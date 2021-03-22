@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <meta name="GENERATOR" content="VIM - Vi IMproved 5.6">
+        <meta name="AUTHOR" content="Vortex">
+        <meta name="MOOD" content="Pissed off, spammed">
+        <title>Promote Responsible E-Commerce: Fight Spam! (Cracked by Vortex)</title>
+    </head>
+
+    <body background="background.gif" bgcolor="#FFFFFF" text="#000000" link="#000080" vlink="#000080" alink="#808080">
+
+    <div align="left">
+        <table border="0" cellpadding="5" cellspacing="5" width="100%">
+        <tr>
+            <td width="100" valign="top" align="left">
+                <img border="0" src="spacer.gif" width="100" height="10">
+            </td>
+
+            <td valign="top" align="left">
+                <div align="center">
+                    <h2>Cracked by Vortex</h2>
+                    <p>
+                    <a href="http://spam.abuse.net/">
+                        <img src="viagra.png" border="0" alt="Just say no!">
+                        <br>
+                        <b>Promote Responsible E-Commerce: Say No to Spam!</b> (especially spam for dodgy aphrodisiacs...)
+                    </a>
+                    </p>
+                    <p>
+                        [ <a href="#what">What</a>, <a href="#where">Where</a>, <a href="#when">When</a>, <a href="#why">Why</a>, <a href="#who">Who</a>, <a href="#how">How</a>, <a href="#gibberish">More Gibberish</a> ]
+                    </p>
+                </div>
+
+                <a name="what"><h4>What</h4></a>
+                <p>
+                    Another (lame) web defacement.
+                </p> 
+
+                <a name="where"><h4>Where</h4></a>
+                <p>
+                    <ul>
+                        <li><a href="http://63.104.128.72">63.104.128.72</a></li>
+                        <li><a href="http://aaasearchenginetechniques.com">aaasearchenginetechniques.com</a></li>
+                        <li><a href="http://gordonpgill.com">gordonpgill.com</a></li>
+                        <li><a href="http://otcstockletter.com">otcstockletter.com</a></li>
+                        <li><a href="http://thesolidusgroup.com">thesolidusgroup.com</a></li>
+                        <li><a href="http://successtopia.com">successtopia.com</a></li>
+                        <li><a href="http://syberschool.org">syberschool.org</a></li>
+                        <li><a href="http://web-bizonline.com">web-bizonline.com</a></li>
+                        <li>Probably some others, maybe a few less... The DNS/HTTP conf files are such a mess I don't know what's where!</li>
+                    </ul>
+                </p>
+
+                <a name="when"><h4>When</h4></a>
+                <p>
+                    During a moment of boredom, and spam-induced anger.
+                </p>
+
+                <a name="why"><h4>Why</h4></a>
+                <p>
+                    Recieved <a href="spam.txt">this</a> unsolicited commercial e-mail for sexual stimulants several times... (another magic cure-all: cures limpdick, PMS, obesity, terminal cancer, the death of Elvis, etc. etc. I dunno about you, but I wouldn't want to put anything &quot;EXPLOSIVE&quot; near anything &quot;SEXUAL&quot; of mine...). The system hosting the offending page was revealed to be a moderately sized <i>spamhaus</i>, where complaining to the administrator would be pointless as it's most likely them that gave <b>Mr. A Watson</b> (webmaster of said dodgy pharmacuticals site) the information and tools required to start selling his dubious wares to people who don't give a fuck (precisely, he was most likely targetting those who <i>can't</i> give a fuck ;) ). So, after a quick probe, (...I started to investigate the system... ;) No, seriously...) I realised cracking it would allow me to have a much greater impact on the shit spilling out of this system than mailing upstream providers, etc. (do they ever actually <i>do</i> anything?).
+                </p>
+
+                <p>
+                    <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Useful Links</b>
+                    <ul>
+                        <li><a href="http://spam.abuse.net">Info on Spam</a>: Boycotting spam e-mail promotes responsible online commerce.</li>
+                        <li><a href="http://www.cauce.org">CAUCE</a>: Join the fight against spam.</li>
+                        <li><a href="http://www.happyhacker.org">Happy Hacker</a>: Learn to track e-mail headers, report spammers to their ISP's and have them thrown off</li>
+                    </ul>
+                </p>
+
+                <a name="who"><h4>Who</h4></a>
+                <p>
+                    I'm Vortex, a minor who lives overseas, with no access to credit cards (unless you count the ones I snarfed from this place ;) [<a href="#oopsnote">*</a>]). Therefore not even remotely related to the crap you tried to flog to me ("carefully targeted list", my arse...). Spam (bulk marketing, cyberpromotion, whatever you want to call it), I believe, is a major contributor to the unwanted commercialisation of many parts of the Internet, and general mistrust of e-commerce due to the fact that most spam is selling snake oil, if it's selling anything at all and not planning to run off with your money.
+                </p>
+
+                <p>
+                    [<a name="oopsnote">*</a>] - Actually, if you're stupid enough to have paid money to these people already, relax, all the CC info is sent to a remote server to which I had no access during the course of this crack.
+                </p>
+
+                <a name="how"><h4>How</h4></a>
+                <p>
+                    <a href="http://www.cert.org/advisories/CA-99-14-bind.html">BIND 8.2.1 "NXT" buffer overflow exploit</a>, using ADM's <a href="adm-nxt.c">adm-nxt.c</a> (nb. that link is the unfixed exploit. figure out the required patch yourself!) exploit. Access was trivial, involving compiling a canned script and executing it.
+                </p>
+  
+                <p>
+                    Admins; Your nameserver was out of date, and vulnerable to a publically known security flaw which enabled me to trivially gain root access to your system. It's good policy to keep up to date with major security issues, patching and upgrading when new versions of software are released (especially network daemons!). Your system is based on <a href="http://www.redhat.com">Redhat Linux 6.1</a>, which is at least 6 months out of date and thus has many security holes - if I hadn't got in through DNS, there were several other possible avenues of attack I could have followed. Cricket Liu's whitepaper on &quot;<a href="http://www.acmebw.com/papers/securing.pdf">Securing BIND</a>&quot; is well worth a read; if you'd disabled forwarding on your server that would've stopped me in my tracks.
+                </p>
+
+                <p>
+                    I've not actually damaged anything - just hop through <tt>/home/*/</tt> and <tt>mv public_html.bak/ public_html/</tt>, and all tracks of myself are gone. Hopefully I've managed to piss you off though, and hopefully prevent people from sending you money; if you don't cover your costs you won't bother with spam mail again... Good!
+                </p>
+
+                <p>
+                    I have upgraded your DNS server to a secure release in order to prevent a repeat attack from another (possibly more malicious) disgruntled user, however, it's up to you to obtain the latest version of <a href="http://www.redhat.com">Redhat</a> and upgrade. Possibly consider <a href="http://www.slackware.com">Slackware Linux</a>, or even <a href="http://www.openbsd.org">OpenBSD</a>, if security is important to you (I'm assuming it's not at the moment ;) ). Also, stop spamming for the reasons detailed above. If I recieve any more of your rubbish then I will not be a happy bunny... and my <tt>rm -rf</tt> fingers might start twitching... (actually, might be a good idea to order some of your cure-all pr0npills for that as they seem to cure everything else :P )
+                </p>
+
+                <a name="gibberish"><h4>More Gibberish</h4></a>
+    
+                <p>
+                    <div align="center">
+                        <a href="http://www.userfriendly.org"><img src="uf.gif" border="0" alt="userfriendly.org"></a>
+                    </div>
+
+                    <ul>
+                        <li><a href="http://ars.userfriendly.org/cartoons/?id=20000728&mode=classic">&quot;I can relate to this&quot;</a>: Friday's userfriendly cartoon (above)</li>
+                        <li>This is not <a href="http://www.eps.mcgill.ca/jargon/html/entry/hacker.html">hacking</a>, it's <a href="http://www.eps.mcgill.ca/jargon/html/entry/cracking.html">cracking</a>. <a href="http://www.eps.mcgill.ca/jargon/html/entry/hacker.html">Hacking</a> is legal, fun and productive. <a href="http://www.eps.mcgill.ca/jargon/html/entry/cracking.html">Cracking</a> isn't.</li>
+                        <li>Finally, what would a script kiddie defacement be without giving &quot;pr0ps&quot; to my &quot;cr3w&quot;, heh. So *waves* to Anne (who'll probably never see this, heh. Hope the hols are going well though), Andy (congrats on the new job mate), Lab Six, the #pde guys and girls (esp. Astraea, Squinky, Hypo, Raven, Tub n'Astro), Proteus, Mel, Rune, Sez (raaaaaa!), Si, cuBe, and various places and people on EFnet (who will *definitely* never find out about this if I can help it, lest I be laughed out of the chans ;) ). <a href="http://www.PetitionOnline.com/Napster/">Save</a> <a href="http://www.napster.com">Napster</a>! Oh, and hi everyone who (ab)uses my system (URL won't be given here for obvious reasons :) ). <a href="http://www.obeygiant.com">OBEY</a>. <a href="http://www.adbusters.org">CONSUME</a>.</li>
+                    </ul>
+                </p>
+
+                <p>
+                    Urgh, I feel dirty now, too close to this spamsource, or for descending into the depths of the k-l33t scr1pt k1dd13? Who knows?
+                </p>
+
+                <p>
+                    Well, goodnight from me (Shit, it's starting to get light again!)... V.
+                </p>
+
+            </td>
+        </tr>
+        </table>
+    </div>
+    </body>
+</html>

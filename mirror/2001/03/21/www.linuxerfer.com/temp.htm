@@ -1,0 +1,192 @@
+<HTML>
+<HEAD>
+ <TITLE>Linuxerfer.Com</TITLE>
+<META content="text/html; charset=EUC-KR" http-equiv=Content-Type>
+<STYLE type=text/css>
+A:link { TEXT-DECORATION: none }
+A:visited {TEXT-DECORATION: none}
+A:active {TEXT-DECORATION: none}
+A:hover {TEXT-DECORATION: underline}
+BODY {FONT-SIZE: 10pt}
+TD {FONT-SIZE: 10pt}
+</STYLE>
+</HEAD>
+
+<BODY bgColor=#ffffff text=#111111 link=#000000 aLink=#222222 vLink=#333333>
+
+<TABLE align=center bgColor=#ffffff border=0 cellPadding=0 cellSpacing=0 width=670>
+<TR>
+ <TD height="1"></TD>
+ <TD></TD>
+ <TD></TD>
+ <TD></TD>
+ <TD align=right>
+  <FONT color=#111111>Linuxerfer.com</FONT>&nbsp;&nbsp;</TD>
+ <TD bgColor=#000000 height="7" width="1">
+  <img src="image/empty.gif" width=1></TD>
+ <TD></TD>
+</TR>
+<TR>
+ <TD></TD>
+ <TD bgColor=#000000 height="7">
+  <img src="image/empty.gif" width=1></TD>
+ <TD></TD>
+ <TD></TD>
+ <TD></TD>
+ <TD bgColor=#000000 height="7">
+  <img src="image/empty.gif" width=1></TD>
+ <TD></TD>
+</TR>
+<TR>
+ <TD bgColor=#000000 colSpan=7 height=1>
+  <img src="image/empty.gif" height=1 width=100%></TD>
+</TR>
+<TR>
+ <TD></TD>
+ <TD bgColor=#000000 height=1>
+  <img src="image/empty.gif" width=1></TD>
+ <TD bgColor=#f1f1f1 align=right vAlign=top width=670 colspan=3>
+
+ <!-- -------------------------- 본  문 START ------------------------------ -->
+ <TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+ <TR>
+  <TD width=465 align=left bgColor=#e1e1e1 vAlign=middle>
+   <FONT color=#111111>&nbsp;&nbsp;<span lang=EN-US><B>Bash 에서의 Prompt</B></span></FONT></TD>
+  <TD bgColor=#000000 height=25 width=1>
+   <img src="image/empty.gif" width=1></TD>
+  <TD width=265></TD>
+ </TR>
+ <TR>
+  <TD bgColor=#000000 colSpan=2 height=1 width=1>
+   <img src="image/empty.gif" width=1></TD>
+  <TD></TD>
+ </TR>
+ </TABLE>
+
+ <TABLE border=0 cellPadding=0 cellSpacing=10 width="100%">
+ <TR>
+  <TD>
+   - 변경 방법 <br>
+   &nbsp;&nbsp;&nbsp;자신의 홈디렉토리의 .bashrc 또는 .bash_profile 에 PS1 설정을 넣어주거나,<br>
+   &nbsp;&nbsp;&nbsp;/etc/bashrc 의 PS1 설정을 변경하면 된다.<p>
+   - 옵션 <br>
+   &nbsp;&nbsp;&nbsp;\\  백슬래쉬 출력<br>
+   &nbsp;&nbsp;&nbsp;\d  현재의 날짜 출력<br>
+   &nbsp;&nbsp;&nbsp;\h  현재 쉘이 실행되고 있는 호스트의 이름 출력<br>
+   &nbsp;&nbsp;&nbsp;\n  한 라인을 공백 출력<br>
+   &nbsp;&nbsp;&nbsp;\s  실행되고 있는 쉘의 이름 출력<br>
+   &nbsp;&nbsp;&nbsp;\t  시간 출력<br>
+   &nbsp;&nbsp;&nbsp;\u  현재 사용자의 이름 출력<br>
+   &nbsp;&nbsp;&nbsp;\W  현재 작업 디렉토리의 베이스 이름 출력<br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(예 : /usr/lib/netscape 일때 netscape 만을 출력)<br>
+   &nbsp;&nbsp;&nbsp;\w  현재 작업 디렉토리의 풀패스 출력<p>
+   - Default<br>
+   &nbsp;&nbsp;&nbsp;PS1="[\u@\h \W]\\$"<P>
+   <P></TD>
+ </TR>
+ </TABLE>
+ <P>
+ <!-- --------------------------- 본  문 END ------------------------------- -->
+
+
+ <!-- -------------------------- 본  문 START ------------------------------ -->
+ <TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+ <TR><TD bgColor=#000000 colSpan=2 height=1 width=1>
+   <img src="image/empty.gif" width=1></TD>
+  <TD></TD></TR>
+ <TR>
+  <TD width=465 align=left bgColor=#e1e1e1 vAlign=middle>
+   <FONT color=#111111>&nbsp;&nbsp;<span lang=EN-US><B>xhost 사용법에 대해...</B></span></FONT></TD>
+  <TD bgColor=#000000 height=25 width=1>
+   <img src="image/empty.gif" width=1></TD>
+  <TD width=265></TD>
+ </TR>
+ <TR>
+  <TD bgColor=#000000 colSpan=2 height=1 width=1>
+   <img src="image/empty.gif" width=1></TD>
+  <TD></TD>
+ </TR>
+ </TABLE>
+
+ <TABLE border=0 cellPadding=0 cellSpacing=10 width="100%">
+ <TR>
+  <TD>
+  &nbsp;&nbsp;&nbsp;xhost는 자신의 X server의 접근 권한을 설정하는 프로그램이다.<br>
+  &nbsp;&nbsp;&nbsp; localhost : 123.123.123.2<br>
+  &nbsp;&nbsp;&nbsp; remote host : 123.123.123.3 이라면,<p>
+
+  &nbsp;&nbsp;&nbsp; 먼저 localhost 에서 X windows 를 실행한 후 <br>
+  &nbsp;&nbsp;&nbsp; localhost$ xhost +123.123.123.3<br>
+  &nbsp;&nbsp;&nbsp; localhost$ telnet 123.123.123.3<p>
+  &nbsp;&nbsp;&nbsp; remote host$ export DISPLAY=123.123.123.2:0.0 (bash 를 사용할 경우)<br>
+  &nbsp;&nbsp;&nbsp; remote host$ setenv DISPLAY=123.123.123.2:0.0 (csh 를 사용할 경우)<br>
+  &nbsp;&nbsp;&nbsp; remote host$ I_X_Client_program<r>
+
+  </TD>
+ </TR>
+ </TABLE>
+ <P>
+ <!-- --------------------------- 본  문 END ------------------------------- -->
+
+
+ <!-- -------------------------- 본  문 START ------------------------------ 
+ <TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+ <TR>
+  <TD width=465 align=left bgColor=#e1e1e1 vAlign=middle>
+   <FONT color=#111111>&nbsp;&nbsp;<span lang=EN-US><B>TITLE</B></span></FONT></TD>
+  <TD bgColor=#000000 height=25 width=1>
+   <img src="image/empty.gif" width=1></TD>
+  <TD width=265></TD>
+ </TR>
+ <TR>
+  <TD bgColor=#000000 colSpan=2 height=1 width=1>
+   <img src="image/empty.gif" width=1></TD>
+  <TD></TD>
+ </TR>
+ </TABLE>
+
+ <TABLE border=0 cellPadding=0 cellSpacing=10 width="100%">
+ <TR>
+  <TD>
+
+   <P ALIGN=RIGHT>
+   출처 : </P>
+   <P></TD>
+ </TR>
+ </TABLE>
+ <P>
+  --------------------------- 본  문 END ------------------------------- -->
+
+
+ </TD>
+
+<!-- -----------------------------  꼬리말  -------------------------------- -->
+ <TD bgColor=#000000 height=1 width=1>
+  <img src="image/empty.gif" width=1></TD>
+ <TD height=1 width=7></TD>
+</TR>
+<TR>
+ <TD bgColor=#000000 colSpan=7 height=1 width=1>
+  <img src="image/empty.gif" width=1></TD>
+</TR>
+<TR>
+ <TD height=1 width=7></TD>
+ <TD bgColor=#000000 height=7 width=1>
+  <img src="image/empty.gif" width=1></TD>
+ <TD colspan=3></TD>
+ <TD bgColor=#000000 height=7 width=1>
+  <img src="image/empty.gif" width=1></TD>
+ <TD height=1 width=7></TD>
+</TR>
+<TR>
+ <TD height=1 width=7></TD>
+ <TD bgColor=#000000 height=7 width=1>
+  <img src="image/empty.gif" width=1></TD>
+ <TD vAlign=top>&nbsp;&copy;Linuxerfer.com<BR></TD>
+ <TD colspan=3 align=right><TT>2000/10/15</TT> <BR></TD>
+ <TD></TD>
+</TR>
+</TABLE>
+<P></P>
+</BODY>
+</HTML>

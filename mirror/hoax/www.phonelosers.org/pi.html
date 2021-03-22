@@ -1,0 +1,540 @@
+<HTML><HEAD><TITLE>Private Investigator's Page</TITLE></HEAD>
+<BODY bgcolor=ffff00 background=images/platile1.gif link=ff0000 vlink=ff0000>
+
+
+<center><table><tr><td><img src=images/top_pi.gif></td>
+<td><a href="order.html"><img src="ads/ad_plastuff2.gif" border="0" width="468" height="60" alt="Buy really neato PLA shit!"></a></td></tr></table></center>
+
+<center><table width=98% border=1 bgcolor=ffff00>
+<tr><td width=50% valign=top>
+<font face="arial" size=2>
+
+<a href="http://www.usps.gov">United States Post Office</a> Who better to count on than the post office guys themselves? Using the following form, you can enter in an address, city and state and it'll give you the CORRECT address and zip-plus-four code. By correct, I mean it'll give you the "Street" or "Drive" or "Blvd" on the end as well as any "SE" or "NW." And to top it all off, it'll tell you if the address doesn't exist and if it turns out to be an apartment, it'll give you the full address for each individual apartment. Visit their page for more options, such as zip code to city/state, etc.<p>
+
+
+<FORM METHOD="POST" ACTION="http://www.usps.gov/cgi-bin/zip4/zip4inq">
+
+<INPUT type=hidden MAXLENGTH="50" NAME="company">
+<INPUT type=hidden MAXLENGTH="50" NAME="urbanization">
+<INPUT SIZE="15" MAXLENGTH="50" NAME="street"> Delivery Address<BR>
+<INPUT SIZE="15" MAXLENGTH="50" NAME="city"> City<br>
+<INPUT SIZE="3" MAXLENGTH="2" NAME="state">
+<INPUT SIZE="7" MAXLENGTH="10" NAME="zip"> ZIP Code
+<INPUT TYPE="submit" VALUE="Process Address">
+</FORM>
+
+<hr><a href="http://www.thedirectory.org/pref/">The Directory</a> This directory has alot, but the coolest thing is the area code/prefix lookup. You pick any area code in the United States. Then you get a listing of every prefix in that state which tells you exactly what city the exchange is located in. While it could stand to be a little more accurate (I'd say it's about 90% accurate now) it's an excellent resource, especially since it seems to support ALL of the new area codes.<p>
+
+
+
+<hr><a href="http://www.databaseamerica.com">DataBase America</a> Enter a phone number below in ###-###-#### format and this service will tell you who owns it. Usually only gets listed numbers.<p>
+
+<FORM method=get action="http://api2.databaseamerica.com/cgi-bin/gpfind.cgi">
+<B>Phone: </B><INPUT TYPE=text NAME="p" SIZE=12>
+<INPUT TYPE="SUBMIT" VALUE="Search" NAME="Enter">
+<INPUT TYPE=hidden value="0" name="z"></FORM>
+
+<hr><a href="http://www.whowhere.com">WhoWhere?</a> In addition to search for residential phone numbers, business listings and e-mail addresses, Whowhere will search for home pages, the entire net, people who share your interests and people who use internet phones.<p>
+<FORM METHOD="GET" ACTION="http://query1.whowhere.com/jwz/name.wsrch">
+<b>E-mail Addresses</b><br>
+<b>Name:</b><INPUT size=15 name="name"><br>
+<b>Domain:</b><INPUT size=15 name=org><br>
+<input type=submit value=Find>
+<input type=hidden checked value=exact name=match>
+</form><br><br>
+
+<FORM METHOD="GET" ACTION="http://query1.whowhere.com/jwz/org.wsrch">
+<b>Companies Online</b><br>
+<b>Name:</b>
+<INPUT size=15 name="org">
+<input type=submit value=Find>
+</form><br><br>
+
+<form method=get action=http://phone.whowhere.com/telephone.psrch>
+<b>Phone Numbers & Addresses</b><br>
+<B>Last Name:</B><input type=text size=15 name=name maxlength=15><br>
+<B>First Name:</B><input type=text size=15 name=f-name maxlength=15><br>
+<B>City:</B><input type=text size=15 name=City maxlength=15><br>
+<B>State:</B><select name="state"><option Value="">All States
+<option Value=AL>Alabama
+<option Value=AK>Alaska
+<option Value=AZ>Arizona
+<option Value=AR>Arkansas
+<option Value=CA>California
+<option Value=CO>Colorado
+<option Value=CT>Connecticut
+<option Value=DE>Delaware
+<option Value=FL>Florida
+<option Value=GA>Georgia
+<option Value=HI>Hawaii
+<option Value=ID>Idaho
+<option Value=IL>Illinois
+<option Value=IN>Indiana
+<option Value=IA>Iowa
+<option Value=KS>Kansas
+<option Value=KY>Kentucky
+<option Value=LA>Louisiana
+<option Value=ME>Maine
+<option Value=MD>Maryland
+<option Value=MA>Massachusetts
+<option Value=MI>Michigan
+<option Value=MN>Minnesota
+<option Value=MS>Mississippi
+<option Value=MO>Missouri
+<option Value=MT>Montana
+<option Value=NE>Nebraska
+<option Value=NV>Nevada
+<option Value=NH>New Hampshire
+<option Value=NJ>New Jersey
+<option Value=NM>New Mexico
+<option Value=NY>New York
+<option Value=NC>North Carolina
+<option Value=ND>North Dakota
+<option Value=OH>Ohio
+<option Value=OK>Oklahoma
+<option Value=OR>Oregon
+<option Value=PA>Pennsylvania
+<option Value=RI>Rhode Island
+<option Value=SC>South Carolina
+<option Value=SD>South Dakota
+<option Value=TN>Tennessee
+<option Value=TX>Texas
+<option Value=UT>Utah
+<option Value=VT>Vermont
+<option Value=VA>Virginia
+<option Value=WA>Washington
+<option Value=DC>Washington D.C.
+<option Value=WV>West Virginia
+<option Value=WI>Wisconsin
+<option Value=WY>Wyoming
+</select>
+<input type=hidden value="" name="zip-code" maxlength="15" size="5"><br>
+<input type=submit value=Find>
+</FORM><br>
+
+
+<hr><A HREF="http://yp.uswest.com/">US WEST Yellow Pages</A> National yellow & white pages. Look up a business by the TYPE of business rather than the name. Also look up government numbers and e-mail addresses.<p>
+
+
+<FORM ACTION="http://yp.uswest.com/cgi/search.fcg" METHOD="POST">
+<INPUT TYPE="hidden" NAME="form" VALUE="AdvSearch">
+Category:<INPUT TYPE="text" NAME="heading" size="20" MAXLENGTH="150" VALUE=""><br>
+Or pick a category here:<br>
+<input type="radio" name="heading" value="pizza">Pizza Joints<br>
+<input type="radio" name="heading" value="Video Tapes & Discs-Rentals & Sales">Video Stores<br>
+<input type="radio" name="heading" value="taxicabs">Taxi Cabs<br>
+Business Name:<INPUT TYPE="text" NAME="name" size="20" MAXLENGTH="150" VALUE=""><br>
+Address:<INPUT TYPE="text" NAME="address" size="25" MAXLENGTH="50" VALUE=""><br>
+City:<INPUT TYPE="text" NAME="city" size="20" MAXLENGTH="50">
+<INPUT TYPE="checkbox" NAME="metro" value="checked" checked checked>
+<font color="#000000">Surrounding Area</font><br>
+
+State:<SELECT NAME="state">
+<OPTION SELECTED> Pick One
+<OPTION> Alabama
+<OPTION> Alaska
+<OPTION> Arizona
+<OPTION> Arkansas
+<OPTION> California
+<OPTION> Colorado
+<OPTION> Connecticut
+<OPTION> Delaware
+<OPTION> District of Columbia
+<OPTION> Florida
+<OPTION> Georgia
+<OPTION> Hawaii
+<OPTION> Idaho
+<OPTION> Illinois
+<OPTION> Indiana
+<OPTION> Iowa
+<OPTION> Kansas
+<OPTION> Kentucky
+<OPTION> Louisiana
+<OPTION> Maine
+<OPTION> Maryland
+<OPTION> Massachusetts
+<OPTION> Michigan
+<OPTION> Minnesota
+<OPTION> Mississippi
+<OPTION> Missouri
+<OPTION> Montana
+<OPTION> Nebraska
+<OPTION> Nevada
+<OPTION> New Hampshire
+<OPTION> New Jersey
+<OPTION> New Mexico
+<OPTION> New York
+<OPTION> North Carolina
+<OPTION> North Dakota
+<OPTION> Ohio
+<OPTION> Oklahoma
+<OPTION> Oregon
+<OPTION> Pennsylvania
+<OPTION> Rhode Island
+<OPTION> South Carolina
+<OPTION> South Dakota
+<OPTION> Tennessee
+<OPTION> Texas
+<OPTION> Utah
+<OPTION> Vermont
+<OPTION> Virginia
+<OPTION> Washington
+<OPTION> West Virginia
+<OPTION> Wisconsin
+<OPTION> Wyoming
+</SELECT>
+
+Zip Code:<INPUT TYPE="text" NAME="zip_five" size="5" MAXLENGTH="5" VALUE=""> <br>
+Phone:
+<INPUT TYPE="text" NAME="area_code" size="3" MAXLENGTH="3" VALUE=""> -
+<INPUT TYPE="text" NAME="phone_prefix" size="3" MAXLENGTH="3" VALUE=""> -
+<INPUT TYPE="text" NAME="phone_suffix" size="4" MAXLENGTH="4" VALUE="">
+<p>
+<INPUT TYPE="submit" NAME="submit"></form>
+
+
+
+
+
+<hr><a href="http://www.allapartments.com/">Apartment Lookup Service</a> You can get a listing of all the apartments in a given area by typing a city and state into this form. Great if you want to quiz the apartment manager about a tenant's unlisted telephone number.<p>
+
+<hr><a href="http://canada411.sympatico.ca/">Canada 411 Directory Lookup</a> Not a very powerful search tool, but it's the best I can find so far for Canadian numbers and addresses.<p>
+
+<hr><a href=http://www.bigfoot.com/>Bigfoot.com</a> A large directory of e-mail and people directory services.<p>
+
+<hr><a href=http://www.eyp.co.uk/>U.K. Yellow Pages</a><p>
+
+<hr><a href=http://www.teldir.com/>Telephone Directories</a> A listing of different telephone directories on the web from different countries.<p>
+
+
+</td>
+
+
+
+
+
+
+
+
+
+<!--column two COLUMN TWO COLUMN TWO COLUMN TWO COLUMN TWO!!!-->
+
+<td width=50% valign=top><font face=arial size=2>
+
+<a href="http://www.anywho.com">AnyWho.com</a> What makes this one so great is that it lets you pick a street name in any town and list all the residents on that street. This is great because you can call up the neighbors of the person you're looking for and quiz them. The following form works for residential but if you go to their site you can also look at business addresses. You don't have to fill out the first & last name fields, just the address and city will work.<p>
+
+<form action="http://www.anywho.com/cgi-bin/htwpq" method="POST">
+
+Last Name:<input type=text name=name size=15 maxlength=50>
+<select name="name.st">
+
+<option value="*" selected>Begins With
+<option value=" ">Same As
+<option value="?">Sounds Like
+</select><br>
+
+First Name:<input type=text name=first size=10 maxlength=25>
+<select name="first.st">
+<option value="*" selected>Begins With
+<option value=" ">Same As
+</select><br>
+
+Street Name:<input type=text name=street size=15 maxlength=40>
+<select name="street.st">
+<option value="*" selected>Begins With
+<option value=" ">Same As
+</select><br>
+
+City or ZIP:<input type=text name=cityzip size=15 maxlength=40>
+<select name="city.st">
+<option value="*" selected>Begins With
+<option value=" ">Same As
+</select><br>
+
+State:<input type=text name=state size=3 maxlength=2>
+(abbreviations only)<br>
+
+<input type=submit value="Search">
+
+Query Help:<input type=radio name=help value=1 checked> Yes
+<input type=radio name=help value=0> No
+</form><br><p>
+
+<center><hr width=50%></center>
+
+The following anywho form will help you find out where an exchange is located. Simply enter the area code and prefix in the box and press SEARCH. You can use a dash to separate the area code and prefix like this: 618-254.<p>
+
+<center><FORM ACTION="http://www.anywho.com/cgi-bin/htwpq" METHOD="post">
+<INPUT TYPE="text" NAME="tel" SIZE="10" MAXLENGTH="7">
+<input type=hidden name="tel.st" value="*">
+<INPUT TYPE="hidden" NAME="state">
+<INPUT TYPE="submit" VALUE="Search"></FORM></center>
+
+
+
+<p>
+
+
+<hr><a href="http://www.555-1212.com">555-1212</a> This is just a big page of search directories that puts your query into about four different search forms but you still have to click on them each individually. Nice concept but poor design. Let's you search phone numbers, e-mail addresses and web pages.<p>
+
+<hr>
+
+<a href="http://yahoo.four11.com">Yahoo People Search</a> Your basic phone directory. Just enter the last name with optional info and it should find their listing if they're listed.<p>
+
+<FORM METHOD=POST ACTION="http://yahoo.four11.com/cgi-bin/Four11Main?PhoneResults">
+<input type=hidden name="Template" value="yahoo.t">
+
+First Name:<INPUT TYPE=text NAME="FirstName" VALUE="" SIZE=25><br>
+Last Name:<INPUT TYPE=text NAME="LastName" VALUE="" SIZE=25><br>
+City:<INPUT TYPE=text NAME="City"  VALUE="" SIZE=25><br>
+State:<INPUT TYPE=text NAME="State" VALUE="" SIZE=4>(use 2-letter abbreviation)<br>
+<input type="submit" value="Search" name="Search"><br>
+<INPUT TYPE=hidden value="y" name="z"></FORM><p>
+
+
+<hr><a href="http://www.bigfoot.com">Bigfoot E-mail Lookup</a> This is a pretty good e-mail searching site. Just enter a name or alias into the form below and you'll get a good-sized list of matches.<p>
+
+<FORM ACTION=http://www.bigfoot.com/SEARCH METHOD=GET>
+<INPUT TYPE=hidden NAME=FormName Value=BF2LOOKUP>
+<INPUT TYPE=hidden NAME=SendSite Value=SHADOW>
+<INPUT NAME="SearchName" TYPE="text" SIZE="26">
+<INPUT TYPE="submit" VALUE="search"></FORM> <p>
+
+<hr>
+<a href="http://www.four11.com">411</a> This is one of the more popular search directories, used for finding phone numbers and addresses. Just fill out at least a last name below and hope for the best. If you've already used the Yahoo search (above), you'll probably get the same results since Yahoo uses this service. Make sure to only use an abbreviation for the state.<p>
+
+<form method="POST" action="http://www.four11.com/cgi-bin/Four11Main?PhoneResults&XX=&FormId=,234,2,377FB00,3F70FA11">
+<INPUT TYPE=hidden NAME="Wildcard" value="yes">
+First Name:<INPUT TYPE=text NAME="FirstName" VALUE=""><br>
+Last Name:<INPUT TYPE=text NAME="LastName" VALUE=""><br>
+Street:<INPUT TYPE=text NAME="Street" VALUE=""><br>
+City:<INPUT TYPE=text NAME="City" VALUE=""><br>
+State:<INPUT TYPE=text NAME="State" VALUE=""><br>
+<input type=submit VALUE="Search" name="Search"></form>
+
+
+<hr><a href="http://www.switchboard.com">SwitchBoard</a> You know the drill...<p>
+
+<FORM ACTION="http://www2.switchboard.com/bin/cgiqa.dll" METHOD="POST">
+First Name:<input type="text" name="F"  maxlength="19"><br>
+Last Name:<input type="text" name="L" maxlength="19" size="15"><br>
+City:<input type="text" name="T"  maxlength="31" size="15"><br>
+State:<input type="text" name="S"  maxlength="15" size="10"><br>
+<INPUT TYPE="SUBMIT" VALUE="Search">
+<INPUT TYPE="RESET" VALUE="Reset">
+<input type="hidden" name="SR" value="">
+<input type="hidden" name="MEM" value="1"></FORM>
+
+<hr><a href="http://www.lookupusa.com">Sales Leads USA</a>I was going to include the form for this service, but apparently they just use the forms from databaseamerica for their "free" lookup services. Oh well, this one has some mailing lists you can buy from them. Databaseamerica is listed further down...<p>
+
+<hr><a href="http://www.infospace.com">InfoSpace Search</a>
+
+<form method=get action=http://in-115.infospace.com/search>
+<input type=hidden name=QK value=5>
+<input type=hidden name=QI value=0>
+<input type=hidden name=QT value=1>
+<input type=hidden name=QV value=info>
+<input type=hidden name=QU value="R">
+Last Name:<input type=text size=20 name="QN" value="" maxlength=60><br>
+First Name:<input type=text size=20 name="QF" value="" maxlength=60><br>
+City:<input type=text size=20 name="QC" value="" maxlength=60><br>
+State:<select size=1 cols=20 name=QS>
+
+<option Value="" selected>All States
+<option Value="AL">Alabama
+<option Value="AK">Alaska
+<option Value="AZ">Arizona
+<option Value="AR">Arkansas
+<option Value="CA">California
+<option Value="CO">Colorado
+<option Value="CT">Connecticut
+<option Value="DE">Delaware
+<option Value="FL">Florida
+<option Value="GA">Georgia
+<option Value="HI">Hawaii
+<option Value="ID">Idaho
+<option Value="IL">Illinois
+<option Value="IN">Indiana
+<option Value="IA">Iowa
+<option Value="KS">Kansas
+<option Value="KY">Kentucky
+<option Value="LA">Louisiana
+<option Value="ME">Maine
+<option Value="MD">Maryland
+<option Value="MA">Massachusetts
+<option Value="MI">Michigan
+<option Value="MN">Minnesota
+<option Value="MS">Mississippi
+<option Value="MO">Missouri
+<option Value="MT">Montana
+<option Value="NE">Nebraska
+<option Value="NV">Nevada
+<option Value="NH">New Hampshire
+<option Value="NJ">New Jersey
+<option Value="NM">New Mexico
+<option Value="NY">New York
+<option Value="NC">North Carolina
+<option Value="ND">North Dakota
+<option Value="OH">Ohio
+<option Value="OK">Oklahoma
+<option Value="OR">Oregon
+<option Value="PA">Pennsylvania
+<option Value="RI">Rhode Island
+<option Value="SC">South Carolina
+<option Value="SD">South Dakota
+<option Value="TN">Tennessee
+<option Value="TX">Texas
+<option Value="UT">Utah
+<option Value="VT">Vermont
+<option Value="VA">Virginia
+<option Value="WA">Washington
+<option Value="DC">Washington D.C.
+<option Value="WV">West Virginia
+<option Value="WI">Wisconsin
+<option Value="WY">Wyoming
+</select><br>
+<input type="submit" value="Look It Up"></form>
+
+<hr>
+
+<A HREF="http://www.mailbox.co.uk/esp/">Email Search Program</A> Type in an alias and/or first & last name and you'll get a list of e-mail addresses. This service managed to find three of mine.<br>
+
+<form action="http://www.esp.co.uk/engine.cgi" method=post>
+Input first & last name or an alias:<input size=30 name="substr">
+<input type="submit" value="submit search"><br>
+Maximum number of hits to return:
+<select name="maxhits">
+<option>10
+<option selected>25
+<option>50
+<option>100
+<option>150
+</select>
+</form>
+
+<hr><a href="http://rs.internic.net/cgi-bin/whois">InterNIC</a> Ever wonder who owns a particular registered domain name? Enter the domain name into this form and you'll see the company or person's real name and mailing address along with other useful information such as who's providing them their domain service. Thanks to Logic Box for this gem. Since I can't get InterNIC's form to work correctly on my page, I'm using a company's called Tabnet.<p>
+
+Enter the domain to search for below and click submit. Be sure to include the .com, org, .net or whatever. (example: tomkinson.org)<p>
+
+<FORM action="http://www.tabnet.com/lookup.sh" method="GET">
+WWW.<INPUT TYPE="text" NAME="isindex" VALUE="" SIZE=26 MAXLENGTH=26>
+<INPUT TYPE="submit" VALUE="SUBMIT DOMAIN SEARCH">
+</FORM>
+
+
+<hr><a href="http://www.thelist.com">thelist.com</a> Looking for someone in a particular city? This list shows just about every internet provider in any given city, lets you list by areas or search for specific servers. Great for figuring out what ISP your target is on.<p>
+
+<hr><a href="http://www.mapquest.com/">MapQuest</a> Enter any address in the United States and you'll get a map of that area with a dot showing exactly where the address is located. Let's you pan around & zoom in on areas. This thing rules.<p>
+
+<hr><a href="http://twod.med.harvard.edu/labgc/roth/Emailsearch.html">E-mail address finding tools</a> This is a page put up by Harvard, listing many e-mail searching tools and other useful net-finding links.<p>
+
+<hr><a href="http://www.beherenow.com/spider/links.htm">The Awesome List of All Internet Search Engines and Online Directories</a> This is a <em>huge</em> list of supposedly everything.<p>
+
+<hr><a href="http://www.uswestdex.com/">Another one of those dumb phone directory things but this one has the advantage of looking up a business under the "type of business" catagory. <p>
+
+<hr><a href=http://primeris.com/fonefind/>Fone Finder</a> Put in an area code and prefix into this form and you'll find out the phone company, which switch it's out of and what city it's located in.  Even if it's a cellular phone it'll tell you which cellular company owns the number.
+
+
+
+</td></tr></table>
+
+</center>
+
+
+
+
+<hr>
+<center><h3><font color=ff0000>PRIVATE INVESTIGATORS, INFORMATION BROKERS & DETECTIVE AGENCIES</font></h3></center>
+
+<ul>
+<LI><a href=http://www.usinterlink.com/>United States Interlink</a>
+<LI><a href=http://www.tracerservices.com/>Tracer Services</a>
+<LI><a href=http://the-locate-corner.com/>The Locate Corner</a>
+<LI><a href=http://www.pidirectory.com/>P.I. Directory</a>
+<LI><a href=http://www.spybase.com/>Spy Base</a> Featuring The Latest State-of-the-Art
+Surveillance and Anti-Surveillance
+<LI><a href=http://www.spooktech.com/>Spooktech</a>
+<LI><a href=http://www.shadowtrackers.com/>Shadow Trackers</a>
+<LI><a href=http://www.knowx.com/>knowx.com</a>
+<LI><a href=http://www.parisindustries.com/>P.I. Central</a>
+<LI><a href=http://www.pdi-web.com/>P.D.I. Investigations</a>
+<LI><a href=http://www.public-records.net/>Public Records by Discreet Research</a>
+<LI><a href=http://www.dmvsearch.com/>DMV Searches</a>
+<LI><a href=http://www.spybase.com/disguise.html>DISGUISED CAMERAS</a>
+<li><a href=http://www.dataland.com/>Data Land</a>
+<li><a href=http://www.data-trac.com/>Data-Trac Online</a>
+<li><a href=http://www.kiwi-research.com/>KIWI</a> Public Records Retrieval Specialist
+<li><a href=http://www.investigations.com/>ABDI Professional Legal Investigations</a>
+<li><a href="http://members.tripod.com/~lenapedata/">Lenape Data Retreivers</a>
+<li><a href="http://www.freeyellow.com/members/landsharks/index.html">LandSharks, U.S.A.</a>
+<li><a href="http://www.attloss.com">ATT Investigations</a>
+<li><a href="http://www.iglou.com/iirs_investigate/">I.I.R.S</a>
+<li><a href="http://www.dresearch.com">Discreet Research</a>
+<li><a href="http://businessgates.com/infob.htm">Business Gates</a>
+<li><a href="http://www.smartdatasystems.com/">Smart Data Systems</a>
+<li><a href="http://www.advsearch.com/">Advanced Research</a>
+<li><a href="http://www.pimall.com/digdirt/index.html">Dig Dirt Inc</a>
+<li><a href="http://www.searchnetmgt.com/">Search-Net</a>
+<li><a href="http://www.infochecks.com/">Infochecks</a>
+<li><a href="http://www.discreetdata.com/">Discreet Data</a>
+<li><a href="http://www.pimall.com/nci/index.html">National Credit Information</a>
+<li><a href=http://www.infoseekers.com/>Infoseekers</a> Public Records Location & Retrieval Service
+<li><a href="http://www.pimall.com/dailyplanet/index.html">Daily Planet Information</a>
+<li><a href="http://www.atlasinfo.com/">Atlas Information</a>
+<li><a href="http://www.intellwest.com">Intelligence West</a> Asset Investigation Specialists /  Hard to Obtain Information / PI Software
+<li><a href="http://www.masterfacts.com/">Master-Facts Corporation</a>
+<li><a href="http://www.windsearch.com/">Wind Associates - information services</a>
+<li><a href="http://www.nobleventures.com/">Noble Asset Search & Business Intelligence</a>
+<li><a href="http://www.pimall.com/name/brokers.html">PI Mall's list of information brokers</a>
+<li><a href=http://www.sarao-associates.com>Sarao & Associates</a>A valuable resource for law firms, insurance companies, investment banks, corporations, and members of the general public in need of a private investigations firm.
+<li><a href="http://www.yahoo.com/Business_and_Economy/Companies/Information/Information_Brokers/">Yahoo's List of Info Brokers</a> This is a current listing of all Information Brokers listed with Yahoo.
+<li><a href="http://www.parisindustries.com/">P.I. Central</a> The Best Private Investigator Directory. If you're looking for a private investigator or information broker, this is the place to search.
+<li><a href="http://imperialinvestigations.com">Imperial Investigations</a> Providing Complete, Confidential and Conclusive Private
+Investigations, Pre-employment Screening And Complete Research. Licensed
+Investigator Since 1982. Fully Insured.
+
+<li><a href="http://www.inetarena.com/~mwi">Max Whittington Investigations</a> Civil and criminal investigations since 1975
+<LI><a href="http://www.netcom.com/~fyinc/solutions.html">FYI Investigations, Inc.</a>
+Specializes in Nationwide Pre-Employment Screening, Fraud Investigations and Retail Loss Prevention Consulting.
+<LI><a href="http://www.investigatorservices.com">Investigator Services</a>
+<LI><a href="http://www.hsv.tis.net/~pvteye/">Corporate Investigative Services</a> Our firm specializes in investigations of Workers' Compensation / Liability claim fraud.
+<LI><A HREF="http://www.pimall.com/index.html">The Private Investigators Mall</A> Extremely large list of PI resources, including PIs for hire.
+<LI><a href="http://www.findafriend.com/">Find A Friend</a> Reunite with lost relatives and find college & high school friends.
+<LI><a href="http://www.webring.org/cgi-bin/webring?ring=investigator;list">The PI Webring</a> Yes, there really is a WebRing for everything. This is a list of all the PI's in the web ring. Jump to a random PI site! Yippie!
+
+
+
+<center><h3>Web Search Engines</h3></center>
+<LI><A HREF="http://www.webcrawler.com/">WebCrawler Searching</A>
+<LI><a href="http://www.hotbot.com">Hotbot</a> The best.
+<LI><A HREF="http://search.opentext.com/">The Open Text Index</A>
+<LI><A HREF="http://www.lycos.com/">Lycos Inc.</a>
+<LI><A HREF="http://ibd.ar.com/ger/">Green Eggs Report</A> This system grabs URLs out of newsgroups and posts them on this page.
+<LI><A HREF="http://www.excite.com/">Excite Netsearch</A>
+<LI><a href="http://www.infoseek.com/">Infoseek</a> Search the web, newsgroups and e-mail addresses.
+<LI><a href="http://www.dogpile.com/">Dogpile</a> Searches all of the search engines, automatically.
+
+
+<center><h3><font color=ff0000>OTHER RESOURCES</font></h3></center>
+
+<hr>
+<center><img src="http://www.usatoday.com/weather/icons/usatemp.gif"></center>
+Why a weather map? Sometimes when social engineering it's nice to know what the weather is like in the region that you're claiming to be from so that you know what you're talking about when you're chatting it up with that hapless operator. Oh, who am I trying to fool? I just think the map looks cool, that's all.<p>
+
+<hr>
+<ul>
+<li><a href="http://www.glr.com/stalk.html">The Stalker's Homepage</a> An excellent source for anyone who wants to know stuff they shouldn't. Includes search engine/people finder forms all on one page, social security number databases and ANI blocking services.
+
+<li><a href="http://www.1800ussearch.com/">1-800-US-SEARCH</a> These are the guys who do heavy advertising on all the morning talk show breaks, along with the psychic friends and other infomercials. That should tell you something...
+
+<li><a href="http://www.infosnoop.com/tools.html">InfoSnoop</a> Investigative Tools up the wazoo. Pretty good resources to free services and pay services.
+
+<LI><a href="http://www.dresearch.com/">Discreet Research</a> You gotta love this page. Great layout and great services to offer.
+
+<LI><a href="http://www.pimall.com/pimag/">PI Magazine</a> Although the subscription price really sucks, it's a great source for anyone interested in this type of thing.
+
+<LI><A href="http://members.tripod.com/~Classical_Cafe/spiesonline.html">Spies Online</a> A listing of different URLs to things like anonymous e-mailers, information brokers and search engines. Nice layout.
+
+
+ 
+</body></html>

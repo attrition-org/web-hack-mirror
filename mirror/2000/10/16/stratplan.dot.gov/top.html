@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<TITLE>top_bar</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<!-- ImageReady Preload Script (top_bar.psd) -->
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+function newImage(arg) {
+	if (document.images) {
+		rslt = new Image();
+		rslt.src = arg;
+		return rslt;
+	}
+}
+
+function changeImages() {
+	if (document.images && (preloadFlag == true)) {
+		for (var i=0; i<changeImages.arguments.length; i+=2) {
+			document[changeImages.arguments[i]].src = changeImages.arguments[i+1];
+		}
+	}
+}
+
+var preloadFlag = false;
+function preloadImages() {
+	if (document.images) {
+		top_bar_02_over = newImage("images/top_bar_02-over.gif");
+		top_bar_03_over = newImage("images/top_bar_03-over.gif");
+		preloadFlag = true;
+	}
+}
+
+// -->
+</SCRIPT>
+<!-- End Preload Script -->
+</HEAD>
+<BODY BGCOLOR=#FFFFFF ONLOAD="preloadImages();" topmargin="0" leftmargin="0">
+<!-- ImageReady Slices (top_bar.psd) -->
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+	<TR>
+		<TD>
+			<IMG SRC="images/top_bar_01.gif" WIDTH=338 HEIGHT=19></TD>
+		<TD>
+			<A HREF="http://www.dot.gov" TARGET="_parent"
+			   ONMOUSEOVER="changeImages('top_bar_02', 'images/top_bar_02-over.gif'); return true;"
+			   ONMOUSEOUT="changeImages('top_bar_02', 'images/top_bar_02.gif'); return true;">
+				<IMG NAME="top_bar_02" SRC="images/top_bar_02.gif" WIDTH=86 HEIGHT=19 BORDER=0></A></TD>
+		<TD>
+			<A HREF="http://www.dot.gov/onedot/" TARGET="_parent"
+			   ONMOUSEOVER="changeImages('top_bar_03', 'images/top_bar_03-over.gif'); return true;"
+			   ONMOUSEOUT="changeImages('top_bar_03', 'images/top_bar_03.gif'); return true;">
+				<IMG NAME="top_bar_03" SRC="images/top_bar_03.gif" WIDTH=76 HEIGHT=19 BORDER=0></A></TD>
+		<TD>
+			<IMG SRC="images/top_bar_04.gif" WIDTH=165 HEIGHT=19></TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=4>
+			<IMG SRC="images/top_bar_05.gif" WIDTH=665 HEIGHT=65></TD>
+	</TR>
+</TABLE>
+<!-- End ImageReady Slices -->
+</BODY>
+</HTML>

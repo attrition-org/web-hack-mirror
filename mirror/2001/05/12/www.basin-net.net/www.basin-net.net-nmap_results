@@ -1,0 +1,48 @@
+
+Starting nmap V. 2.54BETA3 ( www.insecure.org/nmap/ )
+Warning:  OS detection will be MUCH less reliable because we did not find at least 1 open and 1 closed TCP port
+Insufficient responses for TCP sequencing (3), OS detection may be less accurate
+Interesting ports on  (63.239.76.69):
+Port       State       Service
+22/tcp     open        ssh                     
+23/tcp     open        telnet                  
+25/tcp     open        smtp                    
+53/tcp     open        domain                  
+80/tcp     open        http                    
+
+TCP Sequence Prediction: Class=random positive increments
+                         Difficulty=78942 (Worthy challenge)
+Aggressive OS guesses: HP-UX B11.00 U 9000/839 (90%), Hardware: Zyxel Prestige 128L router (89%), Cisco X.25/TCP/LAT Protocol Translator ver 8.2(4) (89%), Cisco CPA2500 (68030) or 2511 router (88%), HP9000 Model 804 K450 running HP/UX 11.00 (87%), AS5200 (87%), Cisco 2501/5260/5300 terminal server IOS 11.3.6(T1) (87%), Cisco IOS 11.3 - 12.0(11) (87%)
+No exact OS matches for host (If you know what OS is running on it, see http://www.insecure.org/cgi-bin/nmap-submit.cgi).
+TCP/IP fingerprint:
+TSeq(Class=RI%gcd=1%SI=178B7)
+T1(Resp=Y%DF=N%W=0%ACK=O%Flags=AS%Ops=)
+TSeq(Class=RI%gcd=1%SI=1345E)
+T1(Resp=Y%DF=N%W=0%ACK=S++%Flags=AS%Ops=)
+T2(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+T1(Resp=Y%DF=N%W=0%ACK=O%Flags=AS%Ops=)
+T2(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+T3(Resp=N)
+T2(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+T3(Resp=Y%DF=N%W=1%ACK=S++%Flags=AS%Ops=)
+T4(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T3(Resp=N)
+T4(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T5(Resp=Y%DF=N%W=0%ACK=S++%Flags=AS%Ops=)
+T4(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T5(Resp=Y%DF=N%W=0%ACK=S++%Flags=AS%Ops=)
+T6(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T5(Resp=Y%DF=N%W=0%ACK=S++%Flags=AS%Ops=)
+T6(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T7(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+T6(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T7(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+PU(Resp=Y%DF=N%TOS=C0%IPLEN=164%RIPTL=148%RID=E%RIPCK=E%UCK=E%ULEN=134%DAT=E)
+T7(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+PU(Resp=N)
+PU(Resp=Y%DF=N%TOS=C0%IPLEN=164%RIPTL=148%RID=E%RIPCK=E%UCK=E%ULEN=134%DAT=E)
+
+
+
+
+Nmap run completed -- 1 IP address (1 host up) scanned in 17 seconds

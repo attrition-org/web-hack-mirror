@@ -1,0 +1,78 @@
+<HTML>
+<HEAD>
+<TITLE>Transit Montréal</TITLE>
+<script language="JavaScript">
+<!--//
+
+var currentclick = ""
+
+if (document.images){
+	var Img = new Array(2)
+	for (var i = 0; i < 2; i++){
+		Img[i] = new Image()
+	    }
+		Img[0].src = "ima/accueil_off.gif"
+		Img[1].src = "ima/accueil_over.gif"
+}
+
+function over(name, val){
+	eval('document.images[name].src = Img[val].src')
+}
+
+function out(name, val){	
+	eval('document.images[name].src = Img[val].src')
+}
+
+//-->
+</script>
+
+
+</HEAD>
+
+<BODY BGCOLOR="#00CC00" TOPMARGIN="1" LEFTMARGIN="1" BACKGROUND="../ima/bgtop.gif">
+
+<IMG SRC="../ima/pix.gif" WIDTH=1 HEIGHT=2 BORDER=0 VSPACE=7><BR>
+
+<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0 WIDTH=99%>
+<TR>
+<TD VALIGN=top>
+<IMG SRC="../ima/pix.gif" WIDTH=1 HEIGHT=1 BORDER=0 HSPACE=11><IMG SRC="../ima/transit1.gif" WIDTH=227 HEIGHT=62 BORDER=0><BR>
+</TD>
+<TD VALIGN=top>
+<IMG SRC="../ima/transit2.gif" WIDTH=6 HEIGHT=13 BORDER=0 VSPACE=12><BR>
+<IMG SRC="../ima/pix.gif" WIDTH=1 HEIGHT=2 BORDER=0 VSPACE=1><BR>
+<IMG SRC="../ima/fleches.gif" WIDTH=71 HEIGHT=31 BORDER=0><BR>
+</TD>
+<TD VALIGN=top>
+<IMG SRC="../ima/pix.gif" WIDTH=1 HEIGHT=1 BORDER=0 VSPACE=24><BR>
+<IMG SRC="../ima/montreal.gif" WIDTH=96 HEIGHT=13 BORDER=0 HSPACE=4><BR>
+</TD>
+<TD WIDTH=99% ALIGN=right>
+
+<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0>
+<TR>
+<TD VALIGN=top>
+<IMG SRC="../ima/pix.gif" WIDTH=1 HEIGHT=2 BORDER=0 VSPACE=20><BR>
+<IMG SRC="../ima/fleche_depart.gif" WIDTH=21 HEIGHT=30 BORDER=0 HSPACE=7><BR>
+</TD>
+<TD VALIGN=top ALIGN=right>
+<IMG SRC="../ima/pix.gif" WIDTH=1 HEIGHT=2 BORDER=0 VSPACE=11><BR>
+<A HREF="intro.html" TARGET="mainframe" onMouseOver="over('accueil',1)" onMouseOut="out('accueil',0)" onClick="parent.menuframe.alloff()"><IMG SRC="ima/accueil_off.gif" WIDTH=50 HEIGHT=6 BORDER=0 NAME="accueil"></A><BR>
+<IMG SRC="../ima/pix.gif" WIDTH=1 HEIGHT=1 BORDER=0 VSPACE=9><BR>
+<IMG SRC="ima/depart.gif" WIDTH=177 HEIGHT=17 BORDER=0><BR>
+<FONT COLOR="#000000" FACE="Verdana,Geneva,Arial" SIZE=1>&gt; <B></b>Mercredi 31 janvier<B> <BR>
+</TD>
+</TR>
+</TABLE>
+
+</TD>
+<TD>
+<IMG SRC="../ima/pix.gif" WIDTH=1 HEIGHT=1 BORDER=0 HSPACE=6><BR>
+</TD>
+</TR>
+</TABLE>
+
+
+
+</BODY>
+</HTML>

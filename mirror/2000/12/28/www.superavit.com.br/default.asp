@@ -1,0 +1,1 @@
+( Hacked by bH.GNU.Linux ) Esse eh apenas um aviso educado. Nao destrui nem apaguei nada do site, a nao ser os logs. A pagina original estah em defaultorig.asp . Conselho: mude para um sistema operacional de verdade, como o Debian GNU/Linux rodando Apache. ( stormix ) 

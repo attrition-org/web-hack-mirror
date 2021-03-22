@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+
+	<title>Untitled</title>
+<script LANGUAGE="JavaScript">
+<!-- Begin
+	function check(form) 
+{
+var msg = "";
+var missing = 0;
+                       
+					   
+			           if (document.info.name.value == "")
+                       {
+                       msg += "Please enter your name.\n";
+                      
+                       missing = 1;
+                       }
+                       
+                       
+                       if (document.info.address1.value == "")
+                       {
+                       msg += "Please enter an address.\n";
+                      
+                       missing = 1;
+                       }
+                       
+                       if (document.info.city.value == "")
+                       {
+                       msg += "Please enter a city.\n";
+                      
+                       missing = 1;
+                       }
+                       
+                       if (document.info.state.value == "")
+                       {
+                       msg += "Please enter a state or province.\n";
+                      
+                       missing = 1;
+                       }
+                       
+                       if (document.info.zip.value == "")
+                       {
+                       msg += "Please enter a zip code.\n";
+                      
+                       missing = 1;
+                       }
+					   
+		               if (document.info.country.value == "")
+                       {
+                       msg += "Please enter a country.\n";
+                      
+                       missing = 1;
+                       }
+                       
+                       if (document.info.email.value == "")
+                       {
+                       msg += "Please enter your email address.\n";
+                      
+                       missing = 1;
+                       }
+                       
+                       
+                       if (missing == 1 )
+                       {
+                       alert(msg);
+                       return false;
+                       }
+                       form.submit();
+                       }
+	
+// end -->     
+</script>
+</head>
+
+<body BGCOLOR="#000000" TEXT="#cc0000" ALINK="#000000" VLINK="#cc0000" LINK="#cc0000" BACKGROUND="imgs/bandback5.jpg">
+<CENTER>
+ <TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0" WIDTH="80%">
+<TR>
+<TD>
+<IMG SRC="imgs/bldot.gif" WIDTH=1 HEIGHT=130 BORDER=0 ALT="">
+</TD>
+</TR>
+<TR>
+<TD>
+<FONT FACE="Arial" SIZE="+1">
+<B>
+Hear what Kittie has to say---<BR>
+join the freakin'mailing list<BR>
+</B>
+</FONT>
+	<IMG SRC="imgs/bldot.gif" WIDTH=70 HEIGHT=1 BORDER=0 ALT=""><FONT FACE="Arial,Helvetica" SIZE="-2">Please fill out all fields</FONT>
+</TD>
+</TR>
+<TR>
+    <TD VALIGN="BOTTOM">
+	<FORM ACTION="cgi-bin/mailcomma.pl" METHOD="POST" NAME="info">
+	<TABLE CELLSPACING="2" CELLPADDING="2" BORDER="0">
+<TR>
+    <TD><FONT FACE="Arial" SIZE="-1">Name</FONT></TD>
+    <TD><INPUT TYPE="Text" NAME="name"></TD>
+</TR>
+<TR>
+    <TD><FONT FACE="Arial" SIZE="-1">Address</FONT></TD>
+    <TD><INPUT TYPE="Text" NAME="address1"></TD>
+</TR>
+<TR>
+    <TD><FONT FACE="Arial" SIZE="-1">Address 2</FONT></TD>
+    <TD><INPUT TYPE="Text" NAME="address2"></TD>
+</TR>
+<TR>
+    <TD><FONT FACE="Arial" SIZE="-1">City</FONT></TD>
+    <TD><INPUT TYPE="Text" NAME="city"></TD>
+</TR>
+<TR>
+    <TD><FONT FACE="Arial" SIZE="-1">State or Province</FONT></TD>
+    <TD><input type=text name=state ></TD>
+</TR>
+<TR>
+    <TD><FONT FACE="Arial" SIZE="-1">Zip</FONT></TD>
+    <TD><INPUT TYPE="Text" NAME="zip"></TD>
+</TR>
+<TR>
+    <TD><FONT FACE="Arial" SIZE="-1">Country</FONT></TD>
+    <TD><INPUT TYPE="Text" NAME="country"></TD>
+</TR>
+<TR>
+    <TD><FONT FACE="Arial" SIZE="-1">Email</FONT></TD>
+    <TD><INPUT TYPE="Text" NAME="email"></TD>
+</TR>
+<TR>
+<TD COLSPAN="2" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<INPUT TYPE="button" VALUE="Add Me! (please)" onclick="check(this.form)">
+</TD>
+</TR>
+</TABLE>
+</FORM>
+ </TD>
+</TR>
+</TABLE>
+
+
+</body>
+</html>

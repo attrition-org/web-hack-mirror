@@ -1,0 +1,412 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+<title>Home Page da DMAGGRH</title>
+<script LANGUAGE="JavaScript" FPTYPE="dynamicanimation">
+<!--
+  // If you want to change this script, you must also make the following
+  // changes so that FrontPage will not overwrite your new script.
+  // In the script tag, change type="dynamicanimation" to type="mydynamicanimation"
+  // In the first script statement, change "dynamicanimation" to "mydynamicanimation"
+  // Throughout the HTML content, change dynamicanimation= to mydynamicanimation=
+  // Change function dynAnimation to function mydynAnimation
+  // In the body tag, change onload="dynAnimation()" to onload="mydynAnimation()"
+  dynamicanimAttr = "dynamicanimation"
+  animateElements = new Array()
+  currentElement = 0
+  speed = 0
+  stepsZoom = 8
+  stepsWord = 8
+  stepsFly = 12
+  stepsSpiral = 16
+  steps = stepsZoom
+  step = 0
+  outString = ""
+  function dynAnimation()
+  {
+    var ms = navigator.appVersion.indexOf("MSIE")
+    ie4 = (ms>0) && (parseInt(navigator.appVersion.substring(ms+5, ms+6)) >= 4)
+    if(!ie4)
+    {
+      if((navigator.appName == "Netscape") &&
+         (parseInt(navigator.appVersion.substring(0, 1)) >= 4))
+      {
+        for (index=document.layers.length-1; index >= 0; index--)
+        {
+            layer=document.layers[index]
+            if (layer.left==10000)
+                layer.left=0
+        }
+      }
+      return
+    }
+    for (index=document.all.length-1; index >= document.body.sourceIndex; index--)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if(null != animation)
+      {
+        if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        {
+          ih = el.innerHTML
+          outString = ""
+          i1 = 0
+          iend = ih.length
+          while(true)
+          {
+            i2 = startWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, false, "")
+            if(i2 == iend)
+              break
+            i1 = i2
+            i2 = endWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, true, animation)
+            if(i2 == iend)
+              break
+            i1 = i2
+          }
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+        if(animation == "zoomIn" || animation == "zoomOut")
+        {
+          ih = el.innerHTML
+          outString = "<SPAN " + dynamicanimAttr + "=\"" + animation + "\" style=\"position: relative; left: 10000;\">"
+          outString += ih
+          outString += "</SPAN>"
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+      }
+    }
+    i = 0
+    for (index=document.body.sourceIndex; index < document.all.length; index++)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if (null != animation)
+      {
+        if(animation == "flyLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyRight")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyTop" || animation == "dropWord")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottom")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyTopLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyTopRight" || animation == "flyTopRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottomLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyBottomRight" || animation == "flyBottomRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "spiral")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "zoomIn")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else if(animation == "zoomOut")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        el.initLeft = el.style.posLeft
+        el.initTop = el.style.posTop
+        animateElements[i++] = el
+      }
+    }
+    window.setTimeout("animate();", speed)
+  }
+  function offsetLeft(el)
+  {
+    x = el.offsetLeft
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      x += e.offsetLeft;
+    return x
+  } 
+  function offsetTop(el)
+  {
+    y = el.offsetTop
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      y += e.offsetTop;
+    return y
+  } 
+  function startWord(ih, i)
+  {
+    for(tag = false; i < ih.length; i++)
+    {
+      c = ih.charAt(i)
+      if(c == '<')
+        tag = true
+      if(!tag)
+        return i
+      if(c == '>')
+        tag = false
+    }
+    return -1
+  }
+  function endWord(ih, i)
+  {
+    nonSpace = false
+    space = false
+    while(i < ih.length)
+    {
+      c = ih.charAt(i)
+      if(c != ' ')
+        nonSpace = true
+      if(nonSpace && c == ' ')
+        space = true
+      if(c == '<')
+        return i
+      if(space && c != ' ')
+        return i
+      i++
+    }
+    return -1
+  }
+  function outWord(ih, i1, i2, dyn, anim)
+  {
+    if(dyn)
+      outString += "<SPAN " + dynamicanimAttr + "=\"" + anim + "\" style=\"position: relative; left: 10000;\">"
+    outString += ih.substring(i1, i2)
+    if(dyn)
+      outString += "</SPAN>"
+  }
+  function animate()
+  {
+    el = animateElements[currentElement]
+    animation = el.getAttribute(dynamicanimAttr, false)
+    step++
+    if(animation == "spiral")
+    {
+      steps = stepsSpiral
+      v = step/steps
+      rf = 1.0 - v
+      t = v * 2.0*Math.PI
+      rx = Math.max(Math.abs(el.initLeft), 200)
+      ry = Math.max(Math.abs(el.initTop),  200)
+      el.style.posLeft = Math.ceil(-rf*Math.cos(t)*rx)
+      el.style.posTop  = Math.ceil(-rf*Math.sin(t)*ry)
+    }
+    else if(animation == "zoomIn")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(50+50*step/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else if(animation == "zoomOut")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(100+200*(steps-step)/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else
+    {
+      steps = stepsFly
+      if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        steps = stepsWord
+      dl = el.initLeft / steps
+      dt = el.initTop  / steps
+      el.style.posLeft = el.style.posLeft - dl
+      el.style.posTop = el.style.posTop - dt
+    }
+    if (step >= steps) 
+    {
+      el.style.posLeft = 0
+      el.style.posTop = 0
+      currentElement++
+      step = 0
+    }
+    if(currentElement < animateElements.length)
+      window.setTimeout("animate();", speed)
+  }
+//-->
+</script></head>
+
+<body bgcolor="#F1F1F1" alink="#C0C0C0" onload="dynAnimation()">
+<!--webbot bot="Include" U-Include="barra_std.htm" TAG="BODY" startspan -->
+
+<table border="0" width="731" height="74">
+  <tr>
+    <td width="117" height="2" rowspan="2" valign="middle" align="left"><font face="Arial Black" color="#336600"><strong><img src="images/smallbrazao.GIF" alt="smallbrazao.GIF (3860 bytes)" WIDTH="113" HEIGHT="95"></strong></font></td>
+    <td width="606" height="1"><font color="#336600" size="1" face="Arial Black"><strong><a href="file:///C:/FrontPage%20Webs/index.htm"><img src="images/Cml.gif" alt="CML" border="0" WIDTH="99" HEIGHT="27"></a><a href="file:///C:/FrontPage%20Webs/52538.htm"><img src="images/Inform.gif" alt="Informacoes" border="0" WIDTH="99" HEIGHT="27"></a><a href="file:///C:/FrontPage%20Webs/query.htm"><img src="images/Procurar.gif" alt="Procurar" border="0" WIDTH="99" HEIGHT="27"></a><a href="file:///C:/FrontPage%20Webs/inquerito.htm"><img src="images/Comentar.gif" alt="Comentar" border="0" WIDTH="99" HEIGHT="27"></a><a href="file:///C:/FrontPage%20Webs/contactos.htm"><img src="images/Contacto.gif" alt="Contactar" border="0" WIDTH="99" HEIGHT="27"></a></strong></font></td>
+  </tr>
+  <tr>
+    <td width="606" bgcolor="#B7D17E" height="1" valign="top"><font face="Times New Roman" size="5" color="#008000"><strong>DMAGGRH</strong></font>&nbsp;<br>
+    <font face="Times New Roman" size="4" color="#008000"><strong>Direcção Municipal de
+    Administração Geral e Gestão de Recursos Humanos</strong></font></td>
+  </tr>
+</table>
+<!--webbot bot="Include" endspan i-checksum="44284" -->
+
+
+<table border="0" width="96%">
+  <tr>
+    <td width="15%" valign="top" bgcolor="#B7D17E"><!--webbot bot="Include" U-Include="barra_lateral1.htm" TAG="BODY" startspan -->
+<div align="center"><center>
+
+<table border="0" width="100%" cellpadding="2" bordercolor="#008000" bordercolordark="#008000" bordercolorlight="#008000">
+  <tr>
+    <td width="100%" align="left" bordercolorlight="#FFFFFF" bgcolor="#EBF2DB" bordercolor="#808080" bordercolordark="#000000"></td>
+  </tr>
+  <tr>
+    <td width="100%" align="left" bordercolorlight="#FFFFFF" bgcolor="#EBF2DB" bordercolor="#808080" bordercolordark="#000000"><a href="../../index.html"><font face="Verdana"><small><small>Home Page</small></small></font></a></td>
+  </tr>
+  <tr>
+    <td width="100%" align="left" bordercolorlight="#FFFFFF" bgcolor="#EBF2DB" bordercolor="#808080" bordercolordark="#000000"><font face="Verdana"><a href="DMAGGRH.htm"><small><small>Breve
+    Historial</small></small></a></font></td>
+  </tr>
+  <tr>
+    <td width="100%" align="left" bordercolor="#808080" bgcolor="#EBF2DB" bordercolorlight="#FFFFFF" bordercolordark="#000000"><a href="estrutura.htm"><font face="Verdana"><small><small>Organograma</small></small></font></a></td>
+  </tr>
+  <tr>
+    <td width="100%" align="left" bgcolor="#EBF2DB"><a href="EstruturaDGRH.htm"><font face="Verdana"><small><small>Recursos Humanos</small></small></font></a></td>
+  </tr>
+  <tr>
+    <td width="100%" align="left" bgcolor="#EBF2DB"><p style="margin-left: 10px"><a href="administrar.htm"><font face="Verdana"><small><small>Administração</small></small></font></a></td>
+  </tr>
+  <tr>
+    <td width="100%" align="left" bgcolor="#EBF2DB"><p style="margin-left: 10px"><a href="Estudos.htm"><small><small><font face="Verdana">Estudos</font></small></small></a></td>
+  </tr>
+  <tr>
+    <td width="100%" align="left" bgcolor="#EBF2DB"><p style="margin-left: 10px"><a href="formar.htm"><small><small><font face="Verdana">Formação</font></small></small></a></td>
+  </tr>
+  <tr>
+    <td width="100%" align="left" bgcolor="#EBF2DB"><small><small><font face="Verdana"><p style="margin-left: 10px"><a href="Medicina.htm">Medicina do Trabalho</a></font></small></small></td>
+  </tr>
+  <tr>
+    <td width="100%" align="left" bgcolor="#EBF2DB"><a href="DAG.htm"><small><small><font face="Verdana">Administração Geral</font></small></small></a></td>
+  </tr>
+  <tr>
+    <td width="100%" align="left" bgcolor="#EBF2DB"><p style="margin-left: 10px"><small><small><font face="Verdana">Atendimento e Informação </font></small></small><img src="images/Constr2p.gif" alt="Constr2p.gif (1227 bytes)" WIDTH="25" HEIGHT="25"></td>
+  </tr>
+  <tr>
+    <td width="100%" align="left" bgcolor="#EBF2DB"><p style="margin-left: 10px"><small><small><font face="Verdana">Alvarás, Escrivania e Toponímia </font></small></small><img src="images/Constr2p.gif" alt="Constr2p.gif (1227 bytes)" WIDTH="25" HEIGHT="25"></td>
+  </tr>
+  <tr>
+    <td width="100%" align="left" bgcolor="#EBF2DB"><p style="margin-left: 10px"><small><small><font face="Verdana">Concursos, Compras e Armazéns </font></small></small><img src="images/Constr2p.gif" alt="Constr2p.gif (1227 bytes)" WIDTH="25" HEIGHT="25"></td>
+  </tr>
+  <tr>
+    <td width="100%" align="left" bgcolor="#EBF2DB"><p style="margin-left: 10px"><small><small><font face="Verdana">Imprensa Municipal </font></small></small><img src="images/Constr2p.gif" alt="Constr2p.gif (1227 bytes)" WIDTH="25" HEIGHT="25"></td>
+  </tr>
+  <tr>
+    <td width="100%" align="left" bgcolor="#EBF2DB"></td>
+  </tr>
+</table>
+</center></div>
+<!--webbot bot="Include" endspan i-checksum="56635" -->
+</td>
+    <td width="72%" valign="top">&nbsp;<p>&nbsp;</p>
+    <table border="0" width="96%">
+      <tr>
+        <td width="100%"></td>
+      </tr>
+    </table>
+    <table border="0" width="98%" height="220">
+      <tr>
+        <td width="67%" valign="middle" height="216"><p align="center"><img src="images/indfund.jpg" alt="indfund.jpg (9866 bytes)" WIDTH="230" HEIGHT="208"></td>
+        <td width="41%" valign="top" height="216"><p align="center" dynamicanimation="spiral" style="position: relative !important; left: 10000 !important"><img src="images/smile2.gif" alt="smile2.gif (1578 bytes)" WIDTH="33" HEIGHT="36"></p>
+        <table border="0" width="100%">
+          <tr>
+            <td width="100%" dynamicanimation="dropWord" style="position: relative !important; left: 10000 !important"><p align="center"><a href="Informa.htm"><small><font face="Verdana"><font color="#FF0000"><b><blink><strong>INFORMAÇÃO</strong></blink></b></font><br>
+            <font color="#FF0000"><b><blink><strong>A NÃO PERDER</strong></blink></b></font></font></small></a></td>
+          </tr>
+        </table>
+        <!--webbot bot="Include" U-Include="barra_lateral2.htm" TAG="BODY" startspan -->
+<div align="center"><center>
+
+<table border="0" width="100%" cellpadding="2" bordercolor="#008000" bordercolordark="#008000" bordercolorlight="#008000">
+  <tr>
+    <td width="100%" align="left"><a href="Concursos.htm"><small><small><font face="Verdana">Ofertas
+    de Emprego</font></small></small></a></td>
+  </tr>
+  <tr>
+    <td width="100%" align="left"><a href="Paf99.htm"><small><small><font face="Verdana">Plano
+    Anual de Formação / 99</font></small></small></a></td>
+  </tr>
+  <tr>
+    <td width="100%" align="left"><a href="Pedemprego.htm"><small><small><font face="Verdana">Pedidos
+    de emprego em 1998</font></small></small></a></td>
+  </tr>
+</table>
+</center></div>
+<!--webbot bot="Include" endspan i-checksum="58985" -->
+</td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+
+<table border="0" width="96%">
+  <tr>
+    <td width="100%"><p align="center"><font face="Arial" size="1" color="#008000">Tivemos&nbsp;
+    <!--webbot bot="HitCounter" i-image="3" i-digits="0" PREVIEW="&lt;strong&gt;[Hit Counter]&lt;/strong&gt;" u-custom i-resetvalue="0" startspan --><img SRC="../../_vti_bin/fpcount.exe/?Page=Servicos/dmaggrh/index.htm|Image=3" ALT="Hit Counter"><!--webbot bot="HitCounter" endspan i-checksum="64952" -->&nbsp; acessos<br>
+    desde 99.07.08</font></td>
+  </tr>
+  <tr>
+    <td width="100%" dynamicanimation="flyLeft" style="position: relative !important; left: 10000 !important"><font face="Arial" size="1" color="#008000"><p align="center"></font><strong><blink><font color="#008000"><small>A sua
+    opinião será valiosa para melhorar este serviço</small></font></blink></strong></td>
+  </tr>
+</table>
+<!--webbot bot="Include" u-include="responsabil.htm" tag="BODY" startspan -->
+
+<hr width="95%">
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="10%"><a href="http://www.vbe.com/~starman/graphics/animate/email/mail.gif"><p align="center"></a><img alt="email13.gif" border="0" src="images/email13.gif" WIDTH="45" HEIGHT="52"></td>
+    <td width="90%"><em><font face="Verdana"><small><small>Câmara Municipal de Lisboa</small><br>
+    <small>DMAGGRH - Direcção Municipal de Administração Geral e Gestão de Recursos
+    Humanos</small></small><br>
+    <small><small>Tel: 727 11 30 / 727 11 69 Fax: 727 10 20</small><br>
+    </small></font><a href="mailto:cmldmaggrh.gab@mail.telepac.pt"><font face="Verdana" size="1" color="#0000FF"><u>cmldmaggrh.gab@mail.telepac.pt</u></font></a></em></td>
+  </tr>
+</table>
+<!--webbot bot="Include" endspan i-checksum="28130" -->
+
+</body>
+</html>

@@ -1,0 +1,360 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>F-18 Facts</title>
+<script LANGUAGE="JavaScript" FPTYPE="dynamicanimation">
+<!--
+  // If you want to change this script, you must also make the following
+  // changes so that FrontPage will not overwrite your new script.
+  // In the script tag, change type="dynamicanimation" to type="mydynamicanimation"
+  // In the first script statement, change "dynamicanimation" to "mydynamicanimation"
+  // Throughout the HTML content, change dynamicanimation= to mydynamicanimation=
+  // Change function dynAnimation to function mydynAnimation
+  // In the body tag, change onload="dynAnimation()" to onload="mydynAnimation()"
+  dynamicanimAttr = "dynamicanimation"
+  animateElements = new Array()
+  currentElement = 0
+  speed = 0
+  stepsZoom = 8
+  stepsWord = 8
+  stepsFly = 12
+  stepsSpiral = 16
+  steps = stepsZoom
+  step = 0
+  outString = ""
+  function dynAnimation()
+  {
+    var ms = navigator.appVersion.indexOf("MSIE")
+    ie4 = (ms>0) && (parseInt(navigator.appVersion.substring(ms+5, ms+6)) >= 4)
+    if(!ie4)
+    {
+      if((navigator.appName == "Netscape") &&
+         (parseInt(navigator.appVersion.substring(0, 1)) >= 4))
+      {
+        for (index=document.layers.length-1; index >= 0; index--)
+        {
+            layer=document.layers[index]
+            if (layer.left==10000)
+                layer.left=0
+        }
+      }
+      return
+    }
+    for (index=document.all.length-1; index >= document.body.sourceIndex; index--)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if(null != animation)
+      {
+        if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        {
+          ih = el.innerHTML
+          outString = ""
+          i1 = 0
+          iend = ih.length
+          while(true)
+          {
+            i2 = startWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, false, "")
+            if(i2 == iend)
+              break
+            i1 = i2
+            i2 = endWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, true, animation)
+            if(i2 == iend)
+              break
+            i1 = i2
+          }
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+        if(animation == "zoomIn" || animation == "zoomOut")
+        {
+          ih = el.innerHTML
+          outString = "<SPAN " + dynamicanimAttr + "=\"" + animation + "\" style=\"position: relative; left: 10000;\">"
+          outString += ih
+          outString += "</SPAN>"
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+      }
+    }
+    i = 0
+    for (index=document.body.sourceIndex; index < document.all.length; index++)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if (null != animation)
+      {
+        if(animation == "flyLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyRight")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyTop" || animation == "dropWord")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottom")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyTopLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyTopRight" || animation == "flyTopRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottomLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyBottomRight" || animation == "flyBottomRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "spiral")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "zoomIn")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else if(animation == "zoomOut")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        el.initLeft = el.style.posLeft
+        el.initTop = el.style.posTop
+        animateElements[i++] = el
+      }
+    }
+    window.setTimeout("animate();", speed)
+  }
+  function offsetLeft(el)
+  {
+    x = el.offsetLeft
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      x += e.offsetLeft;
+    return x
+  } 
+  function offsetTop(el)
+  {
+    y = el.offsetTop
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      y += e.offsetTop;
+    return y
+  } 
+  function startWord(ih, i)
+  {
+    for(tag = false; i < ih.length; i++)
+    {
+      c = ih.charAt(i)
+      if(c == '<')
+        tag = true
+      if(!tag)
+        return i
+      if(c == '>')
+        tag = false
+    }
+    return -1
+  }
+  function endWord(ih, i)
+  {
+    nonSpace = false
+    space = false
+    while(i < ih.length)
+    {
+      c = ih.charAt(i)
+      if(c != ' ')
+        nonSpace = true
+      if(nonSpace && c == ' ')
+        space = true
+      if(c == '<')
+        return i
+      if(space && c != ' ')
+        return i
+      i++
+    }
+    return -1
+  }
+  function outWord(ih, i1, i2, dyn, anim)
+  {
+    if(dyn)
+      outString += "<SPAN " + dynamicanimAttr + "=\"" + anim + "\" style=\"position: relative; left: 10000;\">"
+    outString += ih.substring(i1, i2)
+    if(dyn)
+      outString += "</SPAN>"
+  }
+  function animate()
+  {
+    el = animateElements[currentElement]
+    animation = el.getAttribute(dynamicanimAttr, false)
+    step++
+    if(animation == "spiral")
+    {
+      steps = stepsSpiral
+      v = step/steps
+      rf = 1.0 - v
+      t = v * 2.0*Math.PI
+      rx = Math.max(Math.abs(el.initLeft), 200)
+      ry = Math.max(Math.abs(el.initTop),  200)
+      el.style.posLeft = Math.ceil(-rf*Math.cos(t)*rx)
+      el.style.posTop  = Math.ceil(-rf*Math.sin(t)*ry)
+    }
+    else if(animation == "zoomIn")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(50+50*step/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else if(animation == "zoomOut")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(100+200*(steps-step)/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else
+    {
+      steps = stepsFly
+      if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        steps = stepsWord
+      dl = el.initLeft / steps
+      dt = el.initTop  / steps
+      el.style.posLeft = el.style.posLeft - dl
+      el.style.posTop = el.style.posTop - dt
+    }
+    if (step >= steps) 
+    {
+      el.style.posLeft = 0
+      el.style.posTop = 0
+      currentElement++
+      step = 0
+    }
+    if(currentElement < animateElements.length)
+      window.setTimeout("animate();", speed)
+  }
+//-->
+</script><meta name="Microsoft Border" content="tl, default"></head>
+
+<body onload="dynAnimation()" background="images/grnbub1.jpg"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p><a name="top"></a></p>
+</td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%">
+
+<p>&nbsp;</p>
+</td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+<div align="left">
+
+<table border="0" cellpadding="0" cellspacing="8" width="751" height="1">
+  <tr>
+    <td align="center" valign="top" width="178" height="1" rowspan="3"><img src="images/newtorii2.gif" alt="images/newtorii2.gif (7718 bytes)" WIDTH="182" HEIGHT="108"><p align="center"><font color="#D8C880" face="Arial" size="4"><strong>MCAS IWAKUNI</strong></font></p>
+    <p align="center"><!--webbot bot="ImageMap" text="(0,0) (144,22) {Back to Homepage} {Times New Roman} 10 B #cc0000 CT 0  Index3.htm" src="images/goldbutton3.gif" alt="images/goldbutton3.gif (2616 bytes)" border="0" u-originalsrc="images/goldbutton3.gif" u-overlaysrc="images/F18 Facts.htm_txt_goldbutton3.gif" startspan --><MAP NAME="FrontPageMap"><AREA SHAPE="RECT" COORDS="0, 0, 144, 22" HREF="Index3.htm"></MAP><a href="_vti_bin/shtml.exe/F18Facts.htm/map"><img ismap  usemap="#FrontPageMap" border="0" height="22" alt="images/goldbutton3.gif (2616 bytes)" src="_derived/F18%20Facts.htm_txt_goldbutton3.gif" width="144"></a><!--webbot bot="ImageMap" endspan i-checksum="194" --></p>
+    <p align="center"><img src="images/f18roll.gif" alt="f18roll.gif (91404 bytes)" WIDTH="160" HEIGHT="160"></p>
+    <p>&nbsp;</p>
+    <p align="center">&nbsp;</p>
+    <p align="center"><a href="Privacy_Act.htm" style="color: rgb(192,192,192)"><em><font color="#C0C0C0"><small><small><small>Please Read this Privacy and Security Notice</small></small></small></font></em></a></p>
+    <p dynamicanimation="flyTopRight" style="position: relative !important; left: 10000 !important" align="center">&nbsp;</p>
+    <p dynamicanimation="flyTopRight" style="position: relative !important; left: 10000 !important" align="center">&nbsp;</p>
+    <p dynamicanimation="flyTopRight" style="position: relative !important; left: 10000 !important" align="center">&nbsp;</p>
+    <p dynamicanimation="flyTopRight" style="position: relative !important; left: 10000 !important" align="center">&nbsp;</td>
+    <td width="44" height="1" rowspan="2">&nbsp;&nbsp;&nbsp; </td>
+    <th width="1447" height="1" valign="top" colspan="2"><p align="right"><img src="images/f18text.gif" alt="f18text.gif (1368 bytes)" WIDTH="316" HEIGHT="40"><font size="3" face="Arial"><br>
+    </font></th>
+  </tr>
+  <tr>
+    <th width="889" height="0" valign="top">&nbsp;<p><font size="5">F/A-18A/C/CN Hornet</font></th>
+    <th width="572" height="0" valign="top"><p align="right"><img src="images/F18.jpg" alt="F18.jpg (13687 bytes)" WIDTH="316" HEIGHT="192"></th>
+  </tr>
+  <tr>
+    <td width="44" height="271"></td>
+    <td valign="top" width="1447" height="105" colspan="2"><font SIZE="2"><b>Primary function:
+    </b>Intercept and destroy enemy aircraft under all-weather conditions and attack and
+    destroy surface targets.<br>
+    <b>Manufacturer: </b>McDonnell Douglas<br>
+    <b>Propulsion: </b>Two General Electric F404-GE-400 afterburning, low bypass turbofan
+    engines <br>
+    <b>Thrust: </b>16,000 pounds per engine<br>
+    <b>Length: </b>56 feet (17.06 meters)<br>
+    <b>Wing span:</b> 37.5 feet (11.43 meters)<br>
+    <b>Cruise speed: </b>High subsonic to supersonic<br>
+    <b>Ferry range: </b>Over 2,000 nautical miles (2300 miles)<br>
+    <b>Combat radius:</b><br>
+    <i>Fighter mission:</i> 400 nautical miles (460 miles)<br>
+    <i>Attack mission:</i> 575 nautical miles (661.25 miles)<br>
+    <b>Armament:</b> Nine external wing stations, comprising two wingtip stations for an
+    assortment of air-to-air and air-to-ground weapons, including AIM-7 Sparrows, AIM-9
+    Sidewinders, AMRAAMs, AGM-84 Harpoons and AGM-65 Maverick missiles; two inboard wing
+    stations for external fuel tanks or air-to-ground stations; two nacelle fuselage stations
+    for Sparrows or AN/AAS-38 Forward Looking Infrared Radar (FLIR) pods; and a center station
+    for fuel tank or air-to-ground weapons. Air-to-ground weapons include GBU-10 and -12 laser
+    guided bombs, Mk 80 series general purpose bombs, and CBU-59 cluster bombs. AN M61 20mm
+    six-barrel gun is mounted in the nose and has a McDonnell Douglas director gunsight.<br>
+    <b>Crew:</b> 1<br>
+    <b>Introduction date:</b> March 1983<br>
+    <b>Unit Replacement Cost: </b>$28,100,000<br>
+    <br>
+    <b>Mission:</b> Specific F/A-18A/C/CN tasks include: <br>
+    - Intercept and destroy enemy aircraft in conjunction with ground or airborne fighter
+    control under all-weather conditions. <br>
+    - Conduct day and night close air support under the weather. <br>
+    - Conduct day and night deep air support, under the weather. Deep air support consists of
+    radar search and attack, interdiction, and strikes against enemy installations using all
+    types of weapons compatible with assigned aircraft. <br>
+    - Conduct armed escort of friendly aircraft. <br>
+    - Be able to operate from aircraft carriers, advanced bases, and expeditionary airfields. <br>
+    - Be able to deploy or conduct extended range operations employing aerial refueling. <br>
+    <br>
+    <b>Features:</b> The Marine Corps F/A-18A/C/CN strike fighter multi-mission aircraft was
+    designed to replace the F-4 Phantom. The F/A-18A/C/CN Hornet is missionized for
+    traditional fighter, attack, and close air support roles through selection of external
+    pods/equipment to accomplish specific mission objectives. Any aircraft can quickly be
+    configured to perform either fighter or attack missions, or both, thus providing the
+    Marine Air Ground Task Force (MAGTF) commander more flexibility in employing his tactical
+    aircraft in a rapidly changing scenario. Marine F/A18s may be land-based from prepared
+    airfields, or they can operate from expeditionary airfields (EAF). They may also be
+    sea-based, operating from the decks of Navy aircraft carriers.<br>
+    <br>
+    <br>
+    <b>Inventory:</b> 10 active and 4 reserve squadrons with 12 planes each for a total of 168
+    planes.<br>
+    <br>
+    <b>Background:</b> Operation Desert Storm in 1991 was the operational proving ground for
+    the F/A-18A/C. Six single-seat F/A-18A/C squadrons deployed to SWA to participate in
+    combat operations. These squadrons flew in excess of 4600 sorties for a total of 8864
+    hours while experiencing no combat losses.<br>
+    </font></td>
+  </tr>
+</table>
+</div>
+<!--msnavigation--></td></tr><!--msnavigation--></table></body>
+</html>

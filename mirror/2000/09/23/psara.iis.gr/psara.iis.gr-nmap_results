@@ -1,0 +1,40 @@
+
+Starting nmap V. 2.54BETA3 ( www.insecure.org/nmap/ )
+Insufficient responses for TCP sequencing (2), OS detection may be less accurate
+Insufficient responses for TCP sequencing (3), OS detection may be less accurate
+Interesting ports on psara.iis.gr (193.92.13.50):
+(The 2 ports scanned but not shown below are in state: closed)
+Port       State       Service
+23/tcp     open        telnet                  
+53/tcp     open        domain                  
+80/tcp     open        http                    
+
+TCP Sequence Prediction: Class=64K rule
+                         Difficulty=1 (Trivial joke)
+Aggressive OS guesses: IRIX 6.5 (97%), IRIX 6.2 - 6.5 (97%), IRIX 6.5.7f-6.5.8 (93%), IRIX 6.5.7f (93%), IRIX 6.5 Origin2 (92%), IRIX 6.4 - 6.5.3m (92%), Cisco 1601 (IOS 11.0) or DECbrouter90T1 (Runs Cisco IOS 10.2(5)) (91%), IRIX 5.3 (91%)
+No exact OS matches for host (If you know what OS is running on it, see http://www.insecure.org/cgi-bin/nmap-submit.cgi).
+TCP/IP fingerprint:
+T1(Resp=Y%DF=N%W=EF2A%ACK=S++%Flags=AS%Ops=MNNT)
+TSeq(Class=64K)
+T2(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+T1(Resp=Y%DF=N%W=EF2A%ACK=S++%Flags=AS%Ops=MNNT)
+T3(Resp=Y%DF=N%W=EF2A%ACK=O%Flags=A%Ops=NNT)
+T2(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+T4(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T3(Resp=Y%DF=N%W=EF2A%ACK=O%Flags=A%Ops=NNT)
+T5(Resp=N)
+T5(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+T4(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T6(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T5(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+T7(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+T6(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+PU(Resp=Y%DF=N%TOS=0%IPLEN=38%RIPTL=148%RID=E%RIPCK=E%UCK=E%ULEN=134%DAT=E)
+PU(Resp=N)
+T7(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+PU(Resp=N)
+
+
+
+
+Nmap run completed -- 1 IP address (1 host up) scanned in 32 seconds

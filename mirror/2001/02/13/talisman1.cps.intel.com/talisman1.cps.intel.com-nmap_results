@@ -1,0 +1,32 @@
+
+Starting nmap V. 2.54BETA3 ( www.insecure.org/nmap/ )
+Warning:  OS detection will be MUCH less reliable because we did not find at least 1 open and 1 closed TCP port
+Interesting ports on talisman1.cps.intel.com (192.102.198.72):
+Port       State       Service
+22/tcp     filtered    ssh                     
+23/tcp     filtered    telnet                  
+25/tcp     filtered    smtp                    
+53/tcp     filtered    domain                  
+80/tcp     open        http                    
+
+TCP Sequence Prediction: Class=trivial time dependency
+                         Difficulty=3 (Trivial joke)
+Aggressive OS guesses: Windows NT4 / Win95 / Win98 (93%), Windows NT 4 SP3 (90%), Cisco IOS 12.0(3.3)S  (perhaps a 7200) (87%), FreeBSD 3.2-STABLE (87%), MPE/iX 5.5 (87%), Cisco 1601 (IOS 11.0) or DECbrouter90T1 (Runs Cisco IOS 10.2(5)) (86%), 3com Office Connect Router 810 (86%), Alteon AceSwitch 110 (software 4.0.37) (86%)
+No exact OS matches for host (If you know what OS is running on it, see http://www.insecure.org/cgi-bin/nmap-submit.cgi).
+TCP/IP fingerprint:
+TSeq(Class=TD%gcd=2%SI=3)
+TSeq(Class=TD%gcd=1%SI=4)
+TSeq(Class=TD%gcd=1%SI=3)
+T1(Resp=Y%DF=Y%W=7210%ACK=S++%Flags=AS%Ops=M)
+T2(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+T3(Resp=Y%DF=Y%W=7210%ACK=S++%Flags=AS%Ops=M)
+T4(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T5(Resp=N)
+T6(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T7(Resp=N)
+PU(Resp=N)
+
+
+
+
+Nmap run completed -- 1 IP address (1 host up) scanned in 25 seconds

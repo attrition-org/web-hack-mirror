@@ -1,0 +1,89 @@
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="GoLive CyberStudio 3">
+		<title>Welcome to GoLive CyberStudio</title>
+		<script language="JavaScript"><!--
+var flag = false;
+/* ^- This flag is set to true, when all images are loaded...*/
+
+function imageLoad(){  // called with onLoad()
+
+	if (document.images){        
+	but0_on = new Image(); but0_on.src = "ill/dskif_r.gif";               
+	but1_on = new Image(); but1_on.src = "ill/m1nyt_r.gif";
+    but2_on = new Image(); but2_on.src = "ill/m1aktiviteter_r.gif";
+    but3_on = new Image(); but3_on.src = "ill/m1forum_r.gif";
+    but4_on = new Image(); but4_on.src = "ill/m1resultater_r.gif";
+	but5_on = new Image(); but5_on.src = "ill/m1uddannelse_r.gif";
+	but6_on = new Image(); but6_on.src = "ill/m1adresser_r.gif";
+	but7_on = new Image(); but7_on.src = "ill/m1omdskif_r.gif";
+
+    // and so on until you load them all          
+
+    return (flag = true);  // set the flag and let the function know it can work
+	}
+
+} /* End of imageLoad() */
+
+
+function rollIn(imgName){
+	if (document.images && (flag == true)) {
+
+  	document[imgName].src = eval(imgName + '_on.src');
+  }
+}
+
+
+function rollOut(imgName){  // the normal onMouseOut function
+	if (document.images){
+  	document[imgName].src = eval(imgName + '_off.src');
+  }
+}
+
+if (document.images){   // load the off images in the normal way
+    but0_off = new Image(); but0_off.src = "ill/dskif.gif"; 
+    but1_off = new Image(); but1_off.src = "ill/m1nyt.gif";
+    but2_off = new Image(); but2_off.src = "ill/m1aktiviteter.gif";
+    but3_off = new Image(); but3_off.src = "ill/m1forum.gif";
+    but4_off = new Image(); but4_off.src = "ill/m1resultater.gif";
+	but5_off = new Image(); but5_off.src = "ill/m1uddannelse.gif";
+	but6_off = new Image(); but6_off.src = "ill/m1adresser.gif";
+	but7_off = new Image(); but7_off.src = "ill/m1omdskif.gif";
+
+}
+// -->
+		</script>
+	</head>
+
+	<body background="ill/bagtop.gif" onload="imageLoad()">
+		<center>
+			<table border="0" cellpadding="0" cellspacing="0" height="66">
+				<tr valign="top">
+					<td><img src="ill/trans.gif" width="14" height="5"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr valign="top" height="38">
+					<td rowspan="2"><img src="ill/animat.gif" width="83" height="61" align="top"></td>
+					<td height="38" colspan="7" valign="top"><img src="ill/trans.gif" width="244" height="13"><img src="ill/dskif.gif" border="0" width="302" height="38" align="top" name="but0"></td>
+				</tr>
+				<tr valign="top" height="23">
+					<td height="23"><a href="nyt/maanedsnyt.shtml" target="mid" onmouseover="rollIn('but1');return true" onmouseout="rollOut('but1');return true"><img src="ill/m1nyt.gif" border="0" width="39" height="23" align="top" name="but1"></a></td>
+					<td height="23"><a href="aktiviteter/alpint.shtml" target="mid" onmouseover="rollIn('but2');return true" onmouseout="rollOut('but2');return true;"><img src="ill/m1aktiviteter.gif" border="0" width="86" height="23" align="top" name="but2"></a></td>
+					<td height="23"><a href="forum/konferencer.htm" target="mid" onmouseover="rollIn('but3');return true" onmouseout="rollOut('but3');return true;"><img src="ill/m1forum.gif" border="0" width="59" height="23" align="top" name="but3"></a></td>
+					<td height="23"><a href="resultater/alpint.shtml" target="mid" onmouseover="rollIn('but4');return true" onmouseout="rollOut('but4');return true;"><img src="ill/m1resultater.gif" border="0" width="87" height="23" align="top" name="but4"></a></td>
+					<td height="23"><a href="http://kiu.dskif.dk/alpint.php" target="mid" onclick="location.href='top_uddannelse.htm';return true" onmouseover="rollIn('but5');return true" onmouseout="rollOut('but5');return true;"><img src="ill/m1uddannelse.gif" border="0" width="96" height="23" align="top" name="but5"></a></td>
+					<td height="23"><a href="adresser/skiklubber.shtml" target="mid" onmouseover="rollIn('but6');return true" onmouseout="rollOut('but6');return true;"><img src="ill/m1adresser.gif" border="0" width="75" height="23" align="top" name="but6"></a></td>
+					<td height="23"><a href="omdskif/historie.shtml" target="mid" onmouseover="rollIn('but7');return true" onmouseout="rollOut('but7');return true;"><img src="ill/m1omdskif.gif" border="0" width="104" height="23" align="top" name="but7"></a></td>
+				</tr>
+			</table></center>
+	</body>
+
+</html>

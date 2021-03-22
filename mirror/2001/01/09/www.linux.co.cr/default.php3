@@ -1,0 +1,142 @@
+ 
+<html>
+<!-- #BeginTemplate "/Templates/default.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>Linux.co.cr: es el grupo de usuarios de linux en Costa Rica !!!</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="title" content="linux.co.cr">
+<meta name="keywords" content="linux, linux.co.cr, costa rica, open source, LUG, grupo, usuarios, users, group, soporte,  noticias, espanol, mirrors, ayuda, help, links, news, noticias, costa, rica">
+<meta name="description" content="Linux.co.cr: es el grupo de usuarios de linux en Costa Rica !!!">
+<meta name="language" content="spanish">
+<meta name="reply-to" content="webmaster@linux.co.cr">
+</head>
+<body bgcolor="#0066CC">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td>&nbsp;</td>
+    <td align="left" valign="top" width="570"> 
+      <table width="570" border="0" cellspacing="0" cellpadding="3" bgcolor="#000000">
+        <tr> 
+          <td> 
+            <table width="568" border="0" cellspacing="0" cellpadding="2" bgcolor="#FFFFFF">
+              <tr align="left" valign="top"> 
+                <td height="49"> 
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr valign="top"> 
+                      <td colspan="2"><a href="default.php3"><img src="img/logo.gif" width="345" height="73" alt="Logo Linux.co.cr" border="0"></a> 
+                      </td>
+                    </tr>
+                    <tr valign="middle"> 
+                      <td><b><font face="sans-serif,Arial, Helvetica" size="1">Sabado 6 de Enero,2001 5:02 pm</font></b></td>
+                      <td align="right"><b><font face="sans-serif,Arial, Helvetica" size="1"> 
+                        Ultima Actualización: 6/9/2000<br>
+                        Version: <a href="version.php3#0.5">0.5</a></font> </b></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td colspan="2"> 
+                        <table width="100%" border="0" cellspacing="0" cellpadding="1" bgcolor="#000000">
+                          <tr> 
+                            <td> 
+                              <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#CCCCCC">
+                                <form method="post" action="ir.php3">
+                                  <tr align="center" valign="middle"> 
+                                    <td height="22" width="70%"><font face="Arial, Helvetica, sans-serif" size="2">&nbsp;[ 
+                                      <a href="default.php3"><b>Inicio</b></a> 
+                                      | <a href="noticias/default.php3"><b>Noticias</b></a> 
+                                      | <a href="listas/default.php3"><b>Listas</b> 
+                                      <b>de</b> <b>Correo</b></a> | <a href="downloads/default.php3"><b>Downloads</b></a> 
+                                      | <a href="documentos/default.php3"><b>Documentos</b></a> 
+                                      | <a href="mirrors/default.php3"><b>Mirrors</b></a> 
+                                      | <a href="link/default.php3"><b>Links</b></a> 
+                                      | <a href="buscar/default.php3"><b>Buscar</b></a> 
+                                      ] </font> </td>
+                                  </tr>
+                                </form>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr background="img/stripes.gif"> 
+                            <td height="5">&nbsp;</td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr align="center"> 
+                      <td colspan="2"><br>
+<!--- Ads start here --->
+<a href="servlet/adj?Pool=lcr&ajtype=cgi_click&ajkey=top">
+<img src="servlet/adj?Pool=lcr&ajtype=cgi_image&ajkey=top" border="0"></a>
+<!-- Ads end here --> 
+	              </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr align="left" valign="top"> 
+                <td> <!-- #BeginEditable "content" --> 
+                  <p><font face="sans-serif, Arial, Helvetica" size="2"><b>Hacked by c1sc0 from Antihackerlink - Prove if c1sc0 now r00ted! - Greetz chikebum, eF73, dhery, v|z and all people on Antihackerlink</b></font></p>
+                  <p><font face="sans-serif, Arial, Helvetica" size="2">El dia 
+                    3 de junio linux.co.cr actualizo su computador, ahora contamos 
+                    con mayor capacidad y mas espacio en disco. <a href="hardware.php3"><font size="1">mas 
+                    info...</font></a><br>
+                    <br>
+                    </font><font face="sans-serif, Arial, Helvetica" size="2"> 
+                    Estamos terminando algunos detalles. Los mirrors ya se encuentran 
+                    disponible y las listas de correo ya estan implementadas. 
+                    Estamos en el proceso de implementar el archivo de las listas 
+                    de correo con sistema de busqueda.</font></p>
+                  <p><font face="sans-serif, Arial, Helvetica" size="2">Estamos 
+                    por terminar la seccion de Documentos donde tendremos los 
+                    manuales mas imporantes a disposici&oacute;n.</font></p>
+                  <p><font face="sans-serif, Arial, Helvetica" size="2">Por favor 
+                    no dude en escribirnos si tiene alguna duda,</font></p>
+                  <p><font face="sans-serif, Arial, Helvetica" size="2">Atentamente,</font></p>
+                  <p><font face="sans-serif, Arial, Helvetica" size="2"><a href="mailto:webmaster@linux.co.cr">Webmaster@linux.co.cr</a></font><br>
+                    <br>
+                    <br>
+                    <font face="sans-serif, Arial, Helvetica" size="1">Comentarios 
+                    | Contactenos | Declaración de Privacidad | Terminos y Condiciones<br>
+                    </font></p>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr> 
+                      <td align="left"><a href="http://www.redhat.com"><img src="img/powered_by_redhat.gif" width="88" height="31" alt="Powered by redhat" border="0"></a></td>
+                      <td align="center"><a href="http://www.apache.org"><img src="img/apache_pb.gif" width="245" height="31" alt="Powered by Apache" border="0"></a><br>
+                      </td>
+                      <td align="right"><a href="http://www.php.net"><img src="img/php3.gif" width="88" height="31" border="0"></a></td>
+                    </tr>
+                  </table>
+                  <!-- #EndEditable --></td>
+              </tr>
+              <tr> 
+                <td> 
+                  <hr size="1">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr valign="top"> 
+                      <td width="50%"><font face="Arial, Helvetica, sans-serif" size="1">Mantenimientos 
+                        por <a href="mailto:webmaster@linux.co.cr">webmaster@linux.co.cr</a> 
+                        <br>
+                        <br>
+                        &copy; 1999-2000 Linux.co.cr<br>
+                        Todos los Derechos Reservados.</font><font face="Arial, Helvetica, sans-serif" size="1"></font></td>
+                      <td width="50%" valign="top" align="right"><font face="Arial, Helvetica, sans-serif" size="1">Linux® 
+                        una marca registrada de Linus Torvalds.<br>
+                        Todas las demas marcas son propieda <br>
+                        de sus respectivos due&ntilde;os.</font></td>
+                    </tr>
+                  </table>
+                  <hr size="4" align="left" noshade>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

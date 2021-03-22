@@ -1,0 +1,123 @@
+<html>
+
+<head><style>
+a{text-decoration:none}
+A:hover {text-decoration: underline;}
+</style>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>Owned by The-Rev of sm0ked crew!</title>
+<style>
+.spanstyle {
+	position:absolute;
+	visibility:visible;
+	top:-50px;
+	font-size:8pt;
+	font-family:Verdana;
+      font-weight:bold;
+	color:#00FF00;
+}
+</style>
+<script>
+
+var x,y
+var step=20
+var flag=0
+var message="Sm0ked Crew  "
+message=message.split("")
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	xpos[i]=-50
+}
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	ypos[i]=-50
+}
+function handlerMM(e){
+	x = (document.layers) ? e.pageX
+: document.body.scrollLeft+event.clientX
+	y = (document.layers) ? e.pageY
+: document.body.scrollTop+event.clientY
+	flag=1
+}
+function makesnake() {
+	if (flag==1 && document.all) {
+    	for (i=message.length-1; i>=1; i--) {
+	xpos[i]=xpos[i-1]+step
+	ypos[i]=ypos[i-1]
+    	}
+	xpos[0]=x+step
+	ypos[0]=y
+	
+for (i=0; i<message.length-1; i++) {
+	var thisspan = eval("span"+(i)+".style")
+	thisspan.posLeft=xpos[i]
+		thisspan.posTop=ypos[i]
+    	}
+}
+	
+else if (flag==1 && document.layers) {
+    	for (i=message.length-1; i>=1; i--) {
+		xpos[i]=xpos[i-1]+step
+		ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("document.span"+i)
+    		thisspan.left=xpos[i]
+			thisspan.top=ypos[i]
+    	}
+}
+var timer=setTimeout("makesnake()",30)
+}
+
+</script>
+</head>
+
+<body bgcolor="#000000" onLoad="makesnake()" style="width:100%;overflow-x:hidden;overflow-y:scroll">
+<script>
+<!-- Beginning of JavaScript -
+for (i=0;i<=message.length-1;i++) {
+    document.write("<span id='span"+i+"' class='spanstyle'>")
+	document.write(message[i])
+    document.write("</span>")
+}
+if (document.layers){
+	document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+// - End of JavaScript --thx to scurvy ;)--->
+</script>
+
+<p align="center"><img
+src="sm0ked.jpg" width="631"
+height="313"></p>
+
+<p align="center"><font color="#808080">Defaced  by The-Rev</font></p>
+
+<p align="center"><font color="#0000FF">Members:<br>
+DownKaos<br>
+The-Rev<br>
+Syr0kill</font></p>
+
+<p align="center"><font color="#FF0000">Gotcha Admin. Thats what you get for running IIS!</font></p>
+
+<p align="center"><font color="#0000FF"><strong><u>Special
+Thanks:<br>
+#antihackerlink
+</font></p>
+
+<p align="center"><font color="#FF0000"><strong><u>Greets:<br>
+</u></strong>My love Gen and LEG0G0D</font></p>
+
+<p align="center"><font color="#808080"><strong><u>Group Greets:<br>
+</u></strong>Hackweiser, WFD, GForce, Quit Crew, HI-Tech Hate, <u>DevilSoul</u>,
+Prime Suspectz<br>
+Fux0r, dp!</font></p>
+
+<p align="center"><font color="#808080">Contact me at The-Rev@hushmail.com</font></p>
+<p align="center"><font color="#808080">If you would like to join sm0ked crew, email downkaos at: downkaos@hushmail.com</font></p>
+</body>
+</html><!-- www.attrition.org web hack mirror - watermark or something -->

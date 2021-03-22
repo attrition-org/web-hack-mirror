@@ -1,0 +1,118 @@
+<html>
+
+<head>
+<title>Banco Federativo - Banco de dados sobre federalismo fiscal</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<base target="main">
+<script LANGUAGE="JavaScript">
+	
+<!--
+
+function abre1(help_number,x,y) {
+
+   if ( navigator.appName == "Netscape" ) {
+
+      nova=window.open("f-pop.asp"+"?numero="+help_number,"Ajuda","toolbar=0,location=0,directories=0,status=no,menubar=yes,scrollbars=no,resizable=no,copyhistory=no,width="+x+",height="+y);
+      nova.focus();
+   } else {
+
+      nova=window.open("f-pop.asp"+"?numero="+help_number,"Ajuda","toolbar=0,location=0,directories=0,status=no,menubar=yes,scrollbars=no,resizable=no,copyhistory=no,width="+x+",height="+y);
+   }
+
+}
+//-->
+<!--//
+   browserName = navigator.appName;
+   browserVer = parseInt(navigator.appVersion);
+
+   if (browserName == "Netscape" || browserVer >= 3) version = "n3";
+   else version = "n2";
+   if (version == "n3") 
+   {
+      b1off = new Image(148, 25);
+      b1off.src = "images/b_1.gif";      
+      b2off = new Image(148, 25);
+      b2off.src = "images/b_2.gif";
+      b3off = new Image(148, 26);
+      b3off.src = "images/b_3.gif";
+      b4off = new Image(148, 26);
+      b4off.src = "images/b_4.gif";
+      b5off = new Image(148, 27);
+      b5off.src = "images/b_5.gif";
+      b6off = new Image(148, 27);
+      b6off.src = "images/b_6.gif";
+      b7off = new Image(148, 25);
+      b7off.src = "images/b_7.gif";
+      statoff = new Image(148, 30);
+      statoff.src = "images/status.gif";
+      b1on = new Image(148, 25);
+      b1on.src = "images/hb_1.gif";
+      b2on = new Image(148, 25);
+      b2on.src = "images/hb_2.gif";
+      b3on = new Image(148, 26);
+      b3on.src = "images/hb_3.gif";
+      b4on = new Image(148, 26);
+      b4on.src = "images/hb_4.gif";
+      b5on = new Image(148, 27);
+      b5on.src = "images/hb_5.gif";
+      b6on = new Image(148, 27);
+      b6on.src = "images/hb_6.gif";
+      b7on = new Image(148, 25);
+      b7on.src = "images/hb_7.gif";
+      staton = new Image(148, 30);
+      staton.src = "images/hstatus.gif";
+   }
+				
+   function showimg(imgName) {
+   
+      if (version == "n3") {
+         imgOn = eval(imgName + "on.src");
+         document [imgName].src = imgOn;
+      }
+   }
+   function hideimg(imgName) {
+      if (version == "n3") {
+         imgOff = eval(imgName + "off.src");
+         document [imgName].src = imgOff; 
+      }
+   }          
+                                
+//-->
+</script>
+
+
+<meta name="Microsoft Border" content="none"></head>
+
+<body background="images/back.gif">
+
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="148" height="25"><a OnMouseOver="showimg('b1'); return true" OnMouseOut="hideimg('b1'); return true" OnClick="parent.text.location='pesquisa_qbe.asp?Banco=2'" href="f_bestat.htm" target="_top"><img src="images/b_1.gif" border="0" alt name="b1" WIDTH="148" HEIGHT="25"></a></td>
+  </tr>
+  <tr>
+    <td width="148" height="25"><a OnMouseOver="showimg('b2'); return true" OnMouseOut="hideimg('b2'); return true" OnClick="parent.text.location='pesquisa_qbe.asp?Banco=1'" href="f_estudo.htm" target="_top"><img src="images/b_2.gif" border="0" alt name="b2" WIDTH="148" HEIGHT="25"></a></td>
+  </tr>
+  <tr>
+    <td width="148" height="26"><a HREF="f_bexp.htm" OnMouseOver="showimg('b3'); return true" OnMouseOut="hideimg('b3'); return true" OnClick="parent.text.location='pesquisa_qbe.asp?Banco=3'" target="_top"><img src="images/b_3.gif" border="0" alt name="b3" WIDTH="148" HEIGHT="26"></a></td>
+  </tr>
+  <tr>
+    <td width="148" height="26"><a HREF="f_news.htm" OnMouseOver="showimg('b4'); return true" OnMouseOut="hideimg('b4'); return true" OnClick="parent.text.location='pesquisa_qbe.asp?Banco=4'" target="_top"><img src="images/b_4.gif" border="0" alt name="b4" WIDTH="148" HEIGHT="26"></a></td>
+  </tr>
+  <tr>
+    <td width="148" height="27"><a HREF="f_ender.htm" OnMouseOver="showimg('b5'); return true" OnMouseOut="hideimg('b5'); return true" OnClick="parent.text.location='txt_end.htm'" target="_top"><img src="images/b_5.gif" border="0" alt name="b5" WIDTH="148" HEIGHT="27"></a></td>
+  </tr>
+  <tr>
+    <td width="148" height="26"><a HREF="f_forum.htm" OnMouseOver="showimg('b6');showimg('stat'); return true" OnMouseOut="hideimg('b6');hideimg('stat'); return true" OnClick="parent.text.location='login_forum.asp'" target="_top"><img src="images/b_6.gif" border="0" alt name="b6" WIDTH="148" HEIGHT="26"></a></td>
+  </tr>
+  <tr>
+    <td width="148" height="25"><a HREF="f_enter.htm" OnMouseOver="showimg('b7');showimg('stat'); return true" OnMouseOut="hideimg('b7');hideimg('stat'); return true" OnClick="parent.text.location='login_prefeitura.asp'" target="_top"><img src="images/b_7.gif" border="0" alt name="b7" WIDTH="148" HEIGHT="25"></a></td>
+  </tr>
+  <tr>
+    <td width="148" height="30"><img src="images/status.gif" border="0" alt name="stat" WIDTH="148" HEIGHT="30"></td>
+  </tr>
+  <tr>
+    <td width="148" height="89"><img src="images/cont.gif" border="0" alt WIDTH="148" HEIGHT="89"></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,38 @@
+--05:00:03--  http://acm.nmu.edu:80/
+           => `acm.nmu.edu/index.html'
+Connecting to acm.nmu.edu:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 1,586 [text/html]
+
+    0K -> .                                                      [100%]
+
+05:00:04 (1.51 MB/s) - `acm.nmu.edu/index.html' saved [1586/1586]
+
+Loading robots.txt; please ignore errors.
+--05:00:04--  http://acm.nmu.edu:80/no-robots.txt
+           => `acm.nmu.edu/no-robots.txt'
+Connecting to acm.nmu.edu:80... connected!
+HTTP request sent, awaiting response... 404 Not Found
+05:00:04 ERROR 404: Not Found.
+
+--05:00:04--  http://acm.nmu.edu:80/mask.gif
+           => `acm.nmu.edu/mask.gif'
+Connecting to acm.nmu.edu:80... connected!
+HTTP request sent, awaiting response... 404 Not Found
+05:00:04 ERROR 404: Not Found.
+
+--05:00:04--  http://acm.nmu.edu:80/31337.jpg
+           => `acm.nmu.edu/31337.jpg'
+Connecting to acm.nmu.edu:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 3,696 [image/jpeg]
+
+    0K -> ...                                                    [100%]
+
+05:00:04 (35.04 KB/s) - `acm.nmu.edu/31337.jpg' saved [3696/3696]
+
+Converting acm.nmu.edu/index.html... done.
+
+FINISHED --05:00:04--
+Downloaded: 5,282 bytes in 2 files
+Converting acm.nmu.edu/index.html... done.

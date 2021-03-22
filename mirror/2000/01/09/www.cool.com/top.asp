@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<META HTTP-EQUIV="Refresh" CONTENT="60">
+
+<html>
+<head>
+	<title>Untitled</title>
+	
+<SCRIPT language="JavaScript">
+<!--
+function enterChat(accountName) 
+	{
+	window.name = "lp_parent";
+	var url = "http://www2.cool.com/chat.php3?LoginName=" + accountName;
+	var hWnd = window.open(url,"Cool_Chat","width=650,height=600,resizable=yes,scrollbars=no");
+	if (hWnd != null) 
+		{ 
+		if (hWnd.opener == null) 
+			{ 
+			hWnd.opener = self; 
+			window.name = "home"; 
+			hWnd.location.href=url; 
+			} 
+		}
+	}
+// -->
+</SCRIPT>	
+	
+</head>
+
+<body bgcolor="#FFFFFF" background="images/top_bg.gif" margheight="10" topmargin="0">
+
+<div align="center">
+	<script LANGUAGE="JavaScript">
+	<!--
+	// ValueParameters
+	ValueHost = "h0078711";
+	ValueID = "indexpage";
+	ValueLoaded = false;
+	ValueCategory = "1f";
+	ValueVersion = "0.9";
+	//-->
+	</script>
+	<center><script LANGUAGE="Javascript" SRC="http://oz.valueclick.com/jsmaster"></script></center>
+	<script LANGUAGE="JavaScript">
+	<!--
+	if (ValueLoaded) ValueShowAd();
+	//-->
+	</script>
+	<noscript>
+	<a HREF="http://kansas.valueclick.com/redirect?host=h0078711&amp;b=indexpage&amp;v=0" TARGET="_top"><img BORDER="0" WIDTH="468" HEIGHT="60" ALT="Click here to
+	visit our sponsor" SRC="http://kansas.valueclick.com/cycle?host=h0078711&amp;b=indexpage&amp;noscript=1"></a>
+	</noscript>
+	</div>
+
+	<center>
+
+<img src="images/soon.jpg" width=461 height=24 border=0 alt="">
+</body>
+</html>

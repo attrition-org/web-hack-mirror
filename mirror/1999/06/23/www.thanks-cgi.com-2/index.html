@@ -1,0 +1,419 @@
+<HTML>
+
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso8859-1">
+<TITLE>Thanks-CGI</TITLE>
+<META NAME="KEYWORDS" CONTENT="cgi-resources; headlines; downloads; Perl scripts; Web site; free scripts; solutions; services; software; CGI; cgi news;">
+<META NAME="DESCRIPTION" CONTENT="The entry page to Thanks-CGI Web site. Find CGI scripts, Perl and Free scripts. Support, and Thanks-cgi news.">
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+</HEAD>
+<SCRIPT LANGUAGE="JavaScript">
+
+               <!--
+               function scroll(seed)
+               {
+                    var m1 = "HiP Welcomes you to THANKS-CGI....." 
+                    var m2 = "We're trying to make your site more secure for the world!"
+                    var msg=m1+m2; 
+                    var out = " ";
+                    var c = 1;
+                    if (seed > 100) {
+                          seed--;
+                          var cmd="scroll(" + seed + ")";
+                          timerTwo=window.setTimeout(cmd,100);
+                    }
+                    else if (seed <= 100 && seed > 0) {
+                          for (c=0 ; c < seed ; c++) {
+                             out+=" ";
+                          }
+                          out+=msg;
+                          seed--;
+                          var cmd="scroll(" + seed + ")";
+                           window.status=out;
+                          timerTwo=window.setTimeout(cmd,100);
+                    }  else if (seed <= 0) {
+                          if (-seed < msg.length) {
+                             out+=msg.substring(-seed,msg.length);
+                             seed--;
+                             var cmd="scroll(" + seed + ")";
+                             window.status=out;
+                             timerTwo=window.setTimeout(cmd,100);
+                          }
+                          else {
+                             window.status=" ";
+                             timerTwo=window.setTimeout("scroll(100)",7);
+                          }
+                    }
+               }
+               timerONE=window.setTimeout('scroll(100)',50);
+               //-->
+               
+
+
+</SCRIPT>
+<body bgcolor="3366aa" text=ffffff link=yellow alink=red vlink=lime>
+
+<center>
+<table border=0>
+<tr>
+<td width=0 valign=top align=center>
+
+	</td>
+	<td width=350 valign=top>
+	<img src=../images/title1.gif border=0>
+	</td>
+	<td width=125 valign=top align=center>
+	<table border=0><tr>
+
+	<td><A HREF="http://banner.arttoday.com/PD-0027960/button.click" 
+ TARGET="_top"><IMG SRC="http://banner.arttoday.com/PD-0027960/button.gif" 
+ WIDTH=88 HEIGHT=31 BORDER=0></A></td>
+	<td><a href="http://www.freestuffcenter.com" target="_blank"><img src="../images/freecenter.gif" border=0></a></td>
+	<tr>
+	<td colspan=2 align=right><marquee width=35><blink><b><font size=1 face=arial color=red>NEW!! </font></b></blink></marquee><font size=1 face=arial>UNIX SETUP!! [<a href=setup.html>HERE</a>]<br>
+	              <font color=pink>News Subscribe!</font> [<a href="http://209.15.23.169/newsmail/newscribe.html">HERE</a>]<br>
+		      <font color=00ffff>Advanced scripts!</font> [<a href="#advance">HERE</a>]<br>
+	</font></td>
+	<tr></table>
+</td>
+</tr>
+</table>
+<hr width=600 align=center>
+<script Language='JavaScript'>
+var now = new Date();
+var years = now.getYear();
+var months =now.getMonth();
+var days = now.getDate();
+var hours = now.getHours();
+var minutes = now.getMinutes();
+var seconds = now.getSeconds();
+var ram_num=Math.floor(Math.random()*10000);
+var markstr=""+years+"-"+months+"-"+days+"-"+hours+"-"+minutes+"-"+seconds+"-"+ram_num;
+var showcgiurl="http://www.thanks-cgi.com/cgi-bin/banker/banker_show.cgi";
+var clickcgiurl="http://www.thanks-cgi.com/cgi-bin/banker/banker_click.cgi";
+document.write('<a href='+clickcgiurl+'?'+markstr+'><img src='+showcgiurl+'?'+markstr+' border=0></a>');
+</script>
+
+<hr width=600 align=center>
+<table border=0>
+<tr>
+	<td width=300 valign=top>
+	<table border=2><tr><td width=250 bgcolor=green>
+	<font color=ffffff face="Arial Narrow, Arial" size=3><i><b> COUNTER</b></i></font>
+	</td></tr></table>
+	<font size=1 face=arial><a href=http://www.thanks-cgi.com/cgi-bin/clickcount.cgi?url=http://www.thanks-cgi.com/files/thanks-counter.zip&file=/home/thankscgi_com/www/docs/index.html&mark=counter>DOWNLOAD</a>
+<!--counter--11737-->11737
+	| <a href="counter.html">SAMPLE & DETAIL</a></font>
+	<br><font face=arial size=2>
+	Display number of the visitors you've had in graphics. No GB, FLY or SSI required!
+	</font></td>
+	<td width=300 valign=top>
+	<table border=2><tr><td width=250 bgcolor=green>
+	<font color=ffffff face="Arial Narrow, Arial" size=3><i><b> BITMAP-COUNTER</b></i></font>
+	</td></tr></table>
+	<font size=1 face=arial><a href=http://www.thanks-cgi.com/cgi-bin/clickcount.cgi?url=http://www.thanks-cgi.com/files/thanks-bitmapcounter.zip&file=/home/thankscgi_com/www/docs/index.html&mark=bitmap>DOWNLOAD</a>
+<!--bitmap--5828-->5828
+	| <a href="bitmap.html">SAMPLE & DETAIL</a></font>
+	<br><font face=arial size=2>
+	Display number of the visitors you've had in a black and white graphics.
+	</font></td>
+</tr>
+<tr>
+	<td width=300 valign=top>
+	<table border=2><tr><td width=250 bgcolor=green>
+	<font color=ffffff face="Arial Narrow, Arial" size=3><i><b> CLICKCOUNT</b></i></font>
+	</td></tr></table>
+	<font size=1 face=arial><a href=http://www.thanks-cgi.com/cgi-bin/clickcount.cgi?url=http://www.thanks-cgi.com/files/thanks-click.zip&file=/home/thankscgi_com/www/docs/index.html&mark=click>DOWNLOAD</a>
+<!--click--6260-->6260
+	| <a href="clickcounter.html">SAMPLE & DETAIL</a></font>
+	<br><font face=arial size=2>
+	Display number of the visitors who clicked on your hyper link in text. NO SSI required!
+	</font></td>
+	<td width=300 valign=top>
+	<table border=2><tr><td width=250 bgcolor=green>
+	<font color=ffffff face="Arial Narrow, Arial" size=3><i><b> EZ-DISPLAY</b></i></font>
+	</td></tr></table>
+	<font size=1 face=arial><a href=http://www.thanks-cgi.com/cgi-bin/clickcount.cgi?url=http://www.thanks-cgi.com/files/thanks-ezdisplay.zip&file=/home/thankscgi_com/www/docs/index.html&mark=ez>DOWNLOAD</a>
+<!--ez--4508-->4508
+	| <a href="rand/rand.shtml">SAMPLE</a> | <a href="rand.html">DETAIL</a></font>
+	<br><font face=arial size=2>
+	Random image links displaying the record of visits each link has. Good for advertisement.SSI required!
+	</font></td>
+</tr>
+<tr>
+	<td width=300 valign=top>
+	<table border=2><tr><td width=250 bgcolor=green>
+	<font color=ffffff face="Arial Narrow, Arial" size=3><i><b> E-CARD</b></i></font>
+	</td></tr></table>
+	<font size=1 face=arial><a href=http://www.thanks-cgi.com/cgi-bin/clickcount.cgi?url=http://www.thanks-cgi.com/files/thanks-card.zip&file=/home/thankscgi_com/www/docs/index.html&mark=ecard>DOWNLOAD</a>
+<!--ecard--6578-->6578
+	| <a href="http://www.citybirds.com/cards/">IN ACTION</a> | <a href="ecard.html">DETAIL</a></font>
+	<br><font face=arial size=2>
+	Allow visitors in your web page to send an internet postcard to their friends all over the world. Friendly interface and setup.
+	</font></td>
+	<td width=300 valign=top>
+	<table border=2><tr><td width=250 bgcolor=green>
+	<font color=ffffff face="Arial Narrow, Arial" size=3><i><b> EZ-VOTE</b></i></font>
+	</td></tr></table>
+	<font size=1 face=arial><a href=http://www.thanks-cgi.com/cgi-bin/clickcount.cgi?url=http://www.thanks-cgi.com/files/thanks-easyvote.zip&file=/home/thankscgi_com/www/docs/index.html&mark=vote>DOWNLOAD</a>
+<!--vote--7103-->7103
+	| <a href="cgi-bin/ezvote/easyvote.cgi">SAMPLE</a> | <a href="ezvote.html">DETAIL</a></font>
+	<br><font face=arial size=2>
+	Conducts surveys or takes votes on the web to find out what's popular now for certain interests.
+	</font></td>
+</tr>
+<tr>
+	<td width=300 valign=top>
+	<table border=2><tr><td width=250 bgcolor=green>
+	<font color=ffffff face="Arial Narrow, Arial" size=3><i><b> GUESTBOOK-1</b></i></font>
+	</td></tr></table>
+	<font size=1 face=arial><a href=http://www.thanks-cgi.com/cgi-bin/clickcount.cgi?url=http://www.thanks-cgi.com/files/thanks-guestbook-1.zip&file=/home/thankscgi_com/www/docs/index.html&mark=g1>DOWNLOAD</a>
+<!--g1--6588-->6588
+	| <a href="../guestbook1">SAMPLE</a> | <a href="guestbook1.html">DETAIL</a></font>
+	<br><font face=arial size=2>
+	Guestbook-1 allows your visitors to sign in and leave a message with basic functionality.
+	</font></td>
+	<td width=300 valign=top>
+	<table border=2><tr><td width=250 bgcolor=green>
+	<font color=ffffff face="Arial Narrow, Arial" size=3><i><b> GUESTBOOK-2</b></i></font>
+	</td></tr></table>
+	<font size=1 face=arial><a href=http://www.thanks-cgi.com/cgi-bin/clickcount.cgi?url=http://www.thanks-cgi.com/files/thanks-guestbook-2.zip&file=/home/thankscgi_com/www/docs/index.html&mark=g2>DOWNLOAD</a>
+<!--g2--6910-->6910
+	| <a href="cgi-bin/guestbook2/guestbook.cgi">SAMPLE</a> | <a href="guestbook2.html">DETAIL</a></font>
+	<br><font face=arial size=2>
+	Guestbook-2 allows your visitors to sign in and leave a message with "searching by words" functionality.
+	</font></td>
+</tr>
+<tr>
+	<td width=300 valign=top>
+	<table border=2><tr><td width=250 bgcolor=green>
+	<font color=ffffff face="Arial Narrow, Arial" size=3><i><b> WWWBOARD-3</b></i></font>
+	</td></tr></table>
+	<font size=1 face=arial><a href=http://www.thanks-cgi.com/cgi-bin/clickcount.cgi?url=http://www.thanks-cgi.com/files/thanks-wwwboard-3.zip&file=/home/thankscgi_com/www/docs/index.html&mark=www3>DOWNLOAD</a>
+<!--www3--5370-->5370
+	| <a href="../wwwboard3/">SAMPLE</a> | <a href="wwwboard3.html">DETAIL</a></font>
+	<br><font face=arial size=2>
+	On-line message forums allowing threaded discussions. Webmaster also can manage the board directly thru browser.
+	</font></td>
+	<td width=300 valign=top>
+	<table border=2><tr><td width=250 bgcolor=green>
+	<font color=ffffff face="Arial Narrow, Arial" size=3><i><b> WEB FORM</b></i></font>
+	</td></tr></table>
+	<font size=1 face=arial><a href=http://www.thanks-cgi.com/cgi-bin/clickcount.cgi?url=http://www.thanks-cgi.com/files/thanks-form.zip&file=/home/thankscgi_com/www/docs/index.html&mark=form>DOWNLOAD</a>
+<!--form--7816-->7816
+	| <a href="../form/">SAMPLE</a> | <a href="webform.html">DETAIL</a></font>
+	<br><font face=arial size=2>
+	Sending the on-line E-mail form with nice and clean format.
+	</font></td>
+</tr>
+<tr>
+	<td width=300 valign=top>
+	<table border=2><tr><td width=250 bgcolor=green>
+	<font color=ffffff face="Arial Narrow, Arial" size=3><i><b> WEB-FRIEND</b></i></font>
+	</td></tr></table>
+	<font size=1 face=arial><a href=http://www.thanks-cgi.com/cgi-bin/clickcount.cgi?url=http://www.thanks-cgi.com/files/thanks-webfriend.zip&file=/home/thankscgi_com/www/docs/index.html&mark=wfriend>DOWNLOAD</a>
+<!--wfriend--4864-->4864
+	| <a href="cgi-bin/friend/friend.cgi">SAMPLE</a> | <a href="webfriend.html">DETAIL</a></font>
+	<br><font face=arial size=2>
+	Allow visitors in your web page to leave an personal information and make friends.
+	</font></td>
+	<td width=300 valign=top>
+	<table border=2><tr><td width=250 bgcolor=green>
+	<font color=ffffff face="Arial Narrow, Arial" size=3><i><b> WEB-STAT</b></i></font>
+	</td></tr></table>
+	<font size=1 face=arial><a href=http://www.thanks-cgi.com/cgi-bin/clickcount.cgi?url=http://www.thanks-cgi.com/files/thanks-static.zip&file=/home/thankscgi_com/www/docs/index.html&mark=stat>DOWNLOAD</a>
+<!--stat--5662-->5662
+	| <a href="static.html">SAMPLE & DETAIL</a></font>
+	<br><font face=arial size=2>
+	Display the statistics of you web site. You can easily find out where you visitor came from.
+	</font></td>
+</tr>
+<tr>
+	<td width=300 valign=top>
+	<table border=2><tr><td width=250 bgcolor=green>
+	<font color=ffffff face="Arial Narrow, Arial" size=3><i><b> THANKS-CHAT</b></i></font>
+	</td></tr></table>
+	<font size=1 face=arial><a href=http://www.thanks-cgi.com/cgi-bin/clickcount.cgi?url=http://www.thanks-cgi.com/files/thanks-chat.zip&file=/home/thankscgi_com/www/docs/index.html&mark=chat>DOWNLOAD</a>
+<!--chat--7500-->7500
+	| <a href="../thanks/">SAMPLE</a> | <a href="freechat.html">DETAIL</a></font>
+	<br><font face=arial size=2>
+	On-line live chat in real time. With whisper functionality.
+	</font></td>
+	<td width=300 valign=top>
+	<table border=2><tr><td width=250 bgcolor=green>
+	<font color=ffffff face="Arial Narrow, Arial" size=3><i><b> ACCUR-SEARCH</b></i></font>
+	</td></tr></table>
+	<font size=1 face=arial><a href=http://www.thanks-cgi.com/cgi-bin/clickcount.cgi?url=http://www.thanks-cgi.com/files/thanks-accursearch.zip&file=/home/thankscgi_com/www/docs/index.html&mark=search>DOWNLOAD</a>
+<!--search--8157-->8157
+	| <a href="../search/">SAMPLE</a> | <a href="websearch.html">DETAIL</a></font>
+	<br><font face=arial size=2>
+	Your personal search engine for your very own web site.
+	</font></td>
+</tr>
+
+</table>
+<hr width=600 align=center>
+<font face=arial size=2>
+Want to join our news mailing list? <a href="http://209.15.23.169/newsmail/newscribe.html">Click Here</a><br>
+Still have trouble to setup your scripts? <a href="setup.html">Click here!!</a>
+</font>
+<a name="advance"><hr width=600 align=center></a>
+
+<A HREF="http://www.eads.com/adserve/adserve.dll/link?GB06652,0,0">
+<IMG SRC="http://www.eads.com/adserve/adserve.dll/banner?GB06652,0,0"
+HEIGHT=55 WIDTH=460 ALT="Click Here to Visit Our Sponsor" border=0></A>
+
+<!---------------------------ADVANCE SCRIPTS--------------------------------->
+
+<table border=0>
+<tr>
+	<td width=300 valign=top>
+	<table border=2><tr><td width=250 bgcolor=aa0000>
+	<font color=ffffff face="Arial Narrow, Arial" size=3><i><b> ADVANCE-CHAT</b></i></font>
+	</td></tr></table>
+	<font size=1 face=arial>
+	<a href="advancechat.html">SAMPLE & DETAIL</a></font>
+	<br><font face=arial size=2>
+	We proudly present our script!! We reduce a lot of usage of CPU resource. Most of server doesn't like CGI chat but this one.
+	</font></td>
+	<td width=300 valign=top>
+	<table border=2><tr><td width=250 bgcolor=aa0000>
+	<font color=ffffff face="Arial Narrow, Arial" size=3><i><b> COOL SURVEY</b></i></font>
+	</td></tr></table>
+	<font size=1 face=arial>
+	<a href="survey.html">SAMPLE & DETAIL</a></font>
+	<br><font face=arial size=2>
+	Make an on-line survey for your own site. Very easy to be modified.
+	</font></td>
+</tr>
+<tr>
+	<td width=300 valign=top>
+	<table border=2><tr><td width=250 bgcolor=aa0000>
+	<font color=ffffff face="Arial Narrow, Arial" size=3><i><b> WWWBOARD-1</b></i></font>
+	</td></tr></table>
+	<font size=1 face=arial>
+	<a href="wwwboard1.html">SAMPLE & DETAIL</a></font>
+	<br><font face=arial size=2>
+	This is a pretty funny one. The image in front of each topic gains its size as the visitor clicks on it.
+	</font></td>
+	<td width=300 valign=top>
+	<table border=2><tr><td width=250 bgcolor=aa0000>
+	<font color=ffffff face="Arial Narrow, Arial" size=3><i><b> WWWBOARD-2</b></i></font>
+	</td></tr></table>
+	<font size=1 face=arial>
+	<a href="wwwboard2.html">SAMPLE & DETAIL</a></font>
+	<br><font face=arial size=2>
+	Much more functionality than other wwwboards. Check it out!
+	</font></td>
+</tr>
+<tr>
+	<td width=300 valign=top>
+	<table border=2><tr><td width=250 bgcolor=aa0000>
+	<font color=ffffff face="Arial Narrow, Arial" size=3><i><b> WEBLINK</b></i></font>
+	</td></tr></table>
+	<font size=1 face=arial>
+	<a href="weblink.html">SAMPLE & DETAIL</a></font>
+	<br><font face=arial size=2>
+	Visitors can add their site link in your web site. Small search engine of your database.
+	</font></td>
+	<td width=300 valign=top>
+	<table border=2><tr><td width=250 bgcolor=aa0000>
+	<font color=ffffff face="Arial Narrow, Arial" size=3><i><b> Z-WEBMANAGER</b></i></font>
+	</td></tr></table>
+	<font size=1 face=arial>
+	<a href="zwebmanager.html">SAMPLE & DETAIL</a></font>
+	<br><font face=arial size=2>
+	Allow the members of your site to upload and download the files direct from your site. Password protected!! (Like this is really going to help)
+	</font></td>
+</tr>
+
+<!--
+<tr>
+	<td width=300 valign=top>
+	<table border=2><tr><td width=250 bgcolor=aa0000>
+	<font color=ffffff face="Arial Narrow, Arial" size=3><i><b> A+ PROTECTION</b></i></font>
+	</td></tr></table>
+	<font size=1 face=arial>
+	<a href="aplus.html">SAMPLE & DETAIL</a></font>
+	<br><font face=arial size=2>
+	Protect your special web page on the net. Friendly control panel...
+	</font></td>
+	<td width=300 valign=top>
+	<table border=2><tr><td width=250 bgcolor=aa0000>
+	<font color=ffffff face="Arial Narrow, Arial" size=3><i><b> WWWBOARD-4</b></i></font>
+	</td></tr></table>
+	<font size=1 face=arial>
+	<a href="wwwboard4.html">SAMPLE & DETAIL</a></font>
+	<br><font face=arial size=2>
+	WWWBOARD + Member Access. You can lock your wwwboard for member use only.
+	</font></td>
+</tr>
+-->
+
+<tr>
+	<td width=300 valign=top>
+
+	<table border=2><tr><td width=250 bgcolor=ffa000>
+	<font color=ffffff face="Arial Narrow, Arial" size=3><i><b>UNIX SETUP <font color=red>-$35 only-</font></b></i></font>
+	</td></tr></table>
+	<font size=1 face=arial>
+	<font size=1 face=arial><a href=http://www.thanks-cgi.com/cgi-bin/clickcount.cgi?url=http://www.thanks-cgi.com/setup.html&file=/home/thankscgi_com/www/docs/index.html&mark=SETUP>DETAIL</a>
+<!--SETUP--409-->409
+	<br><font face=arial size=2>
+	If you still don't know how to set it up.....
+	</font></td>
+
+	<td width=300 valign=top>
+	<table border=2><tr><td width=250 bgcolor=aa0000>
+	<font color=ffffff face="Arial Narrow, Arial" size=3><i><b> ADVANCE GUESTBOOK</b></i></font>
+	</td></tr></table>
+	<font size=1 face=arial><a href=http://www.thanks-cgi.com/cgi-bin/clickcount.cgi?url=http://www.thanks-cgi.com/pub.html&file=/home/thankscgi_com/www/docs/index.html&mark=pub>SAMPLE & DETAIL</a>
+<!--pub--2097-->2097
+	| <font size=1 face=arial><a href="http://www.ididea.net/cgi-bin/fgb1/control.cgi?job=setadd" target="_blank">IN ACTION</a>
+	<br><font face=arial size=2>
+	Create as many GUESTBOOKS as many you want! An amazing script of all webmaster!<br>
+	</font></td>
+</tr>
+</table>
+<hr width=600 align=center>
+
+<!---------------------------OTHERS--------------------------------->
+
+<table border=0>
+<tr>
+	<td width=300 valign=top>
+	<table border=2><tr><td width=250 bgcolor=0000ff>
+	<font color=ffffff face="Arial Narrow, Arial" size=3><i><b> FAQ </b></i></font>
+	</td></tr></table>
+	<font size=1 face=arial>
+	<a href="faq/index.html">CLICK HERE</a></font>
+	<br><font face=arial size=2>
+	Do you have any common questions? This might helps you........
+	</font></td>
+	<td width=300 valign=top>
+	<table border=2><tr><td width=250 bgcolor=0000ff>
+	<font color=ffffff face="Arial Narrow, Arial" size=3><i><b>LINKS</b></i></font>
+	</td></tr></table>
+	<font size=1 face=arial>
+	<a href="links.html">CLICK HERE...</a></font>
+	<br><font face=arial size=2>
+	We also have collected lots of FREE resources and links.......<br>
+	</font></td>
+</tr>
+</table>
+<hr align=center width=640 size=7>
+<font face=arial size=2>
+Any questions or bug reports?<br>Please write your message to <a href="mailto:support@thanks-cgi.com?subject=THANKS-CGI [SUPPORT]">support@thanks-cgi.com</a>
+</font>
+<hr width=600><script language='JavaScript'> 
+document.write('<a href=cgi-bin/static/static.cgi?result><img src=cgi-bin/static/static.cgi?'+document.referrer+' border=0 width=1 height=1></a>');
+</script>
+<A HREF="http://www.cgi-resources.com/">
+<IMG SRC="http://www.cgi-resources.com/images/linking/156x28A.gif"
+WIDTH=156 HEIGHT=28 BORDER=0 ALT="The CGI Resource Index" target="new"></A> 
+</center>
+
+</body>
+</HTML>
+
+<!-- www.attrition.org web hack mirror - watermark or something -->

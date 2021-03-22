@@ -1,0 +1,205 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<TITLE>StoryView for Macintosh</TITLE>
+<META content=text/html;charset=iso-8859-1 http-equiv=content-type>
+<script language="JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v3.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function MM_showHideLayers() { //v3.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+
+function MM_timelinePlay(tmLnName, myID) { //v1.2
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,propNum,theObj,firstTime=false;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (myID == null) { myID = ++tmLn.ID; firstTime=true;}//if new call, incr ID
+  if (myID == tmLn.ID) { //if Im newest
+    setTimeout('MM_timelinePlay("'+tmLnName+'",'+myID+')',tmLn.delay);
+    fNew = ++tmLn.curFrame;
+    for (i=0; i<tmLn.length; i++) {
+      sprite = tmLn[i];
+      if (sprite.charAt(0) == 's') {
+        if (sprite.obj) {
+          numKeyFr = sprite.keyFrames.length; firstKeyFr = sprite.keyFrames[0];
+          if (fNew >= firstKeyFr && fNew <= sprite.keyFrames[numKeyFr-1]) {//in range
+            keyFrm=1;
+            for (j=0; j<sprite.values.length; j++) {
+              props = sprite.values[j]; 
+              if (numKeyFr != props.length) {
+                if (props.prop2 == null) sprite.obj[props.prop] = props[fNew-firstKeyFr];
+                else        sprite.obj[props.prop2][props.prop] = props[fNew-firstKeyFr];
+              } else {
+                while (keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]) keyFrm++;
+                if (firstTime || fNew==sprite.keyFrames[keyFrm-1]) {
+                  if (props.prop2 == null) sprite.obj[props.prop] = props[keyFrm-1];
+                  else        sprite.obj[props.prop2][props.prop] = props[keyFrm-1];
+        } } } } }
+      } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+      if (fNew > tmLn.lastFrame) tmLn.ID = 0;
+  } }
+}
+
+function MM_timelineGoto(tmLnName, fNew, numGotos) { //v2.0
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,lastKeyFr,propNum,theObj;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (numGotos != null)
+    if (tmLn.gotoCount == null) tmLn.gotoCount = 1;
+    else if (tmLn.gotoCount++ >= numGotos) {tmLn.gotoCount=0; return}
+  jmpFwd = (fNew > tmLn.curFrame);
+  for (i = 0; i < tmLn.length; i++) {
+    sprite = (jmpFwd)? tmLn[i] : tmLn[(tmLn.length-1)-i]; //count bkwds if jumping back
+    if (sprite.charAt(0) == "s") {
+      numKeyFr = sprite.keyFrames.length;
+      firstKeyFr = sprite.keyFrames[0];
+      lastKeyFr = sprite.keyFrames[numKeyFr - 1];
+      if ((jmpFwd && fNew<firstKeyFr) || (!jmpFwd && lastKeyFr<fNew)) continue; //skip if untouchd
+      for (keyFrm=1; keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]; keyFrm++);
+      for (j=0; j<sprite.values.length; j++) {
+        props = sprite.values[j];
+        if (numKeyFr == props.length) propNum = keyFrm-1 //keyframes only
+        else propNum = Math.min(Math.max(0,fNew-firstKeyFr),props.length-1); //or keep in legal range
+        if (sprite.obj != null) {
+          if (props.prop2 == null) sprite.obj[props.prop] = props[propNum];
+          else        sprite.obj[props.prop2][props.prop] = props[propNum];
+      } }
+    } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+  }
+  tmLn.curFrame = fNew;
+  if (tmLn.ID == 0) eval('MM_timelinePlay(tmLnName)');
+}
+
+function MM_timelineStop(tmLnName) { //v1.2
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  if (tmLnName == null)  //stop all
+    for (var i=0; i<document.MM_Time.length; i++) document.MM_Time[i].ID = null;
+  else document.MM_Time[tmLnName].ID = null; //stop one
+}
+
+function MM_initTimelines() {
+    //MM_initTimelines() Copyright 1997 Macromedia, Inc. All rights reserved.
+    var ns = navigator.appName == "Netscape";
+    document.MM_Time = new Array(1);
+    document.MM_Time[0] = new Array(1);
+    document.MM_Time["menuoff"] = document.MM_Time[0];
+    document.MM_Time[0].MM_Name = "menuoff";
+    document.MM_Time[0].fps = 15;
+    document.MM_Time[0][0] = new String("behavior");
+    document.MM_Time[0][0].frame = 13;
+    document.MM_Time[0][0].value = "MM_showHideLayers('Layer1','','hide')";
+    document.MM_Time[0].lastFrame = 13;
+    for (i=0; i<document.MM_Time.length; i++) {
+        document.MM_Time[i].ID = null;
+        document.MM_Time[i].curFrame = 0;
+        document.MM_Time[i].delay = 1000/document.MM_Time[i].fps;
+    }
+}
+//-->
+</script>
+ 
+<style type="text/css">
+<!--
+.basic {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt; font-style: normal}
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="MM_preloadImages('../../images/home/pnav1homeOn.gif','../../images/home/pnav2aboutOn.gif','../../images/home/pnav4resourcesOn.gif','../../images/home/pnav5eventsOn.gif','../../images/home/pnav6supportOn.gif','../../images/home/pnav7sitemapOn.gif','../../images/products/menu1_on.gif','../../images/products/menu2__on.gif','../../images/products/menu3_on.gif','../../images/products/menu4_on.gif','../../images/products/menu5_on.gif','../../images/products/menu6_on.gif','../../images/products/menu7_on.gif','../../images/products/menu8_on.gif','../../IMAGES/HOME/pnav3productsOn.gif','../../IMAGES/HOME/pnav4storeOn.gif')" link="#666633" vlink="#999966" alink="#996600">
+<div id="Layer1" style="position:absolute; left:534px; top:102px; width:131px; height:101px; z-index:3; visibility: hidden"><a href="../dpro/index.html" onMouseOut="MM_swapImgRestore();MM_timelinePlay('menuoff');MM_timelineGoto('menuoff','1')" onMouseOver="MM_swapImage('menu1','','../../images/products/menu1_on.gif',1);MM_timelineStop()"><img src="../../images/products/menu1.gif" width="182" height="14" name="menu1" border="0"></a><a href="../dreamkit/index.html" onMouseOut="MM_swapImgRestore();MM_timelinePlay('menuoff');MM_timelineGoto('menuoff','1')" onMouseOver="MM_swapImage('menu1b','','../../images/products/menu1b__on.gif',1);MM_timelineStop()"><img src="../../images/products/menu1b.gif" width="182" height="12" name="menu1b" border="0"></a><a href="../mmscreenwriter/index.html" onMouseOut="MM_swapImgRestore();MM_timelinePlay('menuoff');MM_timelineGoto('menuoff','1')" onMouseOver="MM_swapImage('menu2','','../../images/products/menu2__on.gif',1);MM_timelineStop()"><img src="../../images/products/menu2.gif" width="182" height="13" name="menu2" border="0"></a><a href="../hscreenwriter/index.html" onMouseOut="MM_swapImgRestore();MM_timelineGoto('menuoff','1');MM_timelinePlay('menuoff')" onMouseOver="MM_swapImage('menu3','','../../images/products/menu3_on.gif',1);MM_timelineStop()"><img src="../../images/products/menu3.gif" width="182" height="12" name="menu3" border="0"></a><a href="../budgeting/index.html" onMouseOut="MM_swapImgRestore();MM_timelineGoto('menuoff','1');MM_timelinePlay('menuoff')" onMouseOver="MM_swapImage('menu4','','../../images/products/menu4_on.gif',1);MM_timelineStop()"><img src="../../images/products/menu4.gif" width="182" height="12" name="menu4" border="0"></a><a href="../laborrates/index.html" onMouseOut="MM_swapImgRestore();MM_timelineGoto('menuoff','1');MM_timelinePlay('menuoff')" onMouseOver="MM_swapImage('menu5','','../../images/products/menu5_on.gif',1);MM_timelineStop()"><img src="../../images/products/menu5.gif" width="182" height="12" name="menu5" border="0"></a><a href="../scheduling/index.html" onMouseOut="MM_swapImgRestore();MM_timelinePlay('menuoff');MM_timelineGoto('menuoff','1')" onMouseOver="MM_swapImage('menu6','','../../images/products/menu6_on.gif',1);MM_timelineStop()"><img src="../../images/products/menu6.gif" width="182" height="12" name="menu6" border="0"></a><a href="../storyview/index.html" onMouseOut="MM_swapImgRestore();MM_timelinePlay('menuoff');MM_timelineGoto('menuoff','1')" onMouseOver="MM_swapImage('menu7','','../../images/products/menu7_on.gif',1);MM_timelineStop()"><img src="../../images/products/menu7.gif" width="182" height="12" name="menu7" border="0"></a><a href="../contracts/index.html" onMouseOut="MM_swapImgRestore();MM_timelinePlay('menuoff');MM_timelineGoto('menuoff','1')" onMouseOver="MM_swapImage('menu8','','../../images/products/menu8_on.gif',1);MM_timelineStop()"><img src="../../images/products/menu8.gif" width="182" height="16" name="menu8" border="0"></a></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr bgcolor="#CCCC99"> 
+    <td><a href="../../home.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('home','','../../images/home/pnav1homeOn.gif',1)"><img src="../../images/home/pnav1home.gif" width="54" height="19" name="home" border="0"></a><a href="../../about/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('about','','../../images/home/pnav2aboutOn.gif',1)"><img src="../../images/home/pnav2about.gif" width="73" height="19" name="about" border="0"></a><a href="../index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('products','','../../IMAGES/HOME/pnav3productsOn.gif',1)"><img src="../../images/home/pnav3products.gif" width="76" height="19" name="products" border="0"></a><a href="http://store.yahoo.com/screenplay/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('store','','../../IMAGES/HOME/pnav4storeOn.gif',1)"><img src="../../IMAGES/HOME/pnav4store.gif" width="51" height="19" border="0" name="store"></a><a href="../../resources/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('resources','','../../images/home/pnav4resourcesOn.gif',1)"><img src="../../images/home/pnav4resources.gif" width="80" height="19" name="resources" border="0"></a><a href="../../events/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('events','','../../images/home/pnav5eventsOn.gif',1)"><img src="../../images/home/pnav5events.gif" width="62" height="19" name="events" border="0"></a><a href="http://www.screenplay.com/Support/Index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('supports','','../../images/home/pnav6supportOn.gif',1)"><img src="../../images/home/pnav6support.gif" width="67" height="19" name="supports" border="0"></a><a href="../../sitemap/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('sitemap','','../../images/home/pnav7sitemapOn.gif',1)"><img src="../../images/home/pnav7sitemap.gif" width="73" height="19" name="sitemap" border="0"></a></td>
+  </tr>
+  <tr> 
+    <td background="../../images/home/topbar_.gif"><img src="../../images/products/topbar_static.gif" width="800" height="68"></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td colspan="2" background="../../images/products/dropdownbkg.gif"><img src="../../images/products/header.gif" width="482" height="20"><a href="#" onMouseOut="MM_timelineGoto('menuoff','1');MM_timelinePlay('menuoff')" onMouseOver="MM_showHideLayers('Layer1','','show');MM_timelineStop()"><img src="../../images/products/pulldown.gif" width="157" height="20" border="0"></a></td>
+  </tr>
+</table>
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+  <tr> <!-- #BeginEditable "bkg" --> 
+    <td width="175" valign="top" background="../../images/brad.gif"> 
+      <p>&nbsp;</p>
+      <!-- #BeginEditable "product_box" --> 
+      <p align="center">&nbsp;</p>
+      <!-- #EndEditable --> <!-- #BeginEditable "quote" --> 
+      <p align="center">&nbsp;</p>
+      <!-- #EndEditable --></td>
+    <!-- #EndEditable --> 
+    <td width="15">&nbsp;</td>
+    <td width="%" valign="top"><!--The image dimensions in pixels are w:542 h:26.  The font is Courier New, Bold, size 18. --><br>
+      <!-- #BeginEditable "body" --> 
+      <p><img src="../../IMAGES/PRODUCTS/header_storyview.gif" width="542" height="26"></p>
+      <p> <font size="2"><b><font face="Verdana, Arial, Helvetica, sans-serif">Why 
+        don't we have a Macintosh version of StoryView?</font></b></font></p>
+      <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Dear Mac 
+        user,</font></p>
+      <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> Screenplay 
+        Systems has long been a supporter and developer for the Macintosh platform. 
+        With StoryView, we felt it was best to allow the application to mature 
+        before attempting a Macintosh port. We feel this will result in a superior 
+        Mac product. However, no development timeframe has yet been set for a 
+        Macintosh port.</font></p>
+      <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><b> 
+        STORYVIEW WILL RUN UNDER VIRTUAL PC </b></strong></font></p>
+      <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">If you have 
+        a G3 or G4 Macintosh, StoryView will run under Virtual PC (Windows emulator). 
+        If you are a Macintosh user and you purchase StoryView for Windows, and 
+        we later ship a native Macintosh version, we will allow you to cross-upgrade 
+        to the same version of the true Mac program for no additional charge. 
+        If you own Virtual PC, try downloading the <a href="http://www.screenplay.com/support/library/instructions/SVdemoWin.html">demo 
+        version of StoryView</a> and installing it on your system.</font></p>
+      <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> <strong><b>NOTE:</b></strong> 
+        StoryView runs best if it has a lot of screen resolution, so make sure 
+        you use the maximum screen resolution available to Virtual PC (800 x 600 
+        minimum, 1024 x 768 or more preferred).</font> </p>
+      <!-- #EndEditable --></td>
+  </tr>
+</table>
+<p>&nbsp;</P>
+
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td> 
+      <div align="center"> 
+        <p>&nbsp;</p>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><a href="../../copyright.html">Copyright</a> 
+          &copy; 1999-2000 Screenplay Systems, Inc. All Rights Reserved.</font></p>
+      </div>
+    </td>
+  </tr>
+</table>
+<P></P>
+<CENTER>
+<P>&nbsp;</P></CENTER></BODY></HTML>

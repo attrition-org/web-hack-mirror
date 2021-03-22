@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+	<TITLE>Golem Designs - Open Auction</TITLE>
+</HEAD>
+<BODY TEXT=#000000 BGCOLOR=#FFFFFF LINK=#000088 VLINK=#000088 ALINK=#000088>
+	<TABLE WIDTH=100% BORDER=0><TR><TD VALIGN=TOP WIDTH=100%>
+		<FONT SIZE=+2>Golem Designs</FONT>
+		<BR>
+		<FONT SIZE=+1>Online Auction</FONT>
+	</TD><TD VALIGN=TOP ALIGN=LEFT>
+		<FORM ACTION=/cgi-bin/auction.pl METHOD=POST>
+		<INPUT TYPE=TEXT NAME=searchstring>
+		<INPUT TYPE=SUBMIT VALUE="Search">
+		<INPUT TYPE=HIDDEN NAME=action VALUE="search">
+		<FONT SIZE=-2><INPUT TYPE=RADIO NAME=searchtype VALUE="keyword" CHECKED>keyword <INPUT TYPE=RADIO NAME=searchtype VALUE="username">username </FONT>
+		</FORM>
+	</TD></TR></TABLE>
+	<P>
+<H2>Auction Categories</H2><TABLE WIDTH=100% BORDER=1>
+<TR><TD ALIGN=CENTER BGCOLOR=#BBBBBB><B>Category</B></TD><TD ALIGN=CENTER BGCOLOR=#BBBBBB><B>Items</B></TD></TR><TR><TD BGCOLOR=#EEEEEE><A HREF=auction.pl?category=blackhills>Black Hills Gold</A></TD><TD BGCOLOR=#EEEEEE>1</TD></TR><TR><TD BGCOLOR=#EEEEEE><A HREF=auction.pl?category=books>Books</A></TD><TD BGCOLOR=#EEEEEE>0</TD></TR><TR><TD BGCOLOR=#EEEEEE><A HREF=auction.pl?category=collectibles>Collectibles</A></TD><TD BGCOLOR=#EEEEEE>5</TD></TR><TR><TD BGCOLOR=#EEEEEE><A HREF=auction.pl?category=computers>Computer Related</A></TD><TD BGCOLOR=#EEEEEE>0</TD></TR><TR><TD BGCOLOR=#EEEEEE><A HREF=auction.pl?category=gold>More Gold</A></TD><TD BGCOLOR=#EEEEEE>0</TD></TR><TR><TD BGCOLOR=#EEEEEE><A HREF=auction.pl?category=ham>Ham Radio Equipment</A></TD><TD BGCOLOR=#EEEEEE>0</TD></TR><TR><TD BGCOLOR=#EEEEEE><A HREF=auction.pl?category=hobby>Hobbyist Stuff</A></TD><TD BGCOLOR=#EEEEEE>0</TD></TR><TR><TD BGCOLOR=#EEEEEE><A HREF=auction.pl?category=junk>Yard Sale</A></TD><TD BGCOLOR=#EEEEEE>0</TD></TR><TR><TD BGCOLOR=#EEEEEE><A HREF=auction.pl?category=music>Music CDs and Tapes</A></TD><TD BGCOLOR=#EEEEEE>3</TD></TR><TR><TD BGCOLOR=#EEEEEE><A HREF=auction.pl?category=other>Misc Items</A></TD><TD BGCOLOR=#EEEEEE>2</TD></TR><TR><TD BGCOLOR=#EEEEEE><A HREF=auction.pl?category=photo>Photographic Equipment</A></TD><TD BGCOLOR=#EEEEEE>0</TD></TR><TR><TD BGCOLOR=#EEEEEE><A HREF=auction.pl?category=specials>Special Close Out Jewelry</A></TD><TD BGCOLOR=#EEEEEE>3</TD></TR><TR><TD BGCOLOR=#EEEEEE><A HREF=auction.pl?category=sterling>Strictly Sterling</A></TD><TD BGCOLOR=#EEEEEE>3</TD></TR></TABLE>
+<P><P ALIGN=CENTER><FONT SIZE=-1><A HREF=auction.pl>[Category List]</A> <A HREF=auction.pl?action=new>[Post New Item]</A> <A HREF=auction.pl?action=reg>[New Registration]</A> <A HREF=auction.pl?action=creg>[Change Registration]</A> <A HREF=auction.pl?action=closed>[Closed Auctions]</A> </FONT></P>
+<P>
+<CENTER><FONT SIZE=-1><A HREF="../index.html">TheGolemsPlace</A></FONT></CENTER>
+</BODY>
+</HTML>

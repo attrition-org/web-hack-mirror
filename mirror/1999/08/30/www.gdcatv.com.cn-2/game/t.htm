@@ -1,0 +1,56 @@
+<html>
+
+<head>
+<title>上帧</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<script>
+<!--
+
+if (document.images) {            
+   imgWhatsNewOn = new Image();  imgWhatsNewOn.src = "t-11a.gif";
+   
+
+   imgWhatsNewOff = new Image();  imgWhatsNewOff.src = "t-11.gif";
+ 
+}
+
+function imgOn(imgName)
+{
+   if (document.images) {
+      document[imgName].src = eval(imgName + "On.src");       
+   }
+}
+
+function imgOff(imgName)
+{
+   if (document.images) {
+      document[imgName].src = eval(imgName + "Off.src");        
+   }
+}
+//-->
+</script></head>
+
+<body bgcolor="#000000" text="#FFFFFF"
+
+style="position:absolute; width:967px; height:128px; z-index:1; left: 2px; top: 1px">
+<div align="left">
+
+<table border="0" cellpadding="0" cellspacing="0" width="24%" height="28">
+  <tr>
+    <td width="48%" height="37" align="left"><A HREF="../index.html" target="_top" ONMOUSEOVER="imgOn('imgWhatsNew')" ONMOUSEOUT="imgOff('imgWhatsNew')">
+<IMG SRC="t-11.gif" BORDER=0 HSPACE=0 VSPACE=0 align=left  ALT="广东视讯宽带网" NAME="imgWhatsNew">
+</A></td>
+    <td width="73%" height="37" align="left"><img src="t-12.gif" width="154" height="128"
+    alt="t-12.gif (17676 bytes)"></td>
+    <td width="28%" height="96"><img src="t-2.jpg" width="250" height="128"
+    alt="t-2.jpg (10224 bytes)"></td>
+    <td width="28%" height="96"><img src="t-3.jpg" width="226" height="128"
+    alt="t-3.jpg (6341 bytes)"></td>
+  </tr>
+</table>
+
+<p>　</p>
+</div>
+</body>
+</html>
+

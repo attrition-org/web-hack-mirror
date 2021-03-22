@@ -1,0 +1,90 @@
+<%@ LANGUAGE = JScript %>
+
+<!-- #INCLUDE VIRTUAL="ADOJAVAS.inc" -->
+
+<%
+
+//cookie
+
+var koekje = "" + Request.Cookies("distec");
+if (koekje == 'NL') { Session("lang") = koekje; }
+else {	
+if (koekje == 'FR') { Session("lang") = koekje; }
+}
+%>
+
+<html>
+
+<head>
+
+<title>Welcome at Distec sa/nv</title>
+	<META NAME="keywords" CONTENT="ups, hp, calculators">
+	<META NAME="description" CONTENT="">
+	<META NAME="Author" CONTENT="Prosite, info@prosite.be, + 32 16 82.02.51">
+
+<script language="JavaScript">
+	<!-- 
+		function gomail1(){
+			if (document.selecter.taal1.options[document.selecter.taal1.selectedIndex].value != "none") {
+				location = document.selecter.taal1.options[document.selecter.taal1.selectedIndex].value
+			}
+		}
+	//-->
+</script>
+
+<script language="JavaScript">
+	<!-- 
+		function gomail2(){
+			if (document.selecter.taal2.options[document.selecter.taal2.selectedIndex].value != "none") {
+				location = document.selecter.taal2.options[document.selecter.taal2.selectedIndex].value
+			}
+		}
+	//-->
+</script>
+
+
+</head>
+
+<body bgcolor="White" leftmargin=0 topmargin=0 link="#9C0000" vlink="#9C0000" alink="#000066">
+
+<FORM name="selecter">
+
+<TABLE cellspacing="0" cellpadding="0" BORDER="0" WIDTH="100%" HEIGHT="100%">
+<TR>
+    <TD ALIGN="center">
+	<img src="images/distec_logo.gif" width="400" height="157" alt="" border="0">
+	<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="taal1" onChange="gomail1(this.form)" size="1">
+	<OPTION VALUE="none">Welkom
+	<OPTION VALUE="none">-------------
+	<Option Value="taal.asp?lang=NL&choice=hpcalc">HP Calculators</option>
+	<Option Value="taal.asp?lang=NL&choice=hppalm">HP Palmtops</option>
+	<Option Value="taal.asp?lang=NL&choice=ups">UPS Best Power</option>
+	<Option Value="taal.asp?lang=NL&choice=pc">Computer & Netwerk</option>
+	</SELECT>&nbsp;&nbsp;&nbsp;&nbsp;
+	<select name="taal2" onChange="gomail2(this.form)" size="1">
+	<OPTION VALUE="none">Bienvenue
+	<OPTION VALUE="none">-------------
+	<Option Value="taal.asp?lang=FR&choice=hpcalc">HP Calculatrices</option>
+	<Option Value="taal.asp?lang=FR&choice=hppalm">HP Palmtops</option>
+	<Option Value="taal.asp?lang=FR&choice=ups">UPS Best Power</option>
+	<Option Value="taal.asp?lang=FR&choice=pc">Computer & Netwerk</option>
+	</SELECT>
+	
+	<P><BR><P><img name="submenu" src="submenu.gif" width="452" height="117" border="0" usemap="#m_submenu">
+	
+	<map name="m_submenu">
+<area shape="rect" coords="348,5,448,106" href="hppalm/index.asp">
+<area shape="rect" coords="233,5,333,106" href="hpcalc/index.asp">
+<area shape="rect" coords="120,5,220,106" href="ups/index.asp">
+<area shape="rect" coords="7,4,107,105" href="pc/index.asp">
+</map>
+	
+	</TD>
+</TR>
+</TABLE>
+
+</form>
+
+</body>
+</html>
+

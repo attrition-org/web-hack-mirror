@@ -1,0 +1,76 @@
+<HTML>
+<head>
+	<TITLE>President's Message</TITLE>
+
+<SCRIPT LANGUAGE = "JavaScript">
+browser_nm = navigator.appName;
+        br_version = parseInt(navigator.appVersion);
+             if (browser_nm == "Netscape" && br_version >= 3) version = "n3";
+             else version = "n2";
+
+             if (version == "n3") {
+             psu_homeon = new Image(); psu_homeon.src = "/images/psu_home1.gif";
+             psu_homeoff = new Image(); psu_homeoff.src = "/images/psu_home.gif";
+            }
+
+     function img_act(imgName) {
+             if (version == "n3") { imgOn = eval(imgName + "on.src"); document [imgName].src
+			 = imgOn; }
+     }
+
+     function img_inact(imgName) {
+             if (version == "n3") { imgOff = eval(imgName + "off.src"); document [imgName].src = imgOff; }
+
+     }
+</SCRIPT>
+</head>
+
+<BODY BGCOLOR="#FFFFF0" TEXT="#000000" LINK="#0000ff" VLINK="#005500" ALINK="#00ff00" LEFTMARGIN=0 TOPMARGIN=0 >
+<FONT FACE="Verdana, Arial, Helvetica" SIZE=2>
+
+<center><img src="images/t_pre.gif" align="top" border="0" alt="President's Message"></center><p>
+<hr><p>
+<table width="80%" align="center" valign="top">
+<tr><td><FONT FACE="Verdana, Arial, Helvetica" SIZE=2>
+    <table align=left border=0 cellspacing=0 cellpadding=0 >
+	<tr><td><img src="images/pre.gif" alt="President Picture">&nbsp; &nbsp;</td></tr>
+	</table><p>
+As the new millennium begins, the opportunities for you to learn and to master the tools needed for a successful tomorrow are greater than ever.  Our University is proud to offer programs and experiences designed to develop in students a lifetime commitment to learning. <p> 
+
+Today the University's mission as a multi-purpose professional school is carried out in an environment which encourages intellectual and scholarly development; it fosters openness to a wide range of ideas, cultures, and people; and it enhances personal growth.  All our students, faculty, and staff are united in that effort.<p>
+
+The student body matches the diversity of the great metropolitan area of Los Angeles in which we are located.  Instructed by outstanding teachers and field practitioners, students benefit from small classes, the ready accessibility of computer labs, extensive library collections, and opportunities for field-based assignments in corporations with global markets.  Admission requirements and tuition target students whose needs often are not met by larger metropolitan institutions which can be extremely competitive and expensive. <p>
+
+All courses are geared toward an international student body whose unique needs are understood.  The campus has a friendly administration and staff who understand that students must cope with homesickness, cultural alienation, the requirements of the Immigration and Naturalization Service (INS), and the academic challenges of non-native English speakers.<p>  
+
+After you review this introductory brochure, please contact the campus for more information.  You will find that your inquiries are received enthusiastically and answered promptly.<p>
+
+Good luck.  I hope we meet in the near future.<p>
+
+Jae Duk Kim, Ph.D.<br>
+President<br>
+<p>
+<center><a href="about.htm"><b>Go Back</b></a><br>
+<a href="mailto:president@psuca.edu">Mail to President</a></center>
+</td></tr>
+</table><p>
+<hr><p>
+<center>
+<A HREF="index.html" TARGET="browser" onMouseover = "img_act('psu_home')" onMouseout = "img_inact('psu_home')">
+<IMG SRC="images/psu_home.gif" ALT="PSU Home" ALIGN=TOP BORDER=0 name="psu_home"></A>
+</center><p>
+
+<center><FONT FACE="Verdana, Arial, Helvetica" SIZE=1>
+| <a href="academics.htm">Academics</as> | <a href="admission.htm">Admission</a> |
+<a href="alumni.htm">Alumni</a> | <a href="calendar.htm">Calendar</a> |
+<a href="campus.htm">LA Campus</a> | <br>
+
+| <a href="degree.htm">Degrees</a> | <a href="facilities.htm">Facilities</a> |
+<a href="international.htm">International</a> |
+<a href="library.htm">Library</a> | <p>
+
+Copyright&copy; 1928 - 2000 Pacific States University<br>
+<a href="mailto:webmaster@psuca.edu">Webmaster</a></font></center></p>
+
+</BODY>
+</HTML>

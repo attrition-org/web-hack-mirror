@@ -1,0 +1,49 @@
+This is for danny . router 208.145.138.2
+password : superman
+en: 168+88
+
+Current configuration:
+!
+version 11.2
+service udp-small-servers
+service tcp-small-servers
+!
+hostname 168clubgate
+!
+enable secret 5 $1$DqeZ$EBnv0qQzBlMlLxFY7fj470
+enable password superman
+!
+ip subnet-zero
+ip domain-name 1688.com
+ip name-server 208.145.138.8
+!
+interface Ethernet0
+ ip address 208.145.138.2 255.255.255.0
+!
+interface Serial0
+ ip unnumbered Ethernet0
+!
+interface Serial1  
+ no ip address
+ encapsulation frame-relay
+ bandwidth 384
+ frame-relay lmi-type ansi
+!
+interface Serial1.1 point-to-point
+ description Connection to IDN
+ ip unnumbered Ethernet0
+ frame-relay interface-dlci 16
+!
+router eigrp 1
+ network 208.145.138.0
+ network 208.145.137.0
+!
+no ip classless
+ip route 0.0.0.0 0.0.0.0 208.145.138.1
+snmp-server community public RO
+!
+line con 0
+ exec-timeout 0 0
+line aux 0
+ transport input all
+line vty 0 4  

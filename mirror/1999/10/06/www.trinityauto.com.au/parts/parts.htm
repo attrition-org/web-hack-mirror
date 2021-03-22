@@ -1,0 +1,145 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+  <script language="JavaScript">
+<!--
+function MM_initTimelines() {
+    //MM_initTimelines() Copyright 1997 Macromedia, Inc. All rights reserved.
+    var ns = navigator.appName == "Netscape";
+    document.MM_Time = new Array(1);
+    document.MM_Time[0] = new Array(2);
+    document.MM_Time["Timeline1"] = document.MM_Time[0];
+    document.MM_Time[0].MM_Name = "Timeline1";
+    document.MM_Time[0].fps = 15;
+    document.MM_Time[0][0] = new String("sprite");
+    document.MM_Time[0][0].slot = 1;
+    if (ns)
+        document.MM_Time[0][0].obj = document.Layer1;
+    else
+        document.MM_Time[0][0].obj = document.all ? document.all["Layer1"] : null;
+    document.MM_Time[0][0].keyFrames = new Array(1, 20);
+    document.MM_Time[0][0].values = new Array(5);
+    document.MM_Time[0][0].values[0] = new Array(413,395,377,358,340,322,304,286,267,249,231,213,194,176,158,140,122,103,85,67);
+    document.MM_Time[0][0].values[0].prop = "left";
+    document.MM_Time[0][0].values[1] = new Array(25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25);
+    document.MM_Time[0][0].values[1].prop = "top";
+    if (!ns) {
+        document.MM_Time[0][0].values[0].prop2 = "style";
+        document.MM_Time[0][0].values[1].prop2 = "style";
+    }
+    document.MM_Time[0][0].values[2] = new Array(118,118,118,118,118,118,118,119,119,119,119,119,119,120,120,120,120,120,120,121);
+    document.MM_Time[0][0].values[2].prop = "width";
+    if (!ns)
+        document.MM_Time[0][0].values[2].prop2 = "style";
+    document.MM_Time[0][0].values[3] = new Array(50,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49);
+    document.MM_Time[0][0].values[3].prop = "height";
+    if (!ns)
+        document.MM_Time[0][0].values[3].prop2 = "style";
+    document.MM_Time[0][0].values[4] = new Array("2","1");
+    document.MM_Time[0][0].values[4].prop = "zIndex";
+    if (!ns)
+        document.MM_Time[0][0].values[4].prop2 = "style";
+    document.MM_Time[0][1] = new String("sprite");
+    document.MM_Time[0][1].slot = 2;
+    if (ns)
+        document.MM_Time[0][1].obj = document.Layer2;
+    else
+        document.MM_Time[0][1].obj = document.all ? document.all["Layer2"] : null;
+    document.MM_Time[0][1].keyFrames = new Array(1, 20);
+    document.MM_Time[0][1].values = new Array(4);
+    document.MM_Time[0][1].values[0] = new Array(3,13,23,33,43,53,63,73,83,93,103,113,123,133,143,153,163,173,183,193);
+    document.MM_Time[0][1].values[0].prop = "left";
+    document.MM_Time[0][1].values[1] = new Array(51,51,51,51,51,50,50,50,50,50,50,50,50,50,50,49,49,49,49,49);
+    document.MM_Time[0][1].values[1].prop = "top";
+    if (!ns) {
+        document.MM_Time[0][1].values[0].prop2 = "style";
+        document.MM_Time[0][1].values[1].prop2 = "style";
+    }
+    document.MM_Time[0][1].values[2] = new Array(40,40,40,40,41,41,41,41,42,42,42,42,43,43,43,43,44,44,44,45);
+    document.MM_Time[0][1].values[2].prop = "width";
+    if (!ns)
+        document.MM_Time[0][1].values[2].prop2 = "style";
+    document.MM_Time[0][1].values[3] = new Array("3","2");
+    document.MM_Time[0][1].values[3].prop = "zIndex";
+    if (!ns)
+        document.MM_Time[0][1].values[3].prop2 = "style";
+    document.MM_Time[0].lastFrame = 20;
+    for (i=0; i<document.MM_Time.length; i++) {
+        document.MM_Time[i].ID = null;
+        document.MM_Time[i].curFrame = 0;
+        document.MM_Time[i].delay = 1000/document.MM_Time[i].fps;
+    }
+}
+//-->
+</script>
+  <script language="JavaScript">
+<!--
+function MM_timelinePlay(tmLnName, myID) { //v1.2
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,propNum,theObj,firstTime=false;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (myID == null) { myID = ++tmLn.ID; firstTime=true;}//if new call, incr ID
+  if (myID == tmLn.ID) { //if Im newest
+    setTimeout('MM_timelinePlay("'+tmLnName+'",'+myID+')',tmLn.delay);
+    fNew = ++tmLn.curFrame;
+    for (i=0; i<tmLn.length; i++) {
+      sprite = tmLn[i];
+      if (sprite.charAt(0) == 's') {
+        if (sprite.obj) {
+          numKeyFr = sprite.keyFrames.length; firstKeyFr = sprite.keyFrames[0];
+          if (fNew >= firstKeyFr && fNew <= sprite.keyFrames[numKeyFr-1]) {//in range
+            keyFrm=1;
+            for (j=0; j<sprite.values.length; j++) {
+              props = sprite.values[j]; 
+              if (numKeyFr != props.length) {
+                if (props.prop2 == null) sprite.obj[props.prop] = props[fNew-firstKeyFr];
+                else        sprite.obj[props.prop2][props.prop] = props[fNew-firstKeyFr];
+              } else {
+                while (keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]) keyFrm++;
+                if (firstTime || fNew==sprite.keyFrames[keyFrm-1]) {
+                  if (props.prop2 == null) sprite.obj[props.prop] = props[keyFrm-1];
+                  else        sprite.obj[props.prop2][props.prop] = props[keyFrm-1];
+        } } } } }
+      } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+      if (fNew > tmLn.lastFrame) tmLn.ID = 0;
+  } }
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" onLoad="MM_timelinePlay('Timeline1')">
+<div id="Layer1" style="position:absolute; left:413px; top:25px; width:118px; height:50px; z-index:2"><font face="Arial, Helvetica, sans-serif"><b><font size="7" color="#0000FF">Parts</font></b></font></div>
+<div id="Layer2" style="position:absolute; left:3px; top:51px; width:40px; height:36px; z-index:3"><b><font size="6" color="#FF0000">Department</font></b></div>
+<div id="Layer3" style="position:absolute; left:150px; top:126px; width:50px; height:39px; z-index:4"><img src="../curve.gif" width="56" height="227"></div>
+<div id="Layer4" style="position:absolute; left:215px; top:228px; width:308px; height:72px; z-index:1"> 
+  <ul>
+    <li><font face="Arial, Helvetica, sans-serif" size="2">Parts Hotline: (07) 
+      4050 5080</font></li>
+    <li><font face="Arial, Helvetica, sans-serif" size="2">Parts Fax: (07) 4051 
+      9079</font></li>
+    <li><font face="Arial, Helvetica, sans-serif" size="2">Parts Mobile Service: 
+      (0417) 646 101</font></li>
+    <li><font face="Arial, Helvetica, sans-serif" size="2">Switchboard: (07) 4050 
+      5000</font></li>
+  </ul>
+  </div>
+<div id="Layer5" style="position:absolute; left:57px; top:178px; width:96px; height:128px; z-index:6"><img src="../shadow.JPG" width="104" height="129"></div>
+<div id="Layer6" style="position:absolute; left:216px; top:338px; width:173px; height:20px; z-index:7; background-color: #FFFFFF"> 
+  <p><font face="Arial, Helvetica, sans-serif" size="2"><a href="bulletins.htm"><font color="#FF3333"><b>Trinity 
+    Parts News Bulletins</b></font></a></font></p>
+</div>
+<div id="Layer7" style="position:absolute; left:68px; top:167px; width:63px; height:43px; z-index:8"><img src="Shinnie_small.JPG" width="105" height="130"></div>
+<div id="Layer8" style="position:absolute; left:216px; top:126px; width:337px; height:82px; z-index:9"><b>Our 
+  Parts Department</b> is one of the best stocked in Queensland. If you are in 
+  need of a part for your Ford, Honda, Suzuki, Kia, Land Rover or Hyundai, try 
+  us first. If we don't have it in stock, then we'll do our very best to locate 
+  it for you as soon as possible. </div>
+<div id="Layer9" style="position:absolute; left:99px; top:311px; width:72px; height:25px; z-index:10"> 
+  <p><font face="Arial, Helvetica, sans-serif" size="1">David Shinnie Parts Manager</font></p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,786 @@
+<SCRIPT LANGUAGE="JavaScript">
+function opencomments()
+{
+   window.open('comment/comment.asp?page_id=1','box', 'toolbar=no,resizable=yes,scrollbars=yes,width=600,height=400')
+}
+function onDDLBChange(ddlb)
+{
+    iiSel = ddlb.selectedIndex;
+    if (iiSel != -1)
+    {
+        iVal = ddlb.options[iiSel].value
+        if (iVal != "-1")
+        {
+            ddlb.selectedIndex = 0
+            location.href = iVal
+        }
+    }
+}
+// Category descriptions
+var strHCFAStateofReadiness = "Documentation of HCFA's internal and external Y2K preparation and readiness including certification information for Medicare External Systems (Part A and Part B Contractors)."
+var strY2KCommunications = "Many key HCFA Official Correspondence, Speeches, Testimonies, Presentations advertisements and other Y2K Publications providing insight into HCFA's Y2K readiness activities for the new millennium."
+var strY2KPreparations = "Step-by-step guide for the health care community to use to make their office or facility compliant with the new millennium.  The pages provide instruction, information and other resources for each step of a Y2K project."
+var strTestingExperience = "Voluntarily-submitted future date testing of external data exchange testing experiences between health care entities."
+var strFreeSoftwarePlanningTools = "Includes free instructional and planning tools including the complete Y2K Preparations Guide with checklists, software and links to other materials to aid in understanding and in achieving Y2K compliance."
+var strLearningSessions = "Learning Sessions including national conferences for any and all Health Care Organizations and Special Interest sessions."
+var strCertificationProcess = "Information about HCFA certification and re-certification (necessary after changes subsequent to initial certification) of internal and external systems."
+var strContingencyPlanning = "HCFA's Y2K business contingency planning handbook, links to many other contingency planning models and HCFA's own Y2K Contingency Plan."
+var strComplianceIssues = "HCFA's definition of compliance, specific compliance requirements, and compliance standards."
+var strHealthPrograms = "Contains pertinent Y2K information on the major health care programs and operations within HCFA including Medicare, Medicaid, and Managed Care and status of the activities related to them."
+var strExternalLinks = "Governmental and commercial Y2K sites including FDA (medical device Y2K compliance), EDS (database of computer equipment), NIST (National Industry Alliance of Hardware & Software) and many others."
+var strFAQs = "Contains answers and links to information answering questions that range from HCFA\'s Y2K readiness to the windowing issue as related to data exchange agreements and formats."
+
+// What's New link descriptions
+var strTestingProcedures = "Contains Medicare contractor contacts for information concerning front-end EDI testing and each contractor's front-end testing procedures."
+var strTestingMaterials = "Contains a presentation on Y2K Future Date Testing of Electronic Claims, a Y2K Provider Testing Guide in Q&A Format, and Myths on Provider Y2K Testing."
+var strReadinessDisclosureAct = "Enacted in Public Law 105-271 Oct. 19, 1998, 112 Statutes at Large 2386. The text of the Year 2000 Information and Readiness Disclosure Act has been formatted for presentation purposes."
+
+// Contact Info link descriptions
+var strProviderContacts = "Ask non-EDI related questions of Medicare contractors (Fiscal Intermediaries and Carriers), HCFA Y2K Coordinators and Medicaid Directors by state. Contains contact phone numbers."
+var strSubmitterContacts = "Contains contact phone numbers for information about low-cost Medicare billing software from Medicare contractors (Fiscal Intermediaries and Carriers) and front-end EDI testing of claims with them."
+var str800PhoneNumber = "The target audience is health care plans and providers. The purpose of the line is limited to giving and receiving information about Y2K issues to plans and providers."
+var strBeneficiaryContacts = "Contains contact phone numbers for Medicare beneficiaries to use.  They are by local region and Medicaid directors by state for beneficiary-related questions."
+var strGuestbook = "Use our guestbook to provide comments and include optional personal ID information if you choose."
+var strY2KEmail = "Send an email to the HCFA Provider Outreach Team."
+var strComments = "An alternate way to provide comments on our Web site.  Use our guestbook with optional personal ID information if you choose."
+
+function setCategoryDesc(str)
+{
+   document.y2kcategories.txt.value = str
+}
+function clearCategoryDesc()
+{
+   document.y2kcategories.txt.value = ""
+}
+function isNS(ver)
+{
+   var user_agent
+   var app_version
+   var fNS = 0
+
+   user_agent = new String(navigator.appName)
+   app_version = new String(navigator.appVersion)
+
+   // Is it IE?
+   msie = (user_agent.indexOf("MSIE") != -1)
+
+   if (ver == 3)
+      // It's Netscape 3 if it's not IE and it's not version 4 of the browser being used.
+      fNS = (!msie && (app_version.charAt(0) == "3") )
+   else if (ver == 4)
+      // It's Netscape 4 if it's not IE and it's version 4 of the browser being used.
+      fNS = (!msie && (app_version.charAt(0) == "4") )
+
+   return fNS
+}
+function stateofreadinessMouseOver(e)
+{
+   setCategoryDesc(strHCFAStateofReadiness)
+   return true;
+}
+function y2kcommunicationsMouseOver(e)
+{
+   setCategoryDesc(strY2KCommunications)
+   return true;
+}
+function y2kpreparationsMouseOver(e)
+{
+   setCategoryDesc(strY2KPreparations)
+   return true;
+}
+function testingexperienceMouseOver(e)
+{
+   setCategoryDesc(strTestingExperience)
+   return true;
+}
+function freetoolsMouseOver(e)
+{
+   setCategoryDesc(strFreeSoftwarePlanningTools)
+   return true;
+}
+function learningsessionsMouseOver(e)
+{
+   setCategoryDesc(strLearningSessions)
+   return true;
+}
+function certificationprocessMouseOver(e)
+{
+   setCategoryDesc(strCertificationProcess)
+   return true;
+}
+function contingencyplanningMouseOver(e)
+{
+   setCategoryDesc(strContingencyPlanning)
+   return true;
+}
+function complianceissuesMouseOver(e)
+{
+   setCategoryDesc(strComplianceIssues)
+   return true;
+}
+function healthprogramsMouseOver(e)
+{
+   setCategoryDesc(strHealthPrograms)
+   return true;
+}
+function y2kgovlinksMouseOver(e)
+{
+   setCategoryDesc(strExternalLinks)
+   return true;
+}
+</SCRIPT>
+
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<TITLE>HCFA's Y2K (Year 2000) Home Page</TITLE>
+
+<META http-equiv="PICS-Label" content='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l gen true comment "RSACi North America Server" by "GOverland@hcfa.gov" for "http://www.hcfa.gov" on "1996.07.06T21:35-0500" r (n 0 s 0 v 0 l 0))'>
+
+<!-- This file includes shellnav.htm Version 2.2 designed & maintained by OCOS, January 5, 1999 -->
+
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+
+<!-- add any specific keywords which are appropriate; refrain from using hcfa, medicare, medicaid, health, insurance -->
+<meta name="keywords" content="Certification Process,Internal Systems,External Systems ">
+
+<!-- include a small, descriptive abstract, no more than 2 sentences; this text will be displayed by some search engines -->
+<meta name="description" content="HCFA's Certification Process for HCFA Internal and External Systems ">
+
+<!-- file name default.htm; Last revised 11/6/99 by Will King, KPMG -->
+<!-- 11/16/99 removed phone, envelope, changed what's new, search y2k, and contact info pictures to filled tables
+added a link to other what's new entries, changed health care programs to Medicare, Medicaid, and MCO-->
+<!-- 12/2/99 added information symposium information-->
+
+<script language="JavaScript">
+<!-- hide this script from non-javascript-enabled browsers
+
+// function that displays status bar message
+
+var showMsg = navigator.userAgent != "Mozilla/4.0 (compatible; MSIE 4.0; Mac_PowerPC)";
+function dmim(msgStr) {
+  document.returnValue = false;
+  if (showMsg) { 
+    window.status = msgStr;
+    document.returnValue = true;
+  }
+}
+
+// stop hiding -->
+</script>
+
+<style>
+<!--a:visited.ql{color:purple;} 
+a:visited:hover.ql{color:#FF0000;}-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000"
+link="#0000FF" vlink="#800080" alink="#FF0000" topmargin="10"
+leftmargin="10">
+
+<p align="center" style="margin-top: 0; margin-bottom: 0">
+
+<center>
+
+<img src="/images/audienc3.gif" width="600" height="50" usemap="#audienc3" ismap  alt="Navigation Bar" border="0" >
+
+<map name="audienc3">
+<area shape="rect" coords="542,32,593,45"  href="../search.htm"  onmouseover="dmim('Search hcfa.gov'); return document.returnValue;" onmouseout="dmim(''); return document.returnValue;">
+<area shape="rect" coords="464,33,501,46"  href="/webfaq2.htm"  onmouseover="dmim('Frequently Asked Questions'); return document.returnValue;" onmouseout="dmim(''); return document.returnValue;">
+<area shape="rect" coords="295,33,425,46"  href="/customer.htm"  onmouseover="dmim('Customer Service'); return document.returnValue;" onmouseout="dmim(''); return document.returnValue;">
+<area shape="rect" coords="217,33,256,45"  href="../init/children.htm"  onmouseover="dmim('Child Health Insurance Program Information'); return document.returnValue;" onmouseout="dmim(''); return document.returnValue;">
+<area shape="rect" coords="110,33,179,45"  href="../medicaid/medicaid.htm"  onmouseover="dmim('Medicaid Program Information'); return document.returnValue;" onmouseout="dmim(''); return document.returnValue;">
+<area shape="rect" coords="5,35,72,45"  href="../medicare/medicare.htm"  onmouseover="dmim('Medicare Program Information'); return document.returnValue;" onmouseout="dmim(''); return document.returnValue;">
+<area shape="rect" coords="520,5,593,19"  href="../audience/students.htm"  onmouseover="dmim('Students'); return document.returnValue;" onmouseout="dmim(''); return document.returnValue;">
+<area shape="rect" coords="405,5,502,19"  href="../audience/resrch.htm"  onmouseover="dmim('Researchers'); return document.returnValue;" onmouseout="dmim(''); return document.returnValue;">
+<area shape="rect" coords="341,5,391,20"  href="../audience/states.htm"  onmouseover="dmim('States'); return document.returnValue;" onmouseout="dmim(''); return document.returnValue;">
+<area shape="rect" coords="190,4,327,19"  href="../audience/planprov.htm"  onmouseover="dmim('Plans and Providers'); return document.returnValue;" onmouseout="dmim(''); return document.returnValue;">
+<area shape="rect" coords="71,5,175,20"  href="../audience/benes.htm"  onmouseover="dmim('Beneficiaries'); return document.returnValue;" onmouseout="dmim(''); return document.returnValue;">
+<area shape="rect" coords="7,4,55,19"  href="../index.html"  onmouseover="dmim('Go to HCFA\'s Home Page'); return document.returnValue;" onmouseout="dmim(''); return document.returnValue;">
+<area shape="rect" coords="0,0,600,50"  href="../index.html"  onmouseover="dmim(''); return document.returnValue;" onmouseout="dmim(''); return document.returnValue;">
+<AREA SHAPE="DEFAULT" NOHREF>
+</map>
+
+</center></p>
+
+<div align="center">
+  <table border="0" width="765">
+    <tr>
+      <td width="763" align="center" valign="middle" colspan="2">
+        <p style="margin-top: 0; margin-bottom: 0"><center>&nbsp;<img border="0" src="images/hdr5sm.gif" width="361" height="34"></center>
+      </td>
+    </tr>
+    <tr>
+      <td width="381" align="center" valign="middle">
+        <p align="center"><a href="dayone/provroll.htm"><img border="0" src="images/provroll.gif" width="237" height="20"></a>
+      </td>
+      <td width="382" align="center" valign="middle">
+        <a href="dayone/keycont.htm"><img border="0" src="images/24hour.gif" width="192" height="21"></a>
+      </td>
+    </tr>
+    <tr>
+      <td width="763" align="center" valign="middle" colspan="2">
+        <p align="left"><font size=2><b>T</B>his Web site is an important part
+        of an unprecedented HCFA Y2K outreach effort. It is designed to provide
+        essential and useful information and tools to all involved organizations
+        and individuals. The Web site accomplishes this as widely and as quickly
+        as current technology permits.&nbsp; This <a href="disclaim.htm">Legal Disclaimer</a> 
+        is made in accordance with Y2K
+    Information and Readiness Disclosure Act.</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="763" align="center" valign="middle" colspan="2">
+        <font size="2" color="#FF0000"><b>Last Updated 12/28/1999</b></font>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div align="center">
+  <center>
+
+<table border="3" width="765" height="350" cellspacing="2">
+
+<tr>
+<td width="175" height="100" rowspan="2" valign="top" align="center">
+
+<!-- Y2K Search form -->
+<FORM action="/search/scripts/query.idq" method=get>	
+<table border="0" width="138" bgcolor="#0000FF">
+  <tr>
+    <td width="100%">
+      <p align="center"><font color="#F8FB7D"><b>Search Y2K</b></font></td>
+  </tr>
+</table>
+<input type="text" size="13" maxlength="20" name="CiRestriction">
+<input type="submit" value="Go">
+<INPUT name=CiMaxRecordsPerPage type=hidden value=10> 
+<INPUT name=CiScope type=hidden value=/y2k> 
+<INPUT name=SearchArea type=hidden value=/y2k/> 
+<INPUT name=TemplateName type=hidden  value=query> 
+<INPUT name=CiSort type=hidden value="rank[d]"> 
+<INPUT name=HTMLQueryForm type=hidden value="/y2k/default.htm"> 
+</form>
+<a href="y2kindex.htm" class=ql><font size="3">Y2K Site Index</font></a>
+<br>
+</td>
+
+<form NAME="y2kcategories" align="center">
+<!--HCFA's State of Readiness drop-down begins here. 
+
+Keep titles under 35 characters to maintain layout and avoid sideways scrolling problems.
+
+Keep titles brief and to the point-->
+
+
+
+<SCRIPT LANGUAGE="JavaScript">
+function WriteTDTag(bgColor)
+{
+if (!isNS(3))
+    document.writeln('<td width="295" height="50" valign="top" align="left" bgcolor="'+bgColor+'">')
+else
+    document.writeln('<td width="295" height="50" valign="top" align="left">')
+}
+</SCRIPT>
+
+<SCRIPT LANGUAGE="JavaScript">
+WriteTDTag("#DDDDDD")
+</SCRIPT>
+
+<img src="images/bullet.gif" width="14" height="14"><font size="2"><b>HCFA's State of Readiness</b></font>&nbsp;
+<font size="1">(Updated-10/22/99)</font>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<select name="stateofreadiness" onFocus="setCategoryDesc(strHCFAStateofReadiness)" onMouseOver="setCategoryDesc(strHCFAStateofReadiness)" onMouseOut="clearCategoryDesc()" onChange="onDDLBChange(this)">
+	  
+	<option value="-1"></option>
+      <option value="sp042199.htm">Remarks from HCFA Administrator</option>
+      <option value="y2kfact5.htm">Compliance Definition Fact Sheet</option>
+      <option value="certproc.htm">Internal Systems Self-Certification</option>
+      <option value="certpext.htm">External System Certification</option>
+      <option value="bccp4web.htm">HCFA Contingency Plan</option>
+      <option value="statusgv.htm#supp">Supplied Systems</option>
+      <option value="hsssyst2.htm">Systems for Medicare Contractors</option>
+      <option value="statusgv.htm#prod">COTS/OEM Products</option>
+    </select>
+
+
+<!--Y2K Communications drop-down begins here.  
+
+Keep titles under 35 characters to maintain layout and avoid sideways scrolling problems.
+
+Keep titles brief and to the point-->
+
+
+<SCRIPT LANGUAGE="JavaScript">
+WriteTDTag("#DDDDDD")
+</SCRIPT>
+
+<img src="images/bullet.gif" border="0" width="14" height="14"><a href="y2kcommu.htm" onMouseOver="setCategoryDesc(strY2KCommunications)" onMouseOut="clearCategoryDesc()" class=ql><b><font size="2">Y2K Communications</font></b></a>&nbsp;
+<font size="1">(Updated-12/15/99)</font>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<select name="y2kcommunications" onFocus="setCategoryDesc(strY2KCommunications)" onMouseOver="setCategoryDesc(strY2KCommunications)" onMouseOut="clearCategoryDesc()" onChange="onDDLBChange(this)">
+
+      <option value="-1"></option>
+      <option value="y2kcommu.htm">Official Correspondence</option>
+      <option value="y2kcommu.htm#speech">Speeches</option>
+      <option value="y2kcommu.htm#mony">Testimony</option>
+      <option value="provouta.htm">Y2K Publications</option>
+    </select>
+  </tr>
+
+
+<!--Y2K Preparation drop-down begins here.   
+
+Keep titles under 35 characters to maintain layout and avoid sideways scrolling problems.
+
+Keep titles brief and to the point-->
+
+<tr>
+ 
+<SCRIPT LANGUAGE="JavaScript">
+WriteTDTag("#EEEEEE")
+</SCRIPT>
+
+  <img src="images/bullet.gif" width="14" height="14"><font size="2"><b><a href="y2kpreps.htm" onMouseOver="setCategoryDesc(strY2KPreparations)" onMouseOut="clearCategoryDesc()" class=ql>Suggested
+Y2K Preparations</a></b></font>&nbsp; <font size="1">(Updated-12/15/99)</font>
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;<select name="y2kpreparations" onFocus="setCategoryDesc(strY2KPreparations)" onMouseOver="setCategoryDesc(strY2KPreparations)" onMouseOut="clearCategoryDesc()" onChange="onDDLBChange(this)" size="1">
+
+      <option value="-1"></option>
+      <option value="y2kscope.htm">I. Understand Scope</option>
+      <option value="y2kguide.htm">II. Select Guideline or Tool</option>
+      <option value="y2kinvpr.htm">III. Inventory &amp; Prioritize</option>
+      <option value="y2kasses.htm">IV. Assess Y2K Readiness</option>
+      <option value="y2kcorre.htm">V. Correct Y2K Problems</option>
+      <option value="y2ktestt.htm">VI. Test Y2K Readiness</option>
+      <option value="y2kcplan.htm">VII. Contingency Plan</option>
+      <option value="y2kaddit.htm">VIII. Additional Resources</option>
+    </select>
+
+
+<!--Testing Experience drop-down begins here.   
+
+Keep titles under 35 characters to maintain layout and avoid sideways scrolling problems.
+
+Keep titles brief and to the point-->
+
+<SCRIPT LANGUAGE="JavaScript">
+WriteTDTag("#EEEEEE")
+</SCRIPT>
+
+<img src="images/bullet.gif" width="14" height="14"><a href="tradpart.htm" onMouseOver="setCategoryDesc(strTestingExperience)" onMouseOut="clearCategoryDesc()" class=ql><b><font size="2">Testing Experience</font></b></a>&nbsp;
+<font size="1">(Updated-12/11/99)</font>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<select name="testingexperience" onFocus="setCategoryDesc(strTestingExperience)" onMouseOver="setCategoryDesc(strTestingExperience)" onMouseOut="clearCategoryDesc()" onChange="onDDLBChange(this)" size="1">
+
+      <option value="-1"></option>
+      <option value="tradpart.htm">Trading Partners' Experience</option>
+      <option value="tradpart.htm#other">Other Contractors' Experience</option>
+      <option value="ttesting/default.htm">Testing: Tools and Guidelines</option>
+    </select>
+	</tr>
+
+<tr>
+<td width="175" height="150" valign="top" rowspan="3">
+	<table>
+	<tr>
+	<td width="175" valign="top" align="center">
+<table border="0" width="138" bgcolor="#0000FF">
+  <tr>
+    <td width="100%">
+      <p align="center"><font color="#F8FB7D"><b>What's New</b></font></td>
+  </tr>
+</table>
+	</td>
+	</tr>
+
+<!--Insert information for What's New section here. 
+
+Adjust spacing to satisfaction. 
+
+Keep titles brief to avoid wrapping text to next line -->
+	
+	<tr>
+	<td width="175" valign="top" align="left">
+<p style="margin-top: 0; margin-bottom: 0">
+<b>&#183; </b><a href="dayone/provroll.htm"><font size="2">Provider Y2K Rollover
+Guide</font></a></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<b>&#183; </b><a href="infosymp/infosymp.htm"><font size="2">Symposium for State
+Officials</font></a></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<b>&#183;</b> <a href="ediphone.htm" class=ql onMouseOver="setCategoryDesc(strTestingProcedures)" onMouseOut="clearCategoryDesc()"><font size="2">Testing Procedures</font></a>
+<br>
+
+<b>&#183;</b> <a href="provouta.htm" class=ql onMouseOver="setCategoryDesc(strTestingMaterials)" onMouseOut="clearCategoryDesc()"><font size="2">Testing Materials</font></a>
+<br>
+
+<b>&#183;</b> <a href="y2kusact.htm" class=ql onMouseOver="setCategoryDesc(strReadinessDisclosureAct)" onMouseOut="clearCategoryDesc()"><font size="2">Readiness Disclosure Act</font></a>
+<br>
+
+<b>&#183;</b> <a href="y2kpreps.htm" class=ql onMouseOver="setCategoryDesc(strY2KPreparations)" onMouseOut="clearCategoryDesc()"><font size="2">Suggested Y2K Preparations</font></a>
+</p>
+<p style="margin-top: 0; margin-bottom: 0">&#183; <font size="2"><a href="wnewradd.htm">Summary
+of all &quot;What's New&quot;</a></font>
+<br>
+</p>
+	</td>
+	</tr>
+	</table>
+</td>
+
+
+<!--Free Software/Planning Tools drop-down begins here.   
+
+Keep titles under 35 characters to maintain layout and avoid sideways scrolling problems.
+
+Keep titles brief and to the point-->
+
+<SCRIPT LANGUAGE="JavaScript">
+WriteTDTag("#DDDDDD")
+</SCRIPT>
+
+<img src="images/bullet.gif" width="14" height="14"><font size="2"><b>Free Software/Planning Tools</b></font>
+<font size="1">(Updated-10/22/99)</font>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<select name="freetools" onFocus="setCategoryDesc(strFreeSoftwarePlanningTools)" onMouseOver="setCategoryDesc(strFreeSoftwarePlanningTools)" onMouseOut="clearCategoryDesc()" onChange="onDDLBChange(this)" size="1">
+
+      <option value="-1"></option>
+      <option value="y2kparta.htm">Free Billing Software - Part A</option>
+      <option value="y2kpartb.htm">Free Billing Software - Part B</option>
+      <option value="y2kpreps.htm">Suggested Y2K Preparations</option>
+      <option value="ttesting/e2e-joe.htm">Format, Data &amp; Windowing Issue</option>
+      <option value="testplcy.htm">Data Exchange Testing Policy</option>
+      <option value="ttesting/default.htm#sba">SBA Tool Kit</option>
+      <option value="http://www.rx2000.org/data/documents/reports/title.asp">Healthcare
+      Preparedness Report</option>
+      <option value="http://www.rx2000.org/data/selfhelp.html">Rx2000 Solutions</option>
+      <option value="ttesting/default.htm#guide">Project/Testplan Guidelines</option>
+    </select>
+
+
+<!--Learning Sessions drop-down begins here.   
+
+Keep titles under 35 characters to maintain layout and avoid sideways scrolling problems.
+
+Keep titles brief and to the point-->
+
+
+<SCRIPT LANGUAGE="JavaScript">
+WriteTDTag("#DDDDDD")
+</SCRIPT>
+
+<img src="images/bullet.gif" width="14" height="14"><a href="training.htm" onMouseOver="setCategoryDesc(strLearningSessions)" onMouseOut="clearCategoryDesc()" class=ql><b><font size="2">Learning Sessions</font></b></a>&nbsp;
+<font size="1">(Updated-12/15/99)</font>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<select name="learningsessions" onFocus="setCategoryDesc(strLearningSessions)" onMouseOver="setCategoryDesc(strLearningSessions)" onMouseOut="clearCategoryDesc()" onChange="onDDLBChange(this)" size="1">
+
+      <option value="-1"></option>
+      <option value="infosymp/infosymp.htm">Information Symposium 12/8/99</option>
+      <option value="conferen/0922conf.htm">Electronic Claims Submitters</option>
+      <option value="http://www.rx2000.org/data/conferences/RSCMMP/present.asp">National
+      Conferences (general)</option>
+      <option value="conferen/0922conf.htm">National Conferences (vendors)</option>
+      <option value="http://www.rx2000.org/data/conferences/HalfDayBrief/locations_dates.asp">Public
+      Learning Sessions</option>
+    </select>
+  </tr>
+
+
+<!--Certification Process drop-down begins here.   
+
+Keep titles under 35 characters to maintain layout and avoid sideways scrolling problems.
+
+Keep titles brief and to the point-->
+
+
+  <tr>
+<SCRIPT LANGUAGE="JavaScript">
+WriteTDTag("#EEEEEE")
+</SCRIPT>
+
+<img src="images/bullet.gif" width="14" height="14"><b><font size="2">HCFA System Certification</font></b>&nbsp;
+<font size="1">(Updated-11/22/99)</font>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<select name="certificationprocess" onFocus="setCategoryDesc(strCertificationProcess)" onMouseOver="setCategoryDesc(strCertificationProcess)" onMouseOut="clearCategoryDesc()" onChange="onDDLBChange(this)" size="1">
+
+      <option value="-1"></option>
+      <option value="certproc.htm">Internal Systems Self-Certification</option>
+      <option value="certpext.htm">External System Certification</option>
+      <option value="ttesting/tpolicy/index.htm">Guidance on Continued Testing</option>
+    </select>
+
+
+<!--Contingency Planning drop-down begins here. 
+  
+Keep titles under 35 characters to maintain layout and avoid sideways scrolling problems.
+
+Keep titles brief and to the point-->
+
+
+<SCRIPT LANGUAGE="JavaScript">
+WriteTDTag("#EEEEEE")
+</SCRIPT>
+
+<img src="images/bullet.gif" width="14" height="14"><a href="contplan.htm" onMouseOver="setCategoryDesc(strContingencyPlanning)" onMouseOut="clearCategoryDesc()" class=ql><b><font size="2">Contingency Planning</font></b></a>&nbsp;
+<font size="1">(Updated-6/28/99)</font>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<select name="contingencyplanning" onFocus="setCategoryDesc(strContingencyPlanning)" onMouseOver="setCategoryDesc(strContingencyPlanning)" onMouseOut="clearCategoryDesc()" onChange="onDDLBChange(this)">
+      <option value="-1"></option>
+      <option value="bccp4web.htm">HCFA Contingency Plan</option>
+      <option value="990113hc.pdf">HCFA Y2K BCP Handbook</option>
+      <option value="http://www.va.gov/year2000/conguide/">VA Y2K Planning Guidelines</option>
+      <option value="http://www.gao.gov/special.pubs/bcpguide.pdf">GAO's Y2K BCCP</option>
+      <option value="http://www.itpolicy.gsa.gov/">GSA's Policyworks</option>
+      <option value="http://www.sba.gov/financing/fry2k.html">SBA Y2K Program</option>
+      <option value="http://www.gsa.gov/gsacio/ssay2kb1.htm">SSA's BCCP</option>
+    </select>
+  </tr>
+
+
+<!--Compliance Issues drop-down begins here.  
+
+Keep titles under 35 characters to maintain layout and avoid sideways scrolling problems.
+
+Keep titles brief and to the point-->
+
+<tr>
+<SCRIPT LANGUAGE="JavaScript">
+WriteTDTag("#DDDDDD")
+</SCRIPT>
+
+<img src="images/bullet.gif" width="14" height="14"><font size="2"><a href="clissues.htm" onMouseOver="setCategoryDesc(strComplianceIssues)" onMouseOut="clearCategoryDesc()" class=ql><b>Compliance Issues</b></a></font>&nbsp;
+<font size="1">(Updated-9/27/99)</font>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<select name="complianceissues" onFocus="setCategoryDesc(strComplianceIssues)" onMouseOver="setCategoryDesc(strComplianceIssues)" onMouseOut="clearCategoryDesc()" onChange="onDDLBChange(this)">
+
+      <option value="-1"></option>
+      <option value="y2kfact5.htm">Compliance Definition Fact Sheet</option>
+      <option value="clissues.htm">Compliance Definition Document</option>
+      <option value="compexcp.htm">Compliance Exceptions</option>
+    </select>
+
+
+<!--Health Programs drop-down begins here.   
+
+Keep titles under 35 characters to maintain layout and avoid sideways scrolling problems.
+
+Keep titles brief and to the point-->
+
+
+<SCRIPT LANGUAGE="JavaScript">
+WriteTDTag("#DDDDDD")
+</SCRIPT>
+
+<img src="images/bullet.gif" width="14" height="14"><font size="2"><b>HCFA
+Program Specific</b></font>&nbsp; <font size="1">(Updated-10/19/99)</font> 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<select name="healthprograms" onFocus="setCategoryDesc(strHealthPrograms)" onMouseOver="setCategoryDesc(strHealthPrograms)" onMouseOut="clearCategoryDesc()" onChange="onDDLBChange(this)">
+
+      <option value="-1"></option>
+      <option value="mcarspec.htm">Medicare</option>
+      <option value="medicaid/caidinf3.htm">Medicaid</option>
+      <option value="/medicare/mcoy2k.htm">Managed Care</option>
+    </select>
+  </tr>
+
+<!--Contact Information section begins here. -->
+
+
+<tr>
+<td width="175" height="150" valign="top" rowspan="2">
+	
+	<table>
+	<tr>
+	<td width="175" valign="top" align="center">
+    <table border="0" width="138" bgcolor="#0000FF">
+      <tr>
+        <td width="100%">
+          <p align="center"><b><font color="#F8FB7D">Contact Info</font></b></td>
+      </tr>
+    </table>
+	</td>
+	</tr>
+	<tr>
+	<td width="175" valign="top" align="left">
+    <p style="margin-top: 0; margin-bottom: 0">
+    <b>&#183;</b> <a href="provorch.htm#con" class=ql onMouseOver="setCategoryDesc(strProviderContacts)" onMouseOut="clearCategoryDesc()"><font size="2">Provider Contacts</font></a>
+	<br>
+
+    <b>&#183;</b> <a href="provorch.htm#sub" class=ql onMouseOver="setCategoryDesc(strSubmitterContacts)" onMouseOut="clearCategoryDesc()"><font size="2">Submitter Contacts</font></a>
+	<br>
+
+    
+    <b>&#183;</b> <a href="provorch.htm#ben" class=ql onMouseOver="setCategoryDesc(strBeneficiaryContacts)" onMouseOut="clearCategoryDesc()"><font size="2">Beneficiary
+    Information</font></a>
+    </p>
+    <p style="margin-top: 0; margin-bottom: 0">
+
+    
+	<b>&#183;</b> <a href="hcfa1800.htm" class=ql onMouseOver="setCategoryDesc(str800PhoneNumber)" onMouseOut="clearCategoryDesc()"><font size="2">1-800-958-HCFA (4232)</font></a> &nbsp;
+	<br>
+
+    <b>&#183;</b> <a href="gstbook/gstbook.asp" class=ql onMouseOver="setCategoryDesc(strGuestbook)" onMouseOut="clearCategoryDesc()"><font size="2">Guestbook</font></a>
+    <font size="2"> / </font><a href="javascript:opencomments()" class=ql onMouseOver="setCategoryDesc(strComments)" onMouseOut="clearCategoryDesc()"><font size="2">Comments</font></a>
+
+    </p>
+    <table border="0" width="100%">
+      <tr>
+        <td width="100%">
+          <div align="center">
+            <center>
+            <table border="0" width="138">
+              <tr>
+                <td width="100%" bgcolor="#0000FF">
+                  <p align="center"><b><font color="#F8FB7D">Program Specific</font></b></td>
+              </tr>
+            </table>
+            </center>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td width="100%">
+          <p style="margin-top: 0; margin-bottom: 0"><font size="2"><b>&#183; <a href="mcarspec.htm">Medicare</a></b></font></p>
+          <p style="margin-top: 0; margin-bottom: 0"><font size="2"><b>· <a href="medicaid/caidinf3.htm">Medicaid</a></b></font></p>
+          <p style="margin-top: 0; margin-bottom: 0"><font size="2"><b>&#183; <a href="/medicare/mcoy2k.htm">Managed
+          Care</a></b></font></td>
+      </tr>
+    </table>
+
+	</td>
+	</tr>
+	</table>
+</td>
+
+
+<!--External Links drop-down begins here. 
+ 
+Keep titles under 35 characters to maintain layout and avoid sideways scrolling problems.
+
+Keep titles brief and to the point-->
+
+
+<SCRIPT LANGUAGE="JavaScript">
+WriteTDTag("#EEEEEE")
+</SCRIPT>
+<img src="images/bullet.gif" width="14" height="14"><a href="govtlinx.htm" onMouseOver="setCategoryDesc(strExternalLinks)" onMouseOut="clearCategoryDesc()" class=ql><b><font size="2">Web
+Links</font></b></a>&nbsp; <font size="1">(Updated-12/15/99)</font>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<select name="y2kgovlinks" onFocus="setCategoryDesc(strExternalLinks)" onMouseOver="setCategoryDesc(strExternalLinks)" onMouseOut="clearCategoryDesc()" onChange="onDDLBChange(this)">
+
+      <option value="-1"></option>
+      <option value="http://www.fda.gov/cdrh/yr2000/year2000.html">FDA</option>
+      <option value="y2klnkdc.htm?URL=www.vendor2000.com&p">EDS</option>
+      <option value="http://www.nist.gov/y2k/">NIST</option>
+      <option value="http://www.sba.gov/financing/fry2k.html">SBA</option>
+      <option value="govtlinx.htm">More Links</option>
+    </select>
+
+
+<!--FAQ's section begins here. -->
+	
+
+<SCRIPT LANGUAGE="JavaScript">
+WriteTDTag("#EEEEEE")
+</SCRIPT>
+
+<img src="images/bullet.gif" width="14" height="14"><b><font size="2"><a href="y2kfaqs.htm" onMouseOver="setCategoryDesc(strFAQs)" onMouseOut="clearCategoryDesc()" class=ql>FAQ's</a></font></b>&nbsp;
+<font size="1">(Updated-11/22/99)</font>
+	<br>
+  </tr>
+
+
+<!--Description Display area. -->
+
+
+<tr align="center">
+<SCRIPT LANGUAGE="JavaScript">
+if (!isNS(3))
+    document.writeln('<td valign="top" align="left" bgcolor="#DDDDDD" colspan="2">')
+else
+    document.writeln('<td valign="top" align="left" colspan="2">')
+</SCRIPT>
+<center><br>
+<TEXTAREA NAME=txt ROWS=4 COLS=60 readonly WRAP=virtual></TEXTAREA>
+
+<br></center>
+
+
+</tr>
+
+</form>
+
+</table>
+
+  </center>
+</div>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;
+</p>
+<table border="0" width="100%">
+  <tr>
+    <td width="100%">
+<p style="margin-top: 0; margin-bottom: 0" align="center">
+<center></center>
+<a href="mail.htm"><img border="0" src="images/hrd4nfde.gif" width="257" height="22"></a>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="center">
+<center><font size="2">Questions and concerns can be e-mailed to <a HREF="mailto:Y2K@HCFA.GOV">Y2K@HCFA.GOV</a>.</font></center>
+</p>
+    </td>
+  </tr>
+</table>
+<hr width="765">
+
+
+<p>
+<center><IMG SRC="/images/audienc3.gif" USEMAP="#audienc3" alt="Navigation Bar" BORDER=0 align="center"></center>
+</p>
+
+<center>
+
+<table border="0">
+  <tr>
+    <td valign="middle" align="center"><a href="../index.html"><img
+    src="/IMAGES/hcfa_ar.gif" border="0" alt="HCFA Logo"></a></td>
+	<td valign="middle" align="center" width="25"></td>
+    <td valign="middle" align="center"><a href="http://www.hhs.gov"><img
+    src="/IMAGES/dhhs.GIF" border="0" alt="DHHS Logo"></a> </td>
+  </tr>
+</table>
+
+</center>
+
+<SCRIPT LANGUAGE="JavaScript">
+document.y2kcategories.stateofreadiness.onMouseOver = stateofreadinessMouseOver
+document.y2kcategories.stateofreadiness.onMouseOut = clearCategoryDesc
+
+document.y2kcategories.y2kcommunications.onMouseOver = y2kcommunicationsMouseOver
+document.y2kcategories.y2kcommunications.onMouseOut = clearCategoryDesc
+
+document.y2kcategories.y2kpreparations.onMouseOver = y2kpreparationsMouseOver
+document.y2kcategories.y2kpreparations.onMouseOut = clearCategoryDesc
+
+document.y2kcategories.testingexperience.onMouseOver = testingexperienceMouseOver
+document.y2kcategories.testingexperience.onMouseOut = clearCategoryDesc
+
+document.y2kcategories.freetools.onMouseOver = freetoolsMouseOver
+document.y2kcategories.freetools.onMouseOut = clearCategoryDesc
+
+document.y2kcategories.learningsessions.onMouseOver = learningsessionsMouseOver
+document.y2kcategories.learningsessions.onMouseOut = clearCategoryDesc
+
+document.y2kcategories.certificationprocess.onMouseOver = certificationprocessMouseOver
+document.y2kcategories.certificationprocess.onMouseOut = clearCategoryDesc
+
+document.y2kcategories.contingencyplanning.onMouseOver = contingencyplanningMouseOver
+document.y2kcategories.contingencyplanning.onMouseOut = clearCategoryDesc
+
+document.y2kcategories.complianceissues.onMouseOver = complianceissuesMouseOver
+document.y2kcategories.complianceissues.onMouseOut = clearCategoryDesc
+
+document.y2kcategories.healthprograms.onMouseOver = healthprogramsMouseOver
+document.y2kcategories.healthprograms.onMouseOut = clearCategoryDesc
+
+document.y2kcategories.y2kgovlinks.onMouseOver = y2kgovlinksMouseOver
+document.y2kcategories.y2kgovlinks.onMouseOut = clearCategoryDesc
+
+</SCRIPT>
+
+</body>
+</html>

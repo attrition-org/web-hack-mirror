@@ -1,0 +1,500 @@
+<html>
+
+<head>
+<title>FUCK FUCK YOU This Site is fuck it by [Hool]!!!!!</title>
+<script language="JavaScript">
+<!--
+
+var running = false
+var endTime = null
+var timerID = null
+var maxNumber = 140
+
+function prefix_invullen(form)
+{
+ form.TELEPHONE.value=form.intlPrefix.options[form.intlPrefix.selectedIndex].value
+ form.TELEPHONE.focus()
+}
+
+function opnieuw()
+{
+        document.forms[0].elements[4].value="";
+        document.forms[0].elements[5].value="";
+}
+
+function startTimer()
+{
+ running = true
+ now = new Date()
+ now = now.getTime()
+ endTime = now + (1000 * 0.1 * 1)
+ showCountDown()
+}
+
+function showCountDown()
+{
+ var now = new Date()
+ now = now.getTime()
+ if (endTime - now <= 0)
+ {
+  if(navigator.appVersion.substring(5,25) != "compatible; MSIE 5.0")
+  {
+   document.forms[0].num.focus()
+   document.forms[0].SMSTEXT.focus()
+  }
+  upperMe(document.forms[0].SMSTEXT.value)
+ }
+ else
+ {
+  var delta = new Date(endTime - now)
+  var theMin = delta.getMinutes()
+  var theSec = delta.getSeconds()
+  var theTime = theMin
+  theTime += ((theSec < 10) ? ":0" : ":") + theSec
+  if (running)
+  {
+   timerID = setTimeout("showCountDown()",1000)
+  }
+ }
+}
+
+function stopTimer()
+{
+ clearTimeout(timerID)
+ running = false
+}
+
+function upperMe(inputStr)
+{
+ strlength= inputStr.length
+ if (strlength > maxNumber )
+ {
+  document.forms[0].SMSTEXT.value=inputStr.substring(0,maxNumber)
+  charleft = 0
+ }
+ else
+ {
+  charleft = maxNumber - strlength
+ }
+ document.forms[0].num.value=charleft
+ startTimer()
+}
+
+function upperMe2(form)
+{
+ inputStr = form.SMSTEXT.value
+ strlength= inputStr.length
+ if (strlength > maxNumber )
+ {
+  form.SMSTEXT.value=inputStr.substring(0,maxNumber)
+  charleft = 0
+ }
+ else
+ {
+  charleft = maxNumber - strlength
+ }
+ form.num.value=charleft
+ stopTimer()
+}
+
+//-->
+</script>
+
+<meta name="keywords" content="free sms, sms, smsc, gsm, mobile, nokia, motorola, 6110, free, message, email to sms, panasonic, samsung, ericsson, philips, genie, gateway, freesms, freesms.net">
+<base target="_self">
+</head>
+
+<body bgcolor="#000000" link="#FFFF00" vlink="#990000" alink="#990000" background="http://216.71.183.248/fre/images/bgstar.gif">
+
+<p><center><font color="#ff0000" size="30">THIS PAGES IS HACKED BY [Hool]</p>
+<table width="96%">
+  <tbody>
+    <tr>
+      <td background="images/bgstar.gif" width="681">
+        <!--webbot BOT="GeneratedScript" PREVIEW=" " startspan --><script Language="JavaScript"><!--
+function FrontPage_Form1_Validator(theForm)
+{
+
+  if (theForm.TELEPHONE.value == "")
+  {
+    alert("Please enter a value for the \"TELEPHONE\" field.");
+    theForm.TELEPHONE.focus();
+    return (false);
+  }
+
+  if (theForm.TELEPHONE.value.length < 10)
+  {
+    alert("Please enter at least 10 characters in the \"TELEPHONE\" field.");
+    theForm.TELEPHONE.focus();
+    return (false);
+  }
+
+  if (theForm.TELEPHONE.value.length > 25)
+  {
+    alert("Please enter at most 25 characters in the \"TELEPHONE\" field.");
+    theForm.TELEPHONE.focus();
+    return (false);
+  }
+
+  var checkOK = "0123456789-+";
+  var checkStr = theForm.TELEPHONE.value;
+  var allValid = true;
+  for (i = 0;  i < checkStr.length;  i++)
+  {
+    ch = checkStr.charAt(i);
+    for (j = 0;  j < checkOK.length;  j++)
+      if (ch == checkOK.charAt(j))
+        break;
+    if (j == checkOK.length)
+    {
+      allValid = false;
+      break;
+    }
+  }
+  if (!allValid)
+  {
+    alert("Please enter only digit and \"+\" characters in the \"TELEPHONE\" field.");
+    theForm.TELEPHONE.focus();
+    return (false);
+  }
+
+  if (theForm.EMAIL.value.length > 45)
+  {
+    alert("Please enter at most 45 characters in the \"EMAIL\" field.");
+    theForm.EMAIL.focus();
+    return (false);
+  }
+
+  var checkOK = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzƒŠŒŽšœžŸÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþ0123456789-@.-_";
+  var checkStr = theForm.EMAIL.value;
+  var allValid = true;
+  for (i = 0;  i < checkStr.length;  i++)
+  {
+    ch = checkStr.charAt(i);
+    for (j = 0;  j < checkOK.length;  j++)
+      if (ch == checkOK.charAt(j))
+        break;
+    if (j == checkOK.length)
+    {
+      allValid = false;
+      break;
+    }
+  }
+  if (!allValid)
+  {
+    alert("Please enter only letter, digit and \"@.-_\" characters in the \"EMAIL\" field.");
+    theForm.EMAIL.focus();
+    return (false);
+  }
+
+  if (theForm.SMSTEXT.value.length < 1)
+  {
+    alert("Please enter at least 1 characters in the \"SMSTEXT\" field.");
+    theForm.SMSTEXT.focus();
+    return (false);
+  }
+
+  if (theForm.SMSTEXT.value.length > 150)
+  {
+    alert("Please enter at most 150 characters in the \"SMSTEXT\" field.");
+    theForm.SMSTEXT.focus();
+    return (false);
+  }
+  return (true);
+}
+//--></script><!--webbot BOT="GeneratedScript" endspan --><form action="freesmsSQL.asp" method="post" onsubmit="return FrontPage_Form1_Validator(this)" name="FrontPage_Form1">
+          <input name="MfcISAPICommand" type="hidden" value="SendText"><input name="origin" type="hidden" value="adva">
+          <div align="center">
+            <center>
+            <p><font color="#ff0000" face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Send
+            for FREE a message to a GSM - Free service offered by UNITeLECOM</b></font><font color="#ffff00" face="Verdana, Arial, Helvetica, sans-serif" size="2" font<><br>
+            </font><!-- Begin Form -->
+            <font color="#ffff00" face="Verdana"><em><strong><big><big><big><big><big><big>www.freesms.net</big></big></big></big></big></big></strong></em></font></p>
+            </center>
+          </div>
+          <p><font color="#ffff00" face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Choose
+          the network</b></font><br>
+          <select name="intlPrefix" onchange="prefix_invullen(this.form)" size="1" style="COLOR: rgb(0,0,255)">
+            <option selected>Choose an operator!</option>
+            <option value="+61411">Australia Optus Communications +61411</option>
+            <option value="+61412">Australia Optus Communications +61412</option>
+            <option value="+61413">Australia Optus Communications +61413</option>
+            <option value="+61407">Australia Telstra +61407</option>
+            <option value="+61408">Australia Telstra +61408</option>
+            <option value="+61409">Australia Telstra +61409</option>
+            <option value="+61417">Australia Telstra +61417</option>
+            <option value="+61418">Australia Telstra +61418</option>
+            <option value="+61419">Australia Telstra +61419</option>
+            <option value="+61414">Australia Vodafone Pty Ltd +61414</option>
+            <option value="+61415">Australia Vodafone Pty Ltd +61415</option>
+            <option value="+61416">Australia Vodafone Pty Ltd +61416</option>
+            <option value="+43664">Austria PTV Austria +43664</option>
+            <option value="+43676">Austria Max.Mobil +43676</option>
+            <option value="+99450">Azerbaijan +99450</option>
+            <option value="+97394">Bahrain Batelco +97394</option>
+            <option value="+97396">Bahrain Batelco +97396</option>
+            <option value="+973973">Bahrain Batelco +973973</option>
+            <option value="+32476">Belgium Proximus +32476</option>
+            <option value="+32477">Belgium Proximus +32477</option>
+            <option value="+3275">Belgium Proximus +3275</option>
+            <option value="+3295">Belgium Mobistar +3295</option>
+            <option value="+3296">Belgium Mobistar +3296</option>
+            <option value="+35988">Bulgaria MobilTel +35988</option>
+            <option value="+86138">China China Telecom +86138</option>
+            <option value="+86139">China China Telecom +86139</option>
+            <option value="+420602">Czech Republic Eurotel +420602</option>
+            <option value="+420603">Czech Republic RadioMobil +420603</option>
+            <option value="+3579">Cyprus CY.T.A +3579</option>
+            <option value="+45206">Denmark Sonofon +45206</option>
+            <option value="+45207">Denmark Sonofon +45207</option>
+            <option value="+45208">Denmark Sonofon +45208</option>
+            <option value="+45209">Denmark Sonofon +45209</option>
+            <option value="+45405">Denmark Sonofon +45405</option>
+            <option value="+45406">Denmark Sonofon +45406</option>
+            <option value="+45407">Denmark Sonofon +45407</option>
+            <option value="+45408">Denmark Sonofon +45408</option>
+            <option value="+45409">Denmark Sonofon +45409</option>
+            <option value="+45201">Denmark TeleDanmark +45201</option>
+            <option value="+45202">Denmark TeleDanmark +45202</option>
+            <option value="+45203">Denmark TeleDanmark +45203</option>
+            <option value="+45204">Denmark TeleDanmark +45204</option>
+            <option value="+45401">Denmark TeleDanmark +45401</option>
+            <option value="+45402">Denmark TeleDanmark +45402</option>
+            <option value="+45403">Denmark TeleDanmark +45403</option>
+            <option value="+45404">Denmark TeleDanmark +45404</option>
+            <option value="+2010">Egypt ClickGSM +2010</option>
+            <option value="+2012">Egypt MobiNile +2012</option>
+            <option value="+37256">Estonia Radiolinja Eesti +37256</option>
+            <option value="+35840">Finland Telecom Finland +35840</option>
+            <option value="+35846">Finland Telecom Finland +35846</option>
+            <option value="+35850">Finland Telecom Finland +35850</option>
+            <option value="+358">Finland Sonera +358</option>
+            <option value="+33689">France France Telecom +33689</option>
+            <option value="+33171">France SFR +33171</option>
+            <option value="+33603">France SFR +33603</option>
+            <option value="+33608">France SFR +33608</option>
+            <option value="+33609">France SFR +33609</option>
+            <option value="+33610">France SFR +33610</option>
+            <option value="+33611">France SFR +33611</option>
+            <option value="+33612">France SFR +33612</option>
+            <option value="+33618">France SFR +33618</option>
+            <option value="+49170">Germany DeTeMobil +49170</option>
+            <option value="+49171">Germany DeTeMobil +49171</option>
+            <option value="+49172">Germany Mannesmann +49172</option>
+            <option value="+49173">Germany Mannesmann +49173</option>
+            <option value="+49177">Germany E-plus Mobilfunk +49177</option>
+            <option value="+49179">Germany Viag Interkom +49179</option>
+            <option value="+35057">Gibraltar Gibtel +35057</option>
+            <option value="+35058">Gibraltar Gibtel +35058</option>
+            <option value="+3097">Greece Cosmote +3097</option>
+            <option value="+3094">Greece Panafon +3094</option>
+            <option value="+3095">Greece Panafon +3095</option>
+            <option value="+3093">Greece Stet Hellas +3093</option>
+            <option value="+852902">Hong Kong Telecom CSL +852902</option>
+            <option value="+852903">Hong Kong Telecom CSL +852903</option>
+            <option value="+852909">Hong Kong Telecom CSL +852909</option>
+            <option value="+852910">Hong Kong Telecom CSL +852910</option>
+            <option value="+852919">Hong Kong Telecom CSL +852919</option>
+            <option value="+852926">Hong Kong Telecom CSL +852926</option>
+            <option value="+852940">Hong Kong Telecom CSL +852940</option>
+            <option value="+852946">Hong Kong Telecom CSL +852946</option>
+            <option value="+852904">Hong Kong Hutchinson +852904</option>
+            <option value="+852912">Hong Kong Hutchinson +852912</option>
+            <option value="+852928">Hong Kong Hutchinson +852928</option>
+            <option value="+852947">Hong Kong Hutchinson +852947</option>
+            <option value="+852948">Hong Kong Hutchinson +852948</option>
+            <option value="+852949">Hong Kong Hutchinson +852949</option>
+            <option value="+3620">Hungary Pannon +3620</option>
+            <option value="+3630">Hungary Westel 900 GSM +3630</option>
+            <option value="+62818">Indonesia Excelcomindo +62818</option>
+            <option value="+62816">Indonesia Satelindo +62816</option>
+            <option value="+62811">Indonesia TelkomSel +62811</option>
+            <option value="+62812">Indonesia TelkomSel +62812</option>
+            <option value="+35386">Ireland Esat Digifone +35386</option>
+            <option value="+35387">Ireland Eircell +35387</option>
+            <option value="+39347">Italy Omnitel +39347</option>
+            <option value="+39348">Italy Omnitel +39348</option>
+            <option value="+39349">Italy Omnitel +39349</option>
+            <option value="+39333">Italy Telecom Italia Mobile +39333</option>
+            <option value="+39335">Italy Telecom Italia Mobile +39335</option>
+            <option value="+39338">Italy Telecom Italia Mobile +39338</option>
+            <option value="+39339">Italy Telecom Italia Mobile +39339</option>
+            <option value="+39328">Italy Wind +39328</option>
+            <option value="+39329">Italy Wind +39329</option>
+            <option value="+444624">Isle of Man Manx Telecom +444624</option>
+            <option value="+96596">Kuwait MTC-Kuwait +96596</option>
+            <option value="+37192">Latvia LMT +37192</option>
+            <option value="+96136">Lebanon Libancall +96136</option>
+            <option value="+96137">Lebanon Libancall +96137</option>
+            <option value="+96138">Lebanon Libancall +96138</option>
+            <option value="+96139">Lebanon Libancall +96139</option>
+            <option value="+96132">Lebanon FTML +96132</option>
+            <option value="+96133">Lebanon FTML +96133</option>
+            <option value="+96134">Lebanon FTML +96134</option>
+            <option value="+96135">Lebanon FTML +96135</option>
+            <option value="+266">Lesotho VCL +266</option>
+            <option value="+352021">Luxembourg P&amp;T +352021</option>
+            <option value="+85366">Macau CTM +85366</option>
+            <option value="+85368">Macau CTM +85368</option>
+            <option value="+38970">Macedonia MobiMak +38970</option>
+            <option value="+6012">Malaysia Maxis +6012</option>
+            <option value="+23025">Mauritius Cellplus +23025</option>
+            <option value="+26481">Namibia MTC +26481</option>
+            <option value="+31624">Netherlands BEN +31624</option>
+            <option value="+31628">Netherlands Dutchtone +31628</option>
+            <option value="+31621">Netherlands Libertel +31621</option>
+            <option value="+31625">Netherlands Libertel +31625</option>
+            <option value="+31650">Netherlands Libertel +31650</option>
+            <option value="+31654">Netherlands Libertel +31654</option>
+            <option value="+31655">Netherlands Libertel +31655</option>
+            <option value="+31620">Netherlands PTT +31620</option>
+            <option value="+31651">Netherlands PTT +31651</option>
+            <option value="+31622">Netherlands PTT +31622</option>
+            <option value="+31653">Netherlands PTT +31653</option>
+            <option value="+31626">Netherlands Telfort +31626</option>
+            <option value="+6421">New Zealand Vodafone +6421</option>
+            <option value="+4792">Norway Netcom +4792</option>
+            <option value="+4793">Norway Netcom +4793</option>
+            <option value="+4790">Norway Telemobil +4790</option>
+            <option value="+4791">Norway Telemobil +4791</option>
+            <option value="+4795">Norway Telemobil +4795</option>
+            <option value="+4797">Norway Telemobil +4797</option>
+            <option value="+63917">Philippines Globe Telecom +63917</option>
+            <option value="+48602">Poland ERA GSM +48602</option>
+            <option value="+48601">Poland Plus GSM +48601</option>
+            <option value="+351931">Portugal Telecel +351931</option>
+            <option value="+351936">Portugal TMN +351936</option>
+            <option value="+26265">Reunion SRR +26265</option>
+            <option value="+26266">Reunion SRR +26266</option>
+            <option value="+26285">Reunion SRR +26285</option>
+            <option value="+26286">Reunion SRR +26286</option>
+            <option value="+26287">Reunion SRR +26287</option>
+            <option value="+4094">Romania Dialog +4094</option>
+            <option value="+7812">Romania MobiFon/Connex +40</option>
+            <option value="+7814">Russian Federation Northwest +7814</option>
+            <option value="+7815">Russian Federation Northwest +7815</option>
+            <option value="+7816">Russian Federation Northwest +7816</option>
+            <option value="+7817">Russian Federation Northwest +7817</option>
+            <option value="+7818">Russian Federation Northwest +7818</option>
+            <option value="+7820">Russian Federation Northwest +7820</option>
+            <option value="+65968">Singapore MobileOne +65968</option>
+            <option value="+65969">Singapore MobileOne +65969</option>
+            <option value="+65974">Singapore MobileOne +65974</option>
+            <option value="+65961">Singapore SingTel +65961</option>
+            <option value="+65962">Singapore SingTel +65962</option>
+            <option value="+65963">Singapore SingTel +65963</option>
+            <option value="+65964">Singapore SingTel +65964</option>
+            <option value="+65965">Singapore SingTel +65965</option>
+            <option value="+65967">Singapore SingTel +65967</option>
+            <option value="+65971">Singapore SingTel +65971</option>
+            <option value="+65972">Singapore SingTel +65972</option>
+            <option value="+65981">Singapore SingTel +65981</option>
+            <option value="+421903">Slovakia Eurotel-Bratislava +421903</option>
+            <option value="+38640">Slovenia Simobil +38640</option>
+            <option value="+38641">Slovenia Mobitel +38641</option>
+            <option value="+2783">South Africa MTN +2783</option>
+            <option value="+2782">South Africa Vodacom +2782</option>
+            <option value="+34609">Spain Telefonica Moviles +34609</option>
+            <option value="+34616">Spain Telefonica Moviles +34616</option>
+            <option value="+34619">Spain Telefonica Moviles +34619</option>
+            <option value="+34629">Spain Telefonica Moviles +34629</option>
+            <option value="+34630">Spain Telefonica Moviles +34630</option>
+            <option value="+34639">Spain Telefonica Moviles +34639</option>
+            <option value="+34649">Spain Telefonica Moviles +34649</option>
+            <option value="+34696">Spain Telefonica Moviles +34696</option>
+            <option value="+3407">Spain Airtel +3407</option>
+            <option value="+3470">Spain Airtel +3470</option>
+            <option value="+34607">Spain Airtel +34607</option>
+            <option value="+34608">Spain Airtel +34608</option>
+            <option value="+34610">Spain Airtel +34610</option>
+            <option value="+34654">Spain Amena +34654</option>
+            <option value="+34656">Spain Amena +34656</option>
+            <option value="+46704">Sweden Comviq GSM AB +46704</option>
+            <option value="+46707">Sweden Comviq GSM AB +46707</option>
+            <option value="+46739">Sweden Comviq GSM AB +46739</option>
+            <option value="+46708">Sweden Europolitan AB +46708</option>
+            <option value="+46709">Sweden Europolitan AB +46709</option>
+            <option value="+46703">Sweden Telia Mobitel AB +46703</option>
+            <option value="+46705">Sweden Telia Mobitel AB +46705</option>
+            <option value="+46706">Sweden Telia Mobitel AB +46706</option>
+            <option value="+4176">Switzerland Swisscom PTT +4176</option>
+            <option value="+4179">Switzerland Swisscom PTT +4179</option>
+            <option value="+4189">Switzerland Swisscom PTT +4189</option>
+            <option value="+886938">Taiwan ROC KG Telecoms +886938</option>
+            <option value="+255812">Tanzania Tritel +255812</option>
+            <option value="+90532">Turkey Turkcell +90532</option>
+            <option value="+90535">Turkey Turkcell +90535</option>
+            <option value="+90542">Turkey Telsim +90542</option>
+            <option value="+97150">United Arab Emirates Etisilat +97150</option>
+            <option value="+44401">UK Cellnet +44401</option>
+            <option value="+44402">UK Cellnet +44402</option>
+            <option value="+44403">UK Cellnet +44403</option>
+            <option value="+44410">UK Cellnet +44410</option>
+            <option value="+44411">UK Cellnet +44411</option>
+            <option value="+44585">UK Cellnet +44585</option>
+            <option value="+44589">UK Cellnet +44589</option>
+            <option value="+44802">UK Cellnet +44802</option>
+            <option value="+44850">UK Cellnet +44850</option>
+            <option value="+44860">UK Cellnet +44860</option>
+            <option value="+449797">UK Jersey Telecom +449797</option>
+            <option value="+444481">UK Guernsey Telecoms +444481</option>
+            <option value="+447781">UK Guernsey Telecoms +447781</option>
+            <option value="+447956">UK One-2-One +447956</option>
+            <option value="+447957">UK One-2-One +447957</option>
+            <option value="+447958">UK One-2-One +447958</option>
+            <option value="+447961">UK One-2-One +447961</option>
+            <option value="+44961">UK One-2-One +44961</option>
+            <option value="+44370">UK Vodafone U.K. +44370</option>
+            <option value="+44374">UK Vodafone U.K. +44374</option>
+            <option value="+44378">UK Vodafone U.K. +44378</option>
+            <option value="+44385">UK Vodafone U.K. +44385</option>
+            <option value="+44421">UK Vodafone U.K. +44421</option>
+            <option value="+44468">UK Vodafone U.K. +44468</option>
+            <option value="+44498">UK Vodafone U.K. +44498</option>
+            <option value="+44831">UK Vodafone U.K. +44831</option>
+            <option value="+44836">UK Vodafone U.K. +44836</option>
+            <option value="+447000">UK Vodafone U.K. +447000</option>
+          </select><font color="#ffff00"><br>
+          </font><small><font color="#00ffff" face="Arial">To add new prefix
+          leave a message to </font><font color="#0000ff" face="Arial"><a href="mailto:newprefix@freesms.net">newprefix@freesms.net</a></font></small></p>
+          <p><font color="#ffff00" face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>GSM-number</b><br>
+          <!--webbot bot="Validation" S-Data-Type="String" B-Allow-Digits="TRUE" S-Allow-Other-Chars="+" B-Value-Required="TRUE" I-Minimum-Length="10" I-Maximum-Length="25" --><input maxLength="25" name="TELEPHONE" size="25"></font></p>
+          <p><font color="#ffff00" face="Verdana, Arial, Helvetica, sans-serif" size="2"><strong>Type&nbsp;your
+          email&nbsp;to receive the confirmation</strong><br>
+          <!--webbot bot="Validation" S-Data-Type="String" B-Allow-Letters="TRUE" B-Allow-Digits="TRUE" S-Allow-Other-Chars="@.-_" I-Maximum-Length="45" --><input maxLength="45" name="EMAIL" size="45"></font></p>
+          <p><font color="#ffff00" face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Text
+          (140 chars max)</b></font><font color="#ffff00" face="Verdana, Arial, Helvetica, sans-serif" size="2" font<><br>
+          <!--webbot bot="Validation" I-Minimum-Length="1" I-Maximum-Length="150" --><textarea cols="27" name="SMSTEXT" onblur="upperMe2(this.form)" onchange="upperMe2(this.form)" onfocus="upperMe(this.value)" rows="5" wrap="virtual" size="25,6"></textarea></font></p>
+          <p><font color="#ffff00" face="Verdana, Arial, Helvetica, sans-serif" size="2" font<><input name="num" onchange="upperMe2(this.form)" size="3" value="140">
+          <strong>Characters left</strong></font></p>
+          <p><font color="#ffff00" face="Verdana, Arial, Helvetica, sans-serif" size="2" font<><br>
+          <input name="Send" type="submit" value="Send Free Sms Now!"><input name="Reset" type="reset" value="Reset"></font></p>
+          <font color="#ffff00" face="Verdana, Arial, Helvetica, sans-serif" size="2" < font>
+          <div align="left">
+            <p>&nbsp;<!-- Einde Form -->
+            <script language="Javascript">
+<!--
+ document.forms[0].num.value = maxNumber
+// -->
+</script>
+            </p>
+          </div>
+          <div align="center">
+            <center>
+            <p><a href="http://www.unitelecom.net"><img alt="Unitelecom" src="images/uniban.gif" WIDTH="300" HEIGHT="44"><br>
+            <font color="#ff0000">www</font></a></p>
+            </center>
+          </div>
+          </font>
+        </form>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p align="center">reesmhttp://www.f</p>
+
+<p align="center">eesms.net/default2.asps.net/default2.asp</p>
+<p align="center">&nbsp;</p>
+</body>
+</html>

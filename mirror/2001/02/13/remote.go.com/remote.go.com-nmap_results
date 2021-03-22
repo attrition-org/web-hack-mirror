@@ -1,0 +1,34 @@
+
+Starting nmap V. 2.54BETA3 ( www.insecure.org/nmap/ )
+Warning:  OS detection will be MUCH less reliable because we did not find at least 1 open and 1 closed TCP port
+Insufficient responses for TCP sequencing (3), OS detection may be less accurate
+Interesting ports on  (204.202.136.232):
+Port       State       Service
+22/tcp     filtered    ssh                     
+23/tcp     filtered    telnet                  
+25/tcp     filtered    smtp                    
+53/tcp     filtered    domain                  
+80/tcp     open        http                    
+
+No OS matches for host (If you know what OS is running on it, see http://www.insecure.org/cgi-bin/nmap-submit.cgi).
+TCP/IP fingerprint:
+TSeq(Class=TD%gcd=1%SI=3)
+T1(Resp=Y%DF=Y%W=2017%ACK=S++%Flags=AS%Ops=M)
+T1(Resp=Y%DF=Y%W=2017%ACK=S++%Flags=AS%Ops=M)
+T2(Resp=Y%DF=N%W=800%ACK=S%Flags=AR%Ops=WNMETL)
+T2(Resp=Y%DF=N%W=800%ACK=S%Flags=AR%Ops=WNMETL)
+T3(Resp=Y%DF=N%W=800%ACK=O%Flags=AR%Ops=WNMETL)
+T3(Resp=Y%DF=N%W=800%ACK=O%Flags=AR%Ops=WNMETL)
+T4(Resp=Y%DF=N%W=800%ACK=O%Flags=R%Ops=WNMETL)
+T4(Resp=Y%DF=N%W=800%ACK=O%Flags=R%Ops=WNMETL)
+T5(Resp=N)
+T5(Resp=N)
+T6(Resp=N)
+T6(Resp=N)
+T7(Resp=N)
+T7(Resp=N)
+PU(Resp=N)
+PU(Resp=N)
+
+
+Nmap run completed -- 1 IP address (1 host up) scanned in 26 seconds

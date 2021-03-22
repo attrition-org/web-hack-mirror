@@ -1,0 +1,99 @@
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">		<meta name="generator" content="Adobe GoLive 4">
+		<title>búsqueda</title>
+		
+		<csactions>
+			<csaction name="B4238D790" class="Goto Link" val0="#querylang" val1 type>
+		</csactions>
+		<csscriptdict>
+			<script><!--
+function CSClickReturn () {
+	var bAgent = window.navigator.userAgent; 
+	var bAppName = window.navigator.appName;
+	if ((bAppName.indexOf("Explorer") >= 0) && (bAgent.indexOf("Mozilla/3") >= 0) && (bAgent.indexOf("Mac") >= 0))
+		return true; // dont follow link
+	else return false; // dont follow link
+}
+CSStopExecution = false;
+
+function CSAction(array) { 
+	return CSAction2(CSAct, array);
+}
+function CSAction2(fct, array) { 
+	var result;
+	for (var i=0;i<array.length;i++) {
+		if(CSStopExecution) return false; 
+		var actArray = fct[array[i]];
+		var tempArray = new Array;
+		for(var j=1;j<actArray.length;j++) {
+			if((actArray[j] != null) && (typeof(actArray[j]) == "object") && (actArray[j].length == 2)) {
+				if(actArray[j][0] == "VAR") {
+					tempArray[j] = CSStateArray[actArray[j][1]];
+				}
+				else {
+					if(actArray[j][0] == "ACT") {
+						tempArray[j] = CSAction(new Array(new String(actArray[j][1])));
+					}
+				else
+					tempArray[j] = actArray[j];
+				}
+			}
+			else
+				tempArray[j] = actArray[j];
+		}			
+		result = actArray[0](tempArray);
+	}
+	return result;
+}
+CSAct = new Object;
+function CSGotoLink(action) {
+	if (action[2].length) {
+		var hasFrame=false;
+		for(i=0;i<parent.frames.length;i++) { if (parent.frames[i].name==action[2]) { hasFrame=true; break;}}
+		if (hasFrame==true)
+			parent.frames[action[2]].location = action[1];
+		else
+			window.open (action[1],action[2],"");
+	}
+	else location = action[1];
+}
+// --></script>
+		</csscriptdict>
+		<csactiondict>
+		<script><!--
+CSAct[/*CMP*/ 'B4238D790'] = new Array(CSGotoLink,/*URL*/ '#querylang','');
+
+// --></script>
+		</csactiondict>
+	</head>
+
+	<body background="../GRAY.GIF">
+		<a name="Busqueda de texto"></a><font size="2">
+		<table border="0" cellpadding="0" cellspacing="2" width="740">
+			<tr>
+				<td width="118">
+					<div align="left">
+						<h2><font size="2"><img src="../default/logo.jpg" width="118" height="172"></font></h2>
+					</div>
+				</td>
+				<td valign="bottom">
+					<div align="left">
+						<font size="4"><b>Utilizando esta página podrá buscar por nuestra Web<br>
+						una cierta palabra o la combinación de varias,<br>
+						utilizando los criterios que más abajo detallamos.</b><br>
+						<img src="busq.gif" width="305" height="50"></font>
+						<hr size="1" width="580" align="left">
+					</div>
+				</td>
+			</tr>
+		</table>
+		</font>
+		<table border="0" cellpadding="0" cellspacing="2" width="741">
+			<tr height="26">
+				<td width="704" height="26"><img height="26" width="704" src="../botonera.gif" border="0" usemap="#botonerab5507418"><map name="botonerab5507418"><area href="../carreras/frames.html" target="_parent" coords="78,0,134,38" shape="rect"><area href="../empbureau/employme.htm#CV" target="_parent" coords="625,2,703,23" shape="rect"><area href="../formulario/formu.htm" target="_parent" coords="551,-3,625,29" shape="rect"><area href="../clientes/clients.htm" target="_parent" coords="467,1,550,25" shape="rect"><area href="../empbureau/employme.htm" target="_parent" coords="396,1,465,27" shape="rect"><area href="../pasantias/pasant.HTM" target="_parent" coords="307,1,394,27" shape="rect"><area href="../empbureau/employme.htm#parempr" target="_parent" coords="222,1,306,27" shape="rect"><area href="../certif/framesC.html" target="_parent" coords="134,1,220,33" shape="rect"><area href="../DEFAULT_orig.HTM" target="_parent" coords="-17,-3,78,31" shape="rect"></map></td>
+				<td width="31" height="26"><img height="26" width="31" src="../lupa.gif" border="0" name="Buscador" usemap="#lupab55079b9"><map name="lupab55079b9"></map></td>
+			</tr>
+		</table>
+		<!--webbot bot="Search" s-index="All" s-fields="TimeStamp," s-text="Buscar" i-size="20" s-submit="Comenzar a Buscar" s-clear="Limpiar" tag="FORM" b-useindexserver="1" startspan --><form action="../_vti_bin/busq_busqueda.htm0.idq" method="POST"><p><b>Buscar </b><input type="text" name="UserRestriction" size="20" value></p><p><input type="submit" value="Comenzar a Buscar"><input type="reset" value="Limpiar"></p></form><!--webbot bot="Search" endspan i-checksum="17263" -->

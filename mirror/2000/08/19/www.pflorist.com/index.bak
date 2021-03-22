@@ -1,0 +1,394 @@
+<%@ Language=VBScript %>
+<!----------------#INCLUDE VIRTUAL='/myprofile/ReadCookie.asp'--------------------->
+<!-------------------------------------------------------------------------------->
+<!--------------------- db collections and recordsets ---------------------------->
+<!-------------------------------------------------------------------------------->
+<object RUNAT="server" PROGID="ADODB.Connection" id="Conn"> </object>
+<object RUNAT="server" PROGID="ADODB.Recordset" id="toprs"> </object>
+<object RUNAT="server" PROGID="ADODB.Recordset" id="toprs2"> </object>
+<object RUNAT="server" PROGID="ADODB.Recordset" id="rswin"> </object>
+
+<!--------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------->
+<!-------------------------- Load cookies and global functions -------------------->
+<!--------------------------------------------------------------------------------->
+<%'<!----------------#INCLUDE VIRTUAL='/_includes/incGlobalFuncs.asp'----------------->%>
+<!--------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------->
+<%
+		Conn.Open Application("db_ConnectionString")
+
+		'Update Main Toolbar if necessary
+		'If Application("MainToolBar") = "" Then
+		'	Application.Lock
+		'	UpdateToolbar()
+		'	Application.Unlock
+		'End If
+%>
+<html>
+<head>
+<meta NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<!------------------------ header script (required) ------------------------------->
+<!--------------------------------------------------------------------------------->
+<!-----------------#include virtual='/_includes/pages-header.stm'------------------>
+<!--------------------------------------------------------------------------------->
+<title>Plaza Flowers - Welcome to your online florist!</title>
+
+<meta name="keywords" content="Plaza Flowers, pflorist, Virtual Florist, Teleflora, Philadelphia, flower, florist, flowers, florists, gifts, gift baskets, bouquets, roses, birthdays, anniversary, gourmet, FTD, flower, florist, flowers, florists, gifts, gift baskets, bouquets, roses, birthdays, anniversary, gourmet, FTD, flower, florist, flowers, florists, gifts, gift baskets, bouquets, roses, birthdays, anniversary, gourmet, FTD, flower, florist, flowers, florists, gifts, gift baskets, bouquets, roses, birthdays, anniversary, gourmet">
+<meta name="description" content="Plaza Flowers, your
+online florist, is the internet's best floral value.  Our premier
+network of florists provide worldwide delivery of roses, flowers,
+plants, gourmet baskets, and gifts.  Featuring exclusive flower values
+for the Philadelphia, Pennsylvania region, Plaza Flowers is your gift
+source!">
+<link REL="STYLESHEET" TYPE="text/css" HREF="/_includes/global.css" TITLE="Global Style Sheet">
+</head>
+<body bgColor="#ffffff" text="#000000" Link="#336600" vLink="#336600" aLink="#336600">
+<!------------------- header table with top navigation ---------------------------->
+<!--------------------------------------------------------------------------------->
+<!------------#include virtual='/_includes/pages-top-section.stm'------------------>
+<!--------------------------------------------------------------------------------->
+<table width="640" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td width="148" valign="top">
+	<!---------------------------- side toolbar ----------------------------------->
+	<!----------------------- dynamically generated from the DB ------------------->
+	<!---------#include virtual='/_includes/pages-global-maintoolbar.stm'---------->
+	<!----------------------------------------------------------------------------->
+	</td>
+	<td width="5"><!--spacer--><img src="/images/shim.gif" width="5" border="0"></td>
+	<td valign="top">
+	<!------------------------------- main page content --------------------------->
+	<!----------------------------------------------------------------------------->
+	<table width="333" border="0">
+		<!--------------------- special rotations --------------------------------->
+		<tr>
+			<td colspan="2">
+			<!-------------------- banner for todays special ---------------------->
+			<img src="/images/plaza-main-headings-daily.gif" width="330" height="26" border="0">
+			<!--------------------------------------------------------------------->
+			</td>
+		</tr>
+		<%
+		'Get Today's Special From DB
+		CreateTS()
+		%>
+		<tr>
+			<td width="180" valign="top">
+			<!------------------ product shot from the db ------------------------->
+			<!----------------------- todays special ------------------------------>
+	
+			<a href="/Store/ItemDetail.asp?id=<%=Application("tsItemID")%>">
+			<img src="<%=Application("tsImageName")%>" width="180" border="0"></a>
+	
+			<!--------------------------------------------------------------------->
+			</td>
+			<td width="158"><font face="arial, helvetica" size="2">
+		
+			<!------------------------ product desc from db ----------------------->
+			<!-------------------------- todays special text ---------------------->
+			<b><%=Application("tsName")%></b>
+			<p>
+			<%=Application("tsDesc")%><br>
+			<b><%=Application("tsPrice")%></b><br><br>
+			<a href="/Store/ItemDetail.asp?id=<%=Application("tsItemID")%>"><img src="/images/plaza-button-order.gif" width="100" height="20" border="0" alt="Order Now"></a>
+			
+			<!------------------------ end of todays special ---------------------->
+			<!--------------------------------------------------------------------->
+			</td>
+		</tr>
+
+		<%
+		'Get Best Seller from DB
+		CreateBS()
+		%>
+		<tr>
+			<td colspan="2">
+		    <!------------------------ banner for best sellers -------------------->
+			<img src="/images/plaza-main-headings-seasonal.gif" width="330" height="26" border="0">
+			<!--------------------------------------------------------------------->
+			</td>
+		</tr>
+		<tr>
+			<td width="180" valign="top">
+			<!------------------------ product shot from the db ------------------->
+			<!----------------------------- best sellers   ------------------------>
+	
+			<a href="/Store/ItemDetail.asp?id=<%=Application("bsItemID")%>">
+			<img src="<%=Application("bsImageName")%>" width="180" border="0"></a>
+			<a href="default.asp"><img SRC="../images/button-sm-more.gif" border="0"></a>
+	
+			<!--------------------------------------------------------------------->
+			</td>
+			<td width="158"><font face="arial, helvetica" size="2">
+			<!---------------------- product desc from db ------------------------->
+			<!-------------------------- best seller text   ----------------------->
+			<b><%=Application("bsName")%></b>
+			<p>
+			<%=Application("bsDesc")%><br>
+			<b><%=Application("bsPrice")%></b><br><br>
+			<a href="/Store/ItemDetail.asp?id=<%=Application("bsItemID")%>"><img src="/images/plaza-button-order.gif" width="100" height="20" border="0" alt="Order Now"></a>
+			<!------------------------ end of best sellers ------------------------>
+			<!--------------------------------------------------------------------->
+			</td>
+		</tr>
+	</table>
+	<!------------------------------- main content ends ---------------------------->
+	<!------------------------------------------------------------------------------>
+	</td>
+	<td width="5"><img src="images/shim.gif" width="5" border="0"></td>
+	<!------------------------------ begin right column stuff ---------------------->
+	<!------------------------------------------------------------------------------>
+	<td width="120" valign="top">
+	<!------------------------------------------------------------------------------>
+	<!----------------------- side bar space 125px width  -------------------------->
+	<!------------------------------------------------------------------------------>
+	<table width="120" border="0">
+		<tr>
+			<td align="center">
+			<a href="/store/phillyphavoriteslist.asp?oc=37"><!---- Billy please add Philly cat ---->
+			<img src="/images/plaza-sidebar-55-philly.gif" width="120" height="55" border="0"></a></td>
+		</tr>
+		<tr>
+			<td valign="top">
+			<!---------------------------------------------------------------------->
+			<!-------------------- User account log in ----------------------------->
+			<!---------------------------------------------------------------------->
+			<table width="100%" cellpadding="0" cellspacing="0" border="0">
+			<form id="form2" name="form2" method="Post" action="/myprofile/login.asp?URL=<%=Request.ServerVariables("PATH_INFO")%>">
+			<tr>
+				<td colspan="3" valign="top"><img src="/images/plaza-myaccount.gif" width="120" height="45" border="0"></td>
+			</tr>
+			<tr>
+				<td width="1" bgcolor="#99cc66"><img src="/images/clear.gif" width="1" height="1" border="0"></td>
+				<td valign="top" style="font-face:verdana, arial, helvetica; font-size:9pt;">
+				
+				<%
+				if Session("Username")<>"" then
+				%>
+				<table width="100%" border="0" cellpadding="3">
+				<tr>
+					<td colspan="2" align="center">
+				<strong>Hi <%=session("BillFName")%>!</strong>
+					</td>
+				<tr>
+					<td><img src="/images/plaza-default-bullet.gif" border="0"></td>
+					<td><a style="font-face:verdana, arial, helvetica; font-size:9pt;" href="/myprofile/vwcontacts.asp">My Address Book</a></td>
+				</tr>
+				<tr>
+					<td><img src="/images/plaza-default-bullet.gif" border="0"></td>
+					<td><a style="font-face:verdana, arial, helvetica; font-size:9pt;" href="/myprofile/vwcontacts.asp">Reminder Service</a></td>
+				</tr>
+				<tr>
+					<td><img src="/images/plaza-default-bullet.gif" border="0"></td>
+					<td><a style="font-face:verdana, arial, helvetica; font-size:9pt;" href="/myprofile/orderhistory.asp">Order History</a></td>
+				</tr>
+				<tr>
+					<td><img src="/images/plaza-default-bullet.gif" border="0"></td>
+					<td><a style="font-face:verdana, arial, helvetica; font-size:9pt;" href="/store/myfavorites.asp">My Favorites</a></td>
+				</tr>
+				<tr>
+					<td><img src="/images/plaza-default-bullet.gif" border="0"></td>
+					<td><a style="font-face:verdana, arial, helvetica; font-size:9pt;" href="/myprofile/editmyprofile.asp?act=e">My Profile</a></td>
+				</tr>
+				</table>
+				<%else%>
+				<center>
+				<span class="smalltext">
+				<b>Username:</b><br clear="right">
+				<input type="text" size="10" id="Username" name="Username"><br>
+				<b>Password:</b><br clear="right">
+				<input type="password" size="10" id="Password" name="Password"><br clear="right">
+				<input type="image" src="/images/button-sm-logon.gif" border="0" name="image1">
+				</form>
+				New to the site? Please <a href="/myprofile/register.asp">register</a> now. It's free and easy.</span>
+				<%end if%>
+				
+				</center>
+				</td>
+				<td width="1" bgcolor="#99cc66"><img src="/images/clear.gif" width="1" height="1" border="0"></td>
+			</tr>
+			<tr>
+				<td colspan="3" valign="top" bgcolor="#99cc66"><img src="/images/clear.gif" width="1" height="1" border="0"></td>
+			</tr>
+			</table>
+			<!-------------------------------------------------------------------->
+			<!-------------------------------------------------------------------->
+			<!------------------ end of log in utility --------------------------->
+			<!-------------------------------------------------------------------->
+			<br>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">
+			<a href="/pages/international.asp">
+			<img src="/images/plaza-sidebar-international-ani.gif" width="120" height="100" border="0"></a></td>
+		</tr>
+		
+	</table>
+	<br>
+	<!------------------------- right column content ends ---------------------------->
+	<!-------------------------------------------------------------------------------->
+	</td>
+</tr>
+</table>
+<br>
+<!---------------------------- global footer with text tools --------------------------->
+<!-------------------------------------------------------------------------------------->
+<!-----------------#include virtual="/_includes/pages-global-footer.stm"---------------->
+<!-------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------->
+
+</body>
+</html>
+
+
+<%
+
+Conn.Close
+
+
+
+' **************************************************************
+Function DisplayImage(iname)
+	Dim path, nophoto
+	path = Request.ServerVariables("APPL_PHYSICAL_PATH") & "images\prodshots\"
+
+	nophoto = "/store/prodimages/nophoto.gif"
+
+' JWB???
+	If iname = "" Then
+		DisplayImage = nophoto
+	ElseIf ThisFileExists(path & iname) Then
+		DisplayImage = "/images/prodshots/" & iname
+	Else
+		DisplayImage = nophoto
+	End If
+End Function
+' **************************************************************
+
+
+
+' **************************************************************
+' Check for existance of file
+' Return Value:		True or False
+' Parameters:
+'	filespec		"drive:/path/filename.ext"
+' **************************************************************
+Function ThisFileExists(filespec)
+	Dim fso, msg
+	Set fso = CreateObject("Scripting.FileSystemObject")
+	ThisFileExists =  (fso.FileExists(filespec))
+End Function
+' **************************************************************
+
+
+
+
+Public Sub CreateTS()
+
+		'Create Today's Special Feature	*************************************************
+
+	tsupdate = False   
+	If Trim(Application("tsDesc")) = "" Then
+		tsupdate = True
+	End If
+	If IsDate(Application("tsdate")) Then
+		If DateDiff("d",Now(),Application("tsdate")) <> 0 Then
+		'	Response.Write("DateDiff = " & DateDiff("d",Now(),Application("tsdate")))
+			tsupdate = True
+		End If
+	Else
+		tsupdate = True
+	End If
+'	tsupdate = True	'Test
+'	Response.Write("tsupdate = " & tsupdate & "")
+	If tsupdate Then
+
+		Application.Lock
+	
+	'	strSQL = "SELECT i.* FROM Item i JOIN OtherSpecials os ON i.ItemID = os.Todays"
+	'	strSQL = "SELECT fi.ItemText,i.imgName,i.SDesc, MIN(ip.Price) AS minprice, MAX(ip.Price) AS maxprice FROM FeaturedItems fi LEFT OUTER JOIN Item i ON fi.ItemID = i.ItemID JOIN ItemPrice ip ON i.ItemID = ip.ItemID WHERE fi.Todays = 1 GROUP BY fi.ItemText,fi.LastDisplayed,i.imgName,i.SDesc ORDER BY fi.LastDisplayed"
+		strSQL = "SELECT TOP 1 fi.id, fi.ItemText, fi.LastDisplayed, i.ItemID, i.imgName, i.SDesc, i.LDesc, MIN(ip.Price) AS minprice, MAX(ip.Price) AS maxprice FROM FeaturedItems fi LEFT OUTER JOIN Item i ON fi.ItemID = i.ItemID JOIN ItemPrice ip ON i.ItemID = ip.ItemID WHERE fi.Todays = 1 GROUP BY fi.id, fi.ItemText, i.imgName, i.ItemID, i.SDesc, i.LDesc, fi.LastDisplayed ORDER BY fi.LastDisplayed"
+		toprs.Open strSQL,Conn,1,3
+
+			Application("tsImageName") = DisplayImage(toprs("imgName"))
+			Application("tsName") = toprs("ItemText")
+			Application("tsDesc") = toprs("LDesc")
+			If toprs("minprice") = toprs("maxprice") Then
+				Application("tsPrice") = FormatCurrency(toprs("minprice"))
+			Else
+				Application("tsPrice") = FormatCurrency(toprs("minprice")) & " - "  & FormatCurrency(toprs("maxprice"))
+			End If
+			Application("tsItemID") = toprs("ItemID")
+
+
+			sql2 = "SELECT * FROM FeaturedItems WHERE id = " & toprs("id")
+			toprs2.Open sql2,Conn,1,3
+			toprs2("LastDisplayed") = Now()
+			toprs2.Update
+			toprs2.Close
+
+		toprs.Close
+		Application("tsdate") = Now()
+'		Application("ts") = ts
+
+		Application.UnLock
+
+	End If		
+End Sub
+
+
+
+
+Public Sub CreateBS()
+
+		'Create Gift Basket Feature	*****************************************************
+		
+	'	strSQL = "SELECT i.* FROM Item i JOIN OtherSpecials os ON i.ItemID = os.GiftBasket"
+	'	strSQL = "SELECT fi.*,i.* FROM FeaturedItems fi LEFT OUTER JOIN Item i ON fi.ItemID = i.ItemID WHERE fi.GiftBasket = 1 ORDER BY fi.LastDisplayed, fi.ItemID"
+'		strSQL = "SELECT TOP 1 fi.id, fi.ItemText, fi.LastDisplayed, i.ItemID, i.imgName, i.SDesc, i.LDesc, MIN(ip.Price) AS minprice, MAX(ip.Price) AS maxprice FROM FeaturedItems fi LEFT OUTER JOIN Item i ON fi.ItemID = i.ItemID JOIN ItemPrice ip ON i.ItemID = ip.ItemID WHERE fi.Todays = 1 GROUP BY fi.id, fi.ItemText, i.imgName, i.ItemID, i.SDesc, i.LDesc, fi.LastDisplayed ORDER BY fi.LastDisplayed"
+		strSQL = "SELECT TOP 1 fi.id, fi.ItemText, fi.LastDisplayed, i.ItemID, i.imgName, i.SDesc, i.LDesc, MIN(ip.Price) AS minprice, MAX(ip.Price) AS maxprice FROM FeaturedItems fi LEFT OUTER JOIN Item i ON fi.ItemID = i.ItemID JOIN ItemPrice ip ON i.ItemID = ip.ItemID WHERE fi.BestSeller = 1 GROUP BY fi.id, fi.ItemText, i.imgName, i.ItemID, i.SDesc, i.LDesc, fi.LastDisplayed ORDER BY fi.LastDisplayed"
+		toprs.Open strSQL,Conn,1,1
+		
+			Application.Lock
+
+			Application("bsImageName") = DisplayImage(toprs("imgName"))
+			Application("bsName") = toprs("ItemText")
+			Application("bsDesc") = toprs("LDesc")
+			If toprs("minprice") = toprs("maxprice") Then
+				Application("bsPrice") = FormatCurrency(toprs("minprice"))
+			Else
+				Application("bsPrice") = FormatCurrency(toprs("minprice")) & " - " & FormatCurrency(toprs("maxprice"))
+			End If
+			Application("bsItemID") = toprs("ItemID")
+		
+			Application.UnLock
+			
+			sql2 = "SELECT * FROM FeaturedItems WHERE id = " & toprs("id")
+			toprs2.Open sql2,Conn,1,3
+			toprs2("LastDisplayed") = Now()
+			toprs2.Update
+			toprs2.Close
+
+		toprs.Close
+'		Application("bs") = bs
+
+End Sub
+
+Function FindWinner()
+			prevwinner=Month(Date)-1
+			sql = "SELECT Winner FROM Contests Where ContestCode='" &  MonthName(prevwinner) & "'"
+			'Response.Write(sql)
+			rswin.Open sql,Conn,1,1
+			If rswin.RecordCount<>0 then
+				FindWinner=rswin("Winner")
+				Response.Write(FindWinner)
+			else
+				Response.Write("Coming Soon!")
+					
+			end if
+			
+End Function
+
+%>

@@ -1,0 +1,32 @@
+--01:37:07--  http://www.netpaths.net:80/
+           => `www.netpaths.net/index.html'
+Connecting to www.netpaths.net:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 721 [text/html]
+
+    0K ->                                                        [100%]
+
+01:37:58 (23.26 B/s) - `www.netpaths.net/index.html' saved [721/721]
+
+Loading robots.txt; please ignore errors.
+--01:37:58--  http://www.netpaths.net:80/no-robots.txt
+           => `www.netpaths.net/no-robots.txt'
+Connecting to www.netpaths.net:80... connected!
+HTTP request sent, awaiting response... 404 Not Found
+01:37:58 ERROR 404: Not Found.
+
+--01:37:58--  http://www.netpaths.net:80/new/bob.jpg
+           => `www.netpaths.net/new/bob.jpg'
+Connecting to www.netpaths.net:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 25,205 [image/jpeg]
+
+    0K -> .......... .......... ....                             [100%]
+
+01:38:03 (5.47 KB/s) - `www.netpaths.net/new/bob.jpg' saved [25205/25205]
+
+Converting www.netpaths.net/index.html... done.
+
+FINISHED --01:38:03--
+Downloaded: 25,926 bytes in 2 files
+Converting www.netpaths.net/index.html... done.

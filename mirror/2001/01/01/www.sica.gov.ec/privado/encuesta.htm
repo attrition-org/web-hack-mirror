@@ -1,0 +1,340 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Encuesta</title>
+</head>
+
+<body background="../objetos/fondo3.jpg" link="#000080">
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%" align="center"><strong><em><big><big><big><font color="#000080">
+      <marquee align="middle">Libro de Visitas </marquee>
+      </font></big></big></big></em></strong></td>
+  </tr>
+</table>
+
+<hr style="margin-top: -1px; margin-bottom: -1px">
+
+<!--webbot BOT="GeneratedScript" PREVIEW=" " startspan --><script Language="JavaScript"><!--
+function FrontPage_Form1_Validator(theForm)
+{
+
+  if (theForm.Nombre_Usuario.value == "")
+  {
+    alert("Please enter a value for the \"Nombre_Usuario\" field.");
+    theForm.Nombre_Usuario.focus();
+    return (false);
+  }
+
+  if (theForm.Nombre_Usuario.value.length < 3)
+  {
+    alert("Please enter at least 3 characters in the \"Nombre_Usuario\" field.");
+    theForm.Nombre_Usuario.focus();
+    return (false);
+  }
+
+  if (theForm.Nombre_Usuario.value.length > 50)
+  {
+    alert("Please enter at most 50 characters in the \"Nombre_Usuario\" field.");
+    theForm.Nombre_Usuario.focus();
+    return (false);
+  }
+
+  if (theForm.Empresa.value == "")
+  {
+    alert("Please enter a value for the \"Empresa\" field.");
+    theForm.Empresa.focus();
+    return (false);
+  }
+
+  if (theForm.Empresa.value.length < 3)
+  {
+    alert("Please enter at least 3 characters in the \"Empresa\" field.");
+    theForm.Empresa.focus();
+    return (false);
+  }
+
+  if (theForm.Empresa.value.length > 50)
+  {
+    alert("Please enter at most 50 characters in the \"Empresa\" field.");
+    theForm.Empresa.focus();
+    return (false);
+  }
+
+  if (theForm.Pais.value == "")
+  {
+    alert("Please enter a value for the \"Pais\" field.");
+    theForm.Pais.focus();
+    return (false);
+  }
+
+  if (theForm.Pais.value.length < 3)
+  {
+    alert("Please enter at least 3 characters in the \"Pais\" field.");
+    theForm.Pais.focus();
+    return (false);
+  }
+
+  if (theForm.Pais.value.length > 50)
+  {
+    alert("Please enter at most 50 characters in the \"Pais\" field.");
+    theForm.Pais.focus();
+    return (false);
+  }
+
+  if (theForm.Ciudad.value == "")
+  {
+    alert("Please enter a value for the \"Ciudad\" field.");
+    theForm.Ciudad.focus();
+    return (false);
+  }
+
+  if (theForm.Ciudad.value.length < 3)
+  {
+    alert("Please enter at least 3 characters in the \"Ciudad\" field.");
+    theForm.Ciudad.focus();
+    return (false);
+  }
+
+  if (theForm.Ciudad.value.length > 50)
+  {
+    alert("Please enter at most 50 characters in the \"Ciudad\" field.");
+    theForm.Ciudad.focus();
+    return (false);
+  }
+
+  if (theForm.Direccion.value == "")
+  {
+    alert("Please enter a value for the \"Direccion\" field.");
+    theForm.Direccion.focus();
+    return (false);
+  }
+
+  if (theForm.Direccion.value.length < 3)
+  {
+    alert("Please enter at least 3 characters in the \"Direccion\" field.");
+    theForm.Direccion.focus();
+    return (false);
+  }
+
+  if (theForm.Direccion.value.length > 50)
+  {
+    alert("Please enter at most 50 characters in the \"Direccion\" field.");
+    theForm.Direccion.focus();
+    return (false);
+  }
+
+  var checkOK = "0123456789-.";
+  var checkStr = theForm.Telefono.value;
+  var allValid = true;
+  var decPoints = 0;
+  var allNum = "";
+  for (i = 0;  i < checkStr.length;  i++)
+  {
+    ch = checkStr.charAt(i);
+    for (j = 0;  j < checkOK.length;  j++)
+      if (ch == checkOK.charAt(j))
+        break;
+    if (j == checkOK.length)
+    {
+      allValid = false;
+      break;
+    }
+    if (ch == ".")
+    {
+      allNum += ".";
+      decPoints++;
+    }
+    else
+      allNum += ch;
+  }
+  if (!allValid)
+  {
+    alert("Please enter only digit characters in the \"Telefono\" field.");
+    theForm.Telefono.focus();
+    return (false);
+  }
+
+  if (decPoints > 1)
+  {
+    alert("Please enter a valid number in the \"Telefono\" field.");
+    theForm.Telefono.focus();
+    return (false);
+  }
+
+  if (theForm.fax1.value == "")
+  {
+    alert("Please enter a value for the \"fax1\" field.");
+    theForm.fax1.focus();
+    return (false);
+  }
+
+  if (theForm.fax1.value.length < 3)
+  {
+    alert("Please enter at least 3 characters in the \"fax1\" field.");
+    theForm.fax1.focus();
+    return (false);
+  }
+
+  if (theForm.fax1.value.length > 20)
+  {
+    alert("Please enter at most 20 characters in the \"fax1\" field.");
+    theForm.fax1.focus();
+    return (false);
+  }
+  return (true);
+}
+//--></script><!--webbot BOT="GeneratedScript" endspan --><form method="POST" action="../_vti_bin/shtml.dll/privado/encuesta.htm" onsubmit="return FrontPage_Form1_Validator(this)" name="FrontPage_Form1" webbot-action="--WEBBOT-SELF--">
+  <!--webbot bot="SaveResults" startspan S-Email-Format="HTML/UL"
+  B-Email-Label-Fields="TRUE" B-Email-Subject-From-Field="FALSE"
+  S-Email-Subject="Resultado de la Encuesta"
+  S-Builtin-Fields="REMOTE_NAME REMOTE_USER HTTP_USER_AGENT"
+  U-Confirmation-Url="../mirror.htm" S-Email-Address="damianj@sica.gov.ec" --><input TYPE="hidden" NAME="VTI-GROUP" VALUE="0"><!--webbot
+  bot="SaveResults" endspan i-checksum="43374" -->
+  <blockquote>
+    <font FACE="Arial"><table border="0" cellpadding="0" cellspacing="4" height="99">
+      <tr>
+        <td width="21%" height="34"><strong><i><font color="#800040" face="Arial" size="2">Nombre :</font></i></strong></td>
+        <td width="28%" height="34"><i><font size="2"><!--webbot
+          bot="Validation" B-Value-Required="TRUE" I-Minimum-Length="3"
+          I-Maximum-Length="50" --><input type="text" size="30" name="Nombre_Usuario" maxlength="50"></font></i></td>
+        <td width="14%" height="34"><strong><i><font color="#800040" face="Arial" size="2">E-mail:</font></i></strong></td>
+        <td width="37%" height="34"><i><font size="2"><input size="27" name="Direccion_email" tabindex="2"></font></i></td>
+      </tr>
+      <tr>
+        <td width="21%" height="34"><strong><i><font color="#800040" face="Arial" size="2">Empresa:</font></i></strong></td>
+        <td width="28%" height="34"><i><font size="2"><!--webbot
+          bot="Validation" B-Value-Required="TRUE" I-Minimum-Length="3"
+          I-Maximum-Length="50" --><input size="20" maxlength="50" name="Empresa"></font></i></td>
+        <td width="14%" height="34"><strong><i><font color="#800040" face="Arial" size="2">Actividad:</font></i></strong></td>
+        <td width="37%" height="34"><i><font size="2"><select name="Actividad" size="1">
+          <option value="Sector Privado">Sector Privado</option>
+          <option value="Sector Público">Sector Público</option>
+          <option value="Organismo Internacional">Organismo Internacional</option>
+          <option value="O.N.G.´s">O.N.G.</option>
+        </select></font></i></td>
+      </tr>
+      <tr>
+        <td width="21%" height="34"><strong><i><font color="#800040" face="Arial" size="2">País:</font></i></strong></td>
+        <td width="28%" height="34"><i><font size="2"><!--webbot
+          bot="Validation" B-Value-Required="TRUE" I-Minimum-Length="3"
+          I-Maximum-Length="50" --><input type="text" size="14" maxlength="50" name="Pais"></font></i></td>
+        <td width="14%" height="34"><strong><i><font color="#800040" face="Arial" size="2">Ciudad:</font></i></strong></td>
+        <td width="37%" height="34"><i><font size="2"><!--webbot
+          bot="Validation" B-Value-Required="TRUE" I-Minimum-Length="3"
+          I-Maximum-Length="50" --><input type="text" size="14" maxlength="50" name="Ciudad"></font></i></td>
+      </tr>
+      <tr>
+        <td width="21%" height="35"><strong><i><font color="#800040" face="Arial" size="2">Dirección:</font></i></strong></td>
+        <td width="79%" height="35" colspan="3"><i><font size="2"><!--webbot
+          bot="Validation" B-Value-Required="TRUE" I-Minimum-Length="3"
+          I-Maximum-Length="50" --><input size="42" maxlength="50" name="Direccion"></font></i></td>
+      </tr>
+      <tr>
+        <td width="21%" height="35"><strong><i><font color="#800040" face="Arial" size="2">Teléfono:</font></i></strong></td>
+        <td width="28%" height="35"><i><font size="2"><!--webbot
+          bot="Validation" S-Data-Type="Number" S-Number-Separators="x." --><input type="text" size="14" name="Telefono"></font></i></td>
+        <td width="14%" height="35"></td>
+        <td width="37%" height="35"></td>
+      </tr>
+      <tr>
+        <td width="21%" height="35">
+    <font FACE="Arial"><strong><i><font color="#800040" face="Arial" size="2">Fax:</font></i></strong>
+    </font></td>
+        <td width="28%" height="35">
+    <font FACE="Arial"><i><font size="2"><!--webbot bot="Validation"
+    B-Value-Required="TRUE" I-Minimum-Length="3" I-Maximum-Length="20" --><input type="text" name="fax1" size="14" maxlength="20"></font></i>
+    </font></td>
+        <td width="14%" height="35"></td>
+        <td width="37%" height="35"></td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p><em><font color="#000080"><strong>Su opinión es importante</strong></font></em>:</p>
+    </font><p><font FACE="Arial">Siendo nuestro mayor compromiso perfeccionar nuestro Servicio
+    de Información para irlo convirtiendo en un instrumento cada vez más útil para la labor
+    de su entidad, y el desarrollo del sector agropecuario ecuatoriano, solicitamos su
+    colaboración respondiéndonos de manera breve &nbsp;las cuatro preguntas que enumeramos a
+    continuación:</font></p>
+    <blockquote>
+      <div align="left"><table border="0" cellpadding="0" cellspacing="4">
+        <tr>
+          <td width="100%" height="1" colspan="2"><strong><font FACE="Arial" COLOR="#808000">1</font></strong><font FACE="Arial">. ¿</font><font FACE="Arial" COLOR="#000080">Qué falta en la Web SICA,
+          precisando el tipo de información y su frecuencia</font><font FACE="Arial">?<br>
+          <br>
+          <textarea rows="3" name="Que_falta_en_la_Web_SICA" cols="49" tabindex="10"></textarea></font></td>
+        </tr>
+        <tr>
+          <td width="100%" height="1" colspan="2"><strong><font FACE="Arial" COLOR="#808000">2</font></strong><font FACE="Arial">. ¿</font><font FACE="Arial" COLOR="#000080">Qué está de más, y debe ser
+          eliminado, en lo que ha visto de la Web SICA</font><font FACE="Arial">?<br>
+          <br>
+          <textarea rows="3" name="Que_esta_de_mas" cols="49" tabindex="11"></textarea></font></td>
+        </tr>
+        <tr>
+          <td width="100%" height="1" colspan="2"><strong><font FACE="Arial" COLOR="#808000">3</font></strong><font FACE="Arial">. ¿</font><font FACE="Arial" COLOR="#000080">Qué otra sugerencia de
+          cualquier índole nos puede aportar para que la Web SICA sea más <u>útil</u> (agregadora
+          de valor) para sus actividades</font><font FACE="Arial">?<br>
+          <br>
+          </font><textarea rows="3" name="Otra_sugerencia" cols="49" tabindex="12"></textarea></td>
+        </tr>
+        <tr>
+          <td width="100%" height="1" colspan="2"><font FACE="Arial" COLOR="#808000">4</font><font FACE="Arial">. ¿ </font><font FACE="Arial" COLOR="#000080">A que sección o seccciones se
+          refiere más su opinión</font><font FACE="Arial">?:</font></td>
+        </tr>
+        <tr>
+          <td width="50%" height="1" valign="top"><font FACE="Arial"><p style="margin-top: -1px; margin-bottom: -1px"><input type="checkbox" name="Página_principal" value="ON">Página
+          principal </p>
+          <p style="margin-top: -1px; margin-bottom: -1px"><input type="checkbox" name="Agro" value="ON">Agro en la economía</p>
+          <p style="margin-top: -1px; margin-bottom: -1px"><input type="checkbox" name="Comercio_Exterior" value="ON">Comercio Exterior</p>
+          <p style="margin-top: -1px; margin-bottom: -1px"><input type="checkbox" name="Exportaciones_Importaciones" value="ON">Exportaciones e Importaciones</p>
+          <p style="margin-top: -1px; margin-bottom: -1px"><input type="checkbox" name="Nuevas_Agroexportaciones" value="ON">Nuevas Agroexportaciones</p>
+          <p style="margin-top: -1px; margin-bottom: -1px"><input type="checkbox" name="Inversiones" value="ON">Inversiones</p>
+          <p style="margin-top: -1px; margin-bottom: -1px"><input type="checkbox" name="Marco_Legal" value="ON">Marco legal</p>
+          <p style="margin-top: -1px; margin-bottom: -1px"><input type="checkbox" name="Foros" value="ON">Foros</p>
+          <p style="margin-top: -1px; margin-bottom: -1px"><input type="checkbox" name="Mercosur" value="ON">Mercosur</p>
+          <p style="margin-top: -1px; margin-bottom: -1px"><input type="checkbox" name="Omc" value="ON">OMC</p>
+          <p style="margin-top: -1px; margin-bottom: -1px"><input type="checkbox" name="Comunidad_Andina" value="ON">Comunidad Andina
+          <p style="margin-top: -1px; margin-bottom: -1px"><input type="checkbox" name="Alca" value="ON">ALCA</font></td>
+          <td width="50%" height="1" valign="top"><font FACE="Arial">
+          <p style="margin-top: -1px; margin-bottom: -1px"><input type="checkbox" name="Apec" value="ON">APEC</p>
+          <p style="margin-top: -1px; margin-bottom: -1px"><input type="checkbox" name="Aceites" value="ON">Aceites</p>
+          <p style="margin-top: -1px; margin-bottom: -1px"><input type="checkbox" name="Algodón" value="ON">Algodón</p>
+          <p style="margin-top: -1px; margin-bottom: -1px"><input type="checkbox" name="Arroz" value="ON">Arroz</p>
+          <p style="margin-top: -1px; margin-bottom: -1px"><input type="checkbox" name="Azúcar" value="ON">Azúcar</p>
+          <p style="margin-top: -1px; margin-bottom: -1px"><input type="checkbox" name="Banano" value="ON">Banano</p>
+          <p style="margin-top: -1px; margin-bottom: -1px"><input type="checkbox" name="Cacao" value="ON">Cacao</p>
+          <p style="margin-top: -1px; margin-bottom: -1px"><input type="checkbox" name="Café" value="ON">Café</p>
+          <p style="margin-top: -1px; margin-bottom: -1px"><input type="checkbox" name="Lácteos" value="ON">Lácteos</p>
+          <p style="margin-top: -1px; margin-bottom: -1px"><input type="checkbox" name="Maíz" value="ON">Maíz</p>
+          <p style="margin-top: -1px; margin-bottom: -1px"><input type="checkbox" name="Trigo" value="ON">Trigo<br>
+          <input type="checkbox" name="Papa" value="ON">Papa</font></td>
+        </tr>
+      </table>
+      </div><font FACE="Arial">
+    </blockquote>
+  </blockquote>
+  <blockquote>
+    <p>Agradecemos anticipadamente su muy sincera respuesta, pues colabora así con nuestra
+    permanente disposición de servicio y superación.</p>
+    <p>Cordialmente</p>
+    <b><p><i>Dr. Patricio Martínez Jaime<br>
+    Director del Proyecto SICA/ Banco Mundial</i><br>
+    <font FACE="Arial" COLOR="#0000ff"><u><a href="../index.html">http://www.sica.gov.ec</a></u></font></p>
+    </b></font>
+  </blockquote>
+  <dl>
+    <div align="center"><center>
+    <dt><font face="Times New Roman" size="8"><input type="submit" value="Enviar correo" style="font-family: Times New Roman; font-size: 12pt"> <input type="reset" value="Restablecer formulario" style="font-family: Times New Roman; font-size: 12pt"></font></dt>
+    </center></div>
+  </dl>
+</form>
+  <p style="margin-top: -1; margin-bottom: -1"><font face="Times New Roman" size="1"><a href="../mirror.htm"><br>
+  <br>
+  <img border="0" src="../objetos/home09.gif" alt="Home" WIDTH="27" HEIGHT="28"></a></font></p>
+  <hr style="MARGIN-TOP: -1px; MARGIN-BOTTOM: -1px">
+  <p style="MARGIN-TOP: -1px; MARGIN-BOTTOM: -1px" align="center"><font size="1">Copyright
+  © 2000 Sistema de Información Agropecuaria</font></p>
+</body>
+</html>

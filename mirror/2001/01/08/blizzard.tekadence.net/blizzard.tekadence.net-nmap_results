@@ -1,0 +1,39 @@
+
+Starting nmap V. 2.54BETA3 ( www.insecure.org/nmap/ )
+Insufficient responses for TCP sequencing (2), OS detection may be less accurate
+Insufficient responses for TCP sequencing (3), OS detection may be less accurate
+Interesting ports on blizzard.tekadence.net (216.133.250.86):
+(The 1 port scanned but not shown below is in state: closed)
+Port       State       Service
+22/tcp     filtered    ssh                     
+23/tcp     filtered    telnet                  
+25/tcp     open        smtp                    
+80/tcp     open        http                    
+
+TCP Sequence Prediction: Class=random positive increments
+                         Difficulty=3792626 (Good luck!)
+Aggressive OS guesses: Linux 2.2.14 (94%), Linux kernel 2.2.13 (94%), Linux 2.1.122 - 2.2.16 (94%), HP-UX B11.00 U 9000/839 (90%), Linux 2.2.12 (90%), Linux Kernel 2.1.88 (88%), Linux 2.1.91 - 2.1.103 (87%), NetBSD 1.3I (after 19990119) to 1.4 x86 (86%)
+No exact OS matches for host (If you know what OS is running on it, see http://www.insecure.org/cgi-bin/nmap-submit.cgi).
+TCP/IP fingerprint:
+T1(Resp=Y%DF=Y%W=7F53%ACK=S++%Flags=AS%Ops=MENNTNW)
+TSeq(Class=RI%gcd=1%SI=39DEF2)
+T2(Resp=Y%DF=Y%W=0%ACK=S%Flags=AR%Ops=)
+T1(Resp=Y%DF=Y%W=7F53%ACK=S++%Flags=AS%Ops=MENNTNW)
+T3(Resp=Y%DF=Y%W=7F53%ACK=S++%Flags=AS%Ops=MENNTNW)
+T2(Resp=Y%DF=Y%W=0%ACK=S%Flags=AR%Ops=)
+T4(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T3(Resp=Y%DF=Y%W=7F53%ACK=S++%Flags=AS%Ops=MENNTNW)
+T5(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+T4(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T6(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T5(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+T7(Resp=Y%DF=Y%W=0%ACK=S%Flags=AR%Ops=)
+T6(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+PU(Resp=N)
+T7(Resp=Y%DF=Y%W=0%ACK=S%Flags=AR%Ops=)
+PU(Resp=N)
+
+
+
+
+Nmap run completed -- 1 IP address (1 host up) scanned in 13 seconds

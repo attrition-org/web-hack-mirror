@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Advertising Business Opportunities t</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF">
+<script>
+     var counter=0
+     var linktarget=''
+     imgArray =new Array()
+     linkArray =new Array()
+     imgArray[0] = "images/front.jpg"
+     linkArray[0] = ""
+     imgArray[1] = "images/learning.jpg"
+     linkArray[1] = ""
+     imgArray[2] = "images/dotclinic.jpg"
+     linkArray[2] = ""
+     imgArray[3] = "images/promotions.jpg"
+     linkArray[3] = ""
+     function swapBanner(bannerID){ 
+		
+		    if(counter<imgArray.length) {
+               eval('document.'+bannerID+'.src="'+imgArray[counter]+'"') 
+               linktarget=linkArray[counter]
+               counter+=1} else {
+               counter=0
+               eval('document.'+bannerID+'.src="'+imgArray[counter]+'"') 
+               linktarget=linkArray[counter]
+               counter+=1
+               } 
+     }
+			setInterval(swapBanner,2000,"advertise")
+</script>
+<a href='#' onClick='return ((location.href=linktarget)?false:false)'><img src=images/front.jpg name=advertise border=0 width="308" height="182"></a> 
+<script>swapBanner("advertise")</script>
+</body>
+</html>

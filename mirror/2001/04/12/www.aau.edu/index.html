@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>S4t4nic S0ulS Hack Again...</title>
+</head>
+
+<style>
+<!--
+.intro{
+position:absolute;
+left:0;
+top:0;
+layer-background-color:Red;
+background-color:Red;
+border:0.3px solid Red
+}
+-->
+</style>
+</head>
+<body  bgcolor="black">
+<body>
+<div id="i1" class="intro"></div><div id="i2" class="intro"></div>
+<script language="JavaScript1.2">
+
+
+var speed=30
+var temp=new Array()
+var temp2=new Array()
+if (document.layers){
+for (i=1;i<=2;i++){
+temp[i]=eval("document.i"+i+".clip")
+temp2[i]=eval("document.i"+i)
+temp[i].width=window.innerWidth/2
+temp[i].height=window.innerHeight
+temp2[i].left=(i-1)*temp[i].width
+}
+}
+else if (document.all){
+var clipright=document.body.clientWidth/2,clipleft=0
+for (i=1;i<=2;i++){
+temp[i]=eval("document.all.i"+i+".style")
+temp[i].width=document.body.clientWidth/2
+temp[i].height=document.body.offsetHeight
+temp[i].left=(i-1)*parseInt(temp[i].width)
+}
+}
+
+
+function openit(){
+window.scrollTo(0,0)
+if (document.layers){
+temp[1].right-=speed
+temp[2].left+=speed
+if (temp[2].left>window.innerWidth/2)
+clearInterval(stopit)
+}
+else if (document.all){
+clipright-=speed
+temp[1].clip="rect(0 "+clipright+" auto 0)"
+clipleft+=speed
+temp[2].clip="rect(0 auto auto "+clipleft+")"
+if (clipright<=0)
+clearInterval(stopit)
+}
+}
+
+function gogo(){
+stopit=setInterval("openit()",100)
+}
+gogo()
+
+</script>
+ 
+<SCRIPT LANGUAGE="JavaScript"> 
+
+<!--    // start of script
+
+        // code by Joe Burns
+
+        // Fixed up by Zusukar
+
+        var pictures = 3;
+
+        var dt = new Date();
+
+        var hr = dt.getSeconds();
+
+        var ra = hr % pictures;
+
+        var re = ++ra;
+
+document.write(msg); 
+
+<!-- end -->
+
+</script>
+<body bgcolor="Black">
+<font color="Red" size="+2"><b>Hacked By:</b></font>
+<BR>
+<BR>
+<center><img src="zero.jpg"></center><font color="Lime" size="+2"><b><center>and -=|§tee£_edge|=-  Sp1d3r [Attack] (Volte logo...) Murphy</center></b></font>
+<BR>
+<BR>
+<font color="Yellow" size="+1"><b>Thanks:</b></font><font color="White" size="3"><b>&nbsp;&nbsp;&nbsp;Ph4nt4&nbsp;&nbsp;&nbsp;ßoner&nbsp;&nbsp;&nbsp;| THE ¤ Z€NNi€NSS|&nbsp;&nbsp;&nbsp;AcidSnack&nbsp;&nbsp;&nbsp;-|NeoByte|- †O®S†&nbsp;&nbsp;&nbsp;</b></font>
+<BR>
+<BR>
+<BR>
+<font color="Yellow" size="+1"><b>Groups:</b></font><font color="White" size="3"><b>&nbsp;Cr1m3 0rg4n1z4d0</b></font><font color="White" size="3"><b>&nbsp;&nbsp;&nbsp;Silver Lords&nbsp;&nbsp;&nbsp;Demonios&nbsp;&nbsp;&nbsp;Renegados&nbsp;&nbsp;&nbsp;Anjos Virtuais&nbsp;&nbsp;&nbsp;Prime Suspectz</b></font>
+<BR>
+<BR>
+<BR>
+<BR>
+<center><font color="#9966cc" size="5"><b>&nbsp;Você Pra min é Problema Seu</b></font></center>
+<BR>
+<BR>
+<BR>
+<center>
+<font color="Blue" size="10" face="System" ><b>>>S4t4n1c S0ulS<<</b></font>
+</center>
+</body>
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

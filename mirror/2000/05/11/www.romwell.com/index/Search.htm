@@ -1,0 +1,318 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Maya@romwell.com">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en]C-AtHome0405  (Win95; U) [Netscape]">
+   <meta name="Description" content="Search up to 4 search engines simultaneously:">
+   <meta name="KeyWords" content="romwell.com, bookstore, musicstore, web hosting, web design, advertising, promotions, marketing, business, humor, entertainment, health, more">
+   <meta name="Classification" content="business, web hosting, web design, bookstore, books, music, entertainment, humor,">
+   <title>Welcome to the Romwell.com - Search The Web</title>
+<!===============================>
+<script language="JavaScript">
+
+
+<!-- Hide this script from old browsers --
+/*
+   This script came from the 24 hour JavaScripts Site
+located at http://www.javascripts.com.  It is brought to 
+  you by Eric Jarvies, Lewis Sellers, Giuseppe Lombardo, 
+          Kurt Anderson, and David Medinets. 
+*/
+Alta = "http://www.altavista.digital.com/cgi-bin/query?pg=q&what=web&q=";
+Crawler = "http://www.webcrawler.com/cgi-bin/WebQuery?searchText=";
+Excite = "http://www.excite.com/search.gw?searchType=Concept&search=";
+Magellan = "http://www.mckinley.com/searcher.cgi?query=";
+MetaCrawler = "http://metacrawler.cs.washington.edu:8080/htbin-post/nph-metaquery.p?general=";
+Yahoo = "http://search.yahoo.com/bin/search?p=";
+InfoSeek = "http://guide-p.infoseek.com/Titles?qt=";
+Lycos = "http://www.lycos.com/cgi-bin/pursuit?query=";
+var got=0;
+var url = "";
+var plus="";
+var mag="";
+function search4(item){
+        stringPlus();
+        resultsWindow=window.open();
+        resultsWindow.document.open();
+        resultsWindow.document.write("<head><title>Close this window to return to Total Search</title></head>");
+  resultsWindow.document.write("<FRAMESET ROWS=50%,50%><FRAMESET COLS=50%,50%><FRAME NAME='frame0' SRC='" + computeFrameSrc(0) + "'><FRAME NAME='frame1' SRC='" + computeFrameSrc(1) + "'></FRAMESET>");
+        resultsWindow.document.write("<FRAMESET COLS=50%,50%><FRAME NAME='frame2' SRC='" + computeFrameSrc(2) + "'><FRAME NAME='frame3' SRC='" + computeFrameSrc(3) + "'></FRAMESET></FRAMESET>");
+        resultsWindow.document.close();
+        got = 0;
+}
+function search2(item){
+        stringPlus();
+        resultsWindow=window.open();
+        resultsWindow.document.open();
+        resultsWindow.document.write("<head><title>Close this window to return to Total Search</title></head>");
+  resultsWindow.document.write("<FRAMESET ROWS=50%,50%><FRAME NAME='frame0' SRC='" + computeFrameSrc(0) + "'><FRAME NAME='frame1' SRC='" + computeFrameSrc(1) + "'></FRAMESET>");
+        resultsWindow.document.close();
+        got = 0;
+}
+function stringPlus(){
+        for (var j=0; j < window.document.choose4.text.value.length; j++){
+                if (window.document.choose4.text.value.charAt(j) == " ")
+                        mag += "+";
+                else
+                        mag += window.document.choose4.text.value.charAt(j);}
+}
+function numChecked(item){
+        plus = escape(item.text.value);
+        var h=0;
+        num=0;
+        for (var l=0; l < item.check1.length; l++) {
+                if (item.check1[l].checked){
+                                h++;
+                        if (h++ <= 4){
+                                if (l == "0"){
+                                         num = 1;}
+                                else if (l == "1"){
+                                        num = 2;}
+                                else if (l == "2"){
+                                        num = 3;}
+                                else if (l == "3"){
+                                        num = 4;}
+                                else if (l == "4"){
+                                        num = 5;}
+                                else if (l == "5"){
+                                        num = 6;}
+                                else if (l == "6"){
+                                        num = 7;}
+                                else if (l == "7"){
+                                        num = 8;}
+                                else if (l == "8"){
+                                        num = 9;}
+                                else if (l == "9"){
+                                        num = 10;}
+                                else if (l == "10"){
+                                        num = 11;}
+                                else if (l == "11"){
+                                        num = 12;}
+                                else if (l == "12"){
+                                        num = 13;}
+                                }
+                }
+        }
+        if (h == 2)
+                Results(num-1);
+        else if (h == 4)
+                search2(item);
+        else
+                search4(item);
+}
+function computeFrameSrc(num){
+        var k=-1;
+        for (var j=got; j < document.choose4.check1.length; j++) {
+                if (document.choose4.check1[j].checked){
+                                k++;
+                        if (k++ <= num){
+                                if (j == "0"){
+						    url = Alta + plus + "&mode=and";
+                                        got = 1;}
+                                else if (j == "1"){
+						    url = Crawler + plus + "&maxHits=25";
+                                        got = 2;}
+                                else if (j == "2"){
+						    url = Excite + plus + "&category=default&mode=relevance&showqbe=1&display=html3,hb";
+                                        got = 3;}
+                                else if (j == "3"){
+                                        url = Magellan + mag;
+                                        got = 4;}
+                                else if (j == "4"){
+                                        url = Lycos + plus + "&backlink=217&maxhits=25";
+                                        got = 5;}
+                                else if (j == "5"){
+						    url = Yahoo + plus;
+                                        got = 6;}
+                                else if (j == "6"){
+                                        url = InfoSeek + plus + "&col=WW";
+						    got = 7;}
+                                else if (j == "7"){
+                                        got = 8;}
+                                
+                                return url;
+                                }
+                }
+        }
+        url = "http://www.romwell.com";
+        return url;
+}
+function Results(place){
+        stringPlus();
+        resultsWin = open("","results");
+        if (place == "0")
+                url = Alta + plus + "&mode=and";
+        else if (place == "1")
+                url = Crawler + plus + "&maxHits=25";
+        else if (place == "2")
+                url = Excite + plus + "&category=default&mode=relevance&showqbe=1&display=html3,hb";
+        else if (place == "3")
+                url = Magellan + mag;
+        else if (place == "4")
+                 url = Lycos + plus + "&backlink=217&maxhits=25";
+        else if (place == "5")
+                url = Yahoo + plus;
+        else if (place == "6")
+                url = InfoSeek + plus + "&col=WW";
+               
+        resultsWin.location = url;
+}
+// -- End Hiding Here -->
+
+
+</script>
+<!======================================>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#993300" vlink="#660000" alink="#FF6600" background="img/edge.jpg">
+&nbsp;
+<table WIDTH="95%" >
+<tr>
+<td WIDTH="12%"></td>
+
+<td><a href="../index.html"><img SRC="../images/Romwellcom.gif" BORDER=0 height=45 width=351></a></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td></td>
+
+<td></td>
+</tr>
+</table>
+
+<table WIDTH="100%" >
+<tr VALIGN=TOP>
+<td WIDTH="20%">
+<center><a href="../index.html"><img SRC="img/romhome.jpg" BORDER=0 height=33 width=88></a>
+<br><a href="../Hosting/Welcome.htm"><img SRC="img/romwelco.jpg" BORDER=0 height=33 width=88></a>
+<br><a href="SiteMap.htm"><img SRC="img/rommap.jpg" BORDER=0 height=33 width=88></a>
+<br><a href="../Hosting/WebDesign.htm"><img SRC="img/romdesign.jpg" BORDER=0 height=33 width=88></a>
+<br><a href="../Hosting/index.htm"><img SRC="img/romhosting.jpg" BORDER=0 height=33 width=88></a>
+<br><a href="../books/index.htm"><img SRC="img/rombook.jpg" BORDER=0 height=33 width=88></a>
+<br><a href="../books/craft/Craft0.htm"><img SRC="img/romcraft.jpg" BORDER=0 height=33 width=88></a>
+<br><a href="../books/health1/Index.htm"><img SRC="img/romhealth.jpg" BORDER=0 height=33 width=88></a>
+<br><a href="../humor/index.sht"><img SRC="img/romhumor.jpg" BORDER=0 height=33 width=88></a>
+<br><a href="../books/music/index.htm"><img SRC="img/rommusic.jpg" BORDER=0 height=33 width=88></a>
+<br><a href="../books/cooking/index.htm"><img SRC="img/romrealcook.jpg" BORDER=0 height=33 width=88></a>
+<br><a href="../books/relation/Index.htm"><img SRC="img/romrelat.jpg" BORDER=0 height=33 width=88></a>
+<br><a href="../travel/all/index.htm"><img SRC="img/romtravel.jpg" BORDER=0 height=33 width=88></a>
+<br><a href="http://www.romwell.com/cgi-bin/cougalinks.cgi"><img SRC="img/romlinks.jpg" BORDER=0 height=33 width=88></a>
+<br><a href="Search.htm"><img SRC="img/romsearch.jpg" BORDER=0 height=33 width=88></a>
+<br><a href="../Hosting/ContactUs.htm"><img SRC="img/romcontact.jpg" BORDER=0 height=33 width=88></a></center>
+
+<p><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p>&nbsp;</td>
+
+<td>
+<center><b><font size=+3>Search The Web</font></b>
+<p>
+<hr SIZE=1 WIDTH="75%">
+<br><form name="choose4" Action="javascript:numChecked(document.choose4) //">
+<p><b><font size=+1>Search up to 4 search engines simultaneously:</font></b></center>
+
+<center><table>
+<tr>
+<td>
+<br><input type="checkbox" name="check1" value="Alta"
+                onClick="choose4.check1.value='Alta'">Alta
+Vista
+<center><input type="checkbox" name="check1" value="Crawler"
+                onClick="choose4.check1.value='Crawler'">Webcrawler</center>
+<input type="checkbox" name="check1" value="Excite"
+                onClick="choose4.check1.value='Excite'">Excite
+<br><input type="checkbox" name="check1" value="Magellan"
+                onClick="choose4.check1.value='Magellan'">Magellan</td>
+
+<td WIDTH="15">&nbsp;</td>
+
+<td VALIGN=TOP>
+<center><b>Search Engines</b>
+<br>&nbsp;
+<p>&nbsp;</center>
+</td>
+
+<td>
+<br>&nbsp;
+<center>
+<p>&nbsp;</center>
+</td>
+
+<td WIDTH="15">&nbsp;</td>
+
+<td><input type="checkbox" name="check1" value="Lycos"
+                onClick="choose4.check1.value='Lycos'">Lycos
+<br><input type="checkbox" name="check1" value="Yahoo"
+                onClick="choose4.check1.value='Yahoo'">Yahoo
+<br><input type="checkbox" name="check1" value="InfoSeek"
+                onClick="choose4.check1.value='InfoSeek'">InfoSeek</td>
+</tr>
+</table></center>
+
+<center>
+<p><b>Search</b>:&nbsp;<input type="text" name="text" size=60>
+<br><input type="submit" name="send" value="Search"><input type="reset" name="clear" value="Clear"></form>
+<hr SIZE=1 WIDTH="75%"></center>
+
+<br>&nbsp;
+<center><table BORDER WIDTH="70%" BGCOLOR="#FFEFDF" >
+<tr>
+<td>
+<center><b><font color="#000000"><font size=+1>Romwell.com Search</font></font></b></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><font color="#000000"><font size=+1>Enter words below and than
+click <b>Search the web</b></font></font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><table COLS=1 WIDTH="85%" >
+<tr>
+<td>
+<center><form METHOD=GET NAME="searchform" ACTION="http://www.romwell.com/cgi-bin/pod.cgi"><input TYPE="hidden" NAME="cp" VALUE="nsiwidsrc"><input NAME="search" VALUE="" TYPE=TEXT SIZE=25 MAXLENGTH=512>
+<br><input TYPE="SUBMIT" VALUE="Search the web"></form></center>
+</td>
+</tr>
+</table></center>
+</td>
+</tr>
+</table></center>
+
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<center>
+<p><font size=+4><a href="../index.html">Back</a></font>
+<br>&nbsp;
+<br>&nbsp;
+<p><img SRC="../Hosting/cpic042.gif" height=26 width=560>
+<br><font size=-1>Copyright &copy;1998 Romwell.com. All rights reserved
+.Web site designed and hosted by <a href="../index.html">Romwell.com</a></font>
+<br><font size=-1>Send mail to <a href="mailto:webmaster@romwell.com">webmaster</a>&nbsp;
+with questions or comments about this web site.</font></center>
+
+<p><br>
+<br>
+<p><! Counter romwell.com><img SRC="http://romwell.com/cgi-bin/counter/counter.cgi?fram=count&viz=no&isinv=yes&setup=/home/www/romwell/cgi-bin/counter/setup.txt" height=16 width=32><!End Counter romwell.com>
+<br>&nbsp;</td>
+</tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+--14:01:44--  http://clnt.cl.msu.edu:80/
+           => `clnt.cl.msu.edu/index.html'
+Connecting to clnt.cl.msu.edu:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 437 [text/html]
+
+    0K ->                                                        [100%]
+
+14:01:44 (426.76 KB/s) - `clnt.cl.msu.edu/index.html' saved [437/437]
+
+Loading robots.txt; please ignore errors.
+--14:01:44--  http://clnt.cl.msu.edu:80/no-robots.txt
+           => `clnt.cl.msu.edu/no-robots.txt'
+Connecting to clnt.cl.msu.edu:80... connected!
+HTTP request sent, awaiting response... 404 Object Not Found
+14:01:44 ERROR 404: Object Not Found.
+
+--14:01:44--  http://clnt.cl.msu.edu:80/hacked.jpg
+           => `clnt.cl.msu.edu/hacked.jpg'
+Connecting to clnt.cl.msu.edu:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 18,033 [image/jpeg]
+
+    0K -> .......... .......                                     [100%]
+
+14:01:45 (58.31 KB/s) - `clnt.cl.msu.edu/hacked.jpg' saved [18033/18033]
+
+Converting clnt.cl.msu.edu/index.html... done.
+
+FINISHED --14:01:45--
+Downloaded: 18,470 bytes in 2 files
+Converting clnt.cl.msu.edu/index.html... done.

@@ -1,0 +1,342 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>New Page 4</title>
+
+<SCRIPT language=JavaScript>
+<!-- begin script
+function VersionNavigateur(Netscape, Explorer) {
+  if ((navigator.appVersion.substring(0,3) >= Netscape && navigator.appName == 'Netscape') ||      
+      (navigator.appVersion.substring(0,3) >= Explorer && navigator.appName.substring(0,9) == 'Microsoft'))
+    return true;
+else return false;
+}
+//  end script -->
+</SCRIPT>
+
+<SCRIPT>
+
+
+var x,y
+var step=20
+var flag=0
+
+var message="U n t a r "
+message=message.split("")
+
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	xpos[i]=-50
+}
+
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	ypos[i]=-50
+}
+
+function handlerMM(e){
+	x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+	y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+	flag=1
+}
+
+function makesnake() {
+	if (flag==1 && document.all) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("span"+(i)+".style")
+    		thisspan.posLeft=xpos[i]
+			thisspan.posTop=ypos[i]
+    	}
+	}
+	
+	else if (flag==1 && document.layers) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("document.span"+i)
+    		thisspan.left=xpos[i]
+			thisspan.top=ypos[i]
+    	}
+	}
+		var timer=setTimeout("makesnake()",30)
+}
+
+</SCRIPT>
+<STYLE>.special {
+	FONT-FAMILY: Courier New; FONT-SIZE: 10pt
+}
+TABLE {
+	FONT-FAMILY: Tahoma, Verdana, Arial; FONT-SIZE: 10pt
+}
+BODY {
+	FONT-FAMILY: Tahoma, Verdana, Arial; FONT-SIZE: 10pt; OVERFLOW: scroll; OVERFLOW-X: hidden
+}
+A:link {
+	COLOR: #ff8040; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #ff8040; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: red; TEXT-DECORATION: none
+}
+.popper {
+	POSITION: absolute; VISIBILITY: hidden
+}
+.spanstyle {
+	COLOR: blue; FONT-FAMILY: Comic Sans MS; FONT-SIZE: 8pt; FONT-WEIGHT: bold; POSITION: absolute; TOP: -50px; VISIBILITY: visible
+}
+</STYLE>
+
+</head>
+
+
+<body bgColor="" leftMargin="5" onload="makesnake()" style="OVERFLOW-X: hidden; OVERFLOW-Y: scroll; WIDTH: 100%" topMargin="0" marginheight="0" marginwidth="0">
+
+
+
+<SCRIPT>
+<!-- Beginning of JavaScript -
+
+for (i=0;i<=message.length-1;i++) {
+    document.write("<span id='span"+i+"' class='spanstyle'>")
+	document.write(message[i])
+    document.write("</span>")
+}
+
+if (document.layers){
+	document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+
+// - End of JavaScript - -->
+
+</SCRIPT>
+
+<div align="center">
+  <center>
+  <table border="0" cellpadding="0" cellspacing="0" width="95%">
+    <tr>
+      <td width="100%">
+        <div align="center">
+          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+              <td width="100%" colspan="3">
+                <p align="center"><b><font size="3" face="Arial Narrow" color="#FF0000"><img border="0" src="images/profil.gif" width="500" height="50"><br>
+                </font></b></td>
+            </tr>
+            <tr>
+              <td width="100%" colspan="3">
+                <p align="center"><font size="2" face="Arial Narrow"><br>
+                Masa awal&nbsp; <a href="profilbkt.htm">Masa kebangkitan</a>&nbsp;
+       <a href="profilkonsol.htm">Masa
+       konsolidasi</a>&nbsp; <a href="profilpkbn.htm">Masa perkembangan</a>&nbsp;&nbsp;
+       <a href="profilarti.htm">Arti logo untar</a></font>
+              </td>
+            </tr>
+          </center>
+          <tr>
+            <td width="100%" colspan="3">
+                <p align="left"><font face="Arial Narrow" size="2">
+                <b><br>
+                MASA AWAL</b><br>
+                Pemikiran pertama untuk mendirikan suatu perguruan tinggi
+                dicetuskan pada tahun 1957 oleh sekelompok sosiawan di
+                lingkungan Perhimpunan Sosial Candra Naya yang pada waktu itu
+                masih bernama Sin Ming Hui.</font></p>
+              <center>
+                <p align="justify"><font face="Arial Narrow" size="2">Atas
+                prakarsa Drs. Kwee Hwat Djien, pada tanggal 18 Juni 1959, mereka
+                menyepakati untuk mendirikan suatu yayasan yang diberi nama
+                Yayasan Tarumanagara yang kemudian dikukuhkan berdirinya melalui
+                Akte Notaris E. Pondaag nomor 54 tanggal 11 September 1959.
+                Tarumanagara sebagai nama yayasan dan kemudian nama universitas
+                diusulkan oleh P.K. Ojong,SH pada rapat yayasan tanggal 3 Juli
+                1959. Usul itu didukung oleh Moh. Said.</font></p>
+                <p align="justify"><font face="Arial Narrow" size="2">Nama
+                Tarumanagara diambil dari nama kerajaan yang pernah berdiri di
+                daerah yang kini menjadi Jawa Barat. Pada abad VI , di bawah
+                pemerintahan Raja Purnawarman, kerajaan Tarumanagara mengalami
+                masa jayanya. Kerajaan ini meninggalkan beberapa prasasti yang
+                tersebar di daerah Jawa Barat sekarang termasuk di Jakarta,
+                diantaranya, prasasti Ciaruteun yang terletak di lokasi
+                pertemuan sungai Ciaruteun dan sungai Cisadane di daerah Bogor.</font></p>
+                <p align="justify"><font face="Arial Narrow" size="2">Di samping
+                badan hukum Sin Ming Hui, beberapa nama berikut termasuk pula
+                sebagai pendiri yayasan ini. Mereka adalah Drs. Kwee Hwat Djien
+                (H.K. Santoso), Mr. Auw Jong Peng Koen (P.K. Ojong), Drs. Oey
+                Kwie Tek (Hendra Darmawan), Lim Toan Lok (Johannes
+                Soewandi),Khoe Woen Sioe, Mr. Drs. Go Tie Siem, Dr. Liem Tjien
+                Kiat ( Eddy L. Waworuntu), Drs. Lo Kiem Tjing, Drs.Lim Tjoeng
+                Sen (Lutiarso Senoaji), Drs. Tjhio Jan Seng (Hadi Suryanto),
+                R.Supangat&nbsp; Prawirokoesoemo,SH, Lim Tjong Tong, Oey Kim
+                SenGo King Liong, Tjioe Bok San, dan Gan Hok Lin,SH (Ganis
+                Suryahudaya).</font></p>
+                <p align="justify"><font face="Arial Narrow" size="2">Setelah
+                Yayasan Tarumanagara berdiri maka disusunlah pengurus yayasan
+                yang pertama dengan formasi sebagai berikut : </font></p>
+                <div align="center">
+                  <table border="1" cellspacing="0" width="76%" bgcolor="#00FFFF">
+                    <tr>
+                      <td width="30%" valign="top"><font size="2" face="Arial Narrow">Ketua</font></td>
+                      <td width="70%"><font size="2" face="Arial Narrow">Drs.
+                        Kwee Hwat Djien (H.K. Santoso)</font></td>
+                    </tr>
+                    <tr>
+                      <td width="30%" valign="top"><font size="2" face="Arial Narrow">Wakil
+                        ketua</font></td>
+                      <td width="70%"><font size="2" face="Arial Narrow">R.
+                        Supangat Prawirokoesoemo,SH<br>
+                        Drs. Lo Kiem Tjing</font></td>
+                    </tr>
+                    <tr>
+                      <td width="30%" valign="top"><font size="2" face="Arial Narrow">Penulis</font></td>
+                      <td width="70%"><font size="2" face="Arial Narrow">Drs.
+                        Domingus Sakarias Matakupan</font></td>
+                    </tr>
+                    <tr>
+                      <td width="30%" valign="top"><font size="2" face="Arial Narrow">Wakil
+                        penulis</font></td>
+                      <td width="70%"><font size="2" face="Arial Narrow">Drs.
+                        Kho Han Tiong (A. Kahono)</font></td>
+                    </tr>
+                    <tr>
+                      <td width="30%" valign="top"><font size="2" face="Arial Narrow">Bendahara</font></td>
+                      <td width="70%"><font size="2" face="Arial Narrow">Hazil
+                        Tanzil</font></td>
+                    </tr>
+                    <tr>
+                      <td width="30%" valign="top"><font size="2" face="Arial Narrow">Wakil
+                        bendahara</font></td>
+                      <td width="70%"><font size="2" face="Arial Narrow">Drs.
+                        Tjhio Jan Seng (Hadi Suryanto)</font></td>
+                    </tr>
+                    <tr>
+                      <td width="30%" valign="top"><font size="2" face="Arial Narrow">Para
+                        pembantu</font></td>
+                      <td width="70%"><font size="2" face="Arial Narrow">Mr. Auw
+                        Jong Peng Koen (P.K.Ojong)<br>
+                        Mr.Drs. Go Tie Siem<br>
+                        Go KIng Liong<br>
+                        Oey Kim Sen<br>
+                        R.M. Padmo Sumasto,SH<br>
+                        Lie Beng Giok (L.B.G. Surjadinata)</font></td>
+                    </tr>
+                  </table>
+                </div>
+                <p align="justify"><font face="Arial Narrow" size="2">Maksud dan
+                dan tujuan pendirian yayasan ini adalah &quot; <b>Mengembangkan
+                dan meningkatkan mutu pendidikan, pengajaran, dan kebudayaan
+                dalam masyarakat, dengan berpedoman pada pembentukan manusia
+                Indonesia yang pandai dan berbudi luhur </b>&quot;.</font>
+                <p align="justify"><font face="Arial Narrow" size="2">Sebagai usaha pertama pada tanggal 1 Oktober 1959
+      bertempat di gedung Candra Naya, Jalan Gajah Mada nomor 188, yayasan mendirikan Perguruan
+      Tinggi Ekonomi Tarumanagara, Jurusan Ekonomi Perusahaan. Perguruan Tinggi ini dipimpin
+      oleh Drs. Kho Oen Bik sebagai Dekan dan Drs. Lo Kiem Tjing sebagai Wakil Dekan. Kemudian
+      pada tanggal 3 Februari 1960 rapat dilanjutkan dengan membahas rencana pendidikan sekolah
+      kejuruan teknik. Sebagai tindak lanjut dari pembahasan ini, pada tanggal 24 Oktober 1960,
+      Ir. Ong Tjing Jong ditunjuk untuk membentuk sebuah panitia persiapan pendirian sekolah
+      teknik. Hasil kerja panitia ini dibahas dalam rapat yayasan tanggal 7 September 1962, dan
+      rapat memutuskan untuk mendirikan Sekolah Kejuruan Teknik Arsitektur dengan pimpinan Ir.
+      Hadmadi sebagai ketua dan Ir. W. Pragantha sebagai sekretaris. Pada saat peresmian tanggal
+      1 Oktober 1962, sekolah ini dijadikan Fakultas Teknik Jurusan Arsitektur. Fakultas ini
+      merupakan salah satu Jurusan Teknik Arsitektur swasta yang tertua di Indonesia.</font>
+                <p align="justify"><font color="#000000" size="2" face="Arial Narrow">Pada tanggal 18 September 1pada saat ini
+  Universitas Tarumanagara mengelola enam fakultas, yaitu Fakultas Ekonomi, Fakultas Hukum,
+  Fakultas Teknik, Fakultas Kedokteran, Fakultas Psikologi, dan Fakultas Seni Rupa dan
+  Desain; serta tiga Program Magister yaitu Program Magister Ilmu Hukum, Program Magister
+  Teknik Sipil, dan Program Magister Manajemen.</font>
+        <p align="justify"><font size="2" face="Arial Narrow">Atas prakarsa para dokter yang duduk dalam pengurus
+yayasan khususnya yang bertugas di Rurnah Sakit Sumber Waras, pada tanggal 1 Oktober 1965,
+dibuka pula Fakultas Kedokteran. Sebagai dekan pertama diangkat Dr. R. Pirngadi
+Gonggoputro.<br>
+        Tanggal 1 Oktober 1965 ini diresmikan pula sebagai hari
+lahimya Universitas Tarumanagara. Sekitar tahun 1965/1966 Universitas Tarumanagara
+menghadapi masa-masa sulit sehingga usaha pengembangan tidak dapat berjalan lancar. Hal
+ini timbul sebagai akibat dari adanya tragedi nasional G-30-S/PKI. Peristiwa G-30S/PKI
+membangkitkan semangat nasionalisme para mahasiswa Universitas Tarumanagara dan rnereka
+ikut turun ke jalan mengadakan aksi-aksi penumbangan Orde Lama. Dengan kejadian ini
+Universitas Tarumanagara yang saat itu masih menumpang di bagian depan gedung Perhimpunan
+Sosial Candra Naya, telah ikut secara aktif dalam perjuangan Orde Baru dan telah
+menjadikan kampusnya sebagai markas bagi perjuangan Laskar Ampera Arief Rachman Hakim
+Rayon Soeprapto Subrayon VII. Oleh karena itu, kampus Universitas Tarumanagara disebut
+Kampus Perjuangan Orde Baru.</font></p>
+
+<p align="justify"><font size="2" face="Arial Narrow">Sebagai konsekuensi perjuangan mahasiswa untuk
+menumbangkan Orde Lama dan untuk menegakkan Orde Baru, perkuliahan-perkuliahan tidak
+berjalan menurut rencana dan jadwal, bahkan Fakultas Bahasa-bahasa Modern, Jurusan Bahasa
+Inggris terpaksa ditutup dan mahasiswanya dengan rasa berat disalurkan ke Fakultas Sastra,
+Universitas Indonesia.</font></p>
+
+<p align="justify"><font size="2" face="Arial Narrow">Bagi Universitas Tarumanagara, tahun 1967 merupakan tahun
+awal kebangkitannya kembali. Pada tahun itu diresmikan penggunaan kampus Jalan S. Parman
+dengan suatu upacara yang cukup meriah menurut skala perkembangan pada waktu itu. Untuk
+pertama kali kegiatan di Untar diliput oleh TVRI dan disiarkan keesokan harinya. Patut
+dicatat bahwa yang mewakili Gubernur DKI adalah Wakil Gubernur Bapak Dr. R. Soewondo, yang
+kemudian pada tahun 1974 menjabat sebagai Ketua Yayasan Tarumanagara.</font></p>
+
+  <p align="justify"><font size="2" face="Arial Narrow">Pada tahun akademik 1994/1995, dibuka pula dua fakultas
+  baru di lingkungan Universitas Tarumanagara. Fakultas tersebut adalah Fakultas Psikologi
+  dan Fakultas Seni Rupa dan Desain.</font></p>
+  <p align="justify"><font size="2" face="Arial Narrow">Dengan demikian pada saat ini Universitas Tarumanagara
+  mengelola enam fakultas, yaitu Fakultas Ekonomi, Fakultas Hukum, Fakultas
+  Teknik, Fakultas Kedokteran, Fakultas Psikologi, dan Fakultas Seni Rupa dan
+  Desain; serta tiga Program
+  Magister yaitu Program Magister Ilmu Hukum, Program Magister Teknik Sipil, dan Program
+  Magister Manajemen.<br>
+  <br>
+  </font></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="100%" bgcolor="#000000" colspan="3">
+       <p align="center"><b><font size="2" face="Arial Narrow" color="#FFFFFF">ALAMAT
+       UNIVERSITAS TARUMANAGARA</font></b></td>
+            </tr>
+            <tr>
+              <td width="34%">
+       <p align="center"><font face="Arial Narrow" size="2"><b>Kampus I</b><br>
+       Jl. Letjen. S. Parman No. 1&nbsp;<br>
+ Jakarta 11440<br>
+       Telp. (021) 5671747 (hunting)&nbsp;<br>
+ Fax. (021) 560-4478</font></td>
+              <td width="33%">
+       <p align="center"><font face="Arial Narrow" size="2"><b>Kampus II<br>
+        </b>Jl. Tanjung Duren Utara No.1&nbsp;<br>
+ Jakarta
+                        11470<br>
+       Telp. (021) 5655507-10<br>
+       Fax. (021) 5655521</font></td>
+              <td width="33%">
+       <p align="center"><font face="Arial Narrow" size="2"><b>Kampus III<br>
+        </b>Jl. Letjen T.B.Simatupang No.1&nbsp;<br>
+ Jakarta
+                12550<br>
+       Telp. (021) 7806408, 7805387&nbsp;<br>
+ Fax (021) 7805388</font></td>
+            </tr>
+          </table>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</body>
+
+</html>

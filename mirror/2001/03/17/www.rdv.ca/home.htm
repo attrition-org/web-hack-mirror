@@ -1,0 +1,226 @@
+<html>  
+  <head>    
+	<title>Rob Velocci - Home Page</title>
+
+  <script language="JavaScript">
+
+	var Img = new Array();
+
+// **********************************************************************
+// *                        Main Menu Functions                         *
+// **********************************************************************
+
+	// Load Images Into Cache
+	// ----------------------------------
+
+	Img[0] = "Images/m07off.jpg";
+	Img[1] = "Images/m07on.jpg";
+	Img[2] = "Images/m08off.jpg";
+	Img[3] = "Images/m08on.jpg";
+	Img[4] = "Images/m09off.jpg";
+	Img[5] = "Images/m09on.jpg";
+	Img[6] = "Images/m10off.jpg";
+	Img[7] = "Images/m10on.jpg";
+	Img[8] = "Images/m05NoNetscape6.gif";
+	Img[9] = "Images/m05home.gif";
+	Img[10] = "Images/m05about.gif";
+	Img[11] = "Images/m05edu.gif";
+	Img[12] = "Images/m05work.gif";
+	Img[13] = "Images/m23off.gif";
+	Img[14] = "Images/m23on.gif";
+	
+	
+	function PreLoadImg() {
+		for(i=0; i<Img.length; i++) {
+			var ImgLoader = new Image();
+			ImgLoader.src = Img[i];
+		}
+	}
+
+	function ImageSwap07(ImgNum1, ImgNum2) {
+    	document.Swap07.src = Img[ImgNum1];
+	  	document.Swap05.src = Img[ImgNum2];
+	}
+
+	function ImageSwap08(ImgNum1, ImgNum2) {
+        document.Swap08.src = Img[ImgNum1];
+	  	document.Swap05.src = Img[ImgNum2];
+	}
+
+	function ImageSwap09(ImgNum1, ImgNum2) {
+          document.Swap09.src = Img[ImgNum1];
+	  document.Swap05.src = Img[ImgNum2];
+	}
+
+	function ImageSwap10(ImgNum1, ImgNum2) {
+          document.Swap10.src = Img[ImgNum1];
+	  document.Swap05.src = Img[ImgNum2];
+	}
+
+	function ImageSwap23(ImgNum) {
+          document.Swap23.src = Img[ImgNum];
+	}
+
+
+
+	// RANDOM IMAGE GENERATOR
+
+	var Images = new Array();
+	var rnd1, rnd2, Num, lastNum=0;
+
+	Images[0] = "Images/transp_bg.gif";
+	Images[1] = "Images/creative.gif";
+	Images[2] = "Images/dependable.gif";
+	Images[3] = "Images/enthusiastic.gif";
+	Images[4] = "Images/resourceful.gif";
+
+	function randomImage() {
+
+		rnd1 = Math.random();
+		rnd2 = Math.random();
+
+		if (rnd1 <= 0.25)
+			Num = 1;
+		else if (rnd1 > 0.25 && rnd1 <= 0.5)
+			Num = 2;
+		else if (rnd1 > 0.5 && rnd1 <= 0.75)
+			Num = 3;
+		else if (rnd1 > 0.75 && rnd1 <= 1)
+			Num = 4;
+
+		if (Num == lastNum && lastNum == 4)
+			Num = 1;
+		else if (Num == lastNum)
+			Num++;
+
+		lastNum = Num;
+
+		if (rnd2 <= 0.33) {
+			document.area01.src = Images[Num];
+			setTimeout("document.area01.src = Images[0]", 5000);
+		}
+		else if (rnd2 > 0.33 && rnd2 <= 0.66) {
+			document.area02.src = Images[Num];
+			setTimeout("document.area02.src = Images[0]", 5000);
+		}
+		else if (rnd2 > 0.66 && rnd2 <= 1) {
+			document.area03.src = Images[Num];
+			setTimeout("document.area03.src = Images[0]", 5000);
+		}
+
+		setTimeout("randomImage()", 5000);
+	}
+
+  </script>
+
+  </head>
+
+<body bgcolor="white" link="blue" vlink="blue" onLoad="PreLoadImg();">
+
+  <table width="750" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+        <td colspan="7"><IMG border=0 height=15 src="Images/m01.gif" width=750></td>
+    </tr>
+    <tr>
+        <td rowspan="8"><IMG height=165 src="Images/m02a.gif" width=150></td>
+		<td rowspan="7"><IMG height=105 src="Images/m02b.gif" width=210></td>
+		<td><IMG height=15 src="Images/m03.jpg" width=165></td>
+        <td rowspan="7"><IMG height=105 src="Images/m04.gif" width=30></td>
+        <td rowspan="7"><IMG height=105 src="Images/m05NoNetscape6.gif" width=165 name="Swap05"></td>
+        <td rowspan="7"><IMG height=105 src="Images/m06.gif" width=30></td>
+    </tr>
+    <tr>
+        
+    <td><a href="home.htm" onMouseOver="ImageSwap07(1,9)" onMouseOut="ImageSwap07(0,8)"> 
+      <IMG border=0 height=15 src="Images/m07off.jpg" width=165 name="Swap07"></a></td>
+    </tr>
+    <tr>
+        <td><a href="about/about.htm" onMouseOver="ImageSwap08(3,10)" onMouseOut="ImageSwap08(2,8)">
+	    <IMG border=0 height=15 src="Images/m08off.jpg" width=165 name="Swap08"></a></td>
+    </tr>
+    <tr>
+        <td><a href="edu/education.htm" onMouseOver="ImageSwap09(5,11)" onMouseOut="ImageSwap09(4,8)">
+	    <IMG border=0 height=15 src="Images/m09off.jpg" width=165 name="Swap09"></a></td>
+    </tr>
+    <tr>	  
+        <td><a href="work/work.htm" onMouseOver="ImageSwap10(7,12)" onMouseOut="ImageSwap10(6,8)">
+	    <IMG border=0 height=15 src="Images/m10off.jpg" width=165 name="Swap10"></a></td>
+    </tr>
+    <tr>
+        <td><IMG border=0 height=15 src="Images/m11.jpg" width=165></td>
+    </tr>
+    <tr>
+        <td><IMG border=0 height=15 src="Images/m12.gif" width=165></td>
+    </tr>
+    <tr>
+		<td colspan="3"><IMG height=60 src="Images/m13home.gif" width=405></td>
+        <td colspan="2"><IMG height=60 src="Images/m14.gif" width=195></td>
+    </tr>
+  </table>
+
+  <table width="135" border="0" cellspacing="0" cellpadding="0" align="left">
+    <tr>
+	<td><IMG border=0 height=210 src="Images/mb_spacer.gif" width=135></td>
+    </tr>
+    <tr>
+	<td><a href="mailto:rvelocci@home.com" onMouseOver="ImageSwap23(14)" onMouseOut="ImageSwap23(13)">
+	    <IMG border=0 height=15 src="Images/m23off.gif" width=135 name="Swap23"></a></td>
+    </tr>
+    <tr>
+	<td><IMG border=0 height=15 src="Images/mb_end.gif" width=135></td>
+    </tr>
+  </table>
+
+	<br>
+	<table border="0" cellpadding="0" cellspacing="0" width=615>
+		<tr>
+			<td width="400" valign="top"><font size="2" face="arial">
+				Hello, and welcome to my very first personal website.  Here you'll learn a few personal things about myself,
+				my education, and my work experience in Information Technology.
+			</font></td>
+
+			<td width="215" align="right">
+				<img height=100 src="Images/transp_bg.gif" width=200 name="area01">
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<table border="0" cellpadding="0" cellspacing="0" width=615>
+					<tr>
+						<td width="215">
+							<img height=100 src="Images/transp_bg.gif" width=200 name="area02"> 
+						</td>
+					
+						<td width="400"><font size="2" face="arial">
+							I hope you'll enjoy your stay here and hopefully gain some insight into who I am, both personally and 
+							professionally.
+						</font></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr>
+			<td width="400" valign="top"><font size="2" face="arial">
+				<font color="#4c4cbb"><center><h4> Quick Links </h4></center></font>
+				<a href="edu/ICS.htm"> OOP Programming and Web Development At ICS </a> <br>
+				<a href="project/ICSproject.htm" target="NewWindow" onClick="window.open('', 'NewWindow');"> Web Project At ICS </a> <br>
+				<a href="edu/Ryerson.htm"> Electrical Engineering At Ryerson </a> <br>
+				<a href="about/artwork.htm"> My Artwork </a> <br>
+				<a href="about/Italy.htm"> My Experiences In Italy </a> <br>
+			</font></td>
+
+			<td width="215" align="right">
+				<img height=100 src="Images/transp_bg.gif" width=200 name="area03">
+			</td>
+		</tr>
+	</table>
+
+	<script language="JavaScript">
+
+		randomImage();
+
+	</script>
+
+</body>
+</html>

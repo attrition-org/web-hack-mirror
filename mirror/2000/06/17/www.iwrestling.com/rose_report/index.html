@@ -1,0 +1,549 @@
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive 4">
+		<title>iwrestling.com - The Rose Report</title>
+		<meta name="keywords" content="Fantasy Wrestling, Pro Wrestling, Wrestling, wrestling newsletters, wrestling news, news, columns, Games, Scoops, Scoops Wrestling, WWF news, WCW News, ECW news, Raw Results, Nitro Results, PPV Results">
+		<meta name="description" content="The premiere pro wrestling source. Daily Pro Wrestling News,columns, and features. Plus wrestling games and videoa nd audio clips.">
+		<script language="JavaScript"><!--
+/* 	Cookies Demo	
+By Jerry Aman, Optima System, July 28, 1996.   	
+Cookie Functions written by Bill Dortch, hIdaho Design.	Part of the PageSpinner distribution.	
+We will not be held responsible for any unwanted 	
+effects due to the usage of this script or any derivative.  	
+No warrantees for usability for any specific application 	
+are given or implied.	
+You are free to use and modify this script,	
+if credits are kept in the source code*/	
+
+var cookieVisitID 	= 'my_LastVisitiwrestling';		
+var cookieNumVisitID 	= 'my_NumVisitsiwrestling';	
+
+// Change 'my_LastVisit' and 'my_NumVisits'						
+// to something unique for						
+// the current page, or else it						
+// won't work correctly if other uses						
+// this script!	
+var gLastVisit;	
+var gNumVisits;	
+SetLastVisit();	
+// Execute when loading page		
+if ( gLastVisit == "")		
+{		
+window.open("http://www.iwrestling.com/popup.html", "popDialog", "width=500,height=225,scrollbars=no,resize=no,");		}		
+else 		
+{        	
+}	
+function SetLastVisit (name, value){		
+var newVisitDate = new Date();		
+var expDate = new Date (); 		
+var numVisits = 0;			
+// The expDate is the date when the cookie should			
+// expire, we will keep it for a day		
+expDate.setTime( expDate.getTime() + (1 * 24 * 60 * 60 * 1000) ); 			
+// Info about last visit		
+if (GetCookie (cookieVisitID) != null)			
+gLastVisit = GetCookie (cookieVisitID);		
+else gLastVisit = "";		
+if (GetCookie (cookieNumVisitID) != null)			
+gNumVisits = GetCookie (cookieNumVisitID);			
+else gNumVisits = 0;			
+// Use eval() to convert a string to a number		
+numVisits = eval(gNumVisits) +1;				
+// Store info about this visit		
+SetCookie( cookieVisitID, newVisitDate, expDate); 		
+SetCookie( cookieNumVisitID, numVisits, expDate); 	}    
+// ---------------------------------------------------------------    
+// Cookie Functions - Second Helping  (21-Jan-96)    
+//  Written by:  Bill Dortch, hIdaho Design <BDORTCH@NETW.COM>    
+//  The following functions are released to the public domain.    
+//  The following changes were made to SetCookie:    
+//    
+//  1.  The expires parameter is now optional - that is, you can omit    
+//      it instead of passing it null to expire the cookie at the end    
+//      of the current session.    
+//    
+//  2.  An optional path parameter has been added.    
+//    
+//  3.  An optional domain parameter has been added.    
+//    
+//  4.  An optional secure parameter has been added.    
+//    
+//  For information on the significance of these parameters, and    
+//  and on cookies in general, please refer to the official cookie    
+//  spec, at:    
+//    
+//      http://www.netscape.com/newsref/std/cookie_spec.html        
+//    
+//    
+// "Internal" function to return the decoded value of a cookie    
+//    
+function getCookieVal (offset) {      
+var endstr = document.cookie.indexOf (";", offset);      
+if (endstr == -1)        endstr = document.cookie.length;      
+return unescape(document.cookie.substring(offset, endstr));    
+}    
+
+//    
+//  Function to return the value of the cookie specified by "name".    
+//    name - String object containing the cookie name.    
+//    returns - String object containing the cookie value, or null if   
+//      the cookie does not exist.    
+//    
+function GetCookie (name) {      
+var arg = name + "=";      
+var alen = arg.length;      
+var clen = document.cookie.length;      
+var i = 0;      
+while (i < clen) {        
+var j = i + alen;        
+if (document.cookie.substring(i, j) == arg)          
+return getCookieVal (j);        
+i = document.cookie.indexOf(" ", i) + 1;        
+if (i == 0) break;       
+}      
+return null;    }    
+//    
+//  Function to create or update a cookie.    
+//    name - String object object containing the cookie name.    
+//    value - String object containing the cookie value.  May contain    
+//      any valid string characters.    
+//    [expires] - Date object containing the expiration data of the cookie.  If    
+//      omitted or null, expires the cookie at the end of the current session.    
+//    [path] - String object indicating the path for which the cookie is valid.    
+//      If omitted or null, uses the path of the calling document.    
+//    [domain] - String object indicating the domain for which the cookie is    
+//      valid.  If omitted or null, uses the domain of the calling document.    
+//    [secure] - Boolean (true/false) value indicating whether cookie transmission    
+//      requires a secure channel (HTTPS).      
+//    
+//  The first two parameters are required.  The others, if supplied, must    
+//  be passed in the order listed above.  To omit an unused optional field,    
+//  use null as a place holder.  For example, to call SetCookie using name,    
+//  value and path, you would code:    
+//    
+//      SetCookie ("myCookieName", "myCookieValue", null, "/");    
+//   
+//  Note that trailing omitted parameters do not require a placeholder.    
+//    
+//  To set a secure cookie for path "/myPath", that expires after the    
+//  current session, you might code:    
+//    
+//      SetCookie (myCookieVar, cookieValueVar, null, "/myPath", null, true);    
+//    
+function SetCookie (name, value) {      
+var argv = SetCookie.arguments;      
+var argc = SetCookie.arguments.length;      
+var expires = (argc > 2) ? argv[2] : null;      
+var path = (argc > 3) ? argv[3] : null;      
+var domain = (argc > 4) ? argv[4] : null;      
+var secure = (argc > 5) ? argv[5] : false;      
+document.cookie = name + "=" + escape (value) + ((expires == null) ? "" : ("; expires=" + expires.toGMTString())) + ((path == null) ? "" : ("; path=" + path)) + ((domain == null) ? "" : ("; domain=" + domain)) + ((secure == true) ? "; secure" : "");
+    }
+    
+//  Function to delete a cookie. (Sets expiration date to current date/time)   
+//    name - String object containing the cookie name    
+//    
+function DeleteCookie (name) {      
+var exp = new Date();      
+exp.setTime (exp.getTime() - 1);  
+// This cookie is history      
+var cval = GetCookie (name);      
+document.cookie = name + "=" + cval + "; expires=" + exp.toGMTString();    
+}
+// -->
+		</script>
+	</head>
+
+	<body text="white" bgcolor="black" link="#0088ec" vlink="red" alink="white">
+		<center>
+			<a name="top"></a><a href="http://www.ign.com" target="_new"><img src="http://www.iwrestling.com/topads/ign.gif" width="70" height="60" border=0 alt="IGN"></a>
+
+			<img src="../graphics/transparent.gif" width="5" height="60" usemap="#" border="0"><map name=""></map>
+<A HREF="http://adserver.ign.com/click-ng/network=ign&size=468x60&category=entertainment&genre=entertainment&site=scoopswrestling&ord=22318?" target="_new"><img src="http://adserver.ign.com/image-ng/network=ign&size=468x60&category=entertainment&genre=entertainment&site=scoopswrestling&ord=22318?" width=468 height=60 border=0 alt="banner ad"></A>
+
+			<p>
+			<table border="0" cellpadding="0" cellspacing="0" width="640" bgcolor="#186bde">
+				<tr>
+					<td><img src="../graphics/logo_1.gif" width="125" height="60" alt="iwrestling.com" border="0"></td>
+					<td><br>
+					</td>
+					<td align="right"><img src="../graphics/header.gif" width="475" height="60" alt="iwrestling.com " border="0"></td>
+				</tr>
+			</table>
+			<table width="640" bgcolor="black" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td valign="top" width="125" bgcolor="#186bde"><img src="../graphics/logo_2.gif" width="125" height="80">
+						<table width="125" cellpadding="0" cellspacing="0" border="0">
+							<tr>
+								<td width="15" bgcolor="#186bde"><img src="../graphics/transparent.gif" width="15" height="1"></td>
+								<td width="110" bgcolor="black">
+									<div align="right">
+										<img src="../graphics/nav1.gif" width="110" height="10"><br>
+										<table border="0" cellpadding="0" cellspacing="0" width="96%">
+											<tr>
+												<td width="105"><tr><td width="105" bgcolor="#000000"><font size="2" face="arial" color="red">
+	<b><i>what's inside</i></b></font>
+</td></tr>
+<tr><td width="105">
+<font size="2" face="Arial">
+	<li><a href="http://www.iwrestling.com">Main Page</a><br>
+	<li><a href="/rose_report">Rose Report</a><br>
+	<li><a href="/news">News Board</a><br>
+	<li><a href="../cgi/imageFolio.cgi">Gallery</a><br>
+	<li><a href="/columns">Columns</a><br>
+	<li><a href="../search.html">Links</a><br>
+	<img src="graphics/transparent.gif" width="5" height="1">
+</font>
+	</td></tr>
+
+
+<tr><td width="105" bgcolor="black"><font size="2" face="arial" color="red">
+	<b><i>Image Gallery</i></b></font>
+</td></tr>
+<tr><td width="105">
+<font size="2" face="Arial">
+	<li><a href="/cgi/imageFolio.cgi?direct=Women_Of_Wrestling">Women Pics</a><br>
+	<li><a href="/cgi/imageFolio.cgi?direct=WWF_Classics">WWF Classics</a><br>
+	<li><a href="/cgi/imageFolio.cgi?direct=WCW_Classics">WCW Classics</a><br>
+	<img src="graphics/transparent.gif" width="5" height="1">
+</font>
+</td></tr>
+
+<tr><td width="105" bgcolor="black"><font size="2" face="arial" color="red">
+	<b><i>S*P*A*M Columns</i></b></font>
+</td></tr>
+<tr><td width="105">
+<font size="2" face="Arial">
+	<li><a href="/columns/column_1.html">Great Canadian</a><br>
+	<li><a href="/columns/column_2.html">The Couch</a><br>
+	<li><a href="/columns/column_3.html">The Analyst</a><br>
+	<li><a href="/columns/column_4.html">Turnbuckle</a><br>
+	<img src="graphics/transparent.gif" width="5" height="1">
+</font>
+</td></tr>
+
+<tr><td width="105" bgcolor="black"><font size="2" face="arial" color="red">
+	<b><i>interact</i></b></font>
+</td></tr>
+<tr><td width="105">
+<font size="2" face="Arial">
+	<li><a href="/discussion">Fan Forums</a><br>
+	<li><a href="/chat">Chat</a><br>
+	<img src="graphics/transparent.gif" width="5" height="1">
+</font>
+</td></tr>
+
+
+<tr><td width="105" bgcolor="black"><font size="2" face="arial" color="red">
+	<b><i>general</i></b></font>
+</td></tr>
+<tr><td width="105">
+<font size="2" face="Arial">
+	<li><a href="/about.html">About Us</a><br>
+	<li><a href="/contact.html">Contact Us</a><br>
+	<li><a href="../advertising.html">Advertising</a>
+</font>
+</td></tr>
+
+												</td>
+											</tr>
+										</table>
+										<br>
+										<img src="../graphics/nav2.gif" width="110" height="10"></div>
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td valign="top">
+						<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+							<tr>
+								<td width="50%" bgcolor="red"><font face="Times New Roman,Georgia,Times"><img src="../graphics/transparent.gif" width="5" height="1"></font><font color="white" face="Times New Roman,Georgia,Times"><b>TODAY'S NEWS<br>
+									</b></font><font face="Arial" size="2"><img src="../graphics/transparent.gif" width="5" height="1"></font><font color="white" size="2" face="Arial"><b>The Rose Report</b></font></td>
+								<td width="50%" bgcolor="red" align="right"><font color="white" size="2" face="Arial">Today is
+									<script language="JavaScript"><!--
+// Copyright (c) 1997 Mecklermedia Corporation.
+          // http://www.webreference.com/js/
+          // License is granted if and only if this entire
+          // copyright notice is included. By Tomer Shiran.
+
+          function makeArray() {
+            var args = makeArray.arguments;
+            for (var i = 0; i < args.length; i++) {
+              this[i] = args[i];
+            }
+            this.length = args.length;
+          }
+
+          function fixDate(date) {
+            var base = new Date(0);
+            var skew = base.getTime();
+            if (skew > 0)
+              date.setTime(date.getTime() - skew);
+          }
+
+          function getString(date) {
+            var months = new makeArray("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+            return months[date.getMonth()] + " " +
+                   date.getDate() + ", " + (date.getYear());
+          }
+
+          var cur = new Date();
+          fixDate(cur);
+          var str = getString(cur);
+          document.write(str);
+// -->
+									</script>
+									<img src="../graphics/transparent.gif" width="5" height="1"></font></td>
+							</tr>
+						</table>
+						<br>
+						<table align="center" width="99%">
+							<tr>
+								<td valign="top"><font face="Arial"><!--Use This as Your Template. Replace the headline, date and text. You can use HTML code eithin your report. Yesterday's report will be named yesterday.txt-->
+<b>The Rose Report</b>
+<br>by <i><a href="mailto:srose4@tampabay.rr.com?subject=rose report">Shannon Rose</a></i>
+<br>
+<p>
+<b>
+</b>Recap Friday<b>
+<br>
+</b>06/16/00 
+<br>
+<font face="Arial" size="2">
+<br>
+<img src="http://scoopswrestling.com/photo_images/a__20000523_0546___Russo.jpg">
+<p>
+<br>
+{The crowd roars as the one, the only, The Pro Wrestling Ring Announcer Shannon Rose makes his way to the ring to enlighten his legions of fans with his vocal excellence that is always..."The Rose Report.")
+<p>
+Hi all! It is now 5 a.m. and I am still on the computer. You would think I am attached to the computer.
+<p>
+Remember I switch gears tomorrow and head on over to Scoops Land as tomorrow and Sunday you can catch "The Rose Report" over at <a href="http://scoopswrestling.com">http://scoopswrestling.com</a>
+<p>
+I will be back here on iwrestling on Monday for another great week.
+<p>
+The next week will be real busy for me and here is how my week shapes up.
+<p>
+Saturday:I am announcing an IPW event in Crystal River,Florida.
+<p>
+Monday:I am going for dance lessons, (No Jokes please!). I won the invite in some contest. I can then work with Rikishi if I ever get a job with the WWF. They can call me Smooth One Shannon Rose.
+<p>
+Tuesday: I have an audition to host a TV show.
+<p>
+I thought SmackDown was a good show. I will not do ramblings on it as I didn't get a chance to see but bits and pieces and what I saw was good stuff.
+<p>
+I want to clear something up. I am a guy not a girl.
+<p>
+Today we will be premiering some new segments. The first one is something we will do each Friday. We will recap the week in a fun filled pop quiz that we will call the Rose Recap of the Week. Please don't email the answers as this is meant for yourself only to think about. 
+<p>
+1.What is the highlight of the week?
+<p>
+      A. Goldberg turning heel
+<p>
+B.	Kidman becoming a babyface
+<p>
+C.	HHH and Jericho RAW match
+<p>
+D.	Miss Hancock and Daphney doing what they call "wrestling" on WCW
+<p>
+2. Who will join the New Blood Next?
+<p>
+A.	DDP
+<p>
+B.	Sting
+<p>
+C.	Kronic
+<p>
+D.	Is there anyone left that is not part of the NEW BLOOD?
+<p>
+3. How will Shaft help Crash Holly?
+<p>
+A.	Bodyguard
+<p>
+B.	 Friend
+<p>
+C.	Tag team partner
+<p>
+D.	He will turn on him and pin Crash to become the new hardcore champion. He then will say he is not a gimmick but Samuel Jackson cutting a shoot interview.
+<p>
+4. What will WCW's next big surprise be?
+<p>
+A.	changing networks
+<p>
+B.	Hogan will retire
+<p>
+C.	Kiss will make a return on Nitro
+<p>
+D.	WCW will have a PPV with a 4 star match.
+<p>
+5. Who will win King of the Ring?
+<p>
+A.	Kurt Angle
+<p>
+B.	Rikishi
+<p>
+C.	Crash Holly
+<p>
+D.	Stef McMahon will be put over as Mae Young returns and does a run in. 
+<p>
+Our second segment we will start today is where you can be named the Shannon Rose Fan of the Day. Send me your favorite memory of wrestling whether it be meeting a wrestler or what you remember of wrestling. You can email your memories to <a href="mailto:srose4@tampabay.rr.com?subject=Shannon Rose Fan of the Day">srose4@tampabay.rr.com</a> The best email will not only get your name as the Fan of the Day but also it will be run on that day's column.
+<p>
+Be sure to check out my own discussion area here at iwrestling. You can leave your comments and question plus we can discuss what you want. So just {<a href=" http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=list&forum=DCForumID26&conf=conf_general">click here</a>}
+<p>
+Savio Vega(formerly of the WWF) was a guest of Big Show radio program. Savio discussed the early stages of the rise of the WWF to what it is today. Also the real feelings of the crew when Vince McMahon screwed Bret Hart. Big news of what really went on the production meetings with Russo and McMahon. The big show official website is <a href="http://Bigshowradio.00sports.com"> http://Bigshowradio.00sports.com</a>
+<p>
+KYDA Wrestling sent me this...
+<p>
+Tuesday, June 20, 2000  8PM Bell Time
+<p>
+Little Texas
+ Staple Mills Road, Richmond, VA       804-474-0000 (tixs info)
+ <p>
+ECW's Steve Corino will battle for the Mid-Atlantic Title against Shorty Smalls
+<p>
+KYDA Pro Heavyweight Champion Dylan Night will put his title on the line against  a 'mystery'  ECW wrestler.
+<p>
+In addition to Jake Damien, Nitestix Eddie Brown, Alexis Laree, Brock Singleton, Scotty Mayhem, Devin Sturgis and others.
+<p>
+You can listen to KYDA Pro Wrestler on <a href="http://www.Xl102.cc">http://www.Xl102.cc</a> from 7:30am-9am or check out the official site at <a href="http://www.KYDA.com">http://www.KYDA.com</a>
+<p>
+Bob Magee passed this along...
+<p>
+Tickets should be going on sale today on Ticketmaster for the June 25th 
+CZW/Onita PPV taping at Philadelphia's Electric Factory with. doors opening at 5:30.
+<p>
+This event will be taped for PPV (date of PPV airing has not been confirmed yet) and will also be distributed worldwide on Video by ADV Films.
+<p>
+Tickets should be available on the Electric Factory link on Ticketmaster.com later today at: 
+<a href="http://www.ticketmaster.com/cgi/venues.idc?type=VENUE&state=PA&venuenum=44&vaxname=phi">http://www.ticketmaster.com/cgi/venues.idc?type=VENUE&state=PA&venuenum=44&vaxname=phi</a>
+<p>
+Ticket prices:
+<p>
+* 42 front row seats at $75 each<br>
+* 42 second row at $50<br>
+* 42 second row at $50<br>
+<p>
+The remainder are general admission at $20
+<p>
+Further information on matches today and tomorrow at this site and at <a href="http://www.czwwrestling.com">http://www.czwwrestling.com</a>.
+<p>
+Please send any credible news or results to <a href="mailto:srose4@tampabay.rr.com?subject=news or results ">srose4@tampabay.rr.com</a>
+<p>
+Randy Martson reports that Billy Gunn could be back onto WWF TV in September. If he can come back in as good a shape as before, his return could be just as big as the Undertaker's. Jim Ross often calls Gunn the best pure athlete on the roster, and with work on his mic skills, Gunn could be a major player in the future of the company. When he injured himself, if you remember, he was feuding with DX. There is no word on whether he'll be with or against DX on his return.
+<p>
+According to <a href="http://pwtorch.com">http://pwtorch.com</a>...
+<p>
+Vince Russo is just about at his boiling point with WCW. He is tremendously frustrated with just about everything that is going on within WCW, including the low ratings, Standards and Practices vetoing ideas, and Bischoff and himself arguing over ideas. For example, Bischoff wants to bring back Kimberly and Lex Luger, while Russo is dead set against it. People close to Russo said he was so upset he "quit" from WCW earlier today, but thought it over for a few hours and decided to take a few days off to ponder his future with the company. Reportedly, Hulk Hogan is siding with Russo in this argument. There is a possibility that this is a work, but it isn't likely. As always, we will keep you all abreast of the situation, and pass along any and all information we receive.
+<p>
+Scoops Wrestling Own Wendy sent this along…
+<p>
+<I>"Was that you last week that had mentioned Chad Brock in his
+report, or was it Al?  Either way, Chad was #4 as of the end of May on
+the Country Billboard chart with his newest release "Yes".  I remember
+the performance he gave on Nitro a few months back, where he and Curt
+Hennig got into it (when Curt was still a part of the West Texas
+Rednecks). Chad looked like he could still hold his own  :-)  Congrats to Chad!!"</I>
+<p>
+Send your comments or questions to to <a href="mailto:srose4@tampabay.rr.com?subject=questions or comments">srose4@tampabay.rr.com.com</a>
+<p>
+Special Thanks to Steve Gerwick and Justin Fritz for the following tidbits.
+<p>
+ The current plan is for Mona to return with Jimmy "The Mouth of the South" Hart as her manager. 
+<p>
+ Linda McMahon is only going to be used to build up PPV matches as can be seen from her last few appearances. Her appearances for Raw and Smackdown will usually be scheduled for 1-2 weeks before PPV's. 
+<p>
+<a href="http://wcw.com">http://wcw.com</a> has removed Tammy Sytch's name from the superstars section. This adds to the proof that her WCW career is in serious jeopardy. 
+<p>
+ Mick Foley has finished writing two children's books, the first of which he plans to release around Christmas. Jerry "The King" Lawler is putting the finishing touches on illus
+trations for the books
+<p>
+<a href="http://prowrestlingdaily.com">Pro Wrestling Daily</a> is an excellent site that is done by the wrestlers for the fans. It has one of the most comprehensive newsboards on the Internet, with many of the top reporters posting there. They have one of the largest WOW galleries on the web. To top it off, they have wrestlers from all over the world who write columns exclusively for them, including Tammy Lynn Sytch, The Stro, Barry Horowitz, Former Nitro Girl Teri Byrne, the Cuban Assassin, and many more. Pro Wrestling Daily has it all, so don't hesitate to check it.
+<p>
+Now...
+<p>
+{Hit My Music}
+<br>
+<p>
+<p>
+<br>
+<i><a href="http://scoopswrestling.com">Al Isaacs' Scoops Daily Column</a></i>
+<p>
+<br>
+<a href="yesterday.html">Yesterday's News</a><br>
+<p>
+<i>Shannon Rose</i>
+</font>
+									</font></td>
+								<td width="5" valign="top"><br>
+								</td>
+								<td width="130" valign="top"><table bgcolor="#f00000" width="130" border="0" cellspacing="0" cellpadding="1"><tr>	<td>	<img src="http://www.iwrestling.com/graphics/transparent.gif" width="1" height="10"> 	<font size="2" face="Arial" color="white"><b>WHAT'S NEW</b></font>	</td></tr><tr>	<td>	<center>	<table bgcolor="black" width="120" border="0" cellspacing="0" cellpadding="4">	<tr>	<td><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">	<p>	
+
+	<b>S*P*A*M</b><br>	
+	--&gt; <a href="/columns/column_5.html">Week in Review</a><br>
+	--&gt; <a href="/columns/column_1.html">Canadian on TV</a><br>
+	--&gt; <a href="/columns/column_2.html">Tuesday Backlash</a><br>
+	--&gt; <a href="/columns/column_3.html">Three Way Dance?</a><br>
+<p>	
+<b>RESULTS</b><br>
+	--&gt; <a href="../news/messages/5276.html">Smackdown</a><br>	
+	--&gt; <a href="../news/messages/5236.html">Thunder</a><br>	
+	--&gt; <a href="/news/messages/5139.html">Raw</a><br>		
+	--&gt; <a href="/news/messages/5138.html">Nitro</a><br>		
+	--&gt; <a href="/news/messages/5084.html">Heat</a><br>		
+	--&gt; <a href="/news/messages/5059.html">ECW on TNN</a><br>	
+	
+<p>	
+<B>W.O.W.</B><BR>
+	--&gt; <a href="/cgi/imageFolio.cgi?direct=Women_Of_Wrestling/Che_Physique">Che Physique</a><br>	
+	--&gt; <a href="/cgi/imageFolio.cgi?direct=Women_Of_Wrestling/April_Hunter_Exclusives">April Hunter</a><p>	
+
+<b>STAFF FAVORITES</b><br>	
+	--&gt; <a href="/cgi/imageFolio.cgi?direct=Staff_Favorite_Matches/Ricky_Steamboat_vs_Macho_Man_Randy_Savage">Ricky Steamboat vs. Randy Savage</a><BR>	
+	--&gt; <a href="/cgi/imageFolio.cgi?direct=Staff_Favorite_Matches/The_British_Bulldog_vs_Shawn_Michaels">Shawn Michaels vs. British Bulldog</a><BR>	
+	</font>	</td>	</tr>	</table>	</center>	</td></tr></table>
+									<p>
+									<table bgcolor="#f00000" width="130" border="0" cellspacing="0" cellpadding="1">
+										<tr>
+											<td><img src="http://www.iwrestling.com/graphics/transparent.gif" width="1" height="10"> <font size="2" face="Arial" color="white"><b>POLL</b></font></td>
+										</tr>
+										<tr>
+											<td>
+												<center>
+													<table bgcolor="black" width="120" border="0" cellspacing="0" cellpadding="4">
+														<tr>
+															<td>
+																<script src="http://www.scoopswrestling.com/funspot/cgi-bin/poll-js.pl?00000001" language="JavaScript1.1"></script>
+															</td>
+														</tr>
+													</table>
+												</center>
+											</td>
+										</tr>
+									</table>
+									</p>
+									<p><center><font size="2" face="Arial"><A HREF="http://www.iwrestling.com/news/messages/5053.html"><img src="http://www.iwrestling.com/graphics/iwcool.gif" width="130" height="104" border=0><br><b>PRO WRESTLING DAILY</b></a></font></center>	
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td width="1" bgcolor="#186bde"><img src="../graphics/transparent.gif" width="1" height="20"></td>
+				</tr>
+			</table>
+			<table width="640" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td width="100%" bgcolor="#186bde" align="right"><img src="../graphics/footer.gif" width="600" height="60" alt="footer" usemap="#footer" border="0"><map name=""></map></td>
+				</tr>
+			</table>
+			<table width="100%" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td width="640" align="right"><font size="2" face="Arial">&copy; 2000 Snowball.com, Inc. All rights reserved.<br>
+						<a href="http://www.scoopswrestling.com/pages/privacy.html">Privacy Policy</a></font></td>
+				</tr>
+			</table>
+		</center>
+	</body>
+
+</html>
+<map name="toolbar"><area shape="rect" coords="7,15,97,35" href="http://www.iwrestling.com/news"><area shape="rect" coords="7,40,96,61" href="http://www.iwrestling.com/opinions"><area shape="rect" coords="7,64,97,85" href="http://www.iwrestling.com/store"><area shape="rect" coords="6,90,98,110" href="http://www.iwrestling.com/spotlight"><area shape="rect" coords="6,116,98,136" href="http://www.iwrestling.com/discussion"><area shape="rect" coords="6,142,98,163" href="http://www.iwrestling.com/live"><area shape="default" nohref></map><map name="footer"><area shape="rect" coords="2,40,88,58" href="#top"><area shape="rect" coords="99,39,187,58" href="http://www.iwrestling.com/advertising.html"><area shape="rect" coords="196,39,269,58" href="http://www.iwrestling.com/feedback.html"><area shape="rect" coords="276,39,335,58" href="http://www.iwrestling.com/search.html"><area shape="default" nohref></map>

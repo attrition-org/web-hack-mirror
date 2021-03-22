@@ -1,0 +1,275 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0037)http://www.adrena.com.br/tirolesa.htm -->
+<HTML><HEAD><TITLE>ADRENA on line! Bungee Jump da Ponte Metálica com a
+Feiticeira do H - Joana Prado</TITLE>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<SCRIPT language=JavaScript>
+
+
+        
+        self.onError=null;
+        
+        currentX = currentY = 0;  
+        whichIt = null;           
+        lastScrollX = 0; lastScrollY = 0;
+        
+        NS = (document.layers) ? 1 : 0;
+        IE = (document.all) ? 1: 0;
+        
+        <!-- STALKER CODE -->
+        function heartBeat() {
+        
+                if(IE) { diffY = document.body.scrollTop; diffX = document.body.scrollLeft; }
+            if(NS) { diffY = self.pageYOffset; diffX = self.pageXOffset; }
+                
+                if(diffY != lastScrollY) {
+                        percent = .1 * (diffY - lastScrollY);
+                        if(percent > 0) percent = Math.ceil(percent);
+                        else percent = Math.floor(percent);
+                                        if(IE) document.all.floater.style.pixelTop += percent;
+                                        if(NS) document.floater.top += percent; 
+                        lastScrollY = lastScrollY + percent;
+            }
+                if(diffX != lastScrollX) {
+                        percent = .1 * (diffX - lastScrollX);
+                        if(percent > 0) percent = Math.ceil(percent);
+                        else percent = Math.floor(percent);
+                        if(IE) document.all.floater.style.pixelLeft += percent;
+                        if(NS) document.floater.left += percent;
+                        lastScrollX = lastScrollX + percent;
+                }       
+        }
+        <!-- /STALKER CODE -->
+        
+        <!-- DRAG DROP CODE -->
+        function XXcheckFocus(x,y) { 
+                stalkerx = document.floater.pageX;
+                stalkery = document.floater.pageY;
+                stalkerwidth = document.floater.clip.width;
+                stalkerheight = document.floater.clip.height;
+                if( (x > stalkerx && x < (stalkerx+stalkerwidth)) && (y > stalkery && y < (stalkery+stalkerheight))) return true;
+                else return false;
+        }
+        
+        function grabIt(e) {
+                if(IE) {
+                        whichIt = event.srcElement;
+                        while (whichIt.id.indexOf("floater") == -1) {
+                                whichIt = whichIt.parentElement;
+                                if (whichIt == null) { return true; }
+                    }
+                        whichIt.style.pixelLeft = whichIt.offsetLeft;
+                    whichIt.style.pixelTop = whichIt.offsetTop;
+                        currentX = (event.clientX + document.body.scrollLeft);
+                        currentY = (event.clientY + document.body.scrollTop);   
+                } else { 
+                window.captureEvents(Event.MOUSEMOVE);
+                if(checkFocus (e.pageX,e.pageY)) { 
+                        whichIt = document.floater;
+                        StalkerTouchedX = e.pageX-document.floater.pageX;
+
+                        StalkerTouchedY = e.pageY-document.floater.pageY;
+                } 
+                }
+            return true;
+        }
+        
+        function moveIt(e) {
+                if (whichIt == null) { return false; }
+                if(IE) {
+                    newX = (event.clientX + document.body.scrollLeft);
+                    newY = (event.clientY + document.body.scrollTop);
+                    distanceX = (newX - currentX);    distanceY = (newY - currentY);
+                    currentX = newX;    currentY = newY;
+                    whichIt.style.pixelLeft += distanceX;
+                    whichIt.style.pixelTop += distanceY;
+                        if(whichIt.style.pixelTop < document.body.scrollTop) whichIt.style.pixelTop = document.body.scrollTop;
+                        if(whichIt.style.pixelLeft < document.body.scrollLeft) whichIt.style.pixelLeft = document.body.scrollLeft;
+                        if(whichIt.style.pixelLeft > document.body.offsetWidth - document.body.scrollLeft - whichIt.style.pixelWidth - 20) whichIt.style.pixelLeft = document.body.offsetWidth - whichIt.style.pixelWidth - 20;
+                        if(whichIt.style.pixelTop > document.body.offsetHeight + document.body.scrollTop - whichIt.style.pixelHeight - 5) whichIt.style.pixelTop = document.body.offsetHeight + document.body.scrollTop - whichIt.style.pixelHeight - 5;
+                        event.returnValue = false;
+                } else { 
+                        whichIt.moveTo(e.pageX-StalkerTouchedX,e.pageY-StalkerTouchedY);
+                if(whichIt.left < 0+self.pageXOffset) whichIt.left = 0+self.pageXOffset;
+                if(whichIt.top < 0+self.pageYOffset) whichIt.top = 0+self.pageYOffset;
+                if( (whichIt.left + whichIt.clip.width) >= (window.innerWidth+self.pageXOffset-17)) whichIt.left = ((window.innerWidth+self.pageXOffset)-whichIt.clip.width)-17;
+                if( (whichIt.top + whichIt.clip.height) >= (window.innerHeight+self.pageYOffset-17)) whichIt.top = ((window.innerHeight+self.pageYOffset)-whichIt.clip.height)-17;
+                return false;
+                }
+            return false;
+        }
+        
+        function dropIt() {
+                whichIt = null;
+            if(NS) window.releaseEvents (Event.MOUSEMOVE);
+            return true;
+        }
+        <!-- DRAG DROP CODE -->
+        
+        if(NS) {
+                window.captureEvents(Event.MOUSEUP|Event.MOUSEDOWN);
+                window.onmousedown = grabIt;
+                window.onmousemove = moveIt;
+                window.onmouseup = dropIt;
+        }
+        if(IE) {
+                document.onmousedown = grabIt;
+                document.onmousemove = moveIt;
+                document.onmouseup = dropIt;
+        }
+        
+        if(NS || IE) action = window.setInterval("heartBeat()",1);
+             
+
+
+
+</SCRIPT>
+
+<STYLE type=text/css>#floater {
+	LEFT: 5%; POSITION: absolute; TOP: 25px; VISIBILITY: visible; Z-INDEX: 10
+}
+</STYLE>
+
+<META content="Microsoft FrontPage 4.0" name=GENERATOR></HEAD>
+<body bgcolor="#000000" text="#FFFF33" link="#3333CC">
+<div id="floater" style="left: 10%"> <a href="index.html" ><img src="logoAd.gif" border=0 alt="" width="64" height="62"></a> 
+</div>
+<DIV align=center> 
+  <TABLE border=0 cellPadding=0 cellSpacing=0 height=76 width=582>
+    <CENTER><TBODY>
+      <TR> 
+        <TD align=left colSpan=3 height=25 width=633> 
+          <TABLE border=0 cellPadding=0 cellSpacing=0 width=537>
+            <TBODY> 
+            <TR> 
+              <TD align=middle vAlign=top width=71><A name=topo></A></TD>
+              <TD align=middle width=75><A 
+            href="esportes.htm"><IMG border=0 height=21 
+            src="botAdre2.gif" 
+            width=75></A></TD>
+              <TD align=middle width=76><A 
+            href="noticias.htm"><IMG border=0 height=21 
+            src="botAdre3.gif" 
+            width=75></A></TD>
+              <TD align=middle width=76><A 
+            href="equipamento.htm"><IMG border=0 
+            height=21 
+            src="botAdre1.gif" 
+            width=75></A></TD>
+              <TD align=middle width=77><A 
+            href="park.htm"><IMG border=0 height=22 
+            src="botAdreXX.gif" 
+            width=75></A></TD>
+              <TD align=middle width=75><A 
+            href="guia.htm"><IMG border=0 height=21 
+            src="botAdre5.gif" 
+            width=75></A></TD>
+              <TD align=middle width=75><A 
+            href="ecotrip.htm"><IMG border=0 height=21 
+            src="botAdre6.gif" 
+            width=75></A></TD>
+              <TD width=1></TD>
+            </TR>
+            </TBODY>
+          </TABLE>
+        </TD>
+      </TR>
+      <TR> 
+        <TD align=left height=80 width=429><MAP name=FPMap0><AREA 
+        coords=76,21,205,84 href="index.html" shape=RECT></MAP><IMG 
+      border=0 height=95 
+      src="bb1v.gif" 
+      useMap=#FPMap0 width=429></TD>
+        <TD align=justify width=126><A 
+      href="parceiros.htm"><IMG border=0 height=95 
+      src="Parceiros2.gif" 
+      width=126></A></TD>
+        <TD align=left height=79 width=36><IMG border=0 height=95 
+      src="bb3gif.gif" 
+      width=34></TD>
+      </TR>
+    </center>
+    <CENTER></TBODY>
+    </center>
+  </TABLE>
+</DIV>
+<DIV align=center> 
+  <TABLE border=0 cellPadding=0 cellSpacing=0 height=617 width=533>
+    <CENTER><TBODY>
+    </center>
+    <TR>
+      <CENTER>
+        <TD height=215 vAlign=middle align="center"> 
+          <P> <img border="0" src="FeiticeiraSaindoPonte.jpg" width="269" height="178">
+        </TD>
+      </center>
+      <TD height=617 vAlign=top rowspan="3" align="center">
+        <CENTER>
+          <p><img border="0" src="FeiticeiraPlanoAmericano3.jpg" width="238" height="359"></p>
+        </center>
+        <p align="center"><FONT face=Arial><SPAN lang=PT-BR 
+      style="COLOR: yellow">Fotos da Feiticeira Joana Prado&nbsp;&nbsp; saltando 
+          de Bungee Jump na Ponte metálica D. Pedro II&nbsp;em Paulo Afonso - 
+          Bahia durante um série de matérias realizadas para o programa H da Rede 
+          Bandeirantes de Televisão</SPAN></FONT> 
+        <p align="center">Fotos: Lelo Jachimovicz 
+        <p align="center"><font face="Arial" size="2">Veja também ela praticando 
+          <a href="feiticeirarapel.htm"><font color="#FFFF00">Rapel</font></a> 
+          e <a href="feiticeiratirolesa.htm"><font color="#FFFF00">Tiroleza</font></a></font> 
+        <p align="right">&nbsp;
+      </TD>
+    </TR>
+    <CENTER>
+      <tr> 
+        <TD height=216 vAlign=middle align="center"> 
+          <p align="center"><img border="0" src="FeiticeiraVeuCaindo2.jpg" width="271" height="180">
+        </TD>
+      </tr>
+      <tr> 
+        <TD height=186 vAlign=middle align="center"> 
+          <p align="center"><img border="0" src="FeiticeiraRebound.jpg" width="269" height="177">
+        </TD>
+      </tr></TBODY>
+    </center>
+  </TABLE>
+</DIV>
+<DIV align=center> 
+  <CENTER>
+    <TABLE border=0 cellPadding=0 cellSpacing=0 height=102 width=486>
+      <TBODY> 
+      <TR> 
+        <TD colSpan=6 height=55 vAlign=top width=434><IMG border=0 height=55 
+      src="barraBaixo1v.gif" 
+      width=447></TD>
+        <TD height=102 rowSpan=2 width=162><a href="mailto:info@adrena.com.br"><IMG 
+      border=0 height=115 
+      src="FALECONOSCO1.gif" 
+      width=133></a></TD>
+      </TR>
+      <TR> 
+        <TD height=47 vAlign=top width=99></TD>
+        <TD height=47 vAlign=top width=75><A 
+      href="http://www.adrena.com.br/tirolesa.htm#topo"><IMG border=0 height=21 
+      src="botAdreB0.gif" 
+      width=75></A></TD>
+        <TD height=47 vAlign=top width=76><A 
+      href="javascript:history.go(-1);"><IMG border=0 height=21 
+      src="botAdreB1.gif" 
+      width=75></A></TD>
+        <TD height=47 vAlign=top width=77><A href="index.html"><IMG 
+      border=0 height=21 
+      src="botAdreB2.gif" 
+      width=75></A></TD>
+        <TD height=47 vAlign=top width=76><A 
+      href="equipe.htm"><IMG border=0 height=21 
+      src="botAdreB3.gif" 
+      width=75></A></TD>
+        <TD height=47 vAlign=top 
+width=39></TD>
+      </TR>
+      </TBODY>
+    </TABLE>
+  </CENTER>
+</DIV>
+</BODY>
+</HTML>

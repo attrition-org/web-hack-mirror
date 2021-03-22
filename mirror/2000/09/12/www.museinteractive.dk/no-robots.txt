@@ -1,0 +1,19 @@
+    <html>
+    <head>
+    <script>
+    if(!top.iqbar ) {
+	document.write(
+		       '<frameset rows="28,*" border="0" frameborder="no">',
+		       '<frame src="http://iqbar.infopaq.dk/hosted.html" name="iqbar" scrolling="no" marginheight="0" marginwidth="0" noresize>',
+		       '<frame src="/__IQ_BAR__/no-robots.txt">',
+		       '</frameset>',
+		       '<noframes>',
+		       'src="/__IQ_BAR__/no-robots.txt"',
+		       '</noframes>'
+		       );
+    }
+    else window.location="/__IQ_BAR__/no-robots.txt";
+    </script>
+    </head>
+    </html>
+    

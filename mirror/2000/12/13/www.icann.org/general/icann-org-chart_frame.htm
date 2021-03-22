@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>ICANN Org Chart</title>
+<script src="icann-org-chart_utils.js"></script>
+<script>
+<!--
+var g_NavBarLoaded = g_TitleBarLoaded = false;
+
+function FileEntry(pageName, vmlImage, rasterImage) {
+	this.PageName = pageName;
+	this.VMLImage = vmlImage;
+	this.RasterImage = rasterImage;
+	}
+
+g_FileList = new  Array(
+	new FileEntry('Page-1', '', 'icann-org-chart1_raster.htm'));
+
+
+function HTMLExport() { }
+
+g_theApp = new HTMLExport();
+
+g_theApp.ActiveViewMgr = null;
+g_theApp.UseVML = SupportsVML();
+g_theApp.FileList = g_FileList;
+g_theApp.CurrentPageIX = -1;
+g_theApp.DrawingTitle = "ICANN | Org Chart";
+
+function BlankPage(color)
+	{
+	if ( (null != color) && ("" == color) )
+		color = "black";
+		
+	return "<html><body bgcolor='" + color + "'><body></html>";
+	}
+	
+//-->
+</script>
+</head>
+
+<frameset rows="*,0">
+	<frame name="frmPageView" src="javascript:parent.BlankPage('white')" frameborder="no" scrolling="auto">
+	<frame name="frmNavBar" src="icann-org-chart_nav.htm" frameborder="no" scrolling="no">
+</frameset>
+
+<noframes>
+
+</html>
+

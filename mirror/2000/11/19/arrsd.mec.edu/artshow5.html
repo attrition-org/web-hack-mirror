@@ -1,0 +1,146 @@
+<html>
+
+<head>
+<title>Art Award Slide Show</title>
+<script language="javascript">
+<!--
+swapping = "no"
+// -->
+</script>
+<script language="javascript1.1">
+<!--
+swapping = "yes"
+// -->
+</script>
+<script
+language="javascript">
+<!-- This script was written by Craig Corvin for Cut-N-Paste JavaScript (7/97). 
+
+if (swapping == "yes") {
+pict1 = new Image()
+pict1.src = "/images/zshow1.jpg"
+pict2 = new Image()
+pict2.src = "/images/zshow2.jpg" 
+pict3 = new Image()
+pict3.src = "/images/zshow3.jpg"
+pict4 = new Image()
+pict4.src = "/images/zshow4.jpg"
+pict5 = new Image()
+pict5.src = "/images/zshow5.jpg"
+pict6 = new Image()
+pict6.src = "/images/zshow6.jpg"
+}
+
+slides = 6
+rotations = 100
+speed = 7000
+
+//document.theform.thefield.value
+
+function runit() {
+if (swapping == "yes") {
+for (x=1, y=0 ; x < (slides*rotations); x=x+slides, y=0) {
+setTimeout("document.slideshow.src = '/images/zshow2.jpg';document.display.T1.value='\"Memories\"';document.display.T2.value='Bonnie Herbert';document.display.T3.value='Watercolor';",((x + y) * speed))
+y++; setTimeout("document.slideshow.src = '/images/zshow3.jpg';document.display.T1.value='\"Still Life\"';document.display.T2.value='Morgan Willhite';document.display.T3.value='Tempera Paint';",((x + y) * speed))
+y++; setTimeout("document.slideshow.src = '/images/zshow4.jpg';document.display.T1.value='\"Country Autumn Sunset\"';document.display.T2.value='Amanda Lohnes';document.display.T3.value='Tempera Paint';",((x + y) * speed))
+y++; setTimeout("document.slideshow.src = '/images/zshow5.jpg';document.display.T1.value='\"Untitled\"';document.display.T2.value='Casey Woodbury';document.display.T3.value='Tempera Paint';",((x + y) * speed))
+y++; setTimeout("document.slideshow.src = '/images/zshow6.jpg';document.display.T1.value='\"Untitled\"';document.display.T2.value='Jessica Guttcopf';document.display.T3.value='Print';",((x + y) * speed))
+y++; setTimeout("document.slideshow.src = '/images/zshow1.jpg';document.display.T1.value='\"English Pub Scene\"';document.display.T2.value='Bonnie Herbert';document.display.T3.value='Watercolor';",((x + y) * speed))
+}
+}
+}
+
+function openWindow() {
+var currentpic = document.slideshow.src
+if (currentpic.indexOf("2faces.jpg") != -1) {
+var picurl = "images/2faces.html"
+}
+if (currentpic.indexOf("4snow.jpg") != -1) {
+var picurl = "images/4snow.html"
+}
+if (currentpic.indexOf("5clay.jpg") != -1) {
+var picurl = "images/5clay.html"
+}
+if (currentpic.indexOf("9pie.jpg") != -1) {
+var picurl = "images/9pie.html"
+}
+if (currentpic.indexOf("3soccer.jpg") != -1) {
+var picurl = "images/3soccer.html"
+}
+  popupWin = window.open(picurl, 'remote', 'width=250,height=230')
+if (window.focus) {
+popupWin.focus();
+}
+
+}
+
+// -->
+</script>
+</head>
+
+<body BGCOLOR="#000000" BACKGROUND="redblack.gif" text="#FFFFFF" vlink="#FFFFFF"
+link="#FFFFFF" alink="#000000" onload="runit()">
+
+<table CELLPADDING="0" CELLSPACING="0" BORDER="0" WIDTH="608">
+  <tr>
+    <td WIDTH="116" VALIGN="TOP"><p align="center"><br>
+    <a href="index.html"><strong><u>Home Page</u></strong></a></p>
+    <hr noshade color="#000000">
+    <p align="center"><a href="calendar.html"><strong><u>Calendar</u></strong></a></p>
+    <hr noshade color="#000000">
+    <p align="center"><a href="sports.html"><strong><u>Sports Schedule</u></strong></a></p>
+    <hr noshade color="#000000">
+    <p align="center"><a href="menu.html"><strong><u>Lunch Menu</u></strong></a></p>
+    <hr noshade color="#000000">
+    <p align="center"><a href="homework.html"><strong><u>Homework Listings</u></strong></a></p>
+    <hr noshade color="#000000">
+    <p align="center"><a href="news.html"><strong><u>School Newsletter</u></strong></a></p>
+    <hr noshade color="#000000">
+    <p align="center"><a href="tour.html"><strong><u>Virtual Tour</u></strong></a></p>
+    <hr noshade color="#000000">
+    <p align="center"><a href="links.html"><strong>Academic Links</strong></a></p>
+    <hr noshade color="#000000">
+    <font color="#000000" size="4"><em><a href="mailto:question@arrsd.mec.edu"><p
+    align="center"></a><img src="email.jpg" alt="email.jpg (870 bytes)" WIDTH="36" HEIGHT="15"><br>
+    </em></font><font size="3"><strong><a href="mailto:question@arrsd.mec.edu">Email Questions
+    Comments?</a></strong></font></td>
+    <td WIDTH="20"></td>
+    <td WIDTH="472" VALIGN="top"><p align="center"><img src="banner.gif" alt="Welcome To AHS"
+    WIDTH="462" HEIGHT="59"><br>
+    <br>
+    <font face="Arial" size="4" color="#FF0000"><strong><em>Athol-Mahar High Schools<br>
+    Student Art Exhibit Preview</em></strong></font></p>
+    <p align="center"><!--<a href="javascript:onclick=openWindow()">--><img name="slideshow" src="images/zshow1.jpg" border="0" WIDTH="250"
+    HEIGHT="188"><!--</a>--> </p>
+    <form name="display">
+      <div align="center"><center><table border="0" width="35%">
+        <tr>
+          <td width="19%"><font face="Courier">Title: </font></td>
+          <td width="81%"><input type="text" name="T1" size="23"
+          value="&quot;English Pub Scene&quot;"></td>
+        </tr>
+        <tr>
+          <td width="19%"><font face="Courier">Artist:</font></td>
+          <td width="81%"><input type="text" name="T2" size="23" value="Bonnie Herbert"></td>
+        </tr>
+        <tr>
+          <td width="19%"><font face="Courier">Medium:</font></td>
+          <td width="81%"><input type="text" name="T3" size="23" value="Watercolor"></td>
+        </tr>
+        <tr>
+          <td width="19%"></td>
+          <td width="81%"></td>
+        </tr>
+      </table>
+      </center></div>
+    </form>
+    <p><br>
+    <font face="Courier" color="#000000">.....</font>This slideshow contains six selections
+    from the Athol-Mahar High Schools Student Art Exhibit at Halley's Antiques. The exhibit
+    was open to the public through May 27.</p>
+    <p>Related links: <a href="artshow3.html">Athol-Mahar Preview #1</a>, <a
+    href="artshow4.html">Athol-Mahar Preview #2</a></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,685 @@
+<html>
+<head>
+<title>Agendabh</title>
+<meta http-equiv="Content-Type" content="text/asp; charset=iso-8859-1">
+<script language="JavaScript1.2" src="popups.js"></script>
+
+
+
+<STYLE type="text/css">
+<!--
+A.link.def {color:#0099CC;}
+A.link.cin {color:#DD5E5E;}
+A.link.tea {color:#34619C;}
+A.link.gas {color:#DE9000;}
+A.link.noi {color:#B183D6;}
+A.link.sho {color:#DD5E5E;}
+A.link.ser {color:#6DBC00;}
+A.link.eve {color:#41B8B8;}
+A.link.div {color:#4F8800;}
+-->
+</STYLE>
+<SCRIPT>
+var now = new Date();
+var dName = now.getDay() + 1;
+
+if(dName==1) Day = "Domingo";
+if(dName==2) Day = "Segunda";
+if(dName==3) Day = "Ter&ccedil;a";
+if(dName==4) Day = "Quarta";
+if(dName==5) Day = "Quinta";
+if(dName==6) Day = "Sexta";
+if(dName==7) Day = "S&aacute;bado";
+
+var todaysDia =(""+ Day +"");
+</SCRIPT>
+</head>
+
+<body bgcolor="#F59815" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" text="#000000" link="#000000" vlink="#000000" alink="#000000">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr align="left" valign="top"> 
+    <td width="5%"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td><a href="index.asp"><img src="imgs/logotipo.gif" border="0" alt="Agendabh - voltar para a capa"></a></td>
+        </tr>
+        <tr> 
+            <td><img src="imgs/m-inclusao.gif" usemap="#Map3" border="0"><map name="Map3"><area shape="poly" coords="137,3,137,19,55,19,55,11,57,6,63,3,139,3" href="incluir-est.asp" alt="Inclus&atilde;o de estabelecimento" title="Inclus&atilde;o de estabelecimento"><area shape="rect" coords="138,3,177,20" href="incluir-eve.asp" alt="Inclus&atilde;o de evento" title="Inclus&atilde;o de evento"></map></td>
+        </tr>
+      </table>
+    </td>
+    <td width="94%" align="right"> 
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr valign="top" align="right" bgcolor="#F59815"> 
+          <td><img src="imgs/t.gif" width="1" height="11"></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr align="right" valign="top" bgcolor="#3D786F"> 
+          <td> 
+            <table border="0" cellspacing="0" cellpadding="0">
+              <tr valign="top" align="right" bgcolor="#3D786F"> 
+                <td><img src="imgs/t.gif" width="1" height="1"></td>
+              </tr>
+              <tr valign="top" align="right" bgcolor="#3D786F"> 
+                <td> 
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr> 
+                      <td align="right" valign="top">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr align="left" valign="top"> 
+                            <td width="50%" height="36"><img src="imgs/i-data.gif" width="12" height="11"><br>
+                              <font size="1" face="Verdana, Arial, Helvetica, sans-serif" color="#FFFFFF">
+							  <b><script>document.write(todaysDia);</script>,</b><br>
+                              25/04/2001
+							  </font>
+							</td>
+                            <td width="50%" rowspan="2" align="right"><A HREF="CategRedir.asp?url=http://www.agendabh.com.br&image=banners/ban-agendafull.gif" ><IMG SRC="banners/ban-agendafull.gif" ALT="AgendaBH" WIDTH=486 HEIGHT=60 BORDER=0></A><img src="imgs/t.gif" width="1" height="1"></td>
+                          </tr>
+                          <tr align="left" valign="top"> 
+                            <td valign="bottom" align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#CCCCCC">oferecimento&nbsp;</font></td>
+                          </tr>
+                        </table>
+					  </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr valign="top" align="right" bgcolor="#3D786F"> 
+                <td><img src="imgs/t.gif" width="1" height="1"></td>
+              </tr>
+              <tr valign="top" align="right" bgcolor="#3D786F"> 
+                <td><img src="imgs/m-superior.gif" usemap="#Map2" border="0" width="566" height="21"><map name="Map2"><area shape="rect" coords="11,3,129,17" href="javascript:agendamail('receba.asp');" alt="Receba novidades por e-mail." title="Receba novidades por e-mail."><area shape="rect" coords="158,2,273,18" href="sugestoes.asp" alt="Ajude-nos a melhorar o Agendabh." title="Ajude-nos a melhorar o Agendabh."><area shape="rect" coords="304,2,409,17" href="sorteados.asp" alt="Confira a lista dos ganhadores." title="Confira a lista dos ganhadores."><area shape="rect" coords="436,4,560,18" href="privacidade.asp" alt="No Agendabh sua privacidade est&aacute; protegida." title="No Agendabh sua privacidade est&aacute; protegida."></map></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr valign="top" align="right" bgcolor="#F59815"> 
+            <td><img src="imgs/m-sho.gif" usemap="#Map" border="0"><map name="Map"><area shape="rect" coords="66,0,133,36" href="teatros.asp" alt="Teatro e Cultura" title="Teatro e Cultura"><area shape="rect" coords="356,0,433,36" href="servicos.asp" alt="Servi&ccedil;os e Com&eacute;rcio" title="Servi&ccedil;os e Com&eacute;rcio"><area shape="rect" coords="135,0,228,36" href="gastronomia.asp" alt="Gastronomia" title="Gastronomia"><area shape="rect" coords="230,0,291,36" href="noite.asp" alt="Noite em BH" title="Noite em BH"><area shape="rect" coords="293,0,355,36" href="shows.asp" alt="Shows" title="Shows"><area shape="rect" coords="435,0,498,36" href="eventos.asp" alt="Eventos" title="Eventos"><area shape="rect" coords="500,0,580,36" href="diversao.asp" alt="Divers&atilde;o e Turismo" title="Divers&atilde;o e Turismo"><area shape="poly" coords="63,0,63,35,0,35,0,7,2,2,7,0" href="cinema.asp" alt="Cinema" title="Cinema"></map></td>
+        </tr>
+      </table>
+    </td>
+    <td width="1%" align="right"><img src="imgs/t.gif" width="14" height="1"></td>
+  </tr>
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="1%"><img src="imgs/t.gif" width="12" height="1"></td>
+      <td width="98%" bgcolor="#FF7777"><img src="imgs/t.gif" width="1" height="8"></td>
+    <td width="1%"><img src="imgs/t.gif" width="14" height="1"></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="1%"><img src="imgs/t.gif" width="12" height="1"></td>
+    <td width="98%"> 
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr align="left" valign="top"> 
+            
+          <td width="1%" bgcolor="#FF7777" align="center"> 
+            
+
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+  <tr align="center" valign="top"> 
+    <td> 
+            <form name="form1" method="post" action="busca.asp">
+      <table border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td> 
+                    <input type="text" name="textfield" size="16">
+                  </td>
+                  <td>
+                    
+              <input type="image" border="0" name="imageField" src="imgs/b-ok-sho.gif" width="25" height="21">
+                  </td>
+                </tr>
+              </table>
+              
+          
+        <img src="imgs/c-procurar-sho.gif" height="15"> 
+      </form><table border="0" cellspacing="0" cellpadding="0" width="155">
+        <tr> 
+          <td><img src="../imgs/ce-sho-programacao.gif" width="155" height="22"></td>
+        </tr>
+        <tr bgcolor="#FFF5F5" align="left" valign="top"> 
+          <td> 
+            <table border="0" cellspacing="0" cellpadding="3" width="100%">
+              <tr valign="top" align="left"> 
+                <td> <font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#FF6666"> 
+                  1
+                  . <a href ="sho-reg.asp?registro=416" class=sho >Aggeu Marques</a><BR>
+                  2
+                  . <a href ="sho-reg.asp?registro=415" class=sho >Beto Guedes</a><BR>
+                  3
+                  . <a href ="sho-reg.asp?registro=417" class=sho >Biquini Cavadão</a><BR>
+                  4
+                  . <a href ="sho-reg.asp?registro=402" class=sho >Camping & Rock</a><BR>
+                  5
+                  . <a href ="sho-reg.asp?registro=397" class=sho >Chama Chuva</a><BR>
+                  6
+                  . <a href ="sho-reg.asp?registro=414" class=sho >Eliades Ochoa</a><BR>
+                  7
+                  . <a href ="sho-reg.asp?registro=404" class=sho >Jorge Aragão</a><BR>
+                  8
+                  . <a href ="sho-reg.asp?registro=369" class=sho >Trinca de Ases</a><BR>
+                  
+                  </font> </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td height="2"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr valign="top"> 
+                <td align="left" width="2%"><img src="../imgs/ee-boxe-sho.gif" width="18" height="15"></td>
+                <td align="right" bgcolor="#FFF5F5" width="96%"><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#DD5E5E"><b><font color="#FFF5F5">.</font></b></font></td>
+                <td align="right" width="2%"><img src="../imgs/ee-boxd-sho.gif" width="18" height="15"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+          </td>
+          <td width="1%"><img src="imgs/t.gif" width="4" height="1"></td>
+          <td width="98%" bgcolor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="2">
+              <tr align="left" valign="top"> 
+                <td width="90%"> 
+                  <table width="100%" border="0" cellspacing="0" cellpadding="2">
+                    <tr align="left" valign="top"> 
+                      <td> 
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr valign="top" align="center"> 
+                            <td colspan="2"> 
+                              <table width="100%" border="0" cellspacing="0" cellpadding="2">
+                                <tr> 
+                                  <td> 
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#FF7777">
+                                      <tr> 
+                                        <td align="left" valign="top" width="2%"><img src="imgs/t-sho.gif"></td>
+                                        <td align="left" valign="top" width="2%"><img src="imgs/et-sho-esq.gif"></td>
+                                        <td align="right" valign="middle" width="94%"> 
+                                          <a href="cinema.asp"><img src="imgs/ban-cinema.gif" align="top" width="161" height="37" border="0"></a></td>
+                                        <td align="right" valign="top" width="2%"><img src="imgs/et-sho-dir.gif"></td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                                <tr align="left"> 
+                                  <td><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><a href="javascript:history.back();"><img src="imgs/s-voltar.gif" border="0">&nbsp;<b>voltar</b></a></font></td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="2">
+                    <tr> 
+                      <td> 
+                        <table width="100%" border="0" cellspacing="0" cellpadding="2">
+                          <tr> 
+                            <td align="left" valign="top"><font face="Arial, Helvetica, sans-serif" color="#FF7777" size="3"><b>
+                              Camping & Rock
+                              </b></font><font face="Arial, Helvetica, sans-serif" color="#FF7777" size="2"><br>
+                              De 28/04 à 01/05
+                              </font><br>
+                            </td>
+                            
+                            <!--<td align="right" valign="top"><a href=sorteio.asp?sorteio='Camping & Rock'><img src="imgs/b-sorteio.gif" border=0 width="58" height="19"></a></td>-->
+                            
+                          </tr>
+                        </table>
+                        <font face="Arial, Helvetica, sans-serif" size="2" color=#000000><b>Hor&aacute;rio:</b> 
+                        Os shows começam às 19h30 e terminam às 03h.<br>
+                        
+                        <b>Local: </b> 
+                        Balneário Brisa. 
+                        
+                        <br>
+                        
+                        <b>Endere&ccedil;o: </b> - - -, Sem Bairro
+                        . 
+                        
+                        <br>
+                        <b>Referência: </b>
+                         Região da Serra do Cipó
+                        <br>
+                        <b>Telefone de Contato: </b>3201-1187<br>
+                        
+                        <b>Pre&ccedil;o: </b>R$20,00 os quatro dias<br>
+                        
+                        </font><br>
+                        
+                        <table width="100%" border="0" cellspacing="0" cellpadding="2">
+                          <tr bgcolor="#eeeeee"> 
+                            <td><font face="Arial, Helvetica, sans-serif" size="2"> 
+                               
+<p><font face="Arial, Helvetica, sans-serif" size="2"><img src="../eventos/fotos/campingrock-135.jpg" width="135" height="135" align="left">Shows 
+  com v&aacute;rias bandas de rock nacional, o Camping &amp; Rock &eacute; um 
+  dos maiores e mais bem conceituados eventos de Rock'n Roll de Minas Gerais, 
+  ser&atilde;o quatro dias de show no meio do mato.<br>
+  <br>
+  <font color="#FF0000"><b>Bandas:<br>
+  It's Only Rolling Stones - Drowned - Concreto - Thespian - Panacea - Somba - 
+  Morgana - Cartton - Tuatha de Danann - Aracy D' Almaiden - A Rota Rock - Maria 
+  Pretinha - Bizarro - Tabla Kaballa - Nervus - Sancty Angelis - Mantra - Dark 
+  Majesty - Peyote - All Keith - Caution - Anexus - Mogic Marei - Arranha C&eacute;u<br>
+  <br>
+  <br>
+  </b></font><b>Como Chegar</b><br>
+  <br>
+  Partindo da capital mineira, BELO HORIZONTE, haver&aacute; &ocirc;nibus especialmente 
+  fretados da SARITUR TURISMO, saindo da Pra&ccedil;a da Esta&ccedil;&atilde;o 
+  direto ao evento. As passagens dever&atilde;o ser adquiridas com bastante anteced&ecirc;ncia 
+  na &quot;Galeria Pra&ccedil;a Sete&quot; na loja da &quot;PURPLE RECOD'S ou 
+  da &quot;M&Ouml;TLEY RECORD'S, onde tamb&eacute;m estar&aacute; &agrave; venda 
+  o PASSAPORTE para este grande festival.</font></p>
+<p> </p>
+<p></p>
+<p><font face="Arial, Helvetica, sans-serif" size="2">De BELO HORIZONTE voc&ecirc; 
+  vai at&eacute; LAGOA SANTA, cidade tur&iacute;stica que fica a 35Km pela Rodovia 
+  MG10, sentido Aeroporto de Confins, seguindo no sentido &quot;SERRA DO CIP&Oacute;&quot;, 
+  passando pela Ponte do Rio das Velhas-( SORVETERIA PIRAQUARA ) parada obrigat&oacute;ria 
+  ( foi l&aacute; que come&ccedil;ou este grande festival ). O Balne&aacute;rio 
+  Brisa fica logo a 14 Km, depois do Condom&iacute;nio Monte Verde primeira entrada 
+  &agrave; esquerda (estrada de terra de 1,5Km).<br>
+  <br>
+  <b><br>
+  Hor&aacute;rios dos Shows</b><br>
+  <br>
+  </font><font face="Arial, Helvetica, sans-serif" size="2"><b>S&Aacute;BADO: 
+  28/04</b></font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="2">In&iacute;cio: 18:00 horas 
+  &aacute;s 19:15 hrs. - DROWNED. </font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="2">19:30 &aacute;s 20:45 - 
+  MORGANA - 21:00 &aacute;s 22:15 - CONCRETO - 22:30 &aacute;s 23:45 - THESPIAN 
+  - 00:00 &aacute;s 01:15- TUATHA DE DANANN - 01:30 &aacute;s 2:45 - DARK MAJESTY 
+  .</font></p>
+<p> </p>
+<p><font face="Arial, Helvetica, sans-serif" size="2"><b>DOMINGO: 29/04</b></font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="2">In&iacute;cio: 17:00 horas 
+  &aacute;s 18:15 hrs. - PANACEA </font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="2">18:30 &aacute;s 19:45 - 
+  MANTRA - 20:00 &aacute;s 21:15 - CARTOON - 21:30 &aacute;s 22:45 - C&Aacute;LIX- 
+  23:00'&aacute;s 00:15 -SOMBA - 00:30 &aacute;s 01:45 - ARACY D'ALMAIDEN- 02:00 
+  &aacute;s 03:15- KABALLA</font></p>
+<p> </p>
+<p><font face="Arial, Helvetica, sans-serif" size="2"><b>SEGUNDA FEIRA: 30/04</b></font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="2">In&iacute;cio: 18:00 horas 
+  &aacute;s 19:15 hrs. - SANCTY ANGELIS</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="2">19:30 &aacute;s 20:45 - 
+  MARIA PRETINHA- 21:00 &aacute;s 22:15- A ROTA ROCK- 22:30 &aacute;s 23:45 - 
+  BIZARRO- 00:00&aacute;s 01:15- MOGIC MAREI- 01:30 &aacute;s 02:45 - NERVUS.</font></p>
+<p> </p>
+<p><font face="Arial, Helvetica, sans-serif" size="2"><b>TER&Ccedil;A FEIRA: 01/05</b></font></p>
+<p> </p>
+<p><font face="Arial, Helvetica, sans-serif" size="2">In&iacute;cio: 14:00 &aacute;s 
+  15:00 hrs - ANEXUS</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="2">15:15 &aacute;s 16:15 - 
+  CAUTION - 16:30 &aacute;s 17:30 - IT'S ONLY ROLLING STONES - 17:45 &aacute;s 
+  18:45 - PEYOTE - 19:00 &aacute;s 20:00 hrs - ALL KEITH - 20:15 &aacute;s 21:15 
+  - ARRANHA CEU.<br>
+  <br>
+  <br>
+  <b>Hist&oacute;rico</b><br>
+  <br>
+  Inverno de 1995, regi&atilde;o da Serra do Cip&oacute;, um grupo de amigos se 
+  reunia quase todos os finais de semana para curtir o mato ( a regi&atilde;o 
+  &eacute; muito bonita ), e ficar curtindo ROCK N' ROLL . Da&iacute; vieram as 
+  lembran&ccedil;as de grandes festivais que aconteceram aqui no Brasil, principalmente 
+  na d&eacute;cada de 70, como o festival de &quot;&Aacute;GUAS CLARAS&quot;, 
+  que foi um dos primeiros festivais ao ar livre do Pa&iacute;s. Tamb&eacute;m 
+  teve um outro grande festival inesquec&iacute;vel que foi o de &quot;IACANGA&quot;, 
+  que reuniu Roqueiros de v&aacute;rias localidades, e aqui em Minas Gerais aconteceu, 
+  tamb&eacute;m na d&eacute;cada de 70, o famoso &quot;CAMPING POP&quot;, na regi&atilde;o 
+  do Serra Verde, munic&iacute;pio de Vespaziano, cidade que fica a 20 KM de Belo 
+  Horizonte.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="2"><b>CAMPING &amp; ROCK - 
+  O MAIS ALTERNATIVO DE MINAS GERAIS</b></font></p>
+<p> </p>
+<p><font face="Arial, Helvetica, sans-serif" size="2">Foi pensando nestes festivais, 
+  e com bastante saudade, &eacute; que eu, Marcos Arcanjo Assun&ccedil;&atilde;o 
+  e um grande amigo de velhos Rock n' Rolls , Jo&atilde;o Batista Monteiro, decidimos 
+  fazer este festival aqui nesta bel&iacute;ssima regi&atilde;o da Serra do Cip&oacute;- 
+  M.G., e o sucesso foi t&atilde;o grande que j&aacute; estamos na 4&ordf; edi&ccedil;&atilde;o. 
+  &Eacute; claro que n&atilde;o foi nada f&aacute;cil organizar isso tudo, principalmente 
+  porque o local n&atilde;o tem luz el&eacute;trica suficiente para toda a parafern&aacute;lia 
+  que exige um evento desse porte. Ent&atilde;o tivemos que arranjar um grande 
+  gerador que resolveu o problema.</font></p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p><font face="Arial, Helvetica, sans-serif" size="2">A m&eacute;dia de p&uacute;blico 
+  nos festivais anteriores foi de 4000 ( quatro mil ) roqueiros, e nesta quarta 
+  edi&ccedil;&atilde;o deveremos ultrapassar a casa dos 8000 ( oito mil ) roqueiros. 
+  O evento ainda n&atilde;o conta com um patrocinador, e a divulga&ccedil;&atilde;o 
+  &eacute; feita sem nenhum apoio da m&iacute;dia tradicional, o que talvez at&eacute; 
+  favore&ccedil;a sua qualidade n&atilde;o trazendo superlota&ccedil;&atilde;o.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="2"><b>PEGUE SUA BARRACA E N&Atilde;O 
+  PERCA ESTA OPORTUNIDADE!!!</b></font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="2">Fa&ccedil;o aqui o convite 
+  para aqueles que realmente gostam de um puro Rock n' Roll, que n&atilde;o se 
+  deixam enganar por certos tipos de som que ultimamente rolam por a&iacute;, 
+  passando como se fosse &quot;ROCK&quot;, e que na verdade &eacute; um &quot;POP&quot;, 
+  e que a m&iacute;dia, principalmente as gravadoras tentam &quot;empurrar&quot;, 
+  para o p&uacute;blico de ROCK N' ROLL. O CAMPING &amp; ROCK &eacute; um evento 
+  que realmente &eacute; direcionado para o &quot;puro&quot; ROCK AND ROLL. Portanto, 
+  n&atilde;o deixe de comparecer este ano. &quot;Pegue sua barraca e n&atilde;o 
+  perca esta oportunidade!&quot;.<br>
+  <br>
+  <a href="http://www.campingrock.hpg.com.br">www.campingrock.hpg.com.br</a></font> 
+</p>
+
+                              </font></td>
+                          </tr>
+                        </table>
+                        
+                      </td>
+                    </tr>
+                  </table>
+                  <hr size="1" align="center" noshade width="98%">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="2">
+                    <tr> 
+                      <td> <img src="imgs/c-pes-sho.gif"><br>
+                        <br>
+                        <font face="Arial, Helvetica, sans-serif" size="2"><b>&nbsp;&nbsp;<img src="imgs/i-pesquisa.gif" align="absmiddle">&nbsp;Data 
+                        e Nome do Show</b> 
+                        <form method=post action=sho-reg.asp>
+                          <select name="registro" onChange="submit();">
+                            <option> Selecione um Show 
+                            
+                            <option value="416">27/04 
+                            - Aggeu Marques</option>
+                            
+                            <option value="415">27/04 
+                            - Beto Guedes</option>
+                            
+                            <option value="397">27/04 
+                            - Chama Chuva</option>
+                            
+                            <option value="414">30/04 
+                            - Eliades Ochoa</option>
+                            
+                            <option value="402">01/05 
+                            - Camping &amp; Rock</option>
+                            
+                            <option value="369">06/05 
+                            - Trinca de Ases</option>
+                            
+                            <option value="417">11/05 
+                            - Biquini Cavad&#227;o</option>
+                            
+                            <option value="404">19/05 
+                            - Jorge Arag&#227;o</option>
+                            
+                          </select>
+                        </form>
+                        <b>&nbsp;&nbsp;<img src="imgs/i-pesquisa.gif" align="absmiddle">&nbsp;Tipo 
+                        do Show</b> 
+                        <form method=post action=sho-categoria.asp>
+                          <select name="categoria" onChange="submit();">
+                            <option>Tipo de Show</option>
+                            
+                            <option>Forr&#243;</option>
+                            
+                            <option>MPB</option>
+                            
+                            <option>M&#250;sica Cubana</option>
+                            
+                            <option>Pop</option>
+                            
+                            <option>Pop Nacional</option>
+                            
+                            <option>Rock</option>
+                            
+                            <option>Samba</option>
+                            
+                          </select>
+                        </form>
+                        </font><font size="1" face="Verdana, Arial, Helvetica, sans-serif" color="#999999">&nbsp;&nbsp;&nbsp;(Para 
+                        ver o conte&uacute;do, basta selecionar uma op&ccedil;&atilde;o 
+                        nas listas)</font></td>
+                    </tr>
+                  </table>
+                  <br>
+                </td>
+                <td width="10%"> 
+                  <table width="100%" border="0" cellspacing="0" cellpadding="3">
+                     
+<tr align = "center" valign = "top"> 
+  <td><a href="http://www.savassifm.com.br"><IMG border=0 src="../imgs/ban-savassifm2.gif" width="170" height="45"></a><br>
+     </td>
+</tr>
+<tr align = "center" valign = "top"> 
+	<td height = "2"> 
+    	
+    <table border="0" cellspacing="0" cellpadding="0" width="168">
+      <tr><td><IMG border=0 src="imgs/cd-def-acontece.gif"></td></tr>
+			<tr bgcolor="#e7f9ff"> 
+            	<td height="2"> 
+          			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+            			<tr valign="top" align="left" bgcolor="#e7f9ff">
+             				<td height="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#0099cc"> 
+                				1.<a href ="eve-reg.asp?registro=208" class=def >Mostra de Vídeo</a><BR>
+                				 </font> </td>  
+						</tr>
+					</table>
+				</td>
+			</tr>
+		<tr> 
+			<td height="2"> 
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+                	<tr valign="top"> 
+                    	<td align="left" width="2%"><IMG src="imgs/ed-boxe.gif"></td>
+                        <td align="right" bgcolor="#e7f9ff" width="96%" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#0099cc"><b>&nbsp;</b></font></td>
+                        <td align="right" width="2%"><IMG src="imgs/ed-boxd.gif"></td>
+                    </tr>
+                </table>
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+<tr align = "center" valign = "top"> 
+	<td height = "2"> 
+    <table border="0" cellspacing="0" cellpadding="0" width="168">
+      <tr> 
+        <td><A href="eventos.asp"><IMG border=0 src="imgs/cd-def-franca.gif"></a></td>
+      </tr>
+      <tr valign="top" align="left" bgcolor="#e7f9ff"> 
+        <td height="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#0099cc"> 
+          1
+          .<a href ="eve-reg.asp?registro=199" class=def>
+          Amadeo Lorenzato</a><BR>
+          2
+          .<a href ="eve-reg.asp?registro=220" class=def>
+          Arte Sequencial</a><BR>
+          3
+          .<a href ="eve-reg.asp?registro=23" class=def>
+          BH 1893 -1922</a><BR>
+          4
+          .<a href ="eve-reg.asp?registro=237" class=def>
+          Brasil Indígena</a><BR>
+          5
+          .<a href ="eve-reg.asp?registro=241" class=def>
+          Circ Alpha</a><BR>
+          6
+          .<a href ="eve-reg.asp?registro=232" class=def>
+          Curtabelas</a><BR>
+          7
+          .<a href ="eve-reg.asp?registro=242" class=def>
+          Fotógrafas da National Geographic</a><BR>
+          8
+          .<a href ="eve-reg.asp?registro=223" class=def>
+          Imagens do Brasil</a><BR>
+          9
+          .<a href ="eve-reg.asp?registro=154" class=def>
+          Impressões de Minas</a><BR>
+          10
+          .<a href ="eve-reg.asp?registro=240" class=def>
+          Indie 2001</a><BR>
+          11
+          .<a href ="eve-reg.asp?registro=244" class=def>
+          Lançamento</a><BR>
+          12
+          .<a href ="eve-reg.asp?registro=147" class=def>
+          Maria Inêz Starling Mól</a><BR>
+          13
+          .<a href ="eve-reg.asp?registro=204" class=def>
+          Mário Arreguy</a><BR>
+          14
+          .<a href ="eve-reg.asp?registro=208" class=def>
+          Mostra de Vídeo</a><BR>
+          15
+          .<a href ="eve-reg.asp?registro=229" class=def>
+          Mostre o Seu Talento</a><BR>
+          16
+          .<a href ="eve-reg.asp?registro=165" class=def>
+          Pinturas e Esculturas</a><BR>
+          17
+          .<a href ="eve-reg.asp?registro=224" class=def>
+          Projeto Mural 2001</a><BR>
+          18
+          .<a href ="eve-reg.asp?registro=138" class=def>
+          RJ 1862-1927</a><BR>
+          19
+          .<a href ="eve-reg.asp?registro=228" class=def>
+          Sally</a><BR>
+          20
+          .<a href ="eve-reg.asp?registro=202" class=def>
+          Sérgio Machado</a><BR>
+          21
+          .<a href ="eve-reg.asp?registro=210" class=def>
+          Sérgio Tochner</a><BR>
+          22
+          .<a href ="eve-reg.asp?registro=235" class=def>
+          Sylberto Sette Zucheratto</a><BR>
+          23
+          .<a href ="eve-reg.asp?registro=239" class=def>
+          Troféu Pró-Musica 2000</a><BR>
+          24
+          .<a href ="eve-reg.asp?registro=217" class=def>
+          Velhos Horizontes</a><BR>
+          
+          </font></td>
+      </tr>
+      <tr> 
+        <td height="2"> 
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr valign="top"> 
+              <td align="left" width="2%"><IMG src="imgs/ed-boxe.gif"></td>
+              <td align="right" bgcolor="#e7f9ff" width="96%" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#0099cc"><b>&nbsp;</b></font></td>
+              <td align="right" width="2%"><IMG src="imgs/ed-boxd.gif"></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    
+    <br>
+  </td>
+                    </tr>
+                    <tr align = "center" valign = "top"> 
+                      <td> 
+                        <table width="100%" border="0" cellspacing="0" cellpadding="1">
+                          <tr align="middle" valign="top"> 
+                            
+        <td width="96%" valign="top" align="center"> <font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#0099cc"> 
+          <a href="http://www.webminas.com.br"><img src="../imgs/webminas(selo3).gif" width="72" height="76" border="0"></a><br>
+          <br>
+          apoio&nbsp;</font><a href="http://www.otempo.com.br"><IMG align=middle border=0 height=18 src="imgs/b-otempo.gif" width=100></a><br>
+          <br>
+          <a href="http://www.wunderground.com/global/stations/83587.html"> <img src="http://banners.wunderground.com/banner/gizmotemp/global/stations/83587.gif" height=41 width=127 border="0"></a> 
+          <br>
+          <a href="http://www.wunderground.com/global/stations/83587.html"> <br>
+          </a> </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr align="left" valign="top"> 
+          <td width="1%" bgcolor="#FF7777" align="center"><font size="1">&nbsp;</font></td>
+          <td width="1%"><font size="1">&nbsp;</font></td>
+          <td width="98%" bgcolor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="2">
+              <tr align="left" valign="top"> 
+                <td width="70%" align="center" bgcolor="#eeeeee"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Para 
+                  ver o site, utilize <b>resolução mínima</b> de <b>800x600</b>.</font></td>
+                <td width="30%" align="center" bgcolor="#dddddd"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">© 
+                  Copyright 2000, <b>Agendabh</b></font></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td width="1%"><img src="imgs/t.gif" width="14" height="1"></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="1%"><img src="imgs/t.gif" width="12" height="1"></td>
+    <td width="98%" bgcolor="#FF7777"><img src="imgs/t.gif" width="1" height="8"></td>
+    <td width="1%"><img src="imgs/t.gif" width="14" height="1"></td>
+  </tr>
+</table>
+<div align="right"> 
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr> 
+      <td width="1%"><img src="imgs/t.gif" width="12" height="1"></td>
+      <td width="98%" align="left"> 
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td align="left" valign="top"><img src="imgs/assinatura.gif" usemap="#Map5" border="0">
+              <map name="Map5">
+                <area shape="rect" coords="74,4,156,20" href="quemsomos.asp" alt="Agendabh" title="Agendabh">
+                <area shape="rect" coords="168,2,207,20" href="javascript:diw('diw.asp');" alt="Digital Interaction for Web" title="Digital Interaction for Web">
+              </map>
+            </td>
+            <td align="right" valign="top"><img src="imgs/rodape.gif" width="543" height="23" usemap="#Map4Map" border="0">
+              <map name="Map4Map">
+                <area shape="rect" coords="251,0,347,20" href="publicidade.asp">
+                <area shape="rect" coords="348,1,455,21" href="parcerias.asp">
+                <area shape="poly" coords="249,1,249,19,198,19,191,16,188,10,187,0" href="contato.asp">
+                <area shape="poly" coords="456,1,456,16,460,20,466,20,538,19,538,1" href="quemsomos.asp">
+              </map>
+              <map name="Map4">
+                <area shape="rect" coords="248,0,394,19" href="publicidade.asp">
+                <area shape="rect" coords="395,0,456,19" href="parcerias.asp">
+                <area shape="poly" coords="246,0,246,19,198,19,191,16,188,10,187,0" href="contato.asp">
+                <area shape="poly" coords="459,0,458,15,462,19,468,19,540,18,540,0" href="quemsomos.asp">
+              </map>
+            </td>
+          </tr>
+        </table>
+      </td>
+      <td width="1%"><img src="imgs/t.gif" width="14" height="1"></td>
+    </tr>
+  </table>
+</div>
+<br>
+</body>
+</html>

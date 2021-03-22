@@ -1,0 +1,67 @@
+<html>
+
+<head>
+<title>UNEEK TECH [www.uneektech.org]</title>
+</head>
+
+<body bgcolor="#522929" text="#FFFF00">
+
+<p align="center"><big><font color="#00FF00"><big>UNEEK TECH [guide to using linux to go
+online]</big></font></big></p>
+
+<p align="center"><font face="Bookman Old Style">Login as root<br>
+Edit the file /etc/resolv.conf with your favorite editor. <br>
+The file should appear as follows:</font></p>
+
+<blockquote>
+  <p align="center"><font face="Bookman Old Style">domain [your machine name]<br>
+  nameserver [IP address of your ISP's primary nameserver]<br>
+  nameserver [IP address of your ISP's secondary nameserver]</font></p>
+  <p>&nbsp;</p>
+  <p align="center"><font face="Bookman Old Style">now give the following command:<br>
+  <br>
+  mv /etc/ppp/options /etc/ppp/options.default<br>
+  <br>
+  Create a new /etc/ppp/options<br>
+  apply the following lines to the file:<br>
+  <br>
+  /dev/modem<br>
+  57600<br>
+  crtscts<br>
+  lock<br>
+  debug<br>
+  0.0.0.0:<br>
+  defaultroute<br>
+  </font></p>
+  <blockquote>
+    <p>&nbsp;</p>
+    <p align="center"><font face="Bookman Old Style">Create the following file ~/net.chat:<br>
+    <br>
+    &quot;&quot; AT&amp;C1&amp;D2<br>
+    OK<br>
+    ATDT[ISP's Dialup Phone Number]<br>
+    CONNECT &quot;&quot;<br>
+    name: [Your Username]<br>
+    word: [Your Password]</font></p>
+    <blockquote>
+      <p align="center"><font face="Bookman Old Style">chmod 600 ~/net.chat<br>
+      <br>
+      Create the following file /usr/local/bin/net:<br>
+      <br>
+      pppd connect 'chat -f /root/net.chat' /dev/modem 115200 </font></p>
+      <p align="center"><font face="Bookman Old Style"><br>
+      <br>
+      Save the file and execute the following:<br>
+      <br>
+      chmod 600 /usr/local/bin/net<br>
+      <br>
+      Type net and hope that a ppp connection starts</font></p>
+      <p align="center"><font face="Bookman Old Style">You might have to make a few changes in
+      your modem initialization string and also add more lines according to the terminal screen
+      your ISP provides.<br>
+      </font></p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+</body>
+</html>

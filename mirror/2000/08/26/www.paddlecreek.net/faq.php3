@@ -1,0 +1,133 @@
+<html><html>
+<head>
+<title>Paddlecreek.net - Up the creek without a paddle...</title>
+<style rel=stylesheet type=text/css>
+	A:link { font-weight: bold; }
+	A:visited { font-weight: bold; }
+</style>
+</head>
+<body bgcolor="#778899" text="#000000" link="#000000" vlink="#000000" topmargin=5 leftmargin=0 rightmargin=0 marginheight=5>
+
+<table border=0 cellpadding=4 cellspacing=0 width=100% align=center>
+<tr><td bgcolor=778899>
+<table border="0" cellspacing="0" cellpadding="1" width="100%" bgcolor="#000000">
+<tr><td>
+<table border="0" cellspacing="0" cellpadding="3" width="100%" bgcolor="333333">
+<tr><td align=left>Paddlecreek.net</td><td ALIGN=RIGHT>
+<a href="index.html"><img src="images/sinking.gif" alt="Welcome to Paddlecreek.net" border=0></a>
+</td><td align=right>
+<form action="search.php3" method=post><font face=Arial,Helvetica size=2 color="ffffff">
+Search<input type=name name=query>
+</form></tr>
+<tr bgcolor="666666"><td colspan=2 bgcolor="666666">
+<font face=Arial,Helvetica size=3 color=CCCCCC>Up the creek without a paddle...</td>
+</td><td>&nbsp;</td></tr></table>
+</td></tr></table>
+</td></tr><tr><td valign=top width=100% bgcolor=778899>
+<table border=0 cellspacing=0 cellpadding=2 width=100%>
+<tr><td valign=top width=150 bgcolor=778899>
+
+<!-- Blocks Init -->
+
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>Paddlecreek (Main Menu)</td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+<SCRIPT LANGUAGE="JavaScript">
+
+<!--
+ function i(p) {
+ remote = window.open("stutter/?room="+p,"remote","width=300,height=400,scrollbars,resizeable=no,toolbar=no,menubar=no");
+  remote.focus();
+ }
+// -->
+
+</SCRIPT>
+
+
+<li><a href=index.php3>Home</a>
+<li><a href=topics.php3>Topics</a>
+<li><a href=sections.php3>Sections</a>
+<li><a href=links.php3>Web Links</a>
+<li><a href=user.php3>Your Account</a>
+<li><a href=submit.php3>Submit News</a>
+<li><a href=stats.php3>Stats</a>
+<li><a href=top.php3>Top 10</a>
+<li><a href=faq.php3>FAQ</a>
+<li><a href=cam.php3>Webcam</a>
+<li><a href="javascript:i('Paddlecreek Chat')">Chat</a></td></tr></table></td></tr></table><br>
+
+<!-- Because this is the DEFAULT theme, so print the user login block -->
+
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>Paddlecreek.net Login
+</td></tr><tr><td bgcolor=FFFFFF>
+<font face=Arial,Helvetica size=2>
+<form action="user.php3" method="post">
+Nickname: <input type="text" name="uname" size=12 maxlength=25><br>
+Password: <input type="password" name="pass" size=12 maxlength=20><br>
+<center><input type="submit" name="op" value="login"></form>
+Don't have an account yet? You can <a href=user.php3>Create One</a>.
+As registered user you have some advantages like theme manager,
+comments configuration and post comments with your name.
+</center></td></tr></table></td></tr></table><br>
+
+<!-- Show Left Blocks -->
+
+
+
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>Where we work!</td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+<CENTER><A HREF=http://www.itlab.musc.edu><img border=0 src=images/topics/itlab_logo.gif></A><BR></CENTER>
+Robert and I work at the <A HREF=http://www.itlab.musc.edu>ITLab </A> @ <A HREF=http://www.musc.edu> MUSC </A>
+<BR><BR>
+Travis works at Athens Greek Restaurant. (for now :)</td></tr></table></td></tr></table><br>
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2><A HREF=cam.php3>Webcam</A></td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+<SCRIPT LANGUAGE="JavaScript">
+
+<!--
+ function i(p) {
+ remote = window.open("stutter/?room="+p,"remote","width=300,height=400,scrollbars,resizeable=no,toolbar=no,menubar=no");
+  remote.focus();
+ }
+// -->
+
+</SCRIPT>
+
+
+Check out the <A HREF=cam.php3>web cam</A>. There are
+archives and soon to be other fun stuff!  
+<BR><BR>
+<B>Chat</B> about paddlecreek and webcam. Click <a href="javascript:i('Stutter')">here</a> to log in.
+</td></tr></table></td></tr></table><br>
+
+
+
+<img src=images/pix.gif border=0 width=150 height=1>
+</td><td width=100% valign=top><font face=Arial,Helvetica size=3>
+<p align=justify>
+
+<br> <B> What is paddlecreek? </B>
+<br><br>
+6 Paddlecreek Avenue, Charleston SC is where Tofu, Twavy, and Robert eat , sleep, bathe, and watch tv (sometimes).
+ We do other stuff here too. This site is hosted by computers that are in the house. Video and voice will be
+ broadcasted out of the house. So if you care, you can enjoy the goings on at paddlecreek avenue.
+ Various news and stories will be posted. I am thinking of putting up a Twavy section. :) 
+
+</p>
+
+
+</td></tr></table>
+</td></tr></table>
+</body></html>
+
+<font face=Arial,Helvetica size=1><center>
+<a href=php-nuke.php3><img src=images/powered/phpnuke.gif border=0 Alt="Web site powered by PHP-Nuke"></a><br><br>
+All logos and trademarks in this site are property of their respective owner. The comments are property of their posters, all the rest © 2000 by me<br>
+This web site was made with <a href=http://linuxpreview.org/php-nuke.php3>PHP-Nuke</a>, a web portal system written in PHP. PHP-Nuke is Free Software released under the <a href=http://www.gnu.org>GNU/GPL license</a>.<br>
+You can syndicate our news using the file <a href=backend.php3>Backend.php3</a><br>
+</body>
+</html>

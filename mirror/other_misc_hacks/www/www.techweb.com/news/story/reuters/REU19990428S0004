@@ -1,0 +1,37 @@
+
+<!--
+Version: 2.0
+DB: production
+SQL: select a.second_deck,a.url,a.pub_id,a.art_id,a.images,p.pub_name,a.stock_symbol,a.headline,a.extract,TO_CHAR((aw.lastmod_date+(3/24)),'MM/DD/YY, fmHH12fm:MI AM') as lastmod_date,TO_CHAR((aw.create_date+(3/24)),'MM/DD/YY, fmHH12fm:MI AM') as create_date,a.doc_id,a.byline,TO_CHAR((aw.prod_date+(3/24)),'MM/DD/YY, fmHH12fm:MI AM') as prod_date,a.teaser,a.proj_id,p.pub_url,a.prev_id,a.search_query,a.next_id,a.body 
+ from cd_pubs p,cd_articles a,cd_article_workflows aw 
+ where a.doc_id = 'REU19990428S0004' and a.art_id = aw.art_id and a.pub_id = p.pub_id (+)  
+  order by a.prod_date desc
+Cat: 
+-->
+HTTP/1.1 200 OK
+Date: Wed, 19 Jul 2000 17:46:18 GMT
+Server: Apache/1.3.12 (Unix) mod_perl/1.24
+Connection: close
+Content-Type: text/html
+
+<blockquote>
+<font size="5">We've redesigned!</font><p>
+<font size="4">TechWeb News has been redesigned. Most of our content is in the same place it's always been, but we have changed some of our sections to better reflect the news we cover. If you are looking for a section that no longer exists, please visit our new sections:<p>
+
+<font size="3"><b>
+<a href="../../../wire/desktop">Desktop Computing</a><br>
+<a href="../../../wire/ebusiness">E-business</a><br>
+<a href="../../../wire/internet">Internet</a><br>
+<a href="../../../wire/mobile">Mobile Computing</a><br>
+<a href="../../../wire/networking">Networking</a><br>
+<a href="../../../wire/chips">Processors/Components</a><br>
+<a href="../../../wire/storage">Servers/Storage</a><br>
+<a href="../../../wire/software">Software</a><br>
+<a href="../../../wire/telecom">Telecom</a><br>
+<a href="../../../wire/technews/year2000.html"></a><p>
+</b></font>
+
+<!--The page you requested has changed or is in a new location.--> If you reached this page after clicking on a link on our pages, please report the bug by sending e-mail to <a href="mailto:feedback@techweb.com">feedback@techweb.com</a>. Or, you can fill out our <a href="http://www.cmpnet.com/feedback">feedback form</a>. Tell us the URL of the page that brought you here and the link on which you clicked. 
+<p>
+Return to <a href="/news">TechWeb home</a></font>
+</blockquote>

@@ -1,0 +1,160 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>Thanks-CGI [FAQ]</TITLE>
+</HEAD>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+               <!--
+               function scroll(seed)
+               {
+                    var m1 = "Welcome to THANKS-CGI....." 
+                    var m2 = "We made your site more interactive and attractive for the world!"
+                    var msg=m1+m2; 
+                    var out = " ";
+                    var c = 1;
+                    if (seed > 100) {
+                          seed--;
+                          var cmd="scroll(" + seed + ")";
+                          timerTwo=window.setTimeout(cmd,100);
+                    }
+                    else if (seed <= 100 && seed > 0) {
+                          for (c=0 ; c < seed ; c++) {
+                             out+=" ";
+                          }
+                          out+=msg;
+                          seed--;
+                          var cmd="scroll(" + seed + ")";
+                           window.status=out;
+                          timerTwo=window.setTimeout(cmd,100);
+                    }  else if (seed <= 0) {
+                          if (-seed < msg.length) {
+                             out+=msg.substring(-seed,msg.length);
+                             seed--;
+                             var cmd="scroll(" + seed + ")";
+                             window.status=out;
+                             timerTwo=window.setTimeout(cmd,100);
+                          }
+                          else {
+                             window.status=" ";
+                             timerTwo=window.setTimeout("scroll(100)",7);
+                          }
+                    }
+               }
+               timerONE=window.setTimeout('scroll(100)',50);
+               //-->
+</SCRIPT>
+<body bgcolor="3366aa" text=ffffff link=yellow alink=red vlink=lime>
+
+<center>
+<a name="top"><hr width=600 align=center></a>
+<script Language='JavaScript'>
+var now = new Date();
+var years = now.getYear();
+var months =now.getMonth();
+var days = now.getDate();
+var hours = now.getHours();
+var minutes = now.getMinutes();
+var seconds = now.getSeconds();
+var ram_num=Math.floor(Math.random()*10000);
+var markstr=""+years+"-"+months+"-"+days+"-"+hours+"-"+minutes+"-"+seconds+"-"+ram_num;
+var showcgiurl="http://www.thanks-cgi.com/cgi-bin/banker/banker_show.cgi";
+var clickcgiurl="http://www.thanks-cgi.com/cgi-bin/banker/banker_click.cgi";
+document.write('<a href='+clickcgiurl+'?'+markstr+'><img src='+showcgiurl+'?'+markstr+' border=0></a>');
+</script>
+<hr width=600 align=center>
+<!--
+<font color=red face=arial>We still working on it! Sorry for the delay.</font>
+-->
+<table border=0>
+<tr><td width=600>
+<font face=arial color=ffffff size=6><b>FAQ</b></font>
+</td></tr>
+<tr><td width=600>
+<font face=arial color=ffffff>
+<ul>
+<li><a href="#basic">Introduction of basic knowledge of CGI.</a>
+<li><a href="#fpath">What is "FULL FILE PATH" or "REAL FILE PATH"?</a>
+<li><a href="#spcgi">What kind of server support CGI?</a>
+<li><a href="#perld">Where is the directory of "Perl" in my server?</a>
+<li><a href="#whbin">Where is my "CGI-BIN"?</a>
+<li><a href="#whurl">What is URL?</a>
+<li><a href="#uplod">How to upload my CGI script?</a>
+<li><a href="#error">Why I get those error message?</a>
+<ul>
+<li><a href="#ndata">document contain no data</a>
+<li><a href="#iserr">Internal Server Error</a>
+<li><a href="#asden">Access denied</a>
+</ul>
+</ul>
+<hr width=600>
+<font face=wingdings color=ff0000>n</font><a name="basic"><b>Introduction of basic knowledge of CGI.</b></a><br>
+CGI (Common Gataway Interface) can be written by many languages such as
+C++, Perl, Visual Basic...etc.
+CGI bring more interactive and effective website for your visitors.
+<a href="#top">..Top..</a><br><br>
+<font face=wingdings color=ff0000>n</font><a name="fpath"><b>What is "FULL FILE PATH" or "REAL FILE PATH"?</b></a><br>
+Full file path is the file path of your server side.
+You should ask your hostmaster about this.
+Most of server should post the information about it in their FAQ section.
+<a href="#top">..Top..</a><br><br>
+<font face=wingdings color=ff0000>n</font><a name="spcgi"><b>What kind of server support CGI?</b></a><br>
+Our script works on most of UNIX or Linux systems. We don't really recommand using NT sever with our scripts.
+<a href="#top">..Top..</a><br><br>
+<font face=wingdings color=ff0000>n</font><a name="perld"><b>Where is the directory of "Perl" in my server?</b></a><br>
+In UNIX server or Linux there's a specific directory of "Perl" which must be setup correctly to make your scripts working.
+It looks like this:<br><font color=lime>/usr/bin/perl/</font><br>
+They must be in the 1st line of CGI scripts. If you don't know where they are, either you have to contact your hostmaster or use TELNET command "<font color=ffff00>which perl</font>" to detect it.
+<br>
+In NT server, they usually already setup in the path.
+<a href="#top">..Top..</a><br><br>
+<font face=wingdings color=ff0000>n</font><a name="whbin"><b>Where is my "CGI-BIN"?</b></a><br>
+Your CGI-BIN should put under your root directory. Some server put them in different place or lock them up.
+You have to contact your hostmaster for more detail about your CGI-BIN.
+<a href="#top">..Top..</a><br><br>
+<font face=wingdings color=ff0000>n</font><a name="whurl"><b>What is "URL"?</b></a><br>
+URL = <b>U</b>niform <b>R</b>esource <b>L</b>ocator.<br>For example: <font color=lime>http://www.yourdomain.com</font>
+<a href="#top">..Top..</a><br><br>
+<font face=wingdings color=ff0000>n</font><a name="uplod"><b>How to upload my CGI script?</b></a><br>
+All the CGI scripts must upload them with "ASCII" mode and set to "chmod 755" by FTP program.<br>
+Others like "*.htm", "*.html" and "*.txt" should upload them with "Auto" or "ASCII" mode and set to "chmod 666".<br>
+All the images like "*.gif" and "*.jpg" shoud upload by "Binary" or "Auto" mode.
+Directories for CGI scripts should "chmod 755", all other directories set by "chmod 777" if you are not sure how to set them up.
+<a href="#top">..Top..</a><br><br>
+<font face=wingdings color=ff0000>n</font><a name="error"><b>Why I get those error message?</b></a><br>
+<blockquote>
+<font face=wingdings color=ff0000>n</font><a name="uplod"><a name="ndata">document contain no data</a><br>
+If you recived message "document contain no data" that means your script is working but some setting is not correct.
+<br>
+Two possibilities:<br>
+1. The way you set the files and directories are not correct. Set "chmod 777" of the directory where all "*.txt" and "*.htm" stored. Set "chmod 666" for all "txt"
+and "htm".<br>
+2. The file path didn't set correctly in you scripts. Please contact your server to make sure where your
+file path is.
+<a href="#top">..Top..</a><hr width=300 align=left>
+<font face=wingdings color=ff0000>n</font><a name="iserr">Internal Server Error</a><br>
+This is the most common error you may get. Neither your server doesn't support CGI nor you set your script incorrectly.
+To avoid the error like this we stronglly recommand don't try to modify the script other the "SETUP" area.
+<a href="#top">..Top..</a><hr width=300 align=left>
+<font face=wingdings color=ff0000>n</font><a name="asden">Access denied</a><br>
+Your server doesn't support CGI-BIN. Especially for some web space which provide by your ISP or some free hosting services.
+We do have a list of hosting company which fully support or scripts.
+<a href="#top"  align=right>..Top..</a>
+</blockquote>
+<br><br>
+
+</font>
+</td></tr>
+</table>
+<A HREF="http://www.eads.com/adserve/adserve.dll/link?GB06652,0,2">
+<IMG SRC="http://www.eads.com/adserve/adserve.dll/banner?GB06652,0,2"
+HEIGHT=55 WIDTH=460 ALT="Click Here to Visit Our Sponsor" border=0></A>
+<hr width=600 align=center>
+<FONT size=1>© 1998, 1999 <A href="../index.html">Thanks CGI resources</A></FONT>
+</center>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</HTML>
+

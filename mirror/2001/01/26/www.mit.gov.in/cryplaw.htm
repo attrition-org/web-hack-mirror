@@ -1,0 +1,479 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Generator" content="Microsoft Word 97">
+   <meta name="Template" content="E:\MSOFFICE\OFFICE\html.dot">
+   <meta name="GENERATOR" content="Mozilla/4.6 [en] (WinNT; I) [Netscape]">
+   <title>Cryptography Laws</title>
+</head>
+<body bgcolor="#FFFFF0" link="#0000FF" vlink="#800080">
+<font color="#008000"><font size=+2>Cyberlaw series: 3</font></font>
+<p><font color="#008000"><font size=+2>Version 1</font></font>
+<p><font color="#008000"><font size=+2>Cryptography Technology and Policy
+Directions in the Context of NII</font></font>
+<p><b><i><tt><font color="#800000"><font size=+1>Gulshan Rai, R.K.Dubash,
+and A.K.Chakravarti.</font></font></tt></i></b>
+<p><font color="#800000"><font size=+1>December , 1997</font></font>
+<p><font color="#800000"><font size=+1>Information Technology Group Dept.
+of Electronics Govt. of India</font></font>
+<p><font color="#0000FF"><a href="#index">Proceed to Index</a></font>
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<p><a NAME="index"></a><font color="#000000"><font size=+1>INDEX</font></font>
+<p><a href="#Intro">1.0 <font color="#000000"><font size=-1>Introduction</font></font></a>
+<p><a href="#Basics of crypto">2.0</a> <font color="#000000"><font size=-1>Basics
+of Cryptography 2.1 Cryptography 2.2 Encryption 2.3 Advantages of Encryption
+2.4 Elements of Encryption 2.4.1 Encryption algorithm 2.4.2 Encryption
+keys 2.4.3 Key length 2.4.4 Plaintext 2.4.5 Ciphertext 2.4.6 Message Digests
+2.4.7 Digital Signature 2.5 Cryptographic Algorithms 2.5.1 Private key
+cryptography 2.5.2 Public key cryptography 2.5.3 Hybrid public/private
+cryptosystems 2.5.4 Secret key 2.5.5 Key Escrow 2.5.6 Key Splitting 2.5.7
+Key Recovery 2.6 Encryption Standard 2.7 Export Control</font></font>
+<p><a href="#International Scenario">3.0</a> <font color="#000000"><font size=-1>International
+Scenario 3.1 G-7 Countries 3.2 Information Infrastrucure 3.3 OECD Guidelines
+1. Trust in Cryptographic Methods2. Choice of Cryptographic Methods 3.
+Market Driven Development of Cryptographic Methods 4. Standards for Cryptographic
+Methods 5. Protection of privacy and personal data 6. Lawful Access 7.
+Liability 8. International Cooperation</font></font>
+<p><a href="#Scenario in country">4.0</a> <font color="#000000"><font size=-1>Scenario
+in the country</font></font>
+<p><a href="#Annexure-1">Annexure-I</a> <font color="#000000"><font size=-1>Commonly
+used Private and Public Key Cryptography Algorithms&nbsp;</font></font>
+<hr WIDTH="100%">
+<hr WIDTH="100%">
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<p><a NAME="Intro"></a><u><font color="#000000"><font size=+1>Introduction</font></font></u>
+<p><font color="#000000">&nbsp;</font>Privacy and data security have been
+important issues since the dawn of the computer age, but they did not originate
+with the computer. Paper records and files can also threaten personal privacy
+or reveal other confidential or sensitive information. Long before computers
+were invented, most organisations kept their critical files under lock
+and key and restricted access to them to maintain security.
+<p>&nbsp;Computer made data is more easily transportable, easier to copy
+and far easier to manipulate. In the beginning the computers were mainframe,
+residing in a central processing facility.
+<p>&nbsp;Users of computer could be logged in and out. But once desktop
+terminals and personal computers made it possible to use files without
+physically entering a central processing facility or requesting a print
+out, controlling access became much more difficult.
+<p>&nbsp;Beginning in the late 1960s and continuing into 1970s, the computer
+industry itself and most major users came to understand the problems created
+by the new technology. The users developed their own codes and data security
+systems to deal with them.
+<p>&nbsp;The emergence and growth of Internet, banking by computer, electronic
+commerce and other forms of network computing have changed the situation.
+The new massively interconnected environment and the number of users is
+growing at a geometric rate. The volume of information available through
+the system is already incomprehensively large and increasing rapidly.
+<p>&nbsp;With the introduction of electronic commerce, lot of personal
+information will be available on the Internet, namely, credit card numbers,
+transaction data, preferences about the choice of the product, medical
+and insurance records, personal files, even data kept on their personal
+computers. Organisations on the Internet, including corporations, Government
+universities and other non-profit institutions have a worry that hackers
+or competitors or unauthorised persons may enter their systems and engage
+in fraudulent financial transactions, manipulate records or sabotage computers
+themselves.
+<p>&nbsp;The quest to establish trust in the emerging system on the part
+of individual users, service providers, retailers and, in fact, everyone
+who will be connected on the system, voiced down to assuring the protection
+of personal privacy and data security.
+<p>&nbsp;1.2 Cryptography technology and process used to encode (encrypt)
+and subsequently, to decode (decrypt) information to prevent its being
+read by unauthorised party is a major component of the complete data security
+system. It has been used extensively in the past and continues to be used
+by Governments to protect military secrets and exchanges with overseas
+Embassies. It is also enjoyed by corporations to protect confidential data
+by financial institutions exchanging payment data and other sensitive information,
+by social security, administration of many countries to protect the privacy
+of personal information and by many other users.
+<p>&nbsp;As the Internet and Global Information Infrastructure continue
+to evolve, particularly as electronic commerce becomes a reality and vastly
+increasing volumes of information are exchanged among users over global
+telecommunication networks, the customers demand for cryptography solutions
+to the security needs is growing rapidly. Even individual users are showing
+their substantial interest in the availability of cryptography tools, users
+are concerned about the privacy of their personal data and about possible
+disclosure of credit card, banking and other sensitive information when
+their computers are linked to the World Wide Web.
+<p><a href="#index">Back to Index</a>
+<p><a NAME="Basics of crypto"></a><font size=+1>2.0 <u>Basics of Cryptography</u></font>
+<p>2.1 <u>Cryptography</u>
+<p>&nbsp;Cryptography is the science and art of secret writing - keeping
+information secret. When applied in a computing environment, cryptography
+can protect data against unauthorised disclosure; it can authenticate the
+identity of a user or programmer requesting service; and it can disclose
+unauthorised tampering.
+<p>&nbsp;As a concept, cryptography goes back several thousand years, arguably
+to Egyptian Hieroglyphics and certainly to ancient India and Greece wherever,
+in both cases, it was used for communication with spies, military commandos
+and envoys to foreign Governments. Such uses continue to dominate well
+into the 20th century.
+<p>&nbsp;With the advent of electronic commerce, encryption is also becoming
+an active concern for individual consumer reluctant to put credit card
+numbers and other personal information on-line without the assurance that
+their data cannot be captured by other party.
+<p>2.2 <u>Encryption</u>
+<p>Encryption is basically a process in which a message called plain text
+is transformed into another message called a cipher text using a mathematical
+function and a special encryption password called the key. Decryption is
+a reverse process.
+<p>Current encryption technology generates ciphers via computer hardware
+and software enjoying sophisticated mathematical formulae or algorithms.
+<p>Encryption when used in communications, is the manipulation of a packet’s
+data in order to prevent any but the intended recipient from reading that
+data. The process of encryption and decryption is shown in the basic term
+below.
+<p>2.3 <u>Advantages of Encryption</u>
+<p>Encryption can protect information stored on the computer from unauthorised
+access - even from people who otherwise have access to your computer system.
+<p>Encryption can protect information while it is in transit from one computer
+system to another.
+<p>Encryption can be used to deter and detect accidental or international
+alteration in the data.
+<p>Encryption can be used to verify author of a document.
+<p>Despite these advantages, encryption has its limits;
+<p>Encryption cannot prevent an attacker from deleting the data altogether.
+<p>The attacker can compromise the encryption programme itself. The attacker
+might modify the programme to use a key different from the one provided
+or might record all of the encryption keys in a special file for later
+retrieval.
+<p>2.4 <u>Elements of Encryption</u>
+<p>There are many different ways that one can use a computer to encrypt
+or decrypt information. Nevertheless, each of these so-called encryption
+systems share common elements:
+<p>2.4.1 <u>Encryption algorithm</u>
+<p>The encryption algorithm is the function, usually with some mathematical
+foundations, which performs the task of encrypting and decrypting the data.
+<p>2.4.2 <u>Encryption keys</u>
+<p>Encryption keys are used by the encryption algorithm to determine how
+data is encrypted or decrypted. Encryption keys are similar to computer
+passwords: when a piece of information is encrypted, one needs to specify
+the correct key to access it again.
+<br>&nbsp;
+<br>&nbsp;
+<p>But unlike a password program, an encryption programme doesn’t compare
+the key one provides with the key one originally used to encrypt the file,
+and grant access if the two keys match. Instead, an encryption program
+uses key to transform the ciphertext back into the plaintext. If one provides
+the correct key, one gets back his original message. If one tries to decrypt
+a file with the wrong key, one gets irrelevant and unreadable message.
+<p>2.4.3 <u>Key length </u>As with passwords, encryption keys have a predetermined
+length. Longer keys are more difficult for an attacker to guess than shorter
+ones because there are larger permutation and combination of keys for them
+to try. Different encryption systems have keys of different lengths; some
+of which may have variable-length keys.
+<p>2.4.4 <u>Plaintext</u> The information which one wishes to encrypt.
+<p>2.4.5 <u>Ciphertext</u>The information after it is encrypted.
+<p>2.4.6 <u>Message Digests </u>A message digest (also known as Cryptographic
+check sum or Cryptographic hash code) is nothing more than a number - a
+special number that is effectively a hash code produced by a function that
+is difficult to reverse.
+<p>2.4.7 <u>Digital Signature</u>
+<p>A digital signature is a message digest encrypted with someone’s private
+key to certify the contents. This process of encryption is called signing.
+Digital signature can perform two different functions, both being important
+to the security of the system :
+<p>Integrity - A digital signature indicates whether a file or a message
+has been modified.
+<p>Authentication - A digital signature makes possible mathematically verifying
+the name of the person who signed the message.
+<p>A third function that is quite valuable in some context is called non-repudiation.
+Non-repudiation means that after one has signed or sent a message, one
+cannot take claim that he/she did not sign the original message. One cannot
+repudiate his/her signature, because the message was signed with his/her
+own private key (which, presumably, no one else has).
+<p>2.5 <u>Cryptographic Algorithms</u>
+<p>There are two basic kinds of encryption algorithms in use today :
+<p>2.5.1 <u>Private key cryptography</u>, which uses the same key to encrypt
+and decrypt the message. This type is also known as symmetric key cryptography.
+Private key encryption is the method used in supplying personal identification
+numbers and account information for credit card and automatic teller machine
+transactions.
+<p>The information is scrambled electronically when transmitted from the
+bank to central computers, thus maintaining the security of the account
+information.
+<p>2.5.2 <u>Public key cryptography</u>, which uses a public key to encrypt
+the message and a private key to decrypt it. The two keys are mathematically
+related. The name public key comes from the fact that one can make the
+encryption key public without compromising the secrecy of the message or
+the decryption key.
+<p>Public key systems are also known as asymmetric key cryptography. Under
+this system, the parties on the Internet, for example, can encrypt messages
+to one another using each other public keys and each can decrypt the other’s
+message with his/her own private key. Public key encryption also allows
+each message to bear a signature that cannot be forged.
+<p>2.5.3 <u>Hybrid public/private cryptosystems</u>
+<p>In these systems, public key cryptography is used to exchange a random
+session key, which is then used as the basis of a private key algorithm.
+(A session key is used only for a single encryption session and is then
+discarded.) * Nearly all practical public key cryptography implementations
+are actually hybrid systems.
+<p>2.5.4 <u>Secret key</u> - A key that is kept secret, for decrypting
+a message once they are received.
+<p>2.5.5 <u>Key Escrow</u>
+<p>Under Key Escrow, a copy of decryption key for each user is escrowed
+(placing a copy of key in a secure location) by one or more trusted parties,
+and is available if a warrant is issued for it. Concept of safe and safety
+deposit box have been introduced in this context.
+<p>2.5.6 <u>Key Splitting</u>* The concept of "Key Splitting" is used in
+the approach to escrowing of keys. Under this, key is splitted into several
+parts using appropriate algorithms and each part so splitted is deposited
+with several trusted parts. For decryption all the splitted parts are to
+be combined. With key-splitting schemes, one or two parts by themselves
+are not enough to recreate the key, but a majority of them is enough to
+recover the key.
+<p>The issue of access to encrypted messages by law enforcement or intelligence
+agencies raises some technical (as well as legal policy) questions. One
+possible technical possibility is the use of split keys i.e. one party
+has one part of the solution and a second party has the other part. Safety
+deposit boxes are an example of physical split keys. A number of software
+packages are available in the market which implements this concept.
+<p>2.5.7 <u>Key Recovery</u>
+<p>Cryptographers are now beginning to work on so-called "Key Recovery"
+approaches as an alternative to key escrow systems. Under these systems,
+no key is ever transferred to another party.
+<p>To understand key recovery, it is better to think of a combination lock
+on the front of the house. In this case, there is a series of digits -
+say, a 6 - digit combination (instead of actual number) which the home
+owner may give to his trusted party. Here again it is not necessary that
+home owner must provide all 6 digits to the trusted party. He may apply
+the key split approach and split the number and provide the splitted parts
+to more than one trusted party.
+<p>Under more advanced forms of key recovery, means are readily available
+to ensure that in the first case, the 3-digits could be done randomly and
+in no particular sequence. Therefore, a trusted party who has 3 digits
+would not know in which sequence they would appear in the combination,
+and neither would he necessarily know who the other trusted party are who
+have the other 3-digits. Further even, protective shields of sorts to protect
+the confidentiality of 3-digits have been provided.
+<p>This would be similar to the home owner providing the 3-digits to each
+of two trusted party in a sealed envelope. If the sealed envelope were
+ever broken into, then it would be known that an unauthorised access attempt
+has been made.
+<p>In the world of cryptography, key recovery systems are much more complex.
+There are large number of digits (instead of 6-digit in the above cited
+illustration) that go into the construction of a key.
+<p>Private key encryption has many advantages over public key encryption.
+Lower computer overhead costs and quicker response time. With a sufficient
+number of digits in the key, it becomes difficult to break.
+<p>In one variant, the encryption and decryption is performed internally
+by computers - on either end of a communication. All the user needs to
+do is to hit a key or click on an icon to instruct the computer to encrypt
+and transmit the message. An exchange of digital signatures between the
+sending and receiving computers authenticate the exchange. The receiving
+computer then decrypts the message. The public key/private key system operates
+behind the scenes, so to speak, but neither the sender nor the receiver
+is conscious of it.
+<p>2.6 <u>Encryption Standard</u>
+<p>One of the most widely used encryption system today is the Data Encryption
+Standard (DES) developed in the 1970s and patented by researchers at IBM.
+The DES was endorsed by US Govt. in 1977 for use within the US. Since 1977,
+the system has been periodically reviewed and reaffirmed (most recently
+in Dec, 1993), until 1998. It has also been adopted as an American National
+Standard.
+<p>The DES is basically a bit permutation, substitution, and a recombination
+function performed on blocks of 64 bits of data and 56 bits of key (eight
+7-bit characters). The 64 bits of input are permuted initially, and then
+input to a function using static tables of permutations and substitutions.
+The bits are permuted in combination with 48 bits of the key in each round.
+This process is iterated 16 times (rounds), each time with a different
+set of tables and different bits from the key. The algorithm then performs
+a final permutation, and 64 bits of output are provided. The algorithm
+is structured in such a way that changing any bit in the input has a major
+effect on almost all of the output bits.
+<p>The standard is heavily used in many financial and communication exchanges.
+Many vendors make DES chips that can encode or decode information fast
+enough to be used in data - encrypting modems or network interfaces.
+<p>2.7 <u>Export Control</u>
+<p>Cryptographic devices and technical data regarding them are subject
+to US Govt. export control as specified in Title 22, code of Federal Regulations,
+parts 120 through 128.
+<p>Some exports of cryptographic modules implementing DES standard and
+technical data regarding them must comply with US Govt. regulations and
+be licenced by the US Deptt. of State.
+<p>Other exports of cryptographic modules implementing DES standard and
+technical data regarding them fall under the licencing authority of the
+Bureau of Export Administration of the U.S. Deptt. of Commerce.
+<p>The Department of Commerce is responsible for licensing cryptographic
+devices used for authentication, access control, proprietary software,
+automatic teller machines (ATMs), and certain devices used in other equipment
+and software.
+<p><a href="cryplaw.htm#index">Back to Index</a>
+<p><a NAME="International Scenario"></a>3.0 <u>International Scenario</u>
+<p>3.1 <u>G-7 Countries</u>
+<p>The leading information technology associations in Canada, Europe, Japan
+and United States have jointly identified data security and privacy as
+one of the key principles on which the Global Information Infrastructure
+(GII) must be built. They did so in a paper prepared in January 1995 for
+a meeting of the Group of 7 countries (Canada, France, Germany, Italy,
+Japan, United Kingdom and United States). The cooperative associations
+were the information technology associations of Canada, the European Association
+of Business Machines and Information Technology Industry (EUROBIT), the
+Japan Electronic Industry Development Association (JEIDA) and the Information
+Technology Industry Council of the United States. The paper noted that
+implementation of GII necessarily require use of Cryptographic technology.
+The paper prepared by G-7 countries suggests the following :
+<p>That governments, industry and users must agree on the cryptographic
+techniques to be used in the Global Information Infrastructure and on a
+procedure for verifying that products conform to the techniques so agreed.
+<p>That the agreed techniques and the agreed verification procedures must
+be made public.
+<p>That the agreed techniques must be based on private sector-led, voluntary
+consensus international standards.
+<p>That products implementing the agreed techniques should not be subject
+to import controls, restrictions on use within the law, or restrictive
+licensing.
+<p>That products implementing the agreed techniques should be exportable
+to all countries, except those which are subject to UN embargo and
+<p>That users and suppliers of products implementing the agreed techniques
+should be free to make technical and economic choices about modes of implementation
+and operation, including a choice between implementation in hardware or
+software where relevant.
+<p>3.2 <u>Information Infrastructure</u>
+<p>In the United States, the office of Management and Budget established
+a Privacy Working Group of the Information Infrastructure Task Force under
+the Chairmanship of Secretary (Commerce). The Group published in June 1995
+a set of principles for providing and using personal information. It called
+on all the participants in the National Information Infrastructure (NII)
+to be guided by three basic principles :
+<p>i) Personal information should be acquired, disclosed and used only
+in ways that respect an individual’s privacy;
+<p>ii) Personal information should not be improperly altered or destroyed;
+<p>iii) Personal information should be accurate, timely, complete and relevant
+to the purpose for which it is provided and used.
+<p>The Working Group have made detailed recommendations dealing with data
+acquisition, notification, individual rights, data security and other subjects.
+<p>3.3 <u>OECD Guidelines</u>
+<p>The Organisation for Economic Cooperation and Development comprising
+of primarily industrialised countries, including Australia, Canada, Western
+European Nations, Japan and United States adopted a set of guidelines for
+cryptography policy. The guidelines are eight in numbers. In summary, they
+call for :
+<p>1. <u>Trust in Cryptographic Methods</u>
+<p>Cryptographic methods should be trustworthy in order to generate confidence
+in the use of information and communications systems.
+<p>2. <u>Choice of Cryptographic Methods</u>
+<p>Users should have a right to choose any cryptographic method, subject
+to applicable law.
+<p>3. <u>Market Driven Development of Cryptographic Methods</u>
+<p>Cryptographic methods should be developed in response to the needs,
+demands and responsibilities of individuals, businesses and governments.
+<p>4. <u>Standards for Cryptographic Methods</u>
+<p>Technical standards, criteria and protocols for cryptographic methods
+should be developed and promulgated at the national and international level.
+<p>5. <u>Protection of privacy and personal data</u>
+<p>The fundamental rights of individuals to privacy, including secrecy
+of communications and protection of personal data, should be respected
+in national cryptography policies and in the implementation and use of
+cryptographic methods.
+<p>6. <u>Lawful Access</u>
+<p>National cryptography policies may allow lawful access to plaintext,
+or cryptographic keys, of encrypted data. These policies must respect the
+other principles contained in the guidelines to the greatest extent possible.
+<p>7. <u>Liability</u>
+<p>Whether established by contract or legislation, the liability of individuals
+and entities that offer cryptographic services or hold or access cryptographic
+keys should be clearly stated.
+<p>8. <u>International Cooperation</u>
+<p>Governments should cooperate to coordinate cryptography policies. As
+part of this effort, Government should remove, or avoid creating in the
+name of cryptography policy, unjustified obstacles to trade.
+<p>Although the guidelines vary in scope, most OECD members have adopted
+these guidelines. These guidelines are to be reviewed at least every five
+years with a view to improving international cooperation on issues relating
+to cryptography policy.
+<p><u>US Govt. Guidelines</u>
+<p>US Govt. has developed a draft policy paper for global electronic commerce
+"A framework for Global Electronic Commerce defining strategy to help accelerate
+the growth of Global Commerce across the Internet". As a part of that strategy
+paper, US Govt. has recently taken initiative to permit companies to export
+encryption products using 56-Bit Data Encryption Standards (DES) or equal
+algorithm for next two years provided such companies commit, build and
+market products that protect public safety and national safety. No key
+lengths or algorithm restrictions will apply to exported key recovery products.
+Such key recovery products would enable Government access to encrypted
+data collected during legally authorised criminal investigations. Domestic
+use of key recovery will be voluntary; any American will remain free to
+use any encryption system domestically.
+<p>1. The United States will work within the OECD to develop international
+guidelines that can guide OECD member governments as they develop national
+encryption policies.
+<p>2. These guidelines will support the ideas of key recovery, under which
+the keys for encryption products would be stored within trusted entities,
+either in government or the private sector, which would provide the keys
+needed to decrypt encrypted information encountered during a law enforcement
+investigation. Both the US and the EU are promoting this kind of approach
+within their jurisdictions.
+<p>3. The United States government, specifically, the Departments of Commerce,
+Defence, Justice, State, and Treasury as well as the Executive Office of
+the President, will work with the EU and the OECD over the next few years
+to develop common policies for security and encryption which will provide
+a more predictable and secure environment for electronic commerce.
+<p>The Government, industry, consumer groups, civil liberty groups and
+the media around the world feel that it is time to reform public policy
+and cryptography and develop a global key recovery framework.
+<p><a href="cryplaw.htm#index">Back to Index</a>
+<p><a NAME="Scenario in country"></a>4.0 <u>Scenario in the country</u>
+<p>The cryptography scenario in the country is in the development stage.
+Few organisations particularly in the defence are engaged exclusively for
+the development of cryptography techniques, protocols and the products.
+Cryptographic products compatible with IBM PC have been developed and are
+being used commercially. Apart from this, customised cryptographic products
+have been designed and produced. The issue of public and private key normally
+is considered by Joint Cipher Bureau.
+<p>Department of Telecommunications does not permit the encrypted signal
+on their network. This is one of the reasons that this area has not come
+up well in the country. Secondly, the cryptographic products world wide
+are licenced items and the licence to the country is not easily available
+for products of higher key length and more than 56 bits. Indian industry
+largely produces PCs and therefore the cryptographic product has been limited
+to the PC market as the complete knowhow in this regard is not available.
+The larger systems are not produced in the country and therefore the progress
+of the work in this direction is slow as the knowhow of the system is generally
+not available.
+<p><a href="cryplaw.htm#index">Back to Index</a>
+<p><a NAME="Annexure-1"></a><b><font size=+1>Annexure-I</font></b>
+<p><i>&nbsp;Commonly used Private and Public Key Cryptography Algorithms</i>
+<p><b>&nbsp;Algorithm Description</b>
+<p>—————————Private Key Algorithms————————————
+<p>&nbsp;ROT13 Keyless text scrambler; very weak.
+<p>Crypt Variable key length stream cipher; very weak.
+<p>DES 56-bit block cipher; patented, but freely usable (but not exportable).
+<p>RC2 Variable key length block cipher; proprietary.
+<p>RC4 Variable key length stream cipher; proprietary.
+<p>RC5 Variable key length block cipher; proprietary.
+<p>IDEA 128-bit block cipher; patented.
+<p>Skipjack 80-bit stream cipher; classified.
+<br>&nbsp;
+<br>&nbsp;
+<p>———————————Public Key Algorithms——————————
+<p>&nbsp;Diffie-Hellman Key exchange protocol; patented.
+<p>RSA Public key encryption and digital signatures; patented.
+<p>ElGamal Public key encryption and digital signatures; patented.
+<p>DSA Digital signatures only; patented.
+<p>——————————————————————————————
+<center>
+<p>Published in DoE-IPAG Journal Nov '97'</center>
+
+<p><br>
+<br>
+<p><a href="cryplaw.htm#index">Back to Index</a>
+</body>
+</html>

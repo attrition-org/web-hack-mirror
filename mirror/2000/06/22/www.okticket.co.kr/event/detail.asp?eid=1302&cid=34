@@ -1,0 +1,550 @@
+
+<HTML>
+
+<HEAD>
+
+
+<!--///////////////////////////////////////
+	MetaTags 시작
+	///////////////////////////////////////-->
+
+<META name="description" content="designed by sini@ultari.co.kr">
+<META name="description" content="programmed by jania@ultari.co.kr">
+
+<!--///////////////////////////////////////
+	MetaTags 끝
+	///////////////////////////////////////--><!--///////////////////////////////////////
+	StyleSheets 시작
+	///////////////////////////////////////-->
+
+<style type=text/css>
+body{margin:0px}
+</style>
+
+
+
+<STYLE type="text/css">
+<!--
+
+        .topmenu{font-family: 굴림; font-size: 9pt; color: #EFEFE0; text-decoration: none}
+        .topmenu :link{font-family: 굴림; font-size: 9pt; color: #EFEFE0; text-decoration: none}
+        .topmenu :visited{font-family: 굴림; font-size: 9pt; color: #CCFFCC; text-decoration: none}
+        .topmenu :active{font-family: 굴림; font-size: 9pt; color: #FFFFCC; text-decoration: none}
+        .topmenu :hover{font-family: 굴림; font-size: 9pt; color:#FBA300; text-decoration: none}
+
+
+	a{font-family: 굴림; font-size: 9pt; line-height: 14px;}	
+	a:link{text-decoration:none; color:#0152E7;}	
+	a:visited{text-decoration:none;	color:#0152E7;}	
+	a:active{text-decoration:underline; color:#5C069B;}	
+	a:hover{text-decoration:underline; color:#FBA300;}
+	rgb(102,153,204);
+-->
+</STYLE>
+
+<!--///////////////////////////////////////
+	StyleSheets 끝
+	///////////////////////////////////////-->
+<!--///////////////////////////////////////
+	JavaScripts 시작
+	///////////////////////////////////////-->
+
+<SCRIPT Language=JavaScript>
+
+		browserName = navigator.appName;
+		browserVer = parseInt(navigator.appVersion);
+		version = "incompatible";
+		
+		if (browserName == "Netscape" || browserVer >= 3) version = "n3";
+
+		if (version == "n3")
+		{
+			icon1on = new Image();
+			icon1on.src ="/images/tm_on-01-01.gif";
+			icon1off = new Image();
+			icon1off.src = "/images/tm-01-01.gif";
+			
+			icon2on = new Image();                
+			icon2on.src ="/images/tm_on-01-02.gif";
+			icon2off = new Image();
+			icon2off.src = "/images/tm-01-02.gif";
+			
+			icon3on = new Image();                
+			icon3on.src ="/images/tm_on-01-03.gif";
+			icon3off = new Image();
+			icon3off.src = "/images/tm-01-03.gif";
+			
+			icon4on = new Image();                
+			icon4on.src ="/images/tm_on-01-04.gif";
+			icon4off = new Image();
+			icon4off.src = "/images/tm-01-04.gif";
+			
+		}
+		
+		function img_act(imgIcon)
+		{
+			if (version == "n3") 
+			{
+				iconOn = eval(imgIcon + "on.src");
+				document[imgIcon].src = iconOn;
+				return true;
+			}
+		}
+		
+		function img_inact(imgIcon)
+		{
+			if (version == "n3") 
+			{
+				iconOff = eval(imgIcon + "off.src");
+				document[imgIcon].src = iconOff;
+				return true;
+			}
+		}
+	
+</SCRIPT>
+
+<!--///////////////////////////////////////
+	JavaScripts 끝
+	///////////////////////////////////////-->
+
+
+	<TITLE>Welcome to 문화공룡 OK-TICKET</TITLE>
+
+</HEAD>
+
+<BODY marginwidth=0 marginheight=0 topmargin=0 leftmargin=0 bgcolor=#ffffff>
+
+<TABLE marginwidth=0 marginheight=0 topmargin=0 leftmargin=0 border=0 cellpadding=0 cellspacing=0 width=100%>
+	<TR><TD>
+<!--///////////////////////////////////////
+	MainMenus 시작
+	///////////////////////////////////////-->
+<table width="100%" height="75" border="0" cellspacing="0" cellpadding="0" BGCOLOR=#004D4A>
+ 	<TR>
+		<TD background='../images/top_bg.gif' WIDTH=217><A href='../home/index.html'><IMG src="../images/top_01-01.gif" width="181" height="71" border="0" ALT=""></A></TD>
+		<TD background='../images/top_bg.gif' WIDTH=100%></TD>
+		<TD background='../images/top_bg.gif' VALIGN=BOTTOM ALIGN=right>
+		<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 VALIGN=BOTTOM WIDTH=280 background='../images/top_bg.gif'>
+  		<TR>
+    		<TD background='../images/top_bg.gif'>
+    		<A HREF="../home/index.html" TARGET=_top onMouseover="img_act('icon1');" onMouseout="img_inact('icon1');"><IMG SRC="../images/tm-01-01.gif" BORDER="0" NAME='icon1'></TD>
+    		<TD background='../images/top_bg.gif'>
+    		<A HREF="../member/agreement.asp" TARGET=_top onMouseover="img_act('icon2');" onMouseout="img_inact('icon2');"><IMG SRC="../images/tm-01-02.gif" BORDER="0" NAME='icon2'></TD>
+    		<TD background='../images/top_bg.gif'>
+    		<A HREF="../home/schedule.asp" TARGET=_top onMouseover="img_act('icon3');" onMouseout="img_inact('icon3');"><IMG SRC="../images/tm-01-03.gif" BORDER="0" NAME='icon3'></TD>
+    		<TD background='../images/top_bg.gif'>
+    		<A HREF="../shop/cart.asp" TARGET=_top onMouseover="img_act('icon4');" onMouseout="img_inact('icon4');"><IMG SRC="../images/tm-01-04.gif" BORDER="0" NAME='icon4'></TD>
+  			</TR>
+		</TABLE>
+		</TD>
+		
+		
+		<TD align=right VALIGN=BOTTOM background='../images/top_bg.gif'>
+			<TABLE MARGINWIDTH=0 MARGINHEIGHT=0 TOPMARGIN=0 LEFTMARGIN=0 BORDER=0 CELLPADDING=0 CELLSPACING=0>
+			<TR>
+				<TD COLSPAN=3>
+				<A href='../home/searchForm.asp?t=1'><IMG SRC="../images/search.gif" BORDER=0 ALT=""></A>
+				</TD>
+<!----------------------
+				<TD>
+				<IMG SRC="../images/diary.gif" WIDTH=83 HEIGHT=13 BORDER=0 ALT="">
+				</TD>
+---------------------->
+				<TD></TD>	
+			</TR>
+			<TR>
+			
+				<form method=post name=search action=../search.asp>
+				<TD>
+				<select name=searchid value="검색">
+                        <option value="행사">행사</option>
+                        <option value="artist">Artist/단체</option>
+                        <option value="티켓">ticket</option>
+                        <option value="shop">shop</option>
+                        </select>
+           </TD> 
+           <TD>
+           
+				
+				<INPUT TYPE=text name=searchname SIZE=12 maxlength=64>
+				</TD>
+				<TD VALIGN=BOTTOM>
+				<A href='javascript:document.search.submit();'><IMG SRC="../images/go.gif" WIDTH=21 HEIGHT=21 BORDER=0 ALT="" HSPACE=3></A>&nbsp;&nbsp;&nbsp;
+				</TD>
+				</FORM>
+<!----------------------
+		<FORM name=diary method=get action='/home/schedule.asp'>
+				<TD>
+				<FONT SIZE=2 COLOR=WHITE>
+				<SELECT NAME="yy">
+				<option>2002</option>
+				<option>2001</option>
+				<option selected>2000</option>
+				<option>1999</option>
+				<option>1998</option>
+				</SELECT>
+				년&nbsp;
+				<SELECT NAME="mm">
+				<option>01</option>
+				<option>02</option>
+				<option>03</option>
+				<option>04</option>
+				<option>05</option>
+				<option>06</option>
+				<option>07</option>
+				<option>08</option>
+				<option>09</option>
+				<option>10</option>
+				<option>11</option>
+				<option>12</option>
+				</SELECT>
+				월
+				</TD>
+				<TD VALIGN=BOTTOM>
+				<A href='javascript:document.diary.submit();'><IMG SRC="../images/go.gif" WIDTH=21 HEIGHT=21 BORDER=0 ALT="" HSPACE=3></A>&nbsp;&nbsp;&nbsp;
+				</TD>	
+				</FORM> 
+---------------->
+			</TR>
+			</TABLE>
+		</TD>
+  	</TR>
+
+	<TR bgcolor="#FF5100"> 
+		<TD colSpan=4 align=right height=27><span class="topmenu">
+
+					[<FONT size=2 color=black><B>Home</B></FONT>]
+
+					[<A href="/concert/" target=_top>콘서트</A>]
+
+					[<A href="/art/" target=_top>아트</A>]
+
+					[<A href="/family/" target=_top>패밀리 & 이벤트</A>]
+
+					[<A href="../community/index.html" target=_top>OT-커뮤니티</A>]
+
+					[<A href="../member/index.html" target=_top>회원메뉴</A>]
+
+					[<A href="../goods/list.asp?idd=1" target=_top>Shop</A>]
+
+					[<A href="../contact/index.html" target=_top>Contact Us</A>]
+
+		/
+		
+		guest(손님)
+
+		[<A href='../member/loginForm.asp'>Log-in</A>]
+
+		</span></TD>
+  	</TR>
+</TABLE>
+<!--///////////////////////////////////////
+	MainMenus 끝
+	///////////////////////////////////////-->
+	
+	
+
+	</TD></TR>
+
+	<TR>
+		<TD valign=top width=100% align=left>
+<!--///////////////////////////////////////
+	SubMenus 시작
+	///////////////////////////////////////-->
+<TABLE border=0 cellpadding=0 cellspacing=2 width=100%>
+	<TR><TD align=right><FONT size=2>
+
+		[<A href="../home/index.html">시작화면</A>]
+
+		[<A href="../home/schedule.asp">공연일정</A>]
+
+		[<A href="../home/searchForm.asp">정보검색</A>]
+
+		[<A href="../home/help.asp">이용안내</A>]
+
+	</TD></TR>
+</TABLE>
+<!--///////////////////////////////////////
+	SubMenus 끝
+	///////////////////////////////////////-->
+
+			<!----- 본문 시작 ------>
+<BR>
+<TABLE width=95% cellpadding=1 cellspacing=1 border=0 align=center>
+	<TR>
+		<TD colSpan=7 bgColor=white>
+
+		</TD>
+	</TR>
+	
+	<TR>
+		<TD rowSpan=7 width=150 valign=top>
+
+<TABLE border=0 width=130 cellpadding=1 cellspacing=1>
+	<TR>
+		<TD bgColor='#3465c2' colSpan=2>
+			<A href="/event/list.asp?cid=28&c=c%2EparentNode%3D28&v=1"><FONT size=2 color=white><B>Concerts</B></FONT></A>
+		</TD>
+	</TR>
+	<TR>
+		<TD>&nbsp;</TD>
+		<TD align=left>
+
+			<IMG src="../home/images/dot1.gif" border=0 ALT="" HSPACE=5><A href="/event/list.asp?c=e%2EcategoryId%3D43&cid=28&v=1">댄스/발라드</A><BR>
+
+			<IMG src="../home/images/dot1.gif" border=0 ALT="" HSPACE=5><A href="/event/list.asp?c=e%2EcategoryId%3D44&cid=28&v=1">락/포크</A><BR>
+
+			<IMG src="../home/images/dot1.gif" border=0 ALT="" HSPACE=5><A href="/event/list.asp?c=e%2EcategoryId%3D45&cid=28&v=1">재즈/R&B</A><BR>
+
+			<IMG src="../home/images/dot1.gif" border=0 ALT="" HSPACE=5><A href="/event/list.asp?c=e%2EcategoryId%3D61&cid=28&v=1">개그콘서트</A><BR>
+
+			<IMG src="../home/images/dot1.gif" border=0 ALT="" HSPACE=5><A href="/event/list.asp?c=e%2EcategoryId%3D57&cid=28&v=1">Pops/내한공연</A><BR>
+
+			<IMG src="../home/images/dot1.gif" border=0 ALT="" HSPACE=5><A href="/event/list.asp?c=e%2EcategoryId%3D46&cid=28&v=1">올드 가요</A><BR>
+
+		</TD>
+	</TR>
+	<TR>
+		<TD bgColor=#3465c2 colSpan=2 height=1></TD>
+	</TR>
+
+	<TR><TD colSpan=2>&nbsp;</TD></TR>
+
+	<TR>
+		<TD bgColor=#3465c2 colSpan=2>
+			<A href="/event/list.asp?cid=30&c=c%2EparentNode%3D30&v=1"><FONT size=2 color=white><B>Arts</B></FONT></A>
+		</TD>
+	</TR>
+	<TR>
+		<TD>&nbsp;</TD>
+		<TD align=left>
+
+			<IMG src="../home/images/dot2.gif" border=0 ALT="" HSPACE=5><A href="/event/list.asp?c=e%2EcategoryId%3D52&cid=30&v=1">클래식/오페라</A><BR>
+
+			<IMG src="../home/images/dot2.gif" border=0 ALT="" HSPACE=5><A href="/event/list.asp?c=e%2EcategoryId%3D34&cid=30&v=1">연극/뮤지컬</A><BR>
+
+			<IMG src="../home/images/dot2.gif" border=0 ALT="" HSPACE=5><A href="/event/list.asp?c=e%2EcategoryId%3D33&cid=30&v=1">영화</A><BR>
+
+			<IMG src="../home/images/dot2.gif" border=0 ALT="" HSPACE=5><A href="/event/list.asp?c=e%2EcategoryId%3D32&cid=30&v=1">무용/발레</A><BR>
+
+			<IMG src="../home/images/dot2.gif" border=0 ALT="" HSPACE=5><A href="/event/list.asp?c=e%2EcategoryId%3D35&cid=30&v=1">전통음악</A><BR>
+
+			<IMG src="../home/images/dot2.gif" border=0 ALT="" HSPACE=5><A href="/event/list.asp?c=e%2EcategoryId%3D36&cid=30&v=1">미술/박물관</A><BR>
+
+		</TD>
+	</TR>
+	<TR>
+		<TD bgColor=#3465c2 colSpan=2 height=1></TD>
+	</TR>
+
+	<TR><TD colSpan=2>&nbsp;</TD></TR>
+
+	<TR>
+		<TD bgColor=#3465c2 colSpan=2>
+			<A href="/event/list.asp?cid=29&c=c%2EparentNode%3D29&v=1"><FONT size=2 color=white><B>Family & Events</B></FONT></A>
+		</TD>
+	</TR>
+	<TR>
+		<TD>&nbsp;</TD>
+		<TD align=left>
+
+			<IMG src="../home/images/dot3.gif" border=0 ALT="" HSPACE=5><A href="/event/list.asp?c=e%2EcategoryId%3D66&cid=29&v=1">자동차전용극장</A><BR>
+
+			<IMG src="../home/images/dot3.gif" border=0 ALT="" HSPACE=5><A href="/event/list.asp?c=e%2EcategoryId%3D37&cid=29&v=1">라이브클럽</A><BR>
+
+			<IMG src="../home/images/dot3.gif" border=0 ALT="" HSPACE=5><A href="/event/list.asp?c=e%2EcategoryId%3D39&cid=29&v=1">전시/축제</A><BR>
+
+			<IMG src="../home/images/dot3.gif" border=0 ALT="" HSPACE=5><A href="/event/list.asp?c=e%2EcategoryId%3D62&cid=29&v=1">어린이/가족</A><BR>
+
+			<IMG src="../home/images/dot3.gif" border=0 ALT="" HSPACE=5><A href="/event/list.asp?c=e%2EcategoryId%3D64&cid=29&v=1">기타 이벤트</A><BR>
+
+		</TD>
+	</TR>
+	<TR>
+		<TD bgColor=#3465c2 colSpan=2 height=1></TD>
+		
+	</TR>
+	
+</TABLE>
+
+		</TD>
+		
+		<TD rowSpan=7 width=10>&nbsp;</TD>
+
+		<TD rowSpan=7 width=1 bgColor=#3465c2></TD>
+		
+		<TD rowSpan=7 width=10>&nbsp;</TD>
+		
+		<TD bgColor=#3465c2 colSpan=2><FONT size=2 color=white><B>&nbsp;이윤택의 도솔가</TD>
+	</TR>
+	
+	<TR>
+		<!--TD valign=top><IMG src='jpg' width=200></TD-->
+
+		<TD valign=top><IMG src="../dbimages/events/1302.jpg" width=200 border=1></TD>
+		<TD width=100% valign=top><FONT size=2>
+
+			<BR>
+			<LI>공연명 : 이윤택의 도솔가
+			<LI>분류 : 연극/뮤지컬
+			<LI>행사일시 : 2000-07-07 ~ 2000-07-22<BR>
+			<LI>개최장소 : LG아트센터 (서울)
+			<BR>
+			<LI>행사 Homepage : <A href='http://www.lgart.com' target='_blank'>http://www.lgart.com</A>
+     			<LI><B><A href='/ticket/list.asp?c=eventId%3D1302'>이윤택의 도솔가 티켓팅</A>(<FONT color=red>*</FONT>)</B>
+
+			
+			<BR>
+			<BR>
+			 
+
+			<BR>
+			<BR>
+            			출연 : 박철호, 이정화, 박일규, 서상권, 정동숙, 짜라밴드 등			<BR>
+			<BR>
+		</TD>
+	</TR>
+
+	<TR><TD bgColor=#3465c2 colSpan=2 height=1></TD></TR>
+
+	<TR><TD colSpan=2 bgcolor=#f0f0f0 align=right><FONT size=2>
+		[<A href='/place/detail.asp?pid=99'>LG아트센터 정보</A>]
+
+		[<A href='/ticket/list.asp?c=eventId%3D1302&cid=34'>이윤택의 도솔가 티켓팅</A>]
+
+		[<A href='/goods/list.asp?c=g%2EcategoryId%3D34'>연극/뮤지컬 관련상품</A>]
+		[<A href='list.asp'>공연목록</A>]
+	</TD></TR>
+
+	<TR><TD bgColor=#3465c2 colSpan=2 height=1></TD></TR>
+
+	<TR><TD colSpan=2><FONT size=2>
+		<BR>
+		<table border cellspacing="0" bordercolor="#990000">
+    <tr>
+        <td width="118" height="16" bgcolor="#FFCCCC"><p align="center" style="line-height:120%;"><font
+             face="굴림체" size="2"><b>&nbsp;공 연 명</b></font></td>
+        <td width="508" height="16"><p style="line-height:120%;"><font face="굴림체"
+             size="2"><b>&nbsp;이윤택의 도솔가 - 원작: 짜라투스트라는 이렇게 
+            말했다</b></font></td>
+    </tr>
+    <tr>
+        <td width="118" height="18" bgcolor="#FFCCCC"><p align="center" style="line-height:120%;"><font
+             face="굴림체" size="2"><b>&nbsp;공연일시</b></font></td>
+        <td width="508" height="18"><p style="line-height:120%;"><font face="굴림체"
+             size="2"><b>&nbsp;2000년 7월 7일(금) ~ 7월 22일(토)<br>
+            &nbsp;평일 오후 8시/ 토 오후 3시, 7시/ 일 오후 2시, 6시/ 월 쉼</b></font></td>
+    </tr>
+    <tr>
+        <td width="118" bgcolor="#FFCCCC"><p align="center" style="line-height:120%;"><font
+             face="굴림체" size="2"><b>&nbsp;공연장소</b></font></td>
+        <td width="508"><p style="line-height:120%;"><font face="굴림체" size="2"><b>&nbsp;LG아트센터(지하철 
+            2호선 역삼역 6번 출구)</b></font></td>
+    </tr>
+    <tr>
+        <td width="118" bgcolor="#FFCCCC"><p align="center" style="line-height:120%;"><font
+             face="굴림체" size="2"><b>&nbsp;입 장 권</b></font></td>
+        <td width="508"><p style="line-height:120%;"><font face="굴림체" size="2"><b>&nbsp;R석 
+            35,000원/ S석 25,000원/ A석 15,000원</b></font></td>
+    </tr>
+    <tr>
+        <td width="118" bgcolor="#FFCCCC"><p align="center" style="line-height:120%;"><font
+             face="굴림체" size="2"><b>&nbsp;예매문의</b></font></td>
+        <td width="508"><p style="line-height:120%;"><font face="굴림체" size="2"><b>&nbsp;www.OKticket.com 
+            02)525-6591</b></font></td>
+    </tr>
+</table>
+<p style="line-height:120%;"><font face="굴림체" size="2" color="#030781">◆ 
+</font><font face="굴림체" size="2" color="#030781"><b>동서양이 만난다! 2000년을 
+여는 이윤택의 크로스오버 뮤지컬!</b></font><font face="굴림체" size="2"><br>
+<br>
+</font><font face="굴림체" size="2" color="#030781">◆</font><font face="굴림체"
+ size="2" color="#030781"><b> 색다른 재미, 신선한 충격!<br>
+&nbsp;&nbsp;&nbsp;&nbsp;테크노비트로 국악을 듣고, 힙합으로 선무도를 춘다!</b></font><font
+ face="굴림체" size="2"><br>
+</font><font face="굴림체" size="2" color="#030781"><br>
+◆ </font><font face="굴림체" size="2" color="#030781"><b>20대 '꾼'들이 밀양에 
+모였다! 6개월간의 지옥훈련을 거쳐 춤, 연기, 음악의 3박자를 고루 갖추며 탄생한 
+그룹 "짜라밴드"!<br>
+</b></font><font face="굴림체" size="2"><br>
+&nbsp;문화게릴라 '이윤택'의 새로운 작품 『도솔가 -짜라투스트라는 이렇게 말했다』는 
+동양과 서양ㅇ이라는 이분법적 구도속에서 상호이질적인 대립문화로 인식되었던 20세기 
+문화상황을 극복하고, 이제 새로운 세기를 맞아 "동서양의 사상과 상상력의 
+충돌과 공존"이라는 새로운 문화적 지평을 탐색해보는 크로스오버 뮤지컬이다. 
+<br>
+&nbsp;또한 이 작품은 드물게 우리말의 가곡체계와 율격을 기초로 한 시극양식으로 
+창작되며, 여기에 현대적인 락, 발라드, 테크노, 힙합, 소울 등 대중음악이 충돌하면서 
+우리의 가곡체계와 대중음악 체계가 어떻게 만나고 공존할 수 있는가를 시험한다. 
+<br>
+&nbsp;전통적이면서도 현대적인 감성을 표현하고, 젊은 대중층에게 우리의 소리와 
+몸짓을 색다른 느낌으로 재인식시키는 새로운 뮤지컬 양식의 계기가 될 것이다. <br></font>
+<table border cellspacing="0" bgcolor="#FAE9E7" bordercolor="white">
+    <tr>
+        <td width="630" height="4"><p style="line-height:120%;"><font face="굴림체"
+             size="2"><b>작품의 배경</b></font></td>
+    </tr>
+</table>
+<p style="line-height:120%;"><font face="굴림체" size="2">&nbsp;이 작품은 포스트 
+모더니즘과 현대철학의 모태라 불리는 독일 철학자 니체의 『짜라투스트라는 이렇게 
+말했다』에서 보여지는 인간중심사상과 우리나라의 인간을 최대로 존중했던 신라의 
+화랑도 정신에서 공통점을 발견하고, 신라 중기의 혼돈기에 도솔가를 지어 난세를 
+구하고 세상의 평화와 사랑을 실천한 '월명'이란 인물이야 말로 위대한 동양의 짜라투스트라일 
+수 있다는 단서 하에 출발한다. <br>
+&nbsp;자유로운 감성과 절대정신에 입각한 의지의 인간상을 구현하려 한 니체의 인간중심사상은 
+곧 '짜라투스트라'라는 초인간형을 창조했고, 이 인간중심사상은 신라의 화랑도 혹은 
+속된 세계 속에서 오히려 해탈을 찾았던 원효,월명, 경허, 만공 등 우리민족 고승들의 
+행적과 통한다. 특히, 해가 둘이 나타나는 전환기적 혼돈상황 속에서 노래(도솔가)를 
+통해 세상의 구원을 꿈꾸었던 우리 조상들의 높은 문화적 안목과 평화주의는 21세기 
+신문명사회의 문화 민주주의적 모델로 제시될 수 있을 것이다. </font>
+<table border cellspacing="0" bgcolor="#FAE9E7" bordercolor="white">
+    <tr>
+        <td width="630" height="4"><p style="line-height:120%;"><font face="굴림체"
+             size="2"><b>줄거리</b></font></td>
+    </tr>
+</table>
+<p style="line-height:120%;"><font face="굴림체" size="2">&nbsp;속세를 떠나 
+고행 중이던 짜라는 어느 날 문득 강을 거슬러 오르는 은어떼의 움직임을 보고 소리의 
+원리를 터득하고 득음한다. 꿈속에서 누이가 부르는 노래를 듣고 잠을 깬 짜라는 
+산방을 떠나 탁발 행각에 나섰던 투스트라가 불치의 병에 걸려 온몸이 썩어 문드러져 
+가고 있음을 발견한다. 그럼에도 투스트라는 산중의 도사보다 다리 밑의 거지행각이 
+행복했다고 세상 속으로 가라고 하며 숨을 거둔다. 누이의 소식을 들은 짜라는 무의미한 
+혼성의 소리들로 뒤덮여 있는 세상 속으로 나가 테크노음악이 넘치는 광장에서 누이와 
+광대, 테크노를 만난다. 이때 광장은 군대가 진입해 들어오고 바리케이트가 설치되고 
+국기가 나부끼며 독재자가 제압한다. 이 과정에서 테크노가 잡혀 들어가고 짜라는 
+군중들과 저항하여 마침내 혁명을 일으킨다. 새로운 지도자로 부상한 테크노는 광장을 
+이미지의 천국으로 선포한다. 광장은 게임방으로 바뀌고, 모두 자기만의 게임방에 
+들어가 게임과 오락에만 열중하는 세상으로 바뀐다. 이 와중에 사랑의 컴퓨터 바이러스가 
+도시를 전염시키고 해가 둘로 나뉘어지는 이변이 발생하면서 대환란이 시작된다. 
+도시의 재난을 피해 사람들은 황야로 몰려들고 짜라는 구원의 노래로 사람들을 깨우친다. 
+마침내 사람들은 다 함께 노래를 부르며 하늘에 떠 있는 두 개의 해 중 필요없는 
+또 하나의 해를 향해 입을 벌린다.</font></p>
+<BR>
+		<BR>
+	</TD></TR>
+</TABLE>
+<BR>
+		<center><img src=../banner.gif border=0></center><br>		
+			<!----- 본문 끝 -------->	
+<!--///////////////////////////////////////
+	Footer 시작
+	///////////////////////////////////////-->
+
+<DIV align=center><FONT size=2 face=arial>
+	Copyright &copy; 2000 <a href=mailto:webmaster@okticket.com>okticket.com</a>, corporation.<BR>
+	서울시 서초구 서초동 1451-1 원일빌딩 501호 tel: 525-6591<BR>
+	All rights reserved.<BR>
+	<BR>
+</DIV>
+<!--///////////////////////////////////////
+	Footer 끝
+	///////////////////////////////////////-->
+</td>
+</tr>
+</table>
+		</TD>
+	</TR>
+</TABLE>
+
+</BODY>
+
+</HTML>

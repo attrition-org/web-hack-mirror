@@ -1,0 +1,780 @@
+<html>
+			<link rel="stylesheet" type="text/css" href="/css/news.css">
+	<html>
+<head>
+<title>News - Money Today</title>
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=euc-kr">
+<link rel="stylesheet" type="text/css" href="/css/news.css">
+<meta name="discription" content="새 천년, 새 뉴스 머니투데이(moneytoday), 신개념의 경제뉴스비즈니스로 
+모든 금융정보 및 기관- 외국인 투자정보, 증권사 정보 및 동향까지 국내외 모든 금융 및
+경제정보를 리얼타임으로 전해드립니다.">
+<meta name="keywords" content="머니투데이,moneytoday,머니투대이,경제뉴스,제3시장,기업IR,증권,금융,금융상품,투자정보,주식,
+주식시세, 증권뉴스,증시,환율,환율정보,투자,경제뉴스비즈니스,인터넷공모,코스닥,
+KSE,KOSDAQ,KOSDAK,포트폴리오,온라인투자정보,신용평가,기업신용평가,재테크 투자정보,증시일정,투자전략,채권정보,
+특징주,경제신문">
+<!-- 다음부터는 창뜨지 않도록 시작 
+<SCRIPT LANGUAGE = "JavaScript">
+주석넣기 
+function setCookie( name, value, expiredays )
+{
+ var todayDate = new Date();
+ todayDate.setDate( todayDate.getDate() + expiredays );
+ document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+}
+function getCookie( name )
+{
+ var nameOfCookie = name + "=";
+ var x = 0;
+ while ( x <= document.cookie.length )
+ {
+  var y = (x+nameOfCookie.length);
+  if ( document.cookie.substring( x, y ) == nameOfCookie )
+  {
+   if ( (endOfCookie=document.cookie.indexOf( ";", y )) == -1 )
+    endOfCookie = document.cookie.length;
+   return unescape( document.cookie.substring( y, endOfCookie ) );
+  }
+  x = document.cookie.indexOf( " ", x ) + 1;
+  if ( x == 0 )
+   break;
+ }
+ return "";
+}
+if ( getCookie( "notice0823" ) != "done" )
+{
+ noticeWindow  =  window.open("/temp/notice/notice0823.html","popWinName","toolbar=0,scrollbars=no,width=320,height=250,resize=0");
+noticeWindow.opener = self;
+}
+주석넣기
+</SCRIPT>
+다음부터는 창뜨지 않도록 끝 //-->
+</head>
+<script language = "javascript">
+function winopen(ul){
+	var new_window; 
+	
+	var client_window_height=screen.height-65;
+	var client_window_width=screen.width-10;
+	var client_window_Features;
+
+
+	client_window_Features = "height="+client_window_height+",width="+client_window_width+",top=0,left=0"
+ 
+
+
+
+	new_window=window.open(ul,'window', client_window_Features);
+
+
+}
+
+
+function TotalNews() {
+
+	winopen("/total_body.htm");
+
+}
+
+</script>
+<!--kse, 코스닥 시세보기 시작 //-->
+<script language="JavaScript">
+<!-- 
+function kse() {
+
+RemindWindow = window.open( "", "mainpage","toolbar=no,width=750,height=450,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes" 
+
+);
+
+}
+
+// -->
+</script>
+<!--kse, 코스닥 시세보기 끝 //-->
+<!-- 심포지움 시작 //-->
+<script language="JavaScript">
+<!-- 
+function sympo() {
+
+RemindWindow = window.open( "", "mainpage","toolbar=no,width=510,height=550,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes" 
+
+);
+
+}
+// -->
+</script>
+<!-- 심포지움 끝 //-->
+<body leftmargin="3" topmargin="3" marginwidth="0" marginheight="0" bgcolor="white">
+<!--- Top logo //---->
+<table width=774 bgcolor="#ffffff" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+  <!--- logo image //--->
+	<td>
+	<table bgcolor="#19427D" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td width="25">
+			<a href="../index.html" ><img src="../images/moneylogo.gif" border="0"></a>
+			</td>
+			</tr>
+		<tr><td colspan=3 bgcolor="19427D"><img src="../images/clear.gif" width="1" height="2" alt="" border="0"></td></tr>
+		<tr><td colspan=3 bgcolor=ffffff><img src="../images/clear.gif" width="1" height="3" alt="" border="0"></td></tr>
+	</table>
+</td>
+<td>
+		<table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td class=menu style="padding-left: 5; padding-right: 5; padding-top: 4; padding-bottom: 3"><img src="../images/firstbestup.gif"></td>
+			</tr>
+			<tr>
+				<td class=menu style="padding-left: 5; padding-right: 5; padding-top: 4; padding-bottom: 3"><font color="#3866a4">&nbsp;&nbsp;&nbsp;<b>투명한 시장 만드는 투자뉴스의 리더</b></font></td>
+			</tr>
+		</table>
+	</td>		
+      <td><img src="../images/clear.gif" width="1" height="4" alt="" border="0"></td>
+      <td align=right>
+        <SCRIPT LANGUAGE="JavaScript">
+			<!--
+			var how_many_ads = 2;
+			var now = new Date()
+			var sec = now.getSeconds()
+			var ad = sec % how_many_ads;
+			ad +=1;
+
+			if (ad==1) {
+				txt="엘지증권";
+				url="http://www.iflg.com";
+				alt="엘지증권";
+				banner="http://www.moneytoday.co.kr/images/lgbanner-b.gif";
+				width="374";
+				height="48";
+			}
+
+			else if (ad==2) {
+				txt="한화증권";
+				url="http://www.koreastock.co.kr";
+				alt="한화증권";
+				banner="http://www.moneytoday.co.kr/images/hanhwa-bb.gif";
+				width="374";
+				height="48";
+			}
+
+			document.write('<CENTER>');
+			document.write('<A HREF=\"' + url + '\" TARGET=\"blank\">');
+			document.write('<IMG SRC=\"' + banner + '\" WIDTH=')
+			document.write(width + ' HEIGHT=' + height + ' ');
+			document.write('ALT=\"' + alt + '\" BORDER=0><br>');
+	
+			document.write('</CENTER>');
+
+		// -->
+		</SCRIPT>     
+	  </td> 
+   </tr>
+</table>
+<!--- top main menu table //--->
+<table width=774 border="0" cellspacing="0" cellpadding="0">
+   <tr bgcolor="#3866A4">
+      <td width=130 class=menu style="padding-left: 5; padding-right: 5; padding-top: 4; padding-bottom: 3"> <a href="../member/use.htm"><font color=white>&nbsp;회원가입</font></a><font color=white> | </font><a href="../member/login.htm"><font color=white>로그온</font></a></td>
+     <td width=60 align=center class=menu style="padding-left: 5; padding-right: 5; padding-top: 4; padding-bottom: 3" onmouseover="this.style.background='#88c5eb'" onmouseout="this.style.background='#3866A4'"><a href="home.mt"><span class=menu>홈</span></a></td>
+      <td width=60 align=center class=menu style="padding-left: 5; padding-right: 5; padding-top: 4; padding-bottom: 3" bgcolor="#d1ca8c"><a href="news.html"><span class=menu>뉴스</span></a></td>
+      <td width=60 align=center class=menu style="padding-left: 5; padding-right: 5; padding-top: 4; padding-bottom: 3" onmouseover="this.style.background='#a7c5a7'" onmouseout="this.style.background='#3866A4'"><a href="status.html"><span class=menu>시황</span></a></td>
+      <td width=70 align=center class=menu style="padding-left: 5; padding-right: 5; padding-top: 4; padding-bottom: 3" onmouseover="this.style.background='#f7c38b'" onmouseout="this.style.background='#3866A4'"><a href="infor.html"><span class=menu>종목정보</span></a></td>
+      <td width=65 align=center class=menu style="padding-left: 5; padding-right: 5; padding-top: 4; padding-bottom: 3" onmouseover="this.style.background='#c8c6f1'" onmouseout="this.style.background='#3866A4'"><a href="d1.mt?cmd=l&s=&c=&sf=&sw="><span class=menu>데일리</span></a></td>     
+     <td width=100 align=center class=menu style="padding-left: 5; padding-right: 5; padding-top: 4; padding-bottom: 3" onmouseover="this.style.background='#f2b5b5'" onmouseout="this.style.background='#3866A4'"><a href="venture.html"><span class=menu>ITㆍ벤처</span></a></td>
+      <td width=70 align=center class=menu style="padding-left: 5; padding-right: 5; padding-top: 4; padding-bottom: 3" onmouseover="this.style.background='#97D19A'" onmouseout="this.style.background='#3866A4'"><a href="s1.mt?cmd=l&s=&c=&sf=&sw="><span class=menu>투자전략</span></a></td>      
+      <td width=65 align=center class=menu style="padding-left: 5; padding-right: 5; padding-top: 4; padding-bottom: 3" onmouseover="this.style.background='#98c4d9'" onmouseout="this.style.background='#3866A4'"><a href="b1.mt?cmd=l&s=&c=&sf=&sw="><span class=menu>게시판</span></a></td>
+      <td width=50 align=center><img src="../images/clear.gif" width="54" height="1" alt="" border="0"></td>      
+<!-- <td width=53 class=menu style="padding-left: 5; padding-right: 5; padding-top: 4; padding-bottom: 3" onmouseover="this.style.background='#a7c5a7'" onmouseout="this.style.background='#3866A4'"><nobr>&nbsp;<a href="/news/fund.mt"><span class=menu> &nbsp;펀드 </span></a>&nbsp;</nobr></td> //-->
+  </tr>
+</table>
+<table width=774 border='0' cellspacing='0' cellpadding='0' bgcolor='#d1ca8c'>
+<tr>
+  <!-- 시세판보기 시작 //-->
+  <td align=left class=list>&nbsp;&nbsp;&nbsp;<a href="../temp/market/market.html" onClick="kse()" target="mainpage"><font color=000000>시세판보기</font></a></td>
+  <!-- 시세판보기 끝 //-->
+  <td width='20' class=list>&nbsp;</td>
+  <td width='360' height='25' bgcolor='#d1ca8c' align='LEFT' valign='MIDDLE'>&nbsp;</td>
+  <td width='264' bgcolor='#d1ca8c' align='RIGHT' valign='bottom'>&nbsp;
+  <!-- <applet	code='stockticker.class' name='sticker' width=240 height=20>
+   <param name=r value='209'>
+   <param name=g value='202'>
+   <param name=b value='140'>
+   </applet> //-->
+   </td>
+</tr>
+</table>
+  <!-- Left Menu and Contents --->
+			<table align='left' border=0 width='774' cellspacing='0' cellpadding='0'>
+				<tr>
+				<td valign=top>  <!-- Left Menu -->
+	<table border=0 width="130" cellspacing="0" cellpadding="0" bgcolor="#d1ca8c">
+<!-- 종목코드 //-->
+<tr>
+ <td align=center class=list>
+ <font color=000000>주가조회 | </font><a href='seekall.htm'><font color=000000>종목코드</font></a></td>
+</tr>
+<tr>
+ <td align=center>
+ <form action=/news/codeseek.htm method=get name=se><input maxlength="15" name="codeseek" size="11" style="BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-SIZE: 9pt; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; PADDING-TOP: 1px">
+ <input type="image" src="../images/bu_qsearch_go.gif" align="absmiddle" alt="업체명 및 종목코드를 입력하시고 이 버튼을 눌러주세요." class="but" border="0">
+</tr>       
+ </form>
+<tr>
+ <td><img src="../images/clear.gif" width="1" height="9" alt="" border="0"></td>
+</tr>       
+<!-- 기사검색 //-->
+<tr>
+<td align=left class=list>&nbsp;&nbsp;&nbsp;<a href="http://211.115.202.77"><font color=000000>기사검색</a></td> 
+<!--
+ <td align=left class=list>&nbsp;&nbsp;&nbsp;<a href='#' onclick="window.open('http://211.115.202.75/temp/notice/notice0817_1.html', 'popup','scrollbars=yes,resizable=yes,copyhistory=no,width=280,height=150')"><font color=000000>기사검색</a></td> 
+//-->
+</tr>
+
+<script language = "javascript">
+function befSubMit(Form)
+{
+ if( Form.qr.value == "") { 
+ alert("검색어를 입력하셔야 합니다.")
+ Form.qr.focus();
+ return false
+ }
+ return true
+}
+</script>        
+      
+
+<tr>
+ <td align=center>
+ <form method='get' action='http://211.115.202.77/search97cgi/s97_cgi' onsubmit='return befSubMit(this)'>
+
+ <input type='hidden' name='action' value='FilterSearch'>
+ <input type='hidden' name='filter' value='makequery.hts'>
+ <input type='hidden' name='resulttemplate' value='presult.hts'>
+ <input type='hidden' name='sortfield' value='vupwdate'>
+ <input type='hidden' name='sortorder' value='desc'>
+ <input type='hidden' name='resultmaxdocs' value='200'>
+ <input type='hidden' name='strquery' value=''>
+ <input type='hidden' name='startyear' value='1991'>
+ <input type='hidden' name='startmonth' value='01'>
+ <input type='hidden' name='startday' value='01'>
+ <input type='hidden' name='endyear' value='2000'>
+ <input type='hidden' name='endmonth' value='12'>
+ <input type='hidden' name='endday' value='31'>
+ <input type='hidden' name='addquery' value=''>	      
+ <input type='hidden' name='lb' value=''>	      
+ <input maxlength="15" name="qr" size="11" style="BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-SIZE: 9pt; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; PADDING-TOP: 1px">
+ <input type="image" src="../images/bu_qsearch_go.gif" align="absmiddle" alt="검색어를 입력하시고 이 버튼을 눌러주세요." class="but" border="0">
+ </td>
+ </form>
+</tr>       
+<!-- 전체기사보기 시작 //--> 
+<tr> 
+ <td><img src="../images/clear.gif" width="1" height="10" alt="" border="0"></td>
+</tr>
+<tr> 
+ <td align=left class=list>&nbsp;&nbsp;&nbsp;<a href="JavaScript:TotalNews();"><img src="../images/totalnews.gif" border="0"></a></td>
+</tr> 
+<!-- 전체기사보기 끝 //--> 
+<tr>
+ <td><img src="../images/clear.gif" width="130" height="19" border="0"></td>
+</tr>
+<tr>
+<td bgcolor="#d1ca8c">
+<!------  News menu table ------>
+<table width="130" border="0" cellspacing="3" cellpadding="0" bgcolor="#d1ca8c" background="../images/clear.gif">
+<tr>
+<td colsapn=2 class="ntext" valign="top"><img src="../images/clear.gif" width="1" height="4" alt="" border="0"></td>
+</tr>
+<tr>
+<td valign=top width="8"><img src="../images/newsminibox.gif" width="11" height="11" alt="" border="0"></td>					  
+<td width="130"><a href="n1.mt?cmd=l&s=&c=&sf=&sw="><span class="ntext">핫 뉴스&이슈</span></a></td>
+</tr>
+<tr>
+ <td valign=top width="8"><img src="../images/newsminibox.gif" width="11" height="11" alt="" border="0"></td>					  
+<td width="130"><a href="news.mt?br=10000&cmd=2"><span class="ntext">일반 뉴스</span></a></td>
+</tr>
+<tr>
+<td valign=top width="8"><img src="../images/newsminibox.gif" width="11" height="11" alt="" border="0"></td>					  
+ <td><a href="news.mt?br=10001&cmd=2"><span class="ntext">기업 뉴스</span></a></td>
+</tr>
+<tr>
+<td valign=top width="8"><img src="../images/newsminibox.gif" width="11" height="11" alt="" border="0"></td>					  
+  <td><a href="news.mt?br=10002&cmd=2"><span class="ntext">금융 뉴스</span></a></td>
+</tr>
+<tr>
+ <td valign=top width="8"><img src="../images/newsminibox.gif" width="11" height="11" alt="" border="0"></td>					  
+<td><a href="news.mt?br=10003&cmd=2"><span class="ntext">해외 뉴스</span></a></td>
+</tr>
+<tr>
+<td valign=top width="8"><img src="../images/newsminibox.gif" width="11" height="11" alt="" border="0"></td>					  
+<td><a href="n6.mt?cmd=l&s=&c=&sf=&sw="><span class="ntext">증시루머추적<br>(이루머 진짜입니까)</span></a></td>
+</tr>
+<tr>
+<td valign=top width="8"><img src="../images/newsminibox.gif" width="11" height="11" alt="" border="0"></td>					  
+  <td><a href="news.mt?br=10004&cmd=2"><span class="ntext">투자포커스</span></a></td>
+</tr>
+<tr>
+ <td valign=top width="8"><img src="../images/newsminibox.gif" width="11" height="11" alt="" border="0"></td>					  
+ <td><a href="n8.mt?cmd=l&s=&c=&sf=&sw="><span class="ntext">MT칼럼</span></a></td>
+</tr>
+<tr>
+ <td valign=top width="8"><img src="../images/newsminibox.gif" width="11" height="11" alt="" border="0"></td>					  
+<td><a href="n9.mt?cmd=l&s=&c=&sf=&sw="><span class="ntext">보도자료</span></a></td>
+</tr>
+ </table>
+</td>         	
+  </tr>
+ <tr> <!-- Left Menu tail bar --->
+<td bgcolor="#B3AC6D" height="10"><img src="../images/clear.gif" width="1" height="10"></td>
+ </tr>      
+</table>
+<TABLE BORDER="0" WIDTH="130" HEIGHT="5">
+<tr>
+<td img src="../images/clear.gif"></td>
+</tr>
+</table> 
+<!--special 시작 --> 
+<table width="130" cellspacing="0" cellpadding="1" border="0" bgcolor="#9C6F30">
+<tr bgcolor="#9C6F30"> 
+ <td> 
+   <table border="0" cellspacing="0" cellpadding="1" width="100%" bgcolor="#F3EEDA">
+        <tr valign="top" bgcolor="#F3EEDA"> 
+          <td width="174" bgcolor="#F3EEDA"><img src="../images/clear.gif" height="5"></td>
+        </tr>
+        <tr valign="top" bgcolor="#F3EEDA"> 
+          <td width="174" > 
+            <div align="center"><b><span class="ntext"><font color="#9C6F30">김준형</font></span><span class="ntext"><font color="#9C6F30"> 30일 전략</font></span></b></div>
+          </td>
+        </tr>
+         <tr valign="top"> 
+          <td bgcolor="#ffffff" width="118"><a href="s1.mt?cmd=v&s=1&c=1&n=2000082917331311008"><font size="2" class="ntext"><font color="#666600">"본전생각의 굴레"(보완)</font></font></a></td>
+        </tr>
+ 	    <tr valign="top" bgcolor="#F3EEDA"> 
+          <td width="174" bgcolor="#F3EEDA"><img src="../images/clear.gif" height="5"></td>
+        </tr>
+        <tr valign="top" bgcolor="#F3EEDA"> 
+          <td width="174" > 
+            <div align="center"><b><span class="ntext"><font color="#9C6F30">김재승</font></span><span class="ntext"><font color="#9C6F30"> 오늘포인트</font></span></b></div>
+          </td>
+		   </tr>
+		   <tr valign="top"> 
+          <td bgcolor="#ffffff" width="118"><a href="s1.mt?cmd=v&s=1&c=1&n=2000082911093011007"><span class="ntext"><font color="#666600">"지금 코스닥 공략한다면"</font></span></a></td>
+        </tr>
+		<tr valign="top" bgcolor="#F3EEDA"> 
+           <td width="174" bgcolor="#F3EEDA"><img src="../images/clear.gif" height="5"></td>
+        </tr>  
+		<tr valign="top" bgcolor="#F3EEDA"> 
+           <td width="174"> 
+            <div align="center"><b><span class="ntext"><font color="#9C6F30">김정욱 증권학노트</font></span></b></div>
+           </td>
+        </tr>
+        <tr valign="top"> 
+          <td bgcolor="#ffffff" width="118" ><a href="link_newsview.htm?gisa_id=2000082807253414004"><span class="ntext"><font color="#666600">(17)교란투자자 위험
+</font></span></a></td>
+        </tr>
+        
+		<tr valign="top" bgcolor="#F3EEDA"> 
+          <td width="174" bgcolor="#F3EEDA"><img src="../images/clear.gif" height="5"></td>
+        </tr>
+	    <tr valign="top" bgcolor="#F3EEDA"> 
+           <td width="174"> 
+            <div align="center"><b><span class="ntext"><font color="#9C6F30">김상석</font></span><font class="ntext"><font color="#9C6F30">&nbsp;월가리포트</font></font></b></div>
+           </td>
+        </tr>
+        <tr valign="top"> 
+           <td bgcolor="#ffffff" width="118" ><a href="s4.mt?cmd=v&s=1&c=1&n=2000082905325211034"><span class="ntext"><font color="#666600">때론 주식보다 채권</font></span></a></td>
+        </tr>
+		<tr valign="top" bgcolor="#F3EEDA"> 
+          <td width="174" bgcolor="#F3EEDA"><img src="../images/clear.gif" height="5"></td>
+        </tr>
+		<tr valign="top" bgcolor="#F3EEDA"> 
+          <td width="174"> 
+            <div align="center"><b><span class="ntext"><font color="#9C6F30">강상규 추천종목평가</font></span></b></div>
+          </td>
+        </tr>
+        <tr valign="top"> 
+          <td bgcolor="#ffffff" width="118" ><a href="s2.mt?cmd=v&s=1&c=1&n=2000082416444312003"><span class="ntext"><font color="#666600">"100%수익,기필코 달성할테야"</font></span></a></td>
+        </tr>
+		
+		<tr valign="top" bgcolor="#F3EEDA"> 
+          <td width="174" bgcolor="#F3EEDA"><img src="../images/clear.gif" height="5"></td>
+        </tr>
+	    <tr valign="top" bgcolor="#F3EEDA"> 
+           <td width="174"> 
+            <div align="center"><b><span class="ntext"><font color="#9C6F30">이종환</font></span><font class="ntext"><font color="#9C6F30">&nbsp;마켓워치</font></font></b></div>
+           </td>
+        </tr>
+        <tr valign="top"> 
+           <td bgcolor="#ffffff" width="118" ><a href="s2.mt?cmd=v&s=1&c=1&n=2000082104181112001"><span class="ntext"><font color="#666600">·반도체주가 다시뜬다</font></span></a></td>
+        </tr>
+        <tr valign="top"> 
+           <td bgcolor="#ffffff" width="118" ><a href="s2.mt?cmd=v&s=1&c=1&n=2000082110171411002"><span class="ntext"><font color="#666600">·호황 1~2년 더간다</font></span></a></td>
+        </tr>
+		<tr valign="top" bgcolor="#F3EEDA"> 
+          <td width="174" bgcolor="#F3EEDA"><img src="../images/clear.gif" height="5"></td>
+        </tr>
+		<tr valign="top" bgcolor="#F3EEDA"> 
+          <td width="174"> 
+            <div align="center"><b><span class="ntext"><font color="#9C6F30">배현기 경제진단</font></span></b></div>
+          </td>
+        </tr>
+        <tr valign="top"> 
+          <td bgcolor="#ffffff" width="118" ><a href="s2.mt?cmd=v&s=1&c=1&n=2000081719323312002"><span class="ntext"><font color="#666600">경제정책 갈림길</font></span></a></td>
+        </tr>
+		<tr valign="top" bgcolor="#F3EEDA"> 
+           <td width="174" bgcolor="#F3EEDA"><img src="../images/clear.gif" height="5"></td>
+        </tr>  
+		<tr valign="top" bgcolor="#F3EEDA"> 
+           <td width="174"> 
+            <div align="center"><b><span class="ntext"><font color="#9C6F30">강상규 종목 돋보기</font></span></b></div>
+           </td>
+        </tr>
+        <tr valign="top"> 
+          <td bgcolor="#ffffff" width="118" ><a href="s2.mt?cmd=v&s=1&c=1&n=2000081615021612003"><span class="ntext"><font color="#666600">"LG 자산재평가 뺀 실질부채비율 314%"</font></span></a></td>
+        </tr>
+		<!-- <tr valign="top"> 
+          <td bgcolor="#ffffff" width="118" ><font color="#d1ca8c" size="1"> ▶</font><a href="s2.mt?cmd=v&s=1&c=1&n=2000071817145312003"><span class="ntext"><font color="#666600">LG화학 "산넘어 산"</font></span></a></td>
+        </tr> -->
+		<!--<tr valign="top" bgcolor="#F3EEDA"> 
+           <td width="174" bgcolor="#F3EEDA"><img src="../images/clear.gif" height="5"></td>
+         </tr>  
+		 <tr valign="top" bgcolor="#F3EEDA"> 
+          <td width="174"> 
+            <div align="center"><b><span class="ntext"><font color="#9C6F30">알렉스윤 도쿄리포트</font></span></b></div>
+          </td>
+        </tr>
+        <tr valign="top"> 
+          <td bgcolor="#ffffff" width="118" ><a href="s4.mt?cmd=v&s=1&c=1&n=2000051809194311006"><span class="ntext"><font color="#666600">엔달러 박스권 전망</font></span></a></td>
+        </tr>
+		<tr valign="top" bgcolor="#F3EEDA"> 
+          <td width="174" bgcolor="#F3EEDA"><img src="../images/clear.gif" height="5"></td>
+        </tr> //-->
+     </table>
+    </td>
+  </tr>
+</table>
+<!--special end -->
+<TABLE BORDER="0" WIDTH="130" HEIGHT="5">
+<tr>
+<td img src="../images/clear.gif"></td>
+</tr>
+</table> 
+<!-- X파일 시작 -->
+<table width="130" cellspacing="0" cellpadding="1" border="0" bgcolor="#9C6F30">
+  <tr> 
+    <td> 
+      <table border="0" cellspacing="0" cellpadding="1" width="100%">
+        <tr bgcolor="#F3EEDA"> 
+          <td bgcolor="#F3EEDA"><img src="../images/clear.gif" width="125" height="5"></td>
+        </tr>
+        <tr bgcolor="#F3EEDA"> 
+          <td valign="baseline" align="center"><a href="b4.mt?cmd=l&s=&c=&sf=&sw="><b><font size="2" class="ntext"><font color="#9C6F30">머니투데이 X-파일</font></font></b></a></td>
+        </tr>
+		<tr valign="top" bgcolor="#ffffff" bordercolor="#d1ca8c"> 
+          <td width="178">&nbsp;<img src="../images/newstiti.gif"><a href="b4.mt?cmd=v&s=1&c=1&n=2000082818331411032"><font size="2" class="ntext"><font color="#666600">"자율결정 신호탄"</font></font></a></td>
+        </tr>
+		<tr valign="top" bgcolor="#ffffff" bordercolor="#d1ca8c"> 
+          <td width="178">&nbsp;<img src="../images/newstiti.gif"><a href="b4.mt?cmd=v&s=1&c=1&n=2000082409154211015"><font size="2" class="ntext"><font color="#666600">밉보이면 힘들다..</font></font></a></td>
+        </tr>
+		<tr valign="top" bgcolor="#ffffff" bordercolor="#d1ca8c"> 
+          <td width="178">&nbsp;<img src="../images/newstiti.gif"><a href="b4.mt?cmd=v&s=1&c=1&n=2000081714163811007"><font size="2" class="ntext"><font color="#666600">"생존위해 판다"</font></font></a></td>
+        </tr>
+		<tr valign="top" bgcolor="#ffffff" bordercolor="#d1ca8c"> 
+          <td width="178">&nbsp;<img src="../images/newstiti.gif"><a href="b4.mt?cmd=v&s=1&c=1&n=2000081109405911015"><font size="2" class="ntext"><font color="#666600">개미 왕따당한 사연</font></font></a></td>
+        </tr>
+		<tr valign="top" bgcolor="#ffffff" bordercolor="#d1ca8c"> 
+          <td width="178">&nbsp;<img src="../images/newstiti.gif"><a href="b4.mt?cmd=v&s=1&c=1&n=2000081011344711018"><font size="2" class="ntext"><font color="#666600">1조원의 큰손</font></font></a></td>
+        </tr>
+		</table>
+    </td>
+  </tr>
+</table>
+		</td>
+				<!--- Contents --->
+				<td align=center valign=top width='640'
+		<img src='/images/clear.gif' border=0 width=5><br><p>
+				<TABLE border=0 cellPadding=2 cellSpacing=1 width=600>
+					<TBODY>
+						<TR>
+						<TD width=70>&nbsp;</TD>
+						<TD width=530><font size='4' color=#010080><b>건설업 경쟁력강화 방안(전문) </b></font></TD></TR>
+					</TBODY>
+				</TABLE>	
+				<TABLE border=0 cellPadding=2 cellSpacing=1 width=600>
+					<TBODY>
+						<TR>
+						<TD width=550 align=right class=view><font color=#010080>
+		<a href='mailto:leeki@moneytoday.co.kr'>이기형</a>기자 	&nbsp; | &nbsp; 08/30 07:48 &nbsp; | &nbsp; 조회 228 &nbsp; &nbsp;</font></TD></TR> 		
+					</TBODY>
+				</TABLE><br>
+			
+				<TABLE border=0 cellPadding=5 cellSpacing=1 width=600>
+					<TBODY>
+  						<TR>
+		    			<TD width=550 bgColor=#ffffff class=view>
+		Ⅰ. 최근 건설산업의 실태<br>
+<br>
+□ 경제위기이후 공사물량은 35% 이상 격감한 가운데 등록제실시('99.4)등 진입장벽 완화로 업체수가 급증함에 따라 저가수주경쟁으로 채산성이 악화<br>
+<br>
+<img src="http://211.115.202.79/comm/images/news/leeki0829_1.gif"><br>
+<br>
+ㅇ  부실업체 난립에 따른 시장불신으로 금융권으로부터의 자금조달 애로도 가중<br>
+<br>
+□ 이에 따라 정부는 낙찰율을 인상하여 채산성을 제고*하고, 이행보증증권 제출을 의무화하는 최저가낙찰제의 단계적 도입등을 포함하는 중장기 구조개편안을 마련(2000.4)·추진중이나 업체난립에 따른 수주난·자금난은 지속<br>
+<br>
+   * 공사규모에 따라 2∼13%의 낙찰율 인상효과가 발생하여 6월이후 발주공사의 경우 채산성이 대폭 회복될 것으로 기대<br>
+<br>
+ ㅇ  이는 시장 진입은 대폭 완화되었으나, 이에 병행하여 국제기준에 입각한 퇴출장치*는 구축되지 못한 데 가장 큰 원인<br>
+<br>
+    * 입찰제도(발주자에 의한 능력있는 업체선별), 이행보증증권제도(금융기관에 의한 업체 신용력·공사수행능력 심사), 감리·감독제도(시공감리를 통한 부실시공업체 선별)<br>
+<br>
+□ 따라서, 시장에 의한 업체 선별·퇴출기능을 활성화하여  업체난립을 방지하고 시장수급 균형을 유도해 나가되,<br>
+<br>
+ ㅇ  이러한 건설산업의 구조개편을 뒷받침하기 위해서는 건실업체의 경우 제대로 건설업을 영위할 수 있도록 건설수요기반 확충과 자금조달여건 개선노력도 병행할 필요<br>
+<br>
+Ⅱ. 건설업 경쟁력 강화를 위한 기본전략<br>
+<br>
+□ 건설업의 당면 어려움이 기본적으로 경기순환적이라기 보다는 구조적인 문제이므로<br>
+<br>
+ ㅇ 인위적으로 건설경기를 부양하는 것을 지양하고 구조개편이 건설시장에서 자발적으로 이루어질 수 있는 여건을 조성<br>
+<br>
+ ㅇ  이를 위해 건설시장에서 부실업체가 퇴출될 수 있는 장치가 원활히 작동되는 데 필요한 제도적 틀을 단계적으로 구축하고<br>
+<br>
+  -  건실업체에 대해서는 정상적으로 건설업을 영위하고 계속 성장해 나갈 수 있도록 건전한 건설산업발전기반을 확충하고 소요자금도 원활히 조달될 수 있는 여건을 조성<br>
+<br>
+□ 핵심 추진과제<br>
+<br>
+시장기능에 의한 구조개편여건 조성<br>
+<br>
+ ㅇ  금융기관의 객관적인 업체평가에 기초한 이행보증증권제도 활성화 및 발주자의 엄격한 사전심사가 전제된 최저가낙찰제 도입대상 확대<br>
+<br>
+ ㅇ  건설사업관리제 신고제 도입과 겸업제한 폐지등 업역체계 개편<br>
+<br>
+시장기능에 의한 구조개편여건 조성<br>
+<br>
+ ㅇ  공공기관의 SOC투자 확대, 민간투자사업 활성화<br>
+<br>
+ ㅇ  임대주택시장의 활성화, 신축주택 구입시 세제지원 확대등<br>
+<br>
+시장기능에 의한 구조개편여건 조성<br>
+<br>
+ ㅇ 공공공사담보 특별보증제도 확대, 선금·기성금 적기 지급 유도, 해외건설 금융지원 및 건설업 재무공시·회계기준 강화<br>
+<br>
+Ⅲ. 주요 대책<br>
+<br>
+1. 시장기능에 의한 구조개편 여건 조성<br>
+<br>
+(1) 이행보증증권제도 활성화<br>
+<br>
+□ 금융기관에 의한 엄격한 업체·공사이행능력 평가를 유도하기 위해 현행 보증보험사의 경영정상화를 지속적으로 추진하고 이를 바탕으로 이행보증증권 신규취급을 조기 허용<br>
+<br>
+    * 현재 건설공사의 계약보증은 외국처럼 금융기관에 의한 공사이행보증이나 공사이행 보증증권보다는 대부분 연대보증인을 세우고 건설공제조합으로부터 계약금액의 10%에 해당하는 보증서를 제출하는 것으로 이루어지고 있음<br>
+<br>
+      ·그 결과 시공업체 부도시 연대보증업체의 연쇄도산 가능성이 상존하는 데다 출자자가 고객인 건설공제조합의 특성상 보증심사의 객관성 부족으로 발주자의 위험부담이 크고 건실·부실업체의 구별도 제대로 이루어지지 못하고 있는 실정<br>
+<br>
+ ㅇ 이행보증증권시장의 확대 추이를 보아 이행보증증권의 취급대상을 손해보험사까지 확대<br>
+<br>
+□  이행보증증권의 수요기반 확충과 입찰제도를 통한 업체선별  강화를 위해 이행보증증권 제출이 의무화되는 최저가 낙찰제 적용대상을 단계적으로 확대<br>
+<br>
+ ㅇ 2002년 : 500억이상, 2003년 : 100억이상 공사<br>
+<br>
+    ※ 현행 PQ대상이 아닌 100억미만공사에 대한 최저가낙찰제 도입여부는 건설보증시장의 성숙도등을 감안하여 2004년이후 검토<br>
+<br>
+      * 공사규모별 발주물량('98) : 1000억이상(49건, 7.3조원), 500억∼1000억(59건, 4조원),100억∼500억(305건, 6.5조원), 100억미만(32,176건, 11.5조원)<br>
+<br>
+ ㅇ 이행보증증권제도로의 원활한 이행을 위해 다음 연도에 이행보증증권 제출이 의무화된 공사의 경우 이행보증증권방식을 우대토록 PQ·적격심사시 보증방식에 따른 가점 부여<br>
+<br>
+<img src="http://211.115.202.79/comm/images/news/leeki0829_2.gif"><br>
+<br>
+□ 보증기관의 엄격한 보증심사를 통한 부실업체 선별기능 강화를 위해 보증기관의 보증책임 비율(현행 30%)을 단계적으로 확대<br>
+<br>
+ ㅇ 2001년 : 40%(기발표), 2002년 : 50%로 인상<br>
+<br>
+    * 미국의 경우 10만불이상 연방공사 발주시 100% 이행보증증권 제출을 의무화<br>
+<br>
+ ㅇ  보증수수료율의 업체신용도·공사종류등에 따른 차등폭을 확대하고, 보증수수료를 예정가격에 반영*하는 방안도 검토<br>
+<br>
+     * 발주자 및 건설업체가 50%씩 부담하되, 발주자 부담액은 신용등급 최우량기업의 보증수수료율을 기준으로 산정하여 부실업체의 보증수수료부담을 강화<br>
+<br>
+□ 당분간 이행보증증권 취급이 불가피한 건설공제조합의 신용평가 및 공사이행보증 능력 배양을 위해 보증상품운영방안 용역(9월말 완료)결과를 토대로 기업평가 및 심사기준을 개선<br>
+<br>
+ ㅇ  중장기적으로 출자자가 고객인 지배구조상 문제점을 개선하고(주식회사화방안등), 자산운용의 건전성을 확보할 수 있도록 보증업무에 대한 감독강화방안도 강구<br>
+<br>
+□ 건설업 특성을 반영한 신용력·공사수행능력의 전문적 평가를 위해 신용평가기관의 건설업체 평가능력을 확충<br>
+<br>
+ ㅇ 신용평가기관의 신용등급을 PQ심사시 경영상태평가에 반영토록 하여 건설업체에 대한 신용평가 확대를 유도<br>
+<br>
+(2) 등록기준 합리화 및 정기 실태조사 실시<br>
+<br>
+□ 건설업체에 대한 정기적인 실태조사 실시 및 등록기준의 합리화를 통해 무자격 부실업체의 퇴출을 유도<br>
+<br>
+ ㅇ 건교부, 시·도 및 관련협회등으로 합동조사반을 구성하여 자본금·기술자·장비등 건설업 등록요건 충족여부와 등록증 대여, 일괄하도급등 불법행위등을 실태조사<br>
+<br>
+     * 현재까지 서면조사 결과 7,000여개(일반 1,500, 전문 5,500) 업체가 등록기준 미달등으로 적발  →  9월말까지 현장조사후 영업정지·등록말소등 조치 예정<br>
+<br>
+  -  관련 협회에 「부실업체 신고센터」및  「윤리위원회」를 설치하여 업계 자율적인 퇴출기능도 강화<br>
+<br>
+ ㅇ  업종별 등록기준(자본금등)을 합리화하고, 정기적으로 등록사항을 신고받아 등록기준 미달시 등록을 말소<br>
+<br>
+(3)  건설사업관리업 활성화등 고부가가치화 유도<br>
+<br>
+□  시장기능에 의한 건실·부실업체 선별강화를 토대로 능력있는 업체는 시공은 물론 기획·설계·감리등을 함께 수행할 수 있는 건설사업관리(CM)업으로의 업무영역 확대를 유도<br>
+<br>
+ ㅇ  이를 위해 CM사업 신고제를 도입하고,  공공공사에 대한 CM 도입확대를 위해 발주대상·계약방식·대가지급기준등에 대한 세부 규정도 정비<br>
+<br>
+    *  다만, 일부 대형업체들의 시장과점을 방지하기 위해 CM발주대상은 단계적으로 확대<br>
+<br>
+□  CM 활용추이등을 감안하여 CM능력공시제 도입등을 검토하고 <br>
+<br>
+ ㅇ 중장기적으로는 현행 일반건설업자와 전문건설업자간 겸업제한을 폐지하여 건설업체계를 CM업과 전문시공업으로 개편<br>
+<br>
+2. 건전한 건설산업발전기반 확충<br>
+<br>
+(1) SOC 투자 및 민간투자사업 활성화<br>
+<br>
+□ 내년도 SOC 예산을 재정여건이 허용하는 범위내에서 최대한 배분<br>
+<br>
+□  공공기관의 SOC투자 확대를 위해 토공·주공·한전·한통이 채권발행등을 통해 2000년도 기추진사업(총 15조 1,912억원)외에연내 6,561억원의 신규사업* 시행<br>
+<br>
+   *  토공(2,422억원), 주공(1,528억원), 한전(2,311억원), 한통(300억원)<br>
+<br>
+□ 중점관리사업의 연내 구체화 및 재정지원기준 개선등을 통해 민간투자사업의 활성화를 유도<br>
+<br>
+ ㅇ 8개 중점관리사업*등 상당수 민자사업이 연내 구체화되도록 사업추진상황을 정기점검하고 지원대책을 적기 마련 <br>
+<br>
+     * 도로 : 대구-대동간 고속도로, 일산-퇴계원 외곽순환도로등 4개<br>
+        철도 : 인천국제공항 철도, 의정부 경전철<br>
+        항만 : 부산신항만, 목포 신외항 1단계<br>
+<br>
+ ㅇ 민간투자사업의 대상사업의 선정절차 및 재정지원 기준을 보완하는등 민간투자제도를 개선(연내 민간투자법시행령등 개정 추진)<br>
+<br>
+   -  대상사업 선정시 주무관청의 타당성조사·기본설계를 의무화하고 시설사업기본계획 고시시 이를 포함<br>
+<br>
+   - 지자체 민자사업에 대한 정부·지자체간 재정분담원칙 설정<br>
+<br>
+ ㅇ  역외 인프라펀드 자산운용회사를 9월중 설립하는등 인프라펀드의 민자사업에 대한 투·융자업무를 본격 개시<br>
+□ 부동산개발·임대사업의 활성화를 위해 부동산투자회사제도(REITs)를 내년부터 도입<br>
+<br>
+ ㅇ  특히 비수도권지역에 설립되는 부동산투자회사의 자본금 요건을 인하(수도권내 설립시의 50%)하여 침체된 지방의 부동산투자기반을 활성화<br>
+<br>
+(2) 임대주택시장 활성화<br>
+<br>
+□ 소유에서 임대로의 주거형태 변화에 부합되게 국민주택기금의  분양주택에 대한 지원을 축소하는 대신, 임대주택에 대한 지원비중을 지속적으로 제고하여 공공임대주택 건설을 확대<br>
+<br>
+    * 내년도 임대주택건설 지원규모를 최소한 올해수준(15만호)으로 유지<br>
+<br>
+ ㅇ 지자체의 임대주택건설 확대를 위해 지자체 또는 지방공사가 소요부지를 확보하여 임대주택 건설시 국민주택기금에서 총사업비의 50%까지 융자<br>
+<br>
+      * 현재는 공공임대주택 건설시 전용면적 60㎡이하에 대해서는 호당 2,500만원(4%), 전용면적 60∼85㎡에 대해서는 호당 3,000∼5,000만원(5.5%)까지 주택건설비용만을 융자<br>
+<br>
+ ㅇ  임대주택용 택지 공급 확대를 위해 토공등 공공개발택지의 임대주택용 우선공급비율을 현행 10%에서 20%이상으로 확대<br>
+<br>
+□ 미분양주택의 임대용주택으로의 전환과 민간임대주택의  공급확대를 유도하기 위해 임대사업자의 신규 임대주택 구입시 국민주택기금의 호당 대출한도를 확대<br>
+     (현행 3천만원한도 → 매입대금의 50%한도(6,000만원까지))<br>
+<br>
+ ㅇ  임대사업자의 재원조달기반 확충을 위해 부동산투자회사등 신용등급이 우수한 임대사업자의 임대주택 및 임대료 수입을 대상으로 한 자산담보부증권(ABS) 발행을 활성화<br>
+<br>
+     * 현행 제도상 임대사업자(법인)가 ①주권상장법인 또는 협회등록법인이거나 ②금감위 등록법인으로서 투자적격평가등급을 받은 경우에는 ABS발행이 가능<br>
+<br>
+  -  이를 위해 임대주택담보 ABS에 대해서는 주택저당증권(MBS)와 동일한 이자소득세 감면 혜택을 부여<br>
+<br>
+     * 소액채권저축을 통하여 MBB(주택저당채권담보부채권)·MBS(주택저당증권)를 매입한 경우 이자소득에 대한 10% 저율과세<br>
+<br>
+□ 임대·전세주택의 수요 확충을 위해 현재 보증여력 소진으로 전세자금대출등에 애로를 초래하고 있는 주택금융신용보증기금에 대한 정부출연을 통해 기본재산을 확충<br>
+<br>
+     * 2000. 7월말기준 : 기본재산(6,612억원), 보증잔액(14조 8,758억원)<br>
+<br>
+(3) 주택업계 당면애로 해소<br>
+<br>
+□ 주택수요기반 확충을 위해 2000. 9.1∼2001년말까지 1년이상 보유한 기존주택을 양도하고, 신축 분양주택(미분양주택 포함)을 취득하는 경우 기존주택에 대한 양도소득세 부담 완화<br>
+     (10% 특례세율 적용)<br>
+<br>
+    * 기존주택의 양도세 부담을 완화하여 신축주택의 취득을 촉진<br>
+<br>
+□ 주택업계의 택지난 해소를 위해 공공택지개발 물량을 850만평 에서 1,000만평으로 확대하고, 사업성이 있는 지역에 지정된 택지개발사업(파주 교하, 용인 동백지구등)을 조기착공<br>
+<br>
+□ 비업무용 부동산에 대한 취득세 중과제도를 폐지하여 주택업체의 준농림지내 보유토지중 개발유보로 사업추진이 지연된 부동산에 대한 조세부담을 완화<br>
+<br>
+   * 현재 주택건설용으로 취득한 부동산은 4년이내에 착공하지 않을 경우 비업무용부동산에 해당되어 취득세 5배 중과<br>
+<br>
+3. 자금조달여건 개선<br>
+<br>
+(1) 공공공사에 대한 금융지원 강화<br>
+<br>
+□ 현행 신보·기신보의 공공공사대금 담보 특별신용보증제도*의 지원대상을  30대계열소속회사를 제외한 중견건설업체까지 확대하고 시행기간(2000.8 만료)도 2001년말까지 연장<br>
+<br>
+     * 공사계약금액을 금융기관에 담보로 제공하고 자금을 조달하는 제도<br>
+       ·지원실적('98∼2000. 5) : 205건 / 2,812억원<br>
+<br>
+ ㅇ 특히  지방건설업체의 신용력 보완을 위해 지방건설업체에 대한 신용보증기관의 공공공사담보 특별신용보증의 보증한도를 현행 연간매출액의 1/4에서 1/2로 확대<br>
+<br>
+□  공공공사의 선금·기성금을 국가계약법령상 기준에 따라 지급토록 하고 정부투자기관의 경우 필요시 채권을 발행해서라도 지급토록 유도<br>
+<br>
+   ※  국가계약법령상 선금은 20%(100억원이상) ∼ 50%(20억원미만)를 지급토록 되어 있으나, 내부 자금사정으로 5∼14% 수준을 지급중<br>
+<br>
+     · 토공의 경우 현재 지급하지 않고 있는 100억이상 공사에 대해서도 선금을 지급하고, 선금을 전혀 지급하지 않고 있는 주공에서도 지급개시(9.1부터)<br>
+<br>
+(2) 프로젝트 파이낸싱을 위한 별도법인 설립 지원<br>
+<br>
+□ 프로젝트 파이낸싱의 기반이 되는 건설업체의 프로젝트별 회계처리 확대를 위해 프로젝트별 별도법인 설립을 유도<br>
+<br>
+ ㅇ 이를 위해 프로젝트별 별도법인이 당해 프로젝트를 위해 모회사로부터 취득한 부동산에 대한 취득세·등록세를 면제<br>
+<br>
+ ㅇ 별도법인이 수도권 과밀억제권역내에 설립되는 경우에도 법인설립에 대한 등록세 3배 중과대상에서 제외<br>
+<br>
+(3) 해외건설에 대한 금융지원 확대<br>
+<br>
+□ 수출입은행의 해외건설 지원대상 공사의 외화가득율 요건을 인하(20%→15%)하고, 융자대상계약금액에 제3국 하도급 계약분을 포함하는 등 지원대상을 확대<br>
+<br>
+ ㅇ 해외건설공사에 대한 직접대출 뿐만 아니라 채무보증도 가능토록 지원방법을 다양화<br>
+<br>
+□ 해외건설에 대한 보증수수료 경감*을 위해 국책은행 및 해외 금융기관**의 참여를 통한 역외보증기관(SPC)을 연내 설립<br>
+<br>
+   * 현행 1.7∼3.9%의 보증요율을 0.5∼1.0%로 개선<br>
+   ** 외국 출자자로는 IFC, Liberty Mutual 및 Chubbs와 협의중<br>
+<br>
+(4) 시장신뢰회복을 위한 재무공시·회계기준 강화<br>
+<br>
+□ 건설업체에 대한 금융기관등의 불신을 제거하여 건설업 자금조달여건을 근본적으로 개선할 수 있도록 건설업체의 재무상황 공시 및 관련 회계기준을 강화<br>
+<br>
+ ㅇ 현재 공사별 손익상황이 불분명하여 프로젝트 파이낸싱이 곤란하고, 공사수익·유동자산의 적정평가가 이루어지지 못하여 금융기관의 불신을 초래<br>
+<br>
+ ㅇ  이러한 문제점 개선을 위해 유동자산·공사수익계상등 회계처리를 투명화하고 개별공사별 회계처리를 확대하는 방향으로 회계연구원 주관의 개선방안을 마련<br>
+<br>
+<img src="http://211.115.202.79/comm/images/news/leeki0829_3.gif"><br>
+<img src="http://211.115.202.79/comm/images/news/leeki0829_4.gif">				 <br><p>
+        			    </TD></TR>
+					</TBODY>
+				</TABLE><br>
+				<table border=0 width=600 cellspacing=0 cellpadding=0>
+				
+					<tr>
+					<td class=list>
+						<a href='/news/n_print.mt?c=d1ca8c&n=2000082918232814006' target='_blank'>인쇄용화면</a>&nbsp;&nbsp;
+						<a href=javascript:history.go(-1)>뒤로</a>
+					</td></tr>
+				</table><br><p>
+			</td>
+			</tr>
+	  		<!--- Copyright Table --->
+			<tr>
+			<td>&nbsp;</td>
+	    	<td>
+	    	<table border='0' cellspacing='5' cellpadding='0' width=100%%>
+	    		<tr> <td align=right>
+	    			<a href='#top'><img src='../images/top.gif' width='59' height='19' alt='top' border='0'></a><br>
+	    		</td></tr>
+	        	<tr><td bgcolor='#d1ca8c'>
+	        		<img src='../images/clear.gif' width='1' height='2' alt='' border='0'>
+	        	</td></tr>
+				<tr><td valign='top'>
+					<font size=1 face='helvetica,arial' color='#d1ca8c'>
+					  Copyright(c) MoneyToday All Rights Reserved<br> Contact <a href='mailto:webmaster@moneytoday.co.kr'>Webmaster</a> for more Information</font>
+				</td></tr>   
+	      	</table>
+		  	</td>
+			</tr>
+		</table>
+			
+	</body>
+	</html>
+	

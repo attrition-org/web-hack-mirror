@@ -1,0 +1,19 @@
+# This file sets out restrictions that most spiders and automatic
+# web-indexers voluntarily abide by.  For more information, check out:
+# http://info.webcrawler.com/mak/projects/robots/norobots.html
+
+# MOMspider, AccessAbility's pet spider, can check our links.
+User-agent: MOMspider
+Disallow: 
+
+# All other robots have some restrictions on them, though
+User-agent: *
+# Stay away from these:
+Disallow: /admin
+Disallow: /docs/sgml97
+Disallow: /sgml97
+# Add more disallow lines for specific files that you do not want automated
+# web-searching tools to access, such as a membership list, or temporary
+# files that you intend to remove or rename quickly.  For example:
+# Disallow:  /year-end-clearance.html
+

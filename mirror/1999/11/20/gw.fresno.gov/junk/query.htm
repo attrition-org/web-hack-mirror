@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC &quot;-//IETF//DTD HTML 3.0//EN&quot;
+&quot;html.dtd&quot;>
+<html>
+<head>
+<!--
+                *****      INSTRUCTIONS FOR CUSTOMIZING THIS FORM      *****
+
+                To customize this form, look for remarks in the file beginning with
+                5 stars ("*****"). These lines contain instructions for easily
+                customizing the most common qury form elements.
+
+-->
+<link rel="STYLESHEET" href="is2style.css" type="text/css">
+<title>Index Server 2.0 Sample HTM/IDQ/HTX Search Form</title>
+<meta name="DESCRIPTION" content=
+"Sample query form for Microsoft Index Server">
+<meta name="AUTHOR" content="Index Server Team">
+<meta name="KEYWORDS" content="query, content, hit">
+<meta name="SUBJECT" content="sample form">
+<meta name="MS.CATEGORY" content="Internet">
+<meta name="MS.LOCALE" content="EN-US">
+<meta http-equiv="Content-Type" content=
+"text/html; charset=Windows-1252">
+</head>
+<!-- ***** To change the form's background pattern, simply save your background pattern
+       using the name IS2BKGND.GIF in the same directory as this form. ***** -->
+<body bgcolor="navy" marginwidth="0" marginheight="0" leftmargin= 
+"0" topmargin="0">
+<table width="600" border="0" cellspacing="0" cellpadding="10" height="100%">
+<tr>
+<td width="100" bgcolor="navy"> </td>
+<td width="500" bgcolor="white">
+<table>
+<tr>
+<td><a href="http://www.microsoft.com/ntserver/search" target= 
+"_top">
+<!-- ***** To change the form's logo, simply save your logo using the name IS2LOGO.GIF
+       in the same directory as this form. --> <img src= 
+"is2logo.gif" valign="MIDDLE" align="LEFT" border="0"></a></td>
+</tr>
+
+<tr>
+<td align="RIGHT">
+<h3><font face="arial">
+<!-- ***** The following line of text is displayed next to the form logo. -->
+Search Form</font></h3>
+</td>
+</tr>
+</table>
+
+<form action="query.idq" method="GET">
+<table width="500">
+<tr>
+<td><font face="arial">Enter your query below:</font></td>
+</tr>
+
+<tr>
+<td><input type="TEXT" name="CiRestriction" size="50" maxlength= 
+"100" value=""></td>
+<td><input type="SUBMIT" value="Go"></td>
+</tr>
+
+<tr>
+<td align="RIGHT"><a href="ixtiphlp.htm">Tips for
+searching</a></td>
+</tr>
+
+<tr>
+<td>
+<p><input name="FreeText" type="CHECKBOX">Use <a href= 
+"ixtiphlp.htm#FreeTextQueries">Free-Text Query</a>.</p>
+</td>
+</tr>
+</table>
+
+<!-- The CiScope parameter allows you to control which documents are searched. To search
+                the entire document set, use a value of "/", which corresponds to the root of your web
+                virtual namespace. To search a subset of your documents, set the value equal to the
+                virtual directory you want to search.  -->
+<table>
+<tr>
+<td><font face="arial"><input type="RADIO" name="CiScope" value=
+"/" checked>Search entire site</font></td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td><font face="arial"><input type="RADIO" name="CiScope" value=
+"/city_officials">Search City Officials</font></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+
+<input type="HIDDEN" name="CiMaxRecordsPerPage" value="10">
+<input type="HIDDEN" name="TemplateName" value="query"> <input
+type="HIDDEN" name="CiSort" value="rank[d]"> <input type="HIDDEN"
+name="HTMLQueryForm" value="query.htm"></form>
+
+<!-- STANDARD MICROSOFT FOOTER FOR QUERY PAGES -->
+<hr width="500" align="left">
+<table border="0" cellpadding="0" cellspacing="0" width="500">
+<tr><!-- IIS GIF -->
+<td><a href="http://www.microsoft.com/iis"><img src="nts_iis.GIF"
+alt="Learn more about Internet Information Server!" width="88"
+height="31" border="0"></a></td>
+<!-- Microsoft Legal Info -->
+<td align="center"><font size="1" face="Verdana, Arial,
+Helvetica">&copy;1997 Microsoft Corporation. All rights
+reserved.<br>
+</font><a href="http://www.microsoft.com/misc/cpyright.htm"><font
+size="1" face="Verdana, Arial, Helvetica">Legal
+Notices.</font></a></td>
+<!-- Best with IE GIF -->
+<td align="right"><a href="http://www.microsoft.com/ie"><img src= 
+"IE.GIF" alt="Download Internet Explorer!" width="88" height="31"
+border="0"></a></td>
+</tr>
+</table>
+
+<!-- END STANDARD MICROSOFT FOOTER FOR QUERY PAGES --></td>
+</tr>
+</table>
+</body>
+</html>

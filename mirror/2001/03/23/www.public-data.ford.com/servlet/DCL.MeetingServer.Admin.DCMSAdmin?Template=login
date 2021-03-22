@@ -1,0 +1,736 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <SCRIPT TYPE="TEXT/JAVASCRIPT" LANGUAGE="JavaScript"><!--
+   function consoleDataClick()
+   {
+   var i=1;
+   }
+   //-->
+   </SCRIPT>
+
+
+
+
+
+
+<HTML>
+
+<HEAD>
+
+
+<TITLE>FORD MeetingServer site - Login (DC-MeetingServer)</TITLE>
+
+</HEAD>
+
+<BODY BGCOLOR="#DCD3C2"
+  BACKGROUND="/DC-MeetingServer/background.gif"
+TOPMARGIN="0" LEFTMARGIN="10" MARGINWIDTH="10" MARGINHEIGHT="0"
+TEXT="#3B4759" LINK="#5A533A" VLINK="#5A533A" ALINK="#5A533A"
+onUnload="" onLoad="onLoadHelpURL();"
+onResize="">
+
+<FONT SIZE=2 FACE="Arial, Helvetica, Helv">
+
+<SCRIPT TYPE="TEXT/JAVASCRIPT" LANGUAGE="JavaScript"><!--
+function confirmLogout()
+{
+  var msg = "Do you really want to logout from DC-MeetingServer?\n";
+
+  if (confirm(msg))
+  {
+    parent.main.location.replace("http://www.public-data.ford.com/servlet/DCL.MeetingServer.Admin.DCMSAdmin?Template=logout&USER_KEY=8921691531174966233");
+  }
+}
+
+//-->
+</SCRIPT>
+
+<TABLE BORDER=0 CELLSPACING=3 CELLPADDING=0>
+
+<TR>
+  <TD VALIGN=TOP ROWSPAN=2>
+    <IMG SRC="/DC-MeetingServer/title2.gif" WIDTH="197" HEIGHT="58" BORDER=0>
+  </TD>
+  <TD>
+  &nbsp;&nbsp;&nbsp;
+  </TD>
+
+
+
+<SCRIPT TYPE="TEXT/JAVASCRIPT" LANGUAGE="JavaScript"><!--
+function openWin(URL)
+{
+  HelpWindow=window.open(URL, "help", "WIDTH=450,HEIGHT=550,RESIZABLE=YES,SCROLLBARS=YES");
+}
+//-->
+</SCRIPT>
+
+<FORM NAME="helpinfo" ACTION="POST">
+  <INPUT TYPE="HIDDEN" NAME="helpURL" VALUE="no help url">
+</FORM>
+
+
+
+
+<SCRIPT TYPE="TEXT/JAVASCRIPT" LANGUAGE="JavaScript"><!--
+  document.writeln(
+   '<TD VALIGN=TOP WIDTH=53>' +
+   ' <A HREF="javascript:openWin(document.helpinfo.helpURL.value);">' +
+   '<img src="/DC-MeetingServer/help.gif" WIDTH="53" HEIGHT="25" BORDER=0 alt="Help"></A>' +
+   '</TD>');
+  //-->
+</SCRIPT>
+<TD VALIGN=TOP WIDTH=80>
+    <A TARGET="_blank" HREF="/DC-MeetingServer/overview/overview.htm">
+    <IMG SRC="/DC-MeetingServer/overview.gif" WIDTH="75" HEIGHT="25" BORDER=0 ALT="Overview"></A>
+  </TD>
+  <TD VALIGN=TOP WIDTH="100%" ALIGN=RIGHT>
+    <A HREF="http://www.datcon.co.uk" TARGET="_parent">
+    <IMG SRC="/DC-MeetingServer/small_dc_logo.gif" WIDTH="68" HEIGHT="40" BORDER=0></A>
+  </TD>
+</TR>
+
+</TABLE>
+
+    <SCRIPT TYPE="TEXT/JAVASCRIPT" LANGUAGE="JavaScript"><!--
+      function onLoadHelpURL()
+      {
+        document.helpinfo.helpURL.value="http://www.public-data.ford.com/servlet/DCL.MeetingServer.Admin.DCMSAdmin?Template=helplogin&USER_KEY=8921691531174966233&CURRENTPAGE=Login";
+      }
+      //-->
+    </SCRIPT>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<SCRIPT LANGUAGE="JavaScript"><!--
+
+function isValidPassword(s)
+{
+  for (var i = 0; i < s.length; i++)
+  {
+    var c = s.charAt(i);
+
+    if ( (c == '"') || (c == '\'') )
+    {
+      return false;
+    }
+
+  }
+
+  return true;
+}
+
+function isBlank(s)
+{
+  for (var i = 0; i < s.length; i++)
+  {
+    var c = s.charAt(i);
+
+    if (!isWhitespace(c))
+    {
+      return false;
+    }
+
+  }
+
+  return true;
+}
+
+function isValidEmailAddr(s)
+{
+  var foundAt = false;
+
+  for (var i = 0; i < s.length; i++)
+  {
+    var c = s.charAt(i);
+    if (c == "@")
+    {
+      if (foundAt)
+      {
+        return false;
+      }
+      foundAt = true;
+    }
+
+    if (!isLetterOrDigit(c) && (c != ".") && (c != "@") && (c != "-") && (c != "_"))
+    {
+      return false;
+    }
+  }
+  return(foundAt);
+}
+
+function isLetter (c)
+{   return ( ((c >= "a") && (c <= "z")) || ((c >= "A") && (c <= "Z")) )
+}
+
+function isDigit (c)
+{   return ((c >= "0") && (c <= "9"))
+}
+
+function isLetterOrDigit (c)
+{   return (isLetter(c) || isDigit(c))
+}
+
+function isWhitespace(c)
+{
+    return ((c == "\n") || (c == "\r") ||(c == "\t") || (c == " "));
+}
+function isAlphanumeric (s)
+{   var i;
+
+    for (i = 0; i < s.length; i++)
+    {
+        var c = s.charAt(i);
+
+        if (! (isLetter(c) || isDigit(c) ) ) return false;
+    }
+
+    return true;
+}
+
+function isAlphanumericWildcard(s)
+{   var i;
+
+    for (i = 0; i < s.length; i++)
+    {
+        var c = s.charAt(i);
+
+        if (! (isLetter(c) || isDigit(c) || (c == "?") || (c == "*")) ) return false;
+    }
+
+    return true;
+}
+
+function isEmailWildcard(s)
+{   var i;
+
+    for (i = 0; i < s.length; i++)
+    {
+        var c = s.charAt(i);
+
+        if (! (isLetter(c) || isDigit(c) || (c == "@") || (c == ".") || (c == "?") || (c == "*")) ) return false;
+    }
+
+    return true;
+}
+
+function isTextIPAddrElement(s)
+{   var i;
+
+    if (isLetter(s.charAt(0)))
+    {
+      for (i = 0; i < s.length; i++)
+      {
+          var c = s.charAt(i);
+
+          if (! (isLetter(c) || isDigit(c) || (c == "-") )) return false;
+      }
+    }
+    else
+    {
+      return(false);
+    }
+
+    return true;
+}
+
+function isNumericIPAddrElement(s)
+{
+    if (isNumeric(s))
+    {
+      var num = parseInt(s);
+
+      if ( (num >= 0) && (num <= 255) )
+      {
+        return true;
+      }
+    }
+
+    return false;
+}
+
+function isIPAddress(s)
+{
+    var i;
+    var isIPAddress = false;
+
+    var subStrings = s.split('.');
+
+    var numericCount = 0;
+    var textCount = 0;
+
+    for (i = 0; i < subStrings.length; i++)
+    {
+      if (isNumericIPAddrElement(subStrings[i]))
+      {
+        numericCount++;
+      }
+      else if (isTextIPAddrElement(subStrings[i]))
+      {
+        textCount++;
+      }
+    }
+
+    if ( ((subStrings.length == 4) && (numericCount == 4)) ||
+         (textCount == subStrings.length) )
+    {
+      isIPAddress = true;
+    }
+
+    return (isIPAddress);
+}
+
+function isText(s)
+{
+    var i;
+
+    for (i = 0; i < s.length; i++)
+    {
+        var c = s.charAt(i);
+
+        if (! (isLetter(c) || isDigit(c) || (c == ".") || (c == " ") ||
+               (c == "(") || (c == ")") || (c == "-") ))
+        {
+          return false;
+        }
+    }
+
+    return true;
+}
+
+function isTextWildcard(s)
+{
+    var i;
+
+    for (i = 0; i < s.length; i++)
+    {
+        var c = s.charAt(i);
+
+        if (! (isLetter(c) || isDigit(c) || (c == ".") || (c == " ") ||
+               (c == "*") || (c == "?") || (c == "(") || (c == ")") ||
+               (c == "-") ))
+        {
+          return false;
+        }
+    }
+
+    return true;
+}
+
+function isNumeric(s)
+{   var i;
+
+    for (i = 0; i < s.length; i++)
+    {
+        var c = s.charAt(i);
+
+        if (! (isDigit(c) ) ) return false;
+    }
+
+    return true;
+}
+
+function isDate(s)
+{
+    var c0 = s.charAt(0);
+    var c1 = s.charAt(1);
+    var c2 = s.charAt(2);
+    var c3 = s.charAt(3);
+
+    // Check first four characters are digits
+    if (!(isDigit(c0) && isDigit(c1) && isDigit(c2) && isDigit(c3)))
+    {
+      return false;
+    }
+
+    var c4 = s.charAt(4);
+
+    if (!(c4 == "-"))
+    {
+      return false;
+    }
+
+    var c5 = s.charAt(5);
+    var c6 = s.charAt(6);
+
+    // Check next two characters are digits
+    if (!(isDigit(c5) && isDigit(c6)))
+    {
+      return false;
+    }
+
+    var c7 = s.charAt(7);
+
+    if (!(c7 == "-"))
+    {
+      return false;
+    }
+
+    var c8 = s.charAt(8);
+    var c9 = s.charAt(9);
+
+    // Check first last two characters are digits
+    if (!(isDigit(c8) && isDigit(c9)))
+    {
+      return false;
+    }
+
+    return true;
+}
+
+function isValidDate(month, day, year)
+{
+    if ((day < 1) || (day > 31))
+    {
+      return false;
+    }
+
+    if (((month == 4) || (month == 6) || (month == 9) || (month == 11)) && day == 31)
+    {
+      return false;
+    }
+
+    if (month == 2)
+    {
+      var isleap = false;
+
+      if (year != null)
+      {
+        isleap = ((year % 4) == 0) && (((year % 100) != 0) || ((year % 400) == 0));
+      }
+
+      if ((day > 29) || ((day == 29) && !isleap))
+      {
+        return false;
+      }
+    }
+
+    return true;
+}
+
+function trimString(string)
+{
+    var start, end;
+    var trimmed = string;
+    var c;
+    var loop;
+
+    if (string != null)
+    {
+        start = 0;
+        end = string.length - 1;
+        loop = true;
+
+        c = string.charAt(start);
+        while ((start < end) && isWhitespace(c))
+        {
+           start++;
+           c = string.charAt(start);
+        }
+
+        c = string.charAt(end);
+        while ((end >= 0) && isWhitespace(c))
+        {
+           end--;
+           c = string.charAt(end);
+        }
+
+        if (start <= end)
+        {
+           trimmed = string.substring(start, end + 1);
+        }
+        else
+        {
+           trimmed = "";
+        }
+    }
+
+    return(trimmed);
+}
+//-->
+</SCRIPT>
+
+
+<SCRIPT TYPE="TEXT/JAVASCRIPT" LANGUAGE="JavaScript"><!--
+  var agt = navigator.userAgent.toLowerCase();
+
+  var is_major = parseInt(navigator.appVersion);
+  var is_minor = parseFloat(navigator.appVersion);
+
+  var is_win   = ((agt.indexOf("win")!=-1) || (agt.indexOf("16bit")!=-1));
+  var is_sun   = (agt.indexOf("sunos")!=-1);
+  var is_irix  = (agt.indexOf("irix") !=-1);
+  var is_hpux  = (agt.indexOf("hp-ux")!=-1);
+  var is_aix   = (agt.indexOf("aix") !=-1);
+  var is_linux = (agt.indexOf("inux")!=-1);
+  var is_mac   = (agt.indexOf("mac") != -1);
+
+  var is_nav = ((agt.indexOf('mozilla')    != -1) &&
+                (agt.indexOf('spoofer')    == -1) &&
+                (agt.indexOf('compatible') == -1) &&
+                (agt.indexOf('opera')      == -1) &&
+                (agt.indexOf('webtv')      == -1));
+  var is_nav3           = (is_nav && (is_major < 4));
+  var is_nav4orgreater  = (is_nav && (is_major >= 4));
+  var is_nav45orgreater = (is_nav && (is_minor >= 4.5));
+
+  var is_nav5orgreater = (is_nav && (is_minor >= 5.0));
+
+  var is_ie           = (agt.indexOf("msie") != -1);
+  var is_ie3          = (is_ie && (is_major < 4));
+  var is_ie4          = (is_ie && (is_major == 4) && (agt.indexOf("msie 5.0")==-1));
+  var is_ie4orgreater = (is_ie  && (is_major >= 4));
+
+  var supportsLocRep = !is_ie3 && !is_mac;
+
+  var supportsCAB = (is_ie && !is_mac);
+  var supportsJAR = !supportsCAB;
+
+  var is_unsupported_browser = (is_ie3 || is_nav3 || (agt == ""));
+//-->
+</SCRIPT>
+
+<SCRIPT TYPE="TEXT/JAVASCRIPT" LANGUAGE="JavaScript"><!--
+function verify(f)
+{
+  var msg;
+  var empty_fields = "";
+  var errors = "";
+  var rc = true;
+  var e;
+
+  e = document.login.UserName;
+
+  if ((e.value == null) || (e.value == "") || isBlank(e.value))
+  {
+    empty_fields += "\n      Username";
+  }
+  else if ((document.login.Guest.value != "1") && !isAlphanumeric(e.value))
+  {
+    errors += "- The field 'Username' must be alphanumeric\n";
+  }
+  else if ((document.login.Guest.value == "1") && !isText(e.value))
+  {
+    errors += "- The field 'Username' must only contain \n          letters,\n          numbers,\n          spaces,\n          full-stops,\n          round brackets,\n          and/or hypens.\n";
+  }
+  else if (e.value.length > 20)
+  {
+    errors += "- The field 'Username' must be less than or equal to 20 characters long\n"
+  }
+
+  e = document.login.Password;
+
+  if (!isValidPassword(e.value))
+  {
+    errors += "- The field 'Password' must not contain single or double-quote characters\n";
+  }
+  else if (e.value.length > 20)
+  {
+    errors += "- The field 'Password' be less than or equal to 20 characters long\n"
+  }
+
+  if (empty_fields || errors)
+  {
+    msg = "_____________________________________________________\n\n" +
+          "The form was not submitted because of the following error(s).\n" +
+          "Please correct these error(s) and re-submit.\n" +
+          "_____________________________________________________\n\n";
+
+    if (empty_fields)
+    {
+      msg += "- The following required field(s) are empty:" +
+             empty_fields + "\n";
+    }
+
+    if (errors)
+    {
+      msg += "\n" + errors;
+    }
+
+    alert(msg);
+
+    rc = false;
+  }
+
+  return rc;
+}
+//-->
+</SCRIPT>
+
+<BR>
+
+<CENTER>
+
+<SCRIPT TYPE="TEXT/JAVASCRIPT" LANGUAGE="JavaScript"><!--
+function loginAsGuest()
+{
+  document.login.Guest.value = "1";
+  if (verify(this))
+  {
+    document.login.submit();
+  }
+}
+function loginNotAsGuest()
+{
+  document.login.Guest.value = "0";
+}
+
+document.writeln(
+
+'<STRONG><FONT SIZE=4 FACE="Arial, Helvetica, Helv">Login for FORD MeetingServer site</FONT></STRONG>' +
+
+'<FORM NAME="login" METHOD="POST" ACTION="DCL.MeetingServer.Admin.DCMSAdmin" onSubmit="return verify(this);">' +
+
+'<TABLE BORDER=0 CELLPADDING=3 CELLSPACING=2 WIDTH=100>' +
+
+'<INPUT type="hidden" name="Template" value="frames">' +
+
+'<TR>' +
+'  <TD><FONT SIZE=2 FACE="Arial, Helvetica, Helv">Username</FONT></TD>' +
+'  <TD>' +
+'    <FONT SIZE=2 FACE="Arial, Helvetica, Helv">' +
+'    <INPUT type="text" name="UserName" value=""' +
+'           size="' + (1 + 20) + '" maxlength="20">' +
+'    </FONT>' +
+'  </TD>' +
+'</TR>' +
+
+'<TR>' +
+'  <TD><FONT SIZE=2 FACE="Arial, Helvetica, Helv">Password</FONT></TD>' +
+'  <TD>' +
+'    <FONT SIZE=2 FACE="Arial, Helvetica, Helv">' +
+'    <INPUT type="password" name="Password" value=""' +
+'           size="' + (1 + 20) + '" maxlength="20">' +
+'    </FONT>' +
+'  </TD>' +
+'</TR>' +
+
+'<TR>' +
+'  <TD ALIGN=CENTER>' +
+'    <FONT SIZE=2 FACE="Arial, Helvetica, Helv">' +
+'    <INPUT TYPE="hidden" VALUE="" name="ReqMeetID">' +
+'    <INPUT TYPE="hidden" VALUE="" name="DCMSMeetingNameToJoin">' +
+'    <INPUT TYPE="hidden" VALUE="" name="Guest">' +
+'    <INPUT TYPE="submit" VALUE="Login" onClick="loginNotAsGuest()">' +
+'  </TD>' +
+'  <TD ALIGN=CENTER>' +
+'    <FONT SIZE=2 FACE="Arial, Helvetica, Helv">' +
+'    <INPUT TYPE="button" VALUE="Login as Guest" onclick="loginAsGuest()">' +
+'    </FONT>' +
+'  </TD>' +
+'</TR>' +
+
+'</TABLE>' +
+
+'</FORM>' +
+
+'<HR>' +
+
+'If you have not used DC-MeetingServer before and wish to create a new user account then click ' +
+'<A HREF="DCL.MeetingServer.Admin.DCMSAdmin?Template=newuser&ReqMeetID=&DCMSMeetingNameToJoin=">here</A>' +
+
+'<HR>'
+);
+
+if (is_unsupported_browser)
+{
+  document.writeln('<P><STRONG>NOTE :</STRONG> Your browser is not sufficiently recent to be able to support ' +
+                   'all the facilities in DC-MeetingServer.  To gain access to the full functionality ' +
+                   'you must upgrade to a later browser.</P>');
+}
+//-->
+</SCRIPT>
+
+<NOSCRIPT>
+
+<font size=+1>
+It appears that your browser has disabled or does not support JavaScript.
+<BR>
+DC-MeetingServer requires JavaScript to function properly.
+<BR>
+Please re-connect using a JavaScript enabled browser, or after having re-enabled JavaScript in your current browser.
+</font>
+
+</NOSCRIPT>
+<p>
+<font size="+1">
+
+<SCRIPT TYPE="TEXT/JAVASCRIPT" LANGUAGE="JavaScript"><!--
+if (!navigator.javaEnabled())
+{
+  document.writeln(
+  "Your browser doesn't support Java, or Java support is disabled.<br>" +
+  "DC-MeetingServer requires Java to function properly. <br>Please " +
+  "re-connect using a Java enabled browser, or after having re-enabled Java" +
+  " your current browser.");
+}
+//-->
+</SCRIPT>
+
+</font>
+
+</CENTER>
+
+<P>
+
+<SCRIPT TYPE="TEXT/JAVASCRIPT" LANGUAGE="JavaScript"><!--
+  document.login.UserName.focus();
+//-->
+</SCRIPT>
+
+
+<P></P>
+
+
+
+
+
+
+
+  </FONT>
+
+  </BODY>
+
+  </HTML>
+
+

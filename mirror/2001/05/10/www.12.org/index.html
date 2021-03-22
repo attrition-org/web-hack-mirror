@@ -1,0 +1,104 @@
+<html>
+<body bgcolor="#000000" link="#888888" text="white" leftmargin="0" topmargin="0" onload="writetext();">
+<title>tty0 | cybeRpunK</title>
+<style>         
+A:link    {text-decoration: none; color: #888888}
+A:visited {text-decoration: none; color: #888888}
+A:hover   {text-decoration: none; color: #ffffff}
+A:active  {text-decoration: none; color: #888888}
+</style><center>
+  <img src="http://www.tty01.hpg.com.br/principal.gif" width="493" height="299"> 
+  <script language="javascript">
+<!--
+function Is() {
+    var agent = navigator.userAgent.toLowerCase();
+    this.major = parseInt(navigator.appVersion);
+    this.minor = parseFloat(navigator.appVersion);
+    this.ns  = ((agent.indexOf('mozilla')!=-1) && ((agent.indexOf('spoofer')==-1) && (agent.indexOf('compatible') == -1)));
+    this.ns2 = (this.ns && (this.major == 2));
+    this.ns3 = (this.ns && (this.major == 3));
+    this.ns4b = (this.ns && (this.major == 4) && (this.minor <= 4.03));
+    this.ns4 = (this.ns && (this.major >= 4));
+    this.ie   = (agent.indexOf("msie") != -1);
+    this.ie3  = (this.ie && (this.major == 2));
+    this.ie4  = (this.ie && (this.major >= 4));
+    this.op3 = (agent.indexOf("opera") != -1);
+}
+
+var is = new Is()
+
+if(is.ns4) {
+    doc = "document";
+    sty = "";
+    htm = ".document"
+} else if(is.ie4) {
+    doc = "document.all";
+    sty = ".style";
+    htm = ""
+}
+
+var text1 = "", text2 = "", count = 0, count2=0;
+msg = new Array();
+
+msg[0] = "<font color=888888 face=verdana size=1>Vini, vidi , vichi  . . . . ";
+msg[1] = "Vim vi e venci O jovem no brasil nunka é levadow a seriow poiz é nisso ke dah ...";
+msg[2] = "fuckz  for U.S.A | ::  Uniao Superficial de Alienz :: |";
+msg[3] = "gretz 2: all of members tty0 and all girls purpurinadaz ";
+msg[4] = "join #tty0 on irc.brasnet.org. cybeRpunK"; 
+msg[5] = " ";
+msg[6] = " ";
+msg[7] = " ";
+msg[8] = " ";
+
+
+text = msg[0].split("");
+
+function writetext(){
+
+	text1 ='<tt>'+text2 + '<b style="color:#ffffff;">'+text[count]+'</b></tt>';
+
+	text2 += text[count];
+
+	fillHTML = eval(doc + '["nothing"]' + htm);
+
+    if(is.ns4) {
+		fillHTML.write(text1);
+		fillHTML.close();
+	} else {
+		fillHTML.innerHTML = text1;
+	}
+
+	if (!(count >= text.length-1)){
+		count+=1;
+		setTimeout('writetext()',1);
+	}
+	else{
+		count=0;
+		text2+='<p>'
+		if (count2!=6){
+			count2++
+			text = eval('msg['+count2+'].split("")');
+			setTimeout('writetext()',1);
+		}
+	}
+}
+
+//-->
+</script>
+
+<style type="text/css">
+#nothing	{visibility: visible;}
+
+
+</style>
+
+<table cellpadding=0 cellspacing=0 border=0 width=400>
+
+
+	<tr>
+		<td><div id="nothing"></div></td>
+	</tr>
+</table>
+</center></body>
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

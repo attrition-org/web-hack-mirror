@@ -1,0 +1,32 @@
+--00:01:34--  http://www.nsk.hr:80/
+           => `www.nsk.hr/index.html'
+Connecting to www.nsk.hr:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 2,228 [text/html]
+
+    0K -> ..                                                     [100%]
+
+00:01:35 (2.12 MB/s) - `www.nsk.hr/index.html' saved [2228/2228]
+
+Loading robots.txt; please ignore errors.
+--00:01:36--  http://www.nsk.hr:80/no-robots.txt
+           => `www.nsk.hr/no-robots.txt'
+Connecting to www.nsk.hr:80... connected!
+HTTP request sent, awaiting response... 404 Object Not Found
+00:01:36 ERROR 404: Object Not Found.
+
+--00:01:36--  http://www.nsk.hr:80/bits.gif
+           => `www.nsk.hr/bits.gif'
+Connecting to www.nsk.hr:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 7,622 [image/gif]
+
+    0K -> .......                                                [100%]
+
+00:01:37 (17.56 KB/s) - `www.nsk.hr/bits.gif' saved [7622/7622]
+
+Converting www.nsk.hr/index.html... done.
+
+FINISHED --00:01:37--
+Downloaded: 9,850 bytes in 2 files
+Converting www.nsk.hr/index.html... done.

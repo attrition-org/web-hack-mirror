@@ -1,0 +1,247 @@
+
+
+
+
+
+
+
+<html>
+<head>
+
+<title>U.S. DOT - Y2K Transportation Sector - Outreach Activities Searchable Database</title>
+</head>
+<script LANGUAGE="JavaScript">
+
+<!--// Hide from older browsers
+
+function message(txt){
+                window.status = txt;
+                setTimeout("remove()",8000);
+                }
+
+function remove(){
+                window.status="";
+                }
+// -->
+
+</script>
+<body BGCOLOR="#FFFFFF">
+<a NAME="Top"> </a>
+
+<p ALIGN="LEFT">
+
+	<font FACE="trebuchet ms, arial, helvetica" SIZE="2"><b><a HREF="TextOnly/">Home</a> :</b></font> 
+
+<font FACE="trebuchet ms, arial, helvetica" SIZE="3"><b><u>Outreach Activities</u></b></font>
+<hr WIDTH="28%" ALIGN="LEFT">
+</p>
+
+<P ALIGN=LEFT>
+<table BORDER="0" CELLPADDING="3" CELLSPACING="3">
+<tr ALIGN="MIDDLE" VALIGN="TOP">
+<td><form NAME="KeyWord_Form" METHOD="POST" ACTION="KeyWord.asp" TARGET="_parent">
+	<table BORDER="1" CELLPADDING="1" CELLSPACING="1">
+	<caption><font SIZE="2"><b>Keyword Search</b></font></caption>
+	<tr BGCOLOR="#D3D3D3">
+	<td><font SIZE="2"><input TYPE="TEXT" NAME="KeyWord" VALUE SIZE="20"></font></td>
+	<td><font SIZE="2"><input TYPE="SUBMIT" NAME="Search" VALUE="Search"></font></td>
+	</tr>
+	</table>
+</form></td>
+<td><form NAME="Sponsor_Form" METHOD="POST" ACTION="ViewSponsor.asp" TARGET="_parent">
+	<table BORDER="1" CELLPADDING="1" CELLSPACING="1">
+	<caption><font SIZE="2"><b>View by Sponsor</b></font></caption>
+	<tr BGCOLOR="#D3D3D3" ALIGN="MIDDLE">
+	<td><font SIZE="2"><select NAME="Sponsor" SIZE="2" MULTIPLE>
+		
+			<option VALUE="Commercial">Commercial
+			<option VALUE="Federal Government">Federal Government
+			<option VALUE="Joint Commercial/Government">Joint Commercial/Government
+	</select></font></td>
+	</tr>
+	<tr>
+	<td ALIGN="LEFT"><font SIZE="2"><b>Sort by:</b> <input TYPE="RADIO" NAME="SortSponsor" VALUE="StartDate" CHECKED>Start Date 
+	<input TYPE="RADIO" NAME="SortSponsor" VALUE="International">International</font></td>
+	</tr>
+	<tr BGCOLOR="#D3D3D3">
+	<td ALIGN="RIGHT"><font SIZE="2"><input TYPE="SUBMIT" NAME="ViewSponsor" VALUE="View Activities"></font></td>
+	</tr>
+	</table>
+</form></td>
+</tr>
+<tr VALIGN="TOP">
+<td><table BORDER="1" CELLPADDING="1" CELLSPACING="1">
+	<caption><font SIZE="2"><b>View by Time Frame</b></font></caption>
+	<tr BGCOLOR="#D3D3D3" ALIGN="MIDDLE">
+	<td><table BORDER="0" CELLPADDING="1" CELLSPACING="1">
+		<form NAME="Month_Form" METHOD="POST" ACTION="TimeFrame.asp" TARGET="_parent">
+		<tr ALIGN="MIDDLE">
+		<th COLSPAN="2"><font SIZE="2">Select Month</font></th>
+		</tr>
+		<tr ALIGN="MIDDLE">
+		<td><font SIZE="2"><select NAME="SelectMonth">
+			
+				<option VALUE="1/1/98">Jan 1998
+				<option VALUE="2/1/98">Feb 1998
+				<option VALUE="3/1/98">Mar 1998
+				<option VALUE="4/1/98">Apr 1998
+				<option VALUE="5/1/98">May 1998
+				<option VALUE="6/1/98">Jun 1998
+				<option VALUE="7/1/98">Jul 1998
+				<option VALUE="8/1/98">Aug 1998
+				<option VALUE="9/1/98">Sep 1998
+				<option VALUE="10/1/98">Oct 1998
+				<option VALUE="11/1/98">Nov 1998
+				<option VALUE="12/1/98">Dec 1998
+				<option VALUE="1/1/99">Jan 1999
+				<option VALUE="2/1/99">Feb 1999
+				<option VALUE="3/1/99">Mar 1999
+				<option VALUE="4/1/99">Apr 1999
+				<option VALUE="5/1/99">May 1999
+				<option VALUE="6/1/99">Jun 1999
+				<option VALUE="7/1/99">Jul 1999
+				<option VALUE="8/1/99">Aug 1999
+				<option VALUE="9/1/99">Sep 1999
+				<option VALUE="10/1/99">Oct 1999
+				<option VALUE="11/1/99">Nov 1999
+				<option VALUE="12/1/99">Dec 1999
+		</select></font></td>
+		<td><font SIZE="2"><input TYPE="SUBMIT" NAME="MonthView" VALUE="View Month"></font></td>
+		</tr>
+		</form>
+	</table></td>
+	</tr>
+	<tr BGCOLOR="#D3D3D3" ALIGN="MIDDLE">
+	<td><table BORDER="0" CELLPADDING="1" CELLSPACING="1">
+		<form NAME="Period_Form" METHOD="POST" ACTION="TimeFrame.asp" TARGET="_parent">
+		<tr>
+		<th COLSPAN="3"><font SIZE="2">Specify Period</font></th>
+		</tr>
+		<tr>
+		<td><font SIZE="2">From <input TYPE="TEXT" NAME="DateStart" SIZE="8"></font></td>
+		<td><font SIZE="2">To <input TYPE="TEXT" NAME="DateEnd" SIZE="8"></font></td>
+		<td><font SIZE="2"><input TYPE="SUBMIT" NAME="PeriodView" VALUE="View"></font></td>
+		</tr>
+		</form>
+	</table></td>
+	</tr>
+	<tr BGCOLOR="#D3D3D3" ALIGN="MIDDLE">
+	<td><table BORDER="0" CELLPADDING="1" CELLSPACING="1">
+		<form NAME="AllCurrent_Form" METHOD="POST" ACTION="TimeFrame.asp" TARGET="_parent">
+		<tr ALIGN="MIDDLE">
+		<td><font SIZE="2"><input TYPE="SUBMIT" NAME="AllCurrent" VALUE="View Current/Future Activities"></font></td>
+		</tr>
+		</form>
+	</table></td>
+	</tr>
+</table></td>
+<td><form NAME="Sector_Form" METHOD="POST" ACTION="ViewSector.asp" TARGET="_parent">
+	<table BORDER="1" CELLPADDING="1" CELLSPACING="1">
+	<caption><font SIZE="2"><b>View by Sector Component</b></font></caption>
+	<tr BGCOLOR="#D3D3D3" ALIGN="MIDDLE">
+	<td><font SIZE="2"><select NAME="SectorComps" SIZE="5" MULTIPLE>
+		<option VALUE="All Sectors">All Sectors
+		
+			<option VALUE="Air Transportation">Air Transportation
+			<option VALUE="Equipment Manufacturers & Suppliers">Equipment Manufacturers & Suppliers
+			<option VALUE="Foreign Civil Aviation, Air Traffic Control, Carriers, & Airports">Foreign Civil Aviation, Air Traffic Control, Carriers, & Airports
+			<option VALUE="Hazardous Materials Transportation">Hazardous Materials Transportation
+			<option VALUE="Highway Transportation">Highway Transportation
+			<option VALUE="International Transportation">International Transportation
+			<option VALUE="International Water Travel & Commerce">International Water Travel & Commerce
+			<option VALUE="Rail Transportation">Rail Transportation
+			<option VALUE="Urban Transportation">Urban Transportation
+			<option VALUE="Water Travel & Commerce">Water Travel & Commerce
+			<option VALUE="Waterways Management">Waterways Management
+	</select></font></td>
+	</tr>
+	<tr>
+	<td ALIGN="LEFT"><font SIZE="2"><b>Sort by:</b> <input TYPE="RADIO" NAME="SortBy" VALUE="StartDate" CHECKED>Start Date 
+	<input TYPE="RADIO" NAME="SortBy" VALUE="International">International </font></td>
+	</tr>
+	<tr BGCOLOR="#D3D3D3">
+	<td ALIGN="RIGHT"><font SIZE="2"><input TYPE="SUBMIT" NAME="ViewSector" VALUE="View Activities"></font></td>
+	</tr>
+	</table>
+</form></td>
+</tr>
+<tr VALIGN="TOP">
+<td><form NAME="Admins_Form" METHOD="POST" ACTION="ViewAdmin.asp" TARGET="_parent">
+	<table BORDER="1" CELLPADDING="1" CELLSPACING="1">
+	<caption><font SIZE="2"><b>View by Administration</b></font></caption>
+	<tr BGCOLOR="#D3D3D3" ALIGN="MIDDLE">
+	<td><font SIZE="2"><select NAME="Admins" SIZE="5" MULTIPLE>
+		
+			<option VALUE="Bureau of Transportation Statistics">Bureau of Transportation Statistics
+			<option VALUE="Federal Aviation Administration">Federal Aviation Administration
+			<option VALUE="Federal Highway Administration">Federal Highway Administration
+			<option VALUE="Federal Railroad Administration">Federal Railroad Administration
+			<option VALUE="Federal Transit Administration">Federal Transit Administration
+			<option VALUE="Maritime Administration">Maritime Administration
+			<option VALUE="National Highway Traffic Safety Administration">National Highway Traffic Safety Administration
+			<option VALUE="Office of the Inspector General">Office of the Inspector General
+			<option VALUE="Office of the Secretary">Office of the Secretary
+			<option VALUE="Research & Special Programs Administration">Research & Special Programs Administration
+			<option VALUE="St. Lawrence Seaway Development Corporation">St. Lawrence Seaway Development Corporation
+			<option VALUE="Surface Transportation Board">Surface Transportation Board
+			<option VALUE="Transportation Administrative Service Center">Transportation Administrative Service Center
+			<option VALUE="U.S. Department of Agriculture">U.S. Department of Agriculture
+			<option VALUE="United States Coast Guard">United States Coast Guard
+	</select></font></td>
+	</tr>
+	<tr>
+	<td ALIGN="LEFT"><font SIZE="2"><b>Sort by:</b><br><input TYPE="RADIO" NAME="SortAdmins" VALUE="StartDate" CHECKED>Start Date 
+	<input TYPE="RADIO" NAME="SortAdmins" VALUE="International">International </font></td>
+	</tr>
+	<tr BGCOLOR="#D3D3D3">
+	<td ALIGN="RIGHT"><font SIZE="2"><input TYPE="SUBMIT" NAME="ViewAdmins" VALUE="View Activities"></font></td>
+	</tr>
+	</table>
+</form></td>
+<td ALIGN="MIDDLE"><form NAME="Type_Form" METHOD="POST" ACTION="ViewType.asp" TARGET="_parent">
+	<table BORDER="1" CELLPADDING="1" CELLSPACING="1">
+	<caption><font SIZE="2"><b>View by Activity Type</b></font></caption>
+	<tr BGCOLOR="#D3D3D3" ALIGN="MIDDLE">
+	<td><font SIZE="2"><select NAME="ActType" SIZE="5" MULTIPLE>
+		
+			<option VALUE="Conference or Meeting">Conference or Meeting
+			<option VALUE="Congressional Hearing">Congressional Hearing
+			<option VALUE="Exercise">Exercise
+			<option VALUE="Exhibition">Exhibition
+			<option VALUE="Key Y2K Dates">Key Y2K Dates
+			<option VALUE="Media Event">Media Event
+			<option VALUE="Meetings Convened by Federal Agencies">Meetings Convened by Federal Agencies
+			<option VALUE="Outside Events Attended by Federal Officials">Outside Events Attended by Federal Officials
+			<option VALUE="Request for Industry Action">Request for Industry Action
+			<option VALUE="Speech or Briefing">Speech or Briefing
+			<option VALUE="Workshop">Workshop
+			<option VALUE="Y2K Information Distribution">Y2K Information Distribution
+			<option VALUE="Y2K Progress Plan or Status Report">Y2K Progress Plan or Status Report
+	</select></font></td>
+	</tr>
+	<tr>
+	<td ALIGN="LEFT"><font SIZE="2"><b>Sort by:</b><br><input TYPE="RADIO" NAME="SortType" VALUE="StartDate" CHECKED>Start Date 
+	<input TYPE="RADIO" NAME="SortType" VALUE="International">International </font></td>
+	</tr>
+	<tr BGCOLOR="#D3D3D3">
+	<td ALIGN="RIGHT"><font SIZE="2"><input TYPE="SUBMIT" NAME="ViewType" VALUE="View Activities"></font></td>
+	</tr>
+	</table>
+</form></td>
+</tr>
+<tr>
+<th COLSPAN="2"><form NAME="Login_Form" METHOD="POST" ACTION="Login.asp">
+	<table BORDER="1" CELLPADDING="1" CELLSPACING="1">
+	<tr BGCOLOR="#D3D3D3" ALIGN="MIDDLE">
+	<td><font SIZE="2"><input TYPE="SUBMIT" NAME="Login" VALUE="Administrator Login"></font></th>
+	</tr>
+	</table>
+</form></td>
+</tr>
+</table>
+</P>
+
+<br>
+
+</body>
+</html>

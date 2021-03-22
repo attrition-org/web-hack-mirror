@@ -1,0 +1,470 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- im  too lame. am i too lame. too lame i am. lame i  too am.  lame lame lame lame me too you. marry Xmas, html coders -->
+<HTML><HEAD><TITLE>The Millennium Lunix Project    -  "How to secure slackware? Xmas part No.1</TITLE>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<META content="MSHTML 5.00.3103.1000" name=GENERATOR>
+<script language="JavaScript">
+<!--
+
+
+
+<!--
+
+function shake_xy(n) {
+	if (self.moveBy) {
+		for (i = 10; i > 0; i--) {
+			for (j = n; j > 0; j--) {
+			self.moveBy(0,i);
+			self.moveBy(i,0);
+			self.moveBy(0,-i);
+			self.moveBy(-i,0);
+		    }
+	      }
+	   }
+	}
+
+	function shake_x(n) {
+	if (self.moveBy) {
+		for (i = 10; i > 0; i--) {
+			for (j = n; j > 0; j--) {
+			self.moveBy(i,0);
+			self.moveBy(-i,0);
+		    }
+	      }
+	   }
+	}
+
+	function shake_y(n) {
+	if (self.moveBy) {
+		for (i = 10; i > 0; i--) {
+			for (j = n; j > 0; j--) {
+			self.moveBy(0,i);
+			self.moveBy(0,-i);
+		    }
+	      }
+	   }
+	}
+closetime = 6; 
+function Start(URL, WIDTH, HEIGHT) {
+windowprops = "left=50,top=50,width=" + WIDTH + ",height=" + HEIGHT;
+preview = window.open(URL, "preview", windowprops);
+if (closetime) setTimeout("preview.close();", closetime*1000);
+}
+function doPopup() {
+url = "choose.htm";
+width = 190; 
+height = 120; 
+delay = 5;   
+timer = setTimeout("Start(url, width, height)", delay*1000);
+}
+var matrix_window;
+function MatrixWrite(string, bold, italic, speed) {
+var height = window.screen.height;
+var width = window.screen.width;
+var win_dimensions = "height = " + eval(height + 10) + ", width = " + eval(width + 30);
+matrix_window = window.open("blank.htm", "matrix_window", win_dimensions);
+matrix_window.document.open("text/html", "replace");
+var i;
+var timer = 0;
+if(matrix_window.moveTo)
+matrix_window.moveTo(-10, -30);
+if(matrix_window.resizeBy)
+matrix_window.resizeBy(0, 50);
+matrix_window.document.write("<body bgcolor=000000 text=00ff00 onBlur='self.focus()'>");
+matrix_window.document.write("<font face=system>");
+if(bold == true) matrix_window.document.write("<b>");
+if(italic == true) matrix_window.document.write("<i>");
+for(i = 0; i <= string.length; i++) {
+timer += (Math.random() * speed);
+setTimeout("matrix_window.document.write('" + string.charAt(i) + "');", timer);
+}
+timer += 2000;
+setTimeout("matrix_window.close()", timer);
+}
+var messages = new Array("People, choose microsoft. You will have than  a micro sized and gently soft dick.", "#whoami  root? blah, no thank you, sistem is too weak secured", "Starting scanning your home ISP. Scan progress in background", "Can slackware format your HD? Thank you, format in progress...");
+function GetRndIndex() {
+return (parseInt(Math.random() * messages.length));
+}
+function WriteRndMsg(bold, italic, speed) {
+MatrixWrite(messages[GetRndIndex()], bold, italic, speed);
+}
+
+var data = "0123456789";
+var done = 1;
+function statusIn(text) {
+decrypt(text, 2, 1);
+}
+
+function statusOut() {
+self.status = '';
+done = 1;
+}
+
+function decrypt(text, max, delay) {
+if (done) {
+done = 0;
+decrypt_helper(text, max, delay,  0, max);
+   }
+}
+function decrypt_helper(text, runs_left, delay, charvar, max) {
+if (!done) {
+runs_left = runs_left - 1;
+var status = text.substring(0, charvar);
+for (var current_char = charvar; current_char < text.length; current_char++) {
+status += data.charAt(Math.round(Math.random()*data.length));
+}
+window.status = status;
+var rerun = "decrypt_helper('" + text + "'," + runs_left + "," + delay + "," + charvar + "," + max + ");"
+var new_char = charvar + 1;
+var next_char = "decrypt_helper('" + text + "'," + max + "," + delay + "," + new_char + "," + max + ");"
+if(runs_left > 0) {
+setTimeout(rerun, delay);
+}
+else {
+if (charvar < text.length) {
+setTimeout(next_char, Math.round(delay*(charvar+3)/(charvar+1)));
+}
+else {
+done = 1;
+         }
+      }
+   }
+}
+//  End -->//-->
+</script>
+</HEAD>
+<BODY aLink=#000000 background=index_files/background.jpg bgColor=#fefefe  link=#000000 text=#000000 vLink=#000000 onLoad="; doPopup()">
+<CENTER>
+  <TABLE border=0 cellPadding=0 cellSpacing=0 width="85%">
+    <TBODY> 
+    <TR valign="bottom"> 
+      <TD colSpan=3> 
+        <TABLE cellPadding=0 cellSpacing=0 width="100%">
+          <TBODY> 
+          <TR valign="bottom"> 
+            <TD align=left vAlign=top height="71" width="62%"> 
+              <table cellpadding=0 width="100%">
+                <tbody> 
+                <tr> 
+                  <td bgcolor=#000000 height="94"> 
+                    <table cellpadding=6 width="100%">
+                      <tbody> 
+                      <tr> 
+                        <td bgcolor=#fefefe height="87"> 
+                          <center>
+                            <b>The Millennium Lunix Project</b> <br>
+                            <font size="-7">L.U.N.I.X. - Lifeform Used for Nocturnal 
+                            Infiltration and Xenocide</font> 
+                          </center>
+                        </td>
+                      </tr>
+                      </tbody> 
+                    </table>
+                  </td>
+                </tr>
+                </tbody> 
+              </table>
+            </TD>
+            <TD align=right vAlign=bottom width="38%" height="71"> 
+              <table cellpadding=0>
+                <tbody> 
+                <tr> 
+                  <td bgcolor=#000000 height="76"> 
+                    <table cellpadding=0>
+                      <tbody> 
+                      <tr> 
+                        <td bgcolor=#ffffff height="71"><img src="index_files/logo.jpg" width="333" height="88"></td>
+                      </tr>
+                      </tbody> 
+                    </table>
+                  </td>
+                </tr>
+                </tbody> 
+              </table>
+              
+            </TD>
+          </TR>
+          </TBODY> 
+        </TABLE>
+      </TD>
+    </TR>
+    <TR vAlign=top> 
+      <TD width="10%" height="861"> 
+        <TABLE cellPadding=0 width="100%">
+          <TBODY> 
+          <TR> 
+            <TD bgColor=#000000 height="117"> 
+              <TABLE cellPadding=14 width="100%">
+                <TBODY> 
+                <TR> 
+                  <TD bgColor=#fefefe valign="top" align="left"><font size="-1">Leave 
+                    Santa . . .<br>
+                    <img src="index_files/mikucsucsan.gif" width="117" height="87"> 
+                    <br>
+                    . . .he's driving to get you new patches . . .<br>
+                    <font size="-7"><br>
+                    ps.: do u really belive in Santa?</font></font></TD>
+                </TR>
+                </TBODY> 
+              </TABLE>
+            </TD>
+          </TR>
+          </TBODY> 
+        </TABLE>
+        <TABLE cellPadding=0 width="100%">
+          <TBODY> 
+          <TR> 
+            <TD bgColor=#000000> 
+              <TABLE cellPadding=14 width="100%">
+                <TBODY> 
+                <TR> 
+                  <TD bgColor=#fefefe height="640"><FONT size=-1><B> <a href="javascript:WriteRndMsg(false, false, 750)">F0rum??</a> 
+                    <P><A href="javascript:shake_xy(2)">F4Q</A> 
+                    </B> 
+                    <P><b><A href="javascript:shake_xy(2)">B00k</A> </b> 
+                    <P><b><A href="javascript:shake_xy(2)">G3n3r4l 1nf0</A> </b> 
+                    <P><b><A href="javascript:shake_xy(2)">G3t 5l4ck</A> </b> 
+                    <P><b><A href="javascript:shake_xy(2)">Z1p5l4ck</A> </b> 
+                    <P><b><A href="javascript:shake_xy(2)">1n5t4ll H3lp</A> </b> 
+                    <P><b><A 
+href="javascript:shake_xy(2)">C0nf1gur4t10n</A> </b> 
+                    <P><b><A href="%20javascript:shake_x(2)">P4ck4g35</A> </b> 
+                    <P><b><A 
+href="%20javascript:shake_x(2)">Ch4ng3L0g5</A> </b> 
+                    <P><b><A href="%20javascript:shake_x(2)">0th3r 51t35</A></b> 
+                    <P><b><A href="%20javascript:shake_x(2)">534rch</A> </b> 
+                    <P><b><A href="%20javascript:shake_x(2)">5upp0rt</A> </b> 
+                    <P><b><A href="%20javascript:shake_x(2)">C0nt4ct</A> </b> 
+                    <P><b><A href="%20javascript:shake_x(2)">M41l1ng L15t5</A> 
+                      </b> 
+                    <P><b><A 
+                  href="%20javascript:shake_x(2)">4b0ut</A></b></P>
+                    </FONT> </TD>
+                </TR>
+                </TBODY> 
+              </TABLE>
+            </TD>
+          </TR>
+          </TBODY> 
+        </TABLE>
+        <P></P>
+      </TD>
+      <TD height="861">&nbsp; </TD>
+      <TD height="861"> 
+        <CENTER>
+          <TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+            <TBODY> 
+            <TR> 
+              <TD colSpan=2> 
+                <TABLE cellPadding=0 width="100%">
+                  <TBODY> 
+                  <TR> 
+                    <TD bgColor=#000000> 
+                      <TABLE cellPadding=4 width="100%">
+                        <TBODY> 
+                        <TR> 
+                          <TD bgColor=#fefefe><B>Few messages from MnM to the 
+                            world. For the next Millennium:</B></TD>
+                        </TR>
+                        </TBODY> 
+                      </TABLE>
+                    </TD>
+                  </TR>
+                  </TBODY> 
+                </TABLE>
+              </TD>
+            </TR>
+            <TR> 
+              <TD vAlign=top height="788"> 
+                <table cellpadding=0 width="100%">
+                  <tbody> 
+                  <tr> 
+                    <td bgcolor=#000000 valign="top" height="762"> 
+                      <table cellpadding=2 width="100%">
+                        <tbody> 
+                        <tr> 
+                          <td bgcolor=#fefefe valign="top" align="center" height="761"> 
+                            <p><font size="2"><b>From Slovenia :<br>
+                              </b><font size="-7"> (which is not Balkan as micro$oft 
+                              people think)</font><b><br>
+                              ---------------------------------------------------------------------------------------------------------------------<br>
+                              </b>&quot;Kar res hoces.. tudi dosezes !&quot; <br>
+                              &quot;For what u seek is what u get !&quot; <br>
+                              <b>---------------------------------------------------------------------------------------------------------------------</b> 
+                              <br>
+                              &quot;Iite vsi v pizdo !&quot; aka<br>
+                              &quot;Fuck it all fuck this world fuck everything 
+                              that you stand for. Don`t<br>
+                              belong, don`t exist, dont give a shit, dont ever 
+                              judge me.&quot;<br>
+                              <b>---------------------------------------------------------------------------------------------------------------------</b> 
+                              <br>
+                              &quot;A ma kdo tampone za posodit ?&quot; aka<br>
+                              &quot;Can anyone lend me some tampons?&quot;<br>
+                              <b>---------------------------------------------------------------------------------------------------------------------<br>
+                              &quot;</b>Ljudje, ne pustite se vec nategovat ! 
+                              Rastlinsko olje je po naravi brez<br>
+                              holesterola, ki je zivalska mascoba! :)&quot; aka<br>
+                              &quot;People don`t let the world fool you. Vegetable 
+                              oil doesn`t contain<br>
+                              holesterol by default cuz it`s animal phat ! ;)&quot;<br>
+                              <b>---------------------------------------------------------------------------------------------------------------------<br>
+                              </b>&quot;OrKa z4v3dn0.&quot;<b></b> aka<br>
+                              &quot;It used to be a lie..<br>
+                              And now it feels pathetic. <br>
+                              And now I get it.<br>
+                              What's done is done..<br>
+                              You just leave it alone and don't regret it.&quot;<br>
+                              <b><br>
+                              --------------------------------------------------------------------------------------------------------------------- 
+                              <br>
+                              From the United Kingdom :</b><br>
+                              &quot;While we`re all tucking into our turkey dinner... 
+                              you people are fixing<br>
+                              your server, merry christmas guys :)&quot;<br>
+                              <b>---------------------------------------------------------------------------------------------------------------------<br>
+                              F</b></font><b><font size="2">rom the EU:</font></b><font size="2"><br>
+                              &quot;Slackware r0x&quot;<br>
+                              <b>---------------------------------------------------------------------------------------------------------------------</b><br>
+                              </font><b><font size="2">From Sweden:<br>
+                              </font></b><font size="2">&quot;Glad mirkafton frn 
+                              det kalla norr&quot;<br>
+                              &quot;Merry mirkmas from the cold north&quot;<br>
+                              <b>---------------------------------------------------------------------------------------------------------------------</b><br>
+                              &quot;Av egen kraft&quot;<br>
+                              &quot;By my own hands&quot;<br>
+                              <b>---------------------------------------------------------------------------------------------------------------------<br>
+                              </b></font><font size="2">&quot;R du en man eller 
+                              en mus krring ?&quot;<br>
+                              &quot;Are you a man or a mouse bitch ?&quot;<br>
+                              <b>---------------------------------------------------------------------------------------------------------------------</b><br>
+                              </font><b><font size="2">From Turkey:<br>
+                              </font></b><font size="2">&quot;Tek sevdigim sensin 
+                              ve omur boyu sevgilim kalcaksin!&quot;<br>
+                              &quot;The one i love will be always every new year 
+                              my love!&quot;<br>
+                              <b>---------------------------------------------------------------------------------------------------------------------<br>
+                              </b></font><b><font size="2">From the Netherlands:</font></b><br>
+                              <font size="2">&quot;Leven zonder Bacardi Cola en 
+                              Pringles suxxx!&quot;<br>
+                              &quot;Life without Bacardi Cola and Pringles suxx&quot;<br>
+                              <b>---------------------------------------------------------------------------------------------------------------------</b><br>
+                              <font size="-7"> <br>
+                              </font><font size="2"><font size="-7"> .:MnM:.</font></font> 
+                              <font size="-7">Happy New Year 2001 and Marry Xmas 
+                              for all people on that Planet!! .:MnM:.</font></font></p>
+                          </td>
+                        </tr>
+                        </tbody> 
+                      </table>
+                    </td>
+                  </tr>
+                  </tbody> 
+                </table>
+              </TD>
+              <TD vAlign=top width="20%" height="788"> 
+                <TABLE cellPadding=0 width="100%">
+                  <TBODY> 
+                  <TR> 
+                    <TD bgColor=#000000> 
+                      <TABLE cellPadding=4 width="100%">
+                        <TBODY> 
+                        <TR> 
+                          <TD bgColor=#fefefe> 
+                            <CENTER>
+                              <FONT size=-1><B>24-12-2000</B></FONT> 
+                            </CENTER>
+                          </TD>
+                        </TR>
+                        </TBODY> 
+                      </TABLE>
+                    </TD>
+                  </TR>
+                  </TBODY> 
+                </TABLE>
+                <TABLE cellPadding=0 width="100%" height="93%">
+                  <TBODY> 
+                  <TR> 
+                    <TD bgColor=#000000 height="799" valign="top"> 
+                      <TABLE cellPadding=6 width="100%" height="100%">
+                        <TBODY> 
+                        <TR> 
+                          <TD bgColor=#fefefe height="722" valign="top"> 
+                            <CENTER>
+                              <B><FONT size=-1>A message to the World. Which doesn' 
+                              t listen anyway...</FONT></B> <br>
+                            </CENTER>
+                          </TD>
+                        </TR>
+                        </TBODY> 
+                      </TABLE>
+                    </TD>
+                  </TR>
+                  </TBODY> 
+                </TABLE>
+              </TD>
+            </TR>
+            </TBODY> 
+          </TABLE>
+          <CENTER>
+            <CENTER>
+              <CENTER>
+                <CENTER>
+                  <CENTER>
+                    <CENTER>
+                      <CENTER>
+                      </CENTER>
+                    </CENTER>
+                  </CENTER>
+                </CENTER>
+              </CENTER>
+            </CENTER>
+          </CENTER>
+        </CENTER>
+      </TD>
+    </TR>
+    <TR vAlign=top align="center"> 
+      <TD colSpan=3 height="2"> 
+        <table cellpadding=0>
+          <tbody> 
+          <tr> 
+            <td bgcolor=#000000 height="4"> 
+              <table cellpadding=4 width="100%">
+                <tbody> 
+                <tr> 
+                  <td bgcolor=#fefefe valign="top" align="right"><font size="-3">Millennium® 
+                    is a registered crew of Linux support TEAM and unkn0wn 4rt15t5.</font></td>
+                </tr>
+                </tbody> 
+              </table>
+            </td>
+          </tr>
+          </tbody> 
+        </table>
+      </TD>
+    </TR>
+    <TR vAlign=top align="center"><BR>
+      <BR>
+      <BR>
+      <TD colSpan=3 height="77"> 
+        <table cellpadding=0>
+          <tbody> 
+          <tr> 
+            <td bgcolor=#000000 height="137"> 
+              <table cellpadding=4 width="100%">
+                <tbody> 
+                <tr> 
+                  <td bgcolor=#fefefe valign="top" align="left" width="52%" height="130"><img src="index_files/logo2.jpg" width="404" height="163"></td>
+                </tr>
+                </tbody> 
+              </table>
+            </td>
+          </tr>
+          </tbody> 
+        </table>
+      </TD>
+    </TR>
+    </TBODY> 
+  </TABLE>
+</CENTER></BODY></HTML>
+<!-- www.attrition.org web hack mirror - watermark or something -->

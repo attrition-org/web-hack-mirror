@@ -1,0 +1,27 @@
+
+
+<html>
+<head>
+<title>U.S. Department of Transportation - Y2K Transportation Sector</title>
+
+<meta NAME="Keywords" CONTENT="Year 2000, Y2K, Transportation, Y2K Transportation, Y2K Transport, DOT, Department of Transportation, Transportation Sector">
+</head>
+<frameset ROWS="122,*" FRAMEBORDER="0" FRAMESPACING="0" BORDER="0">
+	<NOFRAMES>
+	<center>
+	You must use a browser that can display frames to see this page.<br>
+		<a HREF="http://home.netscape.com/computing/download/"><img SRC="images/now_anim_button.gif" WIDTH="90" HEIGHT="30" ALT="Download Netscape Now" BORDER="0"></a>
+		&nbsp;&nbsp;&nbsp;&nbsp;
+		<a HREF="http://www.microsoft.com/windows/ie/"><img SRC="images/ie4get_animated.gif" WIDTH="88" HEIGHT="31" ALT="Get Microsoft Internet Explorer" BORDER="0"></a> 
+		<BR>
+	Or continue on usisng our <A HREF="TextOnly/Default.asp">No Frames/Text Only</A> site.
+	</center>
+	</NOFRAMES>
+	<frame SRC="TopFrame.asp" NAME="TopFrame" NORESIZE SCROLLING="NO" MARGINWIDTH="1" MARGINHEIGHT="1">
+	<frameset COLS="135,*" FRAMEBORDER="0" FRAMESPACING="0" BORDER="0">
+		<frame SRC="LeftFrame.asp" NAME="LeftFrame" NORESIZE SCROLLING="AUTO" MARGINWIDTH="0" MARGINHEIGHT="2">
+		<frame SRC="MainPage.asp" NAME="MainFrame" NORESIZE SCROLLING="AUTO" MARGINWIDTH="2" MARGINHEIGHT="2">
+	</frameset>
+</frameset>
+
+</html>

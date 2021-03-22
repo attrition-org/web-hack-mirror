@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<HTML>
+<HEAD>
+	<TITLE>BioLinks: Biochemistry and Molecular Biology Internet Resources</TITLE>
+	<META HTTP-EQUIV="Keywords" CONTENT="biochemistry, molecular biology, index, directory">
+</HEAD>
+
+<BODY BGCOLOR="White" TEXT="Black" LINK="Red" VLINK="Blue" ALINK="Red">
+<TABLE WIDTH="100%" CELLSPACING=1 CELLPADDING=3>
+<TR VALIGN="Top">
+
+<TD BGCOLOR="Yellow" WIDTH="30%"><H2><A HREF="biolinks.html"><IMG SRC="biolinks.gif" WIDTH=108 HEIGHT=23 BORDER=0 ALT="[Biolinks Home]"></A></H2>
+<IMG SRC="bullet.gif"> <A HREF="proteindb.html">Protein Databases</A><BR>
+<IMG SRC="bullet.gif"> <A HREF="genomedb.html">Nucleic Acids and Genome Databases </A><BR>
+<IMG SRC="bullet.gif"> <A HREF="analysis.html">Analysis</A><BR>
+<IMG SRC="bullet.gif"> <A HREF="software.html">Software</A><BR>
+<IMG SRC="bullet.gif"> <A HREF="journals.html">Journals</A><BR>
+<IMG SRC="bullet.gif"> <A HREF="medline.html">Medline and Related Resources</A><BR>
+<IMG SRC="bullet.gif"> <A HREF="educ.html">Tutorials, Protocols, Education</A><BR>
+<IMG SRC="bullet.gif"> <A HREF="grants.html">Grants and Funding</A><BR>
+<IMG SRC="bullet.gif"> <A HREF="org.html">Organization and Meetings</A><BR>
+<IMG SRC="bullet.gif"> <A HREF="companies.html">Companies</A><BR>
+<IMG SRC="bullet.gif"> <A HREF="misc.html">Specific Interests</A><BR>
+<IMG SRC="bullet.gif"> <A HREF="usenet.html">Bionet Newsgroups</A><BR>
+<IMG SRC="bullet.gif"> <A HREF="reference.html">Reference</A><BR>
+<IMG SRC="bullet.gif"> <A HREF="others.html">Other Biological Indexes</A><BR>
+</TD>
+
+<TD BGCOLOR="White">
+<H2>Annotated Links to Biochemistry and <BR>Molecular Biology Internet Resources</H2>
+
+<UL>
+<LI><B>Browse</B> this site by selecting a topic from the left column.
+
+<FORM METHOD=POST ACTION="http://sgi.bls.umkc.edu/cgi-bin/biosearch.pl">
+<LI><TABLE BORDER>
+<TR>
+<TH COLSPAN=2>Search text: <INPUT TYPE=TEXT NAME="terms" SIZE=40></TH>
+<TH><INPUT TYPE=SUBMIT VALUE="Search!"></TH></TR>
+<TR>
+<TH>Boolean: <SELECT NAME="boolean">
+<OPTION>AND
+<OPTION>OR
+</SELECT></TH> 
+<TH>Case <SELECT NAME="case">
+<OPTION>Insensitive
+<OPTION>Sensitive
+</SELECT><BR></TH>
+<TH><INPUT TYPE=RESET><BR></TH>
+</TR></TABLE></FORM>
+<LI><B>Quick Links</B> to popular resources:
+	<UL>
+	<LI><A HREF="http://www3.ncbi.nlm.nih.gov/Entrez/index.html">Entrez Browser</A>: sequence databases and Medline subset
+	<LI><A HREF="http://expasy.hcuge.ch/sprot/sprot-top.html">Swiss-Prot</A>: protein sequence database
+	<LI><A HREF="http://www.pdb.bnl.gov/">Protein Data Bank WWW Server</A>:  3D structures
+	<LI><A HREF="http://kiwi.imgen.bcm.tmc.edu:8088/search-launcher/launcher.html">BCM Search Launcher</A>: sequence analysis
+	<LI><A HREF="gopher://gopher.nih.gov/11/res/crisp">Crisp Database</A>: NIH grants and research projects
+	<LI>Search full <A HREF="http://muscat.gdb.org/repos/medl/medl.compact.html">Medline database at Community of Science</A>
+	</UL>
+
+<LI>
+<FORM METHOD=POST ACTION=/cgi-bin/formmail.pl>
+<INPUT TYPE=hidden NAME="recipient" VALUE="dborza@cctr.umkc.edu">
+<INPUT TYPE=hidden NAME="subject" VALUE="Update BioLinks">
+<input type=hidden name="required" value="realname,email,title,url,message">
+<input type=hidden name="sort" value="order:realname,email,title,url,message">
+<input type=hidden name="env_report" value="REMOTE_HOST">
+
+Fill in <I>all</I> fields below to <B>submit a new site</B>:<BR>
+Your name: <INPUT TYPE="TEXT" NAME="realname" SIZE=20 MAXLENGTH=30>&nbsp;&nbsp;
+Your e-mail: <INPUT TYPE="TEXT" NAME="email" SIZE=25 MAXLENGTH=40><BR>
+New Link Title: <INPUT TYPE="TEXT" NAME="title" SIZE=50 MAXLENGTH=100><BR>
+New Link URL: <INPUT TYPE="TEXT" NAME="url" SIZE=50 MAXLENGTH=100><BR>
+Category: <SELECT NAME="category">
+	<OPTION SELECTED>Select a category
+	<OPTION>Protein Databases
+	<OPTION>Nucleic Acids and Genome Databases
+	<OPTION>Analysis
+	<OPTION>Software
+	<OPTION>Journals
+	<OPTION>Medline
+	<OPTION>Tutorials, Protocols, Education
+	<OPTION>Reference
+	<OPTION>Organization and Meetings
+	<OPTION>Grants and Funding
+	<OPTION>Companies
+	<OPTION>Specific Interests
+	<OPTION>Other Biological Indexes
+</SELECT><BR>
+New Link Description:<BR>
+<TEXTAREA NAME="message" ROWS=3 COLS=60></TEXTAREA><P>
+<INPUT TYPE=SUBMIT VALUE=Submit> 
+<INPUT TYPE=RESET VALUE=Reset>
+</FORM>
+</UL>
+
+<HR>Last updated by Andrea Melton on July 21, 1998.
+</TD>
+</TR></TABLE>
+</BODY>
+</HTML>

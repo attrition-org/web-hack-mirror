@@ -1,0 +1,178 @@
+<HTML>
+<HEAD>
+<TITLE>Virtual Publisher, Inc.</TITLE>
+</HEAD>
+<body background="../backgnd.jpg" bgcolor="#FFFFFF" link="#0000A0" vlink="#808080" alink="#9f9f9f">
+<ul>
+<p>
+<center><font size="6" face="Child's Play" color="#8f8f8f">H4CK3D BY&nbsp;<b><br>
+[</b></font><b><font size="6" face="Child's Play" color="#0000A0">M411 R4TZ</font><font size="6" face="Child's Play" color="#8f8f8f">]<br>
+&quot;</font><font color="#9F9F9F"><font face="Child's Play" size="5">FUCK OFF
+CRIME-BOYS!</font><font size="6" face="Child's Play">&quot;</font></font></b><font face="Helvetica" color="#8f8f8f">
+<h2>Password Access Administrator's Page</h2></font></center>
+
+<font face="Helvetica" color="#6f6f6f">
+<h3>Quick Start Instructions</h3></font>
+
+<table>
+<tr><td><font face="Helvetica" color="#6f6f6f">
+
+<b>Admin.html</b></font></td>
+<td><font face="Helvetica" color="#6f6f6f">
+Password access protects a sub-directory and the files contained within from 
+unathorized browser access.  The admin.html page is divided into three functions:
+</td></tr>
+<tr><td valign="top">
+<font face="Helvetica" color="#6f6f6f">
+<b> Create a Secure <br>
+Directory - </b></font></td><td>
+<font face="Helvetica" color="#6f6f6f">
+Just enter the full server path to the directory 
+you wish to protect.  <p>
+</font>
+
+If you were calling your protected directory "secure", the path would be: <p>
+
+/www/UserID/secure<p>
+
+Then enter a name for the "group" to which the authorized members will belong.  
+Enter the name of the protected area of your web site.  This name will appear in the 
+window that will prompt the users for name/password.<p>
+
+When you click on the "Establish Security" button, the program will
+write a report on the top of the this page, informing you of the actions taken.  Hit your browser's 
+<b>BACK </b>button to return to this page, and click on your browser'a <b>RELOAD</b> button to refresh.  The program will have entered the newly created group name into the pull-down list box for you, available for you to enter user names and passwords.<p
+>
+
+
+
+</font></td></tr>
+<tr><td valign="top">
+<font face="Helvetica" color="#6f6f6f">
+<b>Give Authorization - </b> <font face="Helvetica" color="#6f6f6f"></td><td>
+<font face="Helvetica" color="#6f6f6f">
+To give a person access to your secure directory,
+use the "Give Authorization" section of the admin page.  Select the group name from the
+pulldown list box (the password program will add the group names into this box when the
+security system is created).  Then enter a user name and a user password and select the
+"Give Access" button.</font></td></tr>
+<tr><td valign="top">
+<font face="Helvetica" color="#6f6f6f">
+<b>Remove Authorization - </b> </font></td><td>
+<font face="Helvetica" color="#6f6f6f">
+To remove a person from the name/password database, use
+this section of the admin.html page.  Select the "group" to which they belong and enter the
+name of the person whose access is to be denied.  Select the "Remove Access" button and the
+person will be deleted.</font>
+</td></tr>
+<tr><td>&nbsp;</td>
+
+<td>
+
+<center><font face="Helvetica" color="#6f6f6f">
+<b>For more information, see <a href="http://virtualpublisher.com/host4u/index.html">Online Support</a></b></font><hr size=1>
+</center>
+</td></tr></table>
+
+<p>
+
+</center>
+</ul>
+<p>
+
+<ul>
+<table width=90%>
+<tr><td colspan=2 align="center">
+
+<!-------------------------create password protection-------------->
+<font face="Helvetica" color="#6f6f6f">
+<H2>Create Security System:</H2></font></td></tr>
+<FORM METHOD="POST" ACTION="http://dc-artbeat.com/cgi-bin/password/password.cgi">
+<INPUT TYPE="HIDDEN" NAME="configfile" VALUE="/www/dc-artbeat/cgi-bin/password/password.cfg">
+<INPUT TYPE="HIDDEN" NAME="name" VALUE="create">
+
+<tr><td>
+<font face="Helvetica" color="#6f6f6f">
+<STRONG>Directory to Protect </STRONG><br>
+Enter full server directory path, for example<b>
+/www/dc-artbeat/(directory-to-secure):</font></td><td>
+<INPUT SIZE=45 NAME="directory" value="/www/dc-artbeat/"></td></tr>
+
+<tr><td>
+<font face="Helvetica" color="#6f6f6f">
+<STRONG>Name of Group </STRONG></font></td><td>
+<INPUT SIZE=30 NAME="group"></td></tr>
+
+<tr><td><font face="Helvetica" color="#6f6f6f">
+<STRONG>Name of Site
+(occurs in prompt wdw): </STRONG></font></td><td>
+<INPUT SIZE=30 NAME="authname"></td></tr>
+
+<tr><td colspan=2>
+<CENTER><INPUT TYPE="submit" VALUE="Establish Security"><input type="Reset" value="Reset"></CENTER></FORM><hr noshade><p></td></tr>
+ 
+<tr><td colspan=2 align="center">
+
+<!------------------------give user authorization------------------>
+<font face="Helvetica" color="#6f6f6f">
+<p><H2>Give Authorization:</H2></font></td></tr>
+<tr><td>
+<FORM METHOD="POST" ACTION="http://dc-artbeat.com/cgi-bin/password/password.cgi">
+<INPUT TYPE="HIDDEN" NAME="configfile" VALUE="/www/dc-artbeat/cgi-bin/password/password.cfg">
+<INPUT TYPE="HIDDEN" NAME="name" VALUE="add">
+
+<font face="Helvetica" color="#6f6f6f">
+<STRONG>Add to which group?</strong></font></td><td>
+<select name="group" size="1" tabindex="4">
+<option name="hackedbyHiP" selected>hackedbym411r4tz<option name="trial">trial<!--groups-->
+</select></td></tr>
+
+
+<tr><td><font face="Helvetica" color="#6f6f6f">
+<STRONG>Enter Name</STRONG></font></td><td>
+<INPUT SIZE=30 NAME="user"></td></tr>
+
+<tr><td><font face="Helvetica" color="#6f6f6f">
+<STRONG>Enter Password</STRONG></font></td><td>
+
+<INPUT TYPE="password" SIZE=30 NAME="password"></td></tr>
+
+<tr><td colspan=2>
+
+<CENTER><INPUT TYPE="submit" VALUE="Give Access"><input type="Reset" value="Reset"></CENTER></FORM><hr noshade><p></td></tr>
+
+
+  <tr><td colspan=2 align="center">
+<font face="Helvetica" color="#6f6f6f">
+<H2>Remove Authorization:</H2></font></td></tr>
+
+<tr><td>
+
+<FORM METHOD="POST" ACTION="http://dc-artbeat.com/cgi-bin/password/password.cgi">
+<INPUT TYPE="HIDDEN" NAME="configfile" VALUE="/www/dc-artbeat/cgi-bin/password/password.cfg">
+<INPUT TYPE="HIDDEN" NAME="name" VALUE="delete">
+
+<!--------------------remove user from name/password database---------------->
+<font face="Helvetica" color="#6f6f6f">
+<STRONG>Delete from which Group?</strong></font></td><td>
+
+<select name="group" size="1" tabindex="1">
+<option name="hackedbyHiP">hackedbym411r4tz<option name="trial">trial<!--groups-->
+</select></td></tr>
+
+
+<tr><td>
+<font face="Helvetica" color="#6f6f6f">
+<STRONG>Enter Name</STRONG></font></td><td>
+ <INPUT SIZE=30 NAME="user"></td></tr>
+
+<tr><td colspan=2 align="center">
+<CENTER>&nbsp; <INPUT TYPE="submit" VALUE="Remove Access"><input type="Reset" value="Reset"></CENTER>
+</FORM> </td></tr></table>
+
+<hr noshade>
+<!----------------Footer---------------------------->
+
+</UL>
+</body>
+</html>

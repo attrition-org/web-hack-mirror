@@ -1,0 +1,339 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Hoofdmenu</title>
+
+
+<script LANGUAGE="JavaScript" FPTYPE="dynamicanimation">
+<!--
+  // If you want to change this script, you must also make the following
+  // changes so that FrontPage will not overwrite your new script.
+  // In the script tag, change type="dynamicanimation" to type="mydynamicanimation"
+  // In the first script statement, change "dynamicanimation" to "mydynamicanimation"
+  // Throughout the HTML content, change dynamicanimation= to mydynamicanimation=
+  // Change function dynAnimation to function mydynAnimation
+  // In the body tag, change onload="dynAnimation()" to onload="mydynAnimation()"
+  dynamicanimAttr = "dynamicanimation"
+  animateElements = new Array()
+  currentElement = 0
+  speed = 0
+  stepsZoom = 8
+  stepsWord = 8
+  stepsFly = 12
+  stepsSpiral = 16
+  steps = stepsZoom
+  step = 0
+  outString = ""
+  function dynAnimation()
+  {
+    var ms = navigator.appVersion.indexOf("MSIE")
+    ie4 = (ms>0) && (parseInt(navigator.appVersion.substring(ms+5, ms+6)) >= 4)
+    if(!ie4)
+    {
+      if((navigator.appName == "Netscape") &&
+         (parseInt(navigator.appVersion.substring(0, 1)) >= 4))
+      {
+        for (index=document.layers.length-1; index >= 0; index--)
+        {
+            layer=document.layers[index]
+            if (layer.left==10000)
+                layer.left=0
+        }
+      }
+      return
+    }
+    for (index=document.all.length-1; index >= document.body.sourceIndex; index--)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if(null != animation)
+      {
+        if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        {
+          ih = el.innerHTML
+          outString = ""
+          i1 = 0
+          iend = ih.length
+          while(true)
+          {
+            i2 = startWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, false, "")
+            if(i2 == iend)
+              break
+            i1 = i2
+            i2 = endWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, true, animation)
+            if(i2 == iend)
+              break
+            i1 = i2
+          }
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+        if(animation == "zoomIn" || animation == "zoomOut")
+        {
+          ih = el.innerHTML
+          outString = "<SPAN " + dynamicanimAttr + "=\"" + animation + "\" style=\"position: relative; left: 10000;\">"
+          outString += ih
+          outString += "</SPAN>"
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+      }
+    }
+    i = 0
+    for (index=document.body.sourceIndex; index < document.all.length; index++)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if (null != animation)
+      {
+        if(animation == "flyLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyRight")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyTop" || animation == "dropWord")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottom")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyTopLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyTopRight" || animation == "flyTopRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottomLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyBottomRight" || animation == "flyBottomRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "spiral")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "zoomIn")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else if(animation == "zoomOut")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        el.initLeft = el.style.posLeft
+        el.initTop = el.style.posTop
+        animateElements[i++] = el
+      }
+    }
+    window.setTimeout("animate();", speed)
+  }
+  function offsetLeft(el)
+  {
+    x = el.offsetLeft
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      x += e.offsetLeft;
+    return x
+  } 
+  function offsetTop(el)
+  {
+    y = el.offsetTop
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      y += e.offsetTop;
+    return y
+  } 
+  function startWord(ih, i)
+  {
+    for(tag = false; i < ih.length; i++)
+    {
+      c = ih.charAt(i)
+      if(c == '<')
+        tag = true
+      if(!tag)
+        return i
+      if(c == '>')
+        tag = false
+    }
+    return -1
+  }
+  function endWord(ih, i)
+  {
+    nonSpace = false
+    space = false
+    while(i < ih.length)
+    {
+      c = ih.charAt(i)
+      if(c != ' ')
+        nonSpace = true
+      if(nonSpace && c == ' ')
+        space = true
+      if(c == '<')
+        return i
+      if(space && c != ' ')
+        return i
+      i++
+    }
+    return -1
+  }
+  function outWord(ih, i1, i2, dyn, anim)
+  {
+    if(dyn)
+      outString += "<SPAN " + dynamicanimAttr + "=\"" + anim + "\" style=\"position: relative; left: 10000;\">"
+    outString += ih.substring(i1, i2)
+    if(dyn)
+      outString += "</SPAN>"
+  }
+  function animate()
+  {
+    el = animateElements[currentElement]
+    animation = el.getAttribute(dynamicanimAttr, false)
+    step++
+    if(animation == "spiral")
+    {
+      steps = stepsSpiral
+      v = step/steps
+      rf = 1.0 - v
+      t = v * 2.0*Math.PI
+      rx = Math.max(Math.abs(el.initLeft), 200)
+      ry = Math.max(Math.abs(el.initTop),  200)
+      el.style.posLeft = Math.ceil(-rf*Math.cos(t)*rx)
+      el.style.posTop  = Math.ceil(-rf*Math.sin(t)*ry)
+    }
+    else if(animation == "zoomIn")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(50+50*step/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else if(animation == "zoomOut")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(100+200*(steps-step)/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else
+    {
+      steps = stepsFly
+      if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        steps = stepsWord
+      dl = el.initLeft / steps
+      dt = el.initTop  / steps
+      el.style.posLeft = el.style.posLeft - dl
+      el.style.posTop = el.style.posTop - dt
+    }
+    if (step >= steps) 
+    {
+      el.style.posLeft = 0
+      el.style.posTop = 0
+      currentElement++
+      step = 0
+    }
+    if(currentElement < animateElements.length)
+      window.setTimeout("animate();", speed)
+  }
+//-->
+</script><meta name="Microsoft Theme" content="indust 111, default"><meta name="Microsoft Border" content="b"></head>
+
+<body stylesrc="http://donald.alkmaar.sitau.nl/sitau/stijlen/standaard webpagina sitau site.htm" onload="dynAnimation()" background="../_themes/indust/indtextb.jpg" bgcolor="#FFFFFF" text="#000000" link="#3366CC" vlink="#666666" alink="#FF3300"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><!--msnavigation--><td valign="top"><!--mstheme--><font face="trebuchet ms, arial, helvetica">
+
+<!--mstheme--></font><table border="0" width="100%" height="64">
+  <tr>
+    <td width="23%" rowspan="2" height="60"><!--mstheme--><font face="trebuchet ms, arial, helvetica"><font face="trebuchet ms, arial, helvetica"><img alt="Sitaubs small.jpg (5205 bytes)" src="standaard_frames_en_logo's/Sitaubs%20small.jpg" WIDTH="158" HEIGHT="97"></font><!--mstheme--></font></td>
+    <td width="77%" style="border-bottom: 4px solid" valign="middle" align="center" height="40"><!--mstheme--><font face="trebuchet ms, arial, helvetica"><!--webbot bot="Navigation" S-Type="global" S-Orientation="horizontal" S-Rendering="graphics" B-Include-Home="FALSE" B-Include-Up="FALSE" startspan --><a href="../startpagina/Default.htm"><img src="../startpagina/_derived/Default.htm_cmp_indust110_gbtn.gif" width="95" height="20" border="0" alt="Startpagina" align="middle"></a> <img src="_derived/default.htm_cmp_indust110_gbtn.gif" width="95" height="20" border="0" alt="Hoofdmenu" align="middle"> <a href="Inhoudsopgave.htm"><img src="_derived/Inhoudsopgave.htm_cmp_indust110_gbtn.gif" width="95" height="20" border="0" alt="Inhoudsopgave" align="middle"></a> <a href="oversitau/Default.htm"><img src="oversitau/_derived/Default.htm_cmp_indust110_gbtn.gif" width="95" height="20" border="0" alt="Over Sitau" align="middle"></a> <a href="nieuws/Default.htm"><img src="nieuws/_derived/Default.htm_cmp_indust110_gbtn.gif" width="95" height="20" border="0" alt="Nieuws" align="middle"></a> <a href="support/default.htm"><img src="support/_derived/default.htm_cmp_indust110_gbtn.gif" width="95" height="20" border="0" alt="Service &amp; Support" align="middle"></a><!--webbot bot="Navigation" endspan i-checksum="14523" --><!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="77%" height="1%"><!--mstheme--><font face="trebuchet ms, arial, helvetica"><big><font color="#A41E4D"><strong><em>Welkom bij Sitau
+    Business Services...</em></strong></font></big><!--mstheme--></font></td>
+  </tr>
+</table><!--mstheme--><font face="trebuchet ms, arial, helvetica">
+
+<!--mstheme--></font><table border="0" width="100%">
+  <tr>
+    <td width="50%"><!--mstheme--><font face="trebuchet ms, arial, helvetica"><!--mstheme--></font></td>
+    <td width="50%"><!--mstheme--><font face="trebuchet ms, arial, helvetica"><!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="50%"><!--mstheme--><font face="trebuchet ms, arial, helvetica"><p align="right"><a href="contact/default.htm"><img src="../afbeeldingen/TN00051A.gif" alt="Contact met Sitau" border="0" WIDTH="80" HEIGHT="70" align="right"></a></p>
+    <p align="right"><small><small><small>Contact leggen met Sitau:</small></small></small><!--mstheme--></font></td>
+    <td width="50%"><!--mstheme--><font face="trebuchet ms, arial, helvetica"><a href="zoeken/default.htm"><img src="../afbeeldingen/IN00729_.gif" alt="Zoeken op de Sitau website" border="0" WIDTH="71" HEIGHT="71"></a><small><small><small>:
+    zoeken op deze website</small></small></small><!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="50%" valign="bottom"><!--mstheme--><font face="trebuchet ms, arial, helvetica"><p align="center"><a href="produkten/default.htm"><img src="../afbeeldingen/AG00065_.gif" alt="Produkten van Sitau Business Services" border="0" align="right" WIDTH="64" HEIGHT="88"></a></p>
+    <p align="center">&nbsp;</p>
+    <p align="right"><small><small><small>Onze produkten:</small></small></small><!--mstheme--></font></td>
+    <td width="50%"><!--mstheme--><font face="trebuchet ms, arial, helvetica"><a href="http://www.sitau.nl/users"><img src="../afbeeldingen/AG00036_.gif" alt="Homepages van Sitau gebruikers" border="0" WIDTH="89" HEIGHT="96"></a><small><small><small>: de homepages</small></small></small><!--mstheme--></font></td>
+  </tr>
+</table><!--mstheme--><font face="trebuchet ms, arial, helvetica">
+
+<!--mstheme--></font><table border="0" width="89%" height="163">
+  <tr>
+    <td width="25%" height="67" dynamicanimation="spiral" style="position: relative !important; left: 10000 !important"><!--mstheme--><font face="trebuchet ms, arial, helvetica"><h3><!--mstheme--><font color="#CC3300"><a href="http://www.sitau.nl/mkbplaza"><img src="../afbeeldingen/produkten/mkbplaza.gif" alt="MKB Plaza" border="0" WIDTH="151" HEIGHT="65"></a><!--mstheme--></font></h3>
+    <!--mstheme--></font></td>
+    <td width="7%" align="left" height="67"><!--mstheme--><font face="trebuchet ms, arial, helvetica"><img src="../afbeeldingen/smallnew.gif" alt="smallnew.gif (926 bytes)" WIDTH="35" HEIGHT="22"><!--mstheme--></font></td>
+    <td width="77%" colspan="2" height="67" dynamicanimation="dropWord" style="position: relative !important; left: 10000 !important"><!--mstheme--><font face="trebuchet ms, arial, helvetica"><em>Het nieuwe MKB Plaza van
+    Sitau Online!!</em><!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="25%" height="52"><!--mstheme--><font face="trebuchet ms, arial, helvetica"><em>WebMail Plus I, II, III</em><!--mstheme--></font></td>
+    <td width="7%" align="left" height="52"><!--mstheme--><font face="trebuchet ms, arial, helvetica"><img src="../afbeeldingen/smallnew.gif" alt="smallnew.gif (926 bytes)" WIDTH="35" HEIGHT="22"><!--mstheme--></font></td>
+    <td width="77%" colspan="2" valign="middle" align="left" height="52" dynamicanimation="flyBottomRightWord" style="position: relative !important; left: 10000 !important"><!--mstheme--><font face="trebuchet ms, arial, helvetica"><em>Regel uw website en
+    mailafhandeling via Sitau!</em><!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="25%" height="32"><!--mstheme--><font face="trebuchet ms, arial, helvetica"><!--mstheme--></font></td>
+    <td width="7%" align="center" height="32"><!--mstheme--><font face="trebuchet ms, arial, helvetica"><!--mstheme--></font></td>
+    <td width="13%" valign="top" height="32"><!--mstheme--><font face="trebuchet ms, arial, helvetica"><a href="http://www.microsoft.com/ie4"><img src="../afbeeldingen/produkten/ieget_animated.gif" alt="ieget_animated.gif" border="0" WIDTH="84" HEIGHT="30"></a><!--mstheme--></font></td>
+    <td width="64%" height="32"><!--mstheme--><font face="trebuchet ms, arial, helvetica"><small><small>Deze site wordt geoptimaliseerd voor Microsoft
+    Internet Explorer.</small></small><!--mstheme--></font></td>
+  </tr>
+</table><!--mstheme--><font face="trebuchet ms, arial, helvetica">
+
+<p>Voor de homepages van onze users verwijzen wij u naar de <a href="http://www.sitau.nl/users">users-area</a>.</p>
+&nbsp;<!--mstheme--></font><!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><!--mstheme--><font face="trebuchet ms, arial, helvetica">
+<div align="left">
+
+<!--mstheme--></font><table border="0" width="41%" height="3" style="border-top: 0px none; border-bottom: 4px solid">
+  <tr>
+    <td width="100%" height="1"><!--mstheme--><font face="trebuchet ms, arial, helvetica"><small><small><small><small><small></small></small></small></small></small><!--mstheme--></font></td>
+  </tr>
+</table><!--mstheme--><font face="trebuchet ms, arial, helvetica">
+</div>
+
+<h6><!--mstheme--><font color="#993399"><!--mstheme--></font></h6>
+<!--mstheme--></font></td></tr><!--msnavigation--></table></body>
+</html>

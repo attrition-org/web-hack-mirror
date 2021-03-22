@@ -1,0 +1,254 @@
+<html>
+
+<head>
+<title>ADRENA on line! </title>
+<SCRIPT LANGUAGE="JavaScript">
+
+
+        
+        self.onError=null;
+        
+        currentX = currentY = 0;  
+        whichIt = null;           
+        lastScrollX = 0; lastScrollY = 0;
+        
+        NS = (document.layers) ? 1 : 0;
+        IE = (document.all) ? 1: 0;
+        
+        <!-- STALKER CODE -->
+        function heartBeat() {
+        
+                if(IE) { diffY = document.body.scrollTop; diffX = document.body.scrollLeft; }
+            if(NS) { diffY = self.pageYOffset; diffX = self.pageXOffset; }
+                
+                if(diffY != lastScrollY) {
+                        percent = .1 * (diffY - lastScrollY);
+                        if(percent > 0) percent = Math.ceil(percent);
+                        else percent = Math.floor(percent);
+                                        if(IE) document.all.floater.style.pixelTop += percent;
+                                        if(NS) document.floater.top += percent; 
+                        lastScrollY = lastScrollY + percent;
+            }
+                if(diffX != lastScrollX) {
+                        percent = .1 * (diffX - lastScrollX);
+                        if(percent > 0) percent = Math.ceil(percent);
+                        else percent = Math.floor(percent);
+                        if(IE) document.all.floater.style.pixelLeft += percent;
+                        if(NS) document.floater.left += percent;
+                        lastScrollX = lastScrollX + percent;
+                }       
+        }
+        <!-- /STALKER CODE -->
+        
+        <!-- DRAG DROP CODE -->
+        function XXcheckFocus(x,y) { 
+                stalkerx = document.floater.pageX;
+                stalkery = document.floater.pageY;
+                stalkerwidth = document.floater.clip.width;
+                stalkerheight = document.floater.clip.height;
+                if( (x > stalkerx && x < (stalkerx+stalkerwidth)) && (y > stalkery && y < (stalkery+stalkerheight))) return true;
+                else return false;
+        }
+        
+        function grabIt(e) {
+                if(IE) {
+                        whichIt = event.srcElement;
+                        while (whichIt.id.indexOf("floater") == -1) {
+                                whichIt = whichIt.parentElement;
+                                if (whichIt == null) { return true; }
+                    }
+                        whichIt.style.pixelLeft = whichIt.offsetLeft;
+                    whichIt.style.pixelTop = whichIt.offsetTop;
+                        currentX = (event.clientX + document.body.scrollLeft);
+                        currentY = (event.clientY + document.body.scrollTop);   
+                } else { 
+                window.captureEvents(Event.MOUSEMOVE);
+                if(checkFocus (e.pageX,e.pageY)) { 
+                        whichIt = document.floater;
+                        StalkerTouchedX = e.pageX-document.floater.pageX;
+
+                        StalkerTouchedY = e.pageY-document.floater.pageY;
+                } 
+                }
+            return true;
+        }
+        
+        function moveIt(e) {
+                if (whichIt == null) { return false; }
+                if(IE) {
+                    newX = (event.clientX + document.body.scrollLeft);
+                    newY = (event.clientY + document.body.scrollTop);
+                    distanceX = (newX - currentX);    distanceY = (newY - currentY);
+                    currentX = newX;    currentY = newY;
+                    whichIt.style.pixelLeft += distanceX;
+                    whichIt.style.pixelTop += distanceY;
+                        if(whichIt.style.pixelTop < document.body.scrollTop) whichIt.style.pixelTop = document.body.scrollTop;
+                        if(whichIt.style.pixelLeft < document.body.scrollLeft) whichIt.style.pixelLeft = document.body.scrollLeft;
+                        if(whichIt.style.pixelLeft > document.body.offsetWidth - document.body.scrollLeft - whichIt.style.pixelWidth - 20) whichIt.style.pixelLeft = document.body.offsetWidth - whichIt.style.pixelWidth - 20;
+                        if(whichIt.style.pixelTop > document.body.offsetHeight + document.body.scrollTop - whichIt.style.pixelHeight - 5) whichIt.style.pixelTop = document.body.offsetHeight + document.body.scrollTop - whichIt.style.pixelHeight - 5;
+                        event.returnValue = false;
+                } else { 
+                        whichIt.moveTo(e.pageX-StalkerTouchedX,e.pageY-StalkerTouchedY);
+                if(whichIt.left < 0+self.pageXOffset) whichIt.left = 0+self.pageXOffset;
+                if(whichIt.top < 0+self.pageYOffset) whichIt.top = 0+self.pageYOffset;
+                if( (whichIt.left + whichIt.clip.width) >= (window.innerWidth+self.pageXOffset-17)) whichIt.left = ((window.innerWidth+self.pageXOffset)-whichIt.clip.width)-17;
+                if( (whichIt.top + whichIt.clip.height) >= (window.innerHeight+self.pageYOffset-17)) whichIt.top = ((window.innerHeight+self.pageYOffset)-whichIt.clip.height)-17;
+                return false;
+                }
+            return false;
+        }
+        
+        function dropIt() {
+                whichIt = null;
+            if(NS) window.releaseEvents (Event.MOUSEMOVE);
+            return true;
+        }
+        <!-- DRAG DROP CODE -->
+        
+        if(NS) {
+                window.captureEvents(Event.MOUSEUP|Event.MOUSEDOWN);
+                window.onmousedown = grabIt;
+                window.onmousemove = moveIt;
+                window.onmouseup = dropIt;
+        }
+        if(IE) {
+                document.onmousedown = grabIt;
+                document.onmousemove = moveIt;
+                document.onmouseup = dropIt;
+        }
+        
+        if(NS || IE) action = window.setInterval("heartBeat()",1);
+             
+
+
+
+</SCRIPT>
+<STYLE TYPE="text/css">
+#floater {
+        position: absolute;
+        left: 05%;
+        top: 25;
+        visibility: visible;
+        z-index:10;
+}
+</STYLE>
+
+</head>
+<body bgcolor="#000000" text="#FFFF33" link="#3333CC">
+<div id="floater" style="left: 10%"> <a href="index.html" ><img src="logoAd.gif" border=0 alt="" width="64" height="62"></a> 
+</div>
+<div align="center"> <a href="http://www.mercadolivre.com.br" target="_blank"><img border="0" src="Full_bici12k.gif" width="468" height="60"></a>
+<table border="0" cellpadding="0" cellspacing="0" width="582" height="76">
+    <center>
+      <tr> 
+        <td width="429" align="left" height="80"><map name="FPMap0"> <area href="index.html" shape="rect" coords="76, 21, 205, 84"></map><img border="0" src="bb1v.gif" usemap="#FPMap0" width="429" height="95"></td>
+        <td width="126" align="justify"><a href="parceiros.htm"><img border="0" src="Parceiros2.gif" width="126" height="95"></a></td>
+        <td width="36" align="left" height="79"><img border="0" src="bb3gif.gif" width="34" height="95"></td>
+      </tr>
+    </center>
+    <center>
+    </center>
+  </table>
+</div>
+<div align="center"> 
+  <table border="0" cellpadding="0" cellspacing="0" width="595" height="746">
+    <center>
+      <tr>
+        <td width="593" align="left" height="42" colspan="2"> 
+          <table border="0" cellpadding="0" cellspacing="0" width="537">
+            <tr> 
+              <td width="71" align="center" valign="top"><a name="topo"></a><img border="0" src="buttonmove2.gif" align="right" width="30" height="20"></td>
+              <td width="75" align="center"><a href="esportes.htm"><img border="0" src="botAdre2.gif" width="75" height="21"></a></td>
+              <td width="76" align="center"><a href="noticias.htm"><img border="0" src="botAdre3.gif" width="75" height="21"></a></td>
+              <td width="76" align="center"><a href="equipamento.htm"><img border="0" src="botAdre1.gif" width="75" height="21"></a></td>
+              <td width="77" align="center"><a href="park.htm"><img border="0" src="botAdreXX.gif" width="75" height="22"></a></td>
+              <td width="75" align="center"><a href="guia.htm"><img border="0" src="botAdre5.gif" width="75" height="21"></a></td>
+              <td width="75" align="center"><a href="ecotrip.htm"><img border="0" src="botAdre6.gif" width="75" height="21"></a></td>
+              <td width="1"></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr> 
+        <td width="593" height="44" valign="middle" colspan="2"> 
+          <p align="center"><font face="Courier New" color="#FF0000" size="4"><b>Tribo
+          Jam estréia com pinta de sucesso!</b></font> </td>
+      </tr>
+    </center>
+    <tr> 
+      <td width="378" height="138" valign="middle"> <font face="Arial" size="3">O
+        programa </font><font face="Arial" size="4" color="#00FF00">Tribo Jam</font><font face="Arial" size="3">
+        estreiou neste sábado, </font><font face="Arial" size="3" color="#FFFF33">na</font><font face="Arial" size="4" color="#FF0000">
+        Rede Bandeirantes de Televisão</font><font face="Arial" size="3"> com
+        uma excelente matéria de pára-quedismo, trazendo muita informação e
+        serviços para quem quer praticar esportes de aventura e não sabe por
+        onde começar!</font> </td>
+      <td width="213" height="138" valign="top"> 
+        <p align="center"> <img border="0" src="tribojamlogo.jpg" width="135" height="136"> </p>
+ </td>
+    </tr>
+    <tr> 
+      <td width="593" height="124" valign="middle" colspan="2"> 
+        <p align="center"><font face="Arial" size="3"><img border="0" src="marcosefabi.jpg" align="left" alt="Marcos Botelho e Fabiana Bruno gravando em Paulo Afonso - Bahia / Foto: Divulgação" width="150" height="113">&nbsp; </font> 
+        <p align="center" style="margin-top: 0; margin-bottom: 0"><font face="Arial" size="3">O
+        programa, que irá ao ar sempre aos </font><font face="Arial" size="4">Sábados</font><font face="Arial" size="3">,</font> 
+        <p align="center" style="margin-top: 0; margin-bottom: 0"><font face="Arial" size="3">&nbsp;&nbsp;às
+        </font><font face="Arial" size="4" color="#FF0000">17:15 hs</font><font face="Arial" size="3">,
+        será apresentado pela dupla&nbsp;</font> 
+        <p align="center" style="margin-top: 0; margin-bottom: 0"><u><font face="Arial" size="4" color="#00FF00">Marcos
+        Botelho</font></u><font face="Arial" size="3">  e </font><a href="fabimidia.htm"><font face="Arial" size="4" color="#00FF00">Fabiana
+        Bruno</font></a><font face="Arial" size="4" color="#00FF00">.</font>
+        <p align="center" style="margin-top: 0; margin-bottom: 0">&nbsp; 
+        <p align="center" style="margin-top: 0; margin-bottom: 0">&nbsp;
+ </td>
+    </tr>
+    <tr>
+      <td height="397" valign="middle" colspan="2" width="593"> 
+        <p>&nbsp;</p>
+        <p><font face="Arial" size="3">&nbsp;O currículo da dupla dá uma idéia do
+        que vem por aí. Marcos é wakeboarder profissional e pára-quedista nas
+        horas vagas.&nbsp; Fabi, é bungee jumper profissional pela Equipe
+        Adrena (Prata da Casa), tem mais de 500 saltos realizados e é a única
+        mulher a pertencer ao time que fixou o Recorde brasileiro de bungee jumping
+        em pontes.</font></p>
+        <p><font face="Arial" size="3">&nbsp;Os dois são aventureiros natos e se
+        arriscam a praticar tudo que vem pela frente,&nbsp; com ajuda dos
+        melhores profissionais dos esportes radicais, eles levarão muita
+        informação e serviços para a telinha.</font></p>
+        <p><font face="Arial" size="3">&nbsp;Todo gravado em locações externas, com
+        produção da <font color="#00FF00"><b>17 TV e Cinema</b></font>, trilha
+        sonora de primeira qualidade e patrocínio do <a href="http://www.sportsja.com.br" target="_blank"><font color="#FF0000"><b>SportsJá!</b></font></a>
+        &nbsp;</font></p>
+        <p><font face="Arial" size="3">
+        O Tribo Jam promete chacoalhar os fins de tarde de sábado daqui pra
+        frente!</font></p>
+        <p align="center"><font face="Courier New" size="4"><b>Vida Longa aos
+        esportes de ação!!!!!</b></font><p align="center"><a href="http://www.sportsja.com.br/tribojam" target="_blank"><img border="0" src="link4b.gif" alt="Clique aqui para conhecer o hotsite do Tribo Jam dentro do Sports Já!" width="99" height="27"></a> </td>
+    </tr>
+    <tr>
+      <td height="30" valign="bottom" colspan="2" width="595"> 
+        <p align="center"><a href="mailto:tribojam@sportsja.com.br"><img border="0" src="preview_desktop2.jpg" alt="Clique na foto para mandar um recado para galera do Tribo Jam!" width="200" height="150"></a> </td>
+    </tr>
+  </table>
+</div>
+<div align="center"> 
+  <center>
+    <table border="0" cellpadding="0" cellspacing="0" width="486" height="102">
+      <tr> 
+        <td valign="top" colspan="6" width="434" height="55"><img border="0" src="barraBaixo1v.gif" width="447" height="55"></td>
+        <td width="162" rowspan="2" height="102"><a href="mailto:adrena@uol.com.br"><img border="0" src="FALECONOSCO1.gif" width="133" height="115"></a></td>
+      </tr>
+      <tr> 
+        <td width="99" valign="top" height="47"></td>
+        <td width="75" valign="top" height="47"><a href="#topo"><img border="0" src="botAdreB0.gif" width="75" height="21"></a></td>
+        <td width="76" valign="top" height="47"><a href="javascript:history.go(-1);"><img border="0" src="botAdreB1.gif" width="75" height="21"></a></td>
+        <td width="77" valign="top" height="47"><a href="index.html"><img border="0" src="botAdreB2.gif" width="75" height="21"></a></td>
+        <td width="76" valign="top" height="47"><a href="equipe.htm"><img border="0" src="botAdreB3.gif" width="75" height="21"></a></td>
+        <td width="39" valign="top" height="47"></td>
+      </tr>
+    </table>
+  </center>
+</div>
+</body>
+
+</html>

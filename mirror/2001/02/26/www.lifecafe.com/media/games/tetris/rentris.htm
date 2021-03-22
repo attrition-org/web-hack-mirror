@@ -1,0 +1,875 @@
+<html>
+
+<head>
+<meta name="Description" content="RENT Tetris Game">
+<meta name="Keywords" content="tetris-rent, games">
+<title>RENTris</title>
+</head>
+
+<body bgcolor="#000000" text="#FFFFFF">
+<script LANGUAGE="JavaScript">
+
+<!--
+
+// Copyright (c) 1996-1997 Tomer Shiran. All rights reserved.
+// Permission given to use the script provided that this notice remains as is.
+// Additional scripts can be found at http://www.geocities.com/~yehuda/
+
+// array to hold number of shapes used from each type
+var statistics = new Array(7)
+for (var shapeNum = 0; shapeNum < 7; ++shapeNum) {
+        statistics[shapeNum] = 0
+}
+
+// set pause to false
+var paused = false
+
+// game is currently running
+var timerRunning = false
+
+// no shape currently falling
+var shape = -1
+
+// timer is not running
+var timerID = null
+
+// initialize image variables for seven shapes
+var on = new Array()
+on[0] = new Image(12, 12)
+on[1] = new Image(12, 12)
+on[2] = new Image(12, 12)
+on[3] = new Image(12, 12)
+on[4] = new Image(12, 12)
+on[5] = new Image(12, 12)
+on[6] = new Image(12, 12)
+
+// create a transparent block
+var off = new Image(12, 12)
+
+// set image URLs
+on[0].src = "images/10.gif"
+on[1].src = "images/11.gif"
+on[2].src = "images/12.gif"
+on[3].src = "images/13.gif"
+on[4].src = "images/14.gif"
+on[5].src = "images/15.gif"
+on[6].src = "images/16.gif"
+off.src = "images/0.gif"
+
+// get number of images already laid out in the page
+var firstImage = document.images.length
+
+// create initial screen
+drawScreen()
+
+// array of screen (10 x 19)
+var ar = new Array()
+for (var i = 0; i < 10; ++i) {
+        ar[i] = new Array(19)
+        for (var j = 0; j < 19; ++j) {
+                ar[i][j] = 0
+        }
+}
+
+// draw initial empty screen
+function drawScreen() {
+        with (document) {
+                // center entire game
+                write('<CENTER>')
+
+                // start main table
+                write('<TABLE BORDER=1 CELLPADDING=0 CELLSPACING=0><TR><TD>')
+
+                // create board (10 x 19)
+                for (var i = 0; i < 19; ++i) {
+                        for (var j = 0; j < 10; ++j) {
+                                write('<IMG SRC=' + off.src + ' HEIGHT=' + off.height + ' WIDTH=' + off.width + '>')
+                        }
+                        write('<BR>')
+                }
+
+                // close table cell
+                write('</TD><TD VALIGN="top" ALIGN="center">')
+
+                // make small header ("Netris Deluxe")
+                write('<B><FONT FACE=arial><FONT SIZE=+2 COLOR=red>RENT</FONT>RIS <FONT SIZE=+2>D</FONT>ELUXE</FONT></B><BR>')
+        
+                // create form for lines and level displays
+                write('<FORM NAME="lineslevel"><TABLE BORDER=0 CELLPADDING=5 CELLSPACING=0>')
+
+                // make "LINES" table cell and header
+                write('<TR><TD WIDTH=100 ALIGN="center"><FONT FACE=arial SIZE=2>LINES</FONT><BR><INPUT TYPE="text" NAME="lines" VALUE="" SIZE=5></TD>')
+
+                // make "LEVEL" table cell and header           
+                write('<TD WIDTH=100 ALIGN="center"><FONT SIZE=2 face=arial>LEVEL</FONT><BR><INPUT TYPE="text" NAME="level" VALUE="" SIZE=5></TD></TR>')
+
+                // create start button link
+                write('<TR><TD WIDTH=100 ALIGN="center"><A HREF="javascript:start()" onMouseOver="window.status=\'Start game\'; return true">')
+        
+                // create start button image
+                write('<IMG SRC="images/start.gif" WIDTH=72 HEIGHT=24 BORDER=0></A></TD>')
+
+                // create pause button link
+                write('<TD WIDTH=100 ALIGN="center"><A HREF="javascript:pause()" onMouseOver="window.status=\'Pause / unpause game\'; return true">')
+        
+                // create pause button image
+                write('<IMG SRC="images/pause.gif" WIDTH=72 HEIGHT=24 BORDER=0></A></TD></TR>')
+        
+                // close start + pause table and form
+                write('</TABLE></FORM>')
+
+                // create table for shape statistics (two rows, seven columns)
+                write('<FORM NAME="stats"><TABLE BORDER=0 CELLPADDING=5 CELLSPACING=0><TR>')
+
+                // put one block of each type in each cell of upper row
+                for (var k = 0; k < 7; ++k) {
+                        write('<TD ALIGN="center"><IMG SRC="' + on[k].src + '" HEIGHT=' + on[k].height + ' WIDTH=' + on[k].width + '></TD>')
+                }
+
+                // start new table row
+                write('</TR><TR>')
+
+                // create 7 text fields named "0", "1", "2", ..., "6" 
+                for (var l = 0; l < 7; ++l) {
+                        write('<TD ALIGN="center"><INPUT TYPE="text" SIZE=2 VALUE="0" NAME="' + l + '"></TD>')
+                }
+
+                // close statistics table and form
+                write('</TR></TABLE></FORM>')
+
+                // close table cell for header, start + pause buttons, and statistics, and start new row in main table
+                write('</TD></TR><TR><TD>')
+
+                // center control panel (left, right, down, rotate)
+                write('<CENTER>')
+
+                // organize control panel in a table
+                write('<TABLE BORDER=0>')
+
+                // create left table cell and button
+                write('<TR><TD><A HREF="javascript:moveX(-1)" onMouseOver="window.status=\'Move left\'; return true" onMouseOut="window.status=\'\'; return true"><IMG SRC="images/left.gif" WIDTH=24 HEIGHT=24 BORDER=0></A></TD>')
+                
+                // create rotate table cell and button
+                write('<TD><A HREF="javascript:rotate()" onMouseOver="window.status=\'Rotate\'; return true" onMouseOut="window.status=\'\'; return true"><IMG SRC="images/rotate.gif" WIDTH=24 HEIGHT=24 BORDER=0></A></TD>')
+        
+                // create right table cell and button
+                write('<TD><A HREF="javascript:moveX(1)" onMouseOver="window.status=\'Move right\'; return true" onMouseOut="window.status=\'\'; return true"><IMG SRC="images/right.gif" WIDTH=24 HEIGHT=24 BORDER=0></A></TD></TR>')
+                
+                // create down table cell and button, preceded and proceeded by a black cell (placeholder)
+                write('<TR><TD></TD><TD><A HREF="javascript:moveY()" onMouseOver="window.status=\'Move down\'; return true"  onMouseOut="window.status=\'\'; return true"><IMG SRC="images/down.gif" WIDTH=24 HEIGHT=24 BORDER=0></A></TD><TD></TD></TR>')
+        
+                // close table for control panel
+                write('</TABLE>')
+
+                // close center of control panel
+                write('</CENTER>')
+
+                // close control panel table cell (main table) and create another main table cell with credits
+                write('</TD><TD ALIGN="center"><FONT FACE=arial size=2>JavaScript code: Tomer Shiran<BR><FONT SIZE=2>Graphics: Kelly Wong</FONT></FONT></TD></TR></TABLE>')
+                
+                // close center of main table
+                write('</CENTER>')
+        }
+}
+
+// return index of image according to given x and y coordinates
+function computeIndex(x, y) {
+        return (y * 10 + x) + firstImage
+}
+
+// returns state of square (true / false)
+function state(x, y) {
+        // assign URL of image at given coordinates to local variable
+        var source = document.images[computeIndex(x, y)].src
+
+        // expression evaluates to 0 or 1
+        return (source.charAt(source.lastIndexOf('/') + 1) == '0') ? false : true
+}
+
+// set square to 1 / 0
+function setSquare(x, y, state) {
+        if (state == 0)
+                document.images[computeIndex(x, y)].src = off.src
+        else
+                document.images[computeIndex(x, y)].src = on[shape].src
+
+        // if state is 1 square is active, so 1 is assigned to ar[x][y]
+        // otherwise square is not active so 0 is assigned to ar[x][y]
+        ar[x][y] = state
+}
+
+// clear array so no active squares exist
+function clearActive() {
+        // scan entire array and assign 0 to all elements (no active squares)
+        for (var i = 0; i < 10; ++i) {
+                for (var j = 0; j < 19; ++j) {
+                        ar[i][j] = 0
+                }       
+        }
+
+        // no shape is currently in screen
+        shape = -1
+}
+
+// check if specified move (left or right) is valid
+function checkMoveX(step) {
+        // scan screen (direction does not matter)
+        for (var x = 0; x < 10; ++x) {
+                for (var y = 0; y < 19; ++y) {
+                        // if current square is active
+                        if (ar[x][y] == 1) {
+                                // check all conditions:
+                                // not out of range and not coliding with existing not active block
+                                if (x + step < 0 || x + step > 9 || (state(x + step, y) && ar[x + step][y] == 0))
+                                        // return false if move (new situation) is not legal
+                                        return false
+                        }
+                }
+        }
+        
+        // return true if no invalid state has been encountered
+        return true
+}
+
+// check if specified move (down) is valid
+function checkMoveY() {
+        // only possible step is one to the bottom
+        var step = 1
+
+        // scan screen (direction does not matter)
+        for (var x = 0; x < 10; ++x) {
+                for (var y = 0; y < 19; ++y) {
+                        // if current square is active
+                        if (ar[x][y] == 1) {
+                                // check all conditions:
+                                // not out of range and not coliding with existing not active block
+                                if (y + step > 18 || (state(x, y + step) && ar[x][y + step] == 0))
+                                        // return false if move (new situation) is not legal
+                                        return false
+                        }
+                }
+        }
+        
+        // return true if no invalid state has been encountered
+        return true
+}
+
+// move all active squares step squares on the x axis
+function moveX(step) {
+        // if specified move is not legal
+        if (!checkMoveX(step))
+                // terminate function (active blocks are not moved)
+                return
+
+        // if left movement then scan screen from left to right
+        if (step < 0) {
+                for (var x = 0; x < 10; ++x) {
+                        for (var y = 0; y < 19; ++y) {
+                                // if current square is active
+                                if (ar[x][y] == 1)
+                                        // call function to handle movement
+                                        smartX(x, y, step)
+                        }
+                }
+        } else
+
+        // if right movement then scan screen from right to left
+        if (step > 0) {
+                for (var x = 9; x >= 0; --x) {
+                        for (var y = 0; y < 19; ++y) {
+                                // if current square is active
+                                if (ar[x][y] == 1)
+                                        // call function to handle movement
+                                        smartX(x, y, step)
+                        }
+                }
+        }
+}
+
+// responsible for the blocks' horizontal movement
+function smartX(x, y, step) {
+        // if moving one step to the left
+        if (step < 0) 
+                // if the destination square needs to be turned on explicitly
+                if (ar[x + step][y] == 0)
+                        // if there is a block to the right of the current block
+                        if (x != 9 && ar[x - step][y] == 1)
+                                // set square to the left on without clearing current block
+                                setSquare(x + step, y, 1)
+                        else
+                                // clear current block and turn square to the left on
+                                warp(x, y, x + step, y)
+                else
+                        // if there is no block to the right of the current block
+                        if (x == 9 || ar[x - step][y] == 0)
+                                // clear current block
+                                setSquare(x, y, 0)
+
+        // if moving one step to the right
+        if (step > 0) 
+                // if the destination square needs to be turned on explicitly
+                if (ar[x + step][y] == 0)
+                        // if there is a block to the left of the current block
+                        if (x != 0 && ar[x - step][y] == 1)
+                                // set square to the right on without clearing current block
+                                setSquare(x + step, y, 1)
+                        else
+                                // clear current block and turn square to the right on
+                                warp(x, y, x + step, y)
+                else
+                        // if there is no block to the left of the current block
+                        if (x == 0 || ar[x - step][y] == 0)
+                                // clear current block
+                                setSquare(x, y, 0)
+}
+
+// move all active squares step squares on the x axis
+function moveY() {
+        // if specified move is not legal (shape is laid down on block or bottom panel)
+        if (!checkMoveY()) {
+                // active squares are not active anymore (should not be moved later)
+                clearActive()
+
+                // terminate function (active blocks are not moved)
+                return
+        }
+
+        // scan screen from bottom to top
+        for (var y = 18; y >= 0; --y) {
+                for (var x = 0; x < 10; ++x) {
+                        // if current square is active 
+                        if (ar[x][y] == 1)
+                                // call function to handle movement
+                                smartY(x, y)
+                }
+        }
+}
+
+// responsible for the blocks' vertical (downwards) movement
+function smartY(x, y) {
+        // if the destination square needs to be turned on explicitly
+        if (ar[x][y + 1] == 0)
+                // if there is a block above current block
+                if (y != 0 && ar[x][y - 1] == 1)
+                        // set square below on without clearing current block
+                        setSquare(x, y + 1, 1)
+                else
+                        // clear current block and turn square below on
+                        warp(x, y, x, y + 1)
+        else
+                // if there is no block above the current block
+                if (y == 0 || ar[x][y - 1] == 0)
+                        // clear current block
+                        setSquare(x, y, 0)
+}
+
+// construct object containing shape
+function shapeMap() {
+        // set minimum and maximum coordinates to opposite (minimum and maximum found thus far)
+        var minX = 9
+        var minY = 18
+        var maxX = 0
+        var maxY = 0
+        
+        // scan screen to find actual minimum and maximum coordinates of active squares
+        for (var y = 0; y < 19; ++y) {
+                for (var x = 0; x < 10; ++x) {
+                        // if current coordinates reflect active square
+                        if (ar[x][y] == 1) {
+                                if (x < minX)
+                                        minX = x
+                                if (x > maxX)
+                                        maxX = x
+                                if (y < minY)
+                                        minY = y
+                                if (y > maxY)
+                                        maxY = y
+                        }
+                }
+        }
+
+        // create a length property representing the x coordinate span
+        this.length = maxX - minX + 1
+
+        // create properties so hold minimum coordinates of both axisis
+        this.offsetX = minX
+        this.offsetY = minY
+
+        // construct minimum array containing all active squares respectively
+        for (x = 0; x <= maxX - minX; ++x) {
+                this[x] = new Array()
+                for (y = 0; y <= maxY - minY; ++y) {
+                        this[x][y] = ar[x + minX][y + minY]
+                }
+        }
+}
+
+// random function to return an integer between 0 and 6
+function getRandom() {
+        // use random number method to find integer between 0 and 8
+        var randomNum = Math.round(Math.random() * 8)
+
+        // call function again if random number is 0 or 8. 
+        if (randomNum == 0 || randomNum == 8)
+                return getRandom()
+        
+        // 1 to 7 => 0 to 6
+        randomNum--
+
+        // update selected shape's statistics
+        statistics[randomNum]++
+
+        // update statistics display form (update *all* fields so user cannot enter any value in fields)
+        for (var shape = 0; shape < 7; ++shape) {
+                document.stats[shape].value = statistics[shape]
+        }
+
+        // return the random number
+        return randomNum
+}
+
+// inserts a shape when there is no active shape
+function insertShape() {
+        // initialize *global* variable
+        shape = getRandom()
+
+        // The following segment checks if the selected shape has room to enter.
+        // If there is no room the game is over (function return false).
+        // If there is room, the function inserts the shape by setting its initial coordinates.
+
+        if (shape == 0) {
+                if (state(3, 2) || state(3, 2) || state(3, 2) || state(3, 2))
+                        return false
+                setSquare(3, 2, 1)
+                setSquare(4, 2, 1)
+                setSquare(5, 2, 1)
+                setSquare(6, 2, 1)
+        } else
+
+        if (shape == 1) {
+                if (state(4, 2) || state(5, 2) || state(4, 3) || state(5, 3))
+                        return false
+                setSquare(4, 2, 1)
+                setSquare(5, 2, 1)
+                setSquare(4, 3, 1)
+                setSquare(5, 3, 1)
+        } else
+
+        if (shape == 2) {
+                if (state(3, 2) || state(4, 2) || state(5, 2) || state(3, 3))
+                        return false
+                setSquare(3, 2, 1)
+                setSquare(4, 2, 1)
+                setSquare(5, 2, 1)
+                setSquare(3, 3, 1)
+        } else
+
+        if (shape == 3) {
+                if (state(3, 2) || state(4, 2) || state(4, 3) || state(5, 3))
+                        return false
+                setSquare(3, 2, 1)
+                setSquare(4, 2, 1)
+                setSquare(4, 3, 1)
+                setSquare(5, 3, 1)
+        } else
+
+        if (shape == 4) {
+                if (state(4, 2) || state(5, 2) || state(3, 3) || state(4, 3))
+                        return false
+                setSquare(4, 2, 1)
+                setSquare(5, 2, 1)
+                setSquare(3, 3, 1)
+                setSquare(4, 3, 1)
+        } else
+
+        if (shape == 5) {
+                if (state(3, 2) || state(4, 2) || state(5, 2) || state(4, 3))
+                        return false
+                setSquare(3, 2, 1)
+                setSquare(4, 2, 1)
+                setSquare(5, 2, 1)
+                setSquare(4, 3, 1)
+        } else
+
+        if (shape == 6) {
+                if (state(3, 2) || state(4, 2) || state(5, 2) || state(5, 3))
+                        return false
+                setSquare(3, 2, 1)
+                setSquare(4, 2, 1)
+                setSquare(5, 2, 1)
+                setSquare(5, 3, 1)
+        } 
+
+        // return true because shape was able to enter screen
+        return true
+}
+
+// warp several squares if possible
+// initial x1, initial y1, destination x1, destination y1, initial x2, initial y2, destination x2, destination y2, etc.
+function complexWarp() {
+        // loop through arguments checking that each warp is valid
+        for (var i = 0; i < arguments.length; i += 4) {
+                // if warp is not valid
+                if (!checkWarp(arguments[i], arguments[i + 1], arguments[i + 2], arguments[i + 3])) 
+                        // terminate the function -- no squares warped
+                        return
+        }
+
+        // loop through arguments again -- warp squares
+        for (var i = 0; i < arguments.length; i += 4) {
+                // call function to warp the current square corresponding to argument coordinates
+                warp(arguments[i], arguments[i + 1], arguments[i + 2], arguments[i + 3])
+        }
+}
+
+// check if warp is valid (used by complexWarp function)
+function checkWarp(startX, startY, endX, endY) {
+        // if a destination coordinate is invalid or destination square is off
+        // state(endX, endY) must be last due to short-circuit evaluation
+        if (endX < 0 || endX > 9 || endY < 0 || endY > 18 || state(endX, endY))
+                // return false because warp is invalid
+                return false
+
+        // return true because warp has not been proved to be invalid (it is valid)
+        return true
+}
+
+// rotate the current active shape
+function rotate() {
+        // create instance of shapeMap object (similar to minimum 2D array reflecting active shape)
+        var curMap = new shapeMap()
+
+        // note: all arguments handed to complexWarp are explained in that function
+
+        // if shape is 4 x 1 line
+        if (shape == 0)
+                // if line is in horizontal state
+                if (curMap.length == 4)
+                        complexWarp(curMap.offsetX, curMap.offsetY, curMap.offsetX + 1, curMap.offsetY + 1, curMap.offsetX + 2, curMap.offsetY, curMap.offsetX + 1, curMap.offsetY - 1, curMap.offsetX + 3, curMap.offsetY, curMap.offsetX + 1, curMap.offsetY - 2)
+                // else line is in vertical state
+                else
+                        complexWarp(curMap.offsetX, curMap.offsetY + 3, curMap.offsetX - 1, curMap.offsetY + 2, curMap.offsetX, curMap.offsetY + 1, curMap.offsetX + 1, curMap.offsetY + 2, curMap.offsetX, curMap.offsetY, curMap.offsetX + 2, curMap.offsetY + 2)
+
+        // if shape is square
+        if (shape == 1)
+                // do not rotate shape because square does not change appearance after rotation
+                return
+
+        // if shape is L
+        if (shape == 2)
+                // if shape is L tilted 90 degrees to the right
+                if (state(curMap.offsetX, curMap.offsetY) && curMap.length == 3) 
+                        complexWarp(curMap.offsetX, curMap.offsetY + 1, curMap.offsetX + 1, curMap.offsetY + 1, curMap.offsetX + 2, curMap.offsetY, curMap.offsetX + 1, curMap.offsetY - 1, curMap.offsetX, curMap.offsetY, curMap.offsetX, curMap.offsetY - 1)
+                else
+                        // if shape is L titled 180 degrees
+                        if (state(curMap.offsetX + 1, curMap.offsetY) && curMap.length == 2)
+                                complexWarp(curMap.offsetX + 1, curMap.offsetY + 2, curMap.offsetX, curMap.offsetY + 1, curMap.offsetX + 1, curMap.offsetY, curMap.offsetX + 2, curMap.offsetY, curMap.offsetX, curMap.offsetY, curMap.offsetX + 2, curMap.offsetY + 1)
+                        else
+                                // if L is titled 90 degrees to the left
+                                if (curMap.length == 3)
+                                        complexWarp(curMap.offsetX, curMap.offsetY + 1, curMap.offsetX + 1, curMap.offsetY, curMap.offsetX + 2, curMap.offsetY, curMap.offsetX + 2, curMap.offsetY + 2, curMap.offsetX + 2, curMap.offsetY + 1, curMap.offsetX + 1, curMap.offsetY + 2)
+                                // else L is not titled
+                                else
+                                        complexWarp(curMap.offsetX, curMap.offsetY, curMap.offsetX + 1, curMap.offsetY + 1, curMap.offsetX, curMap.offsetY + 2, curMap.offsetX - 1, curMap.offsetY + 2, curMap.offsetX + 1, curMap.offsetY + 2, curMap.offsetX - 1, curMap.offsetY + 1)
+        
+        if (shape == 3)
+                if (curMap.length == 3)
+                        complexWarp(curMap.offsetX + 1, curMap.offsetY + 1, curMap.offsetX, curMap.offsetY + 1, curMap.offsetX + 2, curMap.offsetY + 1, curMap.offsetX + 1, curMap.offsetY - 1)
+                else
+                        complexWarp(curMap.offsetX, curMap.offsetY + 2, curMap.offsetX + 1, curMap.offsetY + 2, curMap.offsetX + 1, curMap.offsetY, curMap.offsetX + 2, curMap.offsetY + 2)
+
+        if (shape == 4)
+                if (curMap.length == 3)
+                        complexWarp(curMap.offsetX, curMap.offsetY + 1, curMap.offsetX, curMap.offsetY, curMap.offsetX + 2, curMap.offsetY, curMap.offsetX, curMap.offsetY - 1)
+                else
+                        complexWarp(curMap.offsetX, curMap.offsetY, curMap.offsetX + 2, curMap.offsetY + 1, curMap.offsetX, curMap.offsetY + 1, curMap.offsetX, curMap.offsetY + 2)
+
+        if (shape == 5)
+                if (curMap.length == 3 && state(curMap.offsetX, curMap.offsetY))
+                        complexWarp(curMap.offsetX + 2, curMap.offsetY, curMap.offsetX + 1, curMap.offsetY - 1)
+                else
+                        if (curMap.length == 2 && state(curMap.offsetX + 1, curMap.offsetY))
+                                complexWarp(curMap.offsetX + 1, curMap.offsetY + 2, curMap.offsetX + 2, curMap.offsetY + 1)
+                        else
+                                if (curMap.length == 3)
+                                        complexWarp(curMap.offsetX, curMap.offsetY + 1, curMap.offsetX + 1, curMap.offsetY + 2)
+                                else
+                                        complexWarp(curMap.offsetX, curMap.offsetY, curMap.offsetX - 1, curMap.offsetY + 1)
+                        
+        if (shape == 6)
+                if (curMap.length == 3 && state(curMap.offsetX + 1, curMap.offsetY))
+                        complexWarp(curMap.offsetX, curMap.offsetY, curMap.offsetX, curMap.offsetY + 1, curMap.offsetX + 2, curMap.offsetY + 1, curMap.offsetX + 1, curMap.offsetY + 1, curMap.offsetX + 2, curMap.offsetY, curMap.offsetX + 1, curMap.offsetY - 1)
+                else
+                        if (curMap.length == 2 && state(curMap.offsetX + 1, curMap.offsetY + 1))
+                                complexWarp(curMap.offsetX, curMap.offsetY + 2, curMap.offsetX, curMap.offsetY, curMap.offsetX + 1, curMap.offsetY + 2, curMap.offsetX, curMap.offsetY + 1, curMap.offsetX + 1, curMap.offsetY, curMap.offsetX + 2, curMap.offsetY + 1)
+                else
+                        if (curMap.length == 3)
+                                complexWarp(curMap.offsetX + 1, curMap.offsetY + 1, curMap.offsetX + 1, curMap.offsetY, curMap.offsetX + 2, curMap.offsetY + 1, curMap.offsetX, curMap.offsetY + 2)
+                        else
+                                complexWarp(curMap.offsetX, curMap.offsetY, curMap.offsetX + 1, curMap.offsetY + 1, curMap.offsetX + 1, curMap.offsetY, curMap.offsetX + 2, curMap.offsetY + 1, curMap.offsetX, curMap.offsetY + 2, curMap.offsetX + 2, curMap.offsetY + 2)
+}
+
+// flood entire screen with given state
+function flood(state) {
+        for (var x = 0; x < 10; ++x) {
+                for (var y = 0; y < 19; ++y) {
+                        if (state == 0)
+                                document.images[computeIndex(x, y)].src = off.src
+                        else
+                                document.images[computeIndex(x, y)].src = on[3].src
+                }
+        }
+}
+
+// return true if no active squares are found and false otherwise
+function noActive() {
+        // scan board from top to bottom
+        for (var y = 0; y < 19; ++y) {
+                for (var x = 0; x < 10; ++ x) {
+                        if (ar[x][y] == 1)
+                                return false
+                }
+        }
+
+        // no active square found on the board
+        return true
+}
+
+// return true if the line with the given coordinate is completed
+function isLine(y) {
+        // horizontal scan of current line
+        for (var x = 0; x < 10; ++x) {
+                // if a square is off the line is not completed
+                if (!state(x, y))
+                        return false
+        }
+        
+        // no square was found off
+        return true
+}
+
+// move block from one position to another
+function warp(startX, startY, endX, endY) {
+        document.images[computeIndex(endX, endY)].src = document.images[computeIndex(startX, startY)].src
+        document.images[computeIndex(startX, startY)].src = off.src
+        
+        // block in new position is now active
+        ar[endX][endY] = 1
+
+        // previous position is no longer active
+        ar[startX][startY] = 0
+}
+
+// function that starts game (*works with global variables only*)
+function start() {
+        // accept level from user (no validation to save space)
+        tempLevel = prompt("Enter level to begin game (0 - 10):", "0")
+
+        // if user cancelled prompt
+        if (!tempLevel)
+                // abort function
+                return
+
+        // tempLevel is the actual level
+        level = tempLevel
+
+        // clear states, blocks, and timer
+        clearActive()
+        flood(0)
+        clearTimeout(timerID)
+
+        // clear statistics
+        for (var i = 0; i < 7; ++i) {
+                statistics[i] = 0
+        }
+
+        // convert input from string to integer
+        level = parseInt(level)
+
+        // calculate speed
+        speed = 800 - (level * 80)
+
+        // game begins with no lines completed!
+        lines = 0
+
+        // game starts
+        timerRunning = true
+
+        // game is not paused for sure
+        paused = false
+
+        // start actual playing
+        play()
+}
+
+// check if lines have been completed and drop accordingly
+function dropLines() {
+        // on line has been found
+        var aLine = -1
+
+        // scan screen from top to bottom and stop when first complete line is found and assigned
+        for (var y = 0; y < 19; ++y) {
+                if (isLine(y)) {
+                        aLine = y
+                        break
+                }
+        }
+
+        // if a complete line has been found
+        if (aLine != -1) {
+                // increment lines
+                lines++
+
+                // if enough lines have been made increment level
+                if (lines > level * 10 + 9)
+                        level++
+
+                if (level == 11)
+                        alert("You are a champion!")
+
+                // scan screen from one line above the complete one to top of screen
+                for (y = aLine - 1; y >= 0; --y) {
+                        for (var x = 0; x < 10; ++x) {
+                                // if current square is on
+                                if (state(x, y))
+                                        // call function to warp it down
+                                        warp(x, y, x, y + 1)
+                                else {
+                                        // clear square below (similar to a warp because initial square is off)
+                                        setSquare(x, y + 1, 0)
+                                }
+                        }
+                }
+
+                // recursive call (maybe more than one line was completed)
+                dropLines()
+        }
+
+        // no square should be active
+        clearActive()
+} 
+
+// main function responsible for game action
+function play() {
+        // place values in form fields (display)
+        document.lineslevel.lines.value = lines
+        document.lineslevel.level.value = level
+
+        // if no shape is falling
+        if (noActive()) {
+                // check for line completions and drop them
+                dropLines()
+
+                // insert a new shape (if shape is not able to enter)
+                if (!insertShape()) {
+                        // flood screen to black
+                        flood(1)
+                
+                        // flood screen to blank
+                        flood(0)
+
+                        // display final results
+                        alert('Game over!\r\rlevel = ' + level + '\rlines = '+ lines)
+
+                        // clear timeout
+                        clearTimeout(timerID)
+
+                        // timer is not running
+                        timerRunning = false
+
+                        // terminate function (and game)
+                        return
+                }
+        } else
+                // a shape is currently falling so move it one square downwards
+                moveY()
+
+        // call after speed milliseconds
+        timerID = setTimeout('play()', speed)
+}
+
+// constructs an object representing a specific position
+function characteristics(x, y) {
+        // create property to hold status (block or empty)
+        this.state = state(x, y)
+
+        // is block found in specified position
+        if (state(x, y)) {
+                // local variable to hold URL of image at specified location
+                var src = document.images[computeIndex(x, y)].src
+
+                // local variable to hold color (0, 1, 2, ..., 6)
+                var color = src.charAt(src.lastIndexOf('/') + 2)
+                
+        } else 
+                // no color because no block found as specified position
+                color = -1
+
+        // convert color from string to integer and assign to property
+        this.color = parseInt(color)
+                
+        // create property to hold square's current state (active or not, 1 or 0)
+        this.activity = ar[x][y]
+}
+
+// contructs a map of entire board and status
+function fullMap() {
+        for (var x = 0; x < 10; ++x) {
+                this[x] = new Array(10)
+                for (var y = 0; y < 19; ++y) {
+                        this[x][y] = new characteristics(x, y)
+                }
+        }
+
+        this.shape = shape
+}
+
+// pause and unpause game
+function pause() {
+        // if game is not paused
+        if (!paused) {
+                // stop timer
+                clearTimeout(timerID)
+
+                // game is now paused
+                paused = true
+        
+                // create global map of board
+                map = new fullMap()
+
+                // flood board so player cannot see current status
+                flood(1)
+
+                // no active blocks so user cannot move anything with buttons
+                clearActive()
+
+                alert('AZT break...')
+        } else {
+                // return board to status before games was paused, according to the map object
+                for (var x = 0; x < 10; ++x) {
+                        for (var y = 0; y < 19; ++y) {
+                                if (!map[x][y].state)
+                                        document.images[computeIndex(x, y)].src = off.src
+                                else
+                                        document.images[computeIndex(x, y)].src = on[map[x][y].color].src
+                                        
+                                ar[x][y] = map[x][y].activity
+                        }
+                }
+                shape = map.shape
+
+                // game is no longer paused
+                paused = false
+
+                // play ball!
+                play()
+        }
+}
+
+
+// -->
+
+</script>
+
+</body>
+</html>

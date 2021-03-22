@@ -1,0 +1,159 @@
+
+<HTML>
+<HEAD>
+<TITLE>Page Not Found - GALLUP</TITLE>
+<META name="GallupType" content="7.0">
+
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" background="/images/subak.gif" link="#003300" vlink="#666633" marginheight=15 topmargin=15 marginwidth=0>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="CENTER">
+	
+	<tr>
+		<td align="middle">
+		<IMG border=0 height=61 src="/images/sub_header.gif" useMap=#sub_hd2 width=481> 
+		</td>
+	</tr>
+	<tr>
+		<td align="CENTER"><!--roll-overs-->
+			<table width="486" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td colspan="3"><IMG height=8 src="/images/spacer.gif" width=1></td>
+				</tr>
+				<tr>
+				    <td valign=top><a href="/index.html" onMouseOver="imgOn('img4')" onMouseOut="imgOff('img4')" target="_top"><IMG SRC="/images/home1.gif" BORDER=0 alt="Gallup Home Page" NAME="img4" width=154 height=32></a></td>
+					<td valign=top><a href="/poll/index.asp" onMouseOver="imgOn('img1')" onMouseOut="imgOff('img1')" target="_top"><IMG SRC="/images/gallup.gif" WIDTH=154 HEIGHT=32 BORDER=0 alt="Gallup Poll" NAME="img1"></a></td>
+					<td valign=top><a href="/path/index.asp" onMouseOver="imgOn('img2')" onMouseOut="imgOff('img2')" target="_top"><IMG SRC="/images/clients.gif" BORDER=0 alt="Gallup Path" NAME="img2" width=154 height=32></a></td>
+					<td valign=top><a href="/online/index.asp" onMouseOver="imgOn('img3')" onMouseOut="imgOff('img3')" target="_top"><IMG SRC="/images/galluponlinegreen.gif" WIDTH=154 HEIGHT=32 BORDER=0 alt="Gallup Online - Client Login Area" NAME="img3"></a></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+
+
+
+
+
+
+
+
+<SCRIPT LANGUAGE="JavaScript">
+//function for the scroll-overs
+
+window.onerror=null;
+browserName = navigator.appName;
+browserVer = parseInt(navigator.appVersion);
+
+function imgOn(imgName) {
+  if (ver == "yes")  {
+  document[imgName].src = eval(imgName + "on.src");
+  }
+}
+
+function imgOff(imgName) {
+  if (ver == "yes")  {
+  document[imgName].src = eval(imgName + "off.src");
+  }
+}
+
+if((browserName=="Netscape" && browserVer >= 3) ||
+   (browserName=="Microsoft Internet Explorer" && browserVer >= 4)) ver = "yes";
+else ver = "no";
+if(ver == "yes") {
+
+		img2on=new Image();
+  img2on.src="/images/clientsx.gif";
+
+  img2off=new Image();
+  img2off.src="/images/clients.gif";
+  
+  img1on=new Image();
+  img1on.src="/images/gallupx.gif";
+
+  img1off=new Image();
+  img1off.src="/images/gallup.gif";
+  
+  img3on=new Image();
+  img3on.src="/images/galluponlinegold.gif";
+
+  img3off=new Image();
+  img3off.src="/images/galluponlinegreen.gif";
+  
+  img4on=new Image();
+  img4on.src="/images/home2.gif";
+
+  img4off=new Image();
+  img4off.src="/images/home1.gif";
+
+  
+}
+</SCRIPT>
+
+	<tr>
+		<td bgcolor="#ffffff" align="CENTER">
+			<table width="640" border="0" cellspacing="10" cellpadding="5">
+				<tr>
+					<td valign="TOP"><!--left column-->
+						<table width="500" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td bgcolor="#FFFFFF">
+									<p>
+					<font face="Times New Roman" size="2">
+					<font size="4" color="#636520">
+					<B>Page Not Found</B> 
+                    </font> 					
+					<p>
+					<font>The page you are looking for could not be found. Please try a search for the information you want - or visit our homepage.</font>
+					</td></FONT>
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td bgcolor="#FFFFFF">&nbsp;</td>
+
+				</tr>
+			</table>
+			<center>
+			
+<p>
+<table width="583">
+<tr><td>
+<center>
+<font face="arial, helvetica" size="-4"><b>
+<a href="/index.html" target="_top">Home</a> | 
+<a href="/Contact/Contact.asp?ContType=G">Contact</a> | 
+<a href="/employment/index.asp">Employment</a> | 
+<a href="/offices/index.asp">Worldwide Offices</a> | 
+<a href="/about/index.asp">About Gallup</a> | 
+<a href="/bookstore/index.asp">Bookstore</a> | 
+<a href="/Search/Search.asp">Search</a></b><p>
+Copyright&copy; 2000 - The Gallup Organization
+</font>
+</center>
+</td></tr>
+</table>
+
+</center>
+
+
+
+<!-- HTML copyright 1999 Proxicom, Inc. (www.proxicom.com) -->
+
+
+			</center>
+		</td>
+	</tr>
+</table>
+
+
+<map name="sub_hd2">
+<area shape="rect" coords="22,10,460,39" href="/index.html" target="_top">
+<area shape="default" nohref>
+</map>
+
+
+
+
+
+</BODY>
+</HTML>

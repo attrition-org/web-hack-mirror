@@ -1,0 +1,180 @@
+<html>
+
+<head>
+<title>FUCK FUCK YOU This Site is fuck it by [Hool and OxyGen]!!!!!</title>
+<script language="JavaScript">
+<!--
+
+var running = false
+var endTime = null
+var timerID = null
+var maxNumber = 140
+
+function prefix_invullen(form)
+{
+ form.TELEPHONE.value=form.intlPrefix.options[form.intlPrefix.selectedIndex].value
+ form.TELEPHONE.focus()
+}
+
+function opnieuw()
+{
+        document.forms[0].elements[4].value="";
+        document.forms[0].elements[5].value="";
+}
+
+function startTimer()
+{
+ running = true
+ now = new Date()
+ now = now.getTime()
+ endTime = now + (1000 * 0.1 * 1)
+ showCountDown()
+}
+
+function showCountDown()
+{
+ var now = new Date()
+ now = now.getTime()
+ if (endTime - now <= 0)
+ {
+  if(navigator.appVersion.substring(5,25) != "compatible; MSIE 5.0")
+  {
+   document.forms[0].num.focus()
+   document.forms[0].SMSTEXT.focus()
+  }
+  upperMe(document.forms[0].SMSTEXT.value)
+ }
+ else
+ {
+  var delta = new Date(endTime - now)
+  var theMin = delta.getMinutes()
+  var theSec = delta.getSeconds()
+  var theTime = theMin
+  theTime += ((theSec < 10) ? ":0" : ":") + theSec
+  if (running)
+  {
+   timerID = setTimeout("showCountDown()",1000)
+  }
+ }
+}
+
+function stopTimer()
+{
+ clearTimeout(timerID)
+ running = false
+}
+
+function upperMe(inputStr)
+{
+ strlength= inputStr.length
+ if (strlength > maxNumber )
+ {
+  document.forms[0].SMSTEXT.value=inputStr.substring(0,maxNumber)
+  charleft = 0
+ }
+ else
+ {
+  charleft = maxNumber - strlength
+ }
+ document.forms[0].num.value=charleft
+ startTimer()
+}
+
+function upperMe2(form)
+{
+ inputStr = form.SMSTEXT.value
+ strlength= inputStr.length
+ if (strlength > maxNumber )
+ {
+  form.SMSTEXT.value=inputStr.substring(0,maxNumber)
+  charleft = 0
+ }
+ else
+ {
+  charleft = maxNumber - strlength
+ }
+ form.num.value=charleft
+ stopTimer()
+}
+
+//-->
+</script>
+
+<meta name="keywords" content="free sms, sms, smsc, gsm, mobile, nokia, motorola, 6110, free, message, email to sms, panasonic, samsung, ericsson, philips, genie, gateway, freesms, freesms.net">
+<base target="_self">
+</head>
+
+<body bgcolor="#000000" link="#FFFF00" vlink="#FFFF00" alink="#FFFF00" background="http://216.71.183.248/fre/images/bgstar.gif">
+
+<p align="center"><font face="Arial" size="4" color="#0000FF"><b><i>
+<marquee width="120%" height="10" bgcolor="#FF0000">This Site is Hacked by HOOL
+and OxyGen!!!&nbsp; We can give you some good links click on one under here!</marquee>
+</i></b></font></p>
+
+<p><center><font color="#ff0000" size="30">THIS PAGE IS HACKED BY&nbsp;</font></center></p>
+
+<p><center><font color="#ff0000" size="30"> [Hool and
+OxyGen]</p>
+
+<p align="center"><img border="0" src="warsons.jpg" width="397" height="99"></p>
+<p align="center"><a href="hool.htm">Free SmS by [Hool]</a></p>
+<p align="center"><img border="0" src="doxoon1.jpg" WIDTH="397" HEIGHT="99"></p>
+<p align="center"><a href="http://www.homepages.hetnet.nl/~maken/index.html">Free
+stuff on Doxoon by [OxyGen]</a></p>
+<p align="center"><img border="0" src="prodemon.jpg" WIDTH="315" HEIGHT="97"></p>
+<p align="center"><a href="http://prodemon.someone.net">ProDemon U.T. Clan by [OxyGen]</a></p>
+<table>
+  <td><font color="#FFFFFF"><script language="JavaScript"><!--
+// Hide from old browsers
+                                        
+                                        var speed = 50 // decrease value to increase speed (must be positive)
+                                        var pause = 2500 // increase value to increase pause
+                                        var timerID = null
+                                        var bannerRunning = false
+                                        var ar = new Array()
+                                        ar[0] = " THIS WEBSITE IS HACKED BY [Hool and OxyGen]!!      "
+                                        ar[1] = "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" 
+                                        ar[2] = "TeLeCoM FuCK YoU!!!!!"
+                                        ar[3] = "AND FuCK YoUR MoTheR!!!!!!!! "
+                                        ar[4] = "Click on one of the good links under her!   "
+                                        ar[4] = "SEE YA     "
+                 
+                                        
+                                        var currentMessage = 0
+                                        var offset = 0
+                                        function stopBanner() {
+                                                if (bannerRunning)
+                                                        clearTimeout(timerID)
+                                                bannerRunning = false
+                                        }
+                                        function startBanner() {
+                                                stopBanner()
+                                                showBanner()
+                                        }
+                                        function showBanner() {
+                                                var text = ar[currentMessage]
+                                                if (offset < text.length) {
+                                                        if (text.charAt(offset) == " ")
+                                                                offset++                        
+                                                        var partialMessage = text.substring(0, offset + 1) 
+                                                        window.status = partialMessage
+                                                        offset++ 
+                                                        timerID = setTimeout("showBanner()", speed)
+                                                        bannerRunning = true
+                                                } else {
+                                                        offset = 0
+                                                        currentMessage++
+                                                        if (currentMessage == ar.length)
+                                                                currentMessage = 0
+                                                        timerID = setTimeout("showBanner()", pause)
+                                                        bannerRunning = true
+                                                }
+                                        }
+                                        
+// --></script><script language="JavaScript"><!--
+                                 startBanner();
+                                        
+// --></script><br>
+
+</body>
+<!-- www.attrition.org web hack mirror - watermark or something -->

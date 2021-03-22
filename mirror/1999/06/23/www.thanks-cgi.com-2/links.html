@@ -1,0 +1,112 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>Thanks-CGI</TITLE>
+</HEAD>
+<SCRIPT LANGUAGE="JavaScript">
+
+               <!--
+               function scroll(seed)
+               {
+                    var m1 = "Welcome to THANKS-CGI....." 
+                    var m2 = "We made your site more interactive and attractive for the world!"
+                    var msg=m1+m2; 
+                    var out = " ";
+                    var c = 1;
+                    if (seed > 100) {
+                          seed--;
+                          var cmd="scroll(" + seed + ")";
+                          timerTwo=window.setTimeout(cmd,100);
+                    }
+                    else if (seed <= 100 && seed > 0) {
+                          for (c=0 ; c < seed ; c++) {
+                             out+=" ";
+                          }
+                          out+=msg;
+                          seed--;
+                          var cmd="scroll(" + seed + ")";
+                           window.status=out;
+                          timerTwo=window.setTimeout(cmd,100);
+                    }  else if (seed <= 0) {
+                          if (-seed < msg.length) {
+                             out+=msg.substring(-seed,msg.length);
+                             seed--;
+                             var cmd="scroll(" + seed + ")";
+                             window.status=out;
+                             timerTwo=window.setTimeout(cmd,100);
+                          }
+                          else {
+                             window.status=" ";
+                             timerTwo=window.setTimeout("scroll(100)",7);
+                          }
+                    }
+               }
+               timerONE=window.setTimeout('scroll(100)',50);
+               //-->
+               
+
+
+</SCRIPT>
+<body bgcolor="3366aa" text=ffffff link=yellow alink=red vlink=lime>
+
+<center>
+<script Language='JavaScript'>
+var now = new Date();
+var years = now.getYear();
+var months =now.getMonth();
+var days = now.getDate();
+var hours = now.getHours();
+var minutes = now.getMinutes();
+var seconds = now.getSeconds();
+var ram_num=Math.floor(Math.random()*10000);
+var markstr=""+years+"-"+months+"-"+days+"-"+hours+"-"+minutes+"-"+seconds+"-"+ram_num;
+var showcgiurl="http://www.thanks-cgi.com/cgi-bin/banker/banker_show.cgi";
+var clickcgiurl="http://www.thanks-cgi.com/cgi-bin/banker/banker_click.cgi";
+document.write('<a href='+clickcgiurl+'?'+markstr+'><img src='+showcgiurl+'?'+markstr+' border=0></a>');
+</script>
+<hr>
+<table border=0>
+<tr>
+	<td width=125 valign=top align=center\>
+	<a href="index.html" target=_top><img src=logo.gif border=0 hspace=7></a>
+	<a href="http://www.hardmouse.com" target=_top><img src=hardlogo.gif border=0 hspace=7></a>
+	<a href="http://www.webhostlist.com" target=_blank><img src=hostlist.gif border=0 width=90 hspace=7></a>
+	<a href="http://4freenet.cjb.net/" target=_blank><img src=banker/4free.gif border=0 width=90 hspace=7></a>
+	</td>
+
+	<td width=125 valign=top align=center>
+	<a href="http://www.freestuffcenter.com" target="_blank"><img src="http://www.freestuffcenter.com/button.gif" border=0 hspace=7></a>
+	<a href="http://www.aaadesignlist.com" target="_blank"><img src=aaa.gif border=0 hspace=7></a>
+	<a href="http://www.4free.nu/" target="_blank"><img src=4free.gif border=0 hspace=7></a>
+	<a href="http://www.abcgiant.com" target="_blank"><img src=banker/abc.gif border=0 hspace=7></a>
+	</td>
+
+	<td width=125 valign=top align=center>
+	<a href="http://server9.hypermart.net/ucprogramming/" target="_blank"><img border="0" width="88" height="31" alt="Uncanny Programming: CSS, XML, and more" src="http://server9.hypermart.net/ucprogramming/ucbutton.gif"></a>
+	<a href="http://home.echo-on.net/~toadhall" target="_blank"><img src=/images/toadhall.gif border=0 hspace=7 height=30 width=90></a>
+	</td>
+
+
+</tr>
+</table>
+<hr width=600 align=center>
+<!-- ArtToday Link Network START -->
+ <A HREF="http://banner.arttoday.com/PD-0027960/full.click" 
+ TARGET="_top"><IMG SRC="http://banner.arttoday.com/PD-0027960/full.gif" 
+ WIDTH=468 HEIGHT=60></A>
+ <!-- ArtToday Link Network END -->
+<script language='JavaScript'> 
+document.write('<a href=cgi-bin/static/static.cgi?result><img src=cgi-bin/static/static.cgi?'+document.referrer+' border=0 width=1 height=1></a>');
+</script>
+<hr width=600 align=center>
+<FONT size=1>© 1998, 1999 <A href="index.html">Thanks CGI resources</A></FONT>
+<br>
+<a href="index.html" target=_top><img src=logo.gif border=0 hspace=7></a><br>
+<Br>
+Welcome to have a free link partnership with us!
+</center>
+
+</body>
+</HTML>
+

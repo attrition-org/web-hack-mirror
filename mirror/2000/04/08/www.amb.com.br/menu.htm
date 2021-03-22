@@ -1,0 +1,58 @@
+<html>
+
+<head>
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="refresh" content="50">
+<base target="principal1">
+<title>H4ck3d</title>
+</head>
+<script language="JavaScript"><!-- 
+
+var clicked = "";
+
+function switchImages (imgName)
+{
+  if (navigator.appVersion.substring(0,1) >= 3) {
+    if (clicked != "") {
+      turnOff(clicked);
+    }
+    turnOn(imgName);
+    clicked = imgName;
+  }
+}
+
+function turnOn (imgName) {
+  if (navigator.appVersion.substring(0,1) >= 3) {
+    var cmd, imgSrc = "";
+
+    cmd = "document.img_" + imgName + ".src = imgSrc";
+    imgSrc = "images/" + imgName + "_color.jpg";
+    eval(cmd); 
+<!--    document.Imagetxt.src = "imgs/bstrada-" + imgName + ".jpg"; -->
+  }
+}
+
+function turnOff (imgName) {
+  if (navigator.appVersion.substring(0,1) >= 3) {
+    var cmd, imgSrc = "";
+
+    cmd = "document.img_" + imgName + ".src = imgSrc";
+    imgSrc = "images/" + imgName + ".jpg";
+    eval(cmd); 
+<!--    document.Imagetxt.src = "imgs/bstrada.gif"; -->
+  }
+}
+// --></script>
+
+
+<body topmargin="2" leftmargin="0" text="#000000">
+
+<p align="center">Fora FHC...</p>
+
+<p align="center">Fora Pitta...</p>
+
+<p align="center">Fora esses politicos corruptos, bando de filhos da puta</p>
+
+<p align="center"><big>Hacked By McM4nus</big></p>
+</body>
+</html>

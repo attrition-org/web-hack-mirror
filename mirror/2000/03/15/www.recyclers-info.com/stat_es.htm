@@ -1,0 +1,82 @@
+<HTML>
+<HEAD>
+<TITLE>Estad&iacute;stica</TITLE>
+</HEAD>
+<BODY BACKGROUND="./grafic/background.jpg" TEXT=#000000 LINK=#008000 VLINK=#555555 ALINK=#008000>
+<CENTER>
+<TABLE BORDER=0>
+<TR>
+<TD width=500 valign=top colspan=2>
+<A name="p1"></A>
+<map name="leiste_allg">
+<area shape=rect coords=10,0,88,23 href="javascript:show_win('navig-es.htm')">
+<area shape=rect coords=91,0,168,23 href="mail-es.htm">
+<area shape=rect coords=171,0,248,23 href="hotlink.htm">
+<area shape=rect coords=251,0,328,23 href="struc_es.htm">
+<area shape=rect coords=331,0,408,23 href="hilfe_es.htm">
+<area shape=rect coords=411,0,489,23 href="default_es.htm">
+</map>
+<img src="./grafic/l_allg_es.gif" usemap="#leiste_allg" border=0 width=500 height=24>
+</TD>
+<TD width=135 valign=top rowspan=2>
+<A HREF="default_es.htm"><IMG SRC="./grafic/logo2.gif" BORDER=0 ALT="Retorno" vspace=4 width=132 height=55></A>
+</TD>
+</TR>
+<TR>
+<TD width=135 valign=top>
+<nobr>
+<A HREF="stat_de.htm"><IMG SRC="./grafic/german.gif" BORDER=0 width=38 height=20></A>
+<A HREF="stat_en.htm"><IMG SRC="./grafic/english.gif" BORDER=0 hspace=5 width=38 height=20></A>
+<A HREF="stat_fr.htm"><IMG SRC="./grafic/french.gif" BORDER=0 width=38 height=20></A>
+</nobr>
+</TD>
+<TD width=365 ALIGN=CENTER valign=top>
+<H2>Estad&iacute;stica</H2>
+</TD>
+</TR>
+</TABLE>
+<h2><br>
+This page is under construction.<br>
+Diese Seite ist in Vorbereitung.<br>
+Cette page est en préparation.<br>
+Esta página se está preparando.<br><br>
+<A HREF="mailto:BIGAT@recyclers-info.com"><IMG SRC="./grafic/email.gif" border=0 hspace=5 width=22 height=12> e-mail</A>
+</h2>
+</center>
+</BODY>
+<script language="JavaScript">
+<!--
+BrowserOk = false;
+//-->
+</script>
+<script language="JavaScript1.1">
+<!--
+BrowserOk = true;
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript">
+<!--   
+hfern = null;
+function show_win(hwin)
+{
+  window.name="recyclers_info_fenster";
+  if (BrowserOk)
+  {
+    if ((hfern!=null) && (hfern.closed)) { hfern = null; }
+    if (hfern==null)
+    {
+      hfern = window.open(hwin,"fern","width=160,height=460,toolbar=no,directories=no,status=no,location=no,menubar=no,resizable=yes,scrollbars=no");
+    }
+    else
+    {
+      hfern.focus();
+    }
+  }
+  else
+  {
+    window.open(hwin,"fern","width=160,height=460,toolbar=no,directories=no,status=no,location=no,menubar=no,resizable=yes,scrollbars=no");
+  }
+}
+//-->
+</SCRIPT>
+</HTML>

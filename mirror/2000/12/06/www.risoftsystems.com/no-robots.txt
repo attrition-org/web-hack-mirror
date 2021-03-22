@@ -1,0 +1,233 @@
+<HTML>
+<HEAD>
+<TITLE>R.I. Soft Systems - Page Not Found</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+if (document.images) {
+  image1on = new Image();
+  image1on.src = "/graphics/interface/sideorder_on.gif";
+  image2on = new Image();
+  image2on.src = "/graphics/interface/sidescreen_on.gif";
+  image3on = new Image();
+  image3on.src = "/graphics/interface/sidecustom_on.gif";
+  image4on = new Image();
+  image4on.src = "/graphics/interface/sidedeveloper_on.gif";
+  image5on = new Image();
+  image5on.src = "/graphics/interface/sidegames_on.gif";
+  image6on = new Image();
+  image6on.src = "/graphics/interface/sideutilities_on.gif";
+  image7on = new Image();
+  image7on.src = "/graphics/interface/sideabout_on.gif";
+  image8on = new Image();
+  image8on.src = "/graphics/interface/sidetech_on.gif";
+  image9on = new Image();
+  image9on.src = "/graphics/interface/sidecontact_on.gif";
+
+  image1off = new Image();
+  image1off.src = "/graphics/interface/sideorder_off.gif";
+  image2off = new Image();
+  image2off.src = "/graphics/interface/sidescreen_off.gif";
+  image3off = new Image();
+  image3off.src = "/graphics/interface/sidecustom_off.gif";
+  image4off = new Image();
+  image4off.src = "/graphics/interface/sidedeveloper_off.gif";
+  image5off = new Image();
+  image5off.src = "/graphics/interface/sidegames_off.gif";
+  image6off = new Image();
+  image6off.src = "/graphics/interface/sideutilities_off.gif";
+  image7off = new Image();
+  image7off.src = "/graphics/interface/sideabout_off.gif";
+  image8off = new Image();
+  image8off.src = "/graphics/interface/sidetech_off.gif";
+  image9off = new Image();
+  image9off.src = "/graphics/interface/sidecontact_off.gif";
+
+}
+
+function turnOn(imageName) {
+  if (document.images) {
+    document[imageName].src = eval(imageName + "on.src");
+  }
+}
+
+function turnOff(imageName) {
+  if (document.images) {
+    document[imageName].src = eval(imageName + "off.src");
+  }
+}
+
+// -->
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+function buildArray() {
+  var a = buildArray.arguments;
+  for (i=0; i<a.length; i++) {
+    this[i] = a[i];
+  }
+  this.length = a.length;
+}
+
+var urls1 = new buildArray("",
+"y2k.asp","autumn.asp",
+"bible.asp",
+"pietoss.asp",
+"blankit.asp",
+"clinton.asp",
+"cupid.asp",
+"dimensia.asp",
+"duke.asp",
+"ghouls.asp",
+"macaroni.asp",
+"hits.asp",
+"teethson.asp",
+"ic2.asp",
+"liverdance.asp",
+"antics.asp",
+"teethson.asp",
+"newfront.asp",
+"diana.asp",
+"random.asp",
+"spraypaint.asp",
+"turkey.asp",
+"vip.asp",
+"winter.asp");
+
+
+var urls2 = new buildArray("",
+"jixxa.asp",
+"solit.asp");
+
+var urls3 = new buildArray("",
+"iclbuild.asp",
+"ovation.asp",
+"palexp.asp",
+"fontpak.asp",
+"iconpak.asp",
+"sigorder.asp");
+
+var urls4 = new buildArray("",
+"ovation.asp",
+"palexp.asp");
+
+function go(which, num, win) {
+  n = which.selectedIndex;
+  if (n != 0) {
+    var url = eval("urls" + num + "[n]")
+    if (win) {
+      openWindow(url);
+    } else {
+      location.href = url;
+    }
+  }
+}
+
+// -->
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" MARGINHEIGHT=0 MARGINWIDTH=3>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=600>
+<TR>
+<TD WIDTH=163 NOWRAP> &nbsp; </TD><TD WIDTH=117 NOWRAP> &nbsp; </TD><TD WIDTH=320 NOWRAP> &nbsp; </TD>
+</TR>
+<TR VALIGN="bottom">
+<TD ROWSPAN=2 COLSPAN=2 WIDTH=280 NOWRAP><A HREF="index.asp"><IMG SRC="/graphics/interface/rilogohome.gif" WIDTH=280 HEIGHT=106 BORDER=0 ALT="R.I. Soft Systems "></A></TD><TD VALIGN="bottom" ALIGN="right" WIDTH=320 NOWRAP><A HREF="/ADvantage/CThrough.asp?site=riss&ad=29&pool=234default" TARGET=""><IMG SRC="/banners/arndm234.gif" width=234 height=60 alt="Randomize your screen savers" border=0></A>
+</TD><TR VALIGN="bottom"><TD COLSPAN=2 ALIGN="left" WIDTH=320 NOWRAP><IMG SRC="/graphics/interface/blueline.gif" WIDTH=320 HEIGHT=52 BORDER=0 ALT="Software Engineered to be the Best! "></TD></TR><TR VALIGN="bottom">
+<TD VALIGN="top" WIDTH=163 NOWRAP>
+<TABLE WIDTH=143 BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR><TD WIDTH=143><A HREF="orders.asp" ONMOUSEOVER="turnOn('image1')" ONMOUSEOUT="turnOff('image1')"><IMG NAME="image1" SRC="/graphics/interface/sideorder_off.gif" ALT="Place an Order" WIDTH=143 HEIGHT=31 BORDER=0></A></TD></TR>
+<TR><TD WIDTH=143><A HREF="screensavers.asp" ONMOUSEOVER="turnOn('image2')" ONMOUSEOUT="turnOff('image2')"><IMG NAME="image2" SRC="/graphics/interface/sidescreen_off.gif" ALT="Screen Saver Links" WIDTH=143 HEIGHT=28 BORDER=0></A></TD></TR>
+<TR><TD WIDTH=143><A HREF="custom.asp" ONMOUSEOVER="turnOn('image3')" ONMOUSEOUT="turnOff('image3')"><IMG NAME="image3" SRC="/graphics/interface/sidecustom_off.gif" ALT="Custom Screen Savers" WIDTH=143 HEIGHT=42 BORDER=0></A></TD></TR>
+<TR><TD WIDTH=143><A HREF="developer.asp" ONMOUSEOVER="turnOn('image4')" ONMOUSEOUT="turnOff('image4')"><IMG NAME="image4" SRC="/graphics/interface/sidedeveloper_off.gif" ALT="Links to all Developer Tools" WIDTH=143 HEIGHT=42 BORDER=0></A></TD></TR>
+<TR><TD WIDTH=143><A HREF="games.asp" ONMOUSEOVER="turnOn('image5')" ONMOUSEOUT="turnOff('image5')"><IMG NAME="image5" SRC="/graphics/interface/sidegames_off.gif" ALT="Links to all Games" WIDTH=143 HEIGHT=28 BORDER=0></A></TD></TR>
+<TR><TD WIDTH=143><A HREF="utilities.asp" ONMOUSEOVER="turnOn('image6')" ONMOUSEOUT="turnOff('image6')"><IMG NAME="image6" SRC="/graphics/interface/sideutilities_off.gif" ALT="Links to all Utilities" WIDTH=143 HEIGHT=28 BORDER=0></A></TD></TR>
+<TR><TD WIDTH=143><A HREF="aboutriss.asp" ONMOUSEOVER="turnOn('image7')" ONMOUSEOUT="turnOff('image7')"><IMG NAME="image7" SRC="/graphics/interface/sideabout_off.gif" ALT="About R.I. Soft Systems" WIDTH=143 HEIGHT=28 BORDER=0></A></TD></TR>
+<TR><TD WIDTH=143><A HREF="techsupport.asp" ONMOUSEOVER="turnOn('image8')" ONMOUSEOUT="turnOff('image8')"><IMG NAME="image8" SRC="/graphics/interface/sidetech_off.gif" ALT="Tech Support" WIDTH=143 HEIGHT=28 BORDER=0></A></TD></TR>
+<TR><TD WIDTH=143><A HREF="contact.asp" ONMOUSEOVER="turnOn('image9')" ONMOUSEOUT="turnOff('image9')"><IMG NAME="image9" SRC="/graphics/interface/sidecontact_off.gif" ALT="Contact Information" WIDTH=143 HEIGHT=28 BORDER=0></A></TD></TR>
+</TABLE>
+<BR>
+<FORM NAME="form1">
+<FONT SIZE=2 FACE="arial"><B>Screen Savers</B></FONT><BR>
+<FONT SIZE=2>
+<SELECT NAME="menu1" ONCHANGE="go(this, 1, false)">
+<OPTION>-Select from list below
+<OPTION>Attack of the Y2K Bug<OPTION>Autumn Scenes
+<OPTION>Bible Scenes<OPTION>Bill's Pie Toss<OPTION>BLANK-IT
+<OPTION>The Clinton Blues
+<OPTION>Cupid's Valentine
+<OPTION>Dimensia 3D
+<OPTION>Duke Nukem
+<OPTION>Ghoul's Delight
+<OPTION>Hey, Macaroni!
+<OPTION>Hits Collection CD
+<OPTION>Holyear vs. Teethson
+<OPTION>Image Carousel II
+<OPTION>Liverdance Parody
+<OPTION>Macaroni Antics
+<OPTION>Mikey Likes Ears
+<OPTION>New Frontiers
+<OPTION>Princess Diana
+<OPTION>Randomizer
+<OPTION>Spray Paint
+<OPTION>Turkey Shoot
+<OPTION>V.I.P.
+<OPTION>Winter Wonderlands
+</SELECT>
+
+</FONT>
+</FORM>
+<FORM NAME="form4">
+<FONT SIZE=2 FACE="arial"><B>Developer Tools</B></FONT><BR>
+<FONT SIZE=2>
+<SELECT NAME="menu4" ONCHANGE="go(this, 4, false)">
+<OPTION>-Select from list below
+<OPTION>Ovation Studio Pro
+<OPTION>Palette Express
+</SELECT>
+</FONT>
+</FORM>
+<FORM NAME="form3">
+<FONT SIZE=2 FACE="arial"><B>Games</B></FONT><BR>
+<FONT SIZE=2>
+<SELECT NAME="menu2" ONCHANGE="go(this, 2, false)">
+<OPTION>-Select from list below
+<OPTION>Jixxa Jigsaw Puzzles
+<OPTION>RISS Solitaire Pak
+</SELECT>
+</FONT>
+</FORM>
+<FORM NAME="form4">
+<FONT SIZE=2 FACE="arial"><B>Utilities</B></FONT><BR>
+<FONT SIZE=2>
+<SELECT NAME="menu3" ONCHANGE="go(this, 3, false)">
+<OPTION>-Select from list below
+<OPTION>ICL Builder
+<OPTION>Ovation Studio Pro
+<OPTION>Palette Express
+<OPTION>RISS FontPak
+<OPTION>RISS IconPak
+<OPTION>Signature Font
+</SELECT>
+</FONT>
+</FORM>
+</TD>
+<TD VALIGN="top" COLSPAN=2 ROWSPAN=30 WIDTH=434>
+<FONT FACE="arial, helvetica" SIZE=2>
+<FONT color="Red", size=5><b>Error: No Such Page</b></font>
+<p>
+The page you've requested was either typed incorrectly, or is no longer available on the system.
+<p>
+You may <a href="/index.asp"><b>click here</b></a> to return to our main page, or select another page through the left-hand menu 
+and listbox options.
+<P>
+</FONT>
+	</TD>
+	</TR>
+	</TABLE>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

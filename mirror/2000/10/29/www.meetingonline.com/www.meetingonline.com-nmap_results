@@ -1,0 +1,31 @@
+
+Starting nmap V. 2.54BETA3 ( www.insecure.org/nmap/ )
+Interesting ports on www.freeservers.com (208.185.127.162):
+(The 1 port scanned but not shown below is in state: closed)
+Port       State       Service
+22/tcp     filtered    ssh                     
+23/tcp     filtered    telnet                  
+25/tcp     filtered    smtp                    
+80/tcp     open        http                    
+
+TCP Sequence Prediction: Class=random positive increments
+                         Difficulty=3557073 (Good luck!)
+Aggressive OS guesses: BSDI 4.0-4.0.1 (90%), NetBSD 1.3I (after 19990119) to 1.4 x86 (89%), HP-UX 10.20 (89%), HP-UX 10.20 E 9000/777 or A 712/60 with tcp_random_seq = 0 (89%), BSDI BSD/OS 3.0-3.1 (or possibly MacOS, NetBSD) (88%), NetBSD 1.3H (after 19980919) or 1.3I (before 19990119) big endian arch (87%), Hydra HydraWEB 5000 (87%), HP-UX B11.00 U 9000/839 (87%)
+No exact OS matches for host (If you know what OS is running on it, see http://www.insecure.org/cgi-bin/nmap-submit.cgi).
+TCP/IP fingerprint:
+TSeq(Class=RI%gcd=1%SI=25A3AD)
+TSeq(Class=RI%gcd=1%SI=2648BA)
+TSeq(Class=RI%gcd=1%SI=3646D1)
+T1(Resp=Y%DF=Y%W=7F53%ACK=S++%Flags=AS%Ops=MENNTNW)
+T2(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+T3(Resp=N)
+T4(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T5(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+T6(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T7(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+PU(Resp=Y%DF=N%TOS=0%IPLEN=38%RIPTL=15C%RID=E%RIPCK=0%UCK=E%ULEN=134%DAT=E)
+
+
+
+
+Nmap run completed -- 1 IP address (1 host up) scanned in 9 seconds

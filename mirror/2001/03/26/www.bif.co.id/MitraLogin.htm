@@ -1,0 +1,66 @@
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive 4">
+		<title></title>
+	</head>
+
+	<script id="clientEventHandlersJS" language="javascript">
+<!--
+
+function frmLogin_onsubmit() {
+	if (frmLogin.user.value ==""){
+		alert("Username cannot be empty");
+		document.forms[0].reset();
+		return;
+	}
+	if (frmLogin.pwd.value ==""){
+		alert("Password cannot be empty");
+		document.forms[0].reset();
+		return;
+	}
+}
+
+//-->
+</script>
+
+	<body bgcolor="#ffffce">
+		<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#ffffce" id=LOGO>
+			<tr height=50>
+				<td align="middle" valign="center" width="80"><IMG height=40 src="images/Batara2.gif" width=40></td>
+				<td align="left"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="6" color="#527b00">Batara Internasional Finansindo</font></td>
+			</tr>
+		</table>
+		<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#00bfff" id=Menu>
+			<tr>
+				<td width="33%"><A href="default.asp"><font face="Arial" size="2">Home</font></A></td>
+				<td width="33%"><A href="NewMitra.htm"><font face="Arial" size="2">New Mitra</font></A></td>
+				<td width="34%"><A href="MitraLogin.htm"><font face="Arial" size="2">Mitra Login</font></A></td>
+			</tr>
+		</table>
+<br>
+		<h2>Login Mitra</h2>
+		<p>
+		<form action="MitraMenu.asp" id="frmLogin" method="post" name="frmLogin" language="javascript" onsubmit="return frmLogin_onsubmit()">
+		<table border="0" cellpadding="1" cellspacing="1" width="75%">
+			<tbody>
+				<tr>
+					<td>Mitra</td>
+					<td>:</td>
+					<td><input id="user" name="user" type="text" size="24"></td>
+				</tr>
+				<tr>
+					<td>Password</td>
+					<td>:</td>
+					<td><input id="pwd" name="pwd" type="password" size="24"></td>
+				</tr>
+				<tr>
+					<td colspan="3"><input id="submit1" name="submit1" type="submit" value="Submit">&nbsp;<input id="reset1" name="reset1" type="reset" value="Reset"></td>
+				</tr>
+			</tbody>
+		</table>
+		</form>
+	</body>
+
+</html>

@@ -1,0 +1,128 @@
+<HTML>
+<HEAD>
+<title>Welcome to Intimedia Website</title>
+<meta name="description" content="INTIMEDIA is an Internet Presence Provider based in Jakarta, Indonesia, providing information system services by using Internet enabled technology.">
+<meta name="keywords" content="Intimedia, Puspa Intimedia Internusa, Internet, Web Development, Web design, commerce, e-commerce, application, technology, proffesional, website, business to business, graphic design,">
+
+</HEAD>
+<script LANGUAGE="JavaScript">
+    if(document.images)
+    {
+    var Choose = new Array('home', 'corporate', 'prodser', 'job', 'developer', 'commerce', 'psu', 'portfolio', 'subportfolio')
+
+    for(var i = 0; i < Choose.length; i++)
+	for(var j = 1; j < 3; j++)
+	{
+	eval(Choose[i] + j + ' = new Image(45, 42)')
+	eval(Choose[i] + j + '.src = "images/' + Choose[i] + j + '.gif"')
+	}
+    }
+
+    function Change(imgNumber, imgName, imgAlt)
+    {
+	if(document.images)
+	document.images[imgNumber].src = eval(imgName + ".src") 
+	window.status=imgAlt
+    }
+</script>
+
+<BODY TOPMARGIN=0 LEFTMARGIN=0 BGCOLOR=FFFFFF>
+<TABLE WIDTH=780 CELLSPACING=0 CELLPADDING=0 BORDER=0>
+<TR>
+   <TD HEIGHT=38 WIDTH=337 BACKGROUND=images/logo1.jpg></TD>
+   <TD WIDTH=473 BACKGROUND=images/bg3.gif ALIGN=right><IMG SRC=images/home2.gif BORDER=0 NAME="home" ALT="home"><a HREF="corporate.html" target="_parent" onMouseOver="Change('corporate', 'corporate2', 'corporate')" onMouseOut="Change('corporate', 'corporate1', '')"><IMG SRC=images/corporate1.gif BORDER=0 NAME="corporate" ALT="corporate"></A><a HREF="prodser.html" target="_parent" onMouseOver="Change('prodser', 'prodser2', 'prodser')" onMouseOut="Change('prodser', 'prodser1', '')"><IMG SRC=images/prodser1.gif BORDER=0 NAME="prodser" ALT="prodser"></A><a HREF="job.html" target="_parent" onMouseOver="Change('job', 'job2', 'job')" onMouseOut="Change('job', 'job1', '')"><IMG SRC=images/job1.gif BORDER=0 NAME="job" ALT="job"></A><a HREF="portfolio.html" target="_parent" onMouseOver="Change('subportfolio', 'subportfolio2', 'portfolio')" onMouseOut="Change('subportfolio', 'subportfolio1', '')"><IMG SRC=images/subportfolio1.gif BORDER=0 NAME="subportfolio" ALT="portfolio"></A></TD>
+</TR>
+<TR>
+   <TD HEIGHT=26><IMG SRC=images/logo2.jpg></TD>
+   <TD ALIGN=right>
+		<FONT FACE=Verdana SIZE=1 COLOR=000080><B>
+		<SCRIPT LANGUAGE="JavaScript">
+		  {
+		    var todayDate = new Date();
+		    var day = todayDate.getDay();
+		    var date = todayDate.getDate();
+		    var year = todayDate.getYear();
+
+		    if (todayDate.getDay() == 0) { theDay = "<FONT COLOR=#FF0000>Sunday</FONT>"};
+		    if (todayDate.getDay() == 1) { theDay = "<FONT COLOR=#00DDFF>Monday</FONT>"};
+		    if (todayDate.getDay() == 2) { theDay = "<FONT COLOR=#0080FF>Tuesday</FONT>"};
+		    if (todayDate.getDay() == 3) { theDay = "<FONT COLOR=#0080FF>Wednesday</FONT>"};
+		    if (todayDate.getDay() == 4) { theDay = "<FONT COLOR=#0080FF>Thursday</FONT>"};
+		    if (todayDate.getDay() == 5) { theDay = "<FONT COLOR=#0080FF>Friday</FONT>"};
+		    if (todayDate.getDay() == 6) { theDay = "<FONT COLOR=#0080FF>Saturday</FONT>"};
+
+		    if (todayDate.getMonth() == 0)  { theMonth = 'January'};
+		    if (todayDate.getMonth() == 1)  { theMonth = 'February'};
+		    if (todayDate.getMonth() == 2)  { theMonth = 'March'};
+		    if (todayDate.getMonth() == 3)  { theMonth = 'April'};
+		    if (todayDate.getMonth() == 4)  { theMonth = 'May'};
+		    if (todayDate.getMonth() == 5)  { theMonth = 'June'};
+		    if (todayDate.getMonth() == 6)  { theMonth = 'July'};
+		    if (todayDate.getMonth() == 7)  { theMonth = 'August'};
+		    if (todayDate.getMonth() == 8)  { theMonth = 'September'};
+		    if (todayDate.getMonth() == 9)  { theMonth = 'October'};
+		    if (todayDate.getMonth() == 10) { theMonth = 'November'};
+		    if (todayDate.getMonth() == 11) { theMonth = 'December'};
+
+		    document.write('&nbsp;',theDay,' - ',theMonth,' ',date,' , ',year);
+		  }
+		</SCRIPT>
+		</B></FONT>&nbsp;</TD>
+</TR>
+<TR>
+   <TD HEIGHT=320 VALIGN=TOP BACKGROUND=images/bg2.gif><IMG SRC=images/gb.jpg><BR><BR>
+   <IMG SRC=images/news1.gif><BR><FONT FACE=Verdana SIZE=1 COLOR=0000BB>&nbsp;
+   <% set con = server.createobject("adodb.connection")
+      strcon = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source="&Server.Mappath("../intimedia_new/admin/news.mdb")&";" 
+      con.open strcon
+      set rec = server.createobject("adodb.recordset")
+      rec.open "select * from updater",con,1,3
+      rec.movelast
+      temp = rec("berita")
+      rec.close
+      set rec = nothing
+      con.close
+      set con = nothing
+   %>
+   <MARQUEE direction=up height=65 onmouseout=start() onmouseover=stop() scrollAmount=1 width=200>
+   <% response.write temp %>
+   </MARQUEE><BR><IMG SRC=images/newsline.gif><BR><BR>
+   </TD>
+   <TD VALIGN=TOP>
+   <TABLE CELLSPACING=0 CELLPADDING=0 WIDTH=410 BORDER=0>
+   <TR>
+	<TD WIDTH=80 VALIGN=TOP><IMG SRC=images/developer.gif BORDER=0></TD>
+	<TD WIDTH=320 VALIGN=TOP><FONT FACE=Verdana SIZE=1 COLOR=000070><a HREF="developer.html" onMouseOver="Change('developer', 'developer2', 'developer')" onMouseOut="Change('developer', 'developer1', '')"><IMG SRC=images/developer1.gif BORDER=0 NAME="developer" ALT="developer"></A><BR>
+	Intimedia provides services to develop websites in any kind for your organization. From simple web promotion for your products to complex corporate websites for your stakeholders.<BR><BR>
+  	</FONT></TD>
+   </TR>
+   <TR>
+	<TD VALIGN=TOP><IMG SRC=images/commerce.gif BORDER=0></TD>
+	<TD VALIGN=TOP><FONT FACE=Verdana SIZE=1 COLOR=000070><a HREF="commerce.html" onMouseOver="Change('commerce', 'commerce2', 'commerce')" onMouseOut="Change('commerce', 'commerce1', '')"><IMG SRC=images/commerce1.gif BORDER=0 NAME="commerce" ALT="commerce"></A><BR>
+	Intimedia provides services to develop business-to-business electronic commerce using Internet features. Such features enable your staff to place order online from your supplier.<BR><BR>
+	</FONT></TD>
+   </TR>
+   <TR>
+	<TD VALIGN=TOP><IMG SRC=images/psu.gif BORDER=0></TD>
+	<TD VALIGN=TOP><FONT FACE=Verdana SIZE=1 COLOR=000070><a HREF="psu.html" onMouseOver="Change('psu', 'psu2', 'psu')" onMouseOut="Change('psu', 'psu1', '')"><IMG SRC=images/psu1.gif BORDER=0 NAME="psu" ALT="psu"></A><BR>
+	Our Professional Services Unit will help you to find any computing necessities with reasonable pricing so you don’t have to waste time finding computer equipment and supplies yourselves.<BR><BR>
+	</FONT></TD>
+   </TR>
+   <TR>
+	<TD VALIGN=TOP><IMG SRC=images/portfolio.gif BORDER=0></TD>
+	<TD VALIGN=TOP><FONT FACE=Verdana SIZE=1 COLOR=000070><a HREF="portfolio.html" onMouseOver="Change('portfolio', 'portfolio2', 'portfolio')" onMouseOut="Change('portfolio', 'portfolio1', '')"><IMG SRC=images/portfolio1.gif BORDER=0 NAME="portfolio" ALT="portfolio"></A><BR>
+	The following World Wide Web sites are created by professional team of Intimedia using latest web technology, advanced programming and art graphic designs.<BR><BR>
+	</FONT></TD>
+   </TR>
+   </TABLE><BR><BR>
+   </TD>
+</TR>
+<TR>
+   <TD COLSPAN=2 BACKGROUND=images/bg2.gif><FONT FACE=Verdana SIZE=1 COLOR=000080><CENTER>copyright © 2000 <B>Intimedia.com</B> All rights reserved.</FONT>
+<TR>
+   <TD HEIGHT=30 BACKGROUND=images/bg1.gif></TD>
+   <TD HEIGHT=30 BACKGROUND=images/bg2.jpg></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

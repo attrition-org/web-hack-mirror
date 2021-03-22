@@ -1,0 +1,399 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Draft//EN">
+<HTML>
+<HEAD>
+<TITLE>SQUID Frequently Asked Questions</TITLE>
+</HEAD>
+<BODY>
+<A HREF="FAQ-1.html">Next</A>
+Previous
+Contents
+<HR>
+<H1>SQUID Frequently Asked Questions</H1>
+
+<H2>Duane Wessels, <CODE>wessels@ircache.net</CODE></H2>
+<P><HR>
+<EM>Frequently Asked Questions (with answers!) about the Squid Internet
+Object Cache software.</EM>
+<HR>
+<P>
+<H2><A NAME="toc1">1.</A> <A HREF="FAQ-1.html">About Squid, this FAQ, and other Squid information resources</A></H2>
+
+<UL>
+<LI><A HREF="FAQ-1.html#ss1.1">1.1 What is Squid?</A>
+<LI><A HREF="FAQ-1.html#ss1.2">1.2 What is Internet object caching?</A>
+<LI><A HREF="FAQ-1.html#ss1.3">1.3 Why is it called Squid?</A>
+<LI><A HREF="FAQ-1.html#ss1.4">1.4 What is the latest version of Squid?</A>
+<LI><A HREF="FAQ-1.html#ss1.5">1.5 Who is responsible for Squid?</A>
+<LI><A HREF="FAQ-1.html#ss1.6">1.6 Where can I get Squid?</A>
+<LI><A HREF="FAQ-1.html#ss1.7">1.7 What Operating Systems does Squid support?</A>
+<LI><A HREF="FAQ-1.html#ss1.8">1.8 Does Squid run on Windows NT?</A>
+<LI><A HREF="FAQ-1.html#ss1.9">1.9 What Squid mailing lists are available?</A>
+<LI><A HREF="FAQ-1.html#ss1.10">1.10 I can't figure out how to unsubscribe from your mailing list.</A>
+<LI><A HREF="FAQ-1.html#ss1.11">1.11 What Squid web pages are available?</A>
+<LI><A HREF="FAQ-1.html#ss1.12">1.12 Does Squid support SSL?</A>
+<LI><A HREF="FAQ-1.html#ss1.13">1.13 What's the legal status of Squid?</A>
+<LI><A HREF="FAQ-1.html#ss1.14">1.14 Is Squid year-2000 compliant?</A>
+<LI><A HREF="FAQ-1.html#ss1.15">1.15 Can I pay someone for Squid support?</A>
+<LI><A HREF="FAQ-1.html#ss1.16">1.16 Squid FAQ contributors</A>
+<LI><A HREF="FAQ-1.html#ss1.17">1.17 About This Document</A>
+</UL>
+<P>
+<H2><A NAME="toc2">2.</A> <A HREF="FAQ-2.html">Getting and Compiling Squid</A></H2>
+
+<UL>
+<LI><A HREF="FAQ-2.html#ss2.1">2.1 Which file do I download to get Squid?</A>
+<LI><A HREF="FAQ-2.html#ss2.2">2.2 How do I compile Squid?</A>
+<LI><A HREF="FAQ-2.html#ss2.3">2.3 What kind of compiler do I need?</A>
+<LI><A HREF="FAQ-2.html#ss2.4">2.4 Do you have pre-compiled binaries available?</A>
+<LI><A HREF="FAQ-2.html#ss2.5">2.5 How do I apply a patch or a diff?</A>
+<LI><A HREF="FAQ-2.html#ss2.6">2.6 <EM>configure</EM> options</A>
+<LI><A HREF="FAQ-2.html#ss2.7">2.7 undefined reference to __inet_ntoa</A>
+<LI><A HREF="FAQ-2.html#ss2.8">2.8 How can I get true DNS TTL info into Squid's IP cache?</A>
+<LI><A HREF="FAQ-2.html#ss2.9">2.9 My platform is BSD/OS or BSDI and I can't compile Squid</A>
+<LI><A HREF="FAQ-2.html#ss2.10">2.10 Problems compiling <EM>libmiscutil.a</EM> on Solaris</A>
+<LI><A HREF="FAQ-2.html#ss2.11">2.11 I have problems compiling Squid on Platform Foo.</A>
+<LI><A HREF="FAQ-2.html#ss2.12">2.12 I see a lot warnings while compiling Squid.</A>
+<LI><A HREF="FAQ-2.html#ss2.13">2.13 Building Squid on OS/2</A>
+</UL>
+<P>
+<H2><A NAME="toc3">3.</A> <A HREF="FAQ-3.html">Installing and Running Squid</A></H2>
+
+<UL>
+<LI><A HREF="FAQ-3.html#ss3.1">3.1 How big of a system do I need to run Squid?</A>
+<LI><A HREF="FAQ-3.html#ss3.2">3.2 How do I install Squid?</A>
+<LI><A HREF="FAQ-3.html#ss3.3">3.3 What does the <EM>squid.conf</EM> file do?</A>
+<LI><A HREF="FAQ-3.html#ss3.4">3.4 Do you have a <EM>squid.conf</EM> example?</A>
+<LI><A HREF="FAQ-3.html#ss3.5">3.5 How do I start Squid?</A>
+<LI><A HREF="FAQ-3.html#ss3.6">3.6 How do I start Squid automatically when the system boots?</A>
+<LI><A HREF="FAQ-3.html#ss3.7">3.7 How do I tell if Squid is running?</A>
+<LI><A HREF="FAQ-3.html#ss3.8">3.8 <EM>squid</EM> command line options</A>
+<LI><A HREF="FAQ-3.html#ss3.9">3.9 How do I see how Squid works?</A>
+</UL>
+<P>
+<H2><A NAME="toc4">4.</A> <A HREF="FAQ-4.html">Configuration issues</A></H2>
+
+<UL>
+<LI><A HREF="FAQ-4.html#ss4.1">4.1 How do I join a cache hierarchy?</A>
+<LI><A HREF="FAQ-4.html#ss4.2">4.2 How do I join NLANR's cache hierarchy?</A>
+<LI><A HREF="FAQ-4.html#ss4.3">4.3 Why should I want to join NLANR's cache hierarchy?</A>
+<LI><A HREF="FAQ-4.html#ss4.4">4.4 How do I register my cache with NLANR's registration service?</A>
+<LI><A HREF="FAQ-4.html#ss4.5">4.5 How do I find other caches close to me and arrange parent/child/sibling relationships with them?</A>
+<LI><A HREF="FAQ-4.html#ss4.6">4.6 My cache registration is not appearing in the Tracker database.</A>
+<LI><A HREF="FAQ-4.html#ss4.7">4.7 What is the httpd-accelerator mode?</A>
+<LI><A HREF="FAQ-4.html#ss4.8">4.8 How do I configure Squid to work behind a firewall?</A>
+<LI><A HREF="FAQ-4.html#ss4.9">4.9 I have <EM>dnsserver</EM> processes that aren't being used, should I lower the number in <EM>squid.conf</EM>?</A>
+<LI><A HREF="FAQ-4.html#ss4.10">4.10 My <EM>dnsserver</EM> average/median service time seems high, how can I reduce it?</A>
+<LI><A HREF="FAQ-4.html#ss4.11">4.11 How can I easily change the default HTTP port?</A>
+<LI><A HREF="FAQ-4.html#ss4.12">4.12 Is it possible to control how big each <EM>cache_dir</EM> is?</A>
+<LI><A HREF="FAQ-4.html#ss4.13">4.13 I'm adding a new <EM>cache_dir</EM>.  Will I lose my cache?</A>
+<LI><A HREF="FAQ-4.html#ss4.14">4.14 Squid and <EM>http-gw</EM> from the TIS toolkit.</A>
+<LI><A HREF="FAQ-4.html#ss4.15">4.15 What is ``HTTP_X_FORWARDED_FOR''?  Why does squid provide it to WWW servers, and how can I stop it?</A>
+<LI><A HREF="FAQ-4.html#ss4.16">4.16 Can Squid anonymize HTTP requests?</A>
+</UL>
+<P>
+<H2><A NAME="toc5">5.</A> <A HREF="FAQ-5.html">Communication between browsers and Squid</A></H2>
+
+<UL>
+<LI><A HREF="FAQ-5.html#ss5.1">5.1 Netscape manual configuration</A>
+<LI><A HREF="FAQ-5.html#ss5.2">5.2 Netscape automatic configuration</A>
+<LI><A HREF="FAQ-5.html#ss5.3">5.3 Lynx and Mosaic configuration</A>
+<LI><A HREF="FAQ-5.html#ss5.4">5.4 Redundant Auto-Proxy-Configuration</A>
+<LI><A HREF="FAQ-5.html#ss5.5">5.5 Microsoft Internet Explorer configuration</A>
+<LI><A HREF="FAQ-5.html#ss5.6">5.6 Netmanage Internet Chameleon WebSurfer configuration</A>
+<LI><A HREF="FAQ-5.html#ss5.7">5.7 Opera 2.12 proxy configuration</A>
+<LI><A HREF="FAQ-5.html#ss5.8">5.8 How do I tell Squid to use a specific username for FTP urls?</A>
+<LI><A HREF="FAQ-5.html#ss5.9">5.9 Configuring Browsers for WPAD</A>
+</UL>
+<P>
+<H2><A NAME="toc6">6.</A> <A HREF="FAQ-6.html">Squid Log Files</A></H2>
+
+<UL>
+<LI><A HREF="FAQ-6.html#ss6.1">6.1 <EM>access.log</EM></A>
+<LI><A HREF="FAQ-6.html#ss6.2">6.2 <EM>hierarchy.log</EM></A>
+<LI><A HREF="FAQ-6.html#ss6.3">6.3 <EM>store.log</EM></A>
+<LI><A HREF="FAQ-6.html#ss6.4">6.4 Field Definitions</A>
+<LI><A HREF="FAQ-6.html#ss6.5">6.5 Cache Result Codes</A>
+<LI><A HREF="FAQ-6.html#ss6.6">6.6 Peer Status Codes</A>
+<LI><A HREF="FAQ-6.html#ss6.7">6.7 HTTP status codes</A>
+<LI><A HREF="FAQ-6.html#ss6.8">6.8 <EM>cache/log</EM> or <EM>swap.state</EM></A>
+<LI><A HREF="FAQ-6.html#ss6.9">6.9 Which log files can I delete safely?</A>
+<LI><A HREF="FAQ-6.html#ss6.10">6.10 How can I disable Squid's log files?</A>
+<LI><A HREF="FAQ-6.html#ss6.11">6.11 My log files get very big!</A>
+<LI><A HREF="FAQ-6.html#ss6.12">6.12 Why do I get ERR_NO_CLIENTS_BIG_OBJ messages so often?</A>
+<LI><A HREF="FAQ-6.html#ss6.13">6.13 What does ERR_LIFETIME_EXP mean?</A>
+<LI><A HREF="FAQ-6.html#ss6.14">6.14 Retrieving ``lost'' files from the cache</A>
+</UL>
+<P>
+<H2><A NAME="toc7">7.</A> <A HREF="FAQ-7.html">Operational issues</A></H2>
+
+<UL>
+<LI><A HREF="FAQ-7.html#ss7.1">7.1 How do I see system level Squid statistics?</A>
+<LI><A HREF="FAQ-7.html#ss7.2">7.2 How can I find the biggest objects in my cache?</A>
+<LI><A HREF="FAQ-7.html#ss7.3">7.3 I want to restart Squid with a clean cache</A>
+<LI><A HREF="FAQ-7.html#ss7.4">7.4 How can I proxy/cache Real Audio?</A>
+<LI><A HREF="FAQ-7.html#ss7.5">7.5 How can I purge an object from my cache?</A>
+<LI><A HREF="FAQ-7.html#ss7.6">7.6 Using ICMP to Measure the Network</A>
+<LI><A HREF="FAQ-7.html#ss7.7">7.7 Why are so few requests logged as TCP_IMS_MISS?</A>
+<LI><A HREF="FAQ-7.html#ss7.8">7.8 How can I make Squid NOT cache objects which match local_domain or local_ip?</A>
+<LI><A HREF="FAQ-7.html#ss7.9">7.9 How can I delete and recreate a cache directory?</A>
+<LI><A HREF="FAQ-7.html#ss7.10">7.10 Why can't I run Squid as root?</A>
+<LI><A HREF="FAQ-7.html#ss7.11">7.11 Can you tell me a good way to upgrade Squid with minimal downtime?</A>
+</UL>
+<P>
+<H2><A NAME="toc8">8.</A> <A HREF="FAQ-8.html">Memory</A></H2>
+
+<UL>
+<LI><A HREF="FAQ-8.html#ss8.1">8.1 Why does Squid use so much memory!?</A>
+<LI><A HREF="FAQ-8.html#ss8.2">8.2 How can I tell how much memory my Squid process is using?</A>
+<LI><A HREF="FAQ-8.html#ss8.3">8.3 My Squid process grows without bounds.</A>
+<LI><A HREF="FAQ-8.html#ss8.4">8.4 I set <EM>cache_mem</EM> to XX, but the process grows beyond that!</A>
+<LI><A HREF="FAQ-8.html#ss8.5">8.5 How do I analyze memory usage from the cache manger output?</A>
+<LI><A HREF="FAQ-8.html#ss8.6">8.6 The ``Total memory accounted'' value is less than the size of my Squid process.</A>
+<LI><A HREF="FAQ-8.html#ss8.7">8.7 xmalloc: Unable to allocate 4096 bytes!</A>
+<LI><A HREF="FAQ-8.html#ss8.8">8.8 fork: (12) Cannot allocate memory</A>
+<LI><A HREF="FAQ-8.html#ss8.9">8.9 What can I do to reduce Squid's memory usage?</A>
+<LI><A HREF="FAQ-8.html#ss8.10">8.10 Using an alternate <EM>malloc</EM> library.</A>
+</UL>
+<P>
+<H2><A NAME="toc9">9.</A> <A HREF="FAQ-9.html">The Cache Manager</A></H2>
+
+<UL>
+<LI><A HREF="FAQ-9.html#ss9.1">9.1 What is the cache manager?</A>
+<LI><A HREF="FAQ-9.html#ss9.2">9.2 How do you set it up?</A>
+<LI><A HREF="FAQ-9.html#ss9.3">9.3 Cache manager configuration for CERN httpd 3.0</A>
+<LI><A HREF="FAQ-9.html#ss9.4">9.4 Cache manager configuration for Apache</A>
+<LI><A HREF="FAQ-9.html#ss9.5">9.5 Cache manager ACLs in <EM>squid.conf</EM></A>
+<LI><A HREF="FAQ-9.html#ss9.6">9.6 Why does it say I need a password and a URL?</A>
+<LI><A HREF="FAQ-9.html#ss9.7">9.7 I want to shutdown the cache remotely. What's the password?</A>
+<LI><A HREF="FAQ-9.html#ss9.8">9.8 How do I make the cache host default to <EM>my</EM> cache?</A>
+<LI><A HREF="FAQ-9.html#ss9.9">9.9 What's the difference between Squid TCP connections and Squid UDP connections?</A>
+<LI><A HREF="FAQ-9.html#ss9.10">9.10 It says the storage expiration will happen in 1970!</A>
+<LI><A HREF="FAQ-9.html#ss9.11">9.11 What do the Meta Data entries mean?</A>
+<LI><A HREF="FAQ-9.html#ss9.12">9.12 In the utilization section, what is <CODE>Other</CODE>?</A>
+<LI><A HREF="FAQ-9.html#ss9.13">9.13 In the utilization section, why is the <CODE>Transfer KB/sec</CODE></A>
+<LI><A HREF="FAQ-9.html#ss9.14">9.14 In the utilization section, what is the <CODE>Object Count</CODE>?</A>
+<LI><A HREF="FAQ-9.html#ss9.15">9.15 In the utilization section, what is the <CODE>Max/Current/Min KB</CODE>?</A>
+<LI><A HREF="FAQ-9.html#ss9.16">9.16 What is the <CODE>I/O</CODE> section about?</A>
+<LI><A HREF="FAQ-9.html#ss9.17">9.17 What is the <CODE>Objects</CODE> section for?</A>
+<LI><A HREF="FAQ-9.html#ss9.18">9.18 What is the <CODE>VM Objects</CODE> section for?</A>
+<LI><A HREF="FAQ-9.html#ss9.19">9.19 What does <CODE>AVG RTT</CODE> mean?</A>
+<LI><A HREF="FAQ-9.html#ss9.20">9.20 In the IP cache section, what's the difference between a hit, a negative hit and a miss?</A>
+<LI><A HREF="FAQ-9.html#ss9.21">9.21 What do the IP cache contents mean anyway?</A>
+<LI><A HREF="FAQ-9.html#ss9.22">9.22 What is the fqdncache and how is it different from the ipcache?</A>
+<LI><A HREF="FAQ-9.html#ss9.23">9.23 What does ``Page faults with physical i/o: 4897'' mean?</A>
+<LI><A HREF="FAQ-9.html#ss9.24">9.24 What does the IGNORED field mean in the 'cache server list'?</A>
+</UL>
+<P>
+<H2><A NAME="toc10">10.</A> <A HREF="FAQ-10.html">Access Controls</A></H2>
+
+<UL>
+<LI><A HREF="FAQ-10.html#ss10.1">10.1 How do I implement an ACL ban list?</A>
+<LI><A HREF="FAQ-10.html#ss10.2">10.2 How do I block specific users or groups from accessing my cache?</A>
+<LI><A HREF="FAQ-10.html#ss10.3">10.3 Do you have a CGI program which lets users change their own proxy passwords?</A>
+<LI><A HREF="FAQ-10.html#ss10.4">10.4 Is there a way to do ident lookups only for a certain host and compare the result with a userlist in squid.conf?</A>
+<LI><A HREF="FAQ-10.html#ss10.5">10.5 Common Mistakes</A>
+<LI><A HREF="FAQ-10.html#ss10.6">10.6 I set up my access controls, but they don't work!  why?</A>
+<LI><A HREF="FAQ-10.html#ss10.7">10.7 Proxy-authentication and neighbor caches</A>
+<LI><A HREF="FAQ-10.html#ss10.8">10.8 Is there an easy way of banning all Destination addresses except one?</A>
+<LI><A HREF="FAQ-10.html#ss10.9">10.9 Does anyone have a ban list of porn sites and such?</A>
+<LI><A HREF="FAQ-10.html#ss10.10">10.10 Squid doesn't match my subdomains</A>
+<LI><A HREF="FAQ-10.html#ss10.11">10.11 Why does Squid deny some port numbers?</A>
+</UL>
+<P>
+<H2><A NAME="toc11">11.</A> <A HREF="FAQ-11.html">Troubleshooting</A></H2>
+
+<UL>
+<LI><A HREF="FAQ-11.html#ss11.1">11.1 Why am I getting ``Proxy Access Denied?''</A>
+<LI><A HREF="FAQ-11.html#ss11.2">11.2 I can't get <CODE>local_domain</CODE> to work; <EM>Squid</EM> is caching the objects from my local servers.</A>
+<LI><A HREF="FAQ-11.html#ss11.3">11.3 I get <CODE>Connection Refused</CODE> when the cache tries to retrieve an object located on a sibling, even though the sibling thinks it delivered the object to my cache.</A>
+<LI><A HREF="FAQ-11.html#ss11.4">11.4 Running out of filedescriptors</A>
+<LI><A HREF="FAQ-11.html#ss11.5">11.5 What are these strange lines about removing objects?</A>
+<LI><A HREF="FAQ-11.html#ss11.6">11.6 Can I change a Windows NT FTP server to list directories in Unix format?</A>
+<LI><A HREF="FAQ-11.html#ss11.7">11.7 Why am I getting ``Ignoring MISS from non-peer x.x.x.x?''</A>
+<LI><A HREF="FAQ-11.html#ss11.8">11.8 DNS lookups for domain names with underscores (_) always fail.</A>
+<LI><A HREF="FAQ-11.html#ss11.9">11.9 Why does Squid say: ``Illegal character in hostname; underscores are not allowed?'</A>
+<LI><A HREF="FAQ-11.html#ss11.10">11.10 Why am I getting access denied from a sibling cache?</A>
+<LI><A HREF="FAQ-11.html#ss11.11">11.11 Cannot bind socket FD NN to *:8080 (125) Address already in use</A>
+<LI><A HREF="FAQ-11.html#ss11.12">11.12 icpDetectClientClose: ERROR xxx.xxx.xxx.xxx: (32) Broken pipe</A>
+<LI><A HREF="FAQ-11.html#ss11.13">11.13 icpDetectClientClose: FD 135, 255 unexpected bytes</A>
+<LI><A HREF="FAQ-11.html#ss11.14">11.14 How come Squid doesn't work with NTLM Authorization.</A>
+<LI><A HREF="FAQ-11.html#ss11.15">11.15 The <EM>default</EM> parent option isn't working!</A>
+<LI><A HREF="FAQ-11.html#ss11.16">11.16 ``Hot Mail'' complains about: Intrusion Logged. Access denied.</A>
+<LI><A HREF="FAQ-11.html#ss11.17">11.17 My Squid becomes very slow after it has been running for some time.</A>
+<LI><A HREF="FAQ-11.html#ss11.18">11.18 WARNING: Failed to start 'dnsserver'</A>
+<LI><A HREF="FAQ-11.html#ss11.19">11.19 Sending in Squid bug reports</A>
+<LI><A HREF="FAQ-11.html#ss11.20">11.20 Debugging Squid</A>
+<LI><A HREF="FAQ-11.html#ss11.21">11.21 FATAL: ipcache_init: DNS name lookup tests failed</A>
+<LI><A HREF="FAQ-11.html#ss11.22">11.22 FATAL: Failed to make swap directory /var/spool/cache: (13) Permission denied</A>
+<LI><A HREF="FAQ-11.html#ss11.23">11.23 FATAL: Cannot open HTTP Port</A>
+<LI><A HREF="FAQ-11.html#ss11.24">11.24 FATAL: All redirectors have exited!</A>
+<LI><A HREF="FAQ-11.html#ss11.25">11.25 You've run out of swap file numbers.</A>
+<LI><A HREF="FAQ-11.html#ss11.26">11.26 When using a username and password, I can not access some files.</A>
+<LI><A HREF="FAQ-11.html#ss11.27">11.27 pingerOpen: icmp_sock: (13) Permission denied</A>
+<LI><A HREF="FAQ-11.html#ss11.28">11.28 What is a forwarding loop?</A>
+<LI><A HREF="FAQ-11.html#ss11.29">11.29 accept failure: (71) Protocol error</A>
+<LI><A HREF="FAQ-11.html#ss11.30">11.30 storeSwapInFileOpened: ... Size mismatch</A>
+<LI><A HREF="FAQ-11.html#ss11.31">11.31 Why do I get <EM>fwdDispatch: Cannot retrieve 'https://www.buy.com/corp/ordertracking.asp'</EM></A>
+<LI><A HREF="FAQ-11.html#ss11.32">11.32 Squid can't access URLs like http://3626046468/ab2/cybercards/moreinfo.html</A>
+</UL>
+<P>
+<H2><A NAME="toc12">12.</A> <A HREF="FAQ-12.html">How does Squid work?</A></H2>
+
+<UL>
+<LI><A HREF="FAQ-12.html#ss12.1">12.1 What are cachable objects?</A>
+<LI><A HREF="FAQ-12.html#ss12.2">12.2 What is the ICP protocol?</A>
+<LI><A HREF="FAQ-12.html#ss12.3">12.3 What is the <EM>dnsserver</EM>?</A>
+<LI><A HREF="FAQ-12.html#ss12.4">12.4 What is the <EM>ftpget</EM> program for?</A>
+<LI><A HREF="FAQ-12.html#ss12.5">12.5 FTP PUT's don't work!</A>
+<LI><A HREF="FAQ-12.html#ss12.6">12.6 What is a cache hierarchy?  What are parents and siblings?</A>
+<LI><A HREF="FAQ-12.html#ss12.7">12.7 What is the Squid cache resolution algorithm?</A>
+<LI><A HREF="FAQ-12.html#ss12.8">12.8 What features are Squid developers currently working on?</A>
+<LI><A HREF="FAQ-12.html#ss12.9">12.9 Tell me more about Internet traffic workloads</A>
+<LI><A HREF="FAQ-12.html#ss12.10">12.10 What are the tradeoffs of caching with the NLANR cache system?</A>
+<LI><A HREF="FAQ-12.html#ss12.11">12.11 Where can I find out more about firewalls?</A>
+<LI><A HREF="FAQ-12.html#ss12.12">12.12 What is the ``Storage LRU Expiration Age?''</A>
+<LI><A HREF="FAQ-12.html#ss12.13">12.13 What is ``Failure Ratio at 1.01; Going into hit-only-mode for 5 minutes''?</A>
+<LI><A HREF="FAQ-12.html#ss12.14">12.14 Does squid periodically re-read its configuration file?</A>
+<LI><A HREF="FAQ-12.html#ss12.15">12.15 How does <EM>unlinkd</EM> work?</A>
+<LI><A HREF="FAQ-12.html#ss12.16">12.16 What is an icon URL?</A>
+<LI><A HREF="FAQ-12.html#ss12.17">12.17 Can I make my regular FTP clients use a Squid cache?</A>
+<LI><A HREF="FAQ-12.html#ss12.18">12.18 Why is the select loop average time so high?</A>
+<LI><A HREF="FAQ-12.html#ss12.19">12.19 How does Squid deal with Cookies?</A>
+<LI><A HREF="FAQ-12.html#ss12.20">12.20 How does Squid decide when to refresh a cached object?</A>
+<LI><A HREF="FAQ-12.html#ss12.21">12.21 What exactly is a <EM>deferred read</EM>?</A>
+<LI><A HREF="FAQ-12.html#ss12.22">12.22 Why is my cache's inbound traffic equal to the outbound traffic?</A>
+<LI><A HREF="FAQ-12.html#ss12.23">12.23 How come some objects do not get cached?</A>
+<LI><A HREF="FAQ-12.html#ss12.24">12.24 What does <EM>keep-alive ratio</EM> mean?</A>
+<LI><A HREF="FAQ-12.html#ss12.25">12.25 How does Squid's cache replacement algorithm work?</A>
+<LI><A HREF="FAQ-12.html#ss12.26">12.26 What are private and public keys?</A>
+<LI><A HREF="FAQ-12.html#ss12.27">12.27 What is FORW_VIA_DB for?</A>
+<LI><A HREF="FAQ-12.html#ss12.28">12.28 Does Squid send packets to port 7 (echo)?  If so, why?</A>
+<LI><A HREF="FAQ-12.html#ss12.29">12.29 What does ``WARNING: Reply from unknown nameserver [a.b.c.d]'' mean?</A>
+<LI><A HREF="FAQ-12.html#ss12.30">12.30 How does Squid distribute cache files among the available directories?</A>
+</UL>
+<P>
+<H2><A NAME="toc13">13.</A> <A HREF="FAQ-13.html">Multicast</A></H2>
+
+<UL>
+<LI><A HREF="FAQ-13.html#ss13.1">13.1 What is Multicast?</A>
+<LI><A HREF="FAQ-13.html#ss13.2">13.2 How do I know if I'm on the Mbone?</A>
+<LI><A HREF="FAQ-13.html#ss13.3">13.3 Should I be using Multicast ICP?</A>
+<LI><A HREF="FAQ-13.html#ss13.4">13.4 How do I configure Squid to send Multicast ICP queries?</A>
+<LI><A HREF="FAQ-13.html#ss13.5">13.5 How do I know what Multicast TTL to use?</A>
+<LI><A HREF="FAQ-13.html#ss13.6">13.6 How do I configure Squid to receive and respond to Multicast ICP?</A>
+</UL>
+<P>
+<H2><A NAME="toc14">14.</A> <A HREF="FAQ-14.html">System-Dependent Weirdnesses</A></H2>
+
+<UL>
+<LI><A HREF="FAQ-14.html#ss14.1">14.1 Solaris</A>
+<LI><A HREF="FAQ-14.html#ss14.2">14.2 FreeBSD</A>
+<LI><A HREF="FAQ-14.html#ss14.3">14.3 OSF1/3.2</A>
+<LI><A HREF="FAQ-14.html#ss14.4">14.4 BSD/OS</A>
+<LI><A HREF="FAQ-14.html#ss14.5">14.5 Linux</A>
+<LI><A HREF="FAQ-14.html#ss14.6">14.6 HP-UX</A>
+<LI><A HREF="FAQ-14.html#ss14.7">14.7 IRIX</A>
+<LI><A HREF="FAQ-14.html#ss14.8">14.8 SCO-UNIX</A>
+</UL>
+<P>
+<H2><A NAME="toc15">15.</A> <A HREF="FAQ-15.html">Redirectors</A></H2>
+
+<UL>
+<LI><A HREF="FAQ-15.html#ss15.1">15.1 What is a redirector?</A>
+<LI><A HREF="FAQ-15.html#ss15.2">15.2 Why use a redirector?</A>
+<LI><A HREF="FAQ-15.html#ss15.3">15.3 How does it work?</A>
+<LI><A HREF="FAQ-15.html#ss15.4">15.4 Can I use the redirector to return HTTP redirect messages?</A>
+<LI><A HREF="FAQ-15.html#ss15.5">15.5 FATAL: All redirectors have exited!</A>
+</UL>
+<P>
+<H2><A NAME="toc16">16.</A> <A HREF="FAQ-16.html">Cache Digests</A></H2>
+
+<UL>
+<LI><A HREF="FAQ-16.html#ss16.1">16.1 What is a Cache Digest?</A>
+<LI><A HREF="FAQ-16.html#ss16.2">16.2 How and why are they used?</A>
+<LI><A HREF="FAQ-16.html#ss16.3">16.3 What is the theory behind Cache Digests?</A>
+<LI><A HREF="FAQ-16.html#ss16.4">16.4 How is the size of the Cache Digest in Squid determined?</A>
+<LI><A HREF="FAQ-16.html#ss16.5">16.5 What hash functions (and how many of them) does Squid use?</A>
+<LI><A HREF="FAQ-16.html#ss16.6">16.6 How are objects added to the Cache Digest in Squid?</A>
+<LI><A HREF="FAQ-16.html#ss16.7">16.7 Does Squid support deletions in Cache Digests? What are diffs/deltas?</A>
+<LI><A HREF="FAQ-16.html#ss16.8">16.8 When and how often is the local digest built?</A>
+<LI><A HREF="FAQ-16.html#ss16.9">16.9 How are Cache Digests transferred between peers?</A>
+<LI><A HREF="FAQ-16.html#ss16.10">16.10 How and where are Cache Digests stored?</A>
+<LI><A HREF="FAQ-16.html#ss16.11">16.11 How are the Cache Digest statistics in the Cache Manager to be interpreted?</A>
+<LI><A HREF="FAQ-16.html#ss16.12">16.12 What are False Hits and how should they be handled?</A>
+<LI><A HREF="FAQ-16.html#ss16.13">16.13 How can Cache Digest related activity be traced/debugged?</A>
+<LI><A HREF="FAQ-16.html#ss16.14">16.14 What about ICP?</A>
+<LI><A HREF="FAQ-16.html#ss16.15">16.15 Is there a Cache Digest Specification?</A>
+</UL>
+<P>
+<H2><A NAME="toc17">17.</A> <A HREF="FAQ-17.html">Transparent Caching/Proxying</A></H2>
+
+<UL>
+<LI><A HREF="FAQ-17.html#ss17.1">17.1 Transparent proxying for Solaris, SunOS, and BSD systems</A>
+<LI><A HREF="FAQ-17.html#ss17.2">17.2 Transparent proxying for Linux</A>
+<LI><A HREF="FAQ-17.html#ss17.3">17.3 Transparent proxying with Cisco</A>
+<LI><A HREF="FAQ-17.html#ss17.4">17.4 Transparent proxying with LINUX 2.0.29 and CISCO IOS 11.1</A>
+<LI><A HREF="FAQ-17.html#ss17.5">17.5 The cache is trying to connect to itself...</A>
+<LI><A HREF="FAQ-17.html#ss17.6">17.6 Transparent caching with FreeBSD</A>
+<LI><A HREF="FAQ-17.html#ss17.7">17.7 Transparent caching with Linux and ipchains</A>
+<LI><A HREF="FAQ-17.html#ss17.8">17.8 Transparent Proxying with ACC Tigris digital access server</A>
+<LI><A HREF="FAQ-17.html#ss17.9">17.9 ``Connection reset by peer'' and Cisco policy routing</A>
+</UL>
+<P>
+<H2><A NAME="toc18">18.</A> <A HREF="FAQ-18.html">SNMP</A></H2>
+
+<UL>
+<LI><A HREF="FAQ-18.html#ss18.1">18.1 Does Squid support SNMP?</A>
+<LI><A HREF="FAQ-18.html#ss18.2">18.2 Enabling SNMP in Squid</A>
+<LI><A HREF="FAQ-18.html#ss18.3">18.3 Configuring Squid 2.2</A>
+<LI><A HREF="FAQ-18.html#ss18.4">18.4 Configuring Squid 2.1</A>
+<LI><A HREF="FAQ-18.html#ss18.5">18.5 How can I query the Squid SNMP Agent</A>
+<LI><A HREF="FAQ-18.html#ss18.6">18.6 What can I use SNMP and Squid for?</A>
+<LI><A HREF="FAQ-18.html#ss18.7">18.7 How can I use SNMP with Squid?</A>
+<LI><A HREF="FAQ-18.html#ss18.8">18.8 Where can I get more information/discussion about Squid and SNMP?</A>
+</UL>
+<P>
+<H2><A NAME="toc19">19.</A> <A HREF="FAQ-19.html">Squid version 2</A></H2>
+
+<UL>
+<LI><A HREF="FAQ-19.html#ss19.1">19.1 What are the new features?</A>
+<LI><A HREF="FAQ-19.html#ss19.2">19.2 How do I configure 'ssl_proxy' now?</A>
+<LI><A HREF="FAQ-19.html#ss19.3">19.3 Logfile rotation doesn't work with Async I/O</A>
+<LI><A HREF="FAQ-19.html#ss19.4">19.4 Adding a new cache disk</A>
+<LI><A HREF="FAQ-19.html#ss19.5">19.5 Squid 2 performs badly on Linux</A>
+<LI><A HREF="FAQ-19.html#ss19.6">19.6 How do I configure proxy authentication with Squid-2?</A>
+<LI><A HREF="FAQ-19.html#ss19.7">19.7 Why does proxy-auth reject all users with Squid-2.2?</A>
+<LI><A HREF="FAQ-19.html#ss19.8">19.8 Delay Pools</A>
+<LI><A HREF="FAQ-19.html#ss19.9">19.9 Can I preserve my cache when upgrading from 1.1 to 2?</A>
+<LI><A HREF="FAQ-19.html#ss19.10">19.10 Customizable Error Messages</A>
+<LI><A HREF="FAQ-19.html#ss19.11">19.11 My squid.conf from version 1.1 doesn't work!</A>
+</UL>
+<P>
+<H2><A NAME="toc20">20.</A> <A HREF="FAQ-20.html">httpd-accelerator mode</A></H2>
+
+<UL>
+<LI><A HREF="FAQ-20.html#ss20.1">20.1 What is the httpd-accelerator mode?</A>
+<LI><A HREF="FAQ-20.html#ss20.2">20.2 How do I set it up?</A>
+<LI><A HREF="FAQ-20.html#ss20.3">20.3 When using an httpd-accelerator, the port number for redirects is wrong</A>
+</UL>
+<P>
+<H2><A NAME="toc21">21.</A> <A HREF="FAQ-21.html">Related Software</A></H2>
+
+<UL>
+<LI><A HREF="FAQ-21.html#ss21.1">21.1 Clients</A>
+<LI><A HREF="FAQ-21.html#ss21.2">21.2 Logfile Analysis</A>
+<LI><A HREF="FAQ-21.html#ss21.3">21.3 Configuration Tools</A>
+<LI><A HREF="FAQ-21.html#ss21.4">21.4 Squid add-ons</A>
+</UL>
+<P>
+<H2><A NAME="toc22">22.</A> <A HREF="FAQ-22.html">Terms and Definitions</A></H2>
+
+<UL>
+<LI><A HREF="FAQ-22.html#ss22.1">22.1 Neighbor</A>
+</UL>
+<HR>
+<A HREF="FAQ-1.html">Next</A>
+Previous
+Contents
+</BODY>
+</HTML>

@@ -1,0 +1,34 @@
+<HTML>
+<HEAD>
+	<TITLE>Golem Designs - Open Auction</TITLE>
+</HEAD>
+<BODY TEXT=#000000 BGCOLOR=#FFFFFF LINK=#000088 VLINK=#000088 ALINK=#000088>
+	<TABLE WIDTH=100% BORDER=0><TR><TD VALIGN=TOP WIDTH=100%>
+		<FONT SIZE=+2>Golem Designs</FONT>
+		<BR>
+		<FONT SIZE=+1>Online Auction</FONT>
+	</TD><TD VALIGN=TOP ALIGN=LEFT>
+		<FORM ACTION=/cgi-bin/auction.pl METHOD=POST>
+		<INPUT TYPE=TEXT NAME=searchstring>
+		<INPUT TYPE=SUBMIT VALUE="Search">
+		<INPUT TYPE=HIDDEN NAME=action VALUE="search">
+		<FONT SIZE=-2><INPUT TYPE=RADIO NAME=searchtype VALUE="keyword" CHECKED>keyword <INPUT TYPE=RADIO NAME=searchtype VALUE="username">username </FONT>
+		</FORM>
+	</TD></TR></TABLE>
+	<P>
+<FORM ACTION=/cgi-bin/auction.pl METHOD=POST>
+<H2>View Closed Items</H2>
+<TABLE WIDTH=100% BORDER=1 BGCOLOR=#EEEEEE>
+<INPUT TYPE=HIDDEN NAME=action VALUE=closed2>
+<TR><TD COLSPAN=2 VALIGN=TOP> This form will allow you to view the
+status and contact information for closed auction items you bid on or listed for auction.
+</TD></TR>
+<TR><TD VALIGN=TOP><B>Your Username:<BR></B>Required for verification</TD><TD><INPUT NAME=ALIAS TYPE=TEXT SIZE=30 MAXLENGTH=30>
+<TR><TD VALIGN=TOP><B>Your Password:<BR></B>Required for verification</TD><TD><INPUT NAME=PASSWORD TYPE=PASSWORD SIZE=30>
+</TD></TR></TABLE>
+<CENTER><INPUT TYPE=SUBMIT VALUE="View Closed Items"></CENTER>
+<P><P ALIGN=CENTER><FONT SIZE=-1><A HREF=auction.pl>[Category List]</A> <A HREF=auction.pl?action=new>[Post New Item]</A> <A HREF=auction.pl?action=reg>[New Registration]</A> <A HREF=auction.pl?action=creg>[Change Registration]</A> <A HREF=auction.pl?action=closed>[Closed Auctions]</A> </FONT></P>
+<P>
+<CENTER><FONT SIZE=-1><A HREF="../index.html">TheGolemsPlace</A></FONT></CENTER>
+</BODY>
+</HTML>

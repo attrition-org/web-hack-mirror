@@ -1,0 +1,192 @@
+<body text="#FFFFFF" bgcolor="#0080C0" link="#00FF00" vlink="#00FFFF" alink="#FF0000">
+<h3>欢迎使用音乐点播搜索</h3><hr size=2>
+<form action="/gdcatv/owa/audio.search" method="post">
+<p>歌(曲)名字数:<select name="s_number" size=1>
+<option></option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
+<option>10</option>
+<option>11</option>
+<option>12</option>
+<option>13</option>
+<option>14</option>
+<option>15</option>
+<option>>15</option>
+</select></p>
+<p>歌曲名包含词:<input type=text size=20 maxlength=30 name="s_keyword"></p>
+<p>演唱:<select name="s_singer" size=1>
+<option selected></option>
+<option>   许志安                                                                                                                                                                                               </option>
+<option> 刘德华                                                                                                                                                                                                 </option>
+<option> 苏慧伦                                                                                                                                                                                                 </option>
+<option> 王馨平                                                                                                                                                                                                 </option>
+<option> 吴倩莲                                                                                                                                                                                                 </option>
+<option> 周华健                                                                                                                                                                                                 </option>
+<option>ARRESTED DEVELOPMENT                                                                                                                                                                                    </option>
+<option>BACKSTREET BOYS                                                                                                                                                                                         </option>
+<option>BEE GEES                                                                                                                                                                                                </option>
+<option>BEYOND                                                                                                                                                                                                  </option>
+<option>BLUR                                                                                                                                                                                                    </option>
+<option>BOBBY BROWN                                                                                                                                                                                             </option>
+<option>BOYZONE-A                                                                                                                                                                                               </option>
+<option>DAMAGE                                                                                                                                                                                                  </option>
+<option>DIANA ROSS                                                                                                                                                                                              </option>
+<option>EARTH  WIND &FIRE                                                                                                                                                                                       </option>
+<option>EAST-17                                                                                                                                                                                                 </option>
+<option>EDDIE MOHEY                                                                                                                                                                                             </option>
+<option>ENIGMA                                                                                                                                                                                                  </option>
+<option>ETERNAL                                                                                                                                                                                                 </option>
+<option>GABRIELLE                                                                                                                                                                                               </option>
+<option>GEORGE MICHAEL                                                                                                                                                                                          </option>
+<option>JAMIROQUAI                                                                                                                                                                                              </option>
+<option>JON SECADA                                                                                                                                                                                              </option>
+<option>JOSHUA KADISON                                                                                                                                                                                          </option>
+<option>Kavanal                                                                                                                                                                                                 </option>
+<option>LUTHER VANDROSS & GREGORY HINES                                                                                                                                                                         </option>
+<option>Lisa Stansfield                                                                                                                                                                                         </option>
+<option>MARK MORRISON                                                                                                                                                                                           </option>
+<option>MEAT LOAF                                                                                                                                                                                               </option>
+<option>MICHAEL BOLTON&SUZIE BENSON                                                                                                                                                                             </option>
+<option>MICHAEL JACKSON                                                                                                                                                                                         </option>
+<option>MICHAEL LEARNS TO ROCK                                                                                                                                                                                  </option>
+<option>PEABO BRYSON & REGINA BELLE                                                                                                                                                                             </option>
+<option>PETER ANDRE                                                                                                                                                                                             </option>
+<option>RICHARD MARX                                                                                                                                                                                            </option>
+<option>ROBERT MILES FEAT.MARIA NAYLER                                                                                                                                                                          </option>
+<option>SHOKO SUZUKI& COREY HART                                                                                                                                                                                </option>
+<option>SPICE GIRLS                                                                                                                                                                                             </option>
+<option>Scorpions(蝎子合唱团）                                                                                                                                                                                  </option>
+<option>TAMMY WYNETT & MARK GRAY                                                                                                                                                                                </option>
+<option>TEXAS                                                                                                                                                                                                   </option>
+<option>THE BEAUTIFUL SOUTH                                                                                                                                                                                     </option>
+<option>THE BLUEBOY                                                                                                                                                                                             </option>
+<option>US3                                                                                                                                                                                                     </option>
+<option>VANILLA  ICE                                                                                                                                                                                            </option>
+<option>VOODOO LOUNGE                                                                                                                                                                                           </option>
+<option>WHITE TOWN                                                                                                                                                                                              </option>
+<option>WILL TO POWER                                                                                                                                                                                           </option>
+<option>WILLIE NELSON & BONNIE RAITT                                                                                                                                                                            </option>
+<option>草蜢                                                                                                                                                                                                    </option>
+<option>陈慧琳                                                                                                                                                                                                  </option>
+<option>陈慧娴                                                                                                                                                                                                  </option>
+<option>陈升                                                                                                                                                                                                    </option>
+<option>陈淑桦                                                                                                                                                                                                  </option>
+<option>陈晓东                                                                                                                                                                                                  </option>
+<option>成龙                                                                                                                                                                                                    </option>
+<option>达明                                                                                                                                                                                                    </option>
+<option>杜德伟                                                                                                                                                                                                  </option>
+<option>范晓萱                                                                                                                                                                                                  </option>
+<option>冯宝宝                                                                                                                                                                                                  </option>
+<option>高明敏                                                                                                                                                                                                  </option>
+<option>高明敏、王謦平                                                                                                                                                                                          </option>
+<option>高胜美                                                                                                                                                                                                  </option>
+<option>关淑怡                                                                                                                                                                                                  </option>
+<option>郭富城                                                                                                                                                                                                  </option>
+<option>何勇                                                                                                                                                                                                    </option>
+<option>胡松华                                                                                                                                                                                                  </option>
+<option>极乐洋行                                                                                                                                                                                                </option>
+<option>酒井法子                                                                                                                                                                                                </option>
+<option>黎明                                                                                                                                                                                                    </option>
+<option>黎瑞恩                                                                                                                                                                                                  </option>
+<option>黎瑞莲                                                                                                                                                                                                  </option>
+<option>黎姿                                                                                                                                                                                                    </option>
+<option>李度                                                                                                                                                                                                    </option>
+<option>李谷一                                                                                                                                                                                                  </option>
+<option>李惠敏                                                                                                                                                                                                  </option>
+<option>李克勤                                                                                                                                                                                                  </option>
+<option>李玫                                                                                                                                                                                                    </option>
+<option>李沁怡                                                                                                                                                                                                  </option>
+<option>李宗盛                                                                                                                                                                                                  </option>
+<option>梁朝伟                                                                                                                                                                                                  </option>
+<option>林佳仪                                                                                                                                                                                                  </option>
+<option>林忆莲                                                                                                                                                                                                  </option>
+<option>林忆莲.BLUE JEANS                                                                                                                                                                                       </option>
+<option>林子祥                                                                                                                                                                                                  </option>
+<option>零点乐队                                                                                                                                                                                                </option>
+<option>刘德华                                                                                                                                                                                                  </option>
+<option>刘若英                                                                                                                                                                                                  </option>
+<option>罗大佑                                                                                                                                                                                                  </option>
+<option>罗嘉良 张可颐                                                                                                                                                                                           </option>
+<option>罗嘉良 张可颐 宣萱 吴镇宇                                                                                                                                                                               </option>
+<option>罗坚                                                                                                                                                                                                    </option>
+<option>彭丽媛                                                                                                                                                                                                  </option>
+<option>齐秦                                                                                                                                                                                                    </option>
+<option>苏有朋                                                                                                                                                                                                  </option>
+<option>苏芮                                                                                                                                                                                                    </option>
+<option>孙耀威 酒井法子                                                                                                                                                                                         </option>
+<option>谭咏麟                                                                                                                                                                                                  </option>
+<option>谭泳麟                                                                                                                                                                                                  </option>
+<option>汤宝如                                                                                                                                                                                                  </option>
+<option>唐季礼                                                                                                                                                                                                  </option>
+<option>童安格                                                                                                                                                                                                  </option>
+<option>万芳                                                                                                                                                                                                    </option>
+<option>王菲                                                                                                                                                                                                    </option>
+<option>王靖雯                                                                                                                                                                                                  </option>
+<option>王馨平                                                                                                                                                                                                  </option>
+<option>王謦平                                                                                                                                                                                                  </option>
+<option>吴奇隆                                                                                                                                                                                                  </option>
+<option>辛晓琪                                                                                                                                                                                                  </option>
+<option>熊家源                                                                                                                                                                                                  </option>
+<option>宣萱  罗嘉良                                                                                                                                                                                            </option>
+<option>宣萱 吴镇宇                                                                                                                                                                                             </option>
+<option>宣萱 张可颐                                                                                                                                                                                             </option>
+<option>杨采妮                                                                                                                                                                                                  </option>
+<option>杨钰莹                                                                                                                                                                                                  </option>
+<option>叶倩文                                                                                                                                                                                                  </option>
+<option>远征                                                                                                                                                                                                    </option>
+<option>张爱嘉                                                                                                                                                                                                  </option>
+<option>张国荣                                                                                                                                                                                                  </option>
+<option>张洪量                                                                                                                                                                                                  </option>
+<option>张可颐 罗嘉良                                                                                                                                                                                           </option>
+<option>张卫健                                                                                                                                                                                                  </option>
+<option>张信哲                                                                                                                                                                                                  </option>
+<option>张学友                                                                                                                                                                                                  </option>
+<option>张学友 汤宝如                                                                                                                                                                                           </option>
+<option>赵传                                                                                                                                                                                                    </option>
+<option>郑嘉颖                                                                                                                                                                                                  </option>
+<option>郑秀文                                                                                                                                                                                                  </option>
+<option>郑中基                                                                                                                                                                                                  </option>
+<option>周华健                                                                                                                                                                                                  </option>
+<option>周慧敏                                                                                                                                                                                                  </option>
+<option>周慧敏、王謦平、汤宝如                                                                                                                                                                                  </option>
+<option>周治平                                                                                                                                                                                                  </option>
+<option>朱威远                                                                                                                                                                                                  </option>
+</select></p>
+<p>类型:<select name="s_type" size=1>
+<option selected></option>
+<option>Not known(空值)</option>
+<option>Disco                                                                                                                                                                                                   </option>
+<option>歌曲连播                                                                                                                                                                                                </option>
+<option>口琴演奏                                                                                                                                                                                                </option>
+<option>流行歌                                                                                                                                                                                                  </option>
+<option>民歌                                                                                                                                                                                                    </option>
+<option>萨克斯风                                                                                                                                                                                                </option>
+<option>小夜曲                                                                                                                                                                                                  </option>
+<option>摇滚乐                                                                                                                                                                                                  </option>
+</select></p>
+<p>语种:<select name="s_language" size=1>
+<option selected></option>
+<option>Not known(空值)</option>
+<option>纯音乐                                                                                                                                                                                                  </option>
+<option>国语                                                                                                                                                                                                    </option>
+<option>闽南语                                                                                                                                                                                                  </option>
+<option>英语                                                                                                                                                                                                    </option>
+<option>粤语                                                                                                                                                                                                    </option>
+</select></p>
+<input type=hidden name=s_page value="1">
+<input type=submit name=s_button value="搜索(Search)">
+<input type=reset value="清除(Reset)">
+<hr size=1>以下主要针对古典音乐,轻音乐<p>
+<p>演奏:<input type=text size=20 maxlength=30 name="s_player"></p>
+<p>作曲:<input type=text size=20 maxlength=30 name="s_mdeveloper"></p>
+<p>作词:<input type=text size=20 maxlength=30 name="s_cdeveloper"></p>
+<p>指挥:<input type=text size=20 maxlength=30 name="s_director"></p>
+<hr size=2>
+</form></body>

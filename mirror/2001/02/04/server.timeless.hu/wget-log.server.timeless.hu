@@ -1,0 +1,32 @@
+--00:31:44--  http://server.timeless.hu:80/
+           => `server.timeless.hu/index.html'
+Connecting to server.timeless.hu:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 1,140 [text/html]
+
+    0K -> .                                                      [100%]
+
+00:31:45 (1.09 MB/s) - `server.timeless.hu/index.html' saved [1140/1140]
+
+Loading robots.txt; please ignore errors.
+--00:31:45--  http://server.timeless.hu:80/no-robots.txt
+           => `server.timeless.hu/no-robots.txt'
+Connecting to server.timeless.hu:80... connected!
+HTTP request sent, awaiting response... 404 Not Found
+00:31:45 ERROR 404: Not Found.
+
+--00:31:45--  http://server.timeless.hu:80/prime.jpg
+           => `server.timeless.hu/prime.jpg'
+Connecting to server.timeless.hu:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 44,550 [image/jpeg]
+
+    0K -> .......... .......... .......... .......... ...        [100%]
+
+00:31:47 (36.56 KB/s) - `server.timeless.hu/prime.jpg' saved [44550/44550]
+
+Converting server.timeless.hu/index.html... done.
+
+FINISHED --00:31:51--
+Downloaded: 45,690 bytes in 2 files
+Converting server.timeless.hu/index.html... done.

@@ -1,0 +1,157 @@
+<HTML> 
+<HEAD>
+<TITLE>Oh! Duvida Cruel !</TITLE>
+<SCRIPT LANGUAGE="JavaScript"> 
+<!-- hide JavaScript from non-JavaScript browsers
+function Is ()
+{   var agt=navigator.userAgent.toLowerCase()
+
+    this.major = parseInt(navigator.appVersion)
+    this.minor = parseFloat(navigator.appVersion)
+
+    this.nav  = ((agt.indexOf('mozilla')!=-1) && ((agt.indexOf('spoofer')==-1)
+                && (agt.indexOf('compatible') == -1)))
+    this.nav2 = (this.nav && (this.major == 2))
+    this.nav3 = (this.nav && (this.major == 3))
+    this.nav4 = (this.nav && (this.major == 4))
+    this.nav4up = this.nav && (this.major >= 4)
+
+    this.navonly      = (this.nav && (agt.indexOf(";nav") != -1))
+
+    this.ie   = (agt.indexOf("msie") != -1)
+    this.ie3  = (this.ie && (this.major == 2))
+    this.ie4  = (this.ie && (this.major == 4))
+    this.ie4up  = this.ie  && (this.major >= 4)
+
+    this.opera = (agt.indexOf("opera") != -1)
+     
+    if (this.nav2 || this.ie3) this.js = 1.0
+    else if (this.nav3 || this.opera) this.js = 1.1
+    else if (this.nav4 || this.ie4) this.js = 1.2
+    else if ((this.nav && (this.minor > 4.05)) || (this.ie && (this.major > 4))) 
+         this.js = 1.2
+    else this.js = 0.0 // HACK: always check for JS version with > or >=
+
+    this.win   = ( (agt.indexOf("win")!=-1) || (agt.indexOf("16bit")!=-1) )
+    this.win95 = ((agt.indexOf("win95")!=-1) || (agt.indexOf("windows 95")!=-1))
+
+    this.win16 = ((agt.indexOf("win16")!=-1)
+               || (agt.indexOf("16bit")!=-1) || (agt.indexOf("windows 3.1")!=-1)
+               || (agt.indexOf("windows 16-bit")!=-1) )  
+
+    this.win31 = (agt.indexOf("windows 3.1")!=-1) || (agt.indexOf("win16")!=-1) ||
+                 (agt.indexOf("windows 16-bit")!=-1)
+
+    this.win98 = ((agt.indexOf("win98")!=-1)||(agt.indexOf("windows 98")!=-1))
+    this.winnt = ((agt.indexOf("winnt")!=-1)||(agt.indexOf("windows nt")!=-1))
+    this.win32 = this.win95 || this.winnt || this.win98 || 
+                 ((this.major >= 4) && (navigator.platform == "Win32")) ||
+                 (agt.indexOf("win32")!=-1) || (agt.indexOf("32bit")!=-1)
+
+    this.os2   = (agt.indexOf("os/2")!=-1) 
+                 || (navigator.appVersion.indexOf("OS/2")!=-1)  
+                 || (agt.indexOf("ibm-webexplorer")!=-1)
+
+    this.mac    = (agt.indexOf("mac")!=-1)
+    this.mac68k = this.mac && ((agt.indexOf("68k")!=-1) || 
+                               (agt.indexOf("68000")!=-1))
+    this.macppc = this.mac && ((agt.indexOf("ppc")!=-1) || 
+                               (agt.indexOf("powerpc")!=-1))
+
+    this.sun   = (agt.indexOf("sunos")!=-1)
+    this.sun4  = (agt.indexOf("sunos 4")!=-1)
+    this.sun5  = (agt.indexOf("sunos 5")!=-1)
+    this.suni86= this.sun && (agt.indexOf("i86")!=-1)
+    this.irix  = (agt.indexOf("irix") !=-1)    // SGI
+    this.irix5 = (agt.indexOf("irix 5") !=-1)
+    this.irix6 = ((agt.indexOf("irix 6") !=-1) || (agt.indexOf("irix6") !=-1))
+    this.hpux  = (agt.indexOf("hp-ux")!=-1)
+    this.hpux9 = this.hpux && (agt.indexOf("09.")!=-1)
+    this.hpux10= this.hpux && (agt.indexOf("10.")!=-1)
+    this.aix   = (agt.indexOf("aix")  !=-1)      // IBM
+    this.aix1  = (agt.indexOf("aix 1")  !=-1)    
+    this.aix2  = (agt.indexOf("aix 2")  !=-1)    
+    this.aix3  = (agt.indexOf("aix 3")  !=-1)    
+    this.aix4  = (agt.indexOf("aix 4")  !=-1)    
+    this.linux = (agt.indexOf("inux")!=-1)
+    this.sco   = (agt.indexOf("sco")!=-1) || (agt.indexOf("unix_sv")!=-1)
+    this.unixware = (agt.indexOf("unix_system_v")!=-1) 
+    this.mpras    = (agt.indexOf("ncr")!=-1) 
+    this.reliant  = (agt.indexOf("reliantunix")!=-1)
+    this.dec   = (agt.indexOf("dec")!=-1) || (agt.indexOf("osf1")!=-1) 
+           || (agt.indexOf("dec_alpha")!=-1) || (agt.indexOf("alphaserver")!=-1) 
+           || (agt.indexOf("ultrix")!=-1) || (agt.indexOf("alphastation")!=-1) 
+    this.sinix = (agt.indexOf("sinix")!=-1)
+    this.freebsd = (agt.indexOf("freebsd")!=-1)
+    this.bsd = (agt.indexOf("bsd")!=-1)
+    this.unix  = (agt.indexOf("x11")!=-1) || this.sun || this.irix || this.hpux || 
+                 this.sco ||this.unixware || this.mpras || this.reliant || 
+                 this.dec || this.sinix || this.aix || this.linux || this.freebsd
+
+    this.vms   = (agt.indexOf("vax")!=-1) || (agt.indexOf("openvms")!=-1)
+}
+
+var is;
+var isIE3Mac = false;
+
+if ((navigator.appVersion.indexOf("Mac")!=-1) && (navigator.userAgent.indexOf("MSIE")!=-1) && (parseInt(navigator.appVersion)==3))
+
+       isIE3Mac = true;
+
+else 
+
+       is = new Is(); 
+
+
+//--> end hide JavaScript
+</SCRIPT>
+<meta name="keywords" content="Imobiliário
+Construção civil
+Empreendimento
+Flat 
+">
+</HEAD> 
+
+<BODY BGCOLOR="#FFFFFF">
+
+<SCRIPT LANGUAGE="JavaScript"> 
+<!-- hide JavaScript from non-JavaScript browsers
+var useFlash;
+if (isIE3Mac)
+	useFlash = 0;
+else {
+
+     if ( (is.nav3 || is.nav4up) && (is.win || is.mac) ) {
+
+        useFlash = navigator.mimeTypes && navigator.mimeTypes["application/x-shockwave-flash"] &&             navigator.mimeTypes["application/x-shockwave-flash"].enabledPlugin;
+
+     }
+     else 
+     {
+        if ((is.ie4up) && (is.win)) {
+
+           temp  = '<SCRIPT LANGUAGE="VBScript"\> \n'
+           temp += '<!--\n'
+           temp += 'On error resume next  \n'
+           temp += 'useFlash = (IsObject(CreateObject("ShockwaveFlash.ShockwaveFlash.3"))) \n'
+           temp += '-->\n'
+           temp += '</SCRIPT\> \n'
+           document.write(temp);
+        }     
+        else
+        {
+          useFlash = 0;
+        }
+     }
+}
+
+if ( useFlash ) { 
+    window.location='index_flash.htm';
+   } else { 
+    window.location='index_html.htm';
+   }
+
+//-->
+</SCRIPT> 
+</BODY> 
+</HTML> 

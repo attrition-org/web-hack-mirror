@@ -1,0 +1,247 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<TITLE>Name of Company</TITLE>
+<script language="javascript">
+
+<!--
+ok = false; pick = 5;
+if (navigator.userAgent.indexOf ("Mozilla") != -1) {
+  ok = parseInt(navigator.appVersion.substring(0,1)) >= 3
+} else {}
+
+   if (ok == 1) {
+// menu item 1 begin
+      menu1 = new Image(100, 24)
+      menu1.src = "images/b_welcome.gif"
+      menu1b = new Image(100, 24)
+      menu1b.src = "images/b_welcome2.gif"
+// menu item 1 end
+	  indx1 = new Image(600, 25)
+	  indx1.src = "images/ind_1.gif"
+// menu item 2 begin
+      menu2 = new Image(100, 24)
+      menu2.src = "images/b_company.gif"
+      menu2b = new Image(100, 24)
+      menu2b.src = "images/b_company2.gif"
+// menu item 2 end
+	  indx2 = new Image(600, 25)
+	  indx2.src = "images/ind_2.gif"
+// menu item 3 begin
+      menu3 = new Image(100, 24)
+      menu3.src = "images/b_services.gif"
+      menu3b = new Image(100, 24)
+      menu3b.src = "images/b_services2.gif"
+// menu item 3 end
+	  indx3 = new Image(600, 25)
+	  indx3.src = "images/ind_3.gif"
+// menu item 4 begin
+      menu4 = new Image(100, 24)
+      menu4.src = "images/b_products.gif"
+      menu4b = new Image(100, 24)
+      menu4b.src = "images/b_products2.gif"
+// menu item 4 end
+	  indx4 = new Image(600, 25)
+	  indx4.src = "images/ind_4.gif"
+// menu item 5 begin
+      menu5 = new Image(100, 24)
+      menu5.src = "images/b_support.gif"
+      menu5b = new Image(100, 24)
+      menu5b.src = "images/b_support2.gif"
+// menu item 5 end
+	  indx5 = new Image(600, 25)
+	  indx5.src = "images/ind_5.gif"
+// menu item 6 begin
+      menu6 = new Image(100, 24)
+      menu6.src = "images/b_contact.gif"
+      menu6b = new Image(100, 24)
+      menu6b.src = "images/b_contact2.gif"
+// menu item 6 end
+	  indx6 = new Image(600, 25)
+	  indx6.src = "images/ind_6.gif"
+   }
+   function un(nom) {
+       if (ok == 1) {
+// menu item 1 begin
+          if ((nom == "m1")&&(pick!=1)) {document.menu1.src = menu1b.src;document.indx.src = indx1.src;}
+// menu item 1 end
+// menu item 2 begin
+          if ((nom == "m2")&&(pick!=2)) {document.menu2.src = menu2b.src;document.indx.src = indx2.src;}
+// menu item 2 end
+// menu item 3 begin
+          if ((nom == "m3")&&(pick!=3)) {document.menu3.src = menu3b.src;document.indx.src = indx3.src;}
+// menu item 3 end
+// menu item 4 begin
+          if ((nom == "m4")&&(pick!=4)) {document.menu4.src = menu4b.src;document.indx.src = indx4.src;}
+// menu item 4 end
+// menu item 5 begin
+          if ((nom == "m5")&&(pick!=5)) {document.menu5.src = menu5b.src;document.indx.src = indx5.src;}
+// menu item 5 end
+// menu item 6 begin
+          if ((nom == "m6")&&(pick!=6)) {document.menu6.src = menu6b.src;document.indx.src = indx6.src;}
+// menu item 6 end
+          return true;
+       }
+   }
+   function deux(nom) {
+       if (ok == 1) {
+// menu item 1 begin
+          if ((nom == "m1")&&(pick!=1)) {document.menu1.src = menu1.src;document.indx.src = indx1.src;}
+// menu item 1 end
+// menu item 2 begin
+          if ((nom == "m2")&&(pick!=2)) {document.menu2.src = menu2.src;document.indx.src = indx2.src;}
+// menu item 2 end
+// menu item 3 begin
+          if ((nom == "m3")&&(pick!=3)) {document.menu3.src = menu3.src;document.indx.src = indx3.src;}
+// menu item 3 end
+// menu item 4 begin
+          if ((nom == "m4")&&(pick!=4)) {document.menu4.src = menu4.src;document.indx.src = indx4.src;}
+// menu item 4 end
+// menu item 5 begin
+          if ((nom == "m5")&&(pick!=5)) {document.menu5.src = menu5.src;document.indx.src = indx5.src;}
+// menu item 5 end
+// menu item 6 begin
+          if ((nom == "m6")&&(pick!=6)) {document.menu6.src = menu6.src;document.indx.src = indx6.src;}
+// menu item 6 end
+if (pick==1) {document.indx.src=indx1.src;}
+if (pick==2) {document.indx.src=indx2.src;}
+if (pick==3) {document.indx.src=indx3.src;}
+if (pick==4) {document.indx.src=indx4.src;}
+if (pick==5) {document.indx.src=indx5.src;}
+if (pick==6) {document.indx.src=indx6.src;}
+          return true;
+       }
+   }
+   function trois(nom) {
+       if (ok == 1) {
+// menu item 1 begin
+          if (pick==1) {document.menu1.src = menu1.src;document.indx.src = indx1.src;}
+// menu item 1 end
+// menu item 2 begin
+          if (pick==2) {document.menu2.src = menu2.src;document.indx.src = indx2.src;}
+// menu item 2 end
+// menu item 3 begin
+          if (pick==3) {document.menu3.src = menu3.src;document.indx.src = indx3.src;}
+// menu item 3 end
+// menu item 4 begin
+          if (pick==4) {document.menu4.src = menu4.src;document.indx.src = indx4.src;}
+// menu item 4 end
+// menu item 5 begin
+          if (pick==5) {document.menu5.src = menu5.src;document.indx.src = indx5.src;}
+// menu item 5 end
+// menu item 6 begin
+          if (pick==6) {document.menu6.src = menu6.src;document.indx.src = indx6.src;}
+// menu item 6 end
+// menu item 1 begin
+          if ((nom == "m1")&&(pick!=1)) {document.menu1.src = menu1b.src;document.indx.src = indx1.src; pick=1}
+// menu item 1 end
+// menu item 2 begin
+          if ((nom == "m2")&&(pick!=2)) {document.menu2.src = menu2b.src;document.indx.src = indx2.src; pick=2}
+// menu item 2 end
+// menu item 3 begin
+          if ((nom == "m3")&&(pick!=3)) {document.menu3.src = menu3b.src;document.indx.src = indx3.src; pick=3}
+// menu item 3 end
+// menu item 4 begin
+          if ((nom == "m4")&&(pick!=4)) {document.menu4.src = menu4b.src;document.indx.src = indx4.src; pick=4}
+// menu item 4 end
+
+// menu item 5 begin
+          if ((nom == "m5")&&(pick!=5)) {document.menu5.src = menu5b.src;document.indx.src = indx5.src; pick=5}
+// menu item 5 end
+// menu item 6 begin
+          if ((nom == "m6")&&(pick!=6)) {document.menu6.src = menu6b.src;document.indx.src = indx6.src; pick=6}
+// menu item 6 end
+          return true;
+       }
+   }
+// -->
+
+</script>
+
+<META NAME="Author" CONTENT="VIsicom Média Inc.">
+<META NAME="Description" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+</HEAD>
+<BODY BGCOLOR="#000000" TEXT="#FFFFFF" LINK="#00FF00" VLINK="#008000" ALINK="#FF0000">
+<DIV ALIGN="center"><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0>
+            <!--  *************************************************************************************************************
+                        PUT HERE THE HEADER IMAGE (COMPANY NAME, LOGO OR OTHER)
+                        only change the name
+                        The size of the image must be 587 x 32. For that use the file barre.gif
+                    ************************************************************************************************************* -->
+  <TR>
+      <TD COLSPAN=2>
+        <div align="center"><a name="top"></a><img src="images/instronicsname.JPG" border=0 width=409 height=70></div>
+      </TD>
+  </TR>
+<!-- ************************************************************************************************************* -->  
+  <TR>
+    <TD COLSPAN=2><IMG SRC="images/ind_5.gif" BORDER=0 WIDTH=600 HEIGHT=25 name=indx></TD>
+  </TR>
+  <TR>
+     <!--  *************************************************************************************************************
+                  FROM HERE PUT IN THE IMAGES CORRESPONDING WITH YOUR PERSONAL MENU
+                  Only change the name of the image ex: b_welcome.gif
+                  You can also include your own images  Use the image button.gif
+             ************************************************************************************************************* -->
+    <TD bgcolor=#000000 height=15 align=left width=100%
+><!-- menu item 1 begin --><a href="index.html"  onmouseover="un('m1')" onmouseout="deux('m1')" onclick="trois('m1')"
+><IMG SRC="images/b_welcome.gif" BORDER=0 WIDTH=100 HEIGHT=24 name=menu1></a
+><!-- menu item 1 end --><!-- menu item 2 begin --><a href="page2.html"  onmouseover="un('m2')" onmouseout="deux('m2')" onclick="trois('m2')"
+><IMG SRC="images/b_company.gif" BORDER=0 WIDTH=100 HEIGHT=24 name=menu2></a
+><!-- menu item 2 end --><!-- menu item 3 begin --><a href="page3.html"  onmouseover="un('m3')" onmouseout="deux('m3')" onclick="trois('m3')"
+><IMG SRC="images/b_services.gif" BORDER=0 WIDTH=100 HEIGHT=24 name=menu3></a
+><!-- menu item 3 end --><!-- menu item 4 begin --><a href="page4.html"  onmouseover="un('m4')" onmouseout="deux('m4')" onclick="trois('m4')"
+><IMG SRC="images/b_products.gif" BORDER=0 WIDTH=100 HEIGHT=24 name=menu4></a
+><!-- menu item 4 end --><!-- menu item 5 begin --><a href="page5.html"  onmouseover="un('m5')" onmouseout="deux('m5')" onclick="trois('m5')"
+><IMG SRC="images/b_support2.gif" BORDER=0 WIDTH=100 HEIGHT=24 name=menu5></a
+><!-- menu item 5 end --><!-- menu item 6 begin --><a href="page6.html"  onmouseover="un('m6')" onmouseout="deux('m6')" onclick="trois('m6')"
+><IMG SRC="images/b_contact.gif" BORDER=0 WIDTH=100 HEIGHT=24 name=menu6></a><!-- menu item 6 end --></TD>
+    </TR>
+    <TR>
+      <TD> <!--- enter text here --> 
+        <div align="left"> 
+          <p><BR>
+            <font color="#000000" size=+1 face="Arial Black"><img src="images/instronicslogo.JPG" border="1" height="216" width="246" align=
+"LEFT" naturalsizeflag="0"> </font><b><font color="#0000FF" face="Arial, Helvetica, sans-serif"></font></b><font face="Arial, Helvetica, sans-serif" size="2"><font size="3"></font></font><font face="Arial, Helvetica, sans-serif">Instronics 
+            maintains a number of Dealers, Representatives and System Integrators 
+            which market a number of Instronics' products into their areas of 
+            expertise. This configuration helps Instronics provide field sales 
+            support into most major industrial and commercial centres across Canada. 
+            Instronics has retained all of the current suppliers under formal 
+            distribution agreements to provide stability to end-users. Together 
+            with the manufacturers, Instronics will continue to supply and support 
+            leading-edge products and services to meet the current and future 
+            needs of the end-user. <br>
+            <br>
+            Maintenance of all products sold by Instronics is handled out of our 
+            Pickering office and with the total back-up from our suppliers, combined 
+            with two Specialized Third Party Maintenance Organizations provide 
+            uninterrupted support to the end-users throughout Canada. </font></p>
+          <p align="center"> <br>
+            <font face="Arial, Helvetica, sans-serif" size="2"><font color="#FF0000"><img src="images/instronicsnamebottom.JPG" width="190" height="33"><br>
+            </font></font><font face="Arial, Helvetica, sans-serif"><font face="Arial, Helvetica, sans-serif"><font color="#FF0000"><font color="#FFFFFF" size="4">1400 
+            Bayly Street - Office Mall 2, Suite 11<br>
+            Pickering, Ontario, Canada L1W 3R2 <br>
+            Telephone: (905) 839-8759 <br>
+            Facsimile: (905) 839-9159 <br>
+            Toll Free: 1-800-809-7167</font></font></font></font> <BR>
+            <!--- END (enter text here)--> </p>
+        </div>
+      </TD>
+  </TR>
+</TABLE></DIV>
+
+
+
+
+</BODY>
+</HTML>
+
+
+
+
+
+
+
+

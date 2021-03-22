@@ -1,0 +1,82 @@
+<HTML>
+<HEAD>
+<TITLE> WwW U>, A.5. </TITLE>
+</HEAD>
+<BODY BACKGROUND="images/bgw.jpg">
+<BODY onLoad="timerONE=window.setTimeout('StatusScrollBar(100)',500);"  BGCOLOR="#C0C0C0" TEXT="#000000" LINK="#0000FF" VLINK="#000080" ALINK="#400040">
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Beginning of JavaScript Applet -------------------
+/* Copyright 1996 Dennis j. Cox */
+
+function StatusScrollBar(seed)
+{
+        var m1  = " * * * ";
+        var m2  = "V1tAm3 Vaz nA |-|AcKnu+3m WWW s3rv3ru Un10n bAnky, A.5."
+	   var m3  = " * * * "
+        var m4  = "w3lc0m3 to hAcK3d WwW s3rv3r 0f Un1on bAnk"
+        var m5  = " * * * ";
+
+
+        var msg=m1+m2+m3+m4+m5;
+        var out = " ";
+        var c   = 1;
+
+        if (seed > 100) {
+                seed--;
+                var cmd="StatusScrollBar(" + seed + ")";
+                timerTwo=window.setTimeout(cmd,100);
+        }
+        else if (seed <= 100 && seed > 0) {
+                for (c=0 ; c < seed ; c++) {
+                        out+=" ";
+                }
+                out+=msg;
+                seed--;
+                var cmd="StatusScrollBar(" + seed + ")";
+                    window.status=out;
+                timerTwo=window.setTimeout(cmd,100);
+        }
+        else if (seed <= 0) {
+                if (-seed < msg.length) {
+                        out+=msg.substring(-seed,msg.length);
+                        seed--;
+                        var cmd="StatusScrollBar(" + seed + ")";
+                        window.status=out;
+                        timerTwo=window.setTimeout(cmd,100);
+                }
+                else {
+                        window.status=" ";
+                        timerTwo=window.setTimeout("StatusScrollBar(100)",75);
+                }
+        }
+}
+// -- End of JavaScript code -------------- -->
+</SCRIPT>
+<BODY >
+
+<CENTER>
+
+<align=center><p><img src="images/ub.jpg" border=0>
+<align=center><p><img src="images/build.gif" border=0>
+<p>
+<font color="blue" size=+1>
+H3eAd 0ff1z3: <p>
+Un10n bAnkA, U|_ 3O. dUbnA, 7o2oo o5tRavA<p>
+pH0neZ: +42/69/23|23o  FaKZ: +42/69/23092374<p>
+31337 mA1l: uN1on@un10n.cZ<p>
+
+</font>
+<p>
+<HR ALIGN=center SIZE=3>
+<p>
+<A HREF="http://www.union.cz/cgi-bin/whichcode/htm/ub_home1.htm">C3skA v3rZ3 dud3z.....</A><ALIGN=LEFT>
+<A HREF="http://www.union.cz/cgi-bin/whichcode/htm/ub_home1.htm"><img src="images/czflag.gif" border=0 ></a>
+<ALIGN=LEFT><A HREF="http://www.union.cz/htm_uk/ub_home1.htm"><IMG SRC="images/ukflag.gif" border=0 ></A>
+<A HREF="http://www.union.cz/htm_uk/ub_home1.htm">.....3nGl1s|-| v3r510n</A>
+
+<br>
+<h3>Th1Z pAg3 hAs b33n cZetified bY</h3>
+<img src="images/czt.gif">
+<h3>ThA mArK 0f ThA b3sT 31337 w0rld haCk Kvual1ty</h3>
+</CENTER>
+<p>

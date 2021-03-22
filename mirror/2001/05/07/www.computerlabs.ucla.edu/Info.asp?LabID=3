@@ -1,0 +1,189 @@
+
+
+<HTML>
+
+<HEAD>
+<TITLE>UCLA Campus Computer Labs</TITLE>
+
+
+<!-- ImageReady Preload Scripts -->
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+function newImage(arg) {
+	if (document.images) {
+		rslt = new Image();
+		rslt.src = arg;
+		return rslt;
+	}
+}
+
+function changeImages() {
+	if (document.images && (preloadFlag == true)) {
+		for (var i=0; i<changeImages.arguments.length; i+=2) {
+			document[changeImages.arguments[i]].src = changeImages.arguments[i+1];
+		}
+	}
+}
+
+var preloadFlag = false;
+function preloadImages() {
+	if (document.images) {
+		aap_over = newImage("images/Menu_aap_red.gif");
+		chem_over = newImage("images/Menu_chem_red.gif");
+		clicc_over = newImage("images/Menu_clicc_red.gif");
+		dcp_over = newImage("images/Menu_dcp_red.gif");
+		cdh_over = newImage("images/Menu_cdh_red.gif");
+		imf_over = newImage("images/Menu_imf_red.gif");
+		impl_over = newImage("images/Menu_impl_red.gif");
+		ls_over = newImage("images/Menu_ls_red.gif");
+		pic_over = newImage("images/Menu_pic_red.gif");
+		orl_over = newImage("images/Menu_orl_red.gif");
+		ats_over = newImage("images/Menu_ats_red.gif");
+		psych_over = newImage("images/Menu_psych_red.gif");
+		seas_over = newImage("images/Menu_seas_red.gif");
+		slc_over = newImage("images/Menu_slc_red.gif");
+		ssc_over = newImage("images/Menu_ssc_red.gif");
+		stat_over = newImage("images/Menu_stat_red.gif");
+
+		MapButton_over = newImage("images/MapButton_red.gif");
+		SwSearch_over = newImage("images/SwSearch_red.gif");
+
+		preloadFlag = true;
+	}
+}
+
+
+
+// -->
+</SCRIPT>
+<!-- End Preload Script -->
+
+
+
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF TEXT=#000000 LINK=#CC0000 ALINK=#33FF00 VLINK=#CC0000 ONLOAD="preloadImages();">
+
+<CENTER>
+
+<TABLE WIDTH=700 BORDER=0 CELLPADDING=0 CELLSPACING=0>
+
+<TR>
+	<TD COLSPAN=2 WIDTH=700 ALIGN=CENTER>
+
+		<IMG SRC="images/Banner.gif" ALT="UCLA Campus Computer Labs">
+		<HR>
+		
+
+
+
+
+	</TD>
+</TR>
+
+<TR>
+	<TD COLSPAN=2 WIDTH=700 ALIGN=LEFT>
+
+
+		<A HREF="default.asp" ONMOUSEOVER="changeImages('MapButton', 'images/MapButton_red.gif'); return true;" ONMOUSEOUT="changeImages('MapButton', 'images/MapButton_black.gif'); return true;"><IMG NAME="MapButton" SRC="images/MapButton_black.gif" BORDER=0 ALT="Back to the Map"></A><A HREF="Info.asp" ONMOUSEOVER="changeImages('SearchButton', 'images/SwSearch_red.gif'); return true;" ONMOUSEOUT="changeImages('SearchButton', 'images/SwSearch_black.gif'); return true;"><IMG NAME="SearchButton" SRC="images/SwSearch_black.gif" BORDER=0 ALT="Software Search"></A><A HREF="Info.asp?ShowSoftware=Show&LabID=3"ONMOUSEOVER="changeImages('SoftwareList', 'images/SwList_SSC_red.gif'); return true;"ONMOUSEOUT="changeImages('SoftwareList', 'images/SwList_SSC_black.gif'); return true;"><IMG NAME='SoftwareList' SRC='images/SwList_SSC_black.gif' BORDER=0 ALT='SSC Software List'></A><HR>
+	</TD>
+</TR>
+
+<TR>
+  <TD WIDTH=150 VALIGN=TOP>
+	
+	<BR><A HREF="Info.asp?LabID=1"ONMOUSEOVER="changeImages('AAP', 'images/Menu_AAP_red.gif'); return true;"ONMOUSEOUT="changeImages('AAP', 'images/Menu_AAP_black.gif'); return true;"><IMG NAME='AAP' SRC='images/Menu_AAP_black.gif' BORDER=0 ALT='Academic Advancement Program Lab'></A><BR><A HREF="Info.asp?LabID=11"ONMOUSEOVER="changeImages('ATS', 'images/Menu_ATS_red.gif'); return true;"ONMOUSEOUT="changeImages('ATS', 'images/Menu_ATS_black.gif'); return true;"><IMG NAME='ATS' SRC='images/Menu_ATS_black.gif' BORDER=0 ALT='Academic Technology Services'></A><BR><A HREF="Info.asp?LabID=5"ONMOUSEOVER="changeImages('CHEM', 'images/Menu_CHEM_red.gif'); return true;"ONMOUSEOUT="changeImages('CHEM', 'images/Menu_CHEM_black.gif'); return true;"><IMG NAME='CHEM' SRC='images/Menu_CHEM_black.gif' BORDER=0 ALT='Chemistry Instructional Computing'></A><BR><A HREF="Info.asp?LabID=4"ONMOUSEOVER="changeImages('CLICC', 'images/Menu_CLICC_red.gif'); return true;"ONMOUSEOUT="changeImages('CLICC', 'images/Menu_CLICC_black.gif'); return true;"><IMG NAME='CLICC' SRC='images/Menu_CLICC_black.gif' BORDER=0 ALT='College Library Instructional Computing Commons'></A><BR><A HREF="Info.asp?LabID=6"ONMOUSEOVER="changeImages('DCP', 'images/Menu_DCP_red.gif'); return true;"ONMOUSEOUT="changeImages('DCP', 'images/Menu_DCP_black.gif'); return true;"><IMG NAME='DCP' SRC='images/Menu_DCP_black.gif' BORDER=0 ALT='Disabilities and Computing Program'></A><BR><A HREF="Info.asp?LabID=2"ONMOUSEOVER="changeImages('CDH', 'images/Menu_CDH_red.gif'); return true;"ONMOUSEOUT="changeImages('CDH', 'images/Menu_CDH_black.gif'); return true;"><IMG NAME='CDH' SRC='images/Menu_CDH_black.gif' BORDER=0 ALT='Center for Digital Humanities'></A><BR><A HREF="Info.asp?LabID=17"ONMOUSEOVER="changeImages('IMF', 'images/Menu_IMF_red.gif'); return true;"ONMOUSEOUT="changeImages('IMF', 'images/Menu_IMF_black.gif'); return true;"><IMG NAME='IMF' SRC='images/Menu_IMF_black.gif' BORDER=0 ALT='Instructional Microcomputing Facility'></A><BR><A HREF="Info.asp?LabID=7"ONMOUSEOVER="changeImages('IMPL', 'images/Menu_IMPL_red.gif'); return true;"ONMOUSEOUT="changeImages('IMPL', 'images/Menu_IMPL_black.gif'); return true;"><IMG NAME='IMPL' SRC='images/Menu_IMPL_black.gif' BORDER=0 ALT='Instructional Multimedia Production Lab'></A><BR><A HREF="Info.asp?LabID=8"ONMOUSEOVER="changeImages('LS', 'images/Menu_LS_red.gif'); return true;"ONMOUSEOUT="changeImages('LS', 'images/Menu_LS_black.gif'); return true;"><IMG NAME='LS' SRC='images/Menu_LS_black.gif' BORDER=0 ALT='Life Sciences Instructional Computing'></A><BR><A HREF="Info.asp?LabID=10"ONMOUSEOVER="changeImages('ORL', 'images/Menu_ORL_red.gif'); return true;"ONMOUSEOUT="changeImages('ORL', 'images/Menu_ORL_black.gif'); return true;"><IMG NAME='ORL' SRC='images/Menu_ORL_black.gif' BORDER=0 ALT='Office of Residential Life Computing'></A><BR><A HREF="Info.asp?LabID=9"ONMOUSEOVER="changeImages('PIC', 'images/Menu_PIC_red.gif'); return true;"ONMOUSEOUT="changeImages('PIC', 'images/Menu_PIC_black.gif'); return true;"><IMG NAME='PIC' SRC='images/Menu_PIC_black.gif' BORDER=0 ALT='Math Sciences (Program in Computing) Lab'></A><BR><A HREF="Info.asp?LabID=12"ONMOUSEOVER="changeImages('PSYCH', 'images/Menu_PSYCH_red.gif'); return true;"ONMOUSEOUT="changeImages('PSYCH', 'images/Menu_PSYCH_black.gif'); return true;"><IMG NAME='PSYCH' SRC='images/Menu_PSYCH_black.gif' BORDER=0 ALT='Psychology Computer Labs'></A><BR><A HREF="Info.asp?LabID=13"ONMOUSEOVER="changeImages('SEAS', 'images/Menu_SEAS_red.gif'); return true;"ONMOUSEOUT="changeImages('SEAS', 'images/Menu_SEAS_black.gif'); return true;"><IMG NAME='SEAS' SRC='images/Menu_SEAS_black.gif' BORDER=0 ALT='School of Engineering & Applied Sciences'></A><BR><A HREF="Info.asp?LabID=14"ONMOUSEOVER="changeImages('SLC', 'images/Menu_SLC_red.gif'); return true;"ONMOUSEOUT="changeImages('SLC', 'images/Menu_SLC_black.gif'); return true;"><IMG NAME='SLC' SRC='images/Menu_SLC_black.gif' BORDER=0 ALT='Science Learning Center'></A><BR><A HREF="Info.asp?LabID=3"ONMOUSEOVER="changeImages('SSC', 'images/Menu_SSC_red.gif'); return true;"ONMOUSEOUT="changeImages('SSC', 'images/Menu_SSC_red.gif'); return true;"><IMG NAME='SSC' SRC='images/Menu_SSC_red.gif' BORDER=0 ALT='Social Sciences Computing'></A><BR><A HREF="Info.asp?LabID=15"ONMOUSEOVER="changeImages('STAT', 'images/Menu_STAT_red.gif'); return true;"ONMOUSEOUT="changeImages('STAT', 'images/Menu_STAT_black.gif'); return true;"><IMG NAME='STAT' SRC='images/Menu_STAT_black.gif' BORDER=0 ALT='Statistics Instructional Computing Lab'></A>
+
+
+
+  </TD>
+
+  <TD WIDTH=550 VALIGN=TOP ALIGN=CENTER>
+
+
+<!--  END HEADER FILE -->
+
+<H2>Social Sciences Computing</H2>
+
+<table border=0 CELLPADDING=0 CELLSPACING=10 width="500">
+
+	
+	  <tr> 
+		<td ALIGN=RIGHT VALIGN=TOP><B>Location:</B></td>
+		<td><B> 2035 Public Policy Building<BR>
+2159 Bunche Hall</B>&nbsp;</td>
+	  </tr>
+	
+	  <tr> 
+		<td ALIGN=RIGHT VALIGN=TOP><B>Hours:</B></td>
+		<td><B>2035 Public Policy</B><BR>
+M-Th: 9am-9pm<BR>
+F: 9am-5pm<BR>
+S, Su: 12pm-4pm<BR>
+<B>2159 Bunche Hall</B><BR>
+M-F: 8am-4pm<BR>
+<B>Scheduled classes may limit access. Please check the link below for the current schedule.</B>&nbsp;</td>
+	  </tr>
+	
+	  <tr> 
+		<td ALIGN=RIGHT VALIGN=TOP><B>Restrictions:</B></td>
+		<td>Students enrolled in Social Science courses. Others may purchase an ID for $15 for the quarter or $5 for the day. Lab IDs are issued in 2035 Public Policy.&nbsp;</td>
+	  </tr>
+	
+	  <tr> 
+		<td ALIGN=RIGHT VALIGN=TOP><B>Hardware Available:</B></td>
+		<td>PCs only&nbsp;</td>
+	  </tr>
+	
+	  <tr> 
+		<td ALIGN=RIGHT VALIGN=TOP><B>Fees and Charges:</B></td>
+		<td><B>Fees</B><BR>
+Free for students enrolled in Social Science courses. Others may purchase an ID for $15 for the quarter or $5 for the day.<BR>
+<B>Printing Charges</B><BR>
+$.10 b/w<BR>
+$.50 color<BR>
+No charge for dot matrix printing&nbsp;</td>
+	  </tr>
+	
+	  <tr> 
+		<td ALIGN=RIGHT VALIGN=TOP><B>Web Site:</B></td>
+		<td><A HREF="http://computing.sscnet.ucla.edu/">http://computing.sscnet.ucla.edu/</A>&nbsp;</td>
+	  </tr>
+	
+	  <tr> 
+		<td ALIGN=RIGHT VALIGN=TOP><B>Phone:</B></td>
+		<td>(310) 206-2821&nbsp;</td>
+	  </tr>
+	
+	  <tr> 
+		<td ALIGN=RIGHT VALIGN=TOP><B>Lab Manager:</B></td>
+		<td>Michelle Lew<BR>
+<A HREF="mailto:help@ssc.ucla.edu">help@ssc.ucla.edu</A>&nbsp;</td>
+	  </tr>
+	
+	
+</table>
+
+
+<!-- BEGIN FOOTER INC -->
+
+  </TD>
+
+</TR>
+
+<TR>
+	<TD COLSPAN=2 WIDTH=700 ALIGN=CENTER>
+		<HR>
+		<FONT SIZE=-2><I>Site Maintained by the <A HREF="http://www.clicc.ucla.edu/">College Library Instructional Computing Commons</A></I></FONT>
+	</TD>
+
+</TR>
+</TABLE>
+</CENTER>
+
+</BODY>
+
+</HTML>
+
+

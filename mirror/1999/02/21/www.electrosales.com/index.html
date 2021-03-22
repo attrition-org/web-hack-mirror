@@ -1,0 +1,36 @@
+<HTML>
+<HEAD>
+<TITLE>Fu Manchu:2</TITLE>
+<CENTER>
+<B>::Fu Manchu:2:: 21/02/99
+</CENTER>
+<BR>
+Exploit: Microsoft Frontpage Extensions:
+<BR>
+<BR>
+By allowing the directory /_vti_pvt to be placed into your server site directory your site is being put at
+serious risk of damage.<BR><BR>
+By entering the location of http://www.yoursite.com/_vti_pvt in a web browser anyone will be given access to
+password files *.PWD files including your username and password for your FTP.<BR><BR>
+There is mimimal threat at this stage as the password is encrypted for instance<BR><BR>
+
+username:P2Tsx6IpVcDvO or <BR><BR>username:P2Tsx6IpVcDvO:0:0:comments:/:/bin/bash <BR><BR>
+
+However by entering this form of encryption into an extremely well known password cracker/decryption program 6 times out of
+10 your password will be retrieved, with your  username and password available the cracker can access the same
+functions as what you can do when logged in.
+<BR>
+<BR>
+The simplest way to oppose this flaw is to completely remove your /vti_pvt dirctory, finding the *.PWD files is just one
+of the flaws, there are others which can be found within them certain locations.
+<BR>
+<BR>
+I would suggest a security check/update in the not so distant future as childish unexperienced crackers are quickly exploiting
+this factor. As of this page, no damage was done to your server or content however there have been many attempts to access your FTP by other users.
+<BR><BR>
+Backup Index.htm = Index.fu<BR><BR>
+Greetings To, ProGen & Progenic Warfare, White Vampire & Project Gamma, AcidMeister, Diablo, mell0n_c0llie
+<BR><BR>
+root:*:0:0:Fu Manchu:2:/root:/usr/local/bin/tcsh<BR><BR>
+
+</HTML>

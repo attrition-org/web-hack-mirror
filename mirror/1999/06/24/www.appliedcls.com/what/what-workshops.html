@@ -1,0 +1,181 @@
+<!-- ©1998 Applied Cognitive & Learning Sciences     Created and maintained by Kent Lim     for more information: klim@iname.com  -->
+	       
+<html>
+<head>
+<title>Applied Cognitive &amp; Learning Sciences - What we do</title>
+
+<script language="JavaScript">
+<!-- HIDE SCRIPT
+
+function Is ()
+{   // convert all characters to lowercase to simplify testing
+    var agt=navigator.userAgent.toLowerCase()
+
+    // *** BROWSER VERSION ***
+	this.nav  = ((agt.indexOf('mozilla')!=-1) && ((agt.indexOf('spoofer')==-1)
+                && (agt.indexOf('compatible') == -1)))
+    this.ie   = (agt.indexOf("msie") != -1)
+     
+    // *** PLATFORM ***
+    this.win   = ( (agt.indexOf("win")!=-1) || (agt.indexOf("16bit")!=-1) )
+    this.mac    = (agt.indexOf("mac")!=-1)
+}
+
+var is = new Is()
+//--> end hide JavaScript
+</script>
+
+<script language="JavaScript">
+<!-- HIDE Script
+            
+//LEFT Navigation Rollovers
+
+browserName = navigator.appName;
+browserVer = parseInt(navigator.appVersion);
+        if ((browserName == "Netscape" && browserVer >= 3) || (browserName == "Microsoft Internet Explorer" && browserVer >=4)) {
+                version = "n3";
+                }
+        else
+                {
+                version = "n2";
+        }
+
+if (version == "n3") {
+leftnav1=new Image()
+leftnav1.src="../images/common/lt-but-who-up.gif"        
+           
+leftnav1b=new Image()
+leftnav1b.src="../images/common/lt-but-who.gif"
+
+leftnav2=new Image()
+leftnav2.src="../images/common/lt-but-what-up.gif"
+
+leftnav2b=new Image()
+leftnav2b.src="../images/common/lt-but-what.gif"
+
+leftnav3=new Image()
+leftnav3.src="../images/common/lt-but-style-up.gif"
+
+leftnav3b=new Image()
+leftnav3b.src="../images/common/lt-but-style.gif"
+
+leftnav4=new Image()
+leftnav4.src="../images/common/lt-but-programs-up.gif"
+
+leftnav4b=new Image()
+leftnav4b.src="../images/common/lt-but-programs.gif"
+
+leftnav5=new Image()
+leftnav5.src="../images/common/lt-but-recent-up.gif"
+
+leftnav5b=new Image()
+leftnav5b.src="../images/common/lt-but-recent.gif"
+}
+
+function SwapOut(num) {
+               if (version == "n3") {
+                        if (num==3){document.c.src=leftnav3.src}
+                        else if (num==1){document.a.src=leftnav1.src}
+                        else if (num==2){document.b.src=leftnav2.src}                      
+                        else if (num==4){document.d.src=leftnav4.src}  
+                        else if (num==5){document.e.src=leftnav5.src}                 
+                        }
+                   return true;
+                   }                    
+                   function SwapBack(num) {
+       if (version == "n3") {                
+                        if (num==3){document.c.src=leftnav3b.src}
+                        else if (num==1){document.a.src=leftnav1b.src}
+                        else if (num==2){document.b.src=leftnav2b.src}
+                        else if (num==4){document.d.src=leftnav4b.src}
+                        else if (num==5){document.e.src=leftnav5b.src}
+                        }
+                   return true;
+                   }                  
+// STOP HIDE -->            
+</script>
+
+</head>
+
+<body BGCOLOR="#ffffff" BACKGROUND="../images/gfx-what/blue-back.gif" LINK="#003399" VLINK="#8C0019">
+
+<table BORDER="0" CELLSPACING="0" CELLPADDING="0">
+
+<tr>
+<td width="117" rowspan="4" align="left" valign="top"><script>
+<!--
+if (is.win) {
+	if (is.nav) {
+	document.write('<IMG SRC="../images/common/space.gif" WIDTH="118" HEIGHT="1" BORDER="0">')
+	} else {
+	document.write('<IMG SRC="../images/common/space.gif" WIDTH="116" HEIGHT="1" BORDER="0">')
+	}
+}
+if  (is.mac)
+{
+   document.write('<IMG SRC="../images/common/space.gif" WIDTH="118" HEIGHT="1" BORDER="0">')
+}
+// -->
+</script><br><img SRC="../images/common/space.gif" WIDTH="1" HEIGHT="98" BORDER="0"><br>
+<a HREF="../who/who-main.html" onMouseOver="if (version == 'n3') {SwapOut(1); self.status = 'Who we are: Our mission, philosophy, and methods'; return true}" onMouseOut="SwapBack(1)"><img SRC="../images/common/lt-but-who.gif" ALT="Who we are" WIDTH="110" HEIGHT="26" BORDER="0" name="a"></a><br><a HREF="what-main.html" onMouseOver="if (version == 'n3') {self.status = 'What we do: A summary of our services'; return true}"><img SRC="../images/common/lt-but-what-up.gif" ALT="What we do" WIDTH="110" HEIGHT="25" BORDER="0" name="b"></a><br><a HREF="../style/style-main.html" onMouseOver="if (version == 'n3') {SwapOut(3); self.status = 'Your Style: Assess your own style of learning'; return true}" onMouseOut="SwapBack(3)"><img SRC="../images/common/lt-but-style.gif" ALT="Your Style" WIDTH="110" HEIGHT="26" BORDER="0" name="c"></a><br><a HREF="../recent/recent-main.html" onMouseOver="if (version == 'n3') {SwapOut(5); self.status = 'Recent News: The latest developments'; return true}" onMouseOut="SwapBack(5)"><img SRC="../images/common/lt-but-recent.gif" ALT="Recent News" WIDTH="110" HEIGHT="25" BORDER="0" name="e"></a>
+</td>
+</tr>
+
+<tr>
+<td>
+<img SRC="../images/gfx-what/blue-topnav.gif" WIDTH="677" HEIGHT="78" ALIGN="BOTTOM" USEMAP="#blue-topnav" ISMAP BORDER="0">
+</td>
+</tr>
+
+<tr>
+<td><br>
+<table BORDER="0" CELLSPACING="0" CELLPADDING="0" width="475">
+
+<tr>
+<td colspan="2">
+<img SRC="../images/common/space.gif" WIDTH="25" HEIGHT="1" BORDER="0"><img SRC="../images/gfx-what/what-work-title.gif" ALT="Workshops" ALIGN="TOP" BORDER="0" WIDTH="89" HEIGHT="28">
+</td>
+</tr>
+
+<tr>
+
+<td width="68"><img SRC="../images/common/space.gif" WIDTH="68" HEIGHT="1" BORDER="0">
+</td>
+<td>
+
+<!-- SECTION NAV -->
+
+<table cellpadding="0" cellspacing="0" border="0" align="right" width="180"><tr><td align="right">
+<a href="what-helper.html"><img SRC="../images/gfx-what/what-rt-1.gif" ALT="Helper Program" WIDTH="169" HEIGHT="24" BORDER="0"></a><br><a href="what-school.html"><img SRC="../images/gfx-what/what-rt-3.gif" ALT="School Support Services" WIDTH="169" HEIGHT="24" BORDER="0"></a><br><a href="what-tutorial.html"><img SRC="../images/gfx-what/what-rt-4.gif" ALT="Tutorial Support Services" WIDTH="169" HEIGHT="23" BORDER="0"></a><br><img SRC="../images/common/space.gif" WIDTH="1" HEIGHT="10" BORDER="0"></td></tr></table>
+
+ACLS provides a workshop for people preparing for the LSAT exam, using techniques based on our basic principles of individual differences, multi-domains, and computer technology.
+<br><br>
+
+We will teach you the fundamentals of different types of LSAT questions, and gradually, effective techniques on tackling the harder ones.  At the same time, we'll teach you how to use your learning style to your advantage to achieve mastery of the LSAT.
+<br><br>
+
+The LSAT workshop consists of three intensive weekend sessions and support services that span a period of two months.  Please <a HREF="../contact.html">contact us</a> for more information.
+<br><br>
+<img SRC="../images/common/space.gif" WIDTH="305" HEIGHT="1" BORDER="0"><a HREF="what-school.html"><img SRC="../images/gfx-what/goto.gif" ALT="Go to next page" WIDTH="98" HEIGHT="31" BORDER="0"></a>
+<br>
+
+
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+
+</table>
+
+<!-- Client side image map -->
+<map name="blue-topnav">
+<area shape="rect" coords="366,54,468,69" href="../self-test.html" onMouseOver="if (version == 'n3') {self.status = 'Take a self test to start assessing your own style of learning'; return true}">
+<area shape="rect" coords="261,54,366,69" href="../glossary.html" onMouseOver="if (version == 'n3') {self.status = 'Glossary: Definitions of Terms'; return true}">
+<area shape="rect" coords="171,54,261,69" href="../contact.html" onMouseOver="if (version == 'n3') {self.status = 'Contact Information'; return true}">
+<area shape="rect" coords="87,53,172,69" HREF="../index.htm" onMouseOver="if (version == 'n3') {self.status = 'Applied Cognitive &amp; Learning Sciences Home Page'; return true}">
+</map>
+
+</body>
+</html>

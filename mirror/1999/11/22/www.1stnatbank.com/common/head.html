@@ -1,0 +1,115 @@
+<html>
+
+<head>
+<meta NAME="noindex" CONTENT="[undefined]">
+<title>First National Top</title>
+<script LANGUAGE="javascript">
+
+var lstr = "";
+var nav = "";
+var yimg= "fnbh3.gif";
+var now = new Date();
+var day_of_week = now.getDay();
+var day_of_month = now.getDate();
+var month = now.getMonth();
+var year = now.getYear();
+var str = "";
+var str2 = "";
+var adlink="";
+var adimg= "";
+var ads = new Array();
+var imtag = "";
+
+
+function makeAd(filename,  href)
+{
+   var imsrc;
+   var link;
+
+   this.imsrc = filename;
+   this.link = href;    
+}
+
+//ADD NEW ADS HERE
+
+ads[0] = new makeAd("http://www.1stnatbank.com/common/1stlink.GIF", "http://www.1stnatbank.com/accounts/checking/");
+ads[1] = new makeAd("http://www.1stnatbank.com/common/1stdirect.GIF", "http://www.1stnatbank.com/accounts/checking/");
+ads[2] = new makeAd("http://www.1stnatbank.com/common/hequity.GIF", "http://www.1stnatbank.com/loans/consumer/");
+ads[3] = new makeAd("http://www.1stnatbank.com/common/carloans.GIF", "http://www.1stnatbank.com/loans/consumer/");
+ads[4] = new makeAd("http://www.1stnatbank.com/common/mortgage.GIF", "http://www.1stnatbank.com/loans/mortgages/");
+
+
+//DO NOT ADD NEW ADS PAST THIS POINT
+
+var rn = Math.random() * ads.length;
+rn = Math.floor(rn);
+adlink = ads[rn].link;
+adimg = ads[rn].imsrc;
+
+imtag = "<img src=\"" + adimg + "\" border=0 align=middle width=200 height=30>";
+
+if (day_of_week == 0) 
+    str = "Sunday, ";
+if (day_of_week == 1)
+    str = "Monday, ";
+if (day_of_week == 2)
+    str = "Tuesday, ";
+if (day_of_week == 3)
+    str = "Wednesday, ";
+if (day_of_week == 4)
+    str = "Thursday, ";
+if (day_of_week == 5)
+    str = "Friday, ";
+if (day_of_week == 6)
+    str = "Saturday, ";
+
+if (month == 0)
+    str = str + "January " + day_of_month;
+if (month == 1)
+    str = str + "February " + day_of_month;
+if (month == 2)
+    str = str + "March " + day_of_month;
+if (month == 3)
+    str = str + "April " + day_of_month;
+if (month == 4)
+    str = str + "May " + day_of_month;
+if (month == 5)
+    str = str + "June " + day_of_month;
+if (month == 6)
+    str = str + "July " + day_of_month;
+if (month == 7)
+    str = str + "August " + day_of_month;
+if (month == 8)
+    str = str + "September " + day_of_month;
+if (month == 9)
+    str = str + "October " + day_of_month;
+if (month == 10)
+    str = str + "November " + day_of_month;
+if (month == 11)
+    str = str + "December " + day_of_month;
+
+if (year >= 97)
+{
+    str = str + ", 19" + year;
+}
+else
+{
+    str = str + ", 20" + year;
+}    
+
+function followAdlink()
+{
+	parent.Body.location.href = adlink;
+}
+</script>
+</head>
+
+<body BGCOLOR="#999999" TEXT="#ffffff" LEFTMARGIN="0" RIGHTMARGIN="0">
+
+<p><img src="http://www.1stnatbank.com/common/fnbh.gif" ALIGN="MIDDLE" BORDER="0"
+WIDTH="340" HEIGHT="57" ALT="FNBH"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
+HREF="javascript:followAdlink();"><script LANGUAGE="javascript">
+document.write(imtag);
+</script></a> </p>
+</body>
+</html>

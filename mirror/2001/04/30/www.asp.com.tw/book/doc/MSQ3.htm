@@ -1,0 +1,531 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>第 五 篇</TITLE>
+<META NAME="Template" CONTENT="E:\Program Files\Microsoft Office\Office\html.dot">
+</HEAD>
+<BODY LINK="#0000ff" VLINK="#800080">
+  <CENTER><img src="TELL2.gif"
+        alt="web資料庫設計速成" ALIGN=CENTER border="0" width="428"
+        height="135">
+
+<DIR>
+
+</FONT><FONT FACE="超研澤中隸,????" LANG="ZH-TW" SIZE=5><P ALIGN="RIGHT">刊登於 微軟之友1998秋季號</P>
+<P>本文重點</P><DIR>
+<DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">本文介紹網站資料庫的設計技巧，包括如何製作「動態的網站」、如何透過網際網路存取資料庫的資料、如何於程式中直接設定待連結的資料庫、如何存取三層式架構的資料庫資料、如何存取</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">UNIX</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">如何呼叫</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">stored procedures</FONT><FONT FACE="新細明體" LANG="ZH-TW">等。</P>
+<P ALIGN="JUSTIFY">作者為微軟台北廳研討會「如何在</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Internet Information Server 4.0 </FONT><FONT FACE="新細明體" LANG="ZH-TW">上開發</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">應用系統」講師，著作有網站網頁設計等相關的十本電腦書籍，其中有關</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">的著作</FONT><FONT FACE="標楷體" LANG="ZH-TW">「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW">超級網站速成班</FONT><FONT FACE="標楷體" LANG="ZH-TW">」</FONT><FONT FACE="新細明體" LANG="ZH-TW">、「NT網站資料庫速成班 設計實例篇」等五本，並以簡體版本發行於大陸。</P>
+<P ALIGN="JUSTIFY">作者從蘋果二號玩到網際網路，有十幾年電腦研發與行銷的工作經驗，並曾任職於宏碁電腦公司研展和產品行銷經理、特望科技總經理等職務，現任「喬篷科技」公司總經理，從事</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Internet</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Intranet</FONT><FONT FACE="新細明體" LANG="ZH-TW">之</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫應用設計、網站網頁規劃架設、電子商務等服務。</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW">示範網站</FONT><FONT FACE="華康少女文字體W4,???" LANG="ZH-TW">：</FONT><A HREF="../../index.html"><FONT FACE="System,新細明體" LANG="ZH-TW">www.asp.com.tw</FONT></A></P>
+<FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">連絡</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">E-mail</FONT><FONT FACE="新細明體" LANG="ZH-TW">：</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">jackchou@tpts5.seed.net.tw</FONT><FONT FACE="新細明體" LANG="ZH-TW">。</P>
+<P ALIGN="JUSTIFY">　</P></DIR>
+</DIR>
+</DIR>
+</DIR>
+
+</FONT><FONT FACE="超研澤中隸,????" LANG="ZH-TW" SIZE=6 COLOR="#0000ff"><P>如何製作「動態的網站」呢？</P><DIR>
+<DIR>
+
+</FONT><FONT FACE="超研澤中隸,????" LANG="ZH-TW" SIZE=5><P>您的網站還是「靜態」的嗎？</P><DIR>
+<DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">目前</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Internet</FONT><FONT FACE="新細明體" LANG="ZH-TW">上許多的網站，仍然提供「靜態」（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">static</FONT><FONT FACE="新細明體" LANG="ZH-TW">）的網頁內容。</P>
+<P ALIGN="JUSTIFY">所謂「靜態」，指的就是網站的網頁內容是「固定不變」地。</P>
+<P ALIGN="JUSTIFY">當瀏覽器透過</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Internet</FONT><FONT FACE="新細明體" LANG="ZH-TW">的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">HTTP</FONT><FONT FACE="新細明體" LANG="ZH-TW">（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Hypertext Transport Protocol</FONT><FONT FACE="新細明體" LANG="ZH-TW">）協定，向網站伺服器（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">web server</FONT><FONT FACE="新細明體" LANG="ZH-TW">）要求提供網頁的內容時，網站伺服器收到要求後，傳送原已設計好靜態的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW">的檔案資料給瀏覽器。</P>
+<P ALIGN="JUSTIFY">「傳統」的網站是屬於「靜態」的，僅僅使用標準的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW">碼，頂多加上</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">GIF89A</FONT><FONT FACE="新細明體" LANG="ZH-TW">格式的圖片，產生幾隻小貓小狗跑來跑去的動畫效果，若要更新網頁的內容，必須手動地來更新其</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW">的檔案資料。「靜態」網站的一個大缺點就是不容易維護，為了不斷更新網頁內容，必須不斷地製作新的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW">檔案資料。</P>
+<P ALIGN="JUSTIFY">「傳統」的網站伺服器並沒有做甚麼事，僅僅將使用者所要求的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW">檔案，傳送到瀏覽器而已。</P></DIR>
+</DIR>
+
+</FONT><FONT FACE="超研澤中隸,????" LANG="ZH-TW" SIZE=5><P>甚麼是「動態的網站」？</P><DIR>
+<DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">一個「動態」的網站，網站的網頁內容是「動態」地。</P>
+<P ALIGN="JUSTIFY">所謂「動態」的網站，指的是：</P></DIR>
+</DIR>
+</DIR>
+</DIR>
+
+
+<UL>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>「內容會變」：網頁內容會依照不同時間、不同使用者，而提供不同的網頁內容。</LI></P>
+<P ALIGN="JUSTIFY"><LI>「自動更新」：網頁內容會自動更新。</LI></P>
+<P ALIGN="JUSTIFY"><LI>「互動性」：網頁內容會依照使用者的需要或選擇而改變。</LI></P></UL>
+</UL>
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+
+<P ALIGN="JUSTIFY">將原本「靜態」的網站，變成一個「動態」的網站，方法如下：</P></DIR>
+</DIR>
+</DIR>
+</DIR>
+
+
+<UL>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>將網站「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">化」：所謂「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">化」，即採用於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">網站伺服器執行的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">碼，使用程式控制，「動態」地產生網頁內容。</LI></P>
+<P ALIGN="JUSTIFY"><LI>將網站「資料庫化」：所謂「資料庫化」，即使用資料庫管理整個網站，只要更新資料庫的內容，網站的內容將自動更新。</LI></P>
+<P ALIGN="JUSTIFY"><LI>使用「動態</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW">」：採用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW">版</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IE</FONT><FONT FACE="新細明體" LANG="ZH-TW">和</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Netscape</FONT><FONT FACE="新細明體" LANG="ZH-TW">瀏覽器所提供的「動態</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW">」，於瀏覽器端「動態」地改變網頁內容。</LI></P></UL>
+</UL>
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+
+<P ALIGN="JUSTIFY">「動態」的網站伺服器，必須執行一些程式，然後將將執行的結果輸出成標準的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW">格式檔案，傳送到使用者的瀏覽器。</P></DIR>
+</DIR>
+
+</FONT><FONT FACE="超研澤中隸,????" LANG="ZH-TW" SIZE=5><P>將網站「</FONT><FONT FACE="Arial" SIZE=5> asp</FONT><FONT FACE="超研澤中隸,????" LANG="ZH-TW" SIZE=5>化」的好處在那裡？</P><DIR>
+<DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">採用於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">網站伺服器執行的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">碼，將網站「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">化」的好處在那裡？好處如下：</P></DIR>
+</DIR>
+</DIR>
+</DIR>
+
+
+<UL>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>動態：每次內容不同。</LI></P>
+<P ALIGN="JUSTIFY"><LI>增加互動性。</LI></P>
+<P ALIGN="JUSTIFY"><LI>設計迅速與維護方便：</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">不須</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">compile</FONT><FONT FACE="新細明體" LANG="ZH-TW">編譯，使用記事本即可編輯設計。</LI></P></UL>
+</UL>
+<DIR>
+<DIR>
+
+</FONT><FONT FACE="超研澤中隸,????" LANG="ZH-TW" SIZE=5><P>甚麼是「資料庫化的網站」？</P><DIR>
+<DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">甚麼是「資料庫化的網站」？所謂將網站「資料庫化」，指的是使用「資料庫」管理整個網站，只要更新資料庫的內容，網站的內容將自動更新。</P>
+<P ALIGN="JUSTIFY">採用資料庫，將網站「資料庫化」的好處在那裡？好處如下：</P></DIR>
+</DIR>
+</DIR>
+</DIR>
+
+
+<UL>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>自動更新網頁：只要更新資料庫的資料，網頁內容會自動更新。</LI></P>
+<P ALIGN="JUSTIFY"><LI>可以搜尋：將網站的內容儲存於資料庫當中，可以搜尋網站的資料。</LI></P>
+<P ALIGN="JUSTIFY"><LI>各種</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫應用。</LI></P></UL>
+</UL>
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+
+<P ALIGN="JUSTIFY">讓我們看個例子。</P></DIR>
+</DIR>
+
+</FONT><FONT FACE="超研澤中隸,????" LANG="ZH-TW" SIZE=5><P>「新消息」真的是「新的消息」嗎？</P><DIR>
+<DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">當連上網際網路瀏覽各網站時，偶而會看到「過期的新消息」，甚至去年的消息仍然列為「新消息」，這時候您就可以寫封信給站長，來嘲笑其新消息「過期」了。</P>
+<P ALIGN="JUSTIFY">其實這不是站長的錯，日期一天天的過，總不能要求站長每天都去檢查每一則「新消息」是否過期。</P>
+<P ALIGN="JUSTIFY">但是如果站長將網站「資料庫化」，使用「資料庫」來管理網站的「新消息」，只要更新資料庫的內容，網站的「新消息」將自動更新。</P>
+<P ALIGN="JUSTIFY">譬如筆者網站「</FONT><A HREF="../../index.html"><FONT FACE="System,新細明體" LANG="ZH-TW">www.asp.com.tw</FONT></A><FONT FACE="新細明體" LANG="ZH-TW">」中的「新消息」部份，每一則「新消息」都於下圖的「資料庫」設定其「開始日期」和「結束日期」。當使用者瀏覽此網頁時，將自動比較當天日期是否介於資料庫中「開始日期」和「結束日期」之間，只將符合此條件的「新消息」顯示出來，顯示出來的「新消息」保證是「新的消息」。</P>
+<P ALIGN="JUSTIFY">加入「新消息」時，只要於資料庫新增一筆資料，於資料庫設定「新消息」的「開始日期」和「結束日期」即可，如此一來，網站的「新消息」內容將自動地更新，「新消息」永遠是「新的消息」，站長可以安心地睡個好覺，不用擔心半夜有訪客會寫信來嘲笑「新消息」過期了。</P>
+<P ALIGN="JUSTIFY">下次您看到「過期」的新消息時，仍然可以寫封信給站長，不是嘲笑其新消息「過期」了，而是嘲笑其網站仍未「資料庫化」。</P></DIR>
+</DIR>
+
+</FONT><FONT FACE="超研澤中隸,????" LANG="ZH-TW" SIZE=5><P>開發各種</FONT><FONT FACE="Arial" SIZE=5>Web</FONT><FONT FACE="超研澤中隸,????" LANG="ZH-TW" SIZE=5>資料庫的應用</P><DIR>
+<DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">將網站「資料庫化」的另一個好處，就是可以開發出各種</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫的應用。</P>
+<P ALIGN="JUSTIFY">使用者使用瀏覽器，透過網際網路或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">intranet</FONT><FONT FACE="新細明體" LANG="ZH-TW">內部網路，來存取</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫的資料，可以使用於學校教學、醫院、商業、銀行、股市、和運輸旅遊等各種</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫的應用，譬如銀行餘額線上查詢、線上機票訂位、線上醫院預約掛號、網路下單、線上股市買賣交易、線上學校註冊選課、線上擇友、線上購物等各種應用。</P>
+<P ALIGN="JUSTIFY">筆者準備一個展示各種</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫設計實例的網站，網址為「</FONT><A HREF="../../index.html"><FONT FACE="System,新細明體" LANG="ZH-TW">www.asp.com.tw</FONT></A><FONT FACE="新細明體" LANG="ZH-TW">」，歡迎讀者光臨指教。</P></DIR>
+</DIR>
+
+</FONT><FONT FACE="Arial" SIZE=5><P>Web-based</FONT><FONT FACE="超研澤中隸,????" LANG="ZH-TW" SIZE=5>應用軟體</P><DIR>
+<DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">將目前各種網路上的應用軟體改變為「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫」的應用，使用「瀏覽器」做為使用者介面，是必然的趨勢。</P>
+<P ALIGN="JUSTIFY">以往每個使用者都必須去學習每一種應用軟體的操作方式。</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫應用使用「瀏覽器」做為使用者介面，對於使用者的好處是只要學會瀏覽器的操作方式，譬如看到有超連結的部份就按下去，如此可以操作各種軟體應用，大幅降低訓練的成本。</P>
+<P ALIGN="JUSTIFY">以往每當修改一個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">bug</FONT><FONT FACE="新細明體" LANG="ZH-TW">時，就須為所有使用者去更新一個新的版本。</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫應用對於設計者的好處是，新版本的軟體只要更新一次網站的軟體就可以了。</P>
+<P ALIGN="JUSTIFY">基本上，所有的網路上的應用軟體，都可以改變為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫的應用，使用「瀏覽器」做為使用者介面。讓我們趕快來學會如何設計一個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫的應用。</P>
+<P ALIGN="JUSTIFY">　　</P></DIR>
+</DIR>
+</DIR>
+</DIR>
+
+</FONT><FONT FACE="超研澤中隸,????" LANG="ZH-TW" SIZE=6 COLOR="#0000ff"><P>如何透過網際網路存取資料庫的資料呢？</P><DIR>
+<DIR>
+<DIR>
+<DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">如何透過網際網路或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">intranet</FONT><FONT FACE="新細明體" LANG="ZH-TW">，存取伺服器資料庫的資料呢？</P>
+<P ALIGN="JUSTIFY">答案為使用瀏覽器，透過網際網路或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">intranet</FONT><FONT FACE="新細明體" LANG="ZH-TW">，經由於網站伺服器</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">執行的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW">）程式，來呼叫</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ADO</FONT><FONT FACE="新細明體" LANG="ZH-TW">（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ActiveX Data Object</FONT><FONT FACE="新細明體" LANG="ZH-TW">）、或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW">（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Remote Data Service</FONT><FONT FACE="新細明體" LANG="ZH-TW">）物件，再透過各種</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW">（或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">OLE DB</FONT><FONT FACE="新細明體" LANG="ZH-TW">）的驅動程式，即可連接到超過</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">50</FONT><FONT FACE="新細明體" LANG="ZH-TW">種支援</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW">（或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">OLE DB</FONT><FONT FACE="新細明體" LANG="ZH-TW">）的資料庫，包括</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Access</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Excel</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">FoxPro</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">dBase</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Oracle</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Sybase</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Informix</FONT><FONT FACE="新細明體" LANG="ZH-TW">等資料庫，也可以連接到</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Excel</FONT><FONT FACE="新細明體" LANG="ZH-TW">、或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Text</FONT><FONT FACE="新細明體" LANG="ZH-TW">檔案。</P>
+<P ALIGN="JUSTIFY">您只要於網站伺服器</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">的電腦上，安裝這種資料庫的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW">（或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">OLE DB</FONT><FONT FACE="新細明體" LANG="ZH-TW">）的驅動程式，即可以存取位於網路上任何一台電腦支援</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW">（或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">OLE DB</FONT><FONT FACE="新細明體" LANG="ZH-TW">）的資料庫。</P></DIR>
+</DIR>
+
+</FONT><FONT FACE="Arial" SIZE=5><P>ADO</FONT><FONT FACE="超研澤中隸,????" LANG="ZH-TW" SIZE=5>（</FONT><FONT FACE="Arial" SIZE=5>ActiveX Data Object</FONT><FONT FACE="超研澤中隸,????" LANG="ZH-TW" SIZE=5>）</P><DIR>
+<DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">透過網際網路或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">intranet</FONT><FONT FACE="新細明體" LANG="ZH-TW">存取資料庫，可採用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW">（簡稱</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">）內建的一個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ActiveX Data Object</FONT><FONT FACE="新細明體" LANG="ZH-TW">（簡稱</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ADO</FONT><FONT FACE="新細明體" LANG="ZH-TW">）。於執行當中的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式當中，加入</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Structured Query Language</FONT><FONT FACE="新細明體" LANG="ZH-TW">（結構化查詢語言，簡稱</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL</FONT><FONT FACE="新細明體" LANG="ZH-TW">）指令，透過各種</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW">（或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">OLE DB</FONT><FONT FACE="新細明體" LANG="ZH-TW">）的驅動程式，即可讓使用者於瀏覽器畫面中輸入、更新、和刪除伺服器之資料庫資訊。</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">ADO</FONT><FONT FACE="新細明體" LANG="ZH-TW">使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">（記錄集合）物件，做為資料的主要介面。</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ADO</FONT><FONT FACE="新細明體" LANG="ZH-TW">可使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">VBScript</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">JavaScript</FONT><FONT FACE="新細明體" LANG="ZH-TW">語言來控制資料庫的存取，與輸出查詢結果。</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">ADO</FONT><FONT FACE="新細明體" LANG="ZH-TW">提供以下的特點，以建造主從式（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">client-server</FONT><FONT FACE="新細明體" LANG="ZH-TW">）和</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">web-based</FONT><FONT FACE="新細明體" LANG="ZH-TW">的運用，包含：</P></DIR>
+</DIR>
+</DIR>
+</DIR>
+
+
+<UL>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>批次更新（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Batch updating</FONT><FONT FACE="新細明體" LANG="ZH-TW">）。</LI></P>
+<P ALIGN="JUSTIFY"><LI>支援預儲程序（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">stored procedures</FONT><FONT FACE="新細明體" LANG="ZH-TW">），可使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">in/out</FONT><FONT FACE="新細明體" LANG="ZH-TW">參數與預儲程序做輸入輸出，以及取得預儲程序的返回值。</LI></P>
+<P ALIGN="JUSTIFY"><LI>提供由預儲程序（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">stored procedures</FONT><FONT FACE="新細明體" LANG="ZH-TW">）或批次</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL</FONT><FONT FACE="新細明體" LANG="ZH-TW">指令，傳回多組</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">的功能。</LI></P></UL>
+</UL>
+<DIR>
+<DIR>
+
+</FONT><FONT FACE="Arial" SIZE=5><P>RDS</FONT><FONT FACE="超研澤中隸,????" LANG="ZH-TW" SIZE=5>（</FONT><FONT FACE="Arial" SIZE=5>Remote Data Service</FONT><FONT FACE="超研澤中隸,????" LANG="ZH-TW" SIZE=5>）</P><DIR>
+<DIR>
+
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW">（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Remote Data Service</FONT><FONT FACE="新細明體" LANG="ZH-TW">），即為以前的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ADC</FONT><FONT FACE="新細明體" LANG="ZH-TW">（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Advanced Data Connector</FONT><FONT FACE="新細明體" LANG="ZH-TW">），提供一個資料處理的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ActiveX Control</FONT><FONT FACE="新細明體" LANG="ZH-TW">，透過各種</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW">（或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">OLE DB</FONT><FONT FACE="新細明體" LANG="ZH-TW">）的驅動程式，以存取資料庫的資料。</P>
+<P ALIGN="JUSTIFY">一般的網站資料處理技術，譬如</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ADO</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IDC</FONT><FONT FACE="新細明體" LANG="ZH-TW">等，資料查詢的動作，是在伺服端的網站伺服器運作的，每次查詢資料的要求，都須由用戶端發起送到伺服端，伺服器運作查詢資料庫後，再傳回用戶端的瀏覽器顯示出來。這一來一往，對頻繁的資料查詢動作，效率較差。</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW">與其他網站資料處理技術，有一個很大的不同點，就是</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW">的資料查詢動作，是在用戶端的瀏覽器上運作的。</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW">將伺服器資料庫可高達數千筆的資料，先下載到用戶端，在用戶端的瀏覽器直接做頻繁的資料查詢動作，大部份時間不須再與伺服器連線，效率較佳。這個資料查詢就是由安裝於用戶端的「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RDS ActiveX Control</FONT><FONT FACE="新細明體" LANG="ZH-TW">」處理的。</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW">的特點，如下：</P></DIR>
+</DIR>
+</DIR>
+</DIR>
+
+
+<UL>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>於用戶端執行資料查詢：將資料庫的大量資料暫存於用戶端（前端），直接於用戶端的瀏覽器查詢資料，節省前端（用戶端）和後端（伺服端）之間資料往返所須的時間。適合於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Internet</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Intranet</FONT><FONT FACE="新細明體" LANG="ZH-TW">、或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">LAN</FONT><FONT FACE="新細明體" LANG="ZH-TW">上，做頻繁的資料庫資料存取查詢動作。</LI></P>
+<P ALIGN="JUSTIFY"><LI>是一個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ActiveX Control</FONT><FONT FACE="新細明體" LANG="ZH-TW">：由網站伺服器自動下載和安裝</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW">的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ActiveX Control</FONT><FONT FACE="新細明體" LANG="ZH-TW">於用戶端，無須另行安裝或設定。用戶端須使用能支援</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ActiveX</FONT><FONT FACE="新細明體" LANG="ZH-TW">的瀏覽器，譬如</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IE 3.0/4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW">等，才能存取網站伺服器的資料庫資料。由於是一個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ActiveX Control</FONT><FONT FACE="新細明體" LANG="ZH-TW">，可使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">VBScript</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">JavaScript</FONT><FONT FACE="新細明體" LANG="ZH-TW">語言來控制此</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW">的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ActiveX Control</FONT><FONT FACE="新細明體" LANG="ZH-TW">，以及可與其他的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ActiveX Control</FONT><FONT FACE="新細明體" LANG="ZH-TW">配合使用。</LI></P></UL>
+</UL>
+<DIR>
+<DIR>
+
+</FONT><FONT FACE="Arial" SIZE=5><P>ADO</FONT><FONT FACE="超研澤中隸,????" LANG="ZH-TW" SIZE=5>存取資料庫的步驟</P><DIR>
+<DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">和</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ADO</FONT><FONT FACE="新細明體" LANG="ZH-TW">的步驟有三個，如下：</P></DIR>
+</DIR>
+</DIR>
+</DIR>
+
+
+<UL>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>第一步驟：設定待連結的資料庫，有</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">DSN</FONT><FONT FACE="新細明體" LANG="ZH-TW">和</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">DSN-less</FONT><FONT FACE="新細明體" LANG="ZH-TW">兩種方法。</LI></P>
+<P ALIGN="JUSTIFY"><LI>第二步驟：設定待執行的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL</FONT><FONT FACE="新細明體" LANG="ZH-TW">指令，可以使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">。</LI></P>
+<P ALIGN="JUSTIFY"><LI>第三步驟：使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性和方法與</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW">碼配合，顯示執行的結果。</LI></P></UL>
+</UL>
+<DIR>
+<DIR>
+
+</FONT><FONT FACE="超研澤中隸,????" LANG="ZH-TW" SIZE=5><P>設定待連結的資料庫</P><DIR>
+<DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">若要使用瀏覽器，透過網際網路存取資料庫的資料，首先第一步驟要設定待連結的資料庫。有兩種方法您可以使用：</P></DIR>
+</DIR>
+</DIR>
+</DIR>
+
+<OL>
+<OL>
+
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>DSN</FONT><FONT FACE="新細明體" LANG="ZH-TW">（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Data Source Name</FONT><FONT FACE="新細明體" LANG="ZH-TW">）：建立一個「系統」資料來源名稱。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>DSN-less</FONT><FONT FACE="新細明體" LANG="ZH-TW">：於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式當中直接設定。</LI></P></OL>
+</OL>
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+
+<P ALIGN="JUSTIFY">第一種方法，於網站伺服器</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">的電腦上的</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">控制台</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">之</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[ODBC] </FONT><FONT FACE="新細明體" LANG="ZH-TW">中，新建一個「系統」資料來源名稱。</P>
+<P ALIGN="JUSTIFY">請注意新建一個「系統」資料來源名稱，而非「使用者」資料來源名稱，兩者差別之處為：</P></DIR>
+</DIR>
+</DIR>
+</DIR>
+
+
+<UL>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>「系統」資料來源名稱：表示所有的使用者都可以使用這個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">DSN</FONT><FONT FACE="新細明體" LANG="ZH-TW">（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Data Source Name</FONT><FONT FACE="新細明體" LANG="ZH-TW">）。</LI></P>
+<P ALIGN="JUSTIFY"><LI>「使用者」資料來源：只在區域電腦中，並且只有目前使用者可以使用這個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">DSN</FONT><FONT FACE="新細明體" LANG="ZH-TW">。</LI></P></UL>
+</UL>
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+
+<P ALIGN="JUSTIFY">建立一個「系統」資料來源名稱的步驟，為執行</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[ODBC] </FONT><FONT FACE="新細明體" LANG="ZH-TW">後選擇</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">系統資料來源名稱</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">。按下</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">新增</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">按鈕後，選取所用資料庫的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW">驅動程式。再命名一個「資料來源名稱」如下圖的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">NTOPSamp2</FONT><FONT FACE="新細明體" LANG="ZH-TW">，以及選擇資料庫檔案或資料庫名稱等，最後按下</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">確定</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">按鈕即可。</P>
+<P ALIGN="JUSTIFY">這個命名的「資料來源名稱」，將於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式當中使用。</P>
+<P ALIGN="JUSTIFY">於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW">設定的「資料來源名稱」後，於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式當中使用「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Server.CreateObject</FONT><FONT FACE="新細明體" LANG="ZH-TW">」建立連線的物件，並使用「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Open</FONT><FONT FACE="新細明體" LANG="ZH-TW">」開啟待存取查詢資料庫，程式如下：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>Set Conn = Server.CreateObject("ADODB.Connection")</P>
+<P>Conn.Open "</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">資料來源名稱</FONT><FONT FACE="Arial">"</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">這裡的「資料來源名稱」即為於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW">設定的「資料來源名稱」，譬如上圖的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">NTOPSamp2</FONT><FONT FACE="新細明體" LANG="ZH-TW">，程式即為「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Conn.Open “NTOPSamp2”</FONT><FONT FACE="新細明體" LANG="ZH-TW">」。</P></DIR>
+</DIR>
+
+</FONT><FONT FACE="超研澤中隸,????" LANG="ZH-TW" SIZE=5><P>設定待執行的</FONT><FONT FACE="Arial" SIZE=5>SQL</FONT><FONT FACE="超研澤中隸,????" LANG="ZH-TW" SIZE=5>指令</P><DIR>
+<DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">新建一個「系統」資料來源名稱後，再來第二步驟就是設定待執行的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL</FONT><FONT FACE="新細明體" LANG="ZH-TW">指令，以便告訴資料庫要查詢、新增、修改、或刪除資料。設定待執行</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL</FONT><FONT FACE="新細明體" LANG="ZH-TW">指令的方法如下：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>Set rs = Conn.Execute(SQL</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">指令</FONT><FONT FACE="Arial">)</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">譬如「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Set rs = Conn.Execute(“select * from </FONT><FONT FACE="新細明體" LANG="ZH-TW">著作</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">”</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">)</FONT><FONT FACE="新細明體" LANG="ZH-TW">」，即查詢資料庫當中「著作」資料表的所有資料。</P>
+<P ALIGN="JUSTIFY">使用以上的方法，直接設定待執行</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL</FONT><FONT FACE="新細明體" LANG="ZH-TW">指令的話，有一個缺點，就是當兩個使用者同時瀏覽同一個網頁時，於第一個使用者已經開啟資料庫尚未關閉前，若第二個使用者也要開啟相同的資料庫時，將產生已經開啟的錯誤訊息。</P>
+<P ALIGN="JUSTIFY">要如何解決呢？解決的辨法為使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">（記錄集合）物件。將資料庫的資料先儲存到</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">當中，就可以讓多位使用者同時存取同一個資料庫。</P>
+<P ALIGN="JUSTIFY">使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">（記錄集合）物件的方法如下：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>Set rs = Server.CreateObject("ADODB.Recordset")</P>
+<P>rs.Open SQL</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">指令</FONT><FONT FACE="Arial">, Conn, 1, 1&#9;</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">‘</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">讀取</P>
+</FONT><FONT FACE="Arial"><P>rs.Open SQL</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">指令</FONT><FONT FACE="Arial">, Conn, 1, 3</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">&#9;</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">‘</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">新增、修改、或刪除</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">先由</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Server.CreateObject("ADODB.Recordset")</FONT><FONT FACE="新細明體" LANG="ZH-TW">定義所使用的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">名稱為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">rs</FONT><FONT FACE="新細明體" LANG="ZH-TW">，再設定待執行</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL</FONT><FONT FACE="新細明體" LANG="ZH-TW">指令，即可開始執行查詢、新增、修改、或刪除資料庫資料的動作。</P>
+<P ALIGN="JUSTIFY">譬如「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">rs.Open “select * from </FONT><FONT FACE="新細明體" LANG="ZH-TW">著作</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">”</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">, Conn, 1, 1</FONT><FONT FACE="新細明體" LANG="ZH-TW">」，即查詢資料庫當中一個叫做「著作」資料表的所有資料。</P></DIR>
+</DIR>
+
+</FONT><FONT FACE="超研澤中隸,????" LANG="ZH-TW" SIZE=5><P>顯示執行的結果</P><DIR>
+<DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">第三步驟，使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性和方法與</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW">碼配合，以顯示執行的結果，其中</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">rs</FONT><FONT FACE="新細明體" LANG="ZH-TW">為第二步驟所定義的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">名稱。</P>
+<P ALIGN="JUSTIFY">取得欄位資訊的方法：</P></DIR>
+</DIR>
+</DIR>
+</DIR>
+
+
+<UL>
+
+<UL>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>rs.Fields.Count</FONT><FONT FACE="新細明體" LANG="ZH-TW">：欄位總數。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>rs(i).Name</FONT><FONT FACE="新細明體" LANG="ZH-TW">：第</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">i</FONT><FONT FACE="新細明體" LANG="ZH-TW">（指標）個欄位名稱，</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">i</FONT><FONT FACE="新細明體" LANG="ZH-TW">由</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">0</FONT><FONT FACE="新細明體" LANG="ZH-TW">算起到</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">rs.Fields.Count-1</FONT><FONT FACE="新細明體" LANG="ZH-TW">。</LI></P></UL>
+</UL>
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+
+<P ALIGN="JUSTIFY">讀取欄位的資料，可以使用以下兩個方法：</P></DIR>
+</DIR>
+</DIR>
+</DIR>
+
+
+<UL>
+
+<UL>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>rs(i)</FONT><FONT FACE="新細明體" LANG="ZH-TW">：讀取第</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">i</FONT><FONT FACE="新細明體" LANG="ZH-TW">（指標）個欄位的資料，</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">i</FONT><FONT FACE="新細明體" LANG="ZH-TW">由</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">0</FONT><FONT FACE="新細明體" LANG="ZH-TW">算起到</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">rs.Fields.Count-1</FONT><FONT FACE="新細明體" LANG="ZH-TW">。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>rs(“</FONT><FONT FACE="新細明體" LANG="ZH-TW">欄位名稱</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">”)</FONT><FONT FACE="新細明體" LANG="ZH-TW">：讀取指定欄位的資料。</LI></P></UL>
+</UL>
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+
+<P ALIGN="JUSTIFY">與</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW">碼配合，以顯示執行的結果之相關</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性和方法：</P></DIR>
+</DIR>
+</DIR>
+</DIR>
+
+
+<UL>
+
+<UL>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>rs.RecordCount</FONT><FONT FACE="新細明體" LANG="ZH-TW">：資料總筆數。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>rs.EOF</FONT><FONT FACE="新細明體" LANG="ZH-TW">：是（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">True</FONT><FONT FACE="新細明體" LANG="ZH-TW">）否（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">False</FONT><FONT FACE="新細明體" LANG="ZH-TW">）已指到最末筆。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>rs.MoveNext</FONT><FONT FACE="新細明體" LANG="ZH-TW">：將指標移到下一筆。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>rs.MovePrev</FONT><FONT FACE="新細明體" LANG="ZH-TW">：將指標移到上一筆。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>rs.MoveFirst</FONT><FONT FACE="新細明體" LANG="ZH-TW">：將指標移到第一筆。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>rs.MoveLast</FONT><FONT FACE="新細明體" LANG="ZH-TW">：將指標移到最末筆。</LI></P></UL>
+</UL>
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+
+<P ALIGN="JUSTIFY">顯示後，最後使用如下的指令，關閉</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">和資料庫連結：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>rs.Close</P>
+<P>Conn.Close</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">您也可以使用「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Set Conn = Nothing</FONT><FONT FACE="新細明體" LANG="ZH-TW">」以關閉資料庫連結。</P>
+<P ALIGN="JUSTIFY">譬如，於用戶端使用瀏覽器，瀏覽執行的結果。</P>
+<P ALIGN="JUSTIFY">相關的</FONT><FONT FACE="華康細圓體,???" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼如下：</P>
+</FONT><P>&lt;<FONT FACE="System,新細明體" LANG="ZH-TW">%</P>
+<P>Set cn = Server.CreateObject("ADODB.Connection") </P>
+<P>cn.Open "Driver={Microsoft Access Driver (*.mdb)};DBQ=" &amp; Server.MapPath("ntopsamp.mdb") </P>
+<P>Set rs = Server.CreateObject("ADODB.Recordset")</P>
+<P>SqlStr = "SELECT * FROM </FONT><FONT FACE="新細明體" LANG="ZH-TW">著作</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">" </P>
+<P>rs.Open SqlStr,cn,1,1</P>
+<P>%&gt;&lt;BR&gt;</P>
+<P>&lt;TABLE COLSPAN=8 CELLPADDING=5 BORDER=0&gt;</P>
+<P>&lt;TR&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW">書名</FONT>&lt;<FONT FACE="System,新細明體" LANG="ZH-TW">/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW">出版</FONT>&lt;<FONT FACE="System,新細明體" LANG="ZH-TW">/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW">圖片</FONT>&lt;<FONT FACE="System,新細明體" LANG="ZH-TW">/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW">簡介</FONT>&lt;<FONT FACE="System,新細明體" LANG="ZH-TW">/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;% Do while not rs.EOF %&gt;</P>
+<P>&lt;TR&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="新細明體" LANG="ZH-TW">書名</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="新細明體" LANG="ZH-TW">出版</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="新細明體" LANG="ZH-TW">圖片</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="新細明體" LANG="ZH-TW">簡介</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;/TR&gt; </P>
+<P>&lt;% </P>
+<P>rs.MoveNext</P>
+<P>Loop </P>
+<P>rs.Close</P>
+<P>Set cn = Nothing</P>
+<P>%&gt;</P>
+<P>&lt;/TABLE&gt;</P>
+<P>　</P></DIR>
+</DIR>
+</DIR>
+</DIR>
+
+</FONT><FONT FACE="超研澤中隸,????" LANG="ZH-TW" SIZE=6 COLOR="#0000ff"><P>如何於程式中直接設定待連結的資料庫呢？</P><DIR>
+<DIR>
+<DIR>
+<DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">如何於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式當中，直接設定待連結的資料庫呢？這個方法即所謂的「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">DSN-less</FONT><FONT FACE="新細明體" LANG="ZH-TW">」法。</P>
+<P ALIGN="JUSTIFY">第一個方法於</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[ODBC] </FONT><FONT FACE="新細明體" LANG="ZH-TW">新建一個系統資料來源，有時候用起來並不方便，譬如當網站伺服器不在身旁、或向</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ISP</FONT><FONT FACE="新細明體" LANG="ZH-TW">租用虛擬主機時，這時候並不方便跑到網站伺服器的</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[ODBC] </FONT><FONT FACE="新細明體" LANG="ZH-TW">中去新建一個系統資料來源。於是</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">提供了一個直接於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼中指定所要連結的資料庫的方法，使用「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Server.CreateObject</FONT><FONT FACE="新細明體" LANG="ZH-TW">」建立連線的物件後，使用「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Open</FONT><FONT FACE="新細明體" LANG="ZH-TW">」直接連結到待存取查詢資料庫，對於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Access</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫而言，資料庫連結的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼如下：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>Set Conn = Server.CreateObject("ADODB.Connection")</P>
+<P>conn.Open "Driver={Microsoft Access Driver (*.mdb)};DBQ=</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">資料庫檔案</FONT><FONT FACE="Arial">;UID=sa;PWD="</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">其中</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">資料庫檔案為</FONT><FONT FACE="新細明體" LANG="ZH-TW">真實路徑，您可以使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Server.MapPath("</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫檔案名稱</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">") </FONT><FONT FACE="新細明體" LANG="ZH-TW">以取得資料庫的真實位址。</P>
+<P ALIGN="JUSTIFY">對於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫而言，資料庫連結的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼如下：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>Set Conn = Server.CreateObject("ADODB.Connection")</P>
+<P>conn.Open "Driver={SQL Server};Database=</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">資料庫名稱</FONT><FONT FACE="Arial">;Server=(Local);UID=sa;PWD=</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">”</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">對於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Oracle</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫而言，資料庫連結的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼如下：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>Set Conn = Server.CreateObject("ADODB.Connection")</P>
+<P>conn.Open "Driver={Oracle Server};Database=;Server=(Local);UID=sa;PWD="</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">對於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Excel</FONT><FONT FACE="新細明體" LANG="ZH-TW">而言，資料庫連結的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼如下：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>Set Conn = Server.CreateObject("ADODB.Connection")</P>
+<P>conn.Open "Driver={Microsoft Excel Driver (*.xls)};DBQ=</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">資料庫檔案</FONT><FONT FACE="Arial">"</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">對於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">dBase</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫而言，資料庫連結的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼如下：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>Set Conn = Server.CreateObject("ADODB.Connection")</P>
+<P>conn.Open "Driver={Microsoft dBase Driver (*.dbf)};DBQ=</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">資料庫檔案</FONT><FONT FACE="Arial">"</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">對於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Text</FONT><FONT FACE="新細明體" LANG="ZH-TW">檔案而言，資料庫連結的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼如下：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>Set Conn = Server.CreateObject("ADODB.Connection")</P>
+<P>conn.Open "Driver= {Microsoft Text Driver (*.txt; *.csv)};DBQ=</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">資料庫檔案</FONT><FONT FACE="Arial">"</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">　</P></DIR>
+</DIR>
+</DIR>
+</DIR>
+</DIR>
+
+</FONT><FONT FACE="超研澤中隸,????" LANG="ZH-TW" SIZE=6 COLOR="#0000ff"><P>如何存取三層式架構的資料庫資料呢？</P><DIR>
+<DIR>
+<DIR>
+<DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">三層式（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">3-tier</FONT><FONT FACE="新細明體" LANG="ZH-TW">）的架構當中，資料庫可能位於另外的一台電腦當中，與網站伺服器</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">為不同一台電腦。</P>
+<P ALIGN="JUSTIFY">如何存取三層式架構的資料庫資料呢？</P>
+<P ALIGN="JUSTIFY">若要存取位於另外的一台電腦當中的資料庫，只要透過網路（網際網路或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">intranet</FONT><FONT FACE="新細明體" LANG="ZH-TW">），將安裝資料庫的電腦，與網站伺服器</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">的電腦相連結，然後於網站伺服器</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">的電腦上，安裝這種資料庫的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW">（或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">OLE DB</FONT><FONT FACE="新細明體" LANG="ZH-TW">）的驅動程式即可。</P>
+<P ALIGN="JUSTIFY">對於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫而言，資料庫連結的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼如下：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>Set Conn = Server.CreateObject("ADODB.Connection")</P>
+<P>conn.Open "Driver={SQL Server};Database=</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">資料庫名稱</FONT><FONT FACE="Arial">;Server=168.195.72.2.;UID=sa;PWD=</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">”</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼中</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Server=…</FONT><FONT FACE="新細明體" LANG="ZH-TW">當中設定資料庫電腦的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IP</FONT><FONT FACE="新細明體" LANG="ZH-TW">位址。</P>
+<P ALIGN="JUSTIFY">　</P></DIR>
+</DIR>
+</DIR>
+</DIR>
+
+</FONT><FONT FACE="超研澤中隸,????" LANG="ZH-TW" SIZE=6 COLOR="#0000ff"><P>如何存取</FONT><FONT FACE="Arial" SIZE=6 COLOR="#0000ff">UNIX</FONT><FONT FACE="超研澤中隸,????" LANG="ZH-TW" SIZE=6 COLOR="#0000ff">資料庫呢？</P><DIR>
+<DIR>
+<DIR>
+<DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">若要存取位於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">UNIX</FONT><FONT FACE="新細明體" LANG="ZH-TW">機器的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Oracle</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Sybase</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Informix</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">MySQL</FONT><FONT FACE="新細明體" LANG="ZH-TW">等資料庫，只要透過網路（網際網路或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">intranet</FONT><FONT FACE="新細明體" LANG="ZH-TW">），將安裝資料庫的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">UNIX</FONT><FONT FACE="新細明體" LANG="ZH-TW">機器，與網站伺服器</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">的電腦相連結，然後於網站伺服器</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">的電腦上，安裝這種資料庫的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW">（或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">OLE DB</FONT><FONT FACE="新細明體" LANG="ZH-TW">）的驅動程式即可。</P>
+<P ALIGN="JUSTIFY">對於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">MySQL</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫而言，資料庫連結的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼如下：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>Set Conn = Server.CreateObject("ADODB.Connection")</P>
+<P>conn.Open "Driver={MySQL};Database=</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">資料庫名稱</FONT><FONT FACE="Arial">;Server=192.168.1.2;UID=sa;PWD="</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">由於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">UNIX</FONT><FONT FACE="新細明體" LANG="ZH-TW">機器一定是另外一台電腦，因此必須於所連結的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼中</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Server=…</FONT><FONT FACE="新細明體" LANG="ZH-TW">當中設定資料庫電腦的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IP</FONT><FONT FACE="新細明體" LANG="ZH-TW">位址。</P>
+<P ALIGN="JUSTIFY">　</P></DIR>
+</DIR>
+</DIR>
+</DIR>
+
+</FONT><FONT FACE="Arial" SIZE=6 COLOR="#0000ff"><P>asp</FONT><FONT FACE="超研澤中隸,????" LANG="ZH-TW" SIZE=6 COLOR="#0000ff">如何呼叫</FONT><FONT FACE="Arial" SIZE=6 COLOR="#0000ff">stored procedures</FONT><FONT FACE="超研澤中隸,????" LANG="ZH-TW" SIZE=6 COLOR="#0000ff">呢？</P><DIR>
+<DIR>
+<DIR>
+<DIR>
+
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">如何呼叫預儲程序（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">stored procedures</FONT><FONT FACE="新細明體" LANG="ZH-TW">）呢？</P>
+<P ALIGN="JUSTIFY">譬如我們要執行</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server</FONT><FONT FACE="新細明體" LANG="ZH-TW">的一個預儲程序</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">sp1</FONT><FONT FACE="新細明體" LANG="ZH-TW">如下：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>CREATE PROCEDURE sp1</P>
+<P>AS</P>
+<P>SELECT * From </FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">著作</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">呼叫預儲程序必須使用一個叫做</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Command</FONT><FONT FACE="新細明體" LANG="ZH-TW">的物件，將預儲程序的名稱於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cmd.CommandText</FONT><FONT FACE="新細明體" LANG="ZH-TW">設定，如下</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼當中，</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cmd.CommandText = "sp1"</FONT><FONT FACE="新細明體" LANG="ZH-TW">設定預儲程序為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">sp1</FONT><FONT FACE="新細明體" LANG="ZH-TW">，最後</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Set rs = cmd.Execute</FONT><FONT FACE="新細明體" LANG="ZH-TW">即可執行預儲程序</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">sp1</FONT><FONT FACE="新細明體" LANG="ZH-TW">，並將執行結果傳到</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">rs</FONT><FONT FACE="新細明體" LANG="ZH-TW">的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">。</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼如下：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>&lt;%</P>
+<P>Set cn = Server.CreateObject("ADODB.Connection")</P>
+<P>cn.Open "driver={SQL Server};server=(Local);uid=sa;pwd=;database=NtopSamp"</P>
+<P>Set cmd = Server.CreateObject("ADODB.Command")</P>
+<P>Set cmd.ActiveConnection = cn</P>
+<P>cmd.CommandText = "sp1"</P>
+<P>Set rs = cmd.Execute&#9;&#9;&#9;</P>
+<P>%&gt;&lt;BR&gt;</P>
+<P>&lt;TABLE COLSPAN=8 CELLPADDING=5 BORDER=0&gt;</P>
+<P>&lt;TR&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">書名</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">出版</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">圖片</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">簡介</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;% Do while not rs.EOF %&gt;</P>
+<P>&lt;TR&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">書名</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">出版</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">圖片</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">簡介</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;/TR&gt; </P>
+<P>&lt;% </P>
+<P>rs.MoveNext</P>
+<P>Loop </P>
+<P>Set cmd = Nothing</P>
+<P>rs.Close</P>
+<P>%&gt;</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">於用戶端使用瀏覽器，瀏覽執行的結果與上圖相同。</P>
+<P ALIGN="JUSTIFY">　</P></DIR>
+</DIR>
+
+</FONT><FONT FACE="Arial" SIZE=5><P>IIS 4.0</FONT><FONT FACE="超研澤中隸,????" LANG="ZH-TW" SIZE=5>設計實例展示網站</P><DIR>
+<DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">作者準備一個展示各種</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW">設計實例的網站，提供各種網站網頁的資訊、與設計範例，包括</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">特異功能、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫設計實例、網路商店、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ActiveX</FONT><FONT FACE="新細明體" LANG="ZH-TW">、推播頻道、動態</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">HTML 99</FONT><FONT FACE="新細明體" LANG="ZH-TW">招等，網址如下：</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"></FONT><A HREF="../../index.html"><FONT FACE="System,新細明體" LANG="ZH-TW">http://www.asp.com.tw</FONT></A></P>
+<FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">歡迎上網光臨指教。</P></DIR>
+</DIR>
+</DIR>
+</DIR>
+</FONT></BODY>
+</HTML>

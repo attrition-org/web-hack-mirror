@@ -1,0 +1,37 @@
+
+Starting nmap V. 2.54BETA3 ( www.insecure.org/nmap/ )
+Insufficient responses for TCP sequencing (0), OS detection may be less accurate
+Insufficient responses for TCP sequencing (0), OS detection may be less accurate
+Interesting ports on unassigned.state.oh.us (199.218.131.185):
+(The 1 port scanned but not shown below is in state: closed)
+Port       State       Service
+22/tcp     filtered    ssh                     
+23/tcp     open        telnet                  
+25/tcp     open        smtp                    
+80/tcp     open        http                    
+
+Aggressive OS guesses: NOKIA IPSO 3.2 Running Checkpoint Firewall-1 (97%), Check Point FireWall-1 4.0 SP-5 (IPSO build) (97%), OpenBSD Post 2.4 (November 1998) - 2.5 (92%), NetBSD 1.5_ALPHA i386 (91%), NetBSD 1.3I (after 19990119) to 1.4 x86 (90%), OpenBSD 2.6-2.7 (89%), NetBSD 1.3 - 1.3.3 big endian arch (88%), AIX v4.2 (87%)
+No exact OS matches for host (If you know what OS is running on it, see http://www.insecure.org/cgi-bin/nmap-submit.cgi).
+TCP/IP fingerprint:
+TSeq(Class=RI%gcd=1%SI=D25A)
+T1(Resp=N)
+T1(Resp=Y%DF=N%W=4000%ACK=S++%Flags=AS%Ops=MNWNNT)
+T2(Resp=N)
+T2(Resp=N)
+T3(Resp=N)
+T3(Resp=Y%DF=N%W=4000%ACK=S++%Flags=AS%Ops=MNWNNT)
+T4(Resp=N)
+T4(Resp=N)
+T5(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+T5(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+T6(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T6(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T7(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+T7(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+PU(Resp=Y%DF=N%TOS=0%IPLEN=38%RIPTL=148%RID=E%RIPCK=E%UCK=E%ULEN=134%DAT=E)
+PU(Resp=Y%DF=N%TOS=0%IPLEN=38%RIPTL=148%RID=E%RIPCK=E%UCK=E%ULEN=134%DAT=E)
+
+
+
+
+Nmap run completed -- 1 IP address (1 host up) scanned in 24 seconds

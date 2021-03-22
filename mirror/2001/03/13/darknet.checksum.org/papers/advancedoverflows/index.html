@@ -1,0 +1,213 @@
+<html>
+<head>
+<title>www.hack.co.za</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#000000" text="#666666" link="#CCCCCC" vlink="#CCCCCC" alink="#CCCCCC">
+<table width="78%" border="1" align="center" bordercolor="#000000">
+  <tr> 
+    <td width="19%">&nbsp;</td>
+    <td width="69%">
+      <div align="center"><font size="2" color="#666666">[[-</font><font size="2"><font color="#CCCCCC">advanced 
+        overflow papers</font><font color="#666666">-]]</font></font></div>
+    </td>
+    <td width="12%">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="19%">&nbsp;</td>
+    <td width="69%">&nbsp;</td>
+    <td width="12%">&nbsp;</td>
+  </tr>
+  <tr bgcolor="#666666" bordercolor="#666666"> 
+    <td width="19%"> <font size="2"><font color="#000000">[-</font><font color="#CCCCCC">name</font><font color="#000000">-]</font></font></td>
+    <td width="69%"> <font size="2" color="#000000">[-</font><font size="2"><font color="#CCCCCC">description</font><font color="#000000">-]</font></font></td>
+    <td width="12%"> <font size="2" color="#000000">[-</font><font size="2"><font color="#CCCCCC">author</font><font color="#000000">-]</font></font></td>
+  </tr>
+  <tr bordercolor="#666666"> 
+    <td width="19%"> 
+      <div align="left"><font size="2" color="#CCCCCC"><a href="adv.overflow.paper.txt">adv.overflow.paper.txt</a></font></div>
+    </td>
+    <td width="69%"><font size="2" color="#CCCCCC">This paper demonstrates the 
+      creation of advanced shellcode for use in buffer overflow exploits. There 
+      are four particular advanced shellcodes discussed: shellcode to bypass non-printable 
+      character filters, shellcode to change your uid back to 0 even after a seteuid(getuid()), 
+      shellcode to break chroot() and set your root directory to "/" again, and 
+      shellcode to bind a shell to a port. </font></td>
+    <td width="12%" nowrap> 
+      <div align="right"><font size="2" color="#CCCCCC">Taeho Oh</font></div>
+    </td>
+  </tr>
+  <tr bordercolor="#666666"> 
+    <td width="19%"> 
+      <div align="left"><font size="2" color="#CCCCCC"><a href="alpha-bof.txt">alpha-bof.txt</a></font></div>
+    </td>
+    <td width="69%"><font size="2" color="#CCCCCC">This paper explains the registers 
+      of the Alpha microprocessor, and demonstrates the process of creating shellcode 
+      that works under Linux/ALPHA (and also works under Digital UNIX.) </font></td>
+    <td width="12%" nowrap> 
+      <div align="right"><font size="2" color="#CCCCCC">Taeho Oh</font></div>
+    </td>
+  </tr>
+  <tr bordercolor="#666666"> 
+    <td width="19%"> 
+      <div align="left"><font size="2" color="#CCCCCC"><a href="defnoexec.txt">defnoexec.txt</a></font></div>
+    </td>
+    <td width="69%"><font size="2" color="#CCCCCC">This post to bugtraq explains 
+      two methods for defeating Solar Designer's non-executable stack patch. First, 
+      the ELF Procedure Linkage Table (PLT) method, which can be used when a program 
+      vulnerable to a stack overflow uses a procedure from a shared library. And 
+      second, the Executable Data Segments (EDS) method, which can be used when 
+      code can be executed in the data segment (almost always). </font></td>
+    <td width="12%" nowrap> 
+      <div align="right"><font size="2" color="#CCCCCC">Rafal Wojtczuk</font></div>
+    </td>
+  </tr>
+  <tr bordercolor="#666666"> 
+    <td width="19%"> 
+      <div align="left"><font size="2" color="#CCCCCC"><a href="ntbufferoverruns.txt">ntbufferoverruns.txt</a></font></div>
+    </td>
+    <td width="69%"><font size="2" color="#CCCCCC">"This document explains what 
+      a buffer overrun is and shows how they can be exploited on the Windows NT4 
+      operating system using RASMAN.EXE as a case study. We will take a look at 
+      Windows NT processes, virtual address space, the dynamics of a buffer overrun 
+      and cover certain key issues such as explaining what a stack is and what 
+      the ESP, EBP, and EIP CPU registers are and do. With these covered we'll 
+      look into the buffer overrun found in RASMAN.EXE." </font></td>
+    <td width="12%" nowrap> 
+      <div align="right"><font size="2" color="#CCCCCC">Dave Litchfield</font></div>
+    </td>
+  </tr>
+  <tr bordercolor="#666666"> 
+    <td width="19%"> 
+      <div align="left"><font color="#CCCCCC" size="2"><a href="p55-08.txt">p55-08.txt</a></font></div>
+    </td>
+    <td width="69%"><font color="#CCCCCC" size="2">This article demonstrates the 
+      frame pointer overwrite. This method can be used to overflow a one-byte(!) 
+      buffer by only using one byte. </font></td>
+    <td width="12%" nowrap> 
+      <div align="right"><font color="#CCCCCC" size="2">klog</font></div>
+    </td>
+  </tr>
+  <tr bordercolor="#666666"> 
+    <td width="19%"> 
+      <div align="left"><font size="2" color="#CCCCCC"><a href="p55-15.txt">p55-15.txt</a></font></div>
+    </td>
+    <td width="69%"><font size="2" color="#CCCCCC">This paper is separated into 
+      3 major sections: First, a reverse engineering session points out a common 
+      vulnerability. Second, the process of exploiting the weakness is demonstrated 
+      (the problem with most win32 remote overflow Exploits stems from the payload, 
+      the current trend is to have the shellcode download an external file and 
+      execute). Far too many problems result from this technique, depending on 
+      router/firewall configurations etc. So, the payload presented directly spawns 
+      a full-blown shell on any port you specify, eliminating 90% of most reported 
+      problems. The last section shows how to add your own code to executables 
+      of your target to prevent exploitation: binary patching." </font></td>
+    <td width="12%" nowrap> 
+      <div align="right"><font size="2" color="#CCCCCC">Dark Spyrit</font></div>
+    </td>
+  </tr>
+  <tr bordercolor="#666666"> 
+    <td width="19%"> 
+      <div align="left"><font size="2" color="#CCCCCC"><a href="p56-0x05.txt">p56-0x05.txt</a></font></div>
+    </td>
+    <td width="69%"><font size="2" color="#CCCCCC">This article demonstrates that 
+      it is possible to exploit stack overflow vulnerabilities on systems secured 
+      by StackGuard or StackShield. Additionally, the paper demonstrates how this 
+      is possible while simultaneously defeating non-executable stack protection 
+      (the ow1 patch for the Linux kernel by Solar Designer in particular. </font></td>
+    <td width="12%" nowrap> 
+      <div align="right"><font size="2" color="#CCCCCC">Bulba and Kil3r</font></div>
+    </td>
+  </tr>
+  <tr bordercolor="#666666"> 
+    <td width="19%"> 
+      <div align="left"><font color="#CCCCCC" size="2"><a href="p56-0x08.txt">p56-0x08.txt</a></font></div>
+    </td>
+    <td width="69%"><font color="#CCCCCC" size="2">This paper demonstrates how 
+      the object-oriented nature of C++ opens new possibilities for exploitation 
+      in addition to the methods currently used for exploiting programs written 
+      in C. Specifically, methods for manipulating C++ Virtual Pointers (VPTRs), 
+      are explained. </font></td>
+    <td width="12%" nowrap> 
+      <div align="right"><font color="#CCCCCC" size="2">Rix</font></div>
+    </td>
+  </tr>
+  <tr bordercolor="#666666"> 
+    <td width="19%"> 
+      <div align="left"><font color="#CCCCCC" size="2"><a href="p56-0x0e.txt">p56-0x0e.txt</a></font></div>
+    </td>
+    <td width="69%"><font color="#CCCCCC" size="2">This article details the hazards 
+      of non-terminated buffers (specifically non-terminated strings), and their 
+      potential impact on the security of a application. To summarize: "Unfortunately, 
+      since p points to buf2, and buf2 is not properly terminated, the sprintf() 
+      will actually continue happily copying until it reaches a NULL somewhere 
+      after the end of buf1. Oh shit." </font></td>
+    <td width="12%" nowrap> 
+      <div align="right"><font color="#CCCCCC" size="2">Twitch</font></div>
+    </td>
+  </tr>
+  <tr bordercolor="#666666"> 
+    <td width="19%"> 
+      <div align="left"><font color="#CCCCCC" size="2"><a href="p56-0x0f.txt">p56-0x0f.txt</a></font></div>
+    </td>
+    <td width="69%"><font color="#CCCCCC" size="2">"Writing shellcode for the 
+      MIPS/Irix platform is not much different from writing shellcode for the 
+      x86 architecture. There are, however, a few tricks worth knowing when attempting 
+      to write clean shellcode (which does not have any NULL bytes and works completely 
+      independent from it's position). This small paper provides a crash course 
+      on writing IRIX shellcode for use in exploits. It covers the basic stuff 
+      you need to know to start writing basic IRIX shellcode. It is divided into 
+      the following sections: The IRIX operating system, MIPS architecture, MIPS 
+      instructions, MIPS registers, the MIPS assembly language, high level language 
+      function representation, syscalls and exceptions, IRIX syscalls, common 
+      constructs, tuning the shellcode, example shellcode, and references." </font></td>
+    <td width="12%" nowrap> 
+      <div align="right"><font color="#CCCCCC" size="2">Scut</font></div>
+    </td>
+  </tr>
+  <tr bordercolor="#666666"> 
+    <td width="19%"> 
+      <div align="left"><font color="#CCCCCC" size="2"><a href="ppc.shellcode.txt">ppc.shellcode.txt</a></font></div>
+    </td>
+    <td width="69%"><font color="#CCCCCC" size="2">This paper describes the process 
+      palante went through to write PPC shellcode for both LinuxPPC and BSD (darwin?). 
+      The only difference with the BSD version is that is uses system call 59 
+      instead of 11 as execve(). </font></td>
+    <td width="12%" nowrap> 
+      <div align="right"><font color="#CCCCCC" size="2">Palante </font></div>
+    </td>
+  </tr>
+  <tr bordercolor="#666666"> 
+    <td width="19%"> 
+      <div align="left"><font color="#CCCCCC" size="2"><a href="ret-libc.txt">ret-libc.txt</a></font></div>
+    </td>
+    <td width="69%"><font color="#CCCCCC" size="2">This post to bugtraq by Solar 
+      Designer contains commented return-into-libc exploits that demonstrate how 
+      they function (he wrote the first known return-into-libc buffer overflow 
+      exploits). Return into libc exploits are significant because they work on 
+      systems even if the stack is non-executable. </font></td>
+    <td width="12%" nowrap> 
+      <div align="right"><font color="#CCCCCC" size="2">Solar Designer </font></div>
+    </td>
+  </tr>
+  <tr bordercolor="#666666"> 
+    <td width="19%"> 
+      <div align="left"><font color="#CCCCCC" size="2"><a href="stack.txt">stack.txt</a></font></div>
+    </td>
+    <td width="69%"><font color="#CCCCCC" size="2">This post to bugtraq was a 
+      discussion on performing return-into-libc exploits on Solaris/SPARC. The 
+      methods described by Solar Designer and Nergal had to be adapted to work 
+      correctly on this platform/architecture. </font></td>
+    <td width="12%" nowrap> 
+      <div align="right"><font color="#CCCCCC" size="2">Horizon</font></div>
+    </td>
+  </tr>
+  <tr> 
+    <td width="19%">&nbsp;</td>
+    <td width="69%">&nbsp;</td>
+    <td width="12%">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

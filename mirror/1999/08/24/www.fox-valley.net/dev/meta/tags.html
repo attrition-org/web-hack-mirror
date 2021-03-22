@@ -1,0 +1,207 @@
+<HTML>
+<HEAD>
+  <SCRIPT language=JavaScript>
+
+<!-- hide script from non-Java browsers
+
+// 
+
+function CheckSize(form, field) {
+
+	if (field ==1) {
+
+		Ctrl = form.key;
+
+		y = 256;
+
+	}	
+
+	if (field ==2) {
+
+		Ctrl = form.description;
+
+		y=256;
+
+	}
+
+	if (field ==3) {
+
+		Ctrl = form.commentag;
+
+		y=73;
+
+	}
+
+
+
+
+
+
+
+	x = Ctrl.value.length;
+
+	if (x < y)
+
+		SendMsg (Ctrl, "Number of characters is: " + x);	else
+
+		SendMsg (Ctrl, "WARNING! TOO MANY CHARACTERS! You have:... " + x);}
+
+function SendMsg (Ctrl, PromptStr) {	alert (PromptStr);
+
+	Ctrl.focus();	return;}
+
+// End the hiding here. -->
+
+</SCRIPT>
+  <TITLE>Meta Generator</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#ff0000" VLINK="#d20000" BACKGROUND="../../search/images/backmai.gif">
+<P ALIGN=Center>
+<IMG SRC="../../search/images/foxvalley.jpg" WIDTH="320" HEIGHT="88" BORDER="0">
+<PRE> 
+ 
+</PRE>
+<CENTER>
+  <FONT face="Verdana,Arial,Helvetica" SIZE=5 color="#0099FF">Meta Tag
+  Generator</FONT>
+</CENTER>
+<P>
+<FORM method="POST" action="meta.cgi">
+  <CENTER>
+    <TABLE BORDER="0" CELLPADDING="2" WIDTH="80%">
+      <TR>
+	<TD></TD>
+	<TD><FONT FACE=VERDANA,ARIAL size=2><B>This form will take your input and
+	  generate META tags for your Web pages. With the proper META tags in place
+	  your page has a much greater chance of placing better in search engines and
+	  directories so people can find what you worked so hard to create!</B> </FONT></TD>
+      </TR>
+      <TR>
+	<TD></TD>
+	<TD><PRE> 
+</PRE>
+	</TD>
+      </TR>
+      <TR>
+	<TD BGCOLOR="#f0f0f0"><P ALIGN=Left>
+	  <FONT face="Verdana,Arial,Helvetica" SIZE="2"><B>Your First Name:</B></FONT></TD>
+	<TD BGCOLOR="#f0f0f0"><CENTER>
+	    <INPUT type="text" name="name" size="43">
+	  </CENTER>
+	</TD>
+      </TR>
+      <TR>
+	<TD BGCOLOR="#f0f0f0"><FONT face="Verdana,Arial,Helvetica" SIZE="2"><B>Page
+	  Title:</B></FONT></TD>
+	<TD BGCOLOR="#f0f0f0"><CENTER>
+	    <INPUT type="text" name="pagetitle" size="43">
+	  </CENTER>
+	</TD>
+      </TR>
+      <TR>
+	<TD></TD>
+	<TD><FONT FACE=VERDANA,ARIAL size=2><B>Enter the keywords below that you
+	  feel would be used to search for your site. </B>(255 characters maximum)<B>
+	  </B>Separate each keyword with a comma and a&nbsp;space. Keywords may be
+	  a single word or two-word phrases. DO NOT duplicate any of your keywords.
+	  Your keywords should be listed in order of importance... </FONT></TD>
+      </TR>
+      <TR>
+	<TD BGCOLOR="#f0f0f0"><P ALIGN=Left>
+	  <FONT face="Verdana,Arial,Helvetica" SIZE="2"><B>Keywords:</B></FONT></TD>
+	<TD BGCOLOR="#f0f0f0"><CENTER>
+	    <TEXTAREA rows="5" name="key" cols="63" WRAP="Physical"></TEXTAREA><BR>
+	    <INPUT TYPE=button VALUE="Count Characters" onClick="CheckSize(this.form, 1)">
+	  </CENTER>
+	</TD>
+      </TR>
+      <TR>
+	<TD></TD>
+	<TD><FONT FACE=VERDANA,ARIAL size=2><B>Enter a two or three line
+	  description</B> of your Web site. 255 characters maximum...</FONT></TD>
+      </TR>
+      <TR>
+	<TD BGCOLOR="#f0f0f0"><FONT face="Verdana,Arial,Helvetica" SIZE="2"><B>Long
+	  Description:</B></FONT></TD>
+	<TD BGCOLOR="#f0f0f0"><CENTER>
+	    <TEXTAREA rows="5" name="description" cols="63" WRAP="Physical"></TEXTAREA>
+	    <INPUT TYPE=button VALUE="Count Characters" onClick="CheckSize(this.form, 2)">
+	  </CENTER>
+	</TD>
+      </TR>
+      <TR>
+	<TD></TD>
+	<TD><FONT face="Verdana,Arial,Helvetica" SIZE="2"><B>The short description
+	  is for the search engines that don't use META tags. </B>This will give them
+	  a description for your page other than the first words they find there. 72
+	  characters maximum recommended...</FONT></TD>
+      </TR>
+      <TR>
+	<TD BGCOLOR="#f0f0f0"><FONT face="Verdana,Arial,Helvetica" SIZE="2"><B>Short
+	  Description:</B></FONT></TD>
+	<TD BGCOLOR="#f0f0f0"><CENTER>
+	    <TEXTAREA rows="3" name="commentag" cols="63" WRAP="Physical"></TEXTAREA>
+	    <INPUT TYPE=button VALUE="Count Characters" onClick="CheckSize(this.form, 3)">
+	  </CENTER>
+	</TD>
+      </TR>
+      <TR>
+	<TD></TD>
+	<TD><FONT face="Verdana,Arial,Helvetica" SIZE="2"><B>INDEX </B>invites robots
+	  to index this page. <B>FOLLOW </B>instructs robots to follow the links it
+	  finds on this page to other pages.</FONT></TD>
+      </TR>
+      <TR>
+	<TD BGCOLOR="#f0f0f0"><FONT face="Verdana,Arial,Helvetica" SIZE="2"><B>Robots:</B></FONT></TD>
+	<TD BGCOLOR="#f0f0f0"><CENTER>
+	    <FONT face="Verdana,Arial,Helvetica" SIZE="2"><B>
+	    <INPUT TYPE="radio" NAME="robotsa" VALUE="INDEX" CHECKED>INDEX
+	    <INPUT TYPE="radio" NAME="robotsa" VALUE="NOINDEX">NOINDEX &nbsp; &nbsp;
+	    &nbsp; &nbsp; 
+	    <INPUT TYPE="radio" NAME="robotsb" VALUE="FOLLOW" CHECKED>FOLLOW
+	    <INPUT TYPE="radio" NAME="robotsb" VALUE="NOFOLLOW">NOFOLLOW</B></FONT>
+	  </CENTER>
+	</TD>
+      </TR>
+      <TR>
+	<TD></TD>
+	<TD><FONT FACE=VERDANA,ARIAL size=2>Now enter the<B> name of the author </B>of
+	  this page...</FONT></TD>
+      </TR>
+      <TR>
+	<TD BGCOLOR="#f0f0f0"><P ALIGN=Left>
+	  <FONT face="Verdana,Arial,Helvetica" SIZE="2"><B>Author:</B></FONT></TD>
+	<TD BGCOLOR="#f0f0f0"><CENTER>
+	    <INPUT type="text" name="author" size="45">
+	  </CENTER>
+	</TD>
+      </TR>
+      <TR>
+	<TD></TD>
+	<TD></TD>
+      </TR>
+      <TR>
+	<TD></TD>
+	<TD><CENTER>
+	    <TABLE BORDER=4 CELLSPACING=0 CELLPADDING=0>
+	      <TR>
+		<TD>
+		  <INPUT type="submit" value="  NOW CREATE THE META TAGS!  " name="submit"></TD>
+	      </TR>
+	    </TABLE>
+	  </CENTER>
+	</TD>
+      </TR>
+    </TABLE>
+  </CENTER>
+</FORM>
+<PRE> 
+ 
+ 
+ 
+ 
+</PRE>
+<P ALIGN=Center>
+<FONT FACE="Arial,Helvetica" SIZE="1" COLOR="Gray">&copy; 1998-99 Brad Dressel
+/ <A HREF="http://eclypse.com">Eclypse Designs</A>. All rights reserved.</FONT>
+</BODY></HTML>

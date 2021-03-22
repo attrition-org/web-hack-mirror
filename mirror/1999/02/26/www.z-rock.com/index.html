@@ -1,0 +1,330 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html;
+charset=iso-8859-1">
+   <META NAME="Author" CONTENT="Joe Villaronga - JoeV@Sunset.Net">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I)
+[Netscape]">
+   <TITLE>Welcome to the 106.7 Z-Rock Homepage</TITLE>
+   <BASE TARGET="_top">
+<SCRIPT LANGUAGE="JavaScript">
+
+
+<!--
+/*
+ Copyright (C) 1996  Frequency Graphics  All Rights Reserved.
+   Feel free to reuse this code snippet
+   provided this header remains in tact
+   Andy Augustine 3.17.96 [www.FreqGrafx.com/411/]
+   send comments to <mohammed@freqgrafx.com>
+*/
+
+// You can add as many MESSAGEn (n being a number) strings 
+// as you would like, 1 for each unique scrollbar. 
+// 
+// To start a new scrollbar with the
+// default message, use: "scrollID = scrollerSetup()".
+// For each new message, use "scrollID = scrollerSetup(MESSAGEn)".        
+//  
+// To pause the scroller when the mouse is over a link, use:
+//  <A HREF="url" onMouseOver="scrollerPause()">linktext</A>
+//
+// To allow visitors to stop the scroller, use a button or link:
+// <FORM>
+//   <INPUT TYPE="button" VALUE="stop" onClick="scrollerStop()">
+// </FORM>
+// <A HREF="url" onMouseOver="scrollerStop()">linktext</A>
+//
+//-------------------------------------------------------------
+//   THESE ARE THE ONLY VARIABLES YOU SHOULD NEED TO CHANGE
+//-------------------------------------------------------------
+var POSITION = 100       //  how wide is the scroller?
+var DELAY    = 100        //  milliseconds between shifts
+var MESSAGE  = "Oh My GaWd  What the fuck is happening ? "
+             + "Holy Fucken SHit  "
+             + "Are Bad Words allowed here? "
+                 + "Z-Rock My Nutts Hoe"
+var LINK_PAUSE = 2000    //  how long will a link pause the scroller?
+//-------------------------------------------------------------
+
+function statusMessageObject() {
+  this.msg = MESSAGE
+  this.out = " "
+  this.pos = POSITION
+  this.delay = DELAY
+  this.i     = 0
+  this.reset = clearMessage
+}
+
+function clearMessage() {
+  this.pos = POSITION
+}
+
+//-------------------------------------------------------------
+var scrollID = Object      
+var scrolling = false    
+var killScroll = false       // set this to true to kill the scroller
+var pauseScroll = false      // set this to true to pause scroller
+//-------------------------------------------------------------
+
+var scroll = new statusMessageObject()
+
+function scroller() {
+  //
+  //  check to see if the scroll should be stopped.
+  //
+      if (killScroll) {return}
+  //
+  //  if a link has the mouse over it, pause the scroller.
+  //   
+      if (pauseScroll) {
+        scrollID = setTimeout('scroller()',scroll.delay)
+        return
+      }
+  //
+  // add spaces to beggining of message
+  //
+  for (scroll.i = 0; scroll.i < scroll.pos; scroll.i++) {
+    scroll.out += " "
+  }
+  
+  // 
+  // if you're still have leading spaces, just 
+  // add custom string to tail of message
+  // OR else if the string is running off the
+  // screen, only add the characters left
+  //
+  if (scroll.pos >= 0)
+   scroll.out += scroll.msg
+  else scroll.out =
+scroll.msg.substring(-scroll.pos,scroll.msg.length)
+
+  window.status = scroll.out
+
+  // set parameters for next run
+  scroll.out = " "
+  scroll.pos--
+  
+  // if you're at the end of the message,
+  // reset parameters to start again
+  if (scroll.pos < -(scroll.msg.length)) {
+   scroll.reset()
+  }
+  
+  scrollID = setTimeout ('scroller()',scroll.delay)
+}
+
+
+function scrollerPause() {
+ pauseScroll=true
+ setTimeout('pauseScroll=false',LINK_PAUSE)
+}
+
+function scrollerStop() {
+ killScroll=true
+ scrolling=false
+ window.defaultStatus=''
+ var killID = setTimeout('killScroll=false',DELAY+1)
+}
+
+function scrollerSetup() {
+ if (scrolling) {  
+  // if (!confirm('Re-initialize scroller?'))
+  // return      
+  killScroll = true
+  scroll.reset()
+  if (scrollerSetup.arguments.length == 1) scroll.msg =
+scrollerSetup.arguments[0]
+  var killID = setTimeout('killScroll=false',DELAY+1)
+ }
+ scrolling = true   
+ scrollID = setTimeout('scroller()',DELAY+5)
+}
+
+// -->
+
+
+</SCRIPT>
+</HEAD>
+<BODY TEXT="#FFFFFF" BGCOLOR="#000000" LINK="#00FF80" VLINK="#9FC6C5"
+ALINK="#000000" BACKGROUND="graphics/blkrippl.gif"
+onLoad="scrollerSetup()">
+<font size="5">FUCKEN DAMN HACKERS THEY PISS ME OFF OR UMM WAIT ??
+HMM THATS US...HAHAHAH   FUCKEN SHIT WELL WE HAVE A BRAND NEW SITE FOR
+U NOW I HOPE U ENJOY IT..
+We also Bring u Free Porno and such..hmm well fuck i would ask for
+credit cards but the admins here might get a little bit say umm Mad ?
+Hmm our Soul Purpose in this "HACK"
+is that we wanna listen to Different Songs umm u guys Rock but Play
+the same shit over and over oh and i need a job and shit hook me up ?
+i could do security ?  hahahah  
+well fuck Happy Surfing this new and improved site..  DONE BY
+<U><B>NIGHTMARE..........SHADOW...........SCREECH...............ZONIS
+GOVERNMENT WORLD WIDE NEWS SHOULD GET THIS DAMNIT
+.....................................................................................................
+</u></B>IF THIS DOES NOT MAKE HEAD LINE FUCKEN NEWS I WILL BE VERY
+PISSED AND HAVE TO REDO THIS PLACE AGAIN UNTILL IT FUCKEN IS OH AND NO
+CALL THE FBI THEY ARE JACKASSES
+THEY WONT HELP THEY DONT GIVE A FUCK.......AT LEAST I HOPE NOT
+AHHAHAHAHHA  FAGGET FBI PEOPLE UMM I MEAN FBI PEOPLE KICK ASS U GUYS
+RULE AND UMM YEAH CAN I HAVE A JOB ???  HAHAHA
+HERE IS MY INFO AND SHIT UMM WELL SHIT CATCH ME AND OFFER ME A JOB ??
+HMM NO HOW BOUT LIKE WELL FUCK FUCK THE JOB THING JUST LIKE HAVE FUN
+SURFING THE WEB??
+HMM NO INTERNET IS BORING  I KNOW GUYS GUYS GUYS  I HAVE PORNO FOR U
+!!!!!  well hmm  ok porno will be at the bottom hehhehehe...
+<br><br>
+<hr>
+<CENTER>
+SHADOW SAYS, Hmm where is the beer and shit? i need some fucken weed
+damnit oh and to my Girlfriend I LOVE U Diana !!! :)
+<hr><BR>
+NIGHTMARE SAYS,  Shit! damn fatal exception error, f**cking microsoft
+junk!
+<HR><BR>
+SCREECH SAYS, Where are my fucken Heat lamps?? i Need fucken Weed to
+Grow in my fucken closet !!!!!
+<HR><BR>
+SHOUT OUTS....To The Whole Zonis Government *bows* and also to all the
+girls out there..and also to Abby  um u need me i know u do hehe...To
+Blood Of Avatar Hey Homie we will get high some time i Promise
+Oh and fuck the world and the Problems that come with it........PEACE
+AND LOVE DAMNIT NO MORE WAR AND BILL CLINTON SHIT MAN WE HAVE SEEN UR
+WIFE AND DO NOT DENY U THE RIGHT TO FUCK INTERNS..
+  
+
+<CENTER><IMG SRC="zrock-1.gif" ALT="Z-Rock" HEIGHT=367
+WIDTH=519></CENTER>
+
+<CENTER><TABLE WIDTH="500" >
+<TR>
+<TD>
+<CENTER>
+<H2>
+<!--#exec cgi="cgi-bin/rand_text.pl" -->
+</H2></CENTER>
+</TD>
+</TR>
+</TABLE></CENTER>
+
+<CENTER>&nbsp;</CENTER>
+
+<CENTER><TABLE>
+<TR>
+<TD COLSPAN="5">
+<HR size=3></TD>
+</TR>
+
+<TR>
+<TD WIDTH="130">
+<CENTER><A HREF="http://www.z-rock.com/zrock.ram"
+onMouseOver="scrollerPause()"><IMG SRC="graphics/ra.gif" BORDER=0
+HEIGHT=32 WIDTH=88></A></CENTER>
+</TD>
+
+<TD WIDTH="130">
+<CENTER><A HREF="whatsup.shtml" onMouseOver="scrollerPause()"><IMG
+SRC="graphics/whatsup.gif" BORDER=0 HEIGHT=70 WIDTH=70></A></CENTER>
+</TD>
+
+<TD WIDTH="130">
+<CENTER><A HREF="zrock50.shtml" onMouseOver="scrollerPause()"><IMG
+SRC="graphics/top50.gif" BORDER=0 HEIGHT=53 WIDTH=100></A></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<CENTER><A HREF="http://www.z-rock.com/zrock.ram"
+onMouseOver="scrollerPause()">Listen
+LIVE</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><A HREF="whatsup.shtml" onMouseOver="scrollerPause()">What's
+NEW!</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><A HREF="zrock50.shtml" onMouseOver="scrollerPause()">Who's on
+top?</A></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="130">
+<CENTER><A HREF="shows.html" onMouseOver="scrollerPause()"><IMG
+SRC="graphics/shows.gif" BORDER=0 HEIGHT=44 WIDTH=105></A></CENTER>
+</TD>
+
+<TD WIDTH="130">
+<CENTER><A HREF="links.html" onMouseOver="scrollerPause()"><IMG
+SRC="graphics/links.gif" BORDER=0 HEIGHT=40 WIDTH=40></A></CENTER>
+</TD>
+
+<TD WIDTH="130">
+<CENTER><A HREF="mailto:cassa33@hotmail.com"
+onMouseOver="scrollerPause()"><IMG SRC="graphics/mail.gif" BORDER=0
+HEIGHT=53 WIDTH=49></A></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<CENTER><A HREF="shows.html" onMouseOver="scrollerPause()">Who's on
+now?</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><A HREF="links.html"
+onMouseOver="scrollerPause()">Links</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><A HREF="mailto:krqr1067@sunset.net"
+onMouseOver="scrollerPause()">Spam
+Us!</A></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD COLSPAN="5">
+<HR size=3></TD>
+</TR>
+</TABLE></CENTER>
+
+<CENTER><A HREF="http://www.real.com"
+onMouseOver="scrollerPause()"><IMG SRC="graphics/getplayer.gif"
+VSPACE=5 BORDER=0 HEIGHT=31 WIDTH=88></A></CENTER>
+
+<CENTER><FONT COLOR="#00CC00">Hey you....</FONT></CENTER>
+
+<CENTER><FONT COLOR="#00CC00">we have a question YOU need to answer
+but we really dont wanna answer them now do we ? hmm Well fuck Are u
+Fucken Paying me Huh !!?!??!  Fuck no u are not so Z-Rock my nutts  oh
+umm Security sucks?  hahaha</FONT></CENTER>
+
+<CENTER><FONT COLOR="#00CC00">on the&nbsp;</FONT> <A
+HREF="whatsup.shtml">WHATSUP
+PAGE</A></CENTER>
+
+<CENTER>go there....answer question...drink a Fresca.</CENTER>
+
+<CENTER>&nbsp;</CENTER>
+
+<CENTER>&nbsp;</CENTER>
+
+<CENTER>E-Mail: <A HREF=""
+onMouseOver="scrollerPause()">Shadow,Nightmare,ScreeCh</A></CENTER>
+
+<CENTER><B>This page, and all contents, are Copyright &copy; Phoenix
+Broadcasting, Inc. and Nightmare-Shadow-Screech.com (coming real
+soon)</B></CENTER>
+
+<CENTER><IMG SRC="http://209.142.14.4/cgi-bin/Count.cgi?df=z-rock.dat"
+ALT="Counter Unavailable" HEIGHT=32 WIDTH=121
+ALIGN=ABSCENTER></CENTER>
+
+</BODY>
+</HTML>
+

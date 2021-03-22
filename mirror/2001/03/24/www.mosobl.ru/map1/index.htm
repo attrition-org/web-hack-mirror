@@ -1,0 +1,80 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html">
+
+<title>Test</title>
+</head>
+<script language=javascript src=scripts/dat_conf.js></script>
+<script language=javascript src=scripts/main.js></script>
+<script language=javascript src=ldata2/reg_info.js></script>
+<script language=javascript src=ldata3/reg_info.js></script>
+<script language=javascript src=maps2/maps2.js></script>
+<script language=javascript src=maps2/maps22.js></script>
+<script language=javascript>
+<!--
+document.clear();
+document.open();
+var nversion = parseFloat(navigator.appVersion);
+var cv_index = navigator.appVersion.lastIndexOf( ";" ) + 1;
+var cv_ss1 = navigator.appVersion.substring( cv_index, 100 );
+var cv_ss = cv_ss1.substring( 0, 3 );
+var pversion = 4.0;
+if( ( navigator.appName == "Microsoft Internet Explorer" && nversion < 4.0 ) ||
+    ( navigator.appName == "Netscape" && 
+      ( ( cv_ss == "Wi" && version < 4.0 ) || (  cv_ss == "Li" && nversion < 4.06  ) )
+    ) 
+)
+{
+   if( navigator.appName == "Netscape" && cv_ss == "Li" ) pversion = 4.0;
+document.writeln("<body bgcolor=#DFDFFF>");
+document.write("<center><h1>Извините, но показ возможен только с помощью</h1>");
+document.write("<h1>MS Internet Explorer 4.0 и выше или Netscape 4.0 и выше</h1></center>");
+document.writeln("</body>");
+}
+else
+{
+//document.writeln("<script language=javascript src=dat_conf.js></script>");
+//document.writeln("<script language=javascript src=main.js></script>");
+//document.writeln("<script language=javascript src=reg_inf2.js></script>");
+//document.writeln("<script language=javascript src=reg_inf3.js></script>");
+//document.writeln("<script language=javascript src=map_lnks.js></script>");
+//document.writeln("<script language=javascript src=maps_rt.js></script>");
+//document.writeln("<script language=javascript src=mp_zst3.js></script>");
+//document.writeln("<script language=javascript src=mp_zst4.js></script>");
+//document.writeln("<script language=javascript src=mp_zst6.js></script>");
+//document.writeln("<script language=javascript src=mp_zoom3.js></script>");
+//document.writeln("<script language=javascript src=mp_zoom4.js></script>");
+//document.writeln("<script language=javascript src=mp_zoom6.js></script>");
+
+document.writeln('<frameset  rows="25,*" framespacing=0>');
+document.writeln(' <frame name="TP" src="chtm/topw.htm" scrolling="no"  frameborder=0 marginheight="0" marginwidth=0>');
+document.writeln(' <frameset  cols="215,*"  framespacing=0>');
+
+document.writeln('   <frameset  rows="200,40,56,*"  framespacing=0>');
+document.writeln('    <frame name="LU" src="ldata3/l_up.htm" frameborder=NO marginheight=0 marginwidth=0>');
+document.writeln('    <frame name="ZM" src="chtm/zmenuemp.htm" frameborder=NO marginheight=0 marginwidth=0>');
+document.writeln('    <frame name="MP" src="chtm/zmenuemp.htm" frameborder=NO marginheight=0 marginwidth=0>');
+document.writeln('    <frame name="SD" src="chtm/zmenuemp.htm" frameborder=yes marginheight=0 marginwidth=0>');
+document.writeln('   </frameset>');
+
+document.writeln('   <frameset  rows="*,22"  framespacing=0 >');
+document.writeln('    <frame name="RU" src="chtm/r_up.htm"  marginheight=0 marginwidth=0 >');
+document.writeln('    <frame name="RD" src="chtm/r_downw.htm" frameborder=NO scrolling="no" marginheight="0" marginwidth="0">');
+document.writeln('   </frameset>');
+
+document.writeln(" </frameset>");
+document.writeln("</frameset>");
+document.writeln("<body bgcolor=#DFDFFF>");
+document.writeln("</body>");
+}
+document.close();
+
+//-->
+</script>
+<noscript>
+<body bgcolor=#DFDFFF>
+<center><h1>Извините, но показ возможен только с помощью</h1>
+<h1>Microsoft Internet Explorer 4.0 и выше или Netscape 4.0 и выше</h1>
+</body>
+</noscript>
+</html>

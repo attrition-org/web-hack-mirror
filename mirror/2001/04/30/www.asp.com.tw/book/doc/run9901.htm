@@ -1,0 +1,662 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>第 五 篇</TITLE>
+<META NAME="Template" CONTENT="E:\Program Files\Microsoft Office\Office\html.dot">
+</HEAD>
+<BODY LINK="#0000ff" VLINK="#800080">
+
+<FONT FACE="Arial" SIZE=7 COLOR="#0000ff"><P ALIGN="CENTER">SQL Server 7.0</P>
+</FONT><FONT FACE="細明體" LANG="ZH-TW" SIZE=7 COLOR="#0000ff"><P ALIGN="CENTER">網站資料庫技術</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4 COLOR="#0000ff"><P ALIGN="CENTER">刊登於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW" SIZE=4 COLOR="#0000ff">RUN!PC 1999</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4 COLOR="#0000ff">年</FONT><FONT FACE="System,新細明體" LANG="ZH-TW" SIZE=4 COLOR="#0000ff">1</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4 COLOR="#0000ff">月號</P><DIR>
+
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4><P ALIGN="RIGHT">作者</FONT><FONT SIZE=4> </FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4>喬篷科技</FONT><FONT FACE="華康少女文字體W4,新細明體" LANG="ZH-TW" SIZE=4> </FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4>周世雄</P></DIR>
+
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>本文重點</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">在前幾期的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW">專欄當中，我們看到了威力強大的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Internet Information Server</FONT><FONT FACE="新細明體" LANG="ZH-TW">）</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW">之</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">30</FONT><FONT FACE="新細明體" LANG="ZH-TW">個特異功能、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SSL</FONT><FONT FACE="新細明體" LANG="ZH-TW">與數位認證、如何使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">設計一個生動的網站、如何將</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫化、</FONT><FONT FACE="華康少女文字體W4,新細明體" LANG="ZH-TW">IIS 4.0</FONT><FONT FACE="超研澤中隸,新細明體" LANG="ZH-TW">網站進階管理</FONT><FONT FACE="新細明體" LANG="ZH-TW">、如何將網站元件化、和</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Transaction Server</FONT><FONT FACE="新細明體" LANG="ZH-TW">三層式架構技術速成等單元。本期將探討</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server 7.0</FONT><FONT FACE="新細明體" LANG="ZH-TW">網站資料庫的技術。</P>
+<P ALIGN="JUSTIFY">作者為微軟台北廳研討會講師，著作有「網站熱門應用技術探討</FONT><FONT FACE="標楷體" LANG="ZH-TW">」</FONT><FONT FACE="新細明體" LANG="ZH-TW">、「微軟熱門Web技術速成班」等網站網頁設計十幾本電腦書籍。現任「喬篷科技」公司總經理，從事</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Internet</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Intranet</FONT><FONT FACE="新細明體" LANG="ZH-TW">之</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫應用設計、網站網頁規劃架設等服務。</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW">示範網站</FONT><FONT FACE="華康少女文字體W4,新細明體" LANG="ZH-TW">：</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">www.asp.com.tw</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">連絡</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">E-mail</FONT><FONT FACE="新細明體" LANG="ZH-TW">：</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">jackchou@tpts5.seed.net.tw</FONT><FONT FACE="新細明體" LANG="ZH-TW">。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW"><P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="Arial" SIZE=5 COLOR="#ff0000"><P>Microsoft SQL Server 7.0</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">11</FONT><FONT FACE="新細明體" LANG="ZH-TW">月剛剛上市的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Microsoft SQL Server 7.0</FONT><FONT FACE="新細明體" LANG="ZH-TW">，對於一個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">應用系統而言，提供甚麼樣的功能呢？</P>
+<P ALIGN="JUSTIFY">首先在資料庫管理方面，</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server 7.0</FONT><FONT FACE="新細明體" LANG="ZH-TW">大幅降低了管理者的負擔，譬如目前市面上的資料都要去調整資料庫空間與記憶體使用量的大小，現在</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server 7.0</FONT><FONT FACE="新細明體" LANG="ZH-TW">版會自動地放大資料庫空間的大小控制與管理，不需人工調整。對於分散於多個點的資料庫，也可以一次管理完成。</P>
+<P ALIGN="JUSTIFY">資料庫資料表一旦有了資料後，資料表的資料類型並不能做修改，這是最令設計者頭痛的事，常常為了修改資料表的資料類型而重新建立一個新的資料表。</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server 7.0</FONT><FONT FACE="新細明體" LANG="ZH-TW">版讓您可以隨時修改資料表的資料類型，於資料表按右鍵選擇</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[Design Table]</FONT><FONT FACE="新細明體" LANG="ZH-TW">，即可修改資料類型。</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">SQL Server 7.0</FONT><FONT FACE="新細明體" LANG="ZH-TW">也讓您可以直接修改資料表的資料，就像</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Access</FONT><FONT FACE="新細明體" LANG="ZH-TW">修改資料一樣地方便，不像其他的資料庫需要下</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL</FONT><FONT FACE="新細明體" LANG="ZH-TW">指令，現在只要於資料表按右鍵選擇</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[Open Table] </FONT><FONT FACE="新細明體" LANG="ZH-TW">的</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[Return All Rows] </FONT><FONT FACE="新細明體" LANG="ZH-TW">即可修改資料。</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">SQL Server 7.0</FONT><FONT FACE="新細明體" LANG="ZH-TW">除了提供</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW">驅動程式外，也提供直接使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">OLE DB</FONT><FONT FACE="新細明體" LANG="ZH-TW">連結資料庫的方式。</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">7.0</FONT><FONT FACE="新細明體" LANG="ZH-TW">版也首先提供資料倉儲（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Data Warehousing</FONT><FONT FACE="新細明體" LANG="ZH-TW">）的功能，可以於瀏覽器自選統計的座標和欄位，直接看到統計分析的圖表。</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">7.0</FONT><FONT FACE="新細明體" LANG="ZH-TW">版對於資料鎖定方面，提供了完整列鎖定（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Row Locking</FONT><FONT FACE="新細明體" LANG="ZH-TW">）的功能。</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">SQL Server 7.0</FONT><FONT FACE="新細明體" LANG="ZH-TW">除了是在</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Windows NT</FONT><FONT FACE="新細明體" LANG="ZH-TW">的平台上執行外，現在也可以使用於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Windows 95/98</FONT><FONT FACE="新細明體" LANG="ZH-TW">的環境上。</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">SQL Server 7.0</FONT><FONT FACE="新細明體" LANG="ZH-TW">的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">DTS(Data Transformation Service)</FONT><FONT FACE="新細明體" LANG="ZH-TW">，讓您方便地將資料於多種個資料庫之間做轉換的工作，例如</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Excel</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Access</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">dBase</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Oracle</FONT><FONT FACE="新細明體" LANG="ZH-TW">等。也提供不同資料庫之間、以及分散式資料庫的查詢功能。</P>
+<P ALIGN="JUSTIFY">如果您要開發</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫的應用，尤其是</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">伺服器是在</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Windows NT</FONT><FONT FACE="新細明體" LANG="ZH-TW">的平台時</FONT> <FONT FACE="新細明體" LANG="ZH-TW">，筆者強烈建議您試試</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server 7.0</FONT><FONT FACE="新細明體" LANG="ZH-TW">。</P>
+<P ALIGN="JUSTIFY">為什麼呢？筆者有一個慘痛的經驗，就是當使用比</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server</FONT><FONT FACE="新細明體" LANG="ZH-TW">昂貴許多的它家資料庫來開發</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫時，不但其資料庫的資料表名稱和欄位名稱不能使用中文外，許多</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">asp/ado</FONT><FONT FACE="新細明體" LANG="ZH-TW">如</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">AbsolutePage</FONT><FONT FACE="新細明體" LANG="ZH-TW">直接抓第幾頁資料的功能也未支援，甚至連</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">text</FONT><FONT FACE="新細明體" LANG="ZH-TW">欄位的資料都無法顯示於瀏覽器當中，技術支援更不用談了，他們連</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">都沒聽過。因此，使用同一家產品真的是有一些整合上較佳的好處，值得讀者做參考。</P>
+<P ALIGN="JUSTIFY">　</P>
+<P ALIGN="JUSTIFY">本文介紹以下數個單元，讓您快速了解</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server 7.0</FONT><FONT FACE="新細明體" LANG="ZH-TW">的網站資料庫應用技術：</P>
+
+<UL>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">如何透過</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW">存取</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server</FONT><FONT FACE="新細明體" LANG="ZH-TW">呢？</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">如何透過</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">OLE DB</FONT><FONT FACE="新細明體" LANG="ZH-TW">存取</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server</FONT><FONT FACE="新細明體" LANG="ZH-TW">呢？</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">如何呼叫</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">stored procedures</FONT><FONT FACE="新細明體" LANG="ZH-TW">呢？</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">如何顯示預儲程序多個查詢結果呢？</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">如何輸入值給預儲程序呢？</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">如何透過</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">OLE DB</FONT><FONT FACE="新細明體" LANG="ZH-TW">呼叫預儲程序呢？</LI></P></UL>
+
+<P ALIGN="JUSTIFY">　</P>
+<P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="Arial" SIZE=6 COLOR="#0000ff"><P>asp</FONT><FONT FACE="全真中隸書,新細明體" LANG="ZH-TW" SIZE=6 COLOR="#0000ff">如何透過</FONT><FONT FACE="Arial" SIZE=6 COLOR="#0000ff">ODBC</FONT><FONT FACE="全真中隸書,新細明體" LANG="ZH-TW" SIZE=6 COLOR="#0000ff">存取</FONT><FONT FACE="Arial" SIZE=6 COLOR="#0000ff">SQL Server</FONT><FONT FACE="全真中隸書,新細明體" LANG="ZH-TW" SIZE=6 COLOR="#0000ff">呢？</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">如何透過</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW">驅動程式存取</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server</FONT><FONT FACE="新細明體" LANG="ZH-TW">呢？</P>
+<P ALIGN="JUSTIFY">若要透過</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW">存取</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫，首先直接於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼中指定所要連結的資料庫，使用「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Server.CreateObject("ADODB.Connection")</FONT><FONT FACE="新細明體" LANG="ZH-TW">」建立連線的物件後，於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Driver</FONT><FONT FACE="新細明體" LANG="ZH-TW">設定為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW">驅動程式名稱，使用「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Open</FONT><FONT FACE="新細明體" LANG="ZH-TW">」直接連結到資料庫譬如</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">NtopSamp</FONT><FONT FACE="新細明體" LANG="ZH-TW">，</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼如下：</P>
+</FONT><FONT FACE="Arial"><P>cn.Open "driver={SQL Server};server=(Local);uid=sa; pwd=;database=NtopSamp"</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">若使用的是</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Trusted Connection</FONT><FONT FACE="新細明體" LANG="ZH-TW">，</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼如下：</P>
+</FONT><FONT FACE="Arial"><P>cn.Open " driver={SQL Server};server=(Local); Trusted_Connection=yes;database=NtopSamp"</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">完整的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼如下：</P>
+</FONT><FONT FACE="Arial"><P>&lt;%</P>
+<P>Set cn = Server.CreateObject("ADODB.Connection")</P>
+<P>cn.Open "driver={SQL Server};server=(Local);uid=sa; pwd=;database=NtopSamp"</P>
+<P>Set rs = Server.CreateObject("ADODB.Recordset")</P>
+<P>SqlStr = "SELECT * FROM </FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">著作</FONT><FONT FACE="Arial">" </P>
+<P>rs.Open SqlStr,cn,1,1</P>
+<P>%&gt;</P>
+<P>&lt;BR&gt;</P>
+<P>&lt;TABLE COLSPAN=8 CELLPADDING=5 BORDER=0&gt;</P>
+<P>&lt;TR&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">書名</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">出版</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">圖片</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">簡介</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;% Do while not rs.EOF %&gt;</P>
+<P>&lt;TR&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">書名</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">出版</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">圖片</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">簡介</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;/TR&gt; </P>
+<P>&lt;% </P>
+<P>rs.MoveNext</P>
+<P>Loop </P>
+<P>rs.Close</P>
+<P>Set cn = Nothing</P>
+<P>%&gt;</P>
+<P>&lt;/TABLE&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">執行後將查詢的資料放置於所定義</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">rs</FONT><FONT FACE="新細明體" LANG="ZH-TW">的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">當中，最後使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性和方法與</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW">碼配合，以顯示執行的結果，於用戶端使用瀏覽器，顯示資料庫內容。</P>
+<P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="Arial" SIZE=6 COLOR="#0000ff"><P>asp</FONT><FONT FACE="全真中隸書,新細明體" LANG="ZH-TW" SIZE=6 COLOR="#0000ff">如何透過</FONT><FONT FACE="Arial" SIZE=6 COLOR="#0000ff">OLE DB</FONT><FONT FACE="全真中隸書,新細明體" LANG="ZH-TW" SIZE=6 COLOR="#0000ff">存取</FONT><FONT FACE="Arial" SIZE=6 COLOR="#0000ff">SQL Server</FONT><FONT FACE="全真中隸書,新細明體" LANG="ZH-TW" SIZE=6 COLOR="#0000ff">呢？</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">SQL Server 7.0</FONT><FONT FACE="新細明體" LANG="ZH-TW">除了提供</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW">驅動程式外，也提供了</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">OLE DB Provider</FONT><FONT FACE="新細明體" LANG="ZH-TW">，</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">如何透過</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">OLE DB</FONT><FONT FACE="新細明體" LANG="ZH-TW">存取</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server</FONT><FONT FACE="新細明體" LANG="ZH-TW">呢？</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">程透過</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">OLE DB </FONT><FONT FACE="新細明體" LANG="ZH-TW">與</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW">驅動程式存取</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server </FONT><FONT FACE="新細明體" LANG="ZH-TW">的差異處，為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">OLE DB </FONT><FONT FACE="新細明體" LANG="ZH-TW">須指定</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Provider</FONT><FONT FACE="新細明體" LANG="ZH-TW">是誰，即只要多加一行「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cn.Provider = "sqloledb"</FONT><FONT FACE="新細明體" LANG="ZH-TW">」程式就可以了，其他與</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW">驅動程式存取</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server </FONT><FONT FACE="新細明體" LANG="ZH-TW">的方法相同。</P>
+<P ALIGN="JUSTIFY">透過</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">OLE DB</FONT><FONT FACE="新細明體" LANG="ZH-TW">存取</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼如下，首先直接於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼中指定所要連結的資料庫，使用「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Server.CreateObject("ADODB.Connection")</FONT><FONT FACE="新細明體" LANG="ZH-TW">」建立連線的物件後，於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Driver</FONT><FONT FACE="新細明體" LANG="ZH-TW">設定為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server</FONT><FONT FACE="新細明體" LANG="ZH-TW">，多加一行「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cn.Provider = "sqloledb"</FONT><FONT FACE="新細明體" LANG="ZH-TW">」，使用「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Open</FONT><FONT FACE="新細明體" LANG="ZH-TW">」直接連結到資料庫譬如</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">NtopSamp</FONT><FONT FACE="新細明體" LANG="ZH-TW">：</P>
+</FONT><FONT FACE="Arial"><P>&lt;%</P>
+<P>Set cn = Server.CreateObject("ADODB.Connection")</P>
+<P>cn.Provider = "sqloledb"</P>
+<P>cn.Open "driver={SQL Server};server=(Local);uid=sa; pwd=;database=NtopSamp"</P>
+<P>Set rs = Server.CreateObject("ADODB.Recordset")</P>
+<P>SqlStr = "SELECT * FROM </FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">著作</FONT><FONT FACE="Arial">" </P>
+<P>rs.Open SqlStr,cn,1,1</P>
+<P>%&gt;</P>
+<P>&lt;BR&gt;</P>
+<P>&lt;TABLE COLSPAN=8 CELLPADDING=5 BORDER=0&gt;</P>
+<P>&lt;TR&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">書名</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">出版</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">圖片</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">簡介</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;% Do while not rs.EOF %&gt;</P>
+<P>&lt;TR&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">書名</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">出版</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">圖片</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">簡介</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;/TR&gt; </P>
+<P>&lt;% </P>
+<P>rs.MoveNext</P>
+<P>Loop </P>
+<P>rs.Close</P>
+<P>Set cn = Nothing</P>
+<P>%&gt;</P>
+<P>&lt;/TABLE&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">執行後將查詢的資料放置於所定義</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">rs</FONT><FONT FACE="新細明體" LANG="ZH-TW">的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">當中，最後使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性和方法與</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW">碼配合，以顯示執行的結果，於用戶端使用瀏覽器，瀏覽執行的結果與上例透過</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW">驅動程式存取</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server </FONT><FONT FACE="新細明體" LANG="ZH-TW">的結果相同，顯示資料庫內容。</P>
+<P ALIGN="JUSTIFY">由於已經指定</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Provider</FONT><FONT FACE="新細明體" LANG="ZH-TW">是誰，</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cn.Open "driver={SQL Server};server=(Local);uid=sa; pwd=;database=NtopSamp"</FONT><FONT FACE="新細明體" LANG="ZH-TW">的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">driver={SQL Server};</FONT><FONT FACE="新細明體" LANG="ZH-TW">部份可以省略不寫。</P>
+<P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="Arial" SIZE=6 COLOR="#0000ff"><P>asp</FONT><FONT FACE="全真中隸書,新細明體" LANG="ZH-TW" SIZE=6 COLOR="#0000ff">如何呼叫</FONT><FONT FACE="Arial" SIZE=6 COLOR="#0000ff">stored procedures</FONT><FONT FACE="全真中隸書,新細明體" LANG="ZH-TW" SIZE=6 COLOR="#0000ff">呢？</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">如何呼叫</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server</FONT><FONT FACE="新細明體" LANG="ZH-TW">的預儲程序（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">stored procedures</FONT><FONT FACE="新細明體" LANG="ZH-TW">）呢？</P>
+<P ALIGN="JUSTIFY">譬如於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式當中要呼叫</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server</FONT><FONT FACE="新細明體" LANG="ZH-TW">的一個預儲程序</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">sp1</FONT><FONT FACE="新細明體" LANG="ZH-TW">如下：</P>
+</FONT><FONT FACE="Arial"><P>CREATE PROCEDURE sp1</P>
+<P>AS</P>
+<P>SELECT * From </FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">著作</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">呼叫預儲程序必須使用一個叫做</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Command</FONT><FONT FACE="新細明體" LANG="ZH-TW">的物件，將預儲程序的名稱於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cmd.CommandText</FONT><FONT FACE="新細明體" LANG="ZH-TW">設定，如下</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼當中，</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cmd.CommandText = "sp1"</FONT><FONT FACE="新細明體" LANG="ZH-TW">設定預儲程序為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">sp1</FONT><FONT FACE="新細明體" LANG="ZH-TW">，最後</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Set rs = cmd.Execute</FONT><FONT FACE="新細明體" LANG="ZH-TW">即可執行預儲程序</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">sp1</FONT><FONT FACE="新細明體" LANG="ZH-TW">，並將執行結果傳到</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">rs</FONT><FONT FACE="新細明體" LANG="ZH-TW">的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">。</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼如下：</P>
+</FONT><FONT FACE="Arial"><P>&lt;%</P>
+<P>Set cn = Server.CreateObject("ADODB.Connection")</P>
+<P>cn.Open "driver={SQL Server};server=(Local); uid=sa;pwd=;database=NtopSamp"</P>
+<P>Set cmd = Server.CreateObject("ADODB.Command")</P>
+<P>Set cmd.ActiveConnection = cn</P>
+<P>cmd.CommandText = "sp1"</P>
+<P>Set rs = cmd.Execute&#9;&#9;&#9;</P>
+<P>%&gt;</P>
+<P>&lt;BR&gt;</P>
+<P>&lt;TABLE COLSPAN=8 CELLPADDING=5 BORDER=0&gt;</P>
+<P>&lt;TR&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">書名</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">出版</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">圖片</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">簡介</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;% Do while not rs.EOF %&gt;</P>
+<P>&lt;TR&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">書名</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">出版</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">圖片</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">簡介</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;/TR&gt; </P>
+<P>&lt;% </P>
+<P>rs.MoveNext</P>
+<P>Loop </P>
+<P>Set cmd = Nothing</P>
+<P>rs.Close</P>
+<P>cn.Close</P>
+<P>%&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">透過</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW">存取</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫，首先直接於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼中指定所要連結的資料庫，使用「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Server.CreateObject("ADODB.Connection")</FONT><FONT FACE="新細明體" LANG="ZH-TW">」建立連線的物件後，於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Driver</FONT><FONT FACE="新細明體" LANG="ZH-TW">設定為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW">驅動程式名稱，使用「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Open</FONT><FONT FACE="新細明體" LANG="ZH-TW">」直接連結到待存取查詢資料庫</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">NtopSamp</FONT><FONT FACE="新細明體" LANG="ZH-TW">。</P>
+<P ALIGN="JUSTIFY">執行後將查詢的資料放置於所定義</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">rs</FONT><FONT FACE="新細明體" LANG="ZH-TW">的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">當中，最後使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性和方法與</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW">碼配合，以顯示執行的結果，於用戶端使用瀏覽器，顯示資料庫內容。</P>
+<P ALIGN="JUSTIFY">設定所呼叫的預儲程序除了使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cmd.CommandText = "</FONT><FONT FACE="新細明體" LANG="ZH-TW">預儲程序名稱</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">"</FONT><FONT FACE="新細明體" LANG="ZH-TW">外，也可使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cmd.CommandText = "{call </FONT><FONT FACE="新細明體" LANG="ZH-TW">預儲程序名稱</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">(?)}"</FONT><FONT FACE="新細明體" LANG="ZH-TW">的語法，譬如</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cmd.CommandText = "{call sp1(?)}"</FONT><FONT FACE="新細明體" LANG="ZH-TW">。</P>
+<P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="Arial" SIZE=6 COLOR="#0000ff"><P>asp</FONT><FONT FACE="全真中隸書,新細明體" LANG="ZH-TW" SIZE=6 COLOR="#0000ff">如何顯示預儲程序多個查詢結果呢？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">上個單元當中，預儲程序（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">stored procedures</FONT><FONT FACE="新細明體" LANG="ZH-TW">）執行的結果只有一個查詢式子，</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">將此查詢結果放置於一個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">當中以顯示出來。但是，譬如於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式當中要呼叫</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server</FONT><FONT FACE="新細明體" LANG="ZH-TW">的一個預儲程序</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">sp10</FONT><FONT FACE="新細明體" LANG="ZH-TW">如下：</P>
+</FONT><FONT FACE="Arial"><P>CREATE PROCEDURE sp10</P>
+<P>AS</P>
+<P>SELECT * From </FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">著作</P>
+</FONT><FONT FACE="Arial"><P>SELECT * From </FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">產品</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">執行的結果有兩個查詢式子，</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">如何將預儲程序的多個查詢式子執行的結果顯示出呢？</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式將多個查詢式子執行的結果，放置於多個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">當中，然後使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">NextRecordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法來切換到下一個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">。如此一來，</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">就可以取得預儲程序的多個查詢式子執行的結果。</P>
+<P ALIGN="JUSTIFY">呼叫有兩個查詢式子的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">sp10</FONT><FONT FACE="新細明體" LANG="ZH-TW">預儲程序之</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼如下，將預儲程序的名稱</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">sp10</FONT><FONT FACE="新細明體" LANG="ZH-TW">於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cmd.CommandText</FONT><FONT FACE="新細明體" LANG="ZH-TW">設定，最後</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Set rs = cmd.Execute</FONT><FONT FACE="新細明體" LANG="ZH-TW">即可執行預儲程序</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">sp10</FONT><FONT FACE="新細明體" LANG="ZH-TW">，並將執行結果傳到</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">rs</FONT><FONT FACE="新細明體" LANG="ZH-TW">的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">：</P>
+</FONT><FONT FACE="Arial"><P>&lt;%</P>
+<P>Set cn = Server.CreateObject("ADODB.Connection")</P>
+<P>cn.Open "driver={SQL Server};server=(Local);uid=sa;pwd=;database=NtopSamp"</P>
+<P>Set cmd = Server.CreateObject("ADODB.Command")</P>
+<P>Set cmd.ActiveConnection = cn</P>
+<P>cmd.CommandText = "sp10"</P>
+<P>Set rs = cmd.Execute&#9;&#9;&#9;</P>
+<P>%&gt;</P>
+<P>&lt;TABLE COLSPAN=8 CELLPADDING=5 BORDER=0&gt;</P>
+<P>&lt;TR&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">書名</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">出版</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">圖片</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">簡介</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;% Do while not rs.EOF %&gt;</P>
+<P>&lt;TR&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">書名</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">出版</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">圖片</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">簡介</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;/TR&gt; </P>
+<P>&lt;% </P>
+<P>rs.MoveNext</P>
+<P>Loop </P>
+<P>%&gt;</P>
+<P>&lt;/TABLE&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">執行後將查詢的資料放置於所定義</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">rs</FONT><FONT FACE="新細明體" LANG="ZH-TW">的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">當中，首先取得第一個查詢式子執行的結果，使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性和方法與</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW">碼配合，以顯示執行的結果，於用戶端使用瀏覽器，顯示第一個查詢式子</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[SELECT * From </FONT><FONT FACE="新細明體" LANG="ZH-TW">著作</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">執行結果的資料庫內容。</P>
+<P ALIGN="JUSTIFY">然後使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">NextRecordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法，來切換到下一個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">，相關的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼如下：</P>
+</FONT><FONT FACE="Arial"><P>&lt;% Set rs = rs.NextRecordset %&gt;</P>
+<P>&lt;TABLE COLSPAN=8 CELLPADDING=5 BORDER=0&gt;</P>
+<P>&lt;TR&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">名稱</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">價格</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">數量</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;% Do while not rs.EOF %&gt;</P>
+<P>&lt;TR&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">名稱</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">價格</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">數量</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;/TR&gt; </P>
+<P>&lt;% </P>
+<P>rs.MoveNext</P>
+<P>Loop </P>
+<P>Set cmd = Nothing</P>
+<P>rs.Close</P>
+<P>cn.Close</P>
+<P>%&gt;</P>
+<P>&lt;/TABLE&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">於用戶端使用瀏覽器，顯示第二個查詢式子</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">[SELECT * From </FONT><FONT FACE="新細明體" LANG="ZH-TW">產品</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">執行結果的資料庫內容。</P>
+<P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="Arial" SIZE=6 COLOR="#0000ff"><P>asp</FONT><FONT FACE="全真中隸書,新細明體" LANG="ZH-TW" SIZE=6 COLOR="#0000ff">如何輸入值給預儲程序呢？</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">如何將輸入的值傳送給所呼叫的預儲程序（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">stored procedures</FONT><FONT FACE="新細明體" LANG="ZH-TW">）呢？</P>
+<P ALIGN="JUSTIFY">譬如於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式當中要呼叫</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server</FONT><FONT FACE="新細明體" LANG="ZH-TW">的一個預儲程序</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">sp2</FONT><FONT FACE="新細明體" LANG="ZH-TW">如下：</P>
+</FONT><FONT FACE="Arial"><P>CREATE PROCEDURE sp2 (@input1 Char(20))</P>
+<P>AS</P>
+<P>SELECT * From </FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">著作</FONT><FONT FACE="Arial"> Where </FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">出版</FONT><FONT FACE="Arial"> = @input1</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">為了要取得</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">出版</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">欄位為</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">松崗</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">的資料庫內容，如何將輸入的值</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">@input1</FONT><FONT FACE="新細明體" LANG="ZH-TW">傳送給所呼叫的預儲程序</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">sp2</FONT><FONT FACE="新細明體" LANG="ZH-TW">呢？</P>
+<P ALIGN="JUSTIFY">傳送輸入給所呼叫預儲程序，必須使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Command</FONT><FONT FACE="新細明體" LANG="ZH-TW">的物件一個叫做</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">CreateParameter</FONT><FONT FACE="新細明體" LANG="ZH-TW">的方法，設定輸入變數的名稱、類型、長度、變數值：</P>
+</FONT><FONT FACE="Arial"><P>CreateParameter (</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">變數名稱</FONT><FONT FACE="Arial">, </FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">變數的類型</FONT><FONT FACE="Arial">, Direction, </FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">變數的長度</FONT><FONT FACE="Arial">, </FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">變數值</FONT><FONT FACE="Arial">)</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">其中</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Direction</FONT><FONT FACE="新細明體" LANG="ZH-TW">為變數傳送的方向，為輸入或輸出，設定值如下：</P></FONT>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=1 WIDTH=272>
+<TR><TD WIDTH="62%" VALIGN="TOP" BGCOLOR="#ffffff">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="CENTER"></FONT><FONT FACE="新細明體" LANG="ZH-TW">變數類型</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP" BGCOLOR="#ffffff">
+<FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="CENTER">設定值</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="新細明體" LANG="ZH-TW"><P>未知</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">0</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="新細明體" LANG="ZH-TW"><P>輸入</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">1</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="新細明體" LANG="ZH-TW"><P>輸出</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">2</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="新細明體" LANG="ZH-TW"><P>輸入出</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">3</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>ReturnValue</FONT><FONT FACE="新細明體" LANG="ZH-TW">（傳回值）</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">4</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">變數類型的設定值如下：</P></FONT>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=1 WIDTH=272>
+<TR><TD WIDTH="62%" VALIGN="TOP" BGCOLOR="#ffffff">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="CENTER"></FONT><FONT FACE="新細明體" LANG="ZH-TW">變數類型</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP" BGCOLOR="#ffffff">
+<FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="CENTER">設定值</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>Empty</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">0</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>TinyInt</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">16</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>SmallInt</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">2</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>Integer</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">3</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>BigInt</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">20</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>UnsignedTinyInt</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">17</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>UnsignedSmallInt</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">18</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>UnsignedInt</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">19</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>UnsignedBigInt</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">21</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>Single</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">4</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>Double</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">5</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>Currency</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">6</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>Decimal</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">14</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>Numeric</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">131</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>Boolean</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">11</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>Error</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">10</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>UserDefined</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">132</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>Variant</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">12</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>IDispatch</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">9</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>IUnknown</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">13</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>GUID</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">72</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>Date</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">7</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>DBDate</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">133</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>DBTime</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">134</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>DBTimeStamp</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">135</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>BSTR</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">8</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>Char</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">129</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>VarChar</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">200</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>LongVarChar</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">201</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>WChar</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">130</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>VarWChar</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">202</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>LongVarWChar</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">203</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>Binary</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">128</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>VarBinary</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">204</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>LongVarBinary</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">205</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>Chapter</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">136</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>FileTime</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">64</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>DBFileTime</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">137</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>PropVariant</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">138</FONT></TD>
+</TR>
+<TR><TD WIDTH="62%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P>VarNumeric</FONT></TD>
+<TD WIDTH="38%" VALIGN="TOP">
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="RIGHT">139</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>輸入文字</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">變數的類型為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Char</FONT><FONT FACE="新細明體" LANG="ZH-TW">（文字）時，必須設定變數的長度，變數值前後須加雙引號包括起來。</P>
+<P ALIGN="JUSTIFY">讓我們來看一個變數的類型為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Char</FONT><FONT FACE="新細明體" LANG="ZH-TW">（文字）的例子，譬如若要將</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">@input1</FONT><FONT FACE="新細明體" LANG="ZH-TW">設定輸入值為</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">松崗</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">]</FONT><FONT FACE="新細明體" LANG="ZH-TW">，</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式如下：</P>
+</FONT><FONT FACE="Arial"><P>&lt;%</P>
+<P>Set cn = Server.CreateObject("ADODB.Connection")</P>
+<P>cn.Open "driver={SQL Server};server=(Local);uid=sa;pwd=;database=NtopSamp"</P>
+<P>Set cmd = Server.CreateObject("ADODB.Command")</P>
+<P>Set cmd.ActiveConnection = cn</P>
+<P>cmd.CommandText = "sp2"</P>
+<P>cmd.Parameters.Append cmd.CreateParameter("@input1", 129, 1, 20, "</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">松崗</FONT><FONT FACE="Arial">")</P>
+<P>Set rs = cmd.Execute&#9;</P>
+<P>%&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">首先直接於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼中指定所要連結的資料庫，使用「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Server.CreateObject("ADODB.Connection")</FONT><FONT FACE="新細明體" LANG="ZH-TW">」建立連線的物件後，於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Driver</FONT><FONT FACE="新細明體" LANG="ZH-TW">設定為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW">驅動程式名稱，使用「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Open</FONT><FONT FACE="新細明體" LANG="ZH-TW">」直接連結到待存取查詢資料庫</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">NtopSamp</FONT><FONT FACE="新細明體" LANG="ZH-TW">。</P>
+<P ALIGN="JUSTIFY">接著，使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Command</FONT><FONT FACE="新細明體" LANG="ZH-TW">的物件，將預儲程序的名稱</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">sp2</FONT><FONT FACE="新細明體" LANG="ZH-TW">於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cmd.CommandText</FONT><FONT FACE="新細明體" LANG="ZH-TW">設定，使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">CreateParameter</FONT><FONT FACE="新細明體" LANG="ZH-TW">的方法，設定輸入變數的名稱為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">@input1</FONT><FONT FACE="新細明體" LANG="ZH-TW">，類型</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">129</FONT><FONT FACE="新細明體" LANG="ZH-TW">為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Char</FONT><FONT FACE="新細明體" LANG="ZH-TW">文字類型，</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">1</FONT><FONT FACE="新細明體" LANG="ZH-TW">表示為輸入，長度為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">20</FONT><FONT FACE="新細明體" LANG="ZH-TW">個字，變數值為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">"</FONT><FONT FACE="新細明體" LANG="ZH-TW">松崗</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">"</FONT><FONT FACE="新細明體" LANG="ZH-TW">。</P>
+<P ALIGN="JUSTIFY">最後</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Set rs = cmd.Execute</FONT><FONT FACE="新細明體" LANG="ZH-TW">即可執行預儲程序</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">sp2</FONT><FONT FACE="新細明體" LANG="ZH-TW">，並將執行結果傳到</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">rs</FONT><FONT FACE="新細明體" LANG="ZH-TW">的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">。</P>
+<P ALIGN="JUSTIFY">執行後將查詢的資料放置於所定義</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">rs</FONT><FONT FACE="新細明體" LANG="ZH-TW">的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">當中，最後使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性和方法與</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW">碼配合，以顯示執行的結果，相關的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼如下：</P>
+</FONT><FONT FACE="Arial"><P>&lt;TABLE COLSPAN=8 CELLPADDING=5 BORDER=0&gt;</P>
+<P>&lt;TR&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">書名</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">出版</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">圖片</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">簡介</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;% Do while not rs.EOF %&gt;</P>
+<P>&lt;TR&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">書名</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">出版</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">圖片</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">簡介</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;/TR&gt; </P>
+<P>&lt;% </P>
+<P>rs.MoveNext</P>
+<P>Loop </P>
+<P>Set cmd = Nothing</P>
+<P>rs.Close</P>
+<P>%&gt;</P>
+<P>&lt;/TABLE&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">於用戶端使用瀏覽器，顯示</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">出版</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">欄位為</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">松崗</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">的資料庫內容。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>　</P>
+<P>另外兩種方式</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">除了使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">CreateParameter (</FONT><FONT FACE="新細明體" LANG="ZH-TW">變數名稱</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">, </FONT><FONT FACE="新細明體" LANG="ZH-TW">變數的類型</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">, Direction, </FONT><FONT FACE="新細明體" LANG="ZH-TW">變數的長度</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">, </FONT><FONT FACE="新細明體" LANG="ZH-TW">變數值</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">)</FONT><FONT FACE="新細明體" LANG="ZH-TW">外，您也可以於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cmd("@input1") </FONT><FONT FACE="新細明體" LANG="ZH-TW">設定數值，</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼如下：</P>
+</FONT><FONT FACE="Arial"><P>cmd.Parameters.Append cmd.CreateParameter("@input1", 129, 1, 20)</P>
+<P>cmd("@input1") = "</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">松崗</FONT><FONT FACE="Arial">"</P>
+<P>Set rs = cmd.Execute&#9;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">您也可以使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Parameter</FONT><FONT FACE="新細明體" LANG="ZH-TW">物件，然後於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Parameter</FONT><FONT FACE="新細明體" LANG="ZH-TW">物件設定各參數值，</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼，最後使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Append</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法將各個所設定的參數值放到</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Command</FONT><FONT FACE="新細明體" LANG="ZH-TW">的物件，如下：</P>
+</FONT><FONT FACE="Arial"><P>Set objParameter = Server.CreateObject("ADODB.Parameter")</P>
+<P>objParameter.Name = "@input1"</P>
+<P>objParameter.Type = 129</P>
+<P>objParameter.Direction = 1</P>
+<P>objParameter.Size = 20</P>
+<P>objParameter.Value = "</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">松崗</FONT><FONT FACE="Arial">"</P>
+<P>cmd.Parameters.Append objParameter</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">以上兩種方式執行結果與上例相同，使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Parameter</FONT><FONT FACE="新細明體" LANG="ZH-TW">物件的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼如下：</P>
+</FONT><FONT FACE="Arial"><P>&lt;%</P>
+<P>Set cn = Server.CreateObject("ADODB.Connection")</P>
+<P>cn.Open "driver={SQL Server};server=(Local);uid=sa;pwd=;database=NtopSamp"</P>
+<P>Set cmd = Server.CreateObject("ADODB.Command")</P>
+<P>Set cmd.ActiveConnection = cn</P>
+<P>cmd.CommandText = "sp2"</P>
+<P>Set objParameter = Server.CreateObject("ADODB.Parameter")</P>
+<P>objParameter.Name = "@input1"</P>
+<P>objParameter.Type = 129</P>
+<P>objParameter.Direction = 1</P>
+<P>objParameter.Size = 20</P>
+<P>objParameter.Value = "</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">松崗</FONT><FONT FACE="Arial">"</P>
+<P>cmd.Parameters.Append objParameter</P>
+<P>Set rs = cmd.Execute&#9;&#9;&#9;</P>
+<P>%&gt;&lt;BR&gt;</P>
+<P>&lt;TABLE COLSPAN=8 CELLPADDING=5 BORDER=0&gt;</P>
+<P>&lt;TR&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">書名</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">出版</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">圖片</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">簡介</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;% Do while not rs.EOF %&gt;</P>
+<P>&lt;TR&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">書名</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">出版</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">圖片</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">簡介</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;/TR&gt; </P>
+<P>&lt;% </P>
+<P>rs.MoveNext</P>
+<P>Loop </P>
+<P>Set cmd = Nothing</P>
+<P>rs.Close</P>
+<P>%&gt;</P>
+<P>&lt;/TABLE&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">若於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Visual Basic</FONT><FONT FACE="新細明體" LANG="ZH-TW">使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Parameter</FONT><FONT FACE="新細明體" LANG="ZH-TW">物件，必須先定義如下：</P>
+</FONT><FONT FACE="Arial"><P>Set objParameter = New ADODB.Parameter</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>　</P>
+<P>輸入數字</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">上例的變數類型為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Char</FONT><FONT FACE="新細明體" LANG="ZH-TW">（文字），</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">如何將變數類型為數字的輸入值傳送給所呼叫的預儲程序（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">stored procedures</FONT><FONT FACE="新細明體" LANG="ZH-TW">）呢？</P>
+<P ALIGN="JUSTIFY">譬如於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式當中要呼叫</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server</FONT><FONT FACE="新細明體" LANG="ZH-TW">的一個預儲程序</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">sp3</FONT><FONT FACE="新細明體" LANG="ZH-TW">如下：</P>
+</FONT><FONT FACE="Arial"><P>CREATE PROCEDURE sp3 (@input1 INT)</P>
+<P>AS</P>
+<P>SELECT * From </FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">產品</FONT><FONT FACE="Arial"> Where </FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">數量</FONT><FONT FACE="Arial"> &gt;= @input1</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">為了要取得</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">產品</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">資料表的</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">數量</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">欄位值大於或等於輸入數字的資料庫內容，如何將輸入的數字值</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">@input1</FONT><FONT FACE="新細明體" LANG="ZH-TW">傳送給所呼叫的預儲程序</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">sp3</FONT><FONT FACE="新細明體" LANG="ZH-TW">呢？</P>
+<P ALIGN="JUSTIFY">變數的類型為數字時，不須設定變數的長度，變數值前後不須加雙引號包括起來。因此於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">CreateParameter (</FONT><FONT FACE="新細明體" LANG="ZH-TW">變數名稱</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">, </FONT><FONT FACE="新細明體" LANG="ZH-TW">變數的類型</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">, Direction, </FONT><FONT FACE="新細明體" LANG="ZH-TW">變數的長度</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">, </FONT><FONT FACE="新細明體" LANG="ZH-TW">變數值</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">)</FONT><FONT FACE="新細明體" LANG="ZH-TW">的第四個參數</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">變數的長度</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">就空著。譬如</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">CreateParameter("@input1", 3, 1,,1000)</FONT><FONT FACE="新細明體" LANG="ZH-TW">。</P>
+<P ALIGN="JUSTIFY">讓我們來看一個變數的類型為數字的例子，譬如若要將</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">@input1</FONT><FONT FACE="新細明體" LANG="ZH-TW">設定輸入值為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">1000</FONT><FONT FACE="新細明體" LANG="ZH-TW">，</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式如下：</P>
+</FONT><FONT FACE="Arial"><P>&lt;%</P>
+<P>Set cmd = Server.CreateObject("ADODB.Command")</P>
+<P>Set cmd.ActiveConnection = cn</P>
+<P>cmd.CommandText = "sp3"</P>
+<P>cmd.Parameters.Append cmd.CreateParameter("@input1", 3, 1,,1000)</P>
+<P>&#9;&#9;&#9;</P>
+<P>Set rs = cmd.Execute&#9;&#9;&#9;</P>
+<P>%&gt;</P>
+<P>&lt;BR&gt;</P>
+<P>&lt;TABLE COLSPAN=8 CELLPADDING=5 BORDER=0&gt;</P>
+<P>&lt;TR&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">名稱</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">價格</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">數量</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;% Do while not rs.EOF %&gt;</P>
+<P>&lt;TR&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">名稱</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">價格</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">數量</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;/TR&gt; </P>
+<P>&lt;% </P>
+<P>rs.MoveNext</P>
+<P>Loop </P>
+<P>Set cmd = Nothing</P>
+<P>rs.Close</P>
+<P>cn.Close</P>
+<P>%&gt;</P>
+<P>&lt;/TABLE&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">於用戶端使用瀏覽器，顯示取得</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">產品</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">資料表的</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">數量</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">欄位值大於或等於輸入數字</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">1000</FONT><FONT FACE="新細明體" LANG="ZH-TW">的資料庫內容。</P>
+<P ALIGN="JUSTIFY">　</P>
+<P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="Arial" SIZE=6 COLOR="#0000ff"><P>asp</FONT><FONT FACE="全真中隸書,新細明體" LANG="ZH-TW" SIZE=6 COLOR="#0000ff">如何透過</FONT><FONT FACE="Arial" SIZE=6 COLOR="#0000ff">OLE DB</FONT><FONT FACE="全真中隸書,新細明體" LANG="ZH-TW" SIZE=6 COLOR="#0000ff">呼叫預儲程序呢？</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">SQL Server 7.0</FONT><FONT FACE="新細明體" LANG="ZH-TW">除了提供</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW">驅動程式外，也提供了</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">OLE DB Provider</FONT><FONT FACE="新細明體" LANG="ZH-TW">，</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">如何透過</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">OLE DB</FONT><FONT FACE="新細明體" LANG="ZH-TW">呼叫預儲程序以存取</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫呢？</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">程透過</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">OLE DB </FONT><FONT FACE="新細明體" LANG="ZH-TW">與</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW">驅動程式存取</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server </FONT><FONT FACE="新細明體" LANG="ZH-TW">的差異處，為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">OLE DB </FONT><FONT FACE="新細明體" LANG="ZH-TW">須指定</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Provider</FONT><FONT FACE="新細明體" LANG="ZH-TW">是誰，即只要多加一行「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cn.Provider = "sqloledb"</FONT><FONT FACE="新細明體" LANG="ZH-TW">」程式就可以了，其他與透過</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW">驅動程式呼叫預儲程序以存取</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server </FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫的方法相同。</P>
+<P ALIGN="JUSTIFY">透過</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">OLE DB</FONT><FONT FACE="新細明體" LANG="ZH-TW">呼叫預儲程序的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼如下，首先直接於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼中指定所要連結的資料庫，使用「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Server.CreateObject("ADODB.Connection")</FONT><FONT FACE="新細明體" LANG="ZH-TW">」建立連線的物件後，於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Driver</FONT><FONT FACE="新細明體" LANG="ZH-TW">設定為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server</FONT><FONT FACE="新細明體" LANG="ZH-TW">，多加一行「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cn.Provider = "sqloledb"</FONT><FONT FACE="新細明體" LANG="ZH-TW">」，使用「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Open</FONT><FONT FACE="新細明體" LANG="ZH-TW">」直接連結到資料庫</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">NtopSamp</FONT><FONT FACE="新細明體" LANG="ZH-TW">。由於已經指定</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Provider</FONT><FONT FACE="新細明體" LANG="ZH-TW">是誰，「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cn.Open "driver={SQL Server};server=(Local);uid=sa; pwd=;database=NtopSamp"</FONT><FONT FACE="新細明體" LANG="ZH-TW">」中於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Driver</FONT><FONT FACE="新細明體" LANG="ZH-TW">設定的「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">driver={SQL Server};</FONT><FONT FACE="新細明體" LANG="ZH-TW">」的部份可以省略不寫：</P>
+</FONT><FONT FACE="Arial"><P>&lt;%</P>
+<P>Set cn = Server.CreateObject("ADODB.Connection")</P>
+<P>cn.Provider = "sqloledb"</P>
+<P>cn.Open "server=(Local);uid=sa; pwd=;database=NtopSamp"</P>
+<P>Set cmd = Server.CreateObject("ADODB.Command")</P>
+<P>Set cmd.ActiveConnection = cn</P>
+<P>cmd.CommandText = "sp1"</P>
+<P>Set rs = cmd.Execute&#9;&#9;&#9;</P>
+<P>%&gt;</P>
+<P>&lt;TABLE COLSPAN=8 CELLPADDING=5 BORDER=0&gt;</P>
+<P>&lt;TR&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">書名</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">出版</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">圖片</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">簡介</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;% Do while not rs.EOF %&gt;</P>
+<P>&lt;TR&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">書名</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">出版</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">圖片</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW">簡介</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;/TR&gt; </P>
+<P>&lt;% </P>
+<P>rs.MoveNext</P>
+<P>Loop </P>
+<P>Set cmd = Nothing</P>
+<P>rs.Close</P>
+<P>%&gt;</P>
+<P>&lt;/TABLE&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">執行後將查詢的資料放置於所定義</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">rs</FONT><FONT FACE="新細明體" LANG="ZH-TW">的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">當中，最後使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性和方法與</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW">碼配合，以顯示執行的結果，於用戶端使用瀏覽器，顯示資料庫內容。</P>
+<P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>另外一種寫法</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">設定資料庫連結的連線物件寫法：</P>
+</FONT><FONT FACE="Arial"><P>&lt;%</P>
+<P>Set cn = Server.CreateObject("ADODB.Connection")</P>
+<P>cn.Provider = "sqloledb"</P>
+<P>cn.Open "server=(Local);uid=sa; pwd=;database=NtopSamp"</P>
+<P>%&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">有另外一種寫法，為於連線物件各參數設定之：</P>
+</FONT><FONT FACE="Arial"><P>&lt;%</P>
+<P>Set cn = Server.CreateObject("ADODB.Connection")</P>
+<P>cn.Provider = "sqloledb"</P>
+<P>cn.Properties("Data Source").Value = "(Local)" </P>
+<P>cn.Properties("Initial Catalog").Value = "NtopSamp" </P>
+<P>cn.Properties("User ID").Value = "sa"</P>
+<P>cn.Properties("Password").Value = "" </P>
+<P>cn.Open</P>
+<P>%&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">執行的結果與上例相同。</P>
+<P ALIGN="JUSTIFY">　</P>
+<P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#ff0000"><P>網站資料庫設計參考資料</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">作者準備一個展示各種</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW">設計實例的網站，提供各種網站網頁的資訊、與設計範例，包括</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">特異功能、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫設計實例、網路商店、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ActiveX</FONT><FONT FACE="新細明體" LANG="ZH-TW">、推播頻道、動態</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">HTML 99</FONT><FONT FACE="新細明體" LANG="ZH-TW">招等，網址如下：</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"></FONT><A HREF="../../index.html"><FONT FACE="System,新細明體" LANG="ZH-TW">http://www.asp.com.tw</FONT></A></P>
+<FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">歡迎上網光臨指教。</P>
+<P ALIGN="JUSTIFY">另外筆者最新著作為「網站熱門應用技術探討</FONT><FONT FACE="標楷體" LANG="ZH-TW">」</FONT><FONT FACE="新細明體" LANG="ZH-TW">、「微軟熱門Web技術速成班」，對網站資料庫的技術提供更多的探討，歡迎參考。</P></FONT></BODY>
+</HTML>

@@ -1,0 +1,70 @@
+<html>
+
+<head>
+<meta name="postinfo" content="/scripts/postinfo.asp">
+<script LANGUAGE="JavaScript">
+function dimensiona(n) { this.length=n; for (var i=1;i<=n;i++) { this[i]=0 } return this }
+mes=new dimensiona(12); mes[1]="Enero"; mes[2]="Febrero"; mes[3]="Marzo"; mes[4]="Abril"; mes[5]="Mayo"; mes[6]="Junio"; mes[7]="Julio"; mes[8]="Agosto"; mes[9]="Setiembre"; mes[10]="Octubre"; mes[12]="Noviembre"; mes[12]="Diciembre";
+dia=new dimensiona(7);  dia[1]="Domingo"; dia[2]="Lunes"; dia[3]="Martes"; dia[4]="Miercoles"; dia[5]="Jueves"; dia[6]="Viernes"; dia[7]="Sabado";
+var hoy,fecha,nombre;
+hoy=new Date();
+fecha = hoy.getDate()+" de "+mes[hoy.getMonth()+1];
+if (fecha=="3 de Enero") nombre="Carlos"; else
+ if (fecha=="29 de Enero") nombre="Paco"; else
+  if (fecha=="18 de Marzo") nombre="José"; else
+   if (fecha=="15 de Abril") nombre="Marcos"; else
+    if (fecha=="10 de Junio") nombre="Mali"; else
+     if (fecha=="10 de Agosto") nombre="Eduardo"; else
+      if (fecha=="17 de Octubre") { nombre="Gustavo"; escribe(); } else
+       if (fecha=="18 de Octubre") { nombre="Gustavo"; escribe(); } else
+        if (fecha=="19 de Octubre") { nombre="Gustavo"; escribe(); } else
+         if (fecha=="20 de Octubre") nombre="Bertha"; else
+          if (fecha=="29 de Octubre") nombre="Martha"; else
+           if (fecha=="4 de Agosto") nombre="Nadie";
+document.write('<TITLE>¡Felicidades '+nombre+'!</TITLE>');
+</script>
+</head>
+
+<body bgcolor="#FFFFAA" text="#5C3F8B" link="#5C3F8B" vlink="#5B9241">
+<script language="javascript">
+document.write('<font color="#7F7F3F" size="+1" face="Verdana,Arial,Helvetica">Hoy es un día muy especial... '+dia[hoy.getDay()+1]+', <blink><font color="#000055">'+hoy.getDate()+' de '+mes[hoy.getMonth()+1]+' de '+(1900+hoy.getYear())+'</font></blink></font><br>');
+</script>
+
+
+<table border="0" width="600" bgcolor="#8080C0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="100%" bgcolor="#8080C0"><br>
+    <br>
+    <table border="0" width="100%" cellpadding="0" bgcolor="#8080C0" cellspacing="0">
+      <tr>
+        <td width="150%"><p align="center"><b><big><big><big><big><font color="#5C3F8B"
+        face="Arial"><strong><script language="javascript">
+document.write('<marquee bgcolor="#FFFFA8" border="0">Hoy es cumpleaños de '+nombre+'... ¡Felicidades!</marquee>');
+</script> </strong></font></big></big></big></big></b></td>
+      </tr>
+    </table>
+    <blockquote>
+
+
+<embed src="../sonidos/happybirthday.mid"></embed>
+<!-- <embed src="happybirthday.mid"></embed> -->
+
+
+      <p><font face="Arial"><a
+      href="http://server/datos/inventariocomputacional/fideicomiso.htm"><strong><br>
+      </strong></a></font></p>
+    </blockquote>
+    <p align="center">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="100%"><dl>
+      <dt><font face="Arial"><font color="#FFFFFF"><strong><br>
+        <small><small>Intranet <blink>Fondo Chiapas</blink></small></small></strong><br>
+        <small><small>Última Actualización: Miércoles 04 de Agosto de 1999</small></small></font><br>
+        </font></dt>
+    </dl>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

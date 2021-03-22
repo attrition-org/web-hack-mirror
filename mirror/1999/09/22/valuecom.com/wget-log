@@ -1,0 +1,32 @@
+--03:12:12--  http://valuecom.com:80/
+           => `valuecom.com/index.html'
+Connecting to valuecom.com:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 590 [text/html]
+
+    0K ->                                                        [100%]
+
+03:12:12 (576.17 KB/s) - `valuecom.com/index.html' saved [590/590]
+
+Loading robots.txt; please ignore errors.
+--03:12:12--  http://valuecom.com:80/robots.txt
+           => `valuecom.com/robots.txt'
+Connecting to valuecom.com:80... connected!
+HTTP request sent, awaiting response... 404 Not Found
+03:12:12 ERROR 404: Not Found.
+
+--03:12:12--  http://valuecom.com:80/nasty.jpg
+           => `valuecom.com/nasty.jpg'
+Connecting to valuecom.com:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 4,647 [image/jpeg]
+
+    0K -> ....                                                   [100%]
+
+03:12:13 (65.77 KB/s) - `valuecom.com/nasty.jpg' saved [4647/4647]
+
+Converting valuecom.com/index.html... done.
+
+FINISHED --03:12:13--
+Downloaded: 5,237 bytes in 2 files
+Converting valuecom.com/index.html... done.

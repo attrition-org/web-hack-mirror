@@ -1,0 +1,115 @@
+<html>
+
+<head>
+<style>
+<!--
+.intro{
+position:absolute;
+left:0;
+top:0;
+layer-background-color:white;
+background-color:red;
+border:0.1px solid white
+}
+-->
+</style>
+<title>Hi.</title>
+<style>
+.light4 { top:-2; left:-2; color:red; }
+.shade4 { top:+2; left:+2; color:white; }
+.fill4 { top:0; left:0; color:red; } </style>
+<style>
+   .light4 { top:-2; left:-2; color:white; }
+   .shade4 { top:+2; left:+2; color:red; }
+   .fill4  { top:0;  left:0;  color:white; } </style>
+<style>
+.shade1 { top:+5; left:+5; color:black; }
+.fill1 { top:0; left:0; color:red; }
+</style>
+</head>
+
+<body bgcolor="#000000" text="#FF0000">
+<div id="i1" class="intro"></div><div id="i2" class="intro"></div><div id="i3"
+class="intro"></div><div id="i4" class="intro"></div><div id="i5" class="intro"></div><div
+id="i6" class="intro"></div><div id="i7" class="intro"></div><div id="i8" class="intro"></div><script
+language="JavaScript1.2">
+var speed=20
+var temp=new Array()
+var temp2=new Array()
+if (document.layers){
+for (i=1;i<=8;i++){
+temp[i]=eval("document.i"+i+".clip")
+temp2[i]=eval("document.i"+i)
+temp[i].width=window.innerWidth
+temp[i].height=window.innerHeight/8
+temp2[i].top=(i-1)*temp[i].height
+}
+}
+else if (document.all){
+var clipright=document.body.clientWidth,clipleft=0
+for (i=1;i<=8;i++){
+temp[i]=eval("document.all.i"+i+".style")
+temp[i].width=document.body.clientWidth
+temp[i].height=document.body.offsetHeight/8
+temp[i].top=(i-1)*parseInt(temp[i].height)
+}
+}
+function openit(){
+window.scrollTo(0,0)
+if (document.layers){
+for (i=1;i<=8;i=i+2)
+temp[i].right-=speed
+for (i=2;i<=8;i=i+2)
+temp[i].left+=speed
+if (temp[2].left>window.innerWidth)
+clearInterval(stopit)
+}
+else if (document.all){
+clipright-=speed
+for (i=1;i<=8;i=i+2){
+temp[i].clip="rect(0 "+clipright+" auto 0)"
+}
+clipleft+=speed
+for (i=2;i<=8;i=i+2){
+temp[i].clip="rect(0 auto auto "+clipleft+")"
+}
+if (clipright<=0)
+clearInterval(stopit)
+}
+}
+function gogo(){
+stopit=setInterval("openit()",100)
+}
+gogo()
+</script>
+
+
+<p align="center"><font face="Verdana" color="#000000"><big>Um High....</big></font></p>
+
+<p align="center"><font face="Verdana" color="#000000"><strong>Your security was weak.</strong></font></p>
+
+<p align="center"><font face="Verdana" color="#000000">So I helped you out...</font></p>
+
+<p align="center"><img src="IAMC.jpg" width="231" height="55"></p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center"><font face="Verdana" color="#000000"><big><big><big>[ v00d00 wuz here ]</big></big></big></font></p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center"><small><small><strong><font color="#FFFFFF" face="Verdana">Greets </font><font
+face="Verdana" color="#FF0000">:</font><font color="#FFFFFF" face="Verdana">&nbsp; Mozy, </font><font
+face="Verdana" color="#FF0000">Pulsewidth, </font><font color="#FFFFFF" face="Verdana">Devil-C,</font><font
+face="Verdana" color="#FF0000"> HFD, </font><font color="#FFFFFF" face="Verdana">Keebler
+Elves, </font><font face="Verdana" color="#FF0000">N.Y.S, </font><font color="#FFFFFF"
+face="Verdana">HiP, </font><font face="Verdana" color="#FF0000">Xoloth1, </font><font
+color="#FFFFFF" face="Verdana">meestervervalser, </font><font face="Verdana"
+color="#FF0000">ne0h, </font><font color="#FFFFFF" face="Verdana">p0gO,</font><font
+face="Verdana" color="#FF0000"> dr_fdisk^ </font><font color="#FFFFFF" face="Verdana">and </font><font
+face="Verdana" color="#FF0000">lyp0x</font></strong></small></small></p>
+</body>
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

@@ -1,0 +1,281 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="haxor nation crew">
+   <title>lofasz, mittomen</title>
+</head>
+<body text="#000000" bgcolor="#C7C6C7" link="#0000EF" vlink="#59188E" alink="#FF0000">
+
+<center>
+<h1>
+This Site owned by :</h1></center>
+
+<center>
+<p><br><img SRC="http://www.windrivers.hu/haxor.jpg" height=200 width=419></center>
+
+<p><br>
+<br>
+<br>
+<p>Udv az osszes nagyfeju ISP rendszergazda/security gurunak (aka: GRIN,
+GUSKAHAX0R, MAG, CYD, MicMac, Bivanbi, KalverKocsog, Atya-Bazsa es az osszes
+LME geci).
+<p>Ez a deface azert keszult, hogy bebizonyitsuk magyarorszagon nem csak
+obotakgeci, dc1geci, madmindgeci szintu scriptkiddie like "allitolagos
+hackerek" leteznek. Kicsit nevetseges az ami a mediaban manapsag csinal
+a hozza nemerto lamer alatokbol.&nbsp; Ezert itt egy prezentacios hack ! =)
+<p>A tamadas az INTERWARE egyik "kisegito" szervere ellen iranyult.
+<p>Mi is tortent itt. (Aki nem hiszi el az jarjon utanna, bar mi az igazat
+irjuk le) :
+<br>&nbsp;
+<ul>
+<li>
+Adott volt egy sniffelt account (switchelt halorol szereztunk, erdekes
+erre mondjak azt hogy nem sniffelheto ? Lenyegtelen, csak okoskodnak :)</li>
+
+<li>
+Az account mogott egy szerver volt: amstel.interware.hu. A szerveren ssh
+service. A sniffelt accountnak volt SSH elerese. shellje a pine nevu levelezokliens...</li>
+
+<li>
+A pine nem okozott komolyabb problemat, egy /bin/bash -c /bin/bash; alternativ
+editor gyorsan dobta a shell-t.</li>
+
+<li>
+Ezutan ismerkedtunk meg a rendszerrel:</li>
+
+<ul>
+<li>
+2.2.17-es linux kernel</li>
+
+<li>
+A kernelben ott vigyorgott a cryptopatch</li>
+
+<li>
+Egy darab C fordito sincs kozel 's tavolban...</li>
+
+
+<li>
+Nagyon jol felkonfigolt packetfilter (ipchains). A pop3 port pl kernel/ipchains-bol
+filterezve,stb. (ha netan a daemonban bug lenne ? :)))</li>
+
+<li>
+Jol belott syncookies,rpfilter vedelem</li>
+
+<li>
+tripewire, portsentry vedelem</li>
+
+<li>
+Debian 2.2 distribucio, a legfrissebb fixekkel.</li>
+
+<li>
+Uj Glibc</li>
+
+<li>
+Uj traceroute</li>
+
+<li>
+hostconf-os trukk nem megy, kernel tul regi hozza (szerencsejukre)</li>
+
+<li>
+szeparalt filerendszer, nosuid, noexec, stb. (hardlink attack eleve kizarva)</li>
+
+<ul>&nbsp;
+<ul>&nbsp;
+<table BORDER COLS=1 WIDTH="70%" NOSAVE >
+<tr>
+<td><tt>bash-2.03$ mount</tt>
+<br><tt>/dev/sda5 on / type ext2 (rw,errors=remount-ro,errors=remount-ro)</tt>
+<br><tt>proc on /proc type proc (rw)</tt>
+<br><tt>devpts on /dev/pts type devpts (rw,gid=5,mode=620)</tt>
+<br><tt>/dev/sda1 on /boot type ext2 (ro)</tt>
+<br><tt>/dev/sda6 on /home type ext2 (rw,noexec,nosuid,nodev)</tt>
+<br><tt>/dev/sda7 on /var type ext2 (rw,nosuid,nodev)</tt>
+<br><tt>/dev/sda8 on /var/mail type ext2 (rw,noexec,nosuid,nodev)</tt>
+<br><tt>/dev/sda9 on /var/lib/mysql type ext2 (rw,noexec,nosuid,nodev)</tt></td>
+</tr>
+</table>
+</ul>
+</ul>
+
+<li>
+szeparalt web groupok (kb 50 darab kulonbozo group a www-data alatt, amelyekhez
+kulon auth tartozik.)</li>
+
+<li>
+semmilyen folosleges daemon, csak ami a mukodeshez kell</li>
+
+<li>
+Erosen leredukalt setuid allomany, amin nem kell hogy feltetlenul setuid
+legyen, azon itt tuti nincs :)</li>
+
+<li>
+a /etc/apache csak root szamara OLVASHATO!!! Nem is lathattuk, hogy mi
+van benne.</li>
+
+<li>
+Localis security magas szintu.</li>
+
+<li>
+Userek konyvtarai abszolut szeparaltak, egyetlen user sem kepes olvasni
+mas user adatait.</li>
+
+<li>
+Szeparalt administrator reteg. (csak par usernek van rendes shellje)</li>
+
+<li>
+A mi userunk veletlenul kiemelten powerfull volt, a legtobb usernek /bin/false
+a shellje</li>
+</ul>
+
+<li>
+Szoval meg a MAG koma sem mondhatja azt, hogy ez egy tipikus "szar" gep.
+<b>MERT TENYLEG NEM AZ.</b></li>
+
+<li>
+<b>Tisztelet a rendszergazdaknak, ennyire szeparalt rendszert karban tartani
+meg szerintunk is komoly munka :) Vagy nagyon megfizetik ezert oket, vagy
+mazochista allatok.&nbsp;</b> (UGYE MAG ? Vannak olyanok akik nem predikaljak,
+hanem csinaljak ???)</li>
+</ul>
+A local HACK:
+<br>&nbsp;
+<ul>
+<li>
+Ugyebar mint azt leirtuk, ./-es local exploitot el lehet felejteni, a szokasos
+mokakat is lehet elrakni. Ami itt jon az tenyleg a "FEELING"</li>
+
+<li>
+Nonpublic PHP exploiton keresztul sikerult krealnunk egy shell-t amelynek
+euid-ja, egid-je www-data volt.</li>
+
+<ul>
+<ul>
+<ul>&nbsp;
+<table BORDER COLS=1 WIDTH="70%" NOSAVE >
+<tr>
+<td><tt>bash-2.03$ id</tt>
+<br><tt>uid=33(www-data) gid=1001(uzlethaz) groups=1001(uzlethaz)</tt></td>
+</tr>
+</table>
+</ul>
+</ul>
+</ul>
+
+<li>
+Ezzel mar minimalisan hozzafertunk par filehoz, de ezutan szembesultunk
+vele, hogy a www-data group nem tud olvasni szinte semmit, mivel a webgroupok
+kulon szeparaltak.</li>
+
+<li>
+Egy ujabb rogtonzott megoldassal a phpn keresztul csinaltunk egy bash_on_port-ot,
+melyet teljes jogulag az apach futtatott, igy hozzafertunk a szeparalt
+groupokhoz.</li>
+
+<li>
+Innentol mar mindenhez hozzafertunk amihez az apach hozzafert. Kezdve az
+osszes hostolt oldal osszes adatahoz.</li>
+
+<ul>
+<ul>
+<ul>&nbsp;
+<table BORDER COLS=1 WIDTH="70%" NOSAVE >
+<tr>
+<td><tt>bash-2.03$ telnet 0 1111</tt>
+<br><tt>Trying 0.0.0.0...</tt>
+<br><tt>Connected to 0.</tt>
+<br><tt>Escape character is '^]'.</tt>
+<br><tt>Gimme pass: ************</tt>
+<br><tt>sh: no job control in this shell</tt>
+<br><tt>sh-2.03$ id</tt>
+<br><tt>id</tt>
+<br><tt>uid=33(www-data) gid=33(www-data) groups=33(www-data),1005(planetweb),1006(web),</tt>
+<br><tt>1007(agility),1008(foldnapja),1009(grafo),1010(e-start),1011(pitvar),1012(danubi</tt>
+<br><tt>anadesign),1013(szinyei),1014(bignet),1015(fizetesinfo),1016(thr),104(loggers),1</tt>
+<br><tt>017(canderel),1018(portar),1019(windrivers),1020(trax),1022(gfkdorelipms),1023(k</tt>
+<br><tt>ioszk),1024(regiszter),1025(pityer),1026(telepito),1027(e-contact),1028(tutynet)</tt>
+<br><tt>,1029(afilmsite),1030(loyolacollege),1031(webkom)</tt></td>
+</tr>
+</table>
+</ul>
+</ul>
+</ul>
+
+<li>
+Egy kis lokalis hiba (rosszul beallitott UMASK), hogy a webgroup-ok nagy
+resze mar eleve tudta irni a html-eleket, tehat mar a rendszer nagy reszet
+itt tudtuk volna defacelni.</li>
+
+<li>
+Mivel a legtobb host hasznalt mysql-t igy azokok teljes adatbazisat dumpolni
+tudtuk (nemhiaba, szuper ottlet a database.conf-ban tarolni a mysql usert,
+passwdt)</li>
+
+<li>
+A rendszer elonyere legyen irva: a mysql total szeparalt meg localhostrol
+is, a mysql adatbazist nem tudtuk elerni egyetlen user jogosultsagaval
+sem.)</li>
+
+<li>
+az /etc/mysql/my.cmf nem tartalmazott semmilyen jelszot. Ez ergo problema
+is lehet, mert a logrotate nem tudja ujrainditani a mysql-t es jelen gepen
+mar 2000-09 ota nem volt logrotate eppen ezert, de ennel ellenere security
+szempontjabol jo huzas volt ez az adminok reszerol.</li>
+
+<li>
+talaltunk egy filet /etc/webpasswd melyben vegyesen DES/MD5 jelszavak,
+melyekbol amiket visszafejtettunk azok mind mukodtek local accountra. (ezt
+nevezhetjuk a rendszer gyenge pontjanak ? :) Mondjuk a filet addig eleve
+nem tudtuk olvasni amig nem szereztuk meg az apachtol a www-root euid,egid-et..</li>
+</ul>
+
+<p><br>- Ebben a pillanatban mar minden lehetosegunk megvolt arra, hogy
+barmelyik honlapot defaceljuk, vagy barmelyik honlaphoz tartozo adatbazist
+lehuzzunk.
+<p>- Kivallogattuk a webpasswd filebol a bash shellel rendelkezo usereket,
+es azokra engedtuk ra a jo oreg JOHN-t!
+<br>- 15 usert tortunk meg par perc alatt, ezeknek su-val probaltuk es
+mindnek ez volt a shelles jelszava mint a webpasswd adatbazisban levo jelszaval.
+(Szinten a rendszer elonyere legyen irva, hogy ez a 15 user kozul egyetlennek
+sem volt /bin/bash shellje, foleg false es nehany pine jutott ide.)
+<br>&nbsp;
+<p>Ebben a deface-ben a kovetkezo hostok szerepeltek : (minimum :) volt
+egy kis kavarodas a gepen a webrootok teren :)
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<table BORDER COLS=1 WIDTH="80%" NOSAVE >
+<tr>
+<td><tt>afilmsite.com&nbsp; e-contact.hu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+loyolacollege.org&nbsp;</tt>
+<br><tt>agility.hu&nbsp;&nbsp;&nbsp;&nbsp; e-start.hu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+pityer.hu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tundehullareszegen.hu</tt>
+<br><tt>amstel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; foldnapja.hu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+planetclub.org&nbsp;&nbsp;&nbsp;&nbsp; tutynet.com</tt>
+<br><tt>canderel.hu&nbsp;&nbsp;&nbsp; gandi.hu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+portar.hu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; webkom.hu</tt>
+<br><tt>bignet&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; gfk-dorel-ipms.hu&nbsp;
+szinyei.hu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; windrivers.hu</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+</tr>
+
+<tr>
+<td><tt>autolista.hu&nbsp; posterprint.hu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+trax.hu</tt>
+<br><tt>geodezia.hu&nbsp;&nbsp; plakatgyar.hu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+profitinfo.hu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uzlethaz.com</tt>
+<br><tt>goldfish&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; poster-display.net&nbsp;
+regiszterplakat.hu</tt></td>
+</tr>
+</table>
+
+<p>Na legyetek jok,
+<br>mi meg csak figyelunk titeket
+<p>- <i>Haxor Nation Crew</i> -
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+</body>
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

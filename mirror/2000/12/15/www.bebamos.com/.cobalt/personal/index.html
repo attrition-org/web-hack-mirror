@@ -1,0 +1,140 @@
+<HTML>
+<HEAD>
+  <TITLE>Personal Profile</TITLE>
+
+<SCRIPT LANGUAGE="javascript">
+<!-- hide
+/***
+* global (for all web pages) stuff
+***/
+
+var loaded=false;
+
+/*
+* show information
+*/
+var timeoutCount=0;
+var clean=true;
+
+function showInfo( info, period ) {
+  if( loaded && !( ( info==null || info.length==0 ) && clean ) && frames[ 1 ]!=null && frames[ 1 ].frames[ 2 ]!=null && frames[ 1 ].frames[ 2 ].document!=null ) {
+    if( ( info==null || info.length==0 ) && !clean ) clearInfo( true );
+    else {
+	clean=false;
+
+	var target=frames[ 1 ].frames[ 2 ].document;
+	var ver=navigator.appVersion;
+	if( ver.indexOf( 'MSIE 4' )!=-1 && ver.indexOf( 'Mac' )!=-1 )
+	    target.location='/cgi-bin/.cobalt/message/message.cgi?info='+escape( info );
+	else {
+	    target.open();
+	    target.write( '<HTML><BODY BGCOLOR=#FFFFFF>' );
+	    target.write( '<CENTER><TABLE WIDTH=95% BORDER=1 CELLSPACING=0><TR><TD ALIGN=CENTER><FONT SIZE=-1 COLOR=#000000>' );
+	    target.write( info );
+	    target.write( '</FONT></TD></TR></TABLE></CENTER>' );
+	    target.write( '</BODY></HTML>' );
+	    target.close();
+	}
+
+	timeoutCount++;
+
+	// default: clear info after 15 seconds
+	var clearAfter=15000;
+	if( period!=null ) clearAfter=period;
+	// 0 or -ve clearAfter and null info takes forever
+	if( clearAfter>0 ) setTimeout( "clearInfo( false );", clearAfter );
+	else timeoutCount=0;
+    }
+  }
+}
+
+function clearInfo( now ) {
+  // can't use clearTimeout here because of a bug found in navigator 3.03 gold on NT
+
+  var path=top.location.pathname;
+  // work around NT server/IE4.01 bug
+  if( path.indexOf( '/:' )==0 ) {
+    var secondSlash=path.indexOf( '/', 2 );
+    if( secondSlash>=0 ) path=path.substring( secondSlash );
+  }
+  var lastSlash;
+  if( ( lastSlash=path.lastIndexOf( '/' ) )!=path.length-1 )
+    path=path.substring( 0, lastSlash+1 );
+
+  if( now ) {
+      frames[ 1 ].frames[ 2 ].location.pathname=path+"blank.html";
+      clean=true;
+  }
+  else if( timeoutCount>0 ) {
+    timeoutCount--;
+    if( timeoutCount==0 && !clean ) {
+      frames[ 1 ].frames[ 2 ].location.pathname=path+"blank.html";
+      clean=true;
+    }
+  }
+}
+
+
+/*
+* menu manipulation
+*/
+var pageURLs=new Array();pageURLs[0]=new Object();pageURLs[0][0]='/cgi-bin/.cobalt/profileMod/profileMod.cgi';pageURLs[1]=new Object();pageURLs[1][0]='/cgi-bin/.cobalt/email/email.cgi';pageURLs[2]=new Object();pageURLs[2][0]='/cgi-bin/.cobalt/userUsage/userUsage.cgi';pageURLs[3]=new Object();pageURLs[3][0]='/cgi-bin/.cobalt/backup/backupmenu.cgi?PERSONAL';pageURLs[4]=new Object();pageURLs[4][0]='/cgi-bin/.cobalt/backup/restoremenu.cgi';
+
+function gotoPage() {
+  var queryStr=location.search;
+
+  if( queryStr=='' ) return;
+  if( queryStr.indexOf( '?goto=' )!=0 ) return;
+
+  queryStr=queryStr.substring( 6 );
+  var commaIndex=queryStr.indexOf( ',' );
+  var mainItemIndex=queryStr.substring( 0, commaIndex );
+  var subItemIndex=queryStr.substring( commaIndex+1 );
+
+  selectMainMenu( mainItemIndex );
+  if( subItemIndex!=0 ) selectSubMenu( mainItemIndex, subItemIndex );
+}
+
+function selectMainMenu( itemIndex ) {
+  if( navigator.appVersion.indexOf( 'IE 3.0A' )!=-1 ) {
+    frames[ 0 ].location='menu'+itemIndex+'.html';
+  }
+  else {
+    frames[ 0 ].location.replace( 'menu'+itemIndex+'.html' );
+  }
+
+  selectSubMenu( itemIndex, 0 );
+}
+
+function selectSubMenu( mainItemIndex, subItemIndex ) {
+  if( navigator.appVersion.indexOf( 'IE 3.0A' )!=-1 ) {
+    frames[ 1 ].frames[ 0 ].location='menu'+mainItemIndex+'-'+subItemIndex+'.html';
+  }
+  else {
+    frames[ 1 ].frames[ 0 ].location.replace( 'menu'+mainItemIndex+'-'+subItemIndex+'.html' );
+  }
+
+  // force reload
+  if( navigator.appVersion.indexOf( 'IE 3.0A' )!=-1 ) {
+    frames[ 1 ].frames[ 1 ].location=pageURLs[ mainItemIndex ][ subItemIndex ]+'?'+( new Date() ).getTime();
+  }
+  else {
+    frames[ 1 ].frames[ 1 ].location.replace( pageURLs[ mainItemIndex ][ subItemIndex ]+'?'+( new Date() ).getTime() );
+  }
+}
+// end hide -->
+</SCRIPT>
+</HEAD>
+
+<FRAMESET cols="165,*" border=0 frameborder=0 framespacing=0 onLoad="loaded=true; gotoPage();">
+
+   <FRAME SRC="menu0.html" name="mainMenu" MARGINWIDTH="0" MARGINHEIGHT="0" border=0 frameborder=0 FRAMESPACING="0" NORESIZE SCROLLING="no">
+   <FRAME SRC="right.html" name="right" MARGINWIDTH="0" WIDTH="0" border=0 frameborder=0 FRAMESPACING="0">
+
+</FRAMESET>
+
+<NOFRAMES>
+<P>This page is designed to be viewed by a browser which supports Frames. You will need a Frames-capable browser.</P>
+</NOFRAMES>
+
+</HTML>

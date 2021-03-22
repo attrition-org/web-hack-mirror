@@ -1,0 +1,84 @@
+<html>
+
+<head>
+<title>Dudley MBC: Failed Link</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+</head>
+
+<body background="http://www.dudley.gov.uk/bg.gif" style="font-family: Arial">
+
+<table border="0" width="100%">
+  <tr>
+    <td width="80%"><font face="Arial"><strong><big>Failed Link (404 Object Not Found)</big><br>
+    <a href="http://www.dudley.gov.uk"><big>Dudley Metropolitan Borough</big></a></strong></font></td>
+    <td width="20%" align="right" valign="top"><a href="http://www.dudley.gov.uk"><font face="Arial"><img src="http://www.dudley.gov.uk/banner.gif" alt="banner.gif (15331 bytes)" WIDTH="93" HEIGHT="34" border="0"></font></a></td>
+  </tr>
+</table>
+
+<p><font face="Arial"><small>Unfortunately, the hyperlink that you have selected has
+failed. While hyperlinks are monitored on a regular basis, the Dudley website is under
+constant change and broken links can sometimes be missed.</small></font></p>
+
+<p><font face="Arial"><small>The page may have been moved, renamed or deleted. To check if
+the information you require is still online please use the <strong>Search facility </strong>accessed
+from the <a href="http://www.dudley.gov.uk">Dudley Metropolitan Borough homepage</a>.</small></font></p>
+
+<p><font face="Arial"><small>We apologise for this break in your browsing, but would ask
+if you could please use the below form to notify us of the broken link so that it can be
+corrected as soon as possible.</small></font></p>
+
+<!--webbot BOT="GeneratedScript" PREVIEW=" " startspan --><script Language="JavaScript"><!--
+function FrontPage_Form1_Validator(theForm)
+{
+
+  if (theForm.Name.value == "")
+  {
+    alert("Please enter a value for the \"Name\" field.");
+    theForm.Name.focus();
+    return (false);
+  }
+
+  if (theForm.Failed_link_details.value == "")
+  {
+    alert("Please enter a value for the \"Details of the failed link\" field.");
+    theForm.Failed_link_details.focus();
+    return (false);
+  }
+  return (true);
+}
+//--></script><!--webbot BOT="GeneratedScript" endspan --><form method="POST" action="../_vti_bin/shtml.dll/syte/fail404.htm" onsubmit="return FrontPage_Form1_Validator(this)" name="FrontPage_Form1" webbot-action="--WEBBOT-SELF--">
+  <!--webbot bot="SaveResults" S-Email-Format="TEXT/PRE" S-Email-Address="inet_supp.itsd@mbc.dudley.gov.uk" B-Email-Label-Fields="TRUE" B-Email-ReplyTo-From-Field="TRUE" S-Email-ReplyTo="Email" B-Email-Subject-From-Field="FALSE" S-Email-Subject="Failed hyperlink" S-Builtin-Fields="Date Time" S-Form-Fields="Name Email Failed_link_is Failed_link_details " U-Confirmation-Url="thanks2.htm" startspan --><input TYPE="hidden" NAME="VTI-GROUP" VALUE="0"><!--webbot bot="SaveResults" endspan i-checksum="43374" --><p><font face="Arial"><small><strong>Name</strong></small><br>
+  <!--webbot bot="Validation" S-Display-Name="Name" B-Value-Required="TRUE" --><input type="text" name="Name" size="30"></font></p>
+  <p><font face="Arial"><small><strong>Email Address</strong></small><br>
+  <input type="text" name="Email" size="30"></font></p>
+  <table border="0">
+    <tr>
+      <td><font face="Arial"><small><strong>Is the failed link ...</strong></small></font></td>
+      <td><font face="Arial"><strong><small>from inside the Dudley website ?</small></strong></font></td>
+      <td><input type="radio" value="Internal" name="Failed_link_is"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><font face="Arial"><strong><small>from another website ?</small></strong></font></td>
+      <td><input type="radio" name="Failed_link_is" value="External"></td>
+    </tr>
+  </table>
+  <table border="0" width="50%">
+    <tr>
+      <td><small><font face="Arial"><strong>If it is from inside the Dudley website please enter
+      either the page title, the name of the the link or the content of the page.</strong></font></small></td>
+    </tr>
+    <tr>
+      <td valign="middle" align="center"><font color="#0000A0" face="Arial"><small><strong><em>OR</em></strong></small></font></td>
+    </tr>
+    <tr>
+      <td><small><font face="Arial"><strong>If it is a failed link from another website please
+      enter their web address. We will then, where possible, notify them so that the link can be
+      updated or removed.</strong></font></small></td>
+    </tr>
+  </table>
+  <p><!--webbot bot="Validation" S-Display-Name="Details of the failed link" B-Value-Required="TRUE" --><textarea rows="3" name="Failed_link_details" cols="50" style="font-family: Arial"></textarea></p>
+  <p><font face="Arial"><input type="submit" value="Send" name="Send"> <input type="reset" value="Reset" name="Reset"></font></p>
+</form>
+</body>
+</html>

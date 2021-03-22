@@ -1,0 +1,35 @@
+<HTML><HEAD> 
+<TITLE> Add URL </TITLE> 
+</HEAD><BODY bgColor="beige"> 
+
+<H1 ALIGN='CENTER'> Add URL </H1> 
+<TABLE BORDER=0 width=100%> 
+<FORM ACTION="/cgi-bin/addurl.cgi" METHOD="post"> 
+
+<TR><TD> Category  <TD> <select name="category"> 
+<option value="BUSINESS"> Business
+<option value="COMPUTERS"> Computers
+<option value="ENTERTAINMENT"> Entertainment
+<option value="SOCIETY"> Society
+<option value="ARTS"> Arts
+<option value="EDUCATION"> Education
+<option value="GOVT"> Government
+<option value="HEALTH"> Health
+<option value="NEWS"> News
+<option value="RECREATION"> Recreation
+<option value="REFERENCE"> Reference
+<option value="REGIONAL"> Regional
+<option value="SCIENCE"> Science
+<option value="SOCIAL"> Social Science
+</select>
+ 
+<TR><TD> Title  <TD> <INPUT TYPE=TEXT NAME="title" SIZE=25> 
+<TR><TD> URL  <TD> <INPUT TYPE=TEXT NAME="url" SIZE=40> 
+<TR><TD> Email  <TD> <INPUT TYPE=TEXT NAME="email" SIZE=25> 
+<TR><TD> Description  <TD> 
+<TR><TD COLSPAN=2><TEXTAREA NAME="description" ROWS=3 COLS=50 size=100></TEXTAREA> 
+<TR><TD><TD> <INPUT TYPE="SUBMIT" VALUE="Submit URL"> 
+</FORM> 
+</TABLE> 
+
+</BODY></HTML>  

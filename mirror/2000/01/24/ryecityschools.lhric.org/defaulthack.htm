@@ -1,0 +1,49 @@
+<HTML>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso8859-1">
+<HEAD>
+<TITLE>Welcome to The Rye City School District Web Page</TITLE>
+</HEAD>
+<BODY BGCOLOR=BLUE TOPMARGIN=0 LEFTMARGIN=0 alink=#23238E vlink=#808080 link=#23238E>
+<!--TOOLBAR_START-->
+<!--TOOLBAR_EXEMPT-->
+<!--TOOLBAR_END-->
+
+<CENTER>
+<BR>
+<BOLD>
+<FONT SIZE=6 color="White" FACE="Verdana, Arial, Helvetica">
+<P>Welcome to</P>
+<P>The Rye City</P>
+<P>School District</P>
+<SCRIPT LANGUAGE="JavaScript">
+
+	ref = document.referrer
+    if ((ref == "http://ryecityschools.lhric.org")|(ref == "http://ryecityschools.lhric.org/")|(ref == "http://ryecityschools.lhric.org")|(ref == "http://ryecityschools.lhric.org"))
+		{
+		document.write('Welcome to The Rye City School District.');
+		document.write(ref);
+		newurl = "http://ryeschools.lhric.org/ryeweb/welcome.html";
+		}
+	else
+		{
+		document.write('');
+		document.write(ref);
+		newurl = "http://ryecityschools.lhric.org/ryeweb/welcome.html";
+		}
+				
+setTimeout("top.location.href = newurl",5000);
+
+</SCRIPT>
+<BR>
+</FONT>
+<FONT FACE="HELVETICA">
+<FONT color = White>
+<FONT Size = 2>
+<A HREF = "ryeweb/welcome.html">If this page does not autoload in 5 seconds please click here </A>
+</FONT>
+</BR>
+</BOLD>
+</CENTER>
+</BODY>
+</HTML>

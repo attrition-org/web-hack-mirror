@@ -1,0 +1,188 @@
+
+==================
+The attack method:
+==================
+
+The method of gaining access is a simple one - it's down to a misconfiguration
+of the webserver software and not through any exlpoitable bugs.
+
+You see, whoever setup Micro$oft SQL(MS-SQL) server on the WWW box forgot to
+change the default admin password. With most products this would not be very
+serious, as they would not allow access to the underlying operating system
+(OS). However, in the case of MS-SQL, once a user has been authenticated
+(using the default sysadmin user - 'sa' - and the default blank password), it
+is possible not only to execute queries into the database,
+create/modify/delete tables etc, but also to execute what are known as Stored
+Procedures (SP).
+
+These are basically pre-written routines that come with most databases to
+perform routine tasks, to give remote online help etc. They are executed in
+exactly the same way as a normal SQL query. In the case of MS-SQL however,
+there is a very dangerous SP called 'xp_cmdshell' that executes OS commands
+under the user-context of the SQL server. In 99% of cases, MS-SQL runs as a
+service user and therefore  has BUILTIN\System privileges - greater than
+Administrator rights. Anyone who can authenticate with the SQL server can
+therefore bypass OS authentication and execute commands with higher privileges
+than any user/superuser.
+
+So, for example, it is possible to do things like:
+
+	xp_cmdshell 'dir c:\'
+	
+and get a list of all the files on drive C:. One could also add a new
+administrator user for later access to the system, via a different route:
+
+	xp_cmdshell 'net user ahacker /add'
+	xp_cmdshell 'net user ahacker ""'
+	xp_cmdshell 'net localgroup administrators ahacker /add'
+	
+This would create an administrator with no password.
+
+However, when I was first investigating this vulnerability, I could not at
+first envision a way to copy files from a remote machine to the victim
+machine. I made early attempts at creating files using the 'echo' command to
+redirect output to files, but this was a slow process with limited
+capabilites. For example, I could do this:
+
+	xp_cmdshell 'echo "<html><body>Hello world!</body></html>" >
+c:\inetpub\wwwroot\index.html'
+
+and it would work, but it was messy and left a lot to be desired. At this
+stage I realised that I really needed a new kind of SQL client.... one that
+did the 3 things I needed:
+
+(1) give me a command prompt, so I didn't have to type 'xp_cmdshell ....' all
+the time.
+
+(2) have the ability to upload/downloads files at will
+
+(3) have SQL query functionality to manipulate databases
+
+So I developed my own tool under Linux for this very purpose. At present it
+still has bugs, but it does work. Now, because I had my own tool (written in
+C, by the way) I could spend time getting the file-transfer section right. I
+knew that I had to somehow use a table in the database(DB) to temporily store
+the file data, then pull it out into a file on the victim host. The theory was
+as follows:
+
+(1) create a table in the victims DB to store the file-data
+
+(2) create a record in that table that could store binary data
+
+(3) convert the file-data into the correct format for the record at (2)
+
+(4) remotely insert the file-data into that record
+
+(5) coerce the victim machine to locally export that data into a file
+
+(6) remove the table created at (1) and tidy up.
+
+It became apparent after some investigation that MS-SQL DB's have a record
+type called 'image' which can hold arbitrarily large amounts of binary data -
+perfect for my needs. This meant I could upload text,images and executable
+programs. The 'image' type requires that any data be converted to hex-pairs
+before insertion into the DB. For example, take the string "Hello". Converted
+into hex this would be:
+
+	H - 48
+	e - 65
+	l - 6c
+	l - 6c
+	o - 6f
+	
+making the hex-encoded string:
+
+	0x48656c6c6f
+	
+So, I wrote a function that converted any file into a hex-encoded string and
+stored it in memory. Next, I wrote code to create a table in the remote DB
+by executing code similar to:
+
+	CREATE TABLE hackertable (filedata image)
+	
+This created the table and the record of the appropriate type. Next, it was a
+simple case of writing a function to create a query to insert my previously
+converted data into the new table. The function would create and execute a
+command similar to:
+
+	INSERT INTO hackertable (filedata) VALUES(0x48656c6c6f)
+	
+So, at this stage I had completed steps (1),(2),(3) and (4) above. Next,
+I needed is a way to get the victim machine to export this record into a
+file on the hard-disk in a specified place. Luckily, MS-SQL comes with a
+command-line OS tool to do just this - 'bcp'. Batch Copy Program (or is it
+Bulk... I never can remember). Anyway, this program is used to import/export
+data from a SQL database. All thats needed for it to work is:
+
+(a) the name of the table to work with
+
+(b) the operation to perform (import/export)
+
+(c) the file to use in the operation
+
+(d) details of username/password to authenticate with the DB
+
+So, to extract data from a record in the DB, we need to execute something
+like:
+
+	xp_cmdshell 'bcp hackertable out c:\temp\hello.txt -U sa -P'
+	
+Which basically says "export from hackertable all data into the file
+'c:\temp\hello.txt' using username 'sa' with no password".
+
+This would be perfect except for one thing: bcp expects interaction with a
+user - something we cannot do remotely. I appeared to be stuck.... hang
+on though.... what if the user interaction is always the same... predictable
+even.... it would then be possible to create a text file containing all the
+keyboard commands expected and pipe them into 'bcp'. It turns out that this is
+indeed the case. When performing the above operation, bcp requires four key
+strokes: ENTER, 0, ENTER, ENTER.  So I used the 'echo' trick from before to
+create  a command-file:
+
+	xp_cmdshell 'echo.> c:\bcp.cmd'
+	xp_cmdshell 'echo 0>> c:\bcp.cmd'
+	xp_cmdshell 'echo.>> c:\bcp.cmd'
+	xp_cmdshell 'echo.>> c:\bcp.cmd'
+	
+and then use this as our keyboard input like so:
+
+	xp_cmdshell 'type c:\bcp.cmd | bcp hackertable out c:\temp\hello.txt -U sa
+-P'
+
+and voila! The file gets exported exactly where specified. It's then a simple
+case of dropping the temporary table, deleting the command file for bcp, and
+signing off. Job done.
+
+All this, of course, would be a pain in the ass if it had to be done manually
+- thats why I wrote my tool to do it automatically. I use it to connect to the
+MS-SQL server, backup any original files, then simply execute this:
+
+	/U file-to-upload c:\place-to-put-it
+	
+and it does the rest. If you would like a copy of the program source-code,
+just ask.
+
+=======================
+Protecting your system:
+=======================
+
+This is the easiest bit of all. Two steps:
+
+(1) assign a password to the 'sa' user of the SQL server
+
+(2) block access to port 1433 on your webserver using a firewall.
+
+Thats it. No more problem. Note, however that if your clients require access
+to the SQL server, stage (2) might be slightly tricky.
+
+I would recommend that you remove the SQL server completely from
+the WWW box and install it on a seperate machine on the local network. This
+would further remove the possibilty of attack and would also increase the
+performance of your webserver.
+
+Regards,
+
+Herbless@hushmail.com
+
+---------------------------------------------------------
+"If you think education is expensive, then try ignorance"

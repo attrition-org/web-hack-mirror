@@ -1,0 +1,1333 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>Army Sustaining Base Management (SBT) Home Page</title>
+
+
+<script LANGUAGE="JavaScript" FPTYPE="dynamicanimation">
+<!--
+  // If you want to change this script, you must also make the following
+  // changes so that FrontPage will not overwrite your new script.
+  // In the script tag, change type="dynamicanimation" to type="mydynamicanimation"
+  // In the first script statement, change "dynamicanimation" to "mydynamicanimation"
+  // Throughout the HTML content, change dynamicanimation= to mydynamicanimation=
+  // Change function dynAnimation to function mydynAnimation
+  // In the body tag, change onload="dynAnimation()" to onload="mydynAnimation()"
+  dynamicanimAttr = "dynamicanimation"
+  animateElements = new Array()
+  currentElement = 0
+  speed = 0
+  stepsZoom = 8
+  stepsWord = 8
+  stepsFly = 12
+  stepsSpiral = 16
+  steps = stepsZoom
+  step = 0
+  outString = ""
+  function dynAnimation()
+  {
+    var ms = navigator.appVersion.indexOf("MSIE")
+    ie4 = (ms>0) && (parseInt(navigator.appVersion.substring(ms+5, ms+6)) >= 4)
+    if(!ie4)
+    {
+      if((navigator.appName == "Netscape") &&
+         (parseInt(navigator.appVersion.substring(0, 1)) >= 4))
+      {
+        for (index=document.layers.length-1; index >= 0; index--)
+        {
+            layer=document.layers[index]
+            if (layer.left==10000)
+                layer.left=0
+        }
+      }
+      return
+    }
+    for (index=document.all.length-1; index >= document.body.sourceIndex; index--)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if(null != animation)
+      {
+        if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        {
+          ih = el.innerHTML
+          outString = ""
+          i1 = 0
+          iend = ih.length
+          while(true)
+          {
+            i2 = startWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, false, "")
+            if(i2 == iend)
+              break
+            i1 = i2
+            i2 = endWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, true, animation)
+            if(i2 == iend)
+              break
+            i1 = i2
+          }
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+        if(animation == "zoomIn" || animation == "zoomOut")
+        {
+          ih = el.innerHTML
+          outString = "<SPAN " + dynamicanimAttr + "=\"" + animation + "\" style=\"position: relative; left: 10000;\">"
+          outString += ih
+          outString += "</SPAN>"
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+      }
+    }
+    i = 0
+    for (index=document.body.sourceIndex; index < document.all.length; index++)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if (null != animation)
+      {
+        if(animation == "flyLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyRight")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyTop" || animation == "dropWord")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottom")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyTopLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyTopRight" || animation == "flyTopRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottomLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyBottomRight" || animation == "flyBottomRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "spiral")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "zoomIn")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else if(animation == "zoomOut")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        el.initLeft = el.style.posLeft
+        el.initTop = el.style.posTop
+        animateElements[i++] = el
+      }
+    }
+    window.setTimeout("animate();", speed)
+  }
+  function offsetLeft(el)
+  {
+    x = el.offsetLeft
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      x += e.offsetLeft;
+    return x
+  } 
+  function offsetTop(el)
+  {
+    y = el.offsetTop
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      y += e.offsetTop;
+    return y
+  } 
+  function startWord(ih, i)
+  {
+    for(tag = false; i < ih.length; i++)
+    {
+      c = ih.charAt(i)
+      if(c == '<')
+        tag = true
+      if(!tag)
+        return i
+      if(c == '>')
+        tag = false
+    }
+    return -1
+  }
+  function endWord(ih, i)
+  {
+    nonSpace = false
+    space = false
+    while(i < ih.length)
+    {
+      c = ih.charAt(i)
+      if(c != ' ')
+        nonSpace = true
+      if(nonSpace && c == ' ')
+        space = true
+      if(c == '<')
+        return i
+      if(space && c != ' ')
+        return i
+      i++
+    }
+    return -1
+  }
+  function outWord(ih, i1, i2, dyn, anim)
+  {
+    if(dyn)
+      outString += "<SPAN " + dynamicanimAttr + "=\"" + anim + "\" style=\"position: relative; left: 10000;\">"
+    outString += ih.substring(i1, i2)
+    if(dyn)
+      outString += "</SPAN>"
+  }
+  function animate()
+  {
+    el = animateElements[currentElement]
+    animation = el.getAttribute(dynamicanimAttr, false)
+    step++
+    if(animation == "spiral")
+    {
+      steps = stepsSpiral
+      v = step/steps
+      rf = 1.0 - v
+      t = v * 2.0*Math.PI
+      rx = Math.max(Math.abs(el.initLeft), 200)
+      ry = Math.max(Math.abs(el.initTop),  200)
+      el.style.posLeft = Math.ceil(-rf*Math.cos(t)*rx)
+      el.style.posTop  = Math.ceil(-rf*Math.sin(t)*ry)
+    }
+    else if(animation == "zoomIn")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(50+50*step/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else if(animation == "zoomOut")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(100+200*(steps-step)/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else
+    {
+      steps = stepsFly
+      if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        steps = stepsWord
+      dl = el.initLeft / steps
+      dt = el.initTop  / steps
+      el.style.posLeft = el.style.posLeft - dl
+      el.style.posTop = el.style.posTop - dt
+    }
+    if (step >= steps) 
+    {
+      el.style.posLeft = 0
+      el.style.posTop = 0
+      currentElement++
+      step = 0
+    }
+    if(currentElement < animateElements.length)
+      window.setTimeout("animate();", speed)
+  }
+//-->
+</script><meta name="Microsoft Theme" content="none"><meta name="Microsoft Border" content="none"></head>
+
+<body bgproperties="fixed" background="images/flagbg.jpg" link="#FFFFFF" vlink="#9FFFFF" alink="#000000" onload="dynAnimation()">
+
+<h1 align="right"><font color="#D3E8FE"><small><small><small><small><small><small><small><small><small>n<a name="&nbsp;..">..</a></small></small></small></small></small></small></small></small></small></font></h1>
+
+<h1 align="center"><font color="#80FFFF"><small><small><strong>&nbsp;</strong></small></small></font><img src="images/waver.gif" alt="waver.gif (12532 bytes)" WIDTH="100" HEIGHT="55"></h1>
+
+<h1 align="center"><font color="#0000A0" face="MS Serif"><em><strong>Army Sustaining
+BaseTraining (SBT) Management</strong></em></font></h1>
+<div align="center"><center>
+
+<table border="1" width="454" height="40" bgcolor="#FFFFFF" bordercolor="#000080" bordercolorlight="#000080" bordercolordark="#800000" cellspacing="4" cellpadding="5">
+  <tr>
+    <td width="114" height="40" valign="middle" bgcolor="#C10000" dynamicanimation="spiral" style="position: relative !important; left: 10000 !important"><small><strong><font color="#FF0000"><p align="center"></font><font color="#FFFFFF"><small><small><u><marquee border="0" style="font-family: Bookman Old Style; font-size: 12pt; border-left: 3px none rgb(0,0,128); border-right: 3px none rgb(192,192,192); border-top: 3px none rgb(0,0,128); border-bottom: 3px none rgb(192,192,192)" width="97" scrollamount="3" scrolldelay="82"> FYOO TMRB Meeting Information</marquee></u></small></small></font></strong></small></td>
+    <td width="341" height="40" dynamicanimation="flyBottomRightWord" style="position: relative !important; left: 10000 !important"><strong><small><font color="#FF0000">Meeting Location --Ft. Eustis VA. --6 -7 Jun 00 &nbsp;&nbsp; &nbsp;
+    &nbsp;Lodging -- Ramada Inn,&nbsp; 950 J. Clyde Morris Blvd., Newport News, VA
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Reservations-- 1 800 841 1112 (before 5 May 00)&nbsp;&nbsp; (Indicate you are with the
+    &quot;SB TMRB&quot;)</font></small></strong></td>
+  </tr>
+</table>
+</center></div>
+
+<p align="center"><font face="Elephant" color="#800000"><big><u><em><strong><big>Welcome
+to the SBT Home Page</big>!</strong></em></u></big></font></p>
+
+<p align="left"><big><font color="#0000A0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+This Web site is dedicated to the provision of information about Army institutionally
+provided Combat Support (CS)/Combat Service Support (CSS) training.&nbsp; The primary
+focus is on the SBT Management process including relevant course data, course analysis
+procedures and analysis results from the most recent SBT management training review for
+courses included under the SBT Management umbrella.&nbsp; Topics covered are listed in the
+table of contents below.</font></big></p>
+
+<hr width="90%" size="4" color="#008000">
+<div align="center"><center>
+
+<table border="1" width="594" height="6" bgcolor="#000080" bordercolor="#C0C0C0" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF">
+  <tr>
+    <td width="147" height="6" align="center" valign="middle">
+    <applet code="fphover.class" codebase="_fpclass/" width="136" height="24">
+      <param name="text" value="Table of Contents">
+      <param name="color" value="#000080">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="#Table" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+    <td width="94" height="6" align="center" valign="middle" bgcolor="#808080">
+    <applet code="fphover.class" codebase="_fpclass/" width="81" height="20" align="left">
+      <param name="text" value="SBT Goals">
+      <param name="color" value="#808080">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="#Goals" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    <font color="#FFFFFF"><strong>&nbsp;</strong></font></td>
+    <td width="92" height="6" bgcolor="#C0C0C0"><p align="center"><font color="#000080" face="Georgia" size="4"><em><strong>On this&nbsp; page</strong></em></font></td>
+    <td width="139" height="6" align="center" valign="middle" bgcolor="#808080"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="119" height="24">
+      <param name="text" value="Point of Contact">
+      <param name="color" value="#808080">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="#inquiries" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+    <td width="122" height="6" align="center" valign="middle">
+    <applet code="fphover.class" codebase="_fpclass/" width="104" height="24">
+      <param name="text" value="Related Webs">
+      <param name="color" value="#000080">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="#related Web Sites" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+</table>
+</center></div><div align="center"><center>
+
+<table border="1" width="188" height="2" bgcolor="#000080" bordercolor="#FFFFFF" bordercolorlight="#C0C0C0">
+  <tr>
+    <td width="188" height="2" bgcolor="#800000"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="172" height="24">
+      <param name="text" value="Other Pages in This Web">
+      <param name="color" value="#800000">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="#pages" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+</table>
+</center></div>
+
+<p align="center">&nbsp;<img src="images/Index.2.gif" alt="wpe3.gif (1167 bytes)" WIDTH="590" HEIGHT="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+<div align="left">
+
+<table border="5" width="587" height="256" bgcolor="#DDDDDD" bordercolor="#000000" bordercolorlight="#800000" bordercolordark="#000080">
+  <tr>
+    <td width="581" height="28" bgcolor="#000080" colspan="2"><p align="center"><font color="#FFFFFF"><big><big><em><strong><a name="Table">Table</a> of Contents</strong></em></big></big></font></td>
+  </tr>
+  <tr>
+    <td width="345" height="1" bgcolor="#808080" bordercolor="#000080" bordercolorlight="#C0C0C0" valign="top"><a href="Background.htm"><strong><font face="Times New Roman">General Background and Objectives</font></strong></a></td>
+    <td width="345" height="19" bgcolor="#808080" bordercolor="#000080" bordercolorlight="#C0C0C0" rowspan="3"><font face="Times New Roman"><strong>&nbsp;<a href="Inventory%20Primary.htm">SBT Course Inventory - Overview</a>&nbsp; <font color="#FFFFFF"><big>*</big></font></strong></font></td>
+  </tr>
+  <tr>
+    <td width="345" height="0" bgcolor="#808080" bordercolor="#000080" bordercolorlight="#C0C0C0" valign="top"><strong><font face="Times New Roman">
+    &nbsp;&nbsp;&nbsp;&nbsp; <a href="Procedural%20Overview.htm">Procedural Overview</a>
+    &nbsp; <font color="#FFFFFF"><big>*</big></font></font></strong></td>
+  </tr>
+  <tr>
+    <td width="345" height="0" bgcolor="#808080" bordercolor="#000080" bordercolorlight="#C0C0C0" valign="top"><strong><font face="Times New Roman">
+    &nbsp;&nbsp;&nbsp;&nbsp; <a href="SBT%20Management%20Cycle.htm">SBT Management Cycle
+    Summary</a>&nbsp; <font color="#FFFFFF"><big>*</big></font></font></strong></td>
+  </tr>
+  <tr>
+    <td width="345" height="1" bgcolor="#808080" bordercolor="#000080" bordercolorlight="#C0C0C0" valign="top"><strong><font face="Times New Roman"><a href="TMRB%20Report%20-%2099.htm">TMRB Mtg Report -- 15-16 Jun 99</a>&nbsp; <font color="#FFFFFF"><big>*</big></font></font></strong></td>
+    <td width="345" height="5" bgcolor="#808080" bordercolor="#000080" bordercolorlight="#C0C0C0"><font face="Times New Roman"><strong>&nbsp;&nbsp;&nbsp; <small><a href="ftp://ftp-dcst.monroe.army.mil/DCST/sbt/cij00tmrb.xls">Course Inventory - FTP File</a>
+    &nbsp; </small><big><font color="#FFFFFF">*</font></big></strong></font></td>
+  </tr>
+  <tr>
+    <td width="345" height="1" bgcolor="#808080" bordercolor="#000080" bordercolorlight="#C0C0C0" valign="top"><font face="Times New Roman"><strong><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="TMRB%20Mtg%20Agenda%2015%20-%2016%20Jun%2099.htm">TMRB Mtg Agenda</a> &nbsp; </small><big><font color="#FFFFFF">*</font></big></strong></font></td>
+    <td width="242" height="1" bgcolor="#808080" bordercolor="#000080" bordercolorlight="#C0C0C0" valign="top"><strong><small>&nbsp;&nbsp;&nbsp;&nbsp; <a href="Inventory%20Codes.htm">Inventory Key -- Notes/Codes/Flags</a>&nbsp; </small><font color="#FFFFFF"><big>*</big></font></strong></td>
+  </tr>
+  <tr>
+    <td width="345" height="1" bgcolor="#808080" bordercolor="#000080" bordercolorlight="#C0C0C0"><font face="Times New Roman"><strong><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="TMRB%20Mtg%20Participant%20List.htm">TMRB Mtg Participant List</a>&nbsp; </small><big><font color="#FFFFFF">*</font></big></strong></font></td>
+    <td width="242" height="1" bgcolor="#808080" bordercolor="#000080" bordercolorlight="#C0C0C0" valign="top"><font face="Times New Roman">&nbsp;<a href="SBT%20Mgt%20Process.htm"><strong>SBT Management Procedures</strong></a></font></td>
+  </tr>
+  <tr>
+    <td width="345" height="17" bgcolor="#808080" bordercolor="#000080" bordercolorlight="#C0C0C0" valign="top"><font face="Times New Roman"><strong><a href="Outputs.htm">Outputs -- FY98/99 Trg Analysis&nbsp; Cycle</a> <font color="#FFFFFF"><big>*</big></font></strong></font></td>
+    <td width="242" height="1" bgcolor="#808080" valign="top" bordercolor="#000080" bordercolorlight="#C0C0C0"><p align="left"><font face="Times New Roman"><small><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Coverage%20Criteria.htm">SBT Coverage Criteria</a></strong></small></font></td>
+  </tr>
+  <tr>
+    <td width="345" height="14" bgcolor="#808080" bordercolor="#000080" bordercolorlight="#C0C0C0" valign="top"><strong><font face="Times New Roman"><a href="TMRB%20Report-Ex%20Summary.htm">FY99 TMRB Report - Ex Summary</a>&nbsp; <font color="#FFFFFF"><big>*</big></font></font></strong></td>
+    <td width="242" height="1" bgcolor="#808080" valign="top" bordercolor="#000080" bordercolorlight="#C0C0C0"><font face="Times New Roman"><small><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="provider%20list.htm">SB Training Provider List</a></strong></small></font></td>
+  </tr>
+  <tr>
+    <td width="345" height="16" bgcolor="#808080" bordercolor="#000080" bordercolorlight="#C0C0C0" valign="top"><a href="SB%20TMRB.htm"><font face="Times New Roman"><strong>Training Mgt Review Board (TMRB)</strong></font></a></td>
+    <td width="242" height="19" bgcolor="#808080" valign="top" bordercolor="#000080" bordercolorlight="#C0C0C0"><p align="left"><font face="Times New Roman"><small><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Options.htm">Recommendation Options/Definitions</a></strong></small></font></td>
+  </tr>
+  <tr>
+    <td width="345" height="3" bgcolor="#808080" bordercolor="#000080" bordercolorlight="#C0C0C0" valign="top"><strong><font face="Times New Roman"><a href="fy99sbt.htm">FY99 Planning Mtg Decisions</a>&nbsp; <font color="#FFFFFF"><big>*</big></font></font></strong></td>
+    <td width="242" height="1" bgcolor="#808080" valign="top" bordercolor="#000080" bordercolorlight="#C0C0C0"><font face="Times New Roman"><small><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small><a href="ITRO%20Data.htm">ITRO Supplemental Data Sheet</a></small></strong></small></font></td>
+  </tr>
+  <tr>
+    <td width="345" height="3" bgcolor="#808080" bordercolor="#000080" bordercolorlight="#C0C0C0" valign="top"><font color="#FFFFFF" face="Times New Roman"><strong><big>&nbsp;&nbsp;</big><small><a href="SBT%20Planning%20Meeting%20Agenda%20&amp;%20Paticipant%20List.htm">FY99 Planning Mtg
+    Agenda/Participant List</a>&nbsp; </small><big>*</big></strong></font></td>
+    <td width="242" height="1" bgcolor="#808080" valign="top" bordercolor="#000080" bordercolorlight="#C0C0C0"><font face="Times New Roman"><small><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="analysis.htm">Analysis Questionnaire</a></strong></small></font></td>
+  </tr>
+  <tr>
+    <td width="345" height="9" bgcolor="#808080" bordercolor="#000080" bordercolorlight="#C0C0C0" valign="top"><font face="Times New Roman"><strong><a href="current.htm">Current Year Management Plan</a>&nbsp; <font color="#FFFFFF"><big>*</big></font></strong></font></td>
+    <td width="242" height="1" bgcolor="#808080" valign="top" bordercolor="#000080" bordercolorlight="#C0C0C0"><font face="Times New Roman"><small><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Outsourcing.htm">Outsourcing Criteria</a></strong></small></font></td>
+  </tr>
+  <tr>
+    <td width="345" height="19" bgcolor="#808080" bordercolor="#000080" bordercolorlight="#C0C0C0"><small><small>&nbsp;&nbsp;&nbsp;</small><strong><a href="FY00%20Analysis%20Reqrmt%20by%20Tng%20Prvdr.htm">FY00 Analysis Requirements by Tng
+    Provider</a>&nbsp; </small><font color="#FFFFFF"><big>*</big></font></strong></td>
+    <td width="242" height="3" bgcolor="#808080" valign="top" bordercolor="#000080" bordercolorlight="#C0C0C0"><font face="Times New Roman"><small><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DL%20Criteria.htm">Distance Learning Criteria</a></strong></small></font></td>
+  </tr>
+  <tr>
+    <td width="345" height="5" bgcolor="#808080" bordercolor="#000080" bordercolorlight="#C0C0C0"><a href="Cost%20Model.htm"><font face="Times New Roman"><strong>SBT
+    Cost Estimating Model</strong></font></a></td>
+    <td width="242" height="9" bgcolor="#808080" valign="top" bordercolor="#000080" bordercolorlight="#C0C0C0"><font face="Times New Roman"><small><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Ground%20Rules.htm">SBT Ground Rules</a></strong></small></font></td>
+  </tr>
+  <tr>
+    <td width="345" height="5" bgcolor="#808080" bordercolor="#000080" bordercolorlight="#C0C0C0"><a href="SBT%20Glossary.htm"><strong><font face="Times New Roman">Glossary of SBT Terminology</font></strong></a></td>
+    <td width="242" height="10" bgcolor="#808080"></td>
+  </tr>
+  <tr>
+    <td width="587" height="9" bgcolor="#C0C0C0" bordercolor="#000080" bordercolorlight="#C0C0C0" colspan="2"><strong><big><font color="#FFFFFF" face="Times New Roman"><p align="center">&nbsp; <u><big>*</font><font face="Times New Roman" color="#FF0000"> </font><font color="#FF0000" face="Georgia"><em>New
+    for FY00!</em></font></big></u></big></strong></td>
+  </tr>
+</table>
+</div>
+
+<p align="left"><img src="images/untitled.gif" alt="untitled.bmp (4630 bytes)" WIDTH="590" HEIGHT="6"></p>
+<div align="left">
+
+<table border="7" width="85%" height="17" bordercolor="#800000" bordercolordark="#000080">
+  <tr>
+    <td width="615" height="4" colspan="2" bgcolor="#C0C0C0" bordercolor="#FF0000" bordercolorlight="#FFFFFF" bordercolordark="#0000FF" valign="top"><h2 align="center"><big><font color="#FF0000"><em>SBT Management <a name="Goals">Goals</a></em></font></big></h2>
+    <p align="center">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="145" height="4" bgcolor="#FFFFFF" bordercolor="#FF0000" bordercolorlight="#FFFFFF" bordercolordark="#000080"><p align="center"><big><strong><big><font color="#0000FF">Focus Area</font><font color="#800000"> </font></big></strong></big></td>
+    <td width="470" height="4" bgcolor="#FFFFFF" bordercolor="#FF0000" bordercolorlight="#FFFFFF" bordercolordark="#000080"><p align="center"><font color="#0000FF"><big><strong><big>Goal</big></strong></big></font></p>
+    <p align="center"><big><font color="#800000" face="Times New Roman"><u><strong>Support
+    development and delivery of:</strong></u></font></big></td>
+  </tr>
+  <tr>
+    <td width="145" height="3" bgcolor="#FFFFFF" bordercolor="#FF0000" bordercolorlight="#FFFFFF" bordercolordark="#000080"><p align="center"><u><font color="#800000" face="Georgia"><big><em><strong>People</strong></em></big></font></u></td>
+    <td width="470" height="3" bgcolor="#FFFFFF" bordercolor="#FF0000" bordercolorlight="#FFFFFF" bordercolordark="#000080" valign="middle"><blockquote>
+      <p><font color="#0000A0"><big><em><strong><big>The right training, for the right people,
+      at the right time.</big></strong></em></big></font></p>
+    </blockquote>
+    </td>
+  </tr>
+  <tr>
+    <td width="145" height="3" bgcolor="#FFFFFF" bordercolor="#FF0000" bordercolorlight="#FFFFFF" bordercolordark="#000080"><p align="center"><font color="#800000" face="Georgia"><u><big><em><strong>Quality</strong></em></big></u></font></td>
+    <td width="470" height="3" bgcolor="#FFFFFF" bordercolor="#FF0000" bordercolorlight="#FFFFFF" bordercolordark="#000080" valign="middle"><blockquote>
+      <p><font color="#0000A0"><big><em><strong><big>High quality, requirements based, mission
+      focused training.</big></strong></em></big></font></p>
+    </blockquote>
+    </td>
+  </tr>
+  <tr>
+    <td width="145" height="3" bgcolor="#FFFFFF" bordercolor="#FF0000" bordercolorlight="#FFFFFF" bordercolordark="#000080"><p align="center"><font color="#800000" face="Georgia"><u><big><strong><em>Efficiency</em></strong></big></u></font></td>
+    <td width="470" height="3" bgcolor="#FFFFFF" bordercolor="#FF0000" bordercolorlight="#FFFFFF" bordercolordark="#000080"><blockquote>
+      <p><font color="#0000A0"><big><em><strong><big>Cost effective training which provides
+      opportunity for maximum return on investment.</big></strong></em></big></font></p>
+    </blockquote>
+    </td>
+  </tr>
+</table>
+</div>
+
+<p>&nbsp;</p>
+
+<p><img src="images/untitled.gif" alt="untitled.bmp (4630 bytes)" WIDTH="590" HEIGHT="6"></p>
+
+<p>&nbsp;</p>
+<div align="left">
+
+<table border="1" width="575" height="4" bgcolor="#C0C0C0" bordercolor="#C0C0C0" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF">
+  <tr>
+    <td width="575" height="4"><p align="center"><img src="images/HH01580A.gif" alt="HH01580A.gif (1311 bytes)" align="left" WIDTH="101" HEIGHT="89"><font color="#800000"><big><big><a name="Inquiries">Inquiries</a>, corrections, and/or suggestions &nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp; </big></big></font></p>
+    <p align="center"><font color="#800000"><big><big>should be forwarded to the following:</big></big></font></td>
+  </tr>
+</table>
+</div><div align="left">
+
+<table border="1" width="573" height="1" bgcolor="#FFFFFF" bordercolor="#C0C0C0" bordercolorlight="#000080" bordercolordark="#000000">
+  <tr>
+    <td width="98" height="1" valign="middle" bgcolor="#C0C0C0"><p align="center"><a href="mailto:dayw@monroe.army.mil"><img src="images/INK.GIF" alt="Ink well and quill writing &quot;email&quot;in Script.GIF (6335 bytes)" WIDTH="115" HEIGHT="101"></a></td>
+    <td width="475" height="1"><p align="left"><font color="#0000A0"><strong>&nbsp;
+    dayw@monroe.army.mil</strong></font></td>
+  </tr>
+  <tr>
+    <td width="98" height="4" bgcolor="#C0C0C0"><strong><font color="#FFFFFF"><p align="center"></font><font color="#0000A0" face="Elephant">Voice</font></strong></td>
+    <td width="475" height="4"><font color="#0000A0"><strong>&nbsp; Bill Day
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    DSN 680-5649 or (757) 728-5649</strong></font></td>
+  </tr>
+  <tr>
+    <td width="98" height="2" bgcolor="#C0C0C0"><strong><font color="#FFFFFF"><p align="center"></font><font color="#0000A0" face="Elephant">Fax &nbsp;</font></strong></td>
+    <td width="475" height="2"><font color="#0000A0"><strong><p align="center">5764</strong></font></td>
+  </tr>
+  <tr>
+    <td width="98" height="1" valign="top" bgcolor="#C0C0C0"><font color="#FFFFFF"><strong><p align="center">&nbsp;</p>
+    </strong></font><p align="center"><font color="#0000A0" face="Elephant"><strong>Mailing
+    Address</strong></font></td>
+    <td width="475" height="1" style="padding-left: 10px">&nbsp;<p align="left"><font color="#0000A0"><strong>HQ TRADOC </strong></font></p>
+    <p align="left"><font color="#0000A0"><strong>ATTN: &nbsp; ATTG-R (BILL DAY)</strong></font></p>
+    <p align="left"><font color="#0000A0"><strong>5 FENWICK ROAD, BLDG 161, RM 321</strong></font></p>
+    <p align="left"><font color="#0000A0"><strong>FORT MONROE, VA&nbsp;&nbsp; 23651-1049</strong></font></p>
+    <p>&nbsp;</td>
+  </tr>
+</table>
+</div>
+
+<p>&nbsp;&nbsp;<img src="images/untitled.gif" alt="untitled.bmp (4630 bytes)" WIDTH="590" HEIGHT="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000A0"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; </strong></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+<p><font face="Georgia" color="#0000A0"><big><u><em><strong>To get to other <a name="related Web Sites">related Web Sites</a>.</strong></em></u></big></font></p>
+<div align="left">
+
+<table border="6" width="419" height="15" bgcolor="#008000" bordercolor="#C0C0C0" bordercolorlight="#000080" bordercolordark="#000080">
+  <tr>
+    <td width="451" height="9" bgcolor="#E6E6E6"><p align="center"><u><font face="Georgia" color="#000080"><strong><big><big>Related Web Sites</big></big></strong></font></u></td>
+  </tr>
+  <tr>
+    <td width="451" height="12"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="80" height="24">
+      <param name="text" value="US Army">
+      <param name="color" value="#008000">
+      <param name="hovercolor" value="#800000">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://www.army.mil" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+      <param name="image" value valuetype="ref">
+      <param name="hoverimage" value valuetype="ref">
+      <param name="sound" value valuetype="ref">
+      <param name="hoversound" value valuetype="ref">
+    </applet>
+    </td>
+  </tr>
+  <tr>
+    <td width="451" height="3"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="110" height="24">
+      <param name="text" value="HQ TRADOC">
+      <param name="color" value="#008000">
+      <param name="hovercolor" value="#800000">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://www-tradoc.monroe.army.mil" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+  <tr>
+    <td width="451" height="6"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="300" height="24">
+      <param name="text" value="Deputy Chief of Staff For Training (DCST)">
+      <param name="color" value="#008000">
+      <param name="hovercolor" value="#800000">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://www-dcst.monroe.army.mil" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+  <tr>
+    <td width="451" height="12"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="352" height="24">
+      <param name="text" value="Interservice Training Review Organization (ITRO)">
+      <param name="color" value="#008000">
+      <param name="hovercolor" value="#800000">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://www-dcst.monroe.army.mil/itd/ITRO/itro.htm" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    &nbsp; </td>
+  </tr>
+  <tr>
+    <td width="451" height="3"></td>
+  </tr>
+  <tr>
+    <td width="451" height="3"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="420" height="24">
+      <param name="text" value="Army Training Requirements &amp; Resources System (ATRRS)">
+      <param name="color" value="#008000">
+      <param name="hovercolor" value="#800000">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://www.asmr.com/atrrs/catalog.html" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+  <tr>
+    <td width="451" height="6"></td>
+  </tr>
+  <tr>
+    <td width="451" height="6"><p align="center"><strong><font color="#FFFF00">
+    <applet code="fphover.class" codebase="_fpclass/" width="158" height="24">
+      <param name="text" value="ACTEDS Plans (CPOL)">
+      <param name="color" value="#008000">
+      <param name="hovercolor" value="#FF0000">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://cpol.army.mil/train/acteds/" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </font></strong></td>
+  </tr>
+  <tr>
+    <td width="451" height="9" align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="250" height="24">
+      <param name="text" value="FY2000 ACTEDS Training Catalog">
+      <param name="color" value="#008000">
+      <param name="hovercolor" value="#FF0000">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://cpol.army.mil/train/fy2000/toc.html" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+  <tr>
+    <td width="451" height="9" align="center"></td>
+  </tr>
+  <tr>
+    <td width="451" height="9" align="center"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="377" height="24">
+      <param name="text" value="Army Force Management School Info &amp; Course List">
+      <param name="color" value="#008000">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://www.afms1.belvoir.army.mil" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+  <tr>
+    <td width="451" height="9" align="center"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="102" height="24">
+      <param name="text" value="ALMC Catalog">
+      <param name="color" value="#008000">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://www.almc.army.mil/catalog/toc.htm" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+  <tr>
+    <td width="451" height="9" align="center"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="140" height="24">
+      <param name="text" value="AMEDD Course List">
+      <param name="color" value="#008000">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://das.cs.amedd.army.mil/350-3.htm" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+  <tr>
+    <td width="451" height="9" align="center"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="131" height="24">
+      <param name="text" value="AMSC Course Info">
+      <param name="color" value="#008000">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://www.amsc.belvoir.army.mil/" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+  <tr>
+    <td width="451" height="9" align="center"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="158" height="24">
+      <param name="text" value="CAL-CLTD Course List">
+      <param name="color" value="#008000">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://www.cgsc.army.mil/cal/cltd/cltdfr.htm" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+  <tr>
+    <td width="451" height="21"><p align="center">&nbsp; 
+    <applet code="fphover.class" codebase="_fpclass/" width="174" height="24">
+      <param name="text" value="CEIHOT Course Catalog">
+      <param name="color" value="#008000">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://sill-www.army.mil/ceihot/Default.htm" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+  <tr>
+    <td width="451" height="9" align="center"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="164" height="24">
+      <param name="text" value="CFSTC Course Catalog">
+      <param name="color" value="#008000">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://trol.redstone.army.mil/mwr/hr/training_center/" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+  <tr>
+    <td width="451" height="2"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="134" height="24">
+      <param name="text" value="Chaplain School">
+      <param name="color" value="#008000">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://www.usachcs.army.mil" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+  <tr>
+    <td width="451" height="2"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="217" height="24">
+      <param name="text" value="CPOCMA-TMD Course Catalog">
+      <param name="color" value="#008000">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://cpma.apg.army.mil/catalog/" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+  <tr>
+    <td width="451" height="3" align="center"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="143" height="24">
+      <param name="text" value="TJAGSA Course List">
+      <param name="color" value="#008000">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://www.jagcnet.army.mil/tjagsa" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+  <tr>
+    <td width="451" height="2" align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="268" height="24">
+      <param name="text" value="US Army Signal Center and School">
+      <param name="color" value="#008000">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://das.cs.css.army.mil/350-3.htm" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+  <tr>
+    <td width="451" height="9" align="center"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="146" height="24">
+      <param name="text" value="USACE Purple Book">
+      <param name="color" value="#008000">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://www.hnd.usace.army.mil/to/download/purplebook.pdf" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+  <tr>
+    <td width="451" height="9" align="center"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="149" height="24">
+      <param name="text" value="USADAC Course List">
+      <param name="color" value="#008000">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://www.dac.army.mil" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+  <tr>
+    <td width="451" height="3"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="137" height="24">
+      <param name="text" value="USASC Course List">
+      <param name="color" value="#008000">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://safety.army.mil" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+  <tr>
+    <td width="451" height="1"></td>
+  </tr>
+  <tr>
+    <td width="451" height="0"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="361" height="24">
+      <param name="text" value="Army Institute for Professional Development (AIPD)">
+      <param name="color" value="#008000">
+      <param name="hovercolor" value="#FFFF00">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://www.atsc.army.mil/accp/aipd.htm" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+  <tr>
+    <td width="451" height="0"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="370" height="24">
+      <param name="text" value="IG Auditor Training Institute">
+      <param name="color" value="#008000">
+      <param name="hovercolor" value="#FFFF00">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://www.igati.org/00catalo.htm" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+  <tr>
+    <td width="451" height="0"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="223" height="24">
+      <param name="text" value="Army Training Support Center">
+      <param name="color" value="#008000">
+      <param name="hovercolor" value="#FFFF00">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://www.atsc.army.mil" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+  <tr>
+    <td width="451" height="1"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="179" height="24">
+      <param name="text" value="U.S. Army War College">
+      <param name="color" value="#008000">
+      <param name="hovercolor" value="#C0C0C0">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://carlisle-www.army.mil/" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+  <tr>
+    <td width="451" height="0"></td>
+  </tr>
+  <tr>
+    <td width="451" height="2"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="376" height="24">
+      <param name="text" value="Defense Acquisition University (DAU) Course Catalog">
+      <param name="color" value="#008000">
+      <param name="hovercolor" value="#C0C0C0">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://www.acq.osd.mil/dau/catalog.html" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+  <tr>
+    <td width="451" height="1"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="209" height="24">
+      <param name="text" value="Defense Information School">
+      <param name="color" value="#008000">
+      <param name="hovercolor" value="#C0C0C0">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://www.dinfos.osd.mil" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+  <tr>
+    <td width="451" height="1"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="286" height="24">
+      <param name="text" value="Defense Systems Management College">
+      <param name="color" value="#008000">
+      <param name="hovercolor" value="#C0C0C0">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://www.dsmc.dsm.mil" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+  <tr>
+    <td width="451" height="0"></td>
+  </tr>
+  <tr>
+    <td width="451" height="0"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="254" height="24">
+      <param name="text" value="National Defense University (NDU)">
+      <param name="color" value="#008000">
+      <param name="hovercolor" value="#C0C0C0">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://www.ndu.edu/" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+  <tr>
+    <td width="451" height="0"></td>
+  </tr>
+  <tr>
+    <td width="451" height="0"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="384" height="24">
+      <param name="text" value="US Navy - Catalog of Navy Tng Courses (CANTRAC)">
+      <param name="color" value="#000080">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://www.cnet.navy.mil/netpdtc/cantrac/index.html" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+  <tr>
+    <td width="451" height="0"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="284" height="24">
+      <param name="text" value="US Navy - Naval Post Graduate School">
+      <param name="color" value="#000080">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://www.nps.navy.mil" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+  <tr>
+    <td width="451" height="0"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="376" height="24">
+      <param name="text" value="US Air Force - Air Education and Training Command">
+      <param name="color" value="#000080">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://www.af.mil/sites/aetc.html" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+  <tr>
+    <td width="451" height="0"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="247" height="24">
+      <param name="text" value="US Air Force - Air University">
+      <param name="color" value="#000080">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://www.au.af.mil/" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+  <tr>
+    <td width="451" height="0"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="379" height="24">
+      <param name="text" value="US Marine Corps - Training and Education Division">
+      <param name="color" value="#000080">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://www.tediv.usmc.mil" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+  <tr>
+    <td width="451" height="0"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="345" height="24">
+      <param name="text" value="US Coast Guard - HR Resources Mgt Directorate">
+      <param name="color" value="#000080">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://www.uscg.mil/hq/g-w/hrhome.htm" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+  <tr>
+    <td width="451" height="0"></td>
+  </tr>
+  <tr>
+    <td width="451" height="0"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="331" height="24">
+      <param name="text" value="USDA Graduate School">
+      <param name="color" value="#FF0000">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="http://www.grad.usda.gov/Catalog/alpha_course_list.cfm?alphachar=A" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+</table>
+</div>
+
+<p align="center"><img src="images/untitled.gif" alt="untitled.bmp (4630 bytes)" WIDTH="590" HEIGHT="6"></p>
+
+<p align="left"><big><u><em><font color="#FF0000" face="Georgia"><strong>To Get to Other <a name="Pages">Pages</a> In This Web</strong></font></em></u></big></p>
+<div align="left">
+
+<table border="1" width="551" height="3" bordercolor="#C0C0C0" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#800000">
+  <tr>
+    <td width="111"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="168" height="24">
+      <param name="text" value="Background/Objectives">
+      <param name="color" value="#800000">
+      <param name="hovercolor" value="#FF0000">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="Background.htm" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+    <td width="96"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="177" height="24">
+      <param name="text" value="Recent Analysis Outputs">
+      <param name="color" value="#800000">
+      <param name="hovercolor" value="#FF0000">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="Outputs.htm" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+    <td width="127"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="132" height="24">
+      <param name="text" value="Current Yr Mgt Plan">
+      <param name="color" value="#800000">
+      <param name="hovercolor" value="#FF0000">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="current.htm" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+</table>
+</div><div align="left">
+
+<table border="1" width="516" height="2" bgcolor="#800000" bordercolor="#C0C0C0" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF">
+  <tr>
+    <td width="149" height="2"><strong><p align="center"></strong>
+    <applet code="fphover.class" codebase="_fpclass/" width="120" height="24">
+      <param name="text" value="Course Inventory">
+      <param name="color" value="#800000">
+      <param name="hovercolor" value="#FF0000">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="Inventory%20Primary.htm" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+    <td width="68" height="2"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="276" height="24">
+      <param name="text" value="SB Training Management Review Board">
+      <param name="color" value="#800000">
+      <param name="hovercolor" value="#FF0000">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="SB%20TMRB.htm" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+</table>
+</div><div align="left">
+
+<table border="1" width="601" height="15" bgcolor="#800000" bordercolor="#C0C0C0" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF">
+  <tr>
+    <td width="176" height="15"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="247" height="24">
+      <param name="text" value="TMRB Report - Executive Summary">
+      <param name="color" value="#800000">
+      <param name="hovercolor" value="#FF0000">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="TMRB%20Report-Ex%20Summary.htm" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+    <td width="177" height="15"><strong><p align="center"></strong>
+    <applet code="fphover.class" codebase="_fpclass/" width="157" height="24">
+      <param name="text" value="Management Process">
+      <param name="color" value="#800000">
+      <param name="hovercolor" value="#FF0000">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="SBT%20Mgt%20Process.htm" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+    <td width="113" height="15"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="80" height="24">
+      <param name="text" value="Cost Model">
+      <param name="color" value="#800000">
+      <param name="hovercolor" value="#FF0000">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="Cost%20Model.htm" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+</table>
+</div><div align="left">
+
+<table border="1" width="553" height="6" bgcolor="#800000" bordercolor="#C0C0C0" bordercolorlight="#FFFFFF">
+  <tr>
+    <td width="103" height="15"><strong><p align="center"></strong>
+    <applet code="fphover.class" codebase="_fpclass/" width="66" height="24">
+      <param name="text" value="Glossary">
+      <param name="color" value="#800000">
+      <param name="hovercolor" value="#FF0000">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="SBT%20Glossary.htm" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+    <td width="390" height="2"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="202" height="24">
+      <param name="text" value="FY99 TMRB Meeting Report">
+      <param name="color" value="#800000">
+      <param name="hovercolor" value="#FF0000">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="TMRB%20Report%20-%2099.htm" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+    <td width="346" height="6"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="237" height="24">
+      <param name="text" value="FY99 Planning Meeting Decisions">
+      <param name="color" value="#800000">
+      <param name="hovercolor" value="#FF0000">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="fy99sbt.htm" valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+</table>
+</div><div align="left">
+
+<table border="1" width="186" height="6" bgcolor="#000080" bordercolor="#C0C0C0" bordercolorlight="#FFFFFF">
+  <tr>
+    <td width="10" height="10"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="164" height="24">
+      <param name="text" value="Go back to top of page">
+      <param name="color" value="#000080">
+      <param name="hovercolor" value="#008000">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value="#&nbsp;.." valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    </td>
+  </tr>
+</table>
+</div><div align="center"><center>
+
+<table border="1" width="340" height="20" bgcolor="#FFFFFF" bordercolor="#C0C0C0" bordercolorlight="#FF0000" bordercolordark="#000080">
+  <tr>
+    <td width="340" height="20"><p align="center"><font face="Century Schoolbook" color="#000080"><small><strong><u>Last SBT Web Site Update:&nbsp;&nbsp;06 Mar 00</u></strong></small></font></td>
+  </tr>
+</table>
+</center></div>
+
+<p>&nbsp;</p>
+</body>
+</html>

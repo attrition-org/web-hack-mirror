@@ -1,0 +1,514 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<TITLE>tentil.com...Karla Fulfer... Web Design, and Fun too!</TITLE>
+
+<META NAME="Description" CONTENT="More fun than one line can convey and the BEST web page design">
+<META NAME="generator" CONTENT="Notepad">
+<META NAME="author" CONTENT="Karla Fulfer">
+<META NAME="keywords" CONTENT="graphics, design, tips, Windows98, Fulfer, fun, Easter eggs">
+
+
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function getMoonAge(year, month, day)
+{       
+        d = Math.floor(year/20)
+        r = year-(d*20) //r is the remainder of (year/20)
+
+        while (r>9)
+        {       
+                r = r-19
+        }
+
+        r = r*11
+
+        while (r>29)
+        {       
+                r = r-30
+        }
+
+        if (month<3)
+        {       
+                month = month+2
+        }
+
+        r = r+month+day
+
+        if (year<2000)
+        {       
+                r = r-4
+        }
+        else
+        {
+                r = r-8.3
+        }
+
+        while(r>29)
+        {       
+                r = r-30
+        }
+
+        while(r<0)
+        {       
+                r = r+30
+        }
+
+        return r
+}
+                
+function getMoonPhase(moonAge)
+{       
+        if (moonAge<2) return "new"
+        if (moonAge<5) return "waxing cresent"
+        if (moonAge<11) return "first quarter"
+        if (moonAge<13) return "waxing gibbous"
+        if (moonAge<16) return "full"
+        if (moonAge<20) return "waning gibbous"
+        if (moonAge<24) return "last quarter"
+        if (moonAge<29) return "waning cresent"
+        if (moonAge<30) return "new"
+}
+
+function getMoonPhaseImg(moonAge)
+{       
+        if (moonAge<2) return "moonnew"
+        if (moonAge<5) return "waxingcresent"
+        if (moonAge<11) return "firstquarter"
+        if (moonAge<13) return "waxinggibbous"
+        if (moonAge<16) return "moonfull"
+        if (moonAge<20) return "waninggibbous"
+        if (moonAge<24) return "lastquarter"
+        if (moonAge<29) return "waningwcresent"
+        if (moonAge<30) return "moonnew"
+}
+
+
+monthNames = new Array(13)
+monthNames[1]  = "January"
+monthNames[2]  = "February"
+monthNames[3]  = "March"
+monthNames[4]  = "April"
+monthNames[5]  = "May"
+monthNames[6]  = "June"
+monthNames[7]  = "July"
+monthNames[8]  = "August"
+monthNames[9]  = "September"
+monthNames[10] = "October"
+monthNames[11] = "November"
+monthNames[12] = "December"
+                 
+dayNames = new Array(8)
+dayNames[1]  = "Sunday"
+dayNames[2]  = "Monday"
+dayNames[3]  = "Tuesday"
+dayNames[4]  = "Wednesday"
+dayNames[5]  = "Thursday"
+dayNames[6]  = "Friday"
+dayNames[7]  = "Saturday"
+                 
+function getLongDate(dateObj)
+{       
+        theDay = dayNames[dateObj.getDay()+1]
+        theMonth = monthNames[dateObj.getMonth()+1]
+        theDate = dateObj.getDate()
+        theYear = 2000+dateObj.getYear()
+        return ""+theDay+", "+theMonth+" "+theDate+", "+theYear
+}
+                
+function getNextFull(moonAge)
+{       
+        currMilSecs = (new Date()).getTime()
+        daysToGo = 15 - moonAge
+        while(daysToGo<2)
+        {       
+                daysToGo = daysToGo+29
+        }
+        milSecsToGo = daysToGo*24*60*60*1000
+        nextMoonTime = currMilSecs+milSecsToGo
+        nextMoonDate = new Date(nextMoonTime)
+        return nextMoonDate
+}
+                
+function getNextNew(moonAge)
+{       
+        currMilSecs = (new Date()).getTime()
+        daysToGo = 29 - moonAge
+        while(daysToGo<2)
+        {       
+                daysToGo = daysToGo+29
+        }
+        milSecsToGo = daysToGo*24*60*60*1000
+        nextMoonTime = currMilSecs+milSecsToGo
+        nextMoonDate = new Date(nextMoonTime)
+        return nextMoonDate
+}
+//-->
+</script>
+
+<SCRIPT LANGUAGE=JAVASCRIPT>
+	
+	<!--
+	if (document.images) {
+		tips = new Image
+		button = new Image
+		email = new Image
+		clients = new Image
+		home = new Image
+		welcome=new Image
+
+		tips.src = "pop1.gif"
+		button.src = "pop7.gif"
+		email.src = "pop5.gif"
+		clients.src = "pop3.gif"
+		home.src = "pop4.gif"
+		welcome.src="pop2.gif"
+		
+	}
+	else {
+		tips = "Personalize windows"
+		button = "Nobody can click just once!"
+		email = "Now with auto-responce"
+		clients = "View some of the work done at tentil.com"
+		home = "the Personal Pages of Ten"
+		welcome = ""
+		document.slide = ""
+	}
+	//--></SCRIPT>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function number(x) {
+if (x==1) return "one"; if (x==2) return "two"; if (x==3) return "three";
+if (x==4) return "four"; if (x==5) return "five"; if (x==6) return "six";
+if (x==7) return "seven"; if (x==8) return "eight"; if (x==9) return "nine";
+if (x==10) return "ten"; if (x==11) return "eleven"; if (x==12) return "twelve";
+return x; //default
+}
+function ishtime(h,m) {
+h = number(h)
+if (m<=3 || m>57) return h+" o'clock";
+if (m<=7)  return "five past "+h;
+if (m<=12) return "ten past "+h;
+if (m<=17) return "quarter past "+h;
+if (m<=23) return "twenty past "+h;
+if (m<=28) return "twenty-five past "+h;
+if (m<=33) return "half past "+h;
+if (m<=38) return "twenty-five to "+h;
+if (m<=43) return "twenty to "+h;
+if (m<=48) return "quarter to "+h;
+if (m<=53) return "ten to "+h;
+if (m<=58) return "five to "+h;
+return "h:m"; // never reached?
+}
+function daytime(h) {
+if (!h || h>21) return " at night"
+if (h<12) return " in the morning";
+if (h<=17) return " in the afternoon";
+return " in the evening"; // default
+}
+function ish(h,m) {
+if (!h && !m) { // if no time supplied, use the system time
+time = new Date()
+h = time.getHours()
+m = time.getMinutes()
+}
+z = daytime(h);
+h = h % 12 // fix to 12 hour clock
+if (m>57 && time.getSeconds()>30) m++; // round seconds
+if (m>60) m=0 // round up minutes
+if (m>33) h++ // round up hours
+if (h>12)  h = 1 // the clock turns round..
+if (h==0) h = 12
+return "It's now about "+ishtime(h,m)+z+"."
+}
+//-->
+</script>
+
+<STYLE>
+<!--
+a:hover {color:#9966FF;}
+A{text-decoration:none}
+.imgall {position:absolute; visibility:hidden;}
+//-->
+</STYLE>
+
+
+
+</HEAD>
+<BODY BACKGROUND="designbkg.gif"  BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#FF0000" ALINK="#666666" VLINK="#FF0000" LEFTMARGIN="0" TOPMARGIN="0" marginheight="0" marginwidth="0">
+
+<script language="Javascript">
+<!-- 
+if (top.location != self.location) {
+top.location = self.location.href
+}
+//--> 
+</script>
+
+<TABLE WIDTH="600" CELLPADDING="0" CELLSPACING="0" BORDER="0">
+	<TR><TD VALIGN="top" COLSPAN="2">
+<IMG SRC="title1c.gif" WIDTH="330" HEIGHT="70" ALT="Welcome to tentil.com">
+		</TD>
+	<TD VALIGN="top" ROWSPAN="2">
+<IMG SRC="title2.gif" WIDTH="82" HEIGHT="100"></TD>
+	<TD VALIGN="top">
+<IMG SRC="title3.gif" WIDTH="188" HEIGHT="70" ALT="Welcome to tentil.com">
+		</TD></TR>
+
+  <TR><TD>&nbsp;</TD>
+
+        <TD VALIGN="top" WIDTH="260"><FONT SIZE="1" FACE="arial,helvetica" COLOR="#000000">
+&nbsp;</FONT></TD>
+
+   <TD WIDTH="200" VALIGN="top">
+<FONT SIZE="1" FACE="arial,helvetica" COLOR="#000000"><I>
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- Begin
+d = new Array(
+"Sunday",
+"Monday",
+"Tuesday",
+"Wednesday",
+"Thursday",
+"Friday",
+"Saturday"
+);
+m = new Array(
+"January",
+"February",
+"March",
+"April",
+"May",
+"June",
+"July",
+"August",
+"September",
+"October",
+"November",
+"December"
+);
+
+today = new Date();
+day = today.getDate();
+end = "th";
+if (day==1 || day==21 || day==31) end="st";
+if (day==2 || day==22) end="nd";
+if (day==3 || day==23) end="rd";
+day+=end;
+		
+document.write();
+document.write(d[today.getDay()]+", "+m[today.getMonth()]+" ");
+document.write(day+" ");
+document.write();
+// End -->
+</script>
+</I></FONT>
+  </TD>
+  </TR>
+ </TABLE>
+
+<P>
+<TABLE WIDTH="520" CELLPADDING="0" CELLSPACING="0" BORDER="0">
+ <TR>
+ <TD WIDTH="100" VALIGN="top">
+<IMG SRC="pop2.gif" WIDTH="100" HEIGHT="360" ALT="" ALIGN="LEFT" NAME="slide">
+ </TD>
+ <TD WIDTH="390" VALIGN="top">
+
+<UL>
+<FONT SIZE="-1" FACE="ARIAL">
+<SCRIPT LANGUAGE="JavaScript"> 
+<!--	
+	var dt = new Date();
+	var hr = dt.getHours();
+	var msg = ((hr<12) ? "morning" :"evening");
+	msg = ((hr>11)&&(hr<16) ? "afternoon" : msg);
+	msg=" Good "+msg+" !";
+	document.write(msg); 
+//-->
+</SCRIPT> 
+
+Welcome to <IMG SRC="tencom.gif" WIDTH="39" HEIGHT="15" ALT="">. This is the<br>
+place for web design, graphics, and FUN too! <br>
+ 
+<script language="JavaScript">
+<!--
+document.writeln(ish().fontcolor("black"),"<BR>")
+//-->
+</script>
+It's time to kick your shoes off, relax, click around.<br>
+Here at <IMG SRC="tencom.gif" WIDTH="39" HEIGHT="15" ALT="">,
+ you can pick up some great
+<A HREF="tips.html" onMouseOver="document.slide.src=tips.src"
+	  onMouseOut="document.slide.src=welcome.src">tips</a><br>
+to personalize Windows or have some fun with<br>
+<A HREF="mybutton.html" onMouseOver="document.slide.src=button.src"
+	onMouseOut="document.slide.src=welcome.src">My Button</a>.  Tell me what you think.You can use the handy all
+purpose <A HREF="bnbform.html" onMouseOver="document.slide.src=email.src">Email</a>
+form. It's now equipped with<br>
+ auto-response! See examples of great web sites at<br>
+<A HREF="designs.html" onMouseOver="document.slide.src=clients.src"
+	onMouseOut="document.slide.src=welcome.src">Clients</a>.
+You are at the right place to see my<br>
+ home page.  At my <A HREF="home.html" onMouseOver="document.slide.src=home.src"
+         onMouseOut="document.slide.src=welcome.src">Home</a>
+you can see the latest<br>
+ pictures or read a favorite poem. <IMG SRC="tencom.gif" WIDTH="39" HEIGHT="15" ALT="">
+ looks good with all browsers, but if your browser isn't Java<br>
+ capable you are missing a lot of the fun.
+<P>
+<B>Are you addicted to your<br> computer?  Click </B>
+<A HREF="addicted.html"><B> here</B></A><B> to find out.</B><P>
+</FONT>
+
+<p><FONT SIZE="-2" FACE="Arial" COLOR="FF0000">
+<I>I use Windows98 and Netscape Navigator, and I didn't<br>
+need the Federal Justice Department to help me decide that.</I></FONT><BR>&nbsp;</P>
+</UL>
+ </TD>
+  <TD WIDTH="30" VALIGN="top">
+	
+   <IMG SRC="down1.gif" WIDTH="25" HEIGHT="335" ALT="">
+  </TD>
+
+
+</TR></TABLE>
+
+
+<TABLE CELLPADDING="1" CELLSPACING="0" BORDER="0">
+ <TR><TD ROWSPAN="2">
+ <IMG SRC="spacer.gif" WIDTH="5" HEIGHT="10" ALT="">
+  </TD>
+
+<TD VALIGN="top" ROWSPAN="3">
+	<table border=0 width=125 cellspacing=0 cellpadding=2><tr><td valign=center align=middle bgcolor="#ff0000"><font face="Arial,Helvetica" color="#ffffff" size="-2"><b>I have to know!</b></font></td></tr>
+<tr><td valign=top align=left bgcolor="#000000">
+<font face="Arial,Helvetica" size="-2" color="#ffffff">When you lose your mind, where do you look for it?<p>
+<form method=post action="/cgi-bin/poll.cgi?voted">
+<input type=hidden name="VOTE_CHECK" value="voted">
+<input type=radio name=quiz value="1"> The kids room - anything could be lost in there<br>
+<input type=radio name=quiz value="2"> The computer - I know I saved it to disk somewhere<br>
+<input type=radio name=quiz value="3"> I just do whatever the little voices tell me to<br>
+<p><center><input type=submit value="Vote!"></center></form><p>
+<center><a href="http://www.cgiscripts.net/" target="_top">by CgiScripts.Net</a>
+</font></td></tr></table>
+
+	</TD>
+<TD ROWSPAN="3">
+ <IMG SRC="spacer.gif" WIDTH="5" HEIGHT="10" ALT="">
+  </TD>
+	<TD WIDTH="70" ALIGN="top">
+<IMG SRC="new.gif" ALIGN="top" WIDTH="70" HEIGHT="80" ALT="What's New?">
+	</TD>
+		</TD>
+	<TD WIDTH="150"><FONT SIZE="1" COLOR="000000" FACE="arial">
+My favorite new toy is a screen saver called Star Message. 
+You can write your own message in the stars and get the phases 
+of the moon too! 
+Click <A HREF="http://members.xoom.com/mioan/starmsg.zip">
+ here</A> to download it. It's well worth the small fee it takes register 
+it.  Make sure to get the latest version (99d) to experience the latest features 
+and improved graphics. </FONT>
+		</TD>
+ <TD WIDTH="155" ALIGN="right" VALIGN="top">
+<script language="JavaScript" type="text/javascript">
+<!--
+
+theDate = new Date()
+theYear = theDate.getYear()
+theMonth = theDate.getMonth()+1
+theDay = theDate.getDate()
+theMoonAge = getMoonAge(theYear, theMonth, theDay)
+theMoonPhase = getMoonPhase(theMoonAge)
+document.write("<FONT FACE=arial COLOR=000000 SIZE=3> The moon is "+theMoonPhase+"</FONT><br>")
+
+theMoonPhase = getMoonPhaseImg(theMoonAge)
+document.write("<img src='"+ escape(theMoonPhase)+".gif' align='top' hspace='0'>")
+document.write('<br clear=all>')
+
+//-->
+</script>
+</font></TD>
+	     
+	</TR>
+	
+	<TR>
+ <TD WIDTH="375" BGCOLOR="000000" COLSPAN="3">
+	<A HREF="eggs.html"><IMG SRC="eggsm.gif" ALIGN="left" BORDER="0" WIDTH="40" HEIGHT="40" ALT="Eggs">
+       </A>
+	<FONT FACE="arial" COLOR="FFFFFF">
+	It's SUMMER!... &nbsp; Easter Eggs are still here.<br>
+   Click the egg to go <I>HUNTING</I>.</FONT>
+  	</TD></TR>
+	
+
+</TABLE>
+<P>
+
+<P>
+
+<iframe src="http://leader.linkexchange.com/1/X1231286/showiframe?" width=468 height=60 marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling=no>
+<a href="http://leader.linkexchange.com/1/X1231286/clickle" target="_top"><img width=468 height=60 border=0 ismap alt="" src="http://leader.linkexchange.com/1/X1231286/showle?"></a></iframe><br><a href="http://leader.linkexchange.com/1/X1231286/clicklogo" target="_top"><img src="http://leader.linkexchange.com/1/X1231286/showlogo?" width=468 height=16 border=0 ismap alt=""></a><br>
+
+
+<br>
+<A HREF="cur.html"><IMG SRC="cat.gif" ALIGN="right" HEIGHT="25" WIDTH="75" ALT="curious?" BORDER="0"></A>
+
+<P>
+
+<FONT SIZE="-2" FACE="arial">
+&nbsp; | <A HREF="designs.html">Clients</A> |
+<A HREF="bnbform.html">Email</A> |
+<A HREF="request.html">Work Request</A> |
+<A HREF="tips.html">Tips</A> |
+<A HREF="faq.html">FAQs</A> |
+<A HREF="picture.html">Pictures</A> |
+<A HREF="y2k.html">Y2K</A> |
+<A HREF="eggs.html">Eggs</A> |<br>
+&nbsp; | <A HREF="mybutton.html">My Button</A> |
+<A HREF="home.html">Ten's Home</A> |
+<A HREF="contact.html">Contact Ten</A> |
+<A HREF="video.html">Web Cam</A> |
+<A HREF="poems.html">Poems</A> |
+<A HREF="addicted.html">Geek Status</A> |
+<br>
+</FONT>
+
+
+ <IMG SRC="line.gif" WIDTH="400" HEIGHT="8" ALT=""><br>
+ <FONT FACE="arial" SIZE="-2" COLOR="000000">&nbsp; If you have <B>any</B> questions,
+comments, accolades, suggestions, love notes, job offers,<BR>
+&nbsp; travel invitaions, free computer equipment, indecent proposals,
+ awards, party invitations,<BR>&nbsp; or just wanna say "Hey, I was at your site."
+ please, Email me at
+ <A HREF="mailto:webmaster@tentil.com"> ten@tentil.com. </A></FONT>
+<P>
+
+<TABLE WIDTH="550" border=0>
+	<TR><TD ALIGN="right" VALIGN="top">
+<IMG SRC="smarow.gif" WIDTH="20" HEIGHT="20" ALT="ICOM">
+<FONT SIZE="-1" COLOR="#FF0000" FACE="Arial">
+<a href=" http://associates.icom.com/cgi-bin/agents/agentst.cgi/text?tentil">
+Click Here for the BEST Web Hosting!
+</a> </FONT></TD></TR></TABLE>
+<P>
+	<TABLE>
+	<TR><TD ALIGN="right" VALIGN="top">
+	<IMG SRC="cgi-bin/count.cgi?main&"></TD>
+	<TD ALIGN="left">
+	<FONT SIZE="-1" COLOR="#000000" FACE="Arial">
+	people have visited here and only <IMG SRC="5.gif" WIDTH="9" HEIGHT="16" ALT="6" ALIGN="top">
+	 have asked what<br>
+	<I>"Si Hoc Legere Scis Nimium Eruditionis Habes"</I></FONT><FONT SIZE="-1" COLOR="#000000" FACE="Arial"> means.</FONT><br>
+	<FONT SIZE="-2" COLOR="#000000" FACE="Arial">
+	...plus two guys who already knew.</FONT>
+	</TD></TR></TABLE>
+<P>
+<FONT SIZE="-2" COLOR="#000000" FACE="Arial">&nbsp;© 2000 tentil.com</FONT>
+  </P>
+</CENTER>
+</BODY>
+</HTML>

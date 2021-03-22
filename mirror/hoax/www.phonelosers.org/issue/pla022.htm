@@ -1,0 +1,94 @@
+<HTML>
+<HEADER>
+<TITLE>PLA022 BBS Back Doors & Flaws</TITLE>
+</HEADER>
+<BODY bgcolor="ffffff">
+<CENTER>
+<h1>BBS Back Doors & Flaws</h1>
+<h3>Written by Pestilence on February 17, 1995</h3>
+<h4>Last Revision on February 19, 1995</h4>
+</center>
+
+Well, this is Pestilence here and I thought I would be nice and produce a file
+on how to hack boards through backdoors etc. First I'd like to thank The
+Cracker, Vision, and The Joker. They gave me most of my knowledge on back doors.<p>
+
+In the course of your BBS career you will come across a dumb ass sysop that for
+some reason or another you just can't stand. Maybe he caught you typing in
+sysop commands, or he dropped your access, or he caught you in bed with his
+wife and you just want to HACK his board. Well this file is for you. I tried to
+include as many doorz as i could remember. Some versions may be too old for the
+doorz and some may be too new so if they dont work email me at (512).fuck.off
+and I'll be glad to laugh at you...<p>
+
+<center><h2>RBBS:</h2></center>
+Well, there aren't any known back doors but because of faulty language
+programming there are some flaws....<p>
+
+Bug 1<p>
+Versions this is known to work on... cpc 12.1c and earlier<p>
+
+Proceedure : Download sysops password<p>
+
+The sysops password is contained in a file called rbbs-pc.def....there is a
+trap in the code to prevent you from downloading it. (gee...I wonder why) But
+unfortunetly the basic and dos are not in agreement about the equivilence of
+the strings...basic says rbbs-pc.def <> rbbs-pc.def but dos truncates the last
+charachter and lets you get the file under the new name. (note 'x' can be
+substituted for 'f' in rbbs-pc.de(x), x being whatever you want it to be.)<p>
+
+<center><h2>Fido:</h2></center>
+Log on as your real name and tell the sysop all your information then proceed
+to go to the message area...from there do an area command and it will list:<p>
+
+-----FIDO------ <p>
+1...general<p>
+2...tech<p>
+3...fido mail<p>
+message ?<p>
+
+At the message prompt type '333333333' 77  times(no '') and this will lock up
+the system....from there it will usually drop to dos.<p>
+
+<center><h2>Renegade:</h2></center>
+From main menu type // king cott<p>
+
+Also on old versions enter into the bbs and go to the main menu...then turn the
+expert mode on and type 'i' 100 times like 'iiiiiiiiiiiiiiiii' etc...When at
+100 press enter and this will give you sysop commands.<p>
+
+<center><h2>WWIV:</h2></center>
+This part is for Excallibur since he wants to get back at the sysops in the
+ray league so here you go...<p>
+
+Go home and make a file called wayne.bell....in this program do the following<p>
+
+ctty<p>
+com1   <---- substitute the appropriate comm port...<p>
+
+Save it and you're set. Now this only works in registered programs that have
+been registered for over 1 year. The trick lies in the fact that Wayne put a
+double loop in the init files to the modem so that he could log onto bbs using
+his wwiv software. It has to be over 1 year old because newer versions Ymodem
+(that's the protocol you need to use) have incorporated the newer 2.3 string
+emitter to keep other people who found out this trick from it...(I'll tell you
+how to hack the new one in a second) now upload wayne.bell using y modem and
+type the following description....i am god _-_ wwiv*rulez. Got that? After all
+that go back to the main menu and type //chuser   //boardedit    //dos  or whatever and it should work. If not you fucked up or the sysop is using a new version of wwiv.<p>
+
+
+Secondly....the /optik method lets you view sysop commands from the file menu
+but only in certain editions...I have not been able to verify this method..
+To hack the newer version see PLA001.TXT <p>
+
+Thats all for now. I will adress the following boards in my next edition: acid bbs       celerity bbs       robo-fx bbs      vision-x bbs     vision/2 bbs   oblivian/2 bbs     ....and many others <p>
+
+<center>
+<a href="pla021.htm"><img src="ishleft.gif" alt="Previous Issue" border="0"></a>
+<a href="plamain.htm"><img src="ishmain.gif" alt="Main Menu" border="0"></a>
+<a href="pla023.htm"><img src="ishrite.gif" alt="Next Issue" border="0"></a>
+</center>
+
+<!--#exec cgi="/cgi-bin/bean2.cgi"--></body>
+</html>
+

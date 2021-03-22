@@ -1,0 +1,188 @@
+
+    <html><html>
+<head>
+<title>Linux Preview - Write here your site's slogan...</title>
+<style rel=stylesheet type=text/css>
+	A:link { font-weight: bold; }
+	A:visited { font-weight: bold; }
+</style>
+</head>
+<body bgcolor="#778899" text="#000000" link="#000000" vlink="#000000" topmargin=5 leftmargin=0 rightmargin=0 marginheight=5>
+
+<table border=0 cellpadding=4 cellspacing=0 width=100% align=center>
+<tr><td bgcolor=778899>
+<table border="0" cellspacing="0" cellpadding="1" width="100%" bgcolor="#000000">
+<tr><td>
+<table border="0" cellspacing="0" cellpadding="3" width="100%" bgcolor="333333">
+<tr><td>
+<a href="index.html"><img src="themes/Default/deflogo.gif" alt="Wilkommen zu Linux Preview" border=0></a>
+</td><td align=right>
+<form action="search.php3" method=post><font face=Arial,Helvetica size=2 color="ffffff">
+Suchen<input type=name name=query>
+</form></tr>
+<tr bgcolor="666666"><td colspan=2 bgcolor="666666">
+<font face=Arial,Helvetica size=3 color=CCCCCC>Write here your site's slogan...</td>
+</td></tr></table>
+</td></tr></table>
+</td></tr><tr><td valign=top width=100% bgcolor=778899>
+<table border=0 cellspacing=0 cellpadding=2 width=100%>
+<tr><td valign=top width=150 bgcolor=778899>
+
+<!-- Blocks Init -->
+
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>Main Menu</td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+<li><a href=index.php3>Home</a>
+<li><a href=topics.php3>Topics</a>
+<li><a href=sections.php3>Sections</a>
+<li><a href=links.php3>Web Links</a>
+<li><a href=user.php3>Your Account</a>
+<li><a href=submit.php3>Submit News</a>
+<li><a href=stats.php3>Stats</a>
+<li><a href=top.php3>Top 10</a>
+<li><a href=faq.php3>FAQ</a></td></tr></table></td></tr></table><br>
+
+<!-- Because this is the DEFAULT theme, so print the user login block -->
+
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>Linux Preview Login
+</td></tr><tr><td bgcolor=FFFFFF>
+<font face=Arial,Helvetica size=2>
+<form action="user.php3" method="post">
+Nickname: <input type="text" name="uname" size=12 maxlength=25><br>
+Password: <input type="password" name="pass" size=12 maxlength=20><br>
+<center><input type="submit" name="op" value="login"></form>
+Don't have an account yet? You can <a href=user.php3>Create One</a>.
+As registered user you have some advantages like theme manager,
+comments configuration and post comments with your name.
+</center></td></tr></table></td></tr></table><br>
+
+<!-- Show Left Blocks -->
+
+
+
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>First Left Block</td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+You can add/remove/edit blocks for your site with PHP-Nuke.
+Also you can add HTML commands like <a href=http://linuxpreview.org/>links</a>, <b>Bold</b> text, images, etc.
+Just use you imagination.</td></tr></table></td></tr></table><br>
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>Special Sections</td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+What about a <a href=http://odisea.org/sections.php3>Special Sections</a>option in the PHP-Nuke code? A place to publish reviews, special articles, interviews, or whatever, independent of the main news.</td></tr></table></td></tr></table><br>
+
+
+
+<img src=images/pix.gif border=0 width=150 height=1>
+</td><td width=100% valign=top><table border=0 cellpadding=0 cellspacing=0 align=center bgcolor=000000 width=100%>
+<tr><td>
+
+<table border=0 cellpadding=3 cellspacing=1 width=100%>
+<tr><td bgcolor=CCCCCC>
+<font face=Arial,Helvetica>
+<b></b><br>
+<font face=Arial,Helvetica size=1>
+Geschrieben von <b><a href="">j|­†)à</a></b> on Friday, September 01 @ 20:18:53 CEST  (gelesen: 0 mal - hits: 0)<br>
+</td>
+</tr>
+<tr>
+<td bgcolor=ffffff>
+<a href="search.php3?query=&topic=0&author="><img src=images/topics/ border=0 Alt="" align=right hspace=10 vspace=10></a>
+<font face=Arial,Helvetica>You are owned by nightman and m0r0n (Pakistan!)  We just want to create global awareness so that people might know what Indians are doing to Kashmiris! The members ;) : m0r0n, NightMan, ftp, code0, laughingeyes, iniquity! (my pal hehe ;), cooldude, pollution, iNfra and Undercover and oh my Computer too ;) Greets : tushay, king, Stargazer, sofh, obi_wan_kenobi, kitten, pyari, anushah, AlexenderTG, b000m, xpert, Bss (bittersweetsymphony -- i did not miss you this time!<br><br>
+</tr></td><tr><td bgcolor=CCCCCC align=right>
+<font face=Arial,Helvetica size=2>( <a href="article.php3?sid=3&mode=threaded&order=0&thold=0">Kommentare?</a> )</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><br>
+
+
+<table border=0 cellpadding=0 cellspacing=0 align=center bgcolor=000000 width=100%>
+<tr><td>
+
+<table border=0 cellpadding=3 cellspacing=1 width=100%>
+<tr><td bgcolor=CCCCCC>
+<font face=Arial,Helvetica>
+<b></b><br>
+<font face=Arial,Helvetica size=1>
+Geschrieben von <b><a href="">j|­†)à</a></b> on Friday, September 01 @ 20:18:01 CEST  (gelesen: 0 mal - hits: 0)<br>
+</td>
+</tr>
+<tr>
+<td bgcolor=ffffff>
+<a href="search.php3?query=&topic=0&author="><img src=images/topics/ border=0 Alt="" align=right hspace=10 vspace=10></a>
+<font face=Arial,Helvetica><META HTTP-EQUIV=Refresh CONTENT="0; URL=http://www.geocities.com/ambreen20_pk"><br><br>
+</tr></td><tr><td bgcolor=CCCCCC align=right>
+<font face=Arial,Helvetica size=2>( <a href="article.php3?sid=2&mode=threaded&order=0&thold=0">Kommentare?</a> )</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><br>
+
+
+<table border=0 cellpadding=0 cellspacing=0 align=center bgcolor=000000 width=100%>
+<tr><td>
+
+<table border=0 cellpadding=3 cellspacing=1 width=100%>
+<tr><td bgcolor=CCCCCC>
+<font face=Arial,Helvetica>
+<b>Welcome to PHP-Nuke 2.0</b><br>
+<font face=Arial,Helvetica size=1>
+Geschrieben von <b><a href="http://linuxpreview.org">god</a></b> on Thursday, July 20 @ 12:00:00 CEST  (gelesen: 6 mal - hits: 0)<br>
+</td>
+</tr>
+<tr>
+<td bgcolor=ffffff>
+<a href="search.php3?query=&topic=10&author="><img src=images/topics/phpnuke.gif border=0 Alt="PHP-Nuke" align=right hspace=10 vspace=10></a>
+<font face=Arial,Helvetica>This is the first article in PHP-Nuke. You can delete it. Remember to set/change nickname and/or password for the main admin user. There aren't any registered/default user, so maybe you want to set the first one. Pelase read carefully the README file for some details, CREDITS files to see from where comes the things and remember that this is free software under the GPL License (COPYING file for details). Hope you enjoy this software. Please report any bug you find, and you'll for sure, so drop me an email when one of this annoying things happens and I'll try to fix it for the next releases.<br><br>
+</tr></td><tr><td bgcolor=CCCCCC align=right>
+<font face=Arial,Helvetica size=2>( <a href="article.php3?sid=1&mode=threaded&order=0&thold=0"><b>mehr lesen...</b></a> | <a href="article.php3?sid=1&mode=threaded&order=0&thold=0">1 Kommentare</a> )</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><br>
+
+
+<td>&nbsp;</td><td valign="top" bgcolor="#778899"><table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>Umfrage</td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+<form action="pollBooth.php3" method="post"><input type="hidden" name="pollID" value="1"><input type="hidden" name="forwarder" value="pollBooth.php3?op=results&pollID=1"><font face=Arial,Helvetica size=2><b>What do you think about PHP-Nuke?</b><br><input type="radio" name="voteID" value="1"><font face=Arial,Helvetica size=2> Ummmm, not bad <br><input type="radio" name="voteID" value="2"><font face=Arial,Helvetica size=2> Cool <br><input type="radio" name="voteID" value="3"><font face=Arial,Helvetica size=2> Terrific <br><input type="radio" name="voteID" value="4"><font face=Arial,Helvetica size=2> The best one! <br><input type="radio" name="voteID" value="5"><font face=Arial,Helvetica size=2> what the hell is this? <br><center><table cellspacing=0 cellpadding=5 border=0 width=111><tr><td align=center> <input type=image src=images/menu/german/vote.gif border=0></td><td align=center></form><a href="pollBooth.php3?op=results&pollID=1"><img src=images/menu/german/result.gif border=0></a></td></tr></table><a href="pollBooth.php3"><b>vorherige Wahlen</a></b><br><br>Stimmen: <b>5</b></font></center></td></tr></table></td></tr></table><br>
+    
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>vorherige Artikel</td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+<font face=Arial,Helvetica size=2></td></tr></table></td></tr></table><br>
+    
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>First Right Block</td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+You can add/remove/edit blocks for your site with PHP-Nuke.<br>
+Also you can add HTML commands like <a href=http://linuxpreview.org/>links</a>, <b>Bold</b> text, images, etc.<br>
+Just use you imagination.</td></tr></table></td></tr></table><br>
+    
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>Information</td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+<center><br>
+Site made with:<br><br>
+<a href=http://linuxpreview.org/php-nuke.php3><img src=images/powered/phpnuke.gif border=0></a><br><br>
+</td></tr></table></td></tr></table><br>
+    
+</td>
+</td></tr></table>
+</td></tr></table>
+</body></html>
+
+<font face=Arial,Helvetica size=1><center>
+<a href=php-nuke.php3><img src=images/powered/phpnuke.gif border=0 Alt="Web site powered by PHP-Nuke"></a><br><br>
+All logos and trademarks in this site are property of their respective owner. The comments are property of their posters, all the rest © 2000 by me<br>
+This web site was made with <a href=http://linuxpreview.org/php-nuke.php3>PHP-Nuke</a>, a web portal system written in PHP. PHP-Nuke is Free Software released under the <a href=http://www.gnu.org>GNU/GPL license</a>.<br>
+You can syndicate our news using the file <a href=backend.php3>Backend.php3</a><br>
+</body>
+</html>

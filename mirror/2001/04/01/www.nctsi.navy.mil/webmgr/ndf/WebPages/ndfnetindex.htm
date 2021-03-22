@@ -1,0 +1,578 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<title>JNL Index</title>
+<meta NAME="description" CONTENT="US Navy JTIDS NDF Document">
+<meta NAME="keywords" CONTENT="JNL 198,NDF,JTIDS,QRG,NCTSI,LINK 16,MTF,Network Design">
+<meta NAME="author" CONTENT="Jay M. Tan">
+<!-- Document Name: JNL 198 (Quick Reference Guide)-->
+<LINK href="http://nctsi.navy.mil/webmgr/ndf/Images/help.css" rel="stylesheet" type="text/css">
+<script LANGUAGE="JavaScript">
+<!--
+var winglossary=new Object;
+function glossary(){
+winglossary=window.open('glossary.htm','glossary','menubar=no,toolbar=no,location=no,directories=no,status=no,scrollbars=yes,resizable=no,width=400,height=430');
+}
+// -->
+</script>
+
+<style TYPE="text/CSS">
+<!--   
+ A.nav {color: blue;
+ 	   font-family: Verdana,Arial;
+ 	   font-size: 9pt;
+	   text-decoration:underline;}
+ .ONE {font-family:Verdana,Arial;
+ 	   font-size:8pt;
+	   color:black;}	
+ .TWO {font-family:Verdana,Arial;
+ 	   font-size:8pt;
+	   color:yellow;
+	   text-align:center;}		   
+.THREE {font-size:10pt;
+    font-family:Verdana,Arial,Times New Roman;
+	text-align:left;
+	color:black;}	
+.FOUR {font-size:10pt;
+    font-family:Verdana,Arial;
+	text-align:left;
+	text-weight:bold;
+	color:black;}		      
+A:hover.nav{font-family:Verdana,Arial;font-size:9pt; color:red;}
+A.buttontext{color:blue;text-decoration:underline;font: 8pt; font-family:Verdana;cursor:hand;} 
+A:hover.buttontext{font-family:Verdana,Arial;font-size:8pt;color:red;}
+BODY {background:white; margin-top:10px;}
+A:Link:  {color:blue;text-decoration:underline;}
+A:active: {color:red;text-decoration:underline;}	
+A:visited: {color:purple;text-decoration:underline;} 
+#dek {POSITION:absolute;VISIBILITY:hidden;Z-INDEX:200;width:130;}
+.closeIt{background:white;}
+ -->
+
+ </style>
+
+</head>
+
+<body>
+<SCRIPT language="JavaScript" TYPE="text/javascript" src="http://nctsi.navy.mil/webmgr/ndf/Images/hide.js"></SCRIPT>
+
+<MAP NAME ="NAV.map">
+<AREA SHAPE="RECT" coords="0,20,56,52" HREF="http://nctsi.navy.mil/webmgr/ndf/ndf.htm">
+<AREA SHAPE="RECT" coords="56,20,116,52" HREF="http://nctsi.navy.mil" ALT="NCTSI Home Page">
+<AREA SHAPE="RECT" coords="116,20,187,52" HREF="http://nctsi.navy.mil/webmgr/ndf/WebPages/ndfrequest.htm" ALT="Network Request">
+<AREA SHAPE="RECT" coords="187,20,260,52" href="https://www.nctsi.navy.mil/webmgr/fouo/ndf/ndfdocument.htm" id="grayedout" ONMOUSEOVER="popup('This link is password protected,click to login','cyan')" ONMOUSEOUT="kill()">
+<AREA SHAPE="RECT" coords="260,20,338,52" href="https://www.nctsi.navy.mil/webmgr/fouo/ndf/ndfloads.htm" id="grayedout" ONMOUSEOVER="popup('This link is password protected,click to login','cyan')" ONMOUSEOUT="kill()">
+<AREA SHAPE="RECT" coords="339,20,405,52">
+<AREA SHAPE="RECT" coords="406,20,470,52" HREF="ndflinks.htm" ALT="JTIDS LINKS Home Page">
+<AREA SHAPE="RECT" coords="471,20,555,52" HREF="JavaScript:glossary()" ALT="Helpful Terms and Definitions">
+<AREA SHAPE="RECT" coords="556,20,640,52" HREF="ndfpoc.htm" ALT="NCTSI Points of Contacs Page">
+</MAP>
+<DIV ALIGN=center>
+<TABLE border="0" cellspacing="0" cellpadding="0" width="720">
+  <TR>
+      <TD ALIGN="center" bgColor="#33CC66" height="30"><FONT face="Verdana" size="4" color="white">US Navy JTIDS Network Design Facility</FONT>
+      </TD>
+  </tr>
+  <TR>
+      <TD ALIGN="center"><IMG SRC="http://nctsi.navy.mil/webmgr/ndf/Images/ndfnetIdx.gif" WIDTH=650 HEIGHT=47 BORDER=0 ALT="Network Index" USEMAP="#NAV.map"></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="center" bgcolor="#316331" height="30"></TD>
+  </tr>
+  
+  <tr>
+    <td><br>
+    <h2 ALIGN="center"><font color="#FF0000">JNL 200 Quick Reference Guide(QRG)</font></h2>
+    <hr SIZE="2" WIDTH="720">
+    <div ALIGN="center"><p CLASS="FOUR">The JTIDS Network Library (JNL) is a collection of the
+    latest approved Navy Networks.&nbsp; Each network in the JNL contains the load files for
+    each participant in the network.&nbsp; In order to support the varied requirements of
+    users, the JNL contains an ever changing number of networks.&nbsp; These network designs
+    will be maintained and updated to match changes in data link specifications, system
+    enhancements, unit capabilities, changes in theater requirements (including pulse density
+    restrictions on deconfliction), changes in the geopolitical environment, and changing
+    mission expectations of Commanders. </p>
+    <p CLASS="FOUR">The JNL consists of the following files for each network:<ul CLASS="FOUR">
+      <li>Network Identification File </li>
+      <li>Mapping files map J series messages to NPGs </li>
+      <li>Platform files define the transmit, receive, and relay assignments for network
+        participants (one per participant). </li>
+      <li>Design files define transmit assignments for network participants in NPGs (Surveillance,
+        Air Control Backlink, Fighter-to Fighter Targets) where a variety of options have been
+        provided. </li>
+    </ul>
+    <p CLASS="FOUR">The QRG gives a brief description of all networks contained in the JNL.
+    &nbsp; For each network a Connectivity Matrix, Time Line, and a table of the Design
+    options are given.&nbsp; The QRG also contains sections on the Network Management Process
+    and a Link-16 overview.<ul CLASS="FOUR">
+      <li>The Connectivity Matrix is the form used to specify a network's transmissions. </li>
+      <li>The Network Time Line allows one to see at a glance how network capacity has been
+        divided among operational/technical functions. </li>
+      <li>The information presented in the table of design options indicates the options available
+        for NPG 7 (Surveillance), NPG 9 (Air Control Backlink), and NPG 19 (Fighter-to-Fighter
+        Targeting). </li>
+    </ul>
+    <p>&nbsp;</p>
+    <p CLASS="FOUR"><strong>*To use the QRG as a planning tool, click on the network number
+    that you want to view.&nbsp; This will give you a description of the Connectivity Matrix,
+    design options for Surveillance, Air Control Backlink, Fighter-to-Fighter Targeting, and a
+    brief description of the network.</strong></p>
+    <p CLASS="FOUR"><strong>*If after viewing the networks available on JNL 200 none meet your
+    requirements, go to the NDF web page to get the latest list of networks that were
+    distributed after JNL 200.&nbsp; If the list of networks does not meet your requirements,
+    call the NDF or complete the Network Design Request page.&nbsp; Follow the instructions
+    for requesting a modified or new network.</strong></p>
+    <p CLASS="FOUR" align="left"><strong>&nbsp;&nbsp;&nbsp; </strong></p>
+    </div></td>
+  </tr>
+</table>
+<div align="center">
+<table BORDER="2" WIDTH="680" CLASS="TWO" CELLPADDING="4">
+  <tr BGCOLOR="#006699">
+    <td WIDTH="438">PLATFORMS SUPPORTED</td>
+    <td WIDTH="242">FUNCTIONAL NPG CAPACITY</td>
+  </tr>
+</table>
+</div>
+
+<div align="center">
+
+<table BORDER="3" WIDTH="680" CLASS="TWO">
+  <tr>
+    <td BGCOLOR="#006699" ROWSPAN="2" WIDTH="120">Network Name</td>
+    <td BGCOLOR="#006699" ROWSPAN="2" WIDTH="90">NATO Name</td>
+    <td BGCOLOR="#006699" ROWSPAN="2" WIDTH="40">JNL No.</td>
+    <td BGCOLOR="#006699" ROWSPAN="2" WIDTH="30">Ship</td>
+    <td BGCOLOR="#006699" ROWSPAN="2" WIDTH="30">Sub</td>
+    <td BGCOLOR="#006699" ROWSPAN="2" WIDTH="30">E-2</td>
+    <td BGCOLOR="#006699" ROWSPAN="2" WIDTH="45">F-14</td>
+    <td BGCOLOR="#006699" ROWSPAN="2" WIDTH="30">E-3</td>
+    <td BGCOLOR="#006699" ROWSPAN="2" WIDTH="45">F-15</td>
+    <td BGCOLOR="#006699" ROWSPAN="2" WIDTH="30">Other</td>
+    <td BGCOLOR="#006699" ROWSPAN="2" WIDTH="30">Surv</td>
+    <td BGCOLOR="#006699" ROWSPAN="2" WIDTH="30">A/C Back</td>
+    <td BGCOLOR="#006699" ROWSPAN="2" WIDTH="40">Ftr-Ftr</td>
+    <td BGCOLOR="#006699" ROWSPAN="2" WIDTH="30">Data Fwd</td>
+    <td BGCOLOR="#006699" COLSPAN="2" WIDTH="50">Voice</td>
+  </tr>
+  <tr CLASS="ONE">
+    <td BGCOLOR="#ffcc33" WIDTH="35">A</td>
+    <td BGCOLOR="#ffcc33" WIDTH="25">B</td>
+  </tr>
+  <tr CLASS="ONE">
+    <td WIDTH="120">NETWORK
+    26B</td>
+    <td WIDTH="90">ANDO0026B</td>
+    <td WIDTH="40">200</td>
+    <td WIDTH="30">5</td>
+    <td WIDTH="30">2</td>
+    <td WIDTH="30">2</td>
+    <td WIDTH="45">8</td>
+    <td WIDTH="30">1</td>
+    <td WIDTH="45">0</td>
+    <td WIDTH="30">0</td>
+    <td WIDTH="30">276</td>
+    <td WIDTH="30">64</td>
+    <td WIDTH="40">21</td>
+    <td WIDTH="30">1</td>
+    <td WIDTH="25">N</td>
+    <td WIDTH="25">N</td>
+  </tr>
+  <tr CLASS="ONE">
+    <td WIDTH="120">NETWORK
+    28C</td>
+    <td WIDTH="90">ANDO0028C</td>
+    <td WIDTH="40">200</td>
+    <td WIDTH="30">6</td>
+    <td WIDTH="30">2</td>
+    <td WIDTH="30">4</td>
+    <td WIDTH="45">0</td>
+    <td WIDTH="30">2</td>
+    <td WIDTH="45">0</td>
+    <td WIDTH="30">0</td>
+    <td WIDTH="30">912</td>
+    <td WIDTH="30">0</td>
+    <td WIDTH="40">0</td>
+    <td WIDTH="30">2</td>
+    <td WIDTH="25">Y/R</td>
+    <td WIDTH="25">N</td>
+  </tr>
+  <tr CLASS="ONE">
+    <td WIDTH="120">NETWORK
+    29C</td>
+    <td WIDTH="90">ANDO0029C</td>
+    <td WIDTH="40">200</td>
+    <td WIDTH="30">7</td>
+    <td WIDTH="30">2</td>
+    <td WIDTH="30">4</td>
+    <td WIDTH="45">12</td>
+    <td WIDTH="30">1</td>
+    <td WIDTH="45">0</td>
+    <td WIDTH="30">1</td>
+    <td WIDTH="30">684</td>
+    <td WIDTH="30">64</td>
+    <td WIDTH="40">21</td>
+    <td WIDTH="30">2</td>
+    <td WIDTH="25">Y/R</td>
+    <td WIDTH="25">Y</td>
+  </tr>
+  <tr CLASS="ONE">
+    <td WIDTH="120">NETWORK
+    30B</td>
+    <td WIDTH="90">ANDU0030B</td>
+    <td WIDTH="40">200</td>
+    <td WIDTH="30">8</td>
+    <td WIDTH="30">2</td>
+    <td WIDTH="30">6</td>
+    <td WIDTH="45">12</td>
+    <td WIDTH="30">1</td>
+    <td WIDTH="45">0</td>
+    <td WIDTH="30">2</td>
+    <td WIDTH="30">696</td>
+    <td WIDTH="30">48</td>
+    <td WIDTH="40">24</td>
+    <td WIDTH="30">1</td>
+    <td WIDTH="25">Y</td>
+    <td WIDTH="25">Y</td>
+  </tr>
+  <tr CLASS="ONE">
+    <td WIDTH="120">NETWORK 31B</td>
+    <td WIDTH="90">ANDOO031B</td>
+    <td WIDTH="40">200</td>
+    <td WIDTH="30">7</td>
+    <td WIDTH="30">2</td>
+    <td WIDTH="30">4</td>
+    <td WIDTH="45">12</td>
+    <td WIDTH="30">1</td>
+    <td WIDTH="45">0</td>
+    <td WIDTH="30">1</td>
+    <td WIDTH="30">716</td>
+    <td WIDTH="30">64</td>
+    <td WIDTH="40">21</td>
+    <td WIDTH="30">2</td>
+    <td WIDTH="25">2.4/Y</td>
+    <td WIDTH="25">Y/R</td>
+  </tr>
+  <tr CLASS="ONE">
+    <td WIDTH="120">NETWORK 32</td>
+    <td WIDTH="90">ACDO0001A</td>
+    <td WIDTH="40">200</td>
+    <td WIDTH="30">6</td>
+    <td WIDTH="30">0</td>
+    <td WIDTH="30">3</td>
+    <td WIDTH="45">8</td>
+    <td WIDTH="30">2/2</td>
+    <td WIDTH="45">20</td>
+    <td WIDTH="30">17</td>
+    <td WIDTH="30">816</td>
+    <td WIDTH="30">64</td>
+    <td WIDTH="40">21</td>
+    <td WIDTH="30">2</td>
+    <td WIDTH="25">N</td>
+    <td WIDTH="25">Y/R</td>
+  </tr>
+  <tr CLASS="ONE">
+    <td WIDTH="120">NETWORK
+    33</td>
+    <td WIDTH="90">ACDO0002A</td>
+    <td WIDTH="40">200</td>
+    <td WIDTH="30">6</td>
+    <td WIDTH="30">0</td>
+    <td WIDTH="30">3</td>
+    <td WIDTH="45">8</td>
+    <td WIDTH="30">3</td>
+    <td WIDTH="45">8</td>
+    <td WIDTH="30">15</td>
+    <td WIDTH="30">624</td>
+    <td WIDTH="30">64</td>
+    <td WIDTH="40">21</td>
+    <td WIDTH="30">2</td>
+    <td WIDTH="25">Y/R</td>
+    <td WIDTH="25">Y</td>
+  </tr>
+  <tr CLASS="ONE">
+    <td WIDTH="120">NETWORK
+    34</td>
+    <td WIDTH="90">AJDE0004A</td>
+    <td WIDTH="40">200</td>
+    <td WIDTH="30">5</td>
+    <td WIDTH="30">0</td>
+    <td WIDTH="30">2</td>
+    <td WIDTH="45">0</td>
+    <td WIDTH="30">2</td>
+    <td WIDTH="45">0</td>
+    <td WIDTH="30">18</td>
+    <td WIDTH="30">818</td>
+    <td WIDTH="30">0</td>
+    <td WIDTH="40">0</td>
+    <td WIDTH="30">1</td>
+    <td WIDTH="25">N</td>
+    <td WIDTH="25">Y/R</td>
+  </tr>
+  <tr CLASS="ONE">
+    <td WIDTH="120">NETWORK
+    35</td>
+    <td WIDTH="90">EABO0001A</td>
+    <td WIDTH="40">200</td>
+    <td WIDTH="30">6</td>
+    <td WIDTH="30">2</td>
+    <td WIDTH="30">4</td>
+    <td WIDTH="45">12</td>
+    <td WIDTH="30">2</td>
+    <td WIDTH="45">0</td>
+    <td WIDTH="30">9</td>
+    <td WIDTH="30">724</td>
+    <td WIDTH="30">96</td>
+    <td WIDTH="40">32</td>
+    <td WIDTH="30">2</td>
+    <td WIDTH="25">IJMS</td>
+    <td WIDTH="25">Y/R</td>
+  </tr>
+  <tr CLASS="ONE">
+    <td WIDTH="120">NETWORK
+    36</td>
+    <td WIDTH="90">EDDO0001A</td>
+    <td WIDTH="40">200</td>
+    <td WIDTH="30">20</td>
+    <td WIDTH="30">0</td>
+    <td WIDTH="30">6</td>
+    <td WIDTH="45">18</td>
+    <td WIDTH="30">4</td>
+    <td WIDTH="45">1</td>
+    <td WIDTH="30">8</td>
+    <td WIDTH="30">864</td>
+    <td WIDTH="30">64</td>
+    <td WIDTH="40">21</td>
+    <td WIDTH="30">2</td>
+    <td WIDTH="25">Y/R</td>
+    <td WIDTH="25">Y</td>
+  </tr>
+  <tr CLASS="ONE">
+    <td WIDTH="120">NETWORK
+    37</td>
+    <td WIDTH="90">NANO0003A</td>
+    <td WIDTH="40">200</td>
+    <td WIDTH="30">5</td>
+    <td WIDTH="30">2</td>
+    <td WIDTH="30">3</td>
+    <td WIDTH="45">0</td>
+    <td WIDTH="30">4</td>
+    <td WIDTH="45">0</td>
+    <td WIDTH="30">8</td>
+    <td WIDTH="30">532</td>
+    <td WIDTH="30">0</td>
+    <td WIDTH="40">0</td>
+    <td WIDTH="30">1</td>
+    <td WIDTH="25">N</td>
+    <td WIDTH="25">Y</td>
+  </tr>
+  <tr CLASS="ONE">
+    <td WIDTH="120">NETWORK
+    38</td>
+    <td WIDTH="90">NANO0004A</td>
+    <td WIDTH="40">200</td>
+    <td WIDTH="30">5</td>
+    <td WIDTH="30">0</td>
+    <td WIDTH="30">4</td>
+    <td WIDTH="45">0</td>
+    <td WIDTH="30">5</td>
+    <td WIDTH="45">0</td>
+    <td WIDTH="30">13</td>
+    <td WIDTH="30">1056</td>
+    <td WIDTH="30">0</td>
+    <td WIDTH="40">0</td>
+    <td WIDTH="30">1</td>
+    <td WIDTH="25">Y/R</td>
+    <td WIDTH="25">N</td>
+  </tr>
+  <tr CLASS="ONE">
+    <td WIDTH="120">NETWORK
+    39</td>
+    <td WIDTH="90">NANO0006A</td>
+    <td WIDTH="40">200</td>
+    <td WIDTH="30">7</td>
+    <td WIDTH="30">0</td>
+    <td WIDTH="30">3</td>
+    <td WIDTH="45">0</td>
+    <td WIDTH="30">4</td>
+    <td WIDTH="45">0</td>
+    <td WIDTH="30">14</td>
+    <td WIDTH="30">832</td>
+    <td WIDTH="30">0</td>
+    <td WIDTH="40">0</td>
+    <td WIDTH="30">1</td>
+    <td WIDTH="25">IJMS</td>
+    <td WIDTH="25">Y</td>
+  </tr>
+  <tr CLASS="ONE">
+    <td WIDTH="120">NETWORK
+    40</td>
+    <td WIDTH="90">AJCO0001A</td>
+    <td WIDTH="40">200</td>
+    <td WIDTH="30">5</td>
+    <td WIDTH="30">0</td>
+    <td WIDTH="30">2</td>
+    <td WIDTH="45">4</td>
+    <td WIDTH="30">2</td>
+    <td WIDTH="45">0</td>
+    <td WIDTH="30">6</td>
+    <td WIDTH="30">808</td>
+    <td WIDTH="30">64</td>
+    <td WIDTH="40">21</td>
+    <td WIDTH="30">2</td>
+    <td WIDTH="25">2.4/Y</td>
+    <td WIDTH="25">N</td>
+  </tr>
+</table>
+</div>
+<br>
+  <br>
+  <div align="center"><font face="Verdana,Arial" color=red><strong>To view the Connectivity Matrix for each network above <a href="https://www.nctsi.navy.mil/webmgr/fouo/NDF/ndfmatrix.htm" id="yellowout" ONMOUSEOVER="popup('This link is password protected,click to login','cyan')" ONMOUSEOUT="kill()">please click here </a></strong></font></div>
+    <p></p>
+	<table BORDER="2" WIDTH="360" CLASS="TWO" CELLPADDING="4">
+    <tr>
+      <td BGCOLOR="#c0c0c0" BORDERCOLOR="#0000ff" BORDERCOLORDARK="#0000ff" BORDERCOLORLIGHT="#0000ff" WIDTH="360"><a href="https://www.nctsi.navy.mil/webmgr/fouo/ndf/docs/JNL200_QRG_Web-Email_ver.pdf" id="whiteout" ONMOUSEOVER="popup('This link is password protected,click to login','cyan')" ONMOUSEOUT="kill()">Download or view PDF version of entire
+      JNL 200(QRG)</a></td>
+    </tr>
+  </table>
+  <table BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="720">
+    <tr>
+      <td CLASS="THREE"><strong>NOTES:</strong><p><strong>Surv </strong>= Surveillance track
+      capacity (approximate) for entire Network and is based on CDS Model 4 Protocols.&nbsp; CDS
+      Model 5 units will have an approximately 20% greater throughput (assumes a 12 second
+      update rate).</p>
+      <p><strong>A/C Back </strong>= Air Control Backlink target capacity per net.</p>
+      <p><strong>FTR-FTR </strong>= Fighter to Fighter target capacity per net.</p>
+      <p><strong>Data Fwd </strong>= Number of simultaneous Data Forwarding Units.</p>
+      <p><strong>Voice </strong>= 16 Kbps unless otherwise noted, /R is relayed.</td>
+    </tr>
+  </table>
+
+
+<p>&nbsp;</p>
+<div align="center">
+<big><big><strong>Network and JNL ID Numbering</strong></big></big>
+</div>
+<p>
+<table border="3" width="78%" bordercolor="#C0C0C0" align="center" class="one">
+  <tr>
+    <td width="33%" align="center" bgcolor="#006699"><font color="#FFFF00">Network Types</font></td>
+    <td width="33%" align="center" bgcolor="#006699"><font color="#FFFF00">Network ID Numbers</font></td>
+    <td width="34%" align="center" bgcolor="#006699"><font color="#FFFF00">JNL ID Numbers</font></td>
+  </tr>
+  <tr>
+    <td width="33%" align="center">Operational Networks</td>
+    <td width="33%" align="center">1-99<font color="#FF0000">*</font></td>
+    <td width="34%" align="center">1-499</td>
+  </tr>
+  <tr>
+    <td width="33%" align="center">Single Use Networks</td>
+    <td width="33%" align="center">100-199</td>
+    <td width="34%" align="center">1-499</td>
+  </tr>
+  <tr>
+    <td width="33%" align="center">R &amp; D Networks</td>
+    <td width="33%" align="center">200 and above</td>
+    <td width="34%" align="center">500 and above</td>
+  </tr>
+</table>
+<br>
+<table border="0" width="78%" cellpadding="0" align="center">
+  <tr>
+    <td width="100%" align="left" class= "three">Navy Network JNLs will have a &quot;dummy network&quot; as the last
+    network in a JNL. The purpose of the network is to facilitate loading for those C2Ps that
+    cannot read the last network in a JNL<font color="#FF0000">The &quot;dummy network&quot; will always be assigned Network ID: 99.
+    &nbsp; DO NOT attempt to load Network 99.</font></td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+<div align="center">
+<big><big><strong>JNL 200 Network Cross Reference Table</strong></big></big>
+</div>
+<p>
+<table border="3" width="78%" align="center" class="one">
+  <tr>
+    <td width="33%" align="center" bgcolor="#006699"><font color="#FFFF00">JNL 200-USN Network
+    ID</font></td>
+    <td width="33%" align="center" bgcolor="#006699"><font color="#FFFF00">JOINT-NATO ID</font></td>
+    <td width="34%" align="center" bgcolor="#006699"><font color="#FFFF00">Former
+    JOINT-NATO/USN ID/JNL</font></td>
+  </tr>
+  <tr>
+    <td width="33%" align="center">26B</td>
+    <td width="33%" align="center">ANDP0026B</td>
+    <td width="34%" align="center">ANDP0026A/26A/JNL-198</td>
+  </tr>
+  <tr>
+    <td width="33%" align="center">28C</td>
+    <td width="33%" align="center">ANDO0028C</td>
+    <td width="34%" align="center">ANDO0028B/28B/JNL-198</td>
+  </tr>
+  <tr>
+    <td width="33%" align="center">29C</td>
+    <td width="33%" align="center">ANDO0029C</td>
+    <td width="34%" align="center">ANDO0029A/29A/JNL-198</td>
+  </tr>
+  <tr>
+    <td width="33%" align="center">30B</td>
+    <td width="33%" align="center">ANDU0030B</td>
+    <td width="34%" align="center">ANDU0030A/30A/JNL-09</td>
+  </tr>
+  <tr>
+    <td width="33%" align="center">31B</td>
+    <td width="33%" align="center">ANDO0031B</td>
+    <td width="34%" align="center">ANDO0031A/31A/JNL-16</td>
+  </tr>
+  <tr>
+    <td width="33%" align="center">032</td>
+    <td width="33%" align="center">ACDO0001A</td>
+    <td width="34%" align="center">ACDO0001A/242/JNL-17</td>
+  </tr>
+  <tr>
+    <td width="33%" align="center">033</td>
+    <td width="33%" align="center">ACDO0002A</td>
+    <td width="34%" align="center">ACDO0002A/244/JNL-15</td>
+  </tr>
+  <tr>
+    <td width="33%" align="center">034</td>
+    <td width="33%" align="center">AJDE0004A</td>
+    <td width="34%" align="center">AJDE0004A/241/JNL-12</td>
+  </tr>
+  <tr>
+    <td width="33%" align="center">035</td>
+    <td width="33%" align="center">EABO0001A</td>
+    <td width="34%" align="center">EABO0001A/235A/JNL-198</td>
+  </tr>
+  <tr>
+    <td width="33%" align="center">036</td>
+    <td width="33%" align="center">EDDO0001A</td>
+    <td width="34%" align="center">EDD0OOO1A/251/JNL-24</td>
+  </tr>
+  <tr>
+    <td width="33%" align="center">037</td>
+    <td width="33%" align="center">NANO0003A</td>
+    <td width="34%" align="center">NANO0003A/231A/JNL-198</td>
+  </tr>
+  <tr>
+    <td width="33%" align="center">038</td>
+    <td width="33%" align="center">NANO0004A</td>
+    <td width="34%" align="center">NANO0004A/240/JNL-11</td>
+  </tr>
+  <tr>
+    <td width="33%" align="center">039</td>
+    <td width="33%" align="center">NANO0006A</td>
+    <td width="34%" align="center">NANO0006A/243/JNL-17</td>
+  </tr>
+  <tr>
+    <td width="33%" align="center">040</td>
+    <td width="33%" align="center">AJCO0001A</td>
+    <td width="34%" align="center">AJCO0001A/253/JNL-26</td>
+  </tr>
+</table>
+
+
+</div>
+</body>
+</html>

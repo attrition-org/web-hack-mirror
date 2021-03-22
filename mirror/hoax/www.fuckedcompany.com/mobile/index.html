@@ -1,0 +1,357 @@
+ 
+	
+
+
+<HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE"> 
+<html>
+<head>
+<title>FuckedCompany.com - The Dot-com Deadpool</title>
+
+
+<script LANGUAGE=JAVASCRIPT TYPE="text/javascript" >
+<!--
+
+function _CF_onError(form_object, input_object, object_value, error_message)
+    {
+	alert(error_message);
+       	return false;	
+    }
+
+
+function _CF_hasValue(obj, obj_type)
+    {
+    if (obj_type == "TEXT" || obj_type == "PASSWORD")
+	{
+    	if (obj.value.length == 0) 
+      		return false;
+    	else 
+      		return true;
+    	}
+    else if (obj_type == "SELECT")
+	{
+        for (i=0; i < obj.length; i++)
+	    	{
+		if (obj.options[i].selected)
+			return true;
+		}
+
+       	return false;	
+	}
+    else if (obj_type == "SINGLE_VALUE_RADIO" || obj_type == "SINGLE_VALUE_CHECKBOX")
+	{
+
+		if (obj.checked)
+			return true;
+		else
+       		return false;	
+	}
+    else if (obj_type == "RADIO" || obj_type == "CHECKBOX")
+	{
+
+        for (i=0; i < obj.length; i++)
+	    	{
+		if (obj[i].checked)
+			return true;
+		}
+
+       	return false;	
+	}
+	}
+
+
+function _CF_checkinteger(object_value)
+    {
+    //Returns true if value is a number or is NULL
+    //otherwise returns false	
+
+    if (object_value.length == 0)
+        return true;
+
+    //Returns true if value is an integer defined as
+    //   having an optional leading + or -.
+    //   otherwise containing only the characters 0-9.
+	var decimal_format = ".";
+	var check_char;
+
+    //The first character can be + -  blank or a digit.
+	check_char = object_value.indexOf(decimal_format)
+    //Was it a decimal?
+    if (check_char < 1)
+	return _CF_checknumber(object_value);
+    else
+	return false;
+    }
+
+
+function _CF_checknumber(object_value)
+    {
+    //Returns true if value is a number or is NULL
+    //otherwise returns false	
+
+    if (object_value.length == 0)
+        return true;
+
+    //Returns true if value is a number defined as
+    //   having an optional leading + or -.
+    //   having at most 1 decimal point.
+    //   otherwise containing only the characters 0-9.
+	var start_format = " .+-0123456789";
+	var number_format = " .0123456789";
+	var check_char;
+	var decimal = false;
+	var trailing_blank = false;
+	var digits = false;
+
+    //The first character can be + - .  blank or a digit.
+	check_char = start_format.indexOf(object_value.charAt(0))
+    //Was it a decimal?
+	if (check_char == 1)
+	    decimal = true;
+	else if (check_char < 1)
+		return false;
+        
+	//Remaining characters can be only . or a digit, but only one decimal.
+	for (var i = 1; i < object_value.length; i++)
+	{
+		check_char = number_format.indexOf(object_value.charAt(i))
+		if (check_char < 0)
+			return false;
+		else if (check_char == 1)
+		{
+			if (decimal)		// Second decimal.
+				return false;
+			else
+				decimal = true;
+		}
+		else if (check_char == 0)
+		{
+			if (decimal || digits)	
+				trailing_blank = true;
+        // ignore leading blanks
+
+		}
+	        else if (trailing_blank)
+			return false;
+		else
+			digits = true;
+	}	
+    //All tests passed, so...
+    return true
+    }
+
+function  _CF_checkCFForm_1(_CF_this)
+    {
+    if  (!_CF_hasValue(_CF_this.companies, "TEXT" )) 
+        {
+        if  (!_CF_onError(_CF_this, _CF_this.companies, _CF_this.companies.value, "Enter the companies you want to be alerted about"))
+            {
+            return false; 
+            }
+        }
+
+    if  (!_CF_hasValue(_CF_this.number1, "TEXT" )) 
+        {
+        if  (!_CF_onError(_CF_this, _CF_this.number1, _CF_this.number1.value, "Enter your area code"))
+            {
+            return false; 
+            }
+        }
+
+    if  (!_CF_checkinteger(_CF_this.number1.value))
+        {
+        if  (!_CF_onError(_CF_this, _CF_this.number1, _CF_this.number1.value, "Enter your area code"))
+            {
+            return false; 
+            }
+        }
+
+    if  (!_CF_hasValue(_CF_this.number2, "TEXT" )) 
+        {
+        if  (!_CF_onError(_CF_this, _CF_this.number2, _CF_this.number2.value, "Enter the first three digits of your wireless phone number"))
+            {
+            return false; 
+            }
+        }
+
+    if  (!_CF_checkinteger(_CF_this.number2.value))
+        {
+        if  (!_CF_onError(_CF_this, _CF_this.number2, _CF_this.number2.value, "Enter the first three digits of your wireless phone number"))
+            {
+            return false; 
+            }
+        }
+
+    if  (!_CF_hasValue(_CF_this.number3, "TEXT" )) 
+        {
+        if  (!_CF_onError(_CF_this, _CF_this.number3, _CF_this.number3.value, "Enter the last three digits of your wireless phone number"))
+            {
+            return false; 
+            }
+        }
+
+    if  (!_CF_checkinteger(_CF_this.number3.value))
+        {
+        if  (!_CF_onError(_CF_this, _CF_this.number3, _CF_this.number3.value, "Enter the last three digits of your wireless phone number"))
+            {
+            return false; 
+            }
+        }
+
+    return true;
+    }
+
+//-->
+</script>
+</head>
+<style>
+<!--
+BODY {scrollbar-face-color: #cccccc;scrollbar-shadow-color: #333333;scrollbar-highlight-color: #333333;scrollbar-3dlight-color: #333333;scrollbar-darkshadow-color: #333333;scrollbar-track-color: #333333;scrollbar-arrow-color: #0000ff;}
+a:link {font-family: Verdana, Geneva, Arial; font-size: 9pt; color:ffffff; font-weight:bold}
+a:visited {font-family: Verdana, Geneva, Arial; font-size:9pt; color:ffffff;font-weight:bold}
+a:hover {font-family: Verdana, Geneva, Arial; font-size:9pt; color:ffb600; font-weight:bold}
+.formlabel {font-family: Verdana, Geneva, Arial; font-size:9pt; color:ffffff; font-weight:bold}
+.regular {font-family: Verdana, Geneva, Arial; font-size:9pt; color:ffffff}
+.headline {font-family: Verdana, Geneva, Arial; font-size:9pt; color:ffffff; font-weight:bold}
+.article {font-family: Verdana, Geneva, Arial; font-size:9pt; color:ffffff}
+.error {font-family: Verdana, Geneva, Arial; font-size:9pt; color:ff0000; font-weight:bold}
+.nav {font-family:verdana,arial;font-size:8pt;color:ffffff;font-weight:bold}
+.navlink {font-family:verdana,arial;font-size:8pt;color:ffffff;font-weight:bold}
+.bigheadline {font-family:verdana,arial;font-size:13pt;color:ffffff;font-weight:bold}
+.pageheader {font-family:verdana,arial;font-size:12pt;color:ffffff;font-weight:bold}
+-->
+</style>
+<body bgColor=000000 text=ffffff alink=ff6600 vlink=ffffff link=ffffff leftmargin="0" topmargin="0">
+<!-- ImageReady Slices (header.psd) -->
+<table border=0 cellPadding=0 cellSpacing=0>
+	<tr>
+		<td width=646 height=76 bgColor=#000000 align=right>
+		<!-- These tags should be placed in the Home Page category in the 468x60 size space  -->
+			<IFRAME NORESIZE="NORESIZE" FRAMEBORDER="0" WIDTH=468 HEIGHT=60 MARGINWIDTH="0"
+			MARGINHEIGHT="0" SCROLLING="NO" SRC="http://ads.admonitor.net/adengine.cgi?F1251|1001|1|iframe|C10673|||_admonitor">
+			<SCRIPT LANGUAGE="JavaScript" SRC="http://ads.admonitor.net/adengine.cgi?F1251|1001|1|jscript|C10673|||_admonitor">
+			</SCRIPT>
+			<NOSCRIPT>
+			<A HREF="http://ads.admonitor.net/clicktrack.cgi?F1251|1001|1|image2|C10673|||" TARGET=_admonitor>
+			<IMG SRC="http://ads.admonitor.net/adengine.cgi?F1251|1001|1|image2|C10673|||" BORDER=0 WIDTH=468 HEIGHT=60></A>
+			</NOSCRIPT>
+			</IFRAME>
+		<!-- End of adMonitor v3.0 rich content tags -->
+		<img src="images/spacer.gif" height=1 width=25>
+		<!-- These tags should be placed in the Home Page category in the 120x60 size space  -->
+			<IFRAME NORESIZE="NORESIZE" FRAMEBORDER="0" WIDTH=120 HEIGHT=60 MARGINWIDTH="0"
+			MARGINHEIGHT="0" SCROLLING="NO" SRC="http://ads.admonitor.net/adengine.cgi?F1251|1006|1|iframe|C10673|||_admonitor">
+			<SCRIPT LANGUAGE="JavaScript" SRC="http://ads.admonitor.net/adengine.cgi?F1251|1006|1|jscript|C10673|||_admonitor">
+			</SCRIPT>
+			<NOSCRIPT>
+			<A HREF="http://ads.admonitor.net/clicktrack.cgi?F1251|1006|1|image2|C10673|||" TARGET=_admonitor>
+			<IMG SRC="http://ads.admonitor.net/adengine.cgi?F1251|1006|1|image2|C10673|||" BORDER=0 WIDTH=120 HEIGHT=60></A>
+			</NOSCRIPT>
+			</IFRAME>
+		<!-- End of adMonitor v3.0 rich content tags -->
+		</td>
+	</tr>
+	<tr><td><a href=../index.cfm><img src=../images/header_bar.gif border=0></a></td></tr>
+	<tr>
+		<td height=22 bgColor=#000000 class="nav" valign="top"><b>
+		&nbsp;&nbsp;<a href=../index.cfm><span class=navlink>Home</span></a> |
+		<a href=../comments/threadlist.cfm><span class=navlink>HFSC</span></a> |
+		<a href=/archives><span class=navlink>Archives</span></a> |
+		<a href=/jobs><span class=navlink>Find a New Job</span></a> |
+		<a href=/merch><span class=navlink>T-shirts & Crap</span></a> |
+		<a href=http://forum.fuckedcompany.com><span class=navlink>Message Board</span></a> |
+
+		<a href=/mobile><span class=navlink>Wireless</span></a> |
+		<a href=/contact><span class=navlink>Contact Pud</span></a>
+		
+		</b></font></td>
+	</tr>
+</table>
+<!-- End ImageReady Slices -->
+</body>
+</html>
+	
+	
+	<!-- ImageReady Slices (fcbox.psd) -->
+	
+	<table border=0 cellPadding=0 cellSpacing=0>
+		<tr>
+			<td colSpan=4 bgColor=#333333>
+				&nbsp;<font face=verdana size=2 color=ffffff><b>Wireless Alerts</b></font></td>
+		</tr>
+		<tr>
+			<td bgColor=#333333>
+				<img src="images/spacer.gif" width=1 height=100></td>
+			<td bgColor=#6C000E>
+				<img src="images/spacer.gif" width=5 height=100></td>
+			<td width=755 height=100 bgColor=#6C000E valign=top>
+			<font color=white face=verdana size=2>
+			
+	
+<FORM NAME="CFForm_1" ACTION="insert.cfm" METHOD=POST onSubmit="return _CF_checkCFForm_1(this)">
+	<br>
+	Sign up to have short text alerts sent to your pager or cell phone about the companies you care about.
+	<br>
+	<a href="profile.cfm">Click here</a> to view or delete your current alert profile.
+	<p>
+	<b>Alert when there's news about: </b>
+	<INPUT TYPE="Text" NAME="companies" SIZE="40" MAXLENGTH="255">
+	<font size=1>
+	<br>
+	Tip: Feel free to leave out the ".com" in the company's name.  Either will work.<br>
+	Tip: Enter multiple companies by separating each company with a comma.<br>
+	Tip: Enter an asterisk (*) to receive <i>all</i> updates (warning: you'll get a shitload this way...)<p>
+	For example:<br>
+	<font color="yellow">amazon, kozmo, priceline</font> - news containing any of the companies will be sent
+	</font>
+	<p>
+	<center>
+	
+
+<table cellpadding=0 cellspacing=3>
+<tr>
+	<td align=right class=formlabel>Wireless Provider:</td>
+	<td><SELECT NAME="address"><OPTION VALUE="alphapage.airtouch.com">Air Touch<OPTION VALUE="message.alltel.com">AllTel<OPTION VALUE="ameritech.exmachina.com">Ameritech<OPTION VALUE="mobile.att.net">AT&T<OPTION VALUE="message.bam.com">Bell Atlantic<OPTION VALUE="sms.bellsouth.com">Bell South<OPTION VALUE="text.houstoncellular.net">Houston Cellular<OPTION VALUE="page.nextel.com">Nextel<OPTION VALUE="PacBellPCS.Net">Pac Bell<OPTION VALUE="pagenet.net">PageNet<OPTION VALUE="skytel.com">SkyTel<OPTION VALUE="message.swbellwireless.com">Southwestern Bell<OPTION VALUE="sprintpaging.com">Sprint Page<OPTION VALUE="messaging.sprintpcs.com">Sprint Phone<OPTION VALUE="airmessage.net">WebLink Wireless</SELECT></td>
+</tr>
+<tr>
+	<td align=right class=formlabel>Wireless Phone Number:</td>
+	<td>
+		<INPUT TYPE="Text" NAME="number1" SIZE="3" MAXLENGTH="3"> - 
+		<INPUT TYPE="Text" NAME="number2" SIZE="3" MAXLENGTH="3"> - 
+		<INPUT TYPE="Text" NAME="number3" SIZE="5" MAXLENGTH="4">
+	</td>
+</tr>
+<tr>
+	<td align=middle colspan=2>
+		<br>
+		<input type="submit" value="submit">
+	</td>
+</tr>
+</table>
+
+	</center>
+</FORM>
+
+
+	
+			</font>
+			</td>
+			<td bgColor=#333333>
+				<img src="images/spacer.gif" width=1 height=100></td>
+		</tr>
+		<tr>
+			<td colSpan=4 bgColor=#333333>
+				<img src="images/spacer.gif" width=755 height=1></td>
+		</tr>
+	</table>
+	
+
+
+<div id="Layer1" style="position:absolute; left:21px; top:355px; width:71px; height:48px; z-index:2; visibility:hidden">
+<IMG SRC="http://hg1.hitbox.com/HG?hc=wf168&l=y&hb=WQ510212AEDS06EN0&cd=1&n=FC+/mobile/index.cfm" height=62 width=88 border=0>
+</div>
+
+</td>
+</tr>
+</table>
+
+  

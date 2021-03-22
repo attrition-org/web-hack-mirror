@@ -1,0 +1,233 @@
+<html>
+<head>
+<title>Fundaci&oacute;n Uni&oacute;n de Centros Educativos</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v3.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v3.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : args[i+1];
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    if ((nbArr = document[grpName]) != null)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = args[i+1];
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="MM_preloadImages('botones/objetivos_r2_c2_f3.gif','botones/objetivos_r2_c2_f2.gif','botones/objetivos_r2_c2_f4.gif','botones/fundamentos_r2_c2_f3.gif','botones/fundamentos_r2_c2_f2.gif','botones/fundamentos_r2_c2_f4.gif','botones/centros_r2_c2_f3.gif','botones/centros_r2_c2_f2.gif','botones/centros_r2_c2_f4.gif','botones/convenios_r2_c2_f3.gif','botones/convenios_r2_c2_f2.gif','botones/convenios_r2_c2_f4.gif','botones/actividades_r2_c2_f3.gif','botones/actividades_r2_c2_f2.gif','botones/actividades_r2_c2_f4.gif','botones/botonera/otra/botonera_r02_c2_f3.gif','botones/botonera/otra/botonera_r02_c2_f2.gif','botones/botonera/otra/botonera_r02_c2_f4.gif','botones/botonera/botonera_r03_c2_f3.gif','botones/botonera/botonera_r03_c2_f2.gif','botones/botonera/botonera_r03_c2_f4.gif','botones/botonera/otra/botonera_r04_c2_f3.gif','botones/botonera/otra/botonera_r04_c2_f2.gif','botones/botonera/otra/botonera_r04_c2_f4.gif','botones/botonera/botonera_r09_c3_f3.gif','botones/botonera/botonera_r09_c3_f2.gif','botones/botonera/botonera_r09_c3_f4.gif','botones/botonera/otra/botonera_r08_c2_f3.gif','botones/botonera/otra/botonera_r08_c2_f2.gif','botones/botonera/otra/botonera_r08_c2_f4.gif','botones/botonera/otra/botonera_r06_c2_f3.gif','botones/botonera/otra/botonera_r06_c2_f2.gif','botones/botonera/otra/botonera_r06_c2_f4.gif','botones/botonera/botonera_r10_c3_f3.gif','botones/botonera/botonera_r10_c3_f2.gif','botones/botonera/botonera_r10_c3_f4.gif')">
+<table width="100%" border="2" height="77" bordercolor="#000099">
+  <tr> 
+    <td width="20%" height="67" bordercolor="#336699"><img src="fuce.gif" width="146" height="66"></td>
+    <td width="80%" height="67" bgcolor="#000000"> 
+      <div align="right"><font color="#FFFFFF" size="6" face="Verdana, Arial, Helvetica, sans-serif"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,2,0" width="527" height="66" align="absmiddle">
+          <param name=movie value="fuce.swf">
+          <param name=quality value=high>
+          <embed src="fuce.swf" quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="527" height="66" align="absmiddle">
+          </embed> 
+        </object></font></div>
+    </td>
+  </tr>
+</table>
+<table width="100%" bgcolor="#003468" height="20">
+  <tr> 
+    <td width="20%">&nbsp;</td>
+    <td width="18%" bgcolor="#003366"> 
+      <div align="center"><a href="#" onMouseOut="MM_nbGroup('out');"  onMouseOver="MM_nbGroup('over','fundamentos_r2_c2','botones/fundamentos_r2_c2_f2.gif','botones/fundamentos_r2_c2_f4.gif',1);"  onClick="MM_nbGroup('down','navbar1','fundamentos_r2_c2','botones/fundamentos_r2_c2_f3.gif',1);" ><img name="fundamentos_r2_c2" src="botones/fundamentos_r2_c2.gif" width="108" height="8" border="0" onLoad="" usemap="#fundamentos_r2_c2Map"><map name="fundamentos_r2_c2Map"><area shape="rect" coords="4,-2,112,9" href="fundamentos.htm"></map></a></div>
+    </td>
+    <td width="14%"> 
+      <div align="center"><a href="#" onMouseOut="MM_nbGroup('out');"  onMouseOver="MM_nbGroup('over','objetivos_r2_c2_2','botones/objetivos_r2_c2_f2.gif','botones/objetivos_r2_c2_f4.gif',1);"  onClick="MM_nbGroup('down','navbar1','objetivos_r2_c2_2','botones/objetivos_r2_c2_f3.gif',1);" ><img name="objetivos_r2_c2_2" src="botones/objetivos_r2_c2.gif" width="82" height="8" border="0" onLoad="" usemap="#objetivos_r2_c2Map"><map name="objetivos_r2_c2Map"><area shape="rect" coords="0,0,85,8" href="objetivos.htm"></map></a></div>
+    </td>
+    <td width="17%"> 
+      <div align="center"><a href="#" onMouseOut="MM_nbGroup('out');"  onMouseOver="MM_nbGroup('over','actividades_r2_c2_2','botones/actividades_r2_c2_f2.gif','botones/actividades_r2_c2_f4.gif',1);"  onClick="MM_nbGroup('down','navbar1','actividades_r2_c2_2','botones/actividades_r2_c2_f3.gif',1);" ><map name="actividades_r2_c2_2MapMap"><area shape="rect" coords="0,1,89,8" href="actividades.htm"></map></a><a href="#" onMouseOut="MM_nbGroup('out');"  onMouseOver="MM_nbGroup('over','actividades_r2_c2','botones/actividades_r2_c2_f2.gif','botones/actividades_r2_c2_f4.gif',1);"  onClick="MM_nbGroup('down','navbar1','actividades_r2_c2','botones/actividades_r2_c2_f3.gif',1);" ><img name="actividades_r2_c2" src="botones/actividades_r2_c2.gif" width="90" height="8" border="0" onLoad="" usemap="#actividades_r2_c2Map"><map name="actividades_r2_c2Map"><area shape="rect" coords="1,0,93,8" href="actividades.htm"></map></a></div>
+    </td>
+    <td width="15%"> 
+      <div align="center"><a href="#" onMouseOut="MM_nbGroup('out');"  onMouseOver="MM_nbGroup('over','convenios_r2_c2_2','botones/convenios_r2_c2_f2.gif','botones/convenios_r2_c2_f4.gif',1);"  onClick="MM_nbGroup('down','navbar1','convenios_r2_c2_2','botones/convenios_r2_c2_f3.gif',1);" ><img name="convenios_r2_c2_2" src="botones/convenios_r2_c2.gif" width="86" height="8" border="0" onLoad="" usemap="#convenios_r2_c2MapMap"><map name="convenios_r2_c2MapMap"><area shape="rect" coords="2,-3,93,9" href="convenios.htm"></map></a></div>
+    </td>
+    <td width="16%" valign="bottom"> 
+      <div align="center"><a href="#" onMouseOut="MM_nbGroup('out');"  onMouseOver="MM_nbGroup('over','centros_r2_c2','botones/centros_r2_c2_f2.gif','botones/centros_r2_c2_f4.gif',1);"  onClick="MM_nbGroup('down','navbar1','centros_r2_c2','botones/centros_r2_c2_f3.gif',1);" ><img name="centros_r2_c2" src="botones/centros_r2_c2.gif" width="109" height="20" border="0" onLoad="" usemap="#centros_r2_c2Map" align="top"><map name="centros_r2_c2Map"><area shape="rect" coords="7,3,105,16" href="institutos.htm"></map></a> 
+      </div>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="1" bordercolor="003366" bgcolor="003366" height="600" align="left" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="141" valign="top" height="615" align="left">
+      <table border="0" cellpadding="3" cellspacing="1" width="132">
+        <!-- fwtable fwsrc="Sin título" fwbase="botonera.gif" --> 
+        <tr valign="top"> 
+          <td colspan="2"> 
+            <div align="right"><a href="#" onMouseOut="MM_nbGroup('out');"  onMouseOver="MM_nbGroup('over','botonera_r02_c2','botones/botonera/otra/botonera_r02_c2_f2.gif','botones/botonera/otra/botonera_r02_c2_f4.gif',1);"  onClick="MM_nbGroup('down','navbar1','botonera_r02_c2','botones/botonera/otra/botonera_r02_c2_f3.gif',1);" ><img name="botonera_r02_c2" src="botones/botonera/otra/botonera_r02_c2.gif" width="123" height="35" border="0" onLoad="" usemap="#botonera_r02_c2Map"><map name="botonera_r02_c2Map"><area shape="rect" coords="3,3,119,35" href="presencial.htm"></map></a></div>
+          </td>
+        </tr>
+        <tr valign="top"> 
+          <td colspan="2"> 
+            <div align="right"><a href="#" onMouseOut="MM_nbGroup('out');"  onMouseOver="MM_nbGroup('over','botonera_r03_c2','botones/botonera/botonera_r03_c2_f2.gif','botones/botonera/botonera_r03_c2_f4.gif',1)"  onClick="MM_nbGroup('down','navbar1','botonera_r03_c2','botones/botonera/botonera_r03_c2_f3.gif',1)" ><img name="botonera_r03_c2" src="botones/botonera/otra/botonera_r03_c2.gif" width="123" height="35" border="0" onLoad="" usemap="#botonera_r03_c2Map"><map name="botonera_r03_c2Map"><area shape="rect" coords="2,3,118,36" href="virtual.htm"></map></a></div>
+          </td>
+        </tr>
+        <tr valign="top"> 
+          <td colspan="2" height="34"> 
+            <div align="right"><a href="#" onMouseOut="MM_nbGroup('out');"  onMouseOver="MM_nbGroup('over','botonera_r04_c2','botones/botonera/otra/botonera_r04_c2_f2.gif','botones/botonera/otra/botonera_r04_c2_f4.gif',1);"  onClick="MM_nbGroup('down','navbar1','botonera_r04_c2','botones/botonera/otra/botonera_r04_c2_f3.gif',1);" ><img name="botonera_r04_c2" src="botones/botonera/otra/botonera_r04_c2.gif" width="123" height="35" border="0" onLoad="" usemap="#botonera_r04_c2Map"><map name="botonera_r04_c2Map"><area shape="rect" coords="4,0,123,36" href="tutorial.htm"></map></a></div>
+          </td>
+        </tr>
+        <tr valign="top"><!-- row 9 --> 
+          <td colspan="2" align="left"> 
+            <div align="right"><a href="#" onMouseOut="MM_nbGroup('out');"  onMouseOver="MM_nbGroup('over','botonera_r09_c3','botones/botonera/botonera_r09_c3_f2.gif','botones/botonera/botonera_r09_c3_f4.gif',1)"  onClick="MM_nbGroup('down','navbar1','botonera_r09_c3','botones/botonera/botonera_r09_c3_f3.gif',1)" ><img name="botonera_r09_c3" src="botones/botonera/botonera_r09_c3.gif" width="123" height="35" border="0" onLoad="" usemap="#botonera_r09_c3Map"><map name="botonera_r09_c3Map"><area shape="rect" coords="4,2,121,35" href="#"></map></a></div>
+          </td>
+        </tr>
+        <tr valign="top"> 
+          <td colspan="2"> 
+            <div align="right"><a href="#" onMouseOut="MM_nbGroup('out');"  onMouseOver="MM_nbGroup('over','botonera_r08_c2','botones/botonera/otra/botonera_r08_c2_f2.gif','botones/botonera/otra/botonera_r08_c2_f4.gif',1);"  onClick="MM_nbGroup('down','navbar1','botonera_r08_c2','botones/botonera/otra/botonera_r08_c2_f3.gif',1);" ><img name="botonera_r08_c2" src="botones/botonera/otra/botonera_r08_c2.gif" width="123" height="35" border="0" onLoad="" usemap="#botonera_r08_c2Map"><map name="botonera_r08_c2Map"><area shape="rect" coords="3,2,124,34" href="tv.htm"></map></a></div>
+          </td>
+        </tr>
+        <tr valign="top"><!-- row 10 --> 
+          <td colspan="2"> 
+            <div align="right"><a href="#" onMouseOut="MM_nbGroup('out');"  onMouseOver="MM_nbGroup('over','botonera_r06_c2','botones/botonera/otra/botonera_r06_c2_f2.gif','botones/botonera/otra/botonera_r06_c2_f4.gif',1);"  onClick="MM_nbGroup('down','navbar1','botonera_r06_c2','botones/botonera/otra/botonera_r06_c2_f3.gif',1);" ><img name="botonera_r06_c2" src="botones/botonera/otra/botonera_r06_c2.gif" width="123" height="35" border="0" onLoad="" usemap="#botonera_r06_c2Map"><map name="botonera_r06_c2Map"><area shape="rect" coords="6,2,121,32" href="certificaciones.htm"></map></a></div>
+          </td>
+        </tr>
+        <tr valign="top"> 
+          <td colspan="2"> 
+            <div align="right"><a href="#" onMouseOut="MM_nbGroup('out');"  onMouseOver="MM_nbGroup('over','botonera_r10_c3','botones/botonera/botonera_r10_c3_f2.gif','botones/botonera/botonera_r10_c3_f4.gif',1)"  onClick="MM_nbGroup('down','navbar1','botonera_r10_c3','botones/botonera/botonera_r10_c3_f3.gif',1)" ><img name="botonera_r10_c3" src="botones/botonera/botonera_r10_c3.gif" width="123" height="35" border="0" onLoad="" usemap="#botonera_r10_c3Map"><map name="botonera_r10_c3Map"><area shape="rect" coords="5,2,122,34" href="mailto:edu@fuce.org"></map></a></div>
+          </td>
+        </tr>
+        <!--   This table was automatically created with Macromedia Fireworks 3.0   --> 
+        <!--   http://www.macromedia.com   --> 
+      </table>
+    </td>
+    <td width="616" bgcolor="#FFFFFF" bordercolor="#003366" valign="top" align="left" height="615"> 
+      <div align="right"> 
+        <div align="right"> 
+          <blockquote>&nbsp; </blockquote>
+        </div>
+      </div>
+      <p align="right">&nbsp;</p>
+                
+      <table width="35%" align="right" cellspacing="5">
+        <tr> 
+          <td width="32%" height="60"> 
+            <div align="center"><img src="grupocyt.gif" width="91" height="50"></div>
+          </td>
+          <td width="15%" height="60"> 
+            <div align="center"><img src="apunet.gif" width="39" height="40" usemap="#MapMap" border="0"><map name="MapMap"><area shape="rect" coords="1,1,40,46" href="http://www.apunet.com.ar/" target="_blank"></map></div>
+          </td>
+          <td width="5%" height="60"> 
+            <div align="center"><img src="proet.gif" width="55" height="35"></div>
+          </td>
+          <td width="48%" height="60"> 
+            <div align="center"><a href="http://www.onesrl.com.ar/" target="_blank"><img src="one.gif" width="39" height="40" usemap="#Map2" border="0"></a><map name="Map2"><area shape="rect" coords="2,1,40,40" href="http://www.onesrl.com.ar/" target="_blank"></map></div>
+          </td>
+        </tr>
+      </table>
+      <hr width="335">
+      <div align="right">
+<div align="left"> 
+          <blockquote> <font color="#003366" face="Tahoma" size="2">La </font><font face="Tahoma" size="2"><b>Fundación 
+            Unión de Centros Educativos</b></font><font color="#003366" face="Tahoma" size="2"><font color="#FFFFFF">-</font>-en 
+            conjunto con instituciones oficiales y privadas- desarrolla el proyecto 
+            de Educación y Trabajo, en el cual se han capacitado desde 1994 más 
+            de 120.000 alumnos de Capital Federal, Gran Buenos Aires y el interior 
+            de nuestro país, a través de los Centros de Capacitación y Entrenamiento, 
+            en el área informática.</font> <font face="Tahoma" size="2"><!-- Image with table --> 
+            </font></blockquote>
+        </div>
+        <blockquote> 
+          <p align="left"><font color="#003366" face="Tahoma" size="2"> Nuestra 
+            propuesta supone un gran cambio: la transformación de la educación 
+            pasiva, enciclopedista y acotada temporalmente, en una educación activa, 
+            participativa e incesante, generadora de estímulos,actitudes éticas 
+            y capacidades profesionales.</font></p>
+          <p align="left"><font color="#003366" face="Tahoma" size="2"> Nuestra 
+            metodología incluye las más modernas tecnologías comunicacionales, 
+            acompañadas de prácticas con entrenamiento laboral, aspecto esencial 
+            para una educación que parte de sólidos conocimientos teóricos y presenta 
+            una intensa actividad práctica. Estos aspectos son fundamentales tanto 
+            en el desarrollo cotidiano de las actividades laborales como en el 
+            momento de conseguir un empleo.</font></p>
+          <p align="left"><font color="#003366" face="Tahoma" size="2"> Nuestra 
+            Fundación posee la infraestructura, capacidad profesional y experiencia 
+            necesarias para la formación de los recursos humanos y técnicos que 
+            sean capaces de mejorar la competitividad de las empresas e instituciones. 
+            Para ello, promovemos la firma de convenios que contribuyan a fortalecer 
+            los conocimientos y las capacidades en informática. </font></p>
+          <p align="left"><font color="#003366" face="Tahoma" size="2">Nuestra 
+            convicción, conocimientos y experiencia nos permiten asegurar que 
+            implementamos un sistema educativo apto para responder a las exigencias 
+            inmediatas del mercado laboral, brindándole a los alumnos los siguientes 
+            recursos: </font></p>
+          <div align="left"> 
+            <ul>
+              <li> <font color="#003366" face="Tahoma" size="2">Ayudas educativas 
+                de hasta un 100%, según el nivel socioeconómico de la familia. 
+                </font></li>
+              <li> <font color="#003366" face="Tahoma" size="2">Clases teóricas 
+                y prácticas con Entrenamiento Laboral.</font></li>
+              <li><font color="#003366" face="Tahoma" size="2">Gu&iacute;as de 
+                Aprendizaje Teórico / Prácticas. Videos Educativos. Cursos Interactivos 
+                en CD.</font></li>
+              <li> <font color="#003366" face="Tahoma" size="2"> Pasantías Laborales. 
+                </font></li>
+              <li> <font color="#003366" face="Tahoma" size="2">Certificados de 
+                Aprobación. </font><font face="Tahoma" size="2"><!-- Image with table --> 
+                </font></li>
+            </ul>
+          </div>
+          <font face="Tahoma" size="2"><!-- Image with table --> <!-- Image with table --> 
+          </font> 
+          <p>&nbsp;</p>
+          <hr align="left">
+          <div align="left"> 
+            <div align="right"> 
+              <div align="right"> 
+                <blockquote><!-- Image with table --> </blockquote>
+              </div>
+            </div>
+          </div>
+        </blockquote>
+        <p>&nbsp;</p>
+      </div>
+      
+    </td>
+  </tr>
+</table>
+
+
+</body>
+</html>

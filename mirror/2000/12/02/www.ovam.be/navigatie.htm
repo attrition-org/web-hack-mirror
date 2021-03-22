@@ -1,0 +1,153 @@
+<HTML>
+<HEAD>
+<TITLE>leftnav</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+	function CheckField(theForm)
+	{
+		if (theForm.CiRestriction.value == '')
+		{
+			alert('U moet een zoekwoord intikken !');
+			theForm.CiRestriction.focus();
+			return false;
+		}
+
+		return true;
+	}
+	
+//-->
+</SCRIPT>
+<LINK REL="stylesheet" 
+TYPE="text/css" 
+HREF="globalstylesheet.css" 
+TITLE="formal">
+<style type="text/css">
+<!-- 
+
+.adres {  font-family: Arial, Helvetica, sans-serif; font-size: 7pt; font-weight: bold; color: #000000; text-align: center; vertical-align: middle}
+-->
+</style>
+</HEAD>
+<BODY BGCOLOR=#FFFFCC BACKGROUND="/images/bg_nav.gif" text="#000000" link="#000000" vlink="#000000" alink="#FF0000" leftmargin="0" topmargin="0" vspace="0" hspace="0">
+<TABLE BORDER=0 VSPACE="0" HSPACE="0" TOPMARGIN="0" LEFTMARGIN="0" CELLPADDING="0" CELLSPACING="0" width="150">
+  <TR> 
+    <TD COLSPAN="2"><IMG SRC="/images/leftnav_01.jpg" WIDTH=150 HEIGHT=54></TD>
+  </TR>
+  <TR> 
+    <TD COLSPAN="2" HEIGHT="8"></TD>
+  </TR>
+  <TR align="center" valign="middle"> 
+    <TD COLSPAN="2"><a href="../nieuw.asp" target="content"><IMG SRC="/images/butt_nieuw.gif" WIDTH="76" HEIGHT="35" border="0"></a></TD>
+  </TR>
+  <FORM name="searchform" method=get ACTION="/simplesearch.idq" onsubmit="return CheckField(this);" target="content" >
+    <TR ALIGN="CENTER" VALIGN="MIDDLE"> 
+      <TD COLSPAN="2"> 
+        <INPUT TYPE="text" NAME="CiRestriction" SIZE="15" MAXLENGTH="25">
+      </TD>
+    </TR>
+    <TR ALIGN="CENTER" VALIGN="MIDDLE"> 
+      <TD colspan="2" align="center">
+<input TYPE="Image" onclick="submit(this)" src="/images/butt__zoeken.gif" border=0>
+      </TD>
+    </TR>
+  </FORM>
+
+  <TR> 
+    <TD COLSPAN="2"> 
+      <table border=0 vspace="0" hspace="0" topmargin="0" leftmargin="0" cellpadding="2" cellspacing="0">
+        <tr> 
+          <td align="right" valign="top"><img src="../images/bullet.gif" width="9" height="15" hspace="2"></td>
+          <td colspan="2"> 
+            <p class="index"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><a href="/ovam/alg_info.asp" target="content"><b>Informatie 
+              OVAM</b></a></font></p>
+          </td>
+        </tr>
+        <tr> 
+          <td align="right" valign="top"><img src="../images/bullet.gif" width="9" height="15" hspace="2"></td>
+          <td colspan="2"> 
+            <p class="index"><font face="Verdana, Arial, Helvetica, sans-serif"><a href="/afval_bodem/afval_inVL.asp" target="content"> 
+              <font size="1"><b>Afval in Vlaanderen</b></font> </a> </font> 
+          </td>
+        </tr>
+        <tr> 
+          <td align="right" valign="top"><img src="../images/bullet.gif" width="9" height="15" hspace="2"></td>
+          <td colspan="2"> 
+            <p class="index"><font face="Verdana, Arial, Helvetica, sans-serif"><a href="/afval_bodem/bodem_inVL.asp" target="content"> 
+              <font size="1"><b>Bodem in Vlaanderen</b></font></a> </font> 
+          </td>
+        </tr>
+        <tr> 
+          <td align="right" valign="top"><img src="../images/bullet.gif" width="9" height="15" hspace="2"></td>
+          <td colspan="2"> 
+            <p class="index"><font face="Verdana, Arial, Helvetica, sans-serif"><a href="/refspubs/indexnew.asp" target="content"> 
+              <font size="1"><b>Publicaties / TWICA<br>
+              & internet</b></font></a> </font> 
+          </td>
+        </tr>
+        <tr> 
+          <td align="right" valign="top"><img src="../images/bullet.gif" width="9" height="15" hspace="2"></td>
+          <td colspan="2"> 
+            <p class="index"><font face="Verdana, Arial, Helvetica, sans-serif"><a href="/edu/index.asp" target="content"> 
+              <font size="1"><b>Educatie</b></font></a> </font> 
+          </td>
+        </tr>
+        <tr>
+          <td align="right" valign="top"><img src="images/bullet.gif" width="9" height="15"></td>
+          <td colspan="2"><font face="Arial, Helvetica, sans-serif" size="1"><a href="ovam/vacatures/bedrijfsprofiel.asp#vacatures" target="content"><b>Vacatures</b></a></font></td>
+        </tr>
+      </table>
+    </TD>
+  </TR>
+  <TR> 
+    <TD COLSPAN="2" height="6"></TD>
+  </TR>
+  <TR> 
+    <TD COLSPAN="2"> <a href="/english/multilang.asp" target="content"><IMG SRC="/images/leftnav_13.jpg" WIDTH=150 HEIGHT=16 border="0"></a></TD>
+  </TR>
+  <TR> 
+    <TD COLSPAN="2"> <a href="gebruik.asp" target="content"><IMG SRC="/images/leftnav_14.jpg" WIDTH=150 HEIGHT=15 border="0"></a></TD>
+  </TR>
+  <TR> 
+    <TD COLSPAN="2"> <a href="http://www.ovam.be/forum/default.asp" target="_blank"><IMG SRC="/images/leftnav_15.gif" WIDTH=150 HEIGHT=15 border="0"></a></TD>
+  </TR>
+  <TR> 
+    <TD COLSPAN="2"> <a href="/downloads/download.asp" target="content"><IMG SRC="/images/leftnav_16.gif" WIDTH=150 HEIGHT=15 border="0"></a></TD>
+  </TR>
+  <TR> 
+    <TD COLSPAN="2"> 
+      <P><a href="/ovam/feedback.asp" target="content"><IMG SRC="/images/leftnav_17.gif" WIDTH=150 HEIGHT=16 border="0"></a></P>
+    </TD>
+  </TR>
+  <TR> 
+    <TD COLSPAN="2"> 
+      <TABLE WIDTH="100%" BORDER="0" CELLPADDING="6">
+        <TR ALIGN="CENTER" VALIGN="TOP"> 
+          <TD> 
+            <p><FONT FACE="Arial, Helvetica, sans-serif" SIZE="1" class="adres">E-mail 
+              : <a href="mailto:info@ovam.be">info@ovam.be</a><br>
+              Kanunnik De Deckerstraat <BR>
+              22-26, 2800 Mechelen <BR>
+              Telefoon : 015/284 284 <BR>
+              Fax : 015/20 32 75 </FONT></p>
+          </TD>
+        </TR>
+      </TABLE>
+    </TD>
+  </TR>
+  <TR> 
+    <TD COLSPAN="2"> 
+      <TABLE WIDTH="100%" BORDER="0" CELLPADDING="4">
+        <TR ALIGN="CENTER" VALIGN="TOP"> 
+          <TD>
+		  <a href="http://www.nedstat.nl/cgi-bin/viewstat?name=l4m3r" target="content"><img nosave src="http://www.nedstat.nl/cgi-bin/nedstat.gif?name=l4m3r" border=0 alt="" width=16 height=16></a>
+		  </TD>
+        </TR>
+      </TABLE>
+    </TD>
+  </TR>
+  
+</TABLE>
+
+</BODY>
+</HTML>

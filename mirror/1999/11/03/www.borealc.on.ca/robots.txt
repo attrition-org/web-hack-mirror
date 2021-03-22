@@ -1,0 +1,125 @@
+<HTML>
+<HEAD>
+<STYLE TYPE="text/css">
+#AproposMenu {POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 0px;}
+#AproposSubMenu {POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 35px; LEFT: 120px;}
+#InnovMenu {POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 116px;}
+#InnovSubMenu {POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 35px; LEFT: 246px;}
+#ServMenu {POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 251px;}
+#ServSubMenu1 {POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 35px; LEFT: 386px;}
+#ServSubMenu2 {POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 100px; LEFT: 386px;}
+#ServSubMenu3 {POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 129px; LEFT: 386px;}
+#ServSubMenu4 {POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 150px; LEFT: 376px;}
+#ServSubMenu5 {POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 192px; LEFT: 377px;}
+#ProgMenu {POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 331px;}
+#ProgSubMenu {POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 35px; LEFT: 470px;}
+</STYLE>
+<SCRIPT LANGUAGE="Javascript">
+<!--
+window.onerror = null;
+
+var bName = navigator.appName;
+var bVer = parseInt(navigator.appVersion);
+
+var NS4 = (bName == "Netscape" && bVer >= 4);
+var IE4 = (bName == "Microsoft Internet Explorer" && bVer >= 4);
+var NS3 = (bName == "Netscape" && bVer < 4);
+var IE3 = (bName == "Microsoft Internet Explorer" && bVer < 4);
+var ON = ( NS4 || IE4 );
+var OFF = ( NS3 );
+//-->
+</SCRIPT>
+<SCRIPT LANGUAGE="Javascript" src="/js/menus.js"></SCRIPT>
+<TITLE>&Agrave; venir</TITLE>
+</HEAD>
+<body onload="if (ON) hideAll()" onblur="if (ON) hideAll()" bgcolor="#ffffff" MARGINHEIGHT="0" MARGINWIDTH="0" LEFTMARGIN="0" TOPMARGIN="0" background="/img/back.gif">
+
+<table border="0" cellspacing="0" cellpadding="0" width="616">
+<tr>
+	<td height="42" width=126><A Href="/apropos/index.htm" target="_top"
+		onMouseover="if (ON){ hideAll(); showLayer('AproposMenu') } if (OFF){m1.src=main1_1.src}"
+		onMouseout='if (OFF){m1.src=main1_0.src}'><img
+		src="/img/menus/apropos.gif" name='m1' width=126 height=42 border=0
+		alt="&agrave; propos du Coll&egrave;ge Bor&eacute;al"></A></td>
+	<td height="42" width=135><A Href="/innovations/index.htm" target="_top"
+		onMouseover="if (ON){hideAll(); showLayer('InnovMenu') } if (OFF){m2.src=main2_1.src}"
+		onMouseout='if (OFF){m2.src=main2_0.src}'><img
+		src="/img/menus/innov.gif" name='m2' width=135 height=42 border=0
+		alt="Innovations P&eacute;dagogiques"></a></td>
+	<td height="42" width="80"><A Href="/services/index.htm" target="_top"
+		onMouseover="if (ON){hideAll(); showLayer('ServMenu') } if (OFF){m3.src=main3_1.src}"
+		onMouseout='if (OFF){m3.src=main3_0.src}'><img
+		src="/img/menus/serv.gif" name='m3' width=80 height=42 border=0
+		alt="Services"></a></td>
+	<td height="42" width=145><A Href="/programmes/index.htm" target="_top"
+		onMouseover="if (ON){hideAll(); showLayer('ProgMenu') } if (OFF){m4.src=main4_1.src}"
+		onMouseout='if (OFF){m4.src=main4_0.src}'><img
+		src="/img/menus/prog.gif" name='m4' width=145 height=42 border=0
+        alt="Programmes de formation"></a></td>
+	<td width="130" height="128" rowspan="2" valign="middle"><img
+		src="/img/anim_boreal.gif" width=130 height=96 border=0
+		alt="Logo anim&eacute;"></td>
+</tr>
+<tr>
+	<td colspan="4" width=486 align="left"><img src="/img/search/titre.gif" width=486 height=86 border=0 alt="Services"></td>
+</tr>
+</table>
+<img src="/img/search/bot_wave.gif" width=75 height=36 border=0>
+<center>
+<table border="0" cellpadding="0" cellspacing="0" width="95%">
+<tr>
+<td>
+<P>
+<font face="arial" size="-1">
+
+<!-- ----------------------------------D&eacute;but du contenu--------------------------------------- -->
+
+<b>&Agrave; venir...<p>
+<b>Le contenu de cette page est en cours de construction
+<p>
+Vous pouvez effectuer une recherche d'ici si vous le d&eacute;sirez:
+</b>
+<FORM ACTION="/recherche.asp" METHOD=POST>
+<center>
+<table border="0" cellpading="5" cellspacing="0">
+<tr>
+	<td align="left"><font face="arial" size="-1"><b>Mot(s) cl&eacute;(s):</b></font></td>
+	<td align="left"><font face="arial" size="-1"></b>O&ugrave; chercher...</b></font></td>
+</tr>
+
+<tr>
+	<td><font face="arial" size="3">
+		<INPUT NAME="SearchString" SIZE=25 VALUE="">
+		</font><br>&nbsp;</td>
+	<td valign="top">
+	<font face="arial" size="-1">
+	<select name="ou_chercher">
+		<option value="/:Tout Borealc.on.ca">Chercher tout Borealc.on.ca
+		<option value="/apropos:&Agrave; propos du coll&egrave;ge Bor&eacute;al">&Agrave; propos du coll&egrave;ge Bor&eacute;al
+		<option value="/innovations:Innovations p&eacute;dagogiques">Innovations p&eacute;dagogiques
+		<option value="/services:Services">Services
+		<option value="/programmes:Programmes de formation">Programmes de formation
+	</select>
+	</font>
+</tr>
+<tr>
+	<td colspan="2" align="center"><font face="arial" size="-1">
+		<INPUT TYPE="submit" VALUE="Effectuer la recherche">
+		<INPUT TYPE="reset" VALUE="Recommencer"></font>
+	</td>
+</tr>
+</table>
+</center>
+</FORM>
+
+<!-- -----------------------------------Fin du contenu---------------------------------------- -->
+</font>
+<P>&nbsp;<P>
+</td>
+</tr>
+</table>
+</center>
+<SCRIPT LANGUAGE='JavaScript1.2' SRC='/js/divs.js'></SCRIPT>
+<SCRIPT LANGUAGE='JavaScript' SRC='/js/roll.js'></SCRIPT>
+</body>
+</HTML>

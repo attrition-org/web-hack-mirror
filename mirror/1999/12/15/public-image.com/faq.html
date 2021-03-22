@@ -1,0 +1,604 @@
+<html>
+
+<BODY BACKGROUND="1-11-97/bg.jpg">
+
+
+
+
+
+
+<CENTER><font  FACE="Arial,Helvetica" size=5>
+<A NAME="top"><STRONG>FREQUENTLY ASKED QUESTIONS</STRONG></A><br>
+</font></center>
+
+
+<br>
+<UL><FONT FACE="Arial,Helvetica">
+<LI><A HREF="http://axxs.net/part1.html#policies">Our Policy Guidelines</a><br>
+<LI><A HREF="#1"> What are all the files and directories in my home directory?</A><br>
+<LI><A HREF="#2"> How do I run my own cgi programs?</A><br>
+<LI><A HREF="#3"> How do I run cgiemail, Formmail and graphical counters?</A><br>
+<LI><A HREF="#5"> How do I use the anonymous ftp site?</A><br>
+<LI><A HREF="#6"> How do I create email aliases, and how do I redirect them?</A><br>
+<LI><A HREF="#7"> How do I use the infobots?</A><br>
+<LI><A HREF="#8"> How do I see who is using my infobots?</A><br>
+<LI><A HREF="#9"> How do I create a Majordomo mailling list?</A><br>
+<LI><A HREF="#10"> How do I use Real Audio?</A><br>
+<LI><A HREF="#11"> How do I change my login password?</A><br>
+<LI><A HREF="#12"> How do I check the web usage stats for my domain?</A><br>
+<LI><A HREF="#13"> I need to configure my mail reading program so I can access my emails.
+    What are the proper settings?</A><br>
+<LI><A HREF="#14"> What is the correct path to perl(and other programs)?</A><br>
+<LI><A HREF="#15"> How do I create my own "404 Not found" error page?</A><br>
+<LI><A HREF="#16"> How do I use the secure server for my order page?</A><br>
+<LI><A HREF="#17">How do I use the Mail list directory?</a><br>
+<LI><A HREF="#21">Boutique Shop Cart
+<LI><A HREF="#19">Basic Frontpage configuration</a><br>
+<LI><A HREF="#20">Basic Msql2 info</a><br>
+<LI><A HREF="#18">Common Problems</a><br>
+</UL></FONT>
+
+<br>
+<HR WIDTH=50% ALIGN=Center SIZE=3>
+
+<br>
+<FONT SIZE=2>
+
+<A NAME="1"><FONT FACE="Arial,Helvetica"  SIZE=+1>What are all the files and directories in my home directory?</FONT></A><br>
+<br>
+<FONT FACE="Arial,Helvetica">
+<STRONG>www</STRONG>................This is your web directory.  Place all your web files in there.<br>
+<br>
+<STRONG>infobots</STRONG>..........This is where you will need to put all your infobot text files.                 <A HREF="#7">More Info</A><br>
+<br>
+<STRONG>anonftp</STRONG>...........This is your anonymous ftp directory.  <A HREF="#5">More Info </A><br>
+<br>
+<STRONG>.redirect</STRONG>..........This is the configuration file for mail aliases.  </FONT><A HREF="#6">More Info</A>
+
+<br><br>
+<HR WIDTH=50% ALIGN=Center SIZE=3>
+
+<A NAME="2"><FONT FACE="Arial,Helvetica"  SIZE=+1>How do I run my own<STRONG> CGI</STRONG> programs?</FONT></A><br>
+<br><FONT FACE="Arial,Helvetica" SIZE=-1>
+<br><BR>
+
+	Put your <STRONG>CGI</STRONG> programs in the cgi-bin directory.<br>
+
+<ul>
+<li>The cgi-bin will automatically chage the permissions to chmod 755 for you<br>
+<li>Its important because of the apache wrapper being run that scripts and there directories be chmod 755, chmod 777 will not work<br>
+</ul><p>
+<b>A special note - this does not apply to frontpage webs, follow normal cgi instructions</b><p>
+
+<br>
+<HR WIDTH=50% ALIGN=Center SIZE=3>
+<br>
+<A NAME="3"><FONT FACE="Arial,Helvetica"  SIZE=+1>How do I use<a href="http://web.mit.edu/wwwdev/cgiemail/user.html"> cgiemail</a>, Formmail and the graphical counters?</FONT></A><br>
+<br>
+<BR><FONT FACE="Arial,Helvetica">
+<STRONG><U>CGIemail:</U></STRONG>This is a program that will email you the forms filled out from the web.<br>
+<br>
+Here's an example -<br>
+<br>
+Create a text file called "example" in the main web directory.<br>
+This is the content of the file:<br>
+<PRE><br>
+	To: joe@blue.com
+	Subject: example
+<br>
+	This is a test message.
+	This is a test message.
+	name: [name]
+	phone: [phone]</PRE>
+<br>
+<br>
+That is the file that will be sent to joe@blue.com.<br>
+Now, <STRONG>cgiemail</STRONG> will automatically replace [name], [phone], anything<br>
+in the brackets with the corresponding user supplied info from the web<br>
+form.  Also, you MUST have the To: and the Subject: line followed by<br>
+the blank line.  Those three lines MUST be on the FIRST THREE lines.  You<br>
+cannot change the From: address.<br>
+<br>
+Here is a part of the web form page called "example.html"<br>
+<br><xmp>
+<form method="post" action="/cgi-bin/cgiemail/example">
+<input type=text name="name">Your name?
+<input type=text name="phone">your number?
+etc...
+</xmp><br>
+<br>
+If you want to have your own customized "success" page, place the following<br>
+line in your form page:<br>
+<br><xmp>
+<INPUT TYPE="hidden" NAME="success" VALUE="http://yourdomain/somepage.html">
+</xmp><br>
+It will then redirect to somepage.html.<br>
+<br><p>
+<STRONG><U>Formmail</u></strong> is a very easy to use form processor,
+simply place the following on any page after entering your domain.<br>
+<p><b>
+&lt;FORM METHOD=POST ACTION="http://yourdomain.com/cgi-bin/formmail.cgi"><br>
+&lt;input type=hidden name="recipient" value="sales@yourdomain.com"><br>
+&lt;input type=hidden name="subject" value="Order"><br>
+&lt;input type=hidden name="return_link_url" value="http://yourdomain.com/"><br>
+&lt;input type=hidden name="return_link_title" value="Back to Main Page"><br>
+<p></b>
+Be sure to replace yourdomain, with your real domain name
+<p>Full Formmail instructions <A HREF="http://host4u.net/forminstruct.htm">click here</a>
+<p>
+<br>
+<STRONG><U>Page Counter:</U></STRONG> A graphical counter that you can use by placing the following line in your page:<br>
+<PRE><br><xmp>
+<IMG SRC="/cgi-bin/nph-count?width=5&link=http://yourdomain/yourpage">
+</xmp><br></PRE>
+This is what the counter looks like :<CENTER><IMG SRC="/cgi-bin/nph-count?width=5&link=http://yourdomain/faq.html"></CENTER><BR>
+<BR>
+<br>
+<HR WIDTH=50% ALIGN=Center SIZE=3>
+
+<br>
+<A NAME="5"> <FONT FACE="Arial,Helvetica"  SIZE=+1>How do I use the anonymous ftp site?</FONT></A><br>
+<br><FONT FACE="Arial,Helvetica">Your anonymous ftp site is completely different from your web site.<br>
+<br>
+When people ftp to your domain anonymously, they will see the following<br>
+directories:<br>
+<br>
+bin/       dev/       etc/       incoming/  lib/       pub/<br>
+<br>
+"pub" is where you should put all your anonymously accessible files.<br>
+"incoming" is for the anonymous users to upload files.
+<p>
+For security the following applies<br>
+<ul>
+<li>Only the incoming directory can be written to anonymously<br>
+<li>Subdirectories are not creatable<br>
+<li>The incoming directory is not readable by people dropping files there<br>
+</ul>
+<li>
+
+ You are responsible<br>
+for any "pirated" software uploaded by the anonymous users.  The anonymous<br>
+ftp sites will be periodically monitored for any abuses.<br>
+<br>
+You may ignore the other directories.</font>
+<br>
+
+<br>
+<HR WIDTH=50% ALIGN=Center SIZE=3>
+
+<br>
+<A NAME="6"><FONT FACE="Arial,Helvetica"  SIZE=+1>How do I create email aliases, and how do I redirect them?</FONT></A><br>
+<br><FONT FACE="Arial,Helvetica">
+Assume your domain is "example.com".<br>
+<br>
+You need to edit the .redirect file in your home directory.<br>
+<br>
+Here is a sample .redirect file for example.com:<br>
+<br>
+<PRE><br>
+	default example@example.com
+	webmaster example@example.com
+	sales joe@aol.com,mike@whatever.com
+	info robert@example.com</PRE>
+<br>
+That will automatically redirect all webmaster@example.com emails to<br>
+example@example.com, sales@example.com to joe@aol.com AND <br>
+mike@whatever.com, and <br>
+info@example.com to robert@example.com.  All others will go to <br>
+example@example.com.  Note that webmaster line isn't necessary, but <br>
+it's better to specifically redirect it to example@example.com.<br>
+<br>
+It's important to note that the second column must be REAL accounts.  
+You cannot redirect emails to an alias.
+<br>
+Please note that it takes a few minutes for the .redirect file to go into<br>
+effect after you've updated it.<br>
+<br>
+Ask us to create additional real email(POP) accounts. </FONT>
+
+<br>
+<HR WIDTH=50% ALIGN=Center SIZE=3>
+<br>
+<A NAME="7"><FONT FACE="Arial,Helvetica"  SIZE=+1>How do I use the infobots?</FONT></A><br>
+<br><FONT FACE="Arial,Helvetica">
+Very simple.  Just create a text file and put it in the infobots directory.<br>
+Let's say that the name of the text file is "info".  Now, when you send<br>
+mail to info@example.com, you will get the text file mailed back to you.<br>
+That's it.  Try it out.  There is no limit to the number of these<br>
+infobots.  Note that the name of the file is simply "info", and not <br>
+"info.txt". </FONT>
+<HR WIDTH=50% ALIGN=Center SIZE=3>
+
+<br>
+<A NAME="8"><FONT FACE="Arial,Helvetica"  SIZE=+1> How do I see who is using my infobots?</FONT></A> <br>
+<br><FONT FACE="Arial,Helvetica">
+Assume your infobot address is info@example.com.<br>
+Just put the following line in your .redirect file.<br>
+Its important that you have the infobot installed <br>
+before entering the address line in the .redirect<br>
+
+<br>
+<PRE>	info example@example.com<br></PRE>
+<br>
+The original email message will be sent to example@example.com, and the<br>
+original sender will get the infobot text. </FONT>
+<br>
+<HR WIDTH=50% ALIGN=Center SIZE=3>
+
+<br>
+<A NAME="9"><FONT FACE="Arial,Helvetica"  SIZE=+1>How do I create a majordomo mailing list?</FONT></A><br>
+<br><FONT FACE="Arial,Helvetica">
+Ask us. Tell us the name of the mailing list and the password for it.<p>
+For full instructions email our autoresponder at <a href="mailto:domo@safe-order.net">domo@safe-order.net</a><br>
+There may be extra charges if your mailing list is very <br>
+large(>1000 subscribers).<br>
+<br>
+</FONT>
+<br>
+<HR WIDTH=50% ALIGN=Center SIZE=3>
+
+<br>
+<A NAME="10"><FONT FACE="Arial,Helvetica"  SIZE=+1>How do I use Real Audio?</FONT></A><br>
+<br><FONT FACE="Arial,Helvetica">
+Real Audio is available for a small extra charge (email sales for more info) <br></FONT>
+<p>
+    RealAudio is a real time audio transmission/player system. A digital
+    audio stream is transmitted from the server over the internet to the
+    destination and played immediately, rather than being stored to disk
+    first and then played.
+<p>
+    Each audio clip requires two files: a metafile with extension .ram, and
+    the digital audio clip itself, with extension .ra. The .ram file holds one
+    or more lines of ASCII text, each of which references the .ra file to
+    be played when the .ram file is accessed by the browser.
+<p>
+    Entries in .ram files have the form:
+<p>
+    rtsp://styx.host4u.net/your-domain/name-of-clip.ra
+<p>
+  Place your .ram and .ra files in the realaudio subdirectory under
+    your web directory. 
+<p>
+    .ram files must be uploaded in ASCII mode while .ra files must be
+    uploaded in BINARY mode.
+<p>
+    You may then access these files at realaudio/file.ram under your
+    www directory.
+
+<br>
+<HR WIDTH=50% ALIGN=Center SIZE=3>
+
+<br>
+<A NAME="11"> <FONT FACE="Arial,Helvetica"  SIZE=+1>How do I change my login password?</FONT></A><br>
+<br><FONT FACE="Arial,Helvetica">
+Telnet to your domain.  After you've logged on, type "passwd" to change<br>
+your password.  You can exit the telnet session by typing "exit". </FONT><br>
+
+<br>
+<HR WIDTH=50% ALIGN=Center SIZE=3>
+<br>
+<A NAME="21"><FONT FACE="Arial,Helvetica"  SIZE=+1>Boutique Shop Cart</FONT>
+<br><FONT FACE="Arial,Helvetica">
+The Boutique Single page shop cart can be found in the following directory
+for <i>those domains that receive it as part of there package.</i><br>
+<p>
+<pre>
+<b>http://yourdomain-name-here/shop/boutique.html</b>
+</pre>
+<p>
+Standard usage of the shop cart can be customized off the working Demo
+at the above URL. If you wish to use this as a secure document, you must
+change the following.<br>
+<ul>
+<li>boutique.html
+<li>saleslip.html and boutique.html in the /shop directory<br>
+<li>Replace it with the following: <br>
+</ul>
+<pre>
+https://styx.safe-order.net/yourdomain/cgi-bin/shop/boutique.cgi
+</pre>
+<p>
+
+You will also need to link to the page using the following URL to be completly secure.<p>
+<pre>
+https://styx.safe-order.net/yourdomain/shop/boutique.html
+</pre>
+<br> in both cases above <b>yourdomain</b> must be replaced with your
+actual domain name with no extension. As  example fred.com would just be fred
+inplace of yourdomain above<br>
+<p>
+
+<A NAME="12"><FONT FACE="Arial,Helvetica"  SIZE=+1>How do I check the web usage stats for my domain?</FONT></A><br>
+<br><FONT FACE="Arial,Helvetica">
+Stats are updated once a week.  You may check your stats by<br>
+going to http://yourdomain/wusage with your favorite browser.<br>
+</FONT>
+<br>
+<HR WIDTH=50% ALIGN=Center SIZE=3>
+
+<A NAME="13"><FONT FACE="Arial,Helvetica"  SIZE=+1> I need to configure my mail reading program so I can access my emails.
+    What are the proper settings?
+</FONT></A><br>
+<br><FONT FACE="Arial,Helvetica">
+
+Assume your domain is fred.com<br>
+<p>
+Smtp = fred.com<br>
+pop = fred@fred.com<br>
+from = anyname@fred.com<br>
+passwd = the same used for FTP<br>
+
+</FONT>
+<br>
+<HR WIDTH=50% ALIGN=Center SIZE=3>
+
+<A NAME="14"><FONT FACE="Arial,Helvetica"  SIZE=+1> 
+What is the correct path to perl(and other programs)?
+</FONT></A><br>
+<br><FONT FACE="Arial,Helvetica">
+perl5: /usr/bin/perl<br>
+perl5.003: /usr/bin/perl5.003<br>
+sendmail: /usr/sbin/sendmail<br>
+date: /bin/date<br>
+java: /usr/bin/java<br>
+python: /usr/bin/python<br>
+<p>
+<b>Domain paths</b><br>
+using example if your domain was fred.com<br>
+<ul>
+<li>Main dir: /www/fred/<br>
+<li>Cgi-bin: /www/fred/cgi-bin <br>
+</ul>
+<br>
+</FONT>
+<br>
+<A NAME="19"><FONT FACE="Arial,Helvetica"  SIZE=+1>
+<HR WIDTH=50% ALIGN=Center SIZE=3>
+What are the basic Frontpage settings?<br>
+</FONT></A><br>
+assume your domain is fred.com<p>
+location to publish to: fred.com (note if the domain is not active use the ip# we assigned)<br>
+FTP server name: fred.com <br>
+Directory path: /www/fred<br>
+Username: fred<br>
+Passwd: As-sent-to-you<br>
+<A NAME="20"><FONT FACE="Arial,Helvetica"  SIZE=+1>
+<HR WIDTH=50% ALIGN=Center SIZE=3>
+What are the basic Msql2 settings?
+</FONT></A><br>
+Msql2 is a database engine, docs may be found at <A Href="http://www.hughes.com.au/">Hughes SQL</a><br>
+We dont provide technical support on this because of its complexity, the basic access path is below<br>
+<p>
+To use this you must submit your domain name and a database name to us, so we can set it up for you<br>
+<p>
+<text>
+/usr/local/Hughes/bin/msql database-name
+</text>
+<br>
+<A NAME="14"><FONT FACE="Arial,Helvetica"  SIZE=+1>
+<HR WIDTH=50% ALIGN=Center SIZE=3>
+
+How do I create my own "404 Not found" error page? 
+</FONT></A><br>
+<br><FONT FACE="Arial,Helvetica">
+
+
+Simply create/modify the missing.html file in your main web directory.
+</FONT>
+<br>
+<A NAME="16"><FONT FACE="Arial,Helvetica"  SIZE=+1>
+<HR WIDTH=50% ALIGN=Center SIZE=3>
+How do I use the SSL server for my order form?
+</FONT></A><br>
+<br><FONT FACE="Arial,Helvetica">
+
+<p>
+Normally, any text(such as your credit card number) sent from your
+browser to the web server is sent as plain text.  This means that a
+hacker could potentially intercept(however unlikely) the information
+sent from your browser and read it.  <br>
+However, by using the secure server, the information is encrypted
+before it is sent from your browser.  It would be practically impossible
+for anyone to decrypt it without knowing the key.
+<br> 
+Please use the secure server only when necessary.
+<p>
+Assume your domain is example.com.<br>
+<p>
+Use the following url to access your pages via the secure server.
+
+<font size=3>
+<pre>https://styx.safe-order.net/example/anypage.html </pre>
+<br></font>
+
+The above page would be accessed from the normal web server as:
+
+<font size=3>
+<pre>http://example.com/anypage.html </pre>
+<br></font>
+
+
+Your cgi-bin dir is:
+
+<font size=3>
+<pre>https://styx.safe-order.net/cgi-example/ </pre>
+<br></font>
+
+*SPECIAL NOTE FOR FORMMAIL.CGI* <p>
+
+If you are using formmail.cgi thru the secure server, you MUST use the
+following url:
+
+<font size=3>
+<pre>https://styx.safe-order.net/cgi-bin/formmail.cgi
+
+Here's an example:
+
+&lt;FORM METHOD=POST ACTION="https://styx.safe-order.net/cgi-bin/formmail.cgi">
+&lt;input type=hidden name="recipient" value="sales@yourdomain.com">
+&lt;input type=hidden name="subject" value="Order">
+&lt;input type=hidden name="return_link_url" value="http://yourdomain.com/">
+&lt;input type=hidden name="return_link_title" value="Back to Main Page">
+</pre>
+<p></font>
+
+
+The last two line allow a link back to your main page - thus they get a
+report of what they ordered and a link. We made the modification for you
+already <p>
+
+<b>Its important that you call your order page thru a secure URL in order to work properly<br>
+<p>
+Ex. https://styx.safe-order.net/yourdomain/yourorderform.htm<br>
+<p></b>
+<A NAME="17"><FONT FACE="Arial,Helvetica"  SIZE=+1>
+<HR WIDTH=50% ALIGN=Center SIZE=3>
+How do I use the maillists directory?
+</FONT></A><br>
+Email the following autoresponders for help<br>
+<ul>
+<li><a href="mailto:info@plusmail.com">To build a mailling list from responses to your infobots.</a><br>
+<li><a href="mailto:lists@plusmail.com">To Use plusmail system for simple listserver type operation</a>
+</ul>
+
+
+
+<A NAME="18"><FONT FACE="Arial,Helvetica"  SIZE=+1>
+<HR WIDTH=50% ALIGN=Center SIZE=3>
+
+SOLUTIONS TO COMMON PROBLEMS</a>
+</FONT></A><br>
+
+<ul>
+<li><a href="#32">Access logs</a>
+<li><a href="#Error_Logs">Error logs</a>
+<li><a href="#33">Cgi-bin scripts</a>
+<li><a href="#34">Perl scripts</a>
+<li><a href="#36">Anonymous ftp</a>
+<li><a href="#37">Setting permissions</a>
+<li><a href="#38">Dont have permission</a>
+<li><a href="#39">I get a forbidden when accessing my web pages</a>
+</UL>
+<p>
+<h3><a name="18"></a>SOLUTIONS TO COMMON PROBLEMS</h3>
+<p>
+<h4><a name="32"></a>Access logs</h4>
+<p>
+<i>"I can't find my access log!"</i><p>
+They are in your home directory, this is the directory you are in when you first logon.<br>
+<p>
+<h4><a name="Error_Logs"></a>2.1.2) Error logs</h4>
+<i>"I can't find my error log?"</i><p>
+
+   We don't keep error logs for performance reasons. 
+<h4><a name="33"></a>Cgi-bin scripts</h4>
+<p>
+<i>"Where do I put my cgi-bin scripts?"</i><p>
+
+Put them in the subdirectory cgi-bin which should be under your
+www directory.<p>
+
+<p>
+<h4><a name="34"></a>Perl scripts</h4>
+<p>
+<i>"I am being told file not found"</i><p>
+<i>"I am being told No such file or directory"</i><p>
+
+    Upload your Perl script in ascii mode, not binary mode.
+<p>
+   Sometimes it seems like this is asked about once a day, so
+we're going to repeat it, loudly.<p>
+<note class=warning>
+<strong>
+Upload your Perl script in ascii mode, not binary mode.
+</strong>
+</note><p>
+<p>
+<i>"I get errors such as
+<pre>
+Literal @sdfsdf now requires backslash at ./test.rob line 2, within string
+Execution of ./test.rob aborted due to compilation errors."
+</pre></i><p>
+
+    Place a "\" before such offending @ characters.  This is an
+    incompatibility between Perl 5 and Perl 4.
+<p>
+<p>
+<h5><a name="36"></a>Anonymous ftp</h5>
+<p>
+<i>"Where should I store files for anonymous ftp access?"</i><p>
+
+     Put files in the directory named anonftp/pub.
+     This will allow a file to be accessed by a customer with
+     ftp://yourdomain.com/pub/your-file-name.
+<p>
+For security the following applies<br>
+<ul>
+<li>Only the incoming directory can be written to anonymously<br>
+<li>Subdirectories are not creatable<br>
+<li>The incoming directory is not readable by people dropping files there<br>
+</ul>
+<li>
+
+<p>
+<p>
+<h5><a name="37"></a>Setting permissions</h5>
+<p>
+<i>"Hey, how do I stop people who are not in my group from reading
+a directory?"</i><p>
+
+    Type <tt>chmod o-r directory</tt> while you are in the directory above
+    it.
+<p>
+<i>"I don't care if people in my group can read my directory, but
+I don't want them to write in it!"</i><p>
+
+    Type <tt>chmod g-w directory</tt> while you are in the directory above
+    it.
+<p>
+<i>"Who is in my group?"</i><p>
+    In general, each domain has its own group.  If you find you are
+    in the group users, let us know if you wish for your domain to
+    have its own group.
+<p>
+<i>"Tell me more about permissions, they sound neat!"</i><p>
+
+    To list the access permissions of a file or directory, type
+<i>ls -ls *</i>.
+    r=read access, x=execute access, w=write access.  The first three
+    letters apply to you, the second three letters apply to your group,
+    the last three letters apply to everyone else.  Execute access enables
+    you to run programs or enter directories.
+<p>
+    Examples of using chmod:
+<pre>
+    PEOPLE                                    PERMISSIONS
+    u = the file's user (or owner)            r = read access
+    g = the file's group                      x = execute access
+    o = others                                w = write access
+    a = the user, the group, and others.
+
+    chmod a+w =  let everyone write to the file
+    chmod go-r = don't let people in the file's group or others to read
+                 the file
+    chmod g+x =  let people in the file's group execute the file
+</pre><p>
+<p>
+<p>
+<h5><a name="39"></a>Don't have permission to access /</h5>
+    This error message means that you are missing your index.html
+    file.
+<p>
+    Note that files that start with a "." are hidden files.  To see
+    them, type ls -al at shell prompt.
+<p>
+    If you wish to ftp this file in, go to the /home/fred directory
+    assuming your userid is fred.
+<p>
+<h5><a name="310"></a>I get a forbidden when trying to access my site</h5>
+    This error is generally because you have not placed a default page in the main directory.<br>
+    A default page must be called index.htm, or default.htm and it should be your main page<br>
+
+
+<p>
+</HTML>

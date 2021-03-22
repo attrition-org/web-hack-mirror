@@ -1,0 +1,586 @@
+<html>
+
+<head>
+<title>Estados</title>
+<script LANGUAGE="JavaScript" FPTYPE="dynamicanimation">
+<!--
+  // If you want to change this script, you must also make the following
+  // changes so that FrontPage will not overwrite your new script.
+  // In the script tag, change type="dynamicanimation" to type="mydynamicanimation"
+  // In the first script statement, change "dynamicanimation" to "mydynamicanimation"
+  // Throughout the HTML content, change dynamicanimation= to mydynamicanimation=
+  // Change function dynAnimation to function mydynAnimation
+  // In the body tag, change onload="dynAnimation()" to onload="mydynAnimation()"
+  dynamicanimAttr = "dynamicanimation"
+  animateElements = new Array()
+  currentElement = 0
+  speed = 0
+  stepsZoom = 8
+  stepsWord = 8
+  stepsFly = 12
+  stepsSpiral = 16
+  steps = stepsZoom
+  step = 0
+  outString = ""
+  function dynAnimation()
+  {
+    var ms = navigator.appVersion.indexOf("MSIE")
+    ie4 = (ms>0) && (parseInt(navigator.appVersion.substring(ms+5, ms+6)) >= 4)
+    if(!ie4)
+    {
+      if((navigator.appName == "Netscape") &&
+         (parseInt(navigator.appVersion.substring(0, 1)) >= 4))
+      {
+        for (index=document.layers.length-1; index >= 0; index--)
+        {
+            layer=document.layers[index]
+            if (layer.left==10000)
+                layer.left=0
+        }
+      }
+      return
+    }
+    for (index=document.all.length-1; index >= document.body.sourceIndex; index--)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if(null != animation)
+      {
+        if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        {
+          ih = el.innerHTML
+          outString = ""
+          i1 = 0
+          iend = ih.length
+          while(true)
+          {
+            i2 = startWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, false, "")
+            if(i2 == iend)
+              break
+            i1 = i2
+            i2 = endWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, true, animation)
+            if(i2 == iend)
+              break
+            i1 = i2
+          }
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+        if(animation == "zoomIn" || animation == "zoomOut")
+        {
+          ih = el.innerHTML
+          outString = "<SPAN " + dynamicanimAttr + "=\"" + animation + "\" style=\"position: relative; left: 10000;\">"
+          outString += ih
+          outString += "</SPAN>"
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+      }
+    }
+    i = 0
+    for (index=document.body.sourceIndex; index < document.all.length; index++)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if (null != animation)
+      {
+        if(animation == "flyLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyRight")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyTop" || animation == "dropWord")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottom")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyTopLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyTopRight" || animation == "flyTopRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottomLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyBottomRight" || animation == "flyBottomRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "spiral")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "zoomIn")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else if(animation == "zoomOut")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        el.initLeft = el.style.posLeft
+        el.initTop = el.style.posTop
+        animateElements[i++] = el
+      }
+    }
+    window.setTimeout("animate();", speed)
+  }
+  function offsetLeft(el)
+  {
+    x = el.offsetLeft
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      x += e.offsetLeft;
+    return x
+  } 
+  function offsetTop(el)
+  {
+    y = el.offsetTop
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      y += e.offsetTop;
+    return y
+  } 
+  function startWord(ih, i)
+  {
+    for(tag = false; i < ih.length; i++)
+    {
+      c = ih.charAt(i)
+      if(c == '<')
+        tag = true
+      if(!tag)
+        return i
+      if(c == '>')
+        tag = false
+    }
+    return -1
+  }
+  function endWord(ih, i)
+  {
+    nonSpace = false
+    space = false
+    while(i < ih.length)
+    {
+      c = ih.charAt(i)
+      if(c != ' ')
+        nonSpace = true
+      if(nonSpace && c == ' ')
+        space = true
+      if(c == '<')
+        return i
+      if(space && c != ' ')
+        return i
+      i++
+    }
+    return -1
+  }
+  function outWord(ih, i1, i2, dyn, anim)
+  {
+    if(dyn)
+      outString += "<SPAN " + dynamicanimAttr + "=\"" + anim + "\" style=\"position: relative; left: 10000;\">"
+    outString += ih.substring(i1, i2)
+    if(dyn)
+      outString += "</SPAN>"
+  }
+  function animate()
+  {
+    el = animateElements[currentElement]
+    animation = el.getAttribute(dynamicanimAttr, false)
+    step++
+    if(animation == "spiral")
+    {
+      steps = stepsSpiral
+      v = step/steps
+      rf = 1.0 - v
+      t = v * 2.0*Math.PI
+      rx = Math.max(Math.abs(el.initLeft), 200)
+      ry = Math.max(Math.abs(el.initTop),  200)
+      el.style.posLeft = Math.ceil(-rf*Math.cos(t)*rx)
+      el.style.posTop  = Math.ceil(-rf*Math.sin(t)*ry)
+    }
+    else if(animation == "zoomIn")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(50+50*step/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else if(animation == "zoomOut")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(100+200*(steps-step)/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else
+    {
+      steps = stepsFly
+      if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        steps = stepsWord
+      dl = el.initLeft / steps
+      dt = el.initTop  / steps
+      el.style.posLeft = el.style.posLeft - dl
+      el.style.posTop = el.style.posTop - dt
+    }
+    if (step >= steps) 
+    {
+      el.style.posLeft = 0
+      el.style.posTop = 0
+      currentElement++
+      step = 0
+    }
+    if(currentElement < animateElements.length)
+      window.setTimeout("animate();", speed)
+  }
+//-->
+</script></head>
+
+<body bgcolor="#FFFFFF" onload="dynAnimation()">
+
+<p align="center"><a name="topo"></a><small><small><small><small><small><small> 
+<applet code="fphover.class" codebase="../../_fpclass/" width="31" height="17">
+  <param name="text" value="MST">
+  <param name="color" value="#FF0000">
+  <param name="hovercolor" value="#000000">
+  <param name="textcolor" value="#FFFFFF">
+  <param name="effect" value="glow">
+  <param name="url" value="../../home.htm" valuetype="ref">
+  <param name="font" value="Dialog">
+  <param name="fontstyle" value="regular">
+  <param name="fontsize" value="8">
+</applet>
+</small></small></small>
+<applet code="fphover.class" codebase="../../_fpclass/" width="38" height="17">
+  <param name="text" value="História">
+  <param name="color" value="#000000">
+  <param name="hovercolor" value="#FF0000">
+  <param name="textcolor" value="#FFFFFF">
+  <param name="effect" value="glow">
+  <param name="url" value="../../historico/sumario.htm" valuetype="ref">
+  <param name="font" value="Dialog">
+  <param name="fontstyle" value="regular">
+  <param name="fontsize" value="8">
+</applet>
+<font face="Times New Roman">
+<applet code="fphover.class" codebase="../../_fpclass/" width="51" height="17">
+  <param name="text" value="Educação">
+  <param name="color" value="#FF0000">
+  <param name="hovercolor" value="#000000">
+  <param name="textcolor" value="#FFFFFF">
+  <param name="effect" value="glow">
+  <param name="url" value="../../educacao/indice.htm" valuetype="ref">
+  <param name="font" value="Dialog">
+  <param name="fontstyle" value="regular">
+  <param name="fontsize" value="8">
+</applet>
+</font></small></small></small>
+<applet code="fphover.class" codebase="../../_fpclass/" width="85" height="17">
+  <param name="text" value="Direitos Humanos">
+  <param name="color" value="#000000">
+  <param name="hovercolor" value="#FF0000">
+  <param name="textcolor" value="#FFFFFF">
+  <param name="effect" value="glow">
+  <param name="url" value="../dhumanos/dhumanos.htm" valuetype="ref">
+  <param name="font" value="Dialog">
+  <param name="fontstyle" value="regular">
+  <param name="fontsize" value="8">
+</applet>
+<applet code="fphover.class" codebase="../../_fpclass/" width="52" height="17">
+  <param name="text" value="Campanha">
+  <param name="color" value="#FF0000">
+  <param name="hovercolor" value="#000000">
+  <param name="textcolor" value="#FFFFFF">
+  <param name="effect" value="glow">
+  <param name="url" value="../../campanha/indice.htm" valuetype="ref">
+  <param name="font" value="Dialog">
+  <param name="fontstyle" value="regular">
+  <param name="fontsize" value="8">
+</applet>
+<font face="Arial">
+<applet code="fphover.class" codebase="../../_fpclass/" width="61" height="17">
+  <param name="text" value="MST informa">
+  <param name="color" value="#000000">
+  <param name="hovercolor" value="#FF0000">
+  <param name="textcolor" value="#FFFFFF">
+  <param name="effect" value="glow">
+  <param name="url" value="mstinf_aber.htm" valuetype="ref">
+  <param name="font" value="Dialog">
+  <param name="fontstyle" value="regular">
+  <param name="fontsize" value="8">
+  <param name="bgcolor" value="#000000">
+</applet>
+</font>
+<applet code="fphover.class" codebase="../../_fpclass/" width="46" height="17">
+  <param name="text" value="Biblioteca">
+  <param name="color" value="#FF0000">
+  <param name="hovercolor" value="#000000">
+  <param name="textcolor" value="#FFFFFF">
+  <param name="effect" value="glow">
+  <param name="url" value="../../bibiotec/bibliotec.htm" valuetype="ref">
+  <param name="font" value="Dialog">
+  <param name="fontstyle" value="regular">
+  <param name="fontsize" value="8">
+</applet>
+<applet code="fphover.class" codebase="../../_fpclass/" width="35" height="17">
+  <param name="text" value="Música">
+  <param name="color" value="#000000">
+  <param name="hovercolor" value="#FF0000">
+  <param name="textcolor" value="#FFFFFF">
+  <param name="effect" value="glow">
+  <param name="url" value="../../multimidia/gmusica/musicas1.htm" valuetype="ref">
+  <param name="font" value="Dialog">
+  <param name="fontstyle" value="regular">
+  <param name="fontsize" value="8">
+</applet>
+<applet code="fphover.class" codebase="../../_fpclass/" width="31" height="17">
+  <param name="text" value="Fotos">
+  <param name="color" value="#FF0000">
+  <param name="hovercolor" value="#000000">
+  <param name="textcolor" value="#FFFFFF">
+  <param name="effect" value="glow">
+  <param name="url" value="../../multimidia/gfotos/GALERIA.HTM" valuetype="ref">
+  <param name="font" value="Dialog">
+  <param name="fontstyle" value="regular">
+  <param name="fontsize" value="8">
+</applet>
+<applet code="fphover.class" codebase="../../_fpclass/" width="35" height="17">
+  <param name="text" value="Mural">
+  <param name="color" value="#000000">
+  <param name="hovercolor" value="#FF0000">
+  <param name="textcolor" value="#FFFFFF">
+  <param name="effect" value="glow">
+  <param name="url" value="../../interar/mural/mura_aber.htm" valuetype="ref">
+  <param name="font" value="Dialog">
+  <param name="fontstyle" value="regular">
+  <param name="fontsize" value="8">
+</applet>
+<applet code="fphover.class" codebase="../../_fpclass/" width="43" height="17">
+  <param name="text" value="Produtos">
+  <param name="color" value="#FF0000">
+  <param name="hovercolor" value="#000000">
+  <param name="textcolor" value="#FFFFFF">
+  <param name="effect" value="glow">
+  <param name="url" value="../../interar/Produtos/produtos.htm" valuetype="ref">
+  <param name="font" value="Dialog">
+  <param name="fontstyle" value="regular">
+  <param name="fontsize" value="8">
+</applet>
+<applet code="fphover.class" codebase="../../_fpclass/" width="39" height="17">
+  <param name="text" value="Estados">
+  <param name="color" value="#000000">
+  <param name="hovercolor" value="#FF0000">
+  <param name="textcolor" value="#FFFFFF">
+  <param name="effect" value="glow">
+  <param name="url" value="estados.htm" valuetype="ref">
+  <param name="font" value="Dialog">
+  <param name="fontstyle" value="regular">
+  <param name="fontsize" value="8">
+</applet>
+<br>
+</p>
+
+<p align="center" dynamicanimation="flyBottomRightWord"
+style="position: relative !important; left: 10000 !important"><font color="#FF0000"><strong><big><big>Estados
+onde o MST está organizado</big></big><br>
+</strong></font><font face="Verdana" size="2"><br>
+<br>
+Para visitar a página do MST Pará, Paraná, Santa Catarina, Rio Grande do Sul ou
+Pernambuco,&nbsp; clique no mapa em um destes Estados.<br>
+</font><br>
+<!--webbot bot="ImageMap"
+polygon="(279,68) (273,67) (267,68) (266,72) (259,74) (239,78) (236,83) (232,84) (232,104) (243,117) (254,121) (235,176) (247,194) (249,202) (260,211) (274,210) (289,211) (304,211) (335,214) (348,195) (347,180) (358,172) (357,165) (352,161) (371,139) (377,132) (384,110) (363,107) (357,117) (343,126) (341,117) (353,107) (355,100) (345,97) (336,99) (329,102) (326,113) (323,112) (312,117) (308,116) (312,110) (303,97) (298,89) (296,85) (295,81) (277,71) (276,72) (279,72) http://www.mstpa.org.br"
+polygon="(449,188) (463,187) (470,193) (477,189) (487,193) (506,192) (516,188) (520,194) (518,201) (509,203) (498,209) (486,203) (480,203) (470,199) (458,203) (450,207) (443,199) http://www.mst.org.br/mstpe"
+polygon="(293,422) (345,439) (353,412) (298,415) (296,419) (297,419) http://www.mst.org.br/mstsc"
+polygon="(292,426) (255,456) (305,490) (332,457) http://www.mst.org.br/mstrs"
+rectangle="(117,43) (524,363) estados1.htm"
+rectangle="(286,372) (354,411) http://bbs2.sul.com.br/mstpr/index.htm"
+src="mapobrs1.gif" alt="mapobrs1.gif (14642 bytes)" border="0" startspan --><MAP NAME="FrontPageMap"><AREA SHAPE="POLYGON" COORDS="279, 68, 273, 67, 267, 68, 266, 72, 259, 74, 239, 78, 236, 83, 232, 84, 232, 104, 243, 117, 254, 121, 235, 176, 247, 194, 249, 202, 260, 211, 274, 210, 289, 211, 304, 211, 335, 214, 348, 195, 347, 180, 358, 172, 357, 165, 352, 161, 371, 139, 377, 132, 384, 110, 363, 107, 357, 117, 343, 126, 341, 117, 353, 107, 355, 100, 345, 97, 336, 99, 329, 102, 326, 113, 323, 112, 312, 117, 308, 116, 312, 110, 303, 97, 298, 89, 296, 85, 295, 81, 277, 71, 276, 72, 279, 72" HREF="http://www.mstpa.org.br"><AREA SHAPE="POLYGON" COORDS="449, 188, 463, 187, 470, 193, 477, 189, 487, 193, 506, 192, 516, 188, 520, 194, 518, 201, 509, 203, 498, 209, 486, 203, 480, 203, 470, 199, 458, 203, 450, 207, 443, 199" HREF="http://www.mst.org.br/mstpe"><AREA SHAPE="POLYGON" COORDS="293, 422, 345, 439, 353, 412, 298, 415, 296, 419, 297, 419" HREF="http://www.mst.org.br/mstsc"><AREA SHAPE="POLYGON" COORDS="292, 426, 255, 456, 305, 490, 332, 457" HREF="http://www.mst.org.br/mstrs"><AREA SHAPE="RECT" COORDS="117, 43, 524, 363" HREF="estados1.htm"><AREA SHAPE="RECT" COORDS="286, 372, 354, 411" HREF="http://bbs2.sul.com.br/mstpr/index.htm"></MAP><a href="../../_vti_bin/shtml.dll/Setores/estados/estados.htm/map"><img src="mapobrs1.gif" alt="mapobrs1.gif (14642 bytes)" border="0" ismap width="574" height="554" usemap="#FrontPageMap"></a><!--webbot bot="ImageMap" endspan i-checksum="29361" --><br>
+<strong><font face="Verdana" size="2" color="#0000FF">O MST não esta organizado nos
+seguintes estados:</font></strong></p>
+
+<p align="center"><font face="Verdana" size="2">- Amazonas<br>
+- Roraima<br>
+- Acre<br>
+- Amapá</font></p>
+
+<p align="center"><a href="../../home.htm"><small><small><font color="#0000FF">Índice</font></small></small></a></p>
+
+<p align="center"><a href="../../mstonline.htm"><font color="#0000FF"><small><small><small>MST
+On Line</small></small></small></font></a></p>
+
+<p align="center"><a name="topo"></a><small><small><small><small><small><small>&nbsp; </small></small></small></small></small></small>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+
+<p align="center"><a name="topo"></a><small><small><small><small><small><small> 
+<applet code="fphover.class" codebase="../../_fpclass/" width="31" height="17">
+  <param name="text" value="MST">
+  <param name="color" value="#FF0000">
+  <param name="hovercolor" value="#000000">
+  <param name="textcolor" value="#FFFFFF">
+  <param name="effect" value="glow">
+  <param name="url" value="../../home.htm" valuetype="ref">
+  <param name="font" value="Dialog">
+  <param name="fontstyle" value="regular">
+  <param name="fontsize" value="8">
+</applet>
+</small></small></small>
+<applet code="fphover.class" codebase="../../_fpclass/" width="38" height="17">
+  <param name="text" value="História">
+  <param name="color" value="#000000">
+  <param name="hovercolor" value="#FF0000">
+  <param name="textcolor" value="#FFFFFF">
+  <param name="effect" value="glow">
+  <param name="url" value="../../historico/sumario.htm" valuetype="ref">
+  <param name="font" value="Dialog">
+  <param name="fontstyle" value="regular">
+  <param name="fontsize" value="8">
+</applet>
+<font face="Times New Roman">
+<applet code="fphover.class" codebase="../../_fpclass/" width="51" height="17">
+  <param name="text" value="Educação">
+  <param name="color" value="#FF0000">
+  <param name="hovercolor" value="#000000">
+  <param name="textcolor" value="#FFFFFF">
+  <param name="effect" value="glow">
+  <param name="url" value="../../educacao/indice.htm" valuetype="ref">
+  <param name="font" value="Dialog">
+  <param name="fontstyle" value="regular">
+  <param name="fontsize" value="8">
+</applet>
+</font></small></small></small>
+<applet code="fphover.class" codebase="../../_fpclass/" width="85" height="17">
+  <param name="text" value="Direitos Humanos">
+  <param name="color" value="#000000">
+  <param name="hovercolor" value="#FF0000">
+  <param name="textcolor" value="#FFFFFF">
+  <param name="effect" value="glow">
+  <param name="url" value="../dhumanos/dhumanos.htm" valuetype="ref">
+  <param name="font" value="Dialog">
+  <param name="fontstyle" value="regular">
+  <param name="fontsize" value="8">
+</applet>
+<applet code="fphover.class" codebase="../../_fpclass/" width="52" height="17">
+  <param name="text" value="Campanha">
+  <param name="color" value="#FF0000">
+  <param name="hovercolor" value="#000000">
+  <param name="textcolor" value="#FFFFFF">
+  <param name="effect" value="glow">
+  <param name="url" value="../../campanha/indice.htm" valuetype="ref">
+  <param name="font" value="Dialog">
+  <param name="fontstyle" value="regular">
+  <param name="fontsize" value="8">
+</applet>
+<font face="Arial">
+<applet code="fphover.class" codebase="../../_fpclass/" width="61" height="17">
+  <param name="text" value="MST informa">
+  <param name="color" value="#000000">
+  <param name="hovercolor" value="#FF0000">
+  <param name="textcolor" value="#FFFFFF">
+  <param name="effect" value="glow">
+  <param name="url" value="mstinf_aber.htm" valuetype="ref">
+  <param name="font" value="Dialog">
+  <param name="fontstyle" value="regular">
+  <param name="fontsize" value="8">
+  <param name="bgcolor" value="#000000">
+</applet>
+</font>
+<applet code="fphover.class" codebase="../../_fpclass/" width="46" height="17">
+  <param name="text" value="Biblioteca">
+  <param name="color" value="#FF0000">
+  <param name="hovercolor" value="#000000">
+  <param name="textcolor" value="#FFFFFF">
+  <param name="effect" value="glow">
+  <param name="url" value="../../bibiotec/bibliotec.htm" valuetype="ref">
+  <param name="font" value="Dialog">
+  <param name="fontstyle" value="regular">
+  <param name="fontsize" value="8">
+</applet>
+<applet code="fphover.class" codebase="../../_fpclass/" width="35" height="17">
+  <param name="text" value="Música">
+  <param name="color" value="#000000">
+  <param name="hovercolor" value="#FF0000">
+  <param name="textcolor" value="#FFFFFF">
+  <param name="effect" value="glow">
+  <param name="url" value="../../multimidia/gmusica/musicas1.htm" valuetype="ref">
+  <param name="font" value="Dialog">
+  <param name="fontstyle" value="regular">
+  <param name="fontsize" value="8">
+</applet>
+<applet code="fphover.class" codebase="../../_fpclass/" width="31" height="17">
+  <param name="text" value="Fotos">
+  <param name="color" value="#FF0000">
+  <param name="hovercolor" value="#000000">
+  <param name="textcolor" value="#FFFFFF">
+  <param name="effect" value="glow">
+  <param name="url" value="../../multimidia/gfotos/GALERIA.HTM" valuetype="ref">
+  <param name="font" value="Dialog">
+  <param name="fontstyle" value="regular">
+  <param name="fontsize" value="8">
+</applet>
+<applet code="fphover.class" codebase="../../_fpclass/" width="35" height="17">
+  <param name="text" value="Mural">
+  <param name="color" value="#000000">
+  <param name="hovercolor" value="#FF0000">
+  <param name="textcolor" value="#FFFFFF">
+  <param name="effect" value="glow">
+  <param name="url" value="../../interar/mural/mura_aber.htm" valuetype="ref">
+  <param name="font" value="Dialog">
+  <param name="fontstyle" value="regular">
+  <param name="fontsize" value="8">
+</applet>
+<applet code="fphover.class" codebase="../../_fpclass/" width="43" height="17">
+  <param name="text" value="Produtos">
+  <param name="color" value="#FF0000">
+  <param name="hovercolor" value="#000000">
+  <param name="textcolor" value="#FFFFFF">
+  <param name="effect" value="glow">
+  <param name="url" value="../../interar/Produtos/produtos.htm" valuetype="ref">
+  <param name="font" value="Dialog">
+  <param name="fontstyle" value="regular">
+  <param name="fontsize" value="8">
+</applet>
+<applet code="fphover.class" codebase="../../_fpclass/" width="39" height="17">
+  <param name="text" value="Estados">
+  <param name="color" value="#000000">
+  <param name="hovercolor" value="#FF0000">
+  <param name="textcolor" value="#FFFFFF">
+  <param name="effect" value="glow">
+  <param name="url" value="estados.htm" valuetype="ref">
+  <param name="font" value="Dialog">
+  <param name="fontstyle" value="regular">
+  <param name="fontsize" value="8">
+</applet>
+<br>
+</p>
+</body>
+</html>

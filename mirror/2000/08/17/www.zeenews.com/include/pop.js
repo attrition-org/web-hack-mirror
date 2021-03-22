@@ -1,0 +1,9 @@
+///////////////////////////////////////////////////////////////////////////////////
+function vod (url) 
+{
+	windowFeatures = 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=210,height=240,left=150,top=100';
+	videoWin = window.open (url , 'video', windowFeatures);
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+// tg	

@@ -1,0 +1,162 @@
+
+<HTML>
+<HEAD>
+<TITLE>Re-HaCk dEdIcAd0 a k1k4 (una vez mas...)</TITLE>
+<META name="description" content="">
+<META name="keywords" content="">
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var speed = 13
+
+var pause = 1333
+
+var timerID = null
+
+var scrabbleBanner = false
+
+var cc = new Array()
+
+cc[0] = "k1k4 este h4ck"
+cc[1] = "fu3 s0L0 p4r4"
+cc[2] = "d3d1c4r73L0 pu3s"
+cc[3] = "3r3s 4lgui3n muY 3sp3c14L"
+
+var message = 0
+
+var state = ""
+
+newBanner()
+
+function stopBanner() {
+	if (scrabbleBanner)
+		clearTimeout(timerID)
+
+	scrabbleBanner = false
+}
+
+function firstBanner() {
+	stopBanner()
+	seeBanner()
+}
+
+function newBanner() {
+	state = ""
+	for (var i = 0; i < cc[message].length; ++i) {
+		state += "0"
+	}
+}
+
+function seeBanner() {
+	if (getString()) {
+		message++
+		if (cc.length <= message)
+			message = 0
+
+		newBanner()
+
+		timerID = setTimeout("seeBanner()", pause)
+
+		scrabbleBanner = true
+	} else {
+		var str = ""
+
+		for (var c = 0; c < state.length; ++c) {
+			str += (state.charAt(c) == "1") ? cc[message].charAt(c) : "     "
+		}
+		window.status = str
+		timerID = setTimeout("seeBanner()", speed)
+		scrabbleBanner = true
+	}
+}
+
+function getString() {
+
+	var full = true
+	for (var c = 0; c < state.length; ++c) {
+		if (state.charAt(c) == 0)
+			full = false
+	}
+	if (full)
+		return true
+
+	while (1) {
+		var num = getRandom(cc[message].length)
+		if (state.charAt(num) == "0")
+			break
+	}
+	state = state.substring(0, num) + "1" + state.substring(num + 1, state.length)
+	return false
+}
+
+function getRandom(max) {
+	return Math.round((max - 1) * Math.random())
+}
+
+// -->
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR=000000 TEXT=C21D14 LINK=0000FF VLINK=800080 onLoad="firstBanner()">
+<BGSOUND src="godfathr.mid">
+<center>
+<font size=7 color=0000CC>EsTe Re-hAcK eStA dEdiCaD0 a...</font><BR>
+<img src="k1k4.gif" alt="h4ck d3d1k4d0 a k1k4">
+<BR>
+<BR>
+<font size=7 face="Arial">B0x 0wn3d bY MIBXXX</font>
+<BR>
+<img src="god_logo.gif" alt="MIBXXX rooLeZ dA nEt">
+<BR>
+<HR>
+<BR>
+<font face="Arial" size=3 color=FFFFFF><B>EsTe eS eL InIcIo dE mI DeFaCe NaViDeNo... ToMeMoS uN MiNuTO pArA PeNsAr eN aKeLLaS PeRsOnaS Ke PuEDeN NecEsiTaR NuEsTra AyuDa y Se LaS NeGaMos... es HoRa dE aYuDaR (Y No Me ReFiEro a La PenDeJaDa dEL TeLeToN... EsO es PaRa LaMeRz)</B></font>
+<BR>
+<BR>
+<HR>
+<BR>
+<font size=2.5 color=EEFFEE><B>LoS 12 PRoPosIToS dE MIBXXX pArA eL 2001<BR><BR>
+EsPeReMoS kE FoX CuMPLa ToDAs LaS PeNDeJaDAs kE NoS PRoMeTIo y Ke eSTe PaIs nO sIgA CaYeNDo (aUnKe Lo DuDo)... <BR><BR>
+Ke AzKaRRaGa dEJe dE InvEnTAr PeNDeJaDas PaRa SakArnOs MaS DiNeRo...<BR><BR>
+Ke TeLmEx NoS dE InTeRnEt GrATiS cOmO La BT dE UK...<BR><BR>
+Ke LoS PoLiCiAs dEjEn dE BusKar CulPaBlEs InOcEnTes...<BR><BR>
+Ke La ScEnE ELiTe se LeVanTe Con MaS FueRzA kE NuNKa...<BR><BR>
+Ke la SHCP aBRa LeGALiZaCiOnEs paRa TODOS LoS VeHiCULoS Ke YA ESTAN en Mx...<BR><BR>
+Ke sE GenErEn AcTiViDaDeS CulTuRalEs dE CaLiDad eN Mx...<BR><BR>
+Ke FoX No Le VaYa a BeSaR LoS wEbOz a USA...<BR><BR>
+Ke La IGLeSiA dEjE dE eStar DanDoNoS aToLe cOn eL dEdo...<BR><BR>
+Ke Se Le NiEGuE la PaRTiCiPaCion en La eDucAciOn aL VaTiCano...<BR><BR>
+Ke LoS MoJaDoS DeJeN dE BuSkAr "SuErTe" eN USA y Se PrEoCuPeN PoR Su PaIs...<BR><BR>
+Ke ReSuRjA eL PeNsAmIenTO LiBeRaL eN MeXiCo .'. ...<BR><BR>
+<BR>
+PEro ComO Se Ke ESToY PiDiENDo CoSaS CaSi ImPoSiBleS SolO me KeDa...
+<BR>
+CaSaRmE Con k1k4 y Ke NoS VaYa de PoKa MaDrE tOdO eL 2001</B></font>
+<BR>
+<HR>
+<BR>
+<font face="Arial" size=3 color=0000EE><B>k1k4:</B><BR>so1o ki3r0 k3 s3p4s k3 T3 4m0</font>
+<BR>
+<HR>
+<BR>
+<BR>
+<font size=5>AdMyN Suk mY dIk... sorry, I fOrGoT... d0 u CaLL YoUrSeLf aN ADMiN???... PlEaSe DoN'T aNsWeR, I dOn'T wAnT to SeE a MaN cRy!!! mwwwhahahahahahaha... <BR>wAnT h3Lp t0 pRot3Ct uR sItE?... eMaiL-mE <B>mibxxx@acidklan.org<BR>I ToLd u OnCe tO eMaIL mE iF U NeeDeD HeLp bUt aS I CaN sEE u DoNt tAkE mE SeRioUsLy... THiS iS uR LaSt ChAnCe AsSHoLe...<BR>I HaVEnT DaMaGeD aNy FiLeS bUt My In LoG...<BR>HoPe To HeAr FRoM u SooN!</B></font>
+<BR>
+<font size=1.5>found over 23 security holes on this box</font>
+<BR>
+<HR>
+<BR>
+<font size=4><B>GreetZ g0 t0:</B> loco_mx, [NaLa], Ctrl, BiZKiT, Brake^Off, ka0s, Gupo, ArMaGeDoN, N3oh4ck, BENENO, T3MPAN0, NiMBuS, Acid_Java, AnthrAx, ICE, Fatal, Yield, alt3kx, Vlad, Megafl0p, KAMMUS, XaNiA, cYN, KaTh, Abz0luT and 4ll I F0r607 </font>
+<BR>
+<BR>
+<font size=4><B>TeaM GrEeTz:</B> InsaneHackers, Digitalh4x0r, AcidKlan, Raza-Mexicana, DM, X-Ploit, WFD.
+<BR>
+<BR>
+<font size=4><B>FuCK y0uz g0 t0:</B> Tenex, PmX-ELiTE LamErS tEaM, Telmex, MicRoSoFT aNd PoderNet ISP.
+<BR>
+<HR>
+<BR>
+<font size=1.5>FeAr... I'm <B>STILL</B> aR0unD</font>
+
+
+</BODY> 
+</HTML>
+<!-- www.attrition.org web hack mirror - watermark or something -->

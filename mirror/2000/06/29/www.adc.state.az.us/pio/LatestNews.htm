@@ -1,0 +1,446 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<title>LatestNews</title>
+<script LANGUAGE="JavaScript" FPTYPE="mydynamicanimation">
+<!--
+  dynamicanimAttr = "mydynamicanimation"
+  animateElements = new Array()
+  currentElement = 0
+  speed = 0
+  stepsZoom = 8
+  stepsWord = 8
+  stepsFly = 12
+  stepsSpiral = 16
+  steps = stepsZoom
+  step = 0
+  outString = ""
+  function mydynAnimation()
+  {
+    var ms = navigator.appVersion.indexOf("MSIE")
+    ie4 = (ms>0) && (parseInt(navigator.appVersion.substring(ms+5, ms+6)) >= 4)
+    if(!ie4)
+    {
+      if((navigator.appName == "Netscape") &&
+         (parseInt(navigator.appVersion.substring(0, 1)) >= 4))
+      {
+        for (index=document.layers.length-1; index >= 0; index--)
+        {
+            layer=document.layers[index]
+            if (layer.left==10000)
+                layer.left=0
+        }
+      }
+      return
+    }
+    for (index=document.all.length-1; index >= document.body.sourceIndex; index--)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if(null != animation)
+      {
+        if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        {
+          ih = el.innerHTML
+          outString = ""
+          i1 = 0
+          iend = ih.length
+          while(true)
+          {
+            i2 = startWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, false, "")
+            if(i2 == iend)
+              break
+            i1 = i2
+            i2 = endWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, true, animation)
+            if(i2 == iend)
+              break
+            i1 = i2
+          }
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+        if(animation == "zoomIn" || animation == "zoomOut")
+        {
+          ih = el.innerHTML
+          outString = "<SPAN " + dynamicanimAttr + "=\"" + animation + "\" style=\"position: relative; left: 10000;\">"
+          outString += ih
+          outString += "</SPAN>"
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+      }
+    }
+    i = 0
+    for (index=document.body.sourceIndex; index < document.all.length; index++)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if (null != animation)
+      {
+        if(animation == "flyLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyRight")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyTop" || animation == "dropWord")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottom")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyTopLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyTopRight" || animation == "flyTopRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottomLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyBottomRight" || animation == "flyBottomRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "spiral")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "zoomIn")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else if(animation == "zoomOut")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        el.initLeft = el.style.posLeft
+        el.initTop = el.style.posTop
+        animateElements[i++] = el
+      }
+    }
+    window.setTimeout("animate();", speed)
+  }
+  function offsetLeft(el)
+  {
+    x = el.offsetLeft
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      x += e.offsetLeft;
+    return x
+  } 
+  function offsetTop(el)
+  {
+    y = el.offsetTop
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      y += e.offsetTop;
+    return y
+  } 
+  function startWord(ih, i)
+  {
+    for(tag = false; i < ih.length; i++)
+    {
+      c = ih.charAt(i)
+      if(c == '<')
+        tag = true
+      if(!tag)
+        return i
+      if(c == '>')
+        tag = false
+    }
+    return -1
+  }
+  function endWord(ih, i)
+  {
+    nonSpace = false
+    space = false
+    while(i < ih.length)
+    {
+      c = ih.charAt(i)
+      if(c != ' ')
+        nonSpace = true
+      if(nonSpace && c == ' ')
+        space = true
+      if(c == '<')
+        return i
+      if(space && c != ' ')
+        return i
+      i++
+    }
+    return -1
+  }
+  function outWord(ih, i1, i2, dyn, anim)
+  {
+    if(dyn)
+      outString += "<SPAN " + dynamicanimAttr + "=\"" + anim + "\" style=\"position: relative; left: 10000;\">"
+    outString += ih.substring(i1, i2)
+    if(dyn)
+      outString += "</SPAN>"
+  }
+  function animate()
+  {
+    el = animateElements[currentElement]
+    animation = el.getAttribute(dynamicanimAttr, false)
+    step++
+    if(animation == "spiral")
+    {
+      steps = stepsSpiral
+      v = step/steps
+      rf = 1.0 - v
+      t = v * 2.0*Math.PI
+      rx = Math.max(Math.abs(el.initLeft), 200)
+      ry = Math.max(Math.abs(el.initTop),  200)
+      el.style.posLeft = Math.ceil(-rf*Math.cos(t)*rx)
+      el.style.posTop  = Math.ceil(-rf*Math.sin(t)*ry)
+    }
+    else if(animation == "zoomIn")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(50+50*step/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else if(animation == "zoomOut")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(100+200*(steps-step)/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else
+    {
+      steps = stepsFly
+      if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        steps = stepsWord
+      dl = el.initLeft / steps
+      dt = el.initTop  / steps
+      el.style.posLeft = el.style.posLeft - dl
+      el.style.posTop = el.style.posTop - dt
+    }
+    if (step >= steps) 
+    {
+      el.style.posLeft = 0
+      el.style.posTop = 0
+      currentElement++
+      step = 0
+    }
+    if(currentElement < animateElements.length)
+      window.setTimeout("animate();", speed)
+  }
+//-->
+</script>
+</head>
+
+<body background="../images/ADCstrip4n2.jpg" bgcolor="#FFFFFF" text="#000000" link="#000080" vlink="#808000" alink="#FF0000" bgproperties="fixed">
+<div align="center">
+
+<center>
+
+<table border="0" width="28%" height="87" bordercolor="#000000" cellspacing="4">
+  <tr>
+    <td width="22%" valign="top" height="81"><p align="center"><img src="../images/badgeshadowsmall.gif" alt="badgeshadowsmall.gif (6879 bytes)" align="top" width="72" height="86"><br>
+    <font size="2" color="#FF0000"><strong><a href="../reports.htm">News Releases</a></strong></font></td>
+    <td width="86%" height="81"><p align="left"><strong><font color="#000000"><big><big>ARIZONA
+    DEPARTMENT OF CORRECTIONS</big></big></font></strong>
+      <div align="left">
+        <table border="0" width="527">
+          <tr>
+            <td width="191"><strong><font color="#000080">
+    1601 West Jefferson Street<br>
+    Phoenix,&nbsp; Arizona 85007</font></strong></td>
+            <td width="26"></td>
+            <td width="290"><em><font color="#808000" size="7">Latest News:</font>
+</em></td>
+          </tr>
+        </table>
+      </div>
+
+<table cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" width="522" height="47">
+<tr>
+<td width="212" height="47">
+  <p align="right"><b><font color="black" face="helvetica, arial" size="1">Today's
+  Police and Crime Headlines from 
+<a href="http://www.apbnews.com">APBnews.com</a>:<br>
+  Select headline for full story</font></b></p>
+</td>
+<td width="22" height="47">&nbsp;</td>
+<td width="324" height="47">
+<applet CODEBASE="http://www.apbproductions.com/classes/newsticker/" code="APBNewsHeadlines.class" name="APBNewsHeadlines" width="320" height="38">
+<param name="newsfile" value="http://www.apbproductions.com/snap/headlines.txt">
+<param name="pause" value="true">
+<param name="fontsize" value="12">
+<param name="bgcolor" value="255,255,255">
+<param name="textcolor" value="0,0,0">
+<param name="hilitecolor" value="0,153,0">
+</applet>
+</td></tr></table></td>
+  </tr>
+</table>
+</center>
+</div>
+
+<div align="center">
+  <center>
+  <table border="0" width="621" height="71">
+    <tr>
+      <td width="63" align="right" height="57"><img border="0" src="../Animates/L3.gif" WIDTH="61" HEIGHT="10"></td>
+  </center>
+      <td align="right" height="57" width="98">
+        <p align="left"><b><font face="Times New Roman"><i>June 28, 2000</i></font></b></td>
+  <center>
+      <td width="440"><u><font FACE="Times New Roman" SIZE="3"><a href="../News/2000/news00-06-28.htm">COURT
+        ORDERS OBTAINED AND BEING SOUGHT ON INMATES REFUSING FOOD AND TREATMENT</a></font></u></td>
+  </tr>
+    <tr>
+      <td width="63" align="right" height="57"></td>
+      <td align="right" height="57" width="98">
+        <p align="left"><b><font face="Times New Roman"><i>June 16, 2000</i></font></b></td>
+  </center>
+      <td width="440"><font FACE="Times New Roman"><u>
+        <p ALIGN="left"><a href="../News/2000/news00-06-16.htm">INMATE DIES
+        WHILE REFUSING TREATMENT<br>
+        NEW POLICY PROMPTED BY HUNGER STRIKES AND TREATMENT REFUSAL</a></u></font></td>
+  </tr>
+  <center>
+    <tr>
+      <td width="63" align="right" height="57"></td>
+      <td align="right" height="57" width="98">
+        <p align="left"><b><font face="Times New Roman"><i>June 02, 2000</i></font></b></td>
+      <td width="440" height="57"><font face="CG Times"><font color="#FF0000"><b>Stay
+        of Execution</b></font> has been issued for ADC inmate <a href="../DeathRow/DRowS.htm#SPEARS">Anthony
+        SPEARS</a> # 097352 in his execution scheduled for&nbsp; June 28, 2000.&nbsp; Inmate Spears has not
+        exhausted his appeals process.</font></td>
+    </tr>
+    <tr>
+      <td width="63" align="right" height="57"></td>
+  </center>
+      <td align="right" height="57" width="98">
+        <p align="left"><font face="Times New Roman"><i><b>June 01, 2000</b></i></font></td>
+  <center>
+      <td width="440" height="57"><a href="../News/2000/news00-06-01.htm"><u><font face="CG Times">ADC
+        inmate Dino Kyzar, charged in the murder of CO Lumley is sentenced in
+        Maricopa County Superior Court to 21 years.</font></u></a></td>
+    </tr>
+  </table>
+  </center>
+</div>
+<p><b><font size="3" color="#008000"><i>IN THE NEWS:</i></font></b></p>
+<ul>
+  <li><font size="3" color="#000000"><a href="http://www.accessarizona.com/partners/kfyi/misc/death_row.html">KFYI
+on Death Row</a></font></li>
+  <li><font size="3" color="#000000"><b>COs at SMU II&nbsp; -&nbsp; Channel 10
+    News, Thursday, June 29, 9pm.</b></font></li>
+</ul>
+<hr>
+<p><i><font size="3" color="#008000"><b>GENERAL INTEREST:</b>&nbsp;
+</font></i></p>
+<ul>
+  <li><i><font size="3" color="#008000"><a href="http://www.azleg.state.az.us/legtext/44leg/2r/laws/0093.htm">Inmate
+    Internet Access
+    </a></font></i></li>
+</ul>
+
+<p>&nbsp;</p>
+<ul>
+  <li><font size="3" color="#000000">This website is now linked to the
+Arizona Department of Public Safety's <a href="http://www.azsexoffender.org">Sex
+Offender InfoCenter</a>, an on-line database of sex offenders registered in
+Arizona.&nbsp; You may find it under FAQs/Sex Offender Information, or under
+Associated Sites.</font></li>
+</ul>
+
+<p align="center"><font size="3">******</font></p>
+
+<p><font size="3">Arizona law (ARS 13-705) allows the Director of the Arizona
+Department of Corrections to invite reputable citizens to be <b> present at
+executions</b> as official witnesses of the State. Most executions in Arizona are
+carried out by lethal injection, however many of the inmates on Death Row are
+eligible to choose lethal gas. The executions are carried out at the Arizona
+State Prison Complex in Florence, Arizona.</font></p>
+<p><font size="3">Citizens of Arizona interested in attending an execution are
+asked to submit a letter to Corrections Director Terry Stewart. The letter
+should include the requester's name, address, telephone number(s), date of
+birth, and Social Security number. The letter also should generally state why
+the requester would want to attend an execution. Witnesses must be at least 18
+years of age.</font></p>
+<p><font size="3">Names will be placed into a pool of potential witnesses for
+future executions. Send letters to:</font></p>
+<p><font size="3">Terry L. Stewart, Director<br>
+Arizona Department of Corrections<br>
+1601 West Jefferson<br>
+Phoenix, AZ 85007<br>
+Or fax letters to 602-542-2859.<br>
+</font></p>
+<p><font size="3">You will be notified later if you have been chosen as a
+witness to a particular execution. Requests to witness an execution become a
+matter of public record and as such can be examined on completion of an appropriate
+request under the Arizona Public Records Law (ARS 39-121 through 121.03).</font></p>
+
+<hr>
+
+<font FACE="Times New Roman">
+
+<p>La ley de Arizona (ARS 13-705) permite al Director del Departamento de
+Correcciones de Arizona, invitar a ciudadanos con buena reputación a <b> presenciar
+una ejecución</b> como testigos oficiales del Estado. La mayoría de las
+ejecuciónes en Arizona son por inyección letal, sin embargo algunos presos que
+esperan la pena de muerte son elegibles para escoger gas letal. Las ejecuciones
+son en La Prisión Estatal de Florence, en Florence, Arizona.</p>
+<p>Ciudadanos del Estado de Arizona interesados en presenciar una ejecución
+deben someter una carta al Director Terry Stewart. La carta debe incluir el
+nombre del interesado, dirección, número de teléfono(s), fecha de nacimiento
+y seguro social. La carta debe explicar porque les gustaria presenciar una
+ejecución. Los testigos deben ser mayores de 18 a<font FACE="WP MultinationalA Roman">Á</font>os.</p>
+<p>Nombres de testigos potenciales serán puestos en una lista para futuras
+ejecuciones. Mande su carta a:</p>
+<p>Terry L. Stewart, Director<br>
+Arizona Department of Corrections<br>
+1601 West Jefferson<br>
+Phoenix, Az. 85007<br>
+Ó mande un fax a (602)542-2859.</p>
+<p>Usted será notificado si es elegido como testigo en una ejecución. Las
+Peticiones para presenciar una ejecución serán archivadas en un record
+público. Estos datos pueden ser examinados después de proveer una petición
+apropiada bajo La Ley de Archivos Públicos de Arizona (ARS 39-131 al 121.03).</p>
+
+<p align="center"><a href="../index.html"><img border="0" src="../images/Latest1.gif" WIDTH="120" HEIGHT="65"></a></p>
+</font>
+
+<div align="center"><center>
+
+<pre><font color="#FF0000" size="3"><a href="../reports.htm"><strong>ADC News Releases</strong></a></font>
+<em><font color="#000000">
+<small><small>Updated <!--webbot bot="Timestamp" S-Type="EDITED" S-Format="%A, %B %d, %Y %I:%M:%S %p" startspan -->Wednesday, June 28, 2000 06:13:13 PM<!--webbot bot="Timestamp" endspan i-checksum="3431" --></small></small></font></em></pre>
+</center></div>
+</body>
+</html>

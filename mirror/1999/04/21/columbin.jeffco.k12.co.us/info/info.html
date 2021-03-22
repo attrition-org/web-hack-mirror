@@ -1,0 +1,577 @@
+<HTML>
+<HEAD>
+	<TITLE>CHS.School Info </TITLE>
+	<LINK rel=STYLESHEET href="http://columbin.jeffco.k12.co.us/style/style.css" type="text/css">
+	<SCRIPT language="javascript">
+	<!--
+	IE4 = (document.all) ? 1 : 0;
+	NS4 = (document.layers) ? 1 : 0;
+	ver4 = (IE4 || NS4) ? 1 : 0;
+	topLayer = "primeLayer";
+	
+	rCor = 138;
+	
+	if (ver4) {
+		
+		arCors = new Array()
+		
+		function setCors(which,top,bottom,left) {
+			arCors[which] = new Array();
+			arCors[which][0] = top;
+			arCors[which][1] = bottom;
+			arCors[which][2] = left;
+		}
+		
+		setCors(1,5,21,87);
+		setCors(2,22,39,73);
+		setCors(3,40,56,20);
+		setCors(4,57,72,83);
+		setCors(5,73,90,6);
+		setCors(6,91,107,71);
+		setCors(7,108,123,71);
+		setCors(8,124,141,46);
+		setCors(9,142,158,46);
+		setCors(10,159,175,5);
+		setCors(11,176,192,58);
+		
+		function mapOver (which,on) {
+				
+			tCor = arCors[which][0];
+			bCor = arCors[which][1];
+			lCor = arCors[which][2];
+			
+			if (NS4) {
+				if (on) {
+				document.menu.document.menuOn.clip.top = tCor
+				document.menu.document.menuOn.clip.right = rCor
+				document.menu.document.menuOn.clip.bottom = bCor
+				document.menu.document.menuOn.clip.left = lCor
+				document.menu.document.menuOn.visibility = "show"				
+				}
+				else {
+				document.menu.document.menuOn.clip.top = 0
+				document.menu.document.menuOn.clip.right = 0
+				document.menu.document.menuOn.clip.bottom = 0
+				document.menu.document.menuOn.clip.left = 0
+				}
+			}					
+	
+			if (IE4) {
+				if (on) {
+					document.all.menuOn.style.clip = "rect(" + tCor + " " + rCor + " " + bCor + " " + lCor + 	")"
+					document.all.menuOn.style.visibility = "visible"
+				}
+				else {document.all.menuOn.style.clip = "rect(0 0 0 0)"}}
+			}
+			
+			function show(id) {
+
+			if (NS4) {
+				document.layers[topLayer].visibility = "hide"
+				document.layers[id].visibility = "show"
+				topLayer = [id]
+				}
+			else if (IE4) {
+				document.all[topLayer].style.visibility = "hidden"
+				document.all[id].style.visibility = "visible"
+				topLayer = [id]
+				}
+			}
+			
+		}
+	//-->
+	</SCRIPT>
+</HEAD>
+
+<BODY>
+
+<DIV STYLE="position: absolute; top:0; text-align:right"><A HREF="mailto:yoshi@hosedown.com"><IMG src="../images/corner_e.gif" WIDTH=9 HEIGHT=5 BORDER=0 ALT="Email"></A>
+</DIV>
+
+<DIV id="mainHeader">
+<P><A href="http://columbin.jeffco.k12.co.us/index.html"><IMG src="../images/chsheader.gif" width=320 height=10 alt="Columbine High School" border=0></A>
+
+&nbsp; 6201 South Pierce Street &nbsp; Littleton, CO 80123 &nbsp; 303.982.4400</P>
+</DIV>
+
+<DIV id="menu">
+	
+		<MAP name="mainmenu">
+		<!-- #$-:Image Map file created by Map THIS! -->
+		<!-- #$-:Map THIS! free image map editor by Todd C. Wilson -->
+		<AREA shape=RECT coords="87,5,138,21" href="http://columbin.jeffco.k12.co.us/ego/ego.html"
+		onMouseOver="mapOver('1',1)" onMouseOut="mapOver('1',0)">
+		<AREA shape=RECT coords="73,22,138,39" href="http://columbin.jeffco.k12.co.us/index.html"
+		onMouseOver="mapOver('2',1)" onMouseOut="mapOver('2',0)">
+		<AREA shape=RECT coords="20,40,138,56" href="http://columbin.jeffco.k12.co.us/feed/feed.html"
+		onMouseOver="mapOver('3',1)" onMouseOut="mapOver('3',0)">
+		<!--<AREA shape=RECT coords="83,57,138,72" href="http://columbin.jeffco.k12.co.us/info/info.html"
+		onMouseOver="mapOver('4',1)" onMouseOut="mapOver('4',0)">-->
+		<AREA shape=RECT coords="6,73,138,90" href="http://columbin.jeffco.k12.co.us/res/res.html"
+		onMouseOver="mapOver('5',1)" onMouseOut="mapOver('5',0)">
+		<AREA shape=RECT coords="71,91,138,107" href="http://columbin.jeffco.k12.co.us/admin/admin.html"
+		onMouseOver="mapOver('6',1)" onMouseOut="mapOver('6',0)">
+		<AREA shape=RECT coords="71,108,138,123" href="http://columbin.jeffco.k12.co.us/dept/dept.html"
+		onMouseOver="mapOver('7',1)" onMouseOut="mapOver('7',0)">
+		<AREA shape=RECT coords="46,124,138,141" href="http://columbin.jeffco.k12.co.us/sports/sports.html"
+		onMouseOver="mapOver('8',1)" onMouseOut="mapOver('8',0)">
+		<!--<AREA shape=RECT coords="46,142,138,158" href="http://columbin.jeffco.k12.co.us/clubs/clubs.html"
+		onMouseOver="mapOver('9',1)" onMouseOut="mapOver('9',0)">-->
+		<AREA shape=RECT coords="5,159,138,175" href="../counsel/counsel.html"
+		onMouseOver="mapOver('10',1)" onMouseOut="mapOver('10',0)">
+		<AREA shape=RECT coords="58,176,138,192" href="http://columbin.jeffco.k12.co.us/alumni/alumni.html"
+		onMouseOver="mapOver('11',1)" onMouseOut="mapOver('11',0)">
+		</MAP>
+	
+	
+	<DIV id="menuBg"></DIV>
+
+	<DIV id="menuOn"></DIV>
+
+	<DIV id="menuImg"><IMG src="../images/menu.gif" usemap="#mainmenu" width=143 height=199 alt="menu" border=0></DIV>
+
+</DIV>
+
+<!-- zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz -->
+
+<DIV CLASS="pageTitle"><p>&nbsp; chs information</p></DIV>
+
+<DIV class="pageLinksSmall"><a href="javascript:show('primeLayer')">Schedule</a>&nbsp; <a href="javascript:show('calendarLayer')">Calendar</a>&nbsp; <a href="javascript:show('counselLayer')">Counseling</a>&nbsp;
+<a href="javascript:show('gradLayer')">Graduation Info</a>&nbsp; <a href="javascript:show('dropsLayer')">Schedule Changes</a>&nbsp; <a href="javascript:show('withdrawalLayer')">Withdrawal Info</a>&nbsp;
+<a href="javascript:show('lockersLayer')">Lockers</a></DIV>
+
+<!-- zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz -->
+
+<DIV ID="primeLayer" class="textLayer" style="visibility: visible">
+<DIV class="sectionTitle"><p>schedule</p></DIV>
+  <TABLE align="center">
+    <TR> 
+      <TH class="color" colspan="3">Regular Schedule</TH>
+    </TR>
+    <TR> 
+      <TD class="color" class="color" width="70">Period 1</TD>
+      <TD class="color" class="color" width="90">7:30-8:20</TD>
+    </TR>
+    <TR> 
+      <TD class="color" class="color">Period 2</TD>
+      <TD class="color" class="color">8:25-9:20</TD>
+    </TR>
+    <TR> 
+      <TD class="color" class="color">Period 3</TD>
+      <TD class="color" class="color">9:25-10:15</TD>
+    </TR>
+    <TR> 
+      <TD class="color" class="color">Period 4</TD>
+      <TD class="color" class="color">10:20-11:10</TD>
+    </TR>
+    <TR> 
+      <TD class="color" class="color">Period 5</TD>
+      <TD class="color" class="color">11:15-11:45</TD>
+      <TD class="color" class="color">Lunch A</TD>
+    </TR>
+    <TR> 
+      <TD class="color" class="color">&nbsp;</TD>
+      <TD class="color" class="color">11:50-12:40</TD>
+      <TD class="color" class="color">Class</TD>
+    </TR>
+    <TR> 
+      <TD class="color" class="color">&nbsp;</TD>
+      <TD class="color" class="color">11:15-12:10</TD>
+      <TD class="color" class="color">Class</TD>
+    </TR>
+    <TR> 
+      <TD class="color" class="color">&nbsp;</TD>
+      <TD class="color" class="color">12:15-12:40</TD>
+      <TD class="color" class="color">Lunch B</TD>
+    </TR>
+    <TR> 
+      <TD class="color" class="color">Period 6</TD>
+      <TD class="color" class="color">12:45-1:35</TD>
+    </TR>
+    <TR> 
+      <TD class="color" class="color">Period 7</TD>
+      <TD class="color" class="color">1:40-2:30</TD>
+    </TR>
+    <TR> 
+      <TD class="color" class="color">&nbsp;</TD>
+    </TR>
+    <TR> 
+      <TH class="color" colspan="3">Long Assembly Schedule</TH>
+    </TR>
+    <TR> 
+      <TD class="color" class="color" width="70">Period 1</TD>
+      <TD class="color" class="color" width="90">7:30-8:10</TD>
+    </TR>
+    <TR> 
+      <TD class="color" class="color">Period 2</TD>
+      <TD class="color" class="color">8:15-9:00</TD>
+    </TR>
+    <TR> 
+      <TD class="color" class="color">Assembly</TD>
+      <TD class="color" class="color">9:05-10:10</TD>
+    </TR>
+    <TR> 
+      <TD class="color" class="color">Period 3</TD>
+      <TD class="color" class="color">10:15-10:55</TD>
+    </TR>
+    <TR> 
+      <TD class="color" class="color">Period 4</TD>
+      <TD class="color" class="color">11:00-11:40</TD>
+    </TR>
+    <TR> 
+      <TD class="color" class="color">Period 5</TD>
+      <TD class="color" class="color">11:45-12:15</TD>
+      <TD class="color" class="color">Lunch A</TD>
+    </TR>
+    <TR> 
+      <TD class="color" class="color">&nbsp;</TD>
+      <TD class="color" class="color">12:20-1:00</TD>
+      <TD class="color" class="color">Class</TD>
+    </TR>
+    <TR> 
+      <TD class="color" class="color">&nbsp;</TD>
+      <TD class="color" class="color">11:45-12:25</TD>
+      <TD class="color" class="color">Class</TD>
+    </TR>
+    <TR> 
+      <TD class="color" class="color">&nbsp;</TD>
+      <TD class="color" class="color">12:30-1:00</TD>
+      <TD class="color" class="color">Lunch B</TD>
+    </TR>
+    <TR> 
+      <TD class="color" class="color">Period 6</TD>
+      <TD class="color" class="color">1:05-1:45</TD>
+    </TR>
+    <TR> 
+      <TD class="color" class="color">Period 7</TD>
+      <TD class="color" class="color">1:45-2:30</TD>
+    </TR>
+    <TR> 
+      <TD class="color" class="color">&nbsp;</TD>
+    </TR>
+    <TR> 
+      <TH class="color" colspan="3">Short Assembly Schedule</TH>
+    </TR>
+    <TR> 
+      <TD class="color" class="color" width="70">Period 1</TD>
+      <TD class="color" class="color" width="90">7:30-8:15</TD>
+    </TR>
+    <TR> 
+      <TD class="color" class="color">Period 2</TD>
+      <TD class="color" class="color">8:20-9:10</TD>
+    </TR>
+    <TR> 
+      <TD class="color" class="color">Assembly</TD>
+      <TD class="color" class="color">9:15-9:45</TD>
+    </TR>
+    <TR> 
+      <TD class="color" class="color">Period 3</TD>
+      <TD class="color" class="color">9:50-10:35</TD>
+    </TR>
+    <TR> 
+      <TD class="color" class="color">Period 4</TD>
+      <TD class="color" class="color">10:40-11:25</TD>
+    </TR>
+    <TR> 
+      <TD class="color" class="color">Period 5</TD>
+      <TD class="color" class="color">11:30-12:00</TD>
+      <TD class="color" class="color">Lunch A</TD>
+    </TR>
+    <TR> 
+      <TD class="color" class="color">&nbsp;</TD>
+      <TD class="color" class="color">12:05-12:50</TD>
+      <TD class="color" class="color">Class</TD>
+    </TR>
+    <TR> 
+      <TD class="color" class="color">&nbsp;</TD>
+      <TD class="color" class="color">11:30-12:15</TD>
+      <TD class="color" class="color">Class</TD>
+    </TR>
+    <TR> 
+      <TD class="color" class="color">&nbsp;</TD>
+      <TD class="color" class="color">12:20-12:50</TD>
+      <TD class="color" class="color">Lunch B</TD>
+    </TR>
+    <TR> 
+      <TD class="color" class="color">Period 6</TD>
+      <TD class="color" class="color">12:55-1:40</TD>
+    </TR>
+    <TR> 
+      <TD class="color" class="color">Period 7</TD>
+      <TD class="color" class="color">1:45-2:30</TD>
+    </TR>
+  </TABLE>
+  <BR>
+  <TABLE border="0" width="100%">
+    <TR> 
+      <TD class="color" class="color"> 
+        <DIV align="center"><B>LUNCH A</B></DIV>
+      </TD>
+      <TD class="color" class="color"> 
+        <DIV align="center"><B>LUNCH B</B></DIV>
+      </TD>
+    </TR>
+    <TR> 
+      <TD class="color" class="color"> 
+        <DIV align="center">Business<BR>
+          Foreign Language<BR>
+          Intervention Services<BR>
+          Language Arts<BR>
+          Social Studies<BR>
+          Tech. Arts </DIV>
+      </TD>
+      <TD class="color" class="color"> 
+        <DIV align="center">Art<BR>
+          Life Management<BR>
+          Math<BR>
+          Music<BR>
+          P.E.<BR>
+          Science </DIV>
+      </TD>
+    </TR>
+  </TABLE>
+</DIV>
+
+<!-- zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz -->
+
+<DIV ID="calendarLayer" class="textLayer" style="width:500">
+<DIV class="sectionTitle"><p>calendar</p></DIV>
+  <TABLE border="0" width="100%">
+    <TR> 
+      <TD class="color" class="color" colspan="2"><B>NOVEMBER</B></TD>
+    </TR>
+    <TR> 
+      <TD class="color" class="color" width="21%" valign="top">6</TD>
+      <TD class="color" width="79%"> End 2nd Six Weeks Grading Period</TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%" valign="top">11</TD>
+      <TD class="color" width="79%">Report Cards in 2nd hr. Classes</TD>
+    </TR>
+    <TR> 
+      <TD class="color" valign="top" width="21%">26-27</TD>
+      <TD class="color" width="79%">Thanksgiving Holiday-NO SCHOOL</TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%" colspan="2"><B>DECEMBER</B></TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%">16-17</TD>
+      <TD class="color" width="79%">Final Exams for Sem. 1</TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%">18</TD>
+      <TD class="color" width="79%">Make-Up Day for Sem.1</TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%">18</TD>
+      <TD class="color" width="79%">End of 1st Sem. Grading Period</TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%"> 21-<BR>
+        Jan 1 </TD>
+      <TD class="color" width="79%">Winter Break-No School</TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%" colspan="2"><B>JANUARY</B></TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%">4</TD>
+      <TD class="color" width="79%">Teachers Report - Student Non-Contact Day</TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%">5</TD>
+      <TD class="color" width="79%">Registration 2nd Sem.-Student Non-Contact Day</TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%">6</TD>
+      <TD class="color" width="79%">First Day of Classes, Semester 2</TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%">18</TD>
+      <TD class="color" width="79%">Martin Luther King Day - NO SCHOOL</TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%">25-29</TD>
+      <TD class="color" width="79%">8th Grade Registration Ken Caryl</TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%">26</TD>
+      <TD class="color" width="79%">8th Grade Parent Meeting</TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%" colspan="2"><B>FEBRUARY</B></TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%">9-11</TD>
+      <TD class="color" width="79%">Recognition Breakfasts</TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%">12</TD>
+      <TD class="color" width="79%">Columbine Area Inservice - NO SCHOOL</TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%">15</TD>
+      <TD class="color" width="79%">Presidents Birthday - NO SCHOOL</TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%">19</TD>
+      <TD class="color" width="79%">End  1st Six Week Grading Period</TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%">24</TD>
+      <TD class="color" width="79%">Report Cards in 2nd hr. classes</TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%" colspan="2"><B>MARCH</B></TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%">3-4</TD>
+      <TD class="color" width="79%">Spring Play: The Smoke in the Room</TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%">4</TD>
+      <TD class="color" width="79%">Senior Assembly/Class Picture</TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%">11</TD>
+      <TD class="color" width="79%">Parent/Teacher Conferences</TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%">12</TD>
+      <TD class="color" width="79%">NO SCHOOL </TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%">15-19</TD>
+      <TD class="color" width="79%">Spring Break-NO SCHOOL</TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%" colspan="2"><B>APRIL</B></TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%">9</TD>
+      <TD class="color" width="79%">End 2nd Six Week Grading Period</TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%">14</TD>
+      <TD class="color" width="79%">Report Cards in 2nd hr. Classes</TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%">17</TD>
+      <TD class="color" width="79%">Prom</TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%">TBA</TD>
+      <TD class="color" width="79%">Caps & Gown Distribution</TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%" colspan="2"><B>MAY</B></TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%">5</TD>
+      <TD class="color" width="79%">Stretch for Excellence</TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%">12-13</TD>
+      <TD class="color" width="79%">Senior Finals</TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%">14</TD>
+      <TD class="color" width="79%">Seniors Make-Up Day</TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%">21</TD>
+      <TD class="color" width="79%">Class Day</TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%">22</TD>
+      <TD class="color" width="79%">Graduation</TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%">25-26</TD>
+      <TD class="color" width="79%">Finals</TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%">27</TD>
+      <TD class="color" width="79%">Finals Make-Up Day for Sem. 2</TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%">27</TD>
+      <TD class="color" width="79%">Last Day of School </TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%">28</TD>
+      <TD class="color" width="79%">Teacher Check-Out Day</TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="21%">31</TD>
+      <TD class="color" width="79%">Memorial Day </TD>
+    </TR>
+  </TABLE>
+
+</DIV>
+
+<!-- zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz-->
+
+<DIV id="counselLayer" class="textLayer">
+<DIV class="sectionTitle"><p>counseling</p></DIV>
+  <TABLE width="100%">
+    <TR> 
+      <TD class="color" colspan="2">The Columbine Counselors provide a variety of services to 
+        students. Each counselor at CHS will participate in personal/social counseling, 
+        registration and academic advising, processing of college and scholarship 
+        applications, and provide input to students, teachers and parents regarding 
+        special needs. Specific services offered by the counselors and each counselor's 
+        part of the alphabet are listed below.<BR>
+        <BR>
+      </TD>
+    </TR>
+    <TR> 
+      <TD class="color" width="50%" valign="top"> 
+        <P><B>RYAN COLLINS(A-CL)</B><BR>
+          Careers Technology Warren Center Liaison Peer Counseling District Career 
+          Counselor Committee </P>
+      </TD>
+      <TD class="color" valign="top"><B>JOE CUNNINGHAM (CO-G)</B><BR>
+        College Technology Testing Coordinator Senior Conference Coordinator Military 
+        Liaison District college Committee </TD>
+    </TR>
+    <TR> 
+      <TD class="color" valign="top"><B>BRAD BUTTS (H-K)</B><BR>
+        Department Chairperson Careers Registration Schedule Alternative School 
+        Liaison Group Counseling Monitor District Career Counselor Committee </TD>
+      <TD class="color" valign="top"><B>SUSAN PETERS (L-N)</B><BR>
+        9th Grade Transition Post Grad. Ctr. Staff & Resource Coordinator Peer 
+        Counseling Special Occasions Safe & Drug Free Schools Liaison Executive 
+        Committee </TD>
+    </TR>
+    <TR> 
+      <TD class="color" valign="top"><B>KEN HOLDEN(O-SM)</B><BR>
+        College NCCAA Outdoor Lab Peer Counseling Student Awards District College 
+        Committee </TD>
+      <TD class="color" valign="top"><B>JUDY ASBURY(Sn-Z)</B><BR>
+        College NCAA Liaison Testing Coordinator Special Occasions Team Building 
+        District College Committee Teen Team Shared Decision Making Committee 
+      </TD>
+    </TR>
+  </TABLE>
+
+</DIV>
+
+<!-- zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz-->
+
+<DIV ID="gradLayer" class="textLayer">
+<DIV class="sectionTitle"><p>graduation info</p></DIV>
+  <P>As a student at Columbine High School, you should constantly be aware of 
+    the course requirements that are set forth as policies of the Jefferson County 
+    Board of Education. With these in mind, it will be easier for you to determine 
+    what courses must be taken as you progress toward graduation.</P>
+  <P>ALL CREDITS EARNED IN GRADES 9 - 12 ARE COLLECTIVELY COUNTED TOWARD HIGH 
+    SCHOOL GRADUATION.</P>
+  <P>Students must complete the following course requirements in grades 9-12:</P>
+  <TABLE width="100%">
+    <TR> 
+      <TD class="color" colspan="2"><B>Requirements for a High School Diploma:</B></TD>
+    </TR>
+    <TR> 
+      <TD class="color" widt

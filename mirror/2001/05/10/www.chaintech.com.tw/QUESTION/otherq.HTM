@@ -1,0 +1,238 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<title>Questions &amp; Answers: Various Questions</title>
+</head>
+
+<body background="../mainpix/backgrnd.jpg" text="#000000" bgcolor="#000000" link="#0099FF" vlink="#0099FF" topmargin="0" leftmargin="0">
+<layer TOP="0" LEFT="0">
+
+<div align="left">
+
+<table border="0" cellpadding="0" cellspacing="0" width="620">
+  <tr>
+    <td valign="top" align="left"><img src="../mainpix/supp_l.jpg" width="160" height="74" alt="supp_l.jpg (14846 bytes)"><div align="left"><table border="0" cellpadding="5" cellspacing="0" width="159" align="left">
+      <tr>
+        <td height="8"><font face="Arial" size="1" color="#FFFFFF"><b>SUPPORT CATEGORY</b></font></td>
+      </tr>
+      <tr>
+        <td height="8"><p align="left"><font face="Arial" size="1" color="#FFFFFF"><strong>- </strong><a href="QUESTION.HTM">Main Technical Support Page</a><br>
+        - <a href="Resource.htm">Model Specific Support</a><br>
+        - <a href="../PRODUCTI/Y2K.htm">Year 2000 (Y2K) Issue</a><br>
+        - <a href="CPUCOMP.htm">CPU-Mainboard compatibility</a></font></td>
+      </tr>
+      <tr>
+        <td height="8"><font face="Arial" size="1" color="#FFFFFF"><b>DOWNLOADS</b></font></td>
+      </tr>
+      <tr>
+        <td height="8"><font face="Arial" size="1" color="#FFFFFF">- <a href="../DRIVER/DRIVER.htm">Drivers</a><br>
+        (sound/display/busmaster,etc.)<br>
+        - <a href="../BIOS/BIOSUPD8.htm">BIOS updates</a><br>
+        - <a href="Manuals.HTM">Manuals or jumpersettings</a></font><p>&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="8"><a href="../PRODUCTI/PRODUCTI.HTM"><u><font face="Arial" size="1" color="#0099FF"><strong>PRODUCTS</strong></font></u></a></td>
+      </tr>
+      <tr>
+        <td height="8"><font face="Arial" size="1" color="#FFFFFF">- Bare-bone Systems<br>
+        - Mainboards<br>
+        - AGP Adapters</font></td>
+      </tr>
+      <tr>
+        <td height="8"><p align="left"><font face="Arial" size="1"><a href="../COMPANY/Company.htm"><strong>COMPANY</strong></a></font></td>
+      </tr>
+      <tr>
+        <td height="8"><font face="Arial" size="1" color="#FFFFFF">- Company Profile<br>
+        - Factory tour <br>
+        - How to contact us</font></td>
+      </tr>
+      <tr>
+        <td><a href="../CHNEWS/News.htm"><font face="Arial" size="1" color="#0099FF"><u><strong>CHAINTECH
+        NEWS</strong></u></font></a></td>
+      </tr>
+      <tr>
+        <td><font face="Arial" size="1" color="#FFFFFF">- Latest News<br>
+        - Hot Releases<br>
+        - Award Gallery</font></td>
+      </tr>
+    </table>
+    </div></td>
+    <td rowspan="2" valign="top" align="left" width="460"><img src="../mainpix/supp_r.jpg" width="258" height="74" alt="supp_r.jpg (19060 bytes)"><br>
+    <div align="left"><table border="0" cellpadding="5" cellspacing="0" width="450">
+      <tr>
+        <td><table border="0" cellpadding="5" cellspacing="0" width="100%">
+          <tr>
+            <td bgcolor="#66C1FF"><font face="Arial" size="3"><strong><p align="center"></strong></font><font face="Arial" size="4" color="#FFFFFF">Various Q&amp;A</font></td>
+          </tr>
+        </table>
+        <ul>
+          <li><small><font face="MS Sans Serif"><a href="#IDE Busmaster Drivers">After installing my
+            IDE Busmaster drivers my system seems to become unstable, what`s wrong ? </a></font></small></li>
+          <li><small><font face="MS Sans Serif"><a href="#6its manual">In my 6ITS manual on page 30 it
+            shows that I can select a Maximum Sync Transfer Rate of up to 40 Mb/sec., but when I enter
+            the BIOS setup, it only allows me to set a speed of up to 20 Mb/sec. Is this an error in
+            the manual ? </a></font></small></li>
+          <li><small><font face="MS Sans Serif"><a href="#SIMM/DIMM used together">Can SIMM and DIMM
+            memory modules be used together on my Chaintech mainboard ?</a></font></small></li>
+          <li><small><font face="MS Sans Serif"><a href="#Which SCSI controllers">Which SCSI
+            controllers are supported by the mainboard`s SCSI BIOS ?</a></font></small></li>
+          <li><small><font face="MS Sans Serif"><a href="#After">After installing my AGP card and
+            checking in Win95 Device Manager, it shows a memory conflict. What`s wrong ?</a></font></small></li>
+          <li><small><font face="MS Sans Serif"><a href="#64MB Memory Modules Support">64MB Memory
+            Modules Support</a></font></small></li>
+          <li><small><font face="MS Sans Serif"><a href="#Why do I have exclamation marks">Why do I
+            have exclamation marks in front of the IDE controller/PCI Bridge under Windows 95 (OSR2) ?</a></font></small></li>
+          <li><small><font face="MS Sans Serif"><a href="#Drivers under Windows 98">Drivers under
+            Windows 98</a></font></small></li>
+        </ul>
+        <p>&nbsp;</p>
+        <div align="center"><center><table border="0">
+          <tr>
+            <td><strong><font face="Arial" size="2"><a href="#IDE Busmaster Drivers" name="IDE Busmaster Drivers">After installing my IDE Busmaster drivers my system seems to
+            become unstable, what`s wrong ? </a></font></strong><p><small><font face="MS Sans Serif">Please
+            note that the Intel busmaster drivers that are shipped with your mainboard are only to be
+            used with Windows 95 retail version. OSR2 (Windows 95b) and OSR2.1/2.5 and Windows 98
+            already have their own busmaster compatible drivers.</font></small></p>
+            <p><small><font face="MS Sans Serif">According to Intel, in order to utilize Bus Master
+            IDE technology your system must have all of the following elements: </font></small><ol>
+              <li><small><font face="MS Sans Serif">bus master compatible logic on your system motherboard
+                </font></small></li>
+              <li><small><font face="MS Sans Serif">bus master compatible BIOS </font></small></li>
+              <li><small><font face="MS Sans Serif">a multi-tasking operating system (OS) such as Windows
+                95 </font></small></li>
+              <li><small><font face="MS Sans Serif">a bus mastering aware device driver for your operating
+                system </font></small></li>
+              <li><small><font face="MS Sans Serif">a bus mastering compatible IDE device (disk drive,
+                CD-ROM) that supports &quot;DMA multi-word&quot; modes </font></small></li>
+              <li><small><font face="MS Sans Serif">a high level of compatibility validation, such as
+                commonly performed by an OEM, which is required to ensure that all these complex elements
+                function properly together </font></small></li>
+            </ol>
+            <p><small><font face="MS Sans Serif">All elements of your PC system should be `aware` of
+            the busmastering technology in order to be able to use it. Furthermore, only heavy users,
+            users who do a lot of multi-tasking and use very demanding applications, will really
+            benefit from using this technology. So if you are experiencing problems when using IDE
+            busmastering drivers, the problem is most likely due to incompatible components in your
+            system. Removing the drivers will solve your problem. </font></small></p>
+            <p><small><font face="MS Sans Serif">Information on Intel's busmaster drivers on the
+            internet:</font></small><ul>
+              <li><small><font face="MS Sans Serif"><a href="http://www2.ldd.net/scribers/griz/intelbus.htm">Intel Busmaster Drivers
+                Troubleshooting</a></font></small></li>
+              <li><a href="http://developer.intel.com/design/pcisets/busmastr/"><small><font face="MS Sans Serif">Intel's website busmaster driver download page</font></small></a></li>
+            </ul>
+            <p>&nbsp;</p>
+            <p align="center"><map name="FPMap5">
+            <area href="#TOP OF PAGE" shape="rect" coords="5, 7, 84, 53"></map><img src="../mainpix/TOPOPAGE.gif" alt="TOPOPAGE.gif (1161 bytes)" border="0" usemap="#FPMap5" width="85" height="54"></p>
+            <p>&nbsp;</p>
+            <p><strong><font face="Arial" size="2"><a href="#6its manual" name="6its manual">In my
+            6ITS manual on page 30 it shows that I can select a Maximum Sync Transfer Rate of up to 40
+            Mb/sec., but when I enter the BIOS setup, it only allows me to set a speed of up to 20
+            Mb/sec. Is this an error in the manual ? </a></font></strong></p>
+            <p><small><font face="MS Sans Serif">No, this is not an error in the manual. You will
+            first have to set the 'Support for Ultra SCSI Speed', which is mentioned on page 32, to
+            'Enable', before you can change the Maximum Sync Transfer Rate to 40 Mb/sec. </font></small></p>
+            <p>&nbsp;</p>
+            <p align="center"><map name="FPMap6">
+            <area href="#TOP OF PAGE" shape="rect" coords="5, 7, 84, 53"></map><img src="../mainpix/TOPOPAGE.gif" alt="TOPOPAGE.gif (1161 bytes)" border="0" usemap="#FPMap6" width="85" height="54"></p>
+            <p>&nbsp;</p>
+            <p align="left"><strong><font face="Arial" size="2"><a href="#SIMM/DIMM used together" name="SIMM/DIMM used together">Can SIMM and DIMM memory modules be used together on my
+            Chaintech mainboard ?</a></font></strong></p>
+            <p align="left"><small><font face="MS Sans Serif">Yes, you can. Chaintech mainboards work
+            well with most of the SIMM and DIMM modules in the market. Once the SIMM or DIMMs work
+            well on the mainboard individually, there should be no problem in using them together
+            (mixed) on the mainboard.</font></small></p>
+            <p align="left"><small><font face="MS Sans Serif">However, since SIMM`s use 5V and DIMM`s
+            only 3V, during the mixed SIMM/DIMM operation the DIMM`s will be exposed to the 5V meant
+            for the SIMM modules. This over-voltage may reduce the life cycle of the DIMM`s in the
+            long term !</font></small></p>
+            <p align="left">&nbsp;</p>
+            <p align="center"><map name="FPMap7">
+            <area href="#TOP OF PAGE" shape="rect" coords="5, 7, 84, 53"></map><img src="../mainpix/TOPOPAGE.gif" alt="TOPOPAGE.gif (1161 bytes)" border="0" usemap="#FPMap7" width="85" height="54"></p>
+            <p align="left">&nbsp;</p>
+            <p><strong><font face="Arial" size="2"><a href="#Which SCSI controllers" name="Which SCSI controllers">Which SCSI controllers are supported by the mainboard`s SCSI
+            BIOS ?</a></font></strong></p>
+            <p><small><font face="MS Sans Serif">Some Chaintech mainboards` BIOS versions contain a
+            Symbios SCSI BIOS. This SCSI BIOS supports the NCR 53C810, 53C815, 53C865 SCSI chip based
+            controllers.</font></small></p>
+            <p>&nbsp;</p>
+            <p align="center"><map name="FPMap8">
+            <area href="#TOP OF PAGE" shape="rect" coords="5, 7, 84, 53"></map><img src="../mainpix/TOPOPAGE.gif" alt="TOPOPAGE.gif (1161 bytes)" border="0" usemap="#FPMap8" width="85" height="54"></p>
+            <p>&nbsp;</p>
+            <p><strong><font face="Arial" size="2"><a name="After" href="#After">After installing my
+            AGP card and checking in Win95 Device Manager, it shows a memory conflict. What`s wrong ?</a></font></strong></p>
+            <p><small><font face="MS Sans Serif">There is nothing wrong here. You can use your AGP
+            card without problems despite this message. The message is as follows:</font></small></p>
+            <p><small><font face="MS Sans Serif">Memory range D9000000 - D901FFFF<br>
+            D8000000 - D87FFFFF<br>
+            D8800000 - D8FFFFFF<br>
+            Used by PCI standard PCI to PCI bridge<br>
+            </font></small></p>
+            <p><small><font face="MS Sans Serif">The message has to do with the memory allocation for
+            the PCI to PCI bridge under Windows 95. These addresses here are actually not used, so the
+            AGP card can use these addresses without problems. This message will be solved in Windows
+            98 (Memphis), when AGP will fully be supported.</font></small></p>
+            <p>&nbsp;</p>
+            <p align="center"><map name="FPMap9">
+            <area href="#TOP OF PAGE" shape="rect" coords="5, 7, 84, 53"></map><img src="../mainpix/TOPOPAGE.gif" alt="TOPOPAGE.gif (1161 bytes)" border="0" usemap="#FPMap9" width="85" height="54"></p>
+            <p>&nbsp;</p>
+            <p><strong><font face="Arial" size="2"><a name="64MB Memory Modules Support" href="#64MB Memory Modules Support">64MB Memory Modules Support</a></font></strong></p>
+            <p><small><font face="MS Sans Serif">64MB memory modules are not supported by any of the
+            Chaintech Pentium based mainboards except for the 5TDM2, 5TLM, 5TTL, 5AGM, 5AGM2.</font></small></p>
+            <p><small><font face="MS Sans Serif">64MB memory modules are also supported by all
+            Chaintech Slot 1 based (Pentium II) mainboards (6LTM, 6LTM2, 6ESA, 6ESA2, 6BTM, 6BTS,
+            6BDU, etc.).</font></small></p>
+            <p>&nbsp;</p>
+            <p align="center"><map name="FPMap10">
+            <area href="#TOP OF PAGE" shape="rect" coords="5, 7, 84, 53"></map><img src="../mainpix/TOPOPAGE.gif" alt="TOPOPAGE.gif (1161 bytes)" border="0" usemap="#FPMap10" width="85" height="54"></p>
+            <p>&nbsp;</p>
+            <p><strong><font face="Arial" size="2"><a name="Why do I have exclamation marks">Why do I
+            have exclamation marks</a> in front of the IDE controller/PCI Bridge under Windows 95
+            (OSR2) ?</font></strong></p>
+            <p><small><font face="MS Sans Serif">Windows 95 does not recognize the PIIX4 controller
+            which is used in the Intel TX/LX/BX chipsets. During the installation of Windows 95 it
+            will therefore ask for new drivers for this controller. When this happens, ignore the
+            message and continue to install Windows 95. After the installation is completed, you will
+            see exclamation marks in front of the IDE controller and sometimes also in front of the
+            PCI bridge. These can be removed by means of the <a href="../DRIVER/UTILITY/px4patch.exe">!Remover</a>
+            utility which is supplied with your mainboard. This utility is suitable for Windows 95 and
+            Windows 95b OSR2.0 and OSR2.1. If you are using Windows 95 OSR2.5, then you should use <a href="../DRIVER/UTILITY/setupex.exe">this</a> utility to fix this problem.</font></small></p>
+            <p>&nbsp;</p>
+            <p align="center"><map name="FPMap11">
+            <area href="#TOP OF PAGE" shape="rect" coords="5, 7, 84, 53"></map><img src="../mainpix/TOPOPAGE.gif" alt="TOPOPAGE.gif (1161 bytes)" border="0" usemap="#FPMap11" width="85" height="54"></p>
+            <p>&nbsp;</p>
+            <p><strong><font face="Arial" size="2"><a name="Drivers under Windows 98">Drivers under
+            Windows 98</a></font></strong></p>
+            <p><small><font face="MS Sans Serif">Windows 98 has its own busmaster drivers. Also,
+            unlike Windows 95 and OSR2.0/2.1/2.5, it recognizes the Intel TX/LX/BX chipset
+            automatically. When using Windows 98 there is thus no need to install any additional
+            drivers.</font></small></td>
+          </tr>
+        </table>
+        </center></div><p>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><p align="center"><map name="FPMap12">
+          <area href="#TOP OF PAGE" shape="rect" coords="5, 7, 84, 53"></map><img src="../mainpix/TOPOPAGE.gif" alt="TOPOPAGE.gif (1161 bytes)" border="0" usemap="#FPMap12" width="85" height="54"></p>
+        <p align="center">&nbsp;</p>
+        <p align="center"><em><font face="Arial" size="1"><a href="../COMPANY/Company.htm">COMPANY</a>
+        - <a href="../PRODUCTI/PRODUCTI.HTM">PRODUCTS</a> - <a href="QUESTION.HTM">SUPPORT</a> - <a href="../CHNEWS/News.htm">NEWS</a> - <a href="../Index_m.htm">HOME</a><br>
+        </font><small><small><small><font face="Arial">Contents &amp; Design by Chaintech Computer
+        Co. 1998/1999<br>
+        </font></small></small></small></em>------------ <img src="../mainpix/logosmal.gif" width="27" height="19" alt="logosmal.gif (1015 bytes)" align="middle"> ------------</td>
+      </tr>
+    </table>
+    </div></td>
+    <td align="left" valign="top"></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+</div>
+</layer>
+</body>
+</html>

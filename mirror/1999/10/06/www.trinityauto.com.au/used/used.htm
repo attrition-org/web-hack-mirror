@@ -1,0 +1,149 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+  
+<script language="JavaScript">
+<!--
+
+function MM_initTimelines() {
+    //MM_initTimelines() Copyright 1997 Macromedia, Inc. All rights reserved.
+    var ns = navigator.appName == "Netscape";
+    document.MM_Time = new Array(1);
+    document.MM_Time[0] = new Array(2);
+    document.MM_Time["Timeline1"] = document.MM_Time[0];
+    document.MM_Time[0].MM_Name = "Timeline1";
+    document.MM_Time[0].fps = 15;
+    document.MM_Time[0][0] = new String("sprite");
+    document.MM_Time[0][0].slot = 1;
+    if (ns)
+        document.MM_Time[0][0].obj = document["Layer1"];
+    else
+        document.MM_Time[0][0].obj = document.all ? document.all["Layer1"] : null;
+    document.MM_Time[0][0].keyFrames = new Array(1, 20);
+    document.MM_Time[0][0].values = new Array(4);
+    document.MM_Time[0][0].values[0] = new Array(422,403,385,366,347,329,310,291,273,254,235,216,198,179,160,142,123,104,86,67);
+    document.MM_Time[0][0].values[0].prop = "left";
+    document.MM_Time[0][0].values[1] = new Array(25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25);
+    document.MM_Time[0][0].values[1].prop = "top";
+    if (!ns) {
+        document.MM_Time[0][0].values[0].prop2 = "style";
+        document.MM_Time[0][0].values[1].prop2 = "style";
+    }
+    document.MM_Time[0][0].values[2] = new Array(114,117,120,123,126,129,132,135,138,141,144,147,150,153,156,159,162,165,168,171);
+    document.MM_Time[0][0].values[2].prop = "width";
+    if (!ns)
+        document.MM_Time[0][0].values[2].prop2 = "style";
+    document.MM_Time[0][0].values[3] = new Array(50,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49);
+    document.MM_Time[0][0].values[3].prop = "height";
+    if (!ns)
+        document.MM_Time[0][0].values[3].prop2 = "style";
+    document.MM_Time[0][1] = new String("sprite");
+    document.MM_Time[0][1].slot = 2;
+    if (ns)
+        document.MM_Time[0][1].obj = document["Layer2"];
+    else
+        document.MM_Time[0][1].obj = document.all ? document.all["Layer2"] : null;
+    document.MM_Time[0][1].keyFrames = new Array(1, 20);
+    document.MM_Time[0][1].values = new Array(3);
+    document.MM_Time[0][1].values[0] = new Array(2,12,22,32,42,51,61,71,81,91,101,111,121,131,141,150,160,170,180,190);
+    document.MM_Time[0][1].values[0].prop = "left";
+    document.MM_Time[0][1].values[1] = new Array(50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50);
+    document.MM_Time[0][1].values[1].prop = "top";
+    if (!ns) {
+        document.MM_Time[0][1].values[0].prop2 = "style";
+        document.MM_Time[0][1].values[1].prop2 = "style";
+    }
+    document.MM_Time[0][1].values[2] = new Array(123,125,127,129,131,133,135,137,139,141,143,145,147,149,151,153,155,157,159,161);
+    document.MM_Time[0][1].values[2].prop = "width";
+    if (!ns)
+        document.MM_Time[0][1].values[2].prop2 = "style";
+    document.MM_Time[0].lastFrame = 20;
+    for (i=0; i<document.MM_Time.length; i++) {
+        document.MM_Time[i].ID = null;
+        document.MM_Time[i].curFrame = 0;
+        document.MM_Time[i].delay = 1000/document.MM_Time[i].fps;
+    }
+}
+//-->
+</script>
+  <script language="JavaScript">
+<!--
+function MM_timelinePlay(tmLnName, myID) { //v1.2
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,propNum,theObj,firstTime=false;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (myID == null) { myID = ++tmLn.ID; firstTime=true;}//if new call, incr ID
+  if (myID == tmLn.ID) { //if Im newest
+    setTimeout('MM_timelinePlay("'+tmLnName+'",'+myID+')',tmLn.delay);
+    fNew = ++tmLn.curFrame;
+    for (i=0; i<tmLn.length; i++) {
+      sprite = tmLn[i];
+      if (sprite.charAt(0) == 's') {
+        if (sprite.obj) {
+          numKeyFr = sprite.keyFrames.length; firstKeyFr = sprite.keyFrames[0];
+          if (fNew >= firstKeyFr && fNew <= sprite.keyFrames[numKeyFr-1]) {//in range
+            keyFrm=1;
+            for (j=0; j<sprite.values.length; j++) {
+              props = sprite.values[j]; 
+              if (numKeyFr != props.length) {
+                if (props.prop2 == null) sprite.obj[props.prop] = props[fNew-firstKeyFr];
+                else        sprite.obj[props.prop2][props.prop] = props[fNew-firstKeyFr];
+              } else {
+                while (keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]) keyFrm++;
+                if (firstTime || fNew==sprite.keyFrames[keyFrm-1]) {
+                  if (props.prop2 == null) sprite.obj[props.prop] = props[keyFrm-1];
+                  else        sprite.obj[props.prop2][props.prop] = props[keyFrm-1];
+        } } } } }
+      } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+      if (fNew > tmLn.lastFrame) tmLn.ID = 0;
+  } }
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" onLoad="MM_timelinePlay('Timeline1')">
+<div id="Layer1" style="position:absolute; left:422px; top:25px; width:114px; height:50px; z-index:1"><font face="Arial, Helvetica, sans-serif"><b><font size="7" color="#0000FF">Used 
+  </font></b></font></div>
+<div id="Layer2" style="position:absolute; left:2px; top:50px; width:123px; height:36px; z-index:2"><b><font size="6" color="#FF0000">Vehicles</font></b></div>
+<div id="Layer3" style="position:absolute; left:151px; top:124px; width:33px; height:52px; z-index:3"><img src="../curve.gif" width="56" height="227"></div>
+<div id="Layer4" style="position:absolute; left:227px; top:124px; width:254px; height:227px; z-index:4">
+  <p><font face="Arial, Helvetica, sans-serif" size="2">At <b>Trinity Auto Group</b>, 
+    we have an extensive range of over 100 sedans, wagons, commercials and 4WDs 
+    to choose from. Each vehicle is fully serviced and detailed and comes with 
+    our 12 month unlimited kilometre warranty. Our stock of vehicles changes frequently.</font></p>
+  <p><font face="Arial, Helvetica, sans-serif" size="2">Recieve a <b>free computer</b> 
+    when you buy any one of these top quality used cars!</font></p>
+  <p><font face="Arial, Helvetica, sans-serif" size="2"> &nbsp;&nbsp;&nbsp;&nbsp;<b><a href="bestbuys.htm"><font color="#0033CC">This 
+    Week's Best Buy</font></a></b></font></p>
+  <p><font face="Arial, Helvetica, sans-serif" size="2">The mighty <b>Hewlett 
+    Packard 4411</b> could be all yours...<br>
+    366mhz processor -4.3Gb hard drive - 32Mb SDRAM - 4Mb video RAM - 56K datafax 
+    modem - 2 USB plug &amp; play ports - Year 2000 compliant - 15&quot; monitor 
+    - and a heap of free software.</font></p>
+  <p><font face="Arial, Helvetica, sans-serif" size="2" color="#FF0066">*</font><font face="Arial, Helvetica, sans-serif" size="-2">Offer 
+    not valid wigh any other promotion. Available on adertised ans selected vehicles. 
+    Only while stocks last.</font></p>
+  <p><font face="Arial, Helvetica, sans-serif" size="2"> <b><a href="bestbuys.htm"><font color="#0033CC"> 
+    <font color="#FFFFFF">-</font></font></a></b></font></p>
+</div>
+<div id="Layer7" style="position:absolute; left:44px; top:465px; width:125px; height:21px; z-index:7"><font face="Arial, Helvetica, sans-serif" size="2"><a href="../customercare/customercare.htm"><font color="#0033FF" size="3"><b><font size="2" color="#0033CC">Customer 
+  Car</font></b><font size="2" color="#0033CC"><b>e</b></font></font></a></font></div>
+<div id="Layer8" style="position:absolute; left:44px; top:376px; width:121px; height:31px; z-index:8"> 
+  <p><font face="Arial, Helvetica, sans-serif" size="2">Used Vehicles<br>
+    Phone: 4050 5050</font></p>
+  <p>&nbsp;</p>
+</div>
+<div id="Layer9" style="position:absolute; left:44px; top:448px; width:125px; height:16px; z-index:9"><font face="Arial, Helvetica, sans-serif" size="2"><b><a href="../brochure_testdrive/request.htm"><font color="#0033CC">Test 
+  Drive/Brochure</font></a></b></font></div>
+<div id="Layer10" style="position:absolute; left:220px; top:303px; width:7px; height:8px; z-index:10"><img src="used%20images/flasher.gif" width="13" height="12"></div>
+<div id="Layer11" style="position:absolute; left:4px; top:141px; width:70px; height:62px; z-index:11"><img src="used%20images/free%20computer.gif" width="220" height="197"></div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,898 @@
+<HTML>
+<HEAD>
+<TITLE>
+The iWrestling Board
+</TITLE>
+
+<!-- Required Marker-->
+
+
+<script  language="javascript">
+function jumpPage(form) {
+i = form.forum.selectedIndex;
+if (i == 0) return;
+    window.location.href = url[i+1];
+}
+
+function openWindow(url) {
+   opinion = window.open(url,"Handheld",'toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0,width=150,height=400');
+}
+
+function makeRemote(url){
+	remote = window.open(url,"remotewin","width=500,height=250,scrollbars=1");
+	remote.location.href = url;
+	if (remote.opener == null) remote.opener = window;
+}
+</script>
+
+<SCRIPT LANGUAGE="JAVASCRIPT">
+<!-- 
+now = new Date();
+my_random = now.getTime();
+function print_tag()
+{
+document.write("<a href='http://adserver.ign.com/click-ng/network=ign&size=468x60&category=entertainment&genre=entertainment&site=scoopswrestling&ord=" + my_random + "?' target='_new'>");
+document.write("<img src='http://adserver.ign.com/image-ng/network=ign&size=468x60&category=entertainment&genre=entertainment&site=scoopswrestling&ord=" + my_random + "?' border=0 width=468 height=60 alt='banner ad'></A>");
+}
+//-->
+</SCRIPT>
+
+</head>
+
+<BODY text="#ffffff" bgcolor="#000000" LINK="#0088EC" VLINK="red" ALINK="#FFFFFF">
+
+<center>
+<a href="http://www.ign.com" target="_new"><img src="http://www.iwrestling.com/topads/ign.gif" width="70" height="60" border=0 alt="IGN"></a><img src="http://www.iwrestling.com/graphics/transparent.gif" width="8" height="60"><SCRIPT LANGUAGE="JAVASCRIPT">
+<!--
+print_tag();
+//-->
+</SCRIPT>
+<NOSCRIPT>
+<A HREF="http://ads.admonitor.net/clicktrack.cgi?F203|1001|1|image|C|||345621">
+<IMG SRC="http://ads.admonitor.net/adengine.cgi?F203|1001|1|image|C|||345621" BORDER=0 WIDTH=468 HEIGHT=60></A>
+</NOSCRIPT>
+</center>
+
+<p><table width="100%" bgcolor="#000000" border="0" cellspacing="0" cellpadding="0">
+<tr><td width="100"><img src="http://www.iwrestling.com/graphics/logo_1.gif" width="125" height="60" alt="iwrestling.com" border=0></td><td width="100%" bgcolor="#186BDE"><br></td><td width="500" valign=top><img src="http://www.iwrestling.com/graphics/hea
+der.gif" width="475" height="60" alt="iwrestling.com" border=0></td></tr></table>
+<table width="100%" bgcolor="#000000" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td valign="top" width="125" bgcolor="#186BDE">
+<img src="http://www.iwrestling.com/graphics/logo_2.gif" width="125" height="80">
+<table width="125" cellpadding=0 cellspacing=0 border=0><tr><td width="15" bgcolor="#186BDE"><img src="http://www.iwrestling.com/graphics/transparent.gif" width="15" height="1"></td><td width="110"bgcolor="#000000">
+<img src="http://www.iwrestling.com/graphics/nav1.gif"><br>
+	<table width="105" align=center><tr><td width="105" bgcolor="#000000"><font size="2" face="arial" color="red"><b><i>what's inside</i></b></font></td></tr>
+<tr><td width="105">
+<font size="2" face="Arial">
+<li><a href="http://www.iwrestling.com">Main Page</a><br>
+<li><a href="/news">Latest News</a><br>
+<li><a href="../imageFolio.cgi">Images</a><br>
+<li><a href="/columns">S*P*A*M</a><br>
+<li><a href="http://search.iwrestling.com">Links</a><br>
+<img src="../../graphics/transparent.gif" width="5" height="1">
+</font>
+	</td></tr>
+
+
+<tr><td width="105" bgcolor="black"><font size="2" face="arial" color="red"><b><i>interact</i></b></font></td></tr>
+<tr><td width="105">
+<font size="2" face="Arial">
+<li><a href="/discussion">Discussion</a><br>
+<li><a href="/chat">Chat</a><br>
+<img src="../../graphics/transparent.gif" width="5" height="1">
+</font>
+</td></tr>
+
+
+<img src="../../graphics/transparent.gif" width="5" height="1">
+</font>
+</td></tr>
+	
+
+<tr><td width="105" bgcolor="black"><font size="2" face="arial" color="red"><b><i>general</i></b></font></td></tr>
+<tr><td width="105">
+<font size="2" face="Arial">
+<li><a href="../../about.html">About Us</a><br>
+<li><a href="../../contact.html">Contact Us</a><br>
+<li><a href="../../advertising.html">Advertising</a>
+</font>
+</td></tr>
+</table>
+<img src="http://www.iwrestling.com/graphics/nav2.gif"></td></tr></table>
+<p>
+		</td>
+
+<td width="100%" valign="top">
+<table width="100%" align=center bgcolor="#333333"><tr><td width="100%">
+
+<center><font size="2" face="arial"><b>New Users, Please <a href="http://www.iwrestling.com/cgi/dcforum/dcboard.cgi?az=user_register">CLICK HERE</a> And Register For The Forums.</font></center></td></tr></table>
+
+
+
+
+<table width="95%" align=center><tr><td width="100%" valign=top>
+
+<!-- Required Marker-->
+<font size="3" face="verdana" color="#FFFFFF">
+<center><b>The iWrestling Board</b></center>
+</font>
+<p>
+<!-- Required Marker-->
+<center>
+         <TABLE BORDER="0" cellspacing="0" cellpadding="0">
+         <TR>
+         <td align="center" width="50" BGCOLOR="#FFFFFF">
+             <a href="dcboard.cgi?az=login"><img 
+            src="../../discussion/Images/login.gif" alt="Click here to Login" border="0"></a><br> <a href="dcboard.cgi?az=login"><font 
+               size="1" face="Verdana" color="#000099">Login</font></a> 
+         </td>
+         <td align="center" width="50" BGCOLOR="#FFFFFF">
+             <a href="dcboard.cgi?az=help"><img 
+            src="../../discussion/Images/help.gif" alt="Click here to see help" border="0"></a><br> <a href="dcboard.cgi?az=help"><font 
+               size="1" face="Verdana" color="#000099">Help</font></a> 
+         </td>
+         <td align="center" width="50" BGCOLOR="#FFFFFF">
+             <a href="dcboard.cgi?az=search_form"><img 
+            src="../../discussion/Images/search.gif" alt="Click here to Search the Forum" border="0"></a><br> <a href="dcboard.cgi?az=search_form"><font 
+               size="1" face="Verdana" color="#000099">Search</font></a> 
+         </td>
+         <td align="center" width="50" BGCOLOR="#FFFFFF">
+             <a href="dcboard.cgi?az=post&forum=WCW 2000"><img 
+            src="../../discussion/Images/post.gif" alt="Click here to post new thread" border="0"></a><br> <a href="dcboard.cgi?az=post&forum=WCW 2000"><font 
+               size="1" face="Verdana" color="#000099">Post</font></a> 
+         </td>
+         </TR></TABLE>
+      </center>
+<p>
+<!-- Required Marker-->
+<font size="3" face="verdana" color="#000099">
+<b></b>
+</font>
+<p>
+
+<!-- Required Marker-->
+
+      <TABLE BORDER="0" WIDTH="100%" cellspacing="1" cellpadding="3">
+      <TR><TD ALIGN="LEFT" VALIGN="BOTTOM" colspan="2" BGCOLOR="#333333">
+      <font face="Verdana" color="#FFFFFF" size="1">
+         <img src="../../discussion/Images/expand_threads.gif" align="bottom" border="0"><a 
+            href="dcboard.cgi?az=expand_threads"><font 
+               face="Verdana" color="#FFFFFF" size="1">Expand Threads</font></a>
+      </font></td>
+      <TD COLSPAN="3" ALIGN="RIGHT" VALIGN="BOTTOM" BGCOLOR="#333333">
+      <font face="Verdana" color="#FFFFFF" size="1">
+      1 | <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=list&forum=WCW 2000&mm=30&archive=yes">2</A> | <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=list&forum=WCW 2000&mm=60&archive=yes">3</A>  |  <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?forum=WCW 2000&az=list">Current</a>
+      (200)
+</FONT></TD></TR>
+      <TR><TH COLSPAN="5" ALIGN="LEFT" VALIGN="BOTTOM" BGCOLOR="#333333">
+         <a href="../../index.html"><font 
+            size="2" face="Verdana" color="#FFFFFF">Home</font></a>
+            <img src="../../discussion/Images/dir.gif"> <a href="dcboard.cgi"><font face="Verdana"
+         color="#FFFFFF" size="2">Conferences</font></a>
+         <img src="../../discussion/Images/dir.gif"> <font face="Verdana"
+         color="#FFFFFF" size="2">WCW 2000
+          (Protected)</FONT>
+         </TH></TR>
+   <a name="TOP">&nbsp;</a>
+   
+      <TR BGCOLOR="#F00000"><TD ALIGN="LEFT" colspan="2"><font 
+         SIZE="1" FACE="Verdana" color="#000000">
+         Sort Topics by..... <a 
+            href="dcboard.cgi?az=set_sort_index&field=1"><font 
+            SIZE="1" FACE="Verdana" color="#000000">
+                  ID</font></a> |
+            <a 
+            href="dcboard.cgi?az=set_sort_index&field=5"><font 
+            SIZE="1" FACE="Verdana" color="#000000">
+                  Topic</font></a> |
+            <a 
+            href="dcboard.cgi?az=set_sort_index&field=4"><font 
+            SIZE="1" FACE="Verdana" color="#000000">
+                  Author</font></a> |
+            <a 
+            href="dcboard.cgi?az=set_sort_index&field="><font 
+            <font SIZE="1" FACE="Verdana" color="#000000">
+               Date</font></a> 
+                | <a 
+                  href="dcboard.cgi?az=set_sort_index&field=8"><font 
+                  SIZE="1" FACE="Verdana" color="#000000">
+                     Views</font></a> 
+               | <a 
+                  href="dcboard.cgi?az=set_sort_index&field=9"><font 
+                  SIZE="1" FACE="Verdana" color="#000000">
+                     Rating</font></a> 
+                     </font></TD>
+            <TD ALIGN="LEFT" COLSPAN="3">
+            <font SIZE="1" FACE="Verdana" color="#000000">
+                  Discussion&nbsp;Information</font>
+               </TD></TR>
+           <TR><TD ALIGN="LEFT" VALIGN="TOP" BGCOLOR="#333333">
+           <img src="http://www.iwrestling.com:2020/discussion/Images/locked_file.gif"></TD><TD ALIGN="LEFT" 
+         WIDTH="100%" VALIGN="TOP" BGCOLOR="#333333">
+                     <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+                     <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=read_count&om=2&forum=WCW 2000&archive=yes"><b>The Russo/Bischoff Era begins with Awesome hype.</b></a>
+                     
+                     <br>To say the least, this is the first time I can remember in more than a year that the anticipation of huge Monday Night has me counting down the minute</FONT></TD>
+
+         <TD ALIGN="Left" VALIGN="TOP" COLSPAN="3" BGCOLOR="#333333">
+           <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+           <b>Y2HH</b><br>
+           <b>2
+</b> messages<br>
+            <b>1</b> views<br>
+           
+           <font size="1">Apr-10-00 06:00&nbsp;PM</font></FONT>
+        </TD>
+        </TR>
+        
+           <TR><TD ALIGN="LEFT" VALIGN="TOP" BGCOLOR="#333333">
+           <img src="http://www.iwrestling.com:2020/discussion/Images/locked_file.gif"></TD><TD ALIGN="LEFT" 
+         WIDTH="100%" VALIGN="TOP" BGCOLOR="#333333">
+                     <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+                     <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=read_count&om=5&forum=WCW 2000&archive=yes"><b>1 week to create around 10 entertaining matches for spring stampede!</b></a>
+                     
+                     <br>I tell you what, Nitro rocked but i cannot wait until the pay per view.Because they only have 1 week to put together story lines to make akick butt p</FONT></TD>
+
+         <TD ALIGN="Left" VALIGN="TOP" COLSPAN="3" BGCOLOR="#333333">
+           <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+           <b>Craigb21</b><br>
+           <b>0
+</b> messages<br>
+            <b>2</b> views<br>
+           
+           <font size="1">Apr-11-00 01:03&nbsp;PM</font></FONT>
+        </TD>
+        </TR>
+        
+           <TR><TD ALIGN="LEFT" VALIGN="TOP" BGCOLOR="#333333">
+           <img src="http://www.iwrestling.com:2020/discussion/Images/locked_file.gif"></TD><TD ALIGN="LEFT" 
+         WIDTH="100%" VALIGN="TOP" BGCOLOR="#333333">
+                     <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+                     <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=read_count&om=9&forum=WCW 2000&archive=yes"><b>Spring Stampede..or however you spell it..</b></a>
+                     
+                     <br> One thing bugged me about the cancelation of Nitro and Thunder last week. It left only one week to set up Spring Stampede. I think they did a pr</FONT></TD>
+
+         <TD ALIGN="Left" VALIGN="TOP" COLSPAN="3" BGCOLOR="#333333">
+           <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+           <b>jww</b><br>
+           <b>0
+</b> messages<br>
+            <b>0</b> views<br>
+           
+           <font size="1">Apr-11-00 10:24&nbsp;PM</font></FONT>
+        </TD>
+        </TR>
+        
+           <TR><TD ALIGN="LEFT" VALIGN="TOP" BGCOLOR="#333333">
+           <img src="http://www.iwrestling.com:2020/discussion/Images/locked_file.gif"></TD><TD ALIGN="LEFT" 
+         WIDTH="100%" VALIGN="TOP" BGCOLOR="#333333">
+                     <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+                     <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=read_count&om=12&forum=WCW 2000&archive=yes"><b>Thunder on the 19th</b></a>
+                     
+                     <br>As I look over what's left on my 2000 Laker schedule I noticed that on Wednesday the 19th the schedule says TBS will broadcast the game vs. the Spurs.</FONT></TD>
+
+         <TD ALIGN="Left" VALIGN="TOP" COLSPAN="3" BGCOLOR="#333333">
+           <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+           <b>Psycoholic</b><br>
+           <b>0
+</b> messages<br>
+            <b>0</b> views<br>
+           
+           <font size="1">Apr-12-00 04:39&nbsp;PM</font></FONT>
+        </TD>
+        </TR>
+        
+           <TR><TD ALIGN="LEFT" VALIGN="TOP" BGCOLOR="#333333">
+           <img src="http://www.iwrestling.com:2020/discussion/Images/locked_file.gif"></TD><TD ALIGN="LEFT" 
+         WIDTH="100%" VALIGN="TOP" BGCOLOR="#333333">
+                     <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+                     <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=read_count&om=15&forum=WCW 2000&archive=yes"><b>Era of Biased Authority</b></a>
+                     
+                     <br>Hey everyone, I'm Joe. I used to post under a different name and everyone hated me. Anyway, now I am back and ready to accept abuse once again. but</FONT></TD>
+
+         <TD ALIGN="Left" VALIGN="TOP" COLSPAN="3" BGCOLOR="#333333">
+           <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+           <b>Joe<img src="../../discussion/Images/team.gif"></b><br>
+           <b>0
+</b> messages<br>
+            <b>1</b> views<br>
+           
+           <font size="1">Apr-12-00 06:28&nbsp;PM</font></FONT>
+        </TD>
+        </TR>
+        
+           <TR><TD ALIGN="LEFT" VALIGN="TOP" BGCOLOR="#333333">
+           <img src="http://www.iwrestling.com:2020/discussion/Images/locked_file.gif"></TD><TD ALIGN="LEFT" 
+         WIDTH="100%" VALIGN="TOP" BGCOLOR="#333333">
+                     <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+                     <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=read_count&om=14&forum=WCW 2000&archive=yes"><b>Very interesting...</b></a>
+                     
+                     <br>I watched Nitro on monday, and to my suprise it wasn't as good as I thought it would be. The whole Hulk Hogan thing got under my skin. But atleast he</FONT></TD>
+
+         <TD ALIGN="Left" VALIGN="TOP" COLSPAN="3" BGCOLOR="#333333">
+           <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+           <b>HeyYo</b><br>
+           <b>2
+</b> messages<br>
+            <b>0</b> views<br>
+           
+           <font size="1">Apr-12-00 06:43&nbsp;PM</font></FONT>
+        </TD>
+        </TR>
+        
+           <TR><TD ALIGN="LEFT" VALIGN="TOP" BGCOLOR="#333333">
+           <img src="http://www.iwrestling.com:2020/discussion/Images/locked_file.gif"></TD><TD ALIGN="LEFT" 
+         WIDTH="100%" VALIGN="TOP" BGCOLOR="#333333">
+                     <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+                     <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=read_count&om=8&forum=WCW 2000&archive=yes"><b>Some of you just don't get it.</b></a>
+                     
+                     <br>Some of you just don't get it. If you watched Nitro last night, and actually watched it, you would see that this Angle is bigger then anyone had imagi</FONT></TD>
+
+         <TD ALIGN="Left" VALIGN="TOP" COLSPAN="3" BGCOLOR="#333333">
+           <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+           <b>aspkicker</b><br>
+           <b>13
+</b> messages<br>
+            <b>0</b> views<br>
+           
+           <font size="1">Apr-12-00 08:28&nbsp;PM</font></FONT>
+        </TD>
+        </TR>
+        
+           <TR><TD ALIGN="LEFT" VALIGN="TOP" BGCOLOR="#333333">
+           <img src="http://www.iwrestling.com:2020/discussion/Images/locked_file.gif"></TD><TD ALIGN="LEFT" 
+         WIDTH="100%" VALIGN="TOP" BGCOLOR="#333333">
+                     <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+                     <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=read_count&om=17&forum=WCW 2000&archive=yes"><b>Free wrestling hotlinr for everyone!</b></a>
+                     
+                     <br>Call 1-800-659-1775.When you hear the main menu press the star key and then press 1770.That's my box number.I update every night.</FONT></TD>
+
+         <TD ALIGN="Left" VALIGN="TOP" COLSPAN="3" BGCOLOR="#333333">
+           <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+           <b>wwfgirl</b><br>
+           <b>0
+</b> messages<br>
+            <b>0</b> views<br>
+           
+           <font size="1">Apr-12-00 09:56&nbsp;PM</font></FONT>
+        </TD>
+        </TR>
+        
+           <TR><TD ALIGN="LEFT" VALIGN="TOP" BGCOLOR="#333333">
+           <img src="http://www.iwrestling.com:2020/discussion/Images/locked_file.gif"></TD><TD ALIGN="LEFT" 
+         WIDTH="100%" VALIGN="TOP" BGCOLOR="#333333">
+                     <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+                     <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=read_count&om=1&forum=WCW 2000&archive=yes"><b>Tonight's the Night!</b></a>
+                     
+                     <br>Tonight is the long awaited April 10th Nitro. What does everyone think going into the broadcast? Will it live up to expectations? Who will show up?</FONT></TD>
+
+         <TD ALIGN="Left" VALIGN="TOP" COLSPAN="3" BGCOLOR="#333333">
+           <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+           <b>FReaKBoY2K<img src="../../discussion/Images/team.gif"></b><br>
+           <b>9
+</b> messages<br>
+            <b>0</b> views<br>
+           
+           <font size="1">Apr-12-00 11:14&nbsp;PM</font></FONT>
+        </TD>
+        </TR>
+        
+           <TR><TD ALIGN="LEFT" VALIGN="TOP" BGCOLOR="#333333">
+           <img src="http://www.iwrestling.com:2020/discussion/Images/locked_file.gif"></TD><TD ALIGN="LEFT" 
+         WIDTH="100%" VALIGN="TOP" BGCOLOR="#333333">
+                     <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+                     <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=read_count&om=19&forum=WCW 2000&archive=yes"><b>WCW's thunder, good story, bad wrestling</b></a>
+                     
+                     <br>I watched thunder tonight, and actually sat down to watch it, instead of getting a million other things done while its on the tv, with me just barely</FONT></TD>
+
+         <TD ALIGN="Left" VALIGN="TOP" COLSPAN="3" BGCOLOR="#333333">
+           <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+           <b>mark49ers</b><br>
+           <b>3
+</b> messages<br>
+            <b>1</b> views<br>
+           
+           <font size="1">Apr-12-00 11:40&nbsp;PM</font></FONT>
+        </TD>
+        </TR>
+        
+           <TR><TD ALIGN="LEFT" VALIGN="TOP" BGCOLOR="#333333">
+           <img src="http://www.iwrestling.com:2020/discussion/Images/locked_file.gif"></TD><TD ALIGN="LEFT" 
+         WIDTH="100%" VALIGN="TOP" BGCOLOR="#333333">
+                     <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+                     <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=read_count&om=11&forum=WCW 2000&archive=yes"><b>The need for mediation</b></a>
+                     
+                     <br>Well it seems that a great discussion by two of my favorites (XP and DD) around here has been cluttered up by some guy who's bitter for not getting in</FONT></TD>
+
+         <TD ALIGN="Left" VALIGN="TOP" COLSPAN="3" BGCOLOR="#333333">
+           <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+           <b>BigJohnCrud</b><br>
+           <b>9
+</b> messages<br>
+            <b>0</b> views<br>
+           
+           <font size="1">Apr-13-00 11:35&nbsp;AM</font></FONT>
+        </TD>
+        </TR>
+        
+           <TR><TD ALIGN="LEFT" VALIGN="TOP" BGCOLOR="#333333">
+           <img src="http://www.iwrestling.com:2020/discussion/Images/locked_file.gif"></TD><TD ALIGN="LEFT" 
+         WIDTH="100%" VALIGN="TOP" BGCOLOR="#333333">
+                     <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+                     <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=read_count&om=20&forum=WCW 2000&archive=yes"><b>To Psychoholic....</b></a>
+                     
+                     <br>Eat ##### and kill yourself. Signed, Everybody 4:20 what? Foo' I was puffing blunts when you were sucking your Mom's cock. Oh yeah, and you l</FONT></TD>
+
+         <TD ALIGN="Left" VALIGN="TOP" COLSPAN="3" BGCOLOR="#333333">
+           <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+           <b>HellRazorRamon</b><br>
+           <b>2
+</b> messages<br>
+            <b>2</b> views<br>
+           
+           <font size="1">Apr-13-00 12:15&nbsp;PM</font></FONT>
+        </TD>
+        </TR>
+        
+           <TR><TD ALIGN="LEFT" VALIGN="TOP" BGCOLOR="#333333">
+           <img src="http://www.iwrestling.com:2020/discussion/Images/locked_file.gif"></TD><TD ALIGN="LEFT" 
+         WIDTH="100%" VALIGN="TOP" BGCOLOR="#333333">
+                     <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+                     <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=read_count&om=21&forum=WCW 2000&archive=yes"><b>Question....</b></a>
+                     
+                     <br>It seems like every single person in WCW is supposed to be involved in this New Blood vs. Millionaires angle. So I've got a question...Where in the h</FONT></TD>
+
+         <TD ALIGN="Left" VALIGN="TOP" COLSPAN="3" BGCOLOR="#333333">
+           <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+           <b>Edge </b><br>
+           <b>2
+</b> messages<br>
+            <b>0</b> views<br>
+           
+           <font size="1">Apr-13-00 12:41&nbsp;PM</font></FONT>
+        </TD>
+        </TR>
+        
+           <TR><TD ALIGN="LEFT" VALIGN="TOP" BGCOLOR="#333333">
+           <img src="http://www.iwrestling.com:2020/discussion/Images/locked_file.gif"></TD><TD ALIGN="LEFT" 
+         WIDTH="100%" VALIGN="TOP" BGCOLOR="#333333">
+                     <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+                     <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=read_count&om=10&forum=WCW 2000&archive=yes"><b>I love it when you hate me....</b></a>
+                     
+                     <br>WOooooooooooaaaa! I touched a nerve, no? Now boys, I'm having a lot of trouble adjusting to the fact that I am actually lowering myself into partica</FONT></TD>
+
+         <TD ALIGN="Left" VALIGN="TOP" COLSPAN="3" BGCOLOR="#333333">
+           <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+           <b>HellRazorRamon</b><br>
+           <b>3
+</b> messages<br>
+            <b>1</b> views<br>
+           
+           <font size="1">Apr-13-00 01:07&nbsp;PM</font></FONT>
+        </TD>
+        </TR>
+        
+           <TR><TD ALIGN="LEFT" VALIGN="TOP" BGCOLOR="#333333">
+           <img src="http://www.iwrestling.com:2020/discussion/Images/locked_file.gif"></TD><TD ALIGN="LEFT" 
+         WIDTH="100%" VALIGN="TOP" BGCOLOR="#333333">
+                     <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+                     <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=read_count&om=13&forum=WCW 2000&archive=yes"><b>The return of the MARK................</b></a>
+                     
+                     <br>Well, it has finally returned..... Finally, after Nitro put on their first great show in 3 years, the marks on iwrestling come out of the woodwork and</FONT></TD>
+
+         <TD ALIGN="Left" VALIGN="TOP" COLSPAN="3" BGCOLOR="#333333">
+           <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+           <b>4-5-6 Kid</b><br>
+           <b>4
+</b> messages<br>
+            <b>0</b> views<br>
+           
+           <font size="1">Apr-13-00 04:52&nbsp;PM</font></FONT>
+        </TD>
+        </TR>
+        
+           <TR><TD ALIGN="LEFT" VALIGN="TOP" BGCOLOR="#333333">
+           <img src="http://www.iwrestling.com:2020/discussion/Images/locked_file.gif"></TD><TD ALIGN="LEFT" 
+         WIDTH="100%" VALIGN="TOP" BGCOLOR="#333333">
+                     <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+                     <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=read_count&om=18&forum=WCW 2000&archive=yes"><b>Edge, tell me about Thunder...</b></a>
+                     
+                     <br>I want to hear your thoughts about all of it. From BPP's victory in the 6 man &quot;mini royal rumble&quot; to the horrible production. I know you watched, if</FONT></TD>
+
+         <TD ALIGN="Left" VALIGN="TOP" COLSPAN="3" BGCOLOR="#333333">
+           <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+           <b>Psycoholic</b><br>
+           <b>14
+</b> messages<br>
+            <b>0</b> views<br>
+           
+           <font size="1">Apr-13-00 10:36&nbsp;PM</font></FONT>
+        </TD>
+        </TR>
+        
+           <TR><TD ALIGN="LEFT" VALIGN="TOP" BGCOLOR="#333333">
+           <img src="http://www.iwrestling.com:2020/discussion/Images/locked_file.gif"></TD><TD ALIGN="LEFT" 
+         WIDTH="100%" VALIGN="TOP" BGCOLOR="#333333">
+                     <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+                     <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=read_count&om=16&forum=WCW 2000&archive=yes"><b>Lazzelle...</b></a>
+                     
+                     <br>You are an ass*hole, and I would like you to know it. I have a question for you; If this board is so trivial and below you, why do you bother postin</FONT></TD>
+
+         <TD ALIGN="Left" VALIGN="TOP" COLSPAN="3" BGCOLOR="#333333">
+           <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+           <b>ProWrestlingEnthusiastandHistorian</b><br>
+           <b>3
+</b> messages<br>
+            <b>0</b> views<br>
+           
+           <font size="1">Apr-14-00 01:19&nbsp;AM</font></FONT>
+        </TD>
+        </TR>
+        
+           <TR><TD ALIGN="LEFT" VALIGN="TOP" BGCOLOR="#333333">
+           <img src="http://www.iwrestling.com:2020/discussion/Images/locked_file.gif"></TD><TD ALIGN="LEFT" 
+         WIDTH="100%" VALIGN="TOP" BGCOLOR="#333333">
+                     <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+                     <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=read_count&om=26&forum=WCW 2000&archive=yes"><b>Here's how WCW should be</b></a>
+                     
+                     <br>There are obviously too many wrestlers in WCW. Here are the wrestlers, in my opinion, that should stay Millionaires - Flair, DDP, Sting, Nash, Hall,</FONT></TD>
+
+         <TD ALIGN="Left" VALIGN="TOP" COLSPAN="3" BGCOLOR="#333333">
+           <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+           <b>TheWait</b><br>
+           <b>1
+</b> messages<br>
+            <b>1</b> views<br>
+           
+           <font size="1">Apr-14-00 08:59&nbsp;AM</font></FONT>
+        </TD>
+        </TR>
+        
+           <TR><TD ALIGN="LEFT" VALIGN="TOP" BGCOLOR="#333333">
+           <img src="http://www.iwrestling.com:2020/discussion/Images/locked_file.gif"></TD><TD ALIGN="LEFT" 
+         WIDTH="100%" VALIGN="TOP" BGCOLOR="#333333">
+                     <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+                     <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=read_count&om=25&forum=WCW 2000&archive=yes"><b>psychoholic</b></a>
+                     
+                     <br>&gt; Lazell, you're the only one left. Start a wrestling thread on the topic of your choice with my name in the subject and we'll see what kind of mush y</FONT></TD>
+
+         <TD ALIGN="Left" VALIGN="TOP" COLSPAN="3" BGCOLOR="#333333">
+           <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+           <b>lazelle</b><br>
+           <b>4
+</b> messages<br>
+            <b>0</b> views<br>
+           
+           <font size="1">Apr-14-00 12:07&nbsp;PM</font></FONT>
+        </TD>
+        </TR>
+        
+           <TR><TD ALIGN="LEFT" VALIGN="TOP" BGCOLOR="#333333">
+           <img src="http://www.iwrestling.com:2020/discussion/Images/locked_file.gif"></TD><TD ALIGN="LEFT" 
+         WIDTH="100%" VALIGN="TOP" BGCOLOR="#333333">
+                     <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+                     <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=read_count&om=7&forum=WCW 2000&archive=yes"><b>In defense of Millionaire Club</b></a>
+                     
+                     <br>So the new era of WCW has come and it seems it will be based on the idea of Old vs. New. Of course, WCW has long been critisized for not pushing it's</FONT></TD>
+
+         <TD ALIGN="Left" VALIGN="TOP" COLSPAN="3" BGCOLOR="#333333">
+           <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+           <b>pizzalips</b><br>
+           <b>12
+</b> messages<br>
+            <b>1</b> views<br>
+           
+           <font size="1">Apr-15-00 09:11&nbsp;AM</font></FONT>
+        </TD>
+        </TR>
+        
+           <TR><TD ALIGN="LEFT" VALIGN="TOP" BGCOLOR="#333333">
+           <img src="http://www.iwrestling.com:2020/discussion/Images/locked_file.gif"></TD><TD ALIGN="LEFT" 
+         WIDTH="100%" VALIGN="TOP" BGCOLOR="#333333">
+                     <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+                     <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=read_count&om=27&forum=WCW 2000&archive=yes"><b>Nitro showed......</b></a>
+                     
+                     <br>How bad the shows have been during the post-EasyE era. They had lowered the bar so much that I was excited when they DIDN'T blow the spots. Now, the i</FONT></TD>
+
+         <TD ALIGN="Left" VALIGN="TOP" COLSPAN="3" BGCOLOR="#333333">
+           <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+           <b>dyareea</b><br>
+           <b>1
+</b> messages<br>
+            <b>1</b> views<br>
+           
+           <font size="1">Apr-15-00 04:02&nbsp;PM</font></FONT>
+        </TD>
+        </TR>
+        
+           <TR><TD ALIGN="LEFT" VALIGN="TOP" BGCOLOR="#333333">
+           <img src="http://www.iwrestling.com:2020/discussion/Images/locked_file.gif"></TD><TD ALIGN="LEFT" 
+         WIDTH="100%" VALIGN="TOP" BGCOLOR="#333333">
+                     <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+                     <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=read_count&om=35&forum=WCW 2000&archive=yes"><b>Quality of wrestling declined</b></a>
+                     
+                     <br>I agree that WCW has a much broader appeal now than before but despite the new Russo era, In my view the overall quality of wrestling has declined. Su</FONT></TD>
+
+         <TD ALIGN="Left" VALIGN="TOP" COLSPAN="3" BGCOLOR="#333333">
+           <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+           <b>prince2000</b><br>
+           <b>1
+</b> messages<br>
+            <b>3</b> views<br>
+           
+           <font size="1">Apr-16-00 08:01&nbsp;AM</font></FONT>
+        </TD>
+        </TR>
+        
+           <TR><TD ALIGN="LEFT" VALIGN="TOP" BGCOLOR="#333333">
+           <img src="http://www.iwrestling.com:2020/discussion/Images/locked_file.gif"></TD><TD ALIGN="LEFT" 
+         WIDTH="100%" VALIGN="TOP" BGCOLOR="#333333">
+                     <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+                     <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=read_count&om=28&forum=WCW 2000&archive=yes"><b>2 WORDS = IM IMPRESSED</b></a>
+                     
+                     <br>WOW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!- !!!!!!!!!! WOOOOOOOOOOOOOOOOOOOOOOOO!!!!!!!!!!! Way to go Russo and Bischoff, I must say both of these guys ma</FONT></TD>
+
+         <TD ALIGN="Left" VALIGN="TOP" COLSPAN="3" BGCOLOR="#333333">
+           <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+           <b>prince2000</b><br>
+           <b>5
+</b> messages<br>
+            <b>2</b> views<br>
+           
+           <font size="1">Apr-16-00 08:16&nbsp;AM</font></FONT>
+        </TD>
+        </TR>
+        
+           <TR><TD ALIGN="LEFT" VALIGN="TOP" BGCOLOR="#333333">
+           <img src="http://www.iwrestling.com:2020/discussion/Images/locked_file.gif"></TD><TD ALIGN="LEFT" 
+         WIDTH="100%" VALIGN="TOP" BGCOLOR="#333333">
+                     <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+                     <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=read_count&om=22&forum=WCW 2000&archive=yes"><b>Spring Stampede</b></a>
+                     
+                     <br>What does everyone think of Sunday's PPV?</FONT></TD>
+
+         <TD ALIGN="Left" VALIGN="TOP" COLSPAN="3" BGCOLOR="#333333">
+           <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+           <b>FReaKBoY2K<img src="../../discussion/Images/team.gif"></b><br>
+           <b>6
+</b> messages<br>
+            <b>0</b> views<br>
+           
+           <font size="1">Apr-16-00 08:22&nbsp;AM</font></FONT>
+        </TD>
+        </TR>
+        
+           <TR><TD ALIGN="LEFT" VALIGN="TOP" BGCOLOR="#333333">
+           <img src="http://www.iwrestling.com:2020/discussion/Images/locked_file.gif"></TD><TD ALIGN="LEFT" 
+         WIDTH="100%" VALIGN="TOP" BGCOLOR="#333333">
+                     <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+                     <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=read_count&om=31&forum=WCW 2000&archive=yes"><b>in defense of russo</b></a>
+                     
+                     <br>Hi guys! I am new here, anyways i have been reading on the internet the past couple of weeks and there has been alot of talk going around that russo d</FONT></TD>
+
+         <TD ALIGN="Left" VALIGN="TOP" COLSPAN="3" BGCOLOR="#333333">
+           <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+           <b>DANNY18M</b><br>
+           <b>5
+</b> messages<br>
+            <b>1</b> views<br>
+           
+           <font size="1">Apr-16-00 11:46&nbsp;PM</font></FONT>
+        </TD>
+        </TR>
+        
+           <TR><TD ALIGN="LEFT" VALIGN="TOP" BGCOLOR="#333333">
+           <img src="http://www.iwrestling.com:2020/discussion/Images/locked_file.gif"></TD><TD ALIGN="LEFT" 
+         WIDTH="100%" VALIGN="TOP" BGCOLOR="#333333">
+                     <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+                     <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=read_count&om=3&forum=WCW 2000&archive=yes"><b>Nitro...</b></a>
+                     
+                     <br>Well, I guess I'll start it off...what did everyone think about the show? I found it to be thouroughly entertaining...especially since I stopped watch</FONT></TD>
+
+         <TD ALIGN="Left" VALIGN="TOP" COLSPAN="3" BGCOLOR="#333333">
+           <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+           <b>Pavement_the_Deuce</b><br>
+           <b>63
+</b> messages<br>
+            <b>0</b> views<br>
+           
+           <font size="1">Apr-17-00 00:20&nbsp;AM</font></FONT>
+        </TD>
+        </TR>
+        
+           <TR><TD ALIGN="LEFT" VALIGN="TOP" BGCOLOR="#333333">
+           <img src="http://www.iwrestling.com:2020/discussion/Images/locked_file.gif"></TD><TD ALIGN="LEFT" 
+         WIDTH="100%" VALIGN="TOP" BGCOLOR="#333333">
+                     <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+                     <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=read_count&om=6&forum=WCW 2000&archive=yes"><b>Am I the only one????</b></a>
+                     
+                     <br>Nitro last night proved once and for all that WCW will never again enjoy the success it did during the early NWO days. Why? Let's have a look.... 1.</FONT></TD>
+
+         <TD ALIGN="Left" VALIGN="TOP" COLSPAN="3" BGCOLOR="#333333">
+           <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+           <b>HellRazorRamon</b><br>
+           <b>67
+</b> messages<br>
+            <b>5</b> views<br>
+           
+           <font size="1">Apr-17-00 00:46&nbsp;AM</font></FONT>
+        </TD>
+        </TR>
+        
+           <TR><TD ALIGN="LEFT" VALIGN="TOP" BGCOLOR="#333333">
+           <img src="http://www.iwrestling.com:2020/discussion/Images/locked_file.gif"></TD><TD ALIGN="LEFT" 
+         WIDTH="100%" VALIGN="TOP" BGCOLOR="#333333">
+                     <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+                     <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=read_count&om=37&forum=WCW 2000&archive=yes"><b>Awesome mistake?</b></a>
+                     
+                     <br>What is your guys opinion of Mike Awesome in WCW. I haven't visited ECW's web page, but the info would be influenced by what ECW wants you to know.</FONT></TD>
+
+         <TD ALIGN="Left" VALIGN="TOP" COLSPAN="3" BGCOLOR="#333333">
+           <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+           <b>Primetime T.J. Fine</b><br>
+           <b>0
+</b> messages<br>
+            <b>1</b> views<br>
+           
+           <font size="1">Apr-17-00 08:29&nbsp;AM</font></FONT>
+        </TD>
+        </TR>
+        
+           <TR><TD ALIGN="LEFT" VALIGN="TOP" BGCOLOR="#333333">
+           <img src="http://www.iwrestling.com:2020/discussion/Images/locked_file.gif"></TD><TD ALIGN="LEFT" 
+         WIDTH="100%" VALIGN="TOP" BGCOLOR="#333333">
+                     <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+                     <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=read_count&om=36&forum=WCW 2000&archive=yes"><b>Spring Stampede</b></a>
+                     
+                     <br>Okay, I feel a little odd starting a thread about a PPV I didn't see, but I read the results and it seemed to me that this PPV would have been a horri</FONT></TD>
+
+         <TD ALIGN="Left" VALIGN="TOP" COLSPAN="3" BGCOLOR="#333333">
+           <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+           <b>Edge </b><br>
+           <b>4
+</b> messages<br>
+            <b>1</b> views<br>
+           
+           <font size="1">Apr-17-00 03:40&nbsp;PM</font></FONT>
+        </TD>
+        </TR>
+        
+           <TR><TD ALIGN="LEFT" VALIGN="TOP" BGCOLOR="#333333">
+           <img src="http://www.iwrestling.com:2020/discussion/Images/locked_file.gif"></TD><TD ALIGN="LEFT" 
+         WIDTH="100%" VALIGN="TOP" BGCOLOR="#333333">
+                     <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+                     <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=read_count&om=38&forum=WCW 2000&archive=yes"><b>Spring Stampede</b></a>
+                     
+                     <br>What did everyone think?</FONT></TD>
+
+         <TD ALIGN="Left" VALIGN="TOP" COLSPAN="3" BGCOLOR="#333333">
+           <FONT SIZE="2" COLOR="#FFFFFF" FACE="Verdana">
+           <b>FReaKBoY2K<img src="../../discussion/Images/team.gif"></b><br>
+           <b>1
+</b> messages<br>
+            <b>1</b> views<br>
+           
+           <font size="1">Apr-17-00 04:20&nbsp;PM</font></FONT>
+        </TD>
+        </TR>
+        
+   <TR><TD COLSPAN="5" BGCOLOR="#F00000" ALIGN="CENTER">
+      <font size="1">&nbsp;</font></TD></TR>
+   <TR><TD COLSPAN="5" ALIGN="RIGHT" VALIGN="BOTTOM" BGCOLOR="#333333">
+   <font face="Verdana" color="#FFFFFF" size="1">
+   1 | <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=list&forum=WCW 2000&mm=30&archive=yes">2</A> | <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=list&forum=WCW 2000&mm=60&archive=yes">3</A>  |  <a href="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?forum=WCW 2000&az=list">Current</a>
+      (200)
+
+   </FONT>
+   </TD></TR></TABLE>
+
+<!-- Required Marker-->
+
+<script language="javascript">
+function MakeArray() {
+   this.length = MakeArray.arguments.length
+   for (var i = 0; i < this.length; i++)
+   this[i+1] = MakeArray.arguments[i]
+}
+
+var url = new MakeArray("","http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi",
+"http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?conf=conf_general",
+"http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=list&forum=RINGSIDE",
+"http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=list&forum=ECW",
+"http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=list&forum=WCW 2000",
+"http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=list&forum=WWF2000",
+"http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=list&forum=DCForumID3",
+"http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=list&forum=DCForumID26",
+"http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?conf=DCConfID1",
+"http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=list&forum=DCForumID4",
+"http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=list&forum=DCForumID11",
+"http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=list&forum=DCForumID22",
+"http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=list&forum=DCForumID24",
+"http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=list&forum=DCForumID14",
+"http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=list&forum=DCForumID21",
+"http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=list&forum=DCForumID19",
+"http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?conf=DCConfID2",
+"http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=list&forum=Tatanka's Pow Wow",
+"http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?conf=scoops",
+"http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=list&forum=Canuckleheads",
+"http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi?az=list&forum=spam"
+   )
+</script>
+
+
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="3" cellspacing="1">
+    <TR BGCOLOR="#F00000">
+      <TD ALIGN="RIGHT" VALIGN="TOP">
+         <FORM ACTION="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi" METHOD="POST">
+         <input type="hidden" name="az" value="list">
+         <FONT SIZE="1" COLOR="#000000" FACE="Verdana">
+         <select name="forum" onChange="jumpPage(this.form)">
+         <option value="">Select another forum
+         <option value="LOBBY">Lobby
+         <option value="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi">General Discussion (Conference)
+            <option value="RINGSIDE">&nbsp;&nbsp;|--Ringside (Protected)
+            
+            <option value="ECW">&nbsp;&nbsp;|--ECW Extreme (Protected)
+            
+            <option value="WCW 2000">&nbsp;&nbsp;|--WCW 2000 (Protected)
+            
+            <option value="WWF2000">&nbsp;&nbsp;|--WWF WARZONE (Protected)
+            
+            <option value="DCForumID3">&nbsp;&nbsp;|--You Write It! (Protected)
+            
+            <option value="DCForumID26">&nbsp;&nbsp;|--Rose Report (Protected)
+            <option value="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi">Brian Pillman Memorial 2000 (Conference)
+            <option value="DCForumID4">&nbsp;&nbsp;|--Brian Pillman Memories (Protected)
+            
+            <option value="DCForumID11">&nbsp;&nbsp;|--Kidman Chat (Protected)
+            
+            <option value="DCForumID22">&nbsp;&nbsp;|--Shane Douglas Chat (Protected)
+            
+            <option value="DCForumID24">&nbsp;&nbsp;|--Les Thatcher Chat (Protected)
+            
+            <option value="DCForumID14">&nbsp;&nbsp;|--Chris Benoit Chat (Protected)
+            
+            <option value="DCForumID21">&nbsp;&nbsp;|--Dean Malenko Chat. (Protected)
+            
+            <option value="DCForumID19">&nbsp;&nbsp;|--Eddy Guerrero Chat (Protected)
+            <option value="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi">Wrestlers (Conference)
+            <option value="Tatanka's Pow Wow">&nbsp;&nbsp;|--Tatanka's Pow Wow (Protected)
+            <option value="http://www.iwrestling.com:2020/cgi/dcforum/dcboard.cgi">Ranting N' Raving with Scoops (Conference)
+            <option value="Canuckleheads">&nbsp;&nbsp;|--Canuckleheads (Protected)
+            
+            <option value="spam">&nbsp;&nbsp;|--S*P*A*M (Protected)
+            
+      </select>
+      <input type="submit" value="GO!"></form>
+      </TD>
+    </TR>
+  </TABLE>
+    
+</td></tr>
+
+</table>
+
+<table width="100%" align=center bgcolor="#333333"><tr><td width="100%">
+
+<center><font size="2" face="arial"><b>New Users, Please <a href="http://www.iwrestling.com/cgi/dcforum/dcboard.cgi?az=user_register">CLICK HERE</a> And Register For The Forums.</font></center></td></tr></table>
+</td><td width="1" bgcolor="#186BDE"><img src="http://www.iwrestling.com/graphics/transparent.gif" width="1" height="20"></td></tr></table>
+
+
+<!-- Begin Footer -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="100%" bgcolor="#186bde" align="right"><img src="../../graphics/footer.gif" width="600" height="60" alt="footer" usemap="#footer" border="0"><map name="footer"><area href="#top" coords="7,35,90,54" shape="rect"><area href="search.html" coords="282,41,339,56" shape="rect"><area href="mailto:feedback@scoopscentral.com" coords="199,39,269,57" shape="rect"><area href="mailto:advertising@scoopscentral.com" coords="97,42,183,56" shape="rect"></map></td>
+</tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="100%" align="right"><font size="2" face="Arial">&copy; 2000 Snowball.com, Inc. All rights reserved.<br>
+<a href="http://www.scoopswrestling.com/pages/privacy.html">Privacy Policy</a></font></td>
+</tr>
+</table>
+
+
+
+
+</body></html>

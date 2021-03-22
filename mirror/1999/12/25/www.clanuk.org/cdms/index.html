@@ -1,0 +1,344 @@
+<html>
+<head>
+<meta name="GENERATOR" content="Microsoft Visual Studio 6.0">
+<title></title>
+<link rel="stylesheet" type="text/css" href="../_private/main.css">
+</head>
+<body>
+<table align=center border=0 width="80%">
+  
+  <tr>
+    <td>
+      <h1>CDMS</h1></td>
+    <td><A href="../index.html" ><img align=right alt="ClanUK home page" 
+      border=0 height=60 src="../graphics/cukgif100.gif" width=100></A></td></tr></table>
+<h2>
+<table border=0 cellPadding=2 cellSpacing=1 id=TABLE1 width="100%">
+  
+  <tr>
+      <td>&nbsp;</td>
+      <td align=right vAlign=center>&nbsp; </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td align=right style="WIDTH: 50%" width="50%"></td></tr></table></h2>
+<h2>News</h2>
+<H4>24th October 1999</H4>
+<p>CDMS - The future</p>
+<p>Okay, this is a fairly lengthy item so please bear with me while I clarify 
+  a few points before I really get started *grin*</p>
+<p>With the sudden interest in CDMS again becoming THE topic, I've again started 
+  receiving Emails asking for accounts. These I won't issue (or give forgotten 
+  passwords out to anyone who may have asked for them). There is one simple reason 
+  for this, CDMS in its current form is just too rigid and the <i>new</i>v version 
+  will require new user accounts and an entirely new database structure to work. 
+  So first things first, could everyone please refrain from asking for accounts. 
+  They will not be acted upon. Interest is high and I'll try and keep momentum 
+  going as much as I can. However, a complete rewrite is required IMO for this 
+  application to evolve (again!).</p>
+<p>Interest appears to be high again (from the Clan and from a few third parties 
+  if the truth be known) so resurrecting CDMS seems like a good idea at the mo. 
+  However, this may change. I'm still making no promises as time is simply far 
+  far too limited for me presently for me to even provide the roughest of estimates. 
+  This is gonna be a Quake III timeline I'm afraid. &quot;It will be finished 
+  when its finished&quot;. However, to counter a little of the negative vibes 
+  in the above two paragraphs, I'm pretty excited with what could become a pretty 
+  useful product.</p>
+<p>Okay then, where does CDMS go from here?</p>
+<p>For the older members of the clan, CDMS was used quite heavily at the beginning 
+  of this year and albeit from a few teething problems, the general concensus 
+  from that it performed a useful service. However, general operational issues 
+  and issues regarding its use and reason for being were raised by a few members. 
+  These issues included: -</p>
+<ol>
+  <li>No Web Front-End. Why should you have to download a Win32 application to 
+    update your database information when a simple set of web forms (implemented 
+    either via cgi scripts or ASP) would do the job perfectly well?</li>
+  <li>Making changes to the 'games' we played was hard to implement and the games 
+    we 'were' playing were changing all the time. This led to the &quot;active 
+    game&quot; part of the application becoming a little out of date. Okay, a 
+    generic &quot;I am playing&quot; input box got around most of these issues, 
+    but with the advent of more online RPG's (all with multiple servers), this 
+    needs to be re-thought.</li>
+  <li>Sometimes, the executing of the cgi scripts that performed the actual maintenance 
+    of the online users were horrifically slow (for no apparent reason). However, 
+    as a slight defence to cgi scripts, they are now recognised to be the least 
+    preferable way of implementing web applications (with the main reason being 
+    speed; every single aysnchronous connection needs to create a new process 
+    for it's appropriate cgi script in memory). CGI scripts will always be slower 
+    that the internal facilities provided by run-time scripting engines like Active 
+    Server Pages (ASP).</li>
+  <li>Getting new accounts was practically impossible. This is purely my fault. 
+    My spare time literally vanished once I left my permanent job and set up on 
+    my own. Emails went unanswered and I apologise for this. I should have had 
+    the decency to at least email you all or post a message here informing you 
+    all of my current inability to perform any type of 'input' to the Clan. No 
+    excuses I'm afraid. It simply shouldn't have happened. It did and I'm sorry.</li>
+  <li>There was a distinct lack of adminstration tools available for the day to 
+    day management of the CDMS database which resulted in the day to day running 
+    of the system falling to me.</li>
+  <li>The application needed to be aware of an active Internet connection and 
+    start automatically. Users simply kept forgetting to start it. This issue 
+    has now been fixed. CDMSConnect now correctly polls for an internet connection, 
+    only starting CDMS when a connection is established. Once CDMS is 'running' 
+    again, CDMSConnect will be an integral part of the installation of CDMS.</li>
+  <li>The Messaging engine needs a lot of work (and to be fair, I'm not surprised. 
+    It was a 'quick job' and only took me around 30 minutes to code!).</li>
+</ol>
+<p>From the above list (and discussions I've had with various people over the 
+  last year and a half), the following areas that need to be worked on are as 
+  follows: -</p>
+<ol>
+  <li>The system need to be generic enough to allow for <i>any</i> type of information 
+    to be stored against <i>any</i> type of entity. And, this information should 
+    be configurable by the administrators of the organisation that is using CDMS. 
+    As an example of this, I am currently coding a data mining application for 
+    the worlds largest supplier of data mining software. This application is truly 
+    generic (the entire repository is created by the DBA's and can contain <i>anything</i>. 
+    And is an absolutely nightmare to code against. 'Genericness' adds a lot of 
+    time to development :-( ).</li>
+  <li>Ditch CGI scripts as the backend and utilise something more efficient to 
+    process and return the data to the client (ASP).</li>
+  <li>The transfer of data between the Client and Server was not too efficient. 
+    A more generic (that word again!) way of transferring data from the client 
+    to server (and back again) need to be implemented. XML is really the only 
+    way to go with this (IMO).</li>
+  <li>A Suite of adminstration tools needs to be written. This will allow operations 
+    such as creating the initial 'repository', creating/removing user accounts, 
+    obtaining email lists and Member information easily etc.</li>
+  <li>Provide a web front-end to the database for organisations that do not require 
+    CDMS's Online Status feature (who is online and doing 'what').</li>
+  <li>Decide what the hell to do with the messaging system. DO we remove it (and 
+    use a more established Net Messenger service instead?) or invest more time 
+    in getting this aspect of the application working properly. The jury's still 
+    out on this one.</li>
+</ol>
+<p>So, 6 items need resolving. Unfortunately, as any of the current members who 
+  has used CDMS will potentially recognise, the 6 items above basically requires 
+  an entire rewrite of the application (with perhaps only the GUI front-ends staying 
+  in some sort of recognisable state).</p>
+<p>So, is this good news or back news?</p>
+<p>Well, it''s a good question. The above is a hell of a lot of work that's for 
+  sure. However, you'll notice ClanUK (as an entity) is not mentioned anywhere 
+  in the problem domains above. This is intentional as the aim is to create a 
+  system architecture that is not set in stone, thus allowing for easier configuration 
+  (and erm....easier for me to sell on!). If CDMS is rewritten to be the generic 
+  monster as above, the advantages will be enormous. Consider the following: -</p>
+<ol>
+  <li>Practically no member database maintenance tasks for webmasters of specific 
+    GameZone's. Simply access your relevant information from the database.</li>
+  <li>The ability to provide instant up to the minute information about your members 
+    (okay, we can get this now, but only by going through a lot of people).</li>
+  <li>If the decision to store more information about members is approved/required 
+    (or another game needs to be shown on the 'games' list), it would be but a 
+    small job to start the Administrator application, perform the change and upload 
+    it to the database.</li>
+</ol>
+<p>To summarise then:</p>
+<ol>
+  <li>CDMS is to be rewritten from scratch to allow for the full configuration 
+    of the data it will be required to store.</li>
+  <li> All of the back-end scripts are to be rewritten to utilise ASP talking 
+    to a more efficent SQL Engine (most probably MS Access initially).</li>
+  <li> CDMS Central will stay. However, the communication between the server and 
+    client will be rewritten to use XML as opposed to the fudged hybrid markup 
+    language I devised myself for CDMS. The key here is 'extensible'. This will 
+    utilise the IE 5.0 browser control to perform the parsing of the XML. Therefore 
+    IE 5.0 will now be a requirement for CDMS Central. I may well alienate more 
+    users by doing it this way, however IE 5.0 is a far more efficent browser 
+    than IE 4.0 and performs a service no other Win 32 App yet does well (XML). 
+    Plus, I may need these skills for a job I'm quoting for. It's good practice 
+    :-)</li>
+  <li> A web front-end into the database is to be developed to allow for users 
+    who do not wish to use CDMS Central to update their details. Online information 
+    however will only be available through CDMS Central. There is a reason for 
+    this, the web is stateless and managing the connection information otherwise 
+    will be practically impossible.</li>
+  <li>The entire application will be able to be manage without my intervention. 
+    I really do not have to time to commit to weekly/daily updates of data. Fortunately, 
+    Piper has already agreed to perform some issues of the administrative duties 
+    involved in managing CDMS.</li>
+</ol>
+<p>I will be starting the design of the initial architecture probably within the 
+  next week or so. Also my companies web page will probably contain a forum purely 
+  for CDMS issues (and its development). This should hopefully be going up with 
+  the next couple of weeks. However for the time being, I would suggest we concetrate 
+  our discussions within the private &quot;ClanUK Topics for Debate&quot; forum.</p>
+<p>Baltir</p>
+<ul>
+  <li></li>
+</ul>
+<H4>10th May 1999</H4>
+<p>The main members database has been repaired today after significant corruption 
+  (I can only think that this was caused by noise on the line while uploading 
+  the file a couple of weeks ago). I will hopefully be updating all members over 
+  the next few days so all accounts are active. Remember all, if you <i>could</i> 
+  login and now can't, your record has probably been deleted in the repair (sorry) 
+  so please email me to get a new account setup.</p>
+<p>I am however still encountering performance issues with CDMS that weren't there 
+  before. After looking at the tables within the database I may have found a problem 
+  and will be looking into it over the next week or so. The internal Access Key 
+  table is a little bigger than I'd really like so hopefully this can be fixed 
+  by a quick change to the CGI scripts.</p>
+<H4>20th April 1999</H4>
+<p>21:30 - CDMS is finally up and running again. I had to depend on old DOS ftp 
+  to finally get the files uploaded. All other means for some reason failed??? 
+  very weird. The database will now be updated shortly so could everyone please 
+  refrain from updating their membership details for a little while longer. Apologies 
+  again for the downtime recently. </p>
+<p>22:50 - Database is now updated with trial members who had requested an account 
+  from me. The following members can now login to CDMS. All of your initial passwords 
+  are LETMEIN. All ops know the password to the zip file.</p>
+<p>Craig<br>
+  [UK]Nads<br>
+  Tiswas<br>
+  Maniac<br>
+  Brie<br>
+  Vidar<br>
+  Sephiroth<br>
+  Humakt<br>
+  Sadsurfer<br>
+  Swordsman</p>
+<p>Apologies again for the delay in you being added.</p>
+<H4>18th April 1999</H4>
+<P>After trying all evening to upload the new executables (and failing due to 
+  time-outs and the Server closing my connection) I've given up. Will try again 
+  hopefully tomorrow evening. </P>
+<P>Apologies again.</P>
+<H4>17th April 1999</H4>
+<P>No it isn't!! No it isn't!!. Due to Interdev insisting 
+it updates changed data automatically when I connect, CDMS is now currently down 
+until I'm able to recompile the CDMS CGI Executables. This will hopefully be 
+done this evening.</P>
+<P>My sincere apologies for this.</P>
+<H4>7th April 1999</H4>
+<P>It's alive!! Its alive!!!! </P>
+<P>This page will be updated shortly (to probably use ASP 
+to make my life easier) as will be the database so all new members will have 
+logons. I again, cannot apologise enough the lack of updates recently but RL has 
+just had to come first.</P>
+<H4>4th March 1999, 23:50</H4>
+<P>Apologies for the lack on contact or CDMS news over the 
+last couple of weeks, my new job is not leaving me too much time to do much and 
+time in the evening in currently a little short.</P>
+<P>I'm also in the unfortunate position of not having my NT 
+Server running at home at the moment (which has my database,&nbsp; the database 
+drivers and IIS on) so development at the moment is pretty much impossible.</P>
+<P>The interim build of CDMS was actually finished last 
+week however I simply never had enough time to completely test it and release 
+it. Please bear with me, I should be back to normal again soon.</P>
+<P>I'm also under the impression some of you are still 
+awaiting your logins for CDMS. If&nbsp; you're one on these people, please 
+contact me again via email (<A 
+href="mailto:baltir@clanuk.com">baltir@clanuk.com</A>) and give me a 'nudge'. However, please be warned, 
+without my NT Server being up I can't update your details as the administratrion 
+scripts are not yet finished (that allow remote maintenance of the 
+database).</P>
+<H4>22 February 1999 13:50</H4>
+<p>Database update is complete, new members added:</p>
+<p>Thrudd (welcome back!!!)<BR>Wolfie<BR>Mauler<BR>SwiftNick</p>
+<h4>22 February 1999 13: 45</h4>
+<p>Another update to the database is being performed, 
+please refrain from updating your details until informed it is safe to do 
+so.</p>
+<h4>11th February 1999 14:30</h4>
+<P>An update to the database has now been finished. Total 
+members now within CDMS is 64.</P>
+<P>The update to the CDMS Client has been delayed due to 
+work pressures, this should be available hopefully by the beginning on next 
+week.</P>
+<h4>       
+             4th February 1999&nbsp; 16:50</h4>
+<p>Another update to the database, Flaming June and Ferdy 
+are now back with us :-). This takes the number of full members to have 
+registered for use of CDMS to 53.</p>
+<p>I'm currently working on a new build of CDMS that fixes 
+a few known problems (and also some that I've found myself!). This will probably 
+be available sometime early next week. Fixes in this version will include:-</p>
+<OL>
+<li>Fixes the bug that causes an Access Violation when 
+    sending a message to yourself . This is caused when the Send Message form is 
+    closed before the actual Messages themselves.<BR><BR>The fix is achieved by not allowing you to send a 
+    message to yourself (to be honest, I can't actually work out why this is 
+    causes the Access Violation it does (it <EM>really</EM> 
+  <EM>really </EM>crashes CDMS (and even Delphi in Debug 
+    mode, thats why I can't track it down!)). I believe its something to do with 
+    the IP Port being open by two processes and them not getting closed down in 
+    the right order).<BR><BR>
+<li>The 'Snap to Desktop Borders' option on the CDMS 
+    Central Window disappears when you toggle the 'Stay on Top' option.<BR><BR>
+<li>Sending Mail is now possible without MAPI Services 
+    being installed on the PC. This option should now open up your default 
+    Internet Email Client.<BR>   </li></OL>
+<p>&nbsp;</p>
+<p>And now for something completely different...<BR><BR>I'm not too happy with how the 
+chat system works. It's functional but not exactly a great implementation so I'm 
+currently looking into rewriting it. For this, I've just started looking into 
+utilising DirectPlay (part of DirectX 6.0).</p>
+<p>If this is implemented to code a 'chat' engine the 
+advantages are going to be pretty big (if I can get the hang of DirectX that 
+is).</p>
+<p>One facility that would definitely be possible would 
+then be a Chat Room type interface (with more than two people simply exchanging 
+messages. It would also teach me DirectX (which can't be a bad thing for the old 
+CV!).</p>
+<p>The disadvantages...well only one I can think of. It 
+would not work on Windows NT (which is only at version 3.0 of DirectX). Windows 
+2000 will incorporate DirectX 6.1 (or 7.0 if Microsoft don't get their act 
+together).</p>
+<p>Oh, The 'server' or Chat Room would also have to reside 
+on the machine that initiated the chat as we don't have the facility to run 
+Server Side applications (apart from CGI Scripts).</p>
+<p>Be warned though, this is a LONG term plan (and may not 
+even happen) so please don't hold your breath. As I've said, I'm just looking 
+into other ideas at the moment.</p>
+<p>Any comments regarding this, other suggestions for CDMS 
+or bug reports, please post onto the HelpDesk BBS. This way all users should be 
+able to keep track of the current state of the application.</p>
+<h4>3rd February 1999, 14:00</h4>
+<p>The database update is now complete. All mail received 
+by me from Clan Ops has now been processed. Keep those requests coming 
+people...</p>
+<h4>3rd February 1999, 12:15</h4>
+<p>The online members count should now be fixed and should 
+accurately reflect the number of Clan Members online at that time.</p>
+<p>Another manual update to the database will be made 
+shortly so please, no remote updates via CDMS until stated.</p>
+<h4>2nd February 1999, 16:30</h4>
+<p>The online members counter has appeared to have got 
+broken and insists on saying six members are online.</p>
+<p>Clicking the link though to display currently displayed 
+users will display the correct information however. I shall be looking into this 
+shortly.</p>
+<h4>2nd February 1999, 14:20</h4>
+<p>The database has been uploaded with all current details 
+I've received. Everyone who has send your details to me is now present (although 
+all of your details are blank...please update your membershipdetails 
+yourself).Your initial password (who has not been part of the beta-test) is 
+&quot;LETMEIN&quot;.</p>
+<p>Once logged in, please <strong>CHANGE YOUR PASSWORD!</strong></p>
+<h4>2nd February 1999, 13:26</h4>
+<p>The Members database is currently being edited locally 
+to incorporate all current full member details I've received through a Clan 
+Op.</p>
+<p><em>DO NOT </em>edit your 
+membership details until this page informs you that the database is uploaded 
+again.</p>
+<h4>1st February 1999</h4>
+<p>Version 3.0 of CDMS is now available for download by all 
+full members. The database has not yet been cleared down so all non current 
+beta-test users will not be able to log in until the cleardown has been 
+performed (hopefully this evening or early tomorrow morning).</p>
+<p>Download CDMS Version 3.0 <A href="CDMS30.zip" >here</A></p>
+<p>This zip file is password protected to enable only Full 
+Members to access the software. All Ops and ClanUK Adminstrators know the 
+password (which is the same as the previous CDMS zip files).</p>
+<blockquote>
+  <p>&nbsp;</p><A href="../index.html" ><font face="Arial, Helvetica, sans-serif" 
+  size=-1><b>Back To ClanUK Home</b></font></A> 
+  <p></p>
+  <p></p>
+  <p align="center">Copyright &copy; ClanUK 
+1996-1999</p></blockquote>
+</body>
+</html>

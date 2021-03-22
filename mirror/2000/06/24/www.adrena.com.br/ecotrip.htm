@@ -1,0 +1,331 @@
+<html>
+
+<head>
+<title>ADRENA on line! </title>
+<SCRIPT LANGUAGE="JavaScript">
+
+
+        
+        self.onError=null;
+        
+        currentX = currentY = 0;  
+        whichIt = null;           
+        lastScrollX = 0; lastScrollY = 0;
+        
+        NS = (document.layers) ? 1 : 0;
+        IE = (document.all) ? 1: 0;
+        
+        <!-- STALKER CODE -->
+        function heartBeat() {
+        
+                if(IE) { diffY = document.body.scrollTop; diffX = document.body.scrollLeft; }
+            if(NS) { diffY = self.pageYOffset; diffX = self.pageXOffset; }
+                
+                if(diffY != lastScrollY) {
+                        percent = .1 * (diffY - lastScrollY);
+                        if(percent > 0) percent = Math.ceil(percent);
+                        else percent = Math.floor(percent);
+                                        if(IE) document.all.floater.style.pixelTop += percent;
+                                        if(NS) document.floater.top += percent; 
+                        lastScrollY = lastScrollY + percent;
+            }
+                if(diffX != lastScrollX) {
+                        percent = .1 * (diffX - lastScrollX);
+                        if(percent > 0) percent = Math.ceil(percent);
+                        else percent = Math.floor(percent);
+                        if(IE) document.all.floater.style.pixelLeft += percent;
+                        if(NS) document.floater.left += percent;
+                        lastScrollX = lastScrollX + percent;
+                }       
+        }
+        <!-- /STALKER CODE -->
+        
+        <!-- DRAG DROP CODE -->
+        function XXcheckFocus(x,y) { 
+                stalkerx = document.floater.pageX;
+                stalkery = document.floater.pageY;
+                stalkerwidth = document.floater.clip.width;
+                stalkerheight = document.floater.clip.height;
+                if( (x > stalkerx && x < (stalkerx+stalkerwidth)) && (y > stalkery && y < (stalkery+stalkerheight))) return true;
+                else return false;
+        }
+        
+        function grabIt(e) {
+                if(IE) {
+                        whichIt = event.srcElement;
+                        while (whichIt.id.indexOf("floater") == -1) {
+                                whichIt = whichIt.parentElement;
+                                if (whichIt == null) { return true; }
+                    }
+                        whichIt.style.pixelLeft = whichIt.offsetLeft;
+                    whichIt.style.pixelTop = whichIt.offsetTop;
+                        currentX = (event.clientX + document.body.scrollLeft);
+                        currentY = (event.clientY + document.body.scrollTop);   
+                } else { 
+                window.captureEvents(Event.MOUSEMOVE);
+                if(checkFocus (e.pageX,e.pageY)) { 
+                        whichIt = document.floater;
+                        StalkerTouchedX = e.pageX-document.floater.pageX;
+
+                        StalkerTouchedY = e.pageY-document.floater.pageY;
+                } 
+                }
+            return true;
+        }
+        
+        function moveIt(e) {
+                if (whichIt == null) { return false; }
+                if(IE) {
+                    newX = (event.clientX + document.body.scrollLeft);
+                    newY = (event.clientY + document.body.scrollTop);
+                    distanceX = (newX - currentX);    distanceY = (newY - currentY);
+                    currentX = newX;    currentY = newY;
+                    whichIt.style.pixelLeft += distanceX;
+                    whichIt.style.pixelTop += distanceY;
+                        if(whichIt.style.pixelTop < document.body.scrollTop) whichIt.style.pixelTop = document.body.scrollTop;
+                        if(whichIt.style.pixelLeft < document.body.scrollLeft) whichIt.style.pixelLeft = document.body.scrollLeft;
+                        if(whichIt.style.pixelLeft > document.body.offsetWidth - document.body.scrollLeft - whichIt.style.pixelWidth - 20) whichIt.style.pixelLeft = document.body.offsetWidth - whichIt.style.pixelWidth - 20;
+                        if(whichIt.style.pixelTop > document.body.offsetHeight + document.body.scrollTop - whichIt.style.pixelHeight - 5) whichIt.style.pixelTop = document.body.offsetHeight + document.body.scrollTop - whichIt.style.pixelHeight - 5;
+                        event.returnValue = false;
+                } else { 
+                        whichIt.moveTo(e.pageX-StalkerTouchedX,e.pageY-StalkerTouchedY);
+                if(whichIt.left < 0+self.pageXOffset) whichIt.left = 0+self.pageXOffset;
+                if(whichIt.top < 0+self.pageYOffset) whichIt.top = 0+self.pageYOffset;
+                if( (whichIt.left + whichIt.clip.width) >= (window.innerWidth+self.pageXOffset-17)) whichIt.left = ((window.innerWidth+self.pageXOffset)-whichIt.clip.width)-17;
+                if( (whichIt.top + whichIt.clip.height) >= (window.innerHeight+self.pageYOffset-17)) whichIt.top = ((window.innerHeight+self.pageYOffset)-whichIt.clip.height)-17;
+                return false;
+                }
+            return false;
+        }
+        
+        function dropIt() {
+                whichIt = null;
+            if(NS) window.releaseEvents (Event.MOUSEMOVE);
+            return true;
+        }
+        <!-- DRAG DROP CODE -->
+        
+        if(NS) {
+                window.captureEvents(Event.MOUSEUP|Event.MOUSEDOWN);
+                window.onmousedown = grabIt;
+                window.onmousemove = moveIt;
+                window.onmouseup = dropIt;
+        }
+        if(IE) {
+                document.onmousedown = grabIt;
+                document.onmousemove = moveIt;
+                document.onmouseup = dropIt;
+        }
+        
+        if(NS || IE) action = window.setInterval("heartBeat()",1);
+             
+
+
+
+</SCRIPT>
+<STYLE TYPE="text/css">
+#floater {
+        position: absolute;
+        left: 05%;
+        top: 25;
+        visibility: visible;
+        z-index:10;
+}
+</STYLE>
+
+</head>
+<body bgcolor="#000000" text="#FFFF33" link="#3333CC">
+<div id="floater" style="left: 10%"> <a href="index.html" ><img src="logoAd.gif" border=0 alt="" width="64" height="62"></a> 
+</div>
+<div align="center"><a href="http://www.mercadolivre.com.br" target="_blank"><img src="Full_bici12k.gif" width="468" height="60"> </a> </div>
+<div align="center"> 
+  <table border="0" cellpadding="0" cellspacing="0" width="582" height="76">
+    <center>
+      <tr> 
+        <td width="429" align="left" height="80"><map name="FPMap0"> <area href="index.html" shape="rect" coords="76, 21, 205, 84"></map><img border="0" src="bb1v.gif" usemap="#FPMap0" width="429" height="95"></td>
+        <td width="126" align="justify"><a href="parceiros.htm"><img border="0" src="Parceiros2.gif" width="126" height="95"></a></td>
+        <td width="36" align="left" height="79"><img border="0" src="bb3gif.gif" width="34" height="95"></td>
+      </tr>
+    </center>
+    <center>
+    </center>
+  </table>
+</div>
+<div align="center"> 
+  <table border="0" cellpadding="0" cellspacing="0" width="540" height="2061">
+    <center>
+      <tr>
+        <td width="538" align="left" height="42" colspan="2"> 
+          <table border="0" cellpadding="0" cellspacing="0" width="537">
+            <tr> 
+              <td width="71" align="center" valign="top"><a name="topo"></a><img border="0" src="buttonmove2.gif" align="right" width="30" height="20"></td>
+              <td width="75" align="center"><a href="esportes.htm"><img border="0" src="botAdre2.gif" width="75" height="21"></a></td>
+              <td width="76" align="center"><a href="noticias.htm"><img border="0" src="botAdre3.gif" width="75" height="21"></a></td>
+              <td width="76" align="center"><a href="equipamento.htm"><img border="0" src="botAdre1.gif" width="75" height="21"></a></td>
+              <td width="77" align="center"><a href="park.htm"><img border="0" src="botAdreXX.gif" width="75" height="22"></a></td>
+              <td width="75" align="center"><a href="guia.htm"><img border="0" src="botAdre5.gif" width="75" height="21"></a></td>
+              <td width="75" align="center"><a href="ecotrip.htm"><img border="0" src="botAdre6.gif" width="75" height="21"></a></td>
+              <td width="1"></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </center>
+      <tr> 
+        <td width="538" height="21" valign="top" colspan="2"> </td>
+      </tr>
+    <tr> 
+      <td width="259" height="178" valign="middle"> 
+        <p align="center" style="margin-top: 0; margin-bottom: 0"><font FACE="Arial" SIZE="1">&nbsp;<img border="0" src="MP.gif" width="258" height="144"></font></p>
+ </td>
+      <td width="277" height="178" valign="middle"> 
+        <p align="center"><img border="0" src="MCRafyPB.jpg" align="right" width="215" height="176"> </td>
+    </tr>
+    <tr>
+      <td width="538" height="20" valign="top" colspan="2"> 
+        <p align="right"><font face="Arial" size="3">por Rafael Kamkhagi.</font> </td>
+    </tr>
+    <tr> 
+      <td width="538" height="187" valign="middle" colspan="2"> <font FACE="Arial" SIZE="1">
+        </font>
+        <p align="center"><font face="Arial" size="2"><i>Estava tudo decidido, eu e
+        mais dois amigos iríamos passar a virada do milênio no Peru !!!</i></font></p>
+        <p><font face="Arial" size="2">&nbsp;Começamos a viagem fazendo uma escala de dois dias na
+        <font color="#FFFFFF">Bolívia</font>, lá
+        pudemos ter uma noção da cidade de<font color="#FFFFFF"> LaPaz </font> , onde visitamos algumas
+        feiras ao ar livre , e o <font color="#FFFFFF"> &quot;Mercado das Bruxas&quot;</font>, onde são
+        vendidos desde raízes nativas até <font color="#FFFFFF"> feto de Lhama</font> , nos deparamos com
+        uma cidade paupérrima , com um povo predominante indígena o qual nos
+        proporcionavam uma mescla de odores e costumes a céu aberto.</font></p>
+ </td>
+    </tr>
+    <tr>
+      <td width="261" height="136" valign="middle" align="right"> 
+        <p align="left"><font face="Arial" size="2">&nbsp;Após esse choque inicial fomos conhecer a parte boliviana do
+        <font color="#00FF00"> Lago
+        Titicaca</font> , conhecido por ser o lago com vida na maior altitude do mundo.
+        Lá conhecemos diversas ilhotas com traços das civilizações Pré
+        Incas , além da <font color="#00FF00"> ilha de Copacabana</font> , que por sinal lembra
+        geograficamente muito a nossa <font color="#00FF00">Copacabana</font>.</font> </td>
+      <td width="279" height="136" valign="middle" align="right"> 
+        <p align="center"><img border="0" src="MCCanoaTITI.jpg" width="132" height="64"> </td>
+    </tr>
+    <tr>
+      <td width="538" height="392" valign="middle" colspan="2"> 
+        <p align="center">&nbsp;</p>
+        <p align="center"><font face="Arial" size="2"><i>Após isso e já aclimatados
+        a altitude , fomos para <font color="#00FF00"> Cuzco – Peru</font> , onde iria ser o ponto central
+        de nossa viagem.</i></font></p>
+        <p align="left"><font face="Arial" size="2">&nbsp;Nos hospedamos num hostal e logo em seguida fomos
+        conhecer a cidade , uma mistura de construções <font color="#00FF00"> Incas</font> ,
+        <font color="#FF0000"> espanholas</font> e <font color="#00FF00">
+        Peruanas</font> .No centro da cidade há uma praça com duas importantes
+        igrejas , vários restaurantes e lojinhas , e na noite é onde
+        concentram-se o maior numero de boates por metro quadrado, cada uma com
+        estilo diferente.</font></p>
+        <p align="left"><font face="Arial" size="2">&nbsp;Tínhamos interesse por tudo , pois o propósito da
+        viagem era &quot;um pouco de balada , arqueologia e paz
+        espiritual&quot;. Estávamos no lugar certo, pois no dia seguinte fomos
+        conhecer as ruínas de <font color="#00FF00"> Saqswayaman</font> , onde começamos a ter uma
+        verdadeira noção do <font color="#00FF00"> Império</font> <font color="#00FF00"> Inca</font> e seus conhecimentos em talhar
+        pedras.</font></p>
+        <p align="left"><font face="Arial" size="2">&nbsp;Cada dia fazíamos um passeio diferente : desde visitar
+        ruínas como as de <font color="#00FF00"> Ollantaytambo</font> (maravilhosas) , como fazer compras de
+        artesanato na cidade de <font color="#00FF00"> Pisaq</font> , <font color="#00FFFF"> rafting</font> nas corredeiras do
+        <font color="#00FFFF"> Rio</font> <font color="#00FFFF">Urubamba</font>,
+        entre outras coisas. E a noite ,após comer a melhor pizza do mundo no
+        Chez Maggy ou um delicioso schawarma no boteco da ruela perto da praça
+        , caíamos nas baladas noturnas .</font> </td>
+    </tr>
+    <tr> 
+      <td width="538" height="16" valign="middle" align="center" colspan="2"> <font FACE="Arial" SIZE="1">
+        <p align="left"></font> </td>
+    </tr>
+    <tr>
+      <td width="259" height="127" valign="middle" align="center"> <img border="0" src="MCPortersP.jpg" width="88" height="125"> </td>
+      <td width="277" height="127" valign="middle" align="center"> 
+        <p align="left"><font face="Arial" size="2">&nbsp;Após uma semana nessa vida
+        , começamos a tão esperada <font color="#00FF00"> Trilha Inca</font> rumo a Cidade Perdida de
+        <font color="#00FF00"> Machu</font> <font color="#00FF00">
+        Pichu</font> , arrumamos um <font color="#FF0000"> guia</font> , um <font color="#FF0000"> cozinheiro</font> e um
+        <font color="#FF0000"> porter</font> para garantir um
+        mínimo de conforto durante a caminhada e partimos.</font> </td>
+    </tr>
+    <tr>
+      <td width="538" height="104" valign="middle" align="center" colspan="2"> 
+        <p align="left"><font face="Arial" size="2">&nbsp;Nos deslumbramos com a
+        natureza que cerca a <font color="#00FF00"> trilha</font> , as mudanças de vegetação ao longo do
+        caminho, as maravilhosas e intrigantes construções <font color="#00FF00">Incas</font> , tudo isso
+        servia como combustível a nossa caminhada.</font> </td>
+    </tr>
+    <tr>
+      <td width="538" height="180" valign="middle" align="center" colspan="2"> <img border="0" src="MCPonte.jpg" width="500" height="178"> </td>
+    </tr>
+    <tr>
+      <td width="538" height="102" valign="middle" align="center" colspan="2"> 
+        <p align="left"><font face="Arial" size="2">&nbsp;Após 3 noites e 4 dias de caminhada nos deparamos com a
+        grandiosidade , a beleza e o ótimo estado de conservação de <font color="#00FF00"> Machu
+        Pichu</font> , a cidade religiosa dos <font color="#00FF00"> Incas</font> , onde por muita sorte os
+        Espanhóis nunca souberam de sua existência , e só foi redescoberta
+        por um arqueólogo em meados de 1911.</font> </td>
+    </tr>
+    <tr> 
+      <td width="538" height="163" valign="middle" colspan="2" align="center"> 
+        <p align="center"><img border="0" src="MCVistaDaTrilhaIncaP.jpg" alt="Esse lugar é realmente indescritível , mexe com todos os nossos sentimentos !!!!" width="233" height="161"> </td>
+    </tr>
+    <tr> 
+      <td width="538" height="94" valign="middle" colspan="2"> 
+        <p align="left"><font face="Arial" size="2">&nbsp;Após conhecer toda cidade , descemos para
+        <font color="#00FFFF"> Águas
+        Calientes</font> , pois como o próprio nome diz é uma cidade com termas de
+        águas quentes , que no momento era o que mais precisávamos para
+        recuperar as energias.</font> </td>
+    </tr>
+    <tr>
+      <td width="538" height="107" valign="middle" colspan="2"> 
+        <p align="center"><img border="0" src="MCVistaTopoM.jpg" width="223" height="154"> </td>
+    </tr>
+    <tr>
+      <td width="538" height="145" valign="middle" colspan="2"> 
+        <p align="left"><font face="Arial" size="2">&nbsp;Após esse dia voltamos a
+        <font color="#FF0000"> Cuzco</font> para matar as saudades ,
+        rever os amigos feitos durante a viagem e pegar nosso rumo de volta ao
+        Brasil.</font></p>
+        <p align="left"><font face="Arial" size="2">&nbsp;Para aqueles que querem unir
+        em um mesmo lugar muita
+        <font color="#FFFF33">
+        história</font> , <font color="#FFFFFF"> magia</font> , <font color="#808000"> arqueologia</font> , ensinamentos
+        <font color="#00FF00"> Incas</font> , contato com a <font color="#00FF00">
+        natureza</font> , <font color="#00FF00"> espirito aventureiro</font> , e
+        <font color="#FF0000"> muitas baladas</font> , esse é um dos
+        lugares aonde você deve ir !!!</font> </td>
+    </tr>
+    <tr> 
+      <td width="538" height="47" valign="middle" colspan="2"> 
+        <p align="center">&nbsp;<font face="Arial" size="3">Para entrar em
+        contato com o autor <a href="mailto:rafy@zipmail.com.br"><font color="#00FF00">clique
+        aqui!</font></a></font> </td>
+    </tr>
+  </table>
+</div>
+<div align="center"> 
+  <center>
+    <table border="0" cellpadding="0" cellspacing="0" width="486" height="102">
+      <tr> 
+        <td valign="top" colspan="6" width="434" height="55"><img border="0" src="barraBaixo1v.gif" width="447" height="55"></td>
+        <td width="162" rowspan="2" height="102"><a href="mailto:adrena@uol.com.br"><img border="0" src="FALECONOSCO1.gif" width="133" height="115"></a></td>
+      </tr>
+      <tr> 
+        <td width="99" valign="top" height="47"></td>
+        <td width="75" valign="top" height="47"><a href="#topo"><img border="0" src="botAdreB0.gif" width="75" height="21"></a></td>
+        <td width="76" valign="top" height="47"><a href="javascript:history.go(-1);"><img border="0" src="botAdreB1.gif" width="75" height="21"></a></td>
+        <td width="77" valign="top" height="47"><a href="index.html"><img border="0" src="botAdreB2.gif" width="75" height="21"></a></td>
+        <td width="76" valign="top" height="47"><a href="equipe.htm"><img border="0" src="botAdreB3.gif" width="75" height="21"></a></td>
+        <td width="39" valign="top" height="47"></td>
+      </tr>
+    </table>
+  </center>
+</div>
+</body>
+
+</html>

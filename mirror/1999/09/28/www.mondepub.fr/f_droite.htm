@@ -1,0 +1,102 @@
+<html>
+
+<head>
+<title>Frame droite</title>
+
+
+
+</head>
+
+<body MARGINHEIGHT="0" MARGINWIDTH="0" leftmargin="0" framespacing="0" topmargin="0" background="Images/d_images/d_pattern.JPG">
+<script language="Javascript">
+
+
+var browser = 0;
+var version = parseInt(navigator.appVersion);
+
+if (navigator.appName.substring(0,8) == "Netscape" && version >= 3 ) browser = 1;
+if (navigator.appName.substring(0,9) == "Microsoft" &&  version >= 3 ) browser = 1;
+if (navigator.appName.substring(0,9) == "Microsoft" &&  version > 3 && navigator.appVersion.indexOf("Mac") > 0 ) browser = 1;
+
+function rollOver(image, name) 
+{	
+if (browser == 1)
+{
+	path = "Images/d_images/";
+	
+	ig = 'document.' + image
+
+	img = eval(ig);
+	
+	filename = path + name
+	img.src = filename;
+
+	return false;
+}
+}
+</script>
+<SCRIPT LANGUAGE="javascript">
+var navigateur = 0;
+if (navigator.appName.substring(0,8) == "Netscape") navigateur = 1;
+if (navigator.appName.substring(0,9) == "Microsoft" && navigator.appVersion.indexOf("Win") > 0 ) navigateur = 0;
+
+function openw(url,nom,dimx,dimy)
+		{
+		if (navigateur == 0) dimy=dimy-19;
+		featur = "toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,width="+ dimx + ",height=" + dimy;
+        zoom = window.open(url,nom,featur);
+		if (navigateur == 1) zoom.focus();
+		}
+
+</SCRIPT>
+
+<SCRIPT LANGUAGE="javascript">
+
+top.document.base="./";
+
+</SCRIPT>
+	
+<table border="0" cellpadding="0" cellspacing="0" width="161" height="100%">
+<tr><td><td></tr>  
+<tr>
+    <td valign="top" align="left">
+      <table border="0" cellpadding="0" cellspacing="0" width="161">
+        <tr><td><img src="Images/d_images/part_1.gif"></td></tr>
+		<tr>
+          <td><img src="Images/d_images/part_2.gif" border="0" usemap="#quali_euro"></td>
+        </tr>
+		<tr> 
+          <td ><!--<a href="Produ/Publi/Publi/index.htm" target="_top" onmouseover="return rollOver('IMG1','part_3_roll.gif');" onmouseout="return rollOver('IMG1','part_3.gif');">--><img src="Images/d_images/part_3.gif" border="0" name="IMG1"><!--</a>--></td>
+        </tr>
+        <tr> 
+          <td><img src="Images/d_images/d_vide_1.gif"><a href="Produ/Comme/Tarif/index.htm" target="_top" onmouseover="return rollOver('IMG2','d_comm_r.gif');" onmouseout="return rollOver('IMG2','d_comm_n.gif');"><img src="Images/d_images/d_comm_n.gif" name="IMG2" border="0"></a></td>
+        </tr>
+        <tr> 
+          <td><MAP NAME="FrontPageMap">
+              <AREA SHAPE="RECT" COORDS="57, 6, 119, 21" HREF="Produ/Educa/index.htm" target="_top" onmouseover="return rollOver('IMG3','d_edu_r.gif');" onmouseout="return rollOver('IMG3','d_emed_n.gif');">
+              <AREA SHAPE="RECT" COORDS="0, 3, 50, 21" HREF="Produ/Emplo/Initi/index.htm" target="_top" onmouseover="return rollOver('IMG3','d_empl_r.gif');" onmouseout="return rollOver('IMG3','d_emed_n.gif',false);">
+            </MAP> <img src="Images/d_images/d_vide_2.gif"><img ismap usemap="#FrontPageMap" border="0"  name="IMG3" src="Images/d_images/d_emed_n.gif" ></td>
+        </tr>
+        <tr> 
+          <td><img src="Images/d_images/d_vide_3.gif"><a href="Produ/Finan/Tarif/index.htm" target="_top" onmouseover="return rollOver('IMG4','d_fina_r.gif');" onmouseout="return rollOver('IMG4','d_fina_n.gif');"><img src="Images/d_images/d_fina_n.gif" name="IMG4" border="0" ></a></td>
+        </tr>
+        <tr> 
+          <td><img src="Images/d_images/d_vide_4.gif"><a href="Produ/Web/Tarif/index.htm" target="_top" onmouseover="return rollOver('IMG5','d_web_r.gif');" onmouseout="return rollOver('IMG5','d_web_n.gif');"><img src="Images/d_images/d_web_n.gif" name="IMG5" border="0" ></a></td>
+        </tr>
+        <tr> 
+          <td><a href="../externe/index.asp" target="_blank" onmouseover="return rollOver('IMG6','d_filet_r.gif');" onmouseout="return rollOver('IMG6','d_filet_n.gif');"><img src="Images/d_images/d_filet_n.gif" name="IMG6" border="0" ></a></td>
+        </tr>
+        <tr> 
+          <td><a href="Produ/Suppl/suppl/index.htm" target="_top" onmouseover="return rollOver('IMG7','d_bout_r.gif');" onmouseout="return rollOver('IMG7','d_bout_n.gif');"><img src="Images/d_images/d_bout_n.gif" name="IMG7" border="0" ></a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+ <tr><td><td></tr> 
+  </table>
+<map name="quali_euro">
+  <area shape="circle" coords="126,32,30" href="#" onclick="openw('quali.htm','quali','390','375')">
+  <area shape="circle" coords="64,33,23"  href="#" onclick="openw('euro.htm','euro','390','375')">
+</map>
+</body>
+</html>

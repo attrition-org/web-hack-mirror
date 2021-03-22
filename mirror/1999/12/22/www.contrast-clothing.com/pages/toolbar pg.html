@@ -1,0 +1,210 @@
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive 4">
+		<title>tool bar page</title>
+		<!--This site designed and maintained by "The Kid". Contact at  webtech@dezignzone.com-->
+		<csactions>
+			<csaction name="320EBD0" class="Goto Link" type="ONEVENT" val0="shirts.html" val1="welcome">
+			<csaction name="14297D0" class="Goto Link" type="ONEVENT" val0="team%20riders.html" val1="welcome">
+			<csaction name="14CB191" class="Goto Link" type="ONEVENT" val0="pictures.html" val1="welcome">
+			<csaction name="2AF80D00" class="Goto Link" type="ONEVENT" val0="contact%20pg.html" val1="welcome">
+			<csaction name="33909B7" class="Goto Link" type="ONEVENT" val0="hat%20pg.html" val1="welcome">
+			<csaction name="AD63728" class="Goto Link" type="ONEVENT" val0="order%20pg.html" val1="welcome">
+		</csactions>
+		<csscriptdict>
+			<script><!--
+CSStopExecution = false;
+CSInit = new Array;
+function CSScriptInit() {
+if(typeof(skipPage) != "undefined") { if(skipPage) return; }
+idxArray = new Array;
+for(var i=0;i<CSInit.length;i++)
+	idxArray[i] = i;
+CSAction2(CSInit, idxArray);
+}
+function CSClickReturn () {
+	var bAgent = window.navigator.userAgent; 
+	var bAppName = window.navigator.appName;
+	if ((bAppName.indexOf("Explorer") >= 0) && (bAgent.indexOf("Mozilla/3") >= 0) && (bAgent.indexOf("Mac") >= 0))
+		return true; // dont follow link
+	else return false; // dont follow link
+}
+CSAg = window.navigator.userAgent; CSBVers = parseInt(CSAg.charAt(CSAg.indexOf("/")+1),10);
+function IsIE() { return CSAg.indexOf("MSIE") > 0;}
+function CSIEStyl(s) { return document.all.tags("div")[s].style; }
+function CSNSStyl(s) { return CSFindElement(s,0); }
+function CSFindElement(n,ly) { if (CSBVers < 4) return document[n];
+	var curDoc = ly ? ly.document : document; var elem = curDoc[n];
+	if (!elem) { for (var i=0;i<curDoc.layers.length;i++) {
+		elem = CSFindElement(n,curDoc.layers[i]); if (elem) return elem; }}
+	return elem;
+}
+function CSButtonReturn () {
+	var bAgent = window.navigator.userAgent; 
+	var bAppName = window.navigator.appName;
+	if ((bAppName.indexOf("Explorer") >= 0) && (bAgent.indexOf("Mozilla/3") >= 0) && (bAgent.indexOf("Mac") >= 0))
+		return false; // follow link
+	else return true; // follow link
+}
+CSIm = new Object();
+function CSIShow(n,i) {
+	if (document.images) {
+		if (CSIm[n]) {
+			var img = (!IsIE()) ? CSFindElement(n,0) : document[n];
+			if (img && typeof(CSIm[n][i].src) != "undefined") {img.src = CSIm[n][i].src;}
+			if(i != 0)
+				self.status = CSIm[n][3];
+			else
+				self.status = " ";
+			return true;
+		}
+	}
+	return false;
+}
+function CSILoad(action) {
+	im = action[1];
+	if (document.images) {
+		CSIm[im] = new Object();
+		for (var i=2;i<5;i++) {
+			if (action[i] != '') { CSIm[im][i-2] = new Image(); CSIm[im][i-2].src = action[i]; }
+			else CSIm[im][i-2] = 0;
+		}
+		CSIm[im][3] = action[5];
+	}
+}
+CSStopExecution = false;
+
+function CSAction(array) { 
+	return CSAction2(CSAct, array);
+}
+function CSAction2(fct, array) { 
+	var result;
+	for (var i=0;i<array.length;i++) {
+		if(CSStopExecution) return false; 
+		var actArray = fct[array[i]];
+		if(actArray == null) return false; 
+		var tempArray = new Array;
+		for(var j=1;j<actArray.length;j++) {
+			if((actArray[j] != null) && (typeof(actArray[j]) == "object") && (actArray[j].length == 2)) {
+				if(actArray[j][0] == "VAR") {
+					tempArray[j] = CSStateArray[actArray[j][1]];
+				}
+				else {
+					if(actArray[j][0] == "ACT") {
+						tempArray[j] = CSAction(new Array(new String(actArray[j][1])));
+					}
+				else
+					tempArray[j] = actArray[j];
+				}
+			}
+			else
+				tempArray[j] = actArray[j];
+		}			
+		result = actArray[0](tempArray);
+	}
+	return result;
+}
+CSAct = new Object;
+
+function CSGotoLink(action) {
+	if (action[2].length) {
+		var hasFrame=false;
+		for(i=0;i<parent.frames.length;i++) { if (parent.frames[i].name==action[2]) { hasFrame=true; break;}}
+		if (hasFrame==true)
+			parent.frames[action[2]].location = action[1];
+		else
+			window.open (action[1],action[2],"");
+	}
+	else location = action[1];
+}
+
+// --></script>
+		</csscriptdict>
+		<csactiondict>
+			<script><!--
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'shirt',/*URL*/'../images/Rollover%20Buttons/images/shirts-1_01.gif',/*URL*/'../images/Rollover%20Buttons/images/shirts-1_01-over.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'hat',/*URL*/'../images/Rollover%20Buttons/images/hats-1_01.gif',/*URL*/'../images/Rollover%20Buttons/images/hats-1_01-over.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'team',/*URL*/'../images/Rollover%20Buttons/images/team-1_01.gif',/*URL*/'../images/Rollover%20Buttons/images/team_1_01-over.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'pics',/*URL*/'../images/Rollover%20Buttons/images/pictures-1_01.gif',/*URL*/'../images/Rollover%20Buttons/images/pictures-1_01-over.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'order',/*URL*/'../images/Rollover%20Buttons/images/ordering_01.gif',/*URL*/'../images/Rollover%20Buttons/images/ordering_01-over.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'Button',/*URL*/'../images/Rollover%20Buttons/images/contact-1_01.gif',/*URL*/'../images/Rollover%20Buttons/images/contact-1_01-over.gif',/*URL*/'','');
+CSAct[/*CMP*/ '320EBD0'] = new Array(CSGotoLink,/*URL*/ 'shirts.html','welcome');
+CSAct[/*CMP*/ '14297D0'] = new Array(CSGotoLink,/*URL*/ 'team%20riders.html','welcome');
+CSAct[/*CMP*/ '14CB191'] = new Array(CSGotoLink,/*URL*/ 'pictures.html','welcome');
+CSAct[/*CMP*/ '2AF80D00'] = new Array(CSGotoLink,/*URL*/ 'contact%20pg.html','welcome');
+CSAct[/*CMP*/ '33909B7'] = new Array(CSGotoLink,/*URL*/ 'hat%20pg.html','welcome');
+CSAct[/*CMP*/ 'AD63728'] = new Array(CSGotoLink,/*URL*/ 'order%20pg.html','welcome');
+
+// --></script>
+		</csactiondict>
+	</head>
+
+	<body bgcolor="black" onload="CSScriptInit();">
+		<table cool width="166" height="601" border="0" cellpadding="0" cellspacing="0" gridx="16" showgridx gridy="16" showgridy bgcolor="black">
+			<tr height="1" cntrlrow>
+				<td width="1" height="1"><spacer type="block" width="1" height="1"></td>
+				<td width="13" height="1"><spacer type="block" width="13" height="1"></td>
+				<td width="2" height="1"><spacer type="block" width="2" height="1"></td>
+				<td width="1" height="1"><spacer type="block" width="1" height="1"></td>
+				<td width="27" height="1"><spacer type="block" width="27" height="1"></td>
+				<td width="122" height="1"><spacer type="block" width="122" height="1"></td>
+			</tr>
+			<tr height="26">
+				<td width="1" height="26"><spacer type="block" width="1" height="26"></td>
+				<td width="13" height="26"><spacer type="block" width="13" height="26"></td>
+				<td width="2" height="26"><spacer type="block" width="2" height="26"></td>
+				<td width="1" height="26"><spacer type="block" width="1" height="26"></td>
+				<td width="27" height="26"><spacer type="block" width="27" height="26"></td>
+				<td width="122" height="26"><spacer type="block" width="122" height="26"></td>
+			</tr>
+			<tr height="159">
+				<td width="1" height="159"><spacer type="block" width="1" height="159"></td>
+				<td width="13" height="159"><spacer type="block" width="13" height="159"></td>
+				<td width="2" height="159"><spacer type="block" width="2" height="159"></td>
+				<td width="1" height="159"><spacer type="block" width="1" height="159"></td>
+				<td width="27" height="159"><spacer type="block" width="27" height="159"></td>
+				<td width="122" height="159" colspan="1" rowspan="1" valign="top" align="left" xpos="43"><img height="90" width="75" src="../images/text/c.gif"></td>
+			</tr>
+			<tr height="34">
+				<td width="1" height="34"><spacer type="block" width="1" height="34"></td>
+				<td width="13" height="34"><spacer type="block" width="13" height="34"></td>
+				<td width="2" height="34"><spacer type="block" width="2" height="34"></td>
+				<td width="150" height="34" colspan="3" rowspan="1" valign="top" align="left" xpos="15"><csobj w="102" h="23" t="Button" ht="../images/Rollover%20Buttons/images/shirts-1_01-over.gif" csclick="320EBD0"><a href="#" onmouseover="return CSIShow(/*CMP*/'shirt',1)" onmouseout="return CSIShow(/*CMP*/'shirt',0)" onclick="CSAction(new Array(/*CMP*/'320EBD0'));return CSClickReturn()"><img src="../images/Rollover%20Buttons/images/shirts-1_01.gif" width="102" height="23" name="shirt" border="0"></a></csobj></td>
+			</tr>
+			<tr height="36">
+				<td width="1" height="36"><spacer type="block" width="1" height="36"></td>
+				<td width="13" height="36"><spacer type="block" width="13" height="36"></td>
+				<td width="2" height="36"><spacer type="block" width="2" height="36"></td>
+				<td width="150" height="36" colspan="3" rowspan="1" valign="top" align="left" xpos="15"><csobj w="71" h="26" t="Button" ht="../images/Rollover%20Buttons/images/hats-1_01-over.gif" csclick="33909B7"><a href="#" onmouseover="return CSIShow(/*CMP*/'hat',1)" onmouseout="return CSIShow(/*CMP*/'hat',0)" onclick="CSAction(new Array(/*CMP*/'33909B7'));return CSClickReturn()"><img src="../images/Rollover%20Buttons/images/hats-1_01.gif" width="71" height="26" name="hat" border="0"></a></csobj></td>
+			</tr>
+			<tr height="37">
+				<td width="1" height="37"><spacer type="block" width="1" height="37"></td>
+				<td width="13" height="37"><spacer type="block" width="13" height="37"></td>
+				<td width="152" height="37" colspan="4" rowspan="1" valign="top" align="left" xpos="13"><csobj w="140" h="25" t="Button" ht="../images/Rollover%20Buttons/images/team_1_01-over.gif" csclick="14297D0"><a href="#" onmouseover="return CSIShow(/*CMP*/'team',1)" onmouseout="return CSIShow(/*CMP*/'team',0)" onclick="CSAction(new Array(/*CMP*/'14297D0'));return CSClickReturn()"><img src="../images/Rollover%20Buttons/images/team-1_01.gif" width="140" height="25" name="team" border="0"></a></csobj></td>
+			</tr>
+			<tr height="37">
+				<td width="1" height="37"><spacer type="block" width="1" height="37"></td>
+				<td width="13" height="37"><spacer type="block" width="13" height="37"></td>
+				<td width="2" height="37"><spacer type="block" width="2" height="37"></td>
+				<td width="150" height="37" colspan="3" rowspan="1" valign="top" align="left" xpos="15"><csobj w="123" h="25" t="Button" ht="../images/Rollover%20Buttons/images/pictures-1_01-over.gif" csclick="14CB191"><a href="#" onmouseover="return CSIShow(/*CMP*/'pics',1)" onmouseout="return CSIShow(/*CMP*/'pics',0)" onclick="CSAction(new Array(/*CMP*/'14CB191'));return CSClickReturn()"><img src="../images/Rollover%20Buttons/images/pictures-1_01.gif" width="123" height="25" name="pics" border="0"></a></csobj></td>
+			</tr>
+			<tr height="38">
+				<td width="1" height="38"><spacer type="block" width="1" height="38"></td>
+				<td width="13" height="38"><spacer type="block" width="13" height="38"></td>
+				<td width="2" height="38"><spacer type="block" width="2" height="38"></td>
+				<td width="1" height="38"><spacer type="block" width="1" height="38"></td>
+				<td width="149" height="38" colspan="2" rowspan="1" valign="top" align="left" xpos="16"><csobj w="110" h="25" t="Button" ht="../images/Rollover%20Buttons/images/ordering_01-over.gif" csclick="AD63728"><a href="#" onmouseover="return CSIShow(/*CMP*/'order',1)" onmouseout="return CSIShow(/*CMP*/'order',0)" onclick="CSAction(new Array(/*CMP*/'AD63728'));return CSClickReturn()"><img src="../images/Rollover%20Buttons/images/ordering_01.gif" width="110" height="25" name="order" border="0"></a></csobj></td>
+			</tr>
+			<tr height="233">
+				<td width="1" height="233"><spacer type="block" width="1" height="233"></td>
+				<td width="13" height="233"><spacer type="block" width="13" height="233"></td>
+				<td width="2" height="233"><spacer type="block" width="2" height="233"></td>
+				<td width="1" height="233"><spacer type="block" width="1" height="233"></td>
+				<td width="149" height="233" colspan="2" rowspan="1" valign="top" align="left" xpos="16"><csobj w="132" h="25" t="Button" ht="../images/Rollover%20Buttons/images/contact-1_01-over.gif" csclick="2AF80D00"><a href="#" onmouseover="return CSIShow(/*CMP*/'Button',1)" onmouseout="return CSIShow(/*CMP*/'Button',0)" onclick="CSAction(new Array(/*CMP*/'2AF80D00'));return CSClickReturn()"><img src="../images/Rollover%20Buttons/images/contact-1_01.gif" width="132" height="25" name="Button" border="0"></a></csobj></td>
+			</tr>
+		</table>
+	</body>
+
+</html>

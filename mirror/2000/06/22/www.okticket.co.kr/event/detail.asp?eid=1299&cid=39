@@ -1,0 +1,611 @@
+
+<HTML>
+
+<HEAD>
+
+
+<!--///////////////////////////////////////
+	MetaTags 시작
+	///////////////////////////////////////-->
+
+<META name="description" content="designed by sini@ultari.co.kr">
+<META name="description" content="programmed by jania@ultari.co.kr">
+
+<!--///////////////////////////////////////
+	MetaTags 끝
+	///////////////////////////////////////--><!--///////////////////////////////////////
+	StyleSheets 시작
+	///////////////////////////////////////-->
+
+<style type=text/css>
+body{margin:0px}
+</style>
+
+
+
+<STYLE type="text/css">
+<!--
+
+        .topmenu{font-family: 굴림; font-size: 9pt; color: #EFEFE0; text-decoration: none}
+        .topmenu :link{font-family: 굴림; font-size: 9pt; color: #EFEFE0; text-decoration: none}
+        .topmenu :visited{font-family: 굴림; font-size: 9pt; color: #CCFFCC; text-decoration: none}
+        .topmenu :active{font-family: 굴림; font-size: 9pt; color: #FFFFCC; text-decoration: none}
+        .topmenu :hover{font-family: 굴림; font-size: 9pt; color:#FBA300; text-decoration: none}
+
+
+	a{font-family: 굴림; font-size: 9pt; line-height: 14px;}	
+	a:link{text-decoration:none; color:#0152E7;}	
+	a:visited{text-decoration:none;	color:#0152E7;}	
+	a:active{text-decoration:underline; color:#5C069B;}	
+	a:hover{text-decoration:underline; color:#FBA300;}
+	rgb(102,153,204);
+-->
+</STYLE>
+
+<!--///////////////////////////////////////
+	StyleSheets 끝
+	///////////////////////////////////////-->
+<!--///////////////////////////////////////
+	JavaScripts 시작
+	///////////////////////////////////////-->
+
+<SCRIPT Language=JavaScript>
+
+		browserName = navigator.appName;
+		browserVer = parseInt(navigator.appVersion);
+		version = "incompatible";
+		
+		if (browserName == "Netscape" || browserVer >= 3) version = "n3";
+
+		if (version == "n3")
+		{
+			icon1on = new Image();
+			icon1on.src ="/images/tm_on-01-01.gif";
+			icon1off = new Image();
+			icon1off.src = "/images/tm-01-01.gif";
+			
+			icon2on = new Image();                
+			icon2on.src ="/images/tm_on-01-02.gif";
+			icon2off = new Image();
+			icon2off.src = "/images/tm-01-02.gif";
+			
+			icon3on = new Image();                
+			icon3on.src ="/images/tm_on-01-03.gif";
+			icon3off = new Image();
+			icon3off.src = "/images/tm-01-03.gif";
+			
+			icon4on = new Image();                
+			icon4on.src ="/images/tm_on-01-04.gif";
+			icon4off = new Image();
+			icon4off.src = "/images/tm-01-04.gif";
+			
+		}
+		
+		function img_act(imgIcon)
+		{
+			if (version == "n3") 
+			{
+				iconOn = eval(imgIcon + "on.src");
+				document[imgIcon].src = iconOn;
+				return true;
+			}
+		}
+		
+		function img_inact(imgIcon)
+		{
+			if (version == "n3") 
+			{
+				iconOff = eval(imgIcon + "off.src");
+				document[imgIcon].src = iconOff;
+				return true;
+			}
+		}
+	
+</SCRIPT>
+
+<!--///////////////////////////////////////
+	JavaScripts 끝
+	///////////////////////////////////////-->
+
+
+	<TITLE>Welcome to 문화공룡 OK-TICKET</TITLE>
+
+</HEAD>
+
+<BODY marginwidth=0 marginheight=0 topmargin=0 leftmargin=0 bgcolor=#ffffff>
+
+<TABLE marginwidth=0 marginheight=0 topmargin=0 leftmargin=0 border=0 cellpadding=0 cellspacing=0 width=100%>
+	<TR><TD>
+<!--///////////////////////////////////////
+	MainMenus 시작
+	///////////////////////////////////////-->
+<table width="100%" height="75" border="0" cellspacing="0" cellpadding="0" BGCOLOR=#004D4A>
+ 	<TR>
+		<TD background='../images/top_bg.gif' WIDTH=217><A href='../home/index.html'><IMG src="../images/top_01-01.gif" width="181" height="71" border="0" ALT=""></A></TD>
+		<TD background='../images/top_bg.gif' WIDTH=100%></TD>
+		<TD background='../images/top_bg.gif' VALIGN=BOTTOM ALIGN=right>
+		<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 VALIGN=BOTTOM WIDTH=280 background='../images/top_bg.gif'>
+  		<TR>
+    		<TD background='../images/top_bg.gif'>
+    		<A HREF="../home/index.html" TARGET=_top onMouseover="img_act('icon1');" onMouseout="img_inact('icon1');"><IMG SRC="../images/tm-01-01.gif" BORDER="0" NAME='icon1'></TD>
+    		<TD background='../images/top_bg.gif'>
+    		<A HREF="../member/agreement.asp" TARGET=_top onMouseover="img_act('icon2');" onMouseout="img_inact('icon2');"><IMG SRC="../images/tm-01-02.gif" BORDER="0" NAME='icon2'></TD>
+    		<TD background='../images/top_bg.gif'>
+    		<A HREF="../home/schedule.asp" TARGET=_top onMouseover="img_act('icon3');" onMouseout="img_inact('icon3');"><IMG SRC="../images/tm-01-03.gif" BORDER="0" NAME='icon3'></TD>
+    		<TD background='../images/top_bg.gif'>
+    		<A HREF="../shop/cart.asp" TARGET=_top onMouseover="img_act('icon4');" onMouseout="img_inact('icon4');"><IMG SRC="../images/tm-01-04.gif" BORDER="0" NAME='icon4'></TD>
+  			</TR>
+		</TABLE>
+		</TD>
+		
+		
+		<TD align=right VALIGN=BOTTOM background='../images/top_bg.gif'>
+			<TABLE MARGINWIDTH=0 MARGINHEIGHT=0 TOPMARGIN=0 LEFTMARGIN=0 BORDER=0 CELLPADDING=0 CELLSPACING=0>
+			<TR>
+				<TD COLSPAN=3>
+				<A href='../home/searchForm.asp?t=1'><IMG SRC="../images/search.gif" BORDER=0 ALT=""></A>
+				</TD>
+<!----------------------
+				<TD>
+				<IMG SRC="../images/diary.gif" WIDTH=83 HEIGHT=13 BORDER=0 ALT="">
+				</TD>
+---------------------->
+				<TD></TD>	
+			</TR>
+			<TR>
+			
+				<form method=post name=search action=../search.asp>
+				<TD>
+				<select name=searchid value="검색">
+                        <option value="행사">행사</option>
+                        <option value="artist">Artist/단체</option>
+                        <option value="티켓">ticket</option>
+                        <option value="shop">shop</option>
+                        </select>
+           </TD> 
+           <TD>
+           
+				
+				<INPUT TYPE=text name=searchname SIZE=12 maxlength=64>
+				</TD>
+				<TD VALIGN=BOTTOM>
+				<A href='javascript:document.search.submit();'><IMG SRC="../images/go.gif" WIDTH=21 HEIGHT=21 BORDER=0 ALT="" HSPACE=3></A>&nbsp;&nbsp;&nbsp;
+				</TD>
+				</FORM>
+<!----------------------
+		<FORM name=diary method=get action='/home/schedule.asp'>
+				<TD>
+				<FONT SIZE=2 COLOR=WHITE>
+				<SELECT NAME="yy">
+				<option>2002</option>
+				<option>2001</option>
+				<option selected>2000</option>
+				<option>1999</option>
+				<option>1998</option>
+				</SELECT>
+				년&nbsp;
+				<SELECT NAME="mm">
+				<option>01</option>
+				<option>02</option>
+				<option>03</option>
+				<option>04</option>
+				<option>05</option>
+				<option>06</option>
+				<option>07</option>
+				<option>08</option>
+				<option>09</option>
+				<option>10</option>
+				<option>11</option>
+				<option>12</option>
+				</SELECT>
+				월
+				</TD>
+				<TD VALIGN=BOTTOM>
+				<A href='javascript:document.diary.submit();'><IMG SRC="../images/go.gif" WIDTH=21 HEIGHT=21 BORDER=0 ALT="" HSPACE=3></A>&nbsp;&nbsp;&nbsp;
+				</TD>	
+				</FORM> 
+---------------->
+			</TR>
+			</TABLE>
+		</TD>
+  	</TR>
+
+	<TR bgcolor="#FF5100"> 
+		<TD colSpan=4 align=right height=27><span class="topmenu">
+
+					[<FONT size=2 color=black><B>Home</B></FONT>]
+
+					[<A href="/concert/" target=_top>콘서트</A>]
+
+					[<A href="/art/" target=_top>아트</A>]
+
+					[<A href="/family/" target=_top>패밀리 & 이벤트</A>]
+
+					[<A href="../community/index.html" target=_top>OT-커뮤니티</A>]
+
+					[<A href="../member/index.html" target=_top>회원메뉴</A>]
+
+					[<A href="../goods/list.asp?idd=1" target=_top>Shop</A>]
+
+					[<A href="../contact/index.html" target=_top>Contact Us</A>]
+
+		/
+		
+		guest(손님)
+
+		[<A href='../member/loginForm.asp'>Log-in</A>]
+
+		</span></TD>
+  	</TR>
+</TABLE>
+<!--///////////////////////////////////////
+	MainMenus 끝
+	///////////////////////////////////////-->
+	
+	
+
+	</TD></TR>
+
+	<TR>
+		<TD valign=top width=100% align=left>
+<!--///////////////////////////////////////
+	SubMenus 시작
+	///////////////////////////////////////-->
+<TABLE border=0 cellpadding=0 cellspacing=2 width=100%>
+	<TR><TD align=right><FONT size=2>
+
+		[<A href="../home/index.html">시작화면</A>]
+
+		[<A href="../home/schedule.asp">공연일정</A>]
+
+		[<A href="../home/searchForm.asp">정보검색</A>]
+
+		[<A href="../home/help.asp">이용안내</A>]
+
+	</TD></TR>
+</TABLE>
+<!--///////////////////////////////////////
+	SubMenus 끝
+	///////////////////////////////////////-->
+
+			<!----- 본문 시작 ------>
+<BR>
+<TABLE width=95% cellpadding=1 cellspacing=1 border=0 align=center>
+	<TR>
+		<TD colSpan=7 bgColor=white>
+
+		</TD>
+	</TR>
+	
+	<TR>
+		<TD rowSpan=7 width=150 valign=top>
+
+<TABLE border=0 width=130 cellpadding=1 cellspacing=1>
+	<TR>
+		<TD bgColor='#3465c2' colSpan=2>
+			<A href="/event/list.asp?cid=28&c=c%2EparentNode%3D28&v=1"><FONT size=2 color=white><B>Concerts</B></FONT></A>
+		</TD>
+	</TR>
+	<TR>
+		<TD>&nbsp;</TD>
+		<TD align=left>
+
+			<IMG src="../home/images/dot1.gif" border=0 ALT="" HSPACE=5><A href="/event/list.asp?c=e%2EcategoryId%3D43&cid=28&v=1">댄스/발라드</A><BR>
+
+			<IMG src="../home/images/dot1.gif" border=0 ALT="" HSPACE=5><A href="/event/list.asp?c=e%2EcategoryId%3D44&cid=28&v=1">락/포크</A><BR>
+
+			<IMG src="../home/images/dot1.gif" border=0 ALT="" HSPACE=5><A href="/event/list.asp?c=e%2EcategoryId%3D45&cid=28&v=1">재즈/R&B</A><BR>
+
+			<IMG src="../home/images/dot1.gif" border=0 ALT="" HSPACE=5><A href="/event/list.asp?c=e%2EcategoryId%3D61&cid=28&v=1">개그콘서트</A><BR>
+
+			<IMG src="../home/images/dot1.gif" border=0 ALT="" HSPACE=5><A href="/event/list.asp?c=e%2EcategoryId%3D57&cid=28&v=1">Pops/내한공연</A><BR>
+
+			<IMG src="../home/images/dot1.gif" border=0 ALT="" HSPACE=5><A href="/event/list.asp?c=e%2EcategoryId%3D46&cid=28&v=1">올드 가요</A><BR>
+
+		</TD>
+	</TR>
+	<TR>
+		<TD bgColor=#3465c2 colSpan=2 height=1></TD>
+	</TR>
+
+	<TR><TD colSpan=2>&nbsp;</TD></TR>
+
+	<TR>
+		<TD bgColor=#3465c2 colSpan=2>
+			<A href="/event/list.asp?cid=30&c=c%2EparentNode%3D30&v=1"><FONT size=2 color=white><B>Arts</B></FONT></A>
+		</TD>
+	</TR>
+	<TR>
+		<TD>&nbsp;</TD>
+		<TD align=left>
+
+			<IMG src="../home/images/dot2.gif" border=0 ALT="" HSPACE=5><A href="/event/list.asp?c=e%2EcategoryId%3D52&cid=30&v=1">클래식/오페라</A><BR>
+
+			<IMG src="../home/images/dot2.gif" border=0 ALT="" HSPACE=5><A href="/event/list.asp?c=e%2EcategoryId%3D34&cid=30&v=1">연극/뮤지컬</A><BR>
+
+			<IMG src="../home/images/dot2.gif" border=0 ALT="" HSPACE=5><A href="/event/list.asp?c=e%2EcategoryId%3D33&cid=30&v=1">영화</A><BR>
+
+			<IMG src="../home/images/dot2.gif" border=0 ALT="" HSPACE=5><A href="/event/list.asp?c=e%2EcategoryId%3D32&cid=30&v=1">무용/발레</A><BR>
+
+			<IMG src="../home/images/dot2.gif" border=0 ALT="" HSPACE=5><A href="/event/list.asp?c=e%2EcategoryId%3D35&cid=30&v=1">전통음악</A><BR>
+
+			<IMG src="../home/images/dot2.gif" border=0 ALT="" HSPACE=5><A href="/event/list.asp?c=e%2EcategoryId%3D36&cid=30&v=1">미술/박물관</A><BR>
+
+		</TD>
+	</TR>
+	<TR>
+		<TD bgColor=#3465c2 colSpan=2 height=1></TD>
+	</TR>
+
+	<TR><TD colSpan=2>&nbsp;</TD></TR>
+
+	<TR>
+		<TD bgColor=#3465c2 colSpan=2>
+			<A href="/event/list.asp?cid=29&c=c%2EparentNode%3D29&v=1"><FONT size=2 color=white><B>Family & Events</B></FONT></A>
+		</TD>
+	</TR>
+	<TR>
+		<TD>&nbsp;</TD>
+		<TD align=left>
+
+			<IMG src="../home/images/dot3.gif" border=0 ALT="" HSPACE=5><A href="/event/list.asp?c=e%2EcategoryId%3D66&cid=29&v=1">자동차전용극장</A><BR>
+
+			<IMG src="../home/images/dot3.gif" border=0 ALT="" HSPACE=5><A href="/event/list.asp?c=e%2EcategoryId%3D37&cid=29&v=1">라이브클럽</A><BR>
+
+			<IMG src="../home/images/dot3.gif" border=0 ALT="" HSPACE=5><A href="/event/list.asp?c=e%2EcategoryId%3D39&cid=29&v=1">전시/축제</A><BR>
+
+			<IMG src="../home/images/dot3.gif" border=0 ALT="" HSPACE=5><A href="/event/list.asp?c=e%2EcategoryId%3D62&cid=29&v=1">어린이/가족</A><BR>
+
+			<IMG src="../home/images/dot3.gif" border=0 ALT="" HSPACE=5><A href="/event/list.asp?c=e%2EcategoryId%3D64&cid=29&v=1">기타 이벤트</A><BR>
+
+		</TD>
+	</TR>
+	<TR>
+		<TD bgColor=#3465c2 colSpan=2 height=1></TD>
+		
+	</TR>
+	
+</TABLE>
+
+		</TD>
+		
+		<TD rowSpan=7 width=10>&nbsp;</TD>
+
+		<TD rowSpan=7 width=1 bgColor=#3465c2></TD>
+		
+		<TD rowSpan=7 width=10>&nbsp;</TD>
+		
+		<TD bgColor=#3465c2 colSpan=2><FONT size=2 color=white><B>&nbsp;젊은 문화축제 2000 場</TD>
+	</TR>
+	
+	<TR>
+		<!--TD valign=top><IMG src='jpg' width=200></TD-->
+
+		<TD valign=top><IMG src="../dbimages/events/1299.jpg" width=200 border=1></TD>
+		<TD width=100% valign=top><FONT size=2>
+
+			<BR>
+			<LI>공연명 : 젊은 문화축제 2000 場
+			<LI>분류 : 전시/축제
+			<LI>행사일시 : 2000-06-24 ~ 2000-07-01<BR>
+			<LI>개최장소 : 예술의 전당 자유소극장 (서울)
+			<BR>
+			<LI>행사 Homepage : <A href='http://' target='_blank'>http://</A>
+     			<LI><B><A href='/ticket/list.asp?c=eventId%3D1299'>젊은 문화축제 2000 場 티켓팅</A>(<FONT color=red>*</FONT>)</B>
+
+			
+			<BR>
+			<BR>
+			 
+
+			<BR>
+			<BR>
+            			출연 : 김은희,김명미,최수진,채송화,황현정,유홍영 외			<BR>
+			<BR>
+		</TD>
+	</TR>
+
+	<TR><TD bgColor=#3465c2 colSpan=2 height=1></TD></TR>
+
+	<TR><TD colSpan=2 bgcolor=#f0f0f0 align=right><FONT size=2>
+		[<A href='/place/detail.asp?pid=24'>예술의 전당 자유소극장 정보</A>]
+
+		[<A href='/ticket/list.asp?c=eventId%3D1299&cid=39'>젊은 문화축제 2000 場 티켓팅</A>]
+
+		[<A href='/goods/list.asp?c=g%2EcategoryId%3D39'>전시/축제 관련상품</A>]
+		[<A href='list.asp'>공연목록</A>]
+	</TD></TR>
+
+	<TR><TD bgColor=#3465c2 colSpan=2 height=1></TD></TR>
+
+	<TR><TD colSpan=2><FONT size=2>
+		<BR>
+		<table border cellspacing="0" bordercolor="#D8AD2D">
+    <tr>
+        <td width="126" bgcolor="#FCEFC0"><p align="center" style="line-height:120%;"><font
+             face="굴림체" size="2"><b>행 사 명</b></font></td>
+        <td width="497"><p style="line-height:120%;"><font face="굴림체" size="2"><b>&nbsp;젊은 
+            문화축제 2000 場</b></font></td>
+    </tr>
+    <tr>
+        <td width="126" height="13" bgcolor="#FCEFC0"><p align="center" style="line-height:120%;"><font
+             face="굴림체" size="2"><b>행사일시</b></font></td>
+        <td width="497" height="13"><p style="line-height:120%;"><font face="굴림체"
+             size="2"><b>&nbsp;2000년 6월 24일(토) ~ 7월 1일(토) <br>
+            &nbsp;평일 7시 30분/ 토요일 7시 / 일요일 4시</b></font></td>
+    </tr>
+    <tr>
+        <td width="126" height="16" bgcolor="#FCEFC0"><p align="center" style="line-height:120%;"><font
+             face="굴림체" size="2"><b>행 사 장</b></font></td>
+        <td width="497" height="16"><p style="line-height:120%;"><font face="굴림체"
+             size="2"><b>&nbsp;예술의 전당 자유소극장</b></font></td>
+    </tr>
+    <tr>
+        <td width="126" bgcolor="#FCEFC0"><p align="center" style="line-height:120%;"><font
+             face="굴림체" size="2"><b>입 장 권</b></font></td>
+        <td width="497"><p style="line-height:120%;"><font face="굴림체" size="2"><b>&nbsp;일반 
+            - 15,000원 / 학생 - 12,000원 <br>
+            &nbsp;오케이티켓 회원 (일반 - 12,000원 / 학생 - 10,000원)&nbsp;&nbsp;</b></font></td>
+    </tr>
+    <tr>
+        <td width="126" bgcolor="#FCEFC0"><p align="center" style="line-height:120%;"><font
+             face="굴림체" size="2"><b>문&nbsp;&nbsp;&nbsp;&nbsp;의</b></font></td>
+        <td width="497"><p>&nbsp;<font face="굴림체" size="2"><b>문화축제 場 
+            (02)743-1683</b></font><font size="2"><b> </b></font></td>
+    </tr>
+</table>
+<p align="left"><font size="2"><br> 각 분야에서 두각을 나타내는 차세대 공연예술인들이 
+장르를 초월해 한무대에서 공연하는 <문화축제 2000 징(場)>이 24일부터 7월 
+1일까지 예술의 전당 자유소극장에서 펼쳐진다. &nbsp;올해로 4회째를 맞는 <문화축제장>은 
+다른 장르와의 교류를 통해 각 장르의 장점을 모으고 다양한 표현을 통해 자기 장르를 
+발전시켜 나가자는 취지에서 시작된 행사다. &nbsp;마임, 현대무용, 바디페인팅, 
+퍼포먼스, 실험극 등 다양한 분야의 전위적인 공연이 한무대에 오른다. &nbsp;<br>
+<br></font>
+<table border cellspacing="0" bgcolor="#FFF8DE" bordercolor="white">
+    <tr>
+        <td width="620" height="30"><p><font size="2">&nbsp;</font><font size="2"><b>&nbsp;&nbsp;공연 
+            프로그램</b></font></td>
+    </tr>
+</table>
+<p align="left"><font size="2"><br></font>
+<div align="center"><table border="0" cellpadding="5" width="95%">
+    <tr>
+        <td width="68" height="80" rowspan="3" bgcolor="teal" bordercolor="white"><p><font
+             size="2" color="white"><b>6월 24일<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;~<br>
+            6월 26일</b></font></td>
+        <td width="180" height="80" bgcolor="#FFF2D5" bordercolor="white"><p><font
+             size="2">▶ 연극 <보이첵 Woyzeck><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;움직임연구소</font></td>
+        <td width="770" height="80"><p><font size="2" color="teal"><b><br>
+            -연출 / 임도완 <br>
+            -출연 / 움직임 연구소 단원 10여명 <br>
+            -작품의도</b></font><font size="2"><br>
+            보이체크, 이 인물은 현 시대를 살아가는 우리들에게 있어 부자이든 
+            가난하든 간에 타인이 아닌 바로 우리이다. 이제 이 시대에 있어 우린 
+            무엇에 의해 이끌리고 조정당하는가? &nbsp;자기 주위의 힘에 눌리고 
+            환청과 환상을 보는, 자기 의지가 아닌 외부의 힘에 의해 분해되어 가는 
+            보이체크와는 달리 우린, 아닌 인간은 자기가 만들어 놓은 문명의 이기 
+            속에 자멸해 간다. &nbsp;그것은 또 다른 의미의 불쌍한(그것도 모르는) 
+            보이체크의 완결편을 예고한다. &nbsp;그 누가 나는 보이체크가 아니라고 
+            말하겠는가? &nbsp;그 누가 위에 군림하고 밑에 지배당하는가? &nbsp;현실 
+            속에 보여지는 상하의 계열은 그것의 의미를 잃은지 오래다. &nbsp;그저 
+            우린 이제 우리가 만든 바보같은 기계상자와 바보같은 규칙 속에 새로운 
+            또 하나의 보이체크인 것이다.&nbsp;&nbsp;&nbsp; </font></td>
+    </tr>
+    <tr>
+        <td width="180" height="94" bgcolor="#FFF2D5" bordercolor="white"><p><font
+             size="2">▶ 댄스 & 바디페인팅<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<꿈의 해석 espoir></font></td>
+        <td width="770" height="94"><p><font size="2"><br>
+            </font><font size="2" color="teal"><b>-안 &nbsp;무 / 김기석 <br>
+            -바디페인팅 / 채송화 외 7명<br>
+            -출 &nbsp;&nbsp;연 &nbsp;/ 황현정 외 4명 <br>
+            -작품의도 </b></font><font size="2"><br>
+            이 작업은 두가지 다른 장르에 합쳐진 작업을 통해서 하나의 독립된 
+            장르에서는 볼 수 없었던 또 다른 공연 형태를 관객들에게 보여주는데 
+            의미가 있다고 할 수 있다. 색채와 움직임의 공간을 창조하는 작업을 
+            통해 더욱 새로운 무대를 보여 주는 기회이다. </font></td>
+    </tr>
+    <tr>
+        <td width="180" height="93" bgcolor="#FFF2D5" bordercolor="white"><p><font
+             size="2">▶ 동랑댄스 앙상블<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<타잔></font></td>
+        <td width="770" height="93"><p><font size="2" color="teal"><b><br>
+            -예술감독/ 박일규<br>
+            -출 &nbsp;&nbsp;&nbsp;연 / 김명미, 최수진, 구호, 염규섭, 김현진, 
+            이석용, 서현수, 이주형, 김미정, 김명제 외<br>
+            -작품 이야기 </b></font><font size="2"><br>
+            표범에게 잡아먹힐 뻔한 어린아이를 칼라가 구출하게 되면서 시작된다. 
+            &nbsp;구사일생으로 구출한 어린아이를 칼라는 친아들처럼 돌보지만 
+            엄격한 지도자인 남편 커잭은 타잔을 아들로써 인정하지 않는다. &nbsp;자신의 
+            눈이며 코며 모두 나와 닮았다는 칼라에게서 자신과의 전혀 다른 손을 
+            발견하고 슬픔에 빠지지만 따뜻한 칼라의 보살핌과 밀림의 친구들을 
+            통해 고릴라 속에 또다른 고릴라로 자라나는데....</font></td>
+    </tr>
+    <tr>
+        <td width="68" height="71" rowspan="3" bgcolor="teal" bordercolor="white"><p><font
+             size="2" color="white"><b>6월 29일<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;~<br>
+            7월 1일</b></font></td>
+        <td width="180" height="71" bgcolor="#FFF2D5" bordercolor="white"><p><font
+             size="2">▶ <간극(間隙)><br> &nbsp;&nbsp;&nbsp;&nbsp;극단 
+            목토 퍼포먼스 그룹</font></td>
+        <td width="770" height="71"><p><font size="2"><b><br>
+            </b></font><font size="2" color="teal"><b>-연출, 구성 / 이영란 <br>
+            -영상 연출 / 임왕태<br>
+            -출 &nbsp;&nbsp;&nbsp;&nbsp;연 / 극단 목토 퍼포먼스 그룹 단원들 
+            <br>
+            -작품의도 </b></font><font size="2"><br>
+            21세기는 시간, 공간, 언어를 초월한 개인 중심의 미디어 등장을 예고한다. 
+            &nbsp;이미 일상화된 인터넷과 그외의 테크놀러지들은 현실과 가상현실사이의 
+            경계를 넘나드는 새로운 지각환경을 제공하고 있다. 어쩌면 우린 이제 
+            과거에 허상이라고 여기던 것을 실상으로 인식하고 익숙한 허상을 보며, 
+            그것을 더욱 자연스럽다고 생각할런지도 모른다. &nbsp;무대바닥의 영상이미지와 
+            살아있는 실체, 그리고 그 실체의 변조, 왜곡된 영상사이의 간극. &nbsp;바닥, 
+            또는 벽의 영상, 그리고 실체의 움직임과 소리가 다양한 변수의 대입으로 
+            그들의 interplay는 나름대로의 드라마를 엮는다. &nbsp;바닥, 또는 
+            벽의 수평적 영상이 형성하는 평면성과 실제의 수직적인 존재감이 직각으로 
+            교차하는 가운데 2차원과 3차원적 공간의 틈새는 그래서 가장 잘 살아있다. 
+            환영과 실제를 조화시키고 역으로 뒤집고, 확장, 증폭시키는 그 간극의 
+            언어는 무한한 변수를 끊임없이 낳는 필연적인 우연의 언어이다.</font></td>
+    </tr>
+    <tr>
+        <td width="180" height="60" bgcolor="#FFF2D5" bordercolor="white"><p><font
+             size="2">▶ <가면ㆍ몸ㆍ마임-기도><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;유홍영</font><a name="top"><font size="2"> 
+            </font></a></td>
+        <td width="770" height="60"><p><font size="2"><br>
+            </font><font size="2" color="teal"><b>-연 &nbsp;&nbsp;출 : 유홍영 
+            &nbsp;<br>
+            -음 &nbsp;&nbsp;악 : 채희준 &nbsp;<br>
+            -출 &nbsp;&nbsp;연 : 유홍영, 김희연, 구현후<br>
+            -작품의도 </b></font><font size="2"><br>
+            정지된 표정, 무표정의 가면이 신체의 각 부위와 만나 살아있는 얼굴이 
+            된다. &nbsp;몸과 가면이 만나 또 하나의 생명이 되어 피어 난다. &nbsp;마임과 
+            오브제의 독특한 만남, 움직임의 변용. </font></td>
+    </tr>
+    <tr>
+        <td width="180" height="80" bgcolor="#FFF2D5" bordercolor="white"><p><font
+             size="2">▶ <두 번째 넘보라살><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;김은희</font></td>
+        <td width="770" height="80"><p><font size="2" color="teal"><b><br>
+            -안무/ 출연 : 김은희 &nbsp;&nbsp;<br>
+            - 작품내용</b></font><font size="2"><br>
+            그녀의 &nbsp;흐느낌이 자신들의 삶을 충족하고자 하는 그들의 불순함에 
+            있어 그 어떤 사랑이란 이데올로기로도 설명이 되지 않는다. &nbsp;그 
+            불순함이 싫다. &nbsp;심장과 폐를 뜯어가는 그들의 몰염치함이, 또 
+            내일이면 잊혀지고 말<br>
+            더 큰 희생을 요구하고 있음을 아는 것이 싫다.</font></td>
+    </tr>
+</table></div>
+<BR>
+		<BR>
+	</TD></TR>
+</TABLE>
+<BR>
+		<center><img src=../banner.gif border=0></center><br>		
+			<!----- 본문 끝 -------->	
+<!--///////////////////////////////////////
+	Footer 시작
+	///////////////////////////////////////-->
+
+<DIV align=center><FONT size=2 face=arial>
+	Copyright &copy; 2000 <a href=mailto:webmaster@okticket.com>okticket.com</a>, corporation.<BR>
+	서울시 서초구 서초동 1451-1 원일빌딩 501호 tel: 525-6591<BR>
+	All rights reserved.<BR>
+	<BR>
+</DIV>
+<!--///////////////////////////////////////
+	Footer 끝
+	///////////////////////////////////////-->
+</td>
+</tr>
+</table>
+		</TD>
+	</TR>
+</TABLE>
+
+</BODY>
+
+</HTML>

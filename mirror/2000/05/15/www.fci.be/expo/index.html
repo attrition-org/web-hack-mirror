@@ -1,0 +1,195 @@
+
+<html>
+
+	<head>
+		<title>FCI schedules</title>
+		<script language="JavaScript"><!--
+function jumpBox(list) {
+        parent.bottom.location.href =list.options[list.selectedIndex].value}
+// -->
+		</script>
+		<script language="JavaScript" cyberversion="N1.2"><!--
+<!-- // hide from older project
+
+// (c) copyright 1998 by tmk <tmk@dad.be>
+
+//  we pre-load our images		
+	
+if (document.images) { // we screen out imcompatible JS implementations
+
+	screen1 = new Image();
+	screen1.src = "../images/europe.gif";
+
+	screen2 = new Image(); 
+	screen2.src = "../images/asia.gif";
+
+	screen3 = new Image(); 
+	screen3.src = "../images/sca.gif";
+	
+	screen4 = new Image(); 
+	screen4.src = "../images/ocean.gif";
+	
+	screen5 = new Image(); 
+	screen5.src = "../images/afri.gif";
+
+ 
+
+	
+	
+}
+
+
+function rollOver (img){
+	if (document.images) {
+    		document.images.change.src =img;
+    	}
+}
+
+function reset () {
+	if (document.images)  {      
+   		document.images.change.src = '../images/continen.gif';  
+   		}
+}
+// -->
+		</script>
+	</head>
+
+	<body bgcolor="white">
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td align="left" width="100"><img src="images/calen2.gif" width="62" height="48"></td>
+				<td width="2"></td>
+				<td width="13"></td>
+				<td></td>
+				<td width="13"></td>
+			</tr>
+			<tr height="25">
+				<td height="25" width="100"></td>
+				<td width="2" height="25"></td>
+				<td width="13" height="25" align="left" valign="top" bgcolor="#336699"><img src="../images/subtit_l.gif" width="13" height="17"></td>
+				<td bgcolor="#336699" height="25" align="center" valign="top"><img src="../images/tit_cale.gif" width="341" height="25"></td>
+				<td width="13" height="25" valign="bottom"></td>
+			</tr>
+			<tr height="2">
+				<td height="2" colspan="5" bgcolor="#110000"><img src="../images/black.gif" width="1" height="1"></td>
+			</tr>
+			<tr>
+				<td align="center" valign="top" width="100"><font face="Verdana,Arial,Helvetica" size="1">Select a country<br>
+					</font>
+					
+
+<form id="form1" name="form1" action="liste.asp">
+<select NAME="p">
+
+<option value="21">Argentina
+<option value="77">Australia
+<option value="1">Austria
+<option value="69">Bahrain
+<option value="2">Belgium
+<option value="43">Bielorussia
+<option value="59">Bolivia
+<option value="25">Brazil
+<option value="37">Bulgaria
+<option value="27">Chile
+<option value="50">Colombia
+<option value="26">Costa Rica
+<option value="28">Croatia
+<option value="60">Cuba
+<option value="38">Cyprus
+<option value="3">Czechia
+<option value="4">Denmark
+<option value="51">Ecuador
+<option value="23">El Salvador
+<option value="5">Estonia
+<option value="6">Finland
+<option value="7">France
+<option value="44">Georgia
+<option value="8">Germany
+<option value="39">Gibraltar
+<option value="9">Greece
+<option value="22">Guatemala
+<option value="61">Honduras
+<option value="70">Hong-Kong
+<option value="10">Hungary
+<option value="11">Iceland
+<option value="65">India
+<option value="71">Indonesia
+<option value="40">Ireland
+<option value="32">Israel
+<option value="16">Italy
+<option value="66">Japan
+<option value="79">Kazakstan
+<option value="12">Latvia (Lettonie)
+<option value="45">Lithuania
+<option value="13">Luxemburg
+<option value="46">Macedonia
+<option value="72">Malaysia
+<option value="90">Malta
+<option value="24">Mexico
+<option value="92">Moldavia
+<option value="34">Monaco
+<option value="33">Morocco
+<option value="14">Netherlands
+<option value="78">New-Zealand
+<option value="62">Nicaragua
+<option value="15">Norway
+<option value="52">Panama
+<option value="53">Paraguay
+<option value="54">Peru
+<option value="67">Philippines
+<option value="17">Poland
+<option value="35">Portugal
+<option value="55">Puerto Rico
+<option value="56">Rep. Dominicana
+<option value="41">Romania
+<option value="47">Russia
+<option value="42">San Marino
+<option value="73">Singapore
+<option value="18">Slovakia
+<option value="36">Slovenia
+<option value="75">South Africa
+<option value="63">South Korea
+<option value="29">Spain
+<option value="74">Sri Lanka
+<option value="19">Sweden
+<option value="20">Switzerland
+<option value="68">Taiwan
+<option value="81">Thailand
+<option value="48">Ukraine
+<option value="57">Uruguay
+<option value="58">Venezuela
+<option value="49">Yougoslavia
+<option value="76">Zimbabwe
+</select>
+<input type="SUBMIT" value="Go">
+</form>
+
+
+
+</td>
+<td width="2" bgcolor="#110000"><img src="../images/black.gif" width="1" height="1"></td>
+<td width="13"></td>
+<td align="center"><font face="Verdana,Arial,Helvetica" size="1">Select a continent <br>
+</font>
+<img src="../images/worldmap.gif" width="420" height="260" border="0" usemap="#worldmap"><map name="worldmap">
+<area coords="13,14,130,125" shape="rect" href="liste.asp?c=northam" onmouseover="rollOver ('images/map_nort.gif')" onmouseout="reset ()">
+<area coords="327,183,411,248" shape="rect" href="liste.asp?c=oceania" onmouseover="rollOver ('images/map_ocea.gif')" onmouseout="reset ()">
+<area coords="158,107,239,220" shape="rect" href="liste.asp?c=africa" onmouseover="rollOver ('images/map_afri.gif')" onmouseout="reset ()">
+<area coords="249,95,408,180" shape="rect" href="liste.asp?c=asia" onmouseover="rollOver ('images/map_asia.gif')" onmouseout="reset ()">
+<area coords="137,17,407,89" shape="rect" href="liste.asp?c=europe" onmouseover="rollOver ('images/map_euro.gif')" onmouseout="reset ()">
+<area coords="47,138,155,248" shape="rect" href="liste.asp?c=lac" onmouseover="rollOver ('images/map_lac.gif')" onmouseout="reset ()">
+</map>
+<br>
+<img src="images/continen.gif" name="change" WIDTH="229" HEIGHT="30"> <br>
+<hr noshade size="2" width="80%">
+</td>
+<td width="13"></td>
+</tr>
+</table>
+</form>
+		
+
+</body>
+
+
+</html>

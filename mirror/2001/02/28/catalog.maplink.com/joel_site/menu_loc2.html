@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <title>Map Link</title>
+<SCRIPT LANGUAGE = "JavaScript">
+
+
+      <!--
+      conBrowser=0;
+      function display (stuff) { window.status = stuff; }  
+      //-->
+</SCRIPT>
+
+<SCRIPT LANGUAGE = "JavaScript1.1">
+
+         <!--    
+         conBrowser=1;
+		 button3_on  = new Image(110,22); button3_on.src  = 'images/mapbookb.gif';
+		 button3_off = new Image(110,22); button3_off.src = 'images/mapbook.gif';
+		 button4_on  = new Image(110,22); button4_on.src  = 'images/usgsb.gif';
+		 button4_off = new Image(110,22); button4_off.src = 'images/usgs.gif';
+		 button5_on  = new Image(110,22); button5_on.src  = 'images/globesb.gif';
+         button5_off = new Image(110,22); button5_off.src = 'images/globes.gif';
+		 button6_on  = new Image(110,22); button6_on.src  = 'images/needb.gif';
+         button6_off = new Image(110,22); button6_off.src = 'images/need.gif';
+		 button7_on  = new Image(110,22); button7_on.src  = 'images/fedxb.gif';
+         button7_off = new Image(110,22); button7_off.src = 'images/fedx.gif';
+		 button8_on  = new Image(110,22); button8_on.src  = 'images/customerb.gif';
+         button8_off = new Image(110,22); button8_off.src = 'images/customer.gif';
+		  //-->
+		 
+</SCRIPT>
+
+<SCRIPT LANGUAGE = "JavaScript">
+        <!--  
+        function HighLight(button_num) {
+              if (conBrowser) 
+              {
+               button_navn = eval(button_num + "_on");
+               document [button_num].src = button_navn.src;
+                }
+        }
+
+       function UndoHighLight(button_num) {
+        if (conBrowser) {
+                button_navn = eval(button_num + "_off");
+                document [button_num].src = button_navn.src;
+                }
+        }
+       //-->
+
+
+</SCRIPT>
+
+</head>
+
+<script language="JavaScript1.2">
+<!--
+var newWindow
+
+function FedExWin()
+{
+    if (!newWindow || newWindow.closed)
+    {
+		newWindow = window.open("http://catalog.maplink.com/scripts/wsisa.dll/WService=MLIntra/pubrates.html", "NWINDOW" ,"DEPENDENT,RESIZABLE,STATUS,SCROLLBARS,MENUBAR,TOOLBAR,HEIGHT=347,WIDTH=500,TOP=30")
+		newWindow.focus()
+		
+		if (!newWindow.opener)
+		{
+			newWindow.opener = window
+			newWindow.focus()
+		}
+    }
+    else
+    {
+        newWindow.location = "http://catalog.maplink.com/scripts/wsisa.dll/WService=MLIntra/pubrates.html"
+        newWindow.focus()
+    }	
+}
+//-->
+</script>
+<body link="#0c3f7f" alink="#990000" bgcolor="#596db8" border="0" leftmargin="8">
+
+<table cellpadding="0" cellspacing="0" align="center">
+    <tr valign="top">
+        <td width ="16">
+		    <img src="images/filler.gif" width="16"><br>
+		</td> 
+		 <td valign="center" align="center" width="154">
+            <!--the ml tool bar-->
+	                  
+          <!--<img src="images/filler.gif" height="5"><br>-->
+          <h5 align="center">SEARCH</h5>
+		  			
+          <A HREF="http://catalog.maplink.com/genindex2.html" target="SiteLoc" onMouseover="HighLight('button3'); display('USGS'); return true;" onMouseout="UndoHighLight('button3'); display('');">
+		       		<img src="images/mapbook.gif" border=0 name="button3" width="110" height="22" alt="MAPS & BOOKS"></a><BR>
+		  <A HREF="http://catalog.maplink.com/topoindex.html" target="SiteLoc" onMouseover="HighLight('button4'); display('USGS'); return true;" onMouseout="UndoHighLight('button4'); display('');">
+                    <img src="images/usgs.gif" border=0 name="button4" width="110" height="22" alt="USGS"></a><BR> 	
+		  <A HREF="http://catalog.maplink.com/scripts/wsisa.dll/WService=MapLinkTest/globes2.r" target="MainCol" onMouseover="HighLight('button5'); display('Questions'); return true;" onMouseout="UndoHighLight('button5'); display('');">
+                    <img src="images/globes.gif" border=0 name="button5" width="110" height="22" alt="GLOBES"></a><BR>	
+		  <A HREF="http://catalog.maplink.com/joel_site/main_help.html" target="MainCol" onMouseover="HighLight('button6'); display('Questions'); return true;" onMouseout="UndoHighLight('button6'); display('');">
+                    <img src="images/need.gif" border=0 name="button6" width="110" height="22" alt="SEARCH HELP"></a><BR><br><br>			
+			
+		  <A HREF="javascript:window.FedExWin()" onMouseover="HighLight('button7'); display('FedEx Rates'); return true;" onMouseout="UndoHighLight('button7'); display('');">
+                    <img src="images/fedx.gif" border=0 name="button7" width="110" height="22" alt="FEDEX RATES"></a><br><br>
+		  <A HREF="http://catalog.maplink.com/scripts/wsisa.dll/WService=MLIntra/askpass.r" target="MainCol" onMouseover="HighLight('button8'); display('Customer Center'); return true;" onMouseout="UndoHighLight('button8'); display('');">
+                    <img src="images/customer.gif" border=0 name="button8" width="110" height="22" alt="CUSTOMER CENTER"></a					
+		  		  
+		 </td>
+                         
+     </tr>
+		             
+</table>  
+
+</body>
+</html>

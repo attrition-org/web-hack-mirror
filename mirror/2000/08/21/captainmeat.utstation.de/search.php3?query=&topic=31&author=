@@ -1,0 +1,132 @@
+<html><html>
+<head>
+<title>CaptainMeats Demozone - CaptainMeats Demozone</title>
+<style rel=stylesheet type=text/css>
+	A:link { font-weight: bold; }
+	A:visited { font-weight: bold; }
+</style>
+</head>
+<body bgcolor="#778899" text="#000000" link="#000000" vlink="#000000" topmargin=5 leftmargin=0 rightmargin=0 marginheight=5>
+
+<table border=0 cellpadding=4 cellspacing=0 width=100% align=center>
+<tr><td bgcolor=778899>
+<table border="0" cellspacing="0" cellpadding="1" width="100%" bgcolor="#000000">
+<tr><td>
+<table border="0" cellspacing="0" cellpadding="3" width="100%" bgcolor="333333">
+<tr><td>
+<a href="index.html"><img src="themes/Default/deflogo.gif" alt="Welcome to CaptainMeats Demozone" border=0></a>
+</td><td align=right>
+<form action="search.php3" method=post><font face=Arial,Helvetica size=2 color="ffffff">
+Search
+<input type=name name=query>
+</form></tr>
+<tr bgcolor="666666"><td colspan=2 bgcolor="666666">
+<font face=Arial,Helvetica size=3 color=CCCCCC>CaptainMeats Demozone</td>
+</td></tr></table>
+</td></tr></table>
+</td></tr><tr><td valign=top width=100% bgcolor=778899>
+<table border=0 cellspacing=0 cellpadding=2 width=100%>
+<tr><td valign=top width=150 bgcolor=778899>
+
+<!-- Blocks Init -->
+
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>Main Menu</td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+<li><a href=index.php3>Home</a>
+<li><a href=topics.php3>Topics</a>
+<li><a href=submit.php3>Submit Demos</a>
+<li><a href=user.php3>Your Account</a>
+<li><a href=stats.php3>Stats</a>
+<li><a href=top.php3>Top 10</a>
+<li><a href=faq.php3>FAQ</a></td></tr></table></td></tr></table><br>
+
+<!-- Because this is the DEFAULT theme, so print the user login block -->
+
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>CaptainMeats Demozone Login
+</td></tr><tr><td bgcolor=FFFFFF>
+<font face=Arial,Helvetica size=2>
+<form action="/user.php3" method="post">
+Nickname: <input type="text" name="uname" size=12 maxlength=25><br>
+Password: <input type="password" name="pass" size=12 maxlength=20><br>
+<center><input type="submit" name="op" value="login"></form>
+<a href=user.php3>Create Account</a>
+</center></td></tr></table></td></tr></table><br>
+
+<!-- Show Left Blocks -->
+
+
+
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>My UT Clans</td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+<center>
+<a href=http://rod.gnw.de>Clan [RoD] - CTF</a>
+<a href=http://www.ocrana.de><img src=http://www.ocrana.de/memberstuff_public/bull/images/ocrana_banner_small.gif></a>
+</center></td></tr></table></td></tr></table><br>
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>UT Links</td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+<li><a href=http://www.utstation.de>UT Station</a>
+<li><a href=http://www.ut-web.de>UT Web</a>
+<li><a href=http://www.gxp.de>gXp</a>
+<li><a href=http://www.planetunreal.de>Planet Unreal</a></td></tr></table></td></tr></table><br>
+
+
+
+<img src=images/pix.gif border=0 width=150 height=1>
+</td><td width=100% valign=top><table border=0 width=100% bgcolor=000000 cellpadding=2 cellspacing=0><tr><td><table border=0 width=100% bgcolor=#CCCCCC cellpadding=5 cellspacing=0><tr><td><center><font size=4 Face=Arial,Helvetica><b>Search in UT 1on1</b></center><br>                <TABLE WIDTH=100% BORDER=0>
+                <TR><TD>
+		<img src=images/topics/1on1.jpg align=right border=2 Alt="UT 1on1">
+                <form action="/search.php3" method=get>
+                <input size=25 type=name name=query value="">
+		<input type=submit value="Search"><br>
+                <!-- Topic Selection -->
+		<SELECT NAME="topic"><OPTION VALUE="">All Topics</option>
+<option  value="10">PHP-Nuke</option>
+<option selected  value="31">UT 1on1</option>
+<option  value="30">UT Assault</option>
+<option  value="32">UT CTF</option>
+<option  value="33">UT Domination</option>
+<option  value="34">UT TeamDeathmatch</option>
+<option  value="35">y0 y0 y0 h1pp15z</option>
+</SELECT><SELECT NAME="author"><OPTION VALUE="">All Authors</option>
+<option value="Aiwa">Aiwa</option>
+<option value="CaptainMeat">CaptainMeat</option>
+<option value="carey">carey</option>
+<option value="Chrizz">Chrizz</option>
+<option value="Earn">Earn</option>
+<option value="Indy">Indy</option>
+<option value="Main Admin">Main Admin</option>
+</SELECT>                <!-- Date Selection -->
+                <select name="days">
+                        <option selected  value=0>All</option>
+                        <option  value=7>1 week</option>
+                        <option  value=14>2 weeks</option>
+                        <option  value=30>1 month</option>
+			<option  value=60>2 months</option>
+                        <option  value=90>3 months</option>
+                </select></form>
+                </TR></TD></TABLE><P><table width=99% cellspacing=0 cellpadding=0 border=0>
+<tr><td><font face=Arial,Helvetica size=3><a href="article.php3?sid=26"><b>Ocranasecret on Memento Mori</b></a> <font face=Arial,Helvetica size=2> by <a href="http://www.captainmeat.de">CaptainMeat</a> on Sunday, August 20th @ 23:39 (<b>0</b>)</td></tr>
+<tr><td><font face=Arial,Helvetica size=3><a href="article.php3?sid=23"><b>Darkbreed 2k demos from [eLD]Kotan (all serverside)</b></a> <font face=Arial,Helvetica size=2> by <a href="">Aiwa</a> on Sunday, August 13th @ 18:26 (<b>0</b>)</td></tr>
+<tr><td><font face=Arial,Helvetica size=3><a href="article.php3?sid=21"><b>§FS§Horny vs. *RoD*CptMeat^eLD</b></a> <font face=Arial,Helvetica size=2> by <a href="http://www.captainmeat.de">captainmeat</a> on Wednesday, August 2nd @ 17:12 (<b>0</b>)</td></tr>
+<tr><td><font face=Arial,Helvetica size=3><a href="article.php3?sid=20"><b>§FS§Horny vs. *RoD*CptMeat^eLD</b></a> <font face=Arial,Helvetica size=2> by <a href="http://www.captainmeat.de">captainmeat</a> on Wednesday, August 2nd @ 17:11 (<b>0</b>)</td></tr>
+<tr><td><font face=Arial,Helvetica size=3><a href="article.php3?sid=9"><b>Chrizz vs CptMeat (Part II)</b></a> <font face=Arial,Helvetica size=2> by <a href="http://www.captainmeat.de">CaptainMeat</a> on Friday, July 14th @ 22:54 (<b>0</b>)</td></tr>
+<tr><td><font face=Arial,Helvetica size=3><a href="article.php3?sid=8"><b>Chrizz vs CptMeat (Part I)</b></a> <font face=Arial,Helvetica size=2> by <a href="http://www.captainmeat.de">CaptainMeat</a> on Friday, July 14th @ 22:53 (<b>0</b>)</td></tr>
+<tr><td><font face=Arial,Helvetica size=3><a href="article.php3?sid=1"><b>Chrizz vs CaptainMeat</b></a> <font face=Arial,Helvetica size=2> by <a href="http://www.captainmeat.de">captainmeat</a> on Wednesday, June 28th @ 14:57 (<b>2</b>)</td></tr>
+</tr></td></table></tr></td></table></tr></td></table>
+
+</td></tr></table>
+</td></tr></table>
+</body></html>
+
+<font face=Arial,Helvetica size=1><center>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>

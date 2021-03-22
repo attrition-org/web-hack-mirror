@@ -1,0 +1,248 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>第 五 篇</TITLE>
+<META NAME="Template" CONTENT="F:\CWORD60\TEMPLATE\manual1.dot">
+</HEAD>
+<BODY LINK="#0000ff">
+
+<FONT FACE="全真中隸書,???" LANG="ZH-TW" SIZE=7><P ALIGN="CENTER">微軟多層式</FONT><FONT SIZE=7>Web</FONT><FONT FACE="全真中隸書,???" LANG="ZH-TW" SIZE=7>架構</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4 COLOR="#0000ff"><P ALIGN="RIGHT">刊登於 微軟之友</FONT><FONT SIZE=4 COLOR="#0000ff"> </FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4 COLOR="#0000ff">冬季號</P>
+<P ALIGN="RIGHT">作者</FONT><FONT SIZE=4 COLOR="#0000ff"> </FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4 COLOR="#0000ff">喬篷科技</FONT><FONT FACE="華康少女文字體W4,???" LANG="ZH-TW" SIZE=4 COLOR="#0000ff"> </FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4 COLOR="#0000ff">周世雄</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>本文重點</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">在前一期中，我們學會了網站資料庫的設計技巧，本期將探討微軟多層式</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>架構，包括微軟的</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>產品與技術、如何製作一個「動態」的網站、何謂「網站</FONT><FONT SIZE=3>3</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>化」（將網站</FONT><FONT SIZE=3>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>化、資料庫化、和元件化）及其好處，並以筆者參予設計的『網站熱門應用精選』軟體，來展示採用微軟多層式</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>架構的好處。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW"><P ALIGN="JUSTIFY"></P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">作者為微軟台北廳研討會講師，著作有網站網頁設計十幾本的電腦書籍，最新力作為「網站熱門應用技術探討</FONT><FONT FACE="標楷體" LANG="ZH-TW">」</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、「微軟熱門Web技術速成班」。現任「喬篷科技」公司總經理，從事</FONT><FONT SIZE=3>Internet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>Intranet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>之</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料庫應用設計、網站網頁規劃架設等服務。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>示範網站</FONT><FONT FACE="華康少女文字體W4,???" LANG="ZH-TW">：</FONT>www.asp.com.tw</P>
+<FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">連絡</FONT><FONT SIZE=3>E-mail</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>：</FONT><FONT SIZE=3>jackchou@tpts5.seed.net.tw</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="全真中隸書,???" LANG="ZH-TW" SIZE=6 COLOR="#ff0000"><P>微軟</FONT><FONT FACE="Arial" SIZE=6 COLOR="#ff0000">Web</FONT><FONT FACE="全真中隸書,???" LANG="ZH-TW" SIZE=6 COLOR="#ff0000">產品與技術有那些呢？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">微軟公司的三層式（</FONT><FONT SIZE=3>3-tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>架構，包括使用者介面層（</FONT><FONT SIZE=3>presentation tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）、商業邏輯層（</FONT><FONT SIZE=3>business logic tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）、和資料服務層（</FONT><FONT SIZE=3>data services tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）。</P>
+<P ALIGN="JUSTIFY">微軟提供的</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>產品與技術，如下：</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>使用者介面層的技術</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">使用者介面層（</FONT><FONT SIZE=3>presentation tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），負責接收使用者的資料輸入，和將結果顯示出來，</FONT><FONT SIZE=3> Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的應用指的使用者介面層就是瀏覽器。</P>
+<P ALIGN="JUSTIFY">於使用者介面層，微軟所提供的</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>產品與技術為：</P>
+
+<UL>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>Microsoft Internet Explorer 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（或以後版本）瀏覽器的「動態</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」（</FONT><FONT SIZE=3>Dynamic HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）。</LI></P></UL>
+
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>商業邏輯層的技術</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">商業邏輯層（</FONT><FONT SIZE=3>business logic tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），作為使用者介面與資料庫的橋樑，負責資料處理、網站伺服器（</FONT><FONT SIZE=3>web server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）等商業法則（</FONT><FONT SIZE=3>business rules</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的工作，譬如使用</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Internet Information Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的網站伺服器，採得</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）撰寫程式，並透過</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Microsoft Transaction Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）管理元件，再透過</FONT><FONT SIZE=3>ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>或</FONT><FONT SIZE=3>OLE DB</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>與各種資料庫相連接。</P>
+<P ALIGN="JUSTIFY">於商業邏輯層，除了</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>網站伺服器外，微軟所提供的</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>產品與技術為：</P>
+
+<UL>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Microsoft Transaction Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）：提供</FONT><FONT SIZE=3>Transaction</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（交易或異動）與元件管理的功能。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>SMTP Service</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>：提供傳送</FONT><FONT SIZE=3>e-mail</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的功能。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>Index Server </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>：提供中文全文檢索的功能。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>Certificate Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>：提供譬如</FONT><FONT SIZE=3>SSL</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>安全傳輸的伺服器認證功能。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>ADO</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>ActiveX Data Object</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）</FONT><FONT SIZE=3>/ RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Remote Data Service</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）：提供資料庫連結的功能。</LI></P></UL>
+
+<P ALIGN="JUSTIFY">以上的功能都包括於</FONT><FONT SIZE=3>Windows NT Option Pack </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的光碟片當中。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>資料服務層的技術</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">資料服務層（</FONT><FONT SIZE=3>data services tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），負責資料庫或訊息的處理，譬如使用</FONT><FONT SIZE=3>SQL Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料庫的預儲程序（</FONT><FONT SIZE=3>stored procedures</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），或使用</FONT><FONT SIZE=3>MSMQ</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>做非同步訊息的處理等。於資料服務層，微軟所提供的</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>產品與技術為：</P>
+
+<UL>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>SQL Server 7.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>：資料庫。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>MSMQ</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Microsoft Message Queue Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）：提供非同步訊息的功能。包括於</FONT><FONT SIZE=3>Windows NT Option Pack </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的光碟片當中。</LI></P></UL>
+
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>相關的</FONT><FONT FACE="Arial" SIZE=5 COLOR="#0000ff">Web</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff">技術</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">於程式開發方面，微軟所提供的</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>產品與技術為：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>開發語言：使用</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）撰寫</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>應用程式，使用</FONT><FONT SIZE=3>Visual Basic</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>或</FONT><FONT SIZE=3>Visual C++</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>等語言來開發元件（</FONT><FONT SIZE=3>component</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）。</LI></P>
+<P ALIGN="JUSTIFY"><LI>開發工具：</FONT><FONT SIZE=3>Visual InterDev 6.0 </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</LI></P></UL>
+
+<P ALIGN="JUSTIFY">於管理方面，微軟所提供的</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>產品與技術為：</P>
+
+<UL>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Internet Information Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）管理：可以使用</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）、</FONT><FONT SIZE=3>WSH</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Windows Scripting Host</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）、</FONT><FONT SIZE=3>Visual Basic</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>等語言，透過程式來管理</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>網站伺服器，譬如新增加一個虛擬目錄等。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Microsoft Transaction Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）管理：可以使用</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>WSH</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>Visual Basic</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>等語言，透過程式來管理</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，譬如新增加一個元件等。</LI></P></UL>
+
+<P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="全真中隸書,???" LANG="ZH-TW" SIZE=6 COLOR="#ff0000"><P>如何製作一個「動態」的網站呢？</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>您的網站還是「靜態」的嗎？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">目前</FONT><FONT SIZE=3>Internet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>上許多的網站，仍然提供「靜態」（</FONT><FONT SIZE=3>static</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的網頁內容。</P>
+<P ALIGN="JUSTIFY">所謂「靜態」，指的就是網站的網頁內容是「固定不變」地。</P>
+<P ALIGN="JUSTIFY">當瀏覽器透過</FONT><FONT SIZE=3>Internet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>HTTP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Hypertext Transport Protocol</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）協定，向網站伺服器（</FONT><FONT SIZE=3>web server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）要求提供網頁的內容時，網站伺服器收到要求後，傳送原已設計好靜態的</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的檔案資料給瀏覽器。</P>
+<P ALIGN="JUSTIFY">「傳統」的網站是屬於「靜態」的，僅僅使用標準的</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼，頂多加上</FONT><FONT SIZE=3>GIF89A</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>格式的圖片，產生幾隻小貓小狗跑來跑去的動畫效果，若要更新網頁的內容，必須手動地來更新其</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的檔案資料。「靜態」網站的一個大缺點就是不容易維護，為了不斷更新網頁內容，必須不斷地製作新的</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>檔案資料。</P>
+<P ALIGN="JUSTIFY">「傳統」的網站伺服器並沒有做甚麼事，僅僅將使用者所要求的</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>檔案，傳送到瀏覽器而已。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>甚麼是「動態的網站」？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">一個「動態」的網站，網站的網頁內容是「動態」地。</P>
+<P ALIGN="JUSTIFY">所謂「動態」的網站，指的是：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>「內容會變」：網頁內容會依照不同時間、不同使用者，而提供不同的網頁內容。</LI></P>
+<P ALIGN="JUSTIFY"><LI>「自動更新」：網頁內容會自動更新。</LI></P>
+<P ALIGN="JUSTIFY"><LI>「互動性」：網頁內容會依照使用者的需要或選擇而改變。</LI></P></UL>
+
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>如何製作一個「動態的網站」？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">將原本「靜態」的網站，變成一個「動態」的網站，方法如下：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>將網站「</FONT><FONT SIZE=3>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>化」：所謂「</FONT><FONT SIZE=3>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>化」，即採用於</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>網站伺服器執行的</FONT><FONT SIZE=3>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼，使用程式控制，「動態」地產生網頁內容。</LI></P>
+<P ALIGN="JUSTIFY"><LI>將網站「資料庫化」：所謂「資料庫化」，即使用資料庫管理整個網站，只要更新資料庫的內容，網站的內容將自動更新。</LI></P>
+<P ALIGN="JUSTIFY"><LI>將網站「元件化」：撰寫元件，採用</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>多層式架構，多人上網共享資源，提供執行效能。</LI></P></UL>
+
+<P ALIGN="JUSTIFY">將網站</FONT><FONT SIZE=3>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>化、資料庫化、和元件化，筆者稱為「網站</FONT><FONT SIZE=3>3</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>化」。</P>
+<P ALIGN="JUSTIFY">將網站</FONT><FONT SIZE=3>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>化、資料庫化、和元件化的好處在那裡？</P>
+<P ALIGN="JUSTIFY">將網站「</FONT><FONT SIZE=3>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>化」的好處，為以程式控制網站、個人化、增加互動性、設計迅速與維護方便。</P>
+<P ALIGN="JUSTIFY">將網站「資料庫化」的好處，為以程式控制網站、網頁自動更新、各種</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料庫應用、直接使用瀏覽器管理與維護。</P>
+<P ALIGN="JUSTIFY">將網站「元件化」的好處，為可以重覆使用、執行速度增快</FONT><FONT SIZE=3>10~30%</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、保護原始碼、多人使用時共享資源。</P>
+<P ALIGN="JUSTIFY">看不懂？別緊張！本文將詳述介紹。</P>
+<P ALIGN="JUSTIFY">另外，可以採用</FONT><FONT SIZE=3>4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>或以後版本的</FONT><FONT SIZE=3>IE</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>和</FONT><FONT SIZE=3>Netscape</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>瀏覽器所提供的「動態</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」，於瀏覽器端「動態」地改變網頁內容。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>『網站熱門應用精選』</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">您或許會說「網站</FONT><FONT SIZE=3>3</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>化」有沒有甚麼作品可看？光碟所附的『網站熱門應用精選』軟體，為採用微軟</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>技術所開發的展示軟體，將您的網站</FONT><FONT SIZE=3>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>化、資料庫化、和元件化。</P>
+<P ALIGN="JUSTIFY">企業/校園/政府</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=3>『</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>網站熱門應用精選</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=3>』</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>軟體，為喬篷科技公司採用微軟相關產品與技術所開發的套裝軟體，提供</FONT><FONT SIZE=3>Microsoft </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>SQL Server、</FONT><FONT SIZE=3>Access</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>等資料庫的熱門網站應用完整解決方案，適合快速地架構一個動態的Internet、Intranet網站。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">『</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>網站熱門應用精選</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=3>』</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>光碟包括了適用於企業、校園、和政府等三套軟體，實際上，您可以運用於各行各業各種類型的Internet、Intranet網站上。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">『</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>網站熱門應用精選</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=3>』</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>將12個常用的網站功能，整合成一個套裝軟體，不須寫程式，即可馬上使用。可以於您現有的網站當中任何一個網頁，插入一行HTML碼，即可擁有那項網站的新功能。使用資料庫管理「網站內容」，只要由瀏覽器更新資料庫，不用找人修改網頁，自動產生新的網頁內容。</P>
+<P ALIGN="JUSTIFY">將您的網站</FONT><FONT SIZE=3>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>化部份，如下：</P>
+<OL>
+
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>網站伺服器。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>IIS Admin Objects</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>建立虛擬目錄。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>WSH</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>建立</FONT><FONT SIZE=3>SQL Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料和於桌面上捷徑。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>SMTP Service</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>傳送</FONT><FONT SIZE=3>e-mail</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</LI></P></OL>
+
+<P ALIGN="JUSTIFY">將您的網站資料庫化部份，如下：</FONT><FONT SIZE=3> </P>
+<OL>
+
+<P ALIGN="JUSTIFY"><LI>ASP/ADO</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>存取資料庫。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>SQL Server 6.5/7.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>或</FONT><FONT SIZE=3>Access</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</LI></P>
+<P ALIGN="JUSTIFY"><LI>報表的部份儲存成</FONT><FONT SIZE=3>Excel</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>格式檔案。</LI></P></OL>
+
+<P ALIGN="JUSTIFY">將您的網站元件化部份，如下：</P>
+<OL>
+
+<P ALIGN="JUSTIFY"><LI>撰寫元件</FONT><FONT SIZE=3>/</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>使用</FONT><FONT SIZE=3>Transaction Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>三層式架構。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>管理元件安裝套件</FONT><FONT SIZE=3>/</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>元件。</LI></P></OL>
+
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>特點</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">採用微軟</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>技術所開發的</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=3>『</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>網站熱門應用精選</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=3>』</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，特點如下：</P>
+<OL>
+
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>12</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>項功能隨裝即用，免程式開發：將</FONT><FONT SIZE=3>12</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>個常用的網站功能，整合成一個套裝軟體，馬上即可使用，不須寫程式。可依據實際需要，從</FONT><FONT SIZE=3>12</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>個常用的網站功能，挑選所須的數個功能。選項部份，由瀏覽器做設定。</LI></P>
+<P ALIGN="JUSTIFY"><LI>資料庫自動更新網站內容，免網頁修改：使用資料庫管理「網站內容」，只要由瀏覽器更新資料庫，不用找人修改網頁，自動產生新的網頁內容。</LI></P>
+<P ALIGN="JUSTIFY"><LI>元件化模組設計，執行效能高，擴充易：採用</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>多層式架構，多人上網共享資源。</LI></P>
+<P ALIGN="JUSTIFY"><LI>與既有網頁輕鬆整合：由於使用</FONT><FONT SIZE=3>include</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>和</FONT><FONT SIZE=3>Component</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的方式，網頁部份可自行設計，只須將所用到的網站功能包含於所設計的</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼中。您現有的網站可以於任何一個網頁當中，加入任何一個『網站熱門應用精選』所提供的網站常用新功能，只要使用記事本或</FONT><FONT SIZE=3>FrontPage Express</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>開啟此網頁現有的</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼，於想插入此新功能的地方，插入一行</FONT><FONT SIZE=3>include</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的文字譬如：&#9;</FONT><FONT SIZE=3>&lt;!--#INCLUDE FILE="xxx.inc" --&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>再儲存成</FONT><FONT SIZE=3>.asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>檔案，即可擁有那項網站的新功能。網頁與美工部份可自行設計。</LI></P></OL>
+
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>執行環境</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">『網站熱門應用精選』軟體所須的執行環境如下：</P>
+<OL>
+
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>Windows NT Server 4.0/Windows NT Option Pack</LI></P>
+<P ALIGN="JUSTIFY"><LI>SQL Server 6.5 / 7.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>或Access資料庫</LI></P></OL>
+
+<P ALIGN="JUSTIFY">　</P>
+<P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="全真中隸書,???" LANG="ZH-TW" SIZE=6 COLOR="#ff0000"><P>將網站「</FONT><FONT FACE="Arial" SIZE=6 COLOR="#ff0000">asp</FONT><FONT FACE="全真中隸書,???" LANG="ZH-TW" SIZE=6 COLOR="#ff0000">化」的好處在那裡？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">「動態」的網站伺服器，必須執行一些程式，然後將執行的結果輸出成標準的</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>格式檔案，傳送到使用者的瀏覽器。</P>
+<P ALIGN="JUSTIFY">所謂將網站「</FONT><FONT SIZE=3>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>化」，就是於</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>或</FONT><FONT SIZE=3>PWS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>網站伺服器執行</FONT><FONT SIZE=3>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式，使用程式來控制網站。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）為於</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>或</FONT><FONT SIZE=3>PWS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>網站伺服器執行的</FONT><FONT SIZE=3>script</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>語言，使用</FONT><FONT SIZE=3>VBScript</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>或</FONT><FONT SIZE=3>JScript</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>來撰寫程式。</P>
+<P ALIGN="JUSTIFY">將網站「</FONT><FONT SIZE=3>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>化」的好處在那裡？好處如下：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>以程式控制網站：每次內容不同。</LI></P>
+<P ALIGN="JUSTIFY"><LI>個人化：因人因時內容不同。</LI></P>
+<P ALIGN="JUSTIFY"><LI>增加互動性。</LI></P>
+<P ALIGN="JUSTIFY"><LI>設計迅速與維護方便：</FONT><FONT SIZE=3>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>不須</FONT><FONT SIZE=3>compile</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>編譯，使用記事本即可編輯設計。</LI></P></UL>
+
+<P ALIGN="JUSTIFY">讓我們舉幾個例子。請安裝所附的『網站熱門應用精選』光碟，就可以看到將網站「</FONT><FONT SIZE=3>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>化」的好處。</P>
+<P ALIGN="JUSTIFY">如下所述，譬如「討論區」、線上「報名」活動、「訂閱</FONT><FONT SIZE=3>Email</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」、搜集客戶的「意見」、「問卷調查」、「線上徵才」等常見的網站功能，就可以使用</FONT><FONT SIZE=3>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式設計出來增加與訪客互動性的功能。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>可以提供「討論區」的功能嗎？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">您或許想知道，</FONT><FONT SIZE=3>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式可以提供多人相互討論的「討論區」的功能嗎？</P>
+<P ALIGN="JUSTIFY">有的，使用</FONT><FONT SIZE=3>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式所設計出來的『網站熱門應用精選』，提供一個依照分類自由討論，可回覆的「討論區」功能。</P>
+<P ALIGN="JUSTIFY">使用者並可以依照分類與關鍵字來搜尋文章。</P>
+<P ALIGN="JUSTIFY">並提供可查看同一個標題、或作者的所有相關發表文章的實用功能。</P>
+<P ALIGN="JUSTIFY">當然，有的訪客會留下不當的文章，管理員可以刪除這些不當的文章。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>可以線上「報名」活動嗎？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">使用</FONT><FONT SIZE=3>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式所設計出來的『網站熱門應用精選』，提供網站線上「活動報名」的功能，站長可以線上登錄活動並接受線上活動報名。</P>
+<P ALIGN="JUSTIFY">管理員可以限制參加名額及每單位報名人數，及決定錄取名單。報名者可以依照分類與關鍵字來搜尋有興趣的活動。</P>
+<P ALIGN="JUSTIFY">『網站熱門應用精選』也將報表的部份儲存成</FONT><FONT SIZE=3>Excel</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>格式檔案，管理員可將活動錄取名單儲存成</FONT><FONT SIZE=3>Excel</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>格式檔案，由瀏覽器下載。</P>
+</FONT><FONT FACE="Arial" SIZE=5 COLOR="#0000ff"><P>asp</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff">程式可以提供「訂閱</FONT><FONT FACE="Arial" SIZE=5 COLOR="#0000ff">Email</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff">」的功能嗎？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">『網站熱門應用精選』運用</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>SMTP Service</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>功能，提供「訂閱</FONT><FONT SIZE=3>Email</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」的功能，訂閱者可訂閱多種類別，以訂閱公司或產品訊息，網站傳送Email給所有訂閱者。</P>
+<P ALIGN="JUSTIFY">傳送時自動修改Email的每行字數，讓Email接收到時看到排得整整齊齊的。 </P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>可以搜集客戶的「意見」嗎？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">使用</FONT><FONT SIZE=3>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式所設計出來的『網站熱門應用精選』，提供「意見箱」的功能，客戶依照分類留下意見，自動回覆感謝E-mail。</P>
+<P ALIGN="JUSTIFY">「意見箱」的意見如何整理成報表呢？格式是我要的嗎？</P>
+<P ALIGN="JUSTIFY">不用擔心，『網站熱門應用精選』將報表的部份儲存成Excel格式檔案，您可以自行運用。站長可依照分類、與期間搜尋客戶所留下的意見，並可儲存成Excel格式檔案，以供分析或處理。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>可以做「問卷調查」嗎？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">『網站熱門應用精選』提供網站「問卷調查」的功能，站長可自訂問卷調查的題目，題目可設計為單選或複選。</P>
+<P ALIGN="JUSTIFY">問卷調查結果如何整理成報表呢？『網站熱門應用精選』也將報表的部份儲存成Excel格式檔案。站長可統計問卷調查結果，並儲存成Excel格式檔案，由瀏覽器下載。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>如何做「線上徵才」呢？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">『網站熱門應用精選』提供網站「線上徵才」的功能，公司登錄徵才資料。應徵者可依照分類與關鍵字搜尋，自行由瀏覽器下載Word格式履歷表填寫。</P>
+<P ALIGN="JUSTIFY">將網站「</FONT><FONT SIZE=3>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>化」的好處不少吧！  </P>
+<P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="全真中隸書,???" LANG="ZH-TW" SIZE=6 COLOR="#ff0000"><P>將網站「資料庫化」的好處在那裡？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">甚麼是「資料庫化的網站」？所謂將網站「資料庫化」，指的是使用「資料庫」管理整個網站，只要更新資料庫的內容，網站的內容將自動更新。</P>
+<P ALIGN="JUSTIFY">採用資料庫，將網站「資料庫化」的好處在那裡？好處如下：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>訪客自由搜尋：將網站的內容儲存於資料庫當中，可以搜尋網站的資料。</LI></P>
+<P ALIGN="JUSTIFY"><LI>網頁自動更新：只要更新資料庫的資料，網頁內容會自動更新。</LI></P>
+<P ALIGN="JUSTIFY"><LI>各種</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料庫應用。</LI></P>
+<P ALIGN="JUSTIFY"><LI>管理方便：直接使用瀏覽器管理與維護。</LI></P></UL>
+
+<P ALIGN="JUSTIFY">讓我們看幾個例子。安裝所附的『網站熱門應用精選』光碟，就可以看到將網站「資料庫化」的好處。</P>
+<P ALIGN="JUSTIFY">將網站「資料庫化」的第一個好處，就是使用「資料庫」管理整個網站，只要更新資料庫的內容，網站的內容將自動更新。譬如「新消息」、「輪播廣告圖片」、「檔案下載」、「相關網站」等常見的網站功能，就可以使用「資料庫」管理整個網站的內容，自動更新網頁。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>「新消息」真的是「新的消息」嗎？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">當連上網際網路瀏覽各網站時，偶而會看到「過期的新消息」，甚至去年的消息仍然列為「新消息」，這時候您就可以寫封信給站長，來嘲笑其新消息「過期」了。</P>
+<P ALIGN="JUSTIFY">其實這不是站長的錯，日期一天天的過，總不能要求站長每天都去檢查每一則「新消息」是否過期。</P>
+<P ALIGN="JUSTIFY">但是如果站長將網站「資料庫化」，使用「資料庫」來管理網站的「新消息」，只要更新資料庫的內容，網站的「新消息」將自動更新。</P>
+<P ALIGN="JUSTIFY">譬如筆者網站「</FONT><A HREF="../../index.html"><FONT SIZE=3>www.asp.com.tw</FONT></A><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」中的「新消息」部份，每一則「新消息」都於下圖的「資料庫」設定其「開始日期」和「結束日期」。當使用者瀏覽此網頁時，將自動比較當天日期是否介於資料庫中「開始日期」和「結束日期」之間，只將符合此條件的「新消息」顯示出來，顯示出來的「新消息」保證是「新的消息」。</P>
+<P ALIGN="JUSTIFY">加入「新消息」時，只要於資料庫新增一筆資料，於資料庫設定「新消息」的「開始日期」和「結束日期」即可，如此一來，網站的「新消息」內容將自動地更新，「新消息」永遠是「新的消息」，站長可以安心地睡個好覺，不用擔心半夜有訪客會寫信來嘲笑「新消息」過期了。</P>
+<P ALIGN="JUSTIFY">下次您看到「過期」的新消息時，仍然可以寫封信給站長，不是嘲笑其新消息「過期」了，而是嘲笑其網站仍未「資料庫化」。</P>
+<P ALIGN="JUSTIFY">加入「新消息」時，只要使用瀏覽器於資料庫新增一筆資料。</P>
+<P ALIGN="JUSTIFY">『網站熱門應用精選』於每天第一個網站訪客進來時，自動讀取「新消息」資料庫以產生新的網頁內容。每天只讀取資料庫一次，不須每次訪客進來時都讀取資料庫，可以加快多人瀏覽的速度。如果您的「新消息」是隨時變動的，當然您也可設定為「即時」更新新消息。</P>
+<P ALIGN="JUSTIFY">您可以設定是否顯示消息簡介或只顯示標題，也可超連結到詳細說明的html檔案。</P>
+<P ALIGN="JUSTIFY">如果當天沒有最新的「新消息」時，不用擔心，『網站熱門應用精選』將自動傳送EMAIL給維護人員以告之。</P>
+<P ALIGN="JUSTIFY">對於不同種類的「新消息」，您可以做分類，不同的分類可以設定不同的標題圖片。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>可以使用資料庫管理「輪播廣告圖片」嗎？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">您想要擁有輪播廣告圖片的功能嗎？</P>
+<P ALIGN="JUSTIFY">『網站熱門應用精選』讓您使用瀏覽器來管理資料庫中的「廣告圖片播放期間」，於每天第一個網站訪客進來時，自動讀取「廣告」資料庫以產生新的輪播圖片內容，自動輪流顯示，並自動記錄廣告圖片被按到的次數。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>「檔案下載」可以使用資料庫管理嗎？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">『網站熱門應用精選』也提供使用資料庫管理「檔案下載」的功能，訪客可下載檔案，自動顯示檔案的大小，以及記錄檔案下載的次數。</P>
+<P ALIGN="JUSTIFY">訪客可依照分類與關鍵字搜尋檔案。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>「相關網站」呢？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">『網站熱門應用精選』使用資料庫管理「相關網站」，只要於瀏覽器更新資料庫，自動產生新的相關網站網頁內容。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>訪客可以「搜查」產品</FONT><FONT FACE="Arial" SIZE=5 COLOR="#0000ff">/</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff">校園</FONT><FONT FACE="Arial" SIZE=5 COLOR="#0000ff">/</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff">便民資訊嗎？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">將網站「資料庫化」的第二個好處，就是將網站的內容儲存於資料庫當中，訪客可以自由搜尋網站的資料。譬如「產品</FONT><FONT SIZE=3>/</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>校園</FONT><FONT SIZE=3>/</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>便民資訊」、「FAQ」（常見問題與解答）等常見的網站功能，將網站的資訊放到「資料庫」裏面，就可以提供訪客搜查資訊的功能。</P>
+<P ALIGN="JUSTIFY">大部份現有的網站都無法提供讓訪客搜查資訊的功能，這是因為沒有使用資料庫來管理產品</FONT><FONT SIZE=3>/</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>校園</FONT><FONT SIZE=3>/</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>便民資訊的緣故。</P>
+<P ALIGN="JUSTIFY">『網站熱門應用精選』，讓您公司自行於瀏覽器更新資料庫的產品</FONT><FONT SIZE=3>/</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>校園</FONT><FONT SIZE=3>/</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>便民資訊，不用修改網頁，自動產生新的產品</FONT><FONT SIZE=3>/</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>校園</FONT><FONT SIZE=3>/</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>便民資訊網頁。訪客可依照分類與關鍵字來搜尋有興趣的資訊。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>有提供「</FONT><FONT FACE="Arial" SIZE=5 COLOR="#0000ff">FAQ</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff">」的功能嗎？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">有的，『網站熱門應用精選』也提供使用資料庫管理「FAQ」（常見問題與解答）的功能，只要於瀏覽器更新資料庫，自動產生新的FAQ網頁內容。</P>
+<P ALIGN="JUSTIFY">因為使用資料庫來管理FAQ的緣故，訪客自可依照分類與關鍵字搜尋常見問題解答。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>開發各種</FONT><FONT FACE="Arial" SIZE=5 COLOR="#0000ff">Web</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff">資料庫的應用</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">將網站「資料庫化」的另一個好處，就是可以開發出各種</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料庫的應用。</P>
+<P ALIGN="JUSTIFY">使用者使用瀏覽器，透過網際網路或</FONT><FONT SIZE=3>intranet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>內部網路，來存取</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料庫的資料，可以使用於學校教學、醫院、商業、銀行、股市、和運輸旅遊等各種</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料庫的應用，譬如銀行餘額線上查詢、線上機票訂位、線上醫院預約掛號、網路下單、線上股市買賣交易、線上學校註冊選課、線上擇友、線上購物等各種應用。</P>
+<P ALIGN="JUSTIFY">筆者準備一個展示各種</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料庫設計實例的網站，網址為「</FONT><A HREF="../../index.html"><FONT SIZE=3>www.asp.com.tw</FONT></A><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」，如下圖，歡迎讀者光臨指教。</P>
+</FONT><FONT FACE="Arial" SIZE=5 COLOR="#0000ff"><P>Web-based</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff">應用軟體</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">將目前各種網路上的應用軟體改變為「</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料庫」的應用，使用「瀏覽器」做為使用者介面，是必然的趨勢。</P>
+<P ALIGN="JUSTIFY">以往每個使用者都必須去學習每一種應用軟體的操作方式。</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料庫應用使用「瀏覽器」做為使用者介面，對於使用者的好處是只要學會瀏覽器的操作方式，譬如看到有超連結的部份就按下去，如此可以操作各種軟體應用，大幅降低訓練的成本。</P>
+<P ALIGN="JUSTIFY">以往每當修改一個</FONT><FONT SIZE=3>bug</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>時，就須為所有使用者去更新一個新的版本。</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料庫應用對於設計者的好處是，新版本的軟體只要更新一次網站的軟體就可以了。</P>
+<P ALIGN="JUSTIFY">基本上，所有的網路上的應用軟體，都可以改變為</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料庫的應用，使用「瀏覽器」做為使用者介面。</P>
+<P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="全真中隸書,???" LANG="ZH-TW" SIZE=6 COLOR="#ff0000"><P>將網站「元件化」的好處在那裡？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">所謂將網站「元件化」，指的是使用</FONT><FONT SIZE=3>Visual Basic</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>或</FONT><FONT SIZE=3>Visual C++</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>等語言來開發元件（</FONT><FONT SIZE=3>component</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），再使用</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）來呼叫所撰寫的元件。</P>
+<P ALIGN="JUSTIFY">元件（</FONT><FONT SIZE=3>component</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），為</FONT><FONT SIZE=3>ActiveX DLL</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，副檔名為</FONT><FONT SIZE=3>.dll</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</P>
+<P ALIGN="JUSTIFY">將網站「元件化」的好處在那裡？好處如下：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>可以重覆使用。</LI></P>
+<P ALIGN="JUSTIFY"><LI>執行速度增快</FONT><FONT SIZE=3>10~30%</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</LI></P>
+<P ALIGN="JUSTIFY"><LI>保護您的原始碼。</LI></P>
+<P ALIGN="JUSTIFY"><LI>多人使用時共享資源。</LI></P></UL>
+
+<P ALIGN="JUSTIFY">元件就像一個零件一般，第一個好處就是可以重覆使用。</P>
+<P ALIGN="JUSTIFY">由於元件是經過</FONT><FONT SIZE=3>compile</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>過的，執行速度依據筆者的測試結果，大概可以增快</FONT><FONT SIZE=3>10~30%</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</P>
+<P ALIGN="JUSTIFY">也由於元件是經過</FONT><FONT SIZE=3>compile</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>過的，所以可以保護您的原始碼。不像</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），原始碼可以一覽無遺。</P>
+<P ALIGN="JUSTIFY">撰寫的元件，使用</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Microsoft Transaction Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）來管理，就可以享受到</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>多人使用時共享資源的功能，多人使用時效率將提高。</P>
+<P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>網站設計參考資料</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">作者準備一個展示各種</FONT><FONT SIZE=3>IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>設計實例的網站，提供各種網站網頁的資訊、與設計範例，包括</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>特異功能、</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料庫設計實例、網路商店、</FONT><FONT SIZE=3>ActiveX</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、推播頻道、動態</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>HTML 99</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>招等，網址如下：</P>
+<P ALIGN="JUSTIFY"></FONT><A HREF="../../index.html"><FONT SIZE=3>http://www.asp.com.tw</FONT></A></P>
+<FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">歡迎上網光臨指教。</P>
+<P ALIGN="JUSTIFY">另外筆者最新著作為「網站熱門應用技術探討</FONT><FONT FACE="標楷體" LANG="ZH-TW">」</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、「微軟熱門Web技術速成班」，對網站資料庫的技術提供更多的探討，歡迎參考。</P>
+<P ALIGN="JUSTIFY">心動不如行動，趕快安裝所附的『網站熱門應用精選』光碟，就可以看到採用微軟多層式</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>架構的好處。</P>
+<P ALIGN="JUSTIFY"></P></FONT></BODY>
+</HTML>

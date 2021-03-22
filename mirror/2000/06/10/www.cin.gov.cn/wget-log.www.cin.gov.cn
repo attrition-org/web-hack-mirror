@@ -1,0 +1,73 @@
+--01:47:34--  http://www.cin.gov.cn:80/
+           => `www.cin.gov.cn/index.html'
+Connecting to www.cin.gov.cn:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 4,868 [text/html]
+
+    0K -> ....                                                   [100%]
+
+01:47:42 (721.40 B/s) - `www.cin.gov.cn/index.html' saved [4868/4868]
+
+Loading robots.txt; please ignore errors.
+--01:47:42--  http://www.cin.gov.cn:80/no-robots.txt
+           => `www.cin.gov.cn/no-robots.txt'
+Connecting to www.cin.gov.cn:80... connected!
+HTTP request sent, awaiting response... 404 找不到对象
+01:47:44 ERROR 404: 找不到对象.
+
+--01:47:44--  http://www.cin.gov.cn:80/cfdigitalBR.jpg
+           => `www.cin.gov.cn/cfdigitalBR.jpg'
+Connecting to www.cin.gov.cn:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 66,047 [image/jpeg]
+
+    0K -> .......... .......... .......... .........             [ 61%]
+
+02:03:05 (44.21 B/s) - Read error at byte 40652/66047 (Connection reset by peer). Retrying.
+
+--02:03:05--  http://www.cin.gov.cn:80/cfdigitalBR.jpg
+  (try: 2) => `www.cin.gov.cn/cfdigitalBR.jpg'
+Connecting to www.cin.gov.cn:80... connected!
+HTTP request sent, awaiting response... 206 Partial content
+Length: 66,047 (25,395 to go) [image/jpeg]
+
+    0K -> ,,,,,,,,,, ,,,,,,,,,, ,,,,,,,,,, ,,,,,,,,,. .......... [ 77%]
+   50K -> .......... ....                                        [100%]
+
+02:08:39 (76.56 B/s) - `www.cin.gov.cn/cfdigitalBR.jpg' saved [66047/66047]
+
+--02:08:39--  http://www.cin.gov.cn:80/cyberown2.gif
+           => `www.cin.gov.cn/cyberown2.gif'
+Connecting to www.cin.gov.cn:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 12,510 [image/gif]
+
+    0K -> .......... ..                                          [100%]
+
+02:09:14 (377.24 B/s) - `www.cin.gov.cn/cyberown2.gif' saved [12510/12510]
+
+--02:09:14--  http://www.cin.gov.cn:80/olha.jpg
+           => `www.cin.gov.cn/olha.jpg'
+Connecting to www.cin.gov.cn:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 20,017 [image/jpeg]
+
+    0K -> .......... .........                                   [100%]
+
+02:09:58 (499.49 B/s) - `www.cin.gov.cn/olha.jpg' saved [20017/20017]
+
+--02:09:58--  http://www.cin.gov.cn:80/cfnewcrew12.jpg
+           => `www.cin.gov.cn/cfnewcrew12.jpg'
+Connecting to www.cin.gov.cn:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 21,008 [image/jpeg]
+
+    0K -> .......... ..........                                  [100%]
+
+02:14:07 (86.21 B/s) - `www.cin.gov.cn/cfnewcrew12.jpg' saved [21008/21008]
+
+Converting www.cin.gov.cn/index.html... done.
+
+FINISHED --02:14:07--
+Downloaded: 124,450 bytes in 5 files
+Converting www.cin.gov.cn/index.html... done.

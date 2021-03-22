@@ -1,0 +1,115 @@
+<html>
+
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<title>The Mirror Image System</title>
+<script LANGUAGE="JavaScript">
+<!--
+function MM_preloadImages() { //v2.0
+  if (document.images) {
+    var imgFiles = MM_preloadImages.arguments;
+    if (document.preloadArray==null) document.preloadArray = new Array();
+    var i = document.preloadArray.length;
+    with (document) for (var j=0; j<imgFiles.length; j++) if (imgFiles[j].charAt(0)!="#"){
+      preloadArray[i] = new Image;
+      preloadArray[i++].src = imgFiles[j];
+  } }
+}
+
+function MM_swapImgRestore() { //v2.0
+  if (document.MM_swapImgData != null)
+    for (var i=0; i<(document.MM_swapImgData.length-1); i+=2)
+      document.MM_swapImgData[i].src = document.MM_swapImgData[i+1];
+}
+
+function MM_swapImage() { //v2.0
+  var i,j=0,objStr,obj,swapArray=new Array,oldArray=document.MM_swapImgData;
+  for (i=0; i < (MM_swapImage.arguments.length-2); i+=3) {
+    objStr = MM_swapImage.arguments[(navigator.appName == 'Netscape')?i:i+1];
+    if ((objStr.indexOf('document.layers[')==0 && document.layers==null) ||
+        (objStr.indexOf('document.all[')   ==0 && document.all   ==null))
+      objStr = 'document'+objStr.substring(objStr.lastIndexOf('.'),objStr.length);
+    obj = eval(objStr);
+    if (obj != null) {
+      swapArray[j++] = obj;
+      swapArray[j++] = (oldArray==null || oldArray[j-1]!=obj)?obj.src:oldArray[j];
+      obj.src = MM_swapImage.arguments[i+2];
+  } }
+  document.MM_swapImgData = swapArray; //used for restore
+}
+
+// #############################################################
+// ### GDS SmartScript V.5.0 (C)1998 GD Software
+// ### http://www.danbbs.dk/~duplex
+// ### duplex@mail.danbbs.dk
+// #############################################################
+// SS5BUTTONS01
+var browser     = '';
+var version     = '';
+var entrance    = '';
+var cond        = '';
+// BROWSER?
+if (browser == ''){
+if (navigator.appName.indexOf('Microsoft') != -1)
+browser = 'IE'
+else if (navigator.appName.indexOf('Netscape') != -1)
+browser = 'Netscape'
+else browser = 'NN';
+}
+// VERSION?
+if (version == ''){
+version= navigator.appVersion;
+paren = version.indexOf('(');
+whole_version = navigator.appVersion.substring(0,paren-1);
+version         = parseInt(whole_version);
+}
+// BROWSER & VERSION
+if (browser == 'IE' && version >= 4) entrance = 'yes';
+if (browser == 'IE' && version < 4) entrance = 'no';
+if (browser == 'Netscape' && version >= 2.02) entrance = 'yes';
+if (browser == 'Netscape' && version < 2.02) entrance = 'no';
+if (entrance=='yes'){
+name0a = new Image;name0a.src = 'images/previous_page_up.gif';
+name0b = new Image;name0b.src = 'images/previous_page_over.gif';
+}
+function lighten(imgName) {
+if (entrance == 'yes'){
+imgOn = eval(imgName + 'b.src');
+document[imgName].src = imgOn;}
+}
+function darken(imgName) {
+if (entrance == 'yes'){
+imgOff = eval(imgName + 'a.src');
+document[imgName].src = imgOff;}
+ }
+
+//-->
+</script>
+</head>
+
+<body BGCOLOR="#000000" TOPMARGIN="0" LEFTMARGIN="0" onLoad="MM_preloadImages('images/explain_mirror_system.gif','#918679359760');MM_preloadImages('images/real_examples.gif','#918679522830');MM_preloadImages('images/know_results.gif','#918679577590');MM_preloadImages('images/mirror_staff.gif','#918679596760');MM_preloadImages('images/mirror_equipment.gif','#918679614720');MM_preloadImages('images/explain_mirror_system.gif','#918681044210')">
+<div ALIGN="center"><div align="center"><center>
+
+<table BORDER="0" CELLSPACING="0" CELLPADDING="5">
+  <tr>
+    <td VALIGN="middle" ALIGN="center"><a HREF="explaination.htm" onMouseOver="MM_swapImage('document.bottombanner','document.bottombanner','images/explain_mirror_system.gif','#918681044210')"><img SRC="images/monitor.jpg" NAME="whatisit" BORDER="0" ALT="What is Mirror Imaging?" WIDTH="96" HEIGHT="90"></a></td>
+    <td ROWSPAN="2"><a HREF="#" onMouseOver="MM_swapImage('document.bottombanner','document.bottombanner','images/know_results.gif','#918679577590')"><img SRC="images/mirror_image_opening.jpg" ALT="The Mirror Image System" HSPACE="25" NAME="banner" BORDER="0" WIDTH="408" HEIGHT="302"></a></td>
+    <td VALIGN="middle" ALIGN="center" rowspan="2">&nbsp;<p><a HREF="staff.htm" onMouseOver="MM_swapImage('document.bottombanner','document.bottombanner','images/mirror_staff.gif','#918679596760')"><img SRC="images/melinda.jpg" NAME="ourstaff" BORDER="0" ALT="Our Mirror Image Professional" WIDTH="100" HEIGHT="115"></a></td>
+  </tr>
+  <tr>
+    <td VALIGN="middle" ALIGN="center"><a HREF="equipment.htm" onMouseOver="MM_swapImage('document.bottombanner','document.bottombanner','images/mirror_equipment.gif','#918679614720')"><img SRC="images/camera.jpg" NAME="equipment" BORDER="0" ALT="The Mirror Image Equipment" WIDTH="117" HEIGHT="81"></a></td>
+  </tr>
+  <tr>
+    <td COLSPAN="3" VALIGN="middle" ALIGN="center"></td>
+  </tr>
+</table>
+</center></div>
+
+<p ALIGN="center"><img SRC="images/know_results.gif" NAME="bottombanner" WIDTH="500" HEIGHT="28"></p>
+</div>
+
+<p align="right"><a href="javascript:history.go(-1);" onmouseover="lighten('name0'); window.status='Previous Page'; return true;" onmouseout="darken('name0'); window.status='';return true" onclick="darken('name0')"><font face="Verdana, Arial, Helvetica, sans-serif"><img src="images/previous_page_up.gif" alt="Previous Page" border="0" name="name0" WIDTH="148" HEIGHT="28"></font></a></p>
+
+<p align="right">&nbsp;</p>
+</body>
+</html>

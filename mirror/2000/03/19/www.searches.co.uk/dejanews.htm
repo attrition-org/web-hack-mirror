@@ -1,0 +1,43 @@
+<html>
+
+<head>
+<title>DejaNews Search From cyberQUEST</title>
+<meta name="keywords" content="The highly acclaimed cyberQUEST Search Engine">
+</head>
+
+<body link="#FF0000" vlink="#FF00FF" alink="#0000FF" topmargin="0" bgcolor="#0015E0"
+text="#FFFFFF">
+
+<form action="http://search.dejanews.com/dnquery.xp" method="POST">
+  <a href="http://www.dejanews.com/"><b><p>DejaNews</b></a> &nbsp;&nbsp; <b>&nbsp;&nbsp;
+  &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; Age Bias:</b> <select
+  name="agesign" size="1">
+    <option selected value="1">Prefer new </option>
+    <option value="-1">Prefer old </option>
+  </select> &nbsp; <b>Age matters:</b> <select name="ageweight" size="1">
+    <option value="0">Not at all </option>
+    <option selected value="1">Somewhat </option>
+    <option value="3">Greatly </option>
+  </select> </p>
+  <p><input type="reset" value="Reset"> <input type="submit" value="Search"> <select
+  name="maxhits" size="1">
+    <option selected>30 </option>
+    <option>60 </option>
+    <option>120 </option>
+  </select> <b>Hits</b> <select name="defaultOp" size="1">
+    <option selected value="OR">Match Any Words </option>
+    <option value="AND">Match All Words </option>
+  </select> <select name="format" size="1">
+    <option selected value="terse">Terse </option>
+    <option value="verbose">Verbose </option>
+  </select> <b>Sort</b> <select name="showsort" size="1">
+    <option value="score" checked>score </option>
+    <option value="newsgroup">group </option>
+    <option value="date">date </option>
+    <option value="author">author </option>
+  </select> <input type="text" name="query" size="75"> </p>
+</form>
+
+<p align="center">&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,289 @@
+<html>
+
+
+<!-- Hacked by m0r0n --> 
+
+
+<!-- Html by nightman -->
+
+<head>
+
+<title>.:: Hatee toh naheen aap kee? ::.</title>
+<style>
+a{text-decoration:none}
+A:hover {text-decoration: underline;}
+</style>
+<title>:)</title>
+<style>
+.spanstyle {
+	position:absolute;
+	visibility:visible;
+	top:-50px;
+	font-size:8pt;
+	font-family:Verdana;
+      font-weight:bold;
+	color:#00FF00;
+}
+</style>
+<script>
+
+var x,y
+var step=20
+var flag=0
+
+var message="Save Kashmir! "
+message=message.split("")
+
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	xpos[i]=-50
+}
+
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	ypos[i]=-50
+}
+
+function handlerMM(e){
+	x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+	y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+	flag=1
+}
+
+function makesnake() {
+	if (flag==1 && document.all) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("span"+(i)+".style")
+    		thisspan.posLeft=xpos[i]
+			thisspan.posTop=ypos[i]
+    	}
+	}
+	
+	else if (flag==1 && document.layers) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("document.span"+i)
+    		thisspan.left=xpos[i]
+			thisspan.top=ypos[i]
+    	}
+	}
+		var timer=setTimeout("makesnake()",30)
+}
+
+</script>
+
+</head>
+
+<body onLoad="makesnake()" style="width:100%;overflow-x:hidden;overflow-y:scroll" bgcolor="#000000" bgproperties="fixed" text="#FFFFFF" link="#00FF00" alink="#ff0000" vlink="#B00000#BB0000">
+
+<basefont size="3"><script>
+<!-- Beginning of JavaScript -
+
+for (i=0;i<=message.length-1;i++) {
+    document.write("<span id='span"+i+"' class='spanstyle'>")
+	document.write(message[i])
+    document.write("</span>")
+}
+
+if (document.layers){
+	document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+
+// - End of JavaScript - --></script>
+
+<p align="left"><font face="Courier New"><small><font color="#00FF00">The
+struggle of the people of</font> <font color="#FF0000">Kashmir</font> for their
+rights has entered the final phase. They have waited for forty long years
+pinning their hope on India's &quot;good&quot; conscience. They got only
+promises but no fulfillment. They counted on Pakistan's ability to pressurize
+India<br>
+into doing justice to them. It did not happen. They put their trust in the
+United Nations. It only passed resolutions for holding a fair and impartial plebiscite. They
+found that with each passing year, India became more obdurate, more defiant and
+became bold enough to declare that Kashmir was an integral part of it. They find
+the tide of Hindu fundamentalism is India rising to a vicious crescendo. It has
+come to hold the levers of power in India at the center and in the states. It
+has already pushed the government into substantially eroding Kashmir's special
+status in the Indian union, guaranteed by Article 370 of the Constitution. It is
+now pitching for the abrogation of the Article itself. Communal riots, killing
+of Muslims and economic discrimination have become endemic. The people of
+Kashmir have decided to wage their own war of freedom. Hatred begets hatred;
+Occupation begets resistance. It is only a natural phenomenon.<br>
+<br>
+<font color="#00FF00">CHRONOLOGY OF THE KASHMIR ISSUE</font><br>
+<br>
+<font color="#00FF00">March 23, 1940</font><br>
+Pakistan Resolution is passed at Iqbal Park, Lahore, demanding the establishment
+of an independent state in areas in which the Muslims are in majority. Alphabet
+&quot;K&quot; in the word &quot;Pakistan&quot; represents Kashmir, as it is a
+Muslim majority area.</small></font><font face="Courier New"><br>
+<small><br>
+<font color="#00FF00">June 3, 1947</font><br>
+British government announces plan accepting the demand of Muslims for
+establishment of Independent State of Pakistan in areas where the Muslims are in
+majority. All the political parties including the Muslim League (representing
+Muslims) and the Congress (representing Hindus) accept the plan.<br>
+<br>
+<font color="#00FF00">August 14, 1947</font><br>
+State of Pakistan comes into being<br>
+<br>
+<font color="#00FF00">October 27, 1947</font><br>
+Indian troops land in Sringar, capital of Kashmir state. India claims that on
+the same day the Hindu ruler of Kashmir signs formal documents of accession to
+India but never shown the documents.<br>
+<br>
+<font color="#00FF00">October 27, 1947</font><br>
+The first Governor-General of India, the British Viceroy, lord Mount batten, in
+a letter accompanying the instrument of accession says, &quot;It is my
+Government's wish that as soon as law and order have been restored in Kashmir,
+the question of accession should be settled by a reference to the people of
+Kashmir.&quot;<br>
+<br>
+<font color="#00FF00">November 1, 1947</font><br>
+The Governor General of Pakistan, Mr. Mohammad Ali Jinnah tells lord Mount batten
+that Kashmir's accession to India &quot;was not a bona fide one since it rests
+on fraud and violence.&quot;<br>
+<br>
+<font color="#00FF00">January 5, 1948</font><br>
+The UN Commission for India and Pakistan passes a resolution, noting that both
+India and Pakistan had accepted the following principle: &quot;The question of
+accession of the state of Jammu and Kashmir to India or Pakistan will be decided
+through the democratic method of free and impartial plebiscite. &quot;<br>
+<br>
+<font color="#00FF00">April 21, 1948</font><br>
+United Nation Security Council passes a resolution &quot;that the future of the
+State of Jammu and Kashmir shall be determine in accordance with the will of the
+people.&quot;<br>
+<br>
+<font color="#00FF00">January 5, 1949</font><br>
+The UN Commissioner for Pakistan and India passes a resolution, nothing that
+both Pakistan and India had accepted the following principals: &quot; The
+question of accession of the state of Jammu and Kashmir to Pakistan or India
+will be decided through the democratic<br>
+method of free and impartial plebiscite.&quot;<br>
+<br>
+<font color="#00FF00">January 24, 1957</font><br>
+The Security Council, reaffirming its previous resolution to the effect,
+&quot;that the final disposition of the state of Jammu and Kashmir will be made
+in accordance with the will of the people expressed through the democratic
+method of a free and impartial plebiscite<br>
+conducted under the auspices of United Nations,&quot; further declared that any
+action taken by the Constituent Assembly formed in Kashmir &quot; would not
+constitute disposition of the state in accordance with the above
+principles.&quot;<br>
+<br>
+<font color="#00FF00">February 5, 1964</font><br>
+India reneges from her pledge. The Indian representative tells the Security
+Council, 'I wish to make it clear on behalf of my government that in no
+circumstances can we agree to the holding of a plebiscite in Kashmir.&quot;
+Defense Minister, Kirshnan Menon gives the reason:<br>
+&quot;Kashmir would vote to join Pakistan and no Indian Government responsible
+for agreeing to plebiscite would survive.<br>
+<br>
+<font color="#00FF00">March, 1965</font><br>
+The Indian Parliament passes a bill declaring Kashmir a province of India.<br>
+<br>
+<font color="#00FF00">August, 1965</font><br>
+India accuses Pakistan of sending infiltrators to Kashmir and Indian forces
+cross the cease-fire line in Kashmir.<br>
+<br>
+<font color="#00FF00">September 6, 1965</font><br>
+India attacks Pakistan across the international border and tries to capture
+Pakistan's second largest city Lahore, but fails.<br>
+<br>
+<font color="#00FF00">September 23, 1965</font><br>
+Security Council arranges a cease-fire.<br>
+<br>
+<font color="#00FF00">January 10, 1966</font><br>
+The Soviet Union arranges talks between Pakistan and India; the Tashkent
+Agreement is signed, through the mediating efforts of the Soviet Prime Minister
+Alexi Kosygin. The Agreement reaffirming that the dispute should be settled by
+peaceful means. The armies are to be withdrawn to their original positions.<br>
+<br>
+<font color="#00FF00">January 30, 1971</font><br>
+The Indian Intelligence arranges a plane hijacking of an Indian plane to
+Pakistan from Kashmir, and on that pretext bans over-flight of Pakistani planes
+to disrupt communication between the two wings of Pakistan.<br>
+<br>
+<font color="#00FF00">November, 1971</font><br>
+Indian Army attacks East Pakistan.<br>
+<br>
+<font color="#00FF00">December 16, 1971</font><br>
+Pakistan surrenders East Pakistan to India. India declares East Pakistan as
+&quot;Bangladesh.&quot;<br>
+<br>
+<font color="#00FF00">July 2, 1972</font><br>
+The Simla Agreement between Pakistan and India is signed. Both agree to make
+efforts for the establishment or durable peace by seeking a solution to existing
+problems, including &quot;a final settlement of Jammu and Kashmir.&quot;<br>
+<br>
+<font color="#00FF00">1987<br>
+</font>The current uprising of the people of Kashmir starts as protest against
+inefficiency, corruption, religious discrimination and Hindu communalism.<br>
+<br>
+<font color="#00FF00">January 19, 1990</font><br>
+The Indian government brings Kashmir, wracked by wide spread Muslim freedom
+unrest, under its direct control. The State legislature suspended, government is
+removed and Ex director general of Indian Secret Service, Research and Analysis
+Wing (RAW) Mr. Jag Mohan is appointed governor.<br>
+<br>
+<font color="#00FF00">January 20, 1990</font><br>
+Large scale demonstration. Thirty people killed by Indian Security forces.
+Curfew imposed in most cities.<br>
+<br>
+<font color="#00FF00">February 25, 1990</font><br>
+Government employees join demonstrations.<br>
+<br>
+<font color="#00FF00">February 27, 1990</font><br>
+India refuses to allow any United Nations official to visit Kashmir.<br>
+<br>
+<font color="#00FF00">March 2, 1990</font><br>
+Forty killed in firing when more than one million Kashmiris march through the
+streets of Srinagar. Police ordered shoot on sight.<br>
+<br>
+<font color="#00FF00">March 28, 1990</font><br>
+Refugees start pouring into Pakistan from Occupied Kashmir.<br>
+<br>
+<font color="#00FF00">April 10, 1990</font><br>
+Prime Minister Singh of India threatens war, and says, &quot;we are not going to
+stop till we have achieved our objectives.<br>
+<br>
+<font color="#00FF00">April 13, 1990</font><br>
+Prime Minister V.P. Singh warns, &quot;India will teach them a lesson.&quot;<br>
+<br>
+<font color="#00FF00">April 14, 1990</font><br>
+Authorities send military reinforcements to Kashmir.</small></font></p>
+
+<p align="left">&nbsp;</p>
+<p align="left">&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#008000">&nbsp;&nbsp;&nbsp; </font></p>
+<p align="left">&nbsp;&nbsp; <font color="#008000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font color="#FF0000">&nbsp;&nbsp; Speak up :</font></p>
+<p align="left">&nbsp;</p>
+<p align="left">&nbsp;&nbsp; <font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#008000"><a href="mailto:wfd2001@nightmail.com">wfd2001@nightmail.com</a></font></font></p>
+<p align="left"><font face="Courier New">&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="mailto:m0r0nandnightman@doityourself.com">m0r0nandnightman@doityourself.com</a>
+</font></p>
+<p align="left">&nbsp;</p>
+
+</body>
+
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

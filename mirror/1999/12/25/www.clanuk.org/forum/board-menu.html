@@ -1,0 +1,152 @@
+<HTML><HEAD>
+
+
+<STYLE>
+<!--
+
+#slidemenubar, #slidemenubar2{
+position:absolute;
+left:-155px;
+width:160px;
+top:170px;
+border:3px solid red;
+background-color:#000033;
+layer-background-color:#000033;
+font:bold 10px Arial;
+line-height:20px;
+}
+-->
+</STYLE>
+
+
+<TITLE>Main Menu</TITLE>
+<META HTTP-EQUIV="pragma" CONTENT = "no-cache">
+</HEAD>
+<BODY BGCOLOR="#000033" TEXT="ffffff" LINK="99ffFF" VLINK="ff99FF" onLoad="window.defaultStatus='Choose any option from this main menu'">
+
+
+<SCRIPT LANGUAGE="JavaScript1.2">
+
+/*
+Sliding Menu Bar Script- 
+
+*/
+
+if (document.all)
+document.write('<div id="slidemenubar2" style="left:-150" onMouseover="pull()" onMouseout="draw()">')
+</SCRIPT>
+<LAYER ID="slidemenubar" onMouseOver="pull()" onMouseOut="draw()">
+<SCRIPT LANGUAGE="JavaScript1.2">
+var sitems=new Array()
+var sitemlinks=new Array()
+
+//extend or shorten this list
+sitems[0]="Site Move!"
+sitems[1]="Kali's News updated 28/10"
+sitems[2]="Trial Members updated 24/10"
+
+
+//These are the links pertaining to the above text.
+sitemlinks[0]="http://www.clanuk.org/news/index.html"
+sitemlinks[1]="http://www.clanuk.org/news/index.html"
+sitemlinks[2]="http://www.clanuk.org/trial/trialmembers.html"
+
+
+for (i=0;i<=sitems.length-1;i++)
+document.write('<a href='+sitemlinks[i]+' TARGET="NEW">'+sitems[i]+'</a><br>')
+</SCRIPT>
+</LAYER>
+<SCRIPT LANGUAGE="JavaScript1.2">
+function regenerate(){
+window.location.reload()
+}
+function regenerate2(){
+if (document.layers)
+setTimeout("window.onresize=regenerate",400)
+}
+window.onload=regenerate2
+if (document.all){
+document.write('</div>')
+themenu=document.all.slidemenubar2.style
+rightboundary=0
+leftboundary=-150
+}
+else{
+themenu=document.layers.slidemenubar
+rightboundary=150
+leftboundary=10
+}
+function pull(){
+if (window.drawit)
+clearInterval(drawit)
+pullit=setInterval("pullengine()",50)
+}
+function draw(){
+clearInterval(pullit)
+drawit=setInterval("drawengine()",50)
+}
+function pullengine(){
+if (document.all&&themenu.pixelLeft<rightboundary)
+themenu.pixelLeft+=5
+else if(document.layers&&themenu.left<rightboundary)
+themenu.left+=5
+else if (window.pullit)
+clearInterval(pullit)
+}
+function drawengine(){
+if (document.all&&themenu.pixelLeft>leftboundary)
+themenu.pixelLeft-=5
+else if(document.layers&&themenu.left>leftboundary)
+themenu.left-=5
+else if (window.drawit)
+clearInterval(drawit)
+}
+</SCRIPT>
+
+
+<FONT FACE="Arial,Helvetica" SIZE="2"> <IMG SRC="icons/tree_g.gif" HEIGHT=16 WIDTH=20 ALIGN=TOP><B>Discussion</B><BR>
+<IMG SRC="icons/tree_e.gif" HEIGHT=16 WIDTH=20 ALIGN=TOP><IMG SRC="icons/tree_g.gif" HEIGHT=16 WIDTH=20 ALIGN=TOP> 
+<A HREF="messages/board-topics.html" TARGET="Main" onMouseOver="window.status='Go to the top page which lists all topics'; return true">Topics</A><BR>
+<IMG SRC="icons/tree_e.gif" HEIGHT=16 WIDTH=20 ALIGN=TOP><IMG SRC="icons/tree_g.gif" HEIGHT=16 WIDTH=20 ALIGN=TOP> 
+<A HREF="http://www.clanuk.org/cgi-bin/forum/board-newmessages.pl?method=last&number=1&units=1440&tree=ON&where=all" TARGET="Main" onMouseOver="window.status='View messages posted within the last day'; return true">Last 
+Day</A><BR>
+<IMG SRC="icons/tree_e.gif" HEIGHT=16 WIDTH=20 ALIGN=TOP><IMG SRC="icons/tree_g.gif" HEIGHT=16 WIDTH=20 ALIGN=TOP> 
+<A HREF="http://www.clanuk.org/cgi-bin/forum/board-newmessages.pl?method=last&number=7&units=1440&tree=ON&where=all" TARGET="Main" onMouseOver="window.status='View messages posted within the last week'; return true">Last 
+Week</A><BR>
+<IMG SRC="icons/tree_f.gif" HEIGHT=16 WIDTH=20 ALIGN=TOP><IMG SRC="icons/tree_g.gif" HEIGHT=16 WIDTH=20 ALIGN=TOP> 
+<A HREF="http://www.clanuk.org/cgi-bin/forum/board-viewtree.pl" TARGET="Main" onMouseOver="window.status='View an explorer-like representation of board topics'; return true">Tree 
+View</A><BR>
+<P> <IMG SRC="icons/tree_g.gif" HEIGHT=16 WIDTH=20 ALIGN=TOP><B>Documentation</B><BR>
+<IMG SRC="icons/tree_e.gif" HEIGHT=16 WIDTH=20 ALIGN=TOP><IMG SRC="icons/tree_g.gif" HEIGHT=16 WIDTH=20 ALIGN=TOP> 
+<A HREF="board-instructions.html" TARGET="Main" onMouseOver="window.status = 'Instructions for new users covering basic operations'; return true">Getting 
+Started</A><BR>
+<IMG SRC="icons/tree_e.gif" HEIGHT=16 WIDTH=20 ALIGN=TOP><IMG SRC="icons/tree_g.gif" HEIGHT=16 WIDTH=20 ALIGN=TOP> 
+<A HREF="board-formatting.html" TARGET="Main" onMouseOver="window.status = 'How to format your messages using formatting codes'; return true">Formatting</A><BR>
+<IMG SRC="icons/tree_e.gif" HEIGHT=16 WIDTH=20 ALIGN=TOP><IMG SRC="icons/tree_g.gif" HEIGHT=16 WIDTH=20 ALIGN=TOP> 
+<A HREF="board-troubleshooting.html" TARGET="Main" onMouseOver="window.status = 'Identification of and solutions to common or browser-specific problems'; return true">Troubleshooting</A><BR>
+<!-- Attention! YOU ARE NOT PERMITTED TO REMOVE THE FOLLOWING LINK.  Doing so
+is a violation of the Discus license agreement and may result in the loss of
+your right to use Discus on your site. --> <IMG SRC="icons/tree_f.gif" HEIGHT=16 WIDTH=20 ALIGN=TOP><IMG SRC="icons/tree_g.gif" HEIGHT=16 WIDTH=20 ALIGN=TOP> 
+<A HREF="board-about.html" TARGET="Main" onMouseOver="window.status = 'Credit to those who developed this discussion board program'; return true">Program 
+Credits</A> <!-- End warning notice --> 
+<P> <IMG SRC="icons/tree_g.gif" HEIGHT=16 WIDTH=20 ALIGN=TOP><B>Utilities</B><BR>
+<IMG SRC="icons/tree_e.gif" HEIGHT=16 WIDTH=20 ALIGN=TOP><IMG SRC="icons/tree_g.gif" HEIGHT=16 WIDTH=20 ALIGN=TOP> 
+<A HREF="../cgi-bin/forum/board-newmessages.pl" TARGET="Main" onMouseOver="window.status = 'View newest messages on this board'; return true">New 
+Messages</A><BR>
+<IMG SRC="icons/tree_e.gif" HEIGHT=16 WIDTH=20 ALIGN=TOP><IMG SRC="icons/tree_g.gif" HEIGHT=16 WIDTH=20 ALIGN=TOP> 
+<A HREF="../cgi-bin/forum/board-search.pl" TARGET="Main" onMouseOver="window.status = 'Search all or part of the forum by keyword'; return true">Keyword 
+Search</A><BR>
+<IMG SRC="icons/tree_e.gif" HEIGHT=16 WIDTH=20 ALIGN=TOP><IMG SRC="icons/tree_g.gif" HEIGHT=16 WIDTH=20 ALIGN=TOP> 
+<A HREF="../cgi-bin/forum/board-contact.pl" TARGET="Main" onMouseOver="window.status = 'Get in touch with board moderators'; return true">Contact</A><BR>
+<IMG SRC="icons/tree_e.gif" HEIGHT=16 WIDTH=20 ALIGN=TOP><IMG SRC="icons/tree_g.gif" HEIGHT=16 WIDTH=20 ALIGN=TOP> 
+<A HREF="../cgi-bin/forum/board-profile.pl" TARGET="Main" onMouseOver="window.status = 'Edit your profile or change your password'; return true">Edit 
+Profile</A><BR>
+<IMG SRC="icons/tree_f.gif" HEIGHT=16 WIDTH=20 ALIGN=TOP><IMG SRC="icons/tree_g.gif" HEIGHT=16 WIDTH=20 ALIGN=TOP> 
+<A HREF="admin.html" TARGET="_top" onMouseOver="window.status = 'Administration interface (board moderators only)'; return true">Administration</A> 
+ 
+<P ALIGN="CENTER"><A HREF="../index.html" TARGET="_top"><IMG SRC="clipart/board_logo.gif" WIDTH="100" HEIGHT="60" BORDER="0"></A> 
+<BR>
+<A HREF="../index.html" TARGET="_top">return to ClanUK home</A> 
+</FONT>
+</BODY>
+</HTML>

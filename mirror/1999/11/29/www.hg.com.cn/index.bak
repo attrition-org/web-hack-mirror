@@ -1,0 +1,356 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>Home Page</title>
+
+<script LANGUAGE="JavaScript" FPTYPE="dynamicanimation">
+<!--
+  // If you want to change this script, you must also make the following
+  // changes so that FrontPage will not overwrite your new script.
+  // In the script tag, change type="dynamicanimation" to type="mydynamicanimation"
+  // In the first script statement, change "dynamicanimation" to "mydynamicanimation"
+  // Throughout the HTML content, change dynamicanimation= to mydynamicanimation=
+  // Change function dynAnimation to function mydynAnimation
+  // In the body tag, change onload="dynAnimation()" to onload="mydynAnimation()"
+  dynamicanimAttr = "dynamicanimation"
+  animateElements = new Array()
+  currentElement = 0
+  speed = 0
+  stepsZoom = 8
+  stepsWord = 8
+  stepsFly = 12
+  stepsSpiral = 16
+  steps = stepsZoom
+  step = 0
+  outString = ""
+  function dynAnimation()
+  {
+    var ms = navigator.appVersion.indexOf("MSIE")
+    ie4 = (ms>0) && (parseInt(navigator.appVersion.substring(ms+5, ms+6)) >= 4)
+    if(!ie4)
+    {
+      if((navigator.appName == "Netscape") &&
+         (parseInt(navigator.appVersion.substring(0, 1)) >= 4))
+      {
+        for (index=document.layers.length-1; index >= 0; index--)
+        {
+            layer=document.layers[index]
+            if (layer.left==10000)
+                layer.left=0
+        }
+      }
+      return
+    }
+    for (index=document.all.length-1; index >= document.body.sourceIndex; index--)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if(null != animation)
+      {
+        if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        {
+          ih = el.innerHTML
+          outString = ""
+          i1 = 0
+          iend = ih.length
+          while(true)
+          {
+            i2 = startWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, false, "")
+            if(i2 == iend)
+              break
+            i1 = i2
+            i2 = endWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, true, animation)
+            if(i2 == iend)
+              break
+            i1 = i2
+          }
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+        if(animation == "zoomIn" || animation == "zoomOut")
+        {
+          ih = el.innerHTML
+          outString = "<SPAN " + dynamicanimAttr + "=\"" + animation + "\" style=\"position: relative; left: 10000;\">"
+          outString += ih
+          outString += "</SPAN>"
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+      }
+    }
+    i = 0
+    for (index=document.body.sourceIndex; index < document.all.length; index++)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if (null != animation)
+      {
+        if(animation == "flyLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyRight")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyTop" || animation == "dropWord")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottom")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyTopLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyTopRight" || animation == "flyTopRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottomLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyBottomRight" || animation == "flyBottomRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "spiral")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "zoomIn")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else if(animation == "zoomOut")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        el.initLeft = el.style.posLeft
+        el.initTop = el.style.posTop
+        animateElements[i++] = el
+      }
+    }
+    window.setTimeout("animate();", speed)
+  }
+  function offsetLeft(el)
+  {
+    x = el.offsetLeft
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      x += e.offsetLeft;
+    return x
+  } 
+  function offsetTop(el)
+  {
+    y = el.offsetTop
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      y += e.offsetTop;
+    return y
+  } 
+  function startWord(ih, i)
+  {
+    for(tag = false; i < ih.length; i++)
+    {
+      c = ih.charAt(i)
+      if(c == '<')
+        tag = true
+      if(!tag)
+        return i
+      if(c == '>')
+        tag = false
+    }
+    return -1
+  }
+  function endWord(ih, i)
+  {
+    nonSpace = false
+    space = false
+    while(i < ih.length)
+    {
+      c = ih.charAt(i)
+      if(c != ' ')
+        nonSpace = true
+      if(nonSpace && c == ' ')
+        space = true
+      if(c == '<')
+        return i
+      if(space && c != ' ')
+        return i
+      i++
+    }
+    return -1
+  }
+  function outWord(ih, i1, i2, dyn, anim)
+  {
+    if(dyn)
+      outString += "<SPAN " + dynamicanimAttr + "=\"" + anim + "\" style=\"position: relative; left: 10000;\">"
+    outString += ih.substring(i1, i2)
+    if(dyn)
+      outString += "</SPAN>"
+  }
+  function animate()
+  {
+    el = animateElements[currentElement]
+    animation = el.getAttribute(dynamicanimAttr, false)
+    step++
+    if(animation == "spiral")
+    {
+      steps = stepsSpiral
+      v = step/steps
+      rf = 1.0 - v
+      t = v * 2.0*Math.PI
+      rx = Math.max(Math.abs(el.initLeft), 200)
+      ry = Math.max(Math.abs(el.initTop),  200)
+      el.style.posLeft = Math.ceil(-rf*Math.cos(t)*rx)
+      el.style.posTop  = Math.ceil(-rf*Math.sin(t)*ry)
+    }
+    else if(animation == "zoomIn")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(50+50*step/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else if(animation == "zoomOut")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(100+200*(steps-step)/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else
+    {
+      steps = stepsFly
+      if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        steps = stepsWord
+      dl = el.initLeft / steps
+      dt = el.initTop  / steps
+      el.style.posLeft = el.style.posLeft - dl
+      el.style.posTop = el.style.posTop - dt
+    }
+    if (step >= steps) 
+    {
+      el.style.posLeft = 0
+      el.style.posTop = 0
+      currentElement++
+      step = 0
+    }
+    if(currentElement < animateElements.length)
+      window.setTimeout("animate();", speed)
+  }
+//-->
+</script><meta name="Microsoft Border" content="none"></head>
+
+<body onload="dynAnimation()">
+
+<p><img src="../feedback/images/HglogoL.JPG" alt="HglogoL.JPG (5011 bytes)" WIDTH="85" HEIGHT="40"> 
+<applet code="fprotate.class" codebase="../_fpclass/" width="480" height="45">
+  <param name="rotatoreffect" value="none">
+  <param name="time" value="1">
+  <param name="url" value valuetype="ref">
+  <param name="image1" value="../feedback/images/title5-1.JPG" valuetype="ref">
+  <param name="image2" value="../feedback/images/title5-2.JPG" valuetype="ref">
+</applet>
+&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp; <img src="../feedback/images/line2.JPG" alt="line2.JPG (2749 bytes)" WIDTH="539" HEIGHT="14"> </p>
+
+<p align="right">　</p>
+
+<table border="0" width="99%" cellspacing="0" cellpadding="0" height="400">
+  <tr>
+    <td width="32%" valign="top" height="400"><p align="center" dynamicanimation="spiral" style="position: relative !important; left: 10000 !important"><font face="隶书" color="#BB0000"><strong><big><big>华光</big></big><img src="http://202.102.148.86/images/newrun0.gif" alt="newrun0.gif (6196 bytes)" width="39" height="21"><big><big>动态</big></big></strong></font></p>
+    <p><img src="http://202.102.148.86/images/butten.GIF" alt="bullet1.GIF (1223 bytes)" width="32" height="16"><a href="http://202.102.148.86/zp.htm">招聘</a><img src="http://202.102.148.86/Li%20Battery/new31.gif" alt="new31.gif (1887 bytes)" width="50" height="33"></p>
+    <p align="center"><img src="http://202.102.148.86/images/butten.GIF" alt="bullet1.GIF (1223 bytes)" width="32" height="16"><a href="mailto:info@hg.com.cn">寻求电子产品机箱及机架外观创意设计的公司</a>(1999.11.22)</p>
+    <p><img src="http://202.102.148.86/images/butten.GIF" alt="bullet1.GIF (1223 bytes)" width="32" height="16"><a href="../80news.htm"><strong>华光BSP80程控交换机最新进展</strong></a></p>
+    <p><a href="../80.htm"><strong><font face="宋体" color="#0000FF" size="2">华光BSP80交换机于近日获得邮电部进网质量认证书</font></strong></a></p>
+    <p>　</p>
+    <p><img src="http://202.102.148.86/images/butten.GIF" alt="bullet1.GIF (1223 bytes)" width="32" height="16"><strong><a href="../Li%20Battery/li.htm">华光锂离子电池</a> </strong></p>
+    <p><strong><font color="#FF2F2F" FACE="宋体" LANG="ZH-CN" size="2"><a href="../Li%20Battery/newli.htm">锂离子可充电电池项目取得阶段性成果</a></font></strong></p>
+    <table border="0" width="97%">
+      <tr>
+        <td width="66%"><p align="left"><small><a href="../Li%20Battery/锂电池.ppt"><strong>幻灯片</strong></a></small></td>
+      </tr>
+    </table>
+    <font FACE="宋体" SIZE="3"><p ALIGN="JUSTIFY"></font><font color="#000000">华<font FACE="宋体" size="2">光锂离子电池具有比能量大、自放电率低、无记忆效应、循环寿命长、安全可靠和无污染等特点。</font><font FACE="宋体" LANG="ZH-CN" size="2">华光科技股份有限公司日前已被国家经济贸易委员会指定为</font></font><font FACE="宋体" LANG="ZH-CN" size="2" color="#FF0000">唯一的国产锂离子电池工业基地。</font></p>
+    <p ALIGN="JUSTIFY">　</p>
+    <p ALIGN="JUSTIFY"><img src="http://202.102.148.86/images/butten.GIF" alt="bullet1.GIF (1223 bytes)" width="32" height="16"><a href="../mac.htm"><strong><font SIZE="3">华光科技推出基于世界主流技术的报业彩色出版解决方案</font></strong></a></p>
+    <p ALIGN="JUSTIFY"><img src="http://202.102.148.86/images/butten.GIF" alt="bullet1.GIF (1223 bytes)" width="32" height="16"><strong><a href="../98report/index.htm">华光科技1998年报</a></strong></p>
+    <p ALIGN="JUSTIFY">　</p>
+    <p ALIGN="JUSTIFY"><img src="http://202.102.148.86/images/butten.GIF" alt="bullet1.GIF (1223 bytes)" width="32" height="16"><a href="../bulletin.htm"><font color="#800080">(600076)“华光科技”公布1999年第一次临时股东大会决议公告</font></a></td>
+    <td width="4%" valign="top" height="400"></td>
+    <td width="64%" height="400"><p align="right">[<a href="../eindex.htm">English Version</a>]</p>
+    <p><font size="2" face="黑体">&nbsp;&nbsp;&nbsp;&nbsp; </font></p>
+    <p><font size="3" face="黑体" color="#E40A46">　　潍坊华光科技股份有限公司</font><font color="#0B236A" size="2" face="黑体">是一家国家产业政策重点扶持的，以生产和销售</font><font size="3" face="黑体" color="#E40A46">计算机与通信产品</font><font color="#0B236A" size="2" face="黑体">为主的大型高科技企业。公司职工总数2000多人，其中，各类专业技术人员占56%。1994年被国家经贸委确定为国家级重大技术装备国产化基地和1000家重点企业，1995年，在全国高新技术百强企业中居第10位。产品曾荣获全国科技进步一等奖，国务院重大技术装备成果特等奖，全国十大专利金奖，国家质量银奖等国际国内大奖二十余项，蜚声国内外。</font></p>
+    <p>　</p>
+    <p><font size="2" face="黑体">　</font><!--webbot bot="ImageMap" rectangle="(195,203) (289,258) ../feedback/index.htm" rectangle="(66,182) (160,237) ../org/index.htm" rectangle="(22,103) (118,157) ../productor/index.htm" rectangle="(61,35) (154,86) ../about/index.htm" rectangle="(183,2) (273,60) ../network/index.htm" src="http://202.102.148.86/images/hg6.JPG" alt="hg6.JPG (23241 bytes)" border="0" width="468" height="265" startspan --><MAP NAME="FrontPageMap"><AREA SHAPE="RECT" COORDS="195, 203, 289, 258" HREF="../feedback/index.htm"><AREA SHAPE="RECT" COORDS="66, 182, 160, 237" HREF="../org/index.htm"><AREA SHAPE="RECT" COORDS="22, 103, 118, 157" HREF="../productor/index.htm"><AREA SHAPE="RECT" COORDS="61, 35, 154, 86" HREF="../about/index.htm"><AREA SHAPE="RECT" COORDS="183, 2, 273, 60" HREF="../network/index.htm"></MAP><a href="../_vti_bin/shtml.exe/images/index.htm/map"><img ismap usemap="#FrontPageMap" border="0" height="265" alt="hg6.JPG (23241 bytes)" src="http://202.102.148.86/images/hg6.JPG" width="468"></a><!--webbot bot="ImageMap" endspan i-checksum="35214" --></p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</td>
+  </tr>
+</table>
+
+<hr width="80%" color="#00008C" noshade size="3">
+
+<p align="center"><strong><font color="#004080">( <a href="../about/index.htm">关于华光</a> 
+)( <a href="../org/index.htm">组织结构</a> )( <a href="../productor/index.htm">产品体系</a> 
+)( <a href="../network/index.htm">销售网络</a> )( <a href="../feedback/index.htm">倾听反馈</a> 
+)</font></strong></p>
+
+<p align="center"><strong><font color="#000000"><br>
+</font></strong></p>
+
+<hr width="45%" color="#00008C" noshade size="3">
+
+<p align="center"><strong><small>华光科技股份有限公司版权所有</small></strong></p>
+
+<p align="center"><strong><small>地址：山东省潍坊市奎文区东风东街272号</small></strong></p>
+
+<p align="center"><strong><small>邮编：261041</small></strong></p>
+
+<p align="center"><strong><small>电话：+86（0536）8236921（总机）</small></strong></p>
+
+<p align="center"><strong><small>传真：+86（0536）8222888 8235397</small></strong></p>
+
+<p align="center"><strong><small>EMAIL：info@hg.com.cn</small></strong></p>
+<div align="center"><center>
+
+<table>
+  <tr>
+    <td><small>建议用</small></td>
+    <td><p align="center"><img src="http://202.102.148.86/images/ieget.GIF" alt="ieget.GIF (1601 bytes)" width="88" height="31"><br>
+    <font face="Arial" size="1">internet explorer4.0</font></td>
+    <td><small>或</small></td>
+    <td><p align="center"><img src="http://202.102.148.86/images/netscape4now.gif" alt="netscape4now.gif (2002 bytes)" width="88" height="31"><br>
+    <font face="Arial" size="1">Netscape communicator 4.04</font></td>
+    <td><font size="2">600*800显示器浏览</font></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

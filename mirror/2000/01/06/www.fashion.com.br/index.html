@@ -1,0 +1,291 @@
+<html>
+
+<head>
+<title>HOME PAGE HACKEADA BY _COBAIA_AND_VIBORA_</title>
+</head>
+
+<body bgcolor="#000000" onload="startBanner()">
+<script language="JavaScript">
+
+
+<!--
+
+
+
+var speed = 55
+var pause = 1500 
+
+var timerID = null
+
+var bannerRunning = false
+
+var ar = new Array()
+
+
+
+ar[0] = "                   HP HACKEADA"
+
+ar[1] = "             BY ----> _Cobaia_AND_VIBORA_"
+
+
+
+var message = 0
+
+
+
+var state = "1"
+
+
+
+clearState()
+
+
+
+function stopBanner() {	
+
+
+
+	if (bannerRunning)		
+
+	
+
+	clearTimeout(timerID)	
+
+
+
+	timerRunning = false
+
+}
+
+
+
+function startBanner() {	
+
+	
+
+	stopBanner()	
+
+	
+
+	showBanner()
+
+}
+
+
+
+
+
+function clearState() {	
+
+	
+
+	state = ""	
+
+
+
+
+
+	for (var i = 0; i < ar[message].length; ++i) {		
+
+		state += "0"	
+
+	}
+
+}
+
+
+
+
+
+function showBanner() {	
+
+	
+
+	if (getString()) {		
+
+			
+
+		message++		
+
+		
+
+	if (ar.length <= message)			
+
+		message = 0		
+
+			
+
+		clearState()		
+
+		
+
+		timerID = setTimeout("showBanner()", pause)	
+
+	} 
+
+	else {		
+
+		
+
+		var str = ""		
+
+		
+
+	for (var j = 0; j < state.length; ++j) {			
+
+		str += (state.charAt(j) == "1") ? ar[message].charAt(j) : "     "		
+
+	}		
+
+		
+
+	window.status = str		
+
+		
+
+	timerID = setTimeout("showBanner()", speed)	
+
+	}
+
+}
+
+
+
+function getString() {	
+
+	
+
+	var full = true	
+
+	
+
+	for (var j = 0; j < state.length; ++j) {		
+
+			
+
+		if (state.charAt(j) == 0)			
+
+		full = false	
+
+	}	
+
+	
+
+	if (full) return true	
+
+	
+
+	while (1) {		
+
+		
+
+		var num = getRandom(ar[message].length)		
+
+		
+
+	if (state.charAt(num) == "0")			
+
+		break	
+
+	}	
+
+	
+
+	state = state.substring(0, num) + "1" + state.substring(num + 1, state.length)	
+
+	
+
+	return false
+
+}
+
+
+
+function getRandom(max) {	
+
+	
+
+	var now = new Date()		
+
+	
+
+	var num = now.getTime() * now.getSeconds() * Math.random()	
+
+	
+
+	return num % max
+
+
+
+}
+
+// -->
+
+</script>
+<font color="#ffffff" size="+3" face="courier"><b>
+
+<p align="center">HACKED</b></font><br>
+<br>
+<br>
+<br>
+<br>
+<font color="#ffffff" size="4" face="courier"><b>&quot; Deus me enviou a terra com uma
+missão<br>
+Só ele poderá me deter<br>
+Os homens nunca poderão... &quot;</b></font><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<font color="#ffffff" size="+3" face="courier"><b>BY</b></font><br>
+<br>
+<br>
+<br>
+<br>
+<font color="#ffffff" size="+3" face="courier"><b>_COBAIA_</b></font><br>
+<br>
+<br>
+<br>
+<br>
+<font color="#ffffff" size="+3" face="courier"><b>AND</b></font><br>
+<br>
+<br>
+<br>
+<br>
+<font color="#ffffff" size="+3" face="courier"><b>_VIBORA_</b></font><br>
+<br>
+<br>
+<br>
+<br>
+<font color="#ffffff" size="+3" face="courier"><b>THE BEST</b></font><br>
+<br>
+<br>
+<br>
+<br>
+<font color="#ffffff" size="+3" face="courier"><b>CHANNEL</b></font><br>
+<br>
+<br>
+<br>
+<br>
+<font color="#ffffff" size="+3" face="courier"><b>#HACKEADORES</b></font><br>
+<br>
+<br>
+<br>
+<br>
+<font color="#ffffff" size="4" face="courier"><b>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COLABORADORES:|CyberWarrior| CYBERFOX NeTRaP
+Grouck
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MNTH_Pyrate
+Sr_Sinistro |_Kapone_|<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [[ZeroCool]]
+Nuzzle Toxic_Revenger<br>
+</b></font><br>
+<br>
+<br>
+<br>
+<br>
+</p>
+</body>
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

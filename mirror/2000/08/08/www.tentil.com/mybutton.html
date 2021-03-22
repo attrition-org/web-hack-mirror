@@ -1,0 +1,117 @@
+<HTML>
+<HEAD>
+<TITLE>tentil.com: My Button</TITLE>
+
+<META NAME="Description" CONTENT="The BEST graphics and web page design">
+<META NAME="generator" CONTENT="Notepad">
+<META NAME="author" CONTENT="TenTil">
+<META NAME="keywords" CONTENT="graphics,design,tips,Windows95,tricks,Fulfer">
+
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- Begin
+var alerted_already;
+var remark;
+function theytyped(form) {
+for (   j = 1;
+j<=remark.length && remark[j]!=form.myoutxt.value;
+j++){}
+if (j>remark.length)
+form.myoutxt.value = "Do not type here!";
+return false;
+}
+function touched_frog() {
+if (!alerted_already) {
+alert("Just once!"+
+                      ""+
+                      ""+
+                      ""+
+                      ""+
+                      "");
+                alerted_already = true;
+}
+return alerted_already;
+}
+function compute(form) {
+for (var i = 1; 
+i<=remark.length && remark[i]!=form.myoutxt.value ;
+i++){}
+if (i==remark.length)
+history.back();
+if (i==remark.length-1)         
+alert("Hey!"+
+"\n\nYou are harassing one of My Buttons.  "+
+"Although most buttons are understanding about this type of thing (being repeatedly pressed), "+
+"My Button is not! "+
+"\nWARNING:"+
+"My Button has been known to mutate!"+
+"\n -- Thank You, TenTil --");
+if (i<remark.length)
+form.myoutxt.value = remark[i+1];
+else 
+form.myoutxt.value = remark[1];
+}
+function initArray() {
+      this.length = initArray.arguments.length;
+      for (var i = 0; i < this.length; i++)
+        this[i+1] = initArray.arguments[i];
+}
+remark = new initArray( "Thanks! That felt good!",
+                        "Once is enough!",
+                        "Are you deaf?", 
+                        "Go Away!  Go back to tentil.com!", 
+                        "SOMEBODY STOP THIS GUY!", 
+                        "I give up. Please stop.", 
+                        "I SAID PLEASE, WHAT'S WRONG WITH YOU!", 
+                        "enough already!", 
+                        "This is NOT funny!", 
+                        "I give up.", 
+                        "LAST WARNING! This is now a BACK BUTTON!");
+alerted_already = false;
+// End -->
+</SCRIPT>
+</HEAD>
+
+<BODY BACKGROUND="designbkg.gif">
+<IMG SRC="pushln.gif" WIDTH="600" HEIGHT="100" ALT="My Button">
+<P>
+<UL><UL>
+<FONT FACE="arial" SIZE="-1">
+Allow me to<br>
+introduce <B>My Button</B>.<br>
+<B>My Button</B> doesn't<br>
+mind the occasional<br>
+push.  <B>My Button</B><br>
+enjoys it. *smile* <br>
+Don't over do it however.
+</FONT>
+<P>
+<FORM name="buttons" method="post" onSubmit="return false">
+<input type="button" name="pushme" value="My Button" onClick="compute(this.form)"
+onMouseOver="window.status='LEAVE ME ALONE!';
+return touched_frog()">
+<input type="text" value=" " 
+name="myoutxt" 
+onBlur="theytyped(this.form)" 
+onFocus="theytyped(this.form)" 
+onChange="theytyped(this.form)" 
+size=45>
+</FORM>
+</UL></UL>
+<P>&nbsp;</P>
+
+
+<TABLE BORDER="0" WIDTH="490">
+<TR><TD WIDTH="490" ALIGN="right">
+<FONT FACE="arial" SIZE="-2">My Button hosted by
+<A HREF="index.html">
+<IMG SRC="smlogo.gif" ALIGN="middle" WIDTH="57" HEIGHT="34" BORDER="0" ALT="TenTil Design"></A>
+ </TD></TR>
+</TABLE>
+<P>&nbsp;</P>
+<IMG SRC="/cgi-bin/count.cgi?push&">
+<FONT SIZE="-1" FACE="arial">
+people have pushed <B>My Button</B> and not one<br>
+ of those people was satisfied with one push.  hmmm ...</FONT>
+</BODY>
+</HTML>

@@ -1,0 +1,40 @@
+<TITLE>DOA E-Mail Search</TITLE>
+<body bgcolor="FFFFFF">
+<a name=top></a>
+<H2>DOA E-Mail Search</H2>
+<form METHOD=POST ACTION="/scripts/cgi-bin/webinator.exe">
+<input type=hidden name="cmd" value=find>
+<table>
+<tr>
+<td align=right>Search for:</td>
+<td><input size=53 name=arg value="">
+<input type=submit value="Search">
+<input type=reset value="Reset"> 
+<br></td>
+</tr>
+<tr>
+<td align=right>Word forms:</td>
+<td><input type=radio name=suffixproc checked value=off>None
+<input type=radio name=suffixproc value=min>Some
+<input type=radio name=suffixproc value=max>Most 
+<br></td>
+</tr>
+<tr>
+<td align=right>Within:</td>
+<td><input type=radio name=proximity value=word>1 word
+<input type=radio name=proximity value=line>line 
+<input type=radio name=proximity value=sent>sentence
+<input type=radio name=proximity value=para>paragraph
+<input type=radio name=proximity value=page>page
+<input type=radio name=proximity checked value=rank>rank
+<input type=hidden name=thesaurus value=0>
+<input type=hidden name=db value="doa"><br>
+</td>
+</tr>
+</table><p>
+<a href=http://www.thunderstone.com/webinator/help.html><b>Help</b></a>
+</form>
+<a name=bottom><hr></a>
+[<a href="dir.htm"> State Directories Page </a>||<a href="../index.html"> Info Louisiana Home Page </a>]
+<h6>Webinator Copyright &#169; 1995 <a href=http://www.thunderstone.com/>Thunderstone - EPI, Inc.</a></h6>
+</body>

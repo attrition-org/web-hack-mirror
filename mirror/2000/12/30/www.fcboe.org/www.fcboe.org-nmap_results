@@ -1,0 +1,31 @@
+
+Starting nmap V. 2.54BETA3 ( www.insecure.org/nmap/ )
+Interesting ports on mail.fcboe.org (216.77.96.35):
+(The 1 port scanned but not shown below is in state: closed)
+Port       State       Service
+22/tcp     filtered    ssh                     
+23/tcp     open        telnet                  
+25/tcp     open        smtp                    
+80/tcp     open        http                    
+
+TCP Sequence Prediction: Class=trivial time dependency
+                         Difficulty=35 (Easy)
+Aggressive OS guesses: Windows NT4 / Win95 / Win98 (95%), BayStack 28115/ADV Fast Ethernet Switch (93%), ZyXEL P480 ISDN router running ZyNOS v2.42(O.00) (88%), Tektronix Phaser(TM) Share Ethernet Card, firmware version 3.01 (88%), Proteon OpenRoute 2.1 on a RBX200 Router or IBM 2210 Router (88%), Intel Express 510T switch (88%), D-Link Corp. DE-1800 Stackable Hub SNMP/Telnet Agent Software version 2.04B3 boot PROM 2.21 (88%), Polycom ViewStation 512K videoconferencing system (88%)
+No exact OS matches for host (If you know what OS is running on it, see http://www.insecure.org/cgi-bin/nmap-submit.cgi).
+TCP/IP fingerprint:
+TSeq(Class=TD%gcd=1%SI=19)
+TSeq(Class=RI%gcd=1%SI=5D)
+TSeq(Class=TD%gcd=2%SI=23)
+T1(Resp=Y%DF=Y%W=2017%ACK=S++%Flags=AS%Ops=M)
+T2(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+T3(Resp=Y%DF=N%W=0%ACK=O%Flags=AR%Ops=)
+T4(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T5(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+T6(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T7(Resp=N)
+PU(Resp=Y%DF=N%TOS=0%IPLEN=38%RIPTL=148%RID=E%RIPCK=E%UCK=F%ULEN=134%DAT=E)
+
+
+
+
+Nmap run completed -- 1 IP address (1 host up) scanned in 13 seconds

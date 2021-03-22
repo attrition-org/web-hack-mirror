@@ -1,0 +1,195 @@
+<html>
+
+<head><script LANGUAGE="Javascript">
+
+var expdate = new Date();
+var visits;
+expdate.setTime(expdate.getTime() +  (24 * 60 * 60 * 1000 * 180));
+  
+function getCookieVal (offset)
+   {
+   var endstr = document.cookie.indexOf (";", offset);
+   if (endstr == -1)
+      endstr = document.cookie.length;
+   return unescape(document.cookie.substring(offset, endstr));
+   }
+function GetCookie (name)
+   {
+   var arg = name + "=";
+   var alen = arg.length;
+   var clen = document.cookie.length;
+   var i = 0;
+   while (i < clen)
+      {
+      var j = i + alen;
+      if (document.cookie.substring(i, j) == arg)
+         return getCookieVal (j);
+      i = document.cookie.indexOf(" ", i) + 1;
+      if (i == 0)
+         break;
+      }
+   return "";
+   }
+   
+function SetCookie (name, value)
+   {
+   var argv = SetCookie.arguments;
+   var argc = SetCookie.arguments.length;
+   var expires = (2 < argc) ? argv[2] : null;
+   var path = (3 < argc) ? argv[3] : null;
+   var domain = (4 < argc) ? argv[4] : null;
+   var secure = (5 < argc) ? argv[5] : false;
+   document.cookie = name + "=" + escape (value) +
+     ((expires == null) ? "" : ("; expires=" + expires.toGMTString())) +
+     ((path == null) ? "" : ("; path=" + path)) +
+     ((domain == null) ? "" : ("; domain=" + domain)) +
+        ((secure == true) ? "; secure" : "");
+   }
+
+//-->
+</script>
+
+<title></title>
+</head>
+
+<body aLink="#000000" bgcolor="#000000" link="#A4C6EE" text="#FFFFFF" leftMargin="0" vlink="#0000CD" title="BCCM home page" bottomMargin="0" rightMargin="0" !link="#ffffff">
+<!center>
+<script LANGUAGE="Javascript">
+{ 
+  //import java.math.*
+  var Nome= GetCookie("Nome");
+  var Prof=GetCookie("Prof");
+  var MI=GetCookie("MI");
+  var AE=GetCookie("AE");
+  var CM=GetCookie("CM");
+  var TF=GetCookie("TF");
+
+  var vtime = new Date();
+  var hour = vtime.getHours();
+  var pis;
+  var stext;
+  var simg;  
+  var shref;
+  var snome;
+var vis;
+var nvis;
+var lMI; 
+var lAE; 
+var lCM; 
+var lTF; 
+var stit;
+var sel ;
+
+sel = Math.round((Math.random()*14))
+
+ switch(sel)
+ { case 0 : 
+ 
+ 
+ 
+  case 1: stext="<BR>Hi%Funds<BR>";
+           shref='<a href="http://www.bancamanzano.it/hifunds" border=0 title="Hi%Funds" target="home">' ;
+           simg='<CENTER><B><FONT size=6 face=Verdana  color=MidnightBlue>Hi%Funds</FONT></B></CENTER>'
+           snome='hf';
+           break; 
+ 
+  
+   case 2 : stext="Alterego?";
+            shref='<a href="http:Alterego.htm" title="AlterEgo" target="home">' ;
+            simg='<IMG border=0 height=79 src="images/alterego5.GIF" width=272>' ;
+            snome='AlterEgo';
+           break;
+           
+   case 3: stext="Internet Home Banking:";
+           shref='<a href="http:IBhome.htm" title="Internet Home Banking" target="home">' ;
+           simg='<IMG border=0 src="images/IHB.GIF">' ;
+           snome='IHB';
+           break;
+   
+   case 4: stext="'Meglio Insieme', Conoscersi meglio,per crescere insieme";
+           shref='<a href="http:MeglioInsieme.htm" border=0 title="Meglio Inseme" target="home">' ;
+           simg='<img height="90" border=0 src="images/meglioins.GIF" width="180">'
+           snome='MeglioInsieme';
+           break;
+           
+   case 5 : stext="Alterego?";
+            shref='<a href="http:Alterego.htm" title="AlterEgo" target="home">' ;
+            simg='<IMG border=0 height=79 src="images/alterego5.GIF" width=272>' ;
+            snome='AlterEgo';
+           break;
+   
+   case 6: stext="<BR>Hi%Funds<BR>";
+           shref='<a href="http://www.bancamanzano.it/hifunds" border=0 title="Hi%Funds" target="home">' ;
+           simg='<CENTER><B><FONT size=6 face=Verdana  color=MidnightBlue>Hi%Funds</FONT></B></CENTER>'
+           snome='hf';
+           break; 
+   
+   
+   
+   case 7:
+   
+        
+   // case 8: // stext="<BR>il MUTUO AL TASSO FISSO DEL 4,50%,<BR> <B>garantito per <I>10</I> anni";
+           // shref='<a href="http:tassofisso.htm" border=0 title="Tasso Fisso" target="home">' ;
+           // simg='<IMG src="images/tassofisso2.GIF"  border=0 >'
+           // snome='TassoFisso';
+           // break;
+   
+  case 9:
+  case 10: stext="<BR>Hi%Funds<BR>";
+           shref='<a href="http://www.bancamanzano.it/hifunds" border=0 title="Hi%Funds" target="home">' ;
+           simg='<CENTER><B><FONT size=6 face=Verdana  color=MidnightBlue>Hi%Funds</FONT></B></CENTER>'
+           snome='hf';
+           break; 
+   
+          
+   case 11: stext="<BR>Manzano Gestioni Patrimoniali<BR>";
+           shref='<a href="http:gestpat1.htm" border=0 title="Gestioni Patrimoniali" target="home">' ;
+           simg='<CENTER><B><FONT size=6 face=Verdana  color=MidnightBlue>Gestione<BR>Patrimoniale</FONT></B></CENTER>'
+           snome='GP';
+           break;
+           
+   default: stext="come investire in borsa comodamente da dove vuoi tu!"
+           shref='<a href="http:directa/directainfo.htm" target="home" title="BORSA In">'
+           simg='<img src="images/borsag4.GIF" border=0>'
+           snome='BorsaIn';
+           break;
+   
+    };
+  
+ //stext="l'innovativo conto corrente:"
+ //simg='<a href="http:Alterego.htm" title="AlterEgo" target="home"><IMG border=0 height=79 src="images/alterego5.GIF" width=272></a>'
+ 
+ //stext="come giocare in borsa dalla comodità della casa vostra:"
+ //simg='<a href="http:directa/directainfo.htm" target="home" title="BORSA In"><IMG border=0 src="images/borsag4.GIF" ></a>'
+ 
+ lMI="<a href=http:MeglioInsieme.htm target=home>Meglio Insieme</a>"+"&nbsp;<!IMG SRC=images/star2.gif>&nbsp;";  
+ lAE="<a href=http:Alterego.htm target=home>AlterEgo</a>"+"&nbsp;<!IMG SRC=images/star2.gif>&nbsp;";  
+ lCM="<a href=http:cm/cm.htm target=_top>Clerical Medical</a>"+"&nbsp;<!IMG SRC=images/star2.gif>&nbsp;"; 
+ lTF="<a href=http:tassofisso.htm target=home>Tasso Fisso 4.50%</a>"+"&nbsp;<!IMG SRC=images/star2.gif>&nbsp;";  
+ vis="&nbsp;<!IMG SRC=images/star2.gif>&nbsp;"; nvis="<!IMG SRC=images/star2.gif>&nbsp;";
+ 
+ //if (AE=="ok")  vis=vis+lAE; else nvis=nvis+lAE;   
+ //if (CM=="ok")  vis=vis+lCM; else nvis=nvis+lCM;   
+ // if (TF=="ok")  vis=vis+lTF; else nvis=nvis+lTF;
+ //if (MI=="ok")  vis=vis+lMI; else nvis=nvis+lMI; 
+ 
+  if (hour < 9) pis="Buongiorno "; else
+  if (hour < 14) pis="Buongiorno "; else
+  if (hour < 18) pis="Buona sera "; else pis= "Buona sera ";
+  
+}
+</script>
+
+
+<p align="center"><img src="McM4nus1.gif" alt="McM4nus1.gif (46412 bytes)" WIDTH="474" HEIGHT="159"></p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center">Greetz: Ao Admin.</p>
+
+<p align="center">Fuck you:&nbsp; FHC, ACM, PITTA, COVAS e PAULO MALUF.</p>
+
+<p align="center">&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>Listening Post: Technical details</title>
+
+<meta name="Microsoft Border" content="none, default">
+</head>
+
+<body bgcolor="#80FFFF" text="#008080" alink="#FF0000">
+
+<h1 align="center">The Listening Post </h1>
+
+<h1 align="center">Technical Details of Implementation</h1>
+
+<h1 align="center"><img src="r7000a.jpg" WIDTH="347" HEIGHT="203"></h1>
+
+<h2>Radio Receiver</h2>
+
+<p>The radio receiver is an Icom <a href="http://www.icomamerica.com/receivers/R7000A.html">IC-R7000</a>. It has a frequency
+range of 25 MHz to 2.0 GHz (=2000 MHz). It supports the following modulation modes: AM,
+wideband FM, narrow band FM, and SSB. SSB sideband selection is done by a rear-panel
+switch always set for upper sideband.&nbsp;&nbsp; The R7000 has 100 memory channels,
+multiple scanning modes, front-end attenuator, infrared remote control, and loads of other
+features. The radio is connected to the serial port of a PC (see below) via Icom's CI-V
+Level Converter. Serial port control is a bit limited.&nbsp; For example, scanning
+functions are not supported.</p>
+
+<p>We have two R7000 receivers.&nbsp; The first one was in service from January 1997 to
+March 1998.&nbsp; It was moved aside and a slightly modified R7000 has taken its place.
+&nbsp; This second unit has be adapted for a future feature of the web site (frequency
+scanning).&nbsp; As of mid-May 1998, these receivers have experienced 110,000 frequency
+changes.&nbsp; When in use, the radio is operational 24 hours/day.&nbsp; We have never
+experienced a failure of either ICOM.&nbsp; These are very rugged radios!</p>
+
+<h2>Antenna&nbsp; [note: the antenna location has changed to Bethesda, Maryland]</h2>
+
+<p>New site:<br>
+&nbsp;&nbsp; Bethesda, Maryland</p>
+
+<p>Old site (before 18 June 1999):<br>
+&nbsp;&nbsp; The antenna is a commercial discone (WB-1300) on a 25 foot mast. Location: <br>
+&nbsp;&nbsp; North Latitude 39.07.532' <br>
+&nbsp;&nbsp; West Longitude 077.28.496'</p>
+
+<h2>System Hardware/Software Architecture</h2>
+
+<p>Here is a diagram of the system architecture that was published in the <small>February
+1998 issue of QST Magazine.&nbsp; <a href="qst/qst.html">Click here to read the article</a>.</small></p>
+
+<h2><font FACE="Arial" size="2"><img src="qst/fig4.jpg" alt="fig4.jpg (31208 bytes)" WIDTH="730" HEIGHT="733"></font></h2>
+
+<p>From the IC-R7000, radio control is via a serial link to a 233 Mhz Pentium PC running
+Red Hat Linux 4.0. Audio streaming is via a sheilded audio cable to a Sun SPARC 20 running
+Solaris 2.6 and a 200 Mhz Pentium running the RealAudio Encoder under Windows 95. The
+Linux computer runs the web server. Web server requests from HTML forms or via the Java
+applet launch CGI programs . The CGI programs are written in Perl 5. They accept requests
+for frequency/mode changes, provide feedback as HTML to the requesting browser, keep
+logging files, and issue unix shell commands to the Linux and Solaris computers. The shell
+commands to the Linux computer run &quot;<a href="http://www.eecis.udel.edu/~mills/ntp/ntp/icom.tar.Z">icom</a>&quot;, a nifty control
+program by David Mills at the University of Delaware. The icom program recognizes many
+Icom radios and allows unix hosts to control them via the serial interface. The shell
+commands to the Solaris computer start up a program called sfmike. The sfmike program is
+part of the <a href="http://www.fourmilab.ch/#speakfree" title="Speak Freely">Speak Freely</a>.
+suite of unix programs for sending and receiving <a href="gsmapps.html">GSM 6.1</a> audio.
+The 200 Mhz Pentium encodes the live audio from the receiver and sends the audio to the
+Solaris computer, which has a Real Audio Server.</p>
+
+<h2>Future directions (problems remaining to be solved)</h2>
+
+<p>The long term objective is to set up both receiving and transmitting.&nbsp; Of special
+interest is the use of Web-transceivers for amature radio satellite operation.
+&nbsp;Before such a station can be built, there are a number of problems that remain.
+&nbsp; They include: 
+
+<ul>
+  <li>Dealing effectively with network delays, especially for tuning in CW and SSB signals</li>
+  <li>Transmitting audio</li>
+  <li>Antenna and doppler shift tracking mechanism</li>
+  <li>Verification of the user such that only licensed hams may transmit</li>
+</ul>
+
+<h3>Dealing with network delays</h3>
+
+<p>The best scheme for tuning signals would be a &quot;sliding frequency window with
+weighted compression&quot;.&nbsp; In this scheme, the server&nbsp; would supply a data
+stream that represents about 10 times the bandwidth of the desired demodulated
+signal.&nbsp; For reception of a 2.5 KHz single-sideband modulated voice, the server's
+data stream encodes 25 KHz of received signal.&nbsp; The 25 KHz is centered on the current
+settings of the user's controls.&nbsp; The encoded data stream uses weighted compression
+such that signals near the center frequency have the highest fidelity, and signals farther
+from the center have increasingly lower fidelity.&nbsp; This scheme has a number of
+effects.&nbsp; When the user tunes slowly, it feels much like a local radio.&nbsp; We
+assume the local processor has sufficient compute power to decode the data stream with
+little delay.&nbsp; When the user tunes more quickly, he will hear signals that, after a
+delay, improve their fidelity.&nbsp; If the user tunes very quickly and exceeds the
+passband of the encoded signal, he must wait for the system to catch up. </p>
+
+<p>Implementation of this system would require a specialist in DSP and signal compression.
+&nbsp; Any volunteers?</p>
+
+<h3>Transmission of audio</h3>
+
+<p>Transmission of audio is probably best done with Speak Freely or similar Internet
+telephone software.&nbsp; Since the source code is available for Speak Freely, it would be
+possible to modify this program to supply a VOX-like signal for the transmitter PTT.</p>
+
+<h3>Antenna and doppler shift tracking</h3>
+
+<p>Existing satellite tracking software can be modified to control antennas.&nbsp; The
+same software could used to compensate for doppler frequency shift due to the motion of
+the satellite relative to the receiver's antenna.&nbsp; Integrating this software into the
+rest of the system is not simple.&nbsp; For example, the R7000 does not have a smooth
+method of tuning.&nbsp; We are now studying the option of replacing the tuning knob of the
+receiver (basically a pulse-type shaft encoder) with pulses generated by the computer.
+&nbsp; This modification would allow smooth frequency control by the computer.</p>
+
+<h3>Verification</h3>
+
+<p>Still under consideration.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<hr>
+
+<p>Return to the <a href="listener.html">Listening Post</a> </p>
+
+<hr>
+
+<p><font size="2">Last updated 18 June 1999</font></p>
+
+<p><a href="mailto:webmaster@nihac.info.nih.gov">email to webmaster</a></p>
+&nbsp;</body>
+</html>

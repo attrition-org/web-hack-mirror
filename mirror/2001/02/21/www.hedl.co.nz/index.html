@@ -1,0 +1,153 @@
+<HTML>
+
+<HEAD>
+<TITLE>www.hedl.co.nz -> Hax0r'd Ur Ass</TITLE>
+<SCRIPT>
+var curTrans = 0;
+var maxTrans = 0;
+var curStrength = 0;
+var direction = 1;
+var introText = new Array();
+var part2 = false;
+
+introText[maxTrans++] = "Hax0r'd ur arse";
+introText[maxTrans++] = "www.hedl.co.nz";
+introText[maxTrans++] = "Has b33n own3d by...";
+introText[maxTrans++] = "The Asylum Slave";
+
+//Initialize page
+function init() {
+	doTrans();
+}
+
+//Cycle through intro text
+function doTrans() {
+	dTitle.filters.item(0).Apply();
+	dTitle.innerText = introText[curTrans++];
+	dTitle.filters.item(0).Play();
+}
+
+//Move the text to the top of the screen
+function moveTitle() {
+	dTitle.style.posTop -= 1;
+}
+
+//Show the landscape and play the music
+function showMars() {
+	iMars.style.visibility = "visible";
+}
+
+//Shows the banner line
+function showBanner() {
+	sBanner.style.visibility = "visible";
+}
+
+//Sets up the glow filters
+function startGlow() {
+	part2 = true;
+	dTitle.filters.Glow.enabled = true;
+}
+
+//Animates the glow
+function loopGlow() {
+	dTitle.filters.Glow.strength = curStrength;
+	curStrength += direction;
+	if ((curStrength == 0) || (curStrength == 10))
+		direction *= -1;
+}
+</SCRIPT>
+
+<SCRIPT FOR="dTitle" EVENT="onfilterchange" LANGUAGE="JScript">
+	//Called when transition or filters complete
+	if (curTrans < maxTrans)
+		doTrans();
+	else if (!part2)
+		Seq.Item("Intro1").Play();
+</SCRIPT>
+
+<SCRIPT FOR="Seq" EVENT="oninit" LANGUAGE="JScript">
+<!--
+
+Seq.Item("Intro1").At(0, "moveTitle()", 15, .05);
+	Seq.Item("Intro1").At(2, "showMars()");
+;	Seq.Item("Intro1").At(2, "startGlow()");
+	Seq.Item("Intro1").At(2, "loopGlow()", -1, .2);
+	Seq.Item("Intro1").At(5, "showBanner()")
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY bgcolor="#000000" onload="init()" text="Gray" link="red" alink="red" vlink="red">
+<CENTER>
+<DIV id=dTitle style="position:relative; width:80%; top:15%; filter:revealTrans(duration=3, transition=12) Glow(color=blue, strength=0, enabled=0); {font-size:50pt; color:gray}">
+</DIV>
+  <p><A Href="http://www.AsylumDH.com" Target="_New"><IMG id=iMars src="http://members.nbci.com/Adman666/Logo.jpg" style="visibility:hidden" alt="Hey We Hax0r'd Ur Ass" border="0"></A> 
+    <BR>
+    <SPAN id=sBanner style="visibility:hidden"></SPAN></p>
+  <p>  </p>
+  </CENTER><FONT COLOR=white>
+
+<OBJECT ID="Seq"
+	CLASSID="CLSID:B0A6BAE2-AAF0-11d0-A152-00A0C908DB96">
+</OBJECT>
+</font>
+<BR>
+<Font Size="1"><Center>Please wait for the JScript intro to finish..Thanx..</Center></Font>
+<Hr Color="Silver">
+<Center>
+<Font Size="4" Face="monotype corsiva">Hax0r'd Your Site...</Font><BR>
+<BR>
+<Img Src="http://members.nbci.com/Adman666/AsylumSlaveLogo.jpg"><BR>
+<Font Size="1">The Asylum Slave</Font>
+<BR>
+<Center>
+[[[ Advertising space for hire.. ]]]<BR>
+<BR>
+ummmmm msg time i think<BR>
+<BR>
+</Center><Font Size="2">
+<Font Face="Courier">
+<Font Color="Lime"></Center>
+Owner/Admin -></Font> Sorry for the hassle, but honestly dude, u need to learn how to secure an NT box
+before you take up a job where u get payed a fuking fortune to do it.<BR>
+<BR></Center>
+<Font Color="Lime">
+Company -></Font> Hire someone with more than 12 braincellz :P<BR>
+<BR>
+<Font Color="Lime">
+Athena/HB80 -></Font> Hmm... lQQking extra sexy today... new lipstick?<BR>
+<BR>
+<Font Color="Lime">
+GeNeTiX -></Font> Stick to programming man, you are fuking good at it :)<BR>
+<BR>
+<Font Color="Lime">
+SiRvu|caN -></Font> WTF do you think u r doing? Quake SUX... get rogue spear bitch!<BR>
+<BR>
+<Font Color="Lime">
+BadGadjit -></Font> hey look i hax0r'd something :P<BR>
+<BR>
+<Font Color="Lime">
+Black Zero -></Font> hmm.... what can i say? you run windows ME .... man u suck! :P<BR>
+<BR>
+<BR>
+<BR>
+<Font Color="green">
+Well that ends my shouts.... ummm visit these sites :<BR>
+<A Href="http://www.asylumdh.com" target="_adh">http://www.AsylumDH.com</a> -> Asylum of Dynastic Hackers<BR>
+<a href="http://www.attrition.org" target="_blah">http://www.attrition.org</a> -> Yeah mirr0rs of defacements<BR>
+<BR>
+<BR>
+For more info please email me : <a href="mailto:asylumofdh@hotmail.com">Click here</a><BR>
+The Asylum Slave<BR>
+http://www.AsylumDH.com<BR>
+<BR>
+<BR>
+<hr Color="gray">
+<Center><Font Size="1" color="gray">
+Hax0r'd By The Asylum Slave....
+
+
+</Center>
+</BODY>
+</HTML>
+<!-- www.attrition.org web hack mirror - watermark or something -->

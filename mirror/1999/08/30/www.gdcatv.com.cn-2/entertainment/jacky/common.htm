@@ -1,0 +1,99 @@
+<html>
+
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb_2312-80">
+<meta NAME="GENERATOR" CONTENT="Microsoft FrontPage 3.0">
+<title>送上您的祝福</title>
+<script language="javascript">
+function getindex(check)
+{
+  for(var i=0;i<check.length;i++)
+            if(check[i].checked == true) {
+                var n=i;
+              }
+        return n;
+
+  
+}
+function check(){
+ var ff=document.form1;
+    if(( ff.re_email.value.indexOf("@")==-1) ||(ff.re_email.value.length < 6)||(ff.re_email.value.indexOf(".")==-1)) {
+                window.alert ("请输入您朋友的正确的Email地址")
+                ff.re_email.focus();return false;}
+ else {
+if(ff.se_email.value=="") {window.alert ("请输入您的Email地址");return false}
+else {if ((ff.se_name.value.indexOf("'")!=-1)||(ff.re_name.value.indexOf("'")!=-1)||(ff.content.value.indexOf("'")!=-1))
+  { window.alert ("请注意，在您的个人资料中不能含有单引号'")
+	return false}
+
+	else
+	return true;}
+  }
+}
+</script>
+</head>
+
+<body TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#FFFFFF" VLINK="#FFFFFF" ALINK="#FFFFFF">
+
+<table BORDER="0" WIDTH="100%">
+  <tr>
+    <td ALIGN="CENTER" WIDTH="100%" BGCOLOR="#EA2509"><font COLOR="#FFFF00">送上您的祝福</font></td>
+  </tr>
+</table>
+
+<form action="http://www.gdcatv.com.cn:4000/intra/owa/wish.preview" name="form1"
+method="POST" onsubmit="return check()">
+  <div align="center"><center><table BORDER="0" width="587">
+    <tr>
+      <td ALIGN="CENTER" width="583"><a HREF="wish01.gif"><img SRC="wish01-1.gif" HEIGHT="85"
+      WIDTH="70"></a><input type="radio" checked name="sele_image" value="wish01.gif"><a
+      HREF="wish02.gif"><img SRC="wish02-1.gif" HEIGHT="85" WIDTH="70"></a><input type="radio"
+      name="sele_image" value="wish02.gif"><a HREF="wish03.gif"><img SRC="wish03-1.gif"
+      HEIGHT="85" WIDTH="70"></a><input type="radio" name="sele_image" value="wish03.gif"><a
+      HREF="wish04.gif"><img SRC="wish04-1.gif" HEIGHT="85" WIDTH="70"></a><input type="radio"
+      name="sele_image" value="wish04.gif">&nbsp; <p><a HREF="wish05.gif"><img
+      SRC="wish05-1.gif" HEIGHT="85" WIDTH="70"></a><input type="radio" name="sele_image"
+      value="wish05.gif"><a HREF="wish06.gif"><img SRC="wish06-1.gif" HEIGHT="85" WIDTH="70"></a><input
+      type="radio" name="sele_image" value="wish06.gif"><a HREF="wish07.gif"><img
+      SRC="wish07-1.gif" HEIGHT="85" WIDTH="70"></a><input type="radio" name="sele_image"
+      value="wish07.gif"><a HREF="wish08.gif"><img SRC="wish08-1.gif" HEIGHT="85" WIDTH="70"></a><input
+      type="radio" name="sele_image" value="wish08.gif">&nbsp; </p>
+      <table border="0" width="100%">
+        <tr>
+          <td width="50%"><font face="宋体" size="3">接收人E_mail:<!--webbot bot="Validation"
+          startspan B-Value-Required="TRUE" I-Maximum-Length="40" --><!--webbot bot="Validation"
+          endspan --><input type="text" size="22" name="re_email" maxlength="40"></font></td>
+          <td width="50%"><font face="宋体" size="3">接收人姓名：<!--webbot
+          bot="Validation" startspan B-Value-Required="TRUE" I-Maximum-Length="12" --><!--webbot
+          bot="Validation" endspan --><input type="text" size="12" name="re_name" maxlength="12"></font></td>
+        </tr>
+        <tr>
+          <td width="50%"><font face="宋体"><font size="3">祝词请写在下面：</font><big><big><big>&nbsp; 
+          </big></big></big></font></td>
+          <td width="50%"></td>
+        </tr>
+        <tr>
+          <td width="100%" colspan="2"><big><big><big><font face="宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+          <textarea name="content" rows="4" cols="28" style="font-family: 宋体"></textarea></font></big></big></big></td>
+        </tr>
+        <tr>
+          <td width="50%"><font face="宋体" size="3">您的E_mail:<!--webbot bot="Validation"
+          startspan B-Value-Required="TRUE" I-Maximum-Length="22" --><!--webbot bot="Validation"
+          endspan --><input type="text" size="22" name="se_email" maxlength="22"></font></td>
+          <td width="50%"><font face="宋体" size="3">您的姓名：<!--webbot bot="Validation"
+          startspan B-Value-Required="TRUE" I-Maximum-Length="12" --><!--webbot bot="Validation"
+          endspan --><input type="text" size="12" name="se_name" maxlength="12"></font></td>
+        </tr>
+        <tr>
+          <td width="100%" colspan="2"><div align="center"><center><p><big><big><big><font
+          face="宋体"><input type="submit" value="预览"> <input type="reset" value="重填"></font></big></big></big></td>
+        </tr>
+      </table>
+      </td>
+    </tr>
+  </table>
+  </center></div><div align="center"><center><p>　</p>
+  </center></div>
+</form>
+</body>
+</html>

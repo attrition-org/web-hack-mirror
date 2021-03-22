@@ -1,0 +1,41 @@
+<title>Weight & Balance</title>
+<center>
+<h1>Weight & Balance</h1>
+</center>
+<hr>
+<p>
+<center>
+<h2><b>WARNING</b></h2>
+</center>
+This program is for demonstration purposes only. Actual weight
+and balance calculations should be performed using  the adjusted
+weight and balance for your particular airplane and the approved
+operators manual.
+<p>
+<hr>
+<form method=POST action="/cgi-shl/buildwab.pl" >
+<p>
+The Aircraft selection will be used to load default values for initial display. <br>
+It is possible to enter yourown values once the page is displayed<p>
+
+Select Aircraft :  <select name="type" >
+                          <option>Cessna 172N
+                          <option>Cessna 182R
+                          <option>Cessna T210M
+                          </select>
+
+Select Output Type : <select name="outtype" >
+                     <option>Table
+                     <option>Non-Table
+                     </select>
+
+<p>
+<input type="submit" value="Submit" >
+</form>
+<p>
+
+<hr>
+<p>
+<a href="flitplng.htm">Flight Planning</a><p>
+<a href="../acmenus.htm"><img src="../images/home.gif">Home</a>
+

@@ -1,0 +1,56 @@
+<HTML>
+<!-- File: llglogin.html -->
+<!-- RequestHandler: ll.GetLogin -->
+<HEAD>
+<TITLE>Livelink Log-in</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" BACKGROUND="/Livelinksupport/pattern.gif">
+<CENTER>
+<FORM NAME="LoginForm" METHOD="POST" ACTION="/livelink/livelink.exe">
+<INPUT TYPE="HIDDEN" NAME="func" VALUE="ll.login">
+<INPUT TYPE="HIDDEN" NAME="CurrentClientTime" VALUE="">
+<INPUT TYPE="HIDDEN" NAME="NextURL" VALUE="/livelink/livelink.exe/">
+<TABLE WIDTH="500" CELLPADDING="0" CELLSPACING="0" BORDER="0">
+<TR>
+<TD COLSPAN="2"><IMG SRC="/Livelinksupport/login.gif" WIDTH="500" HEIGHT="22" BORDER="0" ALT="Log-in" VSPACE="6"></TD>
+</TR>
+<TR>
+<TD><IMG SRC="/Livelinksupport/login_splash.gif" ALT="Livelink Log-in Graphic" WIDTH="291" HEIGHT="69" BORDER="0"></TD>
+<TD>
+<TABLE CELLPADDING="1" CELLSPACING="0" BORDER="0">
+<TR>
+<TD NOWRAP ALIGN="RIGHT"><FONT SIZE="2" FACE="Arial,Helvetica,sans-serif">Username:</FONT></TD>
+<TD ALIGN=LEFT><INPUT TYPE="TEXT" NAME="Username" SIZE="17"></TD>
+</TR>
+<TR>
+<TD NOWRAP ALIGN="RIGHT"><FONT SIZE="2" FACE="Arial,Helvetica,sans-serif">Password:</FONT></TD>
+<TD ALIGN=LEFT><INPUT TYPE="PASSWORD" NAME="Password" SIZE="17"></TD>
+</TR>
+<TR>
+<TD> </TD>
+<TD ALIGN="CENTER"><INPUT TYPE="SUBMIT" VALUE="Log-in"> </TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD>
+&nbsp;
+</TD>
+</TR>
+<TR>
+<TD NOWRAP ALIGN="CENTER" COLSPAN="2">
+<FONT SIZE="1" FACE="Arial,Helvetica,sans-serif">
+Livelink &#174; Version 8.1.3, Copyright &copy; 1995-1999 Open Text Inc.  All rights reserved.<BR>
+For assistance please contact the <A HREF="mailto:c.s.vemuru@larc.nasa.gov">Administrator</A>.
+</FONT>
+</TD>
+</TR>
+</TABLE>
+</FORM>
+<SCRIPT LANGUAGE="JavaScript">
+window.document.LoginForm.Username.focus()
+</SCRIPT>
+</CENTER>
+</BODY>
+</HTML>

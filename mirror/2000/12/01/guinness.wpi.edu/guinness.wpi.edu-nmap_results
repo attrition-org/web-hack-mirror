@@ -1,0 +1,33 @@
+
+Starting nmap V. 2.54BETA3 ( www.insecure.org/nmap/ )
+Interesting ports on guinness.WPI.EDU (130.215.72.23):
+(The 1 port scanned but not shown below is in state: closed)
+Port       State       Service
+22/tcp     open        ssh                     
+23/tcp     open        telnet                  
+25/tcp     filtered    smtp                    
+80/tcp     open        http                    
+
+TCP Sequence Prediction: Class=random positive increments
+                         Difficulty=31884 (Worthy challenge)
+Aggressive OS guesses: IRIX 6.2 - 6.5 (97%), IRIX 6.5.7f (94%), IRIX 6.5.7f-6.5.8 (94%), IRIX 6.5 (93%), HP-UX B11.00 U 9000/839 (91%), IRIX 6.5 Origin2 (90%), IRIX 5.3 (89%), IRIX 6.4 - 6.5.3m (88%)
+No exact OS matches for host (If you know what OS is running on it, see http://www.insecure.org/cgi-bin/nmap-submit.cgi).
+TCP/IP fingerprint:
+TSeq(Class=RI%gcd=1%SI=9572)
+TSeq(Class=RI%gcd=1%SI=72D1)
+TSeq(Class=RI%gcd=2%SI=7C8C)
+T1(Resp=Y%DF=N%W=EF2A%ACK=S++%Flags=AS%Ops=MNWNNTNNM)
+T2(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+T3(Resp=Y%DF=N%W=EF2A%ACK=O%Flags=A%Ops=NNT)
+T4(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T5(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+T6(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T7(Resp=N)
+T7(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+PU(Resp=Y%DF=N%TOS=0%IPLEN=38%RIPTL=148%RID=E%RIPCK=E%UCK=E%ULEN=134%DAT=E)
+PU(Resp=N)
+
+
+
+
+Nmap run completed -- 1 IP address (1 host up) scanned in 16 seconds

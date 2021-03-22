@@ -1,0 +1,147 @@
+<html>
+<head><style>
+a{text-decoration:none}
+A:hover {text-decoration: underline;}
+</style>
+<title>You've Been 0wned By: Scurvy</title>
+<style>
+.spanstyle {
+	position:absolute;
+	visibility:visible;
+	top:-50px;
+	font-size:8pt;
+	font-family:Verdana;
+      font-weight:bold;
+	color:#00FF00;
+}
+</style>
+<script>
+
+var x,y
+var step=20
+var flag=0
+
+var message="Scurvy "
+message=message.split("")
+
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	xpos[i]=-50
+}
+
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	ypos[i]=-50
+}
+
+function handlerMM(e){
+	x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+	y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+	flag=1
+}
+
+function makesnake() {
+	if (flag==1 && document.all) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("span"+(i)+".style")
+    		thisspan.posLeft=xpos[i]
+			thisspan.posTop=ypos[i]
+    	}
+	}
+	
+	else if (flag==1 && document.layers) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("document.span"+i)
+    		thisspan.left=xpos[i]
+			thisspan.top=ypos[i]
+    	}
+	}
+		var timer=setTimeout("makesnake()",30)
+}
+
+</script>
+
+</head>
+<BODY onLoad="makesnake()" style="width:100%;overflow-x:hidden;overflow-y:scroll" bgcolor="#000000" bgproperties="fixed" text="#FFFFFF" link="#00FF00" alink="#ff0000" vlink="#B00000#BB0000">
+<basefont size="3"><script>
+<!-- Beginning of JavaScript -
+
+for (i=0;i<=message.length-1;i++) {
+    document.write("<span id='span"+i+"' class='spanstyle'>")
+	document.write(message[i])
+    document.write("</span>")
+}
+
+if (document.layers){
+	document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+
+// - End of JavaScript - -->
+</script>
+<div align="center">
+<img src="http://www.stas.net/2/rewted/nscurvy4.jpg" alt="Scurvy Was Here!">
+</div><br><br>
+<center><b><strong>This site was owned by <big><a href="mailto:scurvy@hushmail.com">Scurvy</a></big>.<br><br></b></strong></center>
+<b>The reason behind this defacement is because I wanted everyone to hear this song. It's by System of a Down.<br>
+<center><br><font color="#FF8040"><h2><big><strong>War?</big></strong></h2><br></center>
+Dark is the light,<br>
+The man you fight,<br>
+With all your prayers, incantations,<br>
+Running away, a trivial day,<br>
+Of judgment and deliverance,<br>
+To whom was sold, this bounty soul,<br>
+A gentile or a priest?<br>
+Who victored over, the Seljuks,<br>
+When the holy land was taken<br>
+We will fight the heathens, We will fight the heathens<br>
+We will fight the heathens, We will fight the heathen<br>
+Was it the riches, of the land,<br>
+Powers of bright darkness,<br>
+That lead the noble, to the East,<br>
+To fight the heathens,<br>
+We will fight the heathens, We will fight the heathens<br>
+We will fight the heathens, We will fight the heathens<br>
+We will fight the heathens, We will fight the heathens<br>
+We will fight the heathens, We will fight the heathens<br>
+We must call upon our bright darkness,<br>
+Beliefs, they're the bullets of the wicked,<br>
+One was written on the sword,<br>
+For you must enter a room to destroy it,<br>
+International security,<br>
+Call of the righteous man,<br>
+Needs a reason to kill man,<br>
+History teaches us so,<br>
+The reason he must attain,<br>
+Must be approved by his God,<br>
+His child, partisan brother of war, <br>
+Of war, we don't speak anymore,<br>
+Of war, we don't speak anymore,<br>
+Of war, we don't speak anymore,<br>
+Of war, we don't speak anymore,<br>
+We will fight the heathens, We will fight the heathens<br>
+We will fight the heathens, We will fight the heathens<br>
+We will fight the heathens, We will fight the heathens<br>
+We will fight the heathens, We will fight the heathens
+</font><br><br><center>Happy Birthday goes to <big><strong>fuqrag</big></strong> on the 11th.</center>
+<br><br>Greets: <strong><b><big>Datagram</big></strong>, <strong><big>pimpshiz</big></strong>, <strong><big>doom</big></strong>, rootproc, nemesystm, wicked, lokal, Kreator, sinfony, Akurei, Starman_Jones, all of RSH, Apoc, piffy (mediawh0re), GForce, bi0cide, gat0r, z, biosdisk, rootx11, nutsax, matic, hooyah, Traze, SteeLe (guess you got raided, hehe), and whoever else I forgot.</b>
+<div align="center"><br><a href="http://www.8op.com/rsh/"><img src="http://www.stas.net/2/rewted/rootshellme.jpg" alt="RootShellHackers!" border="0"></a><br><br>
+<b><big><a href="mailto:scurvy@hushmail.com">E-mail</a> me if you want. <a href="mailto:scurvy@hushmail.com">Scurvy@hushmail.com</a></big></b><br><br><font size="0"><b><tt>I'm not in RSH. But I love them.</tt></font></b>
+</BODY>
+
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

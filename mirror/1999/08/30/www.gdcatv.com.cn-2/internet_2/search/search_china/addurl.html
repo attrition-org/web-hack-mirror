@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+
+<head>
+<title>登录网页! </title>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb_2312">
+<meta NAME="GENERATOR" CONTENT="Microsoft FrontPage 3.0">
+</head>
+
+<body TEXT="#000000" LINK="#0000C8" BACKGROUND="ban.gif">
+
+<p><script language="JavaScript">function MakeArray()
+        {
+        this.length = MakeArray.arguments.length
+        for (var i = 0; i < this.length; i++)
+        this[i+1] = MakeArray.arguments[i]
+        }
+
+var siteopt = new MakeArray("请选择您登入的一个类别", 
+                            "　　　　艺术           ",
+                            "　　　　商业           ",
+                            "　　　　电脑           ",
+                            "　　　　教育           ",
+                            "　　　　娱乐           ",
+                            "　　　　健康           ",
+                            "　　　　人类           ",
+                            "　　　　政治           ",
+                            "　　　　休闲           ",
+                            "　　　　科学           ",
+                            "　　　　购物           ",
+                            "　　　　运动           ");
+ 
+var url = new MakeArray("",
+                        "url01.htm",
+                        "url02.htm",
+                        "url03.htm",
+                        "url04.htm",
+                        "url05.htm",
+                        "url06.htm",
+                        "url07.htm",
+                        "url08.htm",
+                        "url09.htm",
+                        "url10.htm",
+                        "url11.htm",
+                        "url12.htm" );
+
+
+function jumpPage(form) {
+        i = form.SelectMenu.selectedIndex;
+        if (i == 0) return;
+        window.location.href = url[i+1];
+} </script></p>
+
+<h2 ALIGN="CENTER">登录网页!</h2>
+<div align="center"><center>
+
+<table BORDER="2">
+  <tr align="center">
+    <td>　</td>
+  </tr>
+  <tr>
+    <td>登入类别:</td>
+    <td><script language="JavaScript">document.writeln('<FORM>');
+document.writeln('<SELECT NAME="SelectMenu" onChange="jumpPage(this.form)">');
+tot = siteopt.length;
+        for (var i = 1; i <= tot; i++)
+        document.write("<OPTION>" +siteopt[i]);
+document.writeln('</SELECT>');
+if (navigator.userAgent.indexOf("Mozilla/2") != -1)
+document.writeln('<INPUT TYPE = BUTTON VALUE = "GO!">');
+document.writeln('</FORM>');</script></td>
+  </tr>
+  <tr>
+    <td><form action="http://www.gdcatv.com.cn:4000/intra/owa/navigator.user_add"
+    method="POST">
+      <p>网页标题:</p>
+    </form>
+    </td>
+    <td><!--webbot bot="HTMLMarkup" startspan --><INPUT type="hidden" name="leibie" value="noselect"><!--webbot bot="HTMLMarkup" endspan --><!--webbot
+    bot="HTMLMarkup" startspan --><INPUT type="hidden" name="sub_type" value="noselect"><!--webbot bot="HTMLMarkup" endspan --><input type="text"
+    size="40" name="biaoti"></td>
+  </tr>
+  <tr>
+    <td>网页地址URL:</td>
+    <td><input type="text" size="40" name="w_dizhi" value="http://"></td>
+  </tr>
+  <tr>
+    <td>网页简介:<br>
+    (建议必须20-50字左右)</td>
+    <td><textarea name="neirong" rows="4" cols="32"></textarea></td>
+  </tr>
+  <tr>
+    <td>您的名字:</td>
+    <td><input type="text" size="40" name="mingzi"></td>
+  </tr>
+  <tr>
+    <td>您的E-mail:</td>
+    <td><input type="text" size="40" name="e_dizhi"></td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2"><input type="submit" value="   完成  "><input
+    type="reset" value="   重写   "></td>
+  </tr>
+</table>
+</center></div>
+
+<p align="center">把你的网络节点信息填入上述表格中，你的资料将被加入视讯中文搜索系统。</p>
+
+<p align="center">若想取消你的资料，请发信给<a
+HREF="mailto:webmaster.gdcatv.com.cn">webmaster@gdcatv.com.cn</a>，把你的网页标题及URL告诉我!</p>
+
+<p align="center">请多<a
+HREF="comment.html">提宝贵意见</a>，谢谢！</p>
+
+<hr>
+
+<p align="center"><font SIZE="-1">Copyright 1997 gdcatv.com.cn All Rights Reserved . <br>
+广东视讯宽带网服务中心 </font></p>
+<div align="center"><center>
+
+<address>
+  <font SIZE="-1"><a HREF="mailto:webmaster@gdcatv.com.cn">webmaster@gdcatv.com.cn </a></font>
+</address>
+</center></div>
+</body>
+</html>

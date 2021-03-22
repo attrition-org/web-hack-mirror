@@ -1,0 +1,31 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+<script language="JavaScript">
+<!--
+
+function Time(){
+var danas=new Date();
+var dan_tjedan=danas.getDay();
+switch(dan_tjedan){
+        case 0: var idi_url="nedjelja.htm"; break;
+        case 1: var idi_url="ponedjeljak.htm" ;break;
+        case 2: var idi_url="utorak.htm"; break;
+        case 3: var idi_url="srijeda.htm";break;
+        case 4: var idi_url="cetvrtak.htm";break;
+        case 5: var idi_url="petak.htm";break;
+        case 6: var idi_url="subota.htm";break;
+        case 7: var idi_url="nedjelja.htm";break;
+
+  }
+document.location.href=idi_url;
+}
+
+// -->
+</script>
+</head>
+
+<body bgcolor="39374A" text="#CCCCCC" link="CCCCCC" vlink="CCCCCC"  onLoad="Time()" alink="CCCCCC" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+</body>
+</html>

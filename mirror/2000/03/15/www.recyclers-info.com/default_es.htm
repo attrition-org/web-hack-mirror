@@ -1,0 +1,309 @@
+<HTML>
+<HEAD>
+<TITLE>Recyclers Info</TITLE>
+<META name="description" content="Servicio de informaci&oacute;n especial para reciclaje">
+<META name="keywords" content="">
+<META http-equiv="content-type" content="text/html;charset=ISO8859-1">
+</HEAD>
+<BODY BACKGROUND="./grafic/background.jpg" text=#000000 link=#008000 alink=#008000 vlink=#555555>
+<CENTER>
+
+<FORM name="Auswahl" action="" method="POST">
+
+<TABLE BORDER=0 cellpadding=5>
+<TR>
+  <TD VALIGN=top ALIGN=LEFT WIDTH=310>
+    <A HREF="default.htm"><IMG SRC="./grafic/german.gif" ALT="deutsch" BORDER=0 width=38 height=20></A>
+    <A HREF="default_en.htm"><IMG SRC="./grafic/english.gif" ALT="english" BORDER=0 hspace=5 width=38 height=20></A>
+    <A HREF="default_fr.htm"><IMG SRC="./grafic/french.gif" ALT="francais" BORDER=0 width=38 height=20></A>
+  </TD>
+  <TD VALIGN=top align=left rowspan=2>
+    <IMG SRC="./grafic/logo1.gif" ALT="Logo RI" BORDER=0 width=267 height=111>
+  </TD>
+</TR>
+<TR>
+  <TD width=320 align=right valign=bottom>
+    <B><FONT SIZE=4 FACE="Geneva,Verdana,Helvetica,Arial,Futura,sans serif">
+    Usted est&aacute; interesado en</FONT></B>
+  </TD>
+</TR>
+<TR>
+  <TD width=320 valign=center align=right>
+    <SELECT NAME="Bereich" onChange="Ber_Contr()">
+      <OPTION VALUE="0" SELECTED>todo ?
+      <OPTION VALUE="5">Recyclers Info Bolsa
+      <OPTION VALUE="1">Reuso
+      <OPTION VALUE="2">Reciclaje, saneamiento de desechos
+      <OPTION VALUE="3">Construcci&oacute;n de instalaciones
+      <OPTION VALUE="3">Sistemas de reciclaje
+      <OPTION VALUE="4">Construcci&oacute;n de m&aacute;quinas
+      <OPTION VALUE="4">M&aacute;quinas sueltas
+      <OPTION VALUE="6">Informaci&oacute;n y servicio
+      <OPTION VALUE="7">Producci&oacute;n / productos
+<!--      <OPTION VALUE="8">Tecnolog&iacute;a, procedimientos -->
+      <OPTION VALUE="9">Inovaciones
+<!--      <OPTION VALUE="a">Log&iacute;stica -->
+      <OPTION VALUE="b">Manejo del ambiente
+      <OPTION VALUE="c">Software
+<!--      <OPTION VALUE="d">Ofertas de asesoramiento -->
+    </SELECT>
+  </TD>
+  <TD width=320 align=left valign=center>
+    <IMG SRC="./grafic/1.gif" BORDER=0 vspace=15 width=13 height=13>
+    <IMG SRC="./grafic/welcome.gif" BORDER=0 hspace=50 width=192 height=37>
+  </TD>
+</TR>
+<TR>
+  <TD width=320 align=right valign=center>
+    <B><FONT SIZE="-1" FACE="Geneva,Verdana,Helvetica,Arial,Futura,sans serif">
+    en la r&uacute;brica de reciclaje&nbsp;&nbsp;</FONT></B>
+  </TD>
+  <TD width=320 align=left valign=center>
+    <B><FONT SIZE="-1" FACE="Geneva,Verdana,Helvetica,Arial,Futura,sans serif" COLOR="#669966">
+    o</FONT></B>
+    <B><FONT SIZE="-1" FACE="Geneva,Verdana,Helvetica,Arial,Futura,sans serif">
+    en el ramo de</FONT></B>
+  </TD>
+</TR>
+<TR>
+  <TD width=320 align=right valign=center>
+    <SELECT NAME="Rubrik" onChange="kontrolle(1,2)">
+      <OPTION VALUE="0" SELECTED>Nada seleccionado
+      <OPTION VALUE="1">Escombros de demolici&oacute;n, piedras, tierra
+      <OPTION VALUE="2">Asfalto, alquitr&aacute;n, cart&oacute;n alquitranado
+      <OPTION VALUE="3">Disolvente, aceite, barniz
+      <OPTION VALUE="3">Substancias qu&iacute;micas
+      <OPTION VALUE="4">Basura dom&eacute;stica, basura industrial
+      <OPTION VALUE="5">Basura voluminosa, madera usada
+      <OPTION VALUE="6">Papel usado, cart&oacute;n
+      <OPTION VALUE="7">Cristal, cer&aacute;mica
+      <OPTION VALUE="8">Tejidos, alfombras, fibras naturales
+      <OPTION VALUE="9">Reciclaje de pl&aacute;sticos
+      <OPTION VALUE="a">Goma, neum&aacute;ticos usados
+      <OPTION VALUE="b">Chatarra electr&oacute;nica y de m&aacute;quinas, cables
+      <OPTION VALUE="c">Chatarra ferrosa y no ferrosa
+      <OPTION VALUE="d">Metales preciosos &ograve; pesados
+      <OPTION VALUE="e">Esti&eacute;rcol, desechos org&aacute;nicos
+      <OPTION VALUE="f">Saneamiento de aguas, aguas residuales
+      <OPTION VALUE="g">Vertedores de basura
+      <OPTION VALUE="g">Dep&oacute;sitos de basura especial
+      <OPTION VALUE="h">Aprovechamiento t&eacute;rmico
+      <OPTION VALUE="h">Producci&oacute;n de energ&iacute;a
+    </SELECT>
+  </TD>
+  <TD width=320 align=left valign=center>
+    <IMG SRC="./grafic/2.gif" BORDER=0 width=13 height=13>&nbsp;
+    <SELECT NAME="Branche" onChange="kontrolle(2,1)">
+      <OPTION VALUE="0" SELECTED>Nada seleccionado
+      <OPTION VALUE="x">Todos ramos
+<!--      <OPTION VALUE="a">Construcci&oacute;n, calefacci&oacute;n, clima, sanitario, vidrio
+      <OPTION VALUE="b">Biotecnolog&iacute;a
+      <OPTION VALUE="c">Qu&iacute;micia
+      <OPTION VALUE="d">Electrotecnia, electr&oacute;nica
+      <OPTION VALUE="e">Suministro de energ&iacute;a
+      <OPTION VALUE="f">Saneamiento
+      <OPTION VALUE="g">Salud
+      <OPTION VALUE="h">Madera, papel
+      <OPTION VALUE="i">T&eacute;cnica de informaci&oacute;n y comunicaci&oacute;n
+      <OPTION VALUE="j">Mantillo, desechos biol&oacute;gicos
+      <OPTION VALUE="k">Veh&iacute;culos
+      <OPTION VALUE="l">Pl&aacute;stico
+      <OPTION VALUE="m">Agricultura y silvicultura
+      <OPTION VALUE="n">Alimentos
+      <OPTION VALUE="o">Construcci&oacute;n de m&aacute;quinas / metalurgia
+      <OPTION VALUE="p">Industria minera y metal&uacute;rgica
+      <OPTION VALUE="q">Tejidos
+      <OPTION VALUE="r">Transportes
+      <OPTION VALUE="s">Embalaje -->
+    </SELECT>
+  </TD>
+</TR>
+<TR>
+  <TD width=320 align=right valign=center>
+    <B><FONT SIZE="-1" FACE="Geneva,Verdana,Helvetica,Arial,Futura,sans serif">
+    en el pais&nbsp;&nbsp;</FONT></B>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR>
+  <TD width=320 align=right valign=center>
+    <SELECT NAME="Land">
+      <OPTION VALUE="de">Austria
+      <OPTION VALUE="de" SELECTED>Germany
+      <OPTION VALUE="de">Netherlands
+      <OPTION VALUE="de">Switzerland
+<!--      <OPTION VALUE="0">Australia
+      <OPTION VALUE="0">Belgium
+      <OPTION VALUE="0">Bosnia
+      <OPTION VALUE="0">Bulgaria
+      <OPTION VALUE="0">Canada
+      <OPTION VALUE="0">China
+      <OPTION VALUE="0">Croatia
+      <OPTION VALUE="0">Cyprus
+      <OPTION VALUE="0">Czech Republic
+      <OPTION VALUE="0">Denmark
+      <OPTION VALUE="0">Estonia
+      <OPTION VALUE="0">Finland
+      <OPTION VALUE="0">France
+      <OPTION VALUE="0">Georgia
+      <OPTION VALUE="0">Greece
+      <OPTION VALUE="0">Hong Kong
+      <OPTION VALUE="0">Hungary
+      <OPTION VALUE="0">Ireland
+      <OPTION VALUE="0">Israel
+      <OPTION VALUE="0">Italy
+      <OPTION VALUE="0">Japan
+      <OPTION VALUE="0">Latvia
+      <OPTION VALUE="0">Liechtenstein
+      <OPTION VALUE="0">Lithuania
+      <OPTION VALUE="0">Luxembourg
+      <OPTION VALUE="0">Malta
+      <OPTION VALUE="0">Moldova
+      <OPTION VALUE="0">Monaco
+      <OPTION VALUE="0">New Zealand
+      <OPTION VALUE="0">Norway
+      <OPTION VALUE="0">Poland
+      <OPTION VALUE="0">Portugal
+      <OPTION VALUE="0">Romania
+      <OPTION VALUE="0">Russia
+      <OPTION VALUE="0">Serbia
+      <OPTION VALUE="0">Slovakia
+      <OPTION VALUE="0">Slovenia
+      <OPTION VALUE="0">Spain
+      <OPTION VALUE="0">Sweden
+      <OPTION VALUE="0">Turkey
+      <OPTION VALUE="0">Ukraine
+      <OPTION VALUE="0">United Kingdom
+      <OPTION VALUE="0">USA -->
+    </SELECT>
+  </TD>
+  <TD width=320 align=left valign=center>
+    <IMG SRC="./grafic/3.gif" BORDER=0 width=13 height=13>
+  </TD>
+</TR>
+<TR>
+  <TD COLSPAN=2 ALIGN=CENTER>
+    <INPUT TYPE=Button VALUE="indicar" onClick="GeheZu()">
+  </TD>
+</TR>
+<TR>
+  <TD VALIGN=bottom align=center colspan=2>
+    <MAP NAME="map1">
+      <AREA SHAPE=RECT COORDS=0,0,75,23 HREF="impr_es.htm">
+      <AREA SHAPE=RECT COORDS=78,0,169,23 HREF="stat_es.htm">
+      <AREA SHAPE=RECT COORDS=172,0,236,23 HREF="mail-es.htm">
+      <AREA SHAPE=RECT COORDS=239,0,320,23 HREF="struc_es.htm">
+      <AREA SHAPE=RECT COORDS=323,0,412,23 HREF="calendar.htm">
+      <AREA SHAPE=RECT COORDS=415,0,499,23 HREF="hotlink.htm">
+    </MAP>
+    <IMG USEMAP="#map1" SRC="./grafic/l_def_es.gif" ALT="Buttonleiste" BORDER=0 width=500 height=24>
+  </TD>               
+</TR>
+</TABLE>
+</FORM>
+<TABLE width=640 border=0>
+<TR>
+<TD align=left valign=center>
+<FONT size=1 face=sans-serif>
+Copyright: <A href="./de/bigat/default.htm">BIGAT GmbH</A>
+</FONT>
+</TD>
+<TD align=right valign=center>
+<FONT size=1 face=sans-serif>
+Webmaster: <A href="./de/bigat/default.htm">BIGAT GmbH</A>
+&amp; <A href="http://www.eco-world.de" target="_TOP">KVA eG</A>
+</FONT>
+</TD>
+</TR>
+</TABLE>
+</CENTER>
+</BODY>
+<script language="JavaScript">
+<!--
+function Ber_Contr()
+{
+  if ((document.Auswahl.Bereich.options[document.Auswahl.Bereich.selectedIndex].value>"3") && (document.Auswahl.Rubrik.selectedIndex!=0))
+  {
+    document.Auswahl.Rubrik.selectedIndex=0;
+  }
+  if ((document.Auswahl.Bereich.options[document.Auswahl.Bereich.selectedIndex].value=="5") && (document.Auswahl.Branche.selectedIndex!=0))
+  {
+    document.Auswahl.Branche.selectedIndex=0;
+  }
+}
+
+function kontrolle(selbst, andere)
+{
+  if ((document.Auswahl.elements[selbst].selectedIndex!=0) && (document.Auswahl.elements[andere].selectedIndex!=0))
+  {
+    document.Auswahl.elements[andere].selectedIndex = 0;
+  }
+  if (document.Auswahl.Bereich.options[document.Auswahl.Bereich.selectedIndex].value>"3")
+  {
+    document.Auswahl.Rubrik.selectedIndex=0;
+  }
+  if (document.Auswahl.Bereich.options[document.Auswahl.Bereich.selectedIndex].value=="5")
+  {
+    document.Auswahl.Branche.selectedIndex=0;
+  }
+}
+
+function GeheZu()
+{
+  urlS = "0";
+  BerS = document.Auswahl.Bereich.options[document.Auswahl.Bereich.selectedIndex].value;
+  RubS = document.Auswahl.Rubrik.options[document.Auswahl.Rubrik.selectedIndex].value;
+  BraS = document.Auswahl.Branche.options[document.Auswahl.Branche.selectedIndex].value;
+  LandS = document.Auswahl.Land.options[document.Auswahl.Land.selectedIndex].value;
+
+  if (LandS!="0")
+  {
+    if (BerS!="0")
+    {
+      if (BraS!="0")
+      {
+        urlS = "./" + LandS + "/br" + BerS + "-" + BraS + ".htm";
+      }
+      else
+      {
+        if (BerS>"5")
+        {
+          urlS = "./" + LandS + "/" + BerS + "-0.htm";
+        }
+        else
+        {
+          if (BerS=="5")
+          { 
+            urlS = "./" + LandS + "/" + BerS + "es.htm";
+          }
+          else
+          {
+            urlS = "./" + LandS + "/" + BerS + "-" + RubS + "es.htm";
+          }
+        }
+      }
+    }
+    else
+    {
+      if ((RubS=="0") && (BraS=="0"))
+      {
+        urlS = "./" + LandS + "/default_es.htm";
+      }
+      else
+      {
+        alert('¡Por favor haga su selección del punto (1)!');
+      }
+    }
+  }
+  else
+  {
+    alert('¡Actualmente no hay informaciones para este pais!');
+  }
+  if (urlS!="0")
+  {
+    location.href = urlS;
+  }
+}
+//-->
+</script>
+</HTML>

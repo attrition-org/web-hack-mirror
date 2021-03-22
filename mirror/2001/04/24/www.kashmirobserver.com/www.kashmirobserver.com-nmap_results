@@ -1,0 +1,39 @@
+
+Starting nmap V. 2.54BETA3 ( www.insecure.org/nmap/ )
+Insufficient responses for TCP sequencing (3), OS detection may be less accurate
+Interesting ports on kashmirobserver.com (64.77.114.38):
+(The 3 ports scanned but not shown below are in state: closed)
+Port       State       Service
+22/tcp     open        ssh                     
+80/tcp     open        http                    
+
+TCP Sequence Prediction: Class=random positive increments
+                         Difficulty=5500 (Worthy challenge)
+Aggressive OS guesses: IRIX 6.4 - 6.5.3m (97%), IRIX 6.2 - 6.5 (95%), IRIX 6.5 (88%), IRIX 6.5.7f (88%), IRIX 6.5.7f-6.5.8 (88%), Cisco 1601 (IOS 11.0) or DECbrouter90T1 (Runs Cisco IOS 10.2(5)) (87%), Cisco 1538M HUB running Cisco 1538M EES (1.00.00) or Assured Access Technology ISAS Switch Release-2.3.0 (87%), Telebit's NetBlazer 3.0 (86%)
+No exact OS matches for host (If you know what OS is running on it, see http://www.insecure.org/cgi-bin/nmap-submit.cgi).
+TCP/IP fingerprint:
+T1(Resp=Y%DF=N%W=C000%ACK=S++%Flags=AS%Ops=MNWNNTNNM)
+TSeq(Class=TD%gcd=A0%SI=1C)
+TSeq(Class=RI%gcd=1%SI=157C)
+T2(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+T1(Resp=Y%DF=N%W=C000%ACK=S++%Flags=AS%Ops=MNWNNTNNM)
+T3(Resp=Y%DF=N%W=C000%ACK=O%Flags=A%Ops=NNT)
+T2(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+T4(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T3(Resp=Y%DF=N%W=C000%ACK=O%Flags=A%Ops=NNT)
+T5(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+T4(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T6(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T5(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+T7(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+T6(Resp=N)
+T6(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+PU(Resp=N)
+T7(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+PU(Resp=Y%DF=N%TOS=0%IPLEN=38%RIPTL=148%RID=E%RIPCK=E%UCK=E%ULEN=134%DAT=E)
+PU(Resp=N)
+
+
+
+
+Nmap run completed -- 1 IP address (1 host up) scanned in 10 seconds

@@ -1,0 +1,44 @@
+--12:16:33--  http://can.com.sg:80/
+           => `can.com.sg/index.html'
+Connecting to can.com.sg:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+
+    0K ->
+
+12:16:33 (501.95 KB/s) - `can.com.sg/index.html' saved [514]
+
+Loading robots.txt; please ignore errors.
+--12:16:33--  http://can.com.sg:80/no-robots.txt
+           => `can.com.sg/no-robots.txt'
+Connecting to can.com.sg:80... connected!
+HTTP request sent, awaiting response... 404 Object Not Found
+12:16:34 ERROR 404: Object Not Found.
+
+--12:16:34--  http://can.com.sg:80/splash_index.cfm?cfid=302633&cftoken=65005421
+           => `can.com.sg/splash_index.cfm?cfid=302633&cftoken=65005421'
+Connecting to can.com.sg:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+
+    0K -> .......
+
+12:16:35 (13.41 KB/s) - `can.com.sg/splash_index.cfm?cfid=302633&cftoken=65005421' saved [8045]
+
+Converting can.com.sg/splash_index.cfm?cfid=302633&cftoken=65005421... done.
+--12:16:35--  http://can.com.sg:80/target.htm
+           => `can.com.sg/target.htm'
+Connecting to can.com.sg:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 74 [text/html]
+
+    0K ->                                                        [100%]
+
+12:16:36 (732.67 B/s) - `can.com.sg/target.htm' saved [74/74]
+
+Converting can.com.sg/target.htm... done.
+Converting can.com.sg/index.html... done.
+
+FINISHED --12:16:36--
+Downloaded: 8,633 bytes in 3 files
+Converting can.com.sg/index.html... done.

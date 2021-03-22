@@ -1,0 +1,164 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>0wned by fuqrag - Happy Thanksgiving</TITLE>
+<bgsound src="givethanks.mid" loop="1">
+</HEAD>
+<BODY BACKGROUND="thanks.jpg" BGCOLOR="#ffffff" LINK="#551c00"
+VLINK="#804040" ALINK="#008000" bgproperties="fixed">
+
+<P ALIGN=RIGHT><TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0"
+WIDTH="75%">
+  <TR>
+    <TD WIDTH="100%">
+    <P ALIGN=RIGHT><STRONG><FONT COLOR="#804000" SIZE="+3" FACE="Comic Sans MS">~~fuqrag,
+    Kingston Technology Company, ytcracker, and #sesame, wish you
+    all a Happy and SAFE thanksgiving!~~</FONT></STRONG></P>
+
+    <P><CENTER><STRONG><FONT COLOR="#804000" SIZE="+3" FACE="Comic Sans MS"><IMG 
+    SRC="thxline.gif" WIDTH="342" HEIGHT="37" NATURALSIZEFLAG="0"
+    ALIGN="BOTTOM"></FONT></STRONG></CENTER></P>
+
+    <P><CENTER><FONT SIZE="+2" FACE="Comic Sans MS"><IMG SRC="cute.gif"
+    WIDTH="103" HEIGHT="98" NATURALSIZEFLAG="0" ALIGN="BOTTOM"></FONT></CENTER></P>
+
+    <P ALIGN=RIGHT><STRONG><FONT COLOR="#ca4200" FACE="Comic Sans MS">~</FONT></STRONG><FONT
+     COLOR="#ca4200" FACE="Comic Sans MS">~&quot;O give <STRONG>thanks</STRONG>
+    unto the LORD; for [he is] good; for his mercy [endureth] for
+    ever.&quot; 1 Chronicles 16:34~~</FONT></P>
+
+    <P><CENTER><FONT COLOR="#ca4200" FACE="Comic Sans MS"><IMG SRC="thxbar.jpg"
+    WIDTH="345" HEIGHT="16" NATURALSIZEFLAG="0" ALIGN="BOTTOM"></FONT></CENTER></P>
+
+    <P ALIGN=RIGHT><STRONG><FONT COLOR="#804000" FACE="Comic Sans MS">What
+    are you thankful for...<BR>
+    </FONT></STRONG><FONT COLOR="#ca4200" FACE="Comic Sans MS">~~&quot;I
+    will give <B>thanks</B> unto thee; For I am fearfully and wonderfully
+    made: Wonderful are thy works; And that my soul knoweth right
+    well&quot;.<BR>
+    Psalms 139:14~~</FONT></P>
+
+    <P ALIGN=RIGHT><FONT COLOR="#ca4200" FACE="Comic Sans MS"><IMG 
+    SRC="thxbar.jpg" WIDTH="345" HEIGHT="16" NATURALSIZEFLAG="0"
+    ALIGN="BOTTOM"><BR>
+    The Mayflower sailed from Plymouth, England, September 6, 1620
+    with 102 people aboard.On November 11, 1620, after 66 days at
+    sea,<BR>
+    the Mayflower came to a rest off Cape Cod-far from the Hudson
+    River in which what became New York State, its intended destination.</FONT></P>
+
+    <P ALIGN=RIGHT><STRONG><FONT COLOR="#804000" FACE="Comic Sans MS">The
+    First Thanksgiving was celebrated in 1621 to give thanks for
+    a bountiful harvest. The meal was shared between the Pilgrims
+    and the Native Americans with foods whose origin was North American
+    such as pumpkins, cranberries, corn, and of course the native
+    bird known as wild turkey. The pilgrims harvest would not have
+    been so plentiful were it not for the Native Americans who taught
+    them what would grow well in their new land.</FONT></STRONG></P>
+
+    <P ALIGN=RIGHT><FONT COLOR="#ca4200" FACE="Comic Sans MS">~~&quot;Enter
+    into his gates with thanksgiving, and into his courts <BR>
+    with praise: be <B>thankful</B> unto him, and bless his name.&quot;
+<BR>
+    Psalms 100:4~~</FONT></P>
+
+    <P ALIGN=RIGHT><STRONG><FONT COLOR="#804000" FACE="Comic Sans MS">Thanksgiving
+    today is a time to give thanks for one's blessings , whatever
+    they may be..</FONT></STRONG></P>
+
+    <P><CENTER><STRONG><FONT COLOR="#804000" FACE="Comic Sans MS"><IMG 
+    SRC="cute2.gif" WIDTH="119" HEIGHT="141" NATURALSIZEFLAG="0"
+    ALIGN="BOTTOM"></FONT></STRONG></CENTER></P>
+
+    <P ALIGN=RIGHT><FONT COLOR="#ca4200" SIZE="+2" FACE="Comic Sans MS">&quot;T</FONT><FONT
+     COLOR="#ca4200" SIZE="+1" FACE="Comic Sans MS">hanksgiving is
+    a time of gratitude to God, our Creator and Provider, whose guidance
+    and care go before us...and whose love is with us forever.&quot;</FONT></P>
+
+    <P><CENTER><IMG SRC="tlinks.jpg" WIDTH="113" HEIGHT="33" NATURALSIZEFLAG="0"
+    ALIGN="BOTTOM"></CENTER></P>
+
+    <P><CENTER><STRONG><FONT FACE="Comic Sans MS"><IMG SRC="b-hat.gif"
+    WIDTH="24" HEIGHT="24" NATURALSIZEFLAG="0" ALIGN="BOTTOM"> <A
+    HREF="http://www.hack.co.za/">Http://www.hack.co.za</A></FONT></STRONG></CENTER></P>
+
+    <P><CENTER><STRONG><FONT FACE="Comic Sans MS"><IMG SRC="b-pilgr.gif"
+    ALIGN="TOP" WIDTH="24" HEIGHT="24" NATURALSIZEFLAG="0"> <A HREF="http://www.hackerparts.com/">Http://www.hackerparts.com</A></FONT></STRONG></CENTER></P>
+
+    <P><CENTER><STRONG><FONT FACE="Comic Sans MS"><IMG SRC="b-pump.gif"
+    WIDTH="22" HEIGHT="27" NATURALSIZEFLAG="0" ALIGN="BOTTOM"> <A
+    HREF="http://aempirei.entropy.net/">Http://aempirei.entropy.net</A></FONT></STRONG></CENTER></P>
+
+    <P><CENTER><STRONG><FONT FACE="Comic Sans MS"><IMG SRC="b-turkey.gif"
+    ALIGN="TOP" WIDTH="24" HEIGHT="24" NATURALSIZEFLAG="0"> <A HREF="http://www.technotronic.com/">Http://www.technotronic.com</A></FONT></STRONG></CENTER></P>
+
+    <H2><CENTER><STRONG><FONT SIZE="+0" FACE="Comic Sans MS"><IMG 
+    SRC="b-hat.gif" WIDTH="24" HEIGHT="24" NATURALSIZEFLAG="0" ALIGN="BOTTOM">
+    <A HREF="http://www.unicef.org/">Http://www.unicef.org</A></FONT></STRONG></CENTER></H2>
+
+    <P><CENTER><STRONG><FONT FACE="Comic Sans MS"><IMG SRC="b-indian.gif"
+    WIDTH="24" HEIGHT="24" NATURALSIZEFLAG="0" ALIGN="BOTTOM"><A
+    HREF="http://www.goodwill.org/">Http://www.goodwill.org</A></FONT></STRONG></CENTER></P>
+
+    <P><CENTER><STRONG><FONT FACE="Comic Sans MS"><IMG SRC="b-pump.gif"
+    WIDTH="22" HEIGHT="27" NATURALSIZEFLAG="0" ALIGN="BOTTOM"> <A
+    HREF="http://freenet.buffalo.edu/community/holidays/thanksgiving/">Thanksgiving
+    On The World Wide Web</A></FONT></STRONG></CENTER></P>
+
+    <P><CENTER><STRONG><FONT COLOR="#804000" SIZE="+3" FACE="Comic Sans MS"><IMG 
+    SRC="thxline.gif" WIDTH="342" HEIGHT="37" NATURALSIZEFLAG="0"
+    ALIGN="BOTTOM"></FONT></STRONG></CENTER></P>
+
+    <P><CENTER><FONT COLOR="#ca4200" SIZE="+2" FACE="Comic Sans MS">Giving
+    Thanks<BR>
+    </FONT><FONT COLOR="#ca4200" SIZE="-2" FACE="Comic Sans MS">(Author
+    Unknown)</FONT><FONT COLOR="#ca4200" SIZE="-1" FACE="Comic Sans MS">
+<BR>
+    For the hay and the corn and the wheat that is reaped,<BR>
+    For the labor well done, and the barns that are heaped,<BR>
+    For the sun and the dew and the sweet honeycomb,<BR>
+    For the rose and the song and the harvest brought home --<BR>
+    <IMG SRC="http://www.gentle.org/adonai/thanksgiving.html" WIDTH="25"
+    HEIGHT="1" NATURALSIZEFLAG="0" ALIGN="BOTTOM">Thanksgiving! Thanksgiving!<BR>
+<BR>
+    For the trade and the skill and the wealth in our land,<BR>
+    For the cunning and strength of the workingman's hand,<BR>
+    For the good that our artists and poets have taught,<BR>
+    For the friendship that hope and affection have brought --<BR>
+    <IMG SRC="http://www.gentle.org/adonai/thanksgiving.html" WIDTH="25"
+    HEIGHT="1" NATURALSIZEFLAG="0" ALIGN="BOTTOM">Thanksgiving! Thanksgiving!<BR>
+<BR>
+    For the homes that with purest affection are blest,<BR>
+    For the season of plenty and well-deserved rest,<BR>
+    For our country extending from sea unto sea;<BR>
+    The land that is known as the &quot;Land of the Free&quot; --<BR>
+    <IMG SRC="http://www.gentle.org/adonai/thanksgiving.html" WIDTH="25"
+    HEIGHT="1" NATURALSIZEFLAG="0" ALIGN="BOTTOM">Thanksgiving! Thanksgiving!<BR>
+    </FONT></CENTER></P>
+
+    <P ALIGN=RIGHT><STRONG><FONT COLOR="#804000" FACE="Comic Sans MS">Did
+    you know....<BR>
+    </FONT><FONT COLOR="#ca4200" SIZE="+1" FACE="Comic Sans MS">I</FONT><FONT
+     COLOR="#ca4200" FACE="Comic Sans MS">n 1817 New York State had
+    adopted Thanksgiving Day as an annual custom. By the middle of
+    the 19th century many other states also celebrated a Thanksgiving
+    Day. In 1863 President Abraham Lincoln appointed a national day
+    of thanksgiving. Since then each president has issued a Thanksgiving
+    Day proclamation, usually designating the fourth Thursday of
+    each November as the holiday.</FONT></STRONG></P>
+
+    <H4 ALIGN=RIGHT>And please remember this holiday, to give to
+    those less fortunate. ;)</H4>
+
+    <H4 ALIGN=RIGHT>&quot;The world is what YOU make it. Don't make
+    it any worse than it already is&quot; -- fuqrag<BR>
+    </H4>
+
+    <P><CENTER><FONT COLOR="#804000" SIZE="-1" FACE="Comic Sans MS">Happy
+    Thanksgiving to all</FONT></CENTER></TD>
+  </TR>
+</TABLE>
+
+</BODY>
+</HTML>

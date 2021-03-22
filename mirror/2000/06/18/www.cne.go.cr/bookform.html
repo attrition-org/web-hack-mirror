@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 2.0">
+<title>Registro de Visitantes</title>
+</head>
+
+<body>
+
+<h2 align="center"><font color="#0000FF"><em>Registro de
+Visitantes</em></font></h2>
+
+<form action="/cgi-bin/book.exe" method="POST">
+    <p>Por favor llene los siguientes datos</p>
+    <p>Nombre:<input type="text" size="35" maxlength="127"
+    name="theName">*<br>
+    E-mail:<input type="text" size="35" maxlength="127"
+    name="theEmail"><br>
+    Dirección (Ciudad, provincia)?<input type="text" size="35"
+    maxlength="127" name="theCity">*<br>
+    Si usted posee un &quot;Sitio&quot; o &quot;Homepage&quot; le
+    agradeceríamos nos indique la dirección :<br>
+    <input type="text" size="70" maxlength="127"
+    name="theHomepage"> </p>
+    <p>Como llegó aquí?<br>
+    </p>
+    <ul>
+        <li><dl>
+                <dt><input type="radio" checked name="theWay"
+                    value="Dumb luck">Dumb luck </dt>
+                <dt><input type="radio" name="theWay"
+                    value="Following this link:">Siguiendo una
+                    dirección</dt>
+                <dd><ul>
+                    </ul>
+                </dd>
+                <dt><i>Dirección que siguió : </i><input
+                    type="text" size="50" maxlength="256"
+                    name="theLink"> </dt>
+            </dl>
+        </li>
+    </ul>
+    <dl>
+        <dt><input type="radio" name="theWay"
+            value="Using WebCrawler or other search engine">Desde
+            WebCrawler u otras búsquedas</dt>
+        <dt><input type="radio" name="theWay"
+            value="Word of mouth">Alguien le contó</dt>
+        <dt><input type="radio" name="theWay" value="Other means">Mucho
+            le agradeceríamos sus comentarios?<br>
+            <input type="text" size="70" maxlength="254"
+            name="theComment"> </dt>
+        <dd><input type="submit" value="Envie los Datos"> <input
+            type="reset" value="Limpie la página"> <p><i><blink>*
+            favor llenar estos campos, el resto son opcionales</blink></i></p>
+            <p align="center"><font color="#0000FF">Muchas
+            gracias por su tiempo!</font></p>
+        </dd>
+    </dl>
+</form>
+</body>
+</html>

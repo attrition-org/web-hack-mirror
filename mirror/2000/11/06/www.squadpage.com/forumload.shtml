@@ -1,0 +1,81 @@
+<HEAD>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- Begin
+function NewWindow(mypage, myname, w, h, scroll) {
+var winl = (screen.width - w) / 2;
+var wint = (screen.height - h)  / 2;
+winprops = 'height='+h+',width='+w+',top='+wint+',left='+winl+',scrollbars='+scroll+',resizable'
+win = window.open(mypage, myname)
+if (parseInt(navigator.appVersion) >= 4) { win.window.focus(); }
+}
+//  End -->
+</script>
+<title></title>
+</HEAD>
+
+
+<body OnLoad=NewWindow('forum.htm','name','795','595','yes');return bgcolor="#000000" text="#000000">
+       
+<table border="0" width="100%" height="100%" background="images/Main-Background.jpg">
+  <tr>
+    <td width="100%">
+
+          <p align="center"><TABLE Width=245 CelLSpacing=0 Border=1 BorderColor=Black>
+<TR>
+   <TD BGCOLOR="#FF0000" width="239">   
+   <CENTER><b><font color="#FFFFFF" size="4" face="Arial">Squadpage&nbsp;
+   Polls</font></b></center>
+
+   </TD>
+</TR>
+
+<TR>
+   <TD BGCOLOR="#DDDDDD" width="239"> <Font Face="Verdana,Arial" Size=2>
+   <b>
+   What should Squadpage's first league be?</b></font>
+   </TD>
+</TR>
+<TR>
+   <TD BGCOLOR="#EEEEEE" width="239"> <Font Face="Verdana,Arial" Size=2>
+
+   <TABLE>
+   <FORM Action="/cgi-bin/Poll_It_SSI_v2.0.cgi" Method=POST>
+   <INPUT Type="Hidden" Name="poll_id" Value="">
+
+   
+   
+
+   
+
+      <TR><TD VALIGN=TOP><INPUT Type=Radio Name="option_selected" Value="1"></TD><TD><Font Face="Verdana,Arial" Size=2>A&D </TD></TR>
+      <TR><TD VALIGN=TOP><INPUT Type=Radio Name="option_selected" Value="2"></TD><TD><Font Face="Verdana,Arial" Size=2>FlagBall </TD></TR>
+      <TR><TD VALIGN=TOP><INPUT Type=Radio Name="option_selected" Value="3"></TD><TD><Font Face="Verdana,Arial" Size=2>TDM </TD></TR>
+      <TR><TD VALIGN=TOP><INPUT Type=Radio Name="option_selected" Value="4"></TD><TD><Font Face="Verdana,Arial" Size=2>TKOTH </TD></TR>
+      <TR><TD VALIGN=TOP><INPUT Type=Radio Name="option_selected" Value="5"></TD><TD><Font Face="Verdana,Arial" Size=2>Wait until DFLW Gidget! </TD></TR>
+    
+   
+
+   <TR><TD COLSPAN=2><CENTER> <BR> <INPUT Type=SUBMIT Value="Submit!"> <P> <Font Face="verdana,arial" Size=1>
+    </TD></TR>
+   </FORM>
+   </TABLE>
+
+   </TD>
+</TR>
+<TR>
+   <TD BGCOLOR="#DDDDDD" width="239">  
+   <CENTER><font face="Verdana,Arial" size="2"><b>Your Opinion Does Matter!</b></font>
+   </TD>
+</TR>
+
+
+</TABLE>
+  </td>
+  
+   </tr>
+</table>
+
+</body>
+

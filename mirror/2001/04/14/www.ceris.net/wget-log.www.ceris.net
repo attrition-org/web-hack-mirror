@@ -1,0 +1,38 @@
+--05:12:49--  http://www.ceris.net:80/
+           => `www.ceris.net/index.html'
+Connecting to www.ceris.net:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 468 [text/html]
+
+    0K ->                                                        [100%]
+
+05:12:50 (457.03 KB/s) - `www.ceris.net/index.html' saved [468/468]
+
+Loading robots.txt; please ignore errors.
+--05:12:50--  http://www.ceris.net:80/no-robots.txt
+           => `www.ceris.net/no-robots.txt'
+Connecting to www.ceris.net:80... connected!
+HTTP request sent, awaiting response... 404 Not Found
+05:12:50 ERROR 404: Not Found.
+
+--05:12:50--  http://www.ceris.net:80/cgi-bin/index.cgi
+           => `www.ceris.net/cgi-bin/index.cgi'
+Connecting to www.ceris.net:80... connected!
+HTTP request sent, awaiting response... 302 Found
+Location: http://211.57.245.253 [following]
+--05:13:09--  http://211.57.245.253:80/
+           => `211.57.245.253/index.html'
+Connecting to 211.57.245.253:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 302 [text/html]
+
+    0K ->                                                        [100%]
+
+05:13:10 (294.92 KB/s) - `211.57.245.253/index.html' saved [302/302]
+
+Converting 211.57.245.253/index.html... done.
+Converting www.ceris.net/index.html... done.
+
+FINISHED --05:13:10--
+Downloaded: 770 bytes in 2 files
+Converting www.ceris.net/index.html... done.

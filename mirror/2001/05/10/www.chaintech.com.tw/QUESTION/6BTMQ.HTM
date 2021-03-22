@@ -1,0 +1,285 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<title>Questions &amp; Answers: CT-6BTM Mainboard</title>
+</head>
+
+<body background="../mainpix/backgrnd.jpg" text="#000000" bgcolor="#000000" link="#0099FF" vlink="#0099FF" topmargin="0" leftmargin="0">
+<layer TOP="0" LEFT="0">
+
+<div align="left">
+
+<table border="0" cellpadding="0" cellspacing="0" width="620">
+  <tr>
+    <td valign="top" align="left"><img src="../mainpix/supp_l.jpg" width="160" height="74" alt="supp_l.jpg (14846 bytes)"><div align="left"><table border="0" cellpadding="5" cellspacing="0" width="159" align="left">
+      <tr>
+        <td height="8"><font face="Arial" size="1" color="#FFFFFF"><b>SUPPORT CATEGORY</b></font></td>
+      </tr>
+      <tr>
+        <td height="8"><p align="left"><font face="Arial" size="1" color="#FFFFFF"><strong>- </strong><a href="QUESTION.HTM">Main Technical Support Page</a><br>
+        - <a href="Resource.htm">Model Specific Support</a><br>
+        - <a href="../PRODUCTI/Y2K.htm">Year 2000 (Y2K) Issue</a><br>
+        - <a href="CPUCOMP.htm">CPU-Mainboard compatibility</a></font></td>
+      </tr>
+      <tr>
+        <td height="8"><font face="Arial" size="1" color="#FFFFFF"><b>DOWNLOADS</b></font></td>
+      </tr>
+      <tr>
+        <td height="8"><font face="Arial" size="1" color="#FFFFFF">- <a href="../DRIVER/DRIVER.htm">Drivers</a><br>
+        (sound/display/busmaster,etc.)<br>
+        - <a href="../BIOS/BIOSUPD8.htm">BIOS updates</a><br>
+        - <a href="Manuals.HTM">Manuals or jumpersettings</a></font><p>&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="8"><a href="../PRODUCTI/PRODUCTI.HTM"><u><font face="Arial" size="1" color="#0099FF"><strong>PRODUCTS</strong></font></u></a></td>
+      </tr>
+      <tr>
+        <td height="8"><font face="Arial" size="1" color="#FFFFFF">- Bare-bone Systems<br>
+        - Mainboards<br>
+        - AGP Adapters</font></td>
+      </tr>
+      <tr>
+        <td height="8"><p align="left"><font face="Arial" size="1"><a href="../COMPANY/Company.htm"><strong>COMPANY</strong></a></font></td>
+      </tr>
+      <tr>
+        <td height="8"><font face="Arial" size="1" color="#FFFFFF">- Company Profile<br>
+        - Factory tour <br>
+        - How to contact us</font></td>
+      </tr>
+      <tr>
+        <td><a href="../CHNEWS/News.htm"><font face="Arial" size="1" color="#0099FF"><u><strong>CHAINTECH
+        NEWS</strong></u></font></a></td>
+      </tr>
+      <tr>
+        <td><font face="Arial" size="1" color="#FFFFFF">- Latest News<br>
+        - Hot Releases<br>
+        - Award Gallery</font></td>
+      </tr>
+    </table>
+    </div></td>
+    <td rowspan="2" valign="top" align="left" width="460"><img src="../mainpix/supp_r.jpg" width="258" height="74" alt="supp_r.jpg (19060 bytes)"><br>
+    <div align="left"><table border="0" cellpadding="5" cellspacing="0" width="450">
+      <tr>
+        <td><table border="0" cellpadding="5" cellspacing="0" width="100%">
+          <tr>
+            <td bgcolor="#66C1FF"><p align="center"><font face="Arial" size="4" color="#FFFFFF">CT-6BTM
+            Mainboard Q&amp;A</font></td>
+          </tr>
+        </table>
+        <ul>
+          <li><small><font face="MS Sans Serif"><a href="#Why do I have exclamation marks">Why do I
+            have exclamation marks in front of the IDE controller/PCI Bridge under Windows 95 (OSR2) ?</a></font></small></li>
+          <li><small><font face="MS Sans Serif"><a href="#drivers for use under Windows 98">Where can
+            I get drivers for use under Windows 98 ?</a></font></small></li>
+          <li><small><font face="MS Sans Serif"><a href="#voltage on the CT-6BTM">Is it possible to
+            adjust the voltage on the CT-6BTM through the BIOS ?</a></font></small></li>
+          <li><small><font face="MS Sans Serif"><a href="#memory modules">Which brand memory modules
+            are supported by the CT-6BTM ?</a></font></small></li>
+          <li><small><font face="MS Sans Serif"><a href="#system does not startup">After installing my
+            CT-6BTM, the system does not startup and a siren-like noise sounds from the speaker.
+            What's wrong ?</a></font></small></li>
+          <li><small><font face="MS Sans Serif"><a href="#ACPI">How do I make ACPI work on my CT-6BTM
+            ?</a></font></small></li>
+          <li><small><font face="MS Sans Serif"><a href="#Celeron CPU the system crashes">After
+            installing my Celeron CPU the system crashes every 5 minutes. What's wrong ?</a></font></small></li>
+        </ul>
+        <p align="left">&nbsp;</p>
+        <div align="center"><center><table border="0">
+          <tr>
+            <td><strong><font face="Arial" size="2"><a name="Why do I have exclamation marks">Why do I
+            have exclamation marks</a> in front of the IDE controller/PCI Bridge under Windows 95
+            (OSR2) ?</font></strong><p><small><font face="MS Sans Serif">Windows 95 does not recognize
+            the PIIX4 controller which is used in the Intel TX/LX/BX chipsets. During the installation
+            of Windows 95 it will therefore ask for new drivers for this controller. When this
+            happens, ignore the message and continue to install Windows 95. After the installation is
+            completed, you will see exclamation marks in front of the IDE controller and sometimes
+            also in front of the PCI bridge. These can be removed by means of the <a href="../DRIVER/UTILITY/px4patch.exe">!Remover</a> utility which is supplied with your
+            mainboard. This utility is suitable for Windows 95 and Windows 95b OSR2.0 and OSR2.1. If
+            you are using Windows 95 OSR2.5, then you should use <a href="../DRIVER/UTILITY/setupex.exe">this</a> utility to fix this problem.</font></small></td>
+          </tr>
+          <tr>
+            <td><p align="center"><small><font face="MS Sans Serif">&nbsp;</font></small></p>
+            <p align="center"><map name="FPMap8">
+            <area href="#TOP OF PAGE" shape="rect" coords="5, 7, 84, 53"></map><img src="../mainpix/TOPOPAGE.gif" width="85" height="54" alt="TOPOPAGE.gif (1161 bytes)" border="0" usemap="#FPMap8"></p>
+            <p align="center"><small><font face="MS Sans Serif">&nbsp;</font></small></td>
+          </tr>
+          <tr>
+            <td><strong><font face="Arial" size="2">Where can I get <a name="drivers for use under Windows 98">drivers for use under Windows 98</a> ?</font></strong><p><small><font face="MS Sans Serif">There are no extra drivers for use under Windows 98. All the drivers
+            which came with your board are for use under Windows 95 only. The Intel busmaster drivers
+            that came with your board are also only for Windows 95 (retail version only !). Windows
+            98, as well as Windows 95 OSR2.0/2.1/2.5 automatically install and enable busmaster
+            drivers.</font></small></p>
+            <p><small><font face="MS Sans Serif">For more information on Intel's busmaster drivers
+            please click <a href="http://developer.intel.com/design/pcisets/busmastr/">here</a> and
+            for information and fixes on enabling DMA on Windows based systems please visit <a href="http://www.microsoft.com/hwdev/devdes/idedma.htm">Microsoft's website</a>.</font></small></td>
+          </tr>
+          <tr>
+            <td><p align="center"><small><font face="MS Sans Serif">&nbsp;</font></small></p>
+            <p align="center"><map name="FPMap9">
+            <area href="#TOP OF PAGE" shape="rect" coords="5, 7, 84, 53"></map><img src="../mainpix/TOPOPAGE.gif" width="85" height="54" alt="TOPOPAGE.gif (1161 bytes)" border="0" usemap="#FPMap9"></p>
+            <p align="center"><small><font face="MS Sans Serif">&nbsp;</font></small></td>
+          </tr>
+          <tr>
+            <td><strong><small><font face="MS Sans Serif">Is it possible to adjust the <a name="voltage on the CT-6BTM">voltage on the CT-6BTM</a> through the BIOS ?</font></small></strong><p><small><font face="MS Sans Serif">It is not possible to adjust the voltage on the CT-6BTM through the
+            BIOS. The CT-6BTM uses an Intel standard solution which assures the correct voltage for
+            the CPU at all times. We have found that in most popular overclocking situations it is not
+            necessary to change the voltage. Furthermore, the chances of really damaging your CPU when
+            increasing the voltage are much higher than when only raising the busfrequency. All this
+            combined with the fact that this board is able to support CPUs worth thousands of US$ has
+            prompted us to decide to use a stable, secure and safe solution which provides a perfect
+            compromise between overclockability, safety and stability.</font></small></p>
+            <p><small><font face="MS Sans Serif">If you still want to change the voltage, then you
+            might find what you are looking for on the following URL: <a href="http://ultimatepc.fsn.net/techinfo/slot1voltage/slot1voltage.htm">http://ultimatepc.fsn.net/techinfo/slot1voltage/slot1voltage.htm</a></font></small></td>
+          </tr>
+          <tr>
+            <td><p align="center"><small><font face="MS Sans Serif">&nbsp;</font></small></p>
+            <p align="center"><map name="FPMap10">
+            <area href="#TOP OF PAGE" shape="rect" coords="5, 7, 84, 53"></map><img src="../mainpix/TOPOPAGE.gif" width="85" height="54" alt="TOPOPAGE.gif (1161 bytes)" border="0" usemap="#FPMap10"></p>
+            <p align="center"><small><font face="MS Sans Serif">&nbsp;</font></small></td>
+          </tr>
+          <tr>
+            <td><strong><font face="Arial" size="2">Which brand<a name="memory modules"> memory
+            modules</a> are supported by the CT-6BTM ?</font></strong><p><small><font face="MS Sans Serif">The following modules were tested OK (all PC100):<br>
+            </font></small></p>
+            <div align="center"><center><table border="1" cellspacing="5" cellpadding="5">
+              <tr>
+                <td align="center"><small><font face="MS Sans Serif">32MB</font></small></td>
+                <td><small><font face="MS Sans Serif">ASD / LGS / NEC </font></small></td>
+              </tr>
+              <tr>
+                <td align="center"><small><font face="MS Sans Serif">64MB</font></small></td>
+                <td><small><font face="MS Sans Serif">ASD / LGS / NEC / Mitsubishi</font></small></td>
+              </tr>
+              <tr>
+                <td align="center"><small><font face="MS Sans Serif">128MB</font></small></td>
+                <td><small><font face="MS Sans Serif">SEC / NEC / Hyundai</font></small></td>
+              </tr>
+            </table>
+            </center></div></td>
+          </tr>
+          <tr>
+            <td><p align="center"><small><font face="MS Sans Serif">&nbsp;</font></small></p>
+            <p align="center"><map name="FPMap11">
+            <area href="#TOP OF PAGE" shape="rect" coords="5, 7, 84, 53"></map><img src="../mainpix/TOPOPAGE.gif" width="85" height="54" alt="TOPOPAGE.gif (1161 bytes)" border="0" usemap="#FPMap11"></p>
+            <p align="center"><small><font face="MS Sans Serif">&nbsp;</font></small></td>
+          </tr>
+          <tr>
+            <td><strong><font face="Arial" size="2">After installing my CT-6BTM, the<a name="system does not startup"> system does not startup</a> and a siren-like noise sounds
+            from the speaker. What's wrong ?</font></strong><p><small><font face="MS Sans Serif">This
+            sound indicates a failure encountered during the first stages of the BIOS startup
+            procedure. The causes of this problem could be ::</font></small></p>
+            <p><small><font face="MS Sans Serif">1. Memory related:</font></small><ul>
+              <li><small><font face="MS Sans Serif">the memory modules don't conduct well enough because
+                of damage or dirt buildup</font></small></li>
+              <li><small><font face="MS Sans Serif">the memory modules are defective</font></small></li>
+              <li><small><font face="MS Sans Serif">the memory sockets are damaged</font></small></li>
+            </ul>
+            <p><small><font face="MS Sans Serif">In order to check if your problem is related to the
+            memory, check the modules and sockets carefully and clean the edges of the memory modules.
+            Try other modules if possible and/or try using them in another socket.</font></small></p>
+            <p><small><font face="MS Sans Serif">2. Power supply related:</font></small><ul>
+              <li><small><font face="MS Sans Serif">the powersupply is defective and does not deliver
+                enough power</font></small></li>
+              <li><small><font face="MS Sans Serif">the powersupply has compatibility problems with your
+                board; </font></small></li>
+            </ul>
+            <p><small><font face="MS Sans Serif">We have found that sometimes the CT-6BTM can be picky
+            when it comes to powersupplies. After investigating this issue we have found that the
+            cause of this problem lies in the specification margins of certain powersupplies. If the
+            margin becomes too large, the above mentioned problem may occur. In all cases changing the
+            powersupply to another brand would solve the problem. </font></small></p>
+            <p><small><font face="MS Sans Serif">The problem is caused when the power supply is unable
+            to provide a stable voltage fast enough causing the BIOS POST test to fail. Because the
+            loading on the power supply will also influence this power supply startup time period, the
+            problem will occur more/faster when the system has more components/devices installed and
+            when higher busspeeds are used.</font></small></p>
+            <p><small><font face="MS Sans Serif">Higher quality powersupplies will have stricter
+            margins and will less likely cause problems. We have tested Delta, Enlight, Seventeam,
+            etc. powersupplies without problems.</font></small></p>
+            <p><small><font face="MS Sans Serif">If above suggestions do not solve your problem, then
+            contact your dealer and send us an e-mail with the following information: CPU model no.
+            (all details on the CPU package !), mainboard serial no., mainboard PCB version (see BIOS
+            ROM sticker), short description of the problem (problem at first startup or after a while
+            of using, or after adding some component(s), or after a BIOS update)</font></small></td>
+          </tr>
+          <tr>
+            <td><p align="center"><small><font face="MS Sans Serif">&nbsp;</font></small></p>
+            <p align="center"><map name="FPMap12">
+            <area href="#TOP OF PAGE" shape="rect" coords="5, 7, 84, 53"></map><img src="../mainpix/TOPOPAGE.gif" width="85" height="54" alt="TOPOPAGE.gif (1161 bytes)" border="0" usemap="#FPMap12"></p>
+            <p align="center"><small><font face="MS Sans Serif">&nbsp;</font></small></td>
+          </tr>
+          <tr>
+            <td><small><font face="MS Sans Serif"></font></small></td>
+          </tr>
+          <tr>
+            <td><strong><font face="Arial" size="2">How do I make <a name="ACPI">ACPI</a> work on my
+            CT-6BTM ?</font></strong><p><small><font face="MS Sans Serif">In order to make ACPI work
+            you will need the following:</font></small><ol>
+              <li><small><font face="MS Sans Serif">An ACPI compatible <a href="../BIOS/Models/6BTM.htm">BIOS</a>
+                </font></small></li>
+              <li><small><font face="MS Sans Serif">Install Windows 98 with the option SETUP /P J&nbsp; ,
+                thus installing ACPI support for Windows 98 (default is APM)</font></small></li>
+              <li><small><font face="MS Sans Serif">ACPI compatible display drivers ! At this moment only
+                ATI has these drivers ready. Please check your display card manufacturer for more
+                information on these drivers.</font></small></li>
+              <li><small><font face="MS Sans Serif">Execute the <a href="../DRIVER/UTILITY/ZVHDD.ZIP">ZVHDD</a>
+                utility. You should just execute this program under Windows 98, after which the
+                suspend-to-disk functions wil be available <br>
+                (if above conditions are also met !)</font></small></li>
+            </ol>
+            <p><small><font face="MS Sans Serif">Please take note of the limitations of current
+            implementations of ACPI:</font></small><ul>
+              <li><small><font face="MS Sans Serif">OnNow (= suspend to DRAM) is not supported by any
+                boards on the market yet. This function requires a total relayout of the mainboard's power
+                structure (separated power for the DRAM and other board components) and a special power
+                supply. Wide scale availability of OnNow compatible mainboards are&nbsp; expected to hit
+                the market only in the first quarter of 1999.</font></small></li>
+              <li><small><font face="MS Sans Serif">The Suspend-to-harddisk function only works if your
+                display driver is ACPI compliant (only ATI has good working drivers at this moment) and
+                only works for IDE HDDs</font></small></li>
+              <li><small><font face="MS Sans Serif">CD-ROMs and SCSI HDDs are not controllable by ACPI
+                unless ACPI drivers are available for these devices.</font></small></li>
+            </ul>
+            <p><small><font face="MS Sans Serif">In short, ACPI might not bring the functionality
+            extras (yet) that you might expect from it. </font></small></td>
+          </tr>
+          <tr>
+            <td><p align="center"><small><font face="MS Sans Serif">&nbsp;</font></small></p>
+            <p align="center"><map name="FPMap13">
+            <area href="#TOP OF PAGE" shape="rect" coords="5, 7, 84, 53"></map><img src="../mainpix/TOPOPAGE.gif" width="85" height="54" alt="TOPOPAGE.gif (1161 bytes)" border="0" usemap="#FPMap13"></p>
+            <p align="center">&nbsp;</td>
+          </tr>
+          <tr>
+            <td><strong><font face="Arial" size="2">After installing my <a name="Celeron CPU the system crashes">Celeron CPU the system crashes</a> every 5 minutes.
+            What's wrong ?</font></strong><p><small><font face="MS Sans Serif">Check in the second
+            page of the BIOS for the option CPU L2 Cache ECC Checking and disable this function.</font></small></td>
+          </tr>
+        </table>
+        </center></div><p>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><p align="center"><map name="FPMap14">
+          <area href="#TOP OF PAGE" shape="rect" coords="5, 7, 84, 53"></map><img src="../mainpix/TOPOPAGE.gif" width="85" height="54" alt="TOPOPAGE.gif (1161 bytes)" border="0" usemap="#FPMap14"></p>
+        <p align="center">&nbsp;</p>
+        <p align="center"><em><font face="Arial" size="1"><a href="../COMPANY/Company.htm">COMPANY</a>
+        - <a href="../PRODUCTI/PRODUCTI.HTM">PRODUCTS</a> - <a href="QUESTION.HTM">SUPPORT</a> - <a href="../CHNEWS/News.htm">NEWS</a> - <a href="../Index_m.htm">HOME</a><br>
+        </font><small><small><small><font face="Arial">Contents &amp; Design by Chaintech Computer
+        Co. 1998/1999<br>
+        </font></small></small></small></em>------------ <img src="../mainpix/logosmal.gif" width="27" height="19" alt="logosmal.gif (1015 bytes)" align="middle"> ------------</td>
+      </tr>
+    </table>
+    </div></td>
+    <td align="left" valign="top"></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+</div>
+</layer>
+</body>
+</html>

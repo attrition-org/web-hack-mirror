@@ -1,0 +1,83 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>Nanostructure Research</title>
+<link rel="stylesheet" type="text/css" href="../../sst.css">
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<h1>Pseudopotential Calculations of the Electronic Structure of Semiconductor Quantum
+Nanostructures</h1>
+
+<p>The <a href="../../index.html">Solid State Theory group</a> is involved in
+performing state of the art calculations of the electronic structure of a wide range of
+semiconductor nanostructures, ranging from 2 dimensional quantum wells and superlattices
+to 0 dimensional quantum dots.</p>
+
+<p>Our theory of quantum nanostructures proceeds in the following steps:</p>
+
+<ol>
+
+<li><p><em>Assume the size, shape and composition of the nanostructure.</em>
+The nanostructures can be "free-standing" colloidal dots whose surface is
+passivated, or "embedded dots" such as pyramidal or lens-shaped InAs in
+a GaAs "cap".  One can assume also that the dot is either chemically pure,
+or that it has a given composition/alloying profile.</p>
+</li>
+
+<li><p><em>Relax the atomic positions to minimize strain.</em>  If the dot is
+embedded in another material, we use the Valence Force Field (VFF) to relax
+all atomic positions.</p>
+</li>
+
+<li><p><em>Construct empirical psuedopotentials.</em> Since we need to avoid "LDA
+errors", we must use "realistic" pseudopotentials that not only produce
+correct band gaps, but also give (unlike LDA) correct effective masses and their
+anisotropies.  Furthermore, since we need to consider very large dots, we need 
+pseudopotentials whose plane wave description can be accomodated with a small basis
+set (e.g. a cut-off of 5 Ry). We have developed a new generation of empirical
+pseudopotential methods which satisfy these conditions.</p>
+</li>
+
+<li><p><em>Solve the single particle Schroedinger equation using one of the folowing
+methods.</em></p>
+<ul>
+  <li>The <a href="escan.html">Folded Spectrum Method (FSM)</a></li>
+  <li>The Linear Combination of Bulk Bands (LCBB)</li>
+</ul>
+<p></p>
+</li>
+
+<li><p><em>Calculate the dielectric screening function and the interparticle
+Coulomb and exchange integrals.</em></p>
+</li>
+
+<li><p><em>Using the single-particle levals and inter-particle interactions,
+solve the configuration-interactions problem.</em></p>
+</li>
+
+
+</ol>
+
+<h2>References</h2>
+<p>For a listing of all SST references on the topic "nanostructures",
+click on the "Get References" button below.</p>
+
+<FORM ACTION="http://pix.nrel.gov:8020/BASIS/nich/www/sstnrel/SDF" METHOD="POST">
+<INPUT TYPE="submit" VALUE="Get References">
+<!--Specify the topic "nanostructures" -->
+<INPUT TYPE="hidden" NAME="TOPIC" VALUE="SSTDOTS">
+<!--Request reverse chronological order -->
+<INPUT TYPE="hidden" NAME="FORMFL_OB" VALUE="Publication Year">
+<INPUT TYPE="hidden" NAME="FORM_SO" VALUE="Descend">
+<!--Specify that keywords should be anded, (this field is necessary for searches) -->
+<INPUT TYPE="hidden" NAME="FORM_C" VALUE="AND">
+</FORM>
+
+<hr noshade size="1" width="72" align="left">
+<a href="../../default.html">Back to SST research group</a>
+</body>
+</html>

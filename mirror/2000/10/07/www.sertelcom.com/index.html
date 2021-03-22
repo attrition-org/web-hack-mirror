@@ -1,0 +1,113 @@
+<html>
+<head><style>
+a{text-decoration:none}
+A:hover {text-decoration: underline;}
+</style>
+<title>You've Been 0wned By: Scurvy</title>
+<style>
+.spanstyle {
+	position:absolute;
+	visibility:visible;
+	top:-50px;
+	font-size:8pt;
+	font-family:Verdana;
+      font-weight:bold;
+	color:#00FF00;
+}
+</style>
+<script>
+
+var x,y
+var step=20
+var flag=0
+
+var message="Scurvy "
+message=message.split("")
+
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	xpos[i]=-50
+}
+
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	ypos[i]=-50
+}
+
+function handlerMM(e){
+	x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+	y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+	flag=1
+}
+
+function makesnake() {
+	if (flag==1 && document.all) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("span"+(i)+".style")
+    		thisspan.posLeft=xpos[i]
+			thisspan.posTop=ypos[i]
+    	}
+	}
+	
+	else if (flag==1 && document.layers) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("document.span"+i)
+    		thisspan.left=xpos[i]
+			thisspan.top=ypos[i]
+    	}
+	}
+		var timer=setTimeout("makesnake()",30)
+}
+
+</script>
+
+</head>
+<BODY onLoad="makesnake()" style="width:100%;overflow-x:hidden;overflow-y:scroll" bgcolor="#000000" bgproperties="fixed" text="#FFFFFF" link="#00FF00" alink="#ff0000" vlink="#B00000#BB0000">
+<basefont size="3"><script>
+<!-- Beginning of JavaScript -
+
+for (i=0;i<=message.length-1;i++) {
+    document.write("<span id='span"+i+"' class='spanstyle'>")
+	document.write(message[i])
+    document.write("</span>")
+}
+
+if (document.layers){
+	document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+
+// - End of JavaScript - -->
+</script>
+<div align="center">
+<img src="http://www.stas.net/2/rewted/nscurvy.jpg" alt="Scurvy Was Here!">
+</div><br><br>
+<center><b><strong>This site was owned by <big><a href="mailto:scurvy@hushmail.com">Scurvy</a></big>.<br><br></b></strong></center>
+<b>The reason behind this defacement is because I want to preach about driving.  If the speed limit is 55 mph, then go at <big>LEAST</big> 55 fucking miles an hour!! How fucking hard is that shit?? <br><br>
+If you're pulling out of a parking lot/drive way/side street  and there is one car coming, and nothing behind it, do <big>NOT</big> fucking pull out in front of it like you're in a hurry and only go half the fucking speed limit!!<br><br>
+If you're making a left turn onto a side road, and traffic is coming, get as close to the divide line as possible so people in a fucking hurry can get around you without driving into a ditch you dumb fuck!<br><br>
+Do not <big>EVER</big> fucking pull out in front of my ass, I'll fucking shoot you.<br><br>
+If you can't see past the length of your arm while wearing glasses, you have no reason to be behind the wheel of a car/truck/van/etc..<br><br>
+If you're older than 50, you don't need to be behind the wheel of a car.<br><br>
+If you can't spell/read the word <big>STOP</big>, you need to be shot and killed, and eaten by rabid dogs and cats.<br><br>If your car is older than you, you have no reason to be driving<br><br>If you're not a good lucking, blonde chick with big tits that wants to fuck my brains out, you don't have any reason to wave at me.<br><br>
+If it hurts to stick up your middle finger, you don't need to be fucking driving.<br><br>That's pretty much all I have to say. Thanks for listening.<br><br><br>
+Greets: <strong><b>Datagram</strong>, <strong>pimpshiz</strong>, <strong>doom</strong>, rootproc, nemesystm, wicked, lokal, Kreator, sinfony, Akurei, Starman_Jones, all of RSH, Apoc, piffy (mediawh0re), GForce, bi0cide, gat0r, z, biosdisk, rootx11, nutsax, matic, hooyah, Traze, SteeLe (I guess you got raided, hehe), and whoever else I forgot.</b>
+<div align="center"><br><a href="http://www.8op.com/rsh/"><img src="http://www.stas.net/2/rewted/rootshellme.jpg" alt="RootShellHackers!" border="0"></a><br><br>
+<b><big><a href="mailto:scurvy@hushmail.com">E-mail</a> me if you want. <a href="mailto:scurvy@hushmail.com">Scurvy@hushmail.com</a></big></b><br><br><font size="0"><b><tt>I'm not in RSH, they don't love me or something. But I still love them all.</tt></font></b>
+</BODY>
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

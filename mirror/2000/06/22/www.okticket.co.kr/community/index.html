@@ -1,0 +1,364 @@
+
+<HTML>
+
+<HEAD>
+
+
+<!--///////////////////////////////////////
+	MetaTags 시작
+	///////////////////////////////////////-->
+
+<META name="description" content="designed by sini@ultari.co.kr">
+<META name="description" content="programmed by jania@ultari.co.kr">
+
+<!--///////////////////////////////////////
+	MetaTags 끝
+	///////////////////////////////////////--><!--///////////////////////////////////////
+	StyleSheets 시작
+	///////////////////////////////////////-->
+
+<style type=text/css>
+body{margin:0px}
+</style>
+
+
+
+<STYLE type="text/css">
+<!--
+
+        .topmenu{font-family: 굴림; font-size: 9pt; color: #EFEFE0; text-decoration: none}
+        .topmenu :link{font-family: 굴림; font-size: 9pt; color: #EFEFE0; text-decoration: none}
+        .topmenu :visited{font-family: 굴림; font-size: 9pt; color: #CCFFCC; text-decoration: none}
+        .topmenu :active{font-family: 굴림; font-size: 9pt; color: #FFFFCC; text-decoration: none}
+        .topmenu :hover{font-family: 굴림; font-size: 9pt; color:#FBA300; text-decoration: none}
+
+
+	a{font-family: 굴림; font-size: 9pt; line-height: 14px;}	
+	a:link{text-decoration:none; color:#0152E7;}	
+	a:visited{text-decoration:none;	color:#0152E7;}	
+	a:active{text-decoration:underline; color:#5C069B;}	
+	a:hover{text-decoration:underline; color:#FBA300;}
+	rgb(102,153,204);
+-->
+</STYLE>
+
+<!--///////////////////////////////////////
+	StyleSheets 끝
+	///////////////////////////////////////-->
+<!--///////////////////////////////////////
+	JavaScripts 시작
+	///////////////////////////////////////-->
+
+<SCRIPT Language=JavaScript>
+
+		browserName = navigator.appName;
+		browserVer = parseInt(navigator.appVersion);
+		version = "incompatible";
+		
+		if (browserName == "Netscape" || browserVer >= 3) version = "n3";
+
+		if (version == "n3")
+		{
+			icon1on = new Image();
+			icon1on.src ="/images/tm_on-01-01.gif";
+			icon1off = new Image();
+			icon1off.src = "/images/tm-01-01.gif";
+			
+			icon2on = new Image();                
+			icon2on.src ="/images/tm_on-01-02.gif";
+			icon2off = new Image();
+			icon2off.src = "/images/tm-01-02.gif";
+			
+			icon3on = new Image();                
+			icon3on.src ="/images/tm_on-01-03.gif";
+			icon3off = new Image();
+			icon3off.src = "/images/tm-01-03.gif";
+			
+			icon4on = new Image();                
+			icon4on.src ="/images/tm_on-01-04.gif";
+			icon4off = new Image();
+			icon4off.src = "/images/tm-01-04.gif";
+			
+		}
+		
+		function img_act(imgIcon)
+		{
+			if (version == "n3") 
+			{
+				iconOn = eval(imgIcon + "on.src");
+				document[imgIcon].src = iconOn;
+				return true;
+			}
+		}
+		
+		function img_inact(imgIcon)
+		{
+			if (version == "n3") 
+			{
+				iconOff = eval(imgIcon + "off.src");
+				document[imgIcon].src = iconOff;
+				return true;
+			}
+		}
+	
+</SCRIPT>
+
+<!--///////////////////////////////////////
+	JavaScripts 끝
+	///////////////////////////////////////-->
+
+
+	<TITLE>Welcome to 문화공룡 OK-TICKET</TITLE>
+
+</HEAD>
+
+<BODY  marginwidth=0 marginheight=0 topmargin=0 leftmargin=0 bgcolor=#ffffff>
+
+<TABLE marginwidth=0 marginheight=0 topmargin=0 leftmargin=0 border=0 cellpadding=0 cellspacing=0 width=100%>
+	<TR><TD>
+<!--///////////////////////////////////////
+	MainMenus 시작
+	///////////////////////////////////////-->
+<table width="100%" height="75" border="0" cellspacing="0" cellpadding="0" BGCOLOR=#004D4A>
+ 	<TR>
+		<TD background='../images/top_bg.gif' WIDTH=217><A href='../home/index.html'><IMG src="../images/top_01-01.gif" width="181" height="71" border="0" ALT=""></A></TD>
+		<TD background='../images/top_bg.gif' WIDTH=100%></TD>
+		<TD background='../images/top_bg.gif' VALIGN=BOTTOM ALIGN=right>
+		<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 VALIGN=BOTTOM WIDTH=280 background='../images/top_bg.gif'>
+  		<TR>
+    		<TD background='../images/top_bg.gif'>
+    		<A HREF="../home/index.html" TARGET=_top onMouseover="img_act('icon1');" onMouseout="img_inact('icon1');"><IMG SRC="../images/tm-01-01.gif" BORDER="0" NAME='icon1'></TD>
+    		<TD background='../images/top_bg.gif'>
+    		<A HREF="../member/agreement.asp" TARGET=_top onMouseover="img_act('icon2');" onMouseout="img_inact('icon2');"><IMG SRC="../images/tm-01-02.gif" BORDER="0" NAME='icon2'></TD>
+    		<TD background='../images/top_bg.gif'>
+    		<A HREF="../home/schedule.asp" TARGET=_top onMouseover="img_act('icon3');" onMouseout="img_inact('icon3');"><IMG SRC="../images/tm-01-03.gif" BORDER="0" NAME='icon3'></TD>
+    		<TD background='../images/top_bg.gif'>
+    		<A HREF="../shop/cart.asp" TARGET=_top onMouseover="img_act('icon4');" onMouseout="img_inact('icon4');"><IMG SRC="../images/tm-01-04.gif" BORDER="0" NAME='icon4'></TD>
+  			</TR>
+		</TABLE>
+		</TD>
+		
+		
+		<TD align=right VALIGN=BOTTOM background='../images/top_bg.gif'>
+			<TABLE MARGINWIDTH=0 MARGINHEIGHT=0 TOPMARGIN=0 LEFTMARGIN=0 BORDER=0 CELLPADDING=0 CELLSPACING=0>
+			<TR>
+				<TD COLSPAN=3>
+				<A href='../home/searchForm.asp?t=1'><IMG SRC="../images/search.gif" BORDER=0 ALT=""></A>
+				</TD>
+<!----------------------
+				<TD>
+				<IMG SRC="../images/diary.gif" WIDTH=83 HEIGHT=13 BORDER=0 ALT="">
+				</TD>
+---------------------->
+				<TD></TD>	
+			</TR>
+			<TR>
+			
+				<form method=post name=search action=../search.asp>
+				<TD>
+				<select name=searchid value="검색">
+                        <option value="행사">행사</option>
+                        <option value="artist">Artist/단체</option>
+                        <option value="티켓">ticket</option>
+                        <option value="shop">shop</option>
+                        </select>
+           </TD> 
+           <TD>
+           
+				
+				<INPUT TYPE=text name=searchname SIZE=12 maxlength=64>
+				</TD>
+				<TD VALIGN=BOTTOM>
+				<A href='javascript:document.search.submit();'><IMG SRC="../images/go.gif" WIDTH=21 HEIGHT=21 BORDER=0 ALT="" HSPACE=3></A>&nbsp;&nbsp;&nbsp;
+				</TD>
+				</FORM>
+<!----------------------
+		<FORM name=diary method=get action='/home/schedule.asp'>
+				<TD>
+				<FONT SIZE=2 COLOR=WHITE>
+				<SELECT NAME="yy">
+				<option>2002</option>
+				<option>2001</option>
+				<option selected>2000</option>
+				<option>1999</option>
+				<option>1998</option>
+				</SELECT>
+				년&nbsp;
+				<SELECT NAME="mm">
+				<option>01</option>
+				<option>02</option>
+				<option>03</option>
+				<option>04</option>
+				<option>05</option>
+				<option>06</option>
+				<option>07</option>
+				<option>08</option>
+				<option>09</option>
+				<option>10</option>
+				<option>11</option>
+				<option>12</option>
+				</SELECT>
+				월
+				</TD>
+				<TD VALIGN=BOTTOM>
+				<A href='javascript:document.diary.submit();'><IMG SRC="../images/go.gif" WIDTH=21 HEIGHT=21 BORDER=0 ALT="" HSPACE=3></A>&nbsp;&nbsp;&nbsp;
+				</TD>	
+				</FORM> 
+---------------->
+			</TR>
+			</TABLE>
+		</TD>
+  	</TR>
+
+	<TR bgcolor="#FF5100"> 
+		<TD colSpan=4 align=right height=27><span class="topmenu">
+
+					[<A href="../home/index.html" target=_top>Home</A>]
+
+					[<A href="/concert/" target=_top>콘서트</A>]
+
+					[<A href="/art/" target=_top>아트</A>]
+
+					[<A href="/family/" target=_top>패밀리 & 이벤트</A>]
+
+					[<FONT size=2 color=black><B>OT-커뮤니티</B></FONT>]
+
+					[<A href="../member/index.html" target=_top>회원메뉴</A>]
+
+					[<A href="../goods/list.asp?idd=1" target=_top>Shop</A>]
+
+					[<A href="../contact/index.html" target=_top>Contact Us</A>]
+
+		/
+		
+		guest(손님)
+
+		[<A href='../member/loginForm.asp'>Log-in</A>]
+
+		</span></TD>
+  	</TR>
+</TABLE>
+<!--///////////////////////////////////////
+	MainMenus 끝
+	///////////////////////////////////////-->
+	
+	
+
+	</TD></TR>
+
+	<TR>
+		<TD valign=top width=100% align=left>
+<!--///////////////////////////////////////
+	SubMenus 시작
+	///////////////////////////////////////-->
+<TABLE border=0 cellpadding=0 cellspacing=2 width=100%>
+	<TR><TD align=right><FONT size=2>
+
+		[<FONT size=2><B>시작화면</B></FONT>]
+
+		[<A href="/freeTicket/list.asp">프리티켓 모음</A>]
+
+		[<A href="/freeEvent/list.asp">이벤트 PR 마당</A>]
+
+		[<A href="../sponsor/list.asp">아티스트 갤러리</A>]
+
+		[<A href="http://bbs.localhost.co.kr/okticket/ezboard.cgi?db=faq1">OT-공지사항</A>]
+
+		[<A href="http://bbs.localhost.co.kr/okticket/ezboard.cgi?db=faq2">자유게시판</A>]
+
+	</TD></TR>
+</TABLE>
+<!--///////////////////////////////////////
+	SubMenus 끝
+	///////////////////////////////////////-->
+
+			<!----- 본문 시작 ------>
+<CENTER>
+<table width=70%>
+
+<tr>
+
+<td COLSPAN=2><BR>
+<img src="images/t_ot.gif" border="0" HEIGHT="70"><br><br>
+<FONT SIZE=2 COLOR=#0152E7>
+<B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"문화공룡 OKTICKET이 사이버 문화세상을 여러분과 함께 꾸며 나갑니다!"</B><BR><BR>
+
+</td>
+</TR>
+<TR>
+<td WIDTH="30">&nbsp;</td>
+<td>
+
+
+<font SIZE="2" COLOR="#684A99">
+<img src=images/icon2.gif BORDER=0>
+<a href="/freeTicket/list.asp"><B>프리티켓 모음</B></a><BR><BR>
+<UL>
+OK! Freeticket! 문화를 사랑하는 마음으로 여러분에게 초대권을 배부하는 코너입니다.
+가요, 클래식, 국악, 영화 등 많은 장르를 다양하게 체험하시고 감상하실 수 있는 기회입니다.  이번 기회를 통하여 폭넓은 문화체험을 해 보시기 바랍니다. 출연 아티스트와 문화단체여러분의 후원아래 이 코너를 준비하였습니다.  
+"프리티켓 모음"은 OT회원에 한해서 티켓팅이 가능하며, 원칙적으로 전자출력되는 "사이버 티켓"으로 증정합니다.  1행사당 1인 2매  티켓팅을 원칙으로 하는 만큼 꼭 오실 분만 클릭하시기 바라며, 수시로 프리티켓이 게시판에 올려지게 됩니다.<BR><BR>
+</UL>
+
+<img src=images/icon2.gif BORDER=0>
+<a href="/freeEvent/list.asp"><B>이벤트 PR 마당</B></a><BR><BR>
+<UL>
+여러분의 공연개최나 여러 가지 이벤트를 개최하실 경우 참으로 홍보하시기가 어려우시지요! 이젠 걱정하시기 마시기 바랍니다. 이 코너에서 여러분은 쉽게 PR페이지를 등록하시고 띄우시기 바랍니다.  여러분의 재능을 마음껏 사이버 메니아들에게 보이실 수 있습니다.
+이 경우 동아리 성격 행사를 제외한 전문단체 및 프로 아티스트들의 이벤트는 별도로 기본 카테고리에 자동등록이 되고 요청하실 경우 사이버 티켓팅 서비스 까지 무료로 대행해 드립니다. <BR><BR>
+</UL>
+
+<img src=images/icon2.gif BORDER=0>
+<a href="../sponsor/list.asp"><B>아티스트 갤러리</B></a><BR><BR>
+<UL>
+아티스트와 문화예술 단체들의 캐리어를 한 눈에 파악 하실 수 있습니다.  점진적으로
+특화된 내용으로 알차게 꾸며 나가겠습니다.<BR><BR>
+</UL>
+
+<img src=images/icon2.gif BORDER=0>
+<a href="http://bbs.okticket.com/ezboard.cgi?db=faq2"><B>자유게시판</B></a><BR><BR>
+<UL>
+회원님의 고귀한 생각을 마음껏 담으실 수 있는 사이버 공간입니다., 문화계의 이슈, 뉴스, 공연평 등, 여러분의 알찬 내용을 기다리고 있습니다. 또한 OKTICKET을 이용하시면서 느끼시는 점, 불편하신 점, 의문 나시는 점도 올리실 수 있습니다<BR><BR>
+</UL>
+
+<img src=images/icon2.gif BORDER=0>
+<font SIZE="2" COLOR="BLACK"><a href="http://bbs.okticket.com/ezboard.cgi?db=faq1"><B>OT-공지사항</B></a></FONT><BR><BR>
+<UL>
+㈜오케이티켓닷컴이 회원님에게 알려드리고자 하는 내용들 담고 있습니다. 수시로 열람하시기 바랍니다.
+저희 OT는 회원님의 사이버 문화여행을 다니시는데 최고의 편익을 느끼실 수 있도록
+"고객중심(Customer Centric)"의 기업정신으로 최선을 다하겠습니다.<BR><BR>
+ </UL>
+
+<img src=images/icon2.gif BORDER=0>
+<font SIZE="2" COLOR="BLACK"><a href="http://bbs.okticket.com/ezboard.cgi?db=faq3"><B>티켓/문화장터</B></a></FONT><BR><BR>
+<UL>
+티켓을 포함한 각종 문화상품을 자유롭게 거래하실 수 있는 코너입니다.   이 코너는
+회원님 여러분의 책임과  자유시장 원리에 의해 거래가 되는 곳이며, 이와 관련한 분쟁발생시에 저희 회사는 책임을 지지 않습니다. 
+앞으로 "경매시스템"으로 발전시킬 예정입니다.
+</UL>
+<BR><BR>
+			<!----- 본문 끝 -------->	
+</td>
+</tr>
+</table>
+<!--///////////////////////////////////////
+	Footer 시작
+	///////////////////////////////////////-->
+
+<DIV align=center><FONT size=2 face=arial>
+	Copyright &copy; 2000 <a href=mailto:webmaster@okticket.com>okticket.com</a>, corporation.<BR>
+	서울시 서초구 서초동 1451-1 원일빌딩 501호 tel: 525-6591<BR>
+	All rights reserved.<BR>
+	<BR>
+</DIV>
+<!--///////////////////////////////////////
+	Footer 끝
+	///////////////////////////////////////-->
+</td>
+</tr>
+</table>
+		</TD>
+	</TR>
+</TABLE>
+
+</BODY>
+
+</HTML>

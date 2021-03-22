@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<TITLE>Search Engine</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff" LINK="#0000ff" VLINK="#ff0000" ALINK="#ff0000" TEXT="#000000">
+<CENTER>
+<BR>
+<BR>
+<H2>
+<FONT SIZE="+3">S</FONT>AMBAR 
+<FONT SIZE="+3">S</FONT>EARCH 
+<FONT SIZE="+3">E</FONT>NGINE</H2>
+<P>
+</CENTER> 
+<P>
+You can search the Sambar site using the Search engine below. 
+To search the Sambar site, simply type in any word, set of words, or
+phrases you might use when speaking or writing, then click OK. 
+Additional <A HREF="help.htm" TARGET=_top>help</A> is 
+available for phrasing queries.  The top 100 matching documents are 
+listed in weighted order.  The Search engine is provided by 
+<A HREF="http://www.sambar.com/" TARGET=_top>Sambar Technologies</A>.
+<P>
+<CENTER>
+<TABLE cellpadding=5>
+<TR><TD align=right><B>Search: </B></TD>
+<TD align=left>
+<FORM METHOD=POST ACTION="results.stm">
+<INPUT TYPE=hidden NAME="spage" VALUE="0">
+<SELECT NAME="indexname">
+<OPTION VALUE="docs" SELECTED> Documentation
+<OPTION VALUE="search"> Site Search
+</SELECT>
+<TR><TD></TD><TD>
+<INPUT NAME="query" SIZE=30 VALUE="" MAXLENGTH=40>&nbsp
+<INPUT TYPE=image SRC="/sysimage/system/go.gif" height=20 width=20 border=0>
+<BR>
+<SELECT NAME="style">
+<OPTION VALUE="brief"> Brief
+<OPTION VALUE="standard"> Standard
+<OPTION VALUE="fancy"> Fancy
+<OPTION VALUE="page" SELECTED> Pages
+</SELECT>
+Style
+</FORM>
+</TD></TR>
+<TR valign=top><TD align=right><B>Tips: </B></TD>
+<TD align=left>
+To exclude a word, add a minus sign directly in front of it:<BR>
+<B>windows -Microsoft</B>
+<P>
+To force a word to appear in a document, add a plus sign in front of it:<BR>
+<B>windows +Microsoft</B>
+</TD></TR>
+</TABLE>
+</CENTER>
+<P> 
+<I>The above illustrates how to search two different indexes.  There is
+no practical limit to the number of indexes that the Sambar Server can
+support.</I>
+<P> 
+<A HREF="/" TARGET=_top><IMG border=0 SRC="/sysimage/system/powerby.gif"></A>
+</BODY>
+</HTML>

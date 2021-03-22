@@ -1,0 +1,126 @@
+<html><html>
+<head>
+<title>Linux Malaga</title>
+<style rel=stylesheet type=text/css>
+	A:link { font-weight: bold; }
+	A:visited { font-weight: bold; }
+</style>
+</head>
+<body bgcolor="#778899" text="#000000" link="#000000" vlink="#000000" topmargin=5 leftmargin=0 rightmargin=0 marginheight=5>
+
+<table border=0 cellpadding=4 cellspacing=0 width=100% align=center>
+<tr><td bgcolor=778899>
+<table border="0" cellspacing="0" cellpadding="1" width="100%" bgcolor="#000000">
+<tr><td>
+<table border="0" cellspacing="0" cellpadding="3" width="100%" bgcolor="FFFFFF">
+<tr><td>
+<a href="index.html"><img src="themes/Default/deflogo.gif" alt="Welcome to Linux Malaga" border=0></a>
+</td><td align=right>
+<form action="search.php3" method=post><font face=Arial,Helvetica size=2 color="000000">
+Buscar
+<input type=name name=query>
+</form></tr>
+<tr bgcolor="666666"><td colspan=2 bgcolor="666666">
+<font face=Arial,Helvetica size=3 color=CCCCCC></td>
+</td></tr></table>
+</td></tr></table>
+</td></tr><tr><td valign=top width=100% bgcolor=778899>
+<table border=0 cellspacing=0 cellpadding=2 width=100%>
+<tr><td valign=top width=150 bgcolor=778899>
+
+<!-- Blocks Init -->
+
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>Menú Principal</td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+<li><a href=index.php3>Principal</a>
+<li><a href=about.php3>¿Quienes somos?</a>
+<li><a href=estatutos.php3>Estatutos</a>
+<li><a href=sections.php3?op=listarticles&secid=1>LiMA Gazette</a>
+<p>
+<li><a href=user.php3>Tu cuenta</a>
+<li><a href=submit.php3>Enviar noticia</a>
+<p>
+<li><a href=faq.php3>FAQ</a>
+<li><a href=topics.php3>Topics</a>
+<li><a href=stats.php3>Stats</a>
+<li><a href=top.php3>Top 10</a>
+</td></tr></table></td></tr></table><br>
+
+<!-- Because this is the DEFAULT theme, so print the user login block -->
+
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>Linux Malaga Login
+</td></tr><tr><td bgcolor=FFFFFF>
+<font face=Arial,Helvetica size=2>
+<form action="user.php3" method="post">
+Login: <input type="text" name="uname" size=12 maxlength=25><br>
+Clave: <input type="password" name="pass" size=12 maxlength=20><br>
+<center><input type="submit" name="op" value="login"></form>
+¿ A&uacute;n no tienes una cuenta ? Puedes <a href=user.php3>crear una</a>. 
+Como usuario registrado tienes ventajas como el manejador de temas, 
+configuraci&oacute;n de los comentarios y enviar comentarios con tu nombre.
+</center></td></tr></table></td></tr></table><br>
+
+<!-- Show Left Blocks -->
+
+
+
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>Motor de Búsqueda</td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+Disponemos de un <a href=links.php3>buscador</a> ordenado por categorías: 
+<P><li><a href=links.php3?op=viewlink&cid=1>Distribuciones</a>
+<li><a href=links.php3?op=viewlink&cid=2>Aplicaciones</a>
+<li><a href=links.php3?op=viewlink&cid=3>Noticias</a>
+<li><a href=links.php3?op=viewlink&cid=4>Documentación</a>
+<li><a href=links.php3?op=viewlink&cid=5>Webs de miembros de LiMA</A>
+<li><a href=links.php3?op=viewlink&cid=6>X11</A>
+</td></tr></table></td></tr></table><br>
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>Buscar en Google</td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+<IMG SRC="http://service.bfast.com/bfast/serve?bfmid=27253343&siteid=32376746&bfpage=horizontal" BORDER="0" WIDTH="1" HEIGHT="1" NOSAVE >
+<FORM ACTION="http://service.bfast.com/bfast/click" >
+<INPUT TYPE="hidden" NAME="siteid" VALUE="32376746" >
+<INPUT TYPE="hidden" NAME="bfpage" VALUE="horizontal">
+<INPUT TYPE="hidden" NAME="bfmid" VALUE="27253343"> 
+<TABLE  cellpadding=0 cellspacing=3 bgcolor="#FFFFFF">
+<tr><td bgcolor="#0000cc"><IMG SRC="http://www.google.com/images/cleardot.gif" height=1 border="0" ALT="Google"></td></tr><tr><td>
+ <IMG SRC="http://www.google.com/affiliates/affiliate_logo.gif" border="0" ALT="Google" align="center">
+<INPUT TYPE=text name=q size=10 maxlength=255 value="">
+<INPUT type=submit name=sa VALUE="Buscar">
+</td></tr>
+<tr><td bgcolor="#0000cc"><IMG SRC="http://www.google.com/images/cleardot.gif" height=1 border="0" ALT="Google"></td></tr></TABLE>
+</FORM>
+</td></tr></table></td></tr></table><br>
+
+
+
+<img src=images/pix.gif border=0 width=150 height=1>
+</td><td width=100% valign=top>
+<center><table cellpadding=2 cellspacing=0 border=0 bgcolor=000000><tr><td colspan=2><table cellpadding=3 cellspacing=0 border=0 bgcolor=#CCCCCC><tr><td><center><font face=Arial,Helvetica><br><b>¿ Cual es la mejor distribuci&oacute;n de Linux ?</b><br><br><table><tr><td><font face=Arial,Helvetica>RedHat</td><td><img src="images/leftbar.gif" height=16 width=3><img src="images/mainbar.gif" height=16 width=36 Alt="9 %"><img src="images/rightbar.gif" height=16 width=3> 9.46 % (7)</td></tr><tr><td><font face=Arial,Helvetica>SuSe</td><td><img src="images/leftbar.gif" height=16 width=3><img src="images/mainbar.gif" height=16 width=240 Alt="60 %"><img src="images/rightbar.gif" height=16 width=3> 60.81 % (45)</td></tr><tr><td><font face=Arial,Helvetica>Debian</td><td><img src="images/leftbar.gif" height=16 width=3><img src="images/mainbar.gif" height=16 width=40 Alt="10 %"><img src="images/rightbar.gif" height=16 width=3> 10.81 % (8)</td></tr><tr><td><font face=Arial,Helvetica>Mandrake</td><td><img src="images/leftbar.gif" height=16 width=3><img src="images/mainbar.gif" height=16 width=64 Alt="16 %"><img src="images/rightbar.gif" height=16 width=3> 16.22 % (12)</td></tr><tr><td><font face=Arial,Helvetica>Slackware</td><td><img src="images/leftbar.gif" height=16 width=3><img src="images/mainbar.gif" height=16 width=4 Alt="1 %"><img src="images/rightbar.gif" height=16 width=3> 1.35 % (1)</td></tr><tr><td><font face=Arial,Helvetica>Caldera</td><td><img src="images/leftbar.gif" height=16 width=3 Alt="0 %"><img src="images/mainbar.gif" height=16 width=2 Alt="0 %"><img src="images/rightbar.gif" height=16 width=3 Alt="0 %"> 0.00 % (0)</td></tr><tr><td><font face=Arial,Helvetica>TurboLinux</td><td><img src="images/leftbar.gif" height=16 width=3><img src="images/mainbar.gif" height=16 width=4 Alt="1 %"><img src="images/rightbar.gif" height=16 width=3> 1.35 % (1)</td></tr><tr><td><font face=Arial,Helvetica>Hispafuentes</td><td><img src="images/leftbar.gif" height=16 width=3 Alt="0 %"><img src="images/mainbar.gif" height=16 width=2 Alt="0 %"><img src="images/rightbar.gif" height=16 width=3 Alt="0 %"> 0.00 % (0)</td></tr><tr><td><font face=Arial,Helvetica>Esware</td><td><img src="images/leftbar.gif" height=16 width=3 Alt="0 %"><img src="images/mainbar.gif" height=16 width=2 Alt="0 %"><img src="images/rightbar.gif" height=16 width=3 Alt="0 %"> 0.00 % (0)</td></tr><tr><td><font face=Arial,Helvetica>¿ Que es una distribuci&oacute;n ?</td><td><img src="images/leftbar.gif" height=16 width=3 Alt="0 %"><img src="images/mainbar.gif" height=16 width=2 Alt="0 %"><img src="images/rightbar.gif" height=16 width=3 Alt="0 %"> 0.00 % (0)</td></tr><tr></tr><tr></tr></td></tr></table><br><center><font face=Arial,Helvetica><b>Total de Votos: 74</b><br><font size=1>Se permite sólo un voto por persona al día<br><br><font size=3><font face=Arial,Helvetica>[ <a href="pollBooth.php3?pollID=3">Sala de Votación</a> | <a href="pollBooth.php3">Otras Encuestas</a> ]</tr></td></table></tr></td></table></center><p><center><a href=pollcomments.php3?op=Reply&pid=0&pollID=3><img src=images/menu/spanish/comment.gif border=0></a></p></center><table width=99% border=0 cellspacing=1 cellpadding=2>
+	<tr><td bgcolor=#333333 align=center><font face=Arial,Helvetica size=1 color=FFFFFF>Los comentarios son propiedad de quien los escribió. Nosotros no somos responsables por su contenido.</td></tr>
+	</table><a name="1"><table width=99% border=0><tr bgcolor="#CCCCCC"><td width=500><p><b>Re: ¿ Cual es la mejor distribución de Linux ?</b> <font face=Arial,Helvetica size=2>(Puntaje: 1)<br>por Frim0st el Saturday, August 05 @ 23:38:20 CEST<br>(<a href="user.php3?op=userinfo&uname=Frim0st">Datos de Usuario</a>) </font></td></tr><tr><td>Ante todo decir que no hay una distribución más buena que otra, sino una distribución para una necesidad. Para gustos, los colores.<br>
+<p >Lo que me gustaría que comentaramos es los puntos fuertes y débiles de cada distribución según las experiencias personales. <br>
+<p >Yo he pasado por Slackware, Debian y Redhat. Hace poco he pasado a Mandrake. Tambi&eacute;n he instalado la SuSe 6.2, TurboLinux 6.0 y la CorelLinux. <br>
+<p >Mi experiencia personal... La slack fue con la que empezé y estaba bastante bien, pero era un caos a la hora de instalar cosas nuevas, tal vez en parte por mi inexperiencia. Despues deje la debian (vers. 1.3.1) porque era cuando estaba la transición libc5 y libc6 y el sistema se quedo hecho trizas tras instalar no me acuerdo el qué. Además por aquellas fechas no existia el apt ;)<br>
+<p >Dentro del mundillo RedHat, pues para mí, en casa, va de perlas. Casi todos los programas nuevos (me encanta estar instalando cosas nuevas, incluso de desarrollo) están en formato rpm antes que los deb, aunque esto empieza a cambiar.<br>
+<p >Y ahora me he pasado a Mandrake que tiene versión de desarrollo en constante evolución, estilo debian, y trae utilidades para poder instalarse cosas directamente por la red (estilo apt).<br>
+<br>
+<p >En cuanto a las otras 3 que he mencionado: La SuSe me dej&oacute; muy buena impresi&oacute;n, tal vez lo que m&aacute;s le podr&iacute;a criticar es su alta dependencia del yast. La TurboLinux (Server) tambi&eacute;n me caus&oacute; buena impresi&oacute;n para un entorno servidor, y la Corel, bueno, para alguien que no se quiere romper la cabeza instalando Linux, es genial, te lo configura todo ella en dos pasos. <br>
+Bueno, a ver si empieza la flame-war!!!! <br>
+<br>
+</td></tr></table><br><p><font face=Arial,Helvetica size=2 color=000000> [ <a href="pollcomments.php3?op=Reply&pid=1&pollID=3&mode=&order=&thold=">Responder</a> ]</font><p><ul><li><a href="pollcomments.php3?op=showreply&tid=2&pollID=3&pid=1&mode=&order=&thold=#2">Re: ¿ Cual es la mejor distribución de Linux ?</a> por livingstone <font face=Arial,Helvetica size=2>el Sunday, August 06 @ 03:36:32 CEST</font><br><ul><li><a href="pollcomments.php3?op=showreply&tid=3&pollID=3&pid=2&mode=&order=&thold=#3">Re: ¿ Cual es la mejor distribución de Linux ?</a> por Frim0st <font face=Arial,Helvetica size=2>el Sunday, August 06 @ 04:17:58 CEST</font><br><li><a href="pollcomments.php3?op=showreply&tid=4&pollID=3&pid=2&mode=&order=&thold=#4">Re: ¿ Cual es la mejor distribución de Linux ?</a> por HeLL <font face=Arial,Helvetica size=2>el Monday, August 07 @ 03:52:27 CEST</font><br><ul><li><a href="pollcomments.php3?op=showreply&tid=5&pollID=3&pid=4&mode=&order=&thold=#5">Re: ¿ Cual es la mejor distribución de Linux ?</a> por Anonimo <font face=Arial,Helvetica size=2>el Sunday, August 20 @ 19:18:29 CEST</font><br><ul><li><a href="pollcomments.php3?op=showreply&tid=6&pollID=3&pid=5&mode=&order=&thold=#6">Re: ¿ Cual es la mejor distribución de Linux ?</a> por livingstone <font face=Arial,Helvetica size=2>el Monday, August 21 @ 17:22:00 CEST</font><br></ul></ul></ul></ul><hr noshade size=1></p>
+</td></tr></table>
+</td></tr></table>
+</body></html>
+
+<font face=Arial,Helvetica size=1><center>
+<a href="http://www.linuxpreview.org/php-nuke.php3"><img src=images/powered/phpnuke.gif border=0 Alt="Web site powered by PHP-Nuke"></a><br><br>
+Todos los logos y marcas en este sitio son propiedad de sus propietarios respectivos. Los comentarios son propiedad de sus autores, el resto son propiedad de Linux M&aacute;laga.<br>
+Este sitio web fue creado con <a href=http://linuxpreview.org/php-nuke.php3>PHP-Nuke</a>, un sistema de portal web escrito en <a href=http://www.php.net>PHP</A>. PHP-Nuke es Software Libre bajo <a href=http://www.gnu.org>licencia GNU/GPL</A>.<br>
+Puede utilizar nuestras noticias usando el fichero <a href=backend.php3>Backend.php3</a><br>
+</body>
+</html>

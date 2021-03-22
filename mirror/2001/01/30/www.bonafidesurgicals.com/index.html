@@ -1,0 +1,195 @@
+<html>
+<head>
+
+<!-- Don't steal the code of the snake! 8-) -->
+
+<style>
+a{text-decoration:none}
+A:hover {text-decoration: underline;}
+</style>
+<title>==:: Hatee toh naheen aap kee? ::==</title>
+<style>
+.spanstyle {
+	position:absolute;
+	visibility:visible;
+	top:-50px;
+	font-size:8pt;
+	font-family:Verdana;
+      font-weight:bold;
+	color:#00FF00;
+}
+</style>
+<script>
+
+var x,y
+var step=20
+var flag=0
+
+var message=".:: W  F  D .:: "
+message=message.split("")
+
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	xpos[i]=-50
+}
+
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	ypos[i]=-50
+}
+
+function handlerMM(e){
+	x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+	y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+	flag=1
+}
+
+function makesnake() {
+	if (flag==1 && document.all) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("span"+(i)+".style")
+    		thisspan.posLeft=xpos[i]
+			thisspan.posTop=ypos[i]
+    	}
+	}
+	
+	else if (flag==1 && document.layers) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("document.span"+i)
+    		thisspan.left=xpos[i]
+			thisspan.top=ypos[i]
+    	}
+	}
+		var timer=setTimeout("makesnake()",30)
+}
+
+</script>
+
+</head>
+<BODY onLoad="makesnake()" style="width:100%;overflow-x:hidden;overflow-y:scroll" bgcolor="#000000" bgproperties="fixed" text="#FFFFFF" link="#00FF00" alink="#ff0000" vlink="#B00000#BB0000">
+<basefont size="3"><script>
+<!-- Beginning of JavaScript -
+
+for (i=0;i<=message.length-1;i++) {
+    document.write("<span id='span"+i+"' class='spanstyle'>")
+	document.write(message[i])
+    document.write("</span>")
+}
+
+if (document.layers){
+	document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+
+// - End of JavaScript - --></script>
+<p>&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#00FF00" size="5" face="Andale Mono">m0r0n and nightman </font></p>
+<p>&nbsp;&nbsp; <font color="#00FF00" size="5" face="Andale Mono">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+of </font></p>
+<p>&nbsp;<font color="#00FF00" size="5" face="Andale Mono">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+===========================</font></p>
+<p>&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="http://www.liquid2k.com/wfd/wfd--.gif" width="491" height="131"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+=========================================&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#00FF00" size="5" face="Arial Narrow">&nbsp;&nbsp;&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#00FF00" size="5" face="Arial Narrow">0wn </font></p>
+<p>&nbsp;&nbsp; <font color="#00FF00" size="5" face="Arial Narrow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://bonafidesurgicals.com">http://bonafidesurgicals.com</a>
+of</font><font size="5" face="Arial Narrow" color="#FFFFFF">
+In</font><font size="5" face="Arial Narrow" color="#FF9900">di</font><font size="5" face="Arial Narrow" color="#008000">a
+</font><font size="5" face="Arial Narrow" color="#00FF00">to delineate the truth
+to the world.</font></p>
+<p><font size="5" face="Arial Narrow" color="#00FF00">===============================================================</font></p>
+<p><font size="5" face="Arial Narrow" color="#00FF00">Beginning of the facts:-</font></p>
+<p><font size="3">The violence came as Indian security forces tightened security
+and intensified searches in the region ahead of India's January 26 Republic Day
+celebrations when militants have threatened to strike. Officials said an
+unidentified militant was killed on Thursday in a gun battle with Indian police
+in the Bemina area of Srinagar, the summer capital of Jammu and Kashmir.</font></p>
+<p><font size="5" color="#00FF00" face="Fixedsys"><u>And look at what the U.S.
+has to say on the violence</u>:-</font></p>
+<p><font size="3" face="Fixedsys">WASHINGTON, Jan 25: Welcoming the second
+Indian extension of the Kashmir ceasefire, the United States on Wednesday said
+it believed the peace process would be greatly enhanced if the Kashmiri freedom
+fighters groups responded positively to India's announcement by taking steps to
+halt violence.<br>
+<br>
+Replying to questions at his daily press briefing, State Department spokesman
+Richard Boucher also said the government of Pakistan should use its influence
+with Kashmiri groups to urge them to end violence in the territory.<br>
+<br>
+Asked whether the ceasefire extensions were leading anywhere, Mr. Boucher said:
+&quot;Certainly, we think it is a good thing. This followed on earlier steps,
+positive steps, that we have seen from both India and Pakistan. We believe the
+peace process would be greatly enhanced if the Kashmiri groups responded
+positively to India's announcement by taking steps to halt the violence. We
+would encourage all the parties to take initiatives to reduce violence and
+foster a process to end the conflict in Kashmir.&quot; -- Dawn.com </font></p>
+<p><font size="3" face="Fixedsys" color="#008000">End of facts.</font><br>
+====================================================================================</p>
+<p><b><font color="#FF0000" size="4">Despite of all this and the enmity of India
+against Pakistan this is what Pakistan did regarding the quake in India :-</font></b></p>
+<p><b><font color="#008000">Pakistan dispatched a planeload of tents and
+blankets for India's earthquake victims Tuesday following a day of confusion
+over whether New Delhi would accept help from its old foe.</font></b>
+<p><b><font color="#008000">A Pakistani military transport C-130 aircraft took
+off from Islamabad airport at 9:24 a.m. (11:24 p.m. EST Monday) for Ahmedabad,
+the biggest city in India's quake-hit western state of Gujarat.</font></b>
+<p><b><font color="#008000">A Pakistani government official said Pakistan has
+sent 200 tents and 2,500 blankets in the aircraft Tuesday and would send three
+similar consignments in the next two days.</font></b></p>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; <font face="Fixedsys" color="#00ff00" size="4">Hand shakes :-</font></p>
+<p align="center"><font face="Fixedsys" size="4"><font color="#00ff00">* Gforce
+Pakistan (</font><font color="#ffffff" size="2">Sniper, heataz, Rsnake,
+instinct, miller and rave-</font><font color="#00ff00">)</font></font></p>
+<p align="center"><font face="Fixedsys" color="#00ff00" size="4">* Hi-tech Hate,
+DoctorNuker,
+m0s and Nitr8!, All of Quit crew)</font></p>
+<p align="center"><font face="Fixedsys" color="#00ff00" size="4">&nbsp;*
+Drumcode, Icefist, dislexik, DownKaos, mar1no, piffy, datagram, Scurvy, dodi and
+philer!</font></p>
+<p align="center"><font face="Fixedsys" size="4"><font color="#00ff00">&nbsp;*
+Aniclator, Silver Lords, Devil-Soul, Data Masters -- thepr0digy, Rsh, Hackweiser,
+moshack, ScorpionKTX, Prime Suspects and Dr-hacker.</font></font></p>
+<p align="center"><font face="Fixedsys" color="#00ff00" size="4">&nbsp;*
+kr4kr0k, |ncubus_, seninel-, vol, senn, Cool-dude, Undercover and everyone else&nbsp;&nbsp;who
+supports our cause.</font></p>
+<p align="center"><font face="Fixedsys" color="#00ff00" size="4">&nbsp;<font color="#00ff00">*
+Alldas and Attrition (good mirroring sites)</font></font></p>
+<p align="center"><font color="#00ff00" face="Fixedsys" size="4">=================================================================================================</font></p>
+<p align="center"><font face="Comic Sans MS"><b><font color="#ffffff" size="5">Reach
+all of </font><font color="#00ff00" size="6">us</font><font face="Impact" color="#ffffff" size="5">
+@ </font></b><a href="mailto:wfd2001@nightmail.com?Subject=You people r0ck!"><font face="Impact" color="#00ff00" size="5">wfd2001@nightmail.com</font></a></font></p>
+<p align="center">&nbsp;<font face="Comic Sans MS"><font color="#ffffff" size="5">Reach
+</font><font face="Impact" color="#00ff00" size="5">m0r0n</font></font><font face="Impact" color="#00ff00" size="5">
+and nightman</font><font face="Comic Sans MS"><font face="Impact" color="#00ff00" size="5">&nbsp;
+@ </font><a href="mailto:m0r0nandnightman@doityourself.com?subject=Happy Birthday m0r0n."><font color="#00ff00" size="5">m0r0nandnightman@doityourself.com</font></a></font></p>
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p align="center"><font face="Comic Sans MS" size="1" color="#FFFFCC">Thou shalt
+not get caught.</font></p>
+<p align="center">&nbsp;</p>
+<p>&nbsp;</p>
+<!-- www.attrition.org web hack mirror - watermark or something -->

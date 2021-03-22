@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>Expression Calculator - HELP</title>
+</head>
+<body BGCOLOR="#ffffff">
+
+<a HREF="exprcalc.cfm"><img SRC="help.gif" BORDER="0" WIDTH="485" HEIGHT="95"></a>
+
+<p><font SIZE="+1" FACE="Arial">Overview</font>
+
+<p>You can use the expression evaluator as a testing
+,as well as learning tool when using complex expressions in Cold Fusion 2.0.
+You can use the evaluator to compose complex expressions and test
+their evaluation. The evaluator also enables you to open, save and mail expression
+statements tested in the evaluator.
+
+<p><font SIZE="+1" FACE="Arial">Using the Evaluator</font>
+
+<p>Use the evaluator form to enter expressions you would like to evaluate.
+The evaluator processes the expressions you enter line-by-line providing
+you with the possibility to evaluate multiple expressions. In addition you
+can assign the results of your expressions to variables which can then be used
+in subsequent expressions. Here is an example. Click the EVALUATE button to 
+test the expressions. When done, click the BACK button to get back to HELP.
+
+<form NAME="Form1" ACTION="eval.cfm?RequestTimeout=2000" METHOD="POST">
+<textarea NAME="Expressions" ROWS="7" COLS="55">
+// Enter your expressions here, one per line
+// This is a comment
+
+x = 34 + 23
+y = 78 + RANDOMIZE(1)
+x+y
+</textarea><br>
+<input TYPE="Submit" VALUE="Evaluate">
+</form>
+
+<p>You have noticed the ways the evaluator outputs the results of the expressions
+entered. It lists the expression along with its line number followed by
+the output of the appropriate result.
+
+<p>Assignment of expressions to variables can be very powerful as you can simulate 
+variable manipulations as they are occurring in your Cold Fusion applications. However,
+you need to remember to use the <b>VariableName=Expression</b> syntax as you CANNOT use 
+CFML tags within the evaluator. The following example demonstrates the use of the
+evaluator to test the behavior of some of the date functions:
+
+<form NAME="Form2" ACTION="eval.cfm?RequestTimeout=2000" METHOD="POST">
+<textarea NAME="Expressions" ROWS="7" COLS="55">
+// Simple date sentence.
+&quot;Today's Date is &quot; &amp; DateFormat(Now(),&quot;dd-mmm-yy&quot;)   
+
+// Simple day-of-year sentence.              
+DayOfYear(Now()) &amp; &quot; days have passed this year.&quot;
+
+</textarea><br>
+<input TYPE="Submit" VALUE="Evaluate">
+</form>
+
+<p><font SIZE="+1" FACE="Arial">Using Comments</font>
+
+<p>You must have already noticed that comments can be used in between the 
+expression statements providing you with a way of documenting your 
+testing. Simple use <b>//</b> to delineate each line of comments.
+
+<p><font SIZE="+1" FACE="Arial">Resolving Errors</font>
+
+<p>The evaluator is a simple application written in Cold Fusion. 
+When encountering an invalid expression the evaluator throws a regular 
+Cold Fusion error message pointing at the line of code inside the evaluator
+which attempted to evaluate your expression. Ignore the evaluator code
+printed at the top of the error message. Scroll down to the bottom of the 
+error message where is usually displayed the expression which 
+causes the error. 
+
+<p><font SIZE="+1" FACE="Arial">Opening, Saving and Mailing Expressions</font>
+
+<p>For your convenience the evaluator enables you to open simple text 
+files into the expression window, as well as, to save expressions into
+text files. Use this functionality if you prefer to keep a reference 
+of the expressions tested with the evaluator. You can also e-mail your
+expressions directly from the evaluator for added convenience. This may be a 
+useful feature when forwarding expression samples to your colleagues or forwarding
+problems to Allaire Technical Services .
+
+<p><font SIZE="+1" FACE="Arial">REMEMBER - No use of CFML tags is allowed inside the evaluator.</font>

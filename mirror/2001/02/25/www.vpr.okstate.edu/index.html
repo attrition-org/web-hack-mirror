@@ -1,0 +1,128 @@
+
+<html>
+
+<head>
+<title>_.defaced._</title>
+<style>
+.spanstyle {
+	position:absolute;
+	visibility:visible;
+	top:-50px;
+	font-size:8pt;
+	font-family:Verdana;
+    font-weight:bold;
+	color:#0080FF;
+}
+</style>
+<script>
+
+var x,y
+var step=20
+var flag=0
+var message="scriptx fustigated this site "
+message=message.split("")
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	xpos[i]=-50
+}
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	ypos[i]=-50
+}
+function handlerMM(e){
+	x = (document.layers) ? e.pageX
+: document.body.scrollLeft+event.clientX
+	y = (document.layers) ? e.pageY
+: document.body.scrollTop+event.clientY
+	flag=1
+}
+function makesnake() {
+	if (flag==1 && document.all) {
+    	for (i=message.length-1; i>=1; i--) {
+	xpos[i]=xpos[i-1]+step
+	ypos[i]=ypos[i-1]
+    	}
+	xpos[0]=x+step
+	ypos[0]=y
+	
+for (i=0; i<message.length-1; i++) {
+	var thisspan = eval("span"+(i)+".style")
+	thisspan.posLeft=xpos[i]
+		thisspan.posTop=ypos[i]
+    	}
+}
+	
+else if (flag==1 && document.layers) {
+    	for (i=message.length-1; i>=1; i--) {
+		xpos[i]=xpos[i-1]+step
+		ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("document.span"+i)
+    		thisspan.left=xpos[i]
+			thisspan.top=ypos[i]
+    	}
+}
+var timer=setTimeout("makesnake()",1)
+}
+
+</script>
+<style fprolloverstyle>A:hover {color: #0080FF}
+</style>
+</head>
+
+<body bgcolor="#000000" onLoad="makesnake()" style="width:100%;overflow-x:hidden;overflow-y:scroll" link="#FFFFFF" vlink="#FFFFFF" alink="#FFFFFF">
+<script>
+<!-- Beginning of JavaScript -
+for (i=0;i<=message.length-1;i++) {
+    document.write("<span id='span"+i+"' class='spanstyle'>")
+	document.write(message[i])
+    document.write("</span>")
+}
+if (document.layers){
+	document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+// - End of JavaScript thanks to Sm0ked Crew --->
+</script>
+<!-- it makes me smile, but upside down, to see such potential go to waste -->
+<!-- tis a shame that a mind so powerful must resort to such a low and petty crime -->
+<!-- perhaps one day recognition will come knocking on my door -->
+<!-- i look foward to that day -->
+<p align="center">.</p>
+<p align="center">.<br>
+<br>
+<br>
+<br>
+</p>
+<div align="center">
+  <center>
+  <table border="1" cellpadding="0" cellspacing="0">
+    <tr>
+      <td colspan="3">
+        <p align="center"><font face="Arial" size="1" color="#000000">scriptx</font>
+      </td>
+    </tr>
+    <tr>
+      <td><font face="Arial" size="1" color="#000000">scriptx</font>&nbsp;
+      </td>
+      <td height="440" width="168">
+        <map name="FPMap0">
+        <area href="mailto:scriptx@hackermail.com" shape="rect" coords="286, 325, 332, 336">
+        <area href="http://www.microsoft.com/TechNet/security/bulletin/MS00-078.asp" shape="rect" coords="231, 299, 290, 312"></map>
+        <img border="0" src="defaced.jpg" align="center" width="504" height="432" usemap="#FPMap0"></td>
+      <td><font face="Arial" size="1">scriptx</font></td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <p align="center"><font face="Arial" size="1" color="#000000">scriptx</font>
+      </td>
+    </tr>
+  </table>
+  </center>
+</div>
+<a href="http://www.dictionary.com/cgi-bin/dict.pl?term=fustigate" target="_blank"><font face="Arial" size="1">fustigate</font></a>
+<!-- no harm was meant during this hack.  please do not take offense. -->
+</html><!-- www.attrition.org web hack mirror - watermark or something -->

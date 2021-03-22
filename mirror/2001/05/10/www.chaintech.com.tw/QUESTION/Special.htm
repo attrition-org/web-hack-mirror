@@ -1,0 +1,254 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<title>Technical Support: Special Support Issues</title>
+</head>
+
+<body background="../mainpix/backgrnd.jpg" text="#000000" bgcolor="#000000" link="#0099FF" vlink="#0099FF" topmargin="0" leftmargin="0">
+<layer TOP="0" LEFT="0">
+
+<div align="left">
+
+<table border="0" cellpadding="0" cellspacing="0" width="620">
+  <tr>
+    <td valign="top" align="left"><img src="../mainpix/supp_l.jpg" width="160" height="74" alt="supp_l.jpg (14846 bytes)"><div align="left"><table border="0" cellpadding="5" cellspacing="0" width="159" align="left">
+      <tr>
+        <td height="8"><font face="Arial" size="1" color="#FFFFFF"><b>SUPPORT CATEGORY</b></font></td>
+      </tr>
+      <tr>
+        <td height="8"><p align="left"><font face="Arial" size="1" color="#FFFFFF"><strong>- </strong><a href="QUESTION.HTM">Main Technical Support Page</a><br>
+        - <a href="Resource.htm">Model Specific Support</a><br>
+        - <a href="../PRODUCTI/Y2K.htm">Year 2000 (Y2K) Issue</a><br>
+        - <a href="CPUCOMP.htm">CPU-Mainboard compatibility</a></font></td>
+      </tr>
+      <tr>
+        <td height="8"><font face="Arial" size="1" color="#FFFFFF"><b>DOWNLOADS</b></font></td>
+      </tr>
+      <tr>
+        <td height="8"><font face="Arial" size="1" color="#FFFFFF">- <a href="../DRIVER/DRIVER.htm">Drivers</a><br>
+        (sound/display/busmaster,etc.)<br>
+        - <a href="../BIOS/BIOSUPD8.htm">BIOS updates</a><br>
+        - <a href="Manuals.HTM">Manuals or jumpersettings</a></font><p>&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="8"><a href="../PRODUCTI/PRODUCTI.HTM"><u><font face="Arial" size="1" color="#0099FF"><strong>PRODUCTS</strong></font></u></a></td>
+      </tr>
+      <tr>
+        <td height="8"><font face="Arial" size="1" color="#FFFFFF">- Bare-bone Systems<br>
+        - Mainboards<br>
+        - AGP Adapters</font></td>
+      </tr>
+      <tr>
+        <td height="8"><p align="left"><font face="Arial" size="1"><a href="../COMPANY/Company.htm"><strong>COMPANY</strong></a></font></td>
+      </tr>
+      <tr>
+        <td height="8"><font face="Arial" size="1" color="#FFFFFF">- Company Profile<br>
+        - Factory tour <br>
+        - How to contact us</font></td>
+      </tr>
+      <tr>
+        <td><a href="../CHNEWS/News.htm"><font face="Arial" size="1" color="#0099FF"><u><strong>CHAINTECH
+        NEWS</strong></u></font></a></td>
+      </tr>
+      <tr>
+        <td><font face="Arial" size="1" color="#FFFFFF">- Latest News<br>
+        - Hot Releases<br>
+        - Award Gallery</font></td>
+      </tr>
+    </table>
+    </div></td>
+    <td rowspan="2" valign="top" align="left" width="460"><img src="../mainpix/supp_r.jpg" width="258" height="74" alt="supp_r.jpg (19060 bytes)"><br>
+    <div align="left"><table border="0" cellpadding="5" cellspacing="0" width="450">
+      <tr>
+        <td><table border="0" cellpadding="5" cellspacing="0" width="100%">
+          <tr>
+            <td bgcolor="#66C1FF"><strong><font face="Arial" size="3"><p align="center"></font></strong><font face="Arial" size="4" color="#FFFFFF">Special Support Issues</font></td>
+          </tr>
+        </table>
+        <ul>
+          <li><small><font face="MS Sans Serif"><a href="Special.htm#System cannot startup because of connected printer">System cannot
+            startup due to switching on printer</a></font></small></li>
+          <li><small><font face="MS Sans Serif"><a href="Special.htm#CPU Speed Recognition Problem">CPU
+            Speed Recognition Problem At System Startup</a></font></small></li>
+          <li><small><font face="MS Sans Serif"><a href="Special.htm#Alarm Sounding with AMD K6 CPU">Overheating
+            Alarm Sounding Often with AMD K6 CPU</a></font></small></li>
+          <li><small><font face="MS Sans Serif"><a href="#After system startup">After system startup
+            the system will power down immediately</a></font></small></li>
+          <li><small><font face="MS Sans Serif"><a href="#Linux installation problems">Linux
+            installation problems</a></font></small></li>
+        </ul>
+        <p>&nbsp;</p>
+        <p><strong><font face="Arial" size="2">Issue: <a name="System cannot startup because of connected printer">System cannot startup due to
+        switching on printer</a></font></strong></p>
+        <p><small><font face="MS Sans Serif"><u>Models involved:</u> 5TDM0, 5TDM1, 5TDM2, 5TTM0,
+        5TTM1, 5TTL which were manufactured before October 1997</font></small></p>
+        <p><small><font face="MS Sans Serif">Description: The system is connected to the printer
+        (or other device which uses the printerport) and cannot startup due to an electrical pulse
+        caused by the switching on of the printer to the mainboard`s microcontroller. The pulse
+        flows through the pull-up resistors which had been added to the mainboard`s printerport in
+        order to support printerport test devices (loopback). This pulse will block the
+        microcontroller and prevent it from starting up as usual. </font></small></p>
+        <p><small><font face="MS Sans Serif">This problem will only occur when the following
+        conditions are met:</font></small><ol>
+          <li><small><font face="MS Sans Serif">the mainboard is one of the above mentioned models
+            manufactured before October 1997 </font></small></li>
+          <li><small><font face="MS Sans Serif">the printer is being switched on before the system
+            power is turned on (typical situation for onsite installations of especially currently
+            energy saving printers).</font></small></li>
+        </ol>
+        <p><u><small><font face="MS Sans Serif">Please note: </font></small></u><ol>
+          <li><small><font face="MS Sans Serif">This problem will not happen if the printer happens to
+            be still on after the PC system has been used and turned off. The problem only occurs when
+            a switching on pulse from the printer blocks the microcontroller before startup.</font></small></li>
+          <li><small><font face="MS Sans Serif">The problem has been found to occur mainly when AMD K6
+            CPU`s are installed. Systems equipped with Intel MMX CPU`s will usually not have this kind
+            of problem.</font></small></li>
+        </ol>
+        <p><u><small><font face="MS Sans Serif">Solution: </font></small></u></p>
+        <p><small><font face="MS Sans Serif">The solution to this problem is to make sure that the
+        printer`s power is not being switched on when the PC system is turned off. So turn on the
+        system`s power first before switching on the printer`s power.</font></small></p>
+        <p><small><font face="MS Sans Serif"><u>Please note: </u><br>
+        Some energy saving printermodels do not have a power switch. In this case, usually only
+        the first time after installation the above problem could occur. Make sure the system is
+        turned on before the powercord is attached to the printer.</font></small></p>
+        <p>&nbsp;</p>
+        <p align="center"><map name="FPMap5">
+        <area href="#TOP OF PAGE" shape="rect" coords="5, 7, 84, 53"></map><img src="../mainpix/TOPOPAGE.gif" width="85" height="54" alt="TOPOPAGE.gif (1161 bytes)" border="0" usemap="#FPMap5"></p>
+        <p>&nbsp;</p>
+        <p><strong><font face="Arial" size="2">Issue: <a name="Alarm Sounding with AMD K6 CPU">Overheating
+        Alarm Sounding Often with AMD K6 CPU</a></font></strong></p>
+        <p><small><font face="MS Sans Serif"><u>Models involved:</u> 5TDM0, 5TDM1, 5TTM0, 5TTM1</font></small></p>
+        <p><small><font face="MS Sans Serif"><u>Description</u>: The APTC overheating protection
+        technology used in the above mentioned mainboards depends on a signal coming from the heat
+        sensor near the CPU. This sensor has been set at a certain value (temperature), which was
+        based on data provided by Intel/AMD/Cyrix. In practice, however, it appears that the AMD
+        K6 CPU often operates at a higher temperature than this APTC critical temperature value.
+        As a result, the APTC technology regards this temperature as an overheating problem and
+        subsequently slows down the CPU and issues a sound warning to the user. </font></small></p>
+        <p><small><font face="MS Sans Serif">Furthermore, there are only few thermal solutions
+        (fan/heatsink) that are sufficient to deal with the heat dissipation of the AMD K6 CPU.
+        The ones that have been approved by AMD for use with these processors can be found on <a href="http://www.amd.com">AMD`s website</a>. Using a non-approved fan will aggravate the
+        above mentioned problem</font></small></p>
+        <p><small><font face="MS Sans Serif">Solution: the critical temperature on the sensors of
+        above mentioned mainboards is fixed. In order to prevent the APTC from sounding, there are
+        two possible solutions:</font></small><ul>
+          <li><small><font face="MS Sans Serif">( 1 ) If your system`s APTC only occasionally sounds
+            the overheating warning, then you might be able to solve the problem by using an AMD
+            approved thermal solution. In the case of the 5TTM1, which uses the highly sensitive
+            thermistor, it is possible to reduce the problem by making sure the thermistor does not
+            touch the surface of the CPU by bending the thermistor and/or placing a piece of
+            non-heatconducting material (piece of paper) between the CPU and the thermistor.</font></small></li>
+          <li><small><font face="MS Sans Serif">If your system has been equipped with an AMD approved
+            thermal solution and solution ( 1 ) does not solve your problem, then you should disable
+            the APTC function in the BIOS setup. This APTC enable/disable function is only available
+            on BIOS updates with a datecode later than October, 1997. Please update your BIOS with the
+            latest BIOS update which can be found through the <a href="../BIOS/BIOS.HTM">BIOS
+            Instruction page</a>.</font></small></li>
+        </ul>
+        <p>&nbsp;</p>
+        <p align="center"><map name="FPMap6">
+        <area href="#TOP OF PAGE" shape="rect" coords="5, 7, 84, 53"></map><img src="../mainpix/TOPOPAGE.gif" width="85" height="54" alt="TOPOPAGE.gif (1161 bytes)" border="0" usemap="#FPMap6"></p>
+        <p>&nbsp;</p>
+        <p><strong><font face="Arial" size="2">Issue: <a name="CPU Speed Recognition Problem">CPU
+        Speed Recognition Problem At System Startup</a></font></strong></p>
+        <p><small><font face="MS Sans Serif"><u>Models involved:</u> 5TDM0, 5TDM1, 5TDM2, 5TTM0,
+        5TTM1, 6LTM, 6LTS</font></small></p>
+        <p><small><font face="MS Sans Serif"><u>Description:</u> The CPU`s ID and speed
+        recognition is done by a BIOS routine which probes the CPU and uses timing checks and a
+        CPU lookup table to determine the exact ID and speed of the CPU. If the system is being
+        reset during this CPU detection phase (so before the startup screen appears on your
+        monitor) the SeePU technology will regard the detection either as correct (if the timing
+        check results correspond to a certain CPU ID/speed in the CPU lookup table) but show the
+        wrong speed, or it will regard the detection as failed and then return to its default
+        values before the system. was setup, which is also different from the used CPU`s speed. </font></small></p>
+        <p><small><font face="MS Sans Serif">Wrong recognition may also happen when the system is
+        switched off and on too fast. After switching off the PC system, there are still a lot of
+        residual voltages present within the PC board. After a few seconds these voltages will
+        have disappeared. However, if the system is switched on again when these voltages are
+        still present, the timing checks of the SeePU technology may also be influenced. In
+        general also for harddisks it is considered not suitable to switch the PC system on and
+        off very fast due to the sensitivity of harddisks for electrical pulses.</font></small></p>
+        <p><small><font face="MS Sans Serif">Due to varying timing specifications of SDRAM modules
+        on the market, the use of certain SDRAM modules may also cause a wrong recognition. on the
+        5TDM0/1, 5TTM0/1 mainboards. Recommended modules are mentioned on the mainboard`s manual
+        addendum.</font></small></p>
+        <p><u><small><font face="MS Sans Serif"><a name="Tips for CPU recognition problem">Solution:
+        </a></font></small></u></p>
+        <p><small><font face="MS Sans Serif">1.) Do not press reset before the startup screen
+        appears.</font></small></p>
+        <p><small><font face="MS Sans Serif">2.) After the system has been switched off, it is
+        necessary to wait wait about 10 seconds before switching the system on.</font></small></p>
+        <p><small><font face="MS Sans Serif">3.) When using SDRAM DIMM modules, use recommended
+        SDRAM module brands, which are mentioned on the mainboard`s manual addendum.</font></small></p>
+        <p><small><font face="MS Sans Serif">4.) for the 5TDM0/5TDM1/5TTM0, use the 09/19/97 <a href="../BIOS/BIOSUPD8.htm">BIOS update</a> or later official released BIOS updates</font></small></p>
+        <p><small><font face="MS Sans Serif">If you have CPU recognition problems that cannot be
+        solved by the above 4 guidelines, then please contact our <a href="E-Mail.htm">Technical
+        Support </a>and mention the following information in your e-mail:</font></small><ol>
+          <li><small><font face="MS Sans Serif">Mainboard model and PCB version </font></small></li>
+          <li><small><font face="MS Sans Serif">BIOS version (datecode)</font></small></li>
+          <li><small><font face="MS Sans Serif">Memory modules brand/type/size</font></small></li>
+          <li><small><font face="MS Sans Serif">Other hardware related information (the more complete,
+            the better) </font></small></li>
+          <li><small><font face="MS Sans Serif">Description of the problem (which CPU is used and how
+            is it recognized by the BIOS)</font></small></li>
+          <li><small><font face="MS Sans Serif">An estimation of the occurrence of the problem (% of
+            startups)</font></small></li>
+        </ol>
+        <p>&nbsp;</p>
+        <p align="center"><map name="FPMap7">
+        <area href="#TOP OF PAGE" shape="rect" coords="5, 7, 84, 53"></map><img src="../mainpix/TOPOPAGE.gif" width="85" height="54" alt="TOPOPAGE.gif (1161 bytes)" border="0" usemap="#FPMap7"></p>
+        <p>&nbsp;</p>
+        <p><strong><font face="Arial" size="2">Issue: <a name="After system startup">After system
+        startup the system will power down immediately</a></font></strong></p>
+        <p><small><font face="MS Sans Serif"><u>Models involved:</u> 6LTM, 6LTS</font></small></p>
+        <p><small><font face="MS Sans Serif"><u>Description:</u> After switching on the power by
+        pressing the powerbutton the harddisks will start spinning, but then almost immediately
+        power down again.</font></small></p>
+        <p><small><font face="MS Sans Serif">The problem is caused by the powersupply which is not
+        capable of providing enough standby current. The 6LTM and 6LTS, which are loaded with new
+        features on the board, need a higher standby current in order to function properly.</font></small></p>
+        <p><small><font face="MS Sans Serif"><u>Solution:</u> Make sure you use a power supply
+        with a standby current of 50mA or higher. Some older power supplies are only capable of
+        delivering 30mA. Almost every power supply mentions this current value on the sticker on
+        top of the power supply. </font></small></p>
+        <p>&nbsp;</p>
+        <p align="center"><map name="FPMap8">
+        <area href="#TOP OF PAGE" shape="rect" coords="5, 7, 84, 53"></map><img src="../mainpix/TOPOPAGE.gif" width="85" height="54" alt="TOPOPAGE.gif (1161 bytes)" border="0" usemap="#FPMap8"></p>
+        <p>&nbsp;</p>
+        <p><strong><font face="Arial" size="2">Issue: <a name="Linux installation problems">Linux
+        installation problems</a></font></strong></p>
+        <p><small><font face="MS Sans Serif"><u>Models involved:</u> All models with Trend
+        ChipAwayVirus boot virus protection</font></small></p>
+        <p><small><font face="MS Sans Serif"><u>Description:</u> Installation of Linux OS fails</font></small></p>
+        <p><small><font face="MS Sans Serif"><u>Solution: </u>Disable the ChipAwayVirus function
+        in the virus. If your BIOS does not contain this option, then make sure to download the
+        latest <a href="../BIOS/BIOSUPD8.htm">BIOS update</a> for your mainboard model.</font></small></p>
+        <p>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><p align="center"><map name="FPMap9">
+          <area href="#TOP OF PAGE" shape="rect" coords="5, 7, 84, 53"></map><img src="../mainpix/TOPOPAGE.gif" width="85" height="54" alt="TOPOPAGE.gif (1161 bytes)" border="0" usemap="#FPMap9"></p>
+        <p align="center">&nbsp;</p>
+        <p align="center"><em><font face="Arial" size="1"><a href="../COMPANY/Company.htm">COMPANY</a>
+        - <a href="../PRODUCTI/PRODUCTI.HTM">PRODUCTS</a> - <a href="QUESTION.HTM">SUPPORT</a> - <a href="../CHNEWS/News.htm">NEWS</a> - <a href="../Index_m.htm">HOME</a><br>
+        </font><small><small><small><font face="Arial">Contents &amp; Design by Chaintech Computer
+        Co. 1998/1999<br>
+        </font></small></small></small></em>------------ <img src="../mainpix/logosmal.gif" width="27" height="19" alt="logosmal.gif (1015 bytes)" align="middle"> ------------</td>
+      </tr>
+    </table>
+    </div></td>
+    <td align="left" valign="top"></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+</div>
+</layer>
+</body>
+</html>

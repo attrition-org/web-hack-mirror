@@ -1,0 +1,126 @@
+d><style>
+a{text-decoration:none}
+A:hover {text-decoration: underline;}
+</style>
+<title>.:/r00t-access crew was here...\:.</title>
+<style>
+.spanstyle {
+	position:absolute;
+	visibility:visible;
+	top:-50px;
+	font-size:8pt;
+	font-family:Verdana;
+        font-weight:bold;
+	color:#00FF00;
+}
+</style>
+<script>
+
+var x,y
+var step=10
+var flag=0
+var message="r00t-access crew "
+message=message.split("")
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	xpos[i]=-50
+}
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	ypos[i]=-50
+}
+function handlerMM(e){
+	x = (document.layers) ? e.pageX
+: document.body.scrollLeft+event.clientX
+	y = (document.layers) ? e.pageY
+: document.body.scrollTop+event.clientY
+	flag=1
+}
+function makesnake() {
+	if (flag==1 && document.all) {
+    	for (i=message.length-1; i>=1; i--) {
+	xpos[i]=xpos[i-1]+step
+	ypos[i]=ypos[i-1]
+    	}
+	xpos[0]=x+step
+	ypos[0]=y
+	
+for (i=0; i<message.length-1; i++) {
+	var thisspan = eval("span"+(i)+".style")
+	thisspan.posLeft=xpos[i]
+		thisspan.posTop=ypos[i]
+    	}
+}
+	
+else if (flag==1 && document.layers) {
+    	for (i=message.length-1; i>=1; i--) {
+		xpos[i]=xpos[i-1]+step
+		ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("document.span"+i)
+    		thisspan.left=xpos[i]
+			thisspan.top=ypos[i]
+    	}
+}
+var timer=setTimeout("makesnake()",30)
+}
+
+</script>
+</head>
+<BODY
+onLoad="makesnake()" style="width:100%;overflow-x:hidden;overflow-y:scroll" bgcolor="#000000" bgproperties="fixed" text="#C0C0C0" link="#00FF00" alink="#ff0000" vlink="#B00000#BB0000">
+
+<basefont size="3">
+<script>
+for (i=0;i<=message.length-1;i++)
+ {
+  document.write("<span id='span"+i+"' class='spanstyle'>")
+  document.write(message[i])
+  document.write("</span>")
+ }
+if (document.layers){document.captureEvents(Event.MOUSEMOVE);}
+document.onmousemove = handlerMM;
+</script>
+
+<CENTER>
+ <BASEFONT FACE="Tahoma"><h1><font
+color=#FF0000><u>.:/r00t-access crew owns
+you\:.</u></font></h1>
+</CENTER>
+<PRE>
+	<CENTER><img
+src="http://r00taccess.ath.cx/ubb/ew.gif"></center>
+<BR><BR>
+<center><font color="red"><b>mmcoms3.mmcom.com# id<BR>
+uid=0(root) gid=0(sys)<BR>
+mmcoms3.mmcom.com# uname -a<BR>
+IRIX mmcoms3 6.2 03131015 IP22<BR>
+mmcoms3.mmcom.com#</font></center><BR><BR>
+
+<font color="red"><u>admin:</u></font> bah. just letting you know that you
+need to patch your system, dont bothering trying to track us, just worry
+about<BR> patching your system, it would be a waste of your time to
+attempt to track, our site/email<BR> is all done through roots so your
+efforts are worthless, just wanna save ya some time :/<BR> btw- windows is
+shitty.
+
+<font color="red"><u>shoutz:</u></font> all of: Project-china, Quit Crew,
+Hackweiser, rest of r00t-access crew, WFD, SilverLords, and everyone
+else...
+
+<font color="red"><u>fuck you's go out to:</u></font> certain china
+hackers especially- Redhacker, H.U.C. and every fucking<BR> person
+supporting them. 
+
+
+</center>
+<center>
+<p><br><font color=#00ff00 size=3>r00t-access crew</font>
+if ya need help post on our BBS- www.r00taccess.ath.cx our software/texts also there...
+</center>
+</body>
+</html>
+<HR><h5 align=center>Copyright © 1996-2001 Multi-Media Communications. All rights reserved.</h5><!-- www.attrition.org web hack mirror - watermark or something -->

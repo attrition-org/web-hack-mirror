@@ -1,0 +1,32 @@
+--01:05:44--  http://www.honda.ca:80/
+           => `www.honda.ca/index.html'
+Connecting to www.honda.ca:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 1,117 [text/html]
+
+    0K -> .                                                      [100%]
+
+01:05:55 (111.96 B/s) - `www.honda.ca/index.html' saved [1117/1117]
+
+Loading robots.txt; please ignore errors.
+--01:05:55--  http://www.honda.ca:80/no-robots.txt
+           => `www.honda.ca/no-robots.txt'
+Connecting to www.honda.ca:80... connected!
+HTTP request sent, awaiting response... 404 Object Not Found
+01:05:55 ERROR 404: Object Not Found.
+
+--01:05:55--  http://www.honda.ca:80/hack.jpg
+           => `www.honda.ca/hack.jpg'
+Connecting to www.honda.ca:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 4,944 [image/jpeg]
+
+    0K -> ....                                                   [100%]
+
+01:06:05 (493.96 B/s) - `www.honda.ca/hack.jpg' saved [4944/4944]
+
+Converting www.honda.ca/index.html... done.
+
+FINISHED --01:06:05--
+Downloaded: 6,061 bytes in 2 files
+Converting www.honda.ca/index.html... done.

@@ -1,0 +1,17 @@
+# Robot exclusion file
+
+# all robots denied access to cgi stuff
+
+User-agent: *
+Disallow:  /cgi-bin/
+Disallow:  /cgi-2/
+Disallow:  /wrl/
+Disallow:  http://204.251.142.139/cgi-bin/
+Disallow:  http://204.251.142.139/cgi-2/
+
+
+
+
+# don't tet mail extracters in - if they even pay attention to this
+User-Agent: extractorpro
+Disallow: /

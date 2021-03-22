@@ -1,0 +1,46 @@
+<html><head>
+<title>The trick is to keep breathing...</title>
+<body bgcolor="#000000">
+
+<script>alert("Another IIS compromised. Maybe you should try Apache instead...")
+</script>
+
+<SCRIPT language=JavaScript1.2>
+var it=0
+function initialize(){
+mytext=typing.innerText
+var myheight=typing.offsetHeight
+typing.innerText=''
+document.all.typing.style.height=myheight
+document.all.typing.style.visibility="visible"
+typeit()
+}
+function typeit(){
+typing.insertAdjacentText("beforeEnd",mytext.charAt(it))
+if (it<mytext.length-1){
+it++
+setTimeout("typeit()",100)
+}
+else
+return
+}
+if (document.all)
+document.body.onload=initialize
+</SCRIPT>
+ 
+<FONT color=lime face=terminal size=4><SPAN id=typing 
+style="VISIBILITY: hidden" align="left">
+      
+<p>"Watch the stars, and from them learn. To the Master's honor all must turn, each in its track, without a sound, forever tracing Newton's ground."</p>
+
+</head></html>
+
+<!-- ADMIN: nothing was deleted. Rename all .xxx to their default file
+extensions. Patch @ http://www.microsoft.com/ntserver/nts/downloads/critical/q269862 
+
+LONG LIVE THE SCRIPT KIDDIES
+----------------------------
+
+6D6F64750165 -->
+
+<!-- www.attrition.org web hack mirror - watermark or something -->

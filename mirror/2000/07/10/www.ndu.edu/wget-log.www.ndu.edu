@@ -1,0 +1,42 @@
+--02:46:01--  http://www.ndu.edu:80/
+           => `www.ndu.edu/index.html'
+Connecting to www.ndu.edu:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 1,117 [text/html]
+
+    0K -> .                                                      [100%]
+
+02:46:01 (1.07 MB/s) - `www.ndu.edu/index.html' saved [1117/1117]
+
+Loading robots.txt; please ignore errors.
+--02:46:01--  http://www.ndu.edu:80/no-robots.txt
+           => `www.ndu.edu/no-robots.txt'
+Connecting to www.ndu.edu:80... connected!
+HTTP request sent, awaiting response... 404 Object Not Found
+02:46:01 ERROR 404: Object Not Found.
+
+--02:46:01--  http://www.ndu.edu:80/doodoo.jpg
+           => `www.ndu.edu/doodoo.jpg'
+Connecting to www.ndu.edu:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 11,828 [image/jpeg]
+
+    0K -> .......... .                                           [100%]
+
+02:46:02 (42.94 KB/s) - `www.ndu.edu/doodoo.jpg' saved [11828/11828]
+
+--02:46:02--  http://www.ndu.edu:80/y2k.gif
+           => `www.ndu.edu/y2k.gif'
+Connecting to www.ndu.edu:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 4,260 [image/gif]
+
+    0K -> ....                                                   [100%]
+
+02:46:02 (34.10 KB/s) - `www.ndu.edu/y2k.gif' saved [4260/4260]
+
+Converting www.ndu.edu/index.html... done.
+
+FINISHED --02:46:02--
+Downloaded: 17,205 bytes in 3 files
+Converting www.ndu.edu/index.html... done.

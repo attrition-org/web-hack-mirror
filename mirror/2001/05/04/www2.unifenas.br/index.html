@@ -1,0 +1,197 @@
+"<br><br><center><h1>MIH 0wnz<br></h1><h3>Universidade de Alfenas</h3></center><br><br>"
+<html>
+<head>
+<title>Universidade de Alfenas - Terminal Informativo Unifenas Online</title>
+<style type="text/css">
+<!--
+.unnamed1 {  color: #003399; text-decoration: none}
+a:hover {  color: #CC9900; text-decoration: underline}
+-->
+</style>
+<SCRIPT LANGUAGE="JavaScript">
+var isNN = (navigator.appName.indexOf("Netscape")!=-1);
+function autoTab(input,len, e) {
+var keyCode = (isNN) ? e.which : e.keyCode; 
+var filter = (isNN) ? [0,8,9] : [0,8,9,16,17,18,37,38,39,40,46];
+if(input.value.length >= len && !containsElement(filter,keyCode)) {
+input.value = input.value.slice(0, len);
+input.form[(getIndex(input)+1) % input.form.length].focus();
+}
+function containsElement(arr, ele) {
+var found = false, index = 0;
+while(!found && index < arr.length)
+if(arr[index] == ele)
+found = true;
+else
+index++;
+return found;
+}
+function getIndex(input) {
+var index = -1, i = 0, found = false;
+while (i < input.form.length && index == -1)
+if (input.form[i] == input)index = i;
+else i++;
+return index;
+}
+return true;
+}
+//  End -->
+</script>
+</head>
+<body bgcolor="#FFFFFF" background="tiuimg2.jpg">
+<center>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr> 
+      <td width="54%"> 
+        <div align="left"><img src="tiuimg4.jpg" width="382" height="178"></div>
+      </td>
+      <td width="44%"> 
+        <table width="43%" border="0" cellspacing="0" cellpadding="3" align="center">
+          <tr bgcolor="#CC0000"> 
+            <td>
+              <div align="center"><font size="3" face="Arial, Helvetica, sans-serif"><b><font color="#FFFFFF">Aten&ccedil;&atilde;o</font></b></font></div>
+            </td>
+          </tr>
+        </table>
+        <div align="justify"><dd><font size="2" face="Arial, Helvetica, sans-serif">A sua 
+          senha para acesso ao <b>Tiu Web</b> mudou, agora voc&ecirc; <b>n&atilde;o 
+          precisa mais digitar as barras</b>, digite apenas sua data de nascimento 
+          no formato: <font color="#CC0000"><b>ddmmaaaa</b></font>.<br>
+          </font><font size="2" face="Arial, Helvetica, sans-serif"><dd>Voc&ecirc; 
+          j&aacute; pode tamb&eacute;m escolher uma<b> <font color="#CC0000">nova 
+          senha</font></b>:<b> Lembre-se:</b><br>
+          - A nova senha deve ter <b>8 d&iacute;gitos num&eacute;ricos</b>;<br>
+          - Ela ser&aacute; usada para acesso ao <b>Tiu Web</b> e <b>Tiu Cabine</b>.<br>
+          <br>
+          </font></div>
+        </td>
+      <td width="2%"> 
+        <div align="center"></div>
+      </td>
+    </tr>
+  </table>
+  <table width="100%" border="0" cellpadding="0" cellspacing="0" vspace="0" hspace="0">
+    <tr> 
+      <td height="87" width="33%"> 
+        <form action=/cgi-bin/inicioei.exe  method=POST>
+          <table width="31%" bgcolor="#FFFFCC" bordercolorlight="#000000" bordercolordark="#000000" bordercolor="#000000" cellspacing="0" cellpadding="1" border="0" align="center">
+            <tr bgcolor="#003399"> 
+              <td colspan="2"> 
+                <div align="center"><font face="Arial, Helvetica, sans-serif" size="4"><b><font color="#FFFFCC" size="3">Alunos:</font><font color="#FFFFCC"> 
+                  </font></b></font> </div>
+              </td>
+            </tr>
+            <tr> 
+              <td width="26%"> 
+                <div align="left"><b><font face="Arial, Helvetica, sans-serif" color="#000000" size="3"> 
+                  <input name="Opcao" type="HIDDEN" value="1">
+                  Matr&iacute;cula: </font></b> </div>
+              </td>
+              <td width="74%"><b><font face="Arial, Helvetica, sans-serif" color="#000000" size="3"> 
+<small><input onKeyUp="return autoTab(this, 9, event);" name="Matricula" type="text" size="9" maxlength="9"></small>
+                           </font></b></td>
+            </tr>
+            <tr> 
+              <td width="26%"> 
+                <div align="left"><b><font face="Arial, Helvetica, sans-serif" color="#000000" size="3">Senha: 
+                  </font></b></div>
+              </td>
+              <td width="74%" valign="top"> <b><font face="Arial, Helvetica, sans-serif" color="#000000" size="3"> 
+                <small> 
+                <input onKeyUp="return autoTab(this, 8, event);" name="Nascimento" type="password" size="8" maxlength="8">
+                &nbsp; </small> </font></b><b><font face="Arial, Helvetica, sans-serif" color="#000000" size="3"> 
+                <input name="Ok" type="SUBMIT" value="  Ok  ">
+                </font></b> </td>
+            </tr>
+          </table>
+          <table width="83%" align="center" border="0" cellspacing="0" cellpadding="0">
+            <tr> 
+              <td>
+                <div align="center"><b><font face="Arial, Helvetica, sans-serif" color="#000000" size="1"><font size="2"> 
+                  <font color="#FF3333">Senha:</font> sua data de nascimento digitada 
+                  no </font> <font size="2">formato: </font><font color="#FF3333" size="2">ddmmaaaa 
+                  <font color="#000000" size="1">(N&atilde;o &eacute; mais necess&aacute;rio 
+                  digitar as barras)<br>
+                  <font size="2">Use sua nova senha caso voc&ecirc; j&aacute; 
+                  tenha alterado-a.</font></font></font></font></b></div>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </td>
+    </tr>
+  </table>
+  <table width="100%" border="0" cellpadding="0" cellspacing="0" vspace="0" hspace="0">
+    <tr> 
+      <td height="87" width="33%"> 
+        <form action=/cgi-bin/iniciopei.exe  method=POST name="">
+          <small> </small><small> </small> 
+          <table width="60%" bgcolor="#FFFFCC" border="0" bordercolorlight="#000000" bordercolordark="#000000" bordercolor="#000000" cellspacing="0" cellpadding="1" align="center">
+            <tr bgcolor="#004A1F"> 
+              <td colspan="2"> 
+                <div align="center"><font face="Arial, Helvetica, sans-serif" size="4" color="#012F13"><b><font color="#FFFFCC" size="3">Professores:</font></b></font> 
+                </div>
+              </td>
+            </tr>
+            <tr> 
+              <td width="13%"> <b><font face="Arial, Helvetica, sans-serif" size="3" color="#000000"> 
+                <input name="Opcao" type="HIDDEN" value="1">
+                Código:<br>
+                </font></b></td>
+              <td width="87%"><b><font face="Arial, Helvetica, sans-serif" size="3" color="#000000"> 
+              <small><input onKeyUp="return autoTab(this, 3, event);" name="codigo" type="text" size="3" maxlength="3"></small>
+              </font></b></td>
+            </tr>
+            <tr> 
+              <td width="13%" valign="baseline"><b><font face="Arial, Helvetica, sans-serif" size="3" color="#000000">Senha: 
+                <br>
+                </font></b></td>
+              <td width="87%" valign="top"> <b><font face="Arial, Helvetica, sans-serif" size="3" color="#000000"> 
+             <small><input onKeyUp="return autoTab(this, 11, event);" name="cpfp" type="password" size="11" maxlength="11"></small>
+                </font></b><b><font face="Arial, Helvetica, sans-serif" size="3" color="#000000">
+                <input name="Ok" type="SUBMIT" value="  Ok  ">
+                </font></b></td>
+            </tr>
+          </table>
+        </form>
+      </td>
+      <td height="87" width="33%"> 
+        <form action=/cgi-bin/inicioC.exe  method=POST>
+          <table width="60%" bgcolor="#FFFFCC" border="0" bordercolorlight="#000000" bordercolordark="#000000" bordercolor="#000000" cellspacing="0" cellpadding="1" align="center">
+            <tr bgcolor="#CC6600"> 
+              <td colspan="2"> 
+                <div align="center"><font face="Arial, Helvetica, sans-serif" size="4" color="#012F13"><b><font color="#FFFFCC" size="3">Administra&ccedil;&atilde;o 
+                  Escolar:</font></b></font> </div>
+              </td>
+            </tr>
+            <tr> 
+              <td width="13%"> <b><font face="Arial, Helvetica, sans-serif" size="3" color="#000000"> 
+                <input name="Opcao" type="HIDDEN" value="1">
+                Código:<br>
+                </font></b> </td>
+              <td width="87%"><b><font face="Arial, Helvetica, sans-serif" size="3" color="#000000"> 
+              <small><input onKeyUp="return autoTab(this, 3, event);" name="codigo" type="TEXT" size="3" maxlength="3"></small>
+                </font></b></td>
+            </tr>
+            <tr> 
+              <td width="13%" valign="baseline"><b><font face="Arial, Helvetica, sans-serif" size="3" color="#000000">Senha: 
+                <br>
+                </font></b></td>
+              <td width="87%" valign="top"> <b><font face="Arial, Helvetica, sans-serif" size="3" color="#000000"> 
+            <small><input onKeyUp="return autoTab(this, 11, event);" name="cpfc" type="password" size="11" maxlength="11"></small>
+                </font></b><b><font face="Arial, Helvetica, sans-serif" size="3" color="#000000">
+                <input name="Ok" type="SUBMIT" value="  Ok  ">
+                </font></b></td>
+            </tr>
+          </table>
+        </form>
+      </td>
+    </tr>
+  </table>
+  <b><font face="Arial, Helvetica, sans-serif" size="2" color="#003399">Em caso 
+  de d&uacute;vidas envie email para: </font> <font face="Arial, Helvetica, sans-serif" size="2"><br>
+  <a href="mailto:roberto.moraes@unifenas.br" class="unnamed1">Assessoria de Inform&aacute;tica 
+  UNIFENAS</a> </font></b> <font face="arial" size="1" color="FFFFFF"><!--#exec cgi="/cgi-bin/counter.cgi" --></font> 
+</center>
+</body>
+</html><!-- www.attrition.org web hack mirror - watermark or something -->

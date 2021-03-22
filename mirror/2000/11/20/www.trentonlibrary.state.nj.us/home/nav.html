@@ -1,0 +1,114 @@
+<HTML>
+<HEAD>
+<TITLE>nav
+</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+// Detect if browser is Netscape 3 + or IE 4 +.
+bName = navigator.appName;
+bVer = parseInt(navigator.appVersion);
+    if ((bName == "Netscape" && bVer >= 3) || 
+        (bName == "Microsoft Internet Explorer" && bVer >= 4)) br = "n3"; 
+    else br = "n2";
+ if (br== "n3") { 
+    img1on = new Image();          
+    img1on.src = "buttons/home.gif";  
+    img2on = new Image();          
+    img2on.src = "buttons/refon.gif";  
+    img3on = new Image();
+    img3on.src = "buttons/buson.gif";
+    img4on = new Image();
+    img4on.src = "buttons/childon.gif"; 
+    img5on = new Image();
+    img5on.src = "buttons/hison.gif";  
+    img6on = new Image();
+    img6on.src = "buttons/govon.gif";  
+    img7on = new Image();
+    img7on.src = "buttons/microon.gif";  
+    img8on = new Image();
+    img8on.src = "buttons/videoon.gif";  
+    img9on = new Image();
+    img9on.src = "buttons/eventson.gif";  
+    img10on = new Image();
+    img10on.src = "buttons/seniorson.gif";  
+    img11on = new Image();
+    img11on.src = "buttons/linkson.gif";     
+
+
+	img1off = new Image();          
+    img1off.src = "buttons/home.gif";  
+    img2off = new Image();          
+    img2off.src = "buttons/refoff.gif";  
+    img3off = new Image();
+    img3off.src = "buttons/bus.gif";
+    img4off = new Image();
+    img4off.src = "buttons/child.gif"; 
+    img5off = new Image();
+    img5off.src = "buttons/his.gif";  
+    img6off = new Image();
+    img6off.src = "buttons/gov.gif";  
+    img7off = new Image();
+    img7off.src = "buttons/micro.gif";  
+    img8off = new Image();
+    img8off.src = "buttons/video.gif";  
+    img9off = new Image();
+    img9off.src = "buttons/events.gif";  
+    img10off = new Image();
+    img10off.src = "buttons/seniors.gif";  
+    img11off = new Image();
+    img11off.src = "buttons/links.gif"; 
+  }
+
+// Function to "activate" images.
+function imgAct(imgName) {
+    if (br == "n3") {
+    document[imgName].src = eval(imgName + "on.src");
+    }
+}
+
+// Function to "deactivate" images.
+function imgInact(imgName) {
+    if (br == "n3") {
+    document[imgName].src = eval(imgName + "off.src");
+    }
+}
+
+// -->
+</SCRIPT>
+</HEAD>
+<BODY BACKGROUND="navbg.gif">
+<TABLE BORDER=0 CELLPADDING=2
+CELLSPACING=0 ALIGN=LEFT WIDTH=130>
+<TR>
+<TD WIDTH=130 ALIGN="LEFT" VALIGN="TOP">
+<font face="Verdana, Arial, Helvetica" SIZE="-2" Color="666633">
+
+<A HREF="../home/body.html" TARGET="Body" onMouseOver="imgAct('img1')" onMouseOut="imgInact('img1')">
+<IMG NAME="img1"SRC="buttons/home.gif"WIDTH="86" Height="71"HSPACE="3"  VSPACE="2"BORDER=0><BR></A>
+<A HREF="../reference/ref.html" TARGET="Body"onMouseOver = "imgAct('img2')" onMouseOut = "imgInact('img2')">
+<IMG NAME="img2" SRC="buttons/refoff.gif" WIDTH="84" Height="18"HSPACE="5" VSPACE="2"BORDER=0><BR></A>
+<A HREF="../business/bus.html" TARGET="Body"onMouseOver = "imgAct('img3')" onMouseOut = "imgInact('img3')">
+<IMG NAME="img3"SRC="buttons/bus.gif" WIDTH="84" Height="18"HSPACE="5" VSPACE="2"BORDER=0><BR></A>
+<A HREF="../children/child.html" TARGET="Body"onMouseOver = "imgAct('img4')" onMouseOut = "imgInact('img4')">
+<IMG NAME="img4"SRC="buttons/child.gif" WIDTH="84" Height="18"HSPACE="5" VSPACE="2"BORDER=0><BR></A>
+<A HREF="../trenton/trenton.html" TARGET="Body"onMouseOver = "imgAct('img5')" onMouseOut = "imgInact('img5')">
+<IMG NAME="img5"SRC="buttons/his.gif"WIDTH="84" Height="18"HSPACE="5"  VSPACE="2"BORDER=0><BR></A>
+<A HREF="../gov/gov.html" TARGET="Body" onMouseOver = "imgAct('img6')" onMouseOut = "imgInact('img6')">
+<IMG NAME="img6"SRC="buttons/gov.gif"WIDTH="84" Height="18"HSPACE="5"  VSPACE="2"BORDER=0><BR></A>
+<A HREF="../microfilm/micro.html" TARGET="Body"onMouseOver = "imgAct('img7')" onMouseOut = "imgInact('img7')">
+<IMG NAME="img7"SRC="buttons/micro.gif" WIDTH="84" Height="18"HSPACE="5" VSPACE="2"BORDER=0><BR></A>
+<A HREF="../video/video.html" TARGET="Body"onMouseOver = "imgAct('img8')" onMouseOut = "imgInact('img8')">
+<IMG NAME="img8"SRC="buttons/video.gif"WIDTH="84" Height="18"HSPACE="5"  VSPACE="2"BORDER=0><BR></A>
+<A HREF="../events/events.html" TARGET="Body"onMouseOver = "imgAct('img9')" onMouseOut = "imgInact('img9')">
+<IMG NAME="img9"SRC="buttons/events.gif" WIDTH="84" Height="18"HSPACE="5" VSPACE="2"BORDER=0><BR></A>
+<A HREF="../seniors/seniors.html" TARGET="Body"onMouseOver = "imgAct('img10')" onMouseOut = "imgInact('img10')">
+<IMG NAME="img10"SRC="buttons/seniors.gif" WIDTH="84" Height="18"HSPACE="5" VSPACE="2"BORDER=0><BR></A>
+<A HREF="../links/links.html" TARGET="Body"onMouseOver = "imgAct('img11')" onMouseOut = "imgInact('img11')">
+<IMG NAME="img11"SRC="buttons/links.gif" WIDTH="84" Height="18"HSPACE="5" VSPACE="2"BORDER=0><BR></A>
+
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

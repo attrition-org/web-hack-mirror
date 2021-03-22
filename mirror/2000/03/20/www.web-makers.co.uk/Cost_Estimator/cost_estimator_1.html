@@ -1,0 +1,1223 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--last modified on Wednesday, October 28, 1998 04:50 PM -->
+<HTML>
+
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+<META NAME="discription" CONTENT="Puzzles, Web Design, Lambert & Samborski Design Studio">
+<META NAME="keywords" CONTENT="puzzles, web design studio, gift item, artist studio, golf, Wedding, tennis, skiing, 1960's, wildlife, sea life, family, travel, food, finance, promotional item, paintings, limited editions, commissions, nostalgia, wall street, stock market, business, financial puzzle, block puzzle, cube puzzle,endless puzzle, perpetual image picture blocks, custom web page design, web management, web page management, web site design, web site management, gift, design studio, puzzle designers, artists, golf gift item, golf puzzle, wedding gift, tennis puzzle, Forrest Hills Tennis Club, skiing puzzle, 1960's puzzle, 1960's nostalgia, animal puzzle, wildlife puzzle, coral reef puzzle, travel puzzle, adjustable painting,">
+
+	<META NAME="Author" Content="Lambert & Samborski Design Studio">
+	<TITLE>Puzzles, Web Design, Lambert &amp; Samborski Design Studio</TITLE>
+</HEAD>
+
+<BODY TEXT="black" BGCOLOR="white" LINK="blue" ALINK="red" VLINK="#660099">
+
+<FORM ACTION="default.cgi" METHOD="POST" ENCTYPE="application/x-www-form-urlencoded">
+<P><SCRIPT LANGUAGE="JavaScript">
+<!--
+ if (document.images) {
+     // do image swapping in JavaScript
+  }
+ else {
+     // just display static images
+ }
+//-->
+
+<!--
+
+var timerID=""
+var newwin=""
+var waiting=0
+var popupdelay=100
+
+function startHelp(str) {
+   window.status=""
+   var str1="showHelp('" + str + "')"
+   timerID=setTimeout(str1, 100)
+   waiting=1
+}
+
+
+function showHelp(str) {
+   if (newwin=="" || newwin=="null" || newwin.name=="" || newwin.name=="null")
+      newwin = window.open("", "subWindow", "toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=200,height=400,top=2,left=2")
+   else
+      newwin.focus()
+
+   newwin.document.open()
+   var to_page = "<HTML><HEAD><TITLE>Lambert &amp; Samborski  Web Design Services</TITLE></HEAD><BODY BGCOLOR='#ffff00'><CENTER><P><B>"
+   if (str=="p1")
+      to_page += "</CENTER><UL><LI><FONT SIZE=2 FACE=Arial, Helvetica>One Web Page, Text and graphics equaling one 8&frac12;&quot; X 11&quot;document.</FONT><LI><FONT SIZE=2 FACE=Arial, Helvetica>One image or graphic supplied by the customer; scanned, enhanced, and formatted for the web by Lambert &amp; Samborski.</FONT><LI><FONT SIZE=2 FACE=Arial, Helvetica>Up to three links, internal or external, per page (external URL's supplied by customer)</FONT></UL><CENTER>Single page web site priced at &quot;$99&quot;"
+   else if (str=="p2")
+      to_page += "<FONT SIZE=2 FACE=Arial, Helvetica>Additional Web Pages, Each page equaling approximatly one 8&frac12;&quot; X 11&quot;document.<BR>Additional web pages are priced at &quot;$50&quot; each"
+   else if (str=="p3")
+      to_page += "<FONT SIZE=2 FACE=Arial, Helvetica>One Image or Graphic Element Included with single page web site, Each additional image or graphic supplied by the customer; scanned, enhanced, and formatted for the web by Lambert &amp; Samborski  priced at &quot;$15&quot; each."
+   else if (str=="p4")
+      to_page += "<FONT SIZE=2 FACE=Arial, Helvetica>Web copy should be supplied to Lambert &amp; Samborski  on  floppy disk or via e-mail. A typing charge of &quot;$10&quot; per page for copy supplied on paper"
+   else if (str=="p5")
+      to_page += "<FONT SIZE=2 FACE=Arial, Helvetica>Three Hyperlinks are included with single page web site.<BR>Additional hyperlink, internal or external, are priced at &quot;$5&quot; each"
+   else if (str=="p6")
+      to_page += "<FONT SIZE=2 FACE=Arial, Helvetica>Custom Icons or buttons designed by Lambert &amp; Samborski are priced at &quot;$35&quot; each"
+   else if (str=="p7")
+      to_page += "<FONT SIZE=2 FACE=Arial, Helvetica>Design custom page background, walpaper or watermark used on one or all pages in web site<BR>priced at &quot;$35&quot; each"   else if (str=="p8")
+      to_page += "<FONT SIZE=2 FACE=Arial, Helvetica>Standard form to allow web site visitor to make requests for information and send personel data via the web host's CGI bin. Requests are routed to webmaster and retrieved by e-mail client.<BR>Standard forms are priced at &quot;$50&quot; each"
+   else if (str=="p9")
+      to_page += "<FONT SIZE=2 FACE=Arial, Helvetica>Creates hot spots or hyperlinks in specified areas within a graphic image.<BR>Image maps are priced at &quot;$35&quot; each"
+   else if (str=="p10")
+      to_page += "<FONT SIZE=2 FACE=Arial, Helvetica>The most common type of animation found on the web. Can be viewed by most web browsers. Usually designed to start  as soon as first cell has been loaded and can be set to cycle any number of times from one too forever.<BR>Gif animations are priced starting at &quot;$50&quot; each"
+   else if (str=="p11")
+      to_page += "<FONT SIZE=2 FACE=Arial, Helvetica>When you mouse over an interactive java script menu the text or image is changed.</CENTER><UL><LI><FONT SIZE=2 FACE=Arial, Helvetica>The new image can include a selection of additional menu items and hyperlinks.</FONT><LI><FONT SIZE=2 FACE=Arial, Helvetica>A description of the hyperlink destination can be given.</FONT><LI><FONT SIZE=2 FACE=Arial, Helvetica>The image or text can light up.</FONT><LI><FONT SIZE=2 FACE=Arial, Helvetica>A new image can be revealed</FONT></UL><CENTER>Java script menu's are priced at &quot;$100&quot; each"
+   else if (str=="p12")
+      to_page += "</CENTER><UL><LI><FONT SIZE=2 FACE=Arial, Helvetica>A pop up window will be displayed when you mouse over a hot spot or hyperlink.</FONT><LI><FONT SIZE=2 FACE=Arial, Helvetica>A pop up window is very easy way to give a visitor detailed information about a product or sevice</FONT><LI><FONT SIZE=2 FACE=Arial, Helvetica>Pop up window can be designed to contain any of the elements of a normal page or framepage.</FONT><LI><FONT SIZE=2 FACE=Arial, Helvetica>Pop up windows are embedded in the web page you are viewing and so do not require any wait to download from the server.</FONT><LI><FONT SIZE=2 FACE=Arial, Helvetica>&quot; This is a pop up window&quot;</FONT></UL><CENTER>"
+   else if (str=="p13")
+      to_page += "<FONT SIZE=2 FACE=Arial, Helvetica>A series of text headlines that flash on screen sequentially at the opening of a web page. A page opening slide show can give a description of the page content or information about your company. This java script is only supported by Netscape 2.0+ browsers, will not work with any current version of Internet Explorer.<BR>Opening slide shows are priced starting at &quot;$50&quot; each"
+   else if (str=="p14")
+      to_page += "<FONT SIZE=2 FACE=Arial, Helvetica>A text message is displayed in the browser status bar when you mouse over a hot spot or hyperlink.<BR>Messages in status bar are priced starting at &quot;$50&quot; each"
+   else if (str=="p15")
+      to_page += "<FONT SIZE=2 FACE=Arial, Helvetica>This page is an example of a page built using the price estimator system. It also includes pop up windows and a java script menu.<BR>Price Estimating system &quot;$200&quot;"
+
+   else if (str=="p16")
+      to_page += "</CENTER><FONT SIZE=2 FACE=Arial, Helvetica>A shopping cart system allows you too:<UL><LI><FONT SIZE=2 FACE=Arial, Helvetica>choose an item or multiple items from a catalog page.<LI><FONT SIZE=2 FACE=Arial, Helvetica>The system calculates the total price of all items selected and presents a preliminary invoice that you can approve or edit.<LI><FONT SIZE=2 FACE=Arial, Helvetica>Presents forms to collect buyer information for nonsecure transmission and credit card information to be submitted through an encrypted secure socket layer.</FONT></UL><CENTER>Shopping cart system &quot;$200&quot; each"
+   else if (str=="p17")
+      to_page += "<FONT SIZE=2 FACE=Arial, Helvetica>A java script animation allows viewer to control how the images are displayed. Image controls can include start, stop, forward, backwards and reset. A Java script is embedded into the HTML code of the web page allowing it to be downloadied with the basic page layout.<BR>Java script animations are priced starting at &quot;$50&quot; each"
+   else if (str=="p18")
+      to_page += "<FONT SIZE=2 FACE=Arial, Helvetica>A java script animation allows viewer to control how the images are displayed. Image controls can include start, stop, forward, backwards and reset as well as changing related copy in a text box and and interaction with other java aplets. Java apalets are stored on the server and must be called up seperatly by the web page. Java is a complied language and requires the browser to start a program called java virtual machine to read the java code. For these reasons Java aplets usually are a bit slower to start than java scripts.<BR>Java animations are priced starting at &quot;$50&quot; each"
+   else if (str=="p19")
+      to_page += "<FONT SIZE=2 FACE=Arial, Helvetica>Custom form to meet your specific needs. Allows web site visitors to make requests for information and send personel data via the web host's CGI bin. Requests are routed to webmaster and retrieved by e-mail client.<BR>Custom CGI forms are priced at &quot;$50&quot; each"
+   else if (str=="p20")
+      to_page += "<FONT SIZE=2 FACE=Arial, Helvetica>The custom  java script form does not use the server CGI bin. Custom forms can be designed to meet your specific needs. The Java script form allows web site visitors to make requests for information and send personel data via e-mail to your personel mail box.<BR>Custom Java script forms are priced at &quot;$50&quot; each"
+   else if (str=="p21")
+      to_page += ""
+
+   to_page+="</B></BODY></HTML>\n"
+   newwin.document.write(to_page)
+   newwin.document.close()
+
+   waiting=0
+}
+
+function clearHelp() {
+   waiting=0
+   clearTimeout(timerID)
+   if (newwin!="" && newwin!="null" && newwin.name!="null") {
+      newwin.close()
+      newwin=""
+   }
+}
+// -->
+<!--
+
+
+var called=false;	//to make sure the function compute() is called
+var T_Price=0;
+var sps_flag;	//single page web site flag for keeping track of the choices
+var sps_print="";
+
+var apg_flag;	//flag for additional pages
+var apg_print;
+
+var img_flag;	//flag for additional images
+var img_print;
+
+var typ_flag;		//flag for typing copy
+var typ_print;
+
+var lnk_flag;		//flag for additional hyperlinks
+var lnk_print;
+
+var icon_flag;	//flag for custom icons
+var icon_print;
+
+var cwp_flag;	//flag for custom walpaper
+var cwp_print;
+
+var subm_flag;	//flag for submit form
+var subm_print;
+
+var imap_flag;	//flag for image map
+var imap_print;
+
+var gifa_flag;	//flag for gif animation
+var gifa_print;
+
+var menu_flag;	 //flag for java script menu
+var menu_print;
+
+var popu_flag; 	//flag for pop up window
+var popu_print;
+
+var open_flag;    //flag for opening titles
+var open_print;
+
+
+var sbm_flag;    //flag for message in status bar
+var sbm_print;
+
+var pes_flag;    //flag for price estimator
+var pes_print;
+
+var scs_flag;    //flag for shopping cart
+var scs_print;
+
+var jsa_flag;    //flag for java script animation
+var jsa_print;
+
+var ja_flag;    //flag for java animation
+var ja_print;
+
+var cgif_flag;    //flag for custom cgi form
+var cgif_print;
+
+var jsf_flag;    //flag for custom java script form
+var jsf_print;
+function compute(form){
+called=true;
+
+//-------Single Page Web Site----------
+if (form.sps[0].selected){
+
+	sps_flag=99;	sps_print= "$99";
+}
+	 
+
+//-------Additional Pages----------
+if (form.apg[0].selected){
+	apg_flag=0;
+	apg_print="None";
+}
+
+if (form.apg[1].selected){
+	apg_flag=65;	
+apg_print="1 Page $65";
+}
+
+if (form.apg[2].selected){
+	apg_flag=130;
+	apg_print="2 Pages $130";
+}
+
+if (form.apg[3].selected){
+	apg_flag=195;
+	apg_print="3 Pages $195";
+}
+
+if (form.apg[4].selected){
+	apg_flag=260;
+	apg_print="4 Pages $260";
+}
+if (form.apg[5].selected){
+	apg_flag=325;
+	apg_print="5 Pages $325";
+}if (form.apg[6].selected){
+	apg_flag=390;
+	apg_print="6 Pages $390";
+}if (form.apg[7].selected){
+	apg_flag=455;
+	apg_print="7 Pages $455";
+}if (form.apg[8].selected){
+	apg_flag=520;
+	apg_print="8 Pages $520";
+}
+//-------Additional Images-----------
+if (form.img[0].selected){
+	img_flag=0;
+	img_print="1 Image";
+}
+
+if (form.img[1].selected){
+	img_flag=15;
+	img_print="2 Image $15";
+}
+
+if (form.img[2].selected){
+	img_flag=30;
+	img_print="3 Images $30";
+}
+
+if (form.img[3].selected){
+	img_flag=45;
+	img_print="4 Images $45";
+}
+
+if (form.img[4].selected){
+	img_flag=60;	img_print="5 Images $60";
+}
+
+if (form.img[5].selected){
+	img_flag=75;	img_print="6 Images $75";
+}
+
+if (form.img[6].selected){
+	img_flag=90;
+	img_print="7 Images $90";
+}
+
+if (form.img[7].selected){
+	img_flag=105;
+	img_print="8 Images $105";
+}
+
+if (form.img[8].selected){
+	img_flag=120;	
+img_print="9 Images $120";
+}
+
+if (form.img[9].selected){	
+img_flag=135;	img_print="10 Images $135";
+}
+
+
+
+//-------Typing Copy-------
+if (form.typ[0].selected){
+	typ_flag=0;
+	typ_print="None";
+}
+
+if (form.typ[1].selected){
+	typ_flag=10;	typ_print="Type 1 Page Of Copy $10";
+}
+
+if (form.typ[2].selected){
+	typ_flag=20;	typ_print="Type 2 Pages Of Copy $20";
+}
+
+if (form.typ[3].selected){
+	typ_flag=30;	typ_print="Type 3 Pages Of Copy $30";
+}
+
+if (form.typ[4].selected){
+	typ_flag=40;
+	typ_print="Type 4 Pages Of Copy $40";
+}
+
+
+if (form.typ[5].selected){
+	typ_flag=50;
+	typ_print="Type 5 Pages Of Copy $50";
+}
+
+if (form.typ[6].selected){
+	typ_flag=60;
+	typ_print="Type 6 Pages Of Copy $60";
+}
+
+if (form.typ[7].selected){
+	typ_flag=70;
+	typ_print="Type 7 Pages Of Copy $70";
+}
+
+if (form.typ[8].selected){
+	typ_flag=80;
+	typ_print="Type 8 Pages Of Copy $80";
+}
+
+if (form.typ[9].selected){
+	typ_flag=90;
+	typ_print="Type 9 Pages Of Copy $90";
+}
+
+
+
+//-------Additional Links-------
+
+if (form.lnk[0].selected){
+	lnk_flag=0;
+	lnk_print="3 Links";}
+
+if (form.lnk[1].selected){
+	lnk_flag=5;
+	lnk_print="4 HyperLink $5";
+	}
+
+if (form.lnk[2].selected){
+	lnk_flag=10;
+	lnk_print="5 HyperLink $10";
+	}
+
+if (form.lnk[3].selected){
+	lnk_flag=15;
+	lnk_print="6 HyperLinks $15";
+	}
+
+if (form.lnk[4].selected){
+	lnk_flag=20;
+	lnk_print="7 HyperLink $20";
+	}
+
+
+if (form.lnk[5].selected){
+	lnk_flag=25;
+	lnk_print="8 HyperLink $25";
+	}
+
+if (form.lnk[6].selected){
+	lnk_flag=30;
+	lnk_print="9 HyperLink $30";
+	}
+
+if (form.lnk[7].selected){
+	lnk_flag=35;
+	lnk_print="10 HyperLink $35";
+	}
+
+if (form.lnk[8].selected){
+	lnk_flag=40;
+	lnk_print="11 HyperLink $40";
+	}
+
+if (form.lnk[9].selected){
+	lnk_flag=45;
+	lnk_print="12 HyperLink $45";
+	}
+//-------Custom Icons-------
+if (form.icon[0].selected){
+	icon_flag=0;
+	icon_print="None";
+	}
+
+if (form.icon[1].selected){
+	icon_flag=35;
+	icon_print="1 Custom Icon $35";
+	}
+
+if (form.icon[2].selected){
+	icon_flag=70;	
+icon_print="2 Custom Icons $70";
+	}
+
+if (form.icon[3].selected){
+	icon_flag=105;
+	icon_print="3 Custom Icons $105";
+	}
+
+
+if (form.icon[4].selected){
+	icon_flag=140;
+	icon_print="4 Custom Icons $140";
+	}
+
+if (form.icon[5].selected){
+	icon_flag=175;
+	icon_print="5 Custom Icons $175";
+	}
+
+if (form.icon[6].selected){
+	icon_flag=210;
+	icon_print="6 Custom Icons $210";
+	}
+//-------Walpaper-------
+
+if (form.cwp[0].selected){
+	cwp_flag=0;
+	cwp_print="None";
+	}
+if (form.cwp[1].selected){
+	cwp_flag=35;
+	cwp_print="1 Custom Walpaper $35";
+	}
+
+if (form.cwp[2].selected){
+	cwp_flag=70;
+	cwp_print="2 Custom Walpapers $70";
+	}
+
+if (form.cwp[3].selected){
+	cwp_flag=105;
+	cwp_print="3 Custom Walpapers $105";
+	}
+
+if (form.cwp[4].selected){
+	cwp_flag=140;
+	cwp_print="4 Custom Walpapers $140";
+	}
+//----------Form-----------
+if (form.subm[0].selected){
+	subm_flag=0;
+	subm_print="None";
+	}
+
+if (form.subm[1].selected){
+	subm_flag=50;
+	subm_print="1 Form $50";
+	}
+
+if (form.subm[2].selected){
+	subm_flag=100;
+	subm_print="2 Forms $100";
+	}
+
+if (form.subm[3].selected){
+	subm_flag=150;
+	subm_print="3 Forms $150";
+	}
+
+//-----------Image Map------
+if (form.imap[0].selected){
+	imap_flag=0;
+	imap_print="None";
+}
+
+if (form.imap[1].selected){
+	imap_flag=35;
+	imap_print="1 Image Map $35";
+}
+
+if (form.imap[2].selected){
+	imap_flag=70;	
+imap_print="2 Image Maps $70";
+}
+
+
+if (form.imap[3].selected){
+	imap_flag=105;
+	imap_print="3 Image Maps $105";
+}
+
+if (form.imap[4].selected){
+	imap_flag=140;
+	imap_print="4 Image Maps $140";
+}
+
+//----------Gif Animation-----------
+
+if (form.gifa[0].selected){
+	gifa_flag=0;
+	gifa_print= "None";
+}
+
+if (form.gifa[1].selected){
+	gifa_flag=50;
+	gifa_print="Simple GIF Animation $50";
+}
+
+if (form.gifa[2].selected){
+	gifa_flag=100;
+	gifa_print="Average GIF Animation $100";
+}
+
+if (form.gifa[3].selected){
+	gifa_flag=150;
+	gifa_print="Complex GIF Animation $150";
+}
+
+if (form.gifa[4].selected){
+	gifa_flag=200;
+	gifa_print="Very Complex GIF Animation $200";
+	}
+
+//----------Java Script Menu-----------
+
+if (form.menu[0].selected){
+	menu_flag=0;
+	menu_print=" None";
+}
+
+if (form.menu[1].selected){
+	menu_flag=100;
+	menu_print="1 Menu $100";
+}
+
+if (form.menu[2].selected){
+	menu_flag=200;
+	menu_print="2 Menus $200";
+}
+
+if (form.menu[3].selected){
+	menu_flag=300;
+	menu_print="3 Menus $300";
+}
+
+
+
+//----------Pop Up Window Message-----------
+ 
+if (form.popu[0].selected){
+	popu_flag=0;
+	popu_print="None";
+}
+
+if (form.popu[1].selected){
+	popu_flag=50;
+	popu_print="1-3 messages $50";
+}
+
+if (form.popu[2].selected){
+	popu_flag=75;
+	popu_print="4-6 messages $75";
+}
+
+if (form.popu[3].selected){
+	popu_flag=100;
+	popu_print="7-9 messages $100";
+}
+
+
+
+//----------Opening Slide Show-----------
+ 
+if (form.open[0].selected){
+	open_flag=0;
+	open_print="None";
+}
+ 
+if (form.open[1].selected){
+	open_flag=50;
+	open_print="Text Message $50";
+}
+
+
+
+
+
+//----------Message in Status Bar-----------
+ 
+if (form.sbm[0].selected){
+	sbm_flag=0;
+	sbm_print="None";
+}
+ 
+if (form.sbm[1].selected){
+	sbm_flag=50;
+	sbm_print="1 message $50";
+}
+ 
+if (form.sbm[2].selected){
+	sbm_flag=100;
+	sbm_print="2 Messages $100";
+}
+ 
+if (form.sbm[3].selected){
+	sbm_flag=150;
+	sbm_print="3 messages $150";
+}
+ 
+if (form.sbm[4].selected){
+	sbm_flag=200;
+	sbm_print="4 messages $200";
+}
+ 
+if (form.sbm[5].selected){
+	sbm_flag=250;
+	sbm_print="5 messages";
+}
+
+
+
+
+
+//----------Price Estimator-----------
+ 
+if (form.pes[0].selected){
+	pes_flag=0;
+	pes_print="None";
+}
+ 
+if (form.pes[1].selected){
+	pes_flag=200;
+	pes_print="operating system $200";
+}
+
+
+
+
+
+//----------Shopping Cart-----------
+ 
+if (form.scs[0].selected){
+	scs_flag=0;
+	scs_print="None";
+}
+ 
+if (form.scs[1].selected){
+	scs_flag=200;
+	scs_print="operating system $200";
+}
+
+
+
+
+
+//----------JAVA Script Animation-----------
+ 
+if (form.jsa[0].selected){
+	jsa_flag=0;
+	jsa_print="None";
+}
+ 
+if (form.jsa[1].selected){
+	jsa_flag=50;
+	jsa_print="Simple Animation $50";
+}
+ 
+if (form.jsa[2].selected){
+	jsa_flag=100;
+	jsa_print="Average Animation $100";
+}
+ 
+if (form.jsa[3].selected){
+	jsa_flag=150;
+	jsa_print="Complex Animation $150";
+}
+ 
+if (form.jsa[4].selected){
+	jsa_flag=200;
+	jsa_print="Very Complex Animation $200";
+}
+//----------JAVA  Animation-----------
+ 
+if (form.ja[0].selected){
+	ja_flag=0;
+	ja_print="None";
+}
+ 
+if (form.ja[1].selected){
+	ja_flag=50;
+	ja_print="Simple Animation $50";
+}
+ 
+if (form.ja[2].selected){
+	ja_flag=100;
+	ja_print="Average Animation $100";
+}
+ 
+if (form.ja[3].selected){
+	ja_flag=150;
+	ja_print="Complex Animation $150";
+}
+ 
+if (form.ja[4].selected){
+	ja_flag=200;
+	ja_print="Very Complex Animation $200";
+}
+//----------Custom CGI Form-----------
+ 
+if (form.cgif[0].selected){
+	cgif_flag=0;
+	cgif_print="None";
+}
+ 
+if (form.cgif[1].selected){
+	cgif_flag=50;
+	cgif_print="1 Form $50";
+}
+ 
+if (form.cgif[2].selected){
+	cgif_flag=100;
+	cgif_print="2 Forms $100";
+}
+ 
+if (form.cgif[3].selected){
+	cgif_flag=150;
+	cgif_print="3 Forms $150";
+}
+ 
+if (form.cgif[4].selected){
+	cgif_flag=200;
+	cgif_print="4 Forms $200";
+}
+//----------Custom JAVA Script Form-----------
+ 
+if (form.jsf[0].selected){
+	jsf_flag=0;
+	jsf_print="None";
+}
+ 
+if (form.jsf[1].selected){
+	jsf_flag=50;
+	jsf_print="1 Form $50";
+}
+ 
+if (form.jsf[2].selected){
+	jsf_flag=100;
+	jsf_print="2 Forms $100";
+}
+ 
+if (form.jsf[3].selected){
+	jsf_flag=150;
+	jsf_print="3 Forms $150";
+}
+ 
+if (form.jsf[4].selected){
+	jsf_flag=200;
+	jsf_print="4 Forms $200";
+}
+T_Price=sps_flag+apg_flag+img_flag+typ_flag+lnk_flag+ icon_flag
++cwp_flag+subm_flag+imap_flag+gifa_flag+menu_flag+popu_flag+open_flag+sbm_flag+pes_flag+scs_flag+jsa_flag+ja_flag+cgif_flag+jsf_flag;
+
+form.T_Price.value="     $ "+ T_Price;
+
+
+}
+function print(form){
+if(!called){
+	compute(form);
+}
+
+text = ("<HEAD><TITLE>'Web Site Cost Estimator Lambert & Samborski Design Studio'</TITLE></HEAD>");
+text = (text +"<BODY BGCOLOR =  '#FFFFFF' ><CENTER><B><FONT SIZE = 4><FONT COLOR=BLUE>Web Site Cost Estimator</FONT></FONT></B>");
+text= (text +"<br><FONT SIZE = 2><b>Lambert &amp; Samborski Design Studio<br></b></FONT><FONT SIZE=-2><FONT COLOR=GREEN>To print this page: choose FILE and PRINT.</FONT></CENTER>");
+text=(text+"<hr>");
+text=(text+"<CENTER><TABLE BORDER =0><TR VALIGN=Top><TD VALIGN=Top>");
+
+text=(text+"<B>Single Page Web Site:<BR>Additional Pages: <BR>Images: <BR>Typing Copy: <BR>Links: <BR>Custom Icons:");
+text=(text+" <BR>Walpaper: <BR>Comment-Submit Form: <BR>Image Map: <BR>GIF Animation: <BR>Java Script Menu: <BR>Pop Up Message: ");
+text=(text+" <BR>Text Slide Show: <BR>Status Bar Message: <BR>Price Estimator OS: <BR>Shopping Cart OS: <BR>JS Animation: ");text=(text+" <BR>JAVA Animation: <BR>Custom CGI Form: <BR>Custom JS Form: ");text=(text+"</B></TD><TD>")
+
+
+text=(text+"<B>"+ sps_print+"<BR>"+apg_print+"<BR>"+ img_print+"<BR>"+ typ_print+"<BR>");
+text=(text+ lnk_print+"<BR>"+icon_print+"<BR>"+ cwp_print+"<BR>"+ subm_print+"<BR>");
+text=(text+ imap_print+"<BR>"+ gifa_print+"<BR>"+ menu_print +"<BR>" + popu_print+"<BR>" );
+text=(text+ open_print+"<BR>"+ sbm_print+"<BR>"+ pes_print +"<BR>" + scs_print+"<BR>" );
+text=(text+ jsa_print+"<BR>"+ ja_print+"<BR>"+ cgif_print+"<BR>" + jsf_print );text=(text+"<TD></TR></TABLE></FONT></CENTER><hr>");
+
+text=(text+"<B><FONT COLOR=RED>Total Cost:</FONT>"+" &nbsp &nbsp &nbsp $"+T_Price);
+text=(text+"<BR><FONT SIZE=-1><FONT COLOR=GREEN>To print, choose FILE and PRINT.</FONT></FONT>");
+text=(text+"</body></html>");
+                msgWindow=window.open("","displayWindow","toolbar=no,width=450,height=380,top=2,left=2,directories=no,status=yes,scrollbars=yes,resize=no,menubar=yes")
+                msgWindow.document.write(text)
+                msgWindow.document.close()
+}//-->
+</SCRIPT>
+
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+	<TR>
+		<TD VALIGN="TOP" COLSPAN="2"><IMG SRC="banner-puzzle.gif" WIDTH="347" HEIGHT="41" ALIGN="BOTTOM" BORDER="0"></TD>
+	</TR>
+	<TR>
+		<TD VALIGN="TOP" COLSPAN="2"><IMG SRC="stripe-banner.gif" WIDTH="500" HEIGHT="10" ALIGN="BOTTOM" BORDER="0"></TD>
+	</TR>
+	<TR>
+		<TD WIDTH="132" VALIGN="TOP"><IMG SRC="menu-filler-a.gif" WIDTH="132" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"><BR>
+			<IMG SRC="menu-fade-a.gif" WIDTH="132" HEIGHT="60" ALIGN="BOTTOM" BORDER="0"></TD>
+		<TD VALIGN="TOP">
+			<CENTER>
+			<P><IMG SRC="1x10spacer.gif" WIDTH="1" HEIGHT="10" ALIGN="BOTTOM" BORDER="0"></P>
+
+			<P>
+			<TABLE BORDER="0" CELLPADDING="10" CELLSPACING="0" WIDTH="96%" BGCOLOR="#F4F4F4">
+				<TR>
+					<TD WIDTH="100%" BGCOLOR="white">
+						<P ALIGN="CENTER"><B><FONT COLOR="black" FACE="Arial, Helvetica">Web Site Cost Estimator</FONT></B></P>
+						<CENTER>
+						<P>
+						<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="1" WIDTH="90%">
+							<TR>
+								<TD COLSPAN="2">
+									<P ALIGN="CENTER"><B><FONT SIZE="2" FACE="Arial, Helvetica">Single Page Web Site</FONT></B>
+								</TD>
+							</TR>
+							<TR>
+								<TD BGCOLOR="#FFFBF0">
+									<P ALIGN="CENTER"><FONT SIZE="2" FACE="Arial, Helvetica">Description</FONT>
+								</TD>
+								<TD BGCOLOR="#FFFBF0">
+									<P ALIGN="CENTER">Quanity
+								</TD>
+							</TR>
+							<TR>
+								<TD BGCOLOR="#66CCCC">
+									<P ALIGN="CENTER"><A NAME="1"></A><A HREF="#1" onMouseOver="startHelp('p1')" onMouseOut="clearHelp()"><FONT SIZE="2"
+									FACE="Arial, Helvetica">Single Page Web Site</FONT></A>
+								</TD>
+								<TD BGCOLOR="#CCCCFF"><IMG SRC="10x2spacer.gif" WIDTH="10" HEIGHT="2" ALIGN="BOTTOM" BORDER="0"> 
+									<SELECT NAME="sps">
+									<OPTION SELECTED> $99 </OPTION>
+									</SELECT>
+								</TD>
+							</TR>
+							<TR>
+								<TD COLSPAN="2">
+									<P ALIGN="CENTER"><B><FONT SIZE="2" FACE="Arial, Helvetica">Additional Items</FONT></B>
+								</TD>
+							</TR>
+							<TR>
+								<TD BGCOLOR="#FFFBF0">
+									<P ALIGN="CENTER"><FONT SIZE="2" FACE="Arial, Helvetica">Description</FONT>
+								</TD>
+								<TD BGCOLOR="#FFFBF0">
+									<P ALIGN="CENTER">Quanity
+								</TD>
+							</TR>
+							<TR>
+								<TD BGCOLOR="#66CCCC">
+									<P ALIGN="CENTER"><A NAME="2"></A><A HREF="#2" onMouseOver="startHelp('p2')" onMouseOut="clearHelp()"><FONT SIZE="2"
+									FACE="Arial, Helvetica">Additional Pages</FONT></A>
+								</TD>
+								<TD BGCOLOR="#CCCCFF"><IMG SRC="10x2spacer.gif" WIDTH="10" HEIGHT="2" ALIGN="BOTTOM" BORDER="0"> 
+									<SELECT NAME="apg">
+									<OPTION> None</OPTION>
+									<OPTION>1 page $65</OPTION>
+									<OPTION>2 pages $130</OPTION>
+									<OPTION>3 pages $195</OPTION>
+									<OPTION>4 pages $260</OPTION>
+									<OPTION>5 pages $325</OPTION>
+									<OPTION>6 pages $390</OPTION>
+									<OPTION>7 pages $455</OPTION>
+									<OPTION>8 pages $520</OPTION>
+									</SELECT>
+								</TD>
+							</TR>
+							<TR>
+								<TD BGCOLOR="#66CCCC">
+									<P ALIGN="CENTER"><A NAME="3"></A><A HREF="#3" onMouseOver="startHelp('p3')" onMouseOut="clearHelp()"><FONT SIZE="2"
+									FACE="Arial, Helvetica">Images or Graphics</FONT></A>
+								</TD>
+								<TD BGCOLOR="#CCCCFF"><IMG SRC="10x2spacer.gif" WIDTH="10" HEIGHT="2" ALIGN="BOTTOM" BORDER="0"> 
+									<SELECT NAME="img">
+									<OPTION SELECTED> 1 Image </OPTION>
+									<OPTION> 2 Images $ 15</OPTION>
+									<OPTION> 3 Images $ 30</OPTION>
+									<OPTION> 4 Images $ 45</OPTION>
+									<OPTION> 5 Images $ 60</OPTION>
+									<OPTION> 6 Images $ 75</OPTION>
+									<OPTION> 7 Images $ 90</OPTION>
+									<OPTION> 8 Images $105</OPTION>
+									<OPTION> 9 Images $120</OPTION>
+									<OPTION>10 Images $135</OPTION>
+									</SELECT>
+								</TD>
+							</TR>
+							<TR>
+								<TD BGCOLOR="#66CCCC">
+									<P ALIGN="CENTER"><A NAME="4"></A><A HREF="#4" onMouseOver="startHelp('p4')" onMouseOut="clearHelp()"><FONT SIZE="2"
+									FACE="Arial, Helvetica">Typing Copy</FONT></A>
+								</TD>
+								<TD BGCOLOR="#CCCCFF"><IMG SRC="10x2spacer.gif" WIDTH="10" HEIGHT="2" ALIGN="BOTTOM" BORDER="0"> 
+									<SELECT NAME="typ">
+									<OPTION SELECTED> None</OPTION>
+									<OPTION>1 Page $10</OPTION>
+									<OPTION>2 Pages $20</OPTION>
+									<OPTION>3 Pages $30</OPTION>
+									<OPTION>4 Pages $40</OPTION>
+									<OPTION>5 Pages $50</OPTION>
+									<OPTION>6 Pages $60</OPTION>
+									<OPTION>7 Pages $70</OPTION>
+									<OPTION>8 Pages $80</OPTION>
+									<OPTION>9 Pages $90</OPTION>
+									</SELECT>
+								</TD>
+							</TR>
+							<TR>
+								<TD BGCOLOR="#66CCCC">
+									<P ALIGN="CENTER"><IMG SRC="10x2spacer.gif" WIDTH="10" HEIGHT="2" ALIGN="BOTTOM" BORDER="0"><A NAME="5"></A><A
+									HREF="#5" onMouseOver="startHelp('p5')" onMouseOut="clearHelp()"><FONT SIZE="2" FACE="Arial, Helvetica">Hyperlinks
+									(Internal or External)</FONT></A><FONT SIZE="2" FACE="Arial, Helvetica"><IMG SRC="10x2spacer.gif" WIDTH="10" HEIGHT="2"
+									ALIGN="BOTTOM" BORDER="0"></FONT>
+								</TD>
+								<TD BGCOLOR="#CCCCFF"><IMG SRC="10x2spacer.gif" WIDTH="10" HEIGHT="2" ALIGN="BOTTOM" BORDER="0"> 
+									<SELECT NAME="lnk">
+									<OPTION SELECTED> 3 Links </OPTION>
+									<OPTION> 4 Links $ 5</OPTION>
+									<OPTION> 5 Links $10</OPTION>
+									<OPTION> 6 Links $15</OPTION>
+									<OPTION> 7 Links $20</OPTION>
+									<OPTION> 8 Links $25</OPTION>
+									<OPTION> 9 Links $30</OPTION>
+									<OPTION>10 Links $35</OPTION>
+									<OPTION>11 Links $40</OPTION>
+									<OPTION>12 Links $45</OPTION>
+									</SELECT>
+								</TD>
+							</TR>
+							<TR>
+								<TD BGCOLOR="#66CCCC">
+									<P ALIGN="CENTER"><A NAME="6"></A><A HREF="#6" onMouseOver="startHelp('p6')" onMouseOut="clearHelp()"><FONT SIZE="2"
+									FACE="Arial, Helvetica">Custom Icons</FONT></A>
+								</TD>
+								<TD BGCOLOR="#CCCCFF"><IMG SRC="10x2spacer.gif" WIDTH="10" HEIGHT="2" ALIGN="BOTTOM" BORDER="0"> 
+									<SELECT NAME="icon">
+									<OPTION> None</OPTION>
+									<OPTION>1 Icon $ 35</OPTION>
+									<OPTION>2 Icons $ 70</OPTION>
+									<OPTION>3 Icons $105</OPTION>
+									<OPTION>4 Icons $140</OPTION>
+									<OPTION>5 Icons $175</OPTION>
+									<OPTION>6 Icons $210</OPTION>
+									</SELECT>
+								</TD>
+							</TR>
+							<TR>
+								<TD BGCOLOR="#66CCCC">
+									<P ALIGN="CENTER"><A NAME="7"></A><A HREF="#7" onMouseOver="startHelp('p7')" onMouseOut="clearHelp()"><FONT SIZE="2"
+									FACE="Arial, Helvetica">Custom Walpaper</FONT></A>
+								</TD>
+								<TD BGCOLOR="#CCCCFF"><IMG SRC="10x2spacer.gif" WIDTH="10" HEIGHT="2" ALIGN="BOTTOM" BORDER="0"> 
+									<SELECT NAME="cwp">
+									<OPTION SELECTED> None</OPTION>
+									<OPTION>1 Walpaper $35</OPTION>
+									<OPTION>2 Walpapers $70</OPTION>
+									<OPTION>3 Walpapers $105</OPTION>
+									<OPTION>4 Walpapers $140</OPTION>
+									</SELECT>
+								</TD>
+							</TR>
+							<TR>
+								<TD BGCOLOR="#66CCCC">
+									<P ALIGN="CENTER"><A NAME="8"></A><A HREF="#8" onMouseOver="startHelp('p8')" onMouseOut="clearHelp()"><FONT SIZE="2"
+									FACE="Arial, Helvetica">Comment-Submit Form</FONT></A>
+								</TD>
+								<TD BGCOLOR="#CCCCFF"><IMG SRC="10x2spacer.gif" WIDTH="10" HEIGHT="2" ALIGN="BOTTOM" BORDER="0"> 
+									<SELECT NAME="subm">
+									<OPTION SELECTED> None</OPTION>
+									<OPTION>1 Form $ 50</OPTION>
+									<OPTION>2 Forms $100</OPTION>
+									<OPTION>3 Forms $150</OPTION>
+									</SELECT>
+								</TD>
+							</TR>
+							<TR>
+								<TD BGCOLOR="#66CCCC">
+									<P ALIGN="CENTER"><A NAME="9"></A><A HREF="#9" onMouseOver="startHelp('p9')" onMouseOut="clearHelp()"><FONT SIZE="2"
+									FACE="Arial, Helvetica">Image Map</FONT></A>
+								</TD>
+								<TD BGCOLOR="#CCCCFF"><IMG SRC="10x2spacer.gif" WIDTH="10" HEIGHT="2" ALIGN="BOTTOM" BORDER="0"> 
+									<SELECT NAME="imap">
+									<OPTION SELECTED>None</OPTION>
+									<OPTION>1 Image Map $ 35</OPTION>
+									<OPTION>2 Image Maps $ 70</OPTION>
+									<OPTION>3 Image Maps $105</OPTION>
+									<OPTION>4 Image Maps $140</OPTION>
+									</SELECT>
+								</TD>
+							</TR>
+							<TR>
+								<TD BGCOLOR="#66CCCC">
+									<P ALIGN="CENTER"><A NAME="10"></A><A HREF="#10" onMouseOver="startHelp('p10')" onMouseOut="clearHelp()"><FONT
+									SIZE="2" FACE="Arial, Helvetica">GIF Animation</FONT></A>
+								</TD>
+								<TD BGCOLOR="#CCCCFF"><IMG SRC="10x2spacer.gif" WIDTH="10" HEIGHT="2" ALIGN="BOTTOM" BORDER="0"> 
+									<SELECT NAME="gifa">
+									<OPTION SELECTED>None</OPTION>
+									<OPTION>Simple GIF Animation $ 50</OPTION>
+									<OPTION>Average GIF Animation $100</OPTION>
+									<OPTION>Complex GIF Animation $150</OPTION>
+									<OPTION>Very Complex GIF Animation $200</OPTION>
+									</SELECT>
+								</TD>
+							</TR>
+							<TR>
+								<TD COLSPAN="2">
+									<P ALIGN="CENTER"><B><FONT SIZE="2" FACE="Arial, Helvetica">Interactive JAVA Script Page Elements</FONT></B>
+								</TD>
+							</TR>
+							<TR>
+								<TD BGCOLOR="#FFFBF0">
+									<P ALIGN="CENTER"><FONT SIZE="2" FACE="Arial, Helvetica">Description</FONT>
+								</TD>
+								<TD BGCOLOR="#FFFBF0">
+									<P ALIGN="CENTER">Quanity
+								</TD>
+							</TR>
+							<TR>
+								<TD BGCOLOR="#66CCCC">
+									<P ALIGN="CENTER"><A NAME="11"></A><A HREF="#11" onMouseOver="startHelp('p11')" onMouseOut="clearHelp()"><FONT
+									SIZE="2" FACE="Arial, Helvetica">Menu</FONT></A>
+								</TD>
+								<TD BGCOLOR="#CCCCFF"><IMG SRC="10x2spacer.gif" WIDTH="10" HEIGHT="2" ALIGN="BOTTOM" BORDER="0"> 
+									<SELECT NAME="menu">
+									<OPTION SELECTED>None</OPTION>
+									<OPTION>1 Menu $100</OPTION>
+									<OPTION>2 Menus $200</OPTION>
+									<OPTION>3 Menus $300</OPTION>
+									</SELECT>
+								</TD>
+							</TR>
+							<TR>
+								<TD BGCOLOR="#66CCCC">
+									<P ALIGN="CENTER"><IMG SRC="10x2spacer.gif" WIDTH="10" HEIGHT="2" ALIGN="BOTTOM" BORDER="0"><A NAME="12"></A><A
+									HREF="#12" onMouseOver="startHelp('p12')" onMouseOut="clearHelp()"><FONT SIZE="2" FACE="Arial, Helvetica">Message
+									In Pop Up Window<IMG SRC="10x2spacer.gif" WIDTH="10" HEIGHT="2" ALIGN="BOTTOM" BORDER="0"></FONT></A>
+								</TD>
+								<TD BGCOLOR="#CCCCFF"><IMG SRC="10x2spacer.gif" WIDTH="10" HEIGHT="2" ALIGN="BOTTOM" BORDER="0"> 
+									<SELECT NAME="popu">
+									<OPTION SELECTED>None</OPTION>
+									<OPTION>1-3 Messages $50</OPTION>
+									<OPTION>4-6 Messages $75 </OPTION>
+									<OPTION>7-9 Messages $100</OPTION>
+									</SELECT>
+								</TD>
+							</TR>
+							<TR>
+								<TD BGCOLOR="#66CCCC">
+									<P ALIGN="CENTER"><A NAME="13"></A><A HREF="#13" onMouseOver="startHelp('p13')" onMouseOut="clearHelp()"><FONT
+									SIZE="2" FACE="Arial, Helvetica">Opening Slide Show</FONT></A>
+								</TD>
+								<TD BGCOLOR="#CCCCFF"><IMG SRC="10x2spacer.gif" WIDTH="10" HEIGHT="2" ALIGN="BOTTOM" BORDER="0"> 
+									<SELECT NAME="open">
+									<OPTION SELECTED>None</OPTION>
+									<OPTION>1 Message $50</OPTION>
+									</SELECT>
+								</TD>
+							</TR>
+							<TR>
+								<TD BGCOLOR="#66CCCC">
+									<P ALIGN="CENTER"><A NAME="14"></A><A HREF="#14" onMouseOver="startHelp('p14')" onMouseOut="clearHelp()"><FONT
+									SIZE="2" FACE="Arial, Helvetica">Message In Status Bar</FONT></A>
+								</TD>
+								<TD BGCOLOR="#CCCCFF"><IMG SRC="10x2spacer.gif" WIDTH="10" HEIGHT="2" ALIGN="BOTTOM" BORDER="0"> 
+									<SELECT NAME="sbm">
+									<OPTION SELECTED>None</OPTION>
+									<OPTION>1 Message $50</OPTION>
+									<OPTION>2 Messages $100</OPTION>
+									<OPTION>3 Messages $150</OPTION>
+									<OPTION>4 Messages $200</OPTION>
+									<OPTION>5 Messages $250</OPTION>
+									</SELECT>
+								</TD>
+							</TR>
+							<TR>
+								<TD BGCOLOR="#66CCCC">
+									<P ALIGN="CENTER"><A NAME="15"></A><A HREF="#15" onMouseOver="startHelp('p15')" onMouseOut="clearHelp()"><FONT
+									SIZE="2" FACE="Arial, Helvetica">Price Estimator System</FONT></A>
+								</TD>
+								<TD BGCOLOR="#CCCCFF"><IMG SRC="10x2spacer.gif" WIDTH="10" HEIGHT="2" ALIGN="BOTTOM" BORDER="0"> 
+									<SELECT NAME="pes">
+									<OPTION SELECTED>None</OPTION>
+									<OPTION>Operating System $200</OPTION>
+									</SELECT>
+								</TD>
+							</TR>
+							<TR>
+								<TD BGCOLOR="#66CCCC">
+									<P ALIGN="CENTER"><A NAME="16"></A><A HREF="#16" onMouseOver="startHelp('p16')" onMouseOut="clearHelp()"><FONT
+									SIZE="2" FACE="Arial, Helvetica">Shopping Cart System</FONT></A>
+								</TD>
+								<TD BGCOLOR="#CCCCFF"><IMG SRC="10x2spacer.gif" WIDTH="10" HEIGHT="2" ALIGN="BOTTOM" BORDER="0"> 
+									<SELECT NAME="scs">
+									<OPTION SELECTED>None</OPTION>
+									<OPTION>Operating System $200</OPTION>
+									</SELECT>
+								</TD>
+							</TR>
+							<TR>
+								<TD COLSPAN="2">
+									<P ALIGN="CENTER"><B><FONT SIZE="2" FACE="Arial, Helvetica">Animations</FONT></B>
+								</TD>
+							</TR>
+							<TR>
+								<TD BGCOLOR="#FFFBF0">
+									<P ALIGN="CENTER"><FONT SIZE="2" FACE="Arial, Helvetica">Description</FONT>
+								</TD>
+								<TD BGCOLOR="#FFFBF0">
+									<P ALIGN="CENTER"><FONT SIZE="2" FACE="Arial, Helvetica">Quanity</FONT>
+								</TD>
+							</TR>
+							<TR>
+								<TD BGCOLOR="#66CCCC">
+									<P ALIGN="CENTER"><A NAME="17"></A><A HREF="#17" onMouseOver="startHelp('p17')" onMouseOut="clearHelp()"><FONT
+									SIZE="2" FACE="Arial, Helvetica">Java Script Animation</FONT></A>
+								</TD>
+								<TD BGCOLOR="#CCCCFF"><IMG SRC="10x2spacer.gif" WIDTH="10" HEIGHT="2" ALIGN="BOTTOM" BORDER="0"> 
+									<SELECT NAME="jsa">
+									<OPTION SELECTED>None</OPTION>
+									<OPTION>Simple Animation $ 50</OPTION>
+									<OPTION>Average Animation $100</OPTION>
+									<OPTION>Complex Animation $150</OPTION>
+									<OPTION>Very Complex Animation $200</OPTION>
+									</SELECT>
+								</TD>
+							</TR>
+							<TR>
+								<TD BGCOLOR="#66CCCC">
+									<P ALIGN="CENTER"><A NAME="18"></A><A HREF="#18" onMouseOver="startHelp('p18')" onMouseOut="clearHelp()"><FONT
+									SIZE="2" FACE="Arial, Helvetica">JAVA Animation</FONT></A>
+								</TD>
+								<TD BGCOLOR="#CCCCFF"><IMG SRC="10x2spacer.gif" WIDTH="10" HEIGHT="2" ALIGN="BOTTOM" BORDER="0"> 
+									<SELECT NAME="ja">
+									<OPTION SELECTED>None</OPTION>
+									<OPTION>Simple Animation $ 50</OPTION>
+									<OPTION>Average Animation $100</OPTION>
+									<OPTION>Complex Animation $150</OPTION>
+									<OPTION>Very Complex Animation $200</OPTION>
+									</SELECT>
+								</TD>
+							</TR>
+							<TR>
+								<TD COLSPAN="2">
+									<P ALIGN="CENTER"><B><FONT SIZE="2" FACE="Arial, Helvetica">Custom Forms</FONT></B>
+								</TD>
+							</TR>
+							<TR>
+								<TD BGCOLOR="#FFFBF0">
+									<P ALIGN="CENTER"><FONT SIZE="2" FACE="Arial, Helvetica">Description</FONT>
+								</TD>
+								<TD BGCOLOR="#FFFBF0">
+									<P ALIGN="CENTER"><FONT SIZE="2" FACE="Arial, Helvetica">Quanity</FONT>
+								</TD>
+							</TR>
+							<TR>
+								<TD BGCOLOR="#66CCCC">
+									<P ALIGN="CENTER"><A NAME="19"></A><A HREF="#19" onMouseOver="startHelp('p19')" onMouseOut="clearHelp()"><FONT
+									SIZE="2" FACE="Arial, Helvetica">CGI</FONT></A>
+								</TD>
+								<TD BGCOLOR="#CCCCFF"><IMG SRC="10x2spacer.gif" WIDTH="10" HEIGHT="2" ALIGN="BOTTOM" BORDER="0"> 
+									<SELECT NAME="cgif">
+									<OPTION SELECTED>None</OPTION>
+									<OPTION>1 Custon Form $50</OPTION>
+									<OPTION>2 Custom Forms $100</OPTION>
+									<OPTION>3 Custom Forms $150</OPTION>
+									<OPTION>4 Custom Forms $200</OPTION>
+									</SELECT>
+								</TD>
+							</TR>
+							<TR>
+								<TD BGCOLOR="#66CCCC">
+									<P ALIGN="CENTER"><A NAME="20"></A><A HREF="#20" onMouseOver="startHelp('p20')" onMouseOut="clearHelp()"><FONT
+									SIZE="2" FACE="Arial, Helvetica">JAVA Script</FONT></A>
+								</TD>
+								<TD BGCOLOR="#CCCCFF"><IMG SRC="10x2spacer.gif" WIDTH="10" HEIGHT="2" ALIGN="BOTTOM" BORDER="0"> 
+									<SELECT NAME="jsf">
+									<OPTION SELECTED>None</OPTION>
+									<OPTION>1 Custon Form $50</OPTION>
+									<OPTION>2 Custom Forms $100</OPTION>
+									<OPTION>3 Custom Forms $150</OPTION>
+									<OPTION>4 Custom Forms $200</OPTION>
+									</SELECT>
+								</TD>
+							</TR>
+						</TABLE>
+</P>
+</CENTER>
+						<CENTER>
+						<P>
+						<TABLE BORDER="0" CELLPADDING="4" CELLSPACING="4">
+							<TR>
+								<TD>
+									<CENTER>
+									<P><INPUT TYPE="BUTTON" NAME="Price" Value="Update Cost" onClick="compute(this.form)"> <INPUT TYPE="TEXT" NAME="T_Price"
+									SIZE="15">
+</CENTER>
+								</TD>
+								<TD><INPUT TYPE="BUTTON" NAME="Print_data" Value="Show Cost Estimate" onClick="print(this.form)"></TD>
+							</TR>
+						</TABLE>
+</P>
+</CENTER>
+						<P>
+						<CENTER>
+						<P><FONT SIZE="2" COLOR="blue"><BR>
+						
+<HR ALIGN="CENTER">
+</FONT>
+</CENTER>
+					</TD>
+				</TR>
+				<TR>
+					<TD WIDTH="100%">
+						<P ALIGN="CENTER"><FONT SIZE="1" FACE="Arial, Helvetica">Copyright &copy; 1998 Lambert &amp; Samborski Design Studio</FONT>
+					</TD>
+				</TR>
+			</TABLE>
+
+</CENTER>
+		</TD>
+	</TR>
+</TABLE>
+
+</FORM>
+
+</BODY>
+
+</HTML>

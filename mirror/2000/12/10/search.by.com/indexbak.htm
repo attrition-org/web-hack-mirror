@@ -1,0 +1,46 @@
+<%
+if request("language") <> "" then
+	if request("language") = "norwegian" then
+		session("language") = "norwegian"
+	else
+		session("language") = "english"
+	end if
+end if
+
+'Sprog
+select case session("language")
+	case "norwegian"
+		strTitle = "nytt.net"
+		strFrames = "Din browser støtter ikke frames."
+	case else
+		strTitle = "nytt.net"
+		strFrames = "This page uses frames, but your browser doesn't support them."
+end select
+%>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Nytt.net</title>
+</head>
+
+<frameset framespacing=0 border=false frameborder=0 rows="<%
+	if session("browser") = "ie" then
+		response.write "23"
+	else
+		response.write "25"
+	end if
+	%>,*">
+  <frame name="header" scrolling="no" noresize target="mainframe" src="top.asp">
+  <frame name="mainframe" src="main.asp?byen=bergen&laget=brann<%
+if request("news") = "" then response.write "&news=news"
+if request("bransje") = "" then response.write "&bransje=1"
+if request.servervariables("query_string") <> "" then response.write "&" & replace(request.servervariables("query_string"),"bransje=&","")
+%>">
+  <noframes>
+  <body>
+  <p><%=strFrames%></p>
+  </body>
+  </noframes>
+</frameset>
+</html>

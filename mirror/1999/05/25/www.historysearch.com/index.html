@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>Welcome (The very best!)</title>
+<META name="description" Content= "Superscope is your psychic connection to the Internet fortune telling tools of Tarot, Astrology, Runes, I Ching and Numerology.">
+<META name="Keywords" Content= "Psychic, Tarot, Astrology, Numerology, Runes, I Ching, Horoscope, Zodiac, Future, Nostradamus, Past, Present, Fortune Telling, Fun, Enjoyment, Guidence, Internet,
+Professional Readings, Free Readings, end of the world, year 2000, dead, end of world, Celebrity Horoscopes, Psychic Arts, Mystical, Philisophical, Physical, Psycological, Spiritual, guidence, interpretation, Entertainment">
+
+</head>
+
+<script language="javascript">
+
+<!--
+// 
+if (self != top) {
+   top.location = self.location
+}
+else {
+   // Setup our variables.
+   var current = 0;
+   var count = 2;
+   var urls = new Array;
+   urls[0] = "indexbottom.html";
+   urls[1] = "indexbottom2.html";
+
+   if (parseFloat(navigator.appVersion) >= 3)
+   {
+     document.writeln ('<frameset rows="100%,*" scrolling=no border=0 frameborder=no framespacing=0>');
+     document.writeln ('  <frame name=main src=warp.html>');
+     document.writeln ('  <frame name=warp src=blank.html>');
+     document.writeln ('</frameset>');
+  }
+}
+
+   // 
+   function warpnext() {
+     eval('window.top.main.location.href = "' + urls[current] + '"');
+
+     if(current<count-1)
+     {
+       current++;
+     }
+   }
+
+//-->
+
+</script>
+</HEAD>
+<frameset rows="100%,*" scrolling=no border=0 frameborder=no framespacing=0>
+  <frame name=main src=indexbottom.html>
+  <frame name=warp src=blank.html>
+</frameset>
+</HTML>
+

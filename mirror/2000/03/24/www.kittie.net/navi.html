@@ -1,0 +1,225 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+   function stopError()
+
+   {
+
+     return true;
+
+   }
+   
+var fireswitchstate = 0;
+ 
+Images = new Array('bio','media','tour','links','contact','guestbook'); 
+var WhichIsOn = "";
+var numOfImgs = 6;
+if (document.images) {
+ 
+ 
+ var newsoff = new Image() 
+  newsoff.src = "imgs/news.jpg"
+
+  var newson = new Image() 
+  newson.src = "imgs/newson.jpg"
+  
+  var newshead = new Image() 
+  newshead.src = "imgs/newshead.jpg"
+  
+   var biooff = new Image() 
+  biooff.src = "imgs/bio.jpg"
+
+  var bioon = new Image() 
+  bioon.src = "imgs/bioon.jpg"
+  
+  var biohead = new Image() 
+  biohead.src = "imgs/biohead.jpg"
+  
+   var mediaoff = new Image() 
+  mediaoff.src = "imgs/media.jpg"
+
+  var mediaon = new Image() 
+  mediaon.src = "imgs/mediaon.jpg"
+  
+  var mediahead = new Image() 
+  mediahead.src = "imgs/mediahead.jpg"
+  
+   var touroff = new Image() 
+  touroff.src = "imgs/tour.jpg"
+
+  var touron = new Image() 
+  touron.src = "imgs/touron.jpg"
+  
+  var tourhead = new Image() 
+  tourhead.src = "imgs/tourhead.jpg"
+  
+   var linksoff = new Image() 
+  linksoff.src = "imgs/links.jpg"
+
+  var linkson = new Image() 
+  linkson.src = "imgs/linkson.jpg"
+  
+  var linkshead = new Image() 
+  linkshead.src = "imgs/linkshead.jpg"
+  
+   var contactoff = new Image() 
+  contactoff.src = "imgs/contact.jpg"
+
+  var contacton = new Image() 
+ contacton.src = "imgs/contacton.jpg"
+ 
+ var contacthead = new Image() 
+ contacthead.src = "imgs/contacthead.jpg"
+ 
+ var guestbookoff = new Image() 
+  guestbookoff.src = "imgs/guestbook.jpg"
+
+  var guestbookon = new Image() 
+ guestbookon.src = "imgs/guestbookon.jpg"
+ 
+ var guestbookhead = new Image() 
+ guestbookhead.src = "imgs/guestbookhead.jpg"
+ 
+ var switchleft = new Image() 
+ switchleft.src = "imgs/switchleft.gif"
+ 
+ var switchright = new Image() 
+ switchright.src = "imgs/switchright.gif"
+
+}
+
+
+
+function act(name) {
+   if(WhichIsOn == name)return;
+  if (document.images){
+    imgOn = eval(name + "on.src");
+    document [name].src = imgOn;
+
+  }
+
+}
+
+
+
+function inact(name) {
+
+  if(WhichIsOn == name)return;
+  if (document.images){
+   imgOff = eval(name + "off.src");
+   document [name].src = imgOff;
+
+  }
+
+}
+
+function swapitbaby(num)
+{
+  for(i=0; i<numOfImgs; i++)
+  {
+   
+   if(i == num)
+   {
+     WhichIsOn = Images[i];
+     img = eval(Images[i] + "head.src");
+	 document [ Images[i] ].src = img;
+	// alert(document [ Images[i] ].src)
+	
+   }
+   else
+   {
+    imgOff = eval(Images[i] + "off.src");
+	document [ Images[i] ].src = imgOff;
+   }
+  }
+
+}
+
+function reset()
+{
+  for(i=0; i<numOfImgs; i++)
+  {
+    imgOff = eval(Images[i] + "off.src");
+	document [ Images[i] ].src = imgOff;
+  }
+}
+
+function fireswtich()
+{
+  if( (fireswitchstate++)%2 == 0 )
+  {
+    document [ "switch" ].src = switchright.src;
+	parent.fire.location = "fire.html";
+  }
+  else
+  {
+    document [ "switch" ].src = switchleft.src;
+	parent.fire.location = "fireoff.html";
+  }
+
+
+}
+
+
+// -->
+</SCRIPT>
+
+	<title>Untitled</title>
+</head>
+
+<body BGCOLOR="#000000" TEXT="cc0000" LINK="cc0000" ALINK="cc0000" VLINK="cc0000">
+<CENTER>
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<TR>
+<TD ALIGN="CENTER" VALIGN="TOP">
+
+<TR>
+<TD>
+<A TARGET="stage" href="bio.html" onMouseOver="act('bio')" onMouseOut="inact('bio')" onClick="swapitbaby('0')"><IMG SRC="imgs/bio.jpg" WIDTH=219 HEIGHT=30 BORDER=0 ALT="" NAME="bio"></A>
+</TD>
+</TR>
+<TR>
+<TD>
+<A TARGET="stage" href="picsNew.html" onMouseOver="act('media')" onMouseOut="inact('media')"  onClick="swapitbaby('1')"><IMG SRC="imgs/media.jpg" WIDTH=219 HEIGHT=26 BORDER=0 ALT="" NAME="media"></A>
+</TD>
+</TR>
+<TR>
+<TD>
+<A TARGET="stage" href="tour.html" onMouseOver="act('tour')" onMouseOut="inact('tour')"  onClick="swapitbaby('2')"><IMG SRC="imgs/tour.jpg" WIDTH=219 HEIGHT=30 BORDER=0 ALT="" NAME="tour"></A>
+</TD>
+</TR>
+<TR>
+<TD>
+<A TARGET="stage" href="links.html" onMouseOver="act('links')" onMouseOut="inact('links')" onClick="swapitbaby('3')"><IMG SRC="imgs/links.jpg" WIDTH=219 HEIGHT=27 BORDER=0 ALT="" NAME="links"></A>
+</TD>
+</TR>
+<TR>
+<TD>
+<A TARGET="stage" href="contact.html" onMouseOver="act('contact')" onMouseOut="inact('contact')" onClick="swapitbaby('4')"><IMG SRC="imgs/contact.jpg" WIDTH=219 HEIGHT=29 BORDER=0 ALT="" NAME="contact"></A>
+</TD>
+</TR>
+<TR>
+<TD>
+<A TARGET="stage" href="cgi-bin/writeit.pl?start=0" onMouseOver="act('guestbook')" onMouseOut="inact('guestbook')"><IMG SRC="imgs/guestbook.jpg" WIDTH=219 HEIGHT=29 BORDER=0 ALT="" NAME="guestbook" onClick="swapitbaby('5')"></A>
+</TD>
+</TR>
+<TR>
+<TD>
+<IMG SRC="imgs/bldot.gif" WIDTH=26 HEIGHT=1 BORDER=0 ALT=""><A HREF="mailto:webmaster@kittie.net"><FONT FACE="Arial" SIZE="-2">webmaster@kittie.net</FONT></A>
+</TD>
+</TR>
+<TR>
+<TD><BR>
+<IMG SRC="imgs/bldot.gif" WIDTH=22 HEIGHT=1 BORDER=0 ALT=""><FONT FACE="Arial" SIZE="-2">fire off	<A HREF="#" onClick="fireswtich()"><IMG SRC="imgs/switchleft.gif" WIDTH=45 HEIGHT=15 BORDER=0 ALT="" NAME="switch" ALIGN="ABSMIDDLE"></A><FONT FACE="Arial" SIZE="-2"> fire on
+
+</TD>
+</TR>
+</TABLE>
+
+
+</CENTER>
+</body>
+</html>

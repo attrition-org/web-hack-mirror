@@ -1,0 +1,39 @@
+
+Starting nmap V. 2.54BETA3 ( www.insecure.org/nmap/ )
+Insufficient responses for TCP sequencing (1), OS detection may be less accurate
+Insufficient responses for TCP sequencing (2), OS detection may be less accurate
+Interesting ports on itdfss.colo.patriot.net (209.249.177.12):
+(The 1 port scanned but not shown below is in state: closed)
+Port       State       Service
+22/tcp     filtered    ssh                     
+23/tcp     filtered    telnet                  
+25/tcp     open        smtp                    
+80/tcp     open        http                    
+
+TCP Sequence Prediction: Class=truly random
+                         Difficulty=9999999 (Good luck!)
+Aggressive OS guesses: NT Server 4.0 SP4-SP5 running Checkpoint Firewall-1 (95%), BSDI BSD/OS 4.0.1 Kernel (90%), Windows NT4 / Win95 / Win98 (90%), AIX 4.3 (86%), Novell NetWare 3.12 - 5.00 (86%), NetWare 4.11 SP7- 5 SP3A BorderManager 3.5 (86%), FreeBSD 2.2.1-STABLE (85%), AmigaOS Miami Deluxe 0.9 - Miami 3.2B (85%)
+No exact OS matches for host (If you know what OS is running on it, see http://www.insecure.org/cgi-bin/nmap-submit.cgi).
+TCP/IP fingerprint:
+T1(Resp=Y%DF=Y%W=2017%ACK=S++%Flags=AS%Ops=M)
+TSeq(Class=TR)
+T2(Resp=N)
+T1(Resp=Y%DF=Y%W=2017%ACK=S++%Flags=AS%Ops=M)
+T3(Resp=N)
+T2(Resp=N)
+T4(Resp=N)
+T3(Resp=N)
+T5(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+T4(Resp=N)
+T6(Resp=N)
+T5(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+T7(Resp=N)
+T6(Resp=N)
+PU(Resp=Y%DF=N%TOS=0%IPLEN=38%RIPTL=148%RID=E%RIPCK=E%UCK=F%ULEN=134%DAT=E)
+T7(Resp=N)
+PU(Resp=Y%DF=N%TOS=0%IPLEN=38%RIPTL=148%RID=E%RIPCK=E%UCK=F%ULEN=134%DAT=E)
+
+
+
+
+Nmap run completed -- 1 IP address (1 host up) scanned in 26 seconds

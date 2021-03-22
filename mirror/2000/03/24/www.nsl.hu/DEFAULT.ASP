@@ -1,0 +1,121 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Welcome to Nivelco Security Lines</title>
+</head>
+
+<body background="IMAGES/NSLBGP.GIF">
+
+<p align="center"><img border="0" src="artechrealart.gif" WIDTH="379" HEIGHT="99">&nbsp;&nbsp;<br>
+<font face="Tahoma" size="1">[artech]<br>
+owns you and<br>
+the crime boys<br>
+[<b>p33r the b33r</b>]<br>
+<br>
+greets to pants :]<br>
+greets to nemeststem<br>
+greets to p33r the b33r<br>
+greets to sugar king<br>
+greets to safemode (the safemode staff hates you crime boys)<br>
+greets to attrition staff (the attrition staff hates you crime boys)<br>
+greets to dhc<br>
+greets to tron<br>
+greets to tac<br>
+greets to liq<br>
+greets to and everyone i know</font> </p>
+
+<div align="center"><center>
+
+<table border="0" width="531" height="266">
+  <tr>
+    <td width="492" height="30"><p align="left"><strong><font color="#FF0000">»&nbsp; </font><a href="ROLUNK.HTM"><font color="#0000FF">Néhány szó rólunk...</font></a></strong></td>
+    <td width="459" height="266" rowspan="9" valign="top"><p align="center">&nbsp;&nbsp; </p>
+    <p align="center"><font color="#004080">&nbsp; &nbsp; </font><font color="#0000A0"><strong>Irodánk</strong>
+    vagyonvédelmi rendszerek<br>
+    &nbsp;tervezésével,&nbsp; &nbsp; telepítésével&nbsp; és&nbsp; ezek<br>
+    &nbsp; 24 órás távfelügyeletével&nbsp; foglalkozik.</font></p>
+    <p align="center">&nbsp;</p>
+    <p align="left"><font color="#0000A0">&nbsp;&nbsp;<strong>&nbsp;&nbsp;&nbsp; WEB lapunkon</strong>
+    részletes információt<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;talál cégünkrõl és azokról&nbsp; a termékek-<br>
+    &nbsp;&nbsp;&nbsp; rõl,&nbsp; berendezésekrõl &nbsp;amelyeket&nbsp;rend-<br>
+    &nbsp;&nbsp;&nbsp; szereinkben használunk. </font><font color="#004080"><br>
+    &nbsp; </font></td>
+  </tr>
+  <tr>
+    <td width="492" height="30"><strong><p align="left"><font color="#FF0000">»</font><font color="#0000FF">&nbsp; <a href="bizt.htm">Biztonsági rendszerek</a></font></strong></td>
+  </tr>
+  <tr>
+    <td width="492" height="30" valign="middle"><p align="left"><strong><font color="#FF0000">»</font><font color="#0000FF">&nbsp; <a href="TAVFEL.HTM">Távfelügyelet</a></font></strong></td>
+  </tr>
+  <tr>
+    <td width="492" height="30"><p align="left"><strong><font color="#FF0000">»</font><font color="#0000FF">&nbsp; <a href="jotanacsok.htm">Néhány<font face="Times New Roman">
+    hasznos jó tanács...</font></a></font></strong></td>
+  </tr>
+  <tr>
+    <td width="492" height="30"><p align="left"><strong><font color="#FF0000">»</font><font color="#0000FF">&nbsp; Videó megfigyelõ rendszerek</font></strong></td>
+  </tr>
+  <tr>
+    <td width="492" height="22"><strong><font color="#FF0000">»&nbsp; </font><font color="#0000FF">Beléptetõ rendszerek</font></strong></td>
+  </tr>
+  <tr>
+    <td width="492" height="18"><p align="left"><strong><font color="#FF0000">»</font><font color="#0000FF">&nbsp; Biztonsági és hõvédõ fóliák</font></strong></td>
+  </tr>
+  <tr>
+    <td width="492" height="20"><strong><p align="left"><font color="#FF0000">»</font><font color="#0000FF">&nbsp; Egyéb termékeink, szolgáltatásaink</font></strong></td>
+  </tr>
+  <tr>
+    <td width="492" height="2"><strong><font color="#FF0000">» &nbsp; </font><font color="#0000FF">Partnereink</font></strong></td>
+  </tr>
+</table>
+</center></div>
+
+<p align="center">&nbsp;</p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center"><img src="IMAGES/BLUELINE.GIF" width="619" height="12" alt="BLUELINE.GIF (1412 bytes)"></p>
+
+<p align="center">&nbsp;</p>
+
+<p align="left">&nbsp;</p>
+<div align="center"><center>
+
+<table border="1" width="325" height="158" style="margin-left: 10px">
+  <tr>
+    <td width="325" height="158" bgcolor="#FFFF80" align="center"><p align="center"><strong><big><font color="#000000">Nivelco Security Lines Kft.</font></big></strong></p>
+    <p align="center"><font color="#000000"><em><u>Cím:</u>&nbsp; </em>1043. Budapest,
+    Dugonics u 11.<br>
+    <u><em>Tel:</em></u>&nbsp;&nbsp; 370-00-10<br>
+    <u><em>Fax:</em></u>&nbsp; 370-00-20<br>
+    <u><em>E-mail:</em></u> </font><a href="mailto:nsl@nsl.hu"><font color="#0000FF">nsl@nsl.hu</font></a><font color="#000000"><em> <br>
+    </em></font></td>
+  </tr>
+</table>
+</center></div>
+
+<p align="center">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<br>
+&nbsp;<a href="welcome.asp"><img src="IMAGES/ENGLISH2.gif" alt="English Version" border="0" start="fileopen" WIDTH="102" HEIGHT="109"></a></p>
+
+<p align="center"><font color="#0000A0">[ If you want to see our web page in english
+please click the image above. ]</font></p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center"><big><font color="#0000A0">Utoljára frissítve: </font><font color="#0000FF">2000.02.15.</font></big></p>
+
+<p align="center"><font color="#0000A0">Technikai kérdéseikkel, észrevételeikkel a </font><a href="mailto:szilard@nsl.hu"><font color="#0000FF">webmasterhez</font></a><font color="#0000A0"> lehet fordulni.</font></p>
+<div align="center"><center>
+
+<table border="0" width="60%">
+  <tr>
+    <td width="101%"><font color="#0000A0">Az ipari elektronika témakörben keresse a </font><font color="#0000FF"><a href="http://www.nivelco.hu">Nivelco Rt.</a></font><font color="#0000A0"> web lapját.</font></td>
+    <td width="21%"><a href="http://www.nivelco.hu"><img src="IMAGES/nivelco.gif" start="fileopen" border="0" alt="http://www.nivelco.hu" WIDTH="106" HEIGHT="100"></a></td>
+  </tr>
+</table>
+</center></div>
+
+<p align="center">&nbsp;</p>
+</body>
+</html>

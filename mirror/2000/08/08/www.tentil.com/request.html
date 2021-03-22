@@ -1,0 +1,111 @@
+<HTML>
+<HEAD>
+<title>tentil.com  -  Work Request Form</title>
+</HEAD>
+
+<body bgcolor="#FFFFFF" text="ff0000" link="FF0000" vlink="darkred">
+
+<center><img src="work.gif" WIDTH="300" HEIGHT="100" ALT="Work request"></center>
+
+<br>
+
+<font face="Arial,Helvetiva" size="-1">
+
+<center><table border="0" cellpadding="0" cellspacing="0" width="60%">
+<tr><td valign="0" halign="0" width="60%">
+<font face="Arial,Helvetica" size="-1"><CENTER>
+Fill out the form below if you are interested in custom graphics<br>
+and/or www design, and I'll get back to you with a price estimate.</font></CENTER>
+</td></tr>
+</table>
+<br>
+<CENTER><table border="0" cellpadding="6" cellspacing="0">
+
+<FORM METHOD="POST" ACTION="/cgi-bin/bnbform.cgi">
+
+<tr><td bgcolor="#FF0000" colspan="2">
+<font face="Arial,Helvetica" size="-1" color="black"><b><center>About You</center></b></font>
+</td></tr>
+<tr><td valign="0" halign="0" bgcolor="#000000">
+<font face="Arial,Helvetica" size="-2" color="FFFFFF">
+Your name:</td>
+<td bgcolor="#000000">
+<input type="text" name="name">
+</td></tr>
+
+<tr><td bgcolor="#000000">
+<font face="Arial,Helvetica" size="-2" color="FFFFFF">
+Your e-mail address:</td>
+<td valign="0" halign="0" bgcolor="#000000">
+<input type="text" name="submit_by">
+</td></tr>
+
+<tr><td " bgcolor="#000000">
+<font face="Arial,Helvetica" size="-2" color="FFFFFF">
+Your company name:</td>
+<td valign="0" halign="0" bgcolor="#000000">
+<input type="text" name="company">
+</td></tr>
+
+<tr><td  bgcolor="000000">
+<font face="Arial,Helvetica" size="-2" color="FFFFFF">
+Current URL:<br>&nbsp;&nbsp;&nbsp;&nbsp;(if any)</td>
+<td bgcolor="#000000">
+<input type="text" name="url" value="http://">
+</td></tr>
+
+<tr><td bgcolor="#FF000000" colspan="2">
+<font face="Arial,Helvetica" size="-1" color="000000"><b><center>About the Design</center></b></font>
+</td></tr>
+<tr><td bgcolor="#000000">
+<font face="Arial,Helvetica" size="-2" color="FFFFFF">
+Site type:</td>
+<td bgcolor="#000000">
+<font face="Arial,Helvetica" size="-2" color="FFFFFF">
+<input type="radio" value="business" name="business">Business site<br>
+<input type="radio" value="personal" name="personal">Personal site
+</font>
+</td></tr>
+
+<tr><td bgcolor="#000000">
+<font face="Arial,Helvetica" size="-2" color="FFFFFF">
+Estimated number of pages:</td>
+<td bgcolor="#000000">
+<input type="text" name="numberpages" size="3">
+</td></tr>
+
+<tr><td bgcolor="000000">
+<font face="Arial,Helvetica" size="-2" color="FFFFFF">
+Description<br>of the project:</td>
+<td bgcolor="#000000">
+<textarea name="description" rows="8" cols="35" textwrap="physical"></textarea>
+</td></tr>
+
+<tr><td bgcolor="#000000" colspan="2">
+<font face="Arial,Helvetica" size="-2" color="FFFFFF">
+<center><input type="submit" value="Mail my request!">&nbsp; &nbsp; &nbsp;<input type="reset" value="Clear this form" name="name"></center></td>
+</tr>
+
+<!--  SCRIPT CONFIGURATION SECTION -->
+<INPUT TYPE="HIDDEN" NAME="required" 
+    VALUE="name,submit_by">
+<INPUT TYPE="HIDDEN" NAME="data_order" 
+       VALUE="name,submit_by,company,url,business,personal,
+              numberpages,description">
+<INPUT TYPE="HIDDEN" NAME="submit_to" VALUE="tentil@tentil.com">
+<INPUT TYPE="HIDDEN" NAME="form_id" VALUE="Work Request Form">
+<INPUT TYPE="HIDDEN" NAME="ok_url" 
+     VALUE="http://www.tentil.com/thanks.html">
+<INPUT TYPE="HIDDEN" NAME="not_ok_url" 
+     VALUE="http://www.tentil.com/oops.html">
+<!--  END OF SCRIPT CONFIGURATION SECTION -->
+
+</FORM>
+
+</table>
+
+</font>
+
+
+</body>
+</html>

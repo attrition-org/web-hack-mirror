@@ -1,0 +1,118 @@
+<html> 
+<head> 
+<title>hacked by DeVoN_DCLXVI</title> 
+</head> 
+<body background="rave..jpg" bgcolor="black"> 
+<font color="white"> 
+<h1><center>Essas coisas acontecem<p> 
+Hacked, Owned, Cracked... By DeVoN_DCLXVI<p> 
+<p> 
+!!!347 MY C0D3!!!<p> 
+E aki um pouco dos códigos ASP desse site:<p> 
+</center> 
+</h1> 
+</font> 
+<font color="yellow"> 
+<h3> 
+list-userids.asp<br><br> 
+ECHO is on.
+.<br> 
+.<br> 
+.<br><br> 
+ECHO is on.
+UserID         =    Request.QueryString("UserID")<br> 
+Password       =    Request.QueryString("Password")<br><br> 
+ECHO is on.
+  Set conn = Server.CreateObject("ADODB.Connection")<br> 
+  Set rs1 = Server.CreateObject("ADODB.Recordset")<br> 
+   conn.open "MC"<br> 
+  If UserID = SuperUser Then<br> 
+  rs1query = "SELECT * FROM UserData ORDER BY UserID"<br> 
+  else<br> 
+  rs1query = "SELECT * FROM UserData WHERE UserID = '" & UserID & "'"<br> 
+  end if<br> 
+  rs1.Open rs1query, conn<br><br> 
+ECHO is on.
+.<br> 
+.<br> 
+.<br><br> 
+ECHO is on.
+Show-recipients.asp<br><br> 
+ECHO is on.
+.<br> 
+.<br> 
+.<br><br> 
+ECHO is on.
+SuperUser        =    "SUPER"<br> 
+UserID           =    Request.QueryString("UserID")<br> 
+Password         =    Request.QueryString("Password")<br> 
+SearchBy         =    Request.QueryString("SearchBy")<br> 
+LastSearch       =    Request.QueryString("LastSearch")<br> 
+Sort             =    Request.QueryString("Sort")<br> 
+AddressBookType  =    Request.QueryString("AddressBookType")<br><br 
+ECHO is on.
+if AddressBookType = "" then AddressBookType = Password<br><br> 
+ECHO is on.
+       if LastSearch = SearchBy then<br> 
+          if sort = "ASC" then<br> 
+          sort = "DESC"<br> 
+          else<br> 
+          sort = "ASC"<br> 
+          end if<br> 
+       else<br> 
+          if sort = "DESC" then<br> 
+          sort = "ASC"<br> 
+          else<br> 
+          sort = "DESC"<br> 
+          end if<br> 
+       end if<br> 
+ECHO is on.
+  Set conn = Server.CreateObject("ADODB.Connection")<br> 
+  conn.open "MC"<br><br> 
+ECHO is on.
+  Set rs1 = Server.CreateObject("ADODB.Recordset")<br> 
+ECHO is on.
+  rs1query = "SELECT * FROM UserData WHERE UserID = '" & UserID & "'"<br> 
+  rs1.Open rs1query, conn<br><br> 
+ECHO is on.
+  Set rs2 = Server.CreateObject("ADODB.Recordset")<br><br> 
+ECHO is on.
+  if UserID = SuperUser or AddressBookType = "Corporate" then<br> 
+     if SearchBy = "Name" then<br> 
+        rs2query = "SELECT * FROM Customers ORDER BY RecipientsName " & sort 
+&""<br>          LastSearch = "Name"<br> 
+          else if SearchBy = "Company1" then<br> 
+        rs2query = "SELECT * FROM Customers ORDER BY Company " & sort & ""<br> 
+        LastSearch = "Company1"<br> 
+     else if SearchBy = "City1" then<br> 
+        rs2query = "SELECT * FROM Customers ORDER BY City " & sort & ""<br> 
+        LastSearch = "City1"<br> 
+     else if SearchBy = "State1" then<br> 
+        rs2query = "SELECT * FROM Customers ORDER BY State " & sort & ""<br> 
+        LastSearch = "State1"<br> 
+     else if SearchBy = "" then<br> 
+        rs2query = "SELECT * FROM Customers ORDER BY RecipientsName"<br> 
+     end if<br> 
+     end if<br> 
+     end if<br> 
+     end if<br> 
+     end if<br> 
+  else     <br> 
+     if SearchBy = "Name" then<br> 
+     else if SearchBy = "Company1" then<br> 
+     else if SearchBy = "City1" then<br> 
+     else if SearchBy = "State1" then<br> 
+     else if SearchBy = "" then<br> 
+     end if<br> 
+     end if<br> 
+     end if<br> 
+     end if<br> 
+  end if   <br> 
+  rs2.Open rs2query, conn<p> 
+.<br> 
+.<br> 
+.<br><br> 
+</h3> 
+</body> 
+</html> 
+<!-- www.attrition.org web hack mirror - watermark or something -->

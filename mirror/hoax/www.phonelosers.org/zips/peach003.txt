@@ -1,0 +1,1108 @@
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³               ISSUE 003 -  PEACHEY INCORPORATED - ISSUE 003                ³
+³ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ³
+³                         Released on June 1,  1997                          ³
+³ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ³
+³  The publishers of this newsletter take no responsibility for the use of   ³
+³   any information printed and do not encourage others to bother peachey.   ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+Welcome to the third issue of Peachey Incorporated! Not a whole lot has
+developed since the last couple of issues. Peachey has finally started coming
+back on IRC on a regular basis. Somehow she managed to find someone who gave
+her el_jefe's real home phone number and when the #rock goons found out about
+this, they really let her have it. By now she's wishing she'd never gotten it
+and refuses to tell anyone who gave it to her. Details are in the #phoneloser
+log in this issue.
+
+Darkhour (a regular from #rock) was nice enough to make a peachey.irc script.
+It doesn't actually do anything useful but blurt out dumb peachey quotes but
+it's funny. Also, check out peachmap.jpg which should be included in this
+issue's archive and shows pictures of peachey's town and a map to her house!
+
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³                               /whois peachey                               ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+As a regular feature in each issue of Peachey Inc, we will dedicate a section
+to peachey's personal information, updated from the last issue to reflect
+changes if any apply. Nobody has really done any research lately so we don't
+have alot of information but here's the little that we do have:
+
+Peachey lives at 16 Cornell in Marblehead, MA which is a suburb-like town of
+Boston, MA. She lives with her brother, mom & dad. Their main phone number is
+617-639-0224. They also have at least one other line which we haven't got yet
+because the MLAC offices are really fierce there. On their video account at
+Videoscope, they list Beverly, Zac & Zeb Edwards. We believe peachey's real
+name is Ashley and she's 27 years old but haven't really bothered to verify
+any of this info.
+
+Listed with directory assistance is Zac & Zeb Edwards, 288 Pleasant St,
+Marblehead, MA, 617-631-8454. This residence is very close by peachey's house.
+(see map) The Marblehead MLAC number is 617-662-3550 if anyone wants to give
+it a try. They insist that I give them a tech ID number.
+
+If you see peachey, warn her not to rent any videos! An unnamed person called
+the video store, explaining they were Chris Tomkinson of the Boston Police
+Department and that if any of the Edwards family came in to rent videos, to
+remain calm and call the police immediately. The video store clerk made a
+notation on their account and promised to keep her eye out for them. hehe.
+
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³                               peachey.irc                                  ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+# Just when you thought you were safe from stupid scripts with no 
+# purpose..
+# Its..
+#                            PEACHEY.IRC!!!!!!!!!!!!!
+# w00p w00p w00p w00p
+#
+# peachey.irc, v1.0
+#
+# sorry if the coding lewks bad, im lame
+
+@ peachey.logo = [.+peachey+.]
+
+^assign peachey.version .+1.0 alpha 10+.
+
+^eval set client_information $client_information + peachey.irc - by darkhour
+
+echo --------- peachey.irc by darkhour (darkhour@underworld.net)
+echo --------- greetz: LogicBox, S_P, pinguino, Maq702 
+echo --------- version .+1.0 alpha10+.
+echo --------- /peachey for random quote, /peachey #channel for topic
+echo --------- /script for more 1nf0
+
+^assign peachey.status.loaded 1
+
+^assign peachey.infoz.0 <peachey> if it's possible..i hope your day gets much worse .......ha ha ha ha
+^assign peachey.infoz.1 <peachey> your face is killing me
+^assign peachey.infoz.2 <peachey> thanks for the invitation but i think i'll pass. by the way ask eljefe for the sex.
+^assign peachey.infoz.3 <peachey> don't you have any pride? you don't even know me and you speak like that?
+^assign peachey.infoz.4 <peachey> how come i see you? everytime im on? what's your life like??? hee hehehehe i don't have to masturbate i have a man
+^assign peachey.infoz.5 <peachey> el_jefe kicked me?
+^assign peachey.infoz.6 <peachey> you will have to be punished for that..
+^assign peachey.infoz.7 <peachey> i don't like filthy mouths..
+^assign peachey.infoz.8 <peachey> get it threw your thick black head !!!NEVER!!!
+^assign peachey.infoz.9 <peachey> stop or you'll be punished
+^assign peachey.infoz.10 <peachey> is bandon your superior?
+^assign peachey.infoz.11 <peachey> what can i do to make you stop?
+^assign peachey.infoz.12 <peachey> i don't like you
+^assign peachey.infoz.13 <peachey> your really mean
+^assign peachey.infoz.14 <peachey> you make me sick and very sad
+^assign peachey.infoz.15 <peachey> hey i wouldn't start with me if i were you!
+^assign peachey.infoz.16 <peachey> you are mean to put our private conversation in a web page... i hate you
+^assign peachey.infoz.17 <peachey> and im going to tell your wife, she'll never screw you again!
+^assign peachey.infoz.18 <peachey> cause your from rock and they all are nasty
+^assign peachey.infoz.19 <peachey> no i won't like it...every time i talked to someone from rock i was mad 
+^assign peachey.infoz.20 <peachey> doesnt work? even with alt-f4 my computer needs to be redone?
+^assign peachey.infoz.21 <peachey> hate to think your someones dad?
+^assign peachey.infoz.22 <peachey> please don't or i'll never talk to you again!!!!
+^assign peachey.infoz.23 <peachey> my dad had it traced 
+^assign peachey.infoz.24 <peachey> i would like el_jefe's number address anything so i can make him stop
+^assign peachey.infoz.25 <peachey> i'd like to get that nashi person to slap el_jefe around for me
+^assign peachey.infoz.26 <peachey> you want to be ignored???
+^assign peachey.infoz.27 <peachey> beacause im afraid you will call
+^assign peachey.infoz.28 <peachey> please i already can't sleep at night my heart beats fast and im scared
+^assign peachey.infoz.29 <rbcp> do you have a penis? <peachey> yes 8 and 1/2
+^assign peachey.infoz.30 <peachey> im saving myself for el_jefe
+^assign peachey.infoz.31 <peachey> i fuc.. hate you
+
+@ total.peachey = [0]
+foreach peachey.infoz ii { @total.peachey++ }
+
+alias script {
+echo --------- peachey.irc - by darkhour ---------
+echo ---------      .+1.0 alpha 10+.     ---------
+echo ---------      released:5/21/97     ---------
+echo ---------       ph33r peachey       ---------
+echo --------- (darkhour@underworld.net) --------- 
+} 
+
+alias peachey {
+  @peachmsg=[${peachey.infoz[${rand($total.peachey)-1}]} - peachey.irc]
+  if (![$0]) { say ${peachmsg} }{
+    if ([$0]) {
+      if ([$0]) {
+        if ([$[1]0]==[#]) {
+          if ([$strlen($0)]==[1]) {
+            topic ${peachmsg} }{
+              quote topic $0 :${peachmsg}
+           }
+          }
+            
+        }
+        }
+        }
+        }
+
+
+
+
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³                               IRC Logs                                     ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+They are bad honest:
+-------------------
+Note: sad is peachey, just trying to trick us into thinking she's not on IRC.
+
+   <sad> why do you call yourself Roy? are you roy?
+<Maq702> Yeah, I'm Roy.  Why?
+   <sad> is that eljefes name? are you also in rock?
+<Maq702> It's my name, and it's also el_jefe's name.  Just a coincidence.
+   <sad> thanks you  what is eljefe name? it`s not roy
+<Maq702> His first name is Roy, I donno his last. He talked to me when 
+         I first came into #rock, cause he saw my name and noticed it's the 
+         same as his.
+   <sad> be carful in rock they are bad people
+<Maq702> They are?  They seem nice...  I just came in the other day cause a
+         friend of mine said that write a wagazine he likes.   They say they
+         don't do it anymore, but oh well.  We just talk about computers and
+         stuff.  Why do you say they're bad?
+   <sad> they harrass me
+<Maq702> They do?  How?
+<Maq702> How can they harass you on IRC?
+   <sad> too numerous to mention  are you male?
+<Maq702> Yeah...   are you?
+   <sad> no  if you can find out what eljefe name is  but do not under any
+         circumstances tell him you talk to me!!
+<Maq702> Ok...     I won't.  I haven't talked to him except that first night.
+<Maq702> You're a girl and they harass you?  That's messed up...
+<Maq702> Did you do something to them?
+   <sad> please try for me...they call me at my home all hours swear threaten
+         me etc it`s a nightmare please dont tell them you talking to me
+<Maq702> Geez, really?  How did they get your phone number?
+   <sad> no i didn`t do anything to make them this mad at me :(
+<Maq702> I won't say anything for now...  if they're really doing this to
+         you I'm not gonna talk to them any more.
+   <sad> they tricked me in \to giving it
+<Maq702> But I hope you're not telling stories about them...
+<Maq702> You aren't, are you?
+   <sad> they have my unlisted phone number. i got it changed and they got
+         the new one..they are phone losers of america
+<Maq702> Geez...  like PLA?  That's the name of the magazine my friend said
+         these guys wrote or are writing or whatever.
+   <sad> they are bad honest  be carful
+<Maq702> I didn't know what it stood for, I never read it...  my friend 
+         doesn't have a computer anymore, but he said to check out #rock.
+<Maq702> I will....  crap.  Are you sure you didn't do anything to them?
+         I mean, they really seem nice...
+   <sad> get out while you can  and never ever give your telephone number
+<Maq702> How did they get your new phone number? (if it's unlisted)
+<Maq702> Crap...  I already gave my number to one guy!
+   <sad> they tricked me :(
+<Maq702> Damn.
+<Maq702> I mean, c'mon...    There has to be some reason why they call you
+         at home! You didn't like swear at them or insult them or anything?
+   <sad> they are harrassing me big time
+<Maq702> How'd they get your new number?
+   <sad> i dont know?
+<Maq702> Are they like hackers or something?
+   <sad> yes
+<Maq702> Geez.  Can't you call the cops? If they're harassing you...
+   <sad> they cant catch them
+<Maq702> Sure they can!  They can trace the calls or something...
+   <sad> they have been traced...dosen`t work they are using cellular
+         and phone booths
+<Maq702> That sucks.  Can't you change the number again?  And like be 
+         really careful with it?
+   <sad> i did they have access to all the phones somehow even unlisted
+<Maq702> Geez.  Are you sure you didn't do anything to them?  I mean, 
+         they wouldn't harass you for no reason?!
+   <sad> NO
+<Maq702> Why would they spent so much time bugging you then?
+* session ends. guess she logged off.
+
+
+El_Jefe is beyond mean:
+----------------------
+This is a chat log of #peachey one day. Pa Bell was her "friend" for the day
+and happily handed over el_jefe's phone number.
+
+<peachey> nothing
+<peachey> i want eljefe name
+<peachey> what are you doing :)
+> Dont tell him I told you
+> but he is an ass
+> his Name is Rob Buecher
+<peachey> you know i won`t... i would be grateful to you
+<peachey> no
+> if they find out, you got the # off caller id if they ask
+<peachey> stop
+> stop what?
+<peachey> lying they tell me its zak then jeesse?
+> it is rob as far as I know
+> Thats all Ive ever called him He may have lied to me
+<peachey> how can i get it from the caller id?
+> I know his phone # though but Dont think I should give it to ya
+<peachey> please
+> hmm I dunno if he finds out he would be mad at me
+<peachey> he will never find out 
+> ok but if he asks who you got it from dont mention me
+<peachey> wb
+> 618-451-1238
+> hmm I dunno if he finds out he would be mad at me
+> be right back
+> back
+<peachey> wb
+<peachey> :)
+> I got a headache
+<peachey> oh i`m sorry :(
+> not your fault
+<peachey> hummmmmm how your not fooling with me i cant take this stuff.
+> im not fooling with you
+<peachey> hope=
+> I told ya what I know as far as I know thats the right stuff
+<peachey> k
+<peachey> where is your area code?  have you ever tried to call him?
+> he called me one and his # was on caller Id
+> I live in CA
+> el_jefe is a mean person
+<peachey> he is beyond mean pabell
+
+peachey joins #phoneloser to talk to us about el_jefe's phone number:
+--------------------------------------------------------------------
+This is several hours after Apok0lyps got wind that peachey found out what
+el_jefe's phone number was and convinced peachey to come into our channel.
+
+*** peachey (eccentric@cnc129041.concentric.net) has joined #phoneloser
+<Apok0lyps> no one kick her
+<Apok0lyps> no one kick her
+<Apok0lyps> no one kick her
+<Apok0lyps> no one kick her
+<S_P> /kick #rock peachey
+<S_P> hehehe
+<S_P> j/k
+<Apok0lyps> peachey: admit to me who gave you our numbers, and
+            I'll go easy on you
+<peachey> i dont remenber the nick? it was flashed to me on a msg
+<Apok0lyps> was it zens?
+<peachey> NO
+<polymorf> or dazen?
+<peachey> nnever even saw him
+<Apok0lyps> you just told me in a /msg it was
+*** rbcp sets mode: +o peachey
+<peachey> NO
+<polymorf> z3n?
+*** rbcp sets mode: -o peachey
+<peachey> ME   nope
+<pinguino> dazen?
+<peachey> never from me no
+<Apok0lyps> someone paste that message
+<peachey> fine it wasnt me
+<rbcp> peachey if you unban me from #peachey right now then i 
+       won't call you tonight
+<Apok0lyps> peachey: come clean now
+<Apok0lyps> I can make your life hell.
+<Apok0lyps> ask anyone here
+<rbcp> come clean and we won't visit marblehead
+<YAM_NINJA> peachey
+<YAM_NINJA> guess what.
+<polymorf> apok, does she understand what will happen to her if 
+           we dont get the truth.
+<YAM_NINJA> you don't have my number
+<YAM_NINJA> and im willing to ruin you
+<polymorf> That we have been treallly sweet to her so far
+<rbcp> peachey, how would you like a bunch of local reporters 
+  knocking on your door in the morning? i think this would make 
+  a very interesting story for them
+<YAM_NINJA> if dazen did it
+<Apok0lyps> peachey: I'm not fucking around
+<YAM_NINJA> he dies
+<YAM_NINJA> peachey
+<Apok0lyps> tell me who did it
+<Apok0lyps> be honest
+<el_jefe> if peachey doesn't say where she got that number 
+          right now, I'm going to the payphone
+<rbcp> be honest peachey, or you won't go to heaven!
+*** S_P sets mode: +o-o peachey peachey
+<rbcp> don't worry, i'm going to have a LONG night at the pay 
+       phone tonight. i'm setting my alarm for 2am.
+<peachey> apok0lyps you said yOU were going to talk to me nobody else
+<Maq702> Hmmm, I wonder what daddy's friends would think if he 
+         started getting bestiality magazines in the mail at the hospital...
+<Apok0lyps> peachey: I AM talking to you
+<Apok0lyps> you better get this straight with me right now
+<peachey> k 
+<peachey> but i cant answer everone?
+<Apok0lyps> answer me
+<peachey> k
+<Apok0lyps> I'm your biggest problem
+<rbcp> put us all on ignore then you stupid bitch
+<peachey> rbcp is
+<rbcp> i will be
+<Apok0lyps> TELL ME WHO DID IT NOW
+<Apok0lyps> LAST CHANCE
+<rbcp> OR WE WON'T LIKE YOU ANYMORE
+<peachey> I DO NOT KNOW it was a false nick
+<Apok0lyps> bullshit
+<rbcp> which nick was false?
+<pinguino> peachey, you better tell him. you think its bad now. 
+           it can get so much worse.
+<Apok0lyps> peachey: /msg me *my* home number
+<rbcp> just tell us which nick it was and since it was false, 
+       we can eliminate that person
+<pabell> I feel bad omens
+<rbcp> do you keep logs peachey?
+<Apok0lyps> you already know my real name, but everyone does
+<el_jefe> what nick was it, peachey
+<peachey> i wont ever call you or use your name... i didnt call 
+          you? and i had the number
+<Apok0lyps> too late
+<Apok0lyps> I want to know who told you
+<rbcp> just the fact that you have it peachey is enough to 
+       cause us to hold PeacheyCon in Boston this summer
+<el_jefe> what nick was it, peachey?
+<Sc0rp> peachey: if u tell us well bother that person isntead of u
+<Apok0lyps> peachey: If you tell me who it was, we'll go much easier on you
+<Sc0rp> so it would be wise to tell
+<polymorf> peachey this could be an end to all your suffering. 
+           It just take a couple words
+<el_jefe> what nick was it, peachey?
+<el_jefe> what nick was it, peachey?
+<el_jefe> what nick was it, peachey?
+<el_jefe> what nick was it, peachey?
+<Sc0rp> listen peachey
+<Sc0rp> if we know who it is
+<Sc0rp> then we have no reason to bug u anymore
+<Sc0rp> we will have someone new to bug
+<peachey> but I NEVER did anything to you??? you are harassing 
+          me for no reason??
+<el_jefe> WAHT NICK WAS IT, PEACHEY
+<pabell> NICK!
+<peachey> I dont know!!!!!!!!!!!!!!!
+<rbcp> just think peachey - if you tell us who it was then we'll
+       have to spend at least HALF of our time bugging them so
+       you'd get about 5 hours of sleep each night
+<el_jefe> yes you do, bitch.
+<peachey> do you think they actually would tell me???
+<Apok0lyps> that's it
+<S_P> and peachey, if we do hold PeacheyCon in Boston, I'm 
+      giving Apok0lyps a helluva lot of coffee
+<Apok0lyps> I tried being nice
+<peachey> god i DONT KNOW
+<pinguino> peachey, it doesnt matter. We'll have a new target 
+           and theyll get it really bad
+<peachey> what difference does it make??
+<pabell> YOU OR THEM TAKE YOUR PICK!
+<peachey> I`m not the F stalker here!!!!!!!!!!!!!
+<polymorf> We will leave you alone
+<el_jefe> they don't have to tell you, idiot. when someone 
+          /msg's you, it has their nick on i
+<Apok0lyps> peachey: because I'm gonna kill whoever it was
+<el_jefe> t
+<pinguino> then tell us the fucking nick
+<el_jefe> now what was the fucking nick?
+<pabell> 10
+<Apok0lyps> fine, have it your way
+<Apok0lyps> its all out war now
+<pinguino> that wasnt smart peachey
+<pinguino> not that anything youve done was
+<Apok0lyps> you guys keep asking her
+<Apok0lyps> I'm making a call
+<Maq702> Oh well...     nice knowing you, peachey.
+<rbcp> peachey do you have me on ignore?
+<peachey> ummmmm i think i was so shocked that maybe i didnt 
+   notice the nick??
+<el_jefe> ummm bullshit??
+<el_jefe> now
+<pabell> but you werent shocked enough to rememeber it?
+<rbcp> apok, i can get us a group flight discount 'cause my 
+  friend works at united airlines
+<el_jefe> unless you tell me the nick
+<pinguino> youd wanna netsex them
+<el_jefe> i'm going to go to the payphone
+<peachey> but thats the truth :( please 
+<el_jefe> so,
+<peachey> i`m scared 
+<peachey> id tell you if i remembered
+<el_jefe> start telling me the nick, or I'm going to have to 
+          call all night, every night until you tell me
+<Maq702> peach:   Seriously, Apok has a REALLY nasty temper and 
+         he's very pissed about this.  If he can't take it out on the 
+         guy, he WILL take it out on you.
+<el_jefe> you better start remembering
+<peachey> i cant :(  
+<pinguino> peachey, you hate us.. you wouldnt want to MEET us would you?
+<pabell> Peachy have you ever been published in a adult magazine before?
+<el_jefe> no joke
+<Sc0rp> its odd how u member that info but NOT who told u eh?
+<el_jefe> you had better remember
+<peachey> i know but what can i do?? i done remember
+<peachey> anyway  i didnt call you?????????
+<el_jefe> remember
+<el_jefe> now
+<polymorf> Look at your logs
+<rbcp> are you going to call me peachey? 
+<Sc0rp> no shit
+<peachey> but i dont remember seeing it?
+<rbcp> someone tell peachey to take me off of ignore or else
+<Sc0rp> but u member seeing the info?
+<Sc0rp> BULLSHIT
+<el_jefe> that's a load of shit
+<pinguino> Peachey. it doesnt matter. you have the numbers. 
+           NOBODY can have the numbers. Either you fess up or your 
+           life, REAL LIFE, goes to hell.
+<peachey> i threw all the logs away..cause i didnt want anyone 
+          here to see them  i always delete them
+<pinguino> take rbcp off ignore
+<Maq702> We won't stop with you, either...    we can get your 
+         dad fired and or arrested.  He's lose his job and his 
+         medical license.
+<el_jefe> you remember everything the person said but you don't 
+          remember who said it
+<pabell> if your going to throw them away why the fuck log it?
+<Sc0rp> peachey: LISTEN DO U WANT YOUR DAD TO LOOSE HIS JOB?
+<Maq702> Is that worth it to you, to have your whole family's 
+         life destroyed?
+<peachey> yes
+<pinguino> youre an insensitive bitch then
+<Sc0rp> I would hate for your dad to loose his job
+<Sc0rp> that would prob NOT be cool
+<peachey> no i dont remember the nick  why can t you understand it?
+<pabell> LIAR
+<el_jefe> you thought your life was hell before, that's 
+          nothing. It was just a game til now.
+<el_jefe> liar
+<peachey> why?
+<el_jefe> you expect us to believe you remember everything the 
+          person said, but not who it was?
+<el_jefe> bullshit
+<Sc0rp> peacheY: How bout I have a investigation started on your dad?
+<YAM_NINJA> would jog cuntie's memory
+<Sc0rp> U think he would like that?
+<Maq702> You think some phone calls were annoying?!?   That is 
+         nothing compard to what's coming now!
+<pinguino> peachey, ever thought about college? haha. not gonna happen now.
+<el_jefe> your life, your parents lives, your friends lives (if 
+          you have any left)
+<el_jefe> all over with
+<Sc0rp> your poor daddy is gonna be collecting state aid
+<S_P> my brother keeps bothering me about what college to go to
+<Sc0rp> no more puter for u
+<el_jefe> unless you start talking
+<S_P> (he's doing that right now)
+<YAM_NINJA> (what he said).
+<Maq702> Hmm, let's see...    just slip a quarter gram of cocaine in
+         your dad's car, phone in an anonymous tip to the police...
+<Sc0rp> maq: no u forget 
+<Sc0rp> maq: I can have a investigation started on ANYONE
+<Sc0rp> power is nice
+<Maq702> Boom...    arrested.  Loss of medical license for drug 
+         use.  Fired and ignored by his friends.
+<Sc0rp> even if there was nothing there
+<Sc0rp> he still would be seen as a bad person
+<Sc0rp> stigmatizing him forever
+<pinguino> wait. if peacheys so old why does she still live 
+           with her parents?!!?
+<rbcp> she's retarded that's why
+* S_P 's dad is a doctor
+<Sc0rp> WAIT
+<Maq702> All of a sudden you have to move cuz the bank 
+         forecloses on your house.  Parents start fighting over money 
+         every day until they ultimately divorce.
+<Sc0rp> I remember now
+<el_jefe> i suggest you answer the question
+<Sc0rp> your dad was molesting some kid
+<el_jefe> peachey
+<Sc0rp> and your dad was like touching people
+<el_jefe> kicking me from your channel isn't the best way to 
+          get on our good side
+<EightBall> rawr!
+*** rbcp sets mode: +o peachey
+<Sc0rp> damn
+<Sc0rp> thats gotta suck
+<rbcp> i dare you to takeover peachey
+<rbcp> i dare you
+<rbcp> come on do it
+<polymorf> And for somereason Your daddy has pedophilic 
+           warrants in all but two states.
+<pinguino> bbl reading
+<polymorf> or you could tell us who.
+<Maq702> Dad works in a gas station for a few years until the 
+         depression causes him to commit suicide.  Mom works as a 
+         waitress , and and the family live in a 1-bedrrom apartment 
+         in the ghetto.
+<EightBall> hrm
+<Sc0rp> maq: hehe
+<EightBall> yam ninja?
+<Sc0rp> oh well
+<Maq702> Is this all worth it?
+*** Sc0rp changes topic to " 617-639-0224 "
+*** Sc0rp sets mode: +l 1997
+<pabell> Peachey im putting your pics in a adult magazine as of 
+         next months issue you will be known as the Boston Peach queen
+<Sc0rp> hey peachey
+<Sc0rp> will your dad get mad if I Call him at work?
+<el_jefe> peachey's not talking to us anymore
+<pabell> then why the fuck is she still here
+<peachey> i dont know what to do?
+<el_jefe> answer the question
+<el_jefe> remember what the fucking nick was. now.
+<YAM_NINJA> ITS REAL SIMPLE BITCH
+<YAM_NINJA> YOU WILL
+<EightBall> you can start by getting on your knees, the rest 
+   comes naturally
+<pabell> tell the name and you can rest easy tongight
+<YAM_NINJA> TELL NOW
+<YAM_NINJA> FOR YOUR OWN FUCKING SAKE
+<el_jefe> or your life will get worse that it already is
+<el_jefe> this isn't shit, you'll be wishing to get hit by a 
+          bus by the time it's done
+<el_jefe> give us the nick, and you never get harassed agian
+<peachey> i told you i cant 
+<el_jefe> you can and you fucking will
+<pabell> OK you made your choice
+<el_jefe> if you just give us the nick, all of this stops
+<YAM_NINJA> ok
+<YAM_NINJA> give us the nick
+<el_jefe> if you don't, it gets fifty times worse
+<peachey> eljefe if i knew it i would   you know i hate all of 
+          you  why would i protect someone??
+<YAM_NINJA> peachey
+<YAM_NINJA> was it 'zens'
+<el_jefe> you actually expect me to believe that someone told 
+          you a bunch of stuff that you just committed to memory, but 
+          just can't remember who did it?
+<YAM_NINJA> or 'z3ns'
+<YAM_NINJA> or 'dazen'
+<el_jefe> bullshit
+<el_jefe> you're fucking lying
+<el_jefe> i don't like liars
+<peachey> i am not lying el jefe
+<el_jefe> if you continue to lie to me, i will make your life very bad
+<polymorf> Maybe someone should call her and walk her through, 
+           step by step, how to look at a log. 
+<el_jefe> now fucking remember the nick, and this will quit
+<peachey> BYE i came to talk to apok thats it!!!!!!!! he should 
+          have kept his word!!!!!!!!
+* pabell away cleaning/packing for the flight
+*** peachey (eccentric@cnc129041.concentric.net) has left #phoneloser
+
+
+Another #peachey log:
+--------------------
+*** Now talking in #peachey
+   <rbcp> boo
+<peachey> hi
+   <rbcp> why weren't you answering your phone earlier?
+<peachey> look at the trouble you caused :(
+<peachey> where is colleen
+   <rbcp> at work
+   <rbcp> what trouble did i cause?
+   <rbcp> hello?
+
+        [rbcp changes topic in #rock to "everyone join #peachey!"]
+
+*** iceQbicle has joined #peachey
+<iceQbicle> hi
+* iceQbicle hugs peachey
+<iceQbicle> xoxoxooxoxoxo
+*** darkhour has joined #peachey
+<peachey> no
+* rbcp hugs peachey
+<darkhour> PEACHEY!
+<peachey> hi darkhour
+*** _Tigress has joined #peachey
+<darkhour> <peachey> stop or you'll be punished - peachey.irc
+* iceQbicle hugs tigress
+<darkhour> <peachey> cause your from rock and they all are nasty - peachey.irc
+<_Tigress> hiya q
+* iceQbicle hugs tigress
+* _Tigress sits down by q
+<rbcp> hehe
+*** netmask has joined #peachey
+<_Tigress> i've missed ya
+* iceQbicle wraps his arm around tigress
+*** porchmnky has joined #PEACHEY
+<iceQbicle> missed you too baby
+<rbcp> wow, you're popular peachey!
+* iceQbicle squeezes, hugs, and loves tigress
+<darkhour> we all love peachey
+*** DeaY has joined #peachey
+<rbcp> peachey is the shit
+*** Retrieving #peachey channel info...
+*** rbcp changes topic to "peachey has a smelly cunt"
+*** lilac has joined #peachey
+*** You were kicked from #peachey by peachey (peachey)
+Session Close: Sat May 31 22:43:11 1997
+
+RBCP beats Colleen to a bloody pulp:
+-----------------------------------
+In the few days following this chat, Colleen has been being really nice to
+peachey to get information from her which worked quite well.
+
+<peachey> hello
+   <rbcp> what's up?
+<peachey> ;0
+   <rbcp> don't make those stupid fucking things at me
+<peachey> hummm sorry :(
+   <rbcp> you better be bitch
+<peachey> oooooooo ummmmmm ok?
+<peachey> why are you mad?
+   <rbcp> yeah whatever
+   <rbcp> i had to beat the shit out of colleen for what she did
+<peachey> WHAT????????????????????/
+   <rbcp> how DARE she be nice to you!
+<peachey> you bastard!!!!!!!!!! she didnt do anything!!!!!!!!!!!!!!!!!!!!!
+   <rbcp> you're calling me a bastard?
+   <rbcp> that's not smart
+<peachey> yes
+<peachey> well you HIT her??????????????
+<peachey> i would kill you
+<peachey> burn you in the bed
+<peachey> cut you
+   <rbcp> that's not smart considering the mass amount of
+          information i have on you
+   <rbcp> i made those maps of your house and i have more
+<peachey> i hate you!!!! No man hits his wife!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+<peachey> well you are making my life dangerous? why?
+<peachey> your wife Colleen is the nicest part of you
+   <rbcp> i also am getting the newspaper in marblehead involved so they 
+          should contact you soon
+   <rbcp> i made colleen dye her hair red and get a perm so she'd look like 
+          you. then i beat the living crap out of her
+<peachey> she didnt do ot tell me anything?? why are you mad at her?? you 
+          really hit her?
+<peachey> you make me sick
+   <rbcp> The Advocate, Marblehead Magazine, Marblehead_News-Digest. They'll
+          be at your house soon.
+<peachey> please stop  can i call you and talk to you please
+   <rbcp> hold on, let me punch her in the nose again.
+<peachey> no please i didnt do anything NOOOOOOOOOOOOOOOOOO
+<peachey> i`m going to call the police
+   <rbcp> fine go ahead. you don't have our address do you?
+<peachey> look i wont talk to you anymore i`ll have to put you on ignore if 
+          you try to scare me anymore :(  cause you are
+<peachey> look i even invited colleen and you to visit this summer
+   <rbcp> fine, put me on ignore. i'll just be forced to call you all night. 
+          i've got tonight off work and could sit at the pay phone until
+          about 3am.
+   <rbcp> i don't want to be around you, i'll probably get a disease.
+<peachey> please  what did i do?  
+   <rbcp> i'm the one who called you and you said to meet you on irc at
+          12:30 the other day
+<peachey> ha i`m not going to bed with you   so dont worry about it hee 
+          hehheh  colleen must hate it too
+   <rbcp> i'm i'm the one who called you at 3am last week and bothered your 
+          brother and left an at&t message after he took the phone off
+          the hook
+<peachey> you were?
+   <rbcp> i love how you're trying to insult me here
+<peachey> awhhhhh
+<peachey> no i will be good
+   <rbcp> i mean, it's not smart to try and piss me off right now. colleen is 
+          lying in a puddle of blood and piss over here
+   <rbcp> i hope you're happy
+<peachey> may i talk to her please
+   <rbcp> her fingers aren't working quite right today. so no.
+<peachey> i1m scared for her...........she is such a nice person...she 
+          dosent deserve this.
+   <rbcp> her brain won't be working in a few hours...
+   <rbcp> she's a pig and deserves everything she gets. 
+<peachey> tell exactly what you want me to do...to make this all end 
+          ...pLease i can talk to you right now on the phone if you
+          want..i will call you or you may call me..
+   <rbcp> this will never end. it's hopeless. sorry
+   <rbcp> me and el_jefe are going to harass all of colleen's family now
+<peachey> please dont you are indangering me..there are crazy ppl out there 
+          pleaes
+   <rbcp> so you'll get a little slack from that
+   <rbcp> i'm not crazy, though.
+<peachey> ok but take the number and that page out
+<peachey> there must be something i can do? what do you want from me 
+          please...help me
+<peachey> stop it i`m breaking down  do you realize this  i cant take it 
+          anymore please
+
+        [RBCP attempts to DCC her peach001.zip]
+
+   <rbcp> nope. read this file when you get it. you'll like it.
+<peachey> no
+<peachey> NOOOOOOOOOOOO
+<peachey> NOOOOOOOOOOOOOO
+<peachey> NOOOOOOOOOOO
+<peachey> i wont
+   <rbcp> okay, fine, you won't get to see exactly how far it's gone and
+          what we know.
+<peachey> i wont do anthing you say ever 
+<peachey> you have to give me something in return if you want me to 
+          cooperate with you
+<peachey> anyway do you know eubernig?
+<peachey> what if i die from this frustration? my heart hurts
+<peachey> i`m so depressed
+   <rbcp> then join #messedup
+<peachey> can i talk to mcolleen
+   <rbcp> no
+   <rbcp> i love you peachey
+   <rbcp> i'm going to leave colleen and come see you
+<peachey> no you dont 
+<peachey> colleen is better than me
+<peachey> she can handle you  i cant 
+   <rbcp> she can't anymore
+   <rbcp> not physically anyway
+<peachey> i tried i`m so upset all the time cause of you  
+<peachey> why?
+<peachey> el_jefe is not as mean as you  congratulatios
+<peachey> look why cant you make a deal with me  i`m not a bad person      
+<peachey> come back here
+   <rbcp> i am here
+   <rbcp> i'm a bad person
+<peachey> no your very nice
+   <rbcp> nope. listen i gotta get going. i have phone calls to make! have a 
+          nice day! and i hope el_jefe's phone number was worth it. bye.
+          sleep tight tonight
+
+        [Later that day...]
+
+   <rbcp> cactus?
+<peachey> what?
+   <rbcp> you know
+<peachey> no? dont know what that means?
+   <rbcp> YOU WILL
+<peachey> i need a hug :(
+<peachey> i`m going crazy 
+* rbcp hugs peachey...then stabs her in the fucking eye
+<peachey> please dont do this?
+   <rbcp> hey guess what? there really is no colleen. i just made her up. i 
+          have split personalities
+<peachey> not true you also have a page
+   <rbcp> yes, i took those pictures from some other girl's page. don't know
+          her. i'm actually a fag but the whole colleen and emily thing is
+          a big coverup
+<peachey> well i`m glad   cause at least you can not beat her :)
+   <rbcp> okay, i'm lying. colleen is real but she will be dead soon
+<peachey> ummmmmm whats your first name??
+   <rbcp> Alex
+<peachey> 76!@#$%^&(*)
+   <rbcp> I bet colleen is the one who gave you el_jefe's phone number.
+<peachey> alex please  leave colleen alone she didnt  tell me a thing it 
+          was someone else
+   <rbcp> she should have known better than that and now she's paying for it
+<peachey> noooooooooooo
+<peachey> plesse
+<peachey> i wish you could hit me instead :(
+<peachey> she didnt give me anything  anyways the number i got (from 
+          someone else) is no good
+   <rbcp> don't fuck with me and quit lying.
+<peachey> nope honest it dosent work :(
+<peachey> sorry :(
+   <rbcp> yep, it does. you must've wrote it down wrong. but that doesn't 
+          change the fact that colleen betrayed me
+   <rbcp> so she will suffer. sorry.
+<peachey> alex i want to talkt to you right now  please? ummm i`ll call you 
+          OR you can call me right now  nobody home
+   <rbcp> i'll call you at 3am tonight
+   <rbcp> don't worry about it
+<peachey> nooooooooooooooooo
+<peachey> noooooooooooooo
+   <rbcp> why do you live at home at your age?
+<peachey> for the f last time she didnt do anything?? it was me who betrayed
+          you!  she didnt give it to me???
+   <rbcp> yes she did, i have the logs. why are you lying to me?
+<peachey> what are you doing f with me anyway  your married hee 
+          hehehehhehehehh
+<peachey> sorry
+   <rbcp> it's too late anyway, i don't think she'll survive more than
+          another few hours
+   <rbcp> i like to put roach clips on my nipples
+<peachey> what?
+<peachey> you do?
+<peachey> good :)
+<peachey> hope it gets stuck and sticks    mmmmmmmmmm you`d like that
+   <rbcp> wow, nice how you're trying to insult me. i think i'll call you 5 
+          times tonight for everytime you do that.
+<peachey> thats wasnt an insult??????????????/
+<peachey> i thought you liked pain????????????
+   <rbcp> i took it as an insult so you're up to 10 calls tonight.
+   <rbcp> you won't sleep tonight
+<peachey> i`m not going to be home and i didnt insult you
+<peachey> i thought you would like that thought??
+<peachey> i`m trying to think like you 
+   <rbcp> fine, i'll annoy your brother. he likes it
+   <rbcp> netsex me
+<peachey> no he please hes is a nice person really
+   <rbcp> so are you but that's not stopping me.
+<peachey> give me your number then
+   <rbcp> 419-586-2345
+   <rbcp> i really don't care if you have my number because i'm on the 
+          internet all the time
+<peachey> oh?
+   <rbcp> yeah
+<peachey> can i talk to colleen for just a minute?
+   <rbcp> so go ahead and try. i won't be here anyway, i'll be out at the pay 
+          phone
+   <rbcp> go ahead
+<peachey> nooooo only when you want me to call you  i will
+   <rbcp> i don't need you to call me but go ahead. colleen is in the kitchen 
+          crying so maybe she will answer
+<peachey> no i dont want you mad  just tell me when to call okay?? and then 
+          you wont call me ok  please  ok?
+   <rbcp> i will call you.
+   <rbcp> whenever i want
+<peachey> no
+<peachey> it wont be necessary to call me
+   <rbcp> okay, your brother then
+   <rbcp> what kind of names are zac & zeb? those are really stupid.
+<peachey> what!!!!!! dont
+   <rbcp> who's beverly?
+<peachey> ummmm i cant talk freely cause your a one way story
+<peachey> ? who?
+   <rbcp> what are you going to do on monday when zak changes his number? 
+          you'll be right back where you started but he'll just be alot more
+          pissed off as well as I. so you screwed yourself over good by
+          getting his number
+   <rbcp> did you pay those late fines yet?
+   <rbcp> it pisses me off that you're not answering me. this deserves
+          another 5 calls tonight at 4am
+   <rbcp> ignore me now, you won't be able to tonight
+
+        [rbcp joins #peachey and gets kicked.]
+
+   <rbcp> that's fine. we'll see who does the kicking tonight
+
+
+-------------------
+This is actually rbcp and not Colleen.
+
+<ColleenC> they let you in #rock?
+ <peachey> are you okay??? rbcpsaid he beat you  :(
+ <peachey> can you leave him??
+ <peachey> bring the baby and come to boston
+ <peachey> and dont tell him
+<ColleenC> hehe. he doesn't beat me
+<ColleenC> did he say he did?
+ <peachey> yes he did:(   i have been very upset about it all day
+<ColleenC> oh! well he didn't do anything like that. rbcp is a very
+           non-violent person. i could kick his ass. hehe.
+ <peachey> well kick it  he said horrible things about what he did to you
+<ColleenC> hmmmm. are you sure it was rbcp? he promised me he wouldn't do 
+           anything like that to you anymore.
+ <peachey> it was him all the time calling me at night early am threateining 
+           me it was him  :)  i am sorry to tell you this
+<ColleenC> no no no, rbcp would never do anything like that to you. he has 
+           no way to call for free. i've taken away his red box and calling
+           cards. it's impossible
+ <peachey> colleen if youever have a problem   you cancome to me with the 
+           baby  honest  you are a very sweet girl and do not deserve his
+           double personality  please becarfu;
+ <peachey> colleen it was him :(  he said it today  he verified things to me 
+           that ONLY he would know  iM positive
+<ColleenC> hmmm. he just left for work. i'll have to have a talk with him. 
+           but he doesn't hit me, he's a very nice person. everyone likes
+           him here.
+ <peachey> well i`m telling you honestly  it was him that was calling me  he 
+           proved it to me...just becarful  it`s not a joke please colleen
+           just be carful
+<ColleenC> okay well thank you. but really he's a very nice person and I 
+           don't think he would do something awful like that.
+<ColleenC> well, there was that one time he punched my teeth in. but other 
+           than that...
+ <peachey> what?????????????????????????????????
+ <peachey> colleen????????????????????? do you know what your saying?
+ <peachey> you are kidding?
+<ColleenC> no, i wouldn't kid about something like that.
+<ColleenC> he's a nice guy but when he drinks too much kool-aid he gets a 
+           little hyperactive. this was just one of those times
+ <peachey> colleen you are too nice for him  dont be offended i dont want 
+           your marriage upset  but you shoul leave him immediately  go
+           home to your mom
+<ColleenC> ack, no way. my mom is a meaney. alex is really nice he just 
+           gets a little obsessed over dumb things.
+<ColleenC> like once i didn't fold his underwear like he wanted me too so 
+           he shredded all my underwear into little peices and threw them
+           in the street. but this was early in our marriage so it was
+           understandable.
+ <peachey> no no   no  thats not true  no man scares woman ever?
+ <peachey> colleen look i wont 
+ <peachey> and i do not mean to upset you  please just listen to me  if he 
+           hits you or threatens you   take emily and leave without him
+           knowing and go to the shelter..or call me okay?  at least you
+           have a place to go  okay?? you dont have to be abused by him 
+<ColleenC> i'm not abused though! he's really nice when he's sober which is 
+           most of the weekdays.
+ <peachey> he f drinks liquor too???????????? god
+ <peachey> colleen :(
+ <peachey> arnt you scared?
+<ColleenC> well, it's not so bad. he's really nice and the only real problem
+           with the liquor is that he buys so much of it that i never have
+           money for emily's food. but i don't mind his drinking.
+ <peachey> god this is obsurb... sorry but i hste him
+ <peachey> brb door bell
+<ColleenC> but he's NICE. you'd like him if you met him in person. he's cool
+ <peachey> ha  i know too much already to think that colleen
+ <peachey> were is he now?
+<ColleenC> he's typing to you right now
+<ColleenC> see, colleen is at work tonight and i'm impersonating her.
+<ColleenC> hehe. you're dumb.
+ <peachey> where?
+<ColleenC> she's working. at work.
+<ColleenC> with a big bruise on her eye
+ <peachey> ??
+<ColleenC> !!
+ <peachey> well i will tell her all about you and what you did
+<ColleenC> what i did?
+<ColleenC> what did i do?
+<ColleenC> please don't tell her
+ <peachey> i will
+ <peachey> i f cant wait!!!!!!!!
+<ColleenC> don't curse!!
+<ColleenC> if you tell her i'll be sad
+ <peachey> i will convince her to leave you hee heh
+<ColleenC> no you won't she's trapped in a bad marriage.
+ <peachey> nope she cann come to me
+ <peachey> ha hahhah nobody shoued be traped with wife beater pig like  you
+ <peachey> she wont ever give you sex again ha ahhahah i1ll tell her 
+<ColleenC> I'M NO PIG! YOU TAKE THAT BACK!!
+<ColleenC> she can't come to you, there's no way for her to leave town.
+<ColleenC> no bus, no taxi, no airport. and she don't drive.
+ <peachey> hey your a wimp you cant take the the truth
+ <peachey> what is
+<ColleenC> oh please don't tell her
+ <peachey> why do you have to show our private conversations
+<ColleenC> there you go
+
+        [I kick her from #rock (she'd been hanging out there for an hour.]
+
+ <peachey> why?
+ <peachey> i didnt do a thing?
+<ColleenC> you insulted me!
+<ColleenC> that was mean
+<ColleenC> i didn't like it one bit
+ <peachey> you want me to put you on ignore??
+<ColleenC> i'm not going to let colleen irc anymore. i'll put a password on 
+           the computer and she won't be able to log in anymore
+ <peachey> put me back in rock right now
+ <peachey> !@@@#$$%^^^&***((((())))___++
+ <peachey> okay 
+<ColleenC> okay
+<ColleenC> done
+ <peachey> last chance before you get ignored??
+ <peachey> thanks
+ <peachey> okay i will be nice now
+<ColleenC> bullshit. you're going to tell colleen everything i said to you 
+           and i can't have that
+ <peachey> no i wont/ i dont want to upset her  living with you is enough 
+           stress
+
+        [As usual, I'm posting our private chat for everyone
+         to see in #rock]
+
+ <peachey> why are you doing that?
+<ColleenC> it's funny
+ <peachey> stop kicking me i said i was going to be nice
+ <peachey> i didnt ignore you?  yet
+<ColleenC> i don't care if you do. go ahead and ignore me. you can't ignore 
+           my phone calls.
+ <peachey> nope
+ <peachey> hey i just want you to be a little kinder towards me
+<ColleenC> then don't try to threaten and insult me. see, that's why you're 
+           in the situation that you're in.
+<ColleenC> ok i am sorry
+<ColleenC> just dont make me mad
+<ColleenC> buhahaha
+<ColleenC> and if i make you mad then what the hell are you going to do?
+ <peachey> look if you want private conversation fine if not then leave me 
+           alone'
+
+        [An hour later...]
+
+<peachey> will you stop if i behave?
+  <rbcp-> no
+<peachey> send me your picture
+  <rbcp-> get it from my page
+<peachey> ha i`d rather :GET IT FROM YOU "
+  <rbcp-> too bad. i'd just send you a picture of a dead dog.
+<peachey> nahh but thanks for the tip
+  <rbcp-> listen, i'm not involved as you think i am but there's something 
+          you should know - apok0lyps and el_jefe and a bunch of other
+          people have already set up flights to boston for next week. so i'd
+          be careful what you say to them
+<peachey> ha no they are not....
+<peachey> i`ll be gone next week anyway hee hheh
+
+        [Of course I'm making all this up.]
+
+  <rbcp-> just telling you. i won't be there but they will. i don't think
+          they want to harm you physically but probably do something
+          nasty. i dunno
+<peachey> like?
+  <rbcp-> i don't know. i'm just warning you. 
+<peachey> please it`s late so dont scare me before i go to sleep pleease okay
+  <rbcp-> fine, i don't care. i was just telling you what i know. geez.
+<peachey> but i`m paranoid now :(
+  <rbcp-> whatever
+<peachey> what please give me a hug tell me your just kidding okay
+  <rbcp-> you're not smart.
+<peachey> depends what you think smart is and okay
+<peachey> goodnight
+
+        [She joins #peachey which I've taken over and I kick her out.]
+
+  <rbcp-> stay out of my channel
+<peachey> i took you off ignore :)  we are friends now
+  <rbcp-> the hell we are. after you threatened me?
+  <rbcp-> you don't know how to make friends.
+<peachey> i am trying
+<peachey> please i will be your friend and colleens
+  <rbcp-> yeah right. you're going to tell colleen about me. you're a 
+          two-faced bitch and i hate you for that
+<peachey> if you give me a chance i will always be nice
+  <rbcp-> can i call you right now?
+<peachey> no everyone is a sleep
+  <rbcp-> good, hold on let me get my cell phone
+<peachey> whos the mean one? see it1s you :( i`m being nice and your not
+<peachey> wanna come to my channel?
+<peachey> hello????
+  <rbcp-> i found a pic. do you really want it?
+<peachey> if it`s nothing that will give me nightmares hummmmmmm no better 
+          not  thanks anyway  i`m too afraid
+  <rbcp-> fine. i found it just for you too. geez.
+<peachey> hummmmm since your not trustworthy i cant accept it sorry
+  <rbcp-> i said fine. i just don't know why you asked and then wouldn't
+          take it.
+  <rbcp-> i'm not the one who sent you gross pics anyway, that was phelon.
+<peachey> cause i dont trust you  but if you say it`s apicture of you i 
+          will take it
+  <rbcp-> are you sure?
+<peachey> yes  come to peachey2
+
+*** now talking in #peachey2
+  <rbcp-> wow
+  <xt0rt> no
+<peachey> hi rbcp-
+  <rbcp-> it's packed in here
+<peachey> ha
+  <xt0rt> ton-o-people
+<peachey> lots of good conversation too
+<peachey> well i have not many friends since i`m banned from 
+          every channel that rock followed me into
+  <rbcp-> hehe. sorry about that
+<peachey> what?
+  <rbcp-> them getting you banned from everywhere.
+
+        [This part is funny. Instead of sending a picture of myself, I
+         sent her the "peachey atlas" JPG with maps to her house.]
+
+  <rbcp-> there's my pic
+<peachey> brb
+  <rbcp-> k
+<peachey> you are dead
+  <rbcp-> why??
+*** you were kicked from #peachey2 by peachey (peachey)
+
+        [Back to private chat...]
+
+  <rbcp-> why'd you kick me???
+  <rbcp-> did i send the wrong pic??
+<peachey> i`m going to blab eljefe name and number all over this fucking 
+          net and you know what it`s your fault and also i`m going to tell
+          apoklyps that IT was you who gave me HIS info too hee
+          hehehhehehehehehhehehehe
+
+        [You know you've pissed her off when she actually says a cuss word.]
+
+  <rbcp-> oh no!!
+  <rbcp-> don't please don't!
+  <rbcp-> i'm sorry, what pic did i send? it was an accident?
+  <rbcp-> hey
+  <rbcp-> i'm sorry

@@ -1,0 +1,50 @@
+<html><head><title>THANKS-CGI order form</title></head>
+<body bgcolor="3366aa" text=000000 link=yellow alink=red vlink=lime>
+<center>
+<table border=0 width=640>
+<tr><td vlaign=top align=center>
+
+<script Language='JavaScript'>
+var now = new Date();
+var years = now.getYear();
+var months =now.getMonth();
+var days = now.getDate();
+var hours = now.getHours();
+var minutes = now.getMinutes();
+var seconds = now.getSeconds();
+var ram_num=Math.floor(Math.random()*10000);
+var markstr=""+years+"-"+months+"-"+days+"-"+hours+"-"+minutes+"-"+seconds+"-"+ram_num;
+var showcgiurl="http://www.thanks-cgi.com/cgi-bin/banker/banker_show.cgi";
+var clickcgiurl="http://www.thanks-cgi.com/cgi-bin/banker/banker_click.cgi";
+document.write('<a href='+clickcgiurl+'?'+markstr+'><img src='+showcgiurl+'?'+markstr+' border=0></a>');
+</script><hr>
+<font color=lime face=Arial>THANKS-CGI</font> <font color=red face=Arial>UNIX SETUP</font><br>
+<table border=0>
+<tr><td width=550 align=left>
+<font size=2 color=ffffff face=arial>
+We sincerely apologize for our free setup service is no longer available. 
+To comply with the company's regulations, we will be charging a nominal fee 
+of US $35 per service. See following for detail. 
+<hr>
+Currently we can only accept UNIX setup due to the various conflicts 
+between NT II4 Server and Perl.  Since the majority of our CGI script
+were written in Perl, we strongly recommend NT users think twice before 
+installing our CGI product. 
+<br><br>
+Practically speaking, please ensure your server supports CGI-BIN beforehand.
+Because of our limited resources and other difficulties, we insist 
+absolutely no refund if incompatibility takes place. On the other hand, our 
+programs have successfully shown compatibility and workability on other 
+servers. Therefore UNIX servers which support CGI can have 100% confidence 
+in our script. 
+<br><br>
+We also provide Hosting service if you are looking for a Server that 
+supports CGI script. (of course all our CGI scripts are then supported)
+Please feel free to <a href="mailto:info@thanks-cgi.com?subject=UNIX SETUP">contact us</a> for further detail. Thanks!!
+</font>
+</td></tr></table>
+<br>
+<font size=1>&copy; 1998, 1999 <a href="index.html">Thanks CGI resources</a><sub>&copy;</sub></font>
+</td></tr></table>
+</body>
+</html>

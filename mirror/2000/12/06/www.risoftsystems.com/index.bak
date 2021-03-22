@@ -1,0 +1,382 @@
+<HTML>
+<HEAD>
+<TITLE>Screen savers and multimedia authoring tools at Rhode Island Soft Systems</TITLE>
+<META NAME="DESCRIPTION" CONTENT="Screen savers and Multimedia Authoring tools and utilities at Rhode Island Soft Systems">
+<META NAME="KEYWORDS" CONTENT="screensaver,screen saver,multimedia authoring,jigsaw puzzles,macaroni,clinton,Rhode Island,R.I. Soft Systems">
+<!-- custom made screen savers are produced by Rhode Island Soft Systems -->
+<!-- the best screensavers are produced by Rhode Island Soft Systems -->
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+if (document.images) {
+  image1on = new Image();
+  image1on.src = "/graphics/interface/sideorder_on.gif";
+  image2on = new Image();
+  image2on.src = "/graphics/interface/sidescreen_on.gif";
+  image3on = new Image();
+  image3on.src = "/graphics/interface/sidecustom_on.gif";
+  image4on = new Image();
+  image4on.src = "/graphics/interface/sidedeveloper_on.gif";
+  image5on = new Image();
+  image5on.src = "/graphics/interface/sidegames_on.gif";
+  image6on = new Image();
+  image6on.src = "/graphics/interface/sideutilities_on.gif";
+  image7on = new Image();
+  image7on.src = "/graphics/interface/sideabout_on.gif";
+  image8on = new Image();
+  image8on.src = "/graphics/interface/sidetech_on.gif";
+  image9on = new Image();
+  image9on.src = "/graphics/interface/sidecontact_on.gif";
+
+  image1off = new Image();
+  image1off.src = "/graphics/interface/sideorder_off.gif";
+  image2off = new Image();
+  image2off.src = "/graphics/interface/sidescreen_off.gif";
+  image3off = new Image();
+  image3off.src = "/graphics/interface/sidecustom_off.gif";
+  image4off = new Image();
+  image4off.src = "/graphics/interface/sidedeveloper_off.gif";
+  image5off = new Image();
+  image5off.src = "/graphics/interface/sidegames_off.gif";
+  image6off = new Image();
+  image6off.src = "/graphics/interface/sideutilities_off.gif";
+  image7off = new Image();
+  image7off.src = "/graphics/interface/sideabout_off.gif";
+  image8off = new Image();
+  image8off.src = "/graphics/interface/sidetech_off.gif";
+  image9off = new Image();
+  image9off.src = "/graphics/interface/sidecontact_off.gif";
+
+}
+
+function turnOn(imageName) {
+  if (document.images) {
+    document[imageName].src = eval(imageName + "on.src");
+  }
+}
+
+function turnOff(imageName) {
+  if (document.images) {
+    document[imageName].src = eval(imageName + "off.src");
+  }
+}
+
+// -->
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+<!--
+
+function buildArray() {
+  var a = buildArray.arguments;
+  for (i=0; i<a.length; i++) {
+    this[i] = a[i];
+  }
+  this.length = a.length;
+}
+var urls1 = new buildArray("",
+"y2k.asp","autumn.asp",
+"bible.asp",
+"pietoss.asp",
+"blankit.asp",
+"clinton.asp",
+"cupid.asp",
+"dimensia.asp",
+"duke.asp",
+"ghouls.asp",
+"macaroni.asp",
+"hits.asp",
+"teethson.asp",
+"hoover.asp",
+"ic2.asp",
+"liverdance.asp",
+"antics.asp",
+"teethson.asp",
+"newfront.asp",
+"penguins.asp",
+"diana.asp",
+"random.asp",
+"starr.asp","santa.asp",
+"spraypaint.asp", "conniver.asp",
+"turkey.asp",
+"vip.asp",
+"winter.asp");
+
+
+var urls2 = new buildArray("",
+"jixxa.asp",
+"solit.asp");
+
+var urls3 = new buildArray("",
+"iclbuild.asp",
+"ovation.asp",
+"palexp.asp",
+"fontpak.asp",
+"iconpak.asp",
+"sigorder.asp");
+
+var urls4 = new buildArray("",
+"ovation.asp",
+"palexp.asp");
+
+function go(which, num, win) {
+  n = which.selectedIndex;
+  if (n != 0) {
+    var url = eval("urls" + num + "[n]")
+    if (win) {
+      openWindow(url);
+    } else {
+      location.href = url;
+    }
+  }
+}
+
+// -->
+
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" MARGINHEIGHT=0 MARGINWIDTH=3>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=550>
+  <TR>
+<TD WIDTH=163 nowrap>&nbsp;  </TD><TD WIDTH=117 nowrap>&nbsp;  </TD><TD WIDTH=320 nowrap>&nbsp;  </TD>
+</TR>
+<TR VALIGN="bottom">
+<TD ROWSPAN=2 COLSPAN=2 WIDTH=280 nowrap><IMG SRC="/graphics/interface/rilogo.gif" WIDTH=280 HEIGHT=106 BORDER=0 ALT="R.I. Soft Systems "></TD>
+<TD VALIGN="bottom" ALIGN="right" WIDTH=320 nowrap>
+<%
+dim asc
+set asc=Server.CreateObject("CyberOps.COAdRotASC")
+Response.Write asc.GetBanner("riss","234default",Request.ServerVariables("REMOTE_ADDR"))
+%>
+
+</TD>
+<TR VALIGN="bottom"><TD COLSPAN=2 ALIGN="left" WIDTH=320 nowrap><IMG SRC="/graphics/interface/blueline.gif" WIDTH=320 HEIGHT=52 BORDER=0 ALT="Software Engineered to be the Best! "></TD></TR><TR VALIGN="bottom">
+<TD VALIGN="top" WIDTH=163 nowrap>
+<TABLE WIDTH=143 BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR><TD WIDTH=143><A HREF="orders.asp" ONMOUSEOVER="turnOn('image1')" ONMOUSEOUT="turnOff('image1')"><IMG NAME="image1" SRC="/graphics/interface/sideorder_off.gif" ALT="Place an Order" WIDTH=143 HEIGHT=31 BORDER=0></A></TD></TR>
+<TR><TD WIDTH=143><A HREF="screensavers.asp" ONMOUSEOVER="turnOn('image2')" ONMOUSEOUT="turnOff('image2')"><IMG NAME="image2" SRC="/graphics/interface/sidescreen_off.gif" ALT="Screensaver Links" WIDTH=143 HEIGHT=28 BORDER=0></A></TD></TR>
+<TR><TD WIDTH=143><A HREF="custom.asp" ONMOUSEOVER="turnOn('image3')" ONMOUSEOUT="turnOff('image3')"><IMG NAME="image3" SRC="/graphics/interface/sidecustom_off.gif" ALT="Custom Screen Savers" WIDTH=143 HEIGHT=42 BORDER=0></A></TD></TR>
+<TR><TD WIDTH=143><A HREF="developer.asp" ONMOUSEOVER="turnOn('image4')" ONMOUSEOUT="turnOff('image4')"><IMG NAME="image4" SRC="/graphics/interface/sidedeveloper_off.gif" ALT="Links to all Developer Tools" WIDTH=143 HEIGHT=42 BORDER=0></A></TD></TR>
+<TR><TD WIDTH=143><A HREF="games.asp" ONMOUSEOVER="turnOn('image5')" ONMOUSEOUT="turnOff('image5')"><IMG NAME="image5" SRC="/graphics/interface/sidegames_off.gif" ALT="Links to all Games" WIDTH=143 HEIGHT=28 BORDER=0></A></TD></TR>
+<TR><TD WIDTH=143><A HREF="utilities.asp" ONMOUSEOVER="turnOn('image6')" ONMOUSEOUT="turnOff('image6')"><IMG NAME="image6" SRC="/graphics/interface/sideutilities_off.gif" ALT="Links to all Utilities" WIDTH=143 HEIGHT=28 BORDER=0></A></TD></TR>
+<TR><TD WIDTH=143><A HREF="aboutriss.asp" ONMOUSEOVER="turnOn('image7')" ONMOUSEOUT="turnOff('image7')"><IMG NAME="image7" SRC="/graphics/interface/sideabout_off.gif" ALT="About R.I. Soft Systems" WIDTH=143 HEIGHT=28 BORDER=0></A></TD></TR>
+<TR><TD WIDTH=143><A HREF="techsupport.asp" ONMOUSEOVER="turnOn('image8')" ONMOUSEOUT="turnOff('image8')"><IMG NAME="image8" SRC="/graphics/interface/sidetech_off.gif" ALT="Tech Support" WIDTH=143 HEIGHT=28 BORDER=0></A></TD></TR>
+<TR><TD WIDTH=143><A HREF="contact.asp" ONMOUSEOVER="turnOn('image9')" ONMOUSEOUT="turnOff('image9')"><IMG NAME="image9" SRC="/graphics/interface/sidecontact_off.gif" ALT="Contact Information" WIDTH=143 HEIGHT=28 BORDER=0></A></TD></TR>
+</TABLE>
+      <center><br>
+        <table width="100%" border="0" cellspacing="0" cellpadding="5">
+          <tr>
+            <td>
+              <div align="center"><a href="#" onClick="MM_openBrWindow('risscam/index.asp','','width=350,height=360,top=5,left=5')"><img src="../graphics/risscam.gif" width="100" height="65" border="0"></a><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+                </font></b><font size="1" face="Verdana, Arial, Helvetica, sans-serif">Live 
+                pictures from<br>
+                Rhode Island Soft Systems<br>
+                Woonsocket, RI</font></div>
+            </td>
+          </tr>
+        </table>
+      </center>
+      <FORM NAME="form1">
+<FONT SIZE=2 FACE="arial"><B>Screen Savers</B></FONT><BR>
+<FONT SIZE=2>
+<FONT SIZE=2><SELECT NAME="menu1" ONCHANGE="go(this, 1, false)">
+<OPTION>-Select from list below
+<OPTION>Attack of the Y2K Bug<OPTION>Autumn Scenes
+<OPTION>Bible Scenes<OPTION>Bill's Pie Toss<OPTION>BLANK-IT
+<OPTION>The Clinton Blues
+<OPTION>Cupid's Valentine
+<OPTION>Dimensia 3D
+<OPTION>Duke Nukem
+<OPTION>Ghoul's Delight
+<OPTION>Hey, Macaroni!
+<OPTION>Hits Collection CD
+<OPTION>Holyear vs. Teethson<OPTION>Hoover
+<OPTION>Image Carousel II
+<OPTION>Liverdance Parody
+<OPTION>Macaroni Antics
+<OPTION>Mikey Likes Ears
+<OPTION>New Frontiers
+<OPTION>Penguin Party
+<OPTION>Princess Diana
+<OPTION>Randomizer<OPTION>Rude Dude Series
+<OPTION>Santa's Workshop<OPTION>Spray Paint<OPTION>Survivor Parody
+<OPTION>Turkey Shoot
+<OPTION>V.I.P.
+<OPTION>Winter Wonderlands
+</SELECT></FONT>
+</FONT>
+</FORM>
+<FORM NAME="form4">
+<FONT SIZE=2 FACE="arial"><B>Developer Tools</B></FONT><BR>
+<FONT SIZE=2>
+<SELECT NAME="menu4" ONCHANGE="go(this, 4, false)">
+<OPTION>-Select from list below
+<OPTION>Ovation Studio Pro
+<OPTION>Palette Express
+</SELECT>
+</FONT>
+</FORM>
+<FORM NAME="form3">
+<FONT SIZE=2 FACE="arial"><B>Games</B></FONT><BR>
+<FONT SIZE=2>
+<SELECT NAME="menu2" ONCHANGE="go(this, 2, false)">
+<OPTION>-Select from list below
+<OPTION>Jixxa Jigsaw Puzzles
+<OPTION>RISS Solitaire Pak
+</SELECT>
+</FONT>
+</FORM>
+<FORM NAME="form4">
+<FONT SIZE=2 FACE="arial"><B>Utilities</B></FONT><BR>
+<FONT SIZE=2>
+<SELECT NAME="menu3" ONCHANGE="go(this, 3, false)">
+<OPTION>-Select from list below
+<OPTION>ICL Builder
+<OPTION>Ovation Studio Pro
+<OPTION>Palette Express
+<OPTION>RISS FontPak
+<OPTION>RISS IconPak
+<OPTION>Signature Font
+</SELECT>
+</FONT>
+</FORM>
+      <p align="center">&nbsp; </p>
+      </TD>
+<TD VALIGN="top" COLSPAN=3 ROWSPAN=30>
+	<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+          <TD VALIGN="top" WIDTH=300 nowrap> <font size="2" color="#000088" face="arial, helvetica"><B><font size="5">Welcome!</font></B></font><font face="arial, helvetica" size="4"> 
+            </font><font face="arial, helvetica" size="2">This site features screen 
+            savers, jigsaw puzzle games, utilities and multimedia development 
+            tools. <!-- You may launch directly to a specific product page via the 
+pull-down lists below, or navigate the site via the main 
+categories, highlights, and advertising banners. --> </font> 
+            <P><font face="arial, helvetica" size="2"> Orders may be placed through 
+              the centralized order page, or from each product's individual page. 
+              </font>
+            <P> <font size="2" color="#000088" face="arial, helvetica"><B><font size="5">What's 
+              Hot</font></B></font><b><font face="Arial, Helvetica, sans-serif" size="4"><font color="#FF0000"><font color="#009900"><br>
+              <br>
+              <a href="santa.asp"><img src="graphics/products/santahome.gif" width="105" height="118" align="left" border="0"></a> 
+              </font></font></font></b><b><font face="Arial, Helvetica, sans-serif" size="4"><br>
+              </font></b><font face="Arial, Helvetica, sans-serif" size="2"><b><font color="#FF0000"> 
+              </font></b> </font>
+            <p align=left><font face="Arial, Helvetica, sans-serif" size="2"><b><a href="santa.asp">Santa's 
+              Workshop</a></b> - Santa's elves are busy creating toys for Christmas. 
+              This gorgeous animated screensaver shows Santa's workshop with a 
+              beautiful, Old World look-and-feel. The elves gleefully toil away 
+              at their workbenches creating their toys, while the snow gently 
+              falls outside the windows.Upon completion, each toy gets whisked 
+              away in a unique style, to be distributed by Santa to all the good 
+              girls and boys. </font><br>
+              <br>
+            </p>
+            <P><font face="arial, helvetica" size="2"><a href="hoover.asp" border=0><img src="/graphics/products/Hoov81x81.gif" width=81 height=79 border=0 align="left" alt="Penguin Party Screensaver"> 
+              <b>Hoover the Mischievous Mutt</b></a> - </font><font face="Arial, Helvetica, sans-serif" size="2">This 
+              animated screensaver utilizes cutting edge PowerPlug<sup>TM</sup> 
+              technology to automatically update <img src="/graphics/misc/pplogo.gif" width="163" height="74" align="right" vspace="3" hspace="3">itself 
+              with new episodes of this screensaver which stars Hoover - a dog 
+              who has an affinity for trouble.</font> 
+            <P> 
+            <div align="left">
+              <p><font face="arial, helvetica" size="2"> </font> </p>
+              </div>
+            <p> <font face="arial, helvetica" size="2"><A HREF="ic2.asp" border=0><IMG SRC="/graphics/products/ic81.gif" WIDTH=81 HEIGHT=81 BORDER=0 ALIGN="left" ALT="Image Carousel Screensaver"> 
+              <B>Image Carousel</B></A> - Build your own screensavers! Comes with 
+              a FREE CD-ROM with over 1,000 breathtaking photos!<br>
+              </font></p>
+            <font face="arial, helvetica" size="2"> <br>
+            </font>
+            <P> <font face="arial, helvetica" size="2"><A HREF="ovation.asp" border=0><IMG SRC="/graphics/products/ovationsm.gif" WIDTH=55 HEIGHT=90 BORDER=0 ALIGN="left" ALT="Multimedia Development Tools"> 
+              <B>Ovation Studio Pro</B></A> - Version 2.1.4 of our Professional 
+              Multimedia Development Tool comes complete with a handsome 350 page 
+              spiral bound Tutorial &amp; User Guide. <b>New Samples, Interactive 
+              Tutorial, and White Papers now online.</b></font><font face="arial, helvetica" size="2"><br>
+              </font> </p>
+            <P> <font face="arial, helvetica" size="2"><A HREF="jixxa.asp" border=0><IMG SRC="/graphics/products/jixxaman.gif" WIDTH=121 HEIGHT=112 BORDER=0 ALIGN="left" ALT="Jigsaw Puzzles"> 
+              <B>New Jigsaw Puzzles</B></A> - More than 25 collections of Jixxa 
+              Jigsaw Puzzles are now available for immediate download. Each themed 
+              collection contains 8 puzzle files. </font></P>
+            <BR>
+            <BR>
+            <BR>
+            <BR>
+            <BR>
+          </TD>
+<TD ROWSPAN=45 WIDTH=4 nowrap>&nbsp;
+
+</TD>
+<TD VALIGN="top" WIDTH=130 nowrap>
+		<TABLE BORDER=0 WIDTH=130 CELLPADDING=3 CELLSPACING=0>
+              <TR bgcolor="#000088"> 
+                <TD VALIGN="top" ALIGN="center" WIDTH=130 nowrap><FONT FACE="arial" COLOR="#FFFFFF"><B>What's 
+                  New? </B></FONT></TD>
+</TR>
+              <TR bgcolor="#99CCFF"> 
+                <TD VALIGN="top"> 
+                  <p align="center"><font face="arial" size=2> <b><font color="#330066">New 
+                    Hoover Episode!</font></b> </font></p>
+                  <p align="center"><font face="arial" size=2><a href="hoover.asp"><img src="graphics/products/hoovernew.gif" width="90" height="72" border="0"></a><br>
+                    <br>
+                    <b>Hoover the Mischievous Mutt</b> gets into trouble at Thanksgiving. 
+                    </font></p>
+                  <p align="center"><font face="arial" size=2><br>
+                    <b><a href="hoover.asp">Click here</a> </b>for more information. 
+                    <BR>
+                    </font> </p>
+                </TD>
+</TR>
+<TR>
+<TD VALIGN="top" ALIGN="center" BGCOLOR="#000088" WIDTH=130 nowrap><FONT FACE="arial" COLOR="#FFFFFF"><B>Free Newsletter</B></FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" BGCOLOR="#99CCFF">
+<font face="arial" size=2>
+Enter your email address to receive free monthly email newsletters announcing new products, updates and more:
+</font>
+<form action="http://www.risoftsystems.com/rissnewsadd.asp" method="POST">
+<CENTER>
+<INPUT NAME="email" SIZE=14 maxlength="90"><BR>
+<INPUT NAME="Submit" TYPE="SUBMIT" VALUE="Subscribe">
+</CENTER>
+</FORM>
+                  <p align="center"><font face="tahoma" size="2"><br>
+                    <a name="private"></a><a href="#private" onClick="MM_openBrWindow('privacy.htm','','width=420,height=440,left=5,top=5')">Privacy 
+                    Policy</a><br>
+                    <br>
+                    </font></p>
+                  </TD>
+</TR>
+<TR>
+<TD VALIGN="top" ALIGN="center" BGCOLOR="#000088" WIDTH=130 nowrap><FONT FACE="arial" COLOR="#FFFFFF"><B>Hot Screensavers</B></FONT></TD>
+<TR>
+                <TD VALIGN="top" BGCOLOR="#99CCFF"> <font face="arial" size=2> 
+                  <A HREF="y2k.asp">Attack...Y2K Bug</a><br>
+                  <a href="autumn.asp">Autumn Scenes</a><BR>
+<A HREF="bible.asp">Bible Scenes</a><BR>
+<A HREF="winter.asp">Winter Wonderlands</A><BR>
+<A HREF="turkey.asp">Turkey Shoot</A><BR>
+<A HREF="clinton.asp">Clinton Blues</A><BR>
+<A HREF="liverdance.asp">Liverdance Parody</A><BR>
+<A HREF="macaroni.asp">Hey, Macaroni!</A><BR>
+<A HREF="spraypaint.asp">Spray Paint</A><BR>
+<A HREF="sumodance.asp">Sumodance</A><BR>
+<A HREF="teethson.asp">Holyear vs. Teethson</A><BR>
+<A HREF="pietoss.asp">Bill's Pie Toss</A><BR>
+<p>
+</font>
+</TD>
+</TR>
+		</TABLE>
+	</TD>
+	</TR>
+	</TABLE>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

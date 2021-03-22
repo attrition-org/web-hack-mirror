@@ -1,0 +1,278 @@
+<html>
+
+<head>
+<title></title>
+<base target="main">
+</head>
+<script Language="JavaScript">
+
+function dialog ()
+
+{
+	var Eingabe;
+	Eingabe=confirm ("If u enter this site you have to agree that you dont use any of the Warez or Linkz shown here for any criminal activity. The warez or infoz are only for learning. No one can make the creator of this site responsible for the information or files on this site. If you go on or if you download anything, you do this on your own risk. Illegal files (crackz etc) are forbidden and against the laws. If you click the OK-Button you agree ! If you dont want to do anything against the laws click the other button. But not everything on this site is against the laws...");
+		if (Eingabe==false)
+			{
+			window.close ("default.htm")
+			}
+}
+
+</script>
+
+
+<body onload="dialog()" bgcolor="#000000">
+
+<p align="left"><img src="images/logo_fertig.gif" alt="logo_fertig.gif (56976 Byte)" WIDTH="600" HEIGHT="50">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+</body>
+<script LANGUAGE="JavaScript">
+<!-- Begin Script
+
+var expDays = 30;
+
+var exp = new Date(); 
+
+exp.setTime(exp.getTime() + (expDays*24*60*60*1000));
+
+
+
+function Who(info){
+
+        // Who
+
+                var VisitorName = GetCookie('VisitorName')
+
+                if (VisitorName == null) {
+
+                        VisitorName = prompt("Who are you?");
+
+                        SetCookie ('VisitorName', VisitorName, exp);
+
+                }
+
+
+
+        return VisitorName;
+
+}
+
+
+
+function When(info){
+
+        // When
+
+                var rightNow = new Date()
+
+                var WWHTime = 0;
+
+                WWHTime = GetCookie('WWhenH')
+
+                
+
+                WWHTime = WWHTime * 1
+
+                /*This part is written by 
+
+                Cut & Paste JavaScript  
+
+                Copyright 1996, IMA STUDIOS, Inc.  
+
+                This code may not be resold.
+
+                This Copyright notice must be included
+
+                on every document that contains this code.
+
+                A link to http://www.imastudios.com should
+
+                be included somewhere on your document. 
+
+                */
+
+                var lastHereFormatting = new Date(WWHTime);  // Date-i-fy that number
+
+                var intLastVisit = (lastHereFormatting.getYear() * 10000)+(lastHereFormatting.getMonth() * 100) + lastHereFormatting.getDate()
+
+                var lastHereInDateFormat = "" + lastHereFormatting;  // Gotta use substring functions
+
+                var dayOfWeek = lastHereInDateFormat.substring(0,3)
+
+                var dateMonth = lastHereInDateFormat.substring(4,11)
+
+                var timeOfDay = lastHereInDateFormat.substring(11,16)
+
+                var year = lastHereInDateFormat.substring(23,25)
+
+                var WWHText = dayOfWeek + ", " + dateMonth + " at " + timeOfDay // display
+
+
+
+
+
+        
+
+                SetCookie ("WWhenH", rightNow.getTime(), exp)
+
+
+
+        return WWHText;
+
+}
+
+
+
+function Count(info){
+
+        // How many times
+
+                var WWHCount = GetCookie('WWHCount')
+
+                if (WWHCount == null) {
+
+                        WWHCount = 0;
+
+                }
+
+                else{
+
+                        WWHCount++;
+
+                }
+
+                SetCookie ('WWHCount', WWHCount, exp);
+
+
+
+
+
+        return WWHCount;
+
+}
+
+
+
+
+
+
+
+function set(){
+
+        VisitorName = prompt("Who are you?");
+
+        SetCookie ('VisitorName', VisitorName, exp);
+
+        SetCookie ('WWHCount', 0, exp);
+
+        SetCookie ('WWhenH', 0, exp);
+
+}
+
+
+
+//  ********************* General Cookie handling *********************
+
+//  Cookie Functions - Second Helping  (21-Jan-96)
+
+//  Written by:  Bill Dortch, hIdaho Design <bdortch@netw.com>
+
+//  The following functions are released to the public domain.
+
+
+
+function getCookieVal (offset) {  
+
+        var endstr = document.cookie.indexOf (";", offset);  
+
+        if (endstr == -1)    
+
+                endstr = document.cookie.length;  
+
+                return unescape(document.cookie.substring(offset, endstr));
+
+}
+
+
+
+function GetCookie (name) {  
+
+        var arg = name + "=";  
+
+        var alen = arg.length;  
+
+        var clen = document.cookie.length;  
+
+        var i = 0;  
+
+        while (i < clen) {    
+
+        var j = i + alen;    
+
+        if (document.cookie.substring(i, j) == arg)      
+
+                return getCookieVal (j);    
+
+                i = document.cookie.indexOf(" ", i) + 1;    
+
+                if (i == 0) break;   
+
+        }  
+
+        return null;
+
+}
+
+
+
+function SetCookie (name, value) {  
+
+        var argv = SetCookie.arguments;  
+
+        var argc = SetCookie.arguments.length;  
+
+        var expires = (argc > 2) ? argv[2] : null;  
+
+        var path = (argc > 3) ? argv[3] : null;  
+
+        var domain = (argc > 4) ? argv[4] : null;  
+
+        var secure = (argc > 5) ? argv[5] : false; 
+
+        document.cookie = name + "=" + escape (value) + 
+
+        ((expires == null) ? "" : ("; expires=" + expires.toGMTString())) + 
+
+        ((path == null) ? "" : ("; path=" + path)) +  
+
+        ((domain == null) ? "" : ("; domain=" + domain)) +    
+
+        ((secure == true) ? "; secure" : "");
+
+}
+
+
+
+function DeleteCookie (name) {  
+
+        var exp = new Date();  
+
+        exp.setTime (exp.getTime() - 1);  
+
+        // This cookie is history  
+
+        var cval = GetCookie (name);  
+
+        document.cookie = name + "=" + cval + "; expires=" + exp.toGMTString();
+
+
+
+}
+
+//  End Script -->
+</script>
+<script>
+alert("Hello " + Who() + ". You've been hacked " + Count() + " time(s).Last time was " + When() +"." )
+</script>
+
+</html>
+<!-- Tommy Raven (Min) says Moo. // -->

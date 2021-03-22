@@ -1,0 +1,38 @@
+
+Starting nmap V. 2.54BETA3 ( www.insecure.org/nmap/ )
+Warning:  OS detection will be MUCH less reliable because we did not find at least 1 open and 1 closed TCP port
+Insufficient responses for TCP sequencing (2), OS detection may be less accurate
+Insufficient responses for TCP sequencing (1), OS detection may be less accurate
+Interesting ports on  (202.186.126.131):
+Port       State       Service
+22/tcp     filtered    ssh                     
+23/tcp     filtered    telnet                  
+25/tcp     open        smtp                    
+53/tcp     open        domain                  
+80/tcp     open        http                    
+
+Aggressive OS guesses: FreeBSD 3.2-STABLE (93%), BSDI 4.0-4.0.1 (93%), Windows NT4 / Win95 / Win98 (93%), NetBSD 1.3I (after 19990119) to 1.4 x86 (91%), HP-UX B11.00 U 9000/839 (91%), Windows NT 5 Beta2 or Beta3 (90%), Windows 2000 RC1 through final release (90%), Windows 2000 Professional, Build 2183 (RC3) (90%)
+No exact OS matches for host (If you know what OS is running on it, see http://www.insecure.org/cgi-bin/nmap-submit.cgi).
+TCP/IP fingerprint:
+TSeq(Class=TR)
+T1(Resp=Y%DF=Y%W=805C%ACK=S++%Flags=AS%Ops=MNWNNT)
+T1(Resp=Y%DF=Y%W=805C%ACK=S++%Flags=AS%Ops=MNWNNT)
+T2(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+T2(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+T3(Resp=Y%DF=Y%W=805C%ACK=S++%Flags=AS%Ops=MNWNNT)
+T3(Resp=Y%DF=Y%W=805C%ACK=S++%Flags=AS%Ops=MNWNNT)
+T4(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T4(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T5(Resp=N)
+T5(Resp=N)
+T6(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T6(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T7(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+T7(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+PU(Resp=N)
+PU(Resp=N)
+
+
+
+
+Nmap run completed -- 1 IP address (1 host up) scanned in 52 seconds

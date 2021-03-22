@@ -1,0 +1,112 @@
+<HTML>
+<HEAD>
+<base target="main_frame">
+</HEAD>
+
+<BODY TEXT="#00002B" BGCOLOR="#000040">
+
+
+<SCRIPT  LANGUAGE="JavaScript">
+<!--
+
+   validBrowser=0;
+
+   if (navigator.appName == "Netscape" && 
+       (parseInt(navigator.appVersion)) >= 3) 
+      validBrowser=1;
+   else 
+   {
+      if (navigator.appName == "Microsoft Internet Explorer" && 
+          (parseInt(navigator.appVersion)) >= 3) 
+         validBrowser=1;
+   }
+
+
+   function ToggleImage (ImgTagName, FileName)
+   { 
+      if (!document.images) {return};
+      if (validBrowser) 
+         document.images[ImgTagName].src = "images/" + FileName;
+   }
+// -->
+</SCRIPT>
+
+
+
+
+
+<DIV ALIGN="CENTER"><CENTER>
+
+<TABLE border="5" cellspacing="3" cellpadding="4" height="292">
+   <TR>
+      <TD height="105" width="132">
+      <p align="center">
+
+      <A HREF="main.html" TARGET="main_frame"
+         onMouseover="self.ToggleImage('ApptechHome', 'ApptechHome_on.gif'); window.status='Home Page';  return true"
+         onMouseout="self.ToggleImage('ApptechHome', 'ApptechHome_off.gif'); return true">
+         <IMG SRC="images/ApptechHome_off.gif" 
+         ALT="AppTech Home" 
+         align="center" border="2" vspace="5" WIDTH="120" HEIGHT="40" 
+         NAME="ApptechHome"></A>
+     </TD>
+   </TR>
+
+   <TR>
+      <TD height="63" width="132"><p align="center">
+      <A HREF="Overview.html" TARGET="main_frame"
+         onMouseover="self.ToggleImage('Overview','Overview_on.gif'); window.status='Overview of our Company';  return true"
+         onMouseout="self.ToggleImage('Overview','Overview_off.gif'); return true">
+         <IMG SRC="images/Overview_off.gif" 
+         ALT="Overview of AppTech"
+         align="center" border="3" vspace="5" WIDTH="120" HEIGHT="30"
+         NAME="Overview"></A>
+      <A HREF="Strategy.html" TARGET="main_frame"
+         onMouseover="ToggleImage('Strategy','Strategy_on.gif');  window.status='Strategy, Goals of successful implementations'; return true"
+         onMouseout="ToggleImage('Strategy','Strategy_off.gif'); return true">
+         <IMG SRC="images/Strategy_off.gif" 
+         ALT="Our Strategy"
+         align="center" border="3" vspace="5" WIDTH="120" HEIGHT="30"
+         NAME="Strategy"></A>
+      <A HREF="Services.html" TARGET="main_frame"
+         onMouseover="ToggleImage('Services','Services_on.gif'); window.status='Functional and specialized integration services'; return true"
+         onMouseout="ToggleImage('Services','Services_off.gif'); return true">
+         <IMG SRC="images/Services_off.gif" 
+         ALT="Our Services"
+         align="center" border="3" vspace="5" WIDTH="120" HEIGHT="30"
+         NAME="Services"></A>
+      <A HREF="Experience.html" TARGET="main_frame"
+         onMouseover="ToggleImage('Experience','Experience_on.gif');  window.status='Over 28 years of experience (hardware, software, methodologies'; return true"
+         onMouseout="ToggleImage('Experience','Experience_off.gif'); return true">
+         <IMG SRC="images/Experience_off.gif" 
+         ALT="Listing of our Experience"
+         align="center" border="3" vspace="5" WIDTH="120" HEIGHT="30"
+         NAME="Experience"></A>
+      <A HREF="Opportunities.html" TARGET="main_frame"
+         onMouseover="ToggleImage('Opportunities','Opportunities_on.gif');  window.status='Current Contract/employment opportunities'; return true"
+         onMouseout="ToggleImage('Opportunities','Opportunities_off.gif'); return true">
+         <IMG SRC="images/Opportunities_off.gif" 
+         ALT="Contracts and Full-time positions"
+         align="center" border="3" vspace="5" WIDTH="120" HEIGHT="30"
+         NAME="Opportunities"></A>
+      <A HREF="Contacts.html" TARGET="main_frame"
+         onMouseover="ToggleImage('Contacts','Contacts_on.gif');  window.status='Contact list of company officers'; return true"
+         onMouseout="ToggleImage('Contacts','Contacts_off.gif'); return true">
+         <IMG SRC="images/Contacts_off.gif" 
+         ALT="How to contact us."
+         align="center" border="3" vspace="5" WIDTH="120" HEIGHT="30"
+         NAME="Contacts"></A>
+      </TD>
+   </TR>
+</TABLE>
+
+</CENTER></DIV>
+
+
+
+
+
+</body>
+</html>
+
+

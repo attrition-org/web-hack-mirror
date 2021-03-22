@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<HTML>
+<HEAD>
+<TITLE>Access Control; Password Protecting Directories and Files</TITLE>
+<LINK REL="stylesheet" TYPE="text/css" HREF="styles.css" TITLE="style">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<CENTER>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="550">
+<TR>
+<TD><IMG SRC="../images/calogo.gif" WIDTH="223" HEIGHT="15" BORDER="0" VSPACE="2"></TD>
+</TR>
+<TR>
+<TD BGCOLOR="#000066" HEIGHT="1"><IMG SRC="../images/trans.gif" WIDTH="1" HEIGHT="1"></TD>
+</TR>
+<TR>
+<TD ALIGN="LEFT" BGCOLOR="#000066"><IMG SRC="../images/trans.gif" WIDTH="5" HEIGHT="1"><A HREF="../index.html"><IMG SRC="../images/home.gif" WIDTH="47" HEIGHT="15" BORDER="0"></A><A HREF="../hosting/hostingplans.html"><IMG SRC="../images/hosting.gif" WIDTH="66" HEIGHT="15" BORDER="0"></A><A HREF="../commerce/commerce.html"><IMG SRC="../images/ecomm.gif" WIDTH="95" HEIGHT="15" BORDER="0"></A><A HREF="../design/design.html"><IMG SRC="../images/design.gif" WIDTH="86" HEIGHT="15" BORDER="0"></A><A HREF="../contactus.html"><IMG SRC="../images/contact.gif" WIDTH="90" HEIGHT="15" BORDER="0"></A><A HREF="./supportindex.html"><IMG SRC="../images/support.gif" WIDTH="68" HEIGHT="15" BORDER="0"></A></TD>
+</TR>
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP"><BR>
+<A HREF="javascript:history.go(-1)" ONMOUSEOVER="window.status = 'Go Back'; return true;" ONMOUSEOUT="window.status = ' '; return true;"><IMG SRC="./images/back.gif" BORDER="0" VSPACE="0" WIDTH="20" HEIGHT="22" HSPACE="4" ALIGN="TEXTTOP"><FONT SIZE="-1" FACE="Arial, Helvetica">Back</FONT></A><BR>
+<BR>
+
+<H3>Support - Usage Statistics</H3>
+<P>Detailed usage statistics are generated for all of our customers' accounts.
+These detailed statistics can show you what domains are accessing your site, how
+many &quot;hits&quot; you are getting, how much data is being transferred, what
+type of browser people are using to look at your site, and more. </P><HR>
+<P><STRONG>To use our built-in analysis programs on UNIX:</STRONG></P>
+<P>Our UNIX web hosting customers may use one of our built-in analysis programs
+to view their usage statistics, or they may use a third-party usage stats
+analysis program to analyze the raw log files generated in their account.</P>
+<P>Select 'Edit Account Information' in your Control Panel. Then choose which
+program you want as your &quot;Preferred Stats&quot; program: </P>
+<UL>
+<LI><STRONG>MkStats v1.0</STRONG> &nbsp; (Note: MkStats analyzes only the past
+90 days worth of stats. <A HREF="#*">more...</A>)</LI>
+<LI><A HREF="http://www.mkstats.com/example/"><STRONG>MkStats v2.1</STRONG></A></LI>
+<LI><STRONG><A HREF="http://www.statslab.cam.ac.uk/~sret1/analog/">Analog
+v2.11</A></STRONG></LI>
+<LI><STRONG><A HREF="http://www.webtrends.com/">WebTrends</A>:</STRONG>
+selecting this option will allow you to download Virtual WebTrends software for
+FREE. Unlike the above server-side programs, WebTrends runs locally on your own
+PC.</LI>
+</UL>
+<P>You will not be able to view any usage statistics for your account until
+approximately 48 hours after choosing one of the above programs. Also, these
+programs are system-wide programs and cannot be custom configured for one
+customer.</P>
+<P>To view your usage statistics using the 'preferred stats' program you chose,
+go to your <STRONG>Control Panel</STRONG> and select '<STRONG>View your web
+usage statistics &amp; logs</STRONG>'. </P><HR>
+<P><STRONG>To use a third-party analysis program:</STRONG></P>
+<P>All customers have access to the raw log files. Therefore, you can use
+third-party log analysis programs on your local PC to get in-depth analysis of
+your web site usage. If needed, you can download the raw log files to your local
+computer for analysis and use gzip to uncompress them if you need to run custom
+queries against the data. We use standard GNU &quot;gzip&quot; format without
+any special options. Mac users who have trouble unzipping the logs with Stuffit
+Expander should try using MacGzip.</P>
+<P>Note: You have access to the raw log files whether or not you choose one of
+our built-in analysis programs. Therefore, you can choose to use our programs,
+your programs, or both.</P><HR>
+<H4><A NAME="data_transfer">Monitoring Data Transfer</A></H4>
+<P>Although only a relatively small number of accounts exceed the allotted data
+transfer each month, we would like to point out that several web-based
+interfaces exist which allow you to monitor data transfer and be alerted when a
+certain amount of data transfer is used.</P>
+<TABLE BORDER="1" CELLPADDING="4" CELLSPACING="0" BORDERCOLOR="#000066">
+<TR>
+<TD><STRONG>To determine how much data transfer has been used at anytime:</STRONG>
+<OL>
+<LI>Access your account Control Panel<BR>
+ ( www.yourdomain.com/stats/ )</LI>
+<LI>Select the Edit Account Information (EAI) link</LI>
+<LI>Click the &quot;Show usage statistics&quot; button in EAI</LI>
+</OL></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE BORDER="1" CELLPADDING="4" CELLSPACING="0" BORDERCOLOR="#000066">
+<TR>
+<TD><STRONG>To receive an e-mail (or suspend an account) when a certain amount
+of data transfer is used:</STRONG>
+<OL>
+<LI>Access your account Control Panel (e.g. www.yourdomain.com/stats/ )</LI>
+<LI>Select the Edit Account Information (EAI) link</LI>
+<LI>Locate the field option which reads:<BR>
+<IMG SRC="images/data_transfer_limit_options.gif" WIDTH="400" HEIGHT="50"></LI>
+<LI>Enter the data transfer amount (in MBs) in the empty field to specify the
+time at which you should be alerted</LI>
+<LI>Click the desired radio button to specify that you wish to either receive
+an e-mail or suspend the account. By default, the &quot;Don't bug me!&quot;
+option is selected. If you have any concerns about exceeding the allotted data
+transfer and merely wish to receive an alert, you can do so here.</LI>
+</OL></TD>
+</TR>
+</TABLE>
+<P><A NAME="*">*</A><SMALL>There seem to be many questions on how MKSTATS
+compiles statistics. One of the most confusing aspects of this statistical
+package is why hits from past months decline as time progresses. You may have
+noticed as an example, hits from a previous month was X amount. Now a month
+later, those hits have dropped. The reason is as follows:</SMALL></P>
+<P><SMALL>MKSTATS compiles statistics for a 90 day span. This means that as
+time progresses, the data early in that span begins to drop off as new data for
+the current month is added. Imagine it as a sliding window, only the most
+current 90 days are kept. </SMALL></P>
+<P><SMALL>For an example, let's look at this from the first of the year. When
+we hit day 95 in the year, the package compile statistics for days 5-95, a span
+of 90 days. Day 5 is still January, but, as you can see, the data for January's
+days 1-4 have dropped off. When stats compile the next day, days 6-96, more of
+the January data is being dropped. This is why the hit total for the last
+trailing month (January in this example) declines.</SMALL></P>
+<P><SMALL>If you wish to not limit your stats to a 90 day sliding window, we
+suggest switching your statistical package to ANALOG. ANALOG does not have this
+behavior and will compile statistics for all the data in your gz log files. If
+the data is in there, ANALOG will compile it all.</SMALL></P></TD>
+</TR>
+<TR>
+<TD ALIGN="LEFT">
+<TABLE BORDER="0" ALIGN="CENTER" NOWRAP="NOWRAP" WIDTH="98%">
+<TR>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">&nbsp;</TD>
+<TD VALIGN="MIDDLE" ALIGN="RIGHT"></TD>
+</TR>
+<TR>
+<TD VALIGN="MIDDLE" ALIGN="LEFT"><FONT SIZE="-2" FACE="Arial, Helvetica"><A HREF="mailto:webmaster@crowderassoc.com">webmaster@crowderassoc.com</A></FONT></TD>
+<TD VALIGN="MIDDLE" ALIGN="RIGHT"><FONT SIZE="-2" FACE="Arial, Helvetica">&copy;1997-99
+Crowder Associates </FONT></TD>
+</TR>
+</TABLE></TD>
+</TR>
+</TABLE></CENTER>
+</BODY>
+</HTML>

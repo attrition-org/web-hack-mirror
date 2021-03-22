@@ -1,0 +1,286 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>第 五 篇</TITLE>
+<META NAME="Template" CONTENT="F:\CWORD60\TEMPLATE\manual1.dot">
+</HEAD>
+<BODY LINK="#0000ff">
+
+<I><FONT FACE="標楷體" LANG="ZH-TW" SIZE=6 COLOR="#ff0000"><P ALIGN="CENTER">如何使用</FONT><FONT SIZE=6 COLOR="#ff0000">ASP</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=6 COLOR="#ff0000">讓您的網站動起來？</P>
+</I></FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4><P ALIGN="RIGHT">作者</FONT><FONT SIZE=4> </FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4>喬篷科技</FONT><FONT FACE="華康少女文字體W4,新細明體" LANG="ZH-TW" SIZE=4> </FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4>周世雄</P>
+<P ALIGN="RIGHT">刊登於</FONT><FONT FACE="Arial" SIZE=4>RUN!PC</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4>雜誌七月份</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>本文重點</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">在前兩期的IIS 4.0實戰道場當中，我們看到了威力強大的IIS（</FONT><FONT SIZE=3>Internet Information Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）4.0之「30個特異功能」和「</FONT><FONT SIZE=3>SSL</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>與數位認證」。本期將探討如何使用</FONT>Active Server Pages<FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（簡稱</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），將您的網站「</FONT><FONT SIZE=3>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>化」，讓原本「靜態」的網站，變成「動態」的網站，包括Active Server Pages簡介、語法、ASP Scripting語法、表單（form）的處理、以及Cookies存取用戶端檔案等。下一期將介紹如何將您的網站「資料庫化」，敬請期待。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW"><P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">作者著有網站網頁設計、</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>等相關的十幾本電腦書籍，其中有關</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>等五本著作，並以簡體版本發行於大陸，最新力作為</FONT><FONT FACE="標楷體" LANG="ZH-TW">「</FONT><FONT SIZE=3>IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>超級網站速成班</FONT><FONT FACE="標楷體" LANG="ZH-TW">」</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、「動態網頁設計99招 PART 2/3」。現任「喬篷科技」公司總經理，從事</FONT><FONT SIZE=3>Internet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>Intranet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>之網站資料庫應用設計、動態網站規劃架設、電子商務等服務。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>示範網站</FONT><FONT FACE="華康少女文字體W4,新細明體" LANG="ZH-TW">：</FONT>www.asp.com.tw</P>
+<FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">連絡</FONT><FONT SIZE=3>E-mail</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>：</FONT><FONT SIZE=3>jackchou@tpts5.seed.net.tw</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="Arial" SIZE=6><P>1. </FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=6>動態的網站</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>您的網站還是「靜態」的嗎？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">目前</FONT><FONT SIZE=3>Internet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>上許多的網站，仍然提供「靜態」（</FONT><FONT SIZE=3>static</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的網頁內容。</P>
+<P ALIGN="JUSTIFY">所謂「靜態」，指的就是網站的網頁內容是「固定不變」地。</P>
+<P ALIGN="JUSTIFY">當瀏覽器透過</FONT><FONT SIZE=3>Internet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>HTTP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Hypertext Transport Protocol</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）協定，向網站伺服器（</FONT><FONT SIZE=3>web server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）要求提供網頁的內容時，網站伺服器收到要求後，傳送原已設計好靜態的</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的檔案資料給瀏覽器。</P>
+<P ALIGN="JUSTIFY">「傳統」的網站是屬於「靜態」的，僅僅使用標準的</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼，頂多加上</FONT><FONT SIZE=3>GIF89A</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>格式的圖片，產生幾隻小貓小狗跑來跑去的動畫效果，若要更新網頁的內容，必須手動地來更新其</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的檔案資料。「靜態」網站的一個大缺點就是不容易維護，為了不斷更新網頁內容，必須不斷地製作新的</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>檔案資料。</P>
+<P ALIGN="JUSTIFY">「傳統」的網站伺服器並沒有做甚麼事，僅僅將使用者所要求的</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>檔案，傳送到瀏覽器而已。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>甚麼是「動態的網站」？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">一個「動態」的網站，網站的網頁內容是「動態」地。</P>
+<P ALIGN="JUSTIFY">所謂「動態」的網站，指的是：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>「內容會變」：網頁內容會依照不同時間、不同使用者，而提供不同的網頁內容。</LI></P>
+<P ALIGN="JUSTIFY"><LI>「自動更新」：網頁內容會自動更新。</LI></P>
+<P ALIGN="JUSTIFY"><LI>「互動性」：網頁內容會依照使用者的需要或選擇而改變。</LI></P></UL>
+
+<P ALIGN="JUSTIFY">將原本「靜態」的網站，變成一個「動態」的網站，方法如下：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>將網站「</FONT><FONT SIZE=3>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>化」：所謂「</FONT><FONT SIZE=3>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>化」，即採用於</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>網站伺服器執行的</FONT><FONT SIZE=3>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼，使用程式控制，「動態」地產生網頁內容。</LI></P>
+<P ALIGN="JUSTIFY"><LI>將網站「資料庫化」：所謂「資料庫化」，即使用資料庫管理整個網站，只要更新資料庫的內容，網站的內容將自動更新。</LI></P>
+<P ALIGN="JUSTIFY"><LI>使用「動態</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」：採用</FONT><FONT SIZE=3>4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>版</FONT><FONT SIZE=3>IE</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>和</FONT><FONT SIZE=3>Netscape</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>瀏覽器所提供的「動態</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」，於瀏覽器端「動態」地改變網頁內容。</LI></P></UL>
+
+<P ALIGN="JUSTIFY">「動態」的網站伺服器，必須執行一些程式，然後將將執行的結果輸出成標準的</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>格式檔案，傳送到使用者的瀏覽器。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>將網站「</FONT><FONT FACE="Arial" SIZE=5> asp</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>化」的好處在那裡？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">採用於</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>網站伺服器執行的</FONT><FONT SIZE=3>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼，將網站「</FONT><FONT SIZE=3> asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>化」的好處在那裡？好處如下：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>動態：每次內容不同。</LI></P>
+<P ALIGN="JUSTIFY"><LI>增加互動性。</LI></P>
+<P ALIGN="JUSTIFY"><LI>設計迅速與維護方便：</FONT><FONT SIZE=3>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>不須</FONT><FONT SIZE=3>compile</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>編譯，使用記事本即可編輯設計。</LI></P></UL>
+
+<P ALIGN="JUSTIFY">讓我們看個例子。譬如每次使用者光臨您的網站時，都會看到不同的內容。</P>
+<P ALIGN="JUSTIFY">　</P>
+<P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>2. Active Server Pages</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>還在使用</FONT><FONT FACE="Arial" SIZE=5>CGI</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>嗎？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">當於瀏覽器填好表單（</FONT><FONT SIZE=3>form</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的輸入資料，提出</FONT><FONT SIZE=3>HTTP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>要求時，可以要求於網站伺服器執行一個表單所設定的可執行應用程式，而非只是一個</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的檔案。網站伺服器收到要求執行應用程式後，分析表單（</FONT><FONT SIZE=3>form</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的輸入資料，將執行的結果以</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的格式傳送給瀏覽器。</P>
+<P ALIGN="JUSTIFY">使用</FONT><FONT SIZE=3>CGI</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Common Gateway Interface</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）應用程式，或使用</FONT><FONT SIZE=3>Netscape</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>公司的</FONT><FONT SIZE=3>NSAPI</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Netscape Server Application Programming Interface</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）、和微軟公司的</FONT><FONT SIZE=3>ISAPI</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Internet Server Application Programming Interface</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）等伺服器</FONT><FONT SIZE=3>API</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>撰寫的應用程式，可以提供「動態」（</FONT><FONT SIZE=3>dynamic</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的網頁內容。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">CGI</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>應用程式有一個缺點，就是不易產生，變更修改也很困難，而且由於並非整合於</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>當中，必須使用與</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>完全不同的設計過程來設計一個可執行的應用程式。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">CGI</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的效率也是一個大問題，每一個表單（</FONT><FONT SIZE=3>form</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）均須執行一個可執行檔，多人同時上線使用時，多個執行檔同時執行，將大大降低網站伺服器的執行速度。</P>
+<P ALIGN="JUSTIFY">即將取代</FONT><FONT FACE="華康細圓體,新細明體" LANG="ZH-TW" SIZE=3>CGI</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的是</FONT><FONT FACE="華康細圓體,新細明體" LANG="ZH-TW" SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>Active Server Pages</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（動態伺服器網頁，簡稱</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），內含於</FONT><FONT SIZE=3>IIS 3.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、或</FONT><FONT SIZE=3>4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（或以後版本）當中，提供一個伺服器端（</FONT><FONT SIZE=3>server-side</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）執行的</FONT><FONT SIZE=3>scripting</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>環境，您可以結合</FONT><FONT SIZE=3> HTML </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>網頁、</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>指令和</FONT><FONT SIZE=3> ActiveX </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>元件，以產生和執行動態、互動、高效率的網站伺服器（</FONT><FONT SIZE=3>web server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的應用程式。</P>
+<P ALIGN="JUSTIFY">當瀏覽器對要求您網站伺服器的</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式碼（檔案副檔名為</FONT><FONT SIZE=3> .asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）時，譬如</FONT><FONT SIZE=3> </FONT><A HREF="../../index.html"><FONT SIZE=3>http://www.asp.com.tw</FONT></A><FONT SIZE=3>/test.asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，您網站伺服器即會「從頭到尾」讀取所要求的</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式碼</FONT><FONT SIZE=3>test.asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>檔案，並且開始執行，將「</FONT><FONT SIZE=3>&lt;%…%&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」部份的</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式碼執行後，輸出標準的</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼，最後傳送此</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼到瀏覽器。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式控制部份，可使用</FONT><FONT SIZE=3>VBScript</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、或</FONT><FONT SIZE=3>JScript</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>語言來設計。</P>
+<P ALIGN="JUSTIFY">您不需要擔心，是否瀏覽器無法執行您設計出來的</FONT><FONT SIZE=3>Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，您的網站伺服器，會自動將</FONT><FONT SIZE=3>Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的程式碼，解譯為標準</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>格式的網頁內容，再送到用戶端的瀏覽器上顯示出來。用戶端只要使用一般可執行</FONT><FONT SIZE=3>HTM</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼的瀏覽器，即可瀏覽</FONT><FONT SIZE=3>Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>所設計的網頁內容。</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>Active Server Pages</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>的特點</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的特點是：</P>
+<OL>
+
+<P ALIGN="JUSTIFY"><LI>使用</FONT><FONT SIZE=3>VBScript</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、或</FONT><FONT SIZE=3>JScript</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>等簡易的</FONT><FONT SIZE=3>script</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>語言，結合</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼，即可快速地完成網站的應用程式。</LI></P>
+<P ALIGN="JUSTIFY"><LI>不須</FONT><FONT SIZE=3>compile</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>編譯，容易產生，不須</FONT><FONT SIZE=3>compile</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>編譯或</FONT><FONT SIZE=3>link</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>連結即可直接執行。整合於</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>當中。</LI></P>
+<P ALIGN="JUSTIFY"><LI>使用一般文書編輯程式，如</FONT><FONT SIZE=3>Windows</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的記事本，即可編輯設計。</LI></P>
+<P ALIGN="JUSTIFY"><LI>與瀏覽器無關（</FONT><FONT SIZE=3>Browser Independence</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）：用戶端只要使用一般可執行</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼的瀏覽器，即可瀏覽</FONT><FONT SIZE=3>Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>所設計的網頁內容。</FONT><FONT SIZE=3>Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>所使用的</FONT><FONT SIZE=3>script</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>語言（</FONT><FONT SIZE=3>VBScript</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、或</FONT><FONT SIZE=3>Jscript</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）係於網站伺服器（</FONT><FONT SIZE=3>server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>端）執行，用戶端的瀏覽器不需要能夠執行這些</FONT><FONT SIZE=3>script</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>語言。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>與任何</FONT><FONT SIZE=3>ActiveX scripting</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>語言相容。除了可使用</FONT><FONT SIZE=3>VBScript</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、或</FONT><FONT SIZE=3>JScript</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>語言來設計，並可經由</FONT><FONT SIZE=3>plug-in</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的方式，使用由</FONT><FONT SIZE=3>third party</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>所提供的其他譬如</FONT><FONT SIZE=3>REXX</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>Perl</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>Tcl</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>等</FONT><FONT SIZE=3>scripting</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的語言。</FONT><FONT SIZE=3>scripting</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>引擎是處理</FONT><FONT SIZE=3>script</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>COM</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Component Object Model</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）物件。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的原始程式碼，不會傳到使用者的瀏覽器，因此可以保護辛辛苦苦寫出來的原始程式碼不會外漏。傳到使用者瀏覽器的為</FONT><FONT SIZE=3>Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>執行結果的一般</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼。</LI></P>
+<P ALIGN="JUSTIFY"><LI>使用</FONT><FONT SIZE=3>server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>端</FONT><FONT SIZE=3>script</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>產生</FONT><FONT SIZE=3>client</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>端</FONT><FONT SIZE=3>script</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，您可以使用</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式碼，於網站伺服器（</FONT><FONT SIZE=3>server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>端）執行</FONT><FONT SIZE=3>script</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>語言（</FONT><FONT SIZE=3>VBScript</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、或</FONT><FONT SIZE=3>Jscript</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），來產生或修改於</FONT><FONT SIZE=3>client</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>端（用戶端的瀏覽器）執行的</FONT><FONT SIZE=3>script</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>語言（</FONT><FONT SIZE=3>VBScript</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、或</FONT><FONT SIZE=3>Jscript</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）。</LI></P>
+<P ALIGN="JUSTIFY"><LI>物件導向（</FONT><FONT SIZE=3>Object-oriented</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）。</LI></P>
+<P ALIGN="JUSTIFY"><LI>可經由</FONT><FONT SIZE=3>ActiveX Server components</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>ActiveX</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>伺服器元件）來擴充增加功能。</FONT><FONT SIZE=3>ActiveX  Server component</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，可使用</FONT><FONT SIZE=3>Visual Basic</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>Java</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>Visual C++</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>COBOL</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>等程式語言來發展。</LI></P></OL>
+
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>執行</FONT><FONT FACE="Arial" SIZE=5>Active Server Pages</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>所須環境</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">以下任何一種環境可以執行</FONT><FONT SIZE=3>Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>：</FONT><FONT SIZE=3> </P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>Windows NT Server 4.0/5.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>：執行</FONT><FONT SIZE=3>IIS 3.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、或</FONT><FONT SIZE=3>4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（或以後版本）。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>Windows NT Workstation 4.0/5.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>：執行</FONT><FONT SIZE=3>IIS 3.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、或</FONT><FONT SIZE=3>4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（或以後版本）。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>Windows 95/98</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>：執行</FONT><FONT SIZE=3>Microsoft Personal Web Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>PWS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）</FONT><FONT SIZE=3>1.0a/4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（或以後版本）。</LI></P></UL>
+
+</FONT><FONT FACE="Arial" SIZE=5><P>ASP</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>新增功能</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">Active Server Pages </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>到了</FONT><FONT SIZE=3>IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>版本，增強了很多功能，如下：</P>
+
+<UL>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>Microsoft Script Debugger</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>：偵錯</FONT><FONT SIZE=3>Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>所使用的</FONT><FONT SIZE=3>script</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>語言（</FONT><FONT SIZE=3>VBScript</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、或</FONT><FONT SIZE=3>Jscript</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）。</FONT><FONT SIZE=3> </LI></P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY"><LI>可執行交易（</FONT><FONT SIZE=3>transaction</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的指令：所有在一個網頁執行的工作，會全部成功或全部失敗。</LI></P>
+<P ALIGN="JUSTIFY"><LI>隔離的</FONT><FONT SIZE=3> ASP </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>應用程式：隔離</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>應用程式，可以與</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>伺服器分開於不同的記憶體空間執行。好處是假若某一個應用程式當機時，就不會影響到其它應用程式和</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>伺服器。也可以讓您不必停止</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>伺服器，就可以停止應用程式或取消從記憶體載入元件。</LI></P>
+<P ALIGN="JUSTIFY"><LI>檔案上載：瀏覽器可以使用</FONT><FONT SIZE=3>Posting Acceptor</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>應用程式，將檔案上載至</FONT><FONT SIZE=3> Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>伺服器。</LI></P>
+<P ALIGN="JUSTIFY"><LI>新的</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>元件（</FONT><FONT SIZE=3>components</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）。</LI></P>
+<P ALIGN="JUSTIFY"><LI>應用程式的根目錄可以是實際目錄：以前，</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>應用程式的根目錄必須是虛擬目錄。現在，根目錄可以是</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>站台內實際的目錄。可以使用</FONT><FONT SIZE=3> [Internet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>服務管理員</FONT><FONT SIZE=3>] </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>來指定</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>應用程式的根目錄。</FONT><FONT SIZE=3> </LI></P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY"><LI>支援</FONT><FONT SIZE=3> Internet Explorer 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>頻道：</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>可以產生頻道定義的</FONT><FONT SIZE=3>CDF</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>檔案。</FONT><FONT SIZE=3> </LI></P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY"><LI>支援</FONT><FONT SIZE=3> HTTP 1.1 </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>通訊協定：</FONT><FONT SIZE=3>Internet Information Server </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>和</FONT><FONT SIZE=3> Personal Web Server </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>支援</FONT><FONT SIZE=3> HTTP 1.1</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>通訊協定。</FONT><FONT SIZE=3>HTTP 1.1</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>可以使用巨量編碼處理、和改進傳送網頁到瀏覽器時的效率。</LI></P></UL>
+
+</FONT><FONT FACE="Arial" SIZE=5><P>ActiveX</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>伺服器元件</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">使用</FONT><FONT SIZE=3>Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的「</FONT><FONT SIZE=3>ActiveX</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>伺服器元件」（</FONT><FONT SIZE=3>ActiveX Server Components</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），讓您重複使用設計好的功能（像副程式般可以一再地呼叫使用），讓您製作出動態、互動的網頁內容。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>包括數個內建的「</FONT><FONT SIZE=3>ActiveX Server Components</FONT><FONT FACE="華康細圓體,新細明體" LANG="ZH-TW" SIZE=3> </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」，如下：</P>
+<OL>
+
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>File Access component</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（檔案存取元件）：提供讀寫伺服器檔案的功能。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>Page Counter Component</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（訪客計數器元件）：記錄訪客的次數。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>Content Rotator Component</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（內容輪播器元件），讓</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>內容輪流顯示於網頁上。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>Ad Rotator component</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（廣告輪播器元件）：提供廣告輪播器的功能。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>Browser Capabilities component</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（瀏覽器資訊元件）：提供用戶端使用瀏覽器的功能資訊給網站伺服器。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>Content Linking component</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（內容連結元件）：讓您很方便地使用一個文字檔，來管理超連結、上一頁、下一頁等連結功能。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>Permission Checker Component</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（允許檢查元件）：檢查使用者是否有權存取某個檔案。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>Database Access component</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（資料庫存取元件）：提供存取伺服器資料庫的功能。</LI></P></OL>
+
+<P ALIGN="JUSTIFY">您可自己製作符合自己特殊需要的「</FONT><FONT SIZE=3>ActiveX</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>伺服器元件」，來增加擴充</FONT><FONT SIZE=3>Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的功能。可使用</FONT><FONT SIZE=3>Visual Basic</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>Java</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>Visual C++</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>COBOL</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>等程式語言來製作。</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>ASP</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>物件</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>提供數個內建的「物件」（</FONT><FONT SIZE=3>object</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），讓您直接呼叫使用：</P>
+
+<UL>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>Request </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>物件：取得用戶資訊。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>Response</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>物件：傳送資訊給用戶。</FONT><FONT SIZE=3> </LI></P>
+<P ALIGN="JUSTIFY"><LI>Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>物件：提供存取伺服器的方法（</FONT><FONT SIZE=3>methods</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）、和屬性（</FONT><FONT SIZE=3>properties</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的功能。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>Application</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>物件：</FONT><FONT SIZE=3>Application</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的所有資訊，於一個應用程式，多個網頁之間，可以讓所有的使用者共同使用。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>Session</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>物件：</FONT><FONT SIZE=3>Session</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的所有資訊，僅適用於一個使用者。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>ObjectContext</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>物件：提供</FONT><FONT SIZE=3>Transaction</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>交易處理功能的物件。</LI></P></UL>
+
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">Application</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>與</FONT><FONT SIZE=3>Session</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>物件，可以於多個網頁之間保留和使用一些共同的資訊，以發展網站的應用程式。</P>
+<P ALIGN="JUSTIFY">　</P>
+<P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="Arial" SIZE=6><P>3. Active Server Pages</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=6>語法</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>.asp</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>檔案</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）製作成</FONT><FONT SIZE=3>.asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>附檔名的檔案，一個</FONT><FONT SIZE=3>.asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>檔案是一個文字檔，包括：</P>
+
+<UL>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>標記（</FONT><FONT SIZE=3>tags</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）：「</FONT><FONT SIZE=3>&lt;...&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」的部份。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>VBScript</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、或</FONT><FONT SIZE=3>Jscript</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>語言的程式碼</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>語法：「</FONT><FONT SIZE=3>&lt;%...%&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」的部份。</LI></P></UL>
+
+</FONT><FONT FACE="Arial" SIZE=5><P>ASP</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>語法</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>標記（</FONT><FONT SIZE=3>tags</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）使用「</FONT><FONT SIZE=3>&lt;...&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」來將</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼包含起來，以與一般的文字區分開來，</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼係於使用者的瀏覽器當中執行；而</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>使用「</FONT><FONT SIZE=3>&lt;%...%&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」來將</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>script</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式碼包含起來，</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼係於伺服器當中執行，執行後產生瀏覽器看得懂的</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼，再傳送給使用者。</P>
+<P ALIGN="JUSTIFY">譬如網站伺服器</FONT><FONT SIZE=3>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼：</P><DIR>
+
+</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3><P>現在是</FONT><FONT FACE="Arial" SIZE=3>: &lt;% =now %&gt;</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">於用戶端使用一般的瀏覽器，瀏覽執行的結果如下，顯示現在的日期時間：</P><DIR>
+
+</FONT><FONT FACE="Arial" SIZE=3><P>1998/7/10 11:30:59 AM</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">其中</FONT><FONT SIZE=3>now</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>是</FONT><FONT SIZE=3>VBScript</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的時間函數。</P>
+<P ALIGN="JUSTIFY">有趣嗎？讓我們趕快來看看另外一個</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>例子。</P>
+<P ALIGN="JUSTIFY">這個</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>例子，於用戶端使用瀏覽器，瀏覽執行的結果如下，顯示五個重覆的句子，字體愈來愈大。</P>
+<P ALIGN="JUSTIFY">網站伺服器的</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式碼如下：</P><DIR>
+
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;% for i = 1 to 5 %&gt;</P>
+<P>&lt;FONT SIZE=<I> &lt;% = i %&gt;</I> COLOR=#0000FF&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3>快速掌握</FONT><FONT FACE="Arial" SIZE=3>Internet</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3>技術</P>
+<P>　</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;/FONT&gt;&lt;BR&gt;</P>
+<I><P>&lt;% next %&gt;</P></DIR>
+
+</I></FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">上例使用的是</FONT><FONT SIZE=3>VBScript</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>語言的迴圈指令</FONT><I><FONT SIZE=3>for…next</I></FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，循環</FONT><FONT FACE="華康細圓體,新細明體" LANG="ZH-TW" SIZE=3>5</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>次。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的原始程式碼，不會傳到使用者的瀏覽器，可以保護您寫出來的原始程式碼不會外漏。因此於用戶端使用瀏覽器，觀看到的是一般標準的</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼，您的網站伺服器會自動將</FONT><FONT SIZE=3>Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的程式碼，解譯為標準</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>格式的網頁內容，如下：</P><DIR>
+
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;FONT SIZE=1 COLOR=#0000FF&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3>快速掌握</FONT><FONT FACE="Arial" SIZE=3>Internet</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3>技術</FONT><FONT FACE="Arial" SIZE=3>&lt;/FONT&gt;&lt;BR&gt;</P>
+<P>　</P>
+<P>&lt;FONT SIZE=2 COLOR=#0000FF&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3>快速掌握</FONT><FONT FACE="Arial" SIZE=3>Internet</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3>技術</FONT><FONT FACE="Arial" SIZE=3>&lt;/FONT&gt;&lt;BR&gt;</P>
+<P>　</P>
+<P>&lt;FONT SIZE=3 COLOR=#0000FF&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3>快速掌握</FONT><FONT FACE="Arial" SIZE=3>Internet</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3>技術</FONT><FONT FACE="Arial" SIZE=3>&lt;/FONT&gt;&lt;BR&gt;</P>
+<P>　</P>
+<P>&lt;FONT SIZE=4 COLOR=#0000FF&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3>快速掌握</FONT><FONT FACE="Arial" SIZE=3>Internet</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3>技術</FONT><FONT FACE="Arial" SIZE=3>&lt;/FONT&gt;&lt;BR&gt;</P>
+<P>　</P>
+<P>&lt;FONT SIZE=5 COLOR=#0000FF&gt;</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3>快速掌握</FONT><FONT FACE="Arial" SIZE=3>Internet</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3>技術</FONT><FONT FACE="Arial" SIZE=3>&lt;/FONT&gt;&lt;BR&gt;</P></DIR>
+
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>傳送字串或</FONT><FONT FACE="Arial" SIZE=5>HTML</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>碼到用戶端的瀏覽器</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">Response.Write</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法，是最常用到傳送字串或</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼到瀏覽器的方法。語法如下：</P><DIR>
+
+</FONT><FONT FACE="Arial" SIZE=3><P>Response.Write </FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3>字串</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">以下的例子向使用者打招呼：</P><DIR>
+
+</FONT><I><FONT FACE="Arial" SIZE=3><P>&lt;%</P>
+<P>Response.Write "</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3>歡迎光臨</FONT><FONT FACE="Arial" SIZE=3>"</P>
+<P>%&gt; </P></DIR>
+
+</I></FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">於用戶端使用瀏覽器，瀏覽執行的結果，為</FONT><FONT SIZE=3> </FONT><I><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>歡迎光臨</I>。</P>
+<P ALIGN="JUSTIFY">傳送字串到用戶端的瀏覽器，不一定須要使用</FONT><FONT SIZE=3>Response.Write</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，位於</FONT><FONT SIZE=3>&lt;%...%&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>外的部份將直接傳送字串或</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼到用戶端的瀏覽器，譬如以下的結果與上例相同：</P><DIR>
+
+</FONT><I><FONT FACE="Arial" SIZE=3><P>&lt;% .... %&gt; </P>
+</I></FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3><P>歡迎光臨</P>
+</FONT><I><FONT FACE="Arial" SIZE=3><P>&lt;% ... %&gt;</P></DIR>
+
+</I></FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">使用</FONT><FONT SIZE=3>&lt;% =...%&gt; </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>也將直接傳送字串或</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼到用戶端的瀏覽器，譬如以下的結果也與上例相同：</P><DIR>
+
+</FONT><I><FONT FACE="Arial" SIZE=3><P>&lt;% =”</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3>歡迎光臨</FONT><FONT FACE="Arial" SIZE=3>” %&gt; </P></DIR>
+
+</I></FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>連結到指定的</FONT><FONT FACE="Arial" SIZE=5>URL</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>位址</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">使用</FONT><FONT SIZE=3>Response.Redirect </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法，可以連結到指定的</FONT><FONT SIZE=3>URL</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>位址。語法，如下：</P><DIR>
+
+</FONT><FONT FACE="Arial" SIZE=3><P>Response.Redirect URL </P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">譬如，自動連結到首頁：</P><DIR>
+
+</FONT><I><FONT FACE="Arial" SIZE=3><P>&lt;% Response.Redirect "homepage.asp" %&gt; </P></DIR>
+
+</I></FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">須注意的一點是，若此</FONT><FONT SIZE=3>.asp </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>網頁的內容已經傳送給使用者，再使用</FONT><FONT SIZE=3>Response.Redirect</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，將發生錯誤！</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>#INCLUDE</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>包括其他檔案</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">您可於</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式碼插入另外一個「被包括」的檔案，執行到此處時將先執行此「被包括」的檔案後，再繼續執行下一行的程式碼。使用的是「</FONT><FONT SIZE=3>#INCLUDE</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」的語法，語法如下：</P><DIR>
+
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;!--#INCLUDE VIRTUAL|FILE="filename"--&gt;</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">其中</FONT><FONT SIZE=3>VIRTUAL</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>代表虛擬的檔案位址，</FONT><FONT SIZE=3>FILE</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>代表絕對的檔案位址，如下：</P><DIR>
+
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;!--#INCLUDE VIRTUAL="/booksamp/test.inc"--&gt;</P>
+<I><P>&lt;!--#INCLUDE FILE="test/test.inc"--&gt;</P></DIR>
+
+</I></FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">附加檔案名稱建議使用</FONT><FONT SIZE=3>.inc</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，但是也可以使用任何附加檔案名稱。</P>
+<P ALIGN="JUSTIFY">您可使用</FONT><FONT SIZE=3>FILE</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>和「</FONT><FONT SIZE=3>../ </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」代表上一層的檔案目錄。</P>
+<P ALIGN="JUSTIFY">「</FONT><FONT SIZE=3>#INCLUDE</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」的語法，適用使用於多個網頁共同使用的部份，有點像副程式，供多個</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式碼呼叫使用。</P>
+<P ALIGN="JUSTIFY">讓我們看一個</FONT><FONT SIZE=3>#INCLUDE</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的例子，於用戶端使用瀏覽器，瀏覽</FONT><FONT SIZE=3>basic1.asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>執行的結果，顯示所「被包括」的檔案</FONT><FONT SIZE=3>copyrgt.asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</P>
+<P ALIGN="JUSTIFY">網站伺服器的</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式碼如下：</P><DIR>
+
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;!--#INCLUDE FILE="copyrgt.asp"--&gt;</P></DIR>
+
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">copyrgt.asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>檔案的</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式碼如下，只有幾行：</P><DIR>
+
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;B&gt;</P>
+<P>&lt;FONT SIZE=1 COLOR=BLUE FACE="Verdana, Arial, Helvetica"&gt;</P>
+<P>&amp;copy; 1998 ABC Company  All rights reserved.</P>
+<P>&lt;/FONT&gt;</P>
+<P>&lt;/B&gt;</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">「被包括」的</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>檔案，可以包括任何</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>標記，譬如圖片與超連結。</P>
+<P ALIGN="JUSTIFY">「被包括」的</FONT><FONT SIZE=3>#INCLUDE </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>檔案，也可再包括其他「被包括」的</FONT><FONT SIZE=3>#INCLUDE </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>檔案。</P>
+<P ALIGN="JUSTIFY">好玩嗎？</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>ASP</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>取得表單（</FONT><FONT FACE="Arial" SIZE=5>form</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>）輸入資料的方法</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">將輸入的資料傳送到伺服器的方法，係使用</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>標記</FONT><FONT SIZE=3>&lt;FORM&gt;…&lt;/FORM&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的「表單」（</FONT><FONT SIZE=3>form</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），於用戶端瀏覽器輸入資料，按下「</FONT><FONT SIZE=3>SUBMIT</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」按鈕後，將輸入的資料傳送到伺服器加予處理。由表單（</FONT><FONT SIZE=3>form</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的</FONT><B><FONT SIZE=3>METHOD</B></FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>得知，用戶端瀏覽器可以用下面兩種方法，將輸入的資料傳給網站的伺服器：</FONT><FONT SIZE=3> </P>
+<OL>
+
+<B><P ALIGN="JUSTIFY"><LI>GET</B></FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>：用戶端將資料附加到</FONT><FONT SIZE=3> URL </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>後，格式為「</FONT><FONT SIZE=3>?</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>欄位</FONT><FONT SIZE=3>1=</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>輸入資料</FONT><FONT SIZE=3>1&amp;</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>欄位</FONT><FONT SIZE=3>2=</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>輸入資料</FONT><FONT SIZE=3>2&amp;... </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」，再將它送到伺服器。譬如</FONT><FONT SIZE=3>ACTION</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>設為</FONT><FONT SIZE=3>http://www.abc.com</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，欄位</FONT><FONT SIZE=3>Name</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的輸入資料為</FONT><FONT SIZE=3>Jack</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，欄位</FONT><FONT SIZE=3>Age</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的輸入資料為</FONT><FONT SIZE=3>15</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，則使用</FONT><FONT SIZE=3>GET</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法，傳給網站伺服器資料為</FONT><FONT SIZE=3>http://www.abc.com?Name=Jack&amp;Age=15</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</LI></P>
+</FONT><B><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>POST</B></FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>：用戶端利用</FONT><FONT SIZE=3>HTTP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>訊息資料欄位將資料傳送到伺服器。</LI></P></OL>
+
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>取得表單（</FONT><FONT SIZE=3>form</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）輸入資料的方法，係使用</FONT><FONT SIZE=3>Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>一個內建的「物件」（</FONT><FONT SIZE=3>object</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），叫做</FONT><FONT SIZE=3>Request</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，依據</FONT><FONT SIZE=3>GET</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>POST</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法而異：</P><DIR>
+
+</FONT><B><FONT FACE="Arial" SIZE=3><P>GET</B></FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3>：</P>
+<P>使用「輸入資料</FONT><FONT FACE="Arial" SIZE=3>= <B>Request.QueryString</B>("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3>欄位名稱</FONT><FONT FACE="Arial" SIZE=3>")</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3>」或「</FONT><B><FONT FACE="Arial" SIZE=3>Request.</B> ("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3>欄位名稱</FONT><FONT FACE="Arial" SIZE=3>")</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3>」，將附加於</FONT><FONT FACE="Arial" SIZE=3>URL</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3>後的資料取出，以取得此欄的輸入資料。</P>
+<P>　</P>
+</FONT><B><FONT FACE="Arial" SIZE=3><P>POST</B></FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3>：</P>
+<P>使用「輸入資料</FONT><FONT FACE="Arial" SIZE=3>=<B>Request.Form</B>("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3>欄位名稱</FONT><FONT FACE="Arial" SIZE=3>")</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3>」或「</FONT><B><FONT FACE="Arial" SIZE=3>Request.</B> ("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3>欄位名稱</FONT><FONT FACE="Arial" SIZE=3>")</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3>」，讀取</FONT><FONT FACE="Arial" SIZE=3>HTTP </FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3>訊息資料欄位，以取得此欄的輸入資料。</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">無論</FONT><FONT SIZE=3>GET</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>或</FONT><FONT SIZE=3> POST</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方式，都可以使用「</FONT><B><FONT SIZE=3>Request.</B> ("</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>欄位名稱</FONT><FONT SIZE=3>")</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」取得此欄的輸入資料。</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>Cookies</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>存取用戶端檔案</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">為了預防病毒於</FONT><FONT SIZE=3>Internet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>上到處漫延，</FONT><FONT SIZE=3>WWW</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>禁止於用戶端的硬碟上做讀寫存取檔案的動作。但是使用</FONT><FONT SIZE=3>Cookies</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，可讓您於用戶端的硬碟上儲存一些資訊，譬如當來訪者輸入其姓名等資料時，使用</FONT><FONT SIZE=3>Cookies</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>將之儲存於來訪者用戶端的硬碟上，下次這位來訪者再度瀏覽此網站時，即可讀取此</FONT><FONT SIZE=3>Cookies</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>直接得知來訪者的身份。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>存取讀寫</FONT><FONT SIZE=3>Cookies</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的方式，係使用</FONT><FONT SIZE=3>Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>兩個內建的「物件」（</FONT><FONT SIZE=3>object</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），叫做</FONT><FONT SIZE=3>Response</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>和</FONT><FONT SIZE=3>Request</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，十分簡單，如下：</P><DIR>
+
+</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3><P>寫入</FONT><FONT FACE="Arial" SIZE=3>Cookies</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3>：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>Response.Cookies("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3>待寫入的</FONT><FONT FACE="Arial" SIZE=3>Cookies</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3>名稱</FONT><FONT FACE="Arial" SIZE=3>") = "</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3>待寫入資料</FONT><FONT FACE="Arial" SIZE=3>"</P>
+<P>　</P>
+</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3><P>讀取</FONT><FONT FACE="Arial" SIZE=3>Cookies</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3>：</P>
+<P>讀取資料</FONT><FONT FACE="Arial" SIZE=3> = Request.Cookies("</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3>待讀取的</FONT><FONT FACE="Arial" SIZE=3>Cookies</FONT><FONT FACE="華康中楷體,新細明體" LANG="ZH-TW" SIZE=3>名稱</FONT><FONT FACE="Arial" SIZE=3>")</P></DIR>
+
+</FONT><FONT FACE="Arial" SIZE=5><P>Microsoft Script Debugger</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>所包括的</FONT><FONT SIZE=3>Microsoft Script Debugger</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Script</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>偵錯工具），提供</FONT><FONT SIZE=3>Script</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式的偵錯功能。您可以使用</FONT><FONT SIZE=3> Microsoft Script</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>偵錯工具來進行使用</FONT><FONT SIZE=3>VBScript</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>JScript</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>編寫的</FONT><FONT SIZE=3> Script</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式，以及</FONT><FONT SIZE=3>Java applets</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>beans </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>和</FONT><FONT SIZE=3> ActiveX </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>元件的偵錯工作。</P>
+<P ALIGN="JUSTIFY">有的</FONT><FONT SIZE=3>Script</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式在用戶端瀏覽器執行，有的</FONT><FONT SIZE=3>Script</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式（</FONT><FONT SIZE=3>&lt;%…%&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>中的部份）在伺服器端執行。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">Microsoft Script Debugger</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，可以偵錯用戶端執行的</FONT><FONT SIZE=3>Script </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式，和伺服器端執行</FONT><FONT SIZE=3>Script</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>在用戶端瀏覽器執行的</FONT><FONT SIZE=3>Script</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式碼：於用戶端的瀏覽器當中執行，包括於標準</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼中的</FONT><FONT SIZE=3>VBScript</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>Jscript</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>部份。在瀏覽器載入此</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼，或譬如按下按鈕觸發事件時，將執行此包括</FONT><FONT SIZE=3>Script</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式的</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼。用戶端瀏覽器執行的</FONT><FONT SIZE=3>Script</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式，主要用於</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>表單輸入的基本檢查等。</LI></P>
+<P ALIGN="JUSTIFY"><LI>在伺服器端執行的</FONT><FONT SIZE=3>Script</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式碼：於</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>伺服器端當中執行，包括於</FONT><FONT SIZE=3>.asp </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>檔案（</FONT><FONT SIZE=3>Active Server Page</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）中。先於</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>伺服器執行，執行結果產生標準的</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼，再傳送到用戶端瀏覽器。伺服器端執行的</FONT><FONT SIZE=3>Script</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式，主要用於多個網頁之間的連結，</FONT><FONT SIZE=3> HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>表單輸入的處理，以及存取伺服器資料庫的資料等。</FONT><FONT SIZE=3> </LI></P></UL>
+
+<P ALIGN="JUSTIFY">Microsoft Script Debugger</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>提供以下的除錯功能：</FONT><FONT SIZE=3> </P>
+
+<UL>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY"><LI>設定中斷點</LI></P>
+<P ALIGN="JUSTIFY"><LI>逐步追蹤</FONT><FONT SIZE=3>Script</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式。</LI></P>
+<P ALIGN="JUSTIFY"><LI>設定書籤。</LI></P>
+<P ALIGN="JUSTIFY"><LI>檢視呼叫堆疊。</LI></P>
+<P ALIGN="JUSTIFY"><LI>檢視和更改變數值。</LI></P>
+<P ALIGN="JUSTIFY"><LI>執行</FONT><FONT SIZE=3>Script</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>指令。</LI></P></UL>
+
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>結論</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">趕快採用於</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>網站伺服器執行的</FONT><FONT SIZE=3>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼，將您的網站「</FONT><FONT SIZE=3> asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>化」，變成一個「動態」的網站，以增加互動性，以及享受設計迅速與維護方便的好處。若您仍然使用</FONT><FONT SIZE=3>CGI</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，建議您轉移到</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>來發展。</P>
+<P ALIGN="JUSTIFY">作者準備一個展示</FONT><FONT SIZE=3>IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>功能的網站，提供各種網站網頁的資訊、與設計範例，包括</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>特異功能、網站資料庫設計實例、網路商店、</FONT><FONT SIZE=3>ActiveX</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、推播頻道、動態</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>HTML 99</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>招等，網址如下：</P>
+<P ALIGN="JUSTIFY"></FONT><A HREF="../../index.html"><FONT SIZE=3>http://www.asp.com.tw</FONT></A></P>
+<FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">歡迎上網光臨指教。</P>
+<P ALIGN="JUSTIFY">有關</FONT><FONT SIZE=3>IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的資料，可以參考</FONT><FONT SIZE=3>Windows NT Option Pack</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>產品文件、</FONT><FONT SIZE=3>IIS Resource Kit</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、以及作者的最新著作</FONT><FONT FACE="標楷體" LANG="ZH-TW">「</FONT><FONT SIZE=3>IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>超級網站速成班</FONT><FONT FACE="標楷體" LANG="ZH-TW">」</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</P></FONT></BODY>
+</HTML>

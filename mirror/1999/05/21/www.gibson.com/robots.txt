@@ -1,0 +1,58 @@
+# Gibson Musical Instruments
+# 
+# 	http://www.gibson.com
+# 	ftp://ftp.gibson.com
+# 	mailto:webguys@gibson.com
+# 
+# -----------------------------------------------------------------------
+
+User-agent: *
+Disallow: /cgi-bin            # Keep'em outa our scripts
+Disallow: tmp/
+Disallow: devel/
+Disallow: development/        # Development directories not quite ready for
+                              # prime time.
+                              # be indexed here from outside anyway.
+DISALLOW: /folks/             # Not much needs to be indexed here.
+Disallow: /images             # This has lots of image files we are gradually
+                              # phasing out.
+
+DISALLOW: /info/              # Lots of little files created by our
+                              # Listserver, guestdesk, and statistic programs
+                              # The copyright page seemed to come up way too
+                              # much in search engines.
+
+Disallow: /mall               # These are mostly scripts
+Disallow: /users              # Because this is a corporate site we will not
+                              # index user directories
+
+User-agent: MomSpider
+Disallow: /cgi-bin            # Keep'em outa our scripts
+Disallow: tmp/
+Disallow: devel/
+Disallow: development/        # Development directories not quite ready for
+                              # prime time.
+Disallow: /images             # This has lots of image files we are gradually
+                              # phasing out.
+
+DISALLOW: /info/classified/   # Lots of little files created by our
+DISALLOW: /info/demographics/ # Listserver, guestdesk, and statistic programs
+DISALLOW: /info/guestdesk/
+DISALLOW: /info/listserv/
+DISALLOW: /info/mailfeeder/
+DISALLOW: /info/search/
+DISALLOW: /info/stats/
+DISALLOW: /info/survey/
+
+Disallow: /mall               # These are mostly scripts
+Disallow: /users              # Because this is a corporate site we will not
+                              # index user directories
+
+
+Disallow: /dealer_update      #This page should not show in searches
+
+# -----------------------------------------------------------------------
+# Brought to you by Gibson Guitars and the WebGuys. 
+# Copyright 1997 Gibson Guitar 1818 Elm Hill Pike, Nashville,
+# Tennessee 37210 USA. All rights reserved. 
+

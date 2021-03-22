@@ -1,0 +1,562 @@
+<%Response.Buffer = true%>
+<!--#include file="AD/ADs_API.asp"-->
+<%Source = Request.QueryString("Source")
+'if Session("PlayerID") <> "" and Session("Name")<>"" and Session("Guest")<>""then
+	Page = "Rooms.asp"
+	'Page ="Member.asp"
+'else
+'	Page = "Member.asp"
+'end if
+'---12/11/00--to add number of players in each game------
+'for tawla
+set recset = DBase.GetTablesInfo(48)
+TawlaPlayers = 0
+if recset.RecordCount> 0 then
+	recset.MoveFirst
+	for i = 1 to recset.RecordCount
+		HumanPlayers=0
+		'SeatsNo = 0
+		'PCPlayers=0
+		set URecset = DBase.GetUsersTablesInfo(CInt(RecSet.Fields("ID")),,,,1)
+		HumanPlayers = Urecset.RecordCount
+		URecset.close
+		'if Recset.fields("status") = 1 then
+	'		HumanPlayers = HumanPlayers + 1
+	'	end if
+		'set URecset = DBase.GetUsersTablesInfo(CInt(RecSet.Fields("ID")),,,,2)
+		'PCPlayers = Urecset.RecordCount
+		'SeatsNo = recset.Fields("NumberOfSeats")
+		'if cint(IDleUsers) > SeatsNo then
+		'	IDleUsers = SeatsNo
+		'end if
+		'KomiPlayers =abs( cint(KomiPlayers) + cint(SeatsNo) - cint(IDleUsers)- cint(PCPlayers))
+		TawlaPlayers =abs( cint(TawlaPlayers) + cint(HumanPlayers))
+		'URecset.close
+		recset.MoveNext
+	next
+end if
+recset.close
+'for tarneeb
+set recset = DBase.GetTablesInfo(8)
+TarneebPlayers = 0
+if recset.RecordCount> 0 then
+	recset.MoveFirst
+	for i = 1 to recset.RecordCount
+		HumanPlayers=0
+		'SeatsNo = 0
+		'PCPlayers=0
+		set URecset = DBase.GetUsersTablesInfo(CInt(RecSet.Fields("ID")),,,,1)
+		HumanPlayers = Urecset.RecordCount
+		URecset.close
+		'if Recset.fields("status") = 1 then
+	'		HumanPlayers = HumanPlayers + 1
+	'	end if
+		'set URecset = DBase.GetUsersTablesInfo(CInt(RecSet.Fields("ID")),,,,2)
+		'PCPlayers = Urecset.RecordCount
+		'SeatsNo = recset.Fields("NumberOfSeats")
+		'if cint(IDleUsers) > SeatsNo then
+		'	IDleUsers = SeatsNo
+		'end if
+		'KomiPlayers =abs( cint(KomiPlayers) + cint(SeatsNo) - cint(IDleUsers)- cint(PCPlayers))
+		TarneebPlayers =abs( cint(TarneebPlayers) + cint(HumanPlayers))
+		'URecset.close
+		recset.MoveNext
+	next
+end if
+
+recset.close
+'for Estimation
+set recset = DBase.GetTablesInfo(51)
+EstimationPlayers = 0
+if recset.RecordCount> 0 then
+	recset.MoveFirst
+	for i = 1 to recset.RecordCount
+		HumanPlayers=0
+		'SeatsNo = 0
+		'PCPlayers=0
+		set URecset = DBase.GetUsersTablesInfo(CInt(RecSet.Fields("ID")),,,,1)
+		HumanPlayers = Urecset.RecordCount
+		URecset.close
+		'if Recset.fields("status") = 1 then
+	'		HumanPlayers = HumanPlayers + 1
+	'	end if
+		'set URecset = DBase.GetUsersTablesInfo(CInt(RecSet.Fields("ID")),,,,2)
+		'PCPlayers = Urecset.RecordCount
+		'SeatsNo = recset.Fields("NumberOfSeats")
+		'if cint(IDleUsers) > SeatsNo then
+		'	IDleUsers = SeatsNo
+		'end if
+		'KomiPlayers =abs( cint(KomiPlayers) + cint(SeatsNo) - cint(IDleUsers)- cint(PCPlayers))
+		EstimationPlayers =abs( cint(EstimationPlayers) + cint(HumanPlayers))
+		'URecset.close
+		recset.MoveNext
+	next
+end if
+
+recset.close
+'for komi
+set recset = DBase.GetTablesInfo(54)
+KomiPlayers = 0
+if recset.RecordCount> 0 then
+	recset.MoveFirst
+	for i = 1 to recset.RecordCount
+		HumanPlayers=0
+		'SeatsNo = 0
+		'PCPlayers=0
+		set URecset = DBase.GetUsersTablesInfo(CInt(RecSet.Fields("ID")),,,,1)
+		HumanPlayers = Urecset.RecordCount
+		URecset.close
+		'if Recset.fields("status") = 1 then
+	'		HumanPlayers = HumanPlayers + 1
+	'	end if
+		'set URecset = DBase.GetUsersTablesInfo(CInt(RecSet.Fields("ID")),,,,2)
+		'PCPlayers = Urecset.RecordCount
+		'SeatsNo = recset.Fields("NumberOfSeats")
+		'if cint(IDleUsers) > SeatsNo then
+		'	IDleUsers = SeatsNo
+		'end if
+		'KomiPlayers =abs( cint(KomiPlayers) + cint(SeatsNo) - cint(IDleUsers)- cint(PCPlayers))
+		KomiPlayers =abs( cint(KomiPlayers) + cint(HumanPlayers))
+		'URecset.close
+		recset.MoveNext
+	next
+end if
+recset.close
+set recset = nothing
+set URecset = nothing
+
+%>
+
+<%
+' ***************** to Write UsersLog File ****************************
+ua = Request.ServerVariables("HTTP_USER_AGENT")
+os = Request.ServerVariables("HTTP_UA_OS")
+If Instr(ua, "MSIE") Then
+	If Instr(ua, "MSIE 5.") Then
+		Browser = "Microsoft Internet Explorer 5.x"
+	Elseif Instr(ua, "MSIE 4.") Then
+		Browser = "Microsoft Internet Explorer 4.x"
+	Elseif Instr(ua, "MSIE 3.") Then
+		Browser = "Microsoft Internet Explorer 3.x"
+		If Instr(ua, "MSIE 3.02") Then
+			Browser = "Microsoft Internet Explorer 3.02"
+		End If
+	Else
+		Browser = "Microsoft Internet Explorer"
+	End If
+ElseIf Instr(ua, "Mozilla") and Instr(ua, "compatible") = 0 Then
+	If Instr(ua, "Mozilla/4") Then
+		Browser = "Netscape Navigator 4.x"
+	Elseif Instr(ua, "Mozilla/3") Then
+		Browser = "Netscape Navigator 3.x"
+	Else
+		Browser = "Netscape Navigator"
+	End If
+End If
+
+If Instr(ua, "Windows 95") or Instr(ua, "Win95") Then
+	System = "Windows 95"
+Elseif Instr(ua, "Windows 98") or Instr(ua, "Win98") Then
+	System = "Windows 98"
+Elseif Instr(ua, "Windows 3.1") or Instr(os, "Win16") Then
+	System = "Windows 3.x/Windows NT 3.x"
+Elseif Instr(ua, "NT") or Instr(oa, "NT") Then
+	System = "Windows NT"
+Elseif Instr(ua, "Mac") Then
+	System = "Mac"
+	If Instr(ua, "PowerPC") or Instr(ua, "PPC") Then
+		System = "Mac PPC"
+	Elseif Instr(ua, "68000") or Instr(ua, "68K") Then
+		System = "Mac 68K"
+	End If
+Elseif Instr(ua, "X11") Then
+	System = "UNIX"
+End If
+TheIP = Request.ServerVariables("Remote_addr")
+  
+   'Browser
+   'System
+   'TheIP
+  
+  	set logfilesys = createobject("Scripting.FileSystemObject") 
+	set logfile = logfilesys.OpenTextFile("c:\inetpub\el3abdemo\el3ablog\UsersLog.txt",8,true)
+	logfile.Write("Date:, " & Date & ", Time:, " & Time & ", IP: ," & TheIP & ", Page:, Default, " & " ,System:, " & System & ", Browser:, " & Browser & vbCrLf)
+	logfile.close 	
+	
+' **********************************************************************
+%>
+<head>
+<TITLE>El3ab Play Free traditional Middle Eastern Games on-line interact and chat with Arab players everywhere</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META http-equiv=pragma content=no-cache>
+<meta name="keywords" content="middle eastern games,Free Online Multiplayer Interactive Games,most popular Arabic games,tawla,tarneeb,regional card games,solitaire,estimation,komi,checkers,board games,card games,Play Online Games,online gaming,world games,arabian games,arabic Board Games,Backgammon,Chess,Free Online Games,Online Java Games,Java Games,Kids Online Games,Online Games Play,Online Gaming League,Free Games,Free Card Games,Board & Card Games,Interactive WWW Games,Interactive Games on the Web,safe family friends,play free games online,play on the Web,GAMES,Go-moku,Euchre,Hearts,Spades,dice,Webgames,Activities & Quizzes,Assaba-al'-Komi,Ashush,52 card pack,Scoring,seven of diamonds">
+<meta name="description" content="Arabic and English Free traditional Middle Eastern Games on-line interact with Arab players everywhere play your most popular Arabic games: Tarneeb, Basra, Komi, Konkan, Estimation, Domino players can meet, chat and play Domino, Tarneeb, and Tawla options for each game to insure that everyone can play the way they enjoy it most locally practice mode with robot players">
+<meta name="abstract" content="Free traditional Middle Eastern Games on-line interact with Arab players everywhere and chat too">
+<meta http-equiv="Content-Language" content="EN-US">
+<meta name="distribution" content="Global">
+<meta name="revisit-after" content="5 days">
+<meta name="copyright" content="ITWorx.com, El3ab.com 200-2001">
+<meta name="robots" content="FOLLOW,INDEX">
+<META content=VBScript name=VI60_defaultClientScript>
+
+<script language="JavaScript">
+<!--
+	//hide contents from old browser
+	browserName=navigator.appName;
+	browserVer=parseInt (navigator.appVersion);
+		if (browserName == "Netscape" || browserVer >=3) 
+			version= "n3";
+        else 
+        {
+	        version="n" 
+	    }
+        if (version == "n3")
+		{
+	        l1_off=new Image;
+	        l1_off.src="english/images/1-of.gif";
+	        l1_on=new Image;
+	        l1_on.src="english/images/1-on.gif"
+	        
+	        l2_off=new Image;
+	        l2_off.src="english/images/2-of.gif";
+	        l2_on=new Image;
+	        l2_on.src="english/images/2-on.gif"
+	        
+	        l3_off=new Image;
+	        l3_off.src="english/images/3-of.gif";
+	        l3_on=new Image;
+	        l3_on.src="english/images/3-on.gif"
+	        
+	        l4_off=new Image;
+	        l4_off.src="english/images/4-of.gif";
+	        l4_on=new Image;
+	        l4_on.src="english/images/4-on.gif"
+	        
+	        l5_off=new Image;
+	        l5_off.src="english/images/sign-of.gif";
+	        l5_on=new Image;
+	        l5_on.src="english/images/sign-on.gif"
+	        
+	        l6_off=new Image;
+	        l6_off.src="english/images/signin-of.gif";
+	        l6_on=new Image;
+	        l6_on.src="english/images/signin-on.gif"
+	        
+	        l7_off=new Image;
+	        l7_off.src="english/images/ar-big-of.gif";
+	        l7_on=new Image;
+	        l7_on.src="english/images/ar-big-on.gif"
+		}
+
+function img_act(imgName) 
+	{
+		if (version == "n3")
+		{
+	        imgon=eval(imgName+"_on.src");
+	         
+		    if (document.all) document.all[imgName].src=imgon;
+		    else if (document.images) document.images[imgName].src=imgon;
+	        
+		}       
+	}
+
+	function img_inact(imgName) 
+	{
+		if (version == "n3")
+		{
+			imgoff=eval(imgName+"_off.src");
+	        if(document.all) document.all[imgName].src=imgoff;
+	        else if (document.images) document.images[imgName].src=imgoff;
+		}
+	}
+// end hiding contents from old browser 
+// --></script>
+
+<script language="JavaScript">
+<!--
+
+function MM_findObj(n, d) { //v3.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document); return x;
+}
+
+function MM_validateForm() { //v3.0
+  var i,p,q,nm,test,num,min,max,errors='',args=MM_validateForm.arguments;
+  for (i=0; i<(args.length-2); i+=3) 
+   {test=args[i+2];
+    val=MM_findObj(args[i]);
+    if (val) 
+     {nm=val.name; 
+      if ((val=val.value)!="") 
+      {if (test.indexOf('isEmail')!=-1) 
+		{p=val.indexOf('@');
+		 if (p<1 || p==(val.length-1)) errors+='- '+nm+' must contain an e-mail address.\n';
+		 }
+		else if (test!='R') 
+			  {num = parseFloat(val);
+			   if (val!=''+num) errors+='- '+nm+' must contain a number.\n';
+			   if (test.indexOf('inRange') != -1) 
+			      {p=test.indexOf(':');
+			       min=test.substring(8,p); max=test.substring(p+1);
+			       if (num<min || max<num) errors+='- '+nm+' must contain a number between '+min+' and '+max+'.\n';
+			       }
+	          }// test!=R
+	  }//val=val.value
+	  else if (test.charAt(0) == 'R') errors += '- '+nm+' is required.\n'; 
+	  }//val
+  } //for loop
+  
+	//check name
+	uname = MM_findObj(args[0]).value;
+	re = new RegExp("(\\W)","i");
+	valid = re.test(uname);
+	if (valid)
+	 {errors +='- user name should only contain letters (a-z,A-Z), numbers (0-9), the underscore (_)\n'
+	  }
+	
+	//checking Password
+	pass = MM_findObj(args[3]).value;
+	re = new RegExp("(\\W)","i");
+	valid = re.test(pass);
+	if (valid)
+	 {errors +='- password should only contain letters (a-z,A-Z), numbers (0-9), the underscore (_)\n'
+	  }
+  
+  
+   if (errors) alert('The following error(s) occurred:\n'+errors);
+   document.forms[0].UserName.focus();
+   document.MM_returnValue = (errors == '');
+}// end function
+
+
+//-->
+</script>
+
+</head>
+
+
+<body bgcolor="#26bf00" onLoad="javascript:document.forms[0].UserName.focus();">
+<%ReqPage = Request.ServerVariables("SCRIPT_NAME")
+Session("requestedpage")= ReqPage%>
+
+
+
+<div align="center">
+ <center>
+  <table border="0" width="504">
+  	<tr>
+	  <td colspan="2" align="middle">
+	    <p align="center">
+<!--	    <a href="http://www.el3ab.com/register" target="register">
+	    <IMG align=right border=0 height=60 src="english/images/banner.gif" width=468 id=IMG7></a>
+-->
+
+<%
+dim AD_ID
+AD_ID = Display_AD()
+if AD_ID <> "-1" then Impressions_Update AD_ID
+%>
+
+
+        </p></td>
+	</tr>
+   
+    <tr>
+      <td valign="center" align="left">
+        <IMG border=0 id=IMG4 src="english/images/logo.gif"><br>
+        <IMG border=0 id=IMG1 src="english/images/beta.gif"><br>
+        <IMG border=0 src="english/images/text.gif"></td>
+      <td valign="center" align="left">
+      
+      <form action="english/CheckMember.asp?RoomID=<%=RoomID%>" method="post" id="form1" name="form1">
+		<div align="left">
+      
+			    <%'if Session("Online")= 1 then
+				if cint(Online) = 1 or cint(Online) = 2 then
+					Session("Online") = 0 %>
+					<p align="center"><strong><font face="Arial" color="navy">User is online right now,</font></strong><font face="Arial" color="navy"><strong>Please try again</strong></font>
+				
+			         
+				<%'elseif Session("Online")= -1 then
+				elseif cint(Online) = -1 then
+					Session("Online") = 0 %>
+					<p align="center"><strong><font face="Arial" color="navy">Invalid User Name or Password,</font></strong><font face="Arial" color="navy"><strong>Please try again</strong></font></p>
+				<%end if%>
+            <table border="0" cellspacing="3" cellpadding="2">
+              <tr>
+                <td align="right"><IMG border=0 height=9 id=IMG3 src="english/images/user.gif" width=59 ></td>
+                <td align="middle"><input name="UserName" size="18" maxlength=18></td>
+              </tr>
+   
+   			  <tr>
+                <td align="right"><IMG border=0 height=10 src="english/images/pass.gif" width=59></td>
+                <td align="middle"><input type=password name="Password" size="18" maxlength=18></td>
+              </tr>
+     
+			  <tr>
+                <td></td>
+                <td align="middle">								                  
+                    <input type="image" name="javascript:document.forms[0].submit();" border="0" id="l6" 
+                    src="english/images/signin-of.gif" width="90" onclick="MM_validateForm('UserName','','R','Password','','R');return document.MM_returnValue" 
+                    onmouseout="img_inact('l6')" onmouseover="img_act('l6')">                                       					
+					</td>
+              </tr>
+              
+              <tr>
+                <td></td>
+                <td align="middle">
+					<A href="english/Subscribe.asp?RoomID=<%=RoomID%>">
+    				<IMG border=0 height=27 name=l5 src="english/images/new.gif" width=90></A></td>
+              </tr>
+              
+             
+              <tr>
+                <td></td>
+          
+                <td align="middle">
+                  <font face="Verdana" size="1">
+                	<A href="english/forgotpassword.asp?RoomID=<%=RoomID%>">Forgot your password</A></font></td>
+              </tr>
+              
+              <tr>
+                <td></td>
+                <td align="middle">
+                  <font face="Verdana" size="1">
+                <A href="english/FirstTimeHere.htm">First time here?
+                </A></font></td>
+              
+              </tr>
+              
+              <tr>
+                <td></td>
+                <td align="middle">
+                <A href="english/telfriendform.asp" target="tellfriend">
+                <IMG border=0 id=IMG2 src="english/images/recommend.gif"></A></td>
+              </tr>
+              
+            </table>
+          </div>
+        </form>
+     <CENTER></CENTER>
+     <table border="0" cellspacing="1" cellpadding="0" bordercolorlight="#039902" bordercolordark="#02cc02">
+        <center>
+        <tr>
+          <td nowrap align="middle" valign="bottom">
+			<%if Session ("Name")= "" or Source="logout" then%>
+				<A href="english/<%=Page%>?GameID=3" onmouseout="img_inact('l1')" onmouseover="img_act('l1')">
+			<%else%>
+				<A href="english/Tables.asp?RoomID=48" onmouseout="img_inact('l1')" onmouseover="img_act('l1')">
+			<%end if%>
+					<IMG border=0 name=l1 src="english/images/1-of.gif"></A></td>
+					 
+					 
+		  <td nowrap align="middle" valign="bottom">
+			<%if Session ("Name")= "" or Source="logout" then%>
+					<A href="english/<%=Page%>?GameID=2" onmouseout="img_inact('l2')" onmouseover="img_act('l2')">
+			<%else%>
+					<A href="english/Tables.asp?RoomID=8" onmouseout="img_inact('l2')" onmouseover="img_act('l2')">
+			<%end if%>
+			<IMG border=0 name=l2 src="english/images/2-of.gif"></A></td>
+
+		  <td nowrap align="middle" valign="bottom"> 
+			<%if Session ("Name")= "" or Source="logout" then%>
+					<A href="english/<%=Page%>?GameID=5" onmouseout="img_inact('l3')" onmouseover="img_act('l3')">
+			<%else%>
+					<A href="english/Tables.asp?RoomID=51" onmouseout="img_inact('l3')" onmouseover="img_act('l3')">
+			<%end if%>
+			<IMG border=0 name=l3 src="english/images/3-of.gif"></A></td>
+					 
+		  <td nowrap align="middle" valign="bottom">
+			<%if Session ("Name")= "" or Source="logout" then%>
+					<A href="english/<%=Page%>?GameID=4" onmouseout="img_inact('l4')" onmouseover="img_act('l4')">
+			<%else%>
+					<A href="english/Tables.asp?RoomID=54" onmouseout="img_inact('l4')" onmouseover="img_act('l4')" target=_top>
+			<%end if%>
+					<IMG border=0 name=l4 src="english/images/4-of.gif"></A></td>
+		</tr>
+
+			<SCRIPT LANGUAGE=JavaScript>
+
+var ShockMode = 0;
+if (navigator.mimeTypes && navigator.mimeTypes["application/x-director"] && navigator.mimeTypes["application/x-director"].enabledPlugin) {
+	if (navigator.plugins && navigator.plugins["Shockwave for Director"] && (versionIndex = navigator.plugins["Shockwave for Director"].description.indexOf(".")) != - 1) {
+		var versionString = navigator.plugins["Shockwave for Director"].description.substring(versionIndex-1, versionIndex);
+		versionIndex = parseInt( versionString );
+		if ( versionIndex >= 8 )
+			ShockMode = 1;
+	}
+}
+</Script>
+<Script language=VBScript>
+  on error resume next
+   ShockMode = IsObject(CreateObject("SWCtl.SWCtl.8")) 
+</script>
+
+<SCRIPT LANGUAGE=JavaScript>
+if ( ShockMode ) {
+    document.write('<tr><TD  colspan=4>')
+	document.write('<OBJECT classid="clsid:166B1BCA-3F9C-11CF-8075-444553540000"');
+	document.write(' codebase="http://download.macromedia.com/pub/shockwave/cabs/director/sw.cab#version=8,0,0,0"');
+	document.write(' ID=PlayerCounter WIDTH=243 HEIGHT=46>');
+	document.write('<PARAM NAME=src VALUE="PlayerCounter.dcr">');
+	document.write('<PARAM NAME=swStretchStyle VALUE=none>');
+    document.write('<PARAM NAME="sw1" VALUE="e">');
+	document.write('<PARAM NAME="sw2" VALUE="<%=Session("ServerIP")%>">');
+    document.write('<PARAM NAME="sw3" VALUE="<%=Session("UserCounter")%>">');
+	document.write('<PARAM NAME=swRemote VALUE="');
+	document.write("swSaveEnabled='true' swVolume='true' swRestart='true' swPausePlay='true' swFastForward='true' swContextMenu='false' ");
+	document.write('">\n');
+	document.write('<EMBED SRC="PlayerCounter.dcr"');
+	document.write(' bgColor=#00AA00  WIDTH=243 HEIGHT=46 swStretchStyle=none ');
+	document.write('swRemote="');
+	document.write("swSaveEnabled='true' swVolume='true' swRestart='true' swPausePlay='true' swFastForward='true' swContextMenu='true' ");
+	document.write('"');
+	document.write(' TYPE="application/x-director" PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveDirector">');
+	document.write('</EMBED>');
+	document.write('</OBJECT>');
+	document.write('</TD><TR>')
+}
+ else if (!(navigator.appName && navigator.appName.indexOf("Netscape")>=0 && navigator.appVersion.indexOf("2.")>=0))
+{			
+	document.write('<TR>')
+	document.write('			<td nowrap align="left" valign="bottom">');
+	document.write('		<p align="center"><b><font color="#ff0000" face="Tahoma" size="2"><%=TawlaPlayers%><br>');
+	document.write('			</font></b><font color="#ff0000"><IMG border=0 height=24 src="english/images/player.gif" width=35></font></p></td>');
+	document.write('			<td nowrap align="left" valign="bottom">');
+	document.write('			<p align="center"><b><font color="#ff0000" face="Tahoma" size="2"><%=TarneebPlayers%><br>');
+	document.write('			</font></b><font color="#ff0000"><IMG border=0 height=24 src="english/images/player.gif" width=35></font></p></td>');
+
+	document.write('		<td nowrap align="left" valign="bottom">');
+	document.write('		<p align="center"><b><font color="#ff0000" face="Tahoma" size="2"><%=EstimationPlayers%><br>');
+	document.write('			</font></b><font color="#ff0000"><IMG border=0 height=24 src="english/images/player.gif" width=35></font></p></td>');
+
+	document.write('		<td nowrap align="left" valign="bottom">');
+	document.write('		<p align="center"><b><font color="#ff0000" face="Tahoma" size="2"><%=KomiPlayers%><br>');
+	document.write('			</font></b><font color="#ff0000"><IMG border=0 height=24 id=IMG5 src="english/images/player.gif" width=35 ></font></p></td>');
+	document.write('</TR>')
+}
+
+</SCRIPT>
+        
+        </table></center></A></td>
+        
+        
+        <td  align=middle valign=top>
+		<p align="center"><A href="Arabic/default.asp" onmouseout="img_inact('l7')" onmouseover="img_act('l7')">
+		<IMG border=0 name="l7" src="english/images/ar-big-of.gif"></A>
+		</p></td></tr></table>
+</div>	
+                
+            
+<p align="center"><font face="Verdana" size="1">Copyright © 2000 <A href="mailto:el3ab@el3ab.com">el3ab.com</A>.
+All Rights Reserved.</font></p>
+
+<a href="http://www.itworx.com/" target="itworx">
+<p align="center"><IMG  border=0 id=IMG6 src ="english\images\EngByITWorx.gif"></p></a>
+
+</CENTER>
+
+</body>
+</HTML>

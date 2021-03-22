@@ -1,0 +1,198 @@
+<html>
+<head>
+<title>::[m O s]:: - Zor Ka Jhatka</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#000000" text="#000000" link="#000000" vlink="#000000" alink="#000000">
+<script language="Javascript1.2">
+// Bubbles - Copyright 1997-2000 mOs 
+// All Rights Reserved.
+var isNS = (navigator.appName == "Netscape");
+layerRef = (isNS) ? "document" : "document.all";
+styleRef = (isNS) ? "" : ".style";
+var queue = new Array();
+var NUM_OF_TRAIL_PARTS = 5
+for (x=1; x < 6; x++) { ///////////////Image Preload
+eval("trailSpriteFrame" + x + " = new Image(28,36);");
+eval("trailSpriteFrame" + x + ".src = 'trailgif" + x + ".gif';");
+}
+////////////////////////////////////////////////
+function trailSpriteObj(anID) {
+this.trailSpriteID = "trailSprite" + anID; //as before 
+this.imgRef = "trailSprite" + anID + "img"; //reference to the sprites image name
+this.currentFrame = 1; //the varible for looking after the frame
+this.animateTrailSprite = animateTrailSprite; //declare the objects method cycle
+}
+function animateTrailSprite() {
+if (this.currentFrame <6 ) {//if there are animation frames left, the change sprites the current frame
+if (isNS) { //Detect the browser and perform coresponding image switch
+eval("document." + this.trailSpriteID +".document['"+ this.imgRef + "'].src=trailSpriteFrame" + this.currentFrame + ".src");
+} else {
+eval("document['" + this.imgRef + "'].src=trailSpriteFrame" + this.currentFrame + ".src");
+}
+this.currentFrame ++; //and increase the objects current frame 
+} else { //the current frame has reached its limit so hide the sprite
+eval(layerRef + '.' + this.trailSpriteID +styleRef + '.visibility = "hidden"');
+}
+}
+/////////////////////////////////////////////////////////////////
+function processAnim() {
+for(x=0; x < NUM_OF_TRAIL_PARTS; x++)
+queue[x].animateTrailSprite();
+}
+function processMouse(e) {
+currentObj = shuffleQueue();
+if (isNS) {
+eval("document." + currentObj + ".left = e.pageX - 10 ;");
+eval("document." + currentObj + ".top = e.pageY + 10;");
+} else {
+eval("document.all." + currentObj + ".style.pixelLeft = event.clientX + document.body.scrollLeft - 10 ;");
+eval("document.all." + currentObj + ".style.pixelTop = event.clientY + document.body.scrollTop + 10;");
+}
+}
+function shuffleQueue() {
+lastItemPos = queue.length - 1;
+lastItem = queue[lastItemPos];
+for (i = lastItemPos; i>0; i--) 
+queue[i] = queue[i-1];
+queue[0] = lastItem;
+queue[0].currentFrame = 1;//reset the objects frame number & make the sprite visible again
+eval(layerRef + '.' + queue[0].trailSpriteID +styleRef + '.visibility = "visible"');
+return queue[0].trailSpriteID;
+}
+function init() {
+for(x=0; x<NUM_OF_TRAIL_PARTS; x++) //fill array with trail objects
+queue[x] = new trailSpriteObj(x+1) ;
+if (isNS) { document.captureEvents(Event.MOUSEMOVE); }
+document.onmousemove = processMouse;
+setInterval("processAnim();",25);
+}
+window.onload = init;
+</script>
+<script language="JScript">
+<!-- hide from JavaScript-challenged browsers
+// initialize the value of "browser"
+var browser = "oldAndInTheWay";
+var bName = navigator.appName;
+var bVersion = parseInt(navigator.appVersion);
+var location = document.location;
+
+
+
+var title = document.title;
+// check for Netscape
+if (bName == "Netscape") {
+browser = "ns" + bVersion;
+} else {
+// check for MSIE
+if (bName == "Microsoft Internet Explorer") {
+if (bVersion >= 4) {
+browser = "ie" + bVersion;
+} else {
+browser = "ie3";
+}
+}
+}
+function writeHref(status){
+if(status == "open"){
+if ((bName == "Microsoft Internet Explorer")&& (bVersion >= 4)){
+var mystring = "<b><a href=\"javascript:window.external.AddFavorite";
+mystring += "('"+location+"','"+title+"')\"";
+mystring += " onmouseover=\"status=\'\&\#183\;Bookmark this page\&\#183\;\'\"\">";
+document.write(mystring);
+}
+}
+else{
+if ((bName == "Microsoft Internet Explorer")&& (bVersion >= 4)){
+document.write("</a></b>");
+}
+}
+}
+function writeString(){
+if ((bName == "Microsoft Internet Explorer")&& (bVersion >= 4)){
+document.write("Bookmark this page");
+}
+}
+// done hiding-->
+</script>
+<div id="trailSprite1" style="position: absolute; height:10px; width:10px;z-index: 100">
+<dd><img src="blanktrail.gif" height="10" width="10" border="0" name="trailSprite1img"> </dd>
+</div><div id="trailSprite2"
+style="position: absolute; height:10px; width:10px;z-index: 10">
+<dd><img src="blanktrail.gif" height="10" width="10" border="0" name="trailSprite2img"> </dd>
+</div><div id="trailSprite3"
+style="position: absolute; height:10px; width:10px;z-index: 10">
+<dd><img src="blanktrail.gif" height="10" width="10" border="0" name="trailSprite3img"> </dd>
+</div><div id="trailSprite4"
+style="position: absolute; height:10px; width:10px;z-index: 10">
+<dd><img src="blanktrail.gif" height="10" width="10" border="0" name="trailSprite4img"> </dd>
+</div><div id="trailSprite5"
+style="position: absolute; height:10px; width:10px;z-index: 10">
+<dd><img src="blanktrail.gif" height="10" width="10" border="0" name="trailSprite5img"> </dd>
+<div align="left"></div></div>
+<table width="83%" border="0" cellspacing="2" cellpadding="2" align="center" bgcolor="#999999" name="main">
+  <tr>
+    <td>
+      <div align="center"> 
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">: : [ m 
+          O s ] : :<br>
+          This defacement brought to you by <br>
+          &quot;<font color="#660000">technically-brilliant-design-geniuses-marketing-savvy-intellectuals-used-to-talking-from-a-centralized-position-in-their-posterior</font>&quot;.</font></p>
+        <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&lt;Extract_From_The_AMS_Page&gt;<br>
+          </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" color="#660000">You 
+          know and we know it - building useful web sites requires some pretty 
+          remarkable skills. To do it, you need to balance technical brilliance, 
+          design genius, and marketing savvy.</font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+          </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&lt;/Extract_From_The_AMS_Page&gt;</font></p>
+        <p align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Forgot 
+          security, didn't we? &lt;G&gt;</font></p>
+        <p align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Ok, 
+          now we are supposed to highlight the 'butt'(?) genius of the animals 
+          called the Hindus, but do we really need to?<br>
+          <br>
+          The answer?<br>
+          <br>
+          YES DAMMIT!@<br>
+          <br>
+          The world needs to know (as if!) !@#$!<br>
+          <br>
+          Bah!, lets talk about ONE Indian... Jaswanth 'i-love-to-suck-my-own-cock' 
+          Singh. The faggot, most of the time, is busy misguiding the world and 
+          the already delusioned Indian public about what actually happened in 
+          Kargil i.e. when he is not busy doing what he does best (see earlier 
+          comment).<br>
+          <br>
+          Bah, forget it.. let the faggots have their fun, at least while they 
+          are celeberating, none of them is dying from Pakistani bullets. &lt;G&gt;<br>
+          <br>
+          So, how do you guys like the cool trail etc? Nice eh? Yes! we were bored, 
+          and Yes.. we love GlitchX :&gt;<br>
+          <br>
+          Oh, we almost forgot.. a special message to the SysAdmin...<br>
+          </font></p>
+        <p align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">'<font color="#660000">Doodh 
+          nahin piyo gey tau aisa hi hooga!</font>'<br>
+          </font></p>
+        <p align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">mOs 
+          art archived <a href="http://www.fuckindia.org/">here</a>.</font></p>
+        <p align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="mailto:root@fuckindia.org?subject=AMS.CO.IN%20can%20I%20have%20your%20babies??%20please?">Media 
+          Contact</a></font></p>
+        <p align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Members 
+          : shahmir, evilroot, Sl|der, paulski, qrs, teddy, afkdemon, angelz & 
+          miller.</font></p>
+        <p align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Greets 
+          : XORG, <a href="http://www.etc-crew.org/">etC!</a>, GForce, Makaveli 
+          Crew, <a href="http://sr2.xoom.com/doctornuker/">PHC</a>, b1nary outlaws, 
+          [<a href="http://www.hackunlimited.com/">HUC</a>], mirinda, macwizard, 
+          aekpani, Ian Hopper, munni pinky chinky dinky and kinky, sharon stone, 
+          the Mujahideen, and all the people supporting the Kashmiri cause !</font></p>
+        <p align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">:: 
+          [ mOs ] :: - Zor Ka Jhatka, Dheray Se Lagay </font></p>
+        </div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

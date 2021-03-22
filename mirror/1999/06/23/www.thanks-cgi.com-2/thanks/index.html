@@ -1,0 +1,44 @@
+<html><head><title>Login</title></head>
+<body bgcolor="3366aa" background=../images/bluebk.gif text=000000 link=yellow alink=red vlink=lime>
+
+<center>
+
+<table border=0 width=640>
+<tr><td align=center valign=top>
+<script Language='JavaScript'>
+var now = new Date();
+var hours = now.getHours();
+var minutes = now.getMinutes();
+var seconds = now.getSeconds();
+timestr=""+hours+minutes+seconds;
+document.write('<a href=http://www.thanks-cgi.com/cgi-bin/banker/banker_click.cgi?'+timestr+' target=new><img src=http://www.thanks-cgi.com/cgi-bin/banker/banker_show.cgi?'+timestr+' border=0></a>');
+</script><hr>
+
+<font face=arial><h1>Free Demo Login</h1></font>
+<table border=0>
+<form method=POST action="http://www.thanks-cgi.com/cgi-bin/thanks/thanks.cgi?job=login" target="_top">
+<tr><td>NAME:</td><td><input type=text name="username" size=20></td></tr>
+<tr><td>SEX:</td><td>
+<input type=radio name="usersex" value="Boy">BOY
+<input type=radio name="usersex" value="Girl">GIRL
+</td></tr>
+<tr><td>ID:</td><td><input type=text name="userid" size=20></td></tr>
+<tr><td>P/W:</td><td><input type=password name="userpassword" size=20></td></tr>
+<tr><td colspan=2 align=center><input type=submit value="Go Chat"><input type=reset value="Clear"></td></tr>
+</form>
+</table>
+
+Level 2 ID=super2 Password=123456<br>
+Level 3 ID=super3 Password=123456
+<br><hr>
+
+<font size=3 face=arial color=#ffffff>
+<b>
+<a href="../freechat.html">DETAIL</a>
+<font color=white>|</font>
+<a href="../index.html">BACK TO MAIN PAGE</a>
+
+</b></font>
+</td></tr></table>
+</body>
+</html>

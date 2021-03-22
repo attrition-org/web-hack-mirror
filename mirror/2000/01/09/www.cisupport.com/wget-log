@@ -1,0 +1,33 @@
+--22:23:18--  http://www.cisupport.com:80/
+           => `www.cisupport.com/index.html'
+Connecting to www.cisupport.com:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 425 [text/html]
+
+    0K ->                                                        [100%]
+
+22:23:40 (307.75 B/s) - `www.cisupport.com/index.html' saved [425/425]
+
+Loading robots.txt; please ignore errors.
+--22:23:40--  http://www.cisupport.com:80/robots.txt
+           => `www.cisupport.com/robots.txt'
+Connecting to www.cisupport.com:80... connected!
+HTTP request sent, awaiting response... 404 Not Found
+22:24:19 ERROR 404: Not Found.
+
+--22:24:19--  http://www.cisupport.com:80/blackguy.jpg
+           => `www.cisupport.com/blackguy.jpg'
+Connecting to www.cisupport.com:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 71,887 [image/jpeg]
+
+    0K -> .......... .......... .......... .......... .......... [ 71%]
+   50K -> .......... ..........                                  [100%]
+
+22:24:41 (3.74 KB/s) - `www.cisupport.com/blackguy.jpg' saved [71887/71887]
+
+Converting www.cisupport.com/index.html... done.
+
+FINISHED --22:24:41--
+Downloaded: 72,312 bytes in 2 files
+Converting www.cisupport.com/index.html... done.

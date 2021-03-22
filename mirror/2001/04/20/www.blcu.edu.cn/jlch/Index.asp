@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>北语国际合作与交流处</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--A.1	{ font-size:9pt;color:#003366 ;text-decoration:none} 
+	A.1:hover	{color:#003366;text-decoration:underline}
+    A.2	{ font-size:9pt;color:#663300 ;text-decoration:none}
+    A.2:hover	{color:#663300;text-decoration:underline}
+    A.3	{ font-size:9pt;color:#003366;text-decoration:none}
+    A.3:hover	{color:#003366;text-decoration:underline}
+    A.4	{ font-size:9pt;color:#000000;text-decoration:none} 
+	A.4:hover	{color:#990000;text-decoration:none}-->
+</style>
+<script language="JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+// -->
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<div id="Layer3" style="position:absolute; left:135px; top:56px; width:549px; height:31px; z-index:2"> 
+  <table width="112%" border="0" height="23">
+    <tr> 
+      <td height="13" width="14%"> 
+        <div align="left"><font color="#FF3300" size="2">机构介绍</font></div>
+      </td>
+      <td height="13" width="19%"> 
+        <div align="left"><font size="2"><a class="1" target="_self" href="InterCoop/Main.asp"><font color="#003366">国际合作与交流</font></a></font></div>
+      </td>
+      <td height="13" width="25%"> 
+        <div align="left"><font size="2"><a class="1" target="_self" href="GATCoop/Main.asp"><font color="#003366">港澳台地区合作与交流</font></a></font></div>
+      </td>
+      <td height="13" width="13%"> 
+        <div align="left"><font size="2"><a class="1" target="_self" href="Profess/Main.asp"><font color="#003366">专家工作</font></a></font></div>
+      </td>
+      <td height="13" width="16%"> 
+        <div align="left"><font size="2"><a class="1" target="_self" href="GATStud/Main.asp"><font color="#003366">港澳学生招生</font></a></font></div>
+      </td>
+      <td height="13" width="13%"> 
+        <div align="left"><font size="2"><a class="1" target="_self" href="ContectUs/Main.asp"><font color="#003366">联系我们</font></a></font></div>
+      </td>
+    </tr>
+    
+  </table>
+</div>
+<div id="Layer1" style="position:absolute; left:45px; top:-4px; width:135px; height:72px; z-index:1; visibility: inherit"><img src="Images/Title.gif" width="698" height="89"></div>
+<div id="Layer2" style="position:absolute; left:116px; top:96px; width:624px; height:342px; z-index:3; overflow: auto"><br>
+  <p align="center"><font color="#FF3300" size="3">国际合作与交流处/港澳台事务办公室</font></p>
+  <p><font color="#000033" size="2">　<font color="#000066">　</font></font><font color="#003366" size="2">北京语言文化大学国际合作与交流处是对外交流工作的归口管理和服务部门。北京语言文化大学港澳<br>
+    <br>
+    台事务办公室是对港澳台工作的归口管理和服务部门。港澳台事务办公室和国际合作与交流处合署办公，<br>
+    <br>
+    港澳台事务办公室主任由国际合作与交流处处长兼任。<br>
+    <br>
+    　　国际合作与交流处下设交流科和专家科，其主要职责包括：建立和保持北京语言文化大学与国外大学<br>
+    <br>
+    和教育机构的联系与合作；接待国外来访；外国专家和外籍教师的管理与服务；办理校内人员因公长短期<br>
+    <br>
+    出国及国外人员来华邀请手续等。<br>
+    <br>
+    　　港澳台事务办公室的主要职责包括：建立和保持北京语言文化大学与港澳台地区大学和教育机构的联<br>
+    <br>
+    系与合作；接待港澳台地区的来访；招收和管理港澳台地区学生；办理校内人员因公长短期赴港澳台地区<br>
+    <br>
+    及港澳台地区人员来京邀请手续等。<br>
+    </font> </p>
+</div>
+<div id="Layer4" style="position:absolute; left:115px; top:434px; width:626px; height:18px; z-index:4"> 
+  <div align="center"><font size="2" color="#003366">&copy; 2001 国际合作交流处 版权所有</font></div>
+</div>
+</body>
+</html>

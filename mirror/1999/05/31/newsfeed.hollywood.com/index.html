@@ -1,0 +1,147 @@
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+// this script was provided by
+// Stefan - the Programinator
+// mailto:trickys@doomhammer.com
+// http://www.doomhammer.com
+// with very minor modification by kiratoy@2600.com and porkchop@2600.com
+// please credit him accordingly if you use this script
+// thanks 
+var Temp2;
+var timerID = null;
+var timerRunning = false;
+function showtime() {
+now = new Date();
+var CurHour = now.getHours();
+var CurMinute = now.getMinutes();
+var CurMonth = now.getMonth();
+var CurDate = now.getDate();
+var CurYear = now.getYear();
+var CurSecond = now.getSeconds();
+now = null;
+Hours = CurHour
+Minutes = CurMinute
+Seconds = CurSecond
+var Years = CurYear - 95
+// now.getMonth() is apparently base 0!
+var Months = CurMonth - 2 + 1
+var Dates = CurDate - 15
+if (Dates < 0)
+{
+        Dates = 28 - 15 + CurDate
+// roll back 1 month
+        Months = Months - 1
+}
+if (Months < 0)
+{
+        Months = 12 - 2 + CurMonth + 1
+// roll back 1 year
+        Years = Years - 1
+}
+// start porkchop@2600.com 's "12 Months" hack
+if (Months == 12)
+{
+        Months = 11 
+}
+// end hack
+if(Years < 0) {Years = 0}
+if (Years!=1) {var ys="s"} else {var ys=""};
+if (Months!=1) {var mos="s"} else {var mos=""}
+if (Dates!=1) {var ds="s"} else {var ds=""}
+if (Hours!=1) {var hs="s"} else {var hs=""}
+if (Minutes!=1) {var mis="s"} else {var mis=""}
+if (Seconds!=1) {var ss="s"} else {var ss=""}
+Temp2='Kevin Mitnick has been imprisoned without a trial for '+Years+'
+year'+ys+',
+'+Months+' month'+mos+', '+Dates+' day'+ds+', '+Hours+' hour'+hs+',
+'+Minutes+' minute'+mis+', '+Seconds+' second'+ss+' and counting! '
+Temp3=Years+' year'+ys+', '+Months+' month'+mos+', '+Dates+' day'+ds+',
+'+Hours+' hour'+hs+', '+Minutes+' minute'+mis+', '+Seconds+' second'+ss
+document.frm.left.value=Temp3;
+timerID = setTimeout("showtime()",1000);
+timerRunning = true;
+}
+var timerID = null;
+var timerRunning = false;
+function stopclock () {
+if(timerRunning)
+clearTimeout(timerID);
+timerRunning = false;
+}
+function startclock () {
+// Make sure the clock is stopped
+stopclock();
+showtime();
+}
+// -->
+</SCRIPT>
+
+ 
+<TITLE>0wned</TITLE></HEAD> <BODY bgcolor="#000000">
+<P>&nbsp;</P>
+<P align="center"><FONT color="#FFFFFF" face="Arial, Helvetica,
+sans-serif"><BR><B>
+<FONT size="+4">
+<BODY TEXT="#29C413" BGCOLOR="#000000" LINK="#FDF511" VLINK="#FDF511" ONLOAD="startclock();">
+<BR><BR>
+well, lucky for you it was j0lt that hacked you and not ereet gH
+<BR>
+</FONT>
+<FONT size="+2">
+sup jiggas? we only own cool shit..like this place, bellsouth.com,
+macweek.com, etc, etc. if its cool, we did it..Why? cause well..it kinda
+gives me a warm feeling inside..kinda like when i urinate in my
+pants....any way we hacked this page to give a message, glitchez a
+computer whiz like my self has been imprisoned by the US government for 4
+weeks with no trial, and worst yet we think that the US government is
+trying to make an example of him by blowing the whole thing out of
+preportion He has been imprisoned:
+     <TABLE CELLSPACING="0" CELLPADDING="0" WIDTH="100">
+          <TR>
+           <TD ALIGN="center">
+            <FORM NAME="frm"><INPUT TYPE="textarea" NAME="left" SIZE="60" 
+            VALUE="Checking..."></FORM></TD>
+          </TR>
+          <TR>
+            <TD><FONT FACE="verdana"><FONT COLOR="#FFFFFF"><FONT
+SIZE="-1">glitchez Lockdown Clock: This is how long it's been since 
+glitchez has been imprisoned by the U.S. Government without a trial.
+            </FONT></FONT></FONT></TD>
+          </TR>
+        </TABLE> </TD>
+      </TR>
+    </TABLE>
+<BR>
+<BR>
+Mad Shoutouts too: <BR>
+j0lt, gH, parse, 2600 (so you will put this on your page..rite?),
+amerex (the coolest smurfer ull ever know), highvoltz (helps amerex
+./statd), plastik gezus (shutup your not on the eminem cd, jk B-)),
+s0up n4z1 ( you hook us up with shit..and act as a mentor....), comrad (it
+isnt ga-nome), beavis & gay wombat (holy anal creamcheese batman), eee_
+(leet master mind programer and cannibal), dap (fone sex pimp), endlessna
+(man i had that 600 page report), musk (defvac boy), kaustic (ask me for 
+shells again..and ill smack you), dime (YOU RAN OVER MY CUP HOLDER!), ska
+(put it to my head mother fucker), PAC (i 0wn you), T4K (okay your not
+gay..your bi), UT (yeah, yeah we all know you were raped), visions (shut
+up slut chew on this mushroom), mstrmind (the  mad phreak), fizzacyst
+("fuck fair fights for all I  know he could kick my ass, ill shoot
+him.."), mystaro (plays the spoons), 'jason (y0 jiggah), poor slut we
+called after boxing Walden Books at 4:00am who thought she was the shit
+with her callers ID(if you dont quit harrassing me im going to call the
+cops mr. waldenbooks)....sorry that line is just sooo classic..ay pg what
+was brian corley's grandmothers digits again? just fuckin with ya
+emmanuel..we dont hate you..your cool..note to admin we made a backup of
+your page just in case..
+<BR><BR><BR><BR>
+togeather they fight off evil and protect castle Gray Skull, these heros
+are THE MASERS OF THE UNIVERSE...err umm no..just j0lt..
+</P>
+</FONT>
+</B></FONT>
+<BR><BR><BR><BR>
+</BODY>
+</HTML>
+<!-- www.attrition.org web hack mirror - watermark or something -->

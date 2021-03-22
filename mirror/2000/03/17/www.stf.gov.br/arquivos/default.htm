@@ -1,0 +1,25 @@
+
+<BODY onLoad=choose()>
+<SCRIPT LANGUAGE="JavaScript">
+
+function choose() 
+{ 
+    
+  var name = navigator.appName;
+  var vers = navigator.appVersion;
+  vers = vers.substring(0,1); // or 0,4  could return 4.5 instead of just 4
+
+ if (name == "Microsoft Internet Explorer")   
+        {
+	location.href = "login.asp"; 
+         }
+ else  
+        { 
+                  location.href = "NotIE.htm";
+        }
+}
+</SCRIPT>
+</BODY>
+
+
+

@@ -1,0 +1,23 @@
+BODY {background:#1807A6; background-image:url(http://columbin.jeffco.k12.co.us/images/bg.gif); color:#FAFAFA }
+
+A:link { color: #8EC3FF }
+A:visited { color: #99CC99 }
+A:active { color: #CCFF00 }
+
+#mainHeader {position: absolute; left:2; top:2; font-size:11px; color:#C1C1C1; z-index:2}
+
+#menu {position: absolute; left: 15; top: 90; width:143; height:199}
+	#menuBg {position:absolute; left:0; top:0; width:143; height:199; clip:rect(0,143,199,0); background-color:#FAFAFA; layer-background-color:#FAFAFA}
+	#menuOn {position:absolute; left:0; top:0; width:143; height:199; clip:rect(0,143,199,0); background-color:#1E7CFF; layer-background-color:#1E7CFF; visibility:hide; visibility:hidden}
+	#menuImg {position:absolute; left:0; top:0; width:143; height:199}
+	
+.pageTitle {position:absolute; left:20; top:16; font-size:26px; font-style:italic; color:#C60404; font-family:"Arial" }
+.pageLinks {position:absolute; left:200; top:50; font-size:16px; width:400; font-weight:bold; color:#C60404; font-family:"Arial" }
+.pageLinksSmall {position:absolute; left:60; top:45; font-size:12px; width:500; font-weight:bold; color:#C60404; font-family:"Arial" }
+
+.sectionTitle {position:absolute; text-align:right; top:-26; font-size:22px; font-style:italic; color:#C60404; font-family:"Arial" }
+
+.color {color:#FAFAFA; background-image:url()}
+.headerLink {position:absolute; top:2; text-align:right}
+.smallcell {color:#FAFAFA; background-image:url()}
+.textLayer {position:absolute; left:180; top:90; width:460; visibility:hidden; background-image:url(http://columbin.jeffco.k12.co.us/images/layerbg.gif); color:#FAFAFA}

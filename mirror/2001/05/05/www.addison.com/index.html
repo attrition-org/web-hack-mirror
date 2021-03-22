@@ -1,0 +1,35 @@
+<html>
+
+<head>
+<title>Addison: Detecting browser..</title>
+<script LANGUAGE="JavaScript">
+
+bName=navigator.appName;
+bVer=parseInt(navigator.appVersion);
+
+        if      (bName == "Netscape" && bVer == 2) ver = "n2";
+        else if (bName == "Netscape" && bVer == 3) ver = "n3";
+        else if (bName == "Netscape" && bVer >= 4) ver = "n4";
+        else if (bName == "Microsoft Internet Explorer" && bVer == 2) ver = "e2";
+        else if (bName == "Microsoft Internet Explorer" && bVer == 3) ver = "e3";
+        else if (bName == "Microsoft Internet Explorer" && bVer >= 4) ver = "e4";
+
+        if (ver == "n2") {location.href = "upgrade.html";}
+        if (ver == "n3") {location.href = "upgrade.html";}
+        if (ver == "n4") {location.href = "index.html";}
+
+        if (ver == "e2") {location.href = "upgrade.html";}
+        if (ver == "e3") {location.href = "upgrade.html";}
+        if (ver == "e4") {location.href = "index.html";}
+
+</script>
+<meta name="description" content="Addison is a branding and communication firm with specialists in corporate branding and naming, retail branding, annual reports, corporate literature and interactive media.">
+<meta name="keywords" content="Annual Report, Annual Reports, Interactive Design, website design, Web site design, Naming, Identity, Print, Interactive, Graphic Design, Positioning, Corporate Identity, Retail Identity, Branding, Brand Identity, Name Development, Identity System Development, Logo Creation, Research, Environmental Design, Summary Annual Report, Factbook, Image Brochure, Capability Brochure, Environmental Brochure, Employee Magazine, Corporate Magazine, Marketing Brochure, Internet, Intranet, CD-ROM">
+</head>
+
+<body bgcolor="#9B0101" text="White" link="#FA5F01" vlink="#FA5F01" alink="#FA5F01">
+
+<font size="+1" face="arial">Checking browser... this should only take a couple of seconds.</font>
+</body>
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

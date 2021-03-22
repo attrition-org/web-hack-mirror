@@ -1,0 +1,571 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>RUN9809</TITLE>
+</HEAD>
+<BODY LINK="#0000ff" VLINK="#800080">
+
+<FONT FACE="華康少女文字體W4,???" LANG="ZH-TW" SIZE=7><P ALIGN="CENTER">IIS 4.0</FONT><FONT FACE="超研澤中隸,????" LANG="ZH-TW" SIZE=7>網站進階管理</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4><P ALIGN="RIGHT">刊登於「</FONT><FONT FACE="Arial" SIZE=4>RUN!PC</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4>雜誌</FONT><FONT FACE="Arial" SIZE=4> 9</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4>月份」       作者</FONT><FONT SIZE=4> </FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4>喬篷科技</FONT><FONT FACE="華康少女文字體W4,???" LANG="ZH-TW" SIZE=4> </FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4>周世雄</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>本文重點</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">在前四期的IIS 4.0實戰道場當中，我們看到了威力強大的IIS（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Internet Information Server</FONT><FONT FACE="新細明體" LANG="ZH-TW">）4.0之30個特異功能、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SSL</FONT><FONT FACE="新細明體" LANG="ZH-TW">與數位認證、和如何使用ASP設計一個生動的網站、和如何將Web資料庫化等單元。本期將探討</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW">之進階管理方法，包括四種</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">網站管理方法、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS Admin Objects</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">WSH</FONT><FONT FACE="新細明體" LANG="ZH-TW">（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Windows Scripting Host</FONT><FONT FACE="新細明體" LANG="ZH-TW">）、使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">WSH</FONT><FONT FACE="新細明體" LANG="ZH-TW">取得網路的資訊、使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">WSH</FONT><FONT FACE="新細明體" LANG="ZH-TW">與</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Shell</FONT><FONT FACE="新細明體" LANG="ZH-TW">溝通、使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">WSH</FONT><FONT FACE="新細明體" LANG="ZH-TW">與</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Excel</FONT><FONT FACE="新細明體" LANG="ZH-TW">溝通、和安裝</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW">套件等。</P>
+<P ALIGN="JUSTIFY">作者著作有網站網頁設計等相關的十本電腦書籍，其中有關</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">的著作</FONT><FONT FACE="標楷體" LANG="ZH-TW">「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW">超級網站速成班</FONT><FONT FACE="標楷體" LANG="ZH-TW">」</FONT><FONT FACE="新細明體" LANG="ZH-TW">、「NT網站資料庫速成班 設計實例篇」等五本，並以簡體版本發行於大陸。</P>
+<P ALIGN="JUSTIFY">作者從蘋果二號玩到網際網路，有十幾年電腦研發與行銷的工作經驗，並曾任職於宏碁電腦公司研展和產品行銷經理、特望科技總經理等職務，現任「喬篷科技」公司總經理，從事</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Internet</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Intranet</FONT><FONT FACE="新細明體" LANG="ZH-TW">之</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫應用設計、網站網頁規劃架設、電子商務等服務。</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW">示範網站</FONT><FONT FACE="華康少女文字體W4,???" LANG="ZH-TW">：</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">www.asp.com.tw</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">連絡</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">E-mail</FONT><FONT FACE="新細明體" LANG="ZH-TW">：</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">jackchou@tpts5.seed.net.tw</FONT><FONT FACE="新細明體" LANG="ZH-TW">。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW"><P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>IIS</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>網站管理方法</P>
+<P>四種</FONT><FONT FACE="Arial" SIZE=5>IIS</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>網站管理方法</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">網站的的管理方法，有以下四種：</P>
+<OL>
+
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>Internet </FONT><FONT FACE="新細明體" LANG="ZH-TW">服務管理員：您可使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">的「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Internet </FONT><FONT FACE="新細明體" LANG="ZH-TW">服務管理員」，來管理區域網路或</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">Internet </FONT><FONT FACE="新細明體" LANG="ZH-TW">上的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">FTP</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>Internet </FONT><FONT FACE="新細明體" LANG="ZH-TW">服務管理員</FONT> <FONT FACE="新細明體" LANG="ZH-TW">（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW">）：</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS </FONT><FONT FACE="新細明體" LANG="ZH-TW">也提供有瀏覽器適用的「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Internet </FONT><FONT FACE="新細明體" LANG="ZH-TW">服務管理員</FONT> <FONT FACE="新細明體" LANG="ZH-TW">（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW">）」，可透過瀏覽器管理</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Intranet </FONT><FONT FACE="新細明體" LANG="ZH-TW">或</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">Internet </FONT><FONT FACE="新細明體" LANG="ZH-TW">上的站台。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW">）：使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式來呼叫「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS Admin Objects</FONT><FONT FACE="新細明體" LANG="ZH-TW">」，可用來透過瀏覽器，來管理</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">網站。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>WSH</FONT><FONT FACE="新細明體" LANG="ZH-TW">（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Windows Scripting Host</FONT><FONT FACE="新細明體" LANG="ZH-TW">）：從</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">Windows </FONT><FONT FACE="新細明體" LANG="ZH-TW">下或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">DOS</FONT><FONT FACE="新細明體" LANG="ZH-TW">指令行下執行一個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">.vbs</FONT><FONT FACE="新細明體" LANG="ZH-TW">的檔案，來管理</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">網站。</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">WSH</FONT><FONT FACE="新細明體" LANG="ZH-TW">可以呼叫「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS Admin Objects</FONT><FONT FACE="新細明體" LANG="ZH-TW">」來管理</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">網站。</LI></P></OL>
+
+<P ALIGN="JUSTIFY">站台的操作員可以使用瀏覽器，於伺服器的電腦、或於遠端，對</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">FTP</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台，做新增、刪除、重新命名、啟動、停止、暫停、繼續等控制，以及對內容做設定，和做備份設定等動作。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>　</P>
+<P>遠端管理站台</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">Windows NT </FONT><FONT FACE="新細明體" LANG="ZH-TW">管理員或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web </FONT><FONT FACE="新細明體" LANG="ZH-TW">站台操作員，可以透過</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Internet</FONT><FONT FACE="新細明體" LANG="ZH-TW">或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Intranet</FONT><FONT FACE="新細明體" LANG="ZH-TW">，使用瀏覽器於遠端來管理站台。即遠端存取「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Internet </FONT><FONT FACE="新細明體" LANG="ZH-TW">服務管理員</FONT> <FONT FACE="新細明體" LANG="ZH-TW">（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW">）」。</FONT> </P>
+<FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">方法為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Windows NT </FONT><FONT FACE="新細明體" LANG="ZH-TW">管理員或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web </FONT><FONT FACE="新細明體" LANG="ZH-TW">站台操作員，透過</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Internet</FONT><FONT FACE="新細明體" LANG="ZH-TW">或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Intranet</FONT><FONT FACE="新細明體" LANG="ZH-TW">，啟動瀏覽器，並輸入</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web </FONT><FONT FACE="新細明體" LANG="ZH-TW">站台的網域名稱及指定的連接埠編號</FONT>&lt;<FONT FACE="System,新細明體" LANG="ZH-TW">port number&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW">，並於其後加上</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">/iisadmin/</FONT><FONT FACE="新細明體" LANG="ZH-TW">。例如，</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">http://www.asp.com.tw:&lt;port number&gt;/iisadmin/</FONT><FONT FACE="新細明體" LANG="ZH-TW">。一旦連上站台，將要求殊輸入使用者名稱與密碼，才可以繼續登入。</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">Windows NT </FONT><FONT FACE="新細明體" LANG="ZH-TW">管理員須指定連接埠編號</FONT>&lt;<FONT FACE="System,新細明體" LANG="ZH-TW">port number&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW">，連接埠編號可在</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">系統管理</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">Web </FONT><FONT FACE="新細明體" LANG="ZH-TW">站台</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">中</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">內容找到。</P>
+<P ALIGN="JUSTIFY">當安裝</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">IIS </FONT><FONT FACE="新細明體" LANG="ZH-TW">時，將指定給這個</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">Web </FONT><FONT FACE="新細明體" LANG="ZH-TW">站台一個隨機選取</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">2,000 </FONT><FONT FACE="新細明體" LANG="ZH-TW">到</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">9,999 </FONT><FONT FACE="新細明體" LANG="ZH-TW">之間的連接埠編號。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>　</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>IIS Admin Objects</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS Admin Objects</FONT><FONT FACE="新細明體" LANG="ZH-TW">來管理</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">網站，可以做到的功能譬如：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>啟動、暫停、繼續、或停止一個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">FTP</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台、伺服器。</LI></P>
+<P ALIGN="JUSTIFY"><LI>建立站台、建立虛擬目錄。</LI></P>
+<P ALIGN="JUSTIFY"><LI>尋找站台。</LI></P></UL>
+
+<P ALIGN="JUSTIFY">改變站台或虛擬目錄的屬性設定。譬如設定存取權限、設定最大頻寬限制等。</P>
+<P ALIGN="JUSTIFY">您可以使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW">）、或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">WSH</FONT><FONT FACE="新細明體" LANG="ZH-TW">（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Windows Scripting Host</FONT><FONT FACE="新細明體" LANG="ZH-TW">），來呼叫「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS Admin Objects</FONT><FONT FACE="新細明體" LANG="ZH-TW">」，以管理</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">網站。</P>
+<P ALIGN="JUSTIFY">另外，使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">CreateObject("MTSAdmin.Catalog.1") </FONT><FONT FACE="新細明體" LANG="ZH-TW">與</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW">（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Microsoft Transaction Server</FONT><FONT FACE="新細明體" LANG="ZH-TW">）溝通，可以做到的功能譬如：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>安裝和解除安裝元件（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">DLL</FONT><FONT FACE="新細明體" LANG="ZH-TW">）。</LI></P>
+<P ALIGN="JUSTIFY"><LI>安裝和解除安裝套件。</LI></P></UL>
+
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>　</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>Metabase</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW">之管理</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS </FONT><FONT FACE="新細明體" LANG="ZH-TW">的設定值，儲存於一個叫做</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">metabase</FONT><FONT FACE="新細明體" LANG="ZH-TW">的階層式資料庫。您可在電腦、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web </FONT><FONT FACE="新細明體" LANG="ZH-TW">站台、虛擬目錄、目錄及檔案等層次，藉由修改</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">metabase</FONT><FONT FACE="新細明體" LANG="ZH-TW">的值來改變伺服器的設定。</P>
+<P ALIGN="JUSTIFY">直接修改</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">metabase</FONT><FONT FACE="新細明體" LANG="ZH-TW">的值是十分危險的，若將</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">metabase </FONT><FONT FACE="新細明體" LANG="ZH-TW">中的內容設定錯誤，可能造成</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web </FONT><FONT FACE="新細明體" LANG="ZH-TW">站台或</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">FTP </FONT><FONT FACE="新細明體" LANG="ZH-TW">站台發生問題，甚至可能損毀</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web </FONT><FONT FACE="新細明體" LANG="ZH-TW">站台或</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">FTP </FONT><FONT FACE="新細明體" LANG="ZH-TW">站台的設定。您應在無法調整使用者介面下才編輯</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">metabase </FONT><FONT FACE="新細明體" LANG="ZH-TW">內容，且當您直接編輯</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">metabase </FONT><FONT FACE="新細明體" LANG="ZH-TW">時需非常小心。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>　</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>Windows Scripting Host </P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">提供於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">DOS</FONT><FONT FACE="新細明體" LANG="ZH-TW">指令行下或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Windows </FONT><FONT FACE="新細明體" LANG="ZH-TW">下，使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">VBScript</FONT><FONT FACE="新細明體" LANG="ZH-TW">及</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">JavaScript </FONT><FONT FACE="新細明體" LANG="ZH-TW">指令設定</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">伺服器的方式，叫做</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Windows Scripting Host</FONT><FONT FACE="新細明體" LANG="ZH-TW">（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">WSH</FONT><FONT FACE="新細明體" LANG="ZH-TW">），將設定值儲存於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Metabase</FONT><FONT FACE="新細明體" LANG="ZH-TW">當中。</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">Windows Scripting Host </FONT><FONT FACE="新細明體" LANG="ZH-TW">，是適用於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">32 </FONT><FONT FACE="新細明體" LANG="ZH-TW">位元</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">Windows </FONT><FONT FACE="新細明體" LANG="ZH-TW">平台的指令主機。</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Windows Scripting Host </FONT><FONT FACE="新細明體" LANG="ZH-TW">，提供</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">VBScript</FONT><FONT FACE="新細明體" LANG="ZH-TW">及</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">JavaScript </FONT><FONT FACE="新細明體" LANG="ZH-TW">指令的執行引擎。</FONT> </P>
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">Windows </FONT><FONT FACE="新細明體" LANG="ZH-TW">作業系統，於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">MS-DOS </FONT><FONT FACE="新細明體" LANG="ZH-TW">指令行下所能支援的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">scripting</FONT><FONT FACE="新細明體" LANG="ZH-TW">語言，以前只提供批次檔。現在，</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Windows Scripting Host </FONT><FONT FACE="新細明體" LANG="ZH-TW">讓您可以於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">MS-DOS </FONT><FONT FACE="新細明體" LANG="ZH-TW">指令行下，執行威力強大的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">VBScript </FONT><FONT FACE="新細明體" LANG="ZH-TW">及</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">JScript </FONT><FONT FACE="新細明體" LANG="ZH-TW">指令碼。</P>
+<P ALIGN="JUSTIFY">使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Windows Scripting Host </FONT><FONT FACE="新細明體" LANG="ZH-TW">設定</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">時，可以從</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">Windows </FONT><FONT FACE="新細明體" LANG="ZH-TW">下執行或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">DOS</FONT><FONT FACE="新細明體" LANG="ZH-TW">指令行下執行。</P>
+<P ALIGN="JUSTIFY">當您準備好設定</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">VBScript </FONT><FONT FACE="新細明體" LANG="ZH-TW">或</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">JScript </FONT><FONT FACE="新細明體" LANG="ZH-TW">指令碼後，使用</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">.vbs</FONT><FONT FACE="新細明體" LANG="ZH-TW">的</FONT> <FONT FACE="新細明體" LANG="ZH-TW">副檔名。直接於</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">檔案總管</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">中按兩下即可執行此</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">.vbs </FONT><FONT FACE="新細明體" LANG="ZH-TW">檔，將自動啟動</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">wscript.exe</FONT><FONT FACE="新細明體" LANG="ZH-TW">以執行之。您也可以從</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">DOS</FONT><FONT FACE="新細明體" LANG="ZH-TW">指令行下，使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cscript.exe</FONT><FONT FACE="新細明體" LANG="ZH-TW">來執行</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">.vbs </FONT><FONT FACE="新細明體" LANG="ZH-TW">檔的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">VBScript </FONT><FONT FACE="新細明體" LANG="ZH-TW">或</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">JScript </FONT><FONT FACE="新細明體" LANG="ZH-TW">指令碼。</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">Windows Scripting Host</FONT><FONT FACE="新細明體" LANG="ZH-TW">（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">WSH</FONT><FONT FACE="新細明體" LANG="ZH-TW">）提供以下數個物件：</P>
+
+<UL>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>WScript.Network</FONT><FONT FACE="新細明體" LANG="ZH-TW">：與網路溝通。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>WScript.Shell </FONT><FONT FACE="新細明體" LANG="ZH-TW">：與</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Shell</FONT><FONT FACE="新細明體" LANG="ZH-TW">溝通。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>Excel.Application </FONT><FONT FACE="新細明體" LANG="ZH-TW">：與</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Excel</FONT><FONT FACE="新細明體" LANG="ZH-TW">溝通。</LI></P></UL>
+
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">WScript.Network </FONT><FONT FACE="新細明體" LANG="ZH-TW">用來與網路溝通，可以做到的功能譬如：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>取得網路的資訊。</LI></P></UL>
+
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">WScript.Shell </FONT><FONT FACE="新細明體" LANG="ZH-TW">用來與</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Shell</FONT><FONT FACE="新細明體" LANG="ZH-TW">溝通，可以做到的功能譬如：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>於桌面上建立捷徑。</LI></P>
+<P ALIGN="JUSTIFY"><LI>建立及刪除登錄機碼（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">registry</FONT><FONT FACE="新細明體" LANG="ZH-TW">）。</LI></P></UL>
+
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">Excel.Application </FONT><FONT FACE="新細明體" LANG="ZH-TW">用來與</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Excel</FONT><FONT FACE="新細明體" LANG="ZH-TW">溝通，可以做到的功能譬如：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>在</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Excel</FONT><FONT FACE="新細明體" LANG="ZH-TW">中顯示</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">WSH</FONT><FONT FACE="新細明體" LANG="ZH-TW">內容。</LI></P>
+<P ALIGN="JUSTIFY"><LI>用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">WSH</FONT><FONT FACE="新細明體" LANG="ZH-TW">存取</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Excel</FONT><FONT FACE="新細明體" LANG="ZH-TW">顯示圖表。</LI></P></UL>
+
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>　</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>DOS</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>指令行</FONT><FONT FACE="Arial" SIZE=5>WSH</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>語法</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">首先，請確定安裝</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Windows NT Option Pack</FONT><FONT FACE="新細明體" LANG="ZH-TW">中的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Windows Scripting Host</FONT><FONT FACE="新細明體" LANG="ZH-TW">。</P>
+<P ALIGN="JUSTIFY">譬如，若要執行</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">test.vbs</FONT><FONT FACE="新細明體" LANG="ZH-TW">，於</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">開始</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">按鈕的</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式集</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">中執行</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">命令提示字元</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">]</FONT><FONT FACE="新細明體" LANG="ZH-TW">（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">MS-DOS </FONT><FONT FACE="新細明體" LANG="ZH-TW">提示），於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">DOS</FONT><FONT FACE="新細明體" LANG="ZH-TW">指令行下執行下列指令：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>C:\&gt; cscript test.vbs</P></DIR>
+
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">cscript.exe</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式，使用於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">DOS</FONT><FONT FACE="新細明體" LANG="ZH-TW">指令行下，執行</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">.vbs </FONT><FONT FACE="新細明體" LANG="ZH-TW">檔語法如下：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>cscript </FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">指令檔名稱</FONT><FONT FACE="Arial"> [/</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">指令參數</FONT><FONT FACE="Arial">...] [//</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">主機參數</FONT><FONT FACE="Arial">...]</P></DIR>
+
+
+<UL>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>指令檔名稱：</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">VBScript </FONT><FONT FACE="新細明體" LANG="ZH-TW">或</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">JScript </FONT><FONT FACE="新細明體" LANG="ZH-TW">指令碼檔案名稱，例如</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">test.vbs</FONT><FONT FACE="新細明體" LANG="ZH-TW">。</FONT> </LI></P>
+<FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>指令參數：傳遞給指令檔的參數，指令參數前面有一個斜線</FONT> <FONT FACE="新細明體" LANG="ZH-TW">（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">/</FONT><FONT FACE="新細明體" LANG="ZH-TW">）記號。</LI></P>
+<P ALIGN="JUSTIFY"><LI>主機參數：</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Windows Scripting Host </FONT><FONT FACE="新細明體" LANG="ZH-TW">選項，主機參數前面有兩個斜線</FONT> <FONT FACE="新細明體" LANG="ZH-TW">（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">//</FONT><FONT FACE="新細明體" LANG="ZH-TW">）記號。</LI></P></UL>
+
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">Cscript.exe </FONT><FONT FACE="新細明體" LANG="ZH-TW">的主機參數如下：</P>
+
+<UL>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>//I</FONT><FONT FACE="新細明體" LANG="ZH-TW">：互動模式</FONT> <FONT FACE="新細明體" LANG="ZH-TW">（預設值），與</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">//B</FONT><FONT FACE="新細明體" LANG="ZH-TW">相反，在螢幕上顯示指令錯誤及使用者提示。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>//B</FONT><FONT FACE="新細明體" LANG="ZH-TW">：批次模式，與</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">//I</FONT><FONT FACE="新細明體" LANG="ZH-TW">相反，在螢幕上不顯示指令錯誤及使用者提示。</FONT> </LI></P>
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>//T:nn</FONT><FONT FACE="新細明體" LANG="ZH-TW">：指令可執行的最多時間</FONT> <FONT FACE="新細明體" LANG="ZH-TW">（單位：秒）。當執行時間超過所設定值時，</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">CSCRIPT </FONT><FONT FACE="新細明體" LANG="ZH-TW">會用中斷處理。</FONT> </LI></P>
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>//logo</FONT><FONT FACE="新細明體" LANG="ZH-TW">：</FONT> <FONT FACE="新細明體" LANG="ZH-TW">在執行時顯示執行標題</FONT> <FONT FACE="新細明體" LANG="ZH-TW">（預設值），與</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">//nologo </FONT><FONT FACE="新細明體" LANG="ZH-TW">相反。</FONT> </LI></P>
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>//nologo</FONT><FONT FACE="新細明體" LANG="ZH-TW">：</FONT> <FONT FACE="新細明體" LANG="ZH-TW">在執行時不顯示執行標題，與</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">//logo </FONT><FONT FACE="新細明體" LANG="ZH-TW">相反。</FONT> </LI></P>
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>//H:Cscript </FONT><FONT FACE="新細明體" LANG="ZH-TW">或</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">Wscript</FONT><FONT FACE="新細明體" LANG="ZH-TW">：</FONT> <FONT FACE="新細明體" LANG="ZH-TW">讓</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">Cscript.exe </FONT><FONT FACE="新細明體" LANG="ZH-TW">或</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">Wscript.exe</FONT><FONT FACE="新細明體" LANG="ZH-TW">設定為執行指令的預設程式。預設值為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Wscript.exe </FONT><FONT FACE="新細明體" LANG="ZH-TW">。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>//S</FONT><FONT FACE="新細明體" LANG="ZH-TW">：儲存目前指令行選項。</FONT> </LI></P>
+<FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>//?</FONT><FONT FACE="新細明體" LANG="ZH-TW">：顯示指令用法。</FONT> </LI></P></UL>
+
+<FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">本文將舉數個範例，讓您迅速學會於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">DOS</FONT><FONT FACE="新細明體" LANG="ZH-TW">指令行下：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>讀取和設定</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">，學會</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Windows Scripting Host </FONT><FONT FACE="新細明體" LANG="ZH-TW">基本指令。</LI></P>
+<P ALIGN="JUSTIFY"><LI>設定存取權限。</LI></P>
+<P ALIGN="JUSTIFY"><LI>設定最大頻寬限制。</LI></P>
+<P ALIGN="JUSTIFY"><LI>讀取各種屬性（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">properties</FONT><FONT FACE="新細明體" LANG="ZH-TW">）值。</LI></P>
+<P ALIGN="JUSTIFY"><LI>使用各種方法（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">methods</FONT><FONT FACE="新細明體" LANG="ZH-TW">），讓您可以於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">DOS</FONT><FONT FACE="新細明體" LANG="ZH-TW">指令行下啟動、繼續、暫停、和停止一個站台。</LI></P>
+<P ALIGN="JUSTIFY"><LI>建立虛擬目錄。</LI></P></UL>
+
+<P ALIGN="JUSTIFY">趕快開始吧！</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>　</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>IIS Admin Objects</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>管理</FONT><FONT FACE="Arial" SIZE=5>IIS</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>網站</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">本單元介紹如何使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS Admin Objects</FONT><FONT FACE="新細明體" LANG="ZH-TW">來管理</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">網站，可以透過瀏覽器使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">、或於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">MS-DOS </FONT><FONT FACE="新細明體" LANG="ZH-TW">指令行和於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Windows</FONT><FONT FACE="新細明體" LANG="ZH-TW">環境下使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">WSH</FONT><FONT FACE="新細明體" LANG="ZH-TW">，呼叫</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS Admin Objects</FONT><FONT FACE="新細明體" LANG="ZH-TW">，來控制管理一個網站。譬如：啟動、暫停、繼續、或停止一個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">FTP</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台、伺服器，或建立一個新的站台、建立一個新的虛擬目錄、尋找站台，以及改變站台或虛擬目錄的屬性設定，譬如設定存取權限、設定最大頻寬限制等。</P>
+<P ALIGN="JUSTIFY">　</P>
+<P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>IIS Admin Objects</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">首先先定義待讀取或設定的電腦、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web </FONT><FONT FACE="新細明體" LANG="ZH-TW">站台、虛擬目錄、目錄或檔案等路徑，語法如下，其中</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IisObj</FONT><FONT FACE="新細明體" LANG="ZH-TW">為定義的路徑物件名稱：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>Set IIsObj = GetObject("IIS://</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">電腦名稱</FONT><FONT FACE="Arial">/</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">服務</FONT><FONT FACE="Arial">/</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">站台編號</FONT><FONT FACE="Arial">/</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">目錄</FONT><FONT FACE="Arial">")</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">其中路徑「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS://</FONT><FONT FACE="新細明體" LANG="ZH-TW">電腦名稱</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">/</FONT><FONT FACE="新細明體" LANG="ZH-TW">服務</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">/</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台編號</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">/</FONT><FONT FACE="新細明體" LANG="ZH-TW">目錄」，語法如下：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>電腦名稱：為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">伺服器的電腦名稱，若為本機可以</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">LocalHost</FONT><FONT FACE="新細明體" LANG="ZH-TW">代表。</LI></P>
+<P ALIGN="JUSTIFY"><LI>服務：</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">W3SVC</FONT><FONT FACE="新細明體" LANG="ZH-TW">，</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">FTP</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">MSFTPSVC</FONT><FONT FACE="新細明體" LANG="ZH-TW">，</LI></P>
+<P ALIGN="JUSTIFY"><LI>站台編號：</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">1</FONT><FONT FACE="新細明體" LANG="ZH-TW">代表第一個站台。</LI></P>
+<P ALIGN="JUSTIFY"><LI>目錄：虛擬目錄，</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Root</FONT><FONT FACE="新細明體" LANG="ZH-TW">表示根目錄。</LI></P></UL>
+
+<P ALIGN="JUSTIFY">譬如：</P>
+
+<UL>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>IIS://LocalHost</FONT><FONT FACE="新細明體" LANG="ZH-TW">：表示為整個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">伺服器。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>IIS://LocalHost/W3SVC/1</FONT><FONT FACE="新細明體" LANG="ZH-TW">：表示「預設的</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">Web </FONT><FONT FACE="新細明體" LANG="ZH-TW">站台」。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>IIS://LocalHost/W3SVC/1/Root</FONT><FONT FACE="新細明體" LANG="ZH-TW">：表示「預設的</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">Web </FONT><FONT FACE="新細明體" LANG="ZH-TW">站台」的主目錄。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>IIS://LocalHost/MSFTPSVC/1</FONT><FONT FACE="新細明體" LANG="ZH-TW">：表示為「預設的</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">FTP</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台」。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>IIS://LocalHost/SMTPSVC/1</FONT><FONT FACE="新細明體" LANG="ZH-TW">：表示為「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Default SMTP Site</FONT><FONT FACE="新細明體" LANG="ZH-TW">」。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>IIS://LocalHost/NNTPSVC/1</FONT><FONT FACE="新細明體" LANG="ZH-TW">：表示為「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Default NNTP Site</FONT><FONT FACE="新細明體" LANG="ZH-TW">」。</LI></P></UL>
+
+<P ALIGN="JUSTIFY">定義位址後即可以使用「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">GET</FONT><FONT FACE="新細明體" LANG="ZH-TW">」指令讀取屬性（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">properties</FONT><FONT FACE="新細明體" LANG="ZH-TW">）值，語法如下，其中</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIsObj</FONT><FONT FACE="新細明體" LANG="ZH-TW">為上面所定義的位址物件名稱：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>xxx = IIsObj.Get("</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">屬性名稱</FONT><FONT FACE="Arial">")</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">譬如「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">a = IIsObj.Get("AccessRead")</FONT><FONT FACE="新細明體" LANG="ZH-TW">」，表示讀取</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">AccessRead </FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性的設定值，儲存到</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">a</FONT><FONT FACE="新細明體" LANG="ZH-TW">的變數當中。</P>
+<P ALIGN="JUSTIFY">若要設定</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">，可以使用「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">PUT</FONT><FONT FACE="新細明體" LANG="ZH-TW">」指令設定屬性（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">properties</FONT><FONT FACE="新細明體" LANG="ZH-TW">）值，最後再使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SetInfo</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法儲存到</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Metabase</FONT><FONT FACE="新細明體" LANG="ZH-TW">當中。語法如下，其中</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIsObj</FONT><FONT FACE="新細明體" LANG="ZH-TW">為上面所定義的位址物件名稱：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>IIsObj.Put "</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">屬性名稱</FONT><FONT FACE="Arial">", </FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">設定值</P>
+</FONT><FONT FACE="Arial"><P>IIsObj.SetInfo</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">譬如「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIsObj.Put "AccessRead", False</FONT><FONT FACE="新細明體" LANG="ZH-TW">」，表示設定</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">AccessRead </FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性的設定值為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">False</FONT><FONT FACE="新細明體" LANG="ZH-TW">。</P>
+<P ALIGN="JUSTIFY">以下整體的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">.vbs</FONT><FONT FACE="新細明體" LANG="ZH-TW">碼，表示先設定</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">AccessRead </FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性的設定值為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">False</FONT><FONT FACE="新細明體" LANG="ZH-TW">，再讀取</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">AccessRead </FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性的設定值，儲存到</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">gRead</FONT><FONT FACE="新細明體" LANG="ZH-TW">的變數當中。如下：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>Set IIsObj = GetObject("IIS://LocalHost/W3SVC/1/Root")</P>
+<P>IIsObj.Put "AccessRead", True </P>
+<P>IIsObj.SetInfo </P>
+<P>gRead = IIsObj.Get("AccessRead")</P>
+<P>WScript.Echo gRead</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">其中「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">WScript.Echo gRead</FONT><FONT FACE="新細明體" LANG="ZH-TW">」，表示將所讀取</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">AccessRead </FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性的值</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">gRead</FONT><FONT FACE="新細明體" LANG="ZH-TW">，顯示於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">DOS</FONT><FONT FACE="新細明體" LANG="ZH-TW">指令行下的畫面。</P>
+<P ALIGN="JUSTIFY">若我們將以上五行的碼使用記事本儲存成</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">admobj1.vbs</FONT><FONT FACE="新細明體" LANG="ZH-TW">檔案，並於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">DOS</FONT><FONT FACE="新細明體" LANG="ZH-TW">指令行下執行下列指令：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>C:\&gt; cscript admobj1.vbs</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">DOS</FONT><FONT FACE="新細明體" LANG="ZH-TW">指令行下，將顯示：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>C:\&gt; cscript admobj0.vbs</P>
+<P>Microsoft (R) Windows Scripting Host Version 5.0 for Windows</P>
+<P>Copyright (C) Microsoft Corporation 1996-1997. All rights reserved.</P>
+<P>-1</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">其中</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">-1</FONT><FONT FACE="新細明體" LANG="ZH-TW">表示</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">True</FONT><FONT FACE="新細明體" LANG="ZH-TW">（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">0</FONT><FONT FACE="新細明體" LANG="ZH-TW">表示</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">False</FONT><FONT FACE="新細明體" LANG="ZH-TW">）。</P>
+<P ALIGN="JUSTIFY">除了使用「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">GET</FONT><FONT FACE="新細明體" LANG="ZH-TW">」和「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">PUT</FONT><FONT FACE="新細明體" LANG="ZH-TW">」指令以讀取和設定屬性（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">properties</FONT><FONT FACE="新細明體" LANG="ZH-TW">）值外，您也可以使用「</FONT><B><FONT FACE="System,新細明體" LANG="ZH-TW">.</B></FONT><FONT FACE="新細明體" LANG="ZH-TW">」以讀取和設定屬性（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">properties</FONT><FONT FACE="新細明體" LANG="ZH-TW">）值。</P>
+<P ALIGN="JUSTIFY">譬如「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIsObj.AccessRead</FONT><FONT FACE="新細明體" LANG="ZH-TW">」表示讀取</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">AccessRead</FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性值，「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIsObj.AccessRead = True</FONT><FONT FACE="新細明體" LANG="ZH-TW">」表示設定</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">AccessRead</FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性值為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">True</FONT><FONT FACE="新細明體" LANG="ZH-TW">。以下的碼與上例結果相同：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>Set IIsObj = GetObject("IIS://LocalHost/W3SVC/1/Root")</P>
+<P>IIsObj.AccessRead = True </P>
+<P>IIsObj.SetInfo </P>
+<P>gRead = IIsObj.AccessRead </P>
+<P>WScript.Echo gRead</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>　</P></DIR>
+
+<P>存取權限設定範例</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">如何透過瀏覽器使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">、或於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">MS-DOS </FONT><FONT FACE="新細明體" LANG="ZH-TW">指令行和於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Windows</FONT><FONT FACE="新細明體" LANG="ZH-TW">環境下使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">WSH</FONT><FONT FACE="新細明體" LANG="ZH-TW">，呼叫</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS Admin Objects</FONT><FONT FACE="新細明體" LANG="ZH-TW">，來設定一個虛擬目錄、主目錄或檔案等的存取權限呢？</P>
+<P ALIGN="JUSTIFY">方法為使用「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">GET</FONT><FONT FACE="新細明體" LANG="ZH-TW">」和「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">PUT</FONT><FONT FACE="新細明體" LANG="ZH-TW">」指令以讀取和設定屬性（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">properties</FONT><FONT FACE="新細明體" LANG="ZH-TW">）值，或者可以使用「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">.</FONT><FONT FACE="新細明體" LANG="ZH-TW">」以讀取和設定屬性（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">properties</FONT><FONT FACE="新細明體" LANG="ZH-TW">）值。相關的屬性，如下：</P>
+
+<UL>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>AccessRead</FONT><FONT FACE="新細明體" LANG="ZH-TW">：讀取。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>AccessWrite</FONT><FONT FACE="新細明體" LANG="ZH-TW">：寫入。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>AccessScript</FONT><FONT FACE="新細明體" LANG="ZH-TW">：指令檔。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>AccessExecute</FONT><FONT FACE="新細明體" LANG="ZH-TW">：執行。</LI></P></UL>
+
+<P ALIGN="JUSTIFY">設定值為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">True</FONT><FONT FACE="新細明體" LANG="ZH-TW">（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">-1</FONT><FONT FACE="新細明體" LANG="ZH-TW">）或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">False</FONT><FONT FACE="新細明體" LANG="ZH-TW">（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">0</FONT><FONT FACE="新細明體" LANG="ZH-TW">）。</P>
+<P ALIGN="JUSTIFY">看個例子就知道存取權限如何設定了！</P>
+<P ALIGN="JUSTIFY">於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">DOS</FONT><FONT FACE="新細明體" LANG="ZH-TW">指令行下執行</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cscript admobj2.vbs</FONT><FONT FACE="新細明體" LANG="ZH-TW">，將顯示：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>c:\asp&gt;cscript admobj2.vbs</P>
+<P>Microsoft (R) Windows Scripting Host Version 5.0 for Windows</P>
+<P>Copyright (C) Microsoft Corporation 1996-1997. All rights reserved.</P>
+<P>-1</P>
+<P>0</P>
+<P>0</P>
+<P>0</P>
+<P>-1</P>
+<P>0</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">使用記事本開啟</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">admobj2.vbs</FONT><FONT FACE="新細明體" LANG="ZH-TW">，內容如下：</P><DIR>
+
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P>‘</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">首先定義位址物件，「</FONT><FONT FACE="Arial"> IIS://LocalHost/W3SVC/1/Root</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">」，表示為預設的</FONT><FONT FACE="Arial"> Web </FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">站台的主目錄。</P>
+</FONT><FONT FACE="Arial"><P>Set IIsObj = GetObject("IIS://LocalHost/W3SVC/1/Root") </P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P>‘</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">使用「</FONT><FONT FACE="Arial">GET</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">」以讀取</FONT><FONT FACE="Arial">AccessRead</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">和</FONT><FONT FACE="Arial">AccessWrite</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">屬性的值。</P>
+</FONT><FONT FACE="Arial"><P>gRead = IIsObj.Get("AccessRead") </P>
+<P>gWrite = IIsObj.Get("AccessWrite") </P>
+</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=1><P>　</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P>‘</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">使用「</FONT><FONT FACE="Arial">WScript.Echo </FONT><FONT FACE="System,新細明體" LANG="ZH-TW">…</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">」，將讀取的顯示於</FONT><FONT FACE="Arial">DOS</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">指令行下的畫面。</P>
+<P>因此顯示</FONT><FONT FACE="Arial">-1</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">（可讀取）和</FONT><FONT FACE="Arial">0</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">（不可寫入）。</P>
+</FONT><FONT FACE="Arial"><P>WScript.Echo gRead</P>
+<P>WScript.Echo gWrite</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P>‘</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">接著使用「</FONT><FONT FACE="Arial">PUT</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">」指令以設定屬性值，設定</FONT><FONT FACE="Arial">AccessRead</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">和</FONT><FONT FACE="Arial">AccessWrite</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">為</FONT><FONT FACE="Arial">False</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">。</P>
+</FONT><FONT FACE="Arial"><P>IIsObj.Put "AccessRead", False </P>
+<P>IIsObj.Put "AccessWrite", False </P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P>‘</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">最後再使用</FONT><FONT FACE="Arial">SetInfo</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">方法儲存到</FONT><FONT FACE="Arial">Metabase</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">當中。</P>
+</FONT><FONT FACE="Arial"><P>IIsObj.SetInfo </P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P>‘</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">再使用「</FONT><FONT FACE="Arial">.</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">」以讀取剛剛寫入的</FONT><FONT FACE="Arial">AccessRead</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">和</FONT><FONT FACE="Arial">AccessWrite</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">屬性設定值。</P>
+</FONT><FONT FACE="Arial"><P>gRead = IIsObj.AccessRead</P>
+<P>gWrite = IIsObj.AccessWrite </P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P>‘</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">使用「</FONT><FONT FACE="Arial">WScript.Echo </FONT><FONT FACE="System,新細明體" LANG="ZH-TW">…</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">」，將讀取的顯示於</FONT><FONT FACE="Arial">DOS</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">指令行下的畫面。因此顯示</FONT><FONT FACE="Arial">0</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">（不可讀取）和</FONT><FONT FACE="Arial">0</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">（不可寫入）。</P>
+</FONT><FONT FACE="Arial"><P>WScript.Echo gRead</P>
+<P>WScript.Echo gWrite </P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P>‘</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">最後使用「</FONT><FONT FACE="Arial">.</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">」指令以設定屬性值，設定</FONT><FONT FACE="Arial">AccessRead</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">和</FONT><FONT FACE="Arial">AccessWrite</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">為原來的值。並讀取顯示出來。</P>
+</FONT><FONT FACE="Arial"><P>IIsObj.AccessRead = True </P>
+<P>IIsObj.AccessWrite = False </P>
+<P>IIsObj.SetInfo </P>
+<P>gRead = IIsObj.AccessRead</P>
+<P>gWrite = IIsObj.AccessWrite </P>
+<P>WScript.Echo gRead</P>
+<P>WScript.Echo gWrite</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">學會了嗎？</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>　</P>
+<P>最大頻寬限制設定範例</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">如何透過瀏覽器使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">、或於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">MS-DOS </FONT><FONT FACE="新細明體" LANG="ZH-TW">指令行和於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Windows</FONT><FONT FACE="新細明體" LANG="ZH-TW">環境下使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">WSH</FONT><FONT FACE="新細明體" LANG="ZH-TW">，呼叫</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS Admin Objects</FONT><FONT FACE="新細明體" LANG="ZH-TW">，來設定最大頻寬限制呢？</P>
+<P ALIGN="JUSTIFY">方法為使用「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">GET</FONT><FONT FACE="新細明體" LANG="ZH-TW">」和「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">PUT</FONT><FONT FACE="新細明體" LANG="ZH-TW">」指令，以讀取和設定最大頻寬限制「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">MaxBandwidth</FONT><FONT FACE="新細明體" LANG="ZH-TW">」的屬性值。</P>
+<P ALIGN="JUSTIFY">看個例子就知道最大頻寬限制如何設定了！</P>
+<P ALIGN="JUSTIFY">於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">DOS</FONT><FONT FACE="新細明體" LANG="ZH-TW">指令行下執行</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cscript admobj3.vbs</FONT><FONT FACE="新細明體" LANG="ZH-TW">，將顯示：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>c:\asp&gt;cscript admobj3.vbs</P>
+<P>Microsoft (R) Windows Scripting Host Version 5.0 for Windows</P>
+<P>Copyright (C) Microsoft Corporation 1996-1997. All rights reserved.</P>
+<P>-1</P>
+<P>204800</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">以上將整個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">伺服器的最大頻寬，限制為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">204800 bits</FONT><FONT FACE="新細明體" LANG="ZH-TW">（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">200 KBytes</FONT><FONT FACE="新細明體" LANG="ZH-TW">）。</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">-1</FONT><FONT FACE="新細明體" LANG="ZH-TW">表示原本未限制最大頻寬。</P>
+<P ALIGN="JUSTIFY">設定後，若要確認設定是否已經改變，方法為在</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[Internet </FONT><FONT FACE="新細明體" LANG="ZH-TW">服務管理員</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">上，在</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">伺服器的電腦上按一下滑鼠右鍵，再選取</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">內容</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">]</FONT><FONT FACE="新細明體" LANG="ZH-TW">，可看到已經啟用頻寬節流設定，並將最大網路限制設定為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">200 KBytes</FONT><FONT FACE="新細明體" LANG="ZH-TW">。</P>
+<P ALIGN="JUSTIFY">讓我們看看如何做到，使用記事本開啟</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">admobj3.vbs</FONT><FONT FACE="新細明體" LANG="ZH-TW">，內容如下：</P><DIR>
+
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P>‘</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">首先定義位址物件，「</FONT><FONT FACE="Arial">IIS://LocalHost</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">」，表示為整個</FONT><FONT FACE="Arial">IIS</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">伺服器。</P>
+</FONT><FONT FACE="Arial"><P>Set IIsObj = GetObject("IIS://LocalHost") </P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P>‘</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">使用「</FONT><FONT FACE="Arial">GET</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">」以讀取最大頻寬限制「</FONT><FONT FACE="Arial">MaxBandwidth</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">」的屬性值。</P>
+</FONT><FONT FACE="Arial"><P>MaxBW = IIsObj.Get("MaxBandwidth") </P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P>‘</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">或使用「</FONT><FONT FACE="Arial">.</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">」以讀取最大頻寬限制「</FONT><FONT FACE="Arial">MaxBandwidth</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">」的屬性值。</P>
+</FONT><FONT FACE="Arial"><P>'MaxBW = IIsObj.MaxBandwidth </P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P>‘</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">用「</FONT><FONT FACE="Arial">WScript.Echo </FONT><FONT FACE="System,新細明體" LANG="ZH-TW">…</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">」，將讀取的顯示於</FONT><FONT FACE="Arial">DOS</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">指令行下的畫面。因此顯示</FONT><FONT FACE="Arial">-1</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">表示原本未限制最大頻寬。</P>
+</FONT><FONT FACE="Arial"><P>WScript.Echo MaxBW</P>
+<P>'</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">接著使用「</FONT><FONT FACE="Arial">PUT</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">」指令以設定最大頻寬屬性值，設定</FONT><FONT FACE="Arial">MaxBandwidth</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">為</FONT><FONT FACE="Arial">200 KBytes</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">。</P>
+</FONT><FONT FACE="Arial"><P>IIsObj.Put "MaxBandwidth", 200 * 1024 </P>
+<P>'</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">最後再使用</FONT><FONT FACE="Arial">SetInfo</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">方法儲存到</FONT><FONT FACE="Arial">Metabase</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">當中。</P>
+</FONT><FONT FACE="Arial"><P>IIsObj.SetInfo </P>
+<P>'</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">再使用「</FONT><FONT FACE="Arial">.</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">」以讀取剛剛寫入的</FONT><FONT FACE="Arial">MaxBandwidth</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">屬性設定值並顯示出。</P>
+</FONT><FONT FACE="Arial"><P>MaxBW = IIsObj.MaxBandwidth</P>
+<P>WScript.Echo MaxBW</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">簡單嗎？</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>　</P>
+<P>讀取各種屬性（</FONT><FONT FACE="Arial" SIZE=5>properties</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>）值範例</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">由前面您學會了由</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">AccessRead</FONT><FONT FACE="新細明體" LANG="ZH-TW">和</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">AccessWrite</FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性，以設定讀取和寫入的存取權限，以及由</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">MaxBandwidth</FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性，以設定最大頻寬，那麼，您是否想知道有那些屬性可以設定呢？</P>
+<P ALIGN="JUSTIFY">答案是屬性有很多很多，讓我們讀取多個屬性值吧！</P>
+<P ALIGN="JUSTIFY">於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">DOS</FONT><FONT FACE="新細明體" LANG="ZH-TW">指令行下執行</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cscript admobj4.vbs</FONT><FONT FACE="新細明體" LANG="ZH-TW">，將顯示多個屬性值：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>c:\asp&gt;cscript admobj4.vbs</P>
+<P>Microsoft (R) Windows Scripting Host Version 5.0 for Windows</P>
+<P>Copyright (C) Microsoft Corporation 1996-1997. All rights reserved.</P>
+<P>AccessExecute = False</P>
+<P>AccessFlags = 513</P>
+<P>AccessNoRemoteExecute = False</P>
+<P>AccessNoRemoteRead = False</P>
+<P>AccessNoRemoteWrite = False</P>
+<P>AccessRead = True</P>
+<P>AccessScript = True</P>
+<P>AccessSSL = False</P>
+<P>AccessSSL128 = False</P>
+<P>AccessSSLFlags = 0</P>
+<P>AccessSSLMapCert = False</P>
+<P>AccessSSLNegotiateCert = False</P>
+<P>AccessSSLRequireCert = False</P>
+<P>AccessWrite = False</P>
+<P>AnonymousPasswordSync = True</P>
+<P>AnonymousUserName = IUSR_NT</P>
+<P>AnonymousUserPass = Fh3ZdT9wowEU5f</P>
+<P>AppAllowClientDebug = False</P>
+<P>AppAllowDebugging = False</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">讓我們看看如何做到，使用記事本開啟</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">admobj4.vbs</FONT><FONT FACE="新細明體" LANG="ZH-TW">，內容如下：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>'</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">首先定義位址物件，「</FONT><FONT FACE="Arial"> IIS://LocalHost/W3SVC/1/Root</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">」，表示為預設的</FONT><FONT FACE="Arial"> Web </FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">站台的主目錄。</P>
+</FONT><FONT FACE="Arial"><P>Set IIsObj = GetObject("IIS://LocalHost/W3SVC/1/Root") </P>
+<P>'</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">使用「</FONT><FONT FACE="Arial">.</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">」以讀取</FONT><FONT FACE="Arial">AccessExecute</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">屬性的值。並使用「</FONT><FONT FACE="Arial">WScript.Echo </FONT><FONT FACE="System,新細明體" LANG="ZH-TW">…</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">」，將讀取的顯示於</FONT><FONT FACE="Arial">DOS</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">指令行下的畫面。</P>
+</FONT><FONT FACE="Arial"><P>WScript.Echo "AccessExecute = " &amp; IIsObj.AccessExecute </P>
+<P>'</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">以下使用相同方法以讀取各個屬性的值。</P>
+</FONT><FONT FACE="Arial"><P>WScript.Echo "AccessFlags = " &amp; IIsObj.AccessFlags </P>
+<P>WScript.Echo "AccessNoRemoteExecute = " &amp; IIsObj.AccessNoRemoteExecute </P>
+<P>WScript.Echo "AccessNoRemoteRead = " &amp; IIsObj.AccessNoRemoteRead </P>
+<P>WScript.Echo "AccessNoRemoteWrite = " &amp; IIsObj.AccessNoRemoteWrite </P>
+<P>WScript.Echo "AccessRead = " &amp; IIsObj.AccessRead </P>
+<P>WScript.Echo "AccessScript = " &amp; IIsObj.AccessScript </P>
+<P>WScript.Echo "AccessSSL = " &amp; IIsObj.AccessSSL </P>
+<P>WScript.Echo "AccessSSL128 = " &amp; IIsObj.AccessSSL128 </P>
+<P>WScript.Echo "AccessSSLFlags = " &amp; IIsObj.AccessSSLFlags </P>
+<P>WScript.Echo "AccessSSLMapCert = " &amp; IIsObj.AccessSSLMapCert </P>
+</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=1><P>　</P>
+</FONT><FONT FACE="Arial"><P>WScript.Echo "AccessSSLNegotiateCert = " &amp; IIsObj.AccessSSLNegotiateCert </P>
+<P>WScript.Echo "AccessSSLRequireCert = " &amp; IIsObj.AccessSSLRequireCert </P>
+<P>WScript.Echo "AccessWrite = " &amp; IIsObj.AccessWrite </P>
+<P>WScript.Echo "AnonymousPasswordSync = " &amp; IIsObj.AnonymousPasswordSync </P>
+<P>WScript.Echo "AnonymousUserName = " &amp; IIsObj.AnonymousUserName </P>
+<P>WScript.Echo "AnonymousUserPass = " &amp; IIsObj.AnonymousUserPass </P>
+<P>WScript.Echo "AppAllowClientDebug = " &amp; IIsObj.AppAllowClientDebug </P>
+<P>WScript.Echo "AppAllowDebugging = " &amp; IIsObj.AppAllowDebugging </P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>　</P></DIR>
+
+<P>啟動、暫停、繼續、或停止</FONT><FONT FACE="Arial" SIZE=5>Web</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>站台範例</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">如何透過瀏覽器使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">、或於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">MS-DOS </FONT><FONT FACE="新細明體" LANG="ZH-TW">指令行和於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Windows</FONT><FONT FACE="新細明體" LANG="ZH-TW">環境下使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">WSH</FONT><FONT FACE="新細明體" LANG="ZH-TW">，呼叫</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS Admin Objects</FONT><FONT FACE="新細明體" LANG="ZH-TW">，來啟動、暫停、繼續、或停止一個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">FTP</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台、或伺服器呢？</P>
+<P ALIGN="JUSTIFY">為達到這個功能，您必須使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS Admin Objects</FONT><FONT FACE="新細明體" LANG="ZH-TW">所提供的方法（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">methods</FONT><FONT FACE="新細明體" LANG="ZH-TW">），如下：</P>
+
+<UL>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>Continue</FONT><FONT FACE="新細明體" LANG="ZH-TW">：繼續一個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">FTP</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台、或伺服器。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>Pause </FONT><FONT FACE="新細明體" LANG="ZH-TW">：暫停一個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">FTP</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台、或伺服器。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>Start</FONT><FONT FACE="新細明體" LANG="ZH-TW">：啟動一個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">FTP</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台、或伺服器。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>Stop </FONT><FONT FACE="新細明體" LANG="ZH-TW">：停止一個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">FTP</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台、或伺服器。</LI></P></UL>
+
+<P ALIGN="JUSTIFY">首先先定義待設定的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">FTP</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台、或伺服器等路徑，語法如下，其中</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IisObj</FONT><FONT FACE="新細明體" LANG="ZH-TW">為定義的路徑物件名稱：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>Set IIsObj = GetObject("IIS://</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">電腦名稱</FONT><FONT FACE="Arial">/</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">服務</FONT><FONT FACE="Arial">/</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">站台編號</FONT><FONT FACE="Arial">")</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">譬如：</P>
+
+<UL>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>IIS://LocalHost</FONT><FONT FACE="新細明體" LANG="ZH-TW">：表示為整個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">伺服器。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>IIS://LocalHost/W3SVC/1</FONT><FONT FACE="新細明體" LANG="ZH-TW">：表示「預設的</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">Web </FONT><FONT FACE="新細明體" LANG="ZH-TW">站台」。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>IIS://LocalHost/MSFTPSVC/1</FONT><FONT FACE="新細明體" LANG="ZH-TW">：表示為「預設的</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">FTP</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台」。</LI></P></UL>
+
+<P ALIGN="JUSTIFY">看個例子就知道如何使用方法（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">methods</FONT><FONT FACE="新細明體" LANG="ZH-TW">）了！</P>
+<P ALIGN="JUSTIFY">讓我們看看如何啟動一個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台，使用記事本開啟</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">startweb.vbs</FONT><FONT FACE="新細明體" LANG="ZH-TW">，內容如下：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>'</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">「</FONT><FONT FACE="Arial"> IIS://LocalHost/W3SVC/1</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">」，表示為預設的</FONT><FONT FACE="Arial">Web</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">站台。</P>
+</FONT><FONT FACE="Arial"><P>fullPath = " IIS://LocalHost/W3SVC/1</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">”</P>
+</FONT><FONT FACE="Arial"><P>On Error Resume Next</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P>‘</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">開啟此路徑。</P>
+</FONT><FONT FACE="Arial"><P>Set objServer = GetObject(fullPath)</P>
+<P>If Err &lt;&gt; 0 Then</P>
+<P>&#9;'</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">若</FONT><FONT FACE="Arial">Err &lt;&gt; 0</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">表示錯誤則跳出</P>
+<P>&#9;</FONT><FONT FACE="Arial">WScript.Echo Now &amp; ". </FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">錯誤碼</FONT><FONT FACE="Arial">: " &amp; Hex(Err) &amp; " - " &amp; "</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">無法開啟</FONT><FONT FACE="Arial"> " &amp; fullPath &amp; "."</P>
+<P>&#9;WScript.Quit</P>
+<P>End If</P>
+<P>'</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">使用</FONT><FONT FACE="Arial">Start</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">啟動</FONT><FONT FACE="Arial">(</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">開始</FONT><FONT FACE="Arial">)</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">站台。</P>
+</FONT><FONT FACE="Arial"><P>objServer.Start</P>
+<P>If Err &lt;&gt; 0 Then</P>
+<P>&#9;WScript.Echo Now &amp; ". </FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">錯誤碼</FONT><FONT FACE="Arial">: " &amp; Hex(Err) &amp; " - " &amp; "</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">無法啟動</FONT><FONT FACE="Arial">(</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">開始</FONT><FONT FACE="Arial">)Web</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">站台</FONT><FONT FACE="Arial"> " &amp; fullPath &amp; "."</P>
+<P>else</P>
+<P>&#9;WScript.Echo "</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">已經啟動</FONT><FONT FACE="Arial">(</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">開始</FONT><FONT FACE="Arial">)Web</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">站台</FONT><FONT FACE="Arial"> " &amp; fullPath &amp; "."</P>
+<P>End If</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">程式當中，首先使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Start</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">methods</FONT><FONT FACE="新細明體" LANG="ZH-TW">），啟動預設的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS://LocalHost/W3svc/1</FONT><FONT FACE="新細明體" LANG="ZH-TW">）。</P>
+<P ALIGN="JUSTIFY">若直接於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Windows </FONT><FONT FACE="新細明體" LANG="ZH-TW">環境下執行</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">startweb.vbs</FONT><FONT FACE="新細明體" LANG="ZH-TW">，將顯示「已經啟動</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">(</FONT><FONT FACE="新細明體" LANG="ZH-TW">開始</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">)Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">IIS://LocalHost/W3svc/1.</FONT><FONT FACE="新細明體" LANG="ZH-TW">」的對話盒。</P>
+<P ALIGN="JUSTIFY">或於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">DOS</FONT><FONT FACE="新細明體" LANG="ZH-TW">指令行下執行</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cscript startweb.vbs</FONT><FONT FACE="新細明體" LANG="ZH-TW">，將顯示：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>c:\ntopsamp&gt; cscript startweb.vbs</P>
+<P>Microsoft (R) Windows Scripting Host Version 5.0 for Windows</P>
+<P>Copyright (C) Microsoft Corporation 1996-1997. All rights reserved.</P>
+</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW"><P>已經啟動</FONT><FONT FACE="Arial">(</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">開始</FONT><FONT FACE="Arial">)Web</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">站台</FONT><FONT FACE="Arial"> IIS://LocalHost/W3svc/1.</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">我們啟動了預設的</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">Web </FONT><FONT FACE="新細明體" LANG="ZH-TW">站台。</P>
+<P ALIGN="JUSTIFY">同理，將以上程式中的「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">objServer.Start</FONT><FONT FACE="新細明體" LANG="ZH-TW">」，若改變為「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">objServer.Pause</FONT><FONT FACE="新細明體" LANG="ZH-TW">」即可暫停一個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台；改變為「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">objServer.Continue</FONT><FONT FACE="新細明體" LANG="ZH-TW">」可繼續一個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台；改變為「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">objServer.Stop </FONT><FONT FACE="新細明體" LANG="ZH-TW">」則可以停止一個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台。</P>
+<P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>啟動、暫停、繼續、或停止</FONT><FONT FACE="Arial" SIZE=5>FTP</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>站台範例</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">將以上程式中路徑更改為「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">msftpsvc</FONT><FONT FACE="新細明體" LANG="ZH-TW">」，就可以控制</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">FTP</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台了！</P>
+<P ALIGN="JUSTIFY">讓我們看看如何停止一個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">FTP</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台，使用記事本開啟</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">stopftp.vbs</FONT><FONT FACE="新細明體" LANG="ZH-TW">，內容如下：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>'</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">「</FONT><FONT FACE="Arial"> IIS://LocalHost/msftpsvc/1</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">」，表示為預設的</FONT><FONT FACE="Arial">FTP</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">站台。</P>
+</FONT><FONT FACE="Arial"><P>fullPath = "IIS://" &amp; ComputerName &amp; "/msftpsvc/" &amp; ServerNo</P>
+<P>'</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">開啟此路徑。</P>
+</FONT><FONT FACE="Arial"><P>Set objServer = GetObject(fullPath)</P>
+<P>If Err &lt;&gt; 0 Then</P>
+<P>&#9;WScript.Echo Now &amp; ". </FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">錯誤碼</FONT><FONT FACE="Arial">: " &amp; Hex(Err) &amp; " - " &amp; "</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">無法開啟</FONT><FONT FACE="Arial"> " &amp; fullPath &amp; "."</P>
+<P>&#9;WScript.Quit</P>
+<P>End If</P>
+<P>'</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">使用</FONT><FONT FACE="Arial">Stop</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">停止站台</P>
+</FONT><FONT FACE="Arial"><P>objServer.Stop</P>
+<P>If Err &lt;&gt; 0 Then</P>
+<P>&#9;WScript.Echo Now &amp; ". </FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">錯誤碼</FONT><FONT FACE="Arial">: " &amp; Hex(Err) &amp; " - " &amp; "</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">無法停止</FONT><FONT FACE="Arial">FTP</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">站台</FONT><FONT FACE="Arial"> " &amp; fullPath &amp; "."</P>
+<P>else</P>
+<P>&#9;WScript.Echo Now &amp; " : " &amp; "</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">已經停止</FONT><FONT FACE="Arial">FTP</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">站台</FONT><FONT FACE="Arial"> " &amp; fullPath &amp; "."</P>
+<P>End If</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">程式當中，首先使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Stop</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">methods</FONT><FONT FACE="新細明體" LANG="ZH-TW">），停止預設的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">FTP</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS://LocalHost/ msftpsvc /1</FONT><FONT FACE="新細明體" LANG="ZH-TW">）。</P>
+<P ALIGN="JUSTIFY">同理，將以上程式中的「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">objServer.Stop</FONT><FONT FACE="新細明體" LANG="ZH-TW">」，若改變為「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">objServer.Pause</FONT><FONT FACE="新細明體" LANG="ZH-TW">」即可暫停一個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">FTP</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台；改變為「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">objServer.Continue</FONT><FONT FACE="新細明體" LANG="ZH-TW">」可繼續一個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">FTP</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台；改變為「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">objServer.Start </FONT><FONT FACE="新細明體" LANG="ZH-TW">」則可以啟動一個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">FTP</FONT><FONT FACE="新細明體" LANG="ZH-TW">站台。</P>
+<P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>建立虛擬目錄範例</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">如何透過瀏覽器使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">、或於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">MS-DOS </FONT><FONT FACE="新細明體" LANG="ZH-TW">指令行和於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Windows</FONT><FONT FACE="新細明體" LANG="ZH-TW">環境下使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">WSH</FONT><FONT FACE="新細明體" LANG="ZH-TW">，呼叫</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS Admin Objects</FONT><FONT FACE="新細明體" LANG="ZH-TW">，來建立虛擬目錄呢？</P>
+<P ALIGN="JUSTIFY">方法為使用「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Create("IISWebVirtualDir","</FONT><FONT FACE="新細明體" LANG="ZH-TW">虛擬目錄名稱</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">")</FONT><FONT FACE="新細明體" LANG="ZH-TW">」方法，以建立虛擬目錄，並設定以下屬性：</P>
+
+<UL>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>Path</FONT><FONT FACE="新細明體" LANG="ZH-TW">：設定虛擬目錄的實際物理路徑。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>EnableDirBrowsing</FONT><FONT FACE="新細明體" LANG="ZH-TW">：設定虛擬目錄是否允許瀏覽目錄。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>AccessRead</FONT><FONT FACE="新細明體" LANG="ZH-TW">：設定虛擬目錄是否允許讀取。</LI></P></UL>
+
+<P ALIGN="JUSTIFY">看個例子就知道建立虛擬目錄如何設定了！</P>
+<P ALIGN="JUSTIFY">於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">DOS</FONT><FONT FACE="新細明體" LANG="ZH-TW">指令行下執行</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cscript admobj6.vbs</FONT><FONT FACE="新細明體" LANG="ZH-TW">，將顯示：</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">admobj6.vbs</FONT><FONT FACE="新細明體" LANG="ZH-TW">於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">DOS</FONT><FONT FACE="新細明體" LANG="ZH-TW">指令行下執行時將顯示：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>c:\asp&gt;cscript admobj6.vbs </P>
+<P>Microsoft (R) Windows Scripting Host Version 5.0 for Windows</P>
+<P>Copyright (C) Microsoft Corporation 1996-1997. All rights reserved.</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">讓我們看看如何做到，使用記事本開啟</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">admobj6.vbs</FONT><FONT FACE="新細明體" LANG="ZH-TW">，內容如下：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>'</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">首先定義位址物件，「</FONT><FONT FACE="Arial"> IIS://LocalHost/W3SVC/1/Root</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">」，表示於預設的</FONT><FONT FACE="Arial"> Web </FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">站台的主目錄下建立虛擬目錄。</P>
+</FONT><FONT FACE="Arial"><P>Set ServiceObj = GetObject("IIS://LocalHost/W3SVC/1/Root")</P>
+<P>'</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">使用「</FONT><FONT FACE="Arial">Create("IISWebVirtualDir","</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">虛擬目錄名稱</FONT><FONT FACE="Arial">")</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">」方法，以建立虛擬目錄</FONT><FONT FACE="Arial">asp5</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">。</P>
+</FONT><FONT FACE="Arial"><P>Set newVirDir =ServiceObj.Create("IISWebVirtualDir","asp5")</P>
+<P>'</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">由</FONT><FONT FACE="Arial">Path</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">屬性設定虛擬目錄的實際物理路徑</FONT><FONT FACE="Arial">c:\temp</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">。</P>
+</FONT><FONT FACE="Arial"><P>newVirDir.Path = "c:\temp"</P>
+<P>'</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">由</FONT><FONT FACE="Arial">EnableDirBrowsing</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">屬性設定虛擬目錄是否允許瀏覽目錄。</P>
+</FONT><FONT FACE="Arial"><P>newVirDir.EnableDirBrowsing = True</P>
+<P>'</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">由</FONT><FONT FACE="Arial">AccessRead</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">屬性設定虛擬目錄是否允許讀取。</P>
+</FONT><FONT FACE="Arial"><P>newVirDir.AccessRead = True</P>
+<P>'</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">最後再使用</FONT><FONT FACE="Arial">SetInfo</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">方法儲存到</FONT><FONT FACE="Arial">Metabase</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">當中。</P>
+</FONT><FONT FACE="Arial"><P>newVirDir.SetInfo</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">設定後，若要確認設定是否已經改變，方法為在</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[Internet </FONT><FONT FACE="新細明體" LANG="ZH-TW">服務管理員</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">上，在於預設的</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">Web </FONT><FONT FACE="新細明體" LANG="ZH-TW">站台下可看到建立虛擬目錄</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">asp5</FONT><FONT FACE="新細明體" LANG="ZH-TW">。再按滑鼠左鍵選取</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">內容</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">]</FONT><FONT FACE="新細明體" LANG="ZH-TW">，可看到已經允許讀取，以及允許瀏覽目錄。</P>
+<P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>使用</FONT><FONT FACE="Arial" SIZE=5>WSH</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>取得網路的資訊</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">Windows Scripting Host</FONT><FONT FACE="新細明體" LANG="ZH-TW">（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">WSH</FONT><FONT FACE="新細明體" LANG="ZH-TW">），使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">WScript.Network</FONT><FONT FACE="新細明體" LANG="ZH-TW">物件與網路溝通，可以取得網路的資訊。</P>
+<P ALIGN="JUSTIFY">讓我們看看如何顯示使用者網域、使用者姓名、和電腦名稱，使用記事本開啟</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">network.vbs</FONT><FONT FACE="新細明體" LANG="ZH-TW">，內容如下：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>Set WSHNetwork = WScript.CreateObject("WScript.Network")</P>
+<P>'</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">顯示</FONT><FONT FACE="Arial">WSHNetwork object</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">的</FONT><FONT FACE="Arial">properties</P>
+<P>MsgBox "</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">使用者網域</FONT><FONT FACE="Arial">: " &amp; WSHNetwork.UserDomain &amp; Chr(13) &amp; Chr(10) &amp; "</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">使用者姓名</FONT><FONT FACE="Arial">: " &amp; WSHNetwork.UserName &amp; Chr(13) &amp; Chr(10) &amp; "</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">電腦名稱</FONT><FONT FACE="Arial"> : " &amp; WSHNetwork.ComputerName, vbInformation + vbOKOnly, "WSHNetwork </FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">內容</FONT><FONT FACE="Arial">"</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">若直接於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Windows </FONT><FONT FACE="新細明體" LANG="ZH-TW">環境下執行</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">network.vbs</FONT><FONT FACE="新細明體" LANG="ZH-TW">，或於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">DOS</FONT><FONT FACE="新細明體" LANG="ZH-TW">指令行下執行</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cscript network.vbs</FONT><FONT FACE="新細明體" LANG="ZH-TW">，將顯示網路資訊。</P>
+<P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>使用</FONT><FONT FACE="Arial" SIZE=5>WSH</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>與</FONT><FONT FACE="Arial" SIZE=5>Shell</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>溝通</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">Windows Scripting Host</FONT><FONT FACE="新細明體" LANG="ZH-TW">（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">WSH</FONT><FONT FACE="新細明體" LANG="ZH-TW">），使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">WScript.Shell</FONT><FONT FACE="新細明體" LANG="ZH-TW">物件與</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Shell</FONT><FONT FACE="新細明體" LANG="ZH-TW">溝通，可以做到譬如於桌面上建立捷徑的功能。</P>
+<P ALIGN="JUSTIFY">讓我們看看如何於桌面上建立記事本捷徑，使用記事本開啟</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">shortcut.vbs</FONT><FONT FACE="新細明體" LANG="ZH-TW">，內容如下：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>Set WSHShell = WScript.CreateObject("WScript.Shell")</P>
+<P>'</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">使用</FONT><FONT FACE="Arial">SpecialFolders</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">讀取桌面路徑</P>
+</FONT><FONT FACE="Arial"><P>DesktopPath = WSHShell.SpecialFolders("Desktop")</P>
+<P>'</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">於桌面上建立捷徑物件</FONT><FONT FACE="Arial">(shortcut object)</P>
+<P>Set Shortcut1 = WSHShell.CreateShortcut(DesktopPath &amp; "\</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">記事本捷徑</FONT><FONT FACE="Arial">.lnk")</P>
+<P>'</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">設定捷徑物件</FONT><FONT FACE="Arial">(shortcut object)</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">的</FONT><FONT FACE="Arial">properties</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">並儲存之</P>
+</FONT><FONT FACE="Arial"><P>Shortcut1.TargetPath = WSHShell.ExpandEnvironmentStrings("%windir%\notepad.exe")</P>
+<P>Shortcut1.WorkingDirectory = WSHShell.ExpandEnvironmentStrings("%windir%")</P>
+<P>Shortcut1.WindowStyle = 4</P>
+<P>Shortcut1.IconLocation = WSHShell.ExpandEnvironmentStrings("%windir%\notepad.exe, 0")</P>
+<P>Shortcut1.Save</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">若直接於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Windows </FONT><FONT FACE="新細明體" LANG="ZH-TW">環境下執行</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">shortcut.vbs</FONT><FONT FACE="新細明體" LANG="ZH-TW">，或於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">DOS</FONT><FONT FACE="新細明體" LANG="ZH-TW">指令行下執行</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cscript shortcut.vbs</FONT><FONT FACE="新細明體" LANG="ZH-TW">，將於桌面上建立記事本捷徑。</P>
+<P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>使用</FONT><FONT FACE="Arial" SIZE=5>WSH</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>與</FONT><FONT FACE="Arial" SIZE=5>Excel</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>溝通</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">Windows Scripting Host</FONT><FONT FACE="新細明體" LANG="ZH-TW">（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">WSH</FONT><FONT FACE="新細明體" LANG="ZH-TW">），使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">WScript.CreateObject("Excel.Application")</FONT><FONT FACE="新細明體" LANG="ZH-TW">與</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Excel</FONT><FONT FACE="新細明體" LANG="ZH-TW">溝通，可以做到譬如在</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Excel</FONT><FONT FACE="新細明體" LANG="ZH-TW">中顯示</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">WSH</FONT><FONT FACE="新細明體" LANG="ZH-TW">內容、用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">WSH</FONT><FONT FACE="新細明體" LANG="ZH-TW">存取</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Excel</FONT><FONT FACE="新細明體" LANG="ZH-TW">顯示圖表等功能。</P>
+<P ALIGN="JUSTIFY">讓我們看看如何在</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Excel</FONT><FONT FACE="新細明體" LANG="ZH-TW">中顯示</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">WSH</FONT><FONT FACE="新細明體" LANG="ZH-TW">內容，使用記事本開啟</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">excel.vbs</FONT><FONT FACE="新細明體" LANG="ZH-TW">，內容如下：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>Set objXL = WScript.CreateObject("Excel.Application")</P>
+<P>objXL.Visible = TRUE</P>
+<P>objXL.WorkBooks.Add</P>
+<P>objXL.Columns(1).ColumnWidth = 20</P>
+<P>objXL.Columns(2).ColumnWidth = 30</P>
+<P>objXL.Columns(3).ColumnWidth = 40</P>
+<P>objXL.Cells(1, 1).Value = "</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">屬性名稱</FONT><FONT FACE="Arial">"</P>
+<P>objXL.Cells(1, 2).Value = "</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">值</FONT><FONT FACE="Arial">"</P>
+<P>objXL.Cells(1, 3).Value = "</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">描述</FONT><FONT FACE="Arial">"</P>
+<P>objXL.Range("A1:C1").Select</P>
+<P>objXL.Selection.Font.Bold = True</P>
+<P>objXL.Selection.Interior.ColorIndex = 1</P>
+<P>objXL.Selection.Interior.Pattern = 1 'xlSolid</P>
+<P>objXL.Selection.Font.ColorIndex = 2</P>
+<P>objXL.Columns("B:B").Select</P>
+<P>objXL.Selection.HorizontalAlignment = &amp;hFFFFEFDD ' xlLeft</P>
+<P>Dim intIndex</P>
+<P>intIndex = 2</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P>　</P>
+</FONT><FONT FACE="Arial"><P>'</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">顯示</FONT><FONT FACE="Arial">WScript properties</P>
+<P>Call Show("Name", WScript.Name, "</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">應用程式名稱</FONT><FONT FACE="Arial">")</P>
+<P>Call Show("Version", WScript.Version, "</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">應用程式版本</FONT><FONT FACE="Arial">")</P>
+<P>Call Show("FullName", WScript.FullName, "</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">應用程式內容</FONT><FONT FACE="Arial">: </FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">完整名稱</FONT><FONT FACE="Arial">")</P>
+<P>Call Show("Path", WScript.Path, "</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">應用程式內容</FONT><FONT FACE="Arial">: </FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">只有路徑</FONT><FONT FACE="Arial">")</P>
+<P>Call Show("Interactive", WScript.Interactive, "</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">互動模式狀態</FONT><FONT FACE="Arial">")</P>
+<P>'</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">顯示</FONT><FONT FACE="Arial">command line arguments.</P>
+<P>Dim colArgs</P>
+<P>Set colArgs = WScript.Arguments</P>
+<P>Call Show("Arguments.Count", colArgs.Count, "</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">指令列引數數目</FONT><FONT FACE="Arial">")</P>
+<P>For i = 0 to colArgs.Count - 1</P>
+<P>objXL.Cells(intIndex, 1).Value = "Arguments(" &amp; i &amp; ")"</P>
+<P>objXL.Cells(intIndex, 2).Value = colArgs(i)</P>
+<P>intIndex = intIndex + 1</P>
+<P>objXL.Cells(intIndex, 1).Select</P>
+<P>Next</P>
+<P>Sub Show(strName, strValue, strDesc)</P>
+<P>objXL.Cells(intIndex, 1).Value = strName</P>
+<P>objXL.Cells(intIndex, 2).Value = strValue</P>
+<P>objXL.Cells(intIndex, 3).Value = strDesc</P>
+<P>intIndex = intIndex + 1</P>
+<P>objXL.Cells(intIndex, 1).Select</P>
+<P>End Sub</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">若直接於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Windows </FONT><FONT FACE="新細明體" LANG="ZH-TW">環境下執行</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">excel.vbs</FONT><FONT FACE="新細明體" LANG="ZH-TW">，或於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">DOS</FONT><FONT FACE="新細明體" LANG="ZH-TW">指令行下執行</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cscript excel.vbs</FONT><FONT FACE="新細明體" LANG="ZH-TW">，將於在</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Excel</FONT><FONT FACE="新細明體" LANG="ZH-TW">中顯示</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">WSH</FONT><FONT FACE="新細明體" LANG="ZH-TW">內容。</P>
+<P ALIGN="JUSTIFY">　</P>
+<P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>安裝</FONT><FONT FACE="Arial" SIZE=5>MTS</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>套件</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">透過瀏覽器使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">、或於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">MS-DOS </FONT><FONT FACE="新細明體" LANG="ZH-TW">指令行和於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Windows</FONT><FONT FACE="新細明體" LANG="ZH-TW">環境下使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">WSH</FONT><FONT FACE="新細明體" LANG="ZH-TW">，使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">CreateObject("MTSAdmin.Catalog.1") </FONT><FONT FACE="新細明體" LANG="ZH-TW">用來與</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW">（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Microsoft Transaction Server</FONT><FONT FACE="新細明體" LANG="ZH-TW">）溝通，可以做到的譬如安裝和解除安裝元件（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">DLL</FONT><FONT FACE="新細明體" LANG="ZH-TW">）、安裝和解除安裝套件等功能。</P>
+<P ALIGN="JUSTIFY">讓我們看看如何安裝一個套件，使用記事本開啟</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">instpak.asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">，內容如下：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>'</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">套件檔案</P>
+</FONT><FONT FACE="Arial"><P>pakPath = "d:\jack.pak"</P>
+<P>'</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">套件名稱</P>
+</FONT><FONT FACE="Arial"><P>packageName = "jack"</P>
+<P>'</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">首先產生</FONT><FONT FACE="Arial">catalog object</P>
+<P>Dim catalog</P>
+<P>Set catalog = CreateObject("MTSAdmin.Catalog.1")</P>
+<P>'</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">然後取得</FONT><FONT FACE="Arial">packages collection</P>
+<P>Dim packages</P>
+<P>Set packages = catalog.GetCollection("Packages")</P>
+<P>'</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">重新整理</P>
+</FONT><FONT FACE="Arial"><P>packages.populate</P>
+<P>'</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">使用</FONT><FONT FACE="Arial">Remove</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">刪除已經安裝的相同名稱套件</P>
+</FONT><FONT FACE="Arial"><P>For i = packages.Count - 1 To 0 Step -1</P>
+<P>If packages.Item(i).Value("Name") = packageName Then</P>
+<P>packages.Remove (i)</P>
+<P>End If</P>
+<P>Next</P>
+<P>'</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">儲存所做的刪除動作</P>
+</FONT><FONT FACE="Arial"><P>packages.SaveChanges</P>
+<P>'</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">使用</FONT><FONT FACE="Arial">InstallPackage</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">從一個</FONT><FONT FACE="Arial">.pak</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">檔案安裝套件</P>
+</FONT><FONT FACE="Arial"><P>Dim util</P>
+<P>Set util = packages.getUtilInterface</P>
+<P>util.InstallPackage pakPath, "", 0</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">若直接於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Windows </FONT><FONT FACE="新細明體" LANG="ZH-TW">環境下執行</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">instpak.asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">，或於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">DOS</FONT><FONT FACE="新細明體" LANG="ZH-TW">指令行下執行</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cscript instpak.asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">，將於在</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Transaction Server Explorer</FONT><FONT FACE="新細明體" LANG="ZH-TW">中顯示所安裝的套件。</P>
+<P ALIGN="JUSTIFY">　</P>
+<P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>IIS 4.0</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>設計實例展示網站</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">作者準備一個展示各種</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW">設計實例的網站，提供各種網站網頁的資訊、與設計範例，包括</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">特異功能、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫設計實例、網路商店、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ActiveX</FONT><FONT FACE="新細明體" LANG="ZH-TW">、推播頻道、動態</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">HTML 99</FONT><FONT FACE="新細明體" LANG="ZH-TW">招等，網址如下：</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"></FONT><A HREF="../../index.html"><FONT FACE="System,新細明體" LANG="ZH-TW">http://www.asp.com.tw</FONT></A></P>
+<FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">歡迎上網光臨指教。</P></FONT></BODY>
+</HTML>

@@ -1,0 +1,527 @@
+<html>
+
+<head>
+<title>ASUS Mainboard Home</title>
+<script LANGUAGE="JavaScript">
+<!--
+var ready = false; 
+var imageDB = new Array();
+var imagepath = "Images/Menu/";
+
+function getImages() {
+  	if (document.images){
+   		imageDB['accessories']=new Array();
+		imageDB['accessories']['off'] = new Image(100,16); 	
+		imageDB['accessories']['off'].src=imagepath + "accessories.gif";
+	   	imageDB['accessories']['on'] = new Image(100,16); 	
+		imageDB['accessories']['on'].src=imagepath + "naccessories.gif";
+		
+		imageDB['home']=new Array();
+		imageDB['home']['off'] = new Image(100,16); 	
+		imageDB['home']['off'].src=imagepath +  "mbhome.gif";
+	   	imageDB['home']['on'] = new Image(100,16); 		
+		imageDB['home']['on'].src=imagepath + "mbhome-1.gif";
+
+		imageDB['slot2']=new Array();
+		imageDB['slot2']['off'] = new Image(100,16); 	
+		imageDB['slot2']['off'].src=imagepath + "slot2.gif";
+	   	imageDB['slot2']['on'] = new Image(100,16); 	
+		imageDB['slot2']['on'].src=imagepath + "slot2-1.gif";
+
+		imageDB['slot1']=new Array();
+		imageDB['slot1']['off'] = new Image(100,16); 	
+		imageDB['slot1']['off'].src=imagepath + "slot1.gif";
+	   	imageDB['slot1']['on'] = new Image(100,16); 		
+		imageDB['slot1']['on'].src=imagepath + "slot1-1.gif";
+		
+		imageDB['slota']=new Array();
+		imageDB['slota']['off'] = new Image(100,16); 	
+		imageDB['slota']['off'].src=imagepath + "slota.gif";
+	   	imageDB['slota']['on'] = new Image(100,16); 	
+		imageDB['slota']['on'].src=imagepath + "slota-1.gif";
+		
+		imageDB['socket370']=new Array();
+		imageDB['socket370']['off'] = new Image(100,16); 	
+		imageDB['socket370']['off'].src=imagepath + "socket370.gif";
+	   	imageDB['socket370']['on'] = new Image(100,16); 	
+		imageDB['socket370']['on'].src=imagepath + "socket370-1.gif";
+
+		imageDB['socket7']=new Array();
+		imageDB['socket7']['off'] = new Image(100,16); 	
+		imageDB['socket7']['off'].src=imagepath + "socket7.gif";
+	   	imageDB['socket7']['on'] = new Image(100,16); 	
+		imageDB['socket7']['on'].src=imagepath + "socket7-1.gif";
+
+		imageDB['socket8']=new Array();
+		imageDB['socket8']['off'] = new Image(100,16); 	
+		imageDB['socket8']['off'].src=imagepath + "socket8.gif";
+	   	imageDB['socket8']['on'] = new Image(100,16); 	
+		imageDB['socket8']['on'].src=imagepath + "socket8-1.gif";
+
+		imageDB['archives']=new Array();
+		imageDB['archives']['off'] = new Image(100,16); 	
+		imageDB['archives']['off'].src=imagepath + "archives.gif";
+	   	imageDB['archives']['on'] = new Image(100,16); 	
+		imageDB['archives']['on'].src=imagepath + "archives-1.gif";
+
+		imageDB['award']=new Array();
+		imageDB['award']['off'] = new Image(100,16); 		
+		imageDB['award']['off'].src=imagepath + "award.gif";
+	   	imageDB['award']['on'] = new Image(100,16); 		
+		imageDB['award']['on'].src=imagepath + "award-1.gif";
+
+		imageDB['bios']=new Array();
+		imageDB['bios']['off'] = new Image(100,16); 		
+		imageDB['bios']['off'].src=imagepath + "bios.gif";
+	   	imageDB['bios']['on'] = new Image(100,16); 		
+		imageDB['bios']['on'].src=imagepath + "bios-1.gif";
+
+		imageDB['driver']=new Array();
+		imageDB['driver']['off'] = new Image(100,16); 		
+		imageDB['driver']['off'].src=imagepath + "driver.gif";
+	   	imageDB['driver']['on'] = new Image(100,16); 		
+		imageDB['driver']['on'].src=imagepath + "driver-1.gif";
+
+		imageDB['manual']=new Array();
+		imageDB['manual']['off'] = new Image(100,16); 		
+		imageDB['manual']['off'].src=imagepath + "manual.gif";
+	   	imageDB['manual']['on'] = new Image(100,16); 		
+		imageDB['manual']['on'].src=imagepath + "manual-1.gif";
+
+		imageDB['cert']=new Array();
+		imageDB['cert']['off'] = new Image(100,16); 		
+		imageDB['cert']['off'].src=imagepath + "certificate.gif";
+	   	imageDB['cert']['on'] = new Image(100,16); 		
+		imageDB['cert']['on'].src=imagepath + "certificate-1.gif";
+
+		imageDB['techref']=new Array();
+		imageDB['techref']['off'] = new Image(100,16); 		
+		imageDB['techref']['off'].src=imagepath + "techref.gif";
+	   	imageDB['techref']['on'] = new Image(100,16); 		
+		imageDB['techref']['on'].src=imagepath + "techref-1.gif";
+		ready = true;
+  	}
+};
+
+function gethlight(_sect){
+   if (ready) document.images[_sect].src=imageDB[_sect]['on'].src;
+   return true;
+};
+
+function offlight(_sect){
+   if (ready) document.images[_sect].src=imageDB[_sect]['off'].src;
+   return true;
+}; 
+// -->
+</script>
+</head>
+
+<body vlink="#0000FF" onLoad="getImages();">
+
+<table border="0" width="660" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100%"><a href="../../../index.html"><img src="../../../image/logo-title.gif"
+    border="0" width="94" height="25"></a><a href="/company/index.html"><img
+    src="../../../image/icon-company.gif" border="0" width="100" height="25"></a><a
+    href="../../products/index.html"><img src="../../../image/icon-product.gif" border="0"
+    width="85" height="25"></a><a href="../../../search.html"><img
+    src="../../../image/icon-search.gif" border="0" width="80" height="25"></a><a
+    href="../../company/support.html"><img src="../../../image/icon-support.gif" border="0"
+    width="85" height="25"></a><a href="/Whatsnew/index.html"><img
+    src="../../../image/icon-news.gif" border="0" width="90" height="25"></a><a
+    href="/index.html"><img src="../../../image/icon-home.gif" border="0" width="80"
+    height="25"></a></td>
+  </tr>
+</table>
+
+<table border="0" width="645" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100" valign="top" align="left" background="middle.gif"><table border="0"
+    width="100%" align="left" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="100%"><img src="Images/Menu/top.gif" width="99" height="5"></td>
+      </tr>
+      <tr>
+        <td width="100%"><img src="Images/Menu/mbhome-1.gif" width="100" height="16"></td>
+      </tr>
+      <tr>
+        <td width="100%"><img src="middle.gif" width="100" height="5" border="0"></td>
+      </tr>
+      <tr>
+        <td width="100%"><a href="slot2.html" onMouseOver="return gethlight('slot2');"
+        onMouseOut="return offlight('slot2');"><img name="slot2" src="Images/Menu/slot2.gif"
+        width="100" height="16" border="0"></a></td>
+      </tr>
+      <tr>
+        <td width="100%"><img src="middle.gif" width="100" height="5"></td>
+      </tr>
+      <tr>
+        <td width="100%"><a href="slot1.html" onMouseOver="return gethlight('slot1');"
+        onMouseOut="return offlight('slot1');"><img name="slot1" src="Images/Menu/slot1.gif"
+        width="100" height="16" border="0"></a></td>
+      </tr>
+      <tr>
+        <td width="100%"><img src="middle.gif" width="100" height="5"></td>
+      </tr>
+      
+      <tr> 
+          <td width="100%"><a href="slota.html" onMouseOver="return gethlight('slota');"
+        onMouseOut="return offlight('slota');"><img name="slota" src="images/Menu/slota.gif"
+        width="100" height="16" border="0"></a></td>
+        </tr>      
+      <tr>
+        <td width="100%"><img src="middle.gif" width="100" height="5"></td>
+      </tr>
+      
+      <tr>
+        <td width="100%"><a href="socket370.html" onMouseOver="return gethlight('socket370');"
+        onMouseOut="return offlight('socket370');"><img name="socket370"
+        src="Images/Menu/socket370.gif" width="100" height="16" border="0"></a></td>
+      </tr>
+      <tr>
+        <td width="100%"><img src="middle.gif" width="100" height="5"></td>
+      </tr>
+      <tr>
+        <td width="100%"><a href="socket8.html" onMouseOver="return gethlight('socket8');"
+        onMouseOut="return offlight('socket8');"><img name="socket8" src="Images/Menu/socket8.gif"
+        width="100" height="16" border="0"></a></td>
+      </tr>
+      <tr>
+        <td width="100%"><img src="middle.gif" width="100" height="5"></td>
+      </tr>
+      <tr>
+        <td width="100%"><a href="socket7.html" onMouseOver="return gethlight('socket7');"
+        onMouseOut="return offlight('socket7');"><img name="socket7" src="Images/Menu/socket7.gif"
+        width="100" height="16" border="0"></a></td>
+      </tr>
+      <tr>
+        <td width="100%"><img src="middle.gif" width="100" height="5"></td>
+      </tr>
+      <tr>
+        <td width="100%"><a href="archives.html" onMouseOver="return gethlight('archives');"
+        onMouseOut="return offlight('archives');"><img name="archives"
+        src="Images/Menu/archives.gif" width="100" height="16" border="0"></a></td>
+      </tr>
+      <tr>
+        <td width="100%"><img src="Images/Menu/between.gif" width="100" height="10"></td>
+      </tr>
+       <tr>
+        <td width="100%"><a href="../accessories.html" onMouseOver="return gethlight('accessories');"
+        onMouseOut="return offlight('accessories');"><img name="accessories"
+        src="Images/menu/accessories.gif" border="0"></td>
+      </tr>
+      <tr>
+        <td width="100%"><img src="middle.gif" width="100" height="5"></td>
+      </tr>
+      <tr>
+        <td width="100%"><a href="award.html" onMouseOver="return gethlight('award');"
+        onMouseOut="return offlight('award');"><img name="award" src="Images/Menu/award.gif"
+        width="100" height="16" border="0"></a></td>
+      </tr>
+      <tr>
+        <td width="100%"><img src="middle.gif" width="100" height="5"></td>
+      </tr>
+      <tr>
+        <td width="100%"><a href="bios.html" onMouseOver="return gethlight('bios');"
+        onMouseOut="return offlight('bios');"><img name="bios" src="Images/Menu/bios.gif"
+        width="100" height="16" border="0"></a></td>
+      </tr>
+      <tr>
+        <td width="100%"><img src="middle.gif" width="100" height="5"></td>
+      </tr>
+      <tr>
+        <td width="100%"><a href="driver.html" onMouseOver="return gethlight('driver');"
+        onMouseOut="return offlight('driver');"><img name="driver" src="Images/Menu/driver.gif"
+        width="100" height="16" border="0"></a></td>
+      </tr>
+      <tr>
+        <td width="100%"><img src="middle.gif" width="100" height="5"></td>
+      </tr>
+      <tr>
+        <td width="100%"><a href="manual.html" onMouseOver="return gethlight('manual');"
+        onMouseOut="return offlight('manual');"><img name="manual" src="Images/Menu/manual.gif"
+        width="100" height="16" border="0"></a></td>
+      </tr>
+      <tr>
+        <td width="100%"><img src="middle.gif" width="100" height="5"></td>
+      </tr>
+      <tr>
+        <td width="100%"><a href="../Certificate/index.html"
+        onMouseOver="return gethlight('cert');" onMouseOut="return offlight('cert');"><img
+        name="cert" src="Images/Menu/certificate.gif" width="100" height="16" border="0"></a></td>
+      </tr>
+      <tr>
+        <td width="100%"><img src="middle.gif" width="100" height="5"></td>
+      </tr>
+      <tr>
+        <td width="100%"><a href="../Techref/index.html"
+        onMouseOver="return gethlight('techref');" onMouseOut="return offlight('techref');"><img
+        name="techref" src="Images/Menu/techref.gif" width="100" height="16" border="0"></a></td>
+      </tr>
+    </table>
+    </td>
+    <td width="390" valign="top" align="left" rowspan="2"><img src="Images/p3.jpg" width="385"
+    height="150"><table border="0" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="100%" bgcolor="#FFFFFF"><font face="Arial" size="2" color="#FFFF00"><strong><img
+        src="clear.gif" width="10" height="10"></strong></font></td>
+      </tr>
+      <tr>
+        <td width="100%" bgcolor="#FFFFFF"><img src="Images/new.gif" width="385" height="29"><img
+        src="clear.gif" width="3" height="3"></td>
+      </tr>
+      <tr>
+        <td width="100%" bgcolor="#FFFFFF"><img src="clear.gif" width="5" height="5"></td>
+      </tr>
+    </table>
+    <table border="0" width="100%" cellspacing="1">
+ <!------------     
+        <tr>
+        <td width="100" valign="top" align="left"><a href="pentiumpro/cuc2000/index.html"><img
+        src="cuc2000.jpg" border="1"></a></td>
+        <td valign="top" align="left"><font face="Arial" size="2"><a
+        href="pentiumpro/cuc2000/index.html"><strong>CUC2000 Series (133/100MHz FSB)</strong></a><br>
+        ASUS CUC2000 Series is based on <a href="http://developer.intel.com/design/chipsets/820/index.htm">Intel<sup>&reg;</sup> 
+         820 Chipset</a> (ATX) supporting FCPGA 350~866MHz, AGP 4X Pro, and upgradable to 5 USB ports.</font>
+        </td></tr>
+           <tr>
+        <td width="100" valign="top" colspan="2" align="left"><img src="clear.gif" width="3"
+        height="3"></td>
+      </tr>
+ //------------>     
+    <tr>
+        <td width="100" valign="top" align="left"><a href="pentiumpro/cuv4x/index.html"><img
+        src="cuv4x.jpg" border="1"></a></td>
+        <td valign="top" align="left"><font face="Arial" size="2"><a
+        href="pentiumpro/cuv4x/index.html"><strong>CUV4X (ATX, AGP 4X/Pro)</strong></a><br>
+        ASUS CUV4X is based on VIA<sup>&reg;</sup> 694X/694Z AGPset</a> which supports Intel<sup>&reg;</sup> FCPGA 300~800MHz. 
+        Also available in <a href="pentiumpro/cuv4x-m/index.html">microATX</a>.</font>
+        </td></tr>
+          <tr>
+        <td width="100" valign="top" colspan="2" align="left"><img src="clear.gif" width="3"
+        height="3"></td>
+      </tr>
+      
+      <tr>
+        <td width="100" valign="top" align="left"><a href="slota.html"><img
+        src="k7v.jpg" border="1"></a></td>
+        <td valign="top" align="left"><font face="Arial" size="2"><a
+        href="slota.html"><strong>K7V Series (200MHz FSB)</strong></a><br>
+        ASUS K7V Series is based on the all new <a href="http://www.via.com.tw/products/prodkx133.htm">VIA<sup>&reg;</sup> 
+        Apollo KX133 Chipset</a> (ATX) which supports 1GHz Athlon K7 CPU, AGP 4X and 1.5GB 
+        PC133/100 SDRAM. Also available in <a href="slota/k7v-rm/index.html">microATX</a>.</font>
+        </td></tr>
+         <tr>
+        <td width="100" valign="top" colspan="2" align="left"><img src="clear.gif" width="3" height="3"></td>
+      </tr>
+
+      <tr>
+        <td width="100" valign="top" align="left"><a href="pentiumpro/cubx/index.html"><img
+        src="cubx.jpg" border="1"></a></td>
+        <td valign="top" align="left"><font face="Arial" size="2"><a
+        href="pentiumpro/cubx/index.html"><strong>CUBX Series (100/66MHz FSB)</strong></a><br>
+        ASUS CUBX Series is based on <a href="http://developer.intel.com/design/chipsets/440bx/index.htm">Intel<sup>&reg;</sup> 
+        440BX AGPset</a> in ATX form factor supporting FCPGA 300~800MHz and UltraDMA/66 BM IDE.</font>
+        </td></tr>
+          <tr>
+        <td width="100" valign="top" colspan="2" align="left"><img src="clear.gif" width="3"
+        height="3"></td>
+      </tr>
+         <tr>
+        <td width="100" valign="top" align="left"><a href="pentiumpro/cuwe-fx/index.html"><img
+        src="cuwe-fx.jpg" width="95" border="1"></a></td>
+        <td valign="top" align="left"><font face="Arial" size="2"><strong><a href="http://www.intel.com/pressroom/archive/releases/cn22399b.htm">FlexATX</strong></a> 
+        </font><font face="arial" size="2" color="0000ff">
+        <strong>Coppermine for Socket370</strong></a><br>
+        </font><font face="arial" size="2">ASUS <a href="pentiumpro/cuwe-fx/index.html">CUWE-FX</a> is equipped with 133MHz 
+        FSB, 3D Graphics, AMR Slot, UDMA/66, and optional <a href="http://developer.intel.com/design/network/82559.htm">LAN</a>, 
+        <a href="pentiumpro/cuwe-fx/tvout.jpg" border="0">TV-Out</a>, <a href="pentiumpro/cuwe-fx/avsout.jpg" border="0">A/V Out</a>, 
+        <a href="pentiumpro/cuwe-fx/lcd-i.jpg" border="0">LCD</a>, <a href="pentiumpro/cuwe-fx/dfpcard.jpg" border="0">PanelLink</a>, 
+        <a href="pentiumpro/cuwe-fx/usbhub.jpg" border="0">USBHUB</a>, additional <a href="pentiumpro/cuwe-fx/usb-1.jpg" border="0">USB 
+        Ports</a> &amp; <a href="pentiumpro/cuwe-fx/6pncable.jpg" border="0">Cable</a><a href="pentiumpro/cuwe-fx/10pncabo.jpg" border="0">s</a>.
+        </font></td>   </tr>     <tr>
+        <td width="100" valign="top" colspan="2" align="left"><img src="clear.gif" width="3"
+        height="3"></td>
+      </tr>
+      <tr>
+        <td width="100" valign="top" align="left"><a href="socket370.html#810e"><img
+        src="cuwe_series.gif" width="95" border="1"></a></td>
+        <td valign="top" align="left"><font face="Arial" size="2">
+        </font><font face="arial" size="2" color="0000ff">
+        <strong>Coppermine for <a href="http://developer.intel.com/design/chipsets/810/810e.htm">Intel 810E</strong></a><br>
+        </font><font face="arial" size="2">ASUS <a href="socket370.html#810e">CUWE Series</a> is equipped with 133MHz Front Side Bus 
+        which supports Ultra DMA/66, JumperFree BIOS, Suspend-to-RAM, Audio/ Modem Riser Card and optional AC ' 97.
+        </font></td>   </tr>
+
+        <tr>
+        <td width="100" valign="top" colspan="2" align="left"><img src="clear.gif" width="3" height="3"></td>
+      </tr>
+        <tr>
+        <td width="100" valign="top" align="left"><a href="/products/motherboard/slot1.html#pro133"><img
+        src="p3v_series.gif" width="95" border="1"></a></td>
+        <td valign="top" align="left"><font face="Arial" size="2"><a
+        href="slot1.html#pro133"><strong>PC133 SDRAM Solution</strong></a><br>
+        ASUS <a href="pentiumpro/p3v133/index.html">P3V133</a> and <a href="pentiumpro/p3v4x/index.html">P3V4X</a> are
+        equipped with ATX, UDMA/66, PC H/M. While P3V4X will also support 2GB SDRAM and AGP 4X.
+        </font></td>   </tr>
+    
+        <tr>
+        <td width="100" valign="top" colspan="2" align="left"><img src="clear.gif" width="3" height="3"></td>
+      </tr>
+        <tr>
+        <td width="100" valign="top" align="left"><a href="/products/motherboard/slota.html"><img
+        src="k7m_series.gif" width="95" border="1"></a></td>
+        <td valign="top" align="left"><font face="Arial" size="2"><a
+        href="slota.html"><strong>Athlon K7 OEM Solution</strong></a><br>
+        ASUS <a href="slota/k7m/index.html">K7M</a> and <a href="slota/k7m-rm/index.html">K7M-RM</a> are
+        equipped with 200MHz FSB, 3x DIMM, UDMA/66, and optional Health Monitoring and 2 additional USB ports.</font></td>   </tr>
+    
+        <tr>
+        <td width="100" valign="top" colspan="2" align="left"><img src="clear.gif" width="3" height="3"></td>
+      </tr>
+    
+   
+<!------------ 
+           <tr>
+        <td width="100" valign="top" align="left"><a href="/products/motherboard/socket370.html"><img
+        src="cuw.jpg" width="95" border="1"></a></td>
+        <td valign="top" align="left"><font face="Arial" color="0000ff" size="2"><strong>FCPGA <a href="http://developer.intel.com/design/chipsets/810">810</a> 
+        <font face="arial" size="2" color="0000ff">Coppermine for Socket370</strong></a><br>
+        </font></font><font face="arial" size="2">ASUS <a href="pentiumpro/cuw/index.html">CUW</a>, <a href="pentiumpro/cuw-b/spec.html">CUW-B</a>, <a 
+        href="pentiumpro/cuwe-fx/spec.html">CUW-FX</a> and <a href="pentiumpro/cuw-rm/index.html">CUW-RM</a> are equipped 
+        with 100MHz FSB, 3D Graphics, AMR Slot, UDMA/66, and optional LAN.
+        
+        </font></td>   </tr>
+ //------------->       
+    </table>
+    </td>
+
+    <td width="5" valign="top" align="left" rowspan="2"><img src="clear.gif" width="5"
+    height="5"></td>
+    <td width="150" valign="top" align="left" rowspan="2"><img src="Images/tech.gif"
+    width="150" height="46"><table border="0" width="100%" cellspacing="1">
+      <tr>
+        <td width="100%" bgcolor="#EBF5D3"><strong><font face="Arial" size="2"><a
+        href="/products/techref/year2000/index.html">Year 2000 solution</a></font></strong></td>
+      </tr>
+    <tr>
+        <td width="100%" bgcolor="#EEEEEE"><strong><font face="Arial" size="2"><a
+        href="/products/techref/cpu/coppermine/index.html">Coppermine</a></font></strong>
+         <img src="/products/motherboard/images/pnew.gif" width="28" height="12" alt="pnew.gif"></td>
+      </tr>
+      <tr>
+        <td width="100%" bgcolor="#EBF5D3"><strong><font face="Arial" size="2"><a
+        href="/Products/Techref/chipset/p3cpu.html">PIII 650/700/750/800 (100MHz) </a></font></strong>
+         <img src="/products/motherboard/images/pnew.gif" width="28" height="12" alt="pnew.gif"></td>
+      </tr>
+      <tr>
+        <td width="100%" bgcolor="#EBF5D3"><strong><font face="Arial" size="2"><a
+        href="/Products/Techref/chipset/p3cpueb.html">PIII 600/667/773/800EB (133MHz)</a></font></strong>
+         <img src="/products/motherboard/images/pnew.gif" width="28" height="12" alt="pnew.gif"></td>
+      </tr>
+      
+      <tr>
+        <td width="100%" bgcolor="#EEEEEE"><strong><font face="Arial" size="2"><a
+        href="/Products/Techref/chipset/cele533.html">Celeron 533MHz</a></font></strong>
+         <img src="/products/motherboard/images/pnew.gif" width="28" height="12" alt="pnew.gif"></td>
+      </tr>
+      <tr>
+        <td width="100%"><strong><font face="Arial" size="2"><img src="Images/tech-b.gif"
+        width="150" height="6"></font></strong></td>
+      </tr>
+      <tr>
+        <td width="100%"><strong><font face="Arial" size="2"><img src="clear.gif" width="4"
+        height="4"></font></strong></td>
+      </tr>
+    </table>
+    <img src="Images/news.gif" width="150" height="43">
+    <table border="0" cellspacing="1">
+    <tr>
+        <td width="9" valign="top" align="left"><img src="dot.gif" width="9" height="9"></td>
+        <td width="141"><a href="../Techref/Faq/mbmm/mb20003.html"><font
+        face="Arial, Helvetica" color="#0000FF" size="2"><strong>Latest Motherboard Product FAQ</strong></font></a> 
+        <img src="/products/motherboard/images/pnew.gif" width="28" height="12" alt="pnew.gif"></td>
+      </tr>
+      
+      <tr>
+        <td width="9" valign="top" align="left"><img src="dot.gif" width="9" height="9"></td>
+        <td width="141"><a href="../Techref/Tech-report/mthmbqa.html"><font
+        face="Arial, Helvetica" color="#0000FF" size="2"><strong>June Mainboard Product Column</strong></font></a>
+        <img src="/products/motherboard/images/pnew.gif" width="28" height="12" alt="pnew.gif"></td>
+      </tr>
+      <tr>
+        <td width="9" valign="top" align="left"><img src="dot.gif" width="9" height="9"></td>
+        <td width="141"><a href="../Techref/Tech-report/mthvgaqa.html"><font
+        face="Arial, Helvetica" color="#0000FF" size="2"><strong>June Multimedia Product Column</strong></font></a>
+        <img src="/products/motherboard/images/pnew.gif" width="28" height="12" alt="pnew.gif"></td>
+      </tr>
+
+      <tr>
+        <td width="150" valign="top" align="left" colspan="2"><img src="Images/cert-b.gif"
+        width="150" height="6"></td>
+      </tr>
+    </table>
+    <table border="0" width="100%" cellspacing="1">
+      <tr>
+        <td width="100%"><img src="clear.gif" width="4" height="4"></td>
+      </tr>
+    </table>
+    <img src="Images/award-ad.gif" width="149" height="45">
+    <table border="0" width="100%" cellspacing="1">
+      <tr>
+        <td width="100%" bgcolor="#FFFFD0"><font face="Arial" size="2">ASUSTeK <a 
+        href="tomsk7v.gif" alt="Tom's Hardware Guide: Mainboard Guide - Motherboard Comparison Epox EP-7KXA vs. Asus K7V" 
+        border="0">K7V</a> received &quot;<a href="tomsconc.gif" border="0">Excellent Comments</a>&quot; in <a href="tomk7w98.gif" 
+        border="0">Win98 Benchmarks</a> / <a href="tom3dgam.gif" 
+        border="0">3D Gaming Win98SE</a> / <a href="tomk98se.gif" border="0">SPECviewperf Win98SE</a> 
+        from <a href="http://www.tomshardware.com/mainboard/00q2/000417/index.html">Tom's Hardware</a> Website, USA, (04/17/2000)</font></td>
+      </tr>
+      <tr>
+        <td width="100%" bgcolor="#FF9900"><img src="clear.gif" width="1" height="1"></td>
+      </tr>
+      <tr>
+        <td width="100%" bgcolor="#FFFFD0"><font face="Arial" size="2">ASUSTeK <a 
+        href="tomp3v4x.html" alt="Tom's Hardware Guide: Mainboard Guide - 21 Slot-1 Motherboard using VIA Chipsets" 
+        border="0">P3V4X</a> received 
+         &quot;<a href="tomcmpar.html" alt="Tom's Hardware Guide: Mainboard Guide - 21 Slot-1 Motherboard using VIA Chipsets" 
+         border="0">Excellent Performance &amp; Reliability</a>&quot; in 
+        <a href="tomw98se.html" alt="Tom's Hardware Guide: Mainboard Guide - 21 Slot-1 Motherboard using VIA Chipsets" border="0">Windows 98 SE</a> / 
+        <a href="tomwnt4.html" alt="Tom's Hardware Guide: Mainboard Guide - 21 Slot-1 Motherboard using VIA Chipsets" border="0">NT4.0</a> / 
+        <a href="tomd3dtd.html" alt="Tom's Hardware Guide: Mainboard Guide - 21 Slot-1 Motherboard using VIA Chipsets" border="0">Direct3D</a> /
+        <a href="tomopngl.html" alt="Tom's Hardware Guide: Mainboard Guide - 21 Slot-1 Motherboard using VIA Chipsets" border="0">OpenGL</a>
+        from <a href="http://www.tomshardware.com/mainboard/00q2/000410/index.html">Tom's Hardware</a> Website, USA, (04/10/2000)</font></td>
+      </tr>
+      <tr>
+        <td width="100%" bgcolor="#FF9900"><img src="clear.gif" width="1" height="1"></td>
+      </tr>
+      
+<!----<tr>
+        <td width="100%" bgcolor="#FF9900"><img src="clear.gif" width="1" height="1"></td>
+      </tr>
+ //----> <tr>
+        <td width="100%" bgcolor="#FFFFFF"><br><a href="award.html"><font face="Arial" size="2"><strong>Read 
+        More ..... </strong></font></a></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100" valign="bottom" align="left" background="middle.gif"><table border="0"
+    width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="100%"><img src="Images/Menu/down.gif" width="100" height="7"></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+
+<table border="0" width="650" cellspacing="1">
+  <tr>
+    <td width="100%"><hr width="98%" size="1">
+    <p align="center"><font face="Arial" size="2"><a href="../../Company/copyright.html">Copyright 
+    (C)</a> ASUSTeK COMPUTER INC. All Rights Reserved.</font></td>
+  </tr>
+</table>
+</body>
+</html>

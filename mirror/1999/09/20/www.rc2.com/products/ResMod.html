@@ -1,0 +1,215 @@
+<html>
+<head>
+
+<META
+description="ResMod: RC-Squared's Geostatistical Reservoir Modeling Package">  
+<META HTTP-EQUIV="KeyWords" CONTENT="Reservoir Characterization, Geostatistics, Reservoir Modeling, Petroleum Reservoir Modelling, Reservoir Characterization, Facies Modelling, Physical Property Modeling, Continuous Property Modelling, Facies Modeling, Reservoir Description, Software ">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+
+<title>Geostatistics, Estimation, Simulation, Reservoir Characterization, Reservoir Modeling = ResMod</title>
+
+<!-- Welcome to the source. 
+Created by Steve McKay 
+for (RC)2 • 1996
+contact: mckay@pacbell.net -->
+
+</head>
+<!	background="/_images/sub_bg.gif">
+<!	background="_images/SGSTint.gif">
+<!	background="_images/SGSTINT3.gif">
+
+<body
+	background="/_images/sub_bg.gif"
+	bgcolor="#FFFFFF"
+	text="#000000"
+	link="#0000FF"
+	alink="#FFFFFF"
+	vlink="#800080">
+
+	
+
+
+<a href="/cgi-bin/imagemap/_maps/key.map">
+<img src="/_images/sub_key.gif" width=558 height=53 border=0 alt="(RC)2 Navigational Key" ISMAP USEMAP="#key"></a>
+<MAP NAME="key">
+<!-- #$GIF:sub_key.gif -->
+<AREA SHAPE=RECT COORDS="100,22,193,50" HREF="../corporate/index.html">
+<AREA SHAPE=RECT COORDS="307,22,394,51" HREF="../products/index.html">
+<AREA SHAPE=RECT COORDS="202,22,303,51" HREF="../services/index.html">
+<AREA SHAPE=RECT COORDS="398,23,469,50" HREF="../sales/index.html">
+<!AREA SHAPE=RECT COORDS="398,23,469,50" HREF="../training/index.html">
+<AREA SHAPE=RECT COORDS="472,22,553,49" HREF="../new/index.html">
+<AREA SHAPE=RECT COORDS="0,0,50,16" HREF="../index.html">
+</MAP>
+
+<p>
+<!tracking script >
+<script><!--
+an=navigator.appName;sr='http://x3.extreme-dm.com/';srw="na";srb="na";d=document;r=41;function pr(n) {
+d.write("<img src=\""+sr+"n\/?tag=rc2&p=http%3A%2F%2Fwww.rc2.com%2Fproducts%2FResMod.html&j=y&srw="+srw+"&srb="+srb+"&l="+escape(parent.document.referrer)+"&rs="+r+"\" height=1 width=1>");}//-->
+</script><script language="javascript1.2"><!--
+s=screen;srw=s.width;an!="Netscape"?srb=s.colorDepth:srb=s.pixelDepth//-->
+</script><script><!--
+pr()//-->
+</script><noscript><img src=http://x3.extreme-dm.com/z/?tag=rc2&p=http%3A%2F%2Fwww.rc2.com%2Fproducts%2FResMod.html&j=n height=1 width=1></noscript>
+
+<center>
+<!-- Main Table -->
+<table width="90%">
+<tr><td>
+
+<i><b><font face="ARIAL,HELVETICA,HELV,SANS SERIF" size="+2">ResMod: 3D Stochastic Reservoir Modeling</font></b></i>
+
+<p>
+
+<!img src="_images/ResModSgS.gif" border=0 width=246 height=221 align=left hspace=10 alt="ResMod Screen Shot">
+<img src="_images/ResModSgS.gif" border=0 width=400 height=400 align=left hspace=10 alt="ResMod Screen Shot">
+<br>
+ResMod is (RC)<font size="-1"><sup>2</sup></font>'s geostatistical modeling package.  It features a large suite of estimation and simulation techniques for generating reservoir models.  ResMod models continuous (e.g., porosity), categorical (i.e., facies), and categorical-to-continuous (facies dependent) properties. 
+Support or questions can be addressed through email (<a href="mailto:resmod@rc2.com">resmod@rc2.com</a>) or through our <a href="../addresses/Denver.html">Denver</a> office. If you have a fast internet connection and wish to see a gallery of ResMod results click here (<a href="ResModGallery.html">ResMod Gallery</a>).
+<br clear=all>
+<p>
+<i><b><font face="ARIAL,HELVETICA,HELV,SANS SERIF" size=3>Features:</font></b></i>
+<ul type=square>
+	<li>Very user friendly
+	<li>Handles both continuous (point properties e.g. porosity, permeability) and categorical variables (geological facies)
+	<li>Provides numerous estimation and conditional simulation techniques (48 and counting - complete list below) to provide users with a suite of techniques from which to choose                 depending on type of reservoir and data available; 
+        <li>Provides estimation techniques for evaluation of local uncertainties;
+        <li>Designed to integrate different types of data (well-log, seismic, well test, production, geological expertise, digitized geological descriptions, outcrop information);
+	<li>Honors the differences in reliabilities between data types when doing integration;
+        <li>Full diagnostic capabilities allow users to inspect every step of model building
+        <li>Spatial models of correlation are area/region dependent and layer/sequence dependent
+	<li>Post processing capabilities to fine tune the reservoir model
+	<li>Stochastic transforms (cloud transform)
+	<li>Full 3D modeling capabilities (honors 3D spatial correlations)
+	<li>Handles the inclusions of faults in the model (see <a href="ResFrame.html">ResFrame</a>)
+	<li>Handles deviated and horizontal wells (spatial analysis and modeling)
+	<li>Marker surfaces are generated from well and/or seismic surfaces or read in from other vendor packages(such as Zmap+ or CPS3D) through the <a href="ResPrep.html">ResPrep</a> program.
+        <li>Extensive data analysis capabilities
+        <li>Generation of rotated or unrotated regular grids
+
+        <li>Generation of stratigraphic, truncated and onlap/offlap vertical grids
+	<li>Batch capabilities to generate hundreds of realizations for sensitivity/uncertainty analysis
+	<li>Interactive uncertainty viewing
+        <li>Very easy to add or remove information from database (adding logs, new wells, markers, etc...) through <a href="ResPrep.html">ResPrep</a>
+	<li>Straightforward handling of seismic data (does not require any extensive data reformatting)
+	<li>Full dynamic memory allocation does not limit number of wells or seismic traces 
+	<li>Output formats compatible with Eclipse, VIP, StrataModel, SEG-Y, CMG, GridGenr 		
+	<li>Open slot utilities to include proprietary spatial statistics algorithms (in development)
+   	<li>Very sophisticated visualization capabilities  (ResScape)
+        <li>Azimuth and Anisotropy templates 
+        <li>Transparent links to Stratamodel 
+        <li>Use of maps to provide model of spatial correlation directly (in development)
+</ul>
+	
+<i><b><font face="ARIAL,HELVETICA,HELV,SANS SERIF" size=3>Algorithms:</font></b></i>
+<p>
+Continuous variables
+<p>
+<ul type=square>
+     	<li>Estimation algorithms: 	
+		<ul type=disc>
+		<li>Inverse Distance to any power
+		<li>Ordinary Kriging		
+		<li>Simple Kriging		
+		<li>Ordinary Kriging with a trend (External Drift)
+		<li>Collocated Cokriging
+		<li>Co-Collocated Cokriging
+		<li>Indicator Kriging
+		<li>Indicator Collocated Cokriging
+		</ul>
+	<li>Simulation algorithms:	
+		<ul type=disc>
+		<li>Sequential Gaussian Simulation (sGs)		
+		<li>sGs with external drift		
+		<li>sGs with Collocated Cokriging
+		<li>sGs with Co-Collocated Cokriging
+		<li>Pfield (Probability Field) Gaussian Simulation 
+		<li>Pfield with external drift	
+		<li>Pfield with collocated cokriging	
+		<li>Pfield with co-collocated cokriging	
+		<li>Sequential Indicator Simulation (SIS)
+		<li>SIS with Collocated Cokriging		
+		<li>Pfield Indicator Simulation 
+		<li>Pfield Indicator Simulation with Collocated cokriging
+		<li>Post Processing using Simulated Annealing
+		<li>Simulated Annealing with multiple objective functions
+		<li>Cloud transform
+		</ul>
+</ul>
+
+<p>
+Categorical variables
+<p>
+<ul type=square>
+        <li>Estimation algorithms:
+		<ul type=disc>
+                <li>Indicator Kriging (with or w/o soft data)
+                <li>Maximum probability classification
+                <li>Rescaled maximum probability classification
+                <li>Dynamic classification (Soares)
+		</ul>
+        
+        <li>Simulation algorithms:
+		<ul type=disc>
+                <li>Sequential indicator Simulation
+                <li>Pfield indicator Simulation (with or w/o soft data)
+                <li>Truncated Gaussian with or without a linear trend
+                <li>Post Processing of estimation using Annealing
+                <li>Post Processing of simulation using Annealing
+                <li>Simulated Annealing
+                <li>Categorical to continuous (Facies to Phys. Property) using sGs
+                <li>Categorical to continuous using Collocated Cokriging
+                <li>Categorical to continuous using cloud transform
+		</ul>
+        <li>Object-oriented algorithms:
+		<ul type=disc>
+                <li>Channel simulation with crevasse splays with conditioning to wells, net pay, azimuth templates, seismic data, etc...
+                <li>Algal mounds
+                <li>Fan lobe systems with up to 5 separate facies and conditioning to seismic data, map information, etc...
+                <li>Boolean Deposits (Shales, Blankets)
+		</uL>
+</ul>
+
+</td></tr>
+</table>
+
+<!-- End Main Table -->
+
+<hr noshade size="1" width="95%">
+<a NAME="download"></a>
+<!-- Last Modified Table -->
+<!table WIDTH="450" border=0 cellpadding=5 bgcolor="#F3F3F3">
+<table WIDTH="450" border=0 cellpadding=5 bgcolor="#D3D3D3">
+	<tr>
+	<td colspan=3><b><font color="#000000" size=3 face="ARIAL,HELVETICA,HELV,SANS SERIF"><a href="/support/pub/index.html">ResMod binaries download:</a></font></b><p></td>
+	</tr>
+</table>
+<!-- End Last Modified Table -->
+
+<hr noshade size="1" width="95%">
+
+</center>
+
+<p>
+
+<center>
+
+<i><font face="ARIAL,HELVETICA,HELV,SANS SERIF" size="-1"><b>
+<a href="/corporate/">Corporate Overview</a> • 
+<a href="/services/">Consulting Services</a> • 
+<a href="/products/">Products</a> • 
+<a href="/sales/">Sales</a> • 
+<a href="/training/">Training</a> • 
+<a href="/new/">What's New</a> • 
+<a href="../index.html">Home</a>
+</b></font></i>
+
+<p>
+
+<a href="../index.html"><img src="../_images/logo.gif" width=83 height=34 border=0 alt="(RC)2"></a>
+
+</center>
+
+</body>
+</html>

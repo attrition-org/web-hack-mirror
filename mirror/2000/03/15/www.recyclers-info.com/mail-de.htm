@@ -1,0 +1,125 @@
+<HTML>
+<HEAD>
+<TITLE>Recyclers Info - E-Mail-Verteiler</TITLE>
+<meta name="Description" content="E-Mail-Verteiler">
+<meta name="Keywords" content="E-Mail-Verteiler,Post-Verteiler,Post,Verteiler,Mail,E-Mail">
+</HEAD>
+<BODY BACKGROUND="./grafic/background.jpg" TEXT=#000000 LINK=#008000 VLINK=#555555 ALINK=#008000>
+
+<CENTER>
+<TABLE BORDER=0>
+<TR>
+<TD width=500 valign=top colspan=2>
+<map name="leiste_mail">
+<area shape=rect coords=10,0,88,23 href="javascript:show_win('navig-de.htm')">
+<area shape=rect coords=91,0,168,23 href="./de/form.htm">
+<area shape=rect coords=171,0,248,23 href="./de/price.htm">
+<area shape=rect coords=251,0,328,23 href="./de/down-de.htm">
+<area shape=rect coords=331,0,408,23 href="./de/hotlink.htm">
+<area shape=rect coords=411,0,489,23 href="default.htm">
+</map>
+<img src="./grafic/leiste_mail.gif" usemap="#leiste_mail" border=0 width=500 height=24>
+</TD>
+<TD width=135 valign=top rowspan=2>
+<A HREF="default.htm"><IMG SRC="./grafic/logo2.gif" BORDER=0 ALT="Zurück" vspace=4 width=132 height=55></A>
+</TD>
+</TR>
+<TR>
+<TD width=135 valign=top>
+<nobr>
+<A HREF="mail-en.htm"><IMG SRC="./grafic/english.gif" BORDER=0 width=38 height=20></A>
+<!--
+<A HREF="mail-fr.htm"><IMG SRC="./grafic/french.gif" BORDER=0 hspace=5 width=38 height=20></A>
+<A HREF="mail-es.htm"><IMG SRC="./grafic/spain.gif" BORDER=0 width=38 height=20></A>
+-->
+</nobr>
+</TD>
+<TD width=360 ALIGN=CENTER valign=top>
+<H2>E-Mail - Verteiler</H2>
+</TD>
+</TR>
+</TABLE>
+
+<TABLE WIDTH=640 border=0>
+<TR>
+<TD VALIGN=top>
+<P><FONT SIZE=4><B>Sehr geehrter Besucher,</B></FONT>
+<P>Wir planen die Abfrage eines Suche / Biete - Profils
+ von allen erfa&szlig;ten Recyclingunternehmen. Mit dem Postverteiler kann dann ihre Anfrage
+ gleich an mehrere Firmen direkt zustellt werden (z. Zt. E-Mail, &quot;E-Mail to Fax&quot; in
+ K&uuml;rze), die genau das bieten, was Sie suchen. Auch Sie k&ouml;nnen solche Anfragen
+ erhalten! Wenden Sie sich an den Webmaster Ihres <A HREF="country.htm">Landes</A>. Die
+ Registrierung <A HREF="./de/price.htm">kostet</A> wirklich nicht viel und bringt einen hohen
+ Nutzen. Garantiert! Fordern Sie ein unverbindliches <A HREF="./de/form.htm">Angebot</A> an!</P>
+<P><FONT SIZE=4>Anfragen an den Webmaster:</FONT></P>
+<P><B>Bitte senden Sie uns erst ein <A HREF="mailto:BIGAT@recyclers-info.de">
+<IMG SRC="./grafic/email.gif" border=0  hspace=2 width=22 height=12> E-Mail</A>, wenn Sie unsere
+ <A HREF="./de/bigat/default.htm">Homepage</A> gelesen haben und unser Leistungsangebot
+ zu Ihrer Anfrage pa&szlig;t.</B></P><BR>
+<P align=center><FONT SIZE=4><B>Auch jeder Kooperationswunsch zum<BR>System Recyclers Info ist willkommen.</B></FONT></P><BR>
+
+<A href="./de/bigat/default.htm">Ihr BIGAT Team</A><BR>Dipl. Ing. Detlef Schulz<BR>
+17. Dezember 1998
+</TD>
+</TR>
+</TABLE>
+
+<HR WIDTH=640>
+<TABLE width=640 border=0>
+<TR>
+<TD align=left valign=center>
+<FONT size=1 face=sans-serif>
+Copyright: <A href="./de/bigat/default.htm">BIGAT GmbH</A>
+</FONT>
+</TD>
+<TD align=right valign=center>
+<FONT size=1 face=sans-serif>
+Webmaster: <A href="./de/bigat/default.htm">BIGAT GmbH</A>
+&amp; <A href="http://www.eco-world.de" target="_TOP">KVA eG</A>
+</FONT>
+</TD>
+</TR>
+</TABLE>
+</CENTER>
+</BODY>
+<script language="JavaScript">
+<!--
+BrowserOk = false;
+//-->
+</script>
+<script language="JavaScript1.1">
+<!--
+BrowserOk = true;
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript">
+<!--   
+hfern = null;
+function show_win(hwin)
+{
+  window.name="recyclers_info_fenster";
+  if (BrowserOk)
+  {
+    if ((hfern!=null) && (hfern.closed)) { hfern = null; }
+    if (hfern==null)
+    {
+      hfern = window.open(hwin,"fern","width=160,height=460,toolbar=no,directories=no,status=no,location=no,menubar=no,resizable=yes,scrollbars=no");
+    }
+    else
+    {
+      hfern.focus();
+    }
+  }
+  else
+  {
+    window.open(hwin,"fern","width=160,height=460,toolbar=no,directories=no,status=no,location=no,menubar=no,resizable=yes,scrollbars=no");
+  }
+}
+
+function openDir(form)
+{
+  location=form.directory.options[form.directory.selectedIndex].value
+}
+//-->
+</SCRIPT>
+</HTML>

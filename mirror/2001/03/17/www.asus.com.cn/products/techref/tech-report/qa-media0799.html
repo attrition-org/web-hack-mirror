@@ -1,0 +1,299 @@
+<!DOCTYPE  HTML PUBLIC  "-//Netscape Comm. Corp.//DTD HTML//EN">
+<html>
+<head>
+<title>July &amp; August '99 Multimedia Q&amp;A Index</title>
+</head>
+<body bgcolor="ffffff" vlink="#0000FF">
+
+<table border="0" cellspacing="0" cellpadding="0" width="650">
+<tr>
+   <td align="left">
+        <table border="0" cellpadding="0" cellspacing="0">
+        <tr>
+        <td align="right" valign="top"><a href="/index.html"><img src="/image/logo-title.gif" border="0" WIDTH="94" HEIGHT="25"></a></td>
+        <td valign="bottom"><a href="/Company/index.html"><img src="/image/icon-company.gif" border="0" WIDTH="100" HEIGHT="25"></a><a href="/Products/index.html"><img src="/image/icon-product.gif" border="0" WIDTH="85" HEIGHT="25"></a><a href="../../../search.html"><img src="/image/icon-search.gif" border="0" WIDTH="80" HEIGHT="25"></a><a href="/Company/support.html"><img src="/image/icon-support.gif" border="0" WIDTH="85" HEIGHT="25"></a><a href="/Whatsnew/index.html"><img src="/image/icon-news.gif" border="0" WIDTH="90" HEIGHT="25"></a><a href="/index.html"><img src="/image/icon-home.gif" border="0" WIDTH="80" HEIGHT="25"></a></td>
+        </tr>
+        </table>
+   </td>
+</tr>
+<tr>
+<td align="left" valign="top" width="650"><table border="0" cellpadding="0" cellspacing="0" width="650">
+                     <tr>
+                <td width="170" rowspan="2" valign="bottom" align="left"><img
+
+
+                src="/image/tech-title.gif" width="170" height="60"></td>
+                <td width="480" bgcolor="#FFFFFF" valign="bottom" align="left" height="0"><img
+
+
+                src="/image/adtmp.gif"></td>
+            </tr>
+            <tr>
+                <td width="480" bgcolor="#000000" valign="bottom" align="left"><img
+
+
+                src="/image/ad.gif"></td>
+                    </tr>
+                </table>
+        </td>
+</tr>
+<tr><td>&nbsp;</td></tr>
+<tr>
+   <td align="center">
+        <font size="3" color="0000ff" face="Arial"><b>July &amp; August <a href="index-media.html">Multimedia Technical Column</a></b></font>
+   </td>
+</tr>
+<!--<tr><td><font face="Arial" color="#075f39" size="2"><b><u><a href="index-media.html">VGA Adapter</a></u></b></font></td></tr>-->
+<tr>
+   <td><br> 
+        <a name="v3800-p3"><font face="Arial" size="2" color="#FF0000"><b>Question:</b></font></a><br>
+	<font size="2" face="Arial"><b>When using the <a href="/products/addon/vga/agpv3800/index.html">
+	AGP-V3800TNT2</a> card, a Creative SB Live and a Pentium III CPU in the system, it crashes and hangs while running
+	any D3D game or application, but if I use a Pentium II CPU instead, D3D game or application can be run without 
+	problems. All TNT2 chipset based VGA cards have the same problem. What is wrong?</b></font>        
+<br><br>
+        <font face="Arial" size="2" color="#0000FF"><b>Answer:</b></font><br>
+        <font size="2" face="Arial">This problem happens on all TNT2 based VGA card system with PIII processors when DirectX6.1
+        is also installed in the system. If  Pentium III, RivaTNT2 (sometimes Voodoo3 also), SB Live are used together,  
+        the DirectX 6.1 (optimized for Pentium III ISSE instructions) installation will overwrite VMCPD.VXD in c:\windows\system\vmm32
+        because it detects new ISSE instructions of Pentium III, but the overwritten version does not work properly.<br><br>
+ 	You can extract the old version VMCPD.VXD from Win98 CD (4.10.1998) to c:\windows\system\vmm32, then reboot the 
+ 	system to solve this problem. The file can be found in Win98_45.cab (English version of Win98), you can use the 
+ 	cabviewer from MS Powertoys or Winzip7.0 to extract it.</font>
+</td>
+</tr>
+
+<tr>
+   <td><br> 
+        <a name="v2740-live"><font face="Arial" size="2" color="#FF0000"><b>Question:</b></font></a><br>
+	<font size="2" face="Arial"><b>When I use <a href="/products/addon/vga/agpv2740/index.html">AGP-V2740</a> with the released driver, v27r320b.exe, if I run Microsoft 
+	NetMeeting or other capture software, it cannot detect the Video-in device, but there is no problem with ASUS 
+	Live2740 software.</b></font>        
+<br><br>
+        <font face="Arial" size="2" color="#0000FF"><b>Answer:</b></font><br>
+        <font size="2" face="Arial">It is because old version of <b><i>Video for Windows</i></b> driver supports Video Decoder BT82p, 
+        but does not support BT827. You can upgrade to new version of display driver to solve this problem. The latest beta 
+        driver can be downloaded from:<br>
+	<a href="ftp://ftp.asus.com.tw/pub/ASUS/beta/vga">ftp://ftp.asus.com.tw/pub/ASUS/beta/vga</a>
+</font>
+</td>
+</tr>
+
+<tr>
+   <td><br> 
+        <a name=""><font face="Arial" size="2" color="#FF0000"><b>Question:</b></font></a><br>
+	<font size="2" face="Arial"><b>After I install <a href="/products/addon/vga/agpv3200/index.html">AGP-V3200</a> driver in Win98 Second Edition, the system cannot be 
+	properly shut down.</b></font>        
+<br><br>
+        <font face="Arial" size="2" color="#0000FF"><b>Answer:</b></font><br>
+        <font size="2" face="Arial">The <a href="/products/addon/vga/agpv3200/index.html">V3200</a> shutdown problem in Windows98 SE can be solved by modifying the settings in 
+        the device manager. It is due to the compatibility problem between the O/S and 3Dfx driver. Please alter the 
+        respective setting in the device manger by following the procedures listed below to fix the problem.<ol>
+        <li>Right click on <i><b>"My Computer"</i></b></li>
+        <li>Select <i><b>"Properties"</b></i> from the pop-up menu</li>
+        <li>Select the <i><b>"Device Manager"</b></i> tab of System Properties</li>
+        <li>Tick on <i><b>"View Devices by type"</b></i> and open <i><b>"System Devices"</b></i></li>
+        <li>Highlight <i><b>"PCI bus"</b></i> and click on the <i><b>"Properties"</b></i> button</li>
+        <li>Select the <i><b>"IRQ Steering"</b></i> tab of PCI Bus Properties</li>
+        <li>Un-check <i><b>"Use IRQ Steering"</b></i></li>
+        <li>Click the <i><b>OK</b></i> button of the dialog. The system will prompt you to restart your computer. Press the 
+        <i><b>Yes</b></i> button to restart it. System would halt again this time but not next time. </li>
+</font>
+</td>
+</tr>
+
+<tr>
+   <td><br> 
+        <a name=""><font face="Arial" size="2" color="#FF0000"><b>Question:</b></font></a><br>
+	<font size="2" face="Arial"><b>As soon as I launch SHOGO game in Win98 with 
+	<a href="http://www.asus.com.tw/Products/Addon/Vga/enthusiast.html">AGP-V3400/V3800 series</a> cards, 
+	it will return back to the Windows immediately, and I cannot play the game.</b></font>        
+<br><br>
+        <font face="Arial" size="2" color="#0000FF"><b>Answer:</b></font><br>
+        <font size="2" face="Arial">You can upgrade the driver to rev. 2.08 beta 3 or later to fix this problem. 
+        The driver can be downloaded from:<br>
+	<a href="/Products/Addon/Vga/asuse/enthusiast_hottestdrv.htm">
+	http://www.asus.com.tw/Products/Addon/Vga/asuse/enthusiast_hottestdrv.htm</a>
+
+</font>
+</td>
+</tr>
+
+<tr>
+   <td><br> 
+        <a name=""><font face="Arial" size="2" color="#FF0000"><b>Question:</b></font></a><br>
+	<font size="2" face="Arial"><b>When I enable <i>Stereoscopic Mode</i> to play 3D games with 
+	<a href="http://www.asus.com.tw/Products/Addon/Vga/enthusiast.html">AGP-V3400/V3800 series</a> 
+	cards, the screen turns to black. What is wrong?</b></font>        
+<br><br>
+        <font face="Arial" size="2" color="#0000FF"><b>Answer:</b></font><br>
+        <font size="2" face="Arial">To support stereoscopic mode with <a href="/products/addon/vga/agpv3800/package.html">3D
+        VR glasses</a>, the monitor needs to support Interlaced
+        mode at 120Hz, that is, 60Hz for each individual eye. Please check if your monitor can support 120Hz of Interlaced 
+        mode, or you can upgrade the driver to rev. 2.08 beta 3 or later. The driver can be downloaded from:<br>
+	<a href="http://www.asus.com.tw/Products/Addon/Vga/asuse/enthusiast_hottestdrv.htm">
+	http://www.asus.com.tw/Products/Addon/Vga/asuse/enthusiast_hottestdrv.htm</a>
+        <br><br>
+        The new beta driver has been added with the following options for <i><b>VR Display Refresh Rate</b></i> in 
+        <b>Advanced -> 3D/VR</b>: 
+        <br><br>
+        100Hz : 800 x 600 or above<br>
+	112Hz : 640 x 480 or above<br>
+	120Hz : 640 x 480 or above<br>
+	140Hz : 640 x 480 or above<br>
+	150Hz : 640 x 480 or above<br><br>
+	
+	<b>Note:</b> The upper limit of the resolution has to be adjusted according to the monitor specification. After 
+	you adjust the setting, please enter <b><i>Display Properties -> Settings</i></b>, click <b><i>Advanced</i></b>, 
+	and enter <b><i>Color -> D3D/Game</i></b>, and press <b><i>Preview</b></i> to test the setting to ensure it can work properly.<br><br>
+	ASUS V3800 <a href="http://www.asus.com.tw/Products/Addon/Vga/asuse/enthusiast_drv.htm">driver rev. 1.91</a> or later has been added with <b><i>OSD (On Screen Display)</i></b> feature, and you can press the 
+	hot key <b><i>(Ctrl+Alt+O)</i></b> to adjust the setting while playing the game.</font>
+</td>
+</tr>
+
+<tr>
+   <td><br> 
+        <a name=""><font face="Arial" size="2" color="#FF0000"><b>Question:</b></font></a><br>
+	<font size="2" face="Arial"><b>When running <a href="http://www.asus.com.tw/Products/Addon/Vga/enthusiast.html">AGP-V3400 or 
+	AGP-V3800 series</a> cards on ALi chipset based M/B, 
+	the system hangs up when I play 3D games in Win9x. What is wrong?
+</b></font>        
+<br><br>
+        <font face="Arial" size="2" color="#0000FF"><b>Answer:</b></font><br>
+        <font size="2" face="Arial">This is a compatibility issue between ALi chipset and NVIDIA driver. Please upgrade 
+        the ALi's AGP driver to rev. 1.60 to fix this problem. The driver can be downloaded from:<br>
+	<a href="ftp://ftp.asus.com.tw/pub/ASUS/beta/mb/driver/">
+	ftp://ftp.asus.com.tw/pub/ASUS/beta/mb/driver/</a>
+	<br><br>
+	<b>Note:</b> Please use <a href="http://www.asus.com.tw/Products/Addon/Vga/asuse/enthusiast_drv.htm">driver rev. 1.91</a>
+	 or later with ALi's AGP driver rev. 1.60.
+        <br>
+</font>
+</td>
+</tr>
+
+<tr>
+   <td><br> 
+        <a name=""><font face="Arial" size="2" color="#FF0000"><b>Question:</b></font></a><br>
+	<font size="2" face="Arial"><b>When I 
+	<a href="http://www.asus.com.tw/Products/Addon/Vga/asuse/predrivere.htm">upgrade the V3800 driver</a> from rev. 1.00 to 
+	<a href="http://www.asus.com.tw/Products/Addon/Vga/asuse/enthusiast_drv.htm">rev. 1.91</a>, I can not remove 
+	the old driver from Control Panel --> Add/Remove Programs, and it reports <i><b>"You do not use ASUS Installer to 
+	install ASUS display driver"</b></i>. What is wrong?</b></font>        
+<br><br>
+        <font face="Arial" size="2" color="#0000FF"><b>Answer:</b></font><br>
+        <font size="2" face="Arial">
+        It is due to some mistakes implemented in the file of removal program. Please load the new 
+        <a href="http://www.asus.com.tw/Products/Addon/Vga/asuse/enthusiast_drv.htm">driver rev. 1.91</a> or 
+        later to overwrite the old driver first, and execute the remove process again from <b>Control Panel --> Add/Remove 
+        Programs</b>.
+        <br>
+	</font>
+</td>
+</tr>
+
+<tr>
+   <td><br> 
+        <a name=""><font face="Arial" size="2" color="#FF0000"><b>Question:</b></font></a><br>
+	<font size="2" face="Arial"><b>What kinds of 
+	<a href="http://www.asus.com.tw/Products/Addon/Vga/enthusiast.html">NVIDIA RIVA TNT2</a> chipset are used on 
+	<a href="http://www.asus.com.tw/Products/Addon/Vga/agpv3800/index.html">V3800 series</a>? And what are the 
+	differences in terms of engine clock, memory clock, etc.</b></font>        
+<br><br>
+        <font face="Arial" size="2" color="#0000FF"><b>Answer:</b></font><br>
+        <font size="2" face="Arial">Please refer to the comparison chart below :<br> <br>
+        <div align="center"><center><table border="1" width="90%">
+      <tr>
+        <td WIDTH="17%" VALIGN="top" bgcolor="#FFFFD0"><p ALIGN="CENTER"><strong><font
+        face="Arial" size="2">NVIDA Chipset</font></strong></td>
+        <td WIDTH="17%" VALIGN="TOP" bgcolor="#FFFFD0"><p ALIGN="CENTER"><strong><font
+        face="Arial" size="2">ASUS Model</font></strong></td>
+        <td WIDTH="17%" VALIGN="TOP" bgcolor="#FFFFD0"><p ALIGN="CENTER"><strong><font
+        face="Arial" size="2">Engine Clock</font></strong></td>
+        <td WIDTH="17%" VALIGN="TOP" bgcolor="#FFFFD0"><p ALIGN="CENTER"><strong><font
+        face="Arial" size="2">Memory Clock</font></strong></td>
+        <td WIDTH="17%" VALIGN="TOP" bgcolor="#FFFFD0"><p ALIGN="CENTER"><strong><font
+        face="Arial" size="2">Memory Interface</font></strong></td>
+        <td WIDTH="17%" VALIGN="TOP" bgcolor="#FFFFD0"><p ALIGN="CENTER"><strong><font
+        face="Arial" size="2">SideBand Addressing</font></strong></td>
+      </tr>
+      <tr>
+        <td WIDTH="17%" VALIGN="top" bgcolor="#FFFFD0"><p ALIGN="CENTER"><strong><font
+        face="Arial" size="2">TNT2 Ultra</font></strong></td>
+        <td WIDTH="17%" VALIGN="top" bgcolor="#F3E8FF"><p ALIGN="CENTER"><font face="Arial"
+        size="2">AGP-V3800U</font></td>
+        <td WIDTH="17%" VALIGN="top" bgcolor="#F3E8FF"><p ALIGN="CENTER"><font face="Arial"
+        size="2">150Mhz</font></td>
+        <td WIDTH="17%" VALIGN="top" bgcolor="#F3E8FF"><p ALIGN="CENTER"><font face="Arial"
+        size="2">183Mhz</font></td>
+        <td WIDTH="17%" VALIGN="top" bgcolor="#F3E8FF"><p ALIGN="CENTER"><font face="Arial"
+        size="2">128Bit</font></td>
+        <td WIDTH="17%" VALIGN="top" bgcolor="#F3E8FF"><p ALIGN="CENTER"><font face="Arial"
+        size="2">Yes</font></td>
+      </tr>
+      <tr>
+        <td WIDTH="17%" VALIGN="top" bgcolor="#FFFFD0"><p ALIGN="CENTER"><strong><font
+        face="Arial" size="2">TNT2</font></strong></td>
+        <td WIDTH="17%" VALIGN="top" bgcolor="#F3E8FF"><p ALIGN="CENTER"><font face="Arial"
+        size="2">AGP-V3800</font></td>
+        <td WIDTH="17%" VALIGN="top" bgcolor="#F3E8FF"><p ALIGN="CENTER"><font face="Arial"
+        size="2">125Mhz</font></td>
+        <td WIDTH="17%" VALIGN="top" bgcolor="#F3E8FF"><p ALIGN="CENTER"><font face="Arial"
+        size="2">150Mhz</font></td>
+        <td WIDTH="17%" VALIGN="top" bgcolor="#F3E8FF"><p ALIGN="CENTER"><font face="Arial"
+        size="2">128Bit</font></td>
+        <td WIDTH="17%" VALIGN="top" bgcolor="#F3E8FF"><p ALIGN="CENTER"><font face="Arial"
+        size="2">Yes</font></td>
+      </tr>
+        
+      <tr>
+        <td WIDTH="17%" VALIGN="top" bgcolor="#FFFFD0"><p ALIGN="CENTER"><strong><font
+        face="Arial" size="2">TNT2 M64</font></strong></td>
+        <td WIDTH="17%" VALIGN="top" bgcolor="#F3E8FF"><p ALIGN="CENTER"><font face="Arial"
+        size="2">AGP-V3800 Magic</font></td>
+        <td WIDTH="17%" VALIGN="top" bgcolor="#F3E8FF"><p ALIGN="CENTER"><font face="Arial"
+        size="2">125Mhz</font></td>
+        <td WIDTH="17%" VALIGN="top" bgcolor="#F3E8FF"><p ALIGN="CENTER"><font face="Arial"
+        size="2">150Mhz</font></td>
+        <td WIDTH="17%" VALIGN="top" bgcolor="#F3E8FF"><p ALIGN="CENTER"><font face="Arial"
+        size="2">64Bit</font></td>
+        <td WIDTH="17%" VALIGN="top" bgcolor="#F3E8FF"><p ALIGN="CENTER"><font face="Arial"
+        size="2">No</font></td>
+      </tr>
+      <tr>
+        <td WIDTH="17%" VALIGN="top" bgcolor="#FFFFD0"><p ALIGN="CENTER"><strong><font
+        face="Arial" size="2">VANTA</font></strong></td>
+        <td WIDTH="17%" VALIGN="top" bgcolor="#F3E8FF"><p ALIGN="CENTER"><font face="Arial"
+        size="2">N/A</font></td>
+        <td WIDTH="17%" VALIGN="top" bgcolor="#F3E8FF"><p ALIGN="CENTER"><font face="Arial"
+        size="2">100Mhz</font></td>
+        <td WIDTH="17%" VALIGN="top" bgcolor="#F3E8FF"><p ALIGN="CENTER"><font face="Arial"
+        size="2">125Mhz</font></td>
+        <td WIDTH="17%" VALIGN="top" bgcolor="#F3E8FF"><p ALIGN="CENTER"><font face="Arial"
+        size="2">64Bit</font></td>
+        <td WIDTH="17%" VALIGN="top" bgcolor="#F3E8FF"><p ALIGN="CENTER"><font face="Arial"
+        size="2">No</font></td>
+      </tr>
+    </table>
+    </center></div><p><font face="Arial" size="2"><b>Note:</b></font><font size="2" face="Arial"> 
+    We currently do not have VANTA chipset based card because its performance is no better than 
+    <a href="http://www.asus.com.tw/Products/Addon/Vga/agpv3400tnt/index.html">AGP-V3400TNT</a>.</font></td>
+  </tr>
+</table>
+<!--	
+</font>
+</td>
+</tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+-->
+<hr>
+<!--<I><Font size="-1">Last-Modified: 02/02/99</Font></I>-->
+<br>
+<address>
+<address>
+<font face="Arial" size="2"><a HREF="../../../Company/copyright.html">Copyright</a> (C) ASUSTeK COMPUTER INC. All Rights Reserved.</font>
+</address>
+</address>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<html><html>
+<head>
+<title>Blues Group - Don't nurse a hole in your soul...</title>
+<style rel=stylesheet type=text/css>
+	A:link { font-weight: bold; }
+	A:visited { font-weight: bold; }
+</style>
+</head>
+<body bgcolor="#778899" text="#000000" link="#000000" vlink="#000000" topmargin=5 leftmargin=0 rightmargin=0 marginheight=5>
+
+<table border=0 cellpadding=4 cellspacing=0 width=100% align=center>
+<tr><td bgcolor=778899>
+<table border="0" cellspacing="0" cellpadding="1" width="100%" bgcolor="#000000">
+<tr><td>
+<table border="0" cellspacing="0" cellpadding="3" width="100%" bgcolor="333333">
+<tr><td>
+<a href="index.html"><img src="themes/Default/deflogo.gif" alt="Welcome to Blues Group" border=0></a>
+</td><td align=right>
+<form action="search.php3" method=post><font face=Arial,Helvetica size=2 color="ffffff">
+Search<input type=name name=query>
+</form></tr>
+<tr bgcolor="666666"><td colspan=2 bgcolor="666666">
+<font face=Arial,Helvetica size=3 color=CCCCCC>Don't nurse a hole in your soul...</td>
+</td></tr></table>
+</td></tr></table>
+</td></tr><tr><td valign=top width=100% bgcolor=778899>
+<table border=0 cellspacing=0 cellpadding=2 width=100%>
+<tr><td valign=top width=150 bgcolor=778899>
+
+<!-- Blocks Init -->
+
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>Main Menu</td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+<li><a href=index.php3>Home</a><li><a href=topics.php3>Topics</a><li><a href=sections.php3>Sections</a><li><a href=links.php3>Web Links</a><li><a href=user.php3>Your Account</a><li><a href=submit.php3>Submit News</a><li><a href=stats.php3>Stats</a><li><a href=top.php3>Top 10</a><li><a href=faq.php3>FAQ</a>
+</td></tr></table></td></tr></table><br>
+
+<!-- Because this is the DEFAULT theme, so print the user login block -->
+
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>Blues Group Login
+</td></tr><tr><td bgcolor=FFFFFF>
+<font face=Arial,Helvetica size=2>
+<form action="user.php3" method="post">
+Nickname: <input type="text" name="uname" size=12 maxlength=25><br>
+Password: <input type="password" name="pass" size=12 maxlength=20><br>
+<center><input type="submit" name="op" value="login"></form>
+Don't have an account yet? You can <a href=user.php3>Create One</a>.
+As registered user you have some advantages like theme manager,
+comments configuration and post comments with your name.
+</center></td></tr></table></td></tr></table><br>
+
+<!-- Show Left Blocks -->
+
+
+
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>Omaha Blues Society</td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+Check out the official <a href="http://www.omahablues.com">site</a>. See <a href="obs/?req=printevents&when=curr">this month's</a> events. 
+See what's happening <a href="obs/?req=printevents&when=next">next</a> month. </td></tr></table></td></tr></table><br>
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>CHEAP Blues CD's</td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+At <a href='http://www.half.com/products/browse/index.cfm?prodtype=music&cat=0-108795'>half.com</a></td></tr></table></td></tr></table><br>
+
+
+
+<img src=images/pix.gif border=0 width=150 height=1>
+</td><td width=100% valign=top><font face=Arial,Helvetica size=3>
+	<center>
+	<table cellpadding=2 cellspacing=0 bgcolor=000000 width=100% border=0><tr><td>
+	<table cellpadding=2 cellspacing=0 bgcolor=FFFFFF width=100% border=0><tr><td>
+	<font face=Lucida,Verdana,Arial,Helvetica size=4>
+	<br><center><b>Welcome to the TOP  page for Blues Group!</b><br><br><table border=0 cellpadding=10 width=100%><tr><td align=left><font face=Arial,Helvetica size=4>
+      <b>10 most linked stories</b><br><br><font size=3><li>1: <a href=article.php3?sid=2>Welcome to BluesGroup.com</a> - (link visited: 4 times)<br><li>2: <a href=article.php3?sid=7>Big Bottom Blues Fest, 2000</a> - (link visited: 2 times)<br></td></tr></table><br><table border=0 cellpadding=10 width=100%><tr><td align=left><font face=Arial,Helvetica size=4>
+      <b>10 most readed stories</b><br><br><font size=3><li>1: <a href=article.php3?sid=2>Welcome to BluesGroup.com</a> - (readed: 14 times)<br><li>2: <a href=article.php3?sid=3>How To Sing The Blues (funny, but true)</a> - (readed: 8 times)<br><li>3: <a href=article.php3?sid=5>CHEAP Blues Music</a> - (readed: 2 times)<br><li>4: <a href=article.php3?sid=4>Blues Name Generator</a> - (readed: 1 times)<br><li>5: <a href=article.php3?sid=6>Chicago Maxwell Street Neighborhood</a> - (readed: 1 times)<br><li>6: <a href=article.php3?sid=7>Big Bottom Blues Fest, 2000</a> - (readed: 1 times)<br><li>7: <a href=article.php3?sid=9>Maxwell Street Updates...</a> - (readed: 1 times)<br></td></tr></table><br><table border=0 cellpadding=10 width=100%><tr><td align=left><font face=Arial,Helvetica size=4>
+      <b>10 most commented stories</b><br><br><font size=3><li>1: <a href=article.php3?sid=2>Welcome to BluesGroup.com</a> - (comments: 2)<br><li>2: <a href=article.php3?sid=3>How To Sing The Blues (funny, but true)</a> - (comments: 1)<br></td></tr></table><br><table border=0 cellpadding=10 width=100%><tr><td align=left><font face=Arial,Helvetica size=4>
+      <b>10 most readed articles in special sections</b><br><br><font size=3></td></tr></table><br><table border=0 cellpadding=10 width=100%><tr><td align=left><font face=Arial,Helvetica size=4>
+      <b>10 most active news submitters</b><br><br><font size=3></td></tr></table><br><table border=0 cellpadding=10 width=100%><tr><td align=left><font face=Arial,Helvetica size=4>
+      <b>10 most voted polls</b><br><br><font size=3><li>1: <a href=pollBooth.php3?op=results&pollID=2>What do you think of the Omaha Blues Society?</a> - (votes: 10)<br></td></tr></table><br><table border=0 cellpadding=10 width=100%><tr><td align=left><font face=Arial,Helvetica size=4>
+      <b>10 most active authors</b><br><br><font size=3><li>1: <a href=search.php3?query=&author=SneakyDave>SneakyDave</a> - (news published: 11)<br><li>2: <a href=search.php3?query=&author=God>God</a> - (news published: 1)<br><li>3: <a href=search.php3?query=&author=wnet>wnet</a> - (news published: 1)<br></td></tr></table><br>
+    <br><br></center>
+    </tr></td></table></tr></td></table>
+</td></tr></table>
+</td></tr></table>
+</body></html>
+
+<font face=Arial,Helvetica size=1><center>
+<br>
+All logos and trademarks in this site are property of their respective owner. The comments are property of their posters, all the rest © 2000 by me<br>
+This web site was made with <a href=http://linuxpreview.org/php-nuke.php3>PHP-Nuke</a>, a web portal system written in PHP. PHP-Nuke is Free Software released under the <a href=http://www.gnu.org>GNU/GPL license</a>.<br>
+You can syndicate our news using the file <a href=backend.php3>Backend.php3</a><br>
+</body>
+</html>

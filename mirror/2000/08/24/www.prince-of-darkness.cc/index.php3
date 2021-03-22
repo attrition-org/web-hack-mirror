@@ -1,0 +1,572 @@
+<html><center><a href=banners.php3?op=click&bid=2><img src=images/banners/caldera-banner.gif border=1></a></center><br><html>
+<head>
+<title>Prince of Darkness - Computer, Software and Website Discussion</title>
+<style rel=stylesheet type=text/css>
+	A:link { text-decoration: underline; font-weight: bold; }
+	A:active { text-decoration: none; }
+	A:visited { text-decoration: underline; font-weight: bold; }
+	A:hover { text-decoration: underline; }
+</style>
+<META NAME="description" CONTENT="Computer, Software, Internet discusstion site.
+        <META NAME="keywords" CONTENT="unix, linux, freebsd, openbsd, windoz, quake, quake3, kernels, patches, ftp, http, compaq, ctx, alpha, intel, sparc, solaris, xwindows, gnome, kirk, windowmaker, twm, linneighborhood, samba, php, cdr,cdrw, thrust66, monitors, 3dfx, gcc, egcs, linus, patches, talk, post, discuss, compile">
+        <META NAME="author" CONTENT="Kirk">
+        <META NAME="generator" CONTENT="VIM on Linux">
+</head>
+
+<body background="themes/KDE/background2.jpg" text="#000000" link="#000000" vlink="#000000" topmargin=5 leftmargin=0 rightmargin=0 marginheight=5>
+
+<table border=0 cellpadding=4 cellspacing=0 width=100% align=center>
+<tr><td>
+
+<center>
+<a href="index.html"><img src="themes/KDE/kde_logo.gif" alt="Welcome to Prince of Darkness" border=0></a>
+</center>
+
+</td></tr>
+<tr><td valign=top width=100%>
+
+<table border=0 cellspacing=0 cellpadding=2 width=100%>
+<tr><td valign=top width=150>
+
+<!-- Blocks Init -->
+
+<TABLE WIDTH="160" CELLPADDING=0 CELLSPACING=0 BORDER=0>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11" alt=""></TD>
+    <TD ALIGN=MIDDLE WIDTH="149" HEIGHT="11" VALIGN=BOTTOM><IMG SRC="themes/KDE/menutop.gif" width="149" height="1" alt=""></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="100" HEIGHT="11"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11" alt=""></TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11" BACKGROUND="themes/KDE/menuleft.gif"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11" alt=""></TD>
+    <TD ALIGN=CENTER bgcolor="#6C6C6C" BACKGROUND="themes/KDE/menutitle.gif">
+	<FONT FACE=Lucida,Verdana,Arial,Helvetica size=3 color=white>Main Menu</FONT></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="100" HEIGHT="11" BACKGROUND="themes/KDE/menuright.gif"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11" alt=""></TD></TR>
+    <TR>
+    <TD ALIGN=RIGHT BACKGROUND="themes/KDE/menuleft.gif" WIDTH="11">&nbsp;</TD>
+    <TD ALIGN=left VALIGN=TOP BGCOLOR="#CFCFCF" BACKGROUND="themes/KDE/grid.gif">
+	<FONT FACE=Lucida,Verdana,Arial,Helvetica size=2><li><a href=index.php3>Home</a>
+<li><a href=topics.php3>Topics</a>
+<li><a href=sections.php3>Sections</a>
+<li><a href=user.php3><b>Create Account</B></a>
+<li><a href=user.php3>User Login</a>
+<li><a href=submit.php3>Submit News</a>
+<li><a href=stats.php3>Statistics</a>
+<li><a href=top.php3>Top 10</a>
+<li><a href=faq.php3>FAQ</a>
+<li><a href="ftp://ftp.prince-of-darkness.cc">Our FTP Server</a><br></TD>
+    <TD ALIGN=LEFT BACKGROUND="themes/KDE/menuright.gif" WIDTH="11">&nbsp;</TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomleft.gif" width="11" height="11" alt=""></TD>
+    <TD ALIGN=MIDDLE WIDTH="149" HEIGHT="11" VALIGN=TOP><IMG SRC="themes/KDE/menubottom.gif" width="149" height="1" alt=""></TD>
+    <TD ALIGN=left VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomright.gif" width="11" height="11" alt="">
+</TD></TR></TABLE>
+
+<!-- Show Left Blocks -->
+
+
+
+<TABLE WIDTH="160" CELLPADDING=0 CELLSPACING=0 BORDER=0>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11" alt=""></TD>
+    <TD ALIGN=MIDDLE WIDTH="149" HEIGHT="11" VALIGN=BOTTOM><IMG SRC="themes/KDE/menutop.gif" width="149" height="1" alt=""></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="100" HEIGHT="11"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11" alt=""></TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11" BACKGROUND="themes/KDE/menuleft.gif"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11" alt=""></TD>
+    <TD ALIGN=CENTER bgcolor="#6C6C6C" BACKGROUND="themes/KDE/menutitle.gif">
+	<FONT FACE=Lucida,Verdana,Arial,Helvetica size=3 color=white>Keyway Internet</FONT></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="100" HEIGHT="11" BACKGROUND="themes/KDE/menuright.gif"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11" alt=""></TD></TR>
+    <TR>
+    <TD ALIGN=RIGHT BACKGROUND="themes/KDE/menuleft.gif" WIDTH="11">&nbsp;</TD>
+    <TD ALIGN=left VALIGN=TOP BGCOLOR="#CFCFCF" BACKGROUND="themes/KDE/grid.gif">
+	<FONT FACE=Lucida,Verdana,Arial,Helvetica size=2>Excellent High speed internet access for all of southern California. <a href="http://www.keyway.net" target="_new">Keyway Internet Services</a> providing for GTE, COVAD, PakBell. Get Yours Today!<br></TD>
+    <TD ALIGN=LEFT BACKGROUND="themes/KDE/menuright.gif" WIDTH="11">&nbsp;</TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomleft.gif" width="11" height="11" alt=""></TD>
+    <TD ALIGN=MIDDLE WIDTH="149" HEIGHT="11" VALIGN=TOP><IMG SRC="themes/KDE/menubottom.gif" width="149" height="1" alt=""></TD>
+    <TD ALIGN=left VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomright.gif" width="11" height="11" alt="">
+</TD></TR></TABLE>
+<TABLE WIDTH="160" CELLPADDING=0 CELLSPACING=0 BORDER=0>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11" alt=""></TD>
+    <TD ALIGN=MIDDLE WIDTH="149" HEIGHT="11" VALIGN=BOTTOM><IMG SRC="themes/KDE/menutop.gif" width="149" height="1" alt=""></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="100" HEIGHT="11"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11" alt=""></TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11" BACKGROUND="themes/KDE/menuleft.gif"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11" alt=""></TD>
+    <TD ALIGN=CENTER bgcolor="#6C6C6C" BACKGROUND="themes/KDE/menutitle.gif">
+	<FONT FACE=Lucida,Verdana,Arial,Helvetica size=3 color=white>Global Viewing</FONT></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="100" HEIGHT="11" BACKGROUND="themes/KDE/menuright.gif"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11" alt=""></TD></TR>
+    <TR>
+    <TD ALIGN=RIGHT BACKGROUND="themes/KDE/menuleft.gif" WIDTH="11">&nbsp;</TD>
+    <TD ALIGN=left VALIGN=TOP BGCOLOR="#CFCFCF" BACKGROUND="themes/KDE/grid.gif">
+	<FONT FACE=Lucida,Verdana,Arial,Helvetica size=2>Need a security system? Want LIVE images on the net and for your website? They have a system with mulitple camers to fit your needs for web imageing. <a href="http://www.globalviewing.com" target="_new">Check them out.</a><br></TD>
+    <TD ALIGN=LEFT BACKGROUND="themes/KDE/menuright.gif" WIDTH="11">&nbsp;</TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomleft.gif" width="11" height="11" alt=""></TD>
+    <TD ALIGN=MIDDLE WIDTH="149" HEIGHT="11" VALIGN=TOP><IMG SRC="themes/KDE/menubottom.gif" width="149" height="1" alt=""></TD>
+    <TD ALIGN=left VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomright.gif" width="11" height="11" alt="">
+</TD></TR></TABLE>
+<TABLE WIDTH="160" CELLPADDING=0 CELLSPACING=0 BORDER=0>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11" alt=""></TD>
+    <TD ALIGN=MIDDLE WIDTH="149" HEIGHT="11" VALIGN=BOTTOM><IMG SRC="themes/KDE/menutop.gif" width="149" height="1" alt=""></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="100" HEIGHT="11"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11" alt=""></TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11" BACKGROUND="themes/KDE/menuleft.gif"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11" alt=""></TD>
+    <TD ALIGN=CENTER bgcolor="#6C6C6C" BACKGROUND="themes/KDE/menutitle.gif">
+	<FONT FACE=Lucida,Verdana,Arial,Helvetica size=3 color=white>Song Pics</FONT></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="100" HEIGHT="11" BACKGROUND="themes/KDE/menuright.gif"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11" alt=""></TD></TR>
+    <TR>
+    <TD ALIGN=RIGHT BACKGROUND="themes/KDE/menuleft.gif" WIDTH="11">&nbsp;</TD>
+    <TD ALIGN=left VALIGN=TOP BGCOLOR="#CFCFCF" BACKGROUND="themes/KDE/grid.gif">
+	<FONT FACE=Lucida,Verdana,Arial,Helvetica size=2><center><a href="http://www.real.com" target="_new"><img src="images/powered/reallogo.gif" border="0"></a><BR><BR><B>Goth Music</B></center><br><B><I><a href="http://www.idrecords.com/gossamer"><img src="images/homepage3.gif" border="0"></a>Gossamer:</i></b><br><a href="http://belial.thrust66.com:8080/ramgen/Gossamer/memoir.rm">Memoir</a><br>
+<a href="http://belial.thrust66.com:8080/ramgen/Gossamer/sweetestmisery.rm">Sweetest Misery</a><BR><BR><i><B><a href="http://vein.lordsofdarkness.com"><img src="images/homepage3.gif" border="0"></a>Vein:</b></i><br><a href="http://belial.thrust66.com:8080/ramgen/Vein/Vein_7Reasons.rm">7 Reasons</a><br><a href="http://belial.thrust66.com:8080/ramgen/Vein/Vein-Dispossessed.rm">Dispossessed</a><br>
+<a href="http://belial.thrust66.com:8080/ramgen/Vein/Vein_100measure.rm">100 Measures</a><br><br><B><I><a href="http://www.ourmuseum.com"><img src="images/homepage3.gif" border="0"></a>Meuseum:</i></b><br><a href="http://belial.thrust66.com:8080/ramgen/Museum/Museum_EvenNow.rm">Even Now</a><br><a href="http://belial.thrust66.com:8080/ramgen/Museum/Museum_PassingTime.rm">Passing Time</a><br><br>
+<B><I><a href="http://www.geocities.com/SunsetStrip/Palace/1194/Synner1.html"><img src="images/homepage3.gif" border="0"></a>Howling Syn</i></b><br><a href="http://belial.thrust66.com:8080/ramgen/Howling_Syn/Living_with_Spiders.rm">Living With Spiders</a><br><a href="http://belial.thrust66.com:8080/ramgen/Howling_Syn/Now_Your_Gone.rm">Now Your Gone</a><br><a href="http://belial.thrust66.com:8080/ramgen/Howling_Syn/Wolfqueen.rm">Wolfqueen</a><br><br></TD>
+    <TD ALIGN=LEFT BACKGROUND="themes/KDE/menuright.gif" WIDTH="11">&nbsp;</TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomleft.gif" width="11" height="11" alt=""></TD>
+    <TD ALIGN=MIDDLE WIDTH="149" HEIGHT="11" VALIGN=TOP><IMG SRC="themes/KDE/menubottom.gif" width="149" height="1" alt=""></TD>
+    <TD ALIGN=left VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomright.gif" width="11" height="11" alt="">
+</TD></TR></TABLE>
+<TABLE WIDTH="160" CELLPADDING=0 CELLSPACING=0 BORDER=0>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11" alt=""></TD>
+    <TD ALIGN=MIDDLE WIDTH="149" HEIGHT="11" VALIGN=BOTTOM><IMG SRC="themes/KDE/menutop.gif" width="149" height="1" alt=""></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="100" HEIGHT="11"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11" alt=""></TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11" BACKGROUND="themes/KDE/menuleft.gif"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11" alt=""></TD>
+    <TD ALIGN=CENTER bgcolor="#6C6C6C" BACKGROUND="themes/KDE/menutitle.gif">
+	<FONT FACE=Lucida,Verdana,Arial,Helvetica size=3 color=white>Quake</FONT></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="100" HEIGHT="11" BACKGROUND="themes/KDE/menuright.gif"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11" alt=""></TD></TR>
+    <TR>
+    <TD ALIGN=RIGHT BACKGROUND="themes/KDE/menuleft.gif" WIDTH="11">&nbsp;</TD>
+    <TD ALIGN=left VALIGN=TOP BGCOLOR="#CFCFCF" BACKGROUND="themes/KDE/grid.gif">
+	<FONT FACE=Lucida,Verdana,Arial,Helvetica size=2><center><B>Quake3</B><BR>Occasionaly you can visit our Quake 3 server at <br> <B>fire.thrust66.net </b><br> We always run the Excessive Server Mod!</center><br><center><B>Quake1</B> <BR>Also Available is Quake1. If anyone has a good server config let us know.</center><br></TD>
+    <TD ALIGN=LEFT BACKGROUND="themes/KDE/menuright.gif" WIDTH="11">&nbsp;</TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomleft.gif" width="11" height="11" alt=""></TD>
+    <TD ALIGN=MIDDLE WIDTH="149" HEIGHT="11" VALIGN=TOP><IMG SRC="themes/KDE/menubottom.gif" width="149" height="1" alt=""></TD>
+    <TD ALIGN=left VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomright.gif" width="11" height="11" alt="">
+</TD></TR></TABLE>
+
+
+
+
+<img src=images/pix.gif border=0 width=150 height=1>
+</td><td width=100% valign=top>		
+
+
+
+<TABLE WIDTH="100%" CELLPADDING=0 CELLSPACING=0 BORDER=0>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11"></TD>
+    <TD ALIGN=MIDDLE HEIGHT="11" VALIGN=BOTTOM><IMG SRC="themes/KDE/menutop.gif" width=100% height=1></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11"></TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11" BACKGROUND="themes/KDE/menuleft.gif"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11"></TD>
+    <TD ALIGN=CENTER bgcolor="#6C6C6C" BACKGROUND="themes/KDE/menutitle.gif">
+    <FONT FACE=Lucida,Verdana,Arial,Helvetica size=3 color=white></center>Hacked?<BR><FONT SIZE=2>Posted by <b><a href="">godbless</a></b> on Thursday, August 24th @ 08:12 <br>(readed: 0 times - hits: 0)<br></FONT></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="11" HEIGHT="11" BACKGROUND="themes/KDE/menuright.gif"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11"></TD></TR>
+    <TR>
+    <TD ALIGN=RIGHT BACKGROUND="themes/KDE/menuleft.gif" WIDTH="11">&nbsp;</TD>
+    <TD ALIGN=left VALIGN=TOP BGCOLOR="#CFCFCF" BACKGROUND="themes/KDE/sketch.gif">
+    <FONT FACE=Lucida,Verdana,Arial,Helvetica size=2>
+    <a href="search.php3?query=&topic=0&author="><img src=images/topics/ border=1 Alt="" align=left hspace=10 vspace=10></a>
+    <font face=Arial,Helvetica>Yes, chevy the h4x0r hacked you.
+<br>
+-chevy
+<br>
+<h7>chevy0@hotmail.com for questions.<br><br>( <a href="article.php3?sid=23&mode=threaded&order=0&thold=0">comments?</a> )</TD>
+    <TD ALIGN=LEFT BACKGROUND="themes/KDE/menuright.gif" WIDTH="11">&nbsp;</TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomleft.gif" width="11" height="11"></TD>
+    <TD ALIGN=MIDDLE HEIGHT="11" VALIGN=TOP><IMG SRC="themes/KDE/menubottom.gif" width="100%" height=1></TD>
+    <TD ALIGN=left VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomright.gif" width="11" height="11">
+</TD></TR></TABLE>
+
+<TABLE WIDTH="100%" CELLPADDING=0 CELLSPACING=0 BORDER=0>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11"></TD>
+    <TD ALIGN=MIDDLE HEIGHT="11" VALIGN=BOTTOM><IMG SRC="themes/KDE/menutop.gif" width=100% height=1></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11"></TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11" BACKGROUND="themes/KDE/menuleft.gif"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11"></TD>
+    <TD ALIGN=CENTER bgcolor="#6C6C6C" BACKGROUND="themes/KDE/menutitle.gif">
+    <FONT FACE=Lucida,Verdana,Arial,Helvetica size=3 color=white></center>
+    New Voodoo 5 Drivers<BR><FONT SIZE=2>
+    Posted by <a href="index.html">thrust66</a> on Tuesday, August 22nd @ 08:43 <br>(readed: 0 times - hits: 0)<br></FONT></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="11" HEIGHT="11" BACKGROUND="themes/KDE/menuright.gif"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11"></TD></TR>
+    <TR>
+    <TD ALIGN=RIGHT BACKGROUND="themes/KDE/menuleft.gif" WIDTH="11">&nbsp;</TD>
+    <TD ALIGN=left VALIGN=TOP BGCOLOR="#CFCFCF" BACKGROUND="themes/KDE/sketch.gif">
+    <FONT FACE=Lucida,Verdana,Arial,Helvetica size=2>
+    <a href="search.php3?query=&topic=29&author="><img src=images/topics/x.jpg border=1 Alt="X Window" align=left hspace=10 vspace=10></a>
+    <font face=Arial,Helvetica><a href="user.php3?op=userinfo&uname=kirk">kirk</a> writes <i>"New release from linux.3dfx.com for Voodoo 5 Linux Drivers, now based on the updated XFree86 4.0.1. Still no SLI or AA but hopefully its coming soon. Get your copy today!"</i> <br><br>( <a href="article.php3?sid=22&mode=threaded&order=0&thold=0">comments?</a> )</TD>
+    <TD ALIGN=LEFT BACKGROUND="themes/KDE/menuright.gif" WIDTH="11">&nbsp;</TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomleft.gif" width="11" height="11"></TD>
+    <TD ALIGN=MIDDLE HEIGHT="11" VALIGN=TOP><IMG SRC="themes/KDE/menubottom.gif" width="100%" height=1></TD>
+    <TD ALIGN=left VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomright.gif" width="11" height="11">
+</TD></TR></TABLE>
+
+<TABLE WIDTH="100%" CELLPADDING=0 CELLSPACING=0 BORDER=0>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11"></TD>
+    <TD ALIGN=MIDDLE HEIGHT="11" VALIGN=BOTTOM><IMG SRC="themes/KDE/menutop.gif" width=100% height=1></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11"></TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11" BACKGROUND="themes/KDE/menuleft.gif"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11"></TD>
+    <TD ALIGN=CENTER bgcolor="#6C6C6C" BACKGROUND="themes/KDE/menutitle.gif">
+    <FONT FACE=Lucida,Verdana,Arial,Helvetica size=3 color=white></center>
+    Mahogany Email Program<BR><FONT SIZE=2>
+    Posted by <a href="index.html">thrust66</a> on Monday, August 21st @ 07:26 <br>(readed: 2 times - hits: 0)<br></FONT></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="11" HEIGHT="11" BACKGROUND="themes/KDE/menuright.gif"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11"></TD></TR>
+    <TR>
+    <TD ALIGN=RIGHT BACKGROUND="themes/KDE/menuleft.gif" WIDTH="11">&nbsp;</TD>
+    <TD ALIGN=left VALIGN=TOP BGCOLOR="#CFCFCF" BACKGROUND="themes/KDE/sketch.gif">
+    <FONT FACE=Lucida,Verdana,Arial,Helvetica size=2>
+    <a href="search.php3?query=&topic=7&author="><img src=images/topics/topicnews.gif border=1 Alt="New News" align=left hspace=10 vspace=10></a>
+    <font face=Arial,Helvetica><a href="user.php3?op=userinfo&uname=kirk">kirk</a> writes <i>"Mahogany is an OpenSource(TM) cross-platform mail and news client. It is available for X11/Unix and MS Windows platforms, supporting a wide range of protocols and standards, including POP3, IMAP and full MIME support."</i> <br><br>( <a href="article.php3?sid=21&mode=threaded&order=0"><b>Read More...</b></a> | 737 bytes more | <a href="article.php3?sid=21&mode=threaded&order=0&thold=0">comments?</a> )</TD>
+    <TD ALIGN=LEFT BACKGROUND="themes/KDE/menuright.gif" WIDTH="11">&nbsp;</TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomleft.gif" width="11" height="11"></TD>
+    <TD ALIGN=MIDDLE HEIGHT="11" VALIGN=TOP><IMG SRC="themes/KDE/menubottom.gif" width="100%" height=1></TD>
+    <TD ALIGN=left VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomright.gif" width="11" height="11">
+</TD></TR></TABLE>
+
+<TABLE WIDTH="100%" CELLPADDING=0 CELLSPACING=0 BORDER=0>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11"></TD>
+    <TD ALIGN=MIDDLE HEIGHT="11" VALIGN=BOTTOM><IMG SRC="themes/KDE/menutop.gif" width=100% height=1></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11"></TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11" BACKGROUND="themes/KDE/menuleft.gif"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11"></TD>
+    <TD ALIGN=CENTER bgcolor="#6C6C6C" BACKGROUND="themes/KDE/menutitle.gif">
+    <FONT FACE=Lucida,Verdana,Arial,Helvetica size=3 color=white></center>
+    Ncftp 2.6.2 Server<BR><FONT SIZE=2>
+    Posted by <a href="index.html">thrust66</a> on Monday, August 21st @ 07:25 <br>(readed: 0 times - hits: 0)<br></FONT></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="11" HEIGHT="11" BACKGROUND="themes/KDE/menuright.gif"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11"></TD></TR>
+    <TR>
+    <TD ALIGN=RIGHT BACKGROUND="themes/KDE/menuleft.gif" WIDTH="11">&nbsp;</TD>
+    <TD ALIGN=left VALIGN=TOP BGCOLOR="#CFCFCF" BACKGROUND="themes/KDE/sketch.gif">
+    <FONT FACE=Lucida,Verdana,Arial,Helvetica size=2>
+    <a href="search.php3?query=&topic=10&author="><img src=images/topics/topicunix.jpg border=1 Alt="Unix" align=left hspace=10 vspace=10></a>
+    <font face=Arial,Helvetica><a href="user.php3?op=userinfo&uname=kirk">kirk</a> writes <i>"<B>Version 2.6.2 of the NcFTPd Server is now available. </B><br>
+Security: Bug fixed where restricted users could access directory paths that were prefixed by the entire pathname of the home directory and if user's UID/GID privileges allowed it. For example, a user bill with home directory /home/users/bill may have been able to access the directory /home/users/billybob if bill's privileges allowed it. 
+"</i> <br><br>( <a href="article.php3?sid=20&mode=threaded&order=0"><b>Read More...</b></a> | 1063 bytes more | <a href="article.php3?sid=20&mode=threaded&order=0&thold=0">comments?</a> )</TD>
+    <TD ALIGN=LEFT BACKGROUND="themes/KDE/menuright.gif" WIDTH="11">&nbsp;</TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomleft.gif" width="11" height="11"></TD>
+    <TD ALIGN=MIDDLE HEIGHT="11" VALIGN=TOP><IMG SRC="themes/KDE/menubottom.gif" width="100%" height=1></TD>
+    <TD ALIGN=left VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomright.gif" width="11" height="11">
+</TD></TR></TABLE>
+
+<TABLE WIDTH="100%" CELLPADDING=0 CELLSPACING=0 BORDER=0>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11"></TD>
+    <TD ALIGN=MIDDLE HEIGHT="11" VALIGN=BOTTOM><IMG SRC="themes/KDE/menutop.gif" width=100% height=1></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11"></TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11" BACKGROUND="themes/KDE/menuleft.gif"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11"></TD>
+    <TD ALIGN=CENTER bgcolor="#6C6C6C" BACKGROUND="themes/KDE/menutitle.gif">
+    <FONT FACE=Lucida,Verdana,Arial,Helvetica size=3 color=white></center>
+    Apache 2.0 Alpha<BR><FONT SIZE=2>
+    Posted by <a href="index.html">thrust66</a> on Tuesday, August 15th @ 06:27 <br>(readed: 0 times - hits: 0)<br></FONT></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="11" HEIGHT="11" BACKGROUND="themes/KDE/menuright.gif"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11"></TD></TR>
+    <TR>
+    <TD ALIGN=RIGHT BACKGROUND="themes/KDE/menuleft.gif" WIDTH="11">&nbsp;</TD>
+    <TD ALIGN=left VALIGN=TOP BGCOLOR="#CFCFCF" BACKGROUND="themes/KDE/sketch.gif">
+    <FONT FACE=Lucida,Verdana,Arial,Helvetica size=2>
+    <a href="search.php3?query=&topic=3&author="><img src=images/topics/topicapache.gif border=1 Alt="Apache" align=left hspace=10 vspace=10></a>
+    <font face=Arial,Helvetica>Anonymous writes <i>"Apache 2.0 Alpha is available for testing. What new features do they have in store for us this time. This is a major version number jump so it should be interesting."</i> <br><br>( <a href="article.php3?sid=19&mode=threaded&order=0"><b>Read More...</b></a> | 247 bytes more | <a href="article.php3?sid=19&mode=threaded&order=0&thold=0">comments?</a> )</TD>
+    <TD ALIGN=LEFT BACKGROUND="themes/KDE/menuright.gif" WIDTH="11">&nbsp;</TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomleft.gif" width="11" height="11"></TD>
+    <TD ALIGN=MIDDLE HEIGHT="11" VALIGN=TOP><IMG SRC="themes/KDE/menubottom.gif" width="100%" height=1></TD>
+    <TD ALIGN=left VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomright.gif" width="11" height="11">
+</TD></TR></TABLE>
+
+<TABLE WIDTH="100%" CELLPADDING=0 CELLSPACING=0 BORDER=0>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11"></TD>
+    <TD ALIGN=MIDDLE HEIGHT="11" VALIGN=BOTTOM><IMG SRC="themes/KDE/menutop.gif" width=100% height=1></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11"></TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11" BACKGROUND="themes/KDE/menuleft.gif"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11"></TD>
+    <TD ALIGN=CENTER bgcolor="#6C6C6C" BACKGROUND="themes/KDE/menutitle.gif">
+    <FONT FACE=Lucida,Verdana,Arial,Helvetica size=3 color=white></center>
+    Portsentry Rocks<BR><FONT SIZE=2>
+    Posted by <a href="index.html">thrust66</a> on Sunday, August 13th @ 16:05 <br>(readed: 3 times - hits: 0)<br></FONT></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="11" HEIGHT="11" BACKGROUND="themes/KDE/menuright.gif"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11"></TD></TR>
+    <TR>
+    <TD ALIGN=RIGHT BACKGROUND="themes/KDE/menuleft.gif" WIDTH="11">&nbsp;</TD>
+    <TD ALIGN=left VALIGN=TOP BGCOLOR="#CFCFCF" BACKGROUND="themes/KDE/sketch.gif">
+    <FONT FACE=Lucida,Verdana,Arial,Helvetica size=2>
+    <a href="search.php3?query=&topic=1&author="><img src=images/topics/linux.gif border=1 Alt="Linux" align=left hspace=10 vspace=10></a>
+    <font face=Arial,Helvetica><a href="user.php3?op=userinfo&uname=jd">jd</a> writes <i>"DENIED!!! portsentry stomps on those that try to access your system and drops them into a black hole!
+
+Hackers go home!"</i> <br><br>( <a href="article.php3?sid=18&mode=threaded&order=0"><b>Read More...</b></a> | 270 bytes more | <a href="article.php3?sid=18&mode=threaded&order=0&thold=0">comments?</a> )</TD>
+    <TD ALIGN=LEFT BACKGROUND="themes/KDE/menuright.gif" WIDTH="11">&nbsp;</TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomleft.gif" width="11" height="11"></TD>
+    <TD ALIGN=MIDDLE HEIGHT="11" VALIGN=TOP><IMG SRC="themes/KDE/menubottom.gif" width="100%" height=1></TD>
+    <TD ALIGN=left VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomright.gif" width="11" height="11">
+</TD></TR></TABLE>
+
+<TABLE WIDTH="100%" CELLPADDING=0 CELLSPACING=0 BORDER=0>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11"></TD>
+    <TD ALIGN=MIDDLE HEIGHT="11" VALIGN=BOTTOM><IMG SRC="themes/KDE/menutop.gif" width=100% height=1></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11"></TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11" BACKGROUND="themes/KDE/menuleft.gif"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11"></TD>
+    <TD ALIGN=CENTER bgcolor="#6C6C6C" BACKGROUND="themes/KDE/menutitle.gif">
+    <FONT FACE=Lucida,Verdana,Arial,Helvetica size=3 color=white></center>
+    Netscape 6 PreRelease 2<BR><FONT SIZE=2>
+    Posted by <a href="index.html">thrust66</a> on Sunday, August 13th @ 08:39 <br>(readed: 5 times - hits: 0)<br></FONT></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="11" HEIGHT="11" BACKGROUND="themes/KDE/menuright.gif"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11"></TD></TR>
+    <TR>
+    <TD ALIGN=RIGHT BACKGROUND="themes/KDE/menuleft.gif" WIDTH="11">&nbsp;</TD>
+    <TD ALIGN=left VALIGN=TOP BGCOLOR="#CFCFCF" BACKGROUND="themes/KDE/sketch.gif">
+    <FONT FACE=Lucida,Verdana,Arial,Helvetica size=2>
+    <a href="search.php3?query=&topic=23&author="><img src=images/topics/netscape.gif border=1 Alt="Netscape" align=left hspace=10 vspace=10></a>
+    <font face=Arial,Helvetica><a href="user.php3?op=userinfo&uname=Kirk">Kirk</a> writes <i>"Netscape has just released the long-awaited preview of the new Communicator browser suite. The company dropped the name Communicator from the suite; now the entire suite is simply called Netscape. But the real surprise is that the company decided to skip the next point upgrade for the Communicator 4.x browser and email clients and head straight to version 6. <BR>
+<BR>         
+Now comes with new designer skins, called Themes, to customize Netscape's look and feel.
+"</i> <br><br>( <a href="article.php3?sid=17&mode=threaded&order=0"><b>Read More...</b></a> | 587 bytes more | <a href="article.php3?sid=17&mode=threaded&order=0&thold=0">1 comment</a> )</TD>
+    <TD ALIGN=LEFT BACKGROUND="themes/KDE/menuright.gif" WIDTH="11">&nbsp;</TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomleft.gif" width="11" height="11"></TD>
+    <TD ALIGN=MIDDLE HEIGHT="11" VALIGN=TOP><IMG SRC="themes/KDE/menubottom.gif" width="100%" height=1></TD>
+    <TD ALIGN=left VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomright.gif" width="11" height="11">
+</TD></TR></TABLE>
+
+<TABLE WIDTH="100%" CELLPADDING=0 CELLSPACING=0 BORDER=0>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11"></TD>
+    <TD ALIGN=MIDDLE HEIGHT="11" VALIGN=BOTTOM><IMG SRC="themes/KDE/menutop.gif" width=100% height=1></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11"></TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11" BACKGROUND="themes/KDE/menuleft.gif"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11"></TD>
+    <TD ALIGN=CENTER bgcolor="#6C6C6C" BACKGROUND="themes/KDE/menutitle.gif">
+    <FONT FACE=Lucida,Verdana,Arial,Helvetica size=3 color=white></center>
+    Yahoo Messanger For Unix<BR><FONT SIZE=2>
+    Posted by <a href="index.html">thrust66</a> on Sunday, August 13th @ 08:06 <br>(readed: 5 times - hits: 2)<br></FONT></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="11" HEIGHT="11" BACKGROUND="themes/KDE/menuright.gif"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11"></TD></TR>
+    <TR>
+    <TD ALIGN=RIGHT BACKGROUND="themes/KDE/menuleft.gif" WIDTH="11">&nbsp;</TD>
+    <TD ALIGN=left VALIGN=TOP BGCOLOR="#CFCFCF" BACKGROUND="themes/KDE/sketch.gif">
+    <FONT FACE=Lucida,Verdana,Arial,Helvetica size=2>
+    <a href="search.php3?query=&topic=29&author="><img src=images/topics/x.jpg border=1 Alt="X Window" align=left hspace=10 vspace=10></a>
+    <font face=Arial,Helvetica><a href="user.php3?op=userinfo&uname=Kirk">Kirk</a> writes <i>"Yahoo has released their Messenger software for Linux and BSD 2,3,4  Very cool for those who like to chat and are having problems with the AOL version. "</i> <br><br>( <a href="article.php3?sid=16&mode=threaded&order=0"><b>Read More...</b></a> | 276 bytes more | <a href="article.php3?sid=16&mode=threaded&order=0&thold=0">comments?</a> )</TD>
+    <TD ALIGN=LEFT BACKGROUND="themes/KDE/menuright.gif" WIDTH="11">&nbsp;</TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomleft.gif" width="11" height="11"></TD>
+    <TD ALIGN=MIDDLE HEIGHT="11" VALIGN=TOP><IMG SRC="themes/KDE/menubottom.gif" width="100%" height=1></TD>
+    <TD ALIGN=left VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomright.gif" width="11" height="11">
+</TD></TR></TABLE>
+
+<TABLE WIDTH="100%" CELLPADDING=0 CELLSPACING=0 BORDER=0>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11"></TD>
+    <TD ALIGN=MIDDLE HEIGHT="11" VALIGN=BOTTOM><IMG SRC="themes/KDE/menutop.gif" width=100% height=1></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11"></TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11" BACKGROUND="themes/KDE/menuleft.gif"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11"></TD>
+    <TD ALIGN=CENTER bgcolor="#6C6C6C" BACKGROUND="themes/KDE/menutitle.gif">
+    <FONT FACE=Lucida,Verdana,Arial,Helvetica size=3 color=white></center>
+    Kernel 2.4.0-Test6 is out!<BR><FONT SIZE=2>
+    Posted by <a href="index.html">thrust66</a> on Friday, August 11th @ 14:04 <br>(readed: 0 times - hits: 0)<br></FONT></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="11" HEIGHT="11" BACKGROUND="themes/KDE/menuright.gif"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11"></TD></TR>
+    <TR>
+    <TD ALIGN=RIGHT BACKGROUND="themes/KDE/menuleft.gif" WIDTH="11">&nbsp;</TD>
+    <TD ALIGN=left VALIGN=TOP BGCOLOR="#CFCFCF" BACKGROUND="themes/KDE/sketch.gif">
+    <FONT FACE=Lucida,Verdana,Arial,Helvetica size=2>
+    <a href="search.php3?query=&topic=1&author="><img src=images/topics/linux.gif border=1 Alt="Linux" align=left hspace=10 vspace=10></a>
+    <font face=Arial,Helvetica><a href="user.php3?op=userinfo&uname=kirk">kirk</a> writes <i>"The latest 2.4 series kernel is out. Looks like we may be getting close to an offical release. See ftp.kernel.org to download your copy."</i> <br><br>( <a href="article.php3?sid=15&mode=threaded&order=0&thold=0">comments?</a> )</TD>
+    <TD ALIGN=LEFT BACKGROUND="themes/KDE/menuright.gif" WIDTH="11">&nbsp;</TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomleft.gif" width="11" height="11"></TD>
+    <TD ALIGN=MIDDLE HEIGHT="11" VALIGN=TOP><IMG SRC="themes/KDE/menubottom.gif" width="100%" height=1></TD>
+    <TD ALIGN=left VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomright.gif" width="11" height="11">
+</TD></TR></TABLE>
+
+<TABLE WIDTH="100%" CELLPADDING=0 CELLSPACING=0 BORDER=0>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11"></TD>
+    <TD ALIGN=MIDDLE HEIGHT="11" VALIGN=BOTTOM><IMG SRC="themes/KDE/menutop.gif" width=100% height=1></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11"></TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11" BACKGROUND="themes/KDE/menuleft.gif"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11"></TD>
+    <TD ALIGN=CENTER bgcolor="#6C6C6C" BACKGROUND="themes/KDE/menutitle.gif">
+    <FONT FACE=Lucida,Verdana,Arial,Helvetica size=3 color=white></center>
+    FreeBSD 4.1<BR><FONT SIZE=2>
+    Posted by <a href="index.html">thrust66</a> on Wednesday, August 9th @ 10:34 <br>(readed: 3 times - hits: 0)<br></FONT></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="11" HEIGHT="11" BACKGROUND="themes/KDE/menuright.gif"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11"></TD></TR>
+    <TR>
+    <TD ALIGN=RIGHT BACKGROUND="themes/KDE/menuleft.gif" WIDTH="11">&nbsp;</TD>
+    <TD ALIGN=left VALIGN=TOP BGCOLOR="#CFCFCF" BACKGROUND="themes/KDE/sketch.gif">
+    <FONT FACE=Lucida,Verdana,Arial,Helvetica size=2>
+    <a href="search.php3?query=&topic=11&author="><img src=images/topics/freebsd.gif border=1 Alt="FreeBSD" align=left hspace=10 vspace=10></a>
+    <font face=Arial,Helvetica><a href="user.php3?op=userinfo&uname=kirk">kirk</a> writes <i>"FreeBSD just released version 4.1. There has been many bug fixes, and hopefully the reboot problem of 4.0. Check back soon for an update on this."</i> <br><br>( <a href="article.php3?sid=14&mode=threaded&order=0&thold=0"><b>Read More...</b></a> | <a href="article.php3?sid=14&mode=threaded&order=0&thold=0">1 comment</a> )</TD>
+    <TD ALIGN=LEFT BACKGROUND="themes/KDE/menuright.gif" WIDTH="11">&nbsp;</TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomleft.gif" width="11" height="11"></TD>
+    <TD ALIGN=MIDDLE HEIGHT="11" VALIGN=TOP><IMG SRC="themes/KDE/menubottom.gif" width="100%" height=1></TD>
+    <TD ALIGN=left VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomright.gif" width="11" height="11">
+</TD></TR></TABLE>
+
+<td>&nbsp;</td><td valign="top"><TABLE WIDTH="160" CELLPADDING=0 CELLSPACING=0 BORDER=0>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11" alt=""></TD>
+    <TD ALIGN=MIDDLE WIDTH="149" HEIGHT="11" VALIGN=BOTTOM><IMG SRC="themes/KDE/menutop.gif" width="149" height="1" alt=""></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="100" HEIGHT="11"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11" alt=""></TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11" BACKGROUND="themes/KDE/menuleft.gif"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11" alt=""></TD>
+    <TD ALIGN=CENTER bgcolor="#6C6C6C" BACKGROUND="themes/KDE/menutitle.gif">
+	<FONT FACE=Lucida,Verdana,Arial,Helvetica size=3 color=white>Survey</FONT></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="100" HEIGHT="11" BACKGROUND="themes/KDE/menuright.gif"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11" alt=""></TD></TR>
+    <TR>
+    <TD ALIGN=RIGHT BACKGROUND="themes/KDE/menuleft.gif" WIDTH="11">&nbsp;</TD>
+    <TD ALIGN=left VALIGN=TOP BGCOLOR="#CFCFCF" BACKGROUND="themes/KDE/grid.gif">
+	<FONT FACE=Lucida,Verdana,Arial,Helvetica size=2><form action="pollBooth.php3" method="post"><input type="hidden" name="pollID" value="5"><input type="hidden" name="forwarder" value="pollBooth.php3?op=results&pollID=5"><font face=Arial,Helvetica size=2><b>Is chevy a 31337 h4x0r?</b><br><input type="radio" name="voteID" value="1"><font face=Arial,Helvetica size=2> yes <br><center><table cellspacing=0 cellpadding=5 border=0 width=111><tr><td align=center> <input type=image src=images/menu/english/vote.gif border=0></td><td align=center></form><a href="pollBooth.php3?op=results&pollID=5"><img src=images/menu/english/result.gif border=0></a></td></tr></table><a href="pollBooth.php3"><b>Past Surveys</a></b><br><br>Votes: <b>0</b></font></center><br></TD>
+    <TD ALIGN=LEFT BACKGROUND="themes/KDE/menuright.gif" WIDTH="11">&nbsp;</TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomleft.gif" width="11" height="11" alt=""></TD>
+    <TD ALIGN=MIDDLE WIDTH="149" HEIGHT="11" VALIGN=TOP><IMG SRC="themes/KDE/menubottom.gif" width="149" height="1" alt=""></TD>
+    <TD ALIGN=left VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomright.gif" width="11" height="11" alt="">
+</TD></TR></TABLE>
+<TABLE WIDTH="160" CELLPADDING=0 CELLSPACING=0 BORDER=0>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11" alt=""></TD>
+    <TD ALIGN=MIDDLE WIDTH="149" HEIGHT="11" VALIGN=BOTTOM><IMG SRC="themes/KDE/menutop.gif" width="149" height="1" alt=""></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="100" HEIGHT="11"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11" alt=""></TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11" BACKGROUND="themes/KDE/menuleft.gif"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11" alt=""></TD>
+    <TD ALIGN=CENTER bgcolor="#6C6C6C" BACKGROUND="themes/KDE/menutitle.gif">
+	<FONT FACE=Lucida,Verdana,Arial,Helvetica size=3 color=white>Past Articles</FONT></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="100" HEIGHT="11" BACKGROUND="themes/KDE/menuright.gif"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11" alt=""></TD></TR>
+    <TR>
+    <TD ALIGN=RIGHT BACKGROUND="themes/KDE/menuleft.gif" WIDTH="11">&nbsp;</TD>
+    <TD ALIGN=left VALIGN=TOP BGCOLOR="#CFCFCF" BACKGROUND="themes/KDE/grid.gif">
+	<FONT FACE=Lucida,Verdana,Arial,Helvetica size=2><font face=Arial,Helvetica size=2><li><a href="article.php3?sid=13">RedHat 7.0 Beta</a> (2)<font face=Arial,Helvetica size=2><li><a href="article.php3?sid=12">New Song Picks Rule</a> (1)<font face=Arial,Helvetica size=2><li><a href="article.php3?sid=11">VMware Maintenance Release</a> (0)<font face=Arial,Helvetica size=2><li><a href="article.php3?sid=10">Kernel 2.4.0-test5 is out!</a> (0)<font face=Arial,Helvetica size=2><li><a href="article.php3?sid=9">Solaris 8</a> (0)<font face=Arial,Helvetica size=2><li><a href="article.php3?sid=8">New Kernel IDE Patch</a> (0)<font face=Arial,Helvetica size=2><li><a href="article.php3?sid=7">Gigers Website Rules</a> (0)<br></TD>
+    <TD ALIGN=LEFT BACKGROUND="themes/KDE/menuright.gif" WIDTH="11">&nbsp;</TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomleft.gif" width="11" height="11" alt=""></TD>
+    <TD ALIGN=MIDDLE WIDTH="149" HEIGHT="11" VALIGN=TOP><IMG SRC="themes/KDE/menubottom.gif" width="149" height="1" alt=""></TD>
+    <TD ALIGN=left VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomright.gif" width="11" height="11" alt="">
+</TD></TR></TABLE>
+<TABLE WIDTH="160" CELLPADDING=0 CELLSPACING=0 BORDER=0>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11" alt=""></TD>
+    <TD ALIGN=MIDDLE WIDTH="149" HEIGHT="11" VALIGN=BOTTOM><IMG SRC="themes/KDE/menutop.gif" width="149" height="1" alt=""></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="100" HEIGHT="11"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11" alt=""></TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11" BACKGROUND="themes/KDE/menuleft.gif"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11" alt=""></TD>
+    <TD ALIGN=CENTER bgcolor="#6C6C6C" BACKGROUND="themes/KDE/menutitle.gif">
+	<FONT FACE=Lucida,Verdana,Arial,Helvetica size=3 color=white>Auto News</FONT></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="100" HEIGHT="11" BACKGROUND="themes/KDE/menuright.gif"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11" alt=""></TD></TR>
+    <TR>
+    <TD ALIGN=RIGHT BACKGROUND="themes/KDE/menuleft.gif" WIDTH="11">&nbsp;</TD>
+    <TD ALIGN=left VALIGN=TOP BGCOLOR="#CFCFCF" BACKGROUND="themes/KDE/grid.gif">
+	<FONT FACE=Lucida,Verdana,Arial,Helvetica size=2>Need a high class car with a great deal?? Assael Automotive Group is for you. BMW, Mazda, Subaru, Mitsubishi, and now <B>KIA</B>. Check their <a href="http://www.assael.net" target="_new">website</a> for the big KIA Grand Opening Event!<br></TD>
+    <TD ALIGN=LEFT BACKGROUND="themes/KDE/menuright.gif" WIDTH="11">&nbsp;</TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomleft.gif" width="11" height="11" alt=""></TD>
+    <TD ALIGN=MIDDLE WIDTH="149" HEIGHT="11" VALIGN=TOP><IMG SRC="themes/KDE/menubottom.gif" width="149" height="1" alt=""></TD>
+    <TD ALIGN=left VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomright.gif" width="11" height="11" alt="">
+</TD></TR></TABLE>
+<TABLE WIDTH="160" CELLPADDING=0 CELLSPACING=0 BORDER=0>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11" alt=""></TD>
+    <TD ALIGN=MIDDLE WIDTH="149" HEIGHT="11" VALIGN=BOTTOM><IMG SRC="themes/KDE/menutop.gif" width="149" height="1" alt=""></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="100" HEIGHT="11"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11" alt=""></TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11" BACKGROUND="themes/KDE/menuleft.gif"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11" alt=""></TD>
+    <TD ALIGN=CENTER bgcolor="#6C6C6C" BACKGROUND="themes/KDE/menutitle.gif">
+	<FONT FACE=Lucida,Verdana,Arial,Helvetica size=3 color=white>Powered By</FONT></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="100" HEIGHT="11" BACKGROUND="themes/KDE/menuright.gif"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11" alt=""></TD></TR>
+    <TR>
+    <TD ALIGN=RIGHT BACKGROUND="themes/KDE/menuleft.gif" WIDTH="11">&nbsp;</TD>
+    <TD ALIGN=left VALIGN=TOP BGCOLOR="#CFCFCF" BACKGROUND="themes/KDE/grid.gif">
+	<FONT FACE=Lucida,Verdana,Arial,Helvetica size=2><center><br>
+<B>Powered By:</B><br>
+<a href="http://www.freebsd.org" target="_new"><img src=images/powered/bsd.gif border=0></a></center><br>
+<br></TD>
+    <TD ALIGN=LEFT BACKGROUND="themes/KDE/menuright.gif" WIDTH="11">&nbsp;</TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomleft.gif" width="11" height="11" alt=""></TD>
+    <TD ALIGN=MIDDLE WIDTH="149" HEIGHT="11" VALIGN=TOP><IMG SRC="themes/KDE/menubottom.gif" width="149" height="1" alt=""></TD>
+    <TD ALIGN=left VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomright.gif" width="11" height="11" alt="">
+</TD></TR></TABLE>
+<TABLE WIDTH="160" CELLPADDING=0 CELLSPACING=0 BORDER=0>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11" alt=""></TD>
+    <TD ALIGN=MIDDLE WIDTH="149" HEIGHT="11" VALIGN=BOTTOM><IMG SRC="themes/KDE/menutop.gif" width="149" height="1" alt=""></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="100" HEIGHT="11"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11" alt=""></TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11" BACKGROUND="themes/KDE/menuleft.gif"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11" alt=""></TD>
+    <TD ALIGN=CENTER bgcolor="#6C6C6C" BACKGROUND="themes/KDE/menutitle.gif">
+	<FONT FACE=Lucida,Verdana,Arial,Helvetica size=3 color=white>Links That Matter</FONT></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="100" HEIGHT="11" BACKGROUND="themes/KDE/menuright.gif"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11" alt=""></TD></TR>
+    <TR>
+    <TD ALIGN=RIGHT BACKGROUND="themes/KDE/menuleft.gif" WIDTH="11">&nbsp;</TD>
+    <TD ALIGN=left VALIGN=TOP BGCOLOR="#CFCFCF" BACKGROUND="themes/KDE/grid.gif">
+	<FONT FACE=Lucida,Verdana,Arial,Helvetica size=2><a href="http://www.freebsd.org" target="_new">FreeBSD</a><br>
+<a href="http://www.apache.org" target="_new">Apache</a><br>
+<a href="http://www.php.net" target="_new">PHP.Net</a><br>
+<a href="http://www.redhat.com" target="_new">RedHat</a><br>
+<a href="http://www.thelinuxstore.com" target="_new">The Linux Store</a><br>
+<a href="http://freshmeat.net" target="_new">Freshmeat</a><br>
+<a href="http://www.copyleft.net" target="_new">Copy Left</a><br>
+<a href="http://www.lsl.com" target="_new">LSL</a><br>
+<a href="http://www.lokigames.com" target="_new">Loki Games</a><br>
+<a href="http://www.3dfx.com" target="_new">3Dfx</a><br>
+<a href="http://www.mp3.com" target="_new">Mp3.com</a><br>
+<br></TD>
+    <TD ALIGN=LEFT BACKGROUND="themes/KDE/menuright.gif" WIDTH="11">&nbsp;</TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomleft.gif" width="11" height="11" alt=""></TD>
+    <TD ALIGN=MIDDLE WIDTH="149" HEIGHT="11" VALIGN=TOP><IMG SRC="themes/KDE/menubottom.gif" width="149" height="1" alt=""></TD>
+    <TD ALIGN=left VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomright.gif" width="11" height="11" alt="">
+</TD></TR></TABLE>
+<TABLE WIDTH="160" CELLPADDING=0 CELLSPACING=0 BORDER=0>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11" alt=""></TD>
+    <TD ALIGN=MIDDLE WIDTH="149" HEIGHT="11" VALIGN=BOTTOM><IMG SRC="themes/KDE/menutop.gif" width="149" height="1" alt=""></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="100" HEIGHT="11"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11" alt=""></TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=BOTTOM WIDTH="11" HEIGHT="11" BACKGROUND="themes/KDE/menuleft.gif"><IMG SRC="themes/KDE/menutopleft.gif" width="11" height="11" alt=""></TD>
+    <TD ALIGN=CENTER bgcolor="#6C6C6C" BACKGROUND="themes/KDE/menutitle.gif">
+	<FONT FACE=Lucida,Verdana,Arial,Helvetica size=3 color=white>Monthly Images</FONT></TD>
+    <TD ALIGN=left VALIGN=BOTTOM WIDTH="100" HEIGHT="11" BACKGROUND="themes/KDE/menuright.gif"><IMG SRC="themes/KDE/menutopright.gif" width="11" height="11" alt=""></TD></TR>
+    <TR>
+    <TD ALIGN=RIGHT BACKGROUND="themes/KDE/menuleft.gif" WIDTH="11">&nbsp;</TD>
+    <TD ALIGN=left VALIGN=TOP BGCOLOR="#CFCFCF" BACKGROUND="themes/KDE/grid.gif">
+	<FONT FACE=Lucida,Verdana,Arial,Helvetica size=2><div align="center">Images by</div><br>
+<div align="center"><B>Steve Garofalo</B><br><br>
+<a href="Photos/hiveguardian620x550.jpg" target="_new">Hive Guardian</a><br>
+<a href="Photos/quakecon550x550.jpg" target="_new">Quakecon 99</a></div><br>
+<div align="center"><b>Michael Pucciareli</b><br><br>
+<a href="Photos/mechanoid.jpg" target="_new">Mechanoid</a></div><br>
+<div align="center"><b>Daniel Unda</b><br><br>
+<a href="Photos/iguana.jpg" target="_new">Iguana</a></div><br>
+<div align="center"><b>Andrey Klenin</b><br><br>
+<a href="Photos/flower.jpg" target="_new">Flower</a></div><br></TD>
+    <TD ALIGN=LEFT BACKGROUND="themes/KDE/menuright.gif" WIDTH="11">&nbsp;</TD></TR>
+    <TR>
+    <TD ALIGN=right VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomleft.gif" width="11" height="11" alt=""></TD>
+    <TD ALIGN=MIDDLE WIDTH="149" HEIGHT="11" VALIGN=TOP><IMG SRC="themes/KDE/menubottom.gif" width="149" height="1" alt=""></TD>
+    <TD ALIGN=left VALIGN=TOP WIDTH="11" HEIGHT="11"><IMG SRC="themes/KDE/menubottomright.gif" width="11" height="11" alt="">
+</TD></TR></TABLE>
+</td>
+</td></tr></table>
+</td></tr></table>
+</body></html>
+
+<font face=Arial,Helvetica size=1><center>
+ <br>
+All logos, trademarks, music and art in this site are the property of their respective owner. <BR>The comments are property of their posters, all the rest &copy; 2000 Prince of Darkness.<br>
+Background &copy; H. R. Giger<br>
+Nypoma, where are you?</font> <br>
+</body>
+</html>

@@ -1,0 +1,706 @@
+<html>
+
+
+
+<head>
+
+<meta http-equiv="Content-Language" content="sv">
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<title>Bjorn's 3D World - Your guide to NVidia gaming</title>
+
+<meta name="description" content="Bjorn's 3D world aim to give you the best info about NVidia's different chipsets as wella s general 3D gaming">
+
+<meta name="keywords" content="rendition,Rendition,V2200,V1000,Thriller,geforce,256,geforce256,gforce,g-force,riva,RIVA,Riva,TNT,tnt,nvidia,Nvidia,NVIDIA,games,demos,drivers,unreal,Unreal,Unread Tournament,quake,Quake,Allegiance,AOEII,forsaken,incoming,D3D,d3d,opengl,OpenGL,Open GL,Microsoft,gaming,news,game demos,,Diamond,Stealth,Canopus,Elsa,Tekram,Hercules,Jazz,Creative Labs,Creative,3d,graphics">
+
+<style>a { Text-Decoration : None }<!--a:hover{ color:Black; font-weight:bold; text-decoration:Underline; }--></style>
+
+<STYLE type="text/css">
+
+<!--
+
+    
+
+TD.noimage {
+
+background-image: none;
+
+}    
+
+    
+
+// -->
+
+</STYLE>
+
+
+
+</head>
+
+
+
+<body bgcolor="#84ADFF" topmargin="2" leftmargin="2" link="#FF0000" vlink="#FF0000">
+
+
+
+<div align="center">
+
+  <center>
+
+  <table border="0" width="723" height="142" background="../../../bilder/front.gif" bgcolor="#84ADFF" cellspacing="0" cellpadding="0">
+
+    <tr>
+
+      <td width="100%" valign="top">
+
+        <table border="0">
+
+          <tr>
+
+            <td width="220" height="10" class="noimage"></td>
+
+            <td height="10" width="469" class="noimage"></td>
+
+          </tr>
+
+          <tr>
+
+            <td width="220" valign="top" class="noimage"></td>
+
+            <td height="61" valign="top" width="469" class="noimage" bgcolor="#FFFFFF"><!-- BEGIN RICH-MEDIA BURST! CODE --> 
+<script language="JavaScript"> 
+<!-- /* © 1997-1999 BURST! Media, LLC. All Rights Reserved.*/ 
+var TheAdcode = 'ad7450a'; 
+var bN = navigator.appName; 
+var bV = parseInt(navigator.appVersion); 
+var base='http://www.burstnet.com/'; 
+var Tv=''; 
+var agt=navigator.userAgent.toLowerCase(); 
+if (bV>=4) 
+  {ts=window.location.pathname+window.location.search; 
+   i=0; Tv=0; while (i< ts.length) 
+      { Tv=Tv+ts.charCodeAt(i); i=i+1; } Tv="/"+Tv;} 
+  else   {Tv=escape(window.location.pathname); 
+   if( Tv.charAt(0)!='/' ) Tv="/"+Tv; 
+          else if (Tv.charAt(1)=="/")
+Tv=""; 
+  if( Tv.charAt(Tv.length-1) == "/") 
+    Tv = Tv + "_";} 
+if (bN=='Netscape'){ 
+     if ((bV>=4)&&(agt.indexOf("mac")==-1))
+{  document.write('<s'+'cript src="'+ 
+      base+'cgi-bin/ads/'+TheAdcode+'.cgi/RETURN-CODE/JS' 
+      +Tv+'">'); 
+     document.write('</'+'script>');    
+} 
+     else if (bV>=3) {document.write('<'+'a href="'+base+'ads/'+ 
+        TheAdcode+'-map.cgi'+Tv+'"target=_top>'); 
+        document.write('<img src="' + base + 'cgi-bin/ads/' + 
+        TheAdcode + '.cgi' + Tv + '" ismap width="468" height="60"' + 
+        ' border="0" alt="Click Here"></a>');} 
+ } 
+if (bN=='Microsoft Internet Explorer') 
+ document.write('<ifr'+'ame id="BURST" src="'+base+'cgi-bin/ads/'
++ 
+  TheAdcode + '.cgi' + Tv + '/RETURN-CODE" width="468" height="60"' + 
+  'marginwidth="0" marginheight="0" hspace="0" vspace="0" ' + 
+  'frameborder="0" scrolling="no"></ifr'+'ame>'); 
+// --> 
+</script> <noscript><a href="http://www.burstnet.com/ads/ad7450a-map.cgi" target="_top"> 
+<img src="http://www.burstnet.com/cgi-bin/ads/ad7450a.cgi" 
+ width="468" height="60" border="0" alt="Click Here"></a> 
+</noscript> 
+<!-- END BURST CODE --></td>
+
+          </tr>
+
+          <tr>
+
+            <td width="220" class="noimage"></td>
+
+            <td width="469" bgcolor="#FFFFFF" class="noimage"><font size="1" face="Verdana"><b>Latest Reviews:</b> 
+<a href="../rally/index.html">Rally
+                Championship review</a> .. <a href="../outrageousDDR/index.html">Outrageous
+3D Graphics DDR</a> .. <a href="../outrageous3D/index.shtml">Outrageous
+3D Sound</a> .. <a href="../cougar/index.shtml" target="_self">Guillemot Cougar Video Edition</a> .. 
+<a href="../allegiance/index.shtml" target="_self">Allegiance Preview</a> ..
+<a href="../fortissimo/index.shtml"> 
+Guillemot MaxiSound Fortissimo</a> .. <a href="../3dprophet/index.shtml"> 
+Guillemot 3D Prophet SDR</a>  </font>
+</td>
+
+          </tr>
+
+        </table>
+
+      </td>
+
+    </tr>
+
+  </table>
+
+  </center>
+
+  <table border="0" width="635" height="58" cellspacing="0" cellpadding="0" background="../../../bilder/pics/menu3.gif">
+
+    <tr>
+
+      <td width="100%">
+
+        <div align="center">
+
+          <center>
+
+          <table border="0" width="95%" cellspacing="0" cellpadding="0">
+
+            <tr>
+
+              <td width="100%" align="center" class="noimage"><b><font face="Tahoma" size="2"><a href="../../../index.html">News</a> ..
+
+                <a href="../../../noncgi/newnews/archive/arch.shtml"> Archive</a> ..
+
+                <a href="../../../cgi-bin/forum/Ultimate.cgi"> Forums</a> ..
+
+                <a href="../previews.shtml">
+
+                P/Reviews</a> .. <a href="../articles.shtml"> Articles</a> ..
+
+                <a href="../../download/drivers.shtml"> Drivers</a> ..
+
+                <a href="../../download/otherfiles.shtml"> &quot;Other&quot; Files</a> ..
+
+                <a href="../../links/links.shtml">
+
+                Links</a> .. <a href="../../siteinfo/privacy.shtml">Privacy</a></font></b></td>
+
+            </tr>
+
+            <tr>
+
+              <td width="100%" align="center" class="noimage"><b><font face="Tahoma" size="2">&nbsp;
+
+                <a href="http://www.ibuyer.net/bjorn3d/">Hardware/Software Price Watch</a> ..
+
+                <a href="http://www.bjorn3d.com/conferenceroom.shtml"> Chat</a> ..
+
+                <a href="../../siteinfo/siteinfo.shtml"> About Site</a> ..
+
+                <a href="../../siteinfo/adverts.shtml"> Advertisment</a> ..
+
+                <a href="../../siteinfo/siteinfo.shtml">
+
+                Contact Us</a>&nbsp;</font></b></td>
+
+            </tr>
+
+          </table>
+
+          </center>
+
+        </div>
+
+      </td>
+
+    </tr>
+
+  </table>
+
+</div>
+
+<p align="center"><a href="http://www.ibuyer.net/bjorn3d/"><img border="0" src="../../../bilder/pricewatch.gif" alt="Check for the best prices for software and hardware" width="500" height="25"></a></p>
+
+<div align="left">
+
+  <table border="0" cellspacing="1" width="100%">
+
+    <tr>
+
+      <td valign="top" width="175">
+
+        <table border="0" width="175" cellspacing="0" cellpadding="0">
+
+          <tr>
+
+            <td>
+
+              <table border="0" width="170" cellspacing="0" cellpadding="0">
+
+                <tr>
+
+                  <td width="170" background="../../../bilder/pics/x1.gif" height="31">
+
+                    <p align="center"><font color="#FFFFFF" face="Arial" size="4"><b>Navigation</b></font></td>
+
+                </tr>
+
+                <tr>
+
+                  <td width="100%" background="../../../bilder/pics/x2.gif">
+
+                    <div align="center">
+
+                      <center>
+
+                    <table border="0" width="96%" cellspacing="0" cellpadding="0" class="noimage">
+
+                      <tr>
+
+                        <td width="100%"><font size="2" face="Arial"></font><b><font face="Arial" size="3">-
+
+                          <a href="index.shtml#Intro">Introduction</a><br>
+
+                          - <a href="index.shtml#GeForce2GTS">GeForce 2 GTS</a><br>
+
+                          - <a href="index.shtml#FSAA">FSAA</a><br>
+
+                          - <a href="index2.shtml#Benchmarks">Benchmarks</a><br>
+
+                          - <a href="index2.shtml#Q3A">Q3A</a><br>
+
+                          - <a href="index2.shtml#3DMark2000">3DMark 2000</a><br>
+
+                          - <a href="index2.shtml#Conclusion">Conclusion</a><br>
+
+                          - <a href="index3.shtml">Screenshots p1</a><br>
+
+                          - <a href="index4.shtml">Screenshots p2</a>&nbsp;</font></b></td>
+
+                      </tr>
+
+                    </table>
+
+                      </center>
+
+                    </div>
+
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td width="170" background="../../../bilder/pics/x3.gif" height="29">
+
+                    <p align="center">&nbsp;</td>
+
+                </tr>
+
+              </table>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+
+              <p align="center"><b><!-- BEGIN BURST! CODE -->
+
+<iframe SRC="http://www.burstnet.com/cgi-bin/ads/bt7450a.cgi/RETURN-CODE/if/201/" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" width="120" height="60">
+
+<A target="_top" HREF="http://www.burstnet.com/ads/bt7450a-map.cgi/201">
+
+<IMG SRC="http://www.burstnet.com/cgi-bin/ads/bt7450a.cgi/201" border="0" width="120" height="60" alt="Please support our sponsor.">
+
+</A></iframe>
+
+<!-- END BURST! CODE --></b></p>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td height="27">
+
+            <div align="center">
+              <center>
+              <table border="0" cellpadding="2">
+                <tr>
+                  <td width="100%" align="center"><!-- Start of Website Reporter Call Tag -->
+                    <script language="javascript">
+  <!--
+    var size=""; var color="";
+  // -->
+</script>
+                    <script language="javascript1.2">
+  <!--
+    var isVer4Min=parseInt(navigator.appVersion) >= 4; if(navigator.appName == "Netscape" || navigator.appName == "Microsoft Internet Explorer"){ if(isVer4Min){ color=screen.colorDepth; size=screen.width; } }
+  // -->
+</script>
+                    <script language="javascript">
+  <!--
+    document.write('<A HREF="http://www.websitereporter.com"><IMG SRC="http://209.15.2.13/~wr/bjorn3d.com/wr.cgi?'+document.referrer+'||'+color+'||'+size+'" BORDER=0></a>')
+  // -->
+</script>
+                    <noscript>
+                    <a HREF="http://www.websitereporter.com"><img SRC="http://209.15.2.13/~wr/bjorn3d.com/wr.cgi" BORDER="0" width="30" height="30"></a>
+                    </noscript>
+                    <!-- End of Website Reporter Call Tag -->
+                  </td>
+                </tr>
+              </table>
+              </center>
+            </div>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+
+              <p align="center"><!-- BEGIN BURST! CODE -->
+
+<iframe SRC="http://www.burstnet.com/cgi-bin/ads/cb7450a.cgi/RETURN-CODE/if/101/" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" width="125" height="125">
+
+<A target="_top" HREF="http://www.burstnet.com/ads/cb7450a-map.cgi/101">
+
+<IMG SRC="http://www.burstnet.com/cgi-bin/ads/cb7450a.cgi/101" border="0" width="125" height="125" alt="Please support our sponsor.">
+
+</A></iframe>
+
+<!-- END BURST! CODE --></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+
+              <p align="center"></td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+
+              <p align="center"><a target="_top" href="http://v.extreme-dm.com/?login=bjorn3d">
+
+<img name=im src="http://v1.extreme-dm.com/i.gif" height=38
+
+border=0 width=41 alt=""></a><script language="javascript"><!--
+
+an=navigator.appName;d=document;function
+
+pr(){d.write("<img src=\"http://v0.extreme-dm.com",
+
+"/0.gif?tag=bjorn3d&j=y&srw="+srw+"&srb="+srb+"&",
+
+"rs="+r+"&l="+escape(d.referrer)+"\" height=1 ",
+
+"width=1>");}srb="na";srw="na";//-->
+
+</script><script language="javascript1.2"><!--
+
+s=screen;srw=s.width;an!="Netscape"?
+
+srb=s.colorDepth:srb=s.pixelDepth;//-->
+
+</script><script language="javascript"><!--
+
+r=41;d.images?r=d.im.width:z=0;pr();//-->
+
+</script><noscript><img height=1 width=1 alt="" 
+
+src="http://v0.extreme-dm.com/0.gif?tag=bjorn3d&j=n"></noscript></td>
+
+          </tr>
+
+        </table>
+
+      </td>
+
+      <td valign="top">
+
+        <hr width="60%" color="#800000">
+
+        <table border="0" cellspacing="0" cellpadding="0" width="100%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000">
+
+          <tr>
+
+            <td valign="middle" bgcolor="#84ADFF">
+
+              <img border="0" src="../../../bilder/pics/t1.gif" width="27" height="27"></td>
+
+            <td valign="middle" bgcolor="#0000FF" background="../../../bilder/pics/t2.gif">
+
+              <p align="center">&nbsp;</td>
+
+            <td valign="middle" bgcolor="#84ADFF">
+
+              <img border="0" src="../../../bilder/pics/t3.gif" width="27" height="27"></td>
+
+          </tr>
+
+          <tr>
+
+            <td bgcolor="#84ADFF" background="../../../bilder/pics/m1.gif">&nbsp;</td>
+
+            <td bgcolor="#FFFFFF">
+
+              <h1 align="center"><img border="0" src="pics/geforce2.gif" width="300" height="75"></h1>
+
+              <h1 align="center"><span style="mso-ansi-language:EN-GB"><font face="Arial"><b style="mso-bidi-font-weight: normal; mso-ansi-language: EN-GB"><font size="6">Screenshots<br>
+
+              </font><font size="1">Updated 26 April 2000</font></b><b style="mso-bidi-font-weight:normal"><o:p>
+
+              </o:p>
+
+              </b></font></span></h1>
+
+              <p class="MsoNormal"><span style="mso-ansi-language:EN-GB"><font face="Arial">Nvidia
+
+              provided us with a lot of screenshots from a few upcoming games
+
+              as well as a special Quake 3 level. Just click on each thumbnail
+
+              to see the full picture. The pics are in jpg-format so some loss
+
+              of quality has occured. They still are around the range of 200-500
+
+              Kb big.&nbsp;</font></span></p>
+
+              <p class="MsoNormal"><i><b><font face="Arial">Giants</font></b></i></p>
+
+              <p class="MsoNormal"><font face="Arial"><span style="mso-ansi-language: EN-GB">Giants
+
+              is a new title from Planet Moon Studios. The game features full
+
+              support for the GeForce 2 GTS T&amp;L engine. I think these
+
+              screenshots look great. They are colourfull and detailed. The huge
+
+              monsters look very cool. Each pic is large (around 300-600 Kb) but
+
+              worth waiting for.</span></font></p>
+
+              <div align="center">
+
+                <center>
+
+                <table border="0" cellpadding="2">
+
+                  <tr>
+
+                    <td><a href="pics/giants/screen1.shtml" target="_blank"><img border="0" src="pics/giants/Attack.gif" width="175" height="131"></a></td>
+
+                    <td><a href="pics/giants/screen2.shtml" target="_blank"><img border="0" src="pics/giants/Base_ROAR.gif" width="175" height="131"></a></td>
+
+                    <td><a href="pics/giants/screen3.shtml" target="_blank"><img border="0" src="pics/giants/Delphi_base_far.gif" width="175" height="131"></a></td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td align="center" valign="top"><b><font size="1" face="Arial">Check
+
+                      out this big bad monster. Cool toenails and teeth!</font></b></td>
+
+                    <td align="center" valign="top"><b><font size="1" face="Arial">Ouch,
+
+                      I hate to be that guys dentist!</font></b></td>
+
+                    <td align="center" valign="top"><b><font size="1" face="Arial">Snow?
+
+                      Must be Sweden!</font></b></td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td><a href="pics/giants/screen4.shtml" target="_blank"><img border="0" src="pics/giants/Kabuto_fire3.gif" width="175" height="131"></a></td>
+
+                    <td><a href="pics/giants/screen5.shtml" target="_blank"><img border="0" src="pics/giants/Mecc_kabuto1.gif" width="175" height="131"></a></td>
+
+                    <td><a href="pics/giants/screen6.shtml" target="_blank"><img border="0" src="pics/giants/Mecc_kabuto2.gif" width="175" height="131"></a></td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td valign="top"><b><font size="1" face="Arial">I guess the
+
+                      next sound will be .. SPLAT!</font></b></td>
+
+                    <td valign="top"><b><font size="1" face="Arial">FInally a
+
+                      game with colours! I'm so sick of brown-grey games.</font></b></td>
+
+                    <td valign="top"><b><font size="1" face="Arial">Check out
+
+                      that sky!!</font></b></td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td><a href="pics/giants/screen7.shtml" target="_blank"><img border="0" src="pics/giants/Offspring1.gif" width="175" height="131"></a></td>
+
+                    <td><a href="pics/giants/screen8.shtml" target="_blank"><img border="0" src="pics/giants/Offspring2.gif" width="175" height="131"></a></td>
+
+                    <td></td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td valign="top"><b><font size="1" face="Arial">Oh my.
+
+                      Someone is about to become a chewing-toy ...</font></b></td>
+
+                    <td valign="top"><b><font size="1" face="Arial">Only a
+
+                      mother can love that baby ..</font></b></td>
+
+                    <td valign="top"></td>
+
+                  </tr>
+
+                </table>
+
+                </center>
+
+              </div>
+
+              <p class="MsoNormal"><i><b><font face="Arial" size="3">Quake III
+
+              special level</font></b></i></p>
+
+              <p class="MsoNormal"><font face="Arial" size="3">This is a special
+
+              level in Q3A that has a massive amount of geometry and textures.
+
+              It demonstrates the GeForce 2 GTS's ability to handle huge amounts
+
+              of polygons and still proved excellent framerates. This level will
+
+              either be provided with some boards or be available as a download
+
+              later.&nbsp;</font></p>
+
+              <div align="center">
+
+                <center>
+
+                <table border="0" cellpadding="2">
+
+                  <tr>
+
+                    <td><a href="pics/quake3/screen1.shtml" target="_blank"><img border="0" src="pics/quake3/banner.gif" width="175" height="131"></a></td>
+
+                    <td><a href="pics/quake3/screen2.shtml" target="_blank"><img border="0" src="pics/quake3/chipmachine.gif" width="175" height="131"></a></td>
+
+                    <td><a href="pics/quake3/screen3.shtml" target="_blank"><img border="0" src="pics/quake3/door1.gif" width="175" height="131"></a></td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td></td>
+
+                    <td></td>
+
+                    <td></td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td><a href="pics/quake3/screen4.shtml" target="_blank"><img border="0" src="pics/quake3/Hall.gif" width="175" height="131"></a></td>
+
+                    <td><a href="pics/quake3/screen5.shtml" target="_blank"><img border="0" src="pics/quake3/Hallwire.gif" width="175" height="131"></a></td>
+
+                    <td><a href="pics/quake3/screen6.shtml" target="_blank"><img border="0" src="pics/quake3/room.gif" width="175" height="131"></a></td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td></td>
+
+                    <td></td>
+
+                    <td></td>
+
+                  </tr>
+
+                </table>
+
+                </center>
+
+              </div>
+
+              <p class="MsoNormal" align="center"><font face="Arial" size="4"><b><span lang="EN-US"><a href="index4.shtml">More
+
+              screenshots =&gt;</a></span>
+
+              </b></font>
+
+              <p align="center"><b><font size="2" face="Arial">&nbsp;
+
+<!-- BEGIN BURST! CODE -->
+
+<iframe SRC="http://www.burstnet.com/cgi-bin/ads/ba7450a.cgi/RETURN-CODE/if/1/" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" width="468" height="60">
+
+<A target="_top" HREF="http://www.burstnet.com/ads/ba7450a-map.cgi/1">
+
+<IMG SRC="http://www.burstnet.com/cgi-bin/ads/ba7450a.cgi/1" border="0" width="468" height="60" alt="Please support our sponsor.">
+
+</A></iframe>
+
+<!-- END BURST! CODE --></font></b></td>
+
+            <td bgcolor="#84ADFF" background="../../../bilder/pics/m3.gif">&nbsp;</td>
+
+          </tr>
+
+          <tr>
+
+            <td bgcolor="#84ADFF"><img border="0" src="../../../bilder/pics/b1.gif" width="27" height="23"></td>
+
+            <td bgcolor="#FFFFFF" background="../../../bilder/pics/b2.gif">
+
+              <p align="center">&nbsp;
+
+            </td>
+
+            <td bgcolor="#84ADFF"><img border="0" src="../../../bilder/pics/b3.gif" width="27" height="23"></td>
+
+          </tr>
+
+        </table>
+
+        
+
+        
+
+        
+
+        
+
+      </td>
+
+    </tr>
+
+  </table>
+
+</div>
+
+
+
+<p align="center"><img border="0" src="../../../bilder/copyright.gif" width="759" height="100"></p>
+
+
+
+</body>
+
+
+
+</html>
+

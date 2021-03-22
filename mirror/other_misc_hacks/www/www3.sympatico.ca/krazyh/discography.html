@@ -1,0 +1,81 @@
+<HTML>
+
+<HEAD>
+<TITLE>Krazy House Home</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!--- hide script from old browsers
+// browser test:
+browserName = navigator.appName;
+browserVer = parseInt(navigator.appVersion);
+if (browserName == "Netscape" && browserVer >= 3) version = "1";
+else version = "2";
+// preload images:
+if (version == "1") {
+
+homebutton = new Image(110,40);
+homebutton.src = "homebutton.jpg";
+
+homebutton2 = new Image(110,40);
+homebutton2.src = "homebutton2.jpg";
+
+contactbutton = new Image(110,40);
+contactbutton.src = "contactbutton.jpg";
+
+contactbutton2 = new Image(110,40);
+contactbutton2.src = "contactbutton2.jpg";
+
+biobutton = new Image(110,40);
+biobutton.src = "biobutton.jpg";
+
+biobutton2 = new Image(110,40);
+biobutton2.src = "biobutton2.jpg";
+
+noozbutton = new Image(110,40);
+noozbutton.src = "noozbutton.jpg";
+
+noozbutton2 = new Image(110,40);
+noozbutton2.src = "noozbutton2.jpg";
+
+}
+
+function hiLite(imgDocID,imgObjName) {
+if (version == "1") {
+document.images[imgDocID].src = eval(imgObjName + ".src")
+}}
+
+// end hiding --->
+</SCRIPT>
+</HEAD>
+
+<BODY Background="wallback.jpg">
+
+<table border=0>
+<caption align="center"><b><font color="goldenrod" size=6 face="jokerman LET">KrazY HousE Recordings...</font></caption>
+
+<tr><td valign="top">
+<A HREF="one.html" onMouseOver="hiLite('img01','homebutton2')"
+onMouseOut="hiLite('img01','homebutton')"><IMG NAME="img01"
+<IMG NAME="img01" SRC="homebutton.jpg" width=110 height=40 border=0></A>
+<p>
+<A HREF="contact.html" onMouseOver="hiLite('img02','contactbutton2')"
+onMouseOut="hiLite('img02','contactbutton')"><IMG NAME="img02"
+<IMG NAME="img02" SRC="contactbutton.jpg" width=110 height=40 border=0></A>
+<p>
+<A HREF="bandbio.html" onMouseOver="hiLite('img03','biobutton2')"
+onMouseOut="hiLite('img03','biobutton')"><IMG NAME="img03"
+<IMG NAME="img03" SRC="biobutton.jpg" width=110 height=40 border=0></A>
+
+<p>
+<A HREF="nooz.html" onMouseOver="hiLite('img04','noozbutton2')"
+onMouseOut="hiLite('img04','noozbutton')"><IMG NAME="img04"
+<IMG NAME="img04" SRC="noozbutton.jpg" width=110 height=40 border=0></A>
+</td>
+<td align="center" valign="top" width=50% >
+<font size=4 color="darkred"><p>...4 Now<p><img src="cdfour.jpg" height=150 width=150><p><a href="sound4.html">Sound Bytes</a><p><a href="lyrics4.html">Lyrics</a></td>
+<td width=50% align="center" valign="top"><font size=4 color="darkred">In the Beginning...<p><img src="cdbeg.jpg" height=150 width=150><p><a href="sound4.html">Sound Bytes</a><p><a href="lyricsbeg.html">Lyrics</a></td></tr>
+<tr><td></td><td valign="top" colspan=2 align="center"><font size=2 color="black">*** ALL SONGS WRITTEN BY KRAZY HOUSE AND PRODUCED BY: ***J.RICHARD HUTT .  COPYRIGHT 1998*** </td></tr>
+
+</table>
+</BODY>
+
+</HTML>

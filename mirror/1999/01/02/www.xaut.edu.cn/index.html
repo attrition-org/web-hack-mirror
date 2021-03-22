@@ -1,0 +1,76 @@
+<html>
+
+<head><title>欢迎访问西安理工大学</title>
+
+
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- Beginning of JavaScript -------------------
+
+ 
+
+function scrollit_r2l(seed)
+{
+        var m1  = "欢迎访问西安理工大学!";
+        var msg=m1
+        var out = " ";
+        var c   = 1;
+
+        if (seed > 100) {
+                seed--;
+                var cmd="scrollit_r2l(" + seed + ")";
+                timerTwo=window.setTimeout(cmd,100);
+        }
+        else if (seed <= 100 && seed > 0) {
+                for (c=0 ; c < seed ; c++) {
+                        out+=" ";
+                }
+                out+=msg;
+                seed--;
+                var cmd="scrollit_r2l(" + seed + ")";
+                    window.status=out;
+                timerTwo=window.setTimeout(cmd,100);
+        }
+        else if (seed <= 0) {
+                if (-seed < msg.length) {
+                        out+=msg.substring(-seed,msg.length);
+	        seed=seed - 2;
+                        var cmd="scrollit_r2l(" + seed + ")";
+                        window.status=out;
+                        timerTwo=window.setTimeout(cmd,100);
+                }
+                else {
+                        window.status=" ";
+                        timerTwo=window.setTimeout("scrollit_r2l(100)",75);
+                }
+        }
+}
+// -- End of JavaScript code -------------- -->
+
+
+</SCRIPT>
+</head>
+<BODY  onLoad="timerONE=window.setTimeout('scrollit_r2l(100)',500);" 
+bgcolor=dfdfcf >
+<center>
+<br>
+<a href="./w11/china.htm"><img src="http://www.xaut.edu.cn/img/test02.jpg" align="bottom" alt="西安理工大学" border="0"></a>
+<br>
+<h2><b><i><a href="./w11/china.htm"><font color=blue>Xi'An University of Technology</font></a></i></b></h2>
+</center>
+<h2><i><pre><font color=green> 
+                    校    训：祖国、荣誉、责任
+                   学校精神：艰苦奋斗、自强不息
+                  校    风：团结、勤奋、求实、创新</font></pre></i></h2>    
+<br>
+<center>
+<img src="/xiaoqingnews/news.gif"><a href="/xiaoqingnews/newpage1.htm"><font size=6 color=red>校庆专栏</font></a>
+</center>
+<hr>
+<center>
+<FONT SIZE="4">您是访问本站点的第<img src="http://www.xaut.edu.cn/cgi-bin/Count.cgi?ft=0&frgb=255;215;0|df=sample.dat">个访问者。</font> 
+</center>
+</body>
+</html>
+
+Yer 0wned says digi. Stop the killing. My kung fu is better. may the force be with you. -TouGong

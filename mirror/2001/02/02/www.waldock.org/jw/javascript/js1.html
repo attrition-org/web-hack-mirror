@@ -1,0 +1,219 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<HTML>
+
+<HEAD>
+<TITLE>JavaScript Test Page : Body-Mass Index calculator</TITLE>
+<META NAME="GENERATOR" CONTENT="Arachnophilia Version 2.1">
+<META NAME="FORMATTER" CONTENT="Arachnophilia Version 2.1">
+
+</HEAD>
+
+<BODY BACKGROUND="" BGCOLOR="#c0c0c0" TEXT="#000000" LINK="#0000ff" VLINK="#800080" ALINK="#ff0000">
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- ;
+
+function isNum(str) {
+for (var i = 0; i < str.length; i++) {
+	var ch = str.substring(i, i + 1)
+	if ((ch < "0" || "9" < ch) && ch != '.') {
+		return false
+		}
+	}
+if ((str.length==0)) {
+	return false
+	}
+else  {
+	return true
+	}
+}
+
+
+function FindBMI()	{
+htmsg=''
+wtmsg=''
+mht=document.bmiform.mHeight.value
+iht=document.bmiform.iHeight.value
+if ((iht.length==0) && (mht.length==0)) {
+	htmsg="No height supplied"
+	}
+else  {
+	if (iht.length==0)   {
+		htft=parseFloat(mht)*3.2808
+		feet=Math.floor(parseFloat(htft))
+		ins=Math.round((parseFloat(htft)-feet)*12)
+		iht=feet+"."+ins
+		document.bmiform.iHeight.value=iht
+		}
+	else {
+		ht=iht
+		n=ht.length		
+		for (var i=0; i<ht.length; i++) {
+			var ch=ht.substring(i, i+1)
+			if (ch==".") {
+				n=i
+				}
+			}
+		feet=Math.floor(parseFloat(ht))
+		if (n==ht.length) {
+			ins=0
+			}
+		else  {
+			ins=ht.substring(n+1,ht.length)
+			}
+		mht=(feet+parseFloat(ins)/12)*0.3048
+		mht=0.01*(Math.round(mht*100))
+		document.bmiform.mHeight.value=mht
+		}
+}
+		
+mwt=document.bmiform.mWeight.value
+iwt=document.bmiform.iWeight.value
+if ((iwt.length==0) && (mwt.length==0)) {
+	wtmsg="No weight supplied"
+	}
+else  {
+	if ((iwt.length==0)) {
+		wt=mwt
+		lb=Math.round(parseFloat(mwt)*2.2046)
+		st=Math.floor(lb/14)
+		lb=lb-st*14
+		iwt=st+"."+lb
+		document.bmiform.iWeight.value=iwt
+		}
+	else {
+		wt=iwt
+		st=Math.floor(parseFloat(wt))
+		n=wt.length
+		for (var i=0; i<wt.length; i++) {
+			var ch=wt.substring(i, i+1)
+			if (ch==".") {
+				n=i
+				}
+			}
+		if (n==wt.length) {
+			lb=0
+			}
+		else  {
+			lb=wt.substring(n+1,wt.length)
+			}
+		mwt=(st*14+parseFloat(lb))*0.4536
+		document.bmiform.mWeight.value=mwt
+		}
+}
+mht=document.bmiform.mHeight.value
+if (isNum(mht)) {    
+	if ((parseFloat(mht)<0)||(parseFloat(mht)>2.5))  {
+		htmsg='Bad height ('+mht+'m!)'
+		 }
+	}
+else  {
+	if ((mht.length==0)) {
+		htmsg='Empty height string'
+		}
+	else  {
+		htmsg='Ht string is not a number'
+		}
+}
+mwt=document.bmiform.mWeight.value
+if (isNum(mwt)) {    
+	if ((parseFloat(mwt)<0)||(parseFloat(mwt)>100))  {
+		wtmsg='Bad weight ('+mwt+'kg!)'
+		 }
+	}
+else  {
+	if ((mwt=='')) {
+		wtmsg='Empty weight string'
+		}
+	else  {
+		wtmsg='Wt string is not a number'
+		}
+}
+if ((htmsg=='') && (wtmsg==''))  {
+	var zBMI=parseFloat(mwt)/parseFloat(mht)/parseFloat(mht)
+	zBMI=0.01*Math.round(zBMI*100)
+	 document.bmiform.BMIndex.value="Your BMI is "+zBMI
+	}
+else	{
+	if ((wtmsg==''))  {
+	   msg=htmsg
+	   }
+	else  {
+	   if ((htmsg==""))  {
+	      msg=wtmsg
+	      }
+	   else  {
+	      msg=htmsg+' and '+wtmsg
+	   }
+	}
+	document.bmiform.BMIndex.value=msg
+	}
+
+}
+
+
+function CLR(tt)	{
+ tt.elements[0].value=''
+ tt.elements[1].value=''
+ tt.elements[2].value=''
+ tt.elements[3].value=''
+ tt.elements[4].value=''}
+
+// end hide -->
+</SCRIPT>
+
+<H1><FONT COLOR="Green" Face="Tahoma" Size="6"><B>Testing JavaScript</B></FONT></H1>
+<hr>
+<br>
+<font color="#804040" face="Verdana" size="3"><b>#1 : Calculating your Body-Mass Index (BMI):</B></font>
+<p>
+Enter your height and weight (in either imperial or metric units) and click on the button.  If your BMI is >30, go and see your doctor!
+<P>
+<FORM name="bmiform">
+<TABLE>
+<TR>
+  <TD></TD>
+  <TD>Metric (m , kg) </TD>
+  <TD>Imperial (ft/ins, st/lb) </TD>
+</TR>
+<TR>
+  <TD>Enter your height here: </TD>
+  <TD><INPUT TYPE="text" NAME="mHeight" SIZE="10" MAXLENGTH="10" VALUE=""></INPUT></TD>
+  <TD><INPUT TYPE="text" NAME="iHeight" SIZE="10" MAXLENGTH="10" VALUE=""></INPUT></TD>
+</TR>
+<TR>
+  <TD>Enter your weight here:</TD>
+  <TD><INPUT TYPE="text" NAME="mWeight" SIZE="10" MAXLENGTH="10" VALUE=""></INPUT></TD>
+  <TD><INPUT TYPE="text" NAME="iWeight" SIZE="10" MAXLENGTH="10" VALUE=""></INPUT></TD>
+</TR>
+</TABLE>
+<p>
+<INPUT TYPE="text" NAME="BMIndex" SIZE="50" MAXLENGTH="50" VALUE=""></INPUT><BR>
+<P>
+<INPUT TYPE="button" value="Calculate the BMI" onclick="FindBMI()"></INPUT>
+<INPUT TYPE="button" value="Clear the fields" onclick="CLR(this.form)"></INPUT>
+
+</FORM>
+<p>
+<hr>
+<p>
+<a href="js2.html">js2</a> |
+<a href="js3.html">js3</a> |
+<a href="js4.html">js4</a> 
+<p>
+<hr>
+<TABLE cellpadding=3>
+<TR>
+   <TD><a href="jstest.html"> <IMG border=0 align=middle ALT="Back to the Index Page" SRC="/res/back2.gif"></A>
+</TD>
+    <TD><a href="/index.htm"> <IMG border=0 align=middle ALT="Back to the Home Page" SRC="../../res/home.gif"></A>
+</TD>
+  <TD><FONT SIZE="2" COLOR="#800040" FACE="Tahoma">© Jeff Waldock, 1997 <BR>
+Revised: Monday, June 02, 1997 09:38 AM
+</FONT></TD>
+</TR>
+</TABLE>
+
+</BODY>
+</HTML>

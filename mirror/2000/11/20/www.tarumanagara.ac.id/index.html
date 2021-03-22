@@ -1,0 +1,48 @@
+<html>
+
+<head>
+<meta name="postinfo" content="/scripts/postinfo.asp">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Website resmi Universitas Tarumanagara</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+</head>
+<script language="javascript">
+<!--
+var gulungconter = 1;
+var Text    = "   Untuk mendapatkan informasi terbaru, selalu tekan tombol refresh setiap saat..... "
+var text1	= "Universitas Tarumanagara, terpercaya dalam meraih cita-cita"
+var bengong   = 90;
+     
+function gulung()
+{
+    window.status = Text.substring(1,gulungconter++);
+    if (gulungconter == 150)  
+        gulungconter = 1;
+
+    setTimeout("gulung()", bengong);
+}
+
+
+gulung();
+//-->
+</script>
+
+<frameset framespacing="0" border="0" rows="*" frameborder="0">
+  <frameset cols="159,*">
+    <frameset rows="*,77%">
+    <frame name="kiri" target="main" scrolling="no" noresize src="lg.htm">
+      <frame name="kiri1" src="kiri.htm" target="main">
+    </frameset>
+    <frameset rows="*,78%">
+    <frame name="main1" scrolling="no" src="head1.htm" target="_self" noresize>
+      <frame name="main" scrolling="auto" src="kk.htm" target="_self">
+    </frameset>
+  </frameset>
+  <noframes>
+  <p>This page uses frames, but your browser doesn't support them.</p>
+  </noframes>
+</frameset>
+
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

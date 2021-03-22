@@ -1,0 +1,83 @@
+<html>
+
+<head>
+<title>Office National des Pêches</title>
+<meta name="description" content="Fireworks Splice HTML">
+
+
+
+<script language="JavaScript">
+<!-- masquage du script pour les navigateurs ne reconnaissant pas javascript
+if (document.images) {
+Iparmenu_01_01 = new Image(96, 16);Iparmenu_01_01.src = 'gif/tit01_off.gif';
+Iparmenu_01_02 = new Image(96, 16);Iparmenu_01_02.src = 'gif/tit01_on.gif';
+Iparmenu_02_01 = new Image(96, 31);Iparmenu_02_01.src = 'gif/tit02_off.gif';
+Iparmenu_02_02 = new Image(96, 31);Iparmenu_02_02.src = 'gif/tit02_on.gif';
+Iparmenu_03_01 = new Image(96, 31);Iparmenu_03_01.src = 'gif/tit03_off.gif';
+Iparmenu_03_02 = new Image(96, 31);Iparmenu_03_02.src = 'gif/tit03_on.gif';
+Iparmenu_04_01 = new Image(96, 31);Iparmenu_04_01.src = 'gif/tit04_off.gif';
+Iparmenu_04_02 = new Image(96, 31);Iparmenu_04_02.src = 'gif/tit04_on.gif';
+}
+function di(id,name){
+  if (document.images) {document.images[id].src=eval(name+".src"); }
+}
+
+// fonction affichant un message dans la barre d'Žtat
+
+function dm(msgStr) {
+  document.returnValue = false;
+  if (document.images) { 
+     window.status = msgStr;
+     document.returnValue = true;
+  }
+}
+var showMsg = navigator.userAgent != "Mozilla/4.0 (compatible; MSIE 4.0; Mac_PowerPC)";
+function dmim(msgStr) {
+  document.returnValue = false;
+  if (showMsg) { 
+    window.status = msgStr;
+    document.returnValue = true;
+  }
+}
+
+// fin du masquage -->
+</script>
+
+
+
+</head>
+
+
+<body bgcolor="#FFCC99" TOPMARGIN="0" LEFTMARGIN="2" MARGINWIDTH="0" MARGINHEIGHT="0">
+<div align="left">
+
+<table border="0" cellpadding="0" cellspacing="0" width="96">
+  <tr>
+   <td><img src="gif/intersom.gif" width="120" height="10" border="0"></td>
+  </tr>
+  <tr>
+    <td rowspan="1" colspan="1"><a href="prod_01.htm" target="main" onmouseout="di('tit_01_01','Iparmenu_01_01');return false;" onmouseover="di('tit_01_01','Iparmenu_01_02');return false;"><img name="tit_01_01" src="gif/tit01_off.gif" border="0"></a></td>
+  </tr>
+  <tr>
+    <td rowspan="1" colspan="1"><img src="gif/intersom.gif" width="120" height="10" border="0"></td>
+  </tr>
+  <tr>
+    <td rowspan="1" colspan="1"><a href="som_02.htm" target="menu" onmouseout="di('tit_02_01','Iparmenu_02_01');return false;" onmouseover="di('tit_02_01','Iparmenu_02_02');return false;"><img name="tit_02_01" src="gif/tit02_off.gif" border="0"></a></td>
+  </tr>
+  <tr>
+    <td rowspan="1" colspan="1"><img src="gif/intersom.gif" width="120" height="10" border="0"></td>
+  </tr>
+  <tr>
+    <td rowspan="1" colspan="1"><a href="prod_03.htm" target="main" onmouseout="di('tit_03_01','Iparmenu_03_01');return false;" onmouseover="di('tit_03_01','Iparmenu_03_02');return false;"><img name="tit_03_01" src="gif/tit03_off.gif" border="0"></a></td>
+  </tr>  
+    <td rowspan="1" colspan="1"><img src="gif/intersom.gif" width="120" height="10" border="0"></td>
+  </tr>
+  <tr>
+    <td rowspan="1" colspan="1"><a href="prod_04a.htm" target="main" onmouseout="di('tit_04_01','Iparmenu_04_01');return false;" onmouseover="di('tit_04_01','Iparmenu_04_02');return false;"><img name="tit_04_01" src="gif/tit04_off.gif" border="0"></a></td>
+  </tr>
+
+</table>
+</div>
+
+</body>
+</html>

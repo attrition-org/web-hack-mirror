@@ -1,0 +1,60 @@
+<HTML>
+	<HEAD>
+		<META HTTP-EQUIV="content-type" CONTENT="text/html;charset=iso-8859-1">
+		<META NAME="generator" CONTENT="GoLive CyberStudio">
+		<TITLE>Welcome to GoLive CyberStudio</TITLE>
+				<SCRIPT LANGUAGE="JavaScript"><!-- Hide from old browsers
+var flag = false;
+/* ^- This flag is set to true, when all images are loaded...*/
+
+function imageLoad(){  // called with onLoad()
+
+	if (document.images){        
+			but0_on = new Image(); but0_on.src = "ill/snabela_r.gif";               
+
+    // and so on until you load them all          
+
+    return (flag = true);  // set the flag and let the function know it can work
+	}
+
+} /* End of imageLoad() */
+
+
+function rollIn(imgName){
+	if (document.images && (flag == true)) {
+  	document[imgName].src = eval(imgName + "on.src");
+  }
+}
+
+
+function rollOut(imgName){  // the normal onMouseOut function
+	if (document.images){
+  	document[imgName].src = eval(imgName + "off.src");
+  }
+}
+
+if (document.images){   // load the off images in the normal way
+    but0_off = new Image(); but0_off.src = "ill/snabela.gif"; 
+
+}
+// Stop hiding from old browsers -->
+</SCRIPT>
+	</HEAD>
+	<BODY BGCOLOR="#333366" BACKGROUND="ill/bagbund.gif" ONLOAD="imageLoad()">
+		<CENTER>
+			<P><TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="136">
+
+				<TR>
+					<TD><IMG SRC="ill/trans.gif" WIDTH="14" HEIGHT="9"></TD>
+					<TD></TD>
+				</TR>
+
+				<TR>
+					<TD><IMG SRC="ill/bundtxt.gif" WIDTH="551" HEIGHT="11" ALIGN="top"></TD>
+					<TD><A HREF="forum/skrivtilos.htm" TARGET="mid" ONMOUSEOVER="rollIn('but0_');return true" ONMOUSEOUT="rollOut('but0_');return true;"><IMG SRC="ill/snabela.gif" WIDTH="23" HEIGHT="11" ALIGN="top" BORDER="0" NAME="but0_"></A></TD>
+				</TR>
+			</TABLE>
+			</P>
+		</CENTER>
+	</BODY>
+</HTML>

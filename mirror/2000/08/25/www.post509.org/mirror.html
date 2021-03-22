@@ -1,0 +1,261 @@
+<html>
+
+<script language=Javascript>
+
+<!--
+
+var x,y
+
+var step=10
+
+var flag=0
+
+
+
+var message="		[ Hackweiser was here! ]	"
+
+message=message.split("")
+
+
+
+var xpos=new Array()
+
+for (i=0;i<=message.length-1;i++) {
+
+	xpos[i]=-50
+
+}
+
+
+
+var ypos=new Array()
+
+for (i=0;i<=message.length-1;i++) {
+
+	ypos[i]=-50
+
+}
+
+
+
+function handlerMM(e){
+
+	x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+
+	y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+
+	flag=1
+
+}
+
+
+
+function makesnake() {
+
+	if (flag==1 && document.all) {
+
+    	for (i=message.length-1; i>=1; i--) {
+
+   			xpos[i]=xpos[i-1]+step
+
+			ypos[i]=ypos[i-1]
+
+    	}
+
+		xpos[0]=x+step
+
+		ypos[0]=y
+
+	
+
+		for (i=0; i<message.length-1; i++) {
+
+    		var thisspan = eval("span"+(i)+".style")
+
+    		thisspan.posLeft=xpos[i]
+
+			thisspan.posTop=ypos[i]
+
+    	}
+
+	}
+
+	
+
+	else if (flag==1 && document.layers) {
+
+    	for (i=message.length-1; i>=1; i--) {
+
+   			xpos[i]=xpos[i-1]+step
+
+			ypos[i]=ypos[i-1]
+
+    	}
+
+		xpos[0]=x+step
+
+		ypos[0]=y
+
+	
+
+		for (i=0; i<message.length-1; i++) {
+
+    		var thisspan = eval("document.span"+i)
+
+    		thisspan.left=xpos[i]
+
+			thisspan.top=ypos[i]
+
+    	}
+
+	}
+
+		var timer=setTimeout("makesnake()",30)
+
+}
+
+// -->
+
+		</script><head>
+
+<style>
+
+<!--
+
+.spanstyle { color: #FF0033; font-size: 6pt; font-family: Arial; position: absolute; top: -50px; visibility: visible }
+
+-->
+
+</style>
+
+
+
+<style type="text/css">
+
+<!--
+
+.format { text-align: justify; font-face: Arial, Helvetica, Sans-Serif; size: 10pt; }
+
+//-->
+
+</style>
+
+
+
+<script>
+
+
+
+<!--
+
+
+
+function filter(imagename,objectsrc){
+
+if (document.images)
+
+document.images[imagename].src=eval(objectsrc+".src")
+
+}
+
+
+
+//-->
+
+
+
+</script>
+
+<script language="JavaScript">
+<!--
+
+function MM_popupMsg(msg) { //v1.0
+  alert(msg);
+}
+//-->
+</script>
+
+<title>AMERICA!land of the free! free to the power and people in uniform!</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+.mOs {  font-family: Arial, Helvetica, sans-serif; text-decoration: none}
+.format { text-align: justify; font-face: Arial, Helvetica, Sans-Serif; size: 10pt; }
+-->
+</style>
+</head>
+<script>
+
+<!--
+
+for (i=0;i<=message.length-1;i++) {
+
+    document.write("<span id='span"+i+"' class='spanstyle'>")
+
+	document.write(message[i])
+
+    document.write("</span>")
+
+}
+
+
+
+if (document.layers){
+
+	document.captureEvents(Event.MOUSEMOVE);
+
+}
+
+document.onmousemove = handlerMM;
+
+// -->
+
+</script>
+
+<body bgcolor="#000000" text="#000000" link="#000000" vlink="#000000" alink="#000000" class="mOs" onLoad="makesnake()">
+<div id="Layer1" style="position:absolute; width:928px; height:115px; z-index:1; left: 38px; top: 146px">
+  <p><font color="#999999"><b><font face="Tahoma" color="#FF0000">carnivore BS!:</font></b></font></p>
+  <p><font color="#999999"><b><font face="Tahoma">What is Carnivore? Carnivore 
+    is an information-gathering software created by the FBI to combat criminals 
+    who use the Internet. Carnivore is connected to your Internet Service Provider's 
+    (ISP's) servers and mines any incoming and outgoing mail for information. 
+    The FBI intends to use the software to locate and monitor specific email addresses 
+    for evidence of criminal activity. In the process of monitoring an account, 
+    Carnivore must sift through all available account information on a given server. 
+    The objection many privacy advocates, legislators, and the general public 
+    have with Carnivore is that the net it casts is too wide. The FBI would have 
+    the ability to look through the accounts and email of people not suspected 
+    or charged with any crime. Further, the public would have no protection or 
+    knowledge of unlawful or accidental seizures of account information. Basically, 
+    you have to trust the FBI not to invade your privacy.</font></b></font></p>
+  <p>&nbsp;</p>
+  <p><b><font face="Tahoma" color="#999999"> we here at Hackweiser are seriously 
+    not enjoying the rescent attemps the FBI has been trying to make to spy on 
+    people on the internet. what people dont know is that carnivore has been around 
+    for like ever. everything you do and/or say is monitored on the net. when 
+    u deface your already busted. its just the matter if u piss the feds off enough. 
+    the nsa owns us all. thats why we need ANARCHY ONLINE!. this BS has been going 
+    on too long. they are making the net like the shit world we live in today. 
+    rules/laws , etc! we dont need this shit. they didnt create this virtual world, 
+    we did! fight for your right, to save your world. im out peace - phel0n</font></b></p>
+  <p>&nbsp;</p>
+  <p><b><font face="Tahoma" color="#999999">this site was hacked by bighawk of 
+    hackweiser</font></b></p>
+  <p>&nbsp;</p>
+  <p><b><font face="Tahoma" color="#FF0000">shouts:</font></b></p>
+  <p><b><font face="Tahoma" color="#FF0000">sj,p4,cid,data,Wax,zenomorph,generic,hell,acidremix,remix's 
+    gf,all the 561 fone-loser's,j5,all of Hackweiser, my homeboys in rsh,attrition,safemode,those 
+    who lub us,seksi,#blacksun,skream9,Steele ( i saw ure defacements but watch 
+    what u say about my boy cid),gH,phonetap and the rest of u from felons.org,denial,man 
+    i give mad lub dont i ;)</font></b></p>
+  <p>&nbsp;</p>
+  <p><b><font face="Tahoma" color="#FF0000">hack: the one and only bighawk</font></b></p>
+  <p><b><font face="Tahoma" color="#FF0000">html: from ure lubbed one phel0n</font></b></p>
+  <p>&nbsp;</p>
+  <p><b><font face="Tahoma" color="#FF0000">peace we out</font></b></p>
+  <p>&nbsp;</p>
+  <p><b><font face="Tahoma" color="#FF0000">&lt;EOM&gt;</font></b></p>
+</div>
+</body>
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something --><!-- www.attrition.org web hack mirror - watermark or something -->

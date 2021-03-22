@@ -1,0 +1,116 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=koi8-r">
+<title>;-) {Rutenia: Internet in Moscow, Russia.}</title>
+<bgsound src="LIRIX.MID" loop="-1">
+</head>
+
+<body bgcolor="#000080" link="#00FF00" vlink="#00FFFF" alink="#0000FF">
+
+<p><font face="MS Sans Serif" color="#FFFFFF"><small>История самого
+простого проникновения...<br>
+Группа, называющая себя </small></font><font face="MS Sans Serif"
+color="#FFFF00">CHC ( Chaos Hackers Crew ) </font><small><font face="MS Sans Serif"
+color="#FFFFFF">взломала вход на один из серверов
+московского ISP - Rutenia.. Это было сделано при помощи
+одного из самых распростроненных exploit'ов.. т.е. был
+remote root spawn.. Далее были получены необходимые
+документы.. цитирую один из них:<br>
+<br>
+root:trICZmVcHLLY2:0:0::0:0:PC6 System Admin:/root:/bin/csh<br>
+daemon:*:1:1::0:0:Owner of system processes:/root:/nonexistent<br>
+operator:*:2:20::0:0:System &amp;:/usr/guest/operator:/bin/csh<br>
+bin:*:3:7::0:0:Binaries Commands and Source,,,:/:/nonexistent<br>
+games:*:7:13::0:0:Games pseudo-user:/usr/games:/nonexistent<br>
+news:*:8:8::0:0:News Subsystem:/:/nonexistent<br>
+man:*:9:9::0:0:Mister Man Pages:/usr/share/man:/nonexistent<br>
+ftp:*:14:5::0:0:Anonymous FTP Admin:/var/ftp:/nonexistent<br>
+uucp:*:66:66::0:0:UUCP pseudo-user:/var/spool/uucppublic:/bin/date<br>
+xten:*:67:67::0:0:X-10 daemon:/usr/local/xten:/nonexistent<br>
+nobody:*:65534:65534::0:0:Unprivileged user:/nonexistent:/nonexistent<br>
+andre:4v99H4SlaXdsg:636:0::0:0:Andrei Pougatch:/home/andre:/bin/sh<br>
+list:*:1022:1022::0:0:list:/home/list:/bin/date<br>
+ftpmail:*:1023:10::0:0:ftpmail:/var/ftpmail:/bin/date<br>
+gamos:*:1057:52:vi:0:0:gamos:/www/GAMOS/./www:/bin/date<br>
+slava:F4.dUcAyXf9Qk:1049:20::0:0:Slava_Alpatov:/home/./slava:/bin/sh<br>
+halt:*:0:0::0:0:Halt Command:/:/sbin/reboot<br>
+petr:oZEm64YC7C4j2:1000:69::0:0:Petr Minosyants:/home/./petr:/bin/date<br>
+pavel:3j9.tw4DJmFb2:1001:69::0:0:Musatov Pavel:/home/./pavel:/bin/date<br>
+sytnikov:QwN7ssArnOw/o:1002:69::0:0:Vadim Sytnikov:/home/./sytnikov:/bin/date<br>
+stukalin:kA3E6uL3j47ZE:1003:69::0:0:Stukalin Nikolay:/home/./stukalin:/bin/date<br>
+eugene:wAKPaCUoIZrpI:1004:69::0:0:Sotnikov Eugene:/home/./eugene:/bin/date<br>
+iva:upnVof3M9JF56:1005:69::0:0:Alpatova Irina:/home/./iva:/bin/sh<br>
+<br>
+Были поставлены соответсвующие утилитки - RK,
+Sniffer.. Получены важные сведения, например: iva:qwerty ,
+petr:petr , pavel:gfdtk1, также, кое-что поведал сниффер:<br>
+From: cmcmos.ru.com<br>
+207.82.197.175(FTP):<br>
+207.82.197.174(FTP):<br>
+207.82.197.173(FTP):<br>
+207.82.197.177(FTP):<br>
+207.82.197.176(FTP):<br>
+l: update<br>
+p: brickwall<br>
+post.ru.com(POP3):<br>
+l: cmcmos (этот логин напрямую сязан с другой FreeBSD -
+cmcmos.ru.com)<br>
+p: TX025VB1<br>
+From: pc6.ru.com<br>
+post.ru.com(POP3): ну и так далее..<br>
+<br>
+iva@pc6.ru.com's password:<br>
+Last login: Tue Jan 5 01:09:00 1999 from www.oskom.ru<br>
+FreeBSD 2.2.6-RELEASE (GAMOS) #0: мда Dec ;) 15:22:46 MSK 1998<br>
+No mail.<br>
+Tue Feb 2 01:29:09 MSK 1999<br>
+oops$ ;)<br>
+<br>
+pc6 - стал собственностью CHC .. ведь именно pc6.ru.com
+была zar00tchena ;-)<br>
+можете написать на pc6 -&nbsp; /usr/sbin/mrstat , ввести
+паролик, и!! о чудо!<br>
+# id<br>
+uid=1005(iva) euid=0(</font><font face="MS Sans Serif" color="#FFFF00">root</font><font
+face="MS Sans Serif" color="#FFFFFF">) gid=69(network) egid=0(wheel)</small><br>
+</font><font face="MS Serif" color="#FFFFFF"><small>(паролик конечно
+ставили они - CHC)<br>
+итак pc6 - 0wn3d.. но главной целью было попасть на
+святую - святых - post.ru.com.. возникли проблемы..
+характерные для &quot;умных&quot; провайдеров:</small></font></p>
+
+<p><font face="MS Sans Serif" color="#FFFFFF"><small>No home directory.<br>
+Logging in with home = &quot;/&quot;.<br>
+Last login: Tue Aug 5 00:35:36 from www.oskom.ru<br>
+Copyright (c) 1980, 1983, 1986, 1988, 1990, 1991, 1993, 1994<br>
+The Regents of the University of California. All rights reserved.<br>
+<br>
+Welcome to Rutenia network.<br>
+<br>
+You have new mail. (ой)<br>
+Tue Feb 2 01:29:09 MSK 1999<br>
+Connection closed by foreign host. мда..</small></font></p>
+
+<p><small><font face="MS Sans Serif" color="#FFFFFF">но помог логин pavel:<br>
+Connected to post.ru.com.<br>
+Escape character is '^]'.<br>
+login: pavel<br>
+Password:<br>
+csh: Permission denied: Permission denied<br>
+csh: Trying to start from &quot;/home/./pavel&quot;<br>
+we are welcome :D in system<br>
+ну, а далее для CHC просто все это поднадоело, ведь
+Рутения не Роснет и не Инфотел (CHC просили
+выразить признательность этим провайдерам за
+качество предоставляемых услуг).. да и при
+двойном заходе на один логин dialup там сразу
+принимают меры.. так что.. это было всеголишь
+мальнькое исследование безопасности
+московского провайдера.. с проникновением
+внутрь.</font></small></p>
+
+<p align="center"><font face="MS Sans Serif" color="#00FF00"><a
+href="http://www.hzona.org/"><small>[НА ОСНОВНУЮ СТРАНИЦУ!]</small></a></font></p>
+</body>
+</html>

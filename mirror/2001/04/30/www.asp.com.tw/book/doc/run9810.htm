@@ -1,0 +1,158 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>您的網站元件化了嗎？</TITLE>
+</HEAD>
+<BODY LINK="#0000ff" VLINK="#800080">
+
+        <CENTER><img src="TELL.gif"
+        alt="您的網站元件化了嗎?" ALIGN=CENTER border="0" width="375"
+        height="100">
+
+</I></FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4><P ALIGN="RIGHT">刊登於 </FONT><FONT FACE="Arial" SIZE=4>RUN!PC </FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4>十月號</P>
+<P ALIGN="RIGHT">作者</FONT><FONT SIZE=4> </FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4>喬篷科技</FONT><FONT FACE="華康少女文字體W4,???" LANG="ZH-TW" SIZE=4> </FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4>周世雄</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>本文重點</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">在前五期的IIS 4.0實戰道場當中，我們看到了威力強大的IIS（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Internet Information Server</FONT><FONT FACE="新細明體" LANG="ZH-TW">）4.0之30個特異功能、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SSL</FONT><FONT FACE="新細明體" LANG="ZH-TW">與數位認證、如何使用ASP設計一個生動的網站、如何將Web資料庫化、和</FONT><FONT FACE="華康少女文字體W4,???" LANG="ZH-TW">IIS 4.0</FONT><FONT FACE="超研澤中隸,????" LANG="ZH-TW">網站進階管理</FONT><FONT FACE="新細明體" LANG="ZH-TW">等單元。本期將探討</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ActiveX</FONT><FONT FACE="新細明體" LANG="ZH-TW">伺服器元件，包括網站「元件化」的好處、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">內建的「元件」、元件定義、和如何運用</FONT><FONT FACE="標楷體" LANG="ZH-TW">「</FONT><FONT FACE="新細明體" LANG="ZH-TW">企業網站熱門應用精選</FONT><FONT FACE="標楷體" LANG="ZH-TW">」</FONT><FONT FACE="新細明體" LANG="ZH-TW">元件等。</P>
+<P ALIGN="JUSTIFY">作者著作有網站網頁設計等相關的十本電腦書籍，其中有關</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">的著作</FONT><FONT FACE="標楷體" LANG="ZH-TW">「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW">超級網站速成班</FONT><FONT FACE="標楷體" LANG="ZH-TW">」</FONT><FONT FACE="新細明體" LANG="ZH-TW">、「NT網站資料庫速成班 設計實例篇」等五本，並以簡體版本發行於大陸。</P>
+<P ALIGN="JUSTIFY">作者從蘋果二號玩到網際網路，有十幾年電腦研發與行銷的工作經驗，並曾任職於宏碁電腦公司研展和產品行銷經理、特望科技總經理等職務，現任「喬篷科技」公司總經理，從事</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Internet</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Intranet</FONT><FONT FACE="新細明體" LANG="ZH-TW">之</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫應用設計、網站網頁規劃架設、電子商務等服務。</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW">示範網站</FONT><FONT FACE="華康少女文字體W4,???" LANG="ZH-TW">：</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">www.asp.com.tw</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">連絡</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">E-mail</FONT><FONT FACE="新細明體" LANG="ZH-TW">：</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">jackchou@tpts5.seed.net.tw</FONT><FONT FACE="新細明體" LANG="ZH-TW">。</P>
+</FONT><FONT FACE="Arial" SIZE=5><P ALIGN="JUSTIFY">ActiveX Server Components</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW">（簡稱</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">）當中，使用「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ActiveX</FONT><FONT FACE="新細明體" LANG="ZH-TW">伺服器元件」（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ActiveX Server Components</FONT><FONT FACE="新細明體" LANG="ZH-TW">，簡稱「元件」），讓您重複地使用設計好的功能（像副程式般可以一再地重複呼叫使用），製作出動態、互動的網頁內容。</P>
+<P ALIGN="JUSTIFY">「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ActiveX Server Components</FONT><FONT FACE="新細明體" LANG="ZH-TW">」，以前叫做「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Automation servers</FONT><FONT FACE="新細明體" LANG="ZH-TW">」，讓您將網站伺服器成為網頁應用程式的一部份。</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">內建的「元件」提供存取資料庫、讀寫伺服器檔案、輪流顯示廣告圖片、得知用戶端瀏覽器的資訊、和管理超連結表等精彩的功能。</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">可經由「元件」來擴充增加功能，可使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Visual Basic</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Java</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Visual C++</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">COBOL</FONT><FONT FACE="新細明體" LANG="ZH-TW">等程式語言來發展。</P>
+<P ALIGN="JUSTIFY">「元件」一般由</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">.asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">檔案的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼所呼叫使用，但是也可以由</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ISAPI</FONT><FONT FACE="新細明體" LANG="ZH-TW">應用程式、其他伺服器元件、或其他</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">OLE</FONT><FONT FACE="新細明體" LANG="ZH-TW">相容的語言所呼叫。</FONT> </P>
+<FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>網站「元件化」的好處</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">所謂將網站「元件化」，指得是於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">當中使用「元件」，好處如下：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>可以重覆使用（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Reuse</FONT><FONT FACE="新細明體" LANG="ZH-TW">）。</LI></P>
+<P ALIGN="JUSTIFY"><LI>執行速度增快：據筆者測試的結果，於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">當中使用「元件」，必未使用「元件」的執行速度快約</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">10~30%</FONT><FONT FACE="新細明體" LANG="ZH-TW">。</LI></P>
+<P ALIGN="JUSTIFY"><LI>保護原始碼：由於「元件」是</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">compile</FONT><FONT FACE="新細明體" LANG="ZH-TW">後的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">.dll</FONT><FONT FACE="新細明體" LANG="ZH-TW">檔案，別人看不到您的原始碼。</LI></P></UL>
+
+</FONT><FONT FACE="Arial" SIZE=5><P>ASP</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>內建的「元件」</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">內含數個內建的「元件」，如下：</P>
+<OL>
+
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>File Access component</FONT><FONT FACE="新細明體" LANG="ZH-TW">（檔案存取元件）：經由</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">FileSystemObject</FONT><FONT FACE="新細明體" LANG="ZH-TW">物件、和</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">TextStream</FONT><FONT FACE="新細明體" LANG="ZH-TW">物件，提供讀寫伺服器檔案的功能，常見的訪客計數器、和每次載入網頁時都給一個不同的提示或座右銘等應用，都可以經由此</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ActiveX</FONT><FONT FACE="新細明體" LANG="ZH-TW">伺服器元件設計出。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>Page Counter Component</FONT><FONT FACE="新細明體" LANG="ZH-TW">（訪客計數器元件）：記錄訪客的次數，每次有訪客瀏覽此網頁，自動將訪客計數器加一。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>Content Rotator Component</FONT><FONT FACE="新細明體" LANG="ZH-TW">（內容輪播器元件），讓</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW">內容輪流顯示於網頁上，您可設定各內容出現的機率。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>Ad Rotator component</FONT><FONT FACE="新細明體" LANG="ZH-TW">（廣告輪播器元件）：提供廣告輪播器的功能，讓廣告圖片輪流顯示於網頁上，您可設定各廣告出現的機率。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>Browser Capabilities component</FONT><FONT FACE="新細明體" LANG="ZH-TW">（瀏覽器資訊元件）：提供用戶端使用瀏覽器的功能資訊給網站伺服器。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>Content Linking component</FONT><FONT FACE="新細明體" LANG="ZH-TW">（內容連結元件）：讓您很方便地使用一個文字檔，來管理超連結、上一頁、下一頁等連結功能。幾行的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼，加上準備一個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">URL</FONT><FONT FACE="新細明體" LANG="ZH-TW">表的文字檔，網頁內容將自動更新，不須修改網頁的程式碼。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>Permission Checker Component</FONT><FONT FACE="新細明體" LANG="ZH-TW">（允許檢查元件）：讓設計者檢查使用者是否有權存取某個檔案，以便決定顯示不同的網頁內容給不同的使用者。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>Database Access component</FONT><FONT FACE="新細明體" LANG="ZH-TW">（資料庫存取元件）：使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ActiveX Data Object</FONT><FONT FACE="新細明體" LANG="ZH-TW">（簡稱</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ADO</FONT><FONT FACE="新細明體" LANG="ZH-TW">）的技術，讓您可以與</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW">結合，以提供存取伺服器資料庫的功能。</LI></P></OL>
+
+<P ALIGN="JUSTIFY">除了這些「內建」的「元件」，您可以製作自己的「元件」，來符合自己特殊的需求，以增加擴充</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW">的功能，可使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Visual Basic</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Java</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Visual C++</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">COBOL</FONT><FONT FACE="新細明體" LANG="ZH-TW">等程式語言來發展。或購買別人已經開發好的「元件」來使用。建議您使用瀏覽器連線上http://www.microsoft.com/iis/ 以下載新的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">components</FONT><FONT FACE="新細明體" LANG="ZH-TW">。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>定義一個元件</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">要使用「元件」須先定義。定義一個元件，以產生元件的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">instance</FONT><FONT FACE="新細明體" LANG="ZH-TW">，定義後即可呼叫此元件的方法（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">methods</FONT><FONT FACE="新細明體" LANG="ZH-TW">）、或存取其屬性（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">properties</FONT><FONT FACE="新細明體" LANG="ZH-TW">）。</P>
+<P ALIGN="JUSTIFY">定義一個「元件」有兩個方法：</P>
+<OL>
+
+<P ALIGN="JUSTIFY"><LI>使用「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">CreateObject</FONT><FONT FACE="新細明體" LANG="ZH-TW">」的方法定義一個元件的方法如下：</LI></P>
+</FONT><FONT FACE="Arial"><P>&lt;% Set obj1 = Server.CreateObject(</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">”</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">專案名稱</FONT><FONT FACE="Arial">.class</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">名稱</FONT><FONT FACE="Arial">") %&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">譬如以下定義一個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Browser Capabilities component</FONT><FONT FACE="新細明體" LANG="ZH-TW">：</FONT> </P>
+<I><FONT FACE="Arial"><P>&lt;% Set bc = Server.CreateObject("MSWC.BrowserType") %&gt; </P>
+</I></FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>使用</FONT>&lt;<FONT FACE="System,新細明體" LANG="ZH-TW">OBJECT&gt; </FONT><FONT FACE="新細明體" LANG="ZH-TW">標記定義一個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ActiveX</FONT><FONT FACE="新細明體" LANG="ZH-TW">伺服器元件。譬如以下定義一個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Ad Rotator Component</FONT><FONT FACE="新細明體" LANG="ZH-TW">：</LI></P></OL>
+<DIR>
+
+</FONT><FONT FACE="Arial"><P>&lt;OBJECT RUNAT=Server ID=MyAd ROGID="MSWC.AdRotator"&gt;</P>
+<P>&lt;/OBJECT&gt;</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">一般而言，您可以於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Global.asa</FONT><FONT FACE="新細明體" LANG="ZH-TW">使用</FONT>&lt;<FONT FACE="System,新細明體" LANG="ZH-TW">OBJECT&gt; </FONT><FONT FACE="新細明體" LANG="ZH-TW">標記，定義使用於一個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">session</FONT><FONT FACE="新細明體" LANG="ZH-TW">、或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">application</FONT><FONT FACE="新細明體" LANG="ZH-TW">的元件。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>企業網站熱門應用精選</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW"><P ALIGN="JUSTIFY">「</FONT><FONT FACE="新細明體" LANG="ZH-TW">企業網站熱門應用精選</FONT><FONT FACE="標楷體" LANG="ZH-TW">」</FONT><FONT FACE="新細明體" LANG="ZH-TW">，為喬篷科技公司採用微軟相關產品與技術所開發的套裝軟體，提供</FONT><B><FONT FACE="System,新細明體" LANG="ZH-TW">Microsoft </FONT><FONT FACE="新細明體" LANG="ZH-TW">SQL Server</B>資料庫的網站完整解決方案，包括許多</FONT><FONT FACE="華康少女文字體W4,???" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">元件，您可以使用這個產品將您的網站「元件化」，迅速提供12個常用的網站功能，而不需要懂得如何寫</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">和元件，特點如下：</P>
+<P ALIGN="JUSTIFY">1. 不須會寫程式，馬上使用：</P>
+<P ALIGN="JUSTIFY">將12個常用的網站功能，整合成一個套餐，馬上即可使用，不須寫程式。</P>
+<P ALIGN="JUSTIFY">選項部份，由瀏覽器做設定。</P>
+<P ALIGN="JUSTIFY">2. Choose on-demand：</P>
+<P ALIGN="JUSTIFY">可依據實際需要，從12個常用的網站功能，挑選所須的數個功能。</P>
+<P ALIGN="JUSTIFY">3. 動態的網頁內容：</P>
+<P ALIGN="JUSTIFY">使用資料庫管理「網站內容」，只要由瀏覽器更新資料庫，不用找人修改網頁，自動產生新的網頁內容。</P>
+<P ALIGN="JUSTIFY">4. 網頁與美工部份可自行設計： </P>
+<P>由於使用include和Component的方式，網頁部份可自行設計，只須將所用到的網站套餐功能包含於所設計的HTML碼中。</P>
+<P ALIGN="JUSTIFY">您現有的網站可以於任何一個網頁當中，加入任何一個</FONT><FONT FACE="標楷體" LANG="ZH-TW">「</FONT><FONT FACE="新細明體" LANG="ZH-TW">企業網站熱門應用精選</FONT><FONT FACE="標楷體" LANG="ZH-TW">」</FONT><FONT FACE="新細明體" LANG="ZH-TW">所提供的網站常用新功能，只要使用記事本或FrontPage Express開啟此網頁現有的HTML碼，於想插入此新功能的地方，插入一行include的文字譬如「</FONT>&lt;<FONT FACE="System,新細明體" LANG="ZH-TW">!--#INCLUDE FILE="xxx.inc" --&gt;</FONT><FONT FACE="標楷體" LANG="ZH-TW">」</FONT><FONT FACE="新細明體" LANG="ZH-TW">，再儲存成</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">.asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">檔案，即可擁有那項網站的新功能。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW"><P ALIGN="JUSTIFY">「</FONT><FONT FACE="新細明體" LANG="ZH-TW">企業網站熱門應用精選</FONT><FONT FACE="標楷體" LANG="ZH-TW">」</FONT><FONT FACE="新細明體" LANG="ZH-TW">所提供的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">12</FONT><FONT FACE="新細明體" LANG="ZH-TW">個常用的網站功能，如下：</P>
+<P ALIGN="JUSTIFY">1. 新消息（佈告欄）</P>
+<P ALIGN="JUSTIFY">2. 廣告輪播</P>
+<P ALIGN="JUSTIFY">3. 產品資訊</P>
+<P ALIGN="JUSTIFY">4. 討論區</P>
+<P ALIGN="JUSTIFY">5. FAQ</P>
+<P ALIGN="JUSTIFY">6. 檔案下載</P>
+<P ALIGN="JUSTIFY">7. 意見箱</P>
+<P ALIGN="JUSTIFY">8. 問卷調查</P>
+<P ALIGN="JUSTIFY">9. 活動報名</P>
+<P ALIGN="JUSTIFY">10. 線上徵才</P>
+<P ALIGN="JUSTIFY">11. 訂閱Email</P>
+<P ALIGN="JUSTIFY">12. 相關網站</P>
+<P ALIGN="JUSTIFY">「企業網站熱門應用精選」軟體所須的執行環境如下：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>Windows NT Server 4.0/Windows NT Option Pack</LI></P>
+<P ALIGN="JUSTIFY"><LI>SQL Server資料庫</LI></P></UL>
+
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#ff0000"><P>「新消息」保證是「新的消息」嗎？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">由於「企業網站熱門應用精選」使用「資料庫」來管理網站的「新消息」，只要更新資料庫的內容，網站的「新消息」將自動更新。</P>
+<P ALIGN="JUSTIFY">每一則「新消息」都設定其「開始日期」和「結束日期」，當使用者瀏覽此網頁時，將自動比較當天日期是否介於資料庫中「開始日期」和「結束日期」之間，只將符合此條件的「新消息」顯示出來，顯示出來的「新消息」保證是「新的消息」。</P>
+<P ALIGN="JUSTIFY">加入「新消息」時，只要使用瀏覽器於資料庫新增一筆資料，於資料庫設定「新消息」的「開始日期」和「結束日期」即可，如此一來，網站的「新消息」內容將自動地更新，「新消息」永遠是「新的消息」，站長可以不用擔心有訪客會寫信來嘲笑其網站的「新消息」過期了。</P>
+<P ALIGN="JUSTIFY">「企業網站熱門應用精選」於每天第一個網站訪客進來時，自動讀取「新消息」資料庫以產生新的網頁內容。每天只讀取資料庫一次，不須每次訪客進來時都讀取資料庫，可以加快多人瀏覽的速度。如果您的「新消息」是隨時變動的，當然您也可設定為「即時」更新新消息。</P>
+<P ALIGN="JUSTIFY">您可以設定是否顯示消息簡介或只顯示標題，也可超連結到詳細說明的html檔案。</P>
+<P ALIGN="JUSTIFY">如果當天沒有最新的「新消息」時，不用擔心，「企業網站熱門應用精選」將自動傳送EMAIL給維護人員以告之。</P>
+<P ALIGN="JUSTIFY">對於不同種類的「新消息」，您可以做分類，不同的分類可以設定不同的標題圖片。</P>
+<P ALIGN="JUSTIFY">將您現有的網站加入「新消息」的功能是一個很輕鬆的事，您只要使用記事本或FrontPage Express開啟html原始碼，於想插入「新消息」的地方，插入一行如下的文字，再儲存成.asp檔案，即可擁有使用「資料庫」來管理網站「新消息」的功能：</P><DIR>
+
+</FONT><FONT FACE="Arial"><P>&lt;!--#INCLUDE FILE="package/news.inc" --&gt;</P></DIR>
+
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#ff0000"><P>可以使用資料庫管理</FONT><FONT FACE="標楷體" LANG="ZH-TW" COLOR="#ff0000">「</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#ff0000">輪播廣告圖片</FONT><FONT FACE="標楷體" LANG="ZH-TW" COLOR="#ff0000">」</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#ff0000">嗎？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">您想要擁有輪播廣告圖片的功能嗎？</P>
+<P ALIGN="JUSTIFY">「企業網站熱門應用精選」讓您使用瀏覽器來管理資料庫中的「廣告圖片播放期間」，於每天第一個網站訪客進來時，自動讀取「廣告」資料庫以產生新的輪播圖片內容，自動輪流顯示，並自動記錄廣告圖片被按到的次數。</P>
+<P ALIGN="JUSTIFY">同樣地，將您現有的網站加入「輪播廣告圖片」的功能，只要插入一行「&lt;!--#INCLUDE FILE="package/adv.inc" --&gt;」的文字，再儲存成.asp檔案，即可擁有使用「資料庫」來管理網站「輪播廣告圖片」的功能：</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#ff0000"><P>訪客可以</FONT><FONT FACE="標楷體" LANG="ZH-TW" COLOR="#ff0000">「</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#ff0000">搜查產品</FONT><FONT FACE="標楷體" LANG="ZH-TW" COLOR="#ff0000">」</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#ff0000">資訊嗎？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">大部份現有的網站都無法提供讓訪客搜查產品資訊的功能，這是因為沒有使用資料庫來管理產品資訊的緣故。</P>
+<P ALIGN="JUSTIFY">「企業網站熱門應用精選」讓您公司自行於瀏覽器更新資料庫的產品資訊，不用修改網頁，自動產生新的產品資訊網頁。訪客可依照分類與關鍵字來搜尋有興趣的產品。</P>
+<P ALIGN="JUSTIFY">只要於現在的網頁插入一行「&lt;!--#INCLUDE FILE="product.inc" --&gt;」，於瀏覽器更新資料庫的產品資訊，即可讓訪客可以搜查產品資訊。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#ff0000"><P>有提供</FONT><FONT FACE="標楷體" LANG="ZH-TW" COLOR="#ff0000">「</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#ff0000">討論區</FONT><FONT FACE="標楷體" LANG="ZH-TW" COLOR="#ff0000">」</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#ff0000">的功能嗎？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">您或許想知道，討論區的功能有提供嗎？</P>
+<P ALIGN="JUSTIFY">有的，「企業網站熱門應用精選」提供一個可做分類自由討論，可回覆的「討論區」功能。</P>
+<P ALIGN="JUSTIFY">使用者並可以依照分類與關鍵字來搜尋文章。</P>
+<P ALIGN="JUSTIFY">並提供可查看同一個標題、或作者的所有相關發表文章的實用功能。</P>
+<P ALIGN="JUSTIFY">當然，有的訪客會留下不當的文章，管理員可以刪除這些不當的文章。</P>
+<P ALIGN="JUSTIFY">於網頁內想要放置「討論區」功能的地方加入程式碼「&lt;!--#INCLUDE FILE="message.inc" --&gt;」即可擁有「討論區」的功能。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#ff0000"><P>有提供「</FONT><FONT FACE="Arial" SIZE=5 COLOR="#ff0000">FAQ</FONT><FONT FACE="標楷體" LANG="ZH-TW" COLOR="#ff0000">」</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#ff0000">的功能嗎？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">有的，「企業網站熱門應用精選」也提供使用資料庫管理「FAQ」（常見問題與解答）的功能，只要於瀏覽器更新資料庫，自動產生新的FAQ網頁內容。</P>
+<P ALIGN="JUSTIFY">因為使用資料庫來管理FAQ的緣故，訪客自可依照分類與關鍵字搜尋常見問題解答。</P>
+<P ALIGN="JUSTIFY">於網頁內想要放置「FAQ」功能的地方加入程式碼「&lt;!--#INCLUDE FILE="faq.inc" --&gt;」，即可產生「FAQ」功能，呈現資料庫裏所設定的FAQ。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#ff0000"><P>可以線上「活動報名」嗎？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">「企業網站熱門應用精選」提供網站線上「活動報名」的功能，站長可以線上登錄活動並接受線上活動報名。</P>
+<P ALIGN="JUSTIFY">管理員可以限制參加名額及每單位報名人數，及決定錄取名單。</P>
+<P ALIGN="JUSTIFY">「企業網站熱門應用精選」也將報表的部份儲存成Excel格式檔案，管理員可將活動錄取名單儲存成Excel格式檔案，由瀏覽器下載。</P>
+<P ALIGN="JUSTIFY">報名者可以依照分類與關鍵字來搜尋有興趣的活動。</P>
+<P ALIGN="JUSTIFY">於網頁內想要放置「活動報名」功能的地方加入程式碼「</FONT>&lt;<FONT FACE="System,新細明體" LANG="ZH-TW">!--#INCLUDE FILE="studyapy.inc" --&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW">」，即可加入「活動報名」的功能。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#ff0000"><P>「檔案下載」可以使用資料庫管理嗎？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">「企業網站熱門應用精選」也提供使用資料庫管理「檔案下載」的功能，訪客可下載檔案，自動顯示檔案的大小，以及記錄檔案下載的次數。</P>
+<P ALIGN="JUSTIFY">訪客可依照分類與關鍵字搜尋檔案。</P>
+<P ALIGN="JUSTIFY">於網頁內想要放置「檔案下載」功能的地方加入程式碼「&lt;!--#INCLUDE FILE="download.inc" --&gt;」，即可加入「檔案下載」的功能。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#ff0000"><P>可以搜集客戶的「意見」嗎？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">「企業網站熱門應用精選」提供使用資料庫管理「意見箱」的功能，客戶依照分類留下意見，自動回覆感謝E-mail。</P>
+<P ALIGN="JUSTIFY">「意見箱」的意見如何整理成報表呢？格式是我要的嗎？不用擔心，「企業網站熱門應用精選」將報表的部份儲存成Excel格式檔案，您可以自行運用。站長可依照分類、與期間搜尋客戶所留下的意見，並可儲存成Excel格式檔案，以供分析或處理。</P>
+<P ALIGN="JUSTIFY">於網頁內想要放置「意見箱」功能的地方加入程式碼「&lt;!--#INCLUDE FILE="opinion.inc" --&gt;」，即可加入「意見箱」的功能。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#ff0000"><P>可以做「問卷調查」嗎？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">「企業網站熱門應用精選」提供網站「問卷調查」的功能，站長可自訂問卷調查的題目，題目可設計為單選或複選。</P>
+<P ALIGN="JUSTIFY">問卷調查結果如何整理成報表呢？「企業網站熱門應用精選」也將報表的部份儲存成Excel格式檔案。站長可統計問卷調查結果，並儲存成Excel格式檔案，由瀏覽器下載。</P>
+<P ALIGN="JUSTIFY">於網頁內想要放置「問卷調查」功能的地方加入程式碼「&lt;!--#INCLUDE FILE="poll.inc" --&gt;」，即可加入「問卷調查」的功能。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#ff0000"><P>如何做「線上徵才」呢？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">「企業網站熱門應用精選」提供網站「線上徵才」的功能，公司登錄徵才資料。應徵者可依照分類與關鍵字搜尋，自行由瀏覽器下載Word格式履歷表填寫。</P>
+<P ALIGN="JUSTIFY">於網頁內想要放置「線上徵才」功能的地方加入程式碼「&lt;!--#INCLUDE FILE="hire.inc" --&gt;」，即可加入「線上徵才」的功能。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#ff0000"><P>有提供「訂閱</FONT><FONT FACE="Arial" SIZE=5 COLOR="#ff0000">Email</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#ff0000">」的功能嗎？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">「企業網站熱門應用精選」提供「訂閱</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Email</FONT><FONT FACE="新細明體" LANG="ZH-TW">」的功能，訂閱者可訂閱多種類別，以訂閱公司或產品訊息，網站傳送Email給所有訂閱者。</P>
+<P ALIGN="JUSTIFY">傳送時自動修改Email的每行字數，讓Email接收到時看到排得整整齊齊的。</P>
+<P ALIGN="JUSTIFY">於網頁內想要放置「訂閱E-mail」功能的地方加入程式碼「&lt;!--#INCLUDE FILE="mail.inc" --&gt;」，即可加入「訂閱E-mail」的功能。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#ff0000"><P>「相關網站」呢？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">「企業網站熱門應用精選」使用資料庫管理「相關網站」，只要於瀏覽器更新資料庫，自動產生新的相關網站網頁內容。</P>
+<P ALIGN="JUSTIFY">於網頁內想要放置「相關網站」功能的地方加入程式碼「&lt;!--#INCLUDE FILE="web.inc" --&gt;」，即可加入「相關網站」的功能。</P>
+</FONT><FONT FACE="Arial" SIZE=5 COLOR="#ff0000"><P>IIS 4.0</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#ff0000">設計實例展示網站</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">作者準備一個展示各種</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW">設計實例的網站，提供各種網站網頁的資訊、與設計範例，包括「企業網站熱門應用精選」、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">特異功能、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫設計實例、網路商店、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ActiveX</FONT><FONT FACE="新細明體" LANG="ZH-TW">、推播頻道、動態</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">HTML 99</FONT><FONT FACE="新細明體" LANG="ZH-TW">招等，網址如下：</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"></FONT><A HREF="../../index.html"><FONT FACE="System,新細明體" LANG="ZH-TW">http://www.asp.com.tw</FONT></A></P>
+<FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">歡迎上網光臨指教。</P></FONT></BODY>
+</HTML>

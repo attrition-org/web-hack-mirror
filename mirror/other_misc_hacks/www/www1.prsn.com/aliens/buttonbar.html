@@ -1,0 +1,208 @@
+
+<HTML>
+<!-- Alien Voices Web Site                                    -->
+<!-- Copyright (C) 1999 by Alien Voices. All Rights Reserved. -->
+
+<HEAD>
+<TITLE>
+Alien Voices Button Bar
+</TITLE>
+
+<script language="JavaScript">
+<!-- hide this script from non-javascript-enabled browsers
+
+var nsVersion = document.layers;
+var ieVersion = document.all;
+var version;
+
+if ( nsVersion || ieVersion )
+	version = 1;
+
+	if( version ) {
+
+        switch1_on=new Image();
+        switch1_on.src ="images/StoreOnbk.gif";
+        switch1_off=new Image();
+        switch1_off.src ="images/StoreOffbk.gif";
+		switch1_sta = new Image();
+		switch1_sta.src = switch1_on.src;
+        
+        switch2_on=new Image();
+        switch2_on.src ="images/ContactOnbk.gif";
+        switch2_off=new Image();
+        switch2_off.src ="images/ContactOffbk.gif";
+        switch2_sta = new Image();
+		switch2_sta.src = switch2_on.src;
+		
+        switch3_on=new Image();
+        switch3_on.src ="images/ProfilesOnbk.gif";
+        switch3_off=new Image();
+        switch3_off.src ="images/ProfilesOffbk.gif";
+        switch3_sta = new Image();
+		switch3_sta.src = switch3_on.src;
+		        
+        switch4_on=new Image();
+        switch4_on.src ="images/CurriculumOnbk.gif";
+        switch4_off=new Image();
+        switch4_off.src ="images/CurriculumOffbk.gif";
+        switch4_sta = new Image();
+		switch4_sta.src = switch4_on.src;		
+        
+        switch5_on=new Image();
+        switch5_on.src ="images/invasionsOnbk.gif";
+        switch5_off=new Image();
+        switch5_off.src ="images/invasionsOffbk.gif";
+        switch5_sta = new Image();
+		switch5_sta.src = switch5_on.src;		
+        
+        switch6_on=new Image();
+        switch6_on.src ="images/GuestbookOnbk.gif";
+        switch6_off=new Image();
+        switch6_off.src ="images/GuestbookOffbk.gif";
+        switch6_sta = new Image();
+		switch6_sta.src = switch6_on.src;			
+        
+        switch7_on=new Image();
+        switch7_on.src ="images/HomeOnbk.gif";
+        switch7_off=new Image();
+        switch7_off.src ="images/HomeOffbk.gif";
+        switch7_sta = new Image();
+		switch7_sta.src = switch7_on.src;		
+		
+		switch8_on = new Image();
+		switch8_on.src = "images/chat_on.gif";
+		switch8_off = new Image();
+		switch8_off.src = "images/chat.gif";
+        switch8_sta = new Image();
+		switch8_sta.src = switch8_on.src;			
+    }
+
+
+	var daButton = 0
+  	function TurnOn(imgName) {
+		if (version) {
+	        switchedImage = eval(imgName + "_on");
+	        document [imgName].src = switchedImage.src;
+	    }
+    }
+
+	function TurnOff(imgName) {
+        if (version) {
+	        switchedImage = eval(imgName + "_off");
+	        document [imgName].src = switchedImage.src;
+		}	
+    }
+
+	function Static(imgName) {
+		if (version) {
+	        switchedImage = eval(imgName + "_sta");
+	        document [imgName].src = switchedImage.src;
+		}
+    }
+	
+   	function Change() {
+    	if (version) {
+		  	if (daButton == 1) TurnOff('switch1');
+		  	if (daButton == 2) TurnOff('switch2');
+		  	if (daButton == 3) TurnOff('switch3');
+		 	if (daButton == 4) TurnOff('switch4');
+			if (daButton == 5) TurnOff('switch5');
+			if (daButton == 6) TurnOff('switch6');
+			if (daButton == 7) TurnOff('switch7');
+			if (daButton == 8) TurnOff('switch8');
+		}
+	}
+	
+	function display(statusText) {
+		if (version)
+			window.status = statusText;
+	}
+
+// -->
+</script>
+
+</HEAD>
+
+<BODY
+	BGCOLOR="#000000" 
+	TEXT="#FFCC66" 
+	LINK="#EDE812" 
+	ALINK="#33FF33" 
+	VLINK="#EDE812">
+	
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0>
+	<TR><TD ALIGN=LEFT>
+		<IMG SRC="images/Abovebuttonsbk.gif" WIDTH=150 HEIGHT=95 BORDER=0 ALIGN=LEFT
+		ALT="Navigation Buttons">
+	</TD></TR>
+	<TR><TD ALIGN=LEFT>
+		<A HREF="catalog/index.html" TARGET="category"
+		onMouseover="if (daButton == 1) Static('switch1'); else TurnOn('switch1');  display('Catalog of Alien Voices programs'); return true;""
+		onMouseout="if (daButton == 1) Static('switch1'); else TurnOff('switch1'); display('');"
+		onClick="Change(); Static('switch1'); daButton = 1;"><IMG SRC="images/StoreOffbk.gif" 
+		name="switch1" WIDTH=150 HEIGHT=30 BORDER=0 ALIGN=LEFT
+		ALT="Catalog of Alien Voices programs"></a>
+	</TD></TR>
+	<TR><TD ALIGN=LEFT>
+		<A HREF="contact/index.html" TARGET="category" 
+		onMouseover="if (daButton == 2) Static('switch2'); else TurnOn('switch2');  display('Contact Alien Voices'); return true;""
+		onMouseout="if (daButton == 2) Static('switch2'); else TurnOff('switch2'); display('');"
+		onClick="Change(); Static('switch2'); daButton = 2;"><IMG SRC="images/ContactOffbk.gif" 
+		name="switch2" WIDTH=150 HEIGHT=30 BORDER=0 ALIGN=LEFT
+		ALT="Contact Alien Voices"></A>
+	</TD></TR>
+	<TR><TD ALIGN=LEFT>
+		<A HREF="bio/index.html" TARGET="category" 
+		onMouseover="if (daButton == 3) Static('switch3'); else TurnOn('switch3');  display('Profiles of Alien Voices actors'); return true;""
+		onMouseout="if (daButton == 3) Static('switch3'); else TurnOff('switch3'); display('');"
+		onClick="Change(); Static('switch3'); daButton = 3;"><IMG SRC="images/ProfilesOffbk.gif" 
+		name="switch3" WIDTH=150 HEIGHT=30 BORDER=0 ALIGN=LEFT
+		ALT="Profiles of Alien Voices actors"></A>
+	</TD></TR>
+	<TR><TD ALIGN=LEFT>
+		<A HREF="curriculum/index.html" TARGET="category" 
+		onMouseover="if (daButton == 4) Static('switch4'); else TurnOn('switch4');  display('Alien Voices goes to school'); return true;""
+		onMouseout="if (daButton == 4) Static('switch4'); else TurnOff('switch4'); display('');"
+		onClick="Change(); Static('switch4'); daButton = 4;"><IMG SRC="images/CurriculumOffbk.gif" 
+		name="switch4" WIDTH=150 HEIGHT=30 BORDER=0 ALIGN=LEFT
+		ALT="Alien Voices goes to school"></A>
+	</TD></TR>
+	<TR><TD ALIGN=LEFT>
+		<A HREF="calendar/index.html" TARGET="category" 
+		onMouseover="if (daButton == 5) Static('switch5'); else TurnOn('switch5');  display('Upcoming Alien Voices events'); return true;""
+		onMouseout="if (daButton == 5) Static('switch5'); else TurnOff('switch5'); display('');"
+		onClick="Change(); Static('switch5'); daButton = 5;"><IMG SRC="images/invasionsOffbk.gif" 
+		name="switch5" WIDTH=150 HEIGHT=30 BORDER=0 ALIGN=LEFT
+		ALT="Upcoming Alien Voices events"></A>
+	</TD></TR>
+	<TR><TD ALIGN=LEFT>
+		<A HREF="guestbook/index.html" TARGET="category" 
+		onMouseover="if (daButton == 6) Static('switch6'); else TurnOn('switch6');  display('Sign our guest book'); return true;""
+		onMouseout="if (daButton == 6) Static('switch6'); else TurnOff('switch6'); display('');"
+		onClick="Change(); Static('switch6'); daButton = 6;"><IMG SRC="images/GuestbookOffbk.gif" 
+		name="switch6" WIDTH=150 HEIGHT=30 BORDER=0 ALIGN=LEFT
+		ALT="Sign our guest book"></A>
+	</TD></TR>
+	<TR><TD ALIGN=LEFT>
+		<A HREF="main.html" TARGET="category" 
+		onMouseover="if (daButton == 7) Static('switch7'); else TurnOn('switch7');  display('Return home'); return true;""
+		onMouseout="if (daButton == 7) Static('switch7'); else TurnOff('switch7'); display('');"
+		onClick="Change(); Static('switch7'); daButton = 7;"><IMG SRC="images/HomeOffbk.gif" 
+		name="switch7" WIDTH=150 HEIGHT=30 BORDER=0 ALIGN=LEFT
+		ALT="Return home"></A>
+	</TD></TR>
+	<TR><TD ALIGN=LEFT>
+		<A HREF="!chat.html" TARGET="category" 
+		onMouseover="if (daButton == 8) Static('switch8'); else TurnOn('switch8');  display('Chat with others'); return true;""
+		onMouseout="if (daButton == 8) Static('switch8'); else TurnOff('switch8'); display('');"
+		onClick="Change(); Static('switch8'); daButton = 8;"><IMG SRC="images/chat.gif" 
+		name="switch8" WIDTH=150 HEIGHT=30 BORDER=0 ALIGN=LEFT
+		ALT="Chat with others"></A>
+	</TD></TR>		
+	<TR><TD ALIGN=LEFT><IMG SRC="images/Belowbuttonsbk.gif" WIDTH=150 HEIGHT=296 BORDER=0 ALIGN=LEFT
+		ALT="Ambience">
+	</TD></TR>
+</TABLE>
+</BODY>
+
+</HTML>

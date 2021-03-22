@@ -1,0 +1,97 @@
+<html>
+<head>
+<title></title>
+</head>
+<body bgcolor="white" onLoad="init()"">
+<script language="JavaScript">
+<!--
+function stopError() {
+return true;
+}
+window.onerror = stopError;
+// -->
+</script>
+<center>
+<script>
+text=new Array('FEOB Hacked by:','Morfeu')
+var numText=2
+color=new Array('red')
+var numColors=5
+var endSize=70
+var Zspeed=30
+var Cspeed=400
+var font='Comic Sans Ms, Arial, Times New Roman'
+var hide=false
+var size=10
+var gonum=0
+var ie, n;
+if (document.all) {
+n=0
+ie=1
+zoomText='document.all.zoom.innerText=text[num]'
+zoomSize='document.all.zoom.style.fontSize=size'
+closeIt=""
+fadeColor="document.all.zoom.style.color=color[num]"
+}
+if (document.layers) {
+n=1;ie=0
+zoomText=""
+zoomSize="document.zoom.document.write('<p align=\"center\" style=\"font-family:'+font+'; font-size:'+size+'px; color:'+color[0]+'\">'+text[num]+'</p>')"
+closeIt="document.zoom.document.close()"
+fadeColor="document.zoom.document.write('<p align=\"center\" style=\"font-family:'+font+'; font-size:'+endSize+'px; color:'+color[num]+'\">'+text[numText-1]+'</p>')"
+}
+function zoom(num,fn){
+if (size<endSize){
+eval(zoomText)
+eval(zoomSize)
+eval(closeIt)
+size+=3;
+setTimeout("zoom("+num+",'"+fn+"')",Zspeed)
+}else{
+eval(fn);
+}
+}
+function fadeIt(num){
+if (num<numColors){
+eval(fadeColor)
+eval(closeIt)
+num+=1;
+setTimeout("fadeIt("+num+")",Cspeed)
+}else{
+hideIt()
+}
+}
+function hideIt(){
+if(hide){
+if(ie)document.all.zoom.style.visibility="hidden"
+if(n)document.layers.zoom.visibility="hidden"
+}
+}
+function init(){
+if(ie){
+document.all.zoom.style.color=color[0]
+document.all.zoom.style.fontFamily=font
+}
+if(ie || n) go(0)       
+}
+function go(num){
+gonum+=1
+size=3
+if(num<numText){
+zoom(num,'go('+gonum+')')
+}else{
+fadeIt(0)
+}
+}
+</script>
+<div id="zoom" align="center" style="position:absolute; top:173px; left: 122px"> 
+</div>
+<br>
+<br>
+<br>
+<br>
+<center>
+</center>
+</center>
+</body>
+</html><!-- www.attrition.org web hack mirror - watermark or something -->

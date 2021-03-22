@@ -1,0 +1,42 @@
+<%
+	Set NW = Server.CreateObject("NewsWay.NewsApi.1")
+
+	set printerXML = server.CreateObject("Microsoft.XMLDOM")
+	printerXML.async = false
+	loaded = printerXML.load(nw.getAbsLocation("/ipanel/db/printerinfo.xml"))
+	printerName = "Printer home page"
+	if loaded then
+		set nameNode = printerXML.selectSingleNode("//printer-info/info/@name")
+		if not nameNode is nothing then
+			printerName = nameNode.value
+		end if
+	end if
+
+	params = makeParams(Array("username", "password", "localizationsection", "failureUrl", "firstUrlSelection"))
+
+function makeParams(paramList)
+	dim params, p
+	params = ""
+	for each p in paramList
+		if Request.QueryString(p) = "" then
+			params = params & "&" & p & "=" & Server.URLEncode(Request.Form(p))
+		end if
+	next
+	makeParams = Mid(params, 2)
+	if makeParams = "" then makeParams = "stam="
+end function
+
+
+%>
+<HTML>
+<HEAD>
+<title>
+<%=printerName%>
+</title>
+</HEAD>
+
+<frameset border=0 >
+	<frame name="iwaytop" border=0 src="/newsway/versions/250/site/iway/default.asp?afterfirst=&<%=params%>&<%=Request.QueryString%>" noresize >
+</frameset>
+
+</HTML>

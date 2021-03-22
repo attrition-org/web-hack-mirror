@@ -1,0 +1,67 @@
+<html>
+
+<head>
+<meta name="description"
+content="Sitio Web de la Facultad Regional Avellaneda de la Universidad Tecnológica Nacional">
+<meta name="keywords"
+content="Educacion, Education, Argentina, Universidad, Tecnologica, Avellaneda, University, Universities, Universidades, Argentinas">
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>Sitio Web de la Facultad Regional Avellaneda de la U.T.N.</title>
+<script LANGUAGE="JavaScript">
+
+<!--
+var speed = 50 // decrease value to increase speed (must be positive)
+var pause = 2000 // increase value to increase pause
+var timerID = null
+var bannerRunning = false
+var ar = new Array()
+ar[0] = "Bienvenido...            "
+ar[1] = "a la Universidad Tecnológica Nacional...     "
+ar[2] = "Facultad Regional Avellaneda       "
+ar[3] = ".      "
+
+
+var currentMessage = 0
+var offset = 0
+function stopBanner() {
+        if (bannerRunning)
+                clearTimeout(timerID)
+        bannerRunning = false
+}
+function startBanner() {
+        stopBanner()
+        showBanner()
+}
+function showBanner() {
+        var text = ar[currentMessage]
+        if (offset < text.length) {
+                if (text.charAt(offset) == " ")
+                        offset++                        
+                var partialMessage = text.substring(0, offset + 1) 
+                window.status = partialMessage
+                offset++ 
+                timerID = setTimeout("showBanner()", speed)
+                bannerRunning = true
+        } else {
+                offset = 0
+                currentMessage++
+                if (currentMessage == ar.length)
+                        currentMessage = 0
+                timerID = setTimeout("showBanner()", pause)
+                bannerRunning = true
+        }
+}
+// -->
+</script>
+</head>
+
+<frameset framespacing="0" border="false" frameborder="0" cols="175,*">
+  <frame name="contenido" target="principal" src="indice.htm" scrolling="yes" noresize>
+  <frame name="principal" src="principal.htm" scrolling="yes" noresize>
+  <noframes>
+  <body background="images/fondo_del_frame2.jpg" onLoad="startBanner()">
+  <p>Esta página usa marcos, pero su explorador no los admite.</p>
+  </body>
+  </noframes>
+</frameset>
+</html>

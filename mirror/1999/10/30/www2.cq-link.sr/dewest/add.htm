@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF">
+<img src="cqservicesban.gif" alt="cqservicesban.gif (17938 bytes)" width="450" height="65" vspace="0" hspace="0" border="0"> 
+<font color="#0066FF"><i><font size="1"><b> 
+<script language="JavaScript">
+var newDateObj = new Date();
+var d = "";
+switch (newDateObj.getDay()){
+  case 0: d = "Zondag, "; break;
+  case 1: d = "Maandag, "; break;
+  case 2: d = "Dinsdag, "; break;
+  case 3: d = "Woensdag, "; break;
+  case 4: d = "Donderdag, "; break;
+  case 5: d = "Vrijdag, "; break;
+  case 6: d = "Zaterdag, "; break;
+}
+var deDatum = (newDateObj.getDate() + "-" + (newDateObj.getMonth() + 1) + "-" + newDateObj.getFullYear());
+var deDatumCompleet = (d + deDatum);
+var tmp;
+document.write(deDatumCompleet);
+
+      
+</script>
+</b></font></i></font> 
+</body>
+</html>

@@ -1,0 +1,106 @@
+<HTML>
+<HEAD>
+<TITLE>Business Counselors</TITLE>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+if (document.images) {
+	NUM_IMAGES = 5;
+
+	hold = new Array(NUM_IMAGES);
+	for (i = 1; i <= NUM_IMAGES+1; i++) {
+		hold[i] = new Image();
+		hold[i].src = "/images/menu" + i + "act.gif";
+        }
+}
+
+
+function over (imgname, imgnum)
+{
+	if (document.images) {
+		off("business",4);
+		document.images[imgname].src = hold[imgnum].src;
+        }
+}
+
+function off (img_name, img_num)
+{
+	if (document.images) {
+		var load = "/images/menu" + img_num + ".gif";
+		document.images[img_name].src = load;
+        }
+}
+
+// -->
+</SCRIPT>
+
+</HEAD>
+
+
+<BODY BGCOLOR="#FFFFFF" LINK="#6C0404" ALINK="#FCFCCC" VLINK="#6C0404" >
+
+
+
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=620>
+
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT" COLSPAN=2><IMG SRC="/images/sbahead2.gif" ALT="Small Business Administration" SUPPRESS=true></TD>
+</TR>
+
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT" COLSPAN=2><IMG SRC="/images/sub5.gif" ALT="" SUPPRESS=true></TD>
+</TR>
+
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><A
+
+HREF="about.htm" onMouseOver="over('about',1);window.status='About the Classroom';return true"
+onMouseOut="off('about',1)"><IMG SRC="images/menu1.gif" ALT="About the Classroom" SUPPRESS=true NAME="about"
+BORDER=0 WIDTH=240 HEIGHT=33></A><BR><A
+
+HREF="online.htm" onMouseOver="over('online',2);window.status='On-Line Courses';return true"
+onMouseOut="off('online',2)"><IMG SRC="images/menu2.gif" ALT="On-Line Courses" SUPPRESS=true NAME="online"
+BORDER=0 WIDTH=240 HEIGHT=25></A><BR><A
+
+HREF="library.htm" onMouseOver="over('library',3);window.status='Library';return true"
+onMouseOut="off('library',3)"><IMG SRC="images/menu3.gif" ALT="Library" SUPPRESS=true NAME="library"
+BORDER=0 WIDTH=240 HEIGHT=27></A><BR><A
+
+HREF="business.htm" onMouseOver="over('business',4);window.status='Business Counselors';return true"
+onMouseOut="off('business',4)"><IMG SRC="images/menu4.gif" ALT="Business Counselors" SUPPRESS=true NAME="business"
+BORDER=0 WIDTH=240 HEIGHT=25></A><BR><A
+
+HREF="comments.htm" onMouseOver="over('course',5);window.status='Course Evaluation & Comments';return true"
+onMouseOut="off('course',5)"><IMG SRC="/images/menu5.gif" ALT="Course Evaluation..." SUPPRESS=true NAME="course"
+BORDER=0 WIDTH=240 HEIGHT=48></A><BR>
+
+<IMG SRC="/images/menubott.gif" ALT="" SUPPRESS=true WIDTH=240 HEIGHT=123></TD>
+<TD VALIGN="TOP">
+<B><P>&nbsp;</P>
+<P>On-Line Business Counseling </B><A HREF="http://www.score.org/"><B><FONT SIZE=2>www.score.org</B></FONT></A></P>
+<P>The SCORE Cyber-Chapter is pleased to provide you with business advice via E-mail. Establish a confidential E-mail dialogue with an experienced business counselor selected by you to match your business needs.</P>
+</TD>
+</TR>
+</TABLE>
+
+<P ALIGN="CENTER"><SCRIPT LANGUAGE="JavaScript"><!--
+	if (parent.globvar != null) {
+		if (document.all || document.layers) document.write(parent.globvar.msgTxt);
+		else document.write (parent.globvar.oldTxt);
+	}
+//--></SCRIPT><A HREF="http://www.sba.gov/"><IMG SRC="images/stamp.gif" BORDER=0 WIDTH=241 HEIGHT=105></A><BR>
+<BR>
+<BR>
+<NOBR>
+<FONT SIZE=1>
+<A HREF="index.htm">Main</A>
+<A HREF="about.htm">About the Classroom</A>
+<A HREF="online.htm">On-Line Courses</A>
+<A HREF="library.htm">Library</A><BR>
+<A HREF="business.htm">Business Counselors</A>
+<A HREF="comments.htm">Course Evaluation & Comments</A>
+</FONT>
+</NOBR>
+</BODY>
+</HTML>

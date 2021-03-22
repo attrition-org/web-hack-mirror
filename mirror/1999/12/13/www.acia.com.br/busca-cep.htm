@@ -1,0 +1,103 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Busca de CEP</title>
+</head>
+
+<body background="IMAGES/Verde.jpg" text="#0000FF" link="#0000FF" vlink="#FF00FF" alink="#FF0000">
+
+<form name="formulario" action="http://200.252.60.7/CEP/resfreecep.asp?Index=1&amp;P1=1" method="post">
+  <input type="hidden" name="Tipo" value="%"><div align="center"><center><table CELLPADDING="1" CELLSPACING="0" BORDER="0" width="469">
+    <tr>
+      <td width="127"><div align="center"><center><p><img border="0" src="http://www.correios.com.br/_imag/0_logo10.gif" width="113" height="24"></td>
+      <td align="center" width="338"><div align="center"><center><p><img border="0" src="http://www.correios.com.br/_imag/buscadecep.gif" width="180" height="30"></td>
+    </tr>
+    <tr align="center">
+      <td valign="middle" align="right" width="127" bgcolor="#FFFFDD"><!-- Logradouro --> <font size="2" face="arial, helvetica"><b>Endereço:</b></font> </td>
+      <td valign="middle" align="center" width="338" bgcolor="#FFFFDD"><select name="descricao" size="1">
+        <option>Rua</option>
+        <option>Avenida</option>
+        <option>Travessa</option>
+        <option>Praça</option>
+        <option>Alameda</option>
+        <option>Outro</option>
+      </select> <input type="TEXT" size="22" name="Logradouro"> </td>
+    </tr>
+    <tr align="center">
+      <td valign="middle" align="right" width="127" bgcolor="#FFFFDD"><!-- Bairro --> <font size="2" face="arial, helvetica"><b>Número/Bairro:</b></font> </td>
+      <td valign="middle" align="center" width="338" bgcolor="#FFFFDD"><input type="TEXT" size="6" name="num"> <input type="TEXT" size="26" name="Bairro"> </td>
+    </tr>
+    <tr align="center">
+      <td valign="middle" align="right" width="127" bgcolor="#FFFFDD"><!-- Localidade --> <font size="2" face="arial, helvetica"><b>Cidade:</b></font> </td>
+      <td valign="middle" align="center" width="338" bgcolor="#FFFFDD"><input name="Localidade" type="TEXT" size="23"> <!-- Estado --> <font size="2" face="arial, helvetica"><b>UF:</b></font> <select name="uf" size="1">
+        <option>AC</option>
+        <option>AL</option>
+        <option>AM</option>
+        <option>AP</option>
+        <option>BA</option>
+        <option>CE</option>
+        <option>DF</option>
+        <option>ES</option>
+        <option>GO</option>
+        <option>MA</option>
+        <option>MG</option>
+        <option>MS</option>
+        <option>MT</option>
+        <option>PA</option>
+        <option>PB</option>
+        <option>PE</option>
+        <option>PI</option>
+        <option>PR</option>
+        <option>RJ</option>
+        <option>RN</option>
+        <option>RO</option>
+        <option>RR</option>
+        <option>RS</option>
+        <option>SC</option>
+        <option>SP</option>
+        <option>SE</option>
+        <option>TO</option>
+      </select> </td>
+    </tr>
+    <tr align="center">
+      <td width="465" colspan="2"><div align="center"><center><p><br>
+      <a href="javascript:SubmeterFormCEP()"><input type="submit" value=" Buscar "></a> </td>
+    </tr>
+  </table>
+  </center></div><!-- fim formulário -->
+
+</form>
+<div align="center"><center>
+
+<table border="0" width="520" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="520"><big>&nbsp;&nbsp;&nbsp;&nbsp; Com esse sistema você pode encontrar
+    facilmente o CEP da cidade ou logradouro solicitado.</big></td>
+  </tr>
+  <tr>
+    <td width="520"><big>&nbsp;&nbsp;&nbsp;&nbsp; Para realizar a pesquisa, preencha os campos
+    requisitados e, no caso do endereço e UF, escolha entre as opções da lista.</big></td>
+  </tr>
+  <tr>
+    <td width="520"><big>&nbsp;&nbsp;&nbsp;&nbsp; O campo 'Endereço' é de preenchimento
+    obrigatório, mas você não precisa digitar o nome completo da rua. Por exemplo, se você
+    digitar 'José', serão listadas as ruas que possuam o nome 'José', mesmo que tenham
+    complemento.</big></td>
+  </tr>
+  <tr>
+    <td width="520"><big>&nbsp;&nbsp;&nbsp;&nbsp; Os campos 'Número/Bairro:' não são
+    obrigatórios.</big></td>
+  </tr>
+  <tr>
+    <td width="520"><big>&nbsp;&nbsp;&nbsp;&nbsp; O campo 'Cidade' deve, obrigatoriamente, ser
+    preenchido com o nome completo da cidade.</big></td>
+  </tr>
+</table>
+</center></div>
+
+<p align="center">&nbsp;</p>
+
+<p align="center"><a href="index.htm"><img src="Gifs%20e%20fotos/home.gif" alt="Página Principal" border="0" WIDTH="53" HEIGHT="53"></a></p>
+</body>
+</html>

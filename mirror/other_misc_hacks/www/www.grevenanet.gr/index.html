@@ -1,0 +1,85 @@
+<html>
+
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1253">
+<script LANGUAGE="JavaScript">
+<!-- // BannerAD
+
+   var bannerAD=new Array();
+   var bannerADlink=new Array();
+   var adNum=0;
+
+   bannerAD[0]="banner1.jpg";
+   bannerADlink[0]="";
+   bannerAD[1]="banner2.jpg";
+   bannerADlink[1]="";
+   bannerAD[2]="banner3.jpg";
+   bannerADlink[2]="";
+   bannerAD[3]="banner4.jpg";
+   bannerADlink[3]="";
+   bannerAD[4]="banner5.jpg";
+   bannerADlink[4]="";
+
+   var preloadedimages=new Array();
+   for (i=1;i<bannerAD.length;i++){
+      preloadedimages[i]=new Image();
+      preloadedimages[i].src=bannerAD[i];
+   }
+
+function setTransition(){
+   if (document.all){
+      bannerADrotator.filters.revealTrans.Transition=Math.floor(Math.random()*23);
+      bannerADrotator.filters.revealTrans.apply();
+   }
+}
+
+function playTransition(){
+   if (document.all)
+      bannerADrotator.filters.revealTrans.play()
+}
+
+function nextAd(){
+   if(adNum<bannerAD.length-1)adNum++ ;
+      else adNum=0;
+   setTransition();
+   document.images.bannerADrotator.src=bannerAD[adNum];
+   playTransition();
+   theTimer=setTimeout("nextAd()", 5000);
+}
+
+function jump2url(){
+   jumpUrl=bannerADlink[adNum];
+   jumpTarget='';
+   if (jumpUrl != ''){
+      if (jumpTarget != '')window.open(jumpUrl,jumpTarget);
+      else location.href=jumpUrl;
+   }
+}
+function displayStatusMsg() { 
+   status=bannerADlink[adNum];
+   document.returnValue = true;
+}
+
+//-->
+</script>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<h1><font color="#FF0000">Hacked By ScorpionKTX</font></h1>
+
+<p><font color="#000000">Look, I/m sorry about it, but you must protect this site better!<br>
+If someone wants my e-mail, it is <a href="mailto:scorpionktx@inferno.com">scorpionktx@inferno.com</a></font></p>
+
+<p><font color="#000000">&nbsp;</font></p>
+
+<p><font color="#000000">Helloween Rulez!</font></p>
+
+<p><font color="#000000">I/m a Child of the hacking generation!<br>
+I/m Anything my Mamma don/t like!</font></p>
+
+<p><font color="#000000">I/m a child hacking sites tomorrow!<br>
+Anything my mamma don/t like!</font></p>
+</body>
+</html>

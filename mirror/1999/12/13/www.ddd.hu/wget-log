@@ -1,0 +1,39 @@
+--10:06:31--  http://www.ddd.hu:80/
+           => `www.ddd.hu/index.html'
+Connecting to www.ddd.hu:80... connected!
+HTTP request sent, awaiting response... 
+Read error (Connection reset by peer) in headers.
+Retrying.
+
+--10:06:36--  http://www.ddd.hu:80/
+  (try: 2) => `www.ddd.hu/index.html'
+Connecting to www.ddd.hu:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 988 [text/html]
+
+    0K ->                                                        [100%]
+
+10:06:38 (137.83 KB/s) - `www.ddd.hu/index.html' saved [988/988]
+
+Loading robots.txt; please ignore errors.
+--10:06:38--  http://www.ddd.hu:80/robots.txt
+           => `www.ddd.hu/robots.txt'
+Connecting to www.ddd.hu:80... connected!
+HTTP request sent, awaiting response... 404 Object Not Found
+10:06:43 ERROR 404: Object Not Found.
+
+--10:06:43--  http://www.ddd.hu:80/018.jpg
+           => `www.ddd.hu/018.jpg'
+Connecting to www.ddd.hu:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 12,939 [image/jpeg]
+
+    0K -> .......... ..                                          [100%]
+
+10:07:09 (558.75 B/s) - `www.ddd.hu/018.jpg' saved [12939/12939]
+
+Converting www.ddd.hu/index.html... done.
+
+FINISHED --10:07:09--
+Downloaded: 13,927 bytes in 2 files
+Converting www.ddd.hu/index.html... done.

@@ -1,0 +1,71 @@
+<HTML>
+     <HEAD>
+     <TITLE>tty0 ROX32 RULEZ... -/- Hacked by 2203 , |¤ Mø®c€gø ¤| , ROX , U.R.S.S. , cyber2 -/-</TITLE>
+</script>
+     <SCRIPT LANGUAGE = "JavaScript">
+
+
+    
+
+     function makeArray() {
+     this.length = makeArray.arguments.length;
+             for (var i = 0; i < this.length; i++)
+             this[i + 1] = makeArray.arguments[i];
+     }
+
+     function makeSlideShow (obj, wait, pre, url) {
+     this.curText = '';
+     this.posit = 2;   
+     this.word = obj;  
+     this.length = obj.length;
+     this.pre = pre;
+     this.wait = wait;
+     this.url = url;
+     this.display = displaySlideShow;
+     }
+
+     function displaySlideShow() {
+             if (this.posit <= this.length) {
+             this.curText = this.word[this.posit]
+             outStringWord = blankFrameTop + this.pre + this.curText + blankFrameBottom;
+             parent.draw.location = 'javascript:parent.outStringWord';
+             this.posit++;
+             }
+             else {
+             doneLoop = true;
+             top.location = this.url;
+             }
+     }
+
+     function displayLoop() {
+     if (!doneLoop) reDraw = setTimeout('displayLoop()', wordIntro.wait);
+     wordIntro.display();
+     }
+
+     var words = new makeArray ('owwwwwwwww...', 'VÃO SE FUDER SEUS FDP !!', 'E ESTE GOV FEDERAL SUX...', 'VÃO APRENDER O QUE É SEGURANÇA SEUS BABACAS...', 'YOU IS 0wn3d , hehehe', '0wn3d by ROX32', '2203', '|¤ Mø®c€gø ¤|', 'ROX', 'U.R.S.S.', 'cyber2', 'FAIRAWAY GALAXY VISITORS', 'Um outRo mUndo é possivel... captalismo sux... socialist rulez... ', 'VAI SE FUDER ESTADOS UNIDOS !!!!!', 'Gr34tZ:', 'all hacking world...', 'fucks:', 'Algum Voluntário ?', 'Ok... ', ' acho que era só isso...', 'ops...', 'que a polícia federal vá se fuder !!!', 'fui...');
+     var wordIntro = new makeSlideShow (words, 2500, '<CENTER><BR><BR><BR><BR><BR><BR><BR><BR><FONT SIZE = 3><FONT FACE="Arial">', 'index.htm');
+     var blankFrameTop = '<HTML><BODY BGCOLOR = "#000000" TEXT = "#FFFFFF">';
+     var blankFrameBottom = '</BODY></HTML>';
+     var blankFrame = blankFrameTop + blankFrameBottom;
+     var doneLoop = false;
+     
+
+
+</SCRIPT>
+         <FRAMESET onLoad = "displayLoop()" ROWS = "100%, *" FRAMEBORDER = NO BORDER = 0>
+
+         <FRAME 
+          SCROLLING=AUTO
+
+          SRC = "javascript:parent.blankFrame"
+          NAME = "draw" 
+          MARGINWIDTH = 2 
+          MARGINHEIGHT = 2>
+         </FRAMESET>     </HEAD>
+     </HTML>
+  </HEAD>
+     </HTML>
+
+
+
+<!-- www.attrition.org web hack mirror - watermark or something -->

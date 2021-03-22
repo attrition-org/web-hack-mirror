@@ -1,0 +1,355 @@
+<html>
+<head>
+
+   <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+   <title>++$$++ Hatee toh naheen aap keh? ++$$++</title>
+
+
+   <style type="text/css"><!--
+body { scrollbar-face-color: purple; scrollbar-shadow-color: #335997; scrollbar-highlight-color: #FF9999; scrollbar-3dlight-color: #335997; scrollbar-darkshadow-color: black; scrollbar-track-color: lightgreen; scrollbar-arrow-color: #FFFFCE }
+//--></style>
+
+
+
+<SCRIPT language="Javascript">
+
+<!-- BEGIN CODE
+
+flag = 1;
+function xit()
+{
+if (flag==1)
+open("http://www.kashmir.com");
+}
+
+// End hiding script -->
+
+
+</SCRIPT>
+
+
+
+   <style TYPE="text/css">
+#slide {
+                Position: Absolute;
+                Left: 5;
+                Top: 5;
+                Visibility: Visible;
+                }
+
+
+</style>
+
+
+<meta name="Microsoft Theme" content="none, default">
+</head>
+
+<body onUnload="xit();" bgcolor="#000000" text="#FFFFFF">
+
+<span ID="slide">
+
+<table CELLSPACING="0" BORDER="0" CELLPADDING="0" ALIGN="right" >
+<TR><td><span ID="slide1"><img src="http://www.liquid2k.com/wfd/wfdwfd.gif" width="160" height="100"></span></TD></tr>
+</table>
+</span>
+
+<script LANGUAGE="JavaScript">
+
+        self.onError=null;
+        
+        currentX = currentY = 0;  
+        whichIt = null;           
+        lastScrollX = 0; lastScrollY =0;
+        
+        NS = (document.layers) ? 1 : 0;
+        IE = (document.all) ? 1: 0;
+        
+        function heartBeat() {
+        
+                if(IE) { diffY = document.body.scrollTop; diffX = document.body.scrollLeft; }
+            if(NS) { diffY = self.pageYOffset; diffX = self.pageXOffset; }
+                
+                if(diffY != lastScrollY) {
+                        percent = .1 * (diffY - lastScrollY);
+                        if(percent > 0) percent = Math.ceil(percent);
+                        else percent = Math.floor(percent);
+                                        if(IE) document.all.slide.style.pixelTop += percent;
+                                        if(NS) document.slide.top += percent; 
+                        lastScrollY = lastScrollY + percent;
+            }
+                if(diffX != lastScrollX) {
+                        percent = .1 * (diffX - lastScrollX);
+                        if(percent > 0) percent = Math.ceil(percent);
+                        else percent = Math.floor(percent);
+                        if(IE) document.all.slide.style.pixelLeft += percent;
+                        if(NS) document.slide.left += percent;
+                        lastScrollX = lastScrollX + percent;
+                }       
+        }
+
+        function checkFocus(x,y) { 
+        var totalY, totalX;
+                floatx = document.slide.pageX;
+                floaty = document.slide.pageY;
+                floatwidth = document.slide.clip.width;
+                floatheight = document.slide.clip.height;
+                        
+                        if(20 == 0) totalY = floatheight;
+                        else totalY = 20;
+                        if(0 == 0) totalX = floatwidth;
+                        else totalX = 0;
+                if( (x > floatx && x < (floatx+totalX)) && (y > floaty && y < (floaty+totalY))) return true;
+                else return false;
+        }
+        
+        function grabIt(e) {
+                if(IE) {
+                        whichIt = event.srcElement;
+                        while (whichIt.id.indexOf("slide") == -1) {
+                                whichIt = whichIt.parentElement;
+                                if (whichIt == null) { return true; }
+                    }
+                        whichIt.style.pixelLeft = whichIt.offsetLeft;
+                    whichIt.style.pixelTop = whichIt.offsetTop;
+                        currentX = (event.clientX + document.body.scrollLeft);
+                        currentY = (event.clientY + document.body.scrollTop);
+                        
+                        if(20 == 0) totalY = whichIt.style.pixelHeight;
+                        else totalY = 20;
+                        if(0 == 0) totalX = whichIt.style.pixelWidth;
+                        else totalX = 0;
+                        if(!(event.clientX > whichIt.offsetLeft && event.clientX < whichIt.offsetLeft + totalX) || 
+                        !(currentY > whichIt.offsetTop && currentY < whichIt.offsetTop + totalY)) whichIt = null;
+                } else { 
+                window.captureEvents(Event.MOUSEMOVE);
+                if(checkFocus (e.pageX,e.pageY)) { 
+                        whichIt = document.slide;
+                        FloatTouchedX = e.pageX-document.slide.pageX;
+                        FloatTouchedY = e.pageY-document.slide.pageY;
+                } 
+                }
+            return true;
+        }
+        
+        function moveIt(e) {
+                if (whichIt == null) { return false; }
+                if(IE) {
+                    newX = (event.clientX + document.body.scrollLeft);
+                    newY = (event.clientY + document.body.scrollTop);
+                    distanceX = (newX - currentX);    distanceY = (newY - currentY);
+                    currentX = newX;    currentY = newY;
+                    whichIt.style.pixelLeft += distanceX;
+                    whichIt.style.pixelTop += distanceY;
+                        if(whichIt.style.pixelTop < document.body.scrollTop) whichIt.style.pixelTop = document.body.scrollTop;
+                        if(whichIt.style.pixelLeft < document.body.scrollLeft) whichIt.style.pixelLeft = document.body.scrollLeft;
+                        if(whichIt.style.pixelLeft > document.body.offsetWidth - document.body.scrollLeft - whichIt.style.pixelWidth - 20) whichIt.style.pixelLeft = document.body.offsetWidth - whichIt.style.pixelWidth - 20;
+                        if(whichIt.style.pixelTop > document.body.offsetHeight + document.body.scrollTop - whichIt.style.pixelHeight - 5) whichIt.style.pixelTop = document.body.offsetHeight + document.body.scrollTop - whichIt.style.pixelHeight - 5;
+                        event.returnValue = false;
+                } else { 
+                        whichIt.moveTo(e.pageX-FloatTouchedX,e.pageY-FloatTouchedY);
+                if(whichIt.left < 0+self.pageXOffset) whichIt.left = 0+self.pageXOffset;
+                if(whichIt.top < 0+self.pageYOffset) whichIt.top = 0+self.pageYOffset;
+                if( (whichIt.left + whichIt.clip.width) >= (window.innerWidth+self.pageXOffset-17)) whichIt.left = ((window.innerWidth+self.pageXOffset)-whichIt.clip.width)-17;
+                if( (whichIt.top + whichIt.clip.height) >= (window.innerHeight+self.pageYOffset-17)) whichIt.top = ((window.innerHeight+self.pageYOffset)-whichIt.clip.height)-17;
+                return false;
+                }
+            return false;
+        }
+        
+        function dropIt() {
+                whichIt = null;
+            if(NS) window.releaseEvents (Event.MOUSEMOVE);
+            return true;
+        }
+
+        
+        if(NS) {
+                window.captureEvents(Event.MOUSEUP|Event.MOUSEDOWN);
+                window.onmousedown = grabIt;
+                window.onmousemove = moveIt;
+                window.onmouseup = dropIt;
+        }
+        if(IE) {
+                document.onmousedown = grabIt;
+                document.onmousemove = moveIt;
+                document.onmouseup = dropIt;
+        }
+        
+        
+        if(NS || IE) action = window.setInterval("heartBeat()",1);
+        
+
+</script>
+
+
+<script language=JavaScript>
+ <!--
+ 
+ 
+ var message="Press Ok if you support our cause!!! ";
+ function click(e) {
+ if (document.all) {
+ if (event.button==2||event.button==3) {
+ alert(message);
+ return false;
+ }
+ }
+ if (document.layers) {
+ if (e.which == 3) {
+ alert(message);
+ return false;
+ }
+ }
+ }
+ if (document.layers) {
+ document.captureEvents(Event.MOUSEDOWN);
+ }
+ document.onmousedown=click;
+ // --> 
+ </script>
+<p><font color="#00FF00" size="5" face="Book Antiqua">This site has been defaced
+by m0r0n and nightman of</font><b><font color="#00FF00" size="4"> &nbsp;&nbsp;</font><font color="#00FF00" size="7" face="OCR A Extended">&nbsp;&nbsp;</font><font face="Tempus Sans ITC" color="#00FF00" size="7">&nbsp;</font></b><b><font face="Tempus Sans ITC" color="#00FF00" size="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></b></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+===========================================</p>
+<p><b><font face="Tempus Sans ITC" color="#00FF00" size="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&quot;</font><font face="Tempus Sans ITC" size="6" color="#FFFFFF">Kas</font><font face="Tempus Sans ITC" color="#00FF00" size="6">hm</font><font face="Tempus Sans ITC" size="6" color="#FFFFFF">ir
+D</font><font face="Tempus Sans ITC" color="#00FF00" size="6">ay h</font><font face="Tempus Sans ITC" size="6" color="#FFFFFF">ac</font><font face="Tempus Sans ITC" color="#00FF00" size="6">k
+at</font><font face="Tempus Sans ITC" size="6" color="#FFFFFF">tac</font><font face="Tempus Sans ITC" color="#00FF00" size="6">k&quot;.</font></b></p>
+<p><span ID="slide0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+===========================================</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;<font color="#008000" face="Impact" size="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><a name="February - Kashmir solidarity day"><font face="Impact" size="6"><font color="#008000">5th
+February</font> --<font color="#FF0000"> Kashmir solidarity day</font></font></a></p>
+<p align="center">&nbsp;</p>
+<p align="left"><font face="Arial" size="2">Kashmir solidarity day is being
+observed on 5<sup>th</sup> February in different parts of the world including
+Pakistan and Azad Jammu &amp; Kashmir. On this day rallies, demonstrations,
+seminars and conferences will be held at different places to highlight the
+various aspects of Kashmir freedom struggle.</font></p>
+<p align="left"><font face="Arial" size="2"><b><font color="#FF0000">Kashmir
+being an international dispute and an oldest unresolved conflict on UN agenda
+needs a dispassionate and an objective assessment on this day. Nuclearisation of
+the subcontinent and subsequent confrontation at Kargil heights between the two
+neighbours India and Pakistan has signaled to the international community that
+peace in South Asia is gravely threatened if the core issue of Kashmir is not
+resolved in accordance with the wishes of the people of Jammu &amp; Kashmir. The
+people living in the UN mandated disputed territory of Jammu &amp; Kashmir are
+an integral component of the global family. As such the international community
+should fulfill its obligations towards their fellow humans in Kashmir</font></b><font color="#FF0000">.</font>
+A conducive climate needs to be generated for eliminating the excesses and
+atrocities on them. The world community will owe an explanation to the
+contemporary and future historian if it fails to take a humanitarian cognizance
+of the prevailing situation in Kashmir.</font></p>
+<p align="left"><font color="#FF0000" size="2" face="Arial">Kashmir has been
+converted into a towering inferno with the unprecedented ruthless violations and
+repression of all human rights through naked use of force by the military and
+its civilian agents.</font></p>
+<p align="left"><font face="Arial" size="2">An Indian women's team led by Rita
+Dewan was on a fact finding mission to Kashmir. An extract from this teams
+eyewitness report says, &quot;Life itself is not secure… the young men walks
+in fear, fear of being named a suspect or militant, picked up interrogated,
+tortured, killed. The women live in fear of humiliation, harassment,
+molestation, rape. Families live in fear of crackdowns, raids, searches. The
+looting of household goods is common. The forces can enter homes, shops,
+schools, hospitals at any time without warning or restriction. The invasion of
+privacy is almost total.&quot;</font></p>
+<p align="left"><font face="Arial" size="2">What Human Rights Watch August 1994,
+vol. 6, no.8 said a few years ago is correct even today. &quot;<font color="#FFFFFF"><b>For
+their part, Indian troops continue to summarily execute detainees, kill
+civilians in reprisal attacks and burn down neighbourhoods and villages as a
+collective punishment for those suspected of supporting the militants….
+Torture also continues to be routine. Human rights groups have compiled a list
+of over fifty-five interrogation centres where detainees are kept in
+unacknowledged detention and tortured. The security forces routinely defy court
+orders to produce the detainees and several thousand habeas corpus petitions
+filed in these cases remain pending without result according to Jammu &amp;
+Kashmir Bar Association. All of these actions are in clear violation of the
+international covenant on civil and political rights to which India is a party.
+Although government claims to have punished security personnel for abuses, to
+Human Rights Watch/Asia's knowledge not a single soldier has been prosecuted for
+the murder or torture of a detainee</b></font>.&quot;</font></p>
+<p align="left"><font face="Arial" size="2">The Indian troops on 10<sup>th</sup>
+January 2000 at around 5 p.m. torched 87 shops and 15 residential houses at
+Pattan, highway town of Baramulla district, a twelve year old boy was also
+killed. It has been phenomenal that the revengeful Indian forces usually target
+the non combatant civilians and they exhibit an inhuman behaviour.</font></p>
+<p align="left"><font face="Arial" size="2">Commenting on the tragedy at Pattan,
+Kashmir Times Jammu writes in its editorial note &quot;while they fail to
+apprehend the militants their anger is turned against the peaceful citizens and
+as a matter of revenge the forces open the mouths of their guns to fire at
+citizens or set their houses and shops ablaze… the Pattan incident calls for a
+high level independent probe followed by stringent action against the
+culprits.&quot;</font></p>
+<font face="Arial" size="3">
+<p align="left"><font color="#00FF00"><b>A Kashmiri poet Parwaz Naqash has
+summed up the behaviour of Indian occupation authority in the following verses:</b></font></p>
+<blockquote>
+  <blockquote>
+    <p align="left"><font color="#00FF00"><b>&quot;See the dance of death &amp;
+    destruction</b></font></p>
+    <p align="left"><font color="#00FF00"><b>Smell the stench of charred human
+    flesh</b></font></p>
+    <p align="left"><font color="#00FF00"><b>Come to Kashmir</b></font></p>
+    <p align="left"><font color="#00FF00"><b>When the mangled bodies of newly
+    born babies bear testimony</b></font></p>
+    <p align="left"><font color="#00FF00"><b>To man's cruelty to man</b></font></p>
+    <p align="left"><font color="#00FF00"><b>Where young girls are raped, and</b></font></p>
+    <p align="left"><font color="#00FF00"><b>Their bosoms ripped apart</b></font></p>
+    <p align="left"><font color="#00FF00"><b>Where it is a crime to be young</b></font></p>
+    <p align="left"><font color="#00FF00"><b>Because if you are young</b></font></p>
+    <p align="left"><font color="#00FF00"><b>You are fit to be slain.&quot;</b></font></p>
+  </blockquote>
+</blockquote>
+</font>
+<p align="left"><br>
+====================================================================================</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; <font face="Fixedsys" color="#00ff00" size="4">Hand shakes :-</font></p>
+<p align="center"><font face="Fixedsys" size="4"><font color="#00ff00">* Gforce
+Pakistan (</font><font color="#ffffff" size="2">Sniper, heataz, Rsnake,
+instinct, miller and rave-</font><font color="#00ff00">)</font></font></p>
+<p align="center"><font face="Fixedsys" color="#00ff00" size="4">* </font><b><font face="Fixedsys" color="#00FF00" size="4">Hi-tech Hate</font></b><font face="Fixedsys" color="#00ff00" size="4">,
+DoctorNuker,
+m0s and Nitr8!, All of Quit crew</font></p>
+<p align="center"><font face="Fixedsys" color="#00ff00" size="4">&nbsp;*
+Drumcode, Icefist, dislexik, DownKaos, mar1no, piffy, datagram, Scurvy, dodi and
+philer!</font></p>
+<p align="center"><font color="#00ff00" face="Fixedsys" size="4">&nbsp;*
+Aniclator, Silver Lords, Devil-Soul, Data Masters -- thepr0digy, Rsh, Hackweiser,
+moshack, ScorpionKTX, Prime Suspects and Dr-hacker.</font></p>
+<p align="center"><font face="Fixedsys" color="#00ff00" size="4">&nbsp;*
+kr4kr0k, |ncubus_, seninel-, vol, senn, Cool-dude, Undercover and everyone else&nbsp;who
+supports our cause.</font></p>
+<p align="center"><font face="Fixedsys" color="#00ff00" size="4">&nbsp;<font color="#00ff00">*
+Alldas and Attrition (good mirroring sites)</font></font></p>
+<p align="center"><font face="Fixedsys" size="4" color="#00FF00">*<font face="Fixedsys">
+sub-0, Cyberpunk, B_real,&nbsp;laughing3y3s, h3ll rais3r,&nbsp; B1n4ry C0d3,
+brake^off&nbsp;</font></font></p>
+<p align="center"><font face="Fixedsys" color="#00FF00">
+ and Tå|{êÑø£Øgîç.</font></p>
+<p align="left"><font face="Abadi MT Condensed Light" color="#00ff00" size="4">===============================================================</font></p>
+<p align="center"><font face="Abadi MT Condensed Light"><b><font color="#ffffff" size="5">Reach
+all of </font><font color="#00ff00" size="6">us</font><font face="Impact" color="#ffffff" size="5">
+@ </font></b><a href="mailto:wfd2001@nightmail.com?Subject=You people r0ck!"><font face="Impact" color="#00ff00" size="5">wfd2001@nightmail.com</font></a></font></p>
+<p align="center"><font face="Abadi MT Condensed Light">&nbsp;<font color="#ffffff" size="5">Reach
+</font><font face="Impact" color="#00ff00" size="5"><b>m0r0n
+and nightman</b>&nbsp;
+@ </font><a href="mailto:m0r0nandnightman@doityourself.com?subject=We support you!"><font color="#00ff00" size="5">m0r0nandnightman@doityourself.com</font></a></font></p>
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p align="center"><u><font color="#CCFFCC" size="2" face="Abadi MT Condensed Light">The eleventh commandment:</font></u></p>
+<p align="center"><font face="Abadi MT Condensed Light" color="#CCFFCC" size="2">Thou shalt
+not get caught.</font></p>
+<p align="center">&nbsp;</p>
+
+
+<!-- This is the start of the Kashmir day hack attack! -->
+
+
+
+<p><font color="#00FF00" size="2">Please do visit this part of the site. <a href="education/Diploma_in%20Cyber%20Laws/intro.htm">Click!</a>&nbsp;</font></p>
+<p><font color="#00FF00" size="2">It is about Cyber laws in India! 8-)</font></p>
+<!-- www.attrition.org web hack mirror - watermark or something -->

@@ -1,0 +1,32 @@
+--00:14:11--  http://unix9.org:80/
+           => `unix9.org/index.html'
+Connecting to unix9.org:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 929 [text/html]
+
+    0K ->                                                        [100%]
+
+00:14:12 (2.65 KB/s) - `unix9.org/index.html' saved [929/929]
+
+Loading robots.txt; please ignore errors.
+--00:14:12--  http://unix9.org:80/robots.txt
+           => `unix9.org/robots.txt'
+Connecting to unix9.org:80... connected!
+HTTP request sent, awaiting response... 404 Not Found
+00:14:13 ERROR 404: Not Found.
+
+--00:14:13--  http://unix9.org:80/x3.jpg
+           => `unix9.org/x3.jpg'
+Connecting to unix9.org:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 2,054 [image/jpeg]
+
+    0K -> ..                                                     [100%]
+
+00:14:15 (2.37 KB/s) - `unix9.org/x3.jpg' saved [2054/2054]
+
+Converting unix9.org/index.html... done.
+
+FINISHED --00:14:15--
+Downloaded: 2,983 bytes in 2 files
+Converting unix9.org/index.html... done.

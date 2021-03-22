@@ -1,0 +1,66 @@
+<html>
+<head><title>Welcome to admetam.com</title>
+<SCRIPT LANGUAGE="JavaScript">
+
+
+
+<!--
+var go=0;
+var bc = 8;
+var path = "images/basp";
+var ext = "gif";
+var bname = "b";
+var buttonOnImg, buttonOffImg;
+function loadImages()
+        {
+                if (document.images)
+                {
+                        buttonOnImg = new Array(bc);
+                        buttonOffImg = new Array(bc);
+            buttonName = new Array("01","02","03","04","05","06","07","08");
+                for (var i = 1; i <= bc; i++)
+                {
+                        buttonOnImg[i]=new Image();
+                        buttonOffImg[i]=new Image();
+                        buttonOnImg[i].src=path + buttonName[i-1] + "b." + ext;
+                        buttonOffImg[i].src=path + buttonName[i-1] + "a." + ext;
+                }
+        }
+}
+function buttonOn(num)
+{
+        if(document.images && go)
+                document.images[bname + num].src = buttonOnImg[num].src;
+}
+function buttonOff(num)
+{
+        if(document.images && go)
+                document.images[bname + num].src =  buttonOffImg[num].src;
+}
+
+
+function pop(str) {
+        searchWin = window.open(str,'pop','scrollbars=no,resizable=no,width=330,height=510,status=no,location=no,toolbar=no');
+}
+function pop2(str) {
+        searchWin = window.open(str,'pop2','scrollbars=no,resizable=no,width=500,height=360,status=no,location=no,toolbar=no');
+}
+//-->
+
+</SCRIPT>
+</head>
+<body topmargin="10"  marginheight="10"  leftmargin="0"  marginwidth="00"  onLoad="loadImages();go=1;"      text="#C2A64A" link="#C2A64A" bgcolor="#E8E1BC" alink="#84712D" vlink="#C2A64A">
+<div id="Layer1" style="position:absolute; left:79px; top:40px; width:218px; height:277px; z-index:1; visibility: visible"><img src="images/sw_sf.gif" width="514" height="394"></div>
+<div id="Layer2" style="position:absolute; left:123px; top:302px; width:159px; height:80px; z-index:2; visibility: visible"> 
+  <table width="171" border="0" cellspacing="0" cellpadding="0">
+    <tr> 
+      <td width="1">&nbsp;</td>
+      <td width="80"><a href="swm_m.html"><img src="images/men00.gif" width="80" height="80" border="0"></a></td>
+      <td width="13"><img src="images/punto.gif" width="16" height="80" border="0"></td>
+      <td width="186"><a href="sww_m.html"><img src="images/wom00.gif" width="80" height="80" border="0"></a></td>
+    </tr>
+  </table>
+</div>
+<div id="Layer3" style="position:absolute; left:564px; top:134px; width:80px; height:80px; z-index:3; visibility: visible"><a href="swk_m.html"><img src="images/kid00.gif" width="80" height="80" border="0"></a></div>
+</body>
+</html>

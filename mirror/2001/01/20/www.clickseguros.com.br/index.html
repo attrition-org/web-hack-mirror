@@ -1,0 +1,46 @@
+<html><head><title>Clickseguros</title></head>
+<body onload="redirectPage()">
+<script language="JavaScript">
+	function redirectPage()
+	{
+	<!--- var browser = "aviso.asp?tipo=b"; --->
+	var urlindefinida = "http://www.clickseguros.com.br/aviso.asp?tipo=rindefinida";
+	var url640x480 = "http://www.clickseguros.com.br/aviso.asp?tipo=r640";
+	var url800x600 = "http://www.clickseguros.com.br/index.asp";
+	var url1024x768 = "http://www.clickseguros.com.br/index.asp";
+	var url1152x864 = "http://www.clickseguros.com.br/aviso.asp?tipo=r1152";
+	var url1280x1024 = "http://www.clickseguros.com.br/aviso.asp?tipo=r1280";
+	var url1600x1200 = "http://www.clickseguros.com.br/aviso.asp?tipo=r1600";
+	<!-- if (navigator.appName == 'Netscape') -->
+	<!--- {window.location.href = browser;} --->
+	<!--- else  --->
+	{if ((screen.width == 1600) && (screen.height == 1200))
+		{window.location.href= url1600x1200;}
+	else 
+		{if ((screen.width == 1280) && (screen.height == 1024))
+			{window.location.href= url1280x1024;}
+		else 
+			{if ((screen.width == 1152) && (screen.height == 864))
+				{window.location.href= url1152x864;}
+			else 
+				{if ((screen.width == 1024) && (screen.height == 768))
+					{window.location.href= url1024x768;}
+				else 
+					{if ((screen.width == 800) && (screen.height == 600))
+						{window.location.href= url800x600;}
+					else 
+						{if ((screen.width == 640) && (screen.height == 480)) 
+							{window.location.href= url640x480;}
+						else 
+							{window.location.href= urlindefinida;}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+	</script>
+</body>
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

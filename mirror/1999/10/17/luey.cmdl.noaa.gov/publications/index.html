@@ -1,0 +1,141 @@
+<html>
+
+<head>
+<title>CMDL Publications Search Page</title>
+<script>
+
+function checkform()
+{
+
+  if (document.datacheck.AuthorPub.value == "" && document.datacheck.TitlePub.value == "" &&
+		document.datacheck.AbstractPub.value == "" && document.datacheck.PlacePub.value == "" &&
+		document.datacheck.PlacePub.value == "" && document.datacheck.KeywordPub.value == "" &&
+		document.datacheck.GroupPub.selectedIndex == ( document.datacheck.GroupPub.length - 1) &&
+		document.datacheck.YearPub.selectedIndex == ( document.datacheck.YearPub.length - 1)) {
+		alert("Please select at least one method of searching.")
+		return false
+  }
+
+  return true
+}
+
+</script>
+</head>
+
+<body BGCOLOR="#F0F0F0">
+<div align="center"><center>
+
+<table border="0" width="95%">
+  <tr>
+    <td align="center" width="25%" valign="top"><p align="center"><a href="/index.html"><img src="http://netsrv1.cmdl.noaa.gov/images/noaalogo1.gif" alt="CMDL" border="0" WIDTH="144" HEIGHT="145"></a></p>
+    <p align="center"><em><font face="Arial"><strong><big><big>Climate Monitoring</big></big> <big><big>&amp;</big></big>
+    <big><big>Diagnostics Laboratory</big></big></strong></font></em></td>
+    <td align="right" width="75%"><h1><strong><font face="Arial">CMDL
+      Publications Page</font></strong></h1>
+      <p align="right"><font face="Arial"><big><i><a href="http://www.doc.gov/">U.S. Dept. of
+    Commerce</a> / <a href="http://www.noaa.gov">NOAA</a> / <a href="http://www.oar.noaa.gov">OAR</a>    / <u>CMDL</u></i></big></font>
+      <p><a href="searchhelp.html"><font face="Arial"><big>Click here for help</big></font></a></p>
+    </td>
+  </tr>
+</table>
+</center></div>
+
+<hr align="center">
+
+<p align="center"><font face="Arial"><big>To view publications by year select one of the
+following:</big></font></p>
+
+<p align="center"><font face="Arial">[<a href="data/1992.html">1992</a>] [<a href="data/1993.html">1993</a>] [<a href="data/1994.html">1994</a>]
+[<a href="data/1995.html">1995</a>] [<a href="data/1996.html">1996</a>]
+[<a href="data/1997.html">1997</a>] [<a href="data/1998.html">1998</a>] [<a href="data/1999.html">1999</a>]</font></p>
+
+<p align="center"><font face="Arial"><a href="annrpt23/index.html">CMDL Summary
+Report #23 (1994-1995)</a></font></p>
+
+<hr>
+
+<p align="center"><strong><big><font face="Arial">Restrict Search By:</font></big></strong></p>
+
+<form method="POST" action="http://ozwvsrv.cmdl.noaa.gov/results.asp" name="datacheck" ONSUBMIT="if (! checkform()) {
+		return false
+	     } else {
+		return true
+	     }">
+  <div align="center"><center><table border="1" width="69%" height="146" cellspacing="1" cellpadding="10">
+    <tr>
+      <td width="28%" height="25"><div align="left"><p><strong><font face="Arial">Author:</font></strong></td>
+      <td width="55%" height="25"><div align="left"><p><font face="Arial"><input type="text" name="AuthorPub" size="40" style="background-color: rgb(192,192,192)"></font><br>
+      <small><font face="Arial">Enter the author's name. (LASTNAME)</font></small></td>
+    </tr>
+    <tr>
+      <td width="28%" height="24"><div align="left"><p><strong><font face="Arial">Title of
+      Publication:</font></strong></td>
+      <td width="55%" height="24"><div align="left"><p><font face="Arial"><input type="text" name="TitlePub" size="40" style="background-color: rgb(192,192,192)"></font><br>
+      <small><font face="Arial">Enter keywords found in the paper's title.</font></small></td>
+    </tr>
+    <tr>
+      <td width="28%" height="24"><strong><font face="Arial">Abstract:</font></strong></td>
+      <td width="55%" height="24"><font face="Arial"><input type="text" name="AbstractPub" size="40" style="background-color: rgb(192,192,192)"></font><br>
+      <small><font face="Arial">Enter keywords found in the paper's abstract.</font></small></td>
+    </tr>
+    <tr>
+      <td width="28%" height="25"><div align="left"><p><strong><font face="Arial">Source of
+      Publication:</font></strong></td>
+      <td width="55%" height="25"><div align="left"><p><font face="Arial"><input type="text" name="PlacePub" size="40" style="background-color: rgb(192,192,192)"></font><br>
+      <small><font face="Arial">Enter keywords found in the source's title.</font></small></td>
+    </tr>
+    <tr>
+      <td width="28%" height="25"><strong><font face="Arial">Content:</font></strong></td>
+      <td width="55%" height="25"><font face="Arial"><input type="text" name="KeywordPub" size="40" style="background-color: rgb(192,192,192)"></font><br>
+      <small><font face="Arial">Enter keywords pertaining to the paper's content.</font></small></td>
+    </tr>
+    <tr>
+      <td width="28%" height="26"><div align="left"><p><strong><font face="Arial">CMDL Group:</font></strong></td>
+      <td width="55%" height="26"><font face="Arial"><select name="GroupPub" size="1" style="background-color: rgb(192,192,192)">
+        <option value="Aerosols">Aerosols</option>
+        <option value="Carbon Cycle-Greenhouse Gases">Carbon Cycle-Greenhouse Gases</option>
+        <option value="Halocarbons and other Atmospheric Trace Species">Halocarbons and other Atmospheric Trace Species</option>
+        <option value="Observatory Operations">Observatory Operations</option>
+        <option value="Ozone &amp; Water Vapor">Ozone &amp; Water Vapor</option>
+        <option value="Radiation">Radiation</option>
+        <option value selected></option>
+      </select></font><br>
+      <small><font face="Arial">Enter the primary author's CMDL research group.</font></small></td>
+    </tr>
+    <tr>
+      <td width="28%" height="26"><div align="left"><p><strong><font face="Arial">Year of
+      Publication:</font></strong></td>
+      <td width="55%" height="26"><font face="Arial"><select name="YearPub" size="1" style="background-color: rgb(192,192,192)">
+        <option value="1992">1992</option>
+        <option value="1993">1993</option>
+        <option value="1994">1994</option>
+        <option value="1995">1995</option>
+        <option value="1996">1996</option>
+        <option value="1997">1997</option>
+        <option value="1998">1998</option>
+        <option value="1999">1999</option>
+        <option value selected></option>
+      </select></font><br>
+      <small><font face="Arial">Enter the year of publication for the paper.</font></small></td>
+    </tr>
+  </table>
+  </center></div><div align="center"><center><p><font face="Arial"><input type="submit" value="Search" name="Submit">&nbsp;&nbsp;&nbsp; <input type="reset" value="Clear" name="Reset"></font></p>
+  </center></div>
+</form>
+
+<hr>
+<div align="center"><center>
+
+<table border="0" width="95%">
+  <tr>
+    <td width="25%" align="center"><a href="/index.html"><img src="../images/buttons/cmdltitlebut.gif" alt="CMDL" border="0" WIDTH="135" HEIGHT="41"></a></td>
+    <td width="75%" align="center"><font face="Arial"><big>Climate Monitoring &amp;
+    Diagnostics Laboratory</big><br>
+    325 Broadway R/E/CG<br>
+    Boulder, CO 80303<br>
+    (303) 497-6074</font></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

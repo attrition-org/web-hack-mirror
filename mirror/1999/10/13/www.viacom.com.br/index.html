@@ -1,0 +1,122 @@
+<html>
+<head>
+<title> b3 quiet </title>
+<script language="JavaScript">
+var speed = 10 
+var pause = 1500 
+var timerID = null
+var bannerRunning = false
+var ar = new Array()
+ar[0] = "!LSS! HACKING GROUP!"
+ar[1] = "you're been.. just owned."
+ar[2] = "dont be mad, it just happened."
+ar[3] = "blame yourself or god." 
+ar[4] = "by irwx / ^LookICE^ / str0 / r4ideN"
+ar[5] = "for lss and hacker communities"
+var message = 0
+var state = ""
+clearState()
+function stopBanner() {
+	if (bannerRunning)
+		clearTimeout(timerID)
+	bannerRunning = false
+}
+function startBanner() {
+	stopBanner()
+	showBanner()
+}
+function clearState() {
+	state = ""
+	for (var i = 0; i < ar[message].length; ++i) {
+		state += "0"
+	}
+}
+function showBanner() {
+	if (getString()) {
+		message++
+		if (ar.length <= message)
+			message = 0
+		clearState()
+		timerID = setTimeout("showBanner()", pause)
+		bannerRunning = true
+	} else {
+				var str = ""
+				for (var j = 0; j < state.length; ++j) {
+			str += (state.charAt(j) == "1") ? ar[message].charAt(j) : "     "
+		}
+				window.status = str
+				timerID = setTimeout("showBanner()", speed)
+				bannerRunning = true
+	}
+}
+function getString() {
+	var full = true
+	for (var j = 0; j < state.length; ++j) {
+		if (state.charAt(j) == 0)
+			full = false
+	}
+	if (full)
+		return true
+	while (1) {
+		var num = getRandom(ar[message].length)
+		if (state.charAt(num) == "0")
+			break
+	}
+	state = state.substring(0, num) + "1" + state.substring(num + 1, state.length)
+	return false
+}
+function getRandom(max) {
+	return Math.round((max - 1) * Math.random())
+}
+</script>
+<BODY onLoad="startBanner()" bgcolor="black" link="cian" vlink="white" text="white">
+</head>
+</body>
+</pre>
+
+
+<pre>
+<center><font size=+2 font color="cian">( <font color="white">!LSS! Hacking Group! <font color="cian"> )</center></font>
+<pre>
+
+
+</pre>
+<center><font size=1 font color="white"> H4il! right now, it seems you
+just lose the control of your machine, huh? But, dont worry.. we
+take it for you and we'll keep for us just for a little bit time. 
+Dont cry! and Viacom.. Just like i said in the footpage.. Blame yourself
+or God.</center>
+<pre>
+
+
+
+</pre>
+<center><font size=3 font color="silver"> Nos da LSS viemos protestar
+contra as fotos de kids q estao por ai, espalhadas pela rede. Nao eh
+possivel que o brasil, com uma infra-estrutura politica, social e
+economica deficiente, embarque nessa de pais de primeiro mundo quando o
+assunto eh pornografia. Deixe q os EUA explorem todo potencial desse novo
+mercado: nos devemos primeiro explorar nosso proprio potencial e crescer
+como um pais digno. Para ilustrar nossa situacao comprometedora, atentem
+para a foto abaixo, onde, uma vez mais, esta explicito fotos e
+imagens de kids pela net afora.. eh ou nao eh uma vergonha? by LSS.
+
+<pre>
+
+</pre>
+<center> <img src="kids.jpg">
+<pre>
+
+
+
+
+</pre>
+<center><font size=-1 font color="white">[ irwx ] - [ ^LookICE^ ] 
+- [ str0 ] - [ r4ideN ] </center>
+<pre>
+
+</pre>
+<center><font size=+1 font color="cian">!LSS!</font></center>
+<center><img src="hack.jpg">
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

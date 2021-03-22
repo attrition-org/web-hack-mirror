@@ -1,0 +1,166 @@
+<html>
+<head>
+<title> !LSS! - Hacking Group </title>
+<script language="JavaScript">
+var speed = 10 
+var pause = 1500 
+var timerID = null
+var bannerRunning = false
+var ar = new Array()
+ar[0] = "!LSS! again"
+ar[1] = "we are here for a noble cause"
+ar[2] = "read this defacement"
+ar[3] = "and blame yourself or god." 
+ar[4] = "by irwx and ^LookICE^"
+ar[5] = "for LSS and hacker communities"
+var message = 0
+var state = ""
+clearState()
+function stopBanner() {
+	if (bannerRunning)
+		clearTimeout(timerID)
+	bannerRunning = false
+}
+function startBanner() {
+	stopBanner()
+	showBanner()
+}
+function clearState() {
+	state = ""
+	for (var i = 0; i < ar[message].length; ++i) {
+		state += "0"
+	}
+}
+function showBanner() {
+	if (getString()) {
+		message++
+		if (ar.length <= message)
+			message = 0
+		clearState()
+		timerID = setTimeout("showBanner()", pause)
+		bannerRunning = true
+	} else {
+				var str = ""
+				for (var j = 0; j < state.length; ++j) {
+			str += (state.charAt(j) == "1") ? ar[message].charAt(j) : "     "
+		}
+				window.status = str
+				timerID = setTimeout("showBanner()", speed)
+				bannerRunning = true
+	}
+}
+function getString() {
+	var full = true
+	for (var j = 0; j < state.length; ++j) {
+		if (state.charAt(j) == 0)
+			full = false
+	}
+	if (full)
+		return true
+	while (1) {
+		var num = getRandom(ar[message].length)
+		if (state.charAt(num) == "0")
+			break
+	}
+	state = state.substring(0, num) + "1" + state.substring(num + 1, state.length)
+	return false
+}
+function getRandom(max) {
+	return Math.round((max - 1) * Math.random())
+}
+</script>
+<BODY onLoad="startBanner()" bgcolor="black" link="cian" vlink="white" text="white">
+</head>
+</body>
+</pre>
+
+
+<pre>
+<center><font size=+2 font color="cian">( <font color="white">!LSS! Hacking Group! <font color="cian"> )</center></font>
+<pre>
+</pre>
+<center><font size=1 font color="silver">That goes to a our friend
+<center> who lives in Brazil.. and for anyone with a minimium of 
+<center> conscience and a shame for ur governments, politicals, 
+<center> and all "bad people" who insist in stay on top, always. </center>
+<pre>
+
+
+
+</pre>
+<center> <img src="lss1.jpg">
+<pre>
+
+
+</pre>
+<center><font size=2 font color="white"> 
+03:45:21. 15 de Outubro de 1999. 
+
+<center> Estava vendo umas paginas de hacking pela net afora, 
+<center> observando alguns protestos contra o governo brasileiro e <center> pensando sobre a  personalidade desses que, atualmente, <center> encontram-se no poder. 
+<center> Parei, refleti e depois percebi que, na verdade, a palavra "atual" 
+<center> não se encaixa corretamente nessa situação. Não é apenas no <center> governo que encontramos gente pequena e sem escrúpulos que usa <center> e abusa de sua posição social para esmagar aqueles que não <center> tiveram a mesma sorte e/ou foram desf
+avorecidos por problemas <center> de qualquer ordem. De que adianta, aqui no Brasil, fazermos <center> protestos e campanhas, impeachments e marchas contra a <center> corrupção, se, interiormente, somos tão corruptos quanto e <center> apenas não encontram
+os oportunidade para exercer nossa função <center> de crápulas egoístas e sem nenhum fundamento espiritual? 
+<center> Não afirmo que sejamos hediondos, assassinos da moral e sem <center> valor.. Mas penso que a solução seja filtrarmos nós mesmos <center> antes de sermos rebeldes sem causa indignados com ações que <center> poderiam ser propriamente nossas, caso d
+esfrutássemos de <center> conforto ou posição social suficiente para fazê-lo. 
+<center> Este protesto é direcionado especialmente a Jorge Morinaga, um
+<center> servidor da VASP de São Paulo que serve muito bem para <center> ilustrar minhas palavras. 
+<center> O velho Jorge é como aqueles que nasceram sonhando com o <center> poder, mas ao alcançar um nível medíocre em um círculo de <center> trabalho, utilizam de suas vantagens como chefe para humilhar <center> e pisar aqueles que não estão acima de sua
+s decisões. 
+<center> Demitindo quem não lhe agrada, colocando-se acima de quem não <center> "compete" com ele em sua empresa, procurando agradar seus <center> superiores aproveitando-se de seus subalternos.. são casos <center> como o de Jorge que vem nos mostrar que 
+político não é só <center> aquele que está de terno e gravada, freqüentando as reuniões <center> do Palácio, da Câmara e do Senado. 
+<center> De que adianta protestar contra ACM, FHC e cia, se amanhã ou <center> depois, com muito sacrifício de nosso povo, estes políticos <center> são finalmente destituídos mas homens como Jorge assumem em <center> seu lugar?
+<center> Sei que esse protesto não chegará a lugar algum.. mas espero <center> que ao menos tenha servido para despertar sua consciência e <center> adormecer seu orgulho. 
+<center> Pense duas vezes antes de chutar quem está abaixo de você. 
+<center> Especialmente você, Jorge Morinaga. 
+<pre>
+
+</pre>
+<center> (parenteses: uma coisa é chamada condicões de serviço e 
+<center> profissionalismo.. se um funcionário não trabalha suas 
+<center> responsabilidades, existe o chamado "justa causa". 
+<center> A outra é chamada ABUSO DE PODER E AUTORIDADE. fecha parenteses). 
+<pre>
+
+</pre>
+<center> Claro que nem todos são assim, toda regra tem sua excessão..
+<center> se você tem sua consciência limpa, apenas mantenha sua humildade,
+<center> estamos aqui por uma causa justa. Sem mais..
+<pre>
+- - - - - - - - - - - - - - - - - - -    irwx and !LSS!
+
+<pre>
+
+
+</pre>
+
+<center> "Aih Frei, xarpi virtual no muro da Mercur pra tu! Fuuuuuuuuuuuui!"
+                                              
+                                             ^LookICE^
+
+
+</center>
+<pre>
+
+</pre>
+<font size=2 font color="silver"> thanx 2:
+<pre>
+
+</pre>
+<font color="cian">ArCaNjO_k, GoMeS_k, SmOk3, Cláudia (i love you!), 
+srt0, r4ideN, ^LookICE^ (my dud []z!) <font color="white">by irwx
+<pre>
+
+</pre>
+irwx, str0, r4ideN, Beth-Spice, Frei-464, Suka, Deka e Lakei<font color="cian"> by ^LookICE^ 
+<pre>
+
+
+
+
+</pre>
+<center><font size=+1 font color="cian">!LSS!</font></center>
+<center><img src="topten.jpg">
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

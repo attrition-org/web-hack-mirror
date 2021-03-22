@@ -1,0 +1,213 @@
+<html>
+
+<head>
+<title>Network Status</title>
+<style fprolloverstyle>A:hover {color: #A53831; font-size: 14pt}
+</style>
+<base target="_self">
+</head>
+
+<body bgcolor="#FFFFFF" link="#5F5F5F" alink="#5F5F5F" vlink="#5F5F5F" onLoad = "start_clock()">
+
+<p align="left">&nbsp;</p>
+
+<p align="left" style="margin-top: 50">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<big><big><big><b><font color="#A53831">WBSnet Network Status
+Page</font></b></big></big></big></p>
+
+<p align="left" style="margin-top: 0"><img border="0" src="images/line.gif" width="554" height="10"></p>
+
+<table width="90%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>We do our very best to provide a continuous and quality service, but there 
+      are times when due to the distributed nature of the Internet and telephone 
+      system problems may occur that are beyond our control.</td>
+  </tr>
+</table>
+<h3>Planned Shutdowns</h3>
+
+<div align="left">
+
+<table border="1" width="90%">
+  <tr>
+      <td width="30%">12th September:</td>
+      <td width="70%">Network outage from 1am to 5am due to NTL upgrading their 
+        systems. </td>
+  </tr>
+</table>
+
+</div>
+
+<p align="left" style="margin-top: 0">&nbsp;</p>
+
+<h3>Current Status</h3>
+
+<div align="left">
+
+<table border="1" width="90%" height="246">
+  <tr>
+      <td width="28%" height="156" valign="top"> 
+        <script language = "JavaScript">
+<!-- Begin hiding here --
+
+/*********************************************************************************
+this script by Jason Schanker (jcheetah@orion.webspan.net)                        
+comes from "http://www.webspan.net/~herbs/jcheetah/web_design/javascript/time.html"                             
+You may copy this source freely if credit is given to the author
+**********************************************************************************/
+
+function start_clock() 
+{
+	
+	var now = new Date();
+
+	var hours = now.getHours();
+
+	var minutes = now.getMinutes();
+
+	var seconds = now.getSeconds();
+
+	var today = now.getDay();
+
+	var month = now.getMonth();
+
+	var year = now.getYear(); 
+
+	var date = now.getDate();
+
+	if(hours < 12) var part_of_day = "Good Morning!"
+
+	else if(hours < 18) var part_of_day = "Good Afternoon!";
+
+	else var part_of_day = "Goodnight!";
+
+	if (today == 0) today = "Sunday, "; 
+
+	else if (today == 1) today = "Monday, ";
+
+	else if (today == 2) today = "Tuesday, ";
+
+	else if (today == 3) today = "Wednesday, ";
+
+	else if (today == 4) today = "Thursday, ";
+
+	else if (today == 5) today = "Friday, ";
+
+	else if (today == 6) today = "Saturday, ";
+
+	if (month == 0) month = "January ";
+
+	else if (month == 1) month = "February ";
+
+	else if (month == 2) month = "March ";
+
+	else if (month == 3) month = "April ";
+
+	else if (month == 4) month = "May ";
+
+	else if (month == 5) month = "June ";
+
+	else if (month == 6) month = "July ";
+
+	else if (month == 7) month = "August ";
+
+	else if (month == 8) month = "September ";
+
+	else if (month == 9) month = "October ";
+
+	else if (month == 10) month = "November ";
+
+	else if (month == 11) month = "December ";
+
+	if(seconds < 10) seconds = "0" + seconds;
+
+	if(minutes < 10) minutes = "0" + minutes;
+
+	if(hours < 12) seconds = seconds + " A.M.";
+
+	else if(hours >= 12) seconds = seconds + " P.M."
+
+	if(hours == 0) hours = hours + 12; 
+
+	else if(hours > 12) hours = hours - 12;
+
+	var time = hours + ":" + minutes + ":" + seconds;  
+
+	
+
+
+	document.time_form.date.value = today + month + date + ", "  + year 
+
+	
+
+}
+
+// -- End hiding here -->
+</script>
+
+<form name = "time_form">
+    <br>
+<br>
+    <input name = "date" size = "28" value = "Loading...">
+ 
+        <p>&nbsp;</p>
+    </form></td>
+      <td width="72%" height="156" valign="top"><font color="#A53831"><b>No problems 
+        reported currently</b></font> 
+        <p><br>
+      If you're having problems with the Internet (and if you use WBSnet as your
+      Internet connection provider), check this page before phoning the helpline.
+      We'll tell you what's going on as soon as we're aware of any problems.<br>
+      If you decide you still need to contact someone at WBSnet to talk through
+      a service problem, then please either e-mail support@wbsnet.co.uk or phone
+      our support line on 01432 269008 and someone will call you back.
+    </td>
+  </tr>
+</table>
+</div>
+
+<p><b><font size="4">Event History</font></b></p>
+<div align="left">
+  <table border="1" cellspacing="1" width="90%">
+    <tr>
+      <td width="28%">5th-6th September</td>
+      <td width="72%">
+        <p>Some minor problems with the mail due to a 'spam' attack. A malicious 
+          third party has been sending mails related to free 'university diplomas'. 
+          We are currently working to trace the culprits and apologise for any 
+          disruption in service.</p>
+        </td>
+    </tr>
+    <tr> 
+      <td width="28%">26th -30th May</td>
+      <td width="72%">The mail server was down during this period, due to relocation. 
+        All emails sent to user of the wbsnet mail server would may have received 
+        errors when sending and receiving mail. This problem is now cured. Sorry 
+        for any inconveniences.</td>
+    </tr>
+    <tr> 
+      <td width="28%">04/05 October 1999</td>
+      <td width="72%">The Email Server experienced intermittent problems from 
+        20:30 on the 4th&nbsp; October til 8:30am on the 5th October.&nbsp; The 
+        Server is now back up and working correctly.</td>
+    </tr>
+  </table>
+</div>
+
+<p>Have you had a problem with the server or will a planned Shutdown affect you? Then
+please</p>
+
+<p style="margin-top: -14">use our<font color="#5F5F5F"> <a href="feedback.htm"><font size="3">Feedback Form</font></a></font><font color="#A53831">.</font></p><p align="left">
+
+<font color="#A53831"><font face="Times New Roman" size="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size="4"><font face="Times New Roman" size="-1"><br>
+</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></font><b><font face="Times New Roman" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></b></font><b><font face="Times New Roman" size="2" color="#000000">The WebMaster<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright © 1998-99&nbsp; </font><font face="Times New Roman" size="2" color="#A53831">WBSnet</font><font face="Times New Roman" size="2" color="#000000">. All rights reserved.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font></b></p>
+<font color="#A53831">
+<font size="4"><font face="Times New Roman" size="4">
+
+</font></font></font></body>
+</html>

@@ -1,0 +1,172 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>ES3.0 Sample Search Interface</title>
+</head>
+
+<script>
+var LiveConnectOn = 0;
+var hasJava = 0;        
+var hasIFC = 0;        
+var str = '';
+self.name="ns_search_results";
+
+function setLiveConnectOn(){
+        // see whether LiveConnect is there
+        if (navigator.appName == "Netscape" && 
+           (parseInt(navigator.appVersion) == 3 ||  
+            parseInt(navigator.appVersion) == 4) &&
+            navigator.javaEnabled()){
+                LiveConnectOn = 1;        
+        }
+} 
+function setIFC(){
+        if (navigator.appName == "Netscape" && 
+            parseInt(navigator.appVersion) == 4 &&
+            navigator.javaEnabled()){
+                hasIFC = 1;
+        }
+} 
+function setJava(){
+        if (navigator.appName == "Netscape" && 
+            navigator.javaEnabled()){
+                hasJava = 1;
+        }
+}
+function GuidedSearchApplet(){
+        str = '';
+        makeGuidedSearchApplet();
+        var myWin = open("", 'guidedSearchApplet','resizeable=0,width=440,height=310,toolbar=no,scrollbars=no');
+        myWin.document.write(str);
+        myWin.document.close();
+}
+function makeGuidedSearchApplet(){
+
+        str='<html><head><title>GuidedSearch@www.mfie.gov.ma</title>';
+        str+='<meta http-equiv="content-type" content="text/html;charset=iso-8859-1"></head>';
+        str+='<body bgcolor=#FFFFFF>';
+	str+='<center>';
+        if(hasIFC){
+        str+='<applet codebase="search-ui/applet" archive="searchapplet.zip" code="NetscapeApplet"  width=390 height=265>';
+        } else if (navigator.appName == "Netscape"){
+        str+='<applet codebase="search-ui/applet" archive="applet.zip" code="NetscapeApplet"  width=390 height=265>';
+        } else {
+        str+='<applet codebase="search-ui/applet" code="NetscapeApplet" width=390 height=265>';
+	}
+        str+='<param name="ApplicationClass" value="SearchInterface">';
+        str+='<param name="search-applet-search-in" value="';
+        str+='Search in:'; str+='">';
+        str+='<param name="search-applet-search" value="';
+        str+='Search'; str+='">';
+        str+='<param name="search-applet-for" value="';
+        str+='for:'; str+='">';
+        str+='<param name="search-applet-advanced" value="';
+        str+='Advanced'; str+='">';
+        str+='<param name="search-applet-help" value="';
+        str+='Help'; str+='">';
+        str+='<param name="search-applet-add-line" value="';
+        str+='Add Line'; str+='">';
+        str+='<param name="search-applet-undo-line" value="';
+        str+='Undo Line'; str+='">';
+        str+='<param name="search-applet-clear" value="';
+        str+='Clear'; str+='">';
+        str+='<param name="search-applet-and-search-for" value="';
+        str+='and search for ...'; str+='">';
+        str+='<param name="search-applet-or-search-for" value="';
+        str+='or search for ...'; str+='">';
+        str+='<param name="search-applet-words" value="';
+        str+='Words'; str+='">';
+        str+='<param name="search-applet-words-in-proximity" value="';
+        str+='Words in proximity'; str+='">';
+        str+='<param name="search-applet-phrase" value="';
+        str+='Phrase'; str+='">';
+        str+='<param name="search-applet-literal" value="';
+        str+='Literal'; str+='">';
+        str+='<param name="search-applet-attribute" value="';
+        str+='Attribute'; str+='">';
+        str+='<param name="search-applet-any-pattern" value="';
+        str+='Any Pattern'; str+='">';
+        str+='<param name="search-applet-that" value="';
+        str+='that'; str+='">';
+        str+='<param name="search-applet-contains" value="';
+        str+='Contains'; str+='">';
+        str+='<param name="search-applet-starts" value="';
+        str+='Starts'; str+='">';
+        str+='<param name="search-applet-ends" value="';
+        str+='Ends'; str+='">';
+        str+='<param name="search-applet-matches" value="';
+        str+='Matches'; str+='">';
+        str+='<param name="search-applet-has-a-substring" value="';
+        str+='Has a substring'; str+='">';
+        str+='<param name="NS-collection" value="';
+        str+=''; str+='">';
+        str+='<param name="NS-display-query" value="';
+        str+=''; str+='">';
+        str+='</applet>';
+//      str+='<br><font size=-1>Copyright &#169; 1997 Netscape Communications Corporation. All Rights Reserved.</font>';
+	str+='</center>';
+        str+='</body></html>';
+}
+function GuidedSearch() {
+
+	setJava();
+	setIFC();
+
+   if (hasJava) {
+         GuidedSearchApplet();
+      }
+   else {
+      var myWin = open('/search?NS-query-pat=/text/NS-advquery.pat', '_self');
+      }
+}
+function setSearchData(myForm){
+
+    searchContext = document.search.pushIFCContext();
+    myForm.searchPattern.value = searchContext.setSearchQuery();
+    myForm.collectionName.value = searchContext.setCollectionName();
+    document.search.popIFCContext();
+}    
+
+</script>
+
+<body bgcolor=#FFFFFF>
+
+<center>
+<form method="post" action="/search?NS-search-page=results">
+<input type="hidden" name="NS-search-type" value=NS-boolean-query>
+<input type="hidden" name="NS-max-records" value="20">
+<table border=0>
+  <tr>
+    <td align=left colspan=3 nowrap><img src="http://www.mfie.gov.ma/search-ui/icons/magnifier.jpg" border=0 align=absmiddle><b><font size=+2>N</font><font size=+1>etscape&nbsp;</font><font size=+2>S</font><font size=+1>earch</font></b> <b><font size=+1>on www.mfie.gov.ma</font></b></td>
+    </tr>
+  <tr>
+    <td colspan=3><hr size=1 noshade width=100%></td>
+    </tr>
+  <tr>
+    <td colspan=3>To search, choose a collection, then enter words and phrases, separated by commas<br>(e.g., search, jet engines, basketball).</td>
+    </tr>
+  <tr>
+    <td align=right><b>Search&nbsp;in:</b></td>
+    <td align=left><select  name=NS-collection><OPTION SELECTED>----<OPTION>Finances<OPTION>Budget<OPTION>Assurances<OPTION>Douane<OPTION>Impots<OPTION>Domaines<OPTION>Etablissements Publics<OPTION>Tresorerie<OPTION>Ressources humaines<OPTION>Annuaire<OPTION>Al-maliya<OPTION>Inspection<OPTION>Retraite<OPTION>Investissement</select></td>
+    <td align=left>
+      <a href="javascript:GuidedSearch()"><img src=http://www.mfie.gov.ma/search-ui/icons/guided.gif border=0 align=absmiddle></a>
+      <a href="/help/srchhelp.htm" target=helpWindow><img src=http://www.mfie.gov.ma/search-ui/icons/help.gif border=0 align=absmiddle></a>
+      </td>
+    </tr>
+  <tr>
+    <td align=right><b>For:</b></td>
+    <td align=left><input name="NS-query" size=40 value=""></td>
+    <td align=left><input type="image" src=http://www.mfie.gov.ma/search-ui/icons/VERITY.GIF border=0 align=absmiddle></td>
+    </tr>
+  <tr>
+    <td colspan=3><hr size=1 noshade width=100%></td>
+    </tr>
+  <tr>
+    <td colspan=3 align=center><b><font size=-1>Copyright &#169; 1997 Netscape Communications Corporation. All Rights Reserved.</font></b></td>
+    </tr>
+  </table>
+  </form>
+  </center>
+
+</body>
+</html>

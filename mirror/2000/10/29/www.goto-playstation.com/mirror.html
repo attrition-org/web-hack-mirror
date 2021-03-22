@@ -1,0 +1,136 @@
+<html>
+<head>
+<title>sun city circuits ownz you</title>
+<LINK media="screen" href="style.css" type="text/css" rel="StyleSheet">
+<style>
+.spanstyle {
+	position:absolute;
+	visibility:visible;
+	top:-50px;
+	font-size:8pt;
+	font-family:Verdana;
+        font-weight:bold;
+	color:#336699;
+}
+</style>
+<script>
+
+var x,y
+var step=20
+var flag=0
+
+var message="sun city circuits"
+message=message.split("")
+
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	xpos[i]=-50
+}
+
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	ypos[i]=-50
+}
+
+function handlerMM(e){
+	x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+	y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+	flag=1
+}
+
+function makesnake() {
+	if (flag==1 && document.all) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("span"+(i)+".style")
+    		thisspan.posLeft=xpos[i]
+			thisspan.posTop=ypos[i]
+    	}
+	}
+	
+	else if (flag==1 && document.layers) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("document.span"+i)
+    		thisspan.left=xpos[i]
+			thisspan.top=ypos[i]
+    	}
+	}
+		var timer=setTimeout("makesnake()",30)
+}
+
+</script>
+
+</head>
+
+<BODY onLoad="makesnake()" style="width:100%;overflow-x:hidden;overflow-y:scroll" bgcolor="#ffffff" bgproperties="fixed" text="#000000" link="#336699" alink="#336688" vlink="#336699">
+
+<script>
+<!-- Beginning of JavaScript -
+
+for (i=0;i<=message.length-1;i++) {
+    document.write("<span id='span"+i+"' class='spanstyle'>")
+	document.write(message[i])
+    document.write("</span>")
+}
+
+if (document.layers){
+	document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+
+// - End of JavaScript - -->
+</script>
+
+<br>
+<center>
+<table width=269><tr><td>
+
+<h1>sun city circuits</h1>
+
+<p><b>Site hacked by sun city circuits</b></p>
+<p>Just testing the new sploit we coded,<br>
+obviously it worked!</p>
+<p>No files were deleted or changed;<br>
+   index.html was renamed as<br>index.old.html</p>
+
+<p><b>shouts to:</b><br> 
+tak,
+lowtek,
+Type-0,
+loophole,
+<a href="http://www.deadprotocol.org/">deadprotocol society</a>,
+burrows,
+overfien,
+sigterm,
+bind,
+f0bic,
+venomous,
+all of <a href="http://www.el8.org/">el8.org</a>,
+skeptik,
+JimJones,
+vulgar,
+reaxt,
+xbs,
+dataangel,
+vortek,
+billyb0y,
+#scc,
+napster,
+shakes
+</td></tr></table></center>
+
+</body>
+</html><!-- www.attrition.org web hack mirror - watermark or something -->

@@ -1,0 +1,124 @@
+<html>
+
+<head>
+<title>Customer Suggestion Form</title>
+
+
+<meta name="Microsoft Theme" content="none"><meta name="Microsoft Border" content="t"></head>
+
+<body background="../Images/Backgrounds/BsuNetBackground.gif" topmargin="0"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><font face="arial, helvetica" mstheme>
+
+<p align="center"><img src="../Images/Logos/BsuNetlogo.gif" WIDTH="539" HEIGHT="150"></p>
+</font mstheme></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><!--msnavigation--><td valign="top">
+
+<p align="center">BSU.NET Customer Suggestion Form<br>
+mandatory fields are with *</p>
+<div align="center"><center>
+
+<table border="0" width="79%">
+  <tr>
+    <td width="100%"><!--webbot BOT="GeneratedScript" PREVIEW=" " startspan --><script Language="JavaScript"><!--
+function FrontPage_Form1_Validator(theForm)
+{
+
+  var checkOK = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzƒŠŒŽšœžŸÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþ \t\r\n\f";
+  var checkStr = theForm.First_Name.value;
+  var allValid = true;
+  for (i = 0;  i < checkStr.length;  i++)
+  {
+    ch = checkStr.charAt(i);
+    for (j = 0;  j < checkOK.length;  j++)
+      if (ch == checkOK.charAt(j))
+        break;
+    if (j == checkOK.length)
+    {
+      allValid = false;
+      break;
+    }
+  }
+  if (!allValid)
+  {
+    alert("Please enter only letter and whitespace characters in the \"First Name\" field.");
+    theForm.First_Name.focus();
+    return (false);
+  }
+
+  var checkOK = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzƒŠŒŽšœžŸÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþ \t\r\n\f";
+  var checkStr = theForm.Last_Name.value;
+  var allValid = true;
+  for (i = 0;  i < checkStr.length;  i++)
+  {
+    ch = checkStr.charAt(i);
+    for (j = 0;  j < checkOK.length;  j++)
+      if (ch == checkOK.charAt(j))
+        break;
+    if (j == checkOK.length)
+    {
+      allValid = false;
+      break;
+    }
+  }
+  if (!allValid)
+  {
+    alert("Please enter only letter and whitespace characters in the \"Last Name\" field.");
+    theForm.Last_Name.focus();
+    return (false);
+  }
+
+  if (theForm.Email.value == "")
+  {
+    alert("Please enter a value for the \"Email Address\" field.");
+    theForm.Email.focus();
+    return (false);
+  }
+
+  var checkOK = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzƒŠŒŽšœžŸÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþ0123456789-@_-.";
+  var checkStr = theForm.Email.value;
+  var allValid = true;
+  for (i = 0;  i < checkStr.length;  i++)
+  {
+    ch = checkStr.charAt(i);
+    for (j = 0;  j < checkOK.length;  j++)
+      if (ch == checkOK.charAt(j))
+        break;
+    if (j == checkOK.length)
+    {
+      allValid = false;
+      break;
+    }
+  }
+  if (!allValid)
+  {
+    alert("Please enter only letter, digit and \"@_-.\" characters in the \"Email Address\" field.");
+    theForm.Email.focus();
+    return (false);
+  }
+
+  if (theForm.Suggestion.value == "")
+  {
+    alert("Please enter a value for the \"Suggestion\" field.");
+    theForm.Suggestion.focus();
+    return (false);
+  }
+  return (true);
+}
+//--></script><!--webbot BOT="GeneratedScript" endspan --><form method="POST" action="../_vti_bin/shtml.dll/Customer%20Suggestion%20Form/CustomerSuggestionForm.htm" onsubmit="return FrontPage_Form1_Validator(this)" name="FrontPage_Form1" webbot-action="--WEBBOT-SELF--">
+      <!--webbot bot="SaveResults" U-File="Data/CustomerSuggestionData.txt" S-Format="TEXT/TSV" S-Label-Fields="TRUE" B-Reverse-Chronology="FALSE" S-Email-Format="TEXT/PRE" B-Email-Label-Fields="TRUE" S-Builtin-Fields="Date Time REMOTE_USER" S-Form-Fields="First_Name Last_Name Email SuggestionType Suggestion " U-Confirmation-Url="Confirmation Pages/ConfirmationPage.htm" S-Email-Address="help@bsu.net" startspan --><input TYPE="hidden" NAME="VTI-GROUP" VALUE="0"><!--webbot bot="SaveResults" endspan i-checksum="43374" --><div align="left"><p>First Name&nbsp;&nbsp;&nbsp; <!--webbot bot="Validation" S-Display-Name="First Name" S-Data-Type="String" B-Allow-Letters="TRUE" B-Allow-WhiteSpace="TRUE" --><input type="text" name="First_Name" size="15" tabindex="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Last
+      Name &nbsp;&nbsp;&nbsp; <!--webbot bot="Validation" S-Display-Name="Last Name" S-Data-Type="String" B-Allow-Letters="TRUE" B-Allow-WhiteSpace="TRUE" --><input type="text" name="Last_Name" size="15" tabindex="2"></p>
+      </div><div align="left"><p>* Email
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <!--webbot bot="Validation" S-Display-Name="Email Address" S-Data-Type="String" B-Allow-Letters="TRUE" B-Allow-Digits="TRUE" S-Allow-Other-Chars="@_-." B-Value-Required="TRUE" --><input type="text" name="Email" size="20" tabindex="3"></p>
+      </div><div align="left"><p>Your Suggestion is Classified as:&nbsp;&nbsp;&nbsp; <input type="radio" value="Services" checked name="SuggestionType" tabindex="4">Services
+      &nbsp;&nbsp;&nbsp; <input type="radio" name="SuggestionType" value="Technical Support" tabindex="5">Technical Support&nbsp;&nbsp;&nbsp; <input type="radio" name="SuggestionType" value="Web Site" tabindex="6">Web Site&nbsp;&nbsp;&nbsp; <input type="radio" name="SuggestionType" value="Other" tabindex="7">Other</p>
+      </div><div align="left"><p>* Suggestion:&nbsp;&nbsp;&nbsp; <br>
+      <!--webbot bot="Validation" B-Value-Required="TRUE" --><textarea rows="2" name="Suggestion" cols="78" tabindex="8"></textarea></p>
+      </div><div align="left"><p><input type="submit" value="Submit" name="Submit" tabindex="9"><input type="reset" value="Reset" name="Reset" tabindex="10"></p>
+      </div>
+    </form>
+    </td>
+  </tr>
+</table>
+</center></div>
+
+<p>&nbsp; 
+<!--msnavigation--></td></tr><!--msnavigation--></table></body>
+</html>

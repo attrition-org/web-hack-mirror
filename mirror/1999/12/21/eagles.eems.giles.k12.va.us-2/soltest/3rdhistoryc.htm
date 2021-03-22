@@ -1,0 +1,2179 @@
+<HTML>
+<HEAD><META NAME="Author" CONTENT="Produced using Hot Potatoes by Half-Baked Software, registered to Jeff Young.">
+<TITLE></TITLE>
+<SCRIPT language="JavaScript">
+
+var min
+var sec
+var ShowReadingAgain = 'Show reading again'
+var platform = 'win'
+if (navigator.appVersion.indexOf('Mac') != -1) {platform = 'mac'}
+
+macrightchar = ':-)'
+macwrongchar = 'X'
+winrightchar = ':-)'
+winwrongchar = 'X'
+
+
+DoneStatus = new Array();
+DoneStatus[1] = '0';
+DoneStatus[2] = '0';
+DoneStatus[3] = '0';
+DoneStatus[4] = '0';
+DoneStatus[5] = '0';
+DoneStatus[6] = '0';
+DoneStatus[7] = '0';
+DoneStatus[8] = '0';
+DoneStatus[9] = '0';
+DoneStatus[10] = '0';
+DoneStatus[11] = '0';
+DoneStatus[12] = '0';
+DoneStatus[13] = '0';
+DoneStatus[14] = '0';
+DoneStatus[15] = '0';
+DoneStatus[16] = '0';
+DoneStatus[17] = '0';
+DoneStatus[18] = '0';
+DoneStatus[19] = '0';
+DoneStatus[20] = '0';
+DoneStatus[21] = '0';
+DoneStatus[22] = '0';
+DoneStatus[23] = '0';
+DoneStatus[24] = '0';
+DoneStatus[25] = '0';
+DoneStatus[26] = '0';
+DoneStatus[27] = '0';
+DoneStatus[28] = '0';
+DoneStatus[29] = '0';
+DoneStatus[30] = '0';
+DoneStatus[31] = '0';
+DoneStatus[32] = '0';
+DoneStatus[33] = '0';
+DoneStatus[34] = '0';
+DoneStatus[35] = '0';
+DoneStatus[36] = '0';
+DoneStatus[37] = '0';
+DoneStatus[38] = '0';
+DoneStatus[39] = '0';
+DoneStatus[40] = '0';
+DoneStatus[41] = '0';
+DoneStatus[42] = '0';
+
+
+Responses = new Array();
+Responses[1] = '';
+Responses[2] = '';
+Responses[3] = '';
+Responses[4] = '';
+Responses[6] = '';
+Responses[7] = '';
+Responses[8] = '';
+Responses[9] = '';
+Responses[11] = '';
+Responses[12] = '';
+Responses[13] = '';
+Responses[14] = '';
+Responses[16] = '';
+Responses[17] = '';
+Responses[18] = '';
+Responses[19] = '';
+Responses[21] = '';
+Responses[22] = '';
+Responses[23] = '';
+Responses[24] = '';
+Responses[26] = '';
+Responses[27] = '';
+Responses[28] = '';
+Responses[29] = '';
+Responses[31] = '';
+Responses[32] = '';
+Responses[33] = '';
+Responses[34] = '';
+Responses[36] = '';
+Responses[37] = '';
+Responses[38] = '';
+Responses[39] = '';
+Responses[41] = '';
+Responses[42] = '';
+Responses[43] = '';
+Responses[44] = '';
+Responses[46] = '';
+Responses[47] = '';
+Responses[48] = '';
+Responses[49] = '';
+Responses[51] = '';
+Responses[52] = '';
+Responses[53] = '';
+Responses[54] = '';
+Responses[56] = '';
+Responses[57] = '';
+Responses[58] = '';
+Responses[59] = '';
+Responses[61] = '';
+Responses[62] = '';
+Responses[63] = '';
+Responses[64] = '';
+Responses[66] = '';
+Responses[67] = '';
+Responses[68] = '';
+Responses[69] = '';
+Responses[71] = '';
+Responses[72] = '';
+Responses[73] = '';
+Responses[74] = '';
+Responses[76] = '';
+Responses[77] = '';
+Responses[78] = '';
+Responses[79] = '';
+Responses[81] = '';
+Responses[82] = '';
+Responses[83] = '';
+Responses[84] = '';
+Responses[86] = '';
+Responses[87] = '';
+Responses[88] = '';
+Responses[89] = '';
+Responses[91] = '';
+Responses[92] = '';
+Responses[93] = '';
+Responses[94] = '';
+Responses[96] = '';
+Responses[97] = '';
+Responses[98] = '';
+Responses[99] = '';
+Responses[101] = '';
+Responses[102] = '';
+Responses[103] = '';
+Responses[104] = '';
+Responses[106] = '';
+Responses[107] = '';
+Responses[108] = '';
+Responses[109] = '';
+Responses[111] = '';
+Responses[112] = '';
+Responses[113] = '';
+Responses[114] = '';
+Responses[116] = '';
+Responses[117] = '';
+Responses[118] = '';
+Responses[119] = '';
+Responses[121] = '';
+Responses[122] = '';
+Responses[123] = '';
+Responses[124] = '';
+Responses[126] = '';
+Responses[127] = '';
+Responses[128] = '';
+Responses[129] = '';
+Responses[131] = '';
+Responses[132] = '';
+Responses[133] = '';
+Responses[134] = '';
+Responses[136] = '';
+Responses[137] = '';
+Responses[138] = '';
+Responses[139] = '';
+Responses[141] = '';
+Responses[142] = '';
+Responses[143] = '';
+Responses[144] = '';
+Responses[146] = '';
+Responses[147] = '';
+Responses[148] = '';
+Responses[149] = '';
+Responses[151] = '';
+Responses[152] = '';
+Responses[153] = '';
+Responses[154] = '';
+Responses[156] = '';
+Responses[157] = '';
+Responses[158] = '';
+Responses[159] = '';
+Responses[161] = '';
+Responses[162] = '';
+Responses[163] = '';
+Responses[164] = '';
+Responses[166] = '';
+Responses[167] = '';
+Responses[168] = '';
+Responses[169] = '';
+Responses[171] = '';
+Responses[172] = '';
+Responses[173] = '';
+Responses[174] = '';
+Responses[176] = '';
+Responses[177] = '';
+Responses[178] = '';
+Responses[179] = '';
+Responses[181] = '';
+Responses[182] = '';
+Responses[183] = '';
+Responses[184] = '';
+Responses[186] = '';
+Responses[187] = '';
+Responses[188] = '';
+Responses[189] = '';
+Responses[191] = '';
+Responses[192] = '';
+Responses[193] = '';
+Responses[194] = '';
+Responses[196] = '';
+Responses[197] = '';
+Responses[198] = '';
+Responses[199] = '';
+Responses[201] = '';
+Responses[202] = '';
+Responses[203] = '';
+Responses[204] = '';
+Responses[206] = '';
+Responses[207] = '';
+Responses[208] = '';
+Responses[209] = '';
+
+
+IndicatorName = new Array();
+IndicatorName[1] = 'document.QuizForm.Q1A';
+IndicatorName[2] = 'document.QuizForm.Q1B';
+IndicatorName[3] = 'document.QuizForm.Q1C';
+IndicatorName[4] = 'document.QuizForm.Q1D';
+IndicatorName[6] = 'document.QuizForm.Q2A';
+IndicatorName[7] = 'document.QuizForm.Q2B';
+IndicatorName[8] = 'document.QuizForm.Q2C';
+IndicatorName[9] = 'document.QuizForm.Q2D';
+IndicatorName[11] = 'document.QuizForm.Q3A';
+IndicatorName[12] = 'document.QuizForm.Q3B';
+IndicatorName[13] = 'document.QuizForm.Q3C';
+IndicatorName[14] = 'document.QuizForm.Q3D';
+IndicatorName[16] = 'document.QuizForm.Q4A';
+IndicatorName[17] = 'document.QuizForm.Q4B';
+IndicatorName[18] = 'document.QuizForm.Q4C';
+IndicatorName[19] = 'document.QuizForm.Q4D';
+IndicatorName[21] = 'document.QuizForm.Q5A';
+IndicatorName[22] = 'document.QuizForm.Q5B';
+IndicatorName[23] = 'document.QuizForm.Q5C';
+IndicatorName[24] = 'document.QuizForm.Q5D';
+IndicatorName[26] = 'document.QuizForm.Q6A';
+IndicatorName[27] = 'document.QuizForm.Q6B';
+IndicatorName[28] = 'document.QuizForm.Q6C';
+IndicatorName[29] = 'document.QuizForm.Q6D';
+IndicatorName[31] = 'document.QuizForm.Q7A';
+IndicatorName[32] = 'document.QuizForm.Q7B';
+IndicatorName[33] = 'document.QuizForm.Q7C';
+IndicatorName[34] = 'document.QuizForm.Q7D';
+IndicatorName[36] = 'document.QuizForm.Q8A';
+IndicatorName[37] = 'document.QuizForm.Q8B';
+IndicatorName[38] = 'document.QuizForm.Q8C';
+IndicatorName[39] = 'document.QuizForm.Q8D';
+IndicatorName[41] = 'document.QuizForm.Q9A';
+IndicatorName[42] = 'document.QuizForm.Q9B';
+IndicatorName[43] = 'document.QuizForm.Q9C';
+IndicatorName[44] = 'document.QuizForm.Q9D';
+IndicatorName[46] = 'document.QuizForm.Q10A';
+IndicatorName[47] = 'document.QuizForm.Q10B';
+IndicatorName[48] = 'document.QuizForm.Q10C';
+IndicatorName[49] = 'document.QuizForm.Q10D';
+IndicatorName[51] = 'document.QuizForm.Q11A';
+IndicatorName[52] = 'document.QuizForm.Q11B';
+IndicatorName[53] = 'document.QuizForm.Q11C';
+IndicatorName[54] = 'document.QuizForm.Q11D';
+IndicatorName[56] = 'document.QuizForm.Q12A';
+IndicatorName[57] = 'document.QuizForm.Q12B';
+IndicatorName[58] = 'document.QuizForm.Q12C';
+IndicatorName[59] = 'document.QuizForm.Q12D';
+IndicatorName[61] = 'document.QuizForm.Q13A';
+IndicatorName[62] = 'document.QuizForm.Q13B';
+IndicatorName[63] = 'document.QuizForm.Q13C';
+IndicatorName[64] = 'document.QuizForm.Q13D';
+IndicatorName[66] = 'document.QuizForm.Q14A';
+IndicatorName[67] = 'document.QuizForm.Q14B';
+IndicatorName[68] = 'document.QuizForm.Q14C';
+IndicatorName[69] = 'document.QuizForm.Q14D';
+IndicatorName[71] = 'document.QuizForm.Q15A';
+IndicatorName[72] = 'document.QuizForm.Q15B';
+IndicatorName[73] = 'document.QuizForm.Q15C';
+IndicatorName[74] = 'document.QuizForm.Q15D';
+IndicatorName[76] = 'document.QuizForm.Q16A';
+IndicatorName[77] = 'document.QuizForm.Q16B';
+IndicatorName[78] = 'document.QuizForm.Q16C';
+IndicatorName[79] = 'document.QuizForm.Q16D';
+IndicatorName[81] = 'document.QuizForm.Q17A';
+IndicatorName[82] = 'document.QuizForm.Q17B';
+IndicatorName[83] = 'document.QuizForm.Q17C';
+IndicatorName[84] = 'document.QuizForm.Q17D';
+IndicatorName[86] = 'document.QuizForm.Q18A';
+IndicatorName[87] = 'document.QuizForm.Q18B';
+IndicatorName[88] = 'document.QuizForm.Q18C';
+IndicatorName[89] = 'document.QuizForm.Q18D';
+IndicatorName[91] = 'document.QuizForm.Q19A';
+IndicatorName[92] = 'document.QuizForm.Q19B';
+IndicatorName[93] = 'document.QuizForm.Q19C';
+IndicatorName[94] = 'document.QuizForm.Q19D';
+IndicatorName[96] = 'document.QuizForm.Q20A';
+IndicatorName[97] = 'document.QuizForm.Q20B';
+IndicatorName[98] = 'document.QuizForm.Q20C';
+IndicatorName[99] = 'document.QuizForm.Q20D';
+IndicatorName[101] = 'document.QuizForm.Q21A';
+IndicatorName[102] = 'document.QuizForm.Q21B';
+IndicatorName[103] = 'document.QuizForm.Q21C';
+IndicatorName[104] = 'document.QuizForm.Q21D';
+IndicatorName[106] = 'document.QuizForm.Q22A';
+IndicatorName[107] = 'document.QuizForm.Q22B';
+IndicatorName[108] = 'document.QuizForm.Q22C';
+IndicatorName[109] = 'document.QuizForm.Q22D';
+IndicatorName[111] = 'document.QuizForm.Q23A';
+IndicatorName[112] = 'document.QuizForm.Q23B';
+IndicatorName[113] = 'document.QuizForm.Q23C';
+IndicatorName[114] = 'document.QuizForm.Q23D';
+IndicatorName[116] = 'document.QuizForm.Q24A';
+IndicatorName[117] = 'document.QuizForm.Q24B';
+IndicatorName[118] = 'document.QuizForm.Q24C';
+IndicatorName[119] = 'document.QuizForm.Q24D';
+IndicatorName[121] = 'document.QuizForm.Q25A';
+IndicatorName[122] = 'document.QuizForm.Q25B';
+IndicatorName[123] = 'document.QuizForm.Q25C';
+IndicatorName[124] = 'document.QuizForm.Q25D';
+IndicatorName[126] = 'document.QuizForm.Q26A';
+IndicatorName[127] = 'document.QuizForm.Q26B';
+IndicatorName[128] = 'document.QuizForm.Q26C';
+IndicatorName[129] = 'document.QuizForm.Q26D';
+IndicatorName[131] = 'document.QuizForm.Q27A';
+IndicatorName[132] = 'document.QuizForm.Q27B';
+IndicatorName[133] = 'document.QuizForm.Q27C';
+IndicatorName[134] = 'document.QuizForm.Q27D';
+IndicatorName[136] = 'document.QuizForm.Q28A';
+IndicatorName[137] = 'document.QuizForm.Q28B';
+IndicatorName[138] = 'document.QuizForm.Q28C';
+IndicatorName[139] = 'document.QuizForm.Q28D';
+IndicatorName[141] = 'document.QuizForm.Q29A';
+IndicatorName[142] = 'document.QuizForm.Q29B';
+IndicatorName[143] = 'document.QuizForm.Q29C';
+IndicatorName[144] = 'document.QuizForm.Q29D';
+IndicatorName[146] = 'document.QuizForm.Q30A';
+IndicatorName[147] = 'document.QuizForm.Q30B';
+IndicatorName[148] = 'document.QuizForm.Q30C';
+IndicatorName[149] = 'document.QuizForm.Q30D';
+IndicatorName[151] = 'document.QuizForm.Q31A';
+IndicatorName[152] = 'document.QuizForm.Q31B';
+IndicatorName[153] = 'document.QuizForm.Q31C';
+IndicatorName[154] = 'document.QuizForm.Q31D';
+IndicatorName[156] = 'document.QuizForm.Q32A';
+IndicatorName[157] = 'document.QuizForm.Q32B';
+IndicatorName[158] = 'document.QuizForm.Q32C';
+IndicatorName[159] = 'document.QuizForm.Q32D';
+IndicatorName[161] = 'document.QuizForm.Q33A';
+IndicatorName[162] = 'document.QuizForm.Q33B';
+IndicatorName[163] = 'document.QuizForm.Q33C';
+IndicatorName[164] = 'document.QuizForm.Q33D';
+IndicatorName[166] = 'document.QuizForm.Q34A';
+IndicatorName[167] = 'document.QuizForm.Q34B';
+IndicatorName[168] = 'document.QuizForm.Q34C';
+IndicatorName[169] = 'document.QuizForm.Q34D';
+IndicatorName[171] = 'document.QuizForm.Q35A';
+IndicatorName[172] = 'document.QuizForm.Q35B';
+IndicatorName[173] = 'document.QuizForm.Q35C';
+IndicatorName[174] = 'document.QuizForm.Q35D';
+IndicatorName[176] = 'document.QuizForm.Q36A';
+IndicatorName[177] = 'document.QuizForm.Q36B';
+IndicatorName[178] = 'document.QuizForm.Q36C';
+IndicatorName[179] = 'document.QuizForm.Q36D';
+IndicatorName[181] = 'document.QuizForm.Q37A';
+IndicatorName[182] = 'document.QuizForm.Q37B';
+IndicatorName[183] = 'document.QuizForm.Q37C';
+IndicatorName[184] = 'document.QuizForm.Q37D';
+IndicatorName[186] = 'document.QuizForm.Q38A';
+IndicatorName[187] = 'document.QuizForm.Q38B';
+IndicatorName[188] = 'document.QuizForm.Q38C';
+IndicatorName[189] = 'document.QuizForm.Q38D';
+IndicatorName[191] = 'document.QuizForm.Q39A';
+IndicatorName[192] = 'document.QuizForm.Q39B';
+IndicatorName[193] = 'document.QuizForm.Q39C';
+IndicatorName[194] = 'document.QuizForm.Q39D';
+IndicatorName[196] = 'document.QuizForm.Q40A';
+IndicatorName[197] = 'document.QuizForm.Q40B';
+IndicatorName[198] = 'document.QuizForm.Q40C';
+IndicatorName[199] = 'document.QuizForm.Q40D';
+IndicatorName[201] = 'document.QuizForm.Q41A';
+IndicatorName[202] = 'document.QuizForm.Q41B';
+IndicatorName[203] = 'document.QuizForm.Q41C';
+IndicatorName[204] = 'document.QuizForm.Q41D';
+IndicatorName[206] = 'document.QuizForm.Q42A';
+IndicatorName[207] = 'document.QuizForm.Q42B';
+IndicatorName[208] = 'document.QuizForm.Q42C';
+IndicatorName[209] = 'document.QuizForm.Q42D';
+
+
+var Score = 0;
+var Tries = 0;
+var Percent = 0;
+var YourScore = 'Your score is';
+var DefaultRight = 'Correct!';
+var DefaultWrong = 'Sorry! Try again.';
+
+if (platform == 'mac') {
+	rightchar = unescape(macrightchar)
+	wrongchar = unescape(macwrongchar)
+}
+else {
+	rightchar = unescape(winrightchar)
+	wrongchar = unescape(winwrongchar)
+}
+
+function DownTime(mm,ss){
+min=mm
+sec=ss
+if (sec==0) {
+     sec = 60
+     min--
+}
+ sec--
+if (sec<10){
+      sec="0" + sec
+}
+parent.Timer.document.TimerForm.face.value= min+":"+sec
+if ((min==0) && (sec==0)){
+TimesUp()
+}
+else{
+        setTimeout('DownTime(min,sec)',1000)
+}
+}
+
+function SetUp(){
+if (parent.Timer != null) {
+Stuff='<HTML><BODY BGCOLOR="#FFFFFF" BACKGROUND="image.gif"><CENTER><FORM NAME="TimerForm"><INPUT TYPE="Button"';
+Stuff+=' NAME="StartIt" VALUE="Start reading" onClick="parent.Code.StartReading()"></FORM></CENTER></BODY></HTML>';
+WriteToReading('Click on the button to see the reading.');
+WriteToTimer(Stuff);
+}
+}
+
+function StartReading(){
+Stuff='<HTML><BODY TEXT="#BA050A" BGCOLOR="FFFFFF" BACKGROUND="image.gif"><CENTER><FORM NAME="TimerForm" onSubmit="return false">';
+Stuff+='<B>Remaining time:</B> <INPUT TYPE=text NAME="face" SIZE=6 VALUE="1:00"></FORM></CENTER></BODY></HTML>';
+WriteToTimer(Stuff);
+parent.Reading.location.href='3rdhistoryr.htm';
+timeoutID=setTimeout('DownTime(1,0)',1000);
+}
+
+function TimesUp() {
+if (ShowReadingAgain.length > 0) {
+Stuff='<HTML><BODY BGCOLOR="FFFFFF" BACKGROUND="image.gif"><CENTER><FORM NAME="TimerForm">';
+Stuff+='<INPUT TYPE="Hidden" NAME="ThisAvoidsNavigator3Bug">';
+Stuff+='<INPUT TYPE="Button" NAME="StartIt" VALUE="Show reading again" onClick="parent.Code.StartReading()">';
+Stuff+='</FORM></CENTER></BODY></HTML>';
+WriteToTimer(Stuff);
+}
+WriteToReading('Your time is over!');
+}
+
+function WriteToReading(Stuff){
+parent.Reading.document.clear();
+parent.Reading.document.open();
+parent.Reading.document.writeln ("<html><body bgcolor=#FFFFFF text=#BA050A BACKGROUND=\"image.gif\">");
+parent.Reading.document.writeln ("<font size=+1>");
+parent.Reading.document.writeln ("<center><b>");
+parent.Reading.document.writeln (Stuff);
+parent.Reading.document.writeln ("</b></center></font></body></html>");
+parent.Reading.document.close();
+}
+
+function WriteToTimer(Stuff){
+parent.Timer.document.clear();
+parent.Timer.document.open();
+parent.Timer.document.writeln (Stuff);
+parent.Timer.document.close();
+}
+
+function CheckAnswer(QNum, AnsNum, Correct) {
+whichfb = (5*(QNum-1) + AnsNum)
+
+ if (Correct == 1) {
+	if (DoneStatus[QNum] != '1'){
+		Tries = Tries + 1;
+		DoneStatus[QNum] = '1';
+		Score = Score + 1;}
+	if (eval(IndicatorName[whichfb]) != null){
+		eval(IndicatorName[whichfb]).value = rightchar}
+	Feedback = Responses[whichfb]
+	if (Feedback == '') {Feedback = DefaultRight}
+	Percent = Math.floor(Score*100/Tries) + '%';
+	Feedback = Feedback + '<BR>' + YourScore + ' ' + Percent + '.';
+
+	var i = 0;
+	var AllDone = true;
+	for (i=1; i<DoneStatus.length; i++){
+		if (DoneStatus[i] == '0'){
+			AllDone = false;
+		}
+	}
+	if (AllDone == true){
+		Feedback += '<BR><FORM><INPUT TYPE=\"button\" VALUE=\"Next exercise\" onClick=\"parent.location=\'nextpage.htm\'\"></FORM>';
+	}
+
+	WriteFeedback(Feedback);
+	}
+
+ else {
+	if (DoneStatus[QNum] != '1'){
+		Tries = Tries + 1;}
+	if (eval(IndicatorName[whichfb]) != null){
+		eval(IndicatorName[whichfb]).value = wrongchar}
+	Feedback = Responses[whichfb]
+	if (Feedback == '') {Feedback = DefaultWrong}
+	WriteFeedback(Feedback)
+ }
+}
+
+function WriteFeedback(Feedback) {
+  parent.FeedbackFrame.document.clear();
+  parent.FeedbackFrame.document.open();
+  parent.FeedbackFrame.document.writeln("<html>");
+  parent.FeedbackFrame.document.writeln("<body bgcolor=#FFFFFF text=#BA050A BACKGROUND=\"image.gif\">");
+  parent.FeedbackFrame.document.writeln("<font size = +1><center><b>");
+  parent.FeedbackFrame.document.writeln(Feedback);
+  parent.FeedbackFrame.document.writeln("</b></center></font></body></html>");
+  parent.FeedbackFrame.document.close();
+}
+
+</SCRIPT>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" BACKGROUND="image.gif" onLoad='SetUp()'>
+
+<CENTER>
+
+<h2></h2>
+<b><i>Click on the correct answer</i></b></CENTER><br>
+
+<FORM name="QuizForm">
+
+<INPUT TYPE="button" VALUE="Help" onClick="parent.FeedbackFrame.location='3rdhistoryw.htm#help'"><BR>
+
+<BR>
+
+<CENTER>
+<TABLE border=0 WIDTH=85%>
+
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>1</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>A highly developed and organized society, like those in ancient Greece and ancient Rome, is called a:</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q1A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(1,1,0)"></TD>
+<TD VALIGN=TOP WIDTH=100%>conflict.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q1B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(1,2,1)"></TD>
+<TD VALIGN=TOP>civilization.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q1C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(1,3,0)"></TD>
+<TD VALIGN=TOP>constitution.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q1D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(1,4,0)"></TD>
+<TD VALIGN=TOP>government.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>2</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>In ancient times, the mountains of Greece divided the people into:</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q2A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(2,1,0)"></TD>
+<TD VALIGN=TOP WIDTH=100%>a huge empire.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q2B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(2,2,1)"></TD>
+<TD VALIGN=TOP>many small city-states.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q2C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(2,3,0)"></TD>
+<TD VALIGN=TOP>one large country.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q2D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(2,4,0)"></TD>
+<TD VALIGN=TOP>a few large kingdoms.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>3</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>Ancient Athens was a:</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q3A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(3,1,0)"></TD>
+<TD VALIGN=TOP WIDTH=100%>dictatorship.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q3B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(3,2,0)"></TD>
+<TD VALIGN=TOP>monarchy.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q3C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(3,3,0)"></TD>
+<TD VALIGN=TOP>republic.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q3D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(3,4,1)"></TD>
+<TD VALIGN=TOP>democracy.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>4</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>Greek architecture was noted for:</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q4A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(4,1,0)"></TD>
+<TD VALIGN=TOP WIDTH=100%>pyramids.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q4B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(4,2,0)"></TD>
+<TD VALIGN=TOP>steeples.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q4C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(4,3,0)"></TD>
+<TD VALIGN=TOP>arches.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q4D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(4,4,1)"></TD>
+<TD VALIGN=TOP>columns.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>5</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>Rome is located on:</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q5A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(5,1,1)"></TD>
+<TD VALIGN=TOP WIDTH=100%>a peninsula.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q5B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(5,2,0)"></TD>
+<TD VALIGN=TOP>an island.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q5C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(5,3,0)"></TD>
+<TD VALIGN=TOP>a prairie.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q5D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(5,4,0)"></TD>
+<TD VALIGN=TOP>a plateau.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>6</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>Ancient Romans enjoyed the most freedom during the:<BR>
+</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q6A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(6,1,0)"></TD>
+<TD VALIGN=TOP WIDTH=100%>downfall.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q6B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(6,2,0)"></TD>
+<TD VALIGN=TOP>monarchy.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q6C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(6,3,0)"></TD>
+<TD VALIGN=TOP>dictatorship.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q6D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(6,4,1)"></TD>
+<TD VALIGN=TOP>republic.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>7</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>The most famous feature of buildings in ancient Rome was their:</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q7A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(7,1,0)"></TD>
+<TD VALIGN=TOP WIDTH=100%>pyramids.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q7B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(7,2,0)"></TD>
+<TD VALIGN=TOP>steeples.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q7C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(7,3,1)"></TD>
+<TD VALIGN=TOP>arches.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q7D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(7,4,0)"></TD>
+<TD VALIGN=TOP>columns.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>8</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>The most famous building in Ancient Rome was the:</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q8A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(8,1,1)"></TD>
+<TD VALIGN=TOP WIDTH=100%>Colosseum.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q8B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(8,2,0)"></TD>
+<TD VALIGN=TOP>Parthenon.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q8C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(8,3,0)"></TD>
+<TD VALIGN=TOP>Cathedral.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q8D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(8,4,0)"></TD>
+<TD VALIGN=TOP>Appian Way</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>9</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>The explorer who sailed from Spain and discovered America in 1492 was:</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q9A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(9,1,0)"></TD>
+<TD VALIGN=TOP WIDTH=100%>Ferdinand Magellan.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q9B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(9,2,0)"></TD>
+<TD VALIGN=TOP>Ponce de Leon.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q9C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(9,3,0)"></TD>
+<TD VALIGN=TOP>Leif Erikson.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q9D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(9,4,1)"></TD>
+<TD VALIGN=TOP>Christopher Columbus.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>10</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>Which explorer came from England?</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q10A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(10,1,0)"></TD>
+<TD VALIGN=TOP WIDTH=100%>Christopher Columbus </TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q10B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(10,2,1)"></TD>
+<TD VALIGN=TOP>Sir Francis Drake</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q10C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(10,3,0)"></TD>
+<TD VALIGN=TOP>Amerigo Vespucci  </TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q10D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(10,4,0)"></TD>
+<TD VALIGN=TOP>Herando Cortez</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>11</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>The Spanish soldier and explorer who conquered Mexico in 1519 was:</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q11A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(11,1,1)"></TD>
+<TD VALIGN=TOP WIDTH=100%>Hernando Cortez.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q11B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(11,2,0)"></TD>
+<TD VALIGN=TOP>Sir Francis Drake.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q11C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(11,3,0)"></TD>
+<TD VALIGN=TOP>Sir Walter Raleigh.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q11D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(11,4,0)"></TD>
+<TD VALIGN=TOP>Henry Hudson.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>12</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>The Spanish started a colony in St. Augustine to:</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q12A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(12,1,0)"></TD>
+<TD VALIGN=TOP WIDTH=100%>trade with the Indians.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q12B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(12,2,0)"></TD>
+<TD VALIGN=TOP>grow tobacco.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q12C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(12,3,0)"></TD>
+<TD VALIGN=TOP>grow cotton.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q12D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(12,4,1)"></TD>
+<TD VALIGN=TOP>protect Spanish trade.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>13</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>The English colonist who brought new tobacco seeds to Jamestown was:</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q13A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(13,1,1)"></TD>
+<TD VALIGN=TOP WIDTH=100%>John Rolfe.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q13B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(13,2,0)"></TD>
+<TD VALIGN=TOP>John Smith.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q13C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(13,3,0)"></TD>
+<TD VALIGN=TOP>Christopher Newport.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q13D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(13,4,0)"></TD>
+<TD VALIGN=TOP>Sir Francis Drake.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>14</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>The pilgrims of New England came to America because they wanted to:</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q14A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(14,1,1)"></TD>
+<TD VALIGN=TOP WIDTH=100%>worship God as they pleased.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q14B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(14,2,0)"></TD>
+<TD VALIGN=TOP>search for gold.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q14C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(14,3,0)"></TD>
+<TD VALIGN=TOP>start a new company.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q14D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(14,4,0)"></TD>
+<TD VALIGN=TOP>grow better tobacco.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>15</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>Early settlers came to Virginia because they wanted to:</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q15A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(15,1,1)"></TD>
+<TD VALIGN=TOP WIDTH=100%>make money.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q15B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(15,2,0)"></TD>
+<TD VALIGN=TOP>be friends with the Indians.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q15C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(15,3,0)"></TD>
+<TD VALIGN=TOP>sail on a ship.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q15D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(15,4,0)"></TD>
+<TD VALIGN=TOP>build a new nation.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>16</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>The Virginia Company wanted the settlers to:</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q16A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(16,1,0)"></TD>
+<TD VALIGN=TOP WIDTH=100%>search for gold.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q16B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(16,2,1)"></TD>
+<TD VALIGN=TOP>make money for the company.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q16C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(16,3,0)"></TD>
+<TD VALIGN=TOP>marry the Indians.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q16D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(16,4,0)"></TD>
+<TD VALIGN=TOP>establish new colonies.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>17</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>The first long-lasting settlement in Virginia was:</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q17A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(17,1,0)"></TD>
+<TD VALIGN=TOP WIDTH=100%>Williamsburg.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q17B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(17,2,0)"></TD>
+<TD VALIGN=TOP>Roanoke Island.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q17C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(17,3,1)"></TD>
+<TD VALIGN=TOP>Jamestown.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q17D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(17,4,0)"></TD>
+<TD VALIGN=TOP>West Point.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>18</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>The product which made the most money for the Virginia Company was:</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q18A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(18,1,0)"></TD>
+<TD VALIGN=TOP WIDTH=100%>oysters.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q18B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(18,2,0)"></TD>
+<TD VALIGN=TOP>corn.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q18C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(18,3,0)"></TD>
+<TD VALIGN=TOP>furs.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q18D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(18,4,1)"></TD>
+<TD VALIGN=TOP>tobacco.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>19</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>People forced to work without pay for the plantation owners were:</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q19A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(19,1,1)"></TD>
+<TD VALIGN=TOP WIDTH=100%>hired hands.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q19B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(19,2,0)"></TD>
+<TD VALIGN=TOP>slaves.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q19C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(19,3,0)"></TD>
+<TD VALIGN=TOP>settlers.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q19D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(19,4,0)"></TD>
+<TD VALIGN=TOP>neighbors.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>20</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>What was true of indentured servants?</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q20A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(20,1,1)"></TD>
+<TD VALIGN=TOP WIDTH=100%>They could be free after seven years.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q20B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(20,2,0)"></TD>
+<TD VALIGN=TOP>They were all slaves.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q20C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(20,3,0)"></TD>
+<TD VALIGN=TOP>They owned land.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q20D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(20,4,0)"></TD>
+<TD VALIGN=TOP>They were represented in the House of Burgesses.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>21</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>John Smith was an important leader because he:</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q21A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(21,1,1)"></TD>
+<TD VALIGN=TOP WIDTH=100%>made the colonists gather food and work.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q21B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(21,2,0)"></TD>
+<TD VALIGN=TOP>was a good hunter.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q21C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(21,3,0)"></TD>
+<TD VALIGN=TOP>made light, strong canoes.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q21D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(21,4,0)"></TD>
+<TD VALIGN=TOP>grew large amounts of tobacco.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>22</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>Pocahontas helped the colony survive because she:</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q22A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(22,1,0)"></TD>
+<TD VALIGN=TOP WIDTH=100%>taught settlers how to fish. </TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q22B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(22,2,0)"></TD>
+<TD VALIGN=TOP>gave them gold.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q22C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(22,3,1)"></TD>
+<TD VALIGN=TOP>saved John Smith's life. </TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q22D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(22,4,0)"></TD>
+<TD VALIGN=TOP>married John Smith.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>23</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>In the colony of Virginia, democracy was started by:<BR>
+</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q23A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(23,1,0)"></TD>
+<TD VALIGN=TOP WIDTH=100%>King James appointing a governor.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q23B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(23,2,1)"></TD>
+<TD VALIGN=TOP>the colonists electing members of the House of Burgesses.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q23C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(23,3,0)"></TD>
+<TD VALIGN=TOP>the Virginia Company picking the leaders.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q23D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(23,4,0)"></TD>
+<TD VALIGN=TOP>King James choosing the council members.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>24</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>The colonists at Jamestown had a hard time at first because they did not have enough:</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q24A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(24,1,0)"></TD>
+<TD VALIGN=TOP WIDTH=100%>money.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q24B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(24,2,1)"></TD>
+<TD VALIGN=TOP>food.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q24C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(24,3,0)"></TD>
+<TD VALIGN=TOP>land.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q24D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(24,4,0)"></TD>
+<TD VALIGN=TOP>trees.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>25</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>The Jamestown settlement survived because:</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q25A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(25,1,0)"></TD>
+<TD VALIGN=TOP WIDTH=100%>most of the settlers were gentlemen.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q25B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(25,2,0)"></TD>
+<TD VALIGN=TOP>it was located in a swampy area.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q25C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(25,3,0)"></TD>
+<TD VALIGN=TOP>everyone shared food whether they worked or not.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q25D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(25,4,1)"></TD>
+<TD VALIGN=TOP>a rule was made that you must work in order to eat.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>26</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>"Taxation without representation" was a cause of:</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q26A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(26,1,0)"></TD>
+<TD VALIGN=TOP WIDTH=100%>the French and Indian War.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q26B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(26,2,1)"></TD>
+<TD VALIGN=TOP>the American Revolution.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q26C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(26,3,0)"></TD>
+<TD VALIGN=TOP>the Civil War.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q26D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(26,4,0)"></TD>
+<TD VALIGN=TOP>western exploration.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>27</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>A community located <BR>
+on the plains may depend on which industry to support its economy?<BR>
+</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q27A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(27,1,0)"></TD>
+<TD VALIGN=TOP WIDTH=100%>fishing </TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q27B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(27,2,0)"></TD>
+<TD VALIGN=TOP>manufacturing</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q27C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(27,3,0)"></TD>
+<TD VALIGN=TOP>publishing</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q27D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(27,4,1)"></TD>
+<TD VALIGN=TOP>farming</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>28</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>The Post Office provides:<BR>
+</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q28A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(28,1,0)"></TD>
+<TD VALIGN=TOP WIDTH=100%>goods.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q28B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(28,2,0)"></TD>
+<TD VALIGN=TOP>needs.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q28C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(28,3,0)"></TD>
+<TD VALIGN=TOP>resources.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q28D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(28,4,1)"></TD>
+<TD VALIGN=TOP>services.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>29</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>To stay healthy, people need the services of a:</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q29A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(29,1,1)"></TD>
+<TD VALIGN=TOP WIDTH=100%>doctor.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q29B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(29,2,0)"></TD>
+<TD VALIGN=TOP>merchant.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q29C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(29,3,0)"></TD>
+<TD VALIGN=TOP>clerk.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q29D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(29,4,0)"></TD>
+<TD VALIGN=TOP>lawyer.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>30</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>To learn to read and write, people depend on a:</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q30A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(30,1,0)"></TD>
+<TD VALIGN=TOP WIDTH=100%>secretary.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q30B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(30,2,0)"></TD>
+<TD VALIGN=TOP>farmer.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q30C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(30,3,0)"></TD>
+<TD VALIGN=TOP>banker.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q30D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(30,4,1)"></TD>
+<TD VALIGN=TOP>teacher.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>31</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>An example of purchasing goods is:</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q31A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(31,1,0)"></TD>
+<TD VALIGN=TOP WIDTH=100%>growing corn.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q31B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(31,2,1)"></TD>
+<TD VALIGN=TOP>buying a CD player.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q31C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(31,3,0)"></TD>
+<TD VALIGN=TOP>putting money in the bank.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q31D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(31,4,0)"></TD>
+<TD VALIGN=TOP>going to the dentist.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>32</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>An example of purchasing a service is:</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q32A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(32,1,1)"></TD>
+<TD VALIGN=TOP WIDTH=100%>getting a haircut from a barber.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q32B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(32,2,0)"></TD>
+<TD VALIGN=TOP>buying a bike.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q32C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(32,3,0)"></TD>
+<TD VALIGN=TOP>checking out a library book.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q32D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(32,4,0)"></TD>
+<TD VALIGN=TOP>renting a house.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>33</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>If a popular toy is sold out at most stores, the toy maker will probably:</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q33A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(33,1,0)"></TD>
+<TD VALIGN=TOP WIDTH=100%>lower the price.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q33B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(33,2,1)"></TD>
+<TD VALIGN=TOP>raise the price.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q33C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(33,3,0)"></TD>
+<TD VALIGN=TOP>stop making the toy.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q33D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(33,4,0)"></TD>
+<TD VALIGN=TOP>offer two for the price of one.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>34</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>Which of the following was a result of the discovery of gold in California?</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q34A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(34,1,0)"></TD>
+<TD VALIGN=TOP WIDTH=100%>Gold became less valuable.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q34B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(34,2,0)"></TD>
+<TD VALIGN=TOP>California became a slave state.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q34C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(34,3,0)"></TD>
+<TD VALIGN=TOP>Every citizen in California became rich.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q34D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(34,4,1)"></TD>
+<TD VALIGN=TOP>Many people moved to California.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>35</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>Where does the government get the money to provide services?</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q35A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(35,1,0)"></TD>
+<TD VALIGN=TOP WIDTH=100%>donations</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q35B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(35,2,1)"></TD>
+<TD VALIGN=TOP>taxes</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q35C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(35,3,0)"></TD>
+<TD VALIGN=TOP>bake sales</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q35D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(35,4,0)"></TD>
+<TD VALIGN=TOP>tickets</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>36</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>The main reason that early American towns were often located near rivers was:</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q36A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(36,1,0)"></TD>
+<TD VALIGN=TOP WIDTH=100%>the view was beautiful.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q36B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(36,2,1)"></TD>
+<TD VALIGN=TOP>goods and products could be shipped easily.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q36C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(36,3,0)"></TD>
+<TD VALIGN=TOP>water was very hard to find in America.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q36D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(36,4,0)"></TD>
+<TD VALIGN=TOP>coal was found near rivers.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>37</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>Ancient Greeks used which form of transportation for trading their goods?</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q37A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(37,1,0)"></TD>
+<TD VALIGN=TOP WIDTH=100%>wagon trains</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q37B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(37,2,1)"></TD>
+<TD VALIGN=TOP>ships</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q37C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(37,3,0)"></TD>
+<TD VALIGN=TOP>trains</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q37D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(37,4,0)"></TD>
+<TD VALIGN=TOP>planes</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>38</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>Which of the following is NOT a basic ideal of America?</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q38A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(38,1,0)"></TD>
+<TD VALIGN=TOP WIDTH=100%>rule of law</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q38B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(38,2,0)"></TD>
+<TD VALIGN=TOP>equality under the law</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q38C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(38,3,1)"></TD>
+<TD VALIGN=TOP>monarchy</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q38D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(38,4,0)"></TD>
+<TD VALIGN=TOP>rights come with responsibilities</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>39</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>Why do we have rules and laws?</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q39A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(39,1,1)"></TD>
+<TD VALIGN=TOP WIDTH=100%>to protect our rights</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q39B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(39,2,0)"></TD>
+<TD VALIGN=TOP>to give everyone the same amount of money</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q39C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(39,3,0)"></TD>
+<TD VALIGN=TOP>to make life more difficult</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q39D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(39,4,0)"></TD>
+<TD VALIGN=TOP>to provide work for the government</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>40</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>Which of these buildings does NOT honor a famous American?</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q40A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(40,1,0)"></TD>
+<TD VALIGN=TOP WIDTH=100%>Washington Monument</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q40B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(40,2,0)"></TD>
+<TD VALIGN=TOP>Lincoln Memorial</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q40C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(40,3,1)"></TD>
+<TD VALIGN=TOP>Capitol Building</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q40D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(40,4,0)"></TD>
+<TD VALIGN=TOP>Kennedy Center </TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>41</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>To help free the colonies from England, Thomas Jefferson wrote the:</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q41A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(41,1,0)"></TD>
+<TD VALIGN=TOP WIDTH=100%>Constitution.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q41B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(41,2,0)"></TD>
+<TD VALIGN=TOP>Bill of Rights.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q41C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(41,3,1)"></TD>
+<TD VALIGN=TOP>Declaration of Independence.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q41D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(41,4,0)"></TD>
+<TD VALIGN=TOP>Emancipation Proclamation.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+<TR>
+<TD VALIGN=TOP><FONT COLOR="#150890"><B>42</B></FONT COLOR></TD>
+<TD COLSPAN=3 VALIGN=TOP><FONT COLOR="#150890"><B>The leader the United States chose for its first president was:</B></FONT COLOR></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q42A"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   A   " OnClick="CheckAnswer(42,1,0)"></TD>
+<TD VALIGN=TOP WIDTH=100%>Ben Franklin.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q42B"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   B   " OnClick="CheckAnswer(42,2,0)"></TD>
+<TD VALIGN=TOP>James Madison.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q42C"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   C   " OnClick="CheckAnswer(42,3,0)"></TD>
+<TD VALIGN=TOP>Thomas Jefferson.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP><INPUT TYPE=text VALUE=" " size=3 NAME="Q42D"></TD>
+<TD VALIGN=TOP><INPUT TYPE=button VALUE="   D   " OnClick="CheckAnswer(42,4,1)"></TD>
+<TD VALIGN=TOP>George Washington.</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+<TD VALIGN=TOP></TD>
+</TR>
+<TR><TD colspan=4>
+<CENTER><HR width=80%></CENTER>
+</TD></TR>
+
+
+</TABLE>
+</CENTER>
+</FORM>
+
+<BR>
+
+<CENTER><FORM NAME="NavigationButtons">
+<INPUT TYPE="button" VALUE="Next exercise" onClick="parent.location='nextpage.htm'"><INPUT TYPE="button" VALUE="Go back to contents" onClick="parent.location='index.htm'"><INPUT TYPE="button" VALUE="Go back to previous page" onClick="parent.history.back()">
+</FORM></CENTER>
+
+</BODY>
+</HTML>
+
+
+
+

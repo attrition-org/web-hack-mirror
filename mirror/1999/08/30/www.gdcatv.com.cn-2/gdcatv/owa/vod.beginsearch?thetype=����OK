@@ -1,0 +1,77 @@
+<body text="#FFFFFF" background="http://www.gni.com.cn/icon/vod_back.gif" link="#00FF00" vlink="#00FFFF" alink="#FF0000">
+<h3>视讯 VOD <FONT size=+2 COLOR="#FFFF00">卡拉OK </font>曲目搜索</h3><hr size=2>
+<form action="/gdcatv/owa/vod.searchMedia" method="post">
+<p>歌(曲)名字数:<select name=s_number size=1>
+<option></option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
+<option>10</option>
+<option>11</option>
+<option>12</option>
+<option>13</option>
+<option>14</option>
+<option>15</option>
+<option>>15</option>
+</select></p>
+<p>歌曲名包含词:<input type=text size=20 maxlength=30 name=s_keyword value=""></p>
+<p>演唱:<select name=s_singer size=1>
+<option selected></option>
+<option>草蜢</option>
+<option>陈慧琳</option>
+<option>陈慧娴</option>
+<option>陈晓东 陈慧琳</option>
+<option>郭富城</option>
+<option>郭富城 </option>
+<option>郭富城  </option>
+<option>何婉盈 邓建明</option>
+<option>黎明诗</option>
+<option>梁雁翎 蔡济文</option>
+<option>刘德华</option>
+<option>刘小慧</option>
+<option>刘雅丽</option>
+<option>梅艳芳</option>
+<option>群星合唱</option>
+<option>任贤齐</option>
+<option>谭咏麟 陈百祥</option>
+<option>汤宝如</option>
+<option>王菲</option>
+<option>王馨平</option>
+<option>巫启贤</option>
+<option>巫启贤 杨采妮</option>
+<option>吴奇隆</option>
+<option>吴奇隆 李沁怡</option>
+<option>杨采妮</option>
+<option>叶倩文 马浚伟</option>
+<option>袁洁莹</option>
+<option>张信哲</option>
+<option>张信哲 刘嘉玲</option>
+<option>张学友</option>
+<option>张学友 黎瑞恩</option>
+<option>郑中基</option>
+<option>周华健 齐豫</option>
+<option>周慧敏</option>
+<option>周慧敏 </option>
+</select>
+<p> 分类:<select name="s_detail_type" size=1>
+<option selected></option>
+<option>流行歌</option>
+<option>外国民歌</option>
+<option>外国民歌 </option>
+<option>粤曲</option>
+<option>粤曲 </option>
+<option>中国民歌</option>
+<option>中国民歌 </option>
+</select></p>
+<input type=hidden name=s_language value="">
+<input type=hidden name=s_type value=卡拉OK>
+<input type=hidden name=s_page value="1">
+<input type=submit name=s_button value="搜索(Search)">
+<input type=reset value="清除(Reset)">
+</form></body>

@@ -1,0 +1,125 @@
+<HTML>
+<HEAD>
+<title>Hiragana Flash Cards</title>
+
+<script language="JavaScript" src="HiraganaFlashcardScript.js">
+</script>
+<link rel=stylesheet href="/css/standard.css">
+</HEAD>
+<body bgcolor="#b0b0bd" link="#1D70AD" vlink="#666666" alink="#666666" onLoad="doPreload();">
+
+<table width=98% align="center" bgcolor="#000000" border="0">
+<tr><td>  <!-- Most outer table start -->
+
+
+<center>
+<table bgcolor="#ffffff" cellpadding="10">
+<tr><td>
+
+
+<h2 align="center">Hiragana Flashcards</h2>
+
+<p>| <a href="../index.shtml">Home</a> | </p>
+
+<p>These flashcards are designed to help you learn to read hiragana, the most basic character set
+of written Japanese.  If you are new to Japanese reading, I personally believe that hiragana is the best place to start.  A strong foundation in hiragana is essential to a successful future as a reader or Japanese. </p>
+
+<p>To utilize the application below, simply click the arrow pointing to the right to see the next hiragana character in the sequence.  To go back a character, press the arrow pointing to the left.   By default, the English reading will be displayed two seconds after the hiragana.  This is to give you a chance to guess the reading beforehand.  The delay is adjustable from 0-10 seconds using the drop-down box.   You can also put the flashcards in 'random' mode so that the next character to be displayed is not in any particular order.  Random mode functions only when moving forward through the cards.</p>
+
+<p>To get a grasp of the pronunciation of hiragana, it is very important to know the proper reading of the first 5 vowels 'a', 'i', 'u', 'e' and 'o'.  The majority of the remaining characters are built upon these five and are formed by preceeding them with a consanant.  For example, if the 5 vowels are preceeded by the sound 'k' as in 'kitchen', you end up with 'ka', 'ki', 'ku', 'ke', and 'ko'.  This pattern is followed throughout the hiragana and you are sure to recognize it.  The five basic vowels have the following sounds:</p>
+<ul>
+<li> 'a' - a as in 'father'
+<li> 'i' - ee as in 'key'
+<li> 'u' - u as in 'truth'
+<li> 'e' - ay as in 'play'
+<li> 'o' - oh as in 'hope'
+</ul>
+
+<p>To fully comprehend the native Japanese pronunciations, I strongly recommend working with a native Japanese speaker.</p>
+
+<p>Currently, only the basic 46 characters are available. I do not include voiced sounds or combinations such as 'kya', 'kyu', 'kyo', etc.  I will add these variations in a 2nd set of flashcards in the future.  In the mean time, please consult a text book for a comprehensive study of hiragana.</p>
+
+If you find this application useful or have some suggestions I appreciate your <a href="mailto:rick@akirapc.com">feedback</a>. </p>
+
+<p>&copy; 2000 <i>Rick Noelle</i></p>
+
+<hr width=75% noshade color="#b0b0bd">
+<p></p>
+
+<table border=0>
+<tr><td bgcolor="#FFFFFF" colspan=3 valign=center>
+<form name="this.form">
+<b>User Options</b><br>
+Delay Before Displaying Reading:
+<select name="SetDelay" size="1" onChange="NewDelay(this.form);" style="font-size:12px; font-family:verdana;">
+<option value=0>0
+<option value=500> 0.5
+<option value=1000>1
+<option selected value=2000>2
+<option value=3000>3
+<option value=4000>4
+<option value=5000>5
+<option value=6000>6
+<option value=7000>7
+<option value=8000>8
+<option value=9000>9
+<option value=10000>10
+</select> Second(s)<br>
+Next Hiragana is Random :
+<input type="radio" name=random_value onClick="changeRandom(1);"> Yes
+<input checked type="radio" name=random_value onClick="changeRandom(0);"> No </b>
+</form>
+</td></tr>
+</table>
+
+
+<center>
+<table border=0>
+<tr><td valign="center"><a href="JavaScript: Previous();" onMouseOver="window.status='Click here to go to the previous card'; return true;" onMouseOut="window.status=''">
+<img name="back" alt="Go to previous card" border="0" src="images/back.gif"></a></td>
+
+<td>
+
+<table width=348 height=398 name="netscape_workaround" border="0" cellspacing="0" background="images/flashcard_back.gif">
+<tr><td>
+
+
+    <table width=348 height=398 name="flashcard" border="0" cellspacing="0"
+             cellpadding="0" background="images/reading_blank.gif">
+	<tr>
+	<td height=199 valign=center> <!-- row to display the character -->
+    <center>
+	<img name="HiraganaGraphic" src="images/hiragana/hiragana_a.gif" width=150 height=150>
+	</center>
+	</td>
+
+
+    <!-- row to display the reading -->
+	<tr>
+	<td height=199 valign=center>
+	<center>
+    <img name="HiraganaReading" src="images/hiragana/reading_a.gif">
+    </center>
+    </td>
+
+   </tr></table>
+   </td></tr></table>
+
+</td>
+
+
+<td valign="center"><a href="JavaScript: Next();" onMouseOver="window.status='Click here to go to the next card'; return true;" onMouseOut="window.status=''">
+<img name="next" alt="Go to next card" src="images/next.gif" border="0"></a></td>
+
+</table>
+
+<p><br></p>
+
+</td></tr></table>
+
+
+</td></tr> <!-- This is the most outer tables closing tag -->
+</table>
+
+</body>
+</html>

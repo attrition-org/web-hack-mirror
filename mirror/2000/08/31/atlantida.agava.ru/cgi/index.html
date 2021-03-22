@@ -1,0 +1,620 @@
+<html><html>
+<head>
+<title>atlantida - Недобросовестный проект одного любителя жизни</title>
+<META name="object" CONTENT="Мастерская CGI">
+<META name="description" CONTENT="Развлекательно-информационный сервер. Каталог, топы, форум, много уникальной и забавной информации">
+<META name="keywords" lang="RU" CONTENT="екатеринбург,атлантида,хичкок,страшилки,радиофак,РТФ,непознанное,цивилизация,земля,мир,история,паралльный, ужас,хичкок,детектив,страсти,фантастика,вампир,оборотень,убийство,каталог,топ,софт,монстр,тварь,йети,лох-несс,чудовище,чудище,глобстеры,загадка">
+<META HTTP-EQUIV="keywords" CONTENT="екатеринбург,атлантида,хичкок,страшилки,радиофак,РТФ,непознанное,цивилизация,земля,мир,история,паралльный, ужас,хичкок,детектив,страсти,фантастика,вампир,оборотень,убийство,каталог,топ,софт,монстр,тварь,йети,лох-несс,чудовище,чудище,глобстеры,загадка">
+<style rel=stylesheet type=text/css>
+	A:link { font-weight: bold; }
+	A:visited { font-weight: bold; }
+</style>
+<style><!--
+A:link
+	{
+	text-decoration: none;
+	}
+A:visited
+	{
+	text-decoration: none;
+;
+	}
+A:hover
+	{
+color:#FF0000;
+	text-decoration: none;
+	}
+A:active
+	{
+	text-decoration: none;
+     	};
+
+
+--> </style>
+
+</head>
+
+<body bgcolor="#CECEFF" text="#000000" topmargin=5 leftmargin=0 rightmargin=0 marginheight=5>
+
+<table border=0 cellpadding=4 cellspacing=0 width=100% align=center>
+<tr><td bgcolor=#CECEFF>
+<table border="0" cellspacing="0" cellpadding="1" width="100%" bgcolor="#000000">
+<tr><td>
+<table border="0" cellspacing="0" cellpadding="3" width="100%" bgcolor="#CCCCCC">
+<tr><td>
+
+<!--AGAVA BANNER NUMBER 1 INSERTED--><script>
+// <!--
+var userid = "64644";
+var page = 1;
+var rndnum = Math.round(Math.random() * 10000);
+document.write("<A HREF='http://ad.tbn.ru/bb.cgi?cmd=go&pubid=" + userid + "&pg=" + page + "&vbn=189&num=1&w=468&h=60&nocache=" + rndnum + "' target='_top'>");
+document.write("<IMG SRC='http://ad.tbn.ru/bb.cgi?cmd=ad&pubid=" + userid + "&pg=" + page + "&vbn=189&num=1&w=468&h=60&nocache=" + rndnum + "' width=468 height=60 Alt='TBN.ru - хежы гкюиьву тр тфвюкнво' border=0></A>");
+// -->
+</script><!--AGAVA BANNER NUMBER 1 INSERT FINISHED-->
+</td><td align=right>
+<font face="arial" size="-1">
+<a href="../weather/index.html">Все&nbsp; о погоде</a> | 
+<a href="../rtf/index.html">Ленивые студни</a><br>
+<a href="../lib/index.html">Ночь мягкого ужаса</a> | 
+<a href="../atlant/index.html">Атлантида</a><br>
+<a href="index.html">CGI,PHP,DB</a> | 
+<a href="../monstr/index.html">Твари и монстры</a><br>
+<a href="../club/index.html">Клуб неприличных сайтов</a><br>
+<a href="../link/index.html">Каталог</a> |
+<a href="../top/index.html">Top 20</a> |
+<a href="../pforum/list.php3?num=1">Форум</a>
+</tr>
+<tr bgcolor="666666"><td colspan=2 bgcolor="666666">
+<font face=Arial,Helvetica size=3 color=CCCCCC>Мастерская CGI</td>
+</td></tr></table>
+</td></tr></table>
+</td></tr><tr><td valign=top width=100% bgcolor=#CECEFF>
+<table border=0 cellspacing=0 cellpadding=2 width=100%>
+<tr><td valign=top width=150 bgcolor=#CECEFF>
+
+<!-- Blocks Init -->
+
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>Стрелочник</td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+<li><a href=../index.html>Домой</a>
+<li><a href=../topics.php3>Обзоры</a>
+<li><a href=../user.php3>Настройки</a>
+<li><a href=../submit.php3>Добавить новость</a>
+<li><a href=../top.php3>Горячая десятка</a></td></tr></table></td></tr></table><br>
+
+<!-- Because this is the DEFAULT theme, so print the user login block -->
+
+
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2> Поиск
+</td></tr><tr><td bgcolor=FFFFFF>
+<font face=Arial,Helvetica size=2>
+<form action="http://atlantida.agava.ru/search.php3" method=post><font face=Arial,Helvetica size=2 color="ffffff">
+<input type=name name=query>
+</form>
+</center></td></tr></table></td></tr></table><br>
+
+
+
+
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>atlantida Login
+</td></tr><tr><td bgcolor=FFFFFF>
+<font face=Arial,Helvetica size=2>
+<form action="http://atlantida.agava.ru/user.php3" method="post">
+Nickname: <input type="text" name="uname" maxlength=25><br>
+Password: <input type="password" name="pass" maxlength=20><br>
+<input type="submit" name="op" value="login"><a href=../user.php3>  регистрация</a></form>
+</td></tr></table></td></tr></table><br>
+
+<!-- Show Left Blocks -->
+
+
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>Куча</td></tr><tr><td bgcolor=FFFFFF>
+<font face=Arial,Helvetica size=2>
+
+<A href="../readme.php3">Правила</A><BR>
+<A href="../mybanners.php3">Баннеры</A><BR>
+<A href="../actions.php3"> Акции</A><BR>
+<A href="../about.php3">О проекте</A><BR>
+<A href="../admin.php3">Администрирование</A><BR>
+<A href="http://atlantida.agava.ru/tell.php3">Рассказать другу</A><BR>
+<A href="../hosting.php3">Хостинг</A><br>
+<A href="../copyrights.php3">Копирайты</A><br>
+<A href="../stats.php3">Статистика</A>
+</td></tr></table></td></tr></table><br>
+
+
+
+
+
+
+
+
+
+
+
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>Кратко</td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+Вы можете помещать новости и обзоры своих сайтов, прочитанных книг и увиденных фильмов. Будет также интересно услышать от вас о своих любимых программах. Я сделал все, чтобы это был действительно полезный и удобный ресурс. Давайте общаться!</td></tr></table></td></tr></table><br>
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>Калькулятор</td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+<center>
+<a target=_top
+href="http://top.list.ru/jump?from=55027"><img
+src="http://195.34.34.80/counter?id=55027;t=99"
+border=0 height=18 width=88
+alt="TopList"></a>
+</center>
+
+</td></tr></table></td></tr></table><br>
+
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2> Соучастники
+</td></tr><tr><td bgcolor=FFFFFF>
+<font face=Arial,Helvetica size=2>
+<iframe
+  src=../adv.php3
+  frameborder=0 vspace=0 hspace=0 width=120 height=200
+  marginwidth=0  marginheight=0 scrolling=no>
+  </a>
+  </iframe>
+
+</center></td></tr></table></td></tr></table><br>
+
+
+
+
+<img src=images/pix.gif border=0 width=150 height=1>
+</td><td width=100% valign=top align=left><table border=0 bgcolor=000000 cellpadding=2 cellspacing=0 width=100%>
+	<tr><td>
+	<table border=0 bgcolor=FFFFFF cellpadding=1 cellspacing=0 width=100%>
+	<tr><td>
+	<center><table border=0 width=100% align=center cellpadding=2><tr>
+
+
+<p align="left">
+
+<html>
+
+<head>
+<title>Настройка скриптов</title>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1251">
+<meta NAME="GENERATOR" CONTENT="Microsoft FrontPage 3.0">
+</head>
+
+<body LINK="#0000ff" VLINK="#800080">
+
+<p ALIGN="LEFT"><br>
+<strong><font FACE="Courier New" COLOR="#ff0000">CGI-мастерская</font></strong></p>
+
+<p ALIGN="LEFT"><!--begin of Top100--><a HREF="#my">Мои статьи</a><br>
+<a href="http://atlantida.agava.ru/cgi/php/">Интересные скрипты на php</a><br>
+<a HREF="#order">Заказ настройки скрипта</a><br>
+<a HREF="#learn">К чертям настройщика!</a><br>
+<a HREF="#ready">Уже воспользовались сервисом</a><br>
+<a HREF="#faq">Маленький фак</a><br>
+<a HREF="#my_scripts">Уникальные скрипты</a><br>
+<font FACE="Arial"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;</font>&nbsp; Вашему вниманию
+предлагается несколько отборных и мощных
+скриптов, настройку и отладку которых можно
+заказать тут же. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Можно часами ползать по сети в
+поисках скрипта и не найти ничего, даже
+приблизительно отвечающим Вашим нуждам. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Насладитесь счастьем, которое
+выпало вам в виде ссылки на эту страничку.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Конечно, последнее утверждение
+не касается тех, у кого вместо подушки книга
+&quot;Perl для кончающих&quot; или начатая рукопись
+&quot;Мой опыт программирования windows на Perl&quot;.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Итак, если у вас страничка уже
+где-то с год, и вы наконец заинтересовались чем то
+большим, чем насовыванием ссылок типа &quot;rambler.ru -
+поисковая система&quot; на желтом фоне с
+применением диких ява скриптов то данная
+страничка-для вас.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Советую также побродить по
+моему сайту и посмотреть, какие фичи использую я
+сам. </p>
+<font FACE="Arial">
+
+<p ALIGN="LEFT"><strong><a NAME="my">Мои статьи</a></p>
+</strong></font>
+
+<p ALIGN="LEFT"><a HREF="?crontab">Что такое crontab и с чем его едят ?</a><br>
+<p ALIGN="LEFT"><a HREF="?php_where">PHP.Где взять бесплатный
+хостинг с PHP ?</a><br>
+<a HREF="?php1">PHP.Первые шаги. Действительно легкая
+смена дизайна.</a><br>
+<a HREF="?php2">PHP.Первые шаги. Зачем нужна
+автоматизация сайта ?</a><br>
+<a HREF="?how">CGI : Настройка скриптов: 10 правил + личные
+советы по проектированию странички</a></p>
+<font FACE="Arial">
+
+<p ALIGN="LEFT"><strong><a NAME="order">Заказ настройки скрипта</a></strong><br>
+<br>
+</font>Если все же вы рпешили прибегнуть к моей
+помощи, заполните форму. Обязательные для
+заполнения поля отмечены <font COLOR="#ff0000">*</font>.&nbsp; </p>
+
+<form action="http://atlantida.agava.ru/cgi-bin/form.cgi" method="POST">
+  <input type="hidden" name="recipient" value="s.vlad@iname.com"><input type="hidden"
+  name="subject" value="CGI"><input type="hidden" name="required" value="fio,email"><input
+  type="hidden" name="env_report" value="REMOTE_HOST,HTTP_USER_AGENT"><input type="hidden"
+  name="sort" value="alphabetic"><input type="hidden" name="print_config" value="fio"><input
+  type="hidden" name="print_blank_fields" value="1"><input type="hidden" name="title"
+  value="CGI"><input type="hidden" name="return_link_url"
+  value="http://atlantida.agava.ru/cgi/index.php3"><input type="hidden"
+  name="return_link_title" value="Back to Main Page"><div align="left"><p>Имя или
+  ник:<font COLOR="#ff0000">*</font><br>
+  <input TYPE="text" SIZE="20" NAME="fio"> <br>
+  E-mail:<font COLOR="#ff0000">*</font><br>
+  <input TYPE="text" SIZE="20" NAME="email"> <br>
+  ICQ<br>
+  <input TYPE="text" SIZE="20" NAME="ICQ"> </p>
+  </div><div align="left"><p>URL вашего проекта.<br>
+  <input TYPE="text" SIZE="20" NAME="URL" VALUE="http://"> </p>
+  </div><div align="left"><p>Сервер вашего хостера.<br>
+  <input TYPE="text" SIZE="20" NAME="HOSTER" VALUE="http://"> </p>
+  </div><strong><div align="left"><p>Технические подробности</p>
+  </div></strong><div align="left"><p>Какой скрипт заинтересовал<br>
+  <select NAME="SCRIPT" SIZE="1">
+    <option VALUE="VIZBOOK">Скрипт гостевой книги Vizbook 1.56</option>
+    <option VALUE="DBMAN">Скрипт базы данных</option>
+    <option VALUE="KATALOG">Каталог ссылок Links Manager v2.0</option>
+    <option VALUE="UBB">Форум</option>
+    <option VALUE="VOTE">Голосование</option>
+    <option VALUE="BANNERS">Баннерная система Webadverts</option>
+    <option VALUE="BANNERSPRO">Баннерная система BannerManager</option>
+    <option VALUE="TOPSITE">Top Sites </option>
+    <option VALUE="TOPSITEPRO">Top Sites Professional</option>
+    <option VALUE="LEECH">Защита файлов от внешних ссылок</option>
+    <option VALUE="DOMEN">Организация виртуальных доменов </option>
+    <option VALUE="REDIRECT">Служба редиректинга</option>
+    <option selected VALUE="MYSCRIPT">Свой скрипт</option>
+    <option VALUE="all">Все!</option>
+    <option VALUE="NOONE">Ни один!</option>
+  </select> </p>
+  </div><div align="left"><p>Путь до Perl на вашем сервере.<br>
+  <input TYPE="text" SIZE="20" NAME="PERL"> </p>
+  </div><div align="left"><p>Путь до sendmail на вашем сервер.<br>
+  <input TYPE="text" SIZE="20" NAME="SENDMAIL"> </p>
+  </div><div align="left"><p>Путь до вашей домашней директории.<br>
+  <input TYPE="text" SIZE="20" NAME="HOMEDIR"> </p>
+  </div><div align="left"><p>Поддерживает ли ваш сервер SSI ?<br>
+  <select NAME="SSI" SIZE="1">
+    <option VALUE="Да">Да</option>
+    <option selected VALUE="Нет">Нет</option>
+  </select> </p>
+  </div><div align="left"><p>Поддерживает ли ваш сервер PHP и
+  базы данных?<br>
+  <select NAME="PHP" SIZE="1">
+    <option VALUE="Да">Да</option>
+    <option selected VALUE="Нет">Нет</option>
+  </select> </p>
+  </div><div align="left"><p>Будете ли вы сами помещать скрипт
+  на сервер?<br>
+  <select NAME="SAMSCRIPT" SIZE="1">
+    <option VALUE="Да">Да</option>
+    <option selected VALUE="Нет">Нет</option>
+  </select> <br>
+  <font COLOR="#ff0000">Внимание!</font> Если вы хоститесь на
+  бесплатных серверах, то сменить пароль там
+  зачастую невозможно. С другой стороны, мне будет
+  трудно настроить скрипт под ваш конкретный
+  сервер без того, чтобы не получить доступ по ftp.
+  Если вы сможете поместить скрипт на сервер т.е.
+  делали это раньше, то все отлично. Я отстраиваю
+  его и в архиве передаю вам. Консультирую по ходу
+  дела. Инструкции можно увидеть здесь.<br>
+  Если же вам лень с этим возится, то посылайте
+  пароль и логин. Я человек честный и конечно не
+  буду никому их отдавать и сам не воспользуюсь во
+  вредоносных или каких либо еще целях. <br>
+  Понимая голословность для вас последнего
+  утверждения, ничего поделать не могу. Вам решать.</p>
+  </div><div align="left"><p>Требуется ли русификация скрипта ?<br>
+  <select NAME="russifikacia" SIZE="1">
+    <option VALUE="Да">Да</option>
+    <option selected VALUE="Нет">Нет</option>
+  </select> <br>
+  Очень важный пункт. Неохота мне возится. Только
+  по крайней нужде. J<br>
+  &nbsp;&nbsp;<br>
+  Ссылка на ваш скрипт<br>
+  <input TYPE="text" SIZE="20" NAME="CUSTOMSCRIPT" VALUE="http://"> </p>
+  </div><div align="left"><p>Нужно специальное
+  программирование ? Скрипт только для вас,
+  которого и в природе пока не существует ?<br>
+  <select NAME="Programmirovanie" SIZE="1">
+    <option VALUE="Да">Да</option>
+    <option selected VALUE="Нет">Нет</option>
+  </select> </p>
+  </div><div align="left"><p>С каким количеством показов
+  можете расстаться за все это дело ?<br>
+  <input TYPE="text" SIZE="20" NAME="RLE"> </p>
+  </div><div align="left"><p>Сколько баннеров готовы
+  нарисовать ?<br>
+  <input TYPE="text" SIZE="20" NAME="BANNER"> <br>
+  <br>
+  Примеры Ваших баннеров и/или работ.<br>
+  <input TYPE="text" SIZE="20" NAME="BANNER_EXAMPLE" VALUE="http://"> </p>
+  </div><div align="left"><p>Ваши вопросы,
+  предложения,информация<br>
+  <font FACE="Arial"><textarea NAME="questions" rows="7" cols="44" wrap="VIRTUAL"></textarea>
+  <br>
+  <br>
+  <input TYPE="submit" NAME="submit" VALUE="Отправить"> <input TYPE="reset"
+  NAME="reset" VALUE=" Очистить "> </font></p>
+  </div>
+</form>
+
+<p ALIGN="LEFT">&nbsp;</p>
+
+<p ALIGN="LEFT"><strong><font FACE="Arial"><a NAME="learn">К чертям
+настройщика! Сделаем сами!</a></p>
+</font></strong><em>
+
+<p ALIGN="LEFT">Русское</em><br>
+<a HREF="book4.zip">Рэндал Шварц, Том Кристиансен
+&quot;Изучаем Perl&quot;</a> (<font COLOR="#ff0000">рекомендую</font>)<br>
+<a HREF="?book2">Практический Перл для начинающего</a> (<a
+HREF="mailto:saint@unforgettable.com">Александр Боровский</a>) <br>
+<a HREF="?book1">Учебное пособие по CGI-программированию</a><br>
+<a HREF="http://phpclub.unet.ru/tutor/apache.html">Установка программ
+для отладки скриптов (Win+Apache+Perl+PHP+MySQL)</a> (новое
+окно)<br>
+<a HREF="http://cgi.superbest.net/publications/cgi_3.shtml">Установка
+cgi-скрипта</a> (новое окно)<br>
+<a HREF="http://cgi.superbest.net/publications/chmod.shtml">Что такое
+команда chmod </a>(новое окно)<br>
+<a HREF="http://www.lib.ru/PERL/russperl5/perl.txt">Владимир Маслов.
+Введение в Perl </a>(новое окно)<br>
+<a HREF="http://perldoc.virtualave.net/cgi-bin/index.pl?part=0">Другие
+учебники и документы </a>(новое окно)<br>
+<a HREF="http://phpclub.unet.ru/tutor/about_php_rus.htm">Что такое PHP</a>
+(новое окно)<br>
+<br>
+<em>Английское</em><br>
+<a HREF="http://hrg.dhtp.kiae.ru/corvin/perlbs/learn32/index.htm">O`Reilly: Learning Perl</a>
+(новое окно)<br>
+<a HREF="http://hrg.dhtp.kiae.ru/corvin/perlbs/prog/index.htm">O`Reilly: Programming Perl</a>
+(новое окно)<br>
+<a HREF="http://hrg.dhtp.kiae.ru/corvin/perlbs/advprog/index.htm">O`Reilly: Advanced Perl
+Programming</a> (новое окно)<br>
+<a HREF="http://hrg.dhtp.kiae.ru/corvin/perlbs/cookbook/index.htm">O`Reilly: Perl Cookbook</a>
+(новое окно)<br>
+<a HREF="http://hrg.dhtp.kiae.ru/corvin/perlbs/perlnut/index.htm">O`Reilly: Perl in a
+Nutshell</a> (новое окно)</p>
+
+<p ALIGN="LEFT"><strong><font FACE="Arial"><a NAME="ready">Уже
+воспользовались сервисом</a></p>
+</font></strong>
+
+<p ALIGN="LEFT">26.04.00 <a HREF="http://school.agava.ru/">http://school.agava.ru</a> -
+Форма (анкета).<br>
+15.03.00 <a HREF="http://www.photo.voronezh.net:8101/">http://www.photo.voronezh.net:8101/</a>
+- махонький скрипт, открывающий картинку вместе с
+баннерами.<br>
+26.02.00 <a HREF="http://www.porto.agava.ru/">www.porto.agava.ru</a> - форум,
+голосование.<br>
+<a HREF="http://www.windsurfing.agava.ru/">www.windsurfing.agava.ru/</a> - каталог
+фотографий, виртуальные открытки<br>
+<a HREF="http://www.realmoney.ru/">www.realmoney.ru</a> - голосование,
+форум</p>
+
+<p ALIGN="LEFT"><strong><font FACE="Arial"><a NAME="faq">Маленький фак</a></font></strong><em><br>
+</em><strong><br>
+Сколько показов ты берешь за настройку скриптов ?</strong><br>
+С каждым скриптом и заказчиком решается все
+индивидуально. Я не жаден до показов, тем более
+все равно время, проведенное в сети, мне не
+окупить :). Просто любой труд должен быть оплачен.</p>
+<strong>
+
+<p ALIGN="LEFT">Каков порядок оплаты ?</strong><br>
+Сначала я заставляю скрипт работать как надо для
+вас, потом вы скидываете мне на счет <strong>012666</strong>
+в <a HREF="http://www.rle.ru/">РЛЕ</a> показы. Для крутых
+скриптов-наоборот. Сначала вы за них
+расплачиваетесь, а потом я передаю их вам. </p>
+<strong>
+
+<p ALIGN="LEFT">Когда тебя можно застать в сети ?</strong><br>
+Обычно я несколько раз забираю почту днем, а по
+вечерам с 20:00 по Москве я в сети до 22:00 по Москве.
+Моя аська&nbsp; 18181623</p>
+<strong>
+
+<p ALIGN="LEFT">Что делать, если мой хостер не
+поддерживает cgi, SSI, а перезжать не хочется ?<br>
+</strong>Открыть аккаунт например на <a
+HREF="http://www.virtualave.net/">www.virtualave.net</a>, и размещать
+скрипты там. Будут оттуда вызываться. Конечно,
+кое что останется за бортом.<br>
+<br>
+<strong>У меня порно ресурс. Сделаешь топ 100 для меня?</strong><br>
+Мне абсолютно неважно, что у вас за ресурс, ровно
+как и цвет кожи, вероисповедание, оценки в школе. <br>
+<br>
+<strong>Хочу сам все настроить, английского не знаю,
+ты мне подскажи, чего там поменять то надо.</strong><br>
+Без проблем. Четко вырази вопрос, я отвечу и
+подскажу. Для этого есть форум. (Пока не работает)<br>
+<br>
+<strong>У меня страничка о птичках/рыбках, показов
+мало, рисовать баннеры не умею, денег нет, твой
+баннер нарушит концептуальность моего Дизайна.
+После того, как увидел один скрипт, больше не
+сплю. Ничего в скриптах не понимаю, что делать ? </strong><br>
+Настрою. Что уж тут. Будете в Екатеринбурге - с вас
+коньяк. <br>
+<br>
+<strong>У меня показов счас мало. Но есть такая фотка
+Бритни Спирс, что народ просто повалит на нее
+глазеть! Будут показы-отдам.</strong><br>
+Окей. Мой баннер на твой ресурс сейчас, показы
+отдашь-уберешь.<br>
+<br>
+<strong>Хочу завсегда пользоваться твоим крутым
+сервисом. Скидки есть ?</strong><br>
+Конечно. Для постоянных пользователей скидки. На
+опт скидки. На мелкий опт скидки. Без скидок
+счас-никуда.<br>
+<br>
+<strong>Я тоже много чего понимаю в скриптах и
+программировании. Есть у меня один, которого нет
+у тебя. Махнемся?</strong><br>
+Давай, всегда рад пополнить свою коллекцию. Пиши,
+обсудим.<br>
+<br>
+<strong>Я тоже большой любитель перла и готов помочь
+людям с настройкой/написанием скриптов. Куда
+податься ?</strong><br>
+Помощники всегда приветствуются. Пишите.<br>
+<br>
+<strong>Это какое то безобразие! Ты мерзкий тип,
+пользующийся тем, что люди не знают, как
+настраивать программы на перле! </strong><br>
+Нехай идут в <a HREF="../index.html">пожиратель
+ссылок</a>, находят там ссылки по программированию
+и обучаются.</p>
+
+<p ALIGN="LEFT"><font FACE="Arial"><a NAME="my_scripts">Уникальные
+скрипты</a></p>
+</font><strong>
+
+<p ALIGN="LEFT">Веб - магазин.<br>
+</strong><a HREF="http://216.3.128.34/cgi-bin/Web_store/web_store.cgi">демонстрация</a><br>
+Хороший магазин. Есть и еще лучше.<br>
+<br>
+<strong>Скрипт базы данных </strong>EZDB<br>
+<a HREF="http://www.ezperl.com/">демонстрация</a><br>
+Любую небольшую базу данных можно легко
+представить в сети. Сайт знакомств, примитивный
+магазинчик.Анкеты для работы, архивы статей,
+каталоги запчастей.<br>
+<strong>Примечание</strong><br>
+Встроенная поддержка закачки файлов<br>
+<br>
+<strong>Каталог ссылок</strong>&nbsp; Links Manager v2.0<br>
+<a HREF="http://www.gossamer-threads.com/">демонстрация</a><br>
+Не хуже, чем лист.ру.<br>
+<strong>Примечание</strong><br>
+Что я изменил-модифицировал из оригинала. Этого
+нет в базовом скрипте.<br>
++Русификация.Могут быть смешанные категории.
+Некторые называются на английском,<br>
+некоторые на русском. <br>
++Графическое отображение (звездочками) рейтинга
+ресурса.<br>
++Возможность пользователи могут оставлять
+отзывы о ресурсе. <br>
++Отображение баннера ресурса 88*31 (как на ярмарке
+сайтов)<br>
++Подкатегории выводятся на клавной страничке
+(как на лист.ру)<br>
++Пользователи могут быстро говорить админу о
+нерабочих ссылках.<br>
++Возможность настройки приоритета вывода
+(друзья-вверху)<br>
+<br>
+Сразу скажу о минусах. Пока я не модифицировал
+секьюрити у каталога.<br>
+Теоретически, пользователь может нагадить
+следующим образом-узнав url<br>
+ресурса, изменить о нем данные. Изменение
+секьюрити возможно<br>
+(запаролить). Просто руки не дошли.<br>
+<a HREF="../index.html">Пример 1</a><br>
+<br>
+<strong>Форум</strong> Ultimate Bulletin Board v5.44а<br>
+<a HREF="http://www.ultimatebb.com/home/examples.shtml">демонстрация</a> |
+полная версия - за показы (<a
+HREF="http://www.realmoney.ru/cgi-bin/Ultimate.cgi">демо</a>)<br>
+Лучший форум.<br>
+<a HREF="http://www.besplatno.ru/">Пример 1</a></p>
+
+<p ALIGN="LEFT"><br>
+<strong>Голосование</strong> Survey 1.3 <br>
+<a HREF="http://www.cgi-factory.com/">демонстрация</a><br>
+Удобно вставлять код на свои странички. Вывод
+результатов по старым голосованиям. <br>
+<a HREF="../index.html">Пример 1</a><br>
+<br>
+<strong>Баннерная система </strong>Webadverts<br>
+<a HREF="http://awsd.com/scripts/webadverts/">демонстрация</a> |
+скачать<br>
+Хотите личную баннерную сеть для вас и ваших
+друзей ?<br>
+<strong>Примечание</strong><br>
+С дизайном плохо дружит. Новые версии регулярно
+появляются.</p>
+<strong>
+
+<p ALIGN="LEFT">Баннерная система</strong> Banner Manager Version 2.5 <br>
+<a HREF="http://meysoft.com/">демонстрация</a> | полная версия -
+за показы<br>
+Хотите крутую баннерную сеть?<br>
+<strong><br>
+Top Sites</strong> Top Sites Professional v3.04 &nbsp;&nbsp; , AutoRank 3<br>
+<a HREF="http://solutionscripts.com/vault/topsites/demo/">демонстрация</a> |
+мощная версия-за показы<br>
+Ваш личный ТОП 100 сайтов о мультиках<br>
+<br>
+<strong>Порногалерея </strong><br>
+ТОП 100, предосмотр, разбивка по категориям, поиск,
+рэйтинг.</p>
+<strong>
+
+<p ALIGN="LEFT">Новости</strong><br>
+Автоархивирование, поиск по новостям, авторы,
+возможность добавления комментариев
+пользователями, категории.<br>
+<a HREF="../index.html">Пример 1</a><br>
+<br>
+<strong>Защита файлов от внешних ссылок.</strong> <br>
+Не хотите, чтобы на файлы ваших страничек ставили
+ссылки ? Статистику по скачанным файлам хочется ?<br>
+<br>
+<strong>Организация виртуальных доменов. Служба
+редиректинга.</strong> (как <a HREF="http://www.cjb.net/">www.cjb.net</a>
+или как у come.to)<br>
+Можно сделать <br>
+cgi.atlantida.agava.ru <br>
+links.atlantida.agava.ru <br>
+lib.atlantida.agava.ru для своих разделов. Типа понты.<br>
+А можно и для пользователей такой сервис
+устроить<br>
+Если у вас сервер www.pupkin.ru , то можно заняться
+редиректингом всех васей и петь пупкиных!
+Требуется wildcard on у сервера вашего хостера</p>
+
+<p ALIGN="CENTER"><a HREF="http://counter.rambler.ru/top100/"><img
+SRC="http://counter.rambler.ru/top100.cnt?126857" BORDER="0" WIDTH="81" HEIGHT="63"
+ALT="Rambler's Top100"></a><!--end of Top100 code--> </p>
+</body>
+</html>
+</p>
+
+<p align="right"><small><a href="?">содержание </a>| <a
+href="#up">вверх</a></small></p>
+	</td></tr></table></td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</body></html>
+
+
+</body></html>

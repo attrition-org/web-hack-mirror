@@ -1,0 +1,86 @@
+<html>
+
+<head>
+<title>sommaire le crip</title>
+<link rel="stylesheet" href="../crip1.css" type="text/css">
+<base target="bas_droite">
+</head>
+
+<body background="../images/pixelbleu.GIF" topmargin="0" leftmargin="0">
+<script LANGUAGE="JavaScript"><!--
+browserName = navigator.appName;
+browserVer = parseInt(navigator.appVersion);
+
+if( browserName == "Netscape" && browserVer >= 3 )
+        version = "rollon";
+else
+
+if( browserName == "Microsoft Internet Explorer" && browserVer >= 4 )
+ version = "rollon";
+else
+
+        version = "rolloff";
+
+if ( version == "rollon" )
+
+{
+
+// declaration des images
+
+	img_a = new Image (130,30);
+        img_a.src = "images/2off.gif";
+        img_a_on = new Image (130,30);
+        img_a_on.src = "images/2on.gif";
+
+
+	img_b = new Image (130,30);
+        img_b.src = "images/3off.gif";
+        img_b_on = new Image (130,30);
+        img_b_on.src = "images/3on.gif";
+
+	img_c = new Image (130,30);
+        img_c.src = "images/4off.gif";
+        img_c_on = new Image (130,30);
+        img_c_on.src = "images/4on.gif";
+
+	img_d = new Image (130,30);
+        img_d.src = "images/5off.gif";
+        img_d_on = new Image (130,30);
+        img_d_on.src = "images/5on.gif";
+
+	img_e = new Image (130,30);
+        img_e.src = "images/1off.gif";
+        img_e_on = new Image (130,30);
+        img_e_on.src = "images/1on.gif";
+    	        
+}
+
+function RollOver (ImgId,Mode)
+{
+if ( version == "rollon" )
+        {
+        if ( Mode == "on" )
+                document.images[ImgId].src = eval(ImgId+"_on.src");
+        if ( Mode == "off" )
+                document.images[ImgId].src = eval(ImgId+".src");
+        else
+	        return null;
+        }
+else
+        return null;
+}
+// --></script>
+
+
+<table CELLSPACING="0" CELLPADDING="0" BORDER="0" height="30">
+  <tr>
+    <td width="130" height="30"><a bas_droite" onMouseover="RollOver('img_a','on');self.status='Présentation du CRIP';return true;" onMouseout="RollOver('img_a','off');self.status='';return true;" TARGET="bas_droite" href="presentation.htm"><img SRC="images/2off.gif" BORDER="0" NAME="img_a" WIDTH="130" HEIGHT="30"></a></td>
+    <td width="130" height="30"><a onMouseover="RollOver('img_b','on');self.status='Les formateurs';return true;" onMouseout="RollOver('img_b','off');self.status='';return true;" TARGET="bas_droite" href="formateurs.htm"><img SRC="images/3off.gif" BORDER="0" NAME="img_b" WIDTH="130" HEIGHT="30"></a></td>
+    <td width="130" height="30"><a onMouseover="RollOver('img_c','on');self.status='Les moyens matériels';return true;" onMouseout="RollOver('img_c','off');self.status='';return true;" TARGET="bas_droite" href="moyens.htm"><img SRC="images/4off.gif" BORDER="0" NAME="img_c" WIDTH="130" HEIGHT="30"></a></td>
+    <td width="130" height="30"></td>
+    <td width="130" height="30"><a HREF="../contacts/contacts.htm" onMouseover="RollOver('img_e','on');self.status='Contactez-nous';return true;" onMouseout="RollOver('img_e','off');self.status='';return true;" TARGET="bas_droite"><img SRC="images/1off.gif" BORDER="0" NAME="img_e" WIDTH="130" HEIGHT="30"></a></td>
+    <td width="130" height="30"><p align="center"><a href="../../index.htm" target="_top"><strong><font color="#FF0000">Accueil</font></strong></a></td>
+  </tr>
+</table>
+</body>
+</html>

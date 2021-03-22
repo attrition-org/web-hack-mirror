@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>./modu1e</title>
+<body
+text="#000000" bgcolor="#000000">
+
+<SCRIPT language=JavaScript1.2>
+var it=0
+function initialize(){
+mytext=typing.innerText
+var myheight=typing.offsetHeight
+typing.innerText=''
+document.all.typing.style.height=myheight
+document.all.typing.style.visibility="visible"
+typeit()
+}
+function typeit(){
+typing.insertAdjacentText("beforeEnd",mytext.charAt(it))
+if (it<mytext.length-1){
+it++
+setTimeout("typeit()",100)
+}
+else
+return
+}
+if (document.all)
+document.body.onload=initialize
+</SCRIPT>
+ 
+<FONT color=lime face=terminal size=4><SPAN id=typing 
+style="VISIBILITY: hidden" align="left">
+      
+<p>"I have seen things you people wouldn't believe. Attack ships on fire off the shoulder of Orion. I watched C-Beams glitter in the dark near the Tannhauser Gate. All those moments will be lost in time, like tears in rain.....TIME TO DIE."</p>
+
+
+<!-- ADMIN: nothing was deleted (except logs) 
+
+            default.htm was renamed to default.bak
+
+            Apply the patches @: 
+            
+            http://www.microsoft.com/technet/security/bulletin/ms99-025.asp
+            http://www.microsoft.com/technet/security/bulletin/ms00-057.asp
+
+            Secure your server...
+
+            !!modu1e!!rox!!your!!world!! -->
+
+            
+</body></head></html>
+
+
+<!-- Merry Christmas and happy new year to all... -->
+<!-- www.attrition.org web hack mirror - watermark or something -->

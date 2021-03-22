@@ -1,0 +1,40 @@
+
+Starting nmap V. 2.54BETA3 ( www.insecure.org/nmap/ )
+Warning:  OS detection will be MUCH less reliable because we did not find at least 1 open and 1 closed TCP port
+Insufficient responses for TCP sequencing (3), OS detection may be less accurate
+Insufficient responses for TCP sequencing (2), OS detection may be less accurate
+Interesting ports on  (200.11.216.24):
+Port       State       Service
+22/tcp     filtered    ssh                     
+23/tcp     filtered    telnet                  
+25/tcp     open        smtp                    
+53/tcp     filtered    domain                  
+80/tcp     open        http                    
+
+TCP Sequence Prediction: Class=random positive increments
+                         Difficulty=2823324 (Good luck!)
+Aggressive OS guesses: Linux 2.1.122 - 2.2.16 (86%), Linux kernel 2.2.13 (86%), Linux 2.2.14 (86%)
+No exact OS matches for host (If you know what OS is running on it, see http://www.insecure.org/cgi-bin/nmap-submit.cgi).
+TCP/IP fingerprint:
+T1(Resp=Y%DF=Y%W=7F53%ACK=S++%Flags=AS%Ops=MENNTNW)
+TSeq(Class=RI%gcd=1%SI=2B149C)
+T2(Resp=N)
+T1(Resp=Y%DF=Y%W=7F53%ACK=S++%Flags=AS%Ops=MENNTNW)
+T3(Resp=Y%DF=Y%W=7F53%ACK=S++%Flags=AS%Ops=MENNTNW)
+T2(Resp=N)
+T4(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T3(Resp=Y%DF=Y%W=7F53%ACK=S++%Flags=AS%Ops=MENNTNW)
+T5(Resp=N)
+T4(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T6(Resp=Y%DF=Y%W=100%ACK=O%Flags=R%Ops=)
+T5(Resp=N)
+T7(Resp=Y%DF=Y%W=100%ACK=S%Flags=AR%Ops=)
+T6(Resp=Y%DF=Y%W=100%ACK=O%Flags=R%Ops=)
+PU(Resp=N)
+T7(Resp=Y%DF=Y%W=100%ACK=S%Flags=AR%Ops=)
+PU(Resp=N)
+
+
+
+
+Nmap run completed -- 1 IP address (1 host up) scanned in 88 seconds

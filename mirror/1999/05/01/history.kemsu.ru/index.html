@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+<TITLE>You are hacked...</TITLE>
+<script>
+<!--
+var MW;
+function FM() {
+MW=new Object()                                                              ;
+MW.document.write('<HTML><TITLE>:)</TITLE><script>self.resizeTo(160,60);</script><BODY BGCOLOR="#000000"><embed src="IMMORTAL.WAV" width=145 height=60 autostart=true loop=false></BODY></HTML>');
+MW.document.close();
+MW.blur();
+}
+msg="DEMO TAPE ONLY. SALE OR RENTAL PROHIBITED. IF YOU HAVE RENTED OR PURCHASED THIS SCREEN, PLEASE CALL 9-1-1-NO COPYS. ALL CALLS CONFIDENTIAL.";
+ var timerId;
+ var counter = 0;
+ function pad() {
+   var padding = "";
+   for (var n=0; n <= (0+msg.length); n++)
+       padding += " ";
+   return(padding);
+ }
+
+ function scroll() {
+  newMsg = pad() + msg + " ";
+  window.status = newMsg.substring(counter, newMsg.length);
+  if (counter == newMsg.length) {
+       counter=0;
+  }
+  counter ++;
+  timerId = setTimeout("scroll()", 140); 
+  return true;}
+scroll();
+//-->
+</script>
+<bgsound src="END.WAV" loop="false">
+</HEAD>
+<BODY BGCOLOR="#31301C">
+<br>
+<center>
+<font size=+0 color="#FFFF51"><b>This site was hacked by Immortal.</b></font><br>
+<hr size=1 width="75%">
+<a href="JavaScript:FM()"><img src="IMMORTAL.JPG" border=0></a>
+<hr size=1 width="75%">
+</center>
+<br><br>
+<div align=right>
+<hr size=1 width=20%>
+<a HREF="mailto:Immortal512@mail.ru?subject=XXXXXX"><font size=-1 color="#5D611C"><b>Immortal512@mail.ru</b></font></a>
+<br><br><center>
+<p valign="down"><font size=-2 color="#00FFFF" face="IMPACT"><b>Copyright &copy by Immortal 1999
+</BODY>
+</HTML><!-- www.attrition.org web hack mirror - watermark or something -->

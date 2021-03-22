@@ -1,0 +1,187 @@
+<HTML>
+<HEAD>
+	<TITLE>CHS.Daily Announcements</TITLE>
+	<LINK rel=STYLESHEET href="style/style.css" type="text/css">
+		<SCRIPT language="javascript">
+	<!--
+	if(document.layers){origWidth=innerWidth;origHeight=innerHeight;onresize=function(){if(innerWidth!=origWidth||innerHeight!=origHeight)location.reload()}}
+	
+
+	if(document.layers){origWidth=innerWidth;origHeight=innerHeight;onresize=function(){if(innerWidth!=origWidth||innerHeight!=origHeight)location.reload()}}
+	
+	IE4 = (document.all) ? 1 : 0;
+	NS4 = (document.layers) ? 1 : 0;
+	ver4 = (IE4 || NS4) ? 1 : 0;
+	topLayer = "primeLayer";
+	
+	rCor = 138;
+	
+	if (ver4) {
+		
+		arCors = new Array()
+		
+		function setCors(which,top,bottom,left) {
+			arCors[which] = new Array();
+			arCors[which][0] = top;
+			arCors[which][1] = bottom;
+			arCors[which][2] = left;
+		}
+		
+		setCors(1,5,21,87);
+		setCors(2,22,39,73);
+		setCors(3,40,56,20);
+		setCors(4,57,72,83);
+		setCors(5,73,90,6);
+		setCors(6,91,107,71);
+		setCors(7,108,123,71);
+		setCors(8,124,141,46);
+		setCors(9,142,158,46);
+		setCors(10,159,175,5);
+		setCors(11,176,192,58);
+		
+		function mapOver (which,on) {
+				
+			tCor = arCors[which][0];
+			bCor = arCors[which][1];
+			lCor = arCors[which][2];
+			
+			if (NS4) {
+				if (on) {
+				document.menu.document.menuOn.clip.top = tCor
+				document.menu.document.menuOn.clip.right = rCor
+				document.menu.document.menuOn.clip.bottom = bCor
+				document.menu.document.menuOn.clip.left = lCor
+				document.menu.document.menuOn.visibility = "show"				
+				}
+				else {
+				document.menu.document.menuOn.clip.top = 0
+				document.menu.document.menuOn.clip.right = 0
+				document.menu.document.menuOn.clip.bottom = 0
+				document.menu.document.menuOn.clip.left = 0
+				}
+			}					
+	
+			if (IE4) {
+				if (on) {
+					document.all.menuOn.style.clip = "rect(" + tCor + " " + rCor + " " + bCor + " " + lCor + 	")"
+					document.all.menuOn.style.visibility = "visible"
+				}
+				else {document.all.menuOn.style.clip = "rect(0 0 0 0)"}}
+			}
+			
+			function show(id) {
+
+			if (NS4) {
+				document.layers[topLayer].visibility = "hide"
+				document.layers[id].visibility = "show"
+				topLayer = [id]
+				}
+			else if (IE4) {
+				document.all[topLayer].style.visibility = "hidden"
+				document.all[id].style.visibility = "visible"
+				topLayer = [id]
+				}
+			}
+			
+		}
+	//-->
+	</SCRIPT>
+</HEAD>
+
+<BODY>
+
+<DIV STYLE="position: absolute; top:0; text-align:right"><A HREF="mailto:yoshi@hosedown.com"><IMG SRC="images/corner_e.gif" WIDTH=9 HEIGHT=5 BORDER=0 ALT="Email"></A>
+</DIV>
+
+<DIV id="mainHeader">
+<p><A HREF="index.html"><IMG src="images/chsheader.gif" width=320 height=10 alt="Columbine High School" BORDER=0></A>
+&nbsp; 6201 South Pierce Street &nbsp; Littleton, CO 80123 &nbsp; 303.982.4400</P>
+</DIV>
+
+<DIV id="menu">
+	
+		<MAP name="mainmenu">
+		<!-- #$-:Image Map file created by Map THIS! -->
+		<!-- #$-:Map THIS! free image map editor by Todd C. Wilson -->
+		<AREA shape=RECT coords="87,5,138,21" href="ego/ego.html"
+		onMouseOver="mapOver('1',1)" onMouseOut="mapOver('1',0)">
+		<AREA shape=RECT coords="73,22,138,39" href="index.html"
+		onMouseOver="mapOver('2',1)" onMouseOut="mapOver('2',0)">
+		<AREA shape=RECT coords="20,40,138,56" href="feed/feed.html"
+		onMouseOver="mapOver('3',1)" onMouseOut="mapOver('3',0)">
+		<AREA shape=RECT coords="83,57,138,72" href="info/info.html"
+		onMouseOver="mapOver('4',1)" onMouseOut="mapOver('4',0)">
+		<AREA shape=RECT coords="6,73,138,90" href="res/res.html"
+		onMouseOver="mapOver('5',1)" onMouseOut="mapOver('5',0)">
+		<AREA shape=RECT coords="71,91,138,107" href="admin/admin.html"
+		onMouseOver="mapOver('6',1)" onMouseOut="mapOver('6',0)">
+		<AREA shape=RECT coords="71,108,138,123" href="dept/dept.html"
+		onMouseOver="mapOver('7',1)" onMouseOut="mapOver('7',0)">
+		<AREA shape=RECT coords="46,124,138,141" href="sports/sports.html"
+		onMouseOver="mapOver('8',1)" onMouseOut="mapOver('8',0)">
+		<AREA shape=RECT coords="46,142,138,158" href="clubs/clubs.html"
+		onMouseOver="mapOver('9',1)" onMouseOut="mapOver('9',0)">
+		<AREA shape=RECT coords="5,159,138,175" href="counsel/counsel.html"
+		onMouseOver="mapOver('10',1)" onMouseOut="mapOver('10',0)">
+		<AREA shape=RECT coords="58,176,138,192" href="alumni/alumni.html"
+		onMouseOver="mapOver('11',1)" onMouseOut="mapOver('11',0)">
+		</MAP>
+	
+	
+	<DIV id="menuBg"></DIV>
+
+	<DIV id="menuOn"></DIV>
+
+	<DIV id="menuImg"><IMG src="images/menu.gif" usemap="#mainmenu" width=143 height=199 alt="menu" border=0></DIV>
+
+</DIV>
+
+<!-- zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz-->
+
+<DIV CLASS="pageTitle"><p>&nbsp; Daily Announcements</p></DIV>
+
+<!-- zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz-->
+
+<DIV id="primeLayer" class="textLayer" style="visibility: visible"> 
+  <p>Daily Announcements for April 20, 1999</p>
+  <p>Attention seniors: as we're finalizing graduation there are still seniors 
+    who have not turned in graduation contracts. Please turn them in A.S.A.P. 
+    If you want to be included in the graduation ceremony.</p>
+  <p>The post grad center will be open tonight from 6:30 to 8:30pm. Please let 
+    your parents know and plan to make use of this resource while it is open.</p>
+  <p>Remember, if you're a guy about to turn 18, you need to register with selective 
+    service. Either log onto the Internet (www.sss.gov), or register at your local 
+    post office. Registration is quick and easy and it's the law. </p>
+  <p>Attention college-bound juniors: there will be a spring college fair on Saturday, 
+    May 1st. There will be over 150 colleges and universities represented. This 
+    would be an excellent opportunity for you and your parents to visit with college 
+    admission representatives from schools both in Colorado and throughout the 
+    country. There will also be workshops on selecting a college and sources of 
+    scholarships. This program will be held at Englewood High school from 1:00 
+    to 4:00pm. Check the post grad center for a partial listing of schools involved 
+    in the college fair. </p>
+  <p>Attention outdoor club members and all seniors: there will be an outdoor 
+    club meeting Thursday at 2:40pm in room La-9 to discuss the end of the year 
+    canoe trip. Please see Mr. Webb if you cannot attend.</p>
+  <p>Congratulations to the girl's golf team for being the top Jeffco team in 
+    the Greeley invitational tournament yesterday. Our third place finishers were 
+    the team of Lindsay Conwell, Lindsay Wyant, Emily Wyant and Kylee Morton. 
+    Lindsay Conwell led the rebels by placing 6th over-all with a round of 77. 
+    Congratulations to all the girls for their excellent showing. </p>
+  <p>Congratulations to the following seniors who will serve as graduation speakers: 
+    Welcome: Meredith Russo; Speakers: Sara Martin and Jenny Wallick; Farewell: 
+    Justin Carlson.</p>
+  <p>Congratulations to the members of the columbine wind symphony. At the Colorado 
+    High School Activities Association large group contest on Wednesday, they 
+    received division 1, superior ratings from all judges, including sight reading. 
+    Only 3 bands of the 20 bands there received straight 1's and Columbine was 
+    the only 5a school to receive straight 1's. </p>
+  <p>Juniors: if you're interested in improving your SAT or ACT test scores, sign 
+    up for the 3 week ACT/SAT test preparation class offered as a part of summer 
+    school. The cost is $150 for each class. If you're interested, come to the 
+    Counseling Center to pick up a registration form. Forms are due April 30th.</p>
+  <p>&nbsp;</p>
+</DIV>
+
+</BODY>
+</HTML>

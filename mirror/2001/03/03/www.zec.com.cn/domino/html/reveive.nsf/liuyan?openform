@@ -1,0 +1,83 @@
+<HTML>
+<!-- Lotus-Domino (Release 5.0.1 (Intl) - 16 July 1999 on Solaris Sparc) -->
+<HEAD>
+<TITLE>新建主题</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- 
+document._domino_target = "_self";
+function _doClick(v, o, t, h) {
+  var form = document._liuyan;
+  if (form.onsubmit) {
+     var retVal = form.onsubmit();
+     if (typeof retVal == "boolean" && retVal == false)
+       return false;
+  }
+  var target = document._domino_target;
+  if (o.href != null) {
+    if (o.target != null)
+       target = o.target;
+  } else {
+    if (t != null)
+      target = t;
+  }
+  form.target = target;
+  form.__Click.value = v;
+  if (h != null)
+    form.action += h;
+  form.submit();
+  return false;
+}
+// -->
+</SCRIPT>
+</HEAD>
+<BODY TEXT="000000" BGCOLOR="ffffff" BACKGROUND="/domino/html/reveive.nsf/40c598a0248fd21448256759001e3950/$Background/0.1E?OpenElement&FieldElemFormat=gif">
+
+<FORM METHOD=post ACTION="/domino/html/reveive.nsf/liuyan?OpenForm&Seq=1" NAME="_liuyan">
+<INPUT TYPE=hidden NAME="__Click" VALUE="0">
+<TABLE WIDTH="100%" BORDER=0 CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=top><TD WIDTH="2377" COLSPAN=4><IMG SRC="/icons/ecblank.gif" BORDER=0 HEIGHT=1 WIDTH=1 ALT=""></TD></TR>
+
+<TR></TR>
+
+<TR></TR>
+
+<TR></TR>
+
+<TR></TR>
+
+<TR></TR>
+
+<TR VALIGN=top><TD WIDTH="1931" BGCOLOR="c0c0c0" COLSPAN=4></TD></TR>
+
+<TR VALIGN=top><TD WIDTH="2377" BGCOLOR="c0c0c0" COLSPAN=4></TD></TR>
+
+<TR VALIGN=top><TD WIDTH="2377" BGCOLOR="c0c0c0" COLSPAN=4></TD></TR>
+</TABLE>
+
+<TABLE WIDTH="100%" BORDER=0 CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=top><TD WIDTH="120" BGCOLOR="37605e"><IMG SRC="/icons/ecblank.gif" BORDER=0 HEIGHT=1 WIDTH=1 ALT=""></TD><TD WIDTH="240" BGCOLOR="37605e"><IMG SRC="/icons/ecblank.gif" BORDER=0 HEIGHT=1 WIDTH=1 ALT=""></TD><TD WIDTH="180" BGCOLOR="37605e"><IMG SRC="/icons/ecblank.gif" BORDER=0 HEIGHT=1 WIDTH=1 ALT=""></TD><TD WIDTH="180" BGCOLOR="37605e"><IMG SRC="/icons/ecblank.gif" BORDER=0 HEIGHT=1 WIDTH=1 ALT=""></TD></TR>
+
+<TR VALIGN=top><TD WIDTH="120"><IMG SRC="/icons/ecblank.gif" BORDER=0 HEIGHT=1 WIDTH=1 ALT=""></TD><TD WIDTH="240"><IMG SRC="/icons/ecblank.gif" BORDER=0 HEIGHT=1 WIDTH=1 ALT=""></TD><TD WIDTH="180"><IMG SRC="/icons/ecblank.gif" BORDER=0 HEIGHT=1 WIDTH=1 ALT=""></TD><TD WIDTH="180"><IMG SRC="/icons/ecblank.gif" BORDER=0 HEIGHT=1 WIDTH=1 ALT=""></TD></TR>
+</TABLE>
+
+<TABLE WIDTH="100%" BORDER=0 CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=top><TD WIDTH="54"><IMG SRC="/icons/ecblank.gif" BORDER=0 HEIGHT=1 WIDTH=1 ALT=""></TD><TD WIDTH="215"><IMG SRC="/icons/ecblank.gif" BORDER=0 HEIGHT=1 WIDTH=1 ALT=""></TD><TD WIDTH="121"><IMG SRC="/icons/ecblank.gif" BORDER=0 HEIGHT=1 WIDTH=1 ALT=""></TD><TD WIDTH="329"><IMG SRC="/icons/ecblank.gif" BORDER=0 HEIGHT=1 WIDTH=1 ALT=""></TD></TR>
+
+<TR VALIGN=top><TD WIDTH="54"><FONT SIZE=2>姓 名</FONT></TD><TD WIDTH="215"><FONT SIZE=2>
+<INPUT NAME="name" VALUE=""></FONT></TD><TD WIDTH="121"><FONT SIZE=2>工作单位</FONT></TD><TD WIDTH="329"><FONT SIZE=2>
+<INPUT NAME="workadress" VALUE=""></FONT></TD></TR>
+
+<TR VALIGN=top><TD WIDTH="54"><FONT SIZE=2>EMAIL</FONT></TD><TD WIDTH="215"><FONT SIZE=2>
+<INPUT NAME="adress" VALUE=""></FONT></TD><TD WIDTH="121"><FONT SIZE=2>主    页</FONT></TD><TD WIDTH="329"><FONT SIZE=2>
+<INPUT NAME="postcode" VALUE=""></FONT></TD></TR>
+</TABLE>
+<BR>
+<FONT SIZE=2>留言：</FONT><BR>
+<FONT SIZE=2>
+<TEXTAREA NAME="Body" ROWS=7 COLS=50></TEXTAREA>
+</FONT><BR>
+<BR>
+
+<INPUT TYPE=button VALUE="提交" onClick="return _doClick('40c598a0248fd21448256759001e3950/$Body/5.464', this, null)"></FORM>
+</BODY>
+</HTML>

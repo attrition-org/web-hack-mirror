@@ -1,0 +1,226 @@
+<html><!-- #BeginTemplate "/Templates/service.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>Untitled Document</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript">
+<!--
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+
+function MM_timelinePlay(tmLnName, myID) { //v1.2
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,propNum,theObj,firstTime=false;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (myID == null) { myID = ++tmLn.ID; firstTime=true;}//if new call, incr ID
+  if (myID == tmLn.ID) { //if Im newest
+    setTimeout('MM_timelinePlay("'+tmLnName+'",'+myID+')',tmLn.delay);
+    fNew = ++tmLn.curFrame;
+    for (i=0; i<tmLn.length; i++) {
+      sprite = tmLn[i];
+      if (sprite.charAt(0) == 's') {
+        if (sprite.obj) {
+          numKeyFr = sprite.keyFrames.length; firstKeyFr = sprite.keyFrames[0];
+          if (fNew >= firstKeyFr && fNew <= sprite.keyFrames[numKeyFr-1]) {//in range
+            keyFrm=1;
+            for (j=0; j<sprite.values.length; j++) {
+              props = sprite.values[j]; 
+              if (numKeyFr != props.length) {
+                if (props.prop2 == null) sprite.obj[props.prop] = props[fNew-firstKeyFr];
+                else        sprite.obj[props.prop2][props.prop] = props[fNew-firstKeyFr];
+              } else {
+                while (keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]) keyFrm++;
+                if (firstTime || fNew==sprite.keyFrames[keyFrm-1]) {
+                  if (props.prop2 == null) sprite.obj[props.prop] = props[keyFrm-1];
+                  else        sprite.obj[props.prop2][props.prop] = props[keyFrm-1];
+        } } } } }
+      } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+      if (fNew > tmLn.lastFrame) tmLn.ID = 0;
+  } }
+}
+
+function MM_timelineGoto(tmLnName, fNew, numGotos) { //v2.0
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,lastKeyFr,propNum,theObj;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (numGotos != null)
+    if (tmLn.gotoCount == null) tmLn.gotoCount = 1;
+    else if (tmLn.gotoCount++ >= numGotos) {tmLn.gotoCount=0; return}
+  jmpFwd = (fNew > tmLn.curFrame);
+  for (i = 0; i < tmLn.length; i++) {
+    sprite = (jmpFwd)? tmLn[i] : tmLn[(tmLn.length-1)-i]; //count bkwds if jumping back
+    if (sprite.charAt(0) == "s") {
+      numKeyFr = sprite.keyFrames.length;
+      firstKeyFr = sprite.keyFrames[0];
+      lastKeyFr = sprite.keyFrames[numKeyFr - 1];
+      if ((jmpFwd && fNew<firstKeyFr) || (!jmpFwd && lastKeyFr<fNew)) continue; //skip if untouchd
+      for (keyFrm=1; keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]; keyFrm++);
+      for (j=0; j<sprite.values.length; j++) {
+        props = sprite.values[j];
+        if (numKeyFr == props.length) propNum = keyFrm-1 //keyframes only
+        else propNum = Math.min(Math.max(0,fNew-firstKeyFr),props.length-1); //or keep in legal range
+        if (sprite.obj != null) {
+          if (props.prop2 == null) sprite.obj[props.prop] = props[propNum];
+          else        sprite.obj[props.prop2][props.prop] = props[propNum];
+      } }
+    } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+  }
+  tmLn.curFrame = fNew;
+  if (tmLn.ID == 0) eval('MM_timelinePlay(tmLnName)');
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v3.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function MM_initTimelines() {
+    //MM_initTimelines() Copyright 1997 Macromedia, Inc. All rights reserved.
+    var ns = navigator.appName == "Netscape";
+    document.MM_Time = new Array(1);
+    document.MM_Time[0] = new Array(1);
+    document.MM_Time["Timeline1"] = document.MM_Time[0];
+    document.MM_Time[0].MM_Name = "Timeline1";
+    document.MM_Time[0].fps = 4;
+    document.MM_Time[0][0] = new String("behavior");
+    document.MM_Time[0][0].frame = 16;
+    document.MM_Time[0][0].value = "MM_timelineGoto('Timeline1','1')";
+    document.MM_Time[0].lastFrame = 16;
+    for (i=0; i<document.MM_Time.length; i++) {
+        document.MM_Time[i].ID = null;
+        document.MM_Time[i].curFrame = 0;
+        document.MM_Time[i].delay = 1000/document.MM_Time[i].fps;
+    }
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#FFFFCC" text="#333333" link="#6666FF" alink="#666600" vlink="#FFCC66" onLoad="MM_timelinePlay('Timeline1');MM_preloadImages('Bilder/vueberuns.gif','Bilder/vnews.gif','Bilder/VOnline.gif','Bilder/vMembers.gif')" background="bg2.gif">
+<div align="center"> 
+  <table width="700">
+    <tr>
+      <td height="48" width="143"> 
+        <div align="center"><img src="Bilder/fwvlogoklein.gif" width="165" height="57"></div>
+      </td>
+      <td height="48" width="541"> 
+        <div align="center">
+          <table>
+            <tr> 
+              <td> 
+                <div align="right"><a href="UnsereZiele.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('&uuml;beruns','','Bilder/vueberuns.gif',1)"><img name="überuns" border="0" src="Bilder/ueberuns.gif" width="96" height="25"></a></div>
+              </td>
+              <td> 
+                <div align="right"><a href="Presse.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image2','','Bilder/vnews.gif',1)"><img src="Bilder/news.gif" width="96" height="25" border="0" name="Image2"></a></div>
+              </td>
+              <td> 
+                <div align="right"></div>
+              </td>
+              <td> 
+                <div align="right"><a href="links.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','Bilder/VOnline.gif',1)"><img src="Bilder/Online.gif" width="96" height="25" border="0" name="Image1"></a></div>
+              </td>
+              <td> 
+                <div align="right"><a href="bundeslaender.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image3','','Bilder/vMembers.gif',1)"><img src="Bilder/members.gif" width="96" height="25" border="0" name="Image3"></a></div>
+              </td>
+            </tr>
+            <tr> 
+              <td height="2" colspan="5"> 
+                <div align="left"><img src="Bilder/strich.gif" width="550" height="1"></div>
+              </td>
+            </tr>
+            <tr> 
+              <td> 
+                <div align="center"><a href="Fachberatung.htm"><img src="Bilder/uFachberatung.gif" width="71" height="12" border="0"></a></div>
+              </td>
+              <td> 
+                <div align="center"><a href="exportclubs.htm"><img src="Bilder/uExportclubs.gif" width="62" height="12" border="0"></a></div>
+              </td>
+              <td> 
+                <div align="right"><img src="Bilder/vServiceS.gif" width="98" height="28"></div>
+              </td>
+              <td> 
+                <div align="center"><a href="messeservice.htm"><img src="Bilder/uMesseservice.gif" width="70" height="9" border="0"></a></div>
+              </td>
+              <td> 
+                <div align="center"><a href="reisen.htm"><img src="Bilder/uReisen.gif" width="34" height="9" border="0"></a></div>
+              </td>
+            </tr>
+          </table>
+          
+        </div>
+      </td>
+    </tr>
+  </table>
+  <p><br>
+  </p>
+  <table width="450" border="0">
+    <tr>
+      <td><!-- #BeginEditable "text" -->
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><b>FWV-FunktionärInnen 
+          kennen sich aus, denn sie sind selbst Wirtschaftstreibende</b></font></p>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Österreichweit 
+          engagieren sich mittlerweile über 1000 FunktionärInnen für die Interessen 
+          der KMU. Da unsere FunktionärInnen selbst Wirtschaftstreibende sind, 
+          kennen sie die Sorgen, Probleme und Hoffnungen der österreichischen 
+          Wirtschaftstreibenden sehr genau. Spezifische Fragen und Anliegen oder 
+          für Betriebe wichtige Gesetzesänderungen werden von den FunktionärInnen 
+          des Freien Wirtschaftsverbandes an die entscheidenden Gremien und Ansprechpartner, 
+          die von der Bezirksvertretung bis zum Präsidium der Wirtschaftskammer 
+          vermittelnd eingreifen können, herangetragen, und mit Nachdruck wird 
+          die Realisierung der Anliegen verfolgt. Wenn Sie Fragen betreffen Ihr 
+          Unternehmen haben, wenden Sie sich an uns (<a
+href="../FRAME/KONTAKT.HTM" target="_top">Kontakt</a>).</font></p>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><b>Der 
+          FWV ist für Sie da</b></font> </p>
+        <ul type="square">
+          <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2">bei 
+            Verhandlungen mit Behörden</font> </li>
+          <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2">bei 
+            arbeits-, sozial-, gewerbe- und steuerrechtlichen Angelegenheiten</font> 
+          </li>
+          <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2">bei 
+            Finanzierungsfragen</font> </li>
+          <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2">bei 
+            Ausbildungsfragen</font> </li>
+          <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2">in der 
+            Betriebsgründungsphase</font> </li>
+          <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2">bei 
+            Betriebsübergaben</font> </li>
+          <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2">bei 
+            Fragen der Betriebsführung allgemein</font> </li>
+          <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2">bei 
+            Ihrer Pensionierung</font> </li>
+          <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2">bei 
+            Schwangerschaft und Geburt</font> </li>
+          <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2">bei 
+            allen anderen Fragen, die in Zusammenhang mit Ihrem Unternehmertum 
+            stehen</font> </li>
+        </ul>
+        <!-- #EndEditable --></td>
+    </tr>
+  </table>
+</div>
+</body>
+<!-- #EndTemplate --></html>

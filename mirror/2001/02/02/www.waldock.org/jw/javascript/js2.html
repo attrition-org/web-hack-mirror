@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<HTML>
+
+<HEAD>
+<TITLE>JavaScript Test Page : Great-Circle Distance calculator</TITLE>
+<META NAME="GENERATOR" CONTENT="Arachnophilia Version 2.1">
+<META NAME="FORMATTER" CONTENT="Arachnophilia Version 2.1">
+
+</HEAD>
+
+<BODY BACKGROUND="" BGCOLOR="#c0c0c0" TEXT="#000000" LINK="#0000ff" VLINK="#800080" ALINK="#ff0000">
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- ;
+
+function isNum(str) {
+for (var i = 0; i < str.length; i++) {
+	var ch = str.substring(i, i + 1)
+	if ((ch < "0" || "9" < ch) && ch != '.') {
+		return false
+		}
+	}
+if ((str.length==0)) {
+	return false
+	}
+else  {
+	return true
+	}
+}
+
+
+function CalcGC()	{
+sLon=parseFloat(document.GCform.LonStart.value)
+sLat=parseFloat(document.GCform.LatStart.value)
+eLon=parseFloat(document.GCform.LonEnd.value)
+eLat=parseFloat(document.GCform.LatEnd.value)
+rad=Math.PI/180
+re=6371.2
+a=(90-sLat)*rad
+b=(90-eLat)*rad
+phi=(eLon-sLon)*rad
+cosr=Math.cos(a)*Math.cos(b)+Math.sin(a)*Math.sin(b)*Math.cos(phi)
+r=Math.acos(cosr)
+rdist=0.01*Math.round(re*r*100)
+sinth=Math.sin(phi)*Math.sin(b)/Math.sin(r)
+th=0.01*Math.round((Math.asin(sinth))/rad*100)
+document.GCform.GCDist.value="The great circle distance is "+rdist+" km"
+document.GCform.Azimuth.value="The azimuth of the path is "+th+" degrees E of N"
+
+}
+
+
+function CLR(tt)	{
+ tt.elements[0].value=''
+ tt.elements[1].value=''
+ tt.elements[2].value=''
+ tt.elements[3].value=''
+ tt.elements[4].value=''
+ tt.elements[5].value=''
+}
+
+// end hide -->
+</SCRIPT>
+
+<H1><FONT COLOR="Green" Face="Tahoma" Size="6"><B>Testing JavaScript</B></FONT></H1>
+<hr>
+<br>
+<font color="#804040" face="Verdana" size="3"><b>#2 : Finding the great-circle distance between two points</B></font>
+<p>
+Enter the latitude and longitude of the starting and ending points in the text boxes and click the button.
+<P>
+<FORM name="GCform">
+<TABLE>
+<TR>
+  <TD></TD>
+  <TD> Starting Point</TD>
+  <TD> Ending Point </TD>
+</TR>
+<TR>
+  <TD>Latitude : </TD>
+  <TD><INPUT TYPE="text" NAME="LatStart" SIZE="10" MAXLENGTH="10" VALUE=""></INPUT></TD>
+  <TD><INPUT TYPE="text" NAME="LatEnd" SIZE="10" MAXLENGTH="10" VALUE=""></INPUT></TD>
+</TR>
+<TR>
+  <TD>Longitude :</TD>
+  <TD><INPUT TYPE="text" NAME="LonStart" SIZE="10" MAXLENGTH="10" VALUE=""></INPUT></TD>
+  <TD><INPUT TYPE="text" NAME="LonEnd" SIZE="10" MAXLENGTH="10" VALUE=""></INPUT></TD>
+</TR>
+</TABLE>
+<p>
+<INPUT TYPE="text" NAME="GCDist" SIZE="50" MAXLENGTH="50" VALUE=""></INPUT><BR>
+<INPUT TYPE="text" NAME="Azimuth" SIZE="50" MAXLENGTH="50" VALUE=""></INPUT><BR>
+<P>
+<INPUT TYPE="button" value="Calculate the great circle distance" onclick="CalcGC()"></INPUT>
+<INPUT TYPE="button" value="Clear the fields" onclick="CLR(this.form)"></INPUT>
+
+</FORM>
+<p>
+<hr>
+<p>
+<a href="js1.html">js1</a> |
+<a href="js3.html">js3</a> |
+<a href="js4.html">js4</a>
+<p>
+<hr>
+<TABLE cellpadding=3>
+<TR>
+   <TD><a href="jstest.html"> <IMG border=0 align=middle ALT="Back to the Index Page" SRC="/res/back2.gif"></A>
+</TD>
+    <TD><a href="/index.htm"> <IMG border=0 align=middle ALT="Back to the Home Page" SRC="../../res/home.gif"></A>
+</TD>
+  <TD><FONT SIZE="2" COLOR="#800040" FACE="Tahoma">© Jeff Waldock, 1997 <BR>
+Revised: Monday, June 02, 1997 09:38 AM
+</FONT></TD>
+</TR>
+</TABLE>
+
+</BODY>
+</HTML>

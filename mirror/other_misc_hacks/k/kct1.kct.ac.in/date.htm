@@ -1,0 +1,34 @@
+<head>
+<basefont face="arial" size=-1>
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#105796" background="bgline.gif"
+text="#ffffff" link="#ffffff" alink="#ffff00" vlink="#ffffff">
+
+<center>
+
+<SCRIPT language=javascript>
+
+<!--
+
+tdate=new Date;
+var tdate1=tdate.getDate();
+var tmonth=tdate.getMonth();
+var tyear=tdate.getYear();
+if(navigator.appName=="Netscape"){
+	tyear+=1900
+}
+var tday=tdate.getDay();
+marr=new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec")
+darr=new Array('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
+var today_date=darr[tday]+', '+marr[tmonth]+' '+tdate1+', '+tyear;
+var today_date2=marr[tmonth]+' '+tdate1+', '+tyear;
+document.writeln('<b>'+today_date2+'</b>');
+//-->
+
+</SCRIPT>
+
+<br>Last Modifed:<br>
+Mar 01, 2001<br>
+<font size=-2>&copy 2001 KCT<br>All Rights Reserved</font>
+</body>

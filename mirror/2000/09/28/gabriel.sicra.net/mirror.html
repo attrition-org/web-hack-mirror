@@ -1,0 +1,128 @@
+<html>
+<head><style>
+a{text-decoration:none}
+A:hover {text-decoration: underline;}
+</style>
+<title>You've Been 0wned By: Scurvy</title>
+<style>
+.spanstyle {
+	position:absolute;
+	visibility:visible;
+	top:-50px;
+	font-size:8pt;
+	font-family:Verdana;
+      font-weight:bold;
+	color:#00FF00;
+}
+</style>
+<script>
+
+var x,y
+var step=20
+var flag=0
+
+var message="Scurvy "
+message=message.split("")
+
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	xpos[i]=-50
+}
+
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	ypos[i]=-50
+}
+
+function handlerMM(e){
+	x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+	y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+	flag=1
+}
+
+function makesnake() {
+	if (flag==1 && document.all) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("span"+(i)+".style")
+    		thisspan.posLeft=xpos[i]
+			thisspan.posTop=ypos[i]
+    	}
+	}
+	
+	else if (flag==1 && document.layers) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("document.span"+i)
+    		thisspan.left=xpos[i]
+			thisspan.top=ypos[i]
+    	}
+	}
+		var timer=setTimeout("makesnake()",30)
+}
+
+</script>
+
+</head>
+<BODY onLoad="makesnake()" style="width:100%;overflow-x:hidden;overflow-y:scroll" bgcolor="#000000" bgproperties="fixed" text="#FFFFFF" link="#00FF00" alink="#ff0000" vlink="#B00000#BB0000">
+<basefont size="3"><script>
+<!-- Beginning of JavaScript -
+
+for (i=0;i<=message.length-1;i++) {
+    document.write("<span id='span"+i+"' class='spanstyle'>")
+	document.write(message[i])
+    document.write("</span>")
+}
+
+if (document.layers){
+	document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+
+// - End of JavaScript - -->
+</script>
+<div align="center">
+<img src="http://www.stas.net/2/rewted/nscurvy2.jpg" alt="Scurvy Was Here!">
+</div><br><br>
+<center><b><strong>This site was owned by <big><a href="mailto:scurvy@hushmail.com">Scurvy</a></big>.<br><br></b></strong></center>
+<b>The reason behind this defacement is because of the following. You have to see this, it's funny shit!</b><br><br>
+<center><table border="0" cellpadding="0" cellspacing="0" width="430">
+				<tr>
+					<td><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="440" height="300" codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=2,0,0,0">
+							<param name="MOVIE" value="http://www.joecartoon.com/buddies/chaos/napsterbad.swf">
+							<param name="PLAY" value="TRUE">
+							<param name="LOOP" value="FALSE">
+							<param name="QUALITY" value="HIGH">
+							<param name="BGCOLOR" value="#000000">
+							<param name="SCALE" value="SHOWALL">
+							<param name="SALIGN" value="TL">
+							<param name="BASE" value=".">
+							<param name="MENU" value="FALSE">
+							<embed src="http://www.joecartoon.com/buddies/chaos/napsterbad.swf" width="440" height="300" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash2" play="TRUE" loop="FALSE" quality="HIGH" bgcolor="#000000" scale="SHOWALL" salign="TL" base="." menu="FALSE"> 
+							<noembed>
+								You need a browser that supports Netscape plugins or ActiveX controls to view this page. 
+							</noembed>
+							 
+						</object></td>
+				</tr>
+			</table></center>
+			<br><br>
+Greets: <strong><b>Datagram</strong>, <strong>pimpshiz</strong>, doom, rootproc, nemesystm, lokal, Kreator, sinfony, Akurei, Starman_Jones, all of RSH, neme, apoc, piffy, GForce, bi0cide, gat0r, z, matic, hooyah, and whoever else I forgot.</b>
+<div align="center"><br><a href="http://www.8op.com/rsh/"><img src="http://www.stas.net/2/rewted/rootshellme.jpg" alt="RootShellHackers!" border="0"></a><br><br>
+<b><big><a href="mailto:scurvy@hushmail.com">E-mail</a> me if you want. <a href="mailto:scurvy@hushmail.com">Scurvy@hushmail.com</a></big></b><br><br><font size="0"><b><tt>I'm not in RSH, they don't love me or something. But I still love them all.</tt></font></b>
+</BODY>
+<!-- Fucks go to: dumbass Sneed, dumbass 80m (80 morons for those that don't konw), Ti|| deserves a big fuck you! He's posting false claims of things people say. He's trying to act like he's elite or some shit by talking shit about someone else. He's talking shit about pimpshiz, myself and has threightened to talk shit about others, however lame that sounds. He's taking 'documentaion' of what other people and I say, then he puts the senteces on a webpage, scrambled up so no one knows how much of loser he really is, trying to make that person look stupid. Ti|| is in this group called RTFM (Retards That Fuck Monkeys) and he's upset because he can't deface, so he talks shit about other people that can/do deface. 
+And fuck everyone else that deserves a fuck, you dumb fucks. --!>
+</html><!-- www.attrition.org web hack mirror - watermark or something -->

@@ -1,0 +1,412 @@
+<HTML>
+<HEAD>
+<TITLE>Apache HTTP Server Project - Related Projects</TITLE>
+</HEAD>
+<!-- Background white, links blue (unvisited), navy (visited), red (active) -->
+<BODY
+ BGCOLOR="#FFFFFF"
+ TEXT="#000000"
+ LINK="#0000FF"
+ VLINK="#000080"
+ ALINK="#FF0000"
+>
+<IMG SRC="images/apache_sub.gif" ALT="">
+<H2>Related Projects</H2>
+
+The source code maintained by the Apache HTTP Server Project provides 
+the basis for a number of interesting projects.  This page summarizes
+those projects and points you to places where you can find more information.
+The Apache Group encourages you to use the source code for your own projects
+and would like to hear about your successes.
+
+<H3>Non-Commercial Projects</H3>
+
+<UL>
+<li><a href="#activescripting">ActiveScripting for Apache</a></li>
+<LI><A HREF="#apacheasp">Apache::ASP</A>
+<LI><A HREF="#apachessl">Apache-SSL</A>
+<LI><A HREF="#modssl">Apache Interface to OpenSSL (mod_ssl)</A>
+<LI><A HREF="#modulereg">Apache Module Registry</A>
+<LI><A HREF="#php">PHP Project</A>
+<LI><A HREF="#modperl">Apache/Perl Integration Project</A>
+<LI><A HREF="#os2">Apache for OS/2</A>
+<LI><A HREF="#amiga">Apache for Amiga</A>
+<LI><A HREF="#jserv">The Java-Apache Project</A>
+<LI><A HREF="#guidev">Apache Graphical User Interface Project</A>
+<LI><A HREF="#docs">Apache Documentation Project</A>
+<LI><A HREF="#quickref">Apache Quick Reference Card</A>
+<LI><A HREF="#webmonkey">Webmonkey XSSI Extensions</A>
+<LI><A HREF="#kshIndex">kshIndex fancy index utility</a>
+<LI><A HREF="#moddav">WebDAV Protocol Extensions for Apache (mod_dav)</a>
+<LI><A HREF="#moddtcl">Embedding TCL in web pages (mod_dtcl)</a>
+</UL>
+
+<H3>Commercial Products</H3>
+
+<UL>
+<LI><A HREF="#apacheweek">Apache Week</A> (free weekly newsletter)
+<li><a href="#tcs">Apache/Stronghold for Trusted Solaris</a></li>
+<LI><A HREF="#raven">Covalent Raven SSL module</A>
+<LI><A HREF="#ibm">IBM HTTP Server powered by Apache</A>
+<LI><A HREF="#macosx">Mac OS X Server</A>
+<LI><A HREF="#matrice">Matrice W3</A>
+<LI><A HREF="#redhat">Red Hat Secure Server</a>
+<LI><A HREF="#stronghold">Stronghold</A>
+<li><a href="#stweb">StWeb -- Stratos Web and Application Server</a></li>
+<LI><A HREF="#vfa">Vision For Apache</A>
+<LI><A HREF="#tenon">WebTen, a MacOS port of Apache</A>
+</UL>
+
+<HR>
+
+<h3><a name="activescripting"
+     href="http://www.activescripting.org/html/projects.html"
+    >ActiveScripting for Apache</a></h3>
+<p>
+The ActiveScripting for Apache project provides an open alternative to the
+use of Active Server Pages (ASP) for the Apache Web server on the Windows
+platform.
+</p>
+<HR>
+
+<h3><a name="apacheasp" href="http://www.nodeworks.com/asp">Apache::ASP</a></h3>
+<p>
+The Apache::ASP project is a Perl-native port of Active Server Pages (ASP)
+to Apache that runs under <a href="http://perl.apache.org/">mod_perl</a>,
+and provides an open alternative to Chili!Soft's ASP for Unix.
+</p>
+<hr>
+
+<H3><A NAME="apachessl" HREF="http://www.apache-ssl.org/">Apache-SSL</A></H3>
+
+Apache-SSL is an encrypting web server, based on Apache and SSLeay, which
+implements <A HREF="http://home.netscape.com/newsref/std/">Secure Sockets 
+Layer (SSL)</A> functionality as a set of patches to existing Apache
+source code.<P>
+
+The webserver is distributed with the full source code.  Inside the
+United States you are able to use it for non-commercial purposes for
+free if you use RSAREF (due to various patents). Outside the United
+States you can use it for non-commercial and commercial purposes for
+free.<P>
+
+Inside the United States in order to use Apache with SSL commercially
+you may want to look at <A HREF="#stronghold">Stronghold</A> or <A
+HREF="#raven">Raven</A>.<P>
+
+<A HREF="http://www.apache-ssl.org/">Get Apache-SSL from here</A>.
+
+<P><HR>
+
+<H3><A NAME="modssl" HREF="http://www.modssl.org/">Apache Interface to OpenSSL (mod_ssl)</A></H3>
+
+This module provides strong cryptography for the <a
+href="index.html">Apache</a> 1.3 webserver via the <a
+href="http://www.netscape.com/eng/ssl3/">Secure Sockets Layer</a> (SSL v2/v3)
+and <a href="http://www.consensus.com/ietf-tls/ietf-tls-home.html">Transport
+Layer Security</a> (TLS v1) protocols by the help of the <a
+href="http://www.opensource.org/">Open Source</a> SSL/TLS toolkit <a
+href="http://www.openssl.org/">OpenSSL</a>, which is based on <a
+href="http://www.ssleay.org/">SSLeay</a> from <a
+href="mailto:eay@cryptsoft.com">Eric A. Young</a> and <a
+href="mailto:tjh@cryptsoft.com">Tim J. Hudson</a>. The mod_ssl package was
+created in April 1998 by <a href="http://www.engelschall.com/">Ralf S.
+Engelschall</a> and was originally derived from software developed by <a
+href="mailto:ben@algroup.co.uk">Ben Laurie</a> for use in the <a
+href="http://www.apache-ssl.org/">Apache-SSL</a> HTTP server project.  The
+mod_ssl package is licensed under a BSD-style licence, which basically means
+that you are free to get and use it for commercial and non-commercial
+purposes.
+
+<P>
+The mod_ssl package is <A
+HREF="http://www.modssl.org/source/">distributed</A> as a
+source extension and set of patches for the Apache 1.3 webserver from outside
+the United States.  Inside the United States you are able to use it for
+non-commercial purposes for free if you use RSAREF (due to various patents).
+Outside the United States you can use it for non-commercial and commercial
+purposes for free.
+
+<P><HR>
+<H3><A NAME="tcs" HREF="http://www.tcs-sec.com/"
+    >Apache/Stronghold for Trusted Solaris</A></H3>
+<p>
+Trusted Computer Solutions, Inc. (TCS) offers a suite of Apache/Stronghold
+based security solutions hosted on Sun's Trusted Solaris operating
+system.  Product and security information, white papers and the
+company's latest news releases may be accessed <i>via</i> TCS'
+World Wide Web site at
+&lt;URL:<a href="http://www.tcs-sec.com">http://www.tcs-sec.com</a>&gt;
+or <i>via</i> email to &lt;info@tcs-sec.com&gt;.
+</p>
+<hr>
+
+<H3><A NAME="raven" HREF="http://ravenssl.com/">Covalent Raven SSL Module for Apache</A></H3>
+
+The Raven SSL module is a commerical product providing a strong
+cryptography upgrade to the Apache web server using the <A
+HREF="http://www.rsa.com/">RSA</A> encryption engine. Available only
+to customers in the United States and Canada. Other services include
+commercial support and custom development services.
+
+<P><HR>
+<H3><A NAME="modulereg" HREF="http://modules.apache.org/"
+    >Apache Module Registry</A></H3>
+
+This project was developed to provide a central location to find and
+submit information about Apache modules projects and developers that
+are taking advantage of the powerful API interface provided by the
+Apache HTTP server.
+
+<P><HR>
+<H3><A NAME="php" HREF="http://www.php.net/">PHP Project</A></H3>
+
+PHP implements an easy-to-learn HTML-embedded scripting language. 
+It supports a number of RDBMS packages including Adabas-D, mSQL 1,
+mSQL 2, MySQL, FilePro, Solid, Postgres95, PostgreSQL, Oracle,
+Sybase as well as many others via standard ODBC.  
+
+<P><HR>
+<H3><A NAME="modperl" HREF="http://perl.apache.org/"
+    >Apache/Perl Integration Project</A></H3>
+
+<P>The Apache/Perl integration project brings together the full power
+of the <A HREF="http://www.perl.com/">Perl</A> programming language
+and the Apache HTTP server.  With <A
+HREF="http://www.perl.com/CPAN/modules/by-module/Apache/">mod_perl</A>
+it is possible to write Apache modules entirely in Perl.  In addition,
+the persistent interpreter embedded in the server avoids the overhead
+of starting an external interpreter and the penalty of Perl start-up
+time.</P>
+
+<HR>
+<H3><A NAME="os2" HREF="http://silk.apana.org.au/apache/"
+    >Apache for OS/2</A></H3>
+
+The primary motivation for this port is to show that OS/2 is a viable 
+and powerful server platform and to promote its use as such. The 
+secondary reason is to provide a free industrial strength HTTP
+server with a growing feature set available for OS/2.
+
+<P><STRONG>Note: as of Apache 1.3b3, it should be possible to compile for
+OS/2 from the standard distribution.</STRONG>
+
+<P><HR>
+<H3><A NAME="amiga" HREF="http://amiga-apache.home.pages.de/"
+    >Apache for Amiga</A></H3>
+
+Apache has now been ported to Amiga, and is maintained as a separate project.  
+
+<P><HR>
+<H3><A NAME="jserv" HREF="http://java.apache.org/"
+    >The Java-Apache Project</A></H3>
+
+A project to fully integrate Java servlet technology.
+
+<P><HR>
+<H3><A NAME="guidev">Apache Graphical User Interface Project</A></H3>
+
+A number of folks have gotten together to work on a graphical
+configuration tool for Apache.
+
+<BLOCKQUOTE>
+Find out more by subscribing to the "gui-dev" mailing list, by sending
+mail to
+<A HREF="mailto:gui-dev-request@apache.org">gui-dev-request@apache.org</A>
+with the words "subscribe" in the body of the message.  Also, visit
+<A HREF="http://gui.apache.org/">the project status page</A>.
+</BLOCKQUOTE>
+
+<HR>
+<H3><A NAME="docs">Apache Documentation Project</A></H3>
+If you're interested in helping improve the documentation which
+accompanies Apache.
+
+<BLOCKQUOTE>
+Find out more by subscribing to the "apache-docs" mailing list, which
+you can join by sending mail to
+<A HREF="mailto:apache-docs-request@apache.org"
+>apache-docs-request@apache.org</A>
+with the word "subscribe" in the body of the message.
+</BLOCKQUOTE>
+
+<HR>
+<H3><A NAME="quickref">Apache Quick Reference Card</A></h3>
+
+<BLOCKQUOTE>
+A compact, tri-fold double-sided page listing all major directives,
+available at <A HREF="http://www.refcards.com/">http://www.refcards.com/</A>.  A
+mod_perl refcard is also available.
+</BLOCKQUOTE>
+
+<HR>
+<H3><A NAME="webmonkey">Webmonkey XSSI Extensions</A></H3>
+The Webmonkey XSSI package extends the commercial authoring tool <A
+HREF="http://www.hotwired.com/webmonkey/dynamic_html/tutorials/tutorial2.html">Dreamweaver</A>
+so you can use <A
+HREF="http://www.hotwired.com/webmonkey/html/97/39/index1a.html">XSSI</A>
+within the editor. The files provide a graphical interface for
+inserting and modifying XSSI commands.  Tres cool.
+
+<BLOCKQUOTE>
+You can <A HREF="http://www.hotwired.com/webmonkey/javascript/code_library/wm_dwxssi_ext/">obtain the extensions here</A>.
+</BLOCKQUOTE>
+<P>
+
+<HR>
+<H3><A NAME="kshIndex">kshIndex fancy index utility</A></H3>
+
+<A
+Href="http://www.aigsupport.com/fancyIndex/Tools/CGI/kshIndex/">kshIndex</A>
+is a set of utilities and scripts built around the
+Apache fancyIndex functions.  It allows webmasters to provide
+a variety of functions to users including automated indexing
+of URL's, files, and directories, user authorization management,
+cascading user customization, events calendars, contact lists, etc.
+
+<P><HR>
+<H3><A NAME="moddav" HREF="http://www.webdav.org/mod_dav/"
+    >WebDAV Protocol Extensions for Apache</A></H3>
+
+    The <a href="http://www.webdav.org/mod_dav/">mod_dav</a> Apache
+    module adds <a href="http://www.webdav.org/">WebDAV</a>
+    capabilities to your Apache web server.
+    <p>
+      WebDAV stands for "Web-Based Distributed Authoring and
+      Versioning." The WebDAV protocol is a set of extensions to HTTP
+      to allow remote users to collaboratively edit and manage files
+      on a web server.
+    </p>
+
+<P><HR>
+<H3><A NAME="moddtcl" HREF="http://comanche.com.dtu.dk/dave/"
+    >Embedding TCL in web pages</A></H3>
+
+    The <a href="http://comanche.com.dtu.dk/dave/">mod_dtcl</a> Apache
+    module enables the use of Tcl as an HTML-embedded scripting
+    language, similar to PHP.  It is fast, light, and lets you use the
+    extensive codebase of existing <a
+    href="http://dev.scriptics.com/software/tcltk/">Tcl</a> code on
+    the web.
+
+<P><HR>
+<H3><A NAME="apacheweek">Apache Week</A></H3>
+A free weekly guide to the latest Apache developments.
+Apache Week  provides an easy way to stay abreast of the
+latest news about Apache including: new releases, major bug fixes, plans
+for the next version, new apache ports and other related Apache
+information.
+<BLOCKQUOTE>
+You can view 
+<A HREF="http://www.apacheweek.com/">Apache Week on the Web</A>
+or receive it each week by email.
+</BLOCKQUOTE>
+
+<HR>
+<H3><A NAME="ibm">IBM HTTP Server powered by Apache</A></H3>
+<A HREF="http://www.software.ibm.com/webservers/httpservers/">IBM HTTP Server powered by Apache</A>
+is a secure web server that features support for SSL V2 and V3, Fast Response Cache 
+Accelerator (Windows NT only) and native platform install. IBM HTTP Server runs on AIX, 
+Solaris and Windows NT.  Support for Linux (Caldera, Pacific HiTech, Red Hat and 
+S.u.S.E. distributions) has been announced with availability later this year. Support for 
+FRCA on AIX is anticipated later this year.
+<P>
+IBM HTTP Server powered by Apache is available as a fully supported IBM product when purchased
+bundled with the <A HREF="http://www.software.ibm.com/webservers/">IBM WebSphere Application Server</A>.
+<P>
+
+<HR>
+<H3><A NAME="macosx">Mac OS X Server</A></H3>
+
+<BLOCKQUOTE>
+<A HREF="http://www.apple.com/macosx/server/">Mac OS X Server</A> is a
+server operating system from Apple Computer which includes the Apache
+web server, AppleShare file services, and Mac OS NetBoot server
+software. It is hosted on a full BSD environment (Darwin) and sports
+an easy to use user interface for server administration.
+</BLOCKQUOTE>
+
+<HR>
+<H3><A NAME="matrice">Matrice W3 System for Linux (x86)</A></H3>
+
+<BLOCKQUOTE>
+MWS is a complete solution for your web presence that enables you to
+access control, tracking, accounting, billing, marketing analyse the
+end user's accesses to your site.  Find out more at
+<A HREF="http://www.matrice.it">Matrice's web site</A>.
+</BLOCKQUOTE>
+
+<hr>
+<h3><a name="redhat">Red Hat Secure Server</a></h3>
+The <A HREF="http://www.redhat.com/product.phtml/WB2000">
+Red Hat Secure Server</a> is an integration of the popular Apache web server
+with the award-winning Red Hat Linux OS that has RSA key technology, and it's
+the out-of-the-box answer to your secure web serving needs.  Shop, sell, and
+transact via the web without worry. Available only to customers in the United
+States and Canada.
+
+<HR>
+<H3><A NAME="stronghold">Stronghold</A></H3>
+
+Stronghold is a commercial Apache-derivative webserver which bundles
+strong cryptography (SSL), commercial support, etc., into a full package.<P>
+
+<BLOCKQUOTE>
+For information on Stronghold see
+<A HREF="http://www.c2.net/">C2Net</A> (US/Canada) or
+<A HREF="http://www.int.c2.net/">C2Net Europe</A> (Outside US/Canada).<P>
+</BLOCKQUOTE>
+
+<HR>
+<h3><a name="stweb">StWeb -- Stratos Web and Application Server</a></h3>
+<p>
+StWeb is an easy-to-use, cross platform, Internet/Intranet development
+and deployment system for development and maintenance of web-enabled
+applications.
+</p>
+<p>
+The main component of the system is the Stratos Web Application Server -
+an Apache based HTTP server integrated with Stratos application server.
+StWeb is platform and database independent. It runs on all major
+hardware  and operating systems and can be used with most of popular
+database servers. Application once developed, can be deployed on any of
+the supported systems ("write once, use anywhere" ).
+The Personal Edition  of StWeb is free and is available for download
+from the StWeb site.
+</p>
+<blockquote>
+For more information visit StWeb home at
+&lt;<a href="http://www.stweb.org/">http://www.stweb.org/</a>&gt;.
+</BLOCKQUOTE>
+
+<HR>
+<H3><A NAME="vfa">Vision For Apache</A></H3>
+
+Vision For Apache is a 100% Java graphical user interface for the Apache
+HTTP server. Free for non-commercial use. Commercial license includes online
+support and updates.
+ 
+<BLOCKQUOTE>
+For more information visit
+<A HREF="http://www.focus-array.com/">The Focus Array's web site</A>.
+</BLOCKQUOTE>
+
+<HR>
+<H3><A NAME="tenon">WebTen, a MacOS port of Apache</A></H3>
+
+WebTen is a commercial Apache-derivative webserver for Power Macs.
+WebTen has been extended with a browser-based interface and Squid
+cacheing.  It supports standard Macintosh-style plug-ins and CGIs and
+includes SSL, DNS, FTP, and NFS.
+
+<BLOCKQUOTE>
+For more information visit
+<A HREF="http://www.tenon.com/products/webten/">Tenon's web site</A>.
+</BLOCKQUOTE>
+
+<HR>
+
+<A HREF="./"><IMG SRC="images/apache_home.gif" ALT="Home"></A>
+
+</BODY>
+</HTML>

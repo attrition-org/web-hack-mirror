@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>BioInformatics Research: Analysis for NMR Spectra with AI</title>
+</head>
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#808080" alink="#FF0000">
+<center>
+<img src="Bioinfo-logo.jpg" alt="Structural Bioinformatics at Rutgers">
+</center>
+
+<table border=0 cellspacing=0 cellpadding=10 cols=1 width="100%">
+<tr bgcolor="#99cc99">
+<td>
+<center>
+<h1>Automated Analysis for NMR Spectra Using Artificial Intelligence</h1>
+</center>
+</td>
+</tr>
+</table>
+<center>
+<h2>Gaetano Montelione, Diane Zimmerman and Casimir Kulikowski</h2>
+</center>
+<p>
+
+The aim of this work is to develop an expert system for automated analysis 
+of protein nuclear magnetic resonance (NMR) spectra. NMR spectroscopy provides
+an important technology for determining three-dimensional (3D) structures of 
+biological molecules.  In order to interpret these data, the spectroscopist 
+must correlate each peak in the spectrum with a specific atom in the protein 
+sequence.  Once these "resonance assignments" are available, the intensities, 
+splittings, and other spectral features of the NMR peaks can be interpreted to
+provide structural information and a 3D image of the protein's structure.  
+We have developed computer software capable of fully 
+automated analysis of resonance assignments from NMR spectra.  This expert 
+system, AUTOASSIGN, utilizes concepts from artificial intelligence to rapidly 
+complete the analysis of resonance assignments. 
+AUTOASSIGN is an expert system for automated analysis of resonance assignments
+in protein NMR spectra. Proteins themselves are polymers of amino acids; there
+are twenty naturally occurring types of amino acids which are put together in 
+different sequences to make different proteins.  These chains then fold into 
+unique 3D structures, which are the targets of structure determination and 
+rational drug design.  Different NMR experiments generate spectra which 
+contain different kinds of information.  Our laboratory is expert both in 
+developing new NMR experiments which provide structural information for 
+proteins, and in applying this technology to determine 3D structures of 
+proteins. Typically, these spectra correlate NMR peaks in 2D plots or in 
+3D or 4D volumes.  Such 3D or 4D data are difficult to analyze by humans, 
+and can be more systematically analyzed by computer. <p>
+
+AUTOASSIGN integrates an object-oriented knowledge base of amino acid 
+structures with methods of constraint propagation from artificial 
+intelligence.  The input to AUTOASSIGN is a set of 3D and 4D NMR spectra 
+and the amino acid sequence of the protein (known from molecular biology 
+methods).  The output is a list assigning each peak in these spectra to a 
+specific atom in the protein's structure.  This mapping (or assignment 
+process) allows further interpretation of the NMR data, which are used to 
+generate 3D structures of the protein using other software.  <p>
+
+The program has been developed and tested on literally hundreds of simulated 
+NMR data sets, and on real data sets for five different proteins.  Each real 
+NMR data set requires 1 - 2 weeks of NMR data collection.  The current 
+version of AUTOASSIGN is highly robust and achieves complete and error-free 
+analysis of real data for proteins containing 50 to 160 amino acids in 
+10 - 30 min on a Sun Sparc2 workstation.  The next step of the work involves 
+automation of the second stage of strucuture determination, namely the 
+generation of distance constraints from multidimensional NMR spectra.  
+These data can then be used to compute 3D structures of proteins using 
+existing computer programs.  In this way the complete process of structure 
+determination can be automated.<p>
+<center>
+<img src="graphics/AutoAssign.jpg">
+<br>
+<b>Screen Illustrating AutoAssign Interface</b>
+</center>
+</ul>
+</body>
+</html>
+

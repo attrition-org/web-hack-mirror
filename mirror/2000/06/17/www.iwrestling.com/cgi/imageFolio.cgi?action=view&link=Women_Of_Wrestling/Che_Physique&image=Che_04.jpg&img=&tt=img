@@ -1,0 +1,422 @@
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive 4">
+		<title>iWrestling.com Flashback Gallery : Che Physique : Che_04</title>
+		<meta name="keywords" content="Fantasy Wrestling, Pro Wrestling, Wrestling, wrestling newsletters, wrestling news, news, columns, Games, Scoops, Scoops Wrestling, WWF news, WCW News, ECW news, Raw Results, Nitro Results, PPV Results">
+		<meta name="description" content="The premiere pro wrestling source. Daily Pro Wrestling News,columns, and features. Plus wrestling games and videoa nd audio clips.">
+		<script language="JavaScript"><!--
+/* 	Cookies Demo	
+By Jerry Aman, Optima System, July 28, 1996.   	
+Cookie Functions written by Bill Dortch, hIdaho Design.	Part of the PageSpinner distribution.	
+We will not be held responsible for any unwanted 	
+effects due to the usage of this script or any derivative.  	
+No warrantees for usability for any specific application 	
+are given or implied.	
+You are free to use and modify this script,	
+if credits are kept in the source code*/	
+
+var cookieVisitID 	= 'my_LastVisitiwrestling';		
+var cookieNumVisitID 	= 'my_NumVisitsiwrestling';	
+
+// Change 'my_LastVisit' and 'my_NumVisits'						
+// to something unique for						
+// the current page, or else it						
+// won't work correctly if other uses						
+// this script!	
+var gLastVisit;	
+var gNumVisits;	
+SetLastVisit();	
+// Execute when loading page		
+if ( gLastVisit == "")		
+{		
+window.open("http://www.iwrestling.com/popup.html", "popDialog", "width=500,height=225,scrollbars=no,resize=no,");		}		
+else 		
+{        	
+}	
+function SetLastVisit (name, value){		
+var newVisitDate = new Date();		
+var expDate = new Date (); 		
+var numVisits = 0;			
+// The expDate is the date when the cookie should			
+// expire, we will keep it for a day		
+expDate.setTime( expDate.getTime() + (1 * 24 * 60 * 60 * 1000) ); 			
+// Info about last visit		
+if (GetCookie (cookieVisitID) != null)			
+gLastVisit = GetCookie (cookieVisitID);		
+else gLastVisit = "";		
+if (GetCookie (cookieNumVisitID) != null)			
+gNumVisits = GetCookie (cookieNumVisitID);			
+else gNumVisits = 0;			
+// Use eval() to convert a string to a number		
+numVisits = eval(gNumVisits) +1;				
+// Store info about this visit		
+SetCookie( cookieVisitID, newVisitDate, expDate); 		
+SetCookie( cookieNumVisitID, numVisits, expDate); 	}    
+// ---------------------------------------------------------------    
+// Cookie Functions - Second Helping  (21-Jan-96)    
+//  Written by:  Bill Dortch, hIdaho Design <BDORTCH@NETW.COM>    
+//  The following functions are released to the public domain.    
+//  The following changes were made to SetCookie:    
+//    
+//  1.  The expires parameter is now optional - that is, you can omit    
+//      it instead of passing it null to expire the cookie at the end    
+//      of the current session.    
+//    
+//  2.  An optional path parameter has been added.    
+//    
+//  3.  An optional domain parameter has been added.    
+//    
+//  4.  An optional secure parameter has been added.    
+//    
+//  For information on the significance of these parameters, and    
+//  and on cookies in general, please refer to the official cookie    
+//  spec, at:    
+//    
+//      http://www.netscape.com/newsref/std/cookie_spec.html        
+//    
+//    
+// "Internal" function to return the decoded value of a cookie    
+//    
+function getCookieVal (offset) {      
+var endstr = document.cookie.indexOf (";", offset);      
+if (endstr == -1)        endstr = document.cookie.length;      
+return unescape(document.cookie.substring(offset, endstr));    
+}    
+
+//    
+//  Function to return the value of the cookie specified by "name".    
+//    name - String object containing the cookie name.    
+//    returns - String object containing the cookie value, or null if   
+//      the cookie does not exist.    
+//    
+function GetCookie (name) {      
+var arg = name + "=";      
+var alen = arg.length;      
+var clen = document.cookie.length;      
+var i = 0;      
+while (i < clen) {        
+var j = i + alen;        
+if (document.cookie.substring(i, j) == arg)          
+return getCookieVal (j);        
+i = document.cookie.indexOf(" ", i) + 1;        
+if (i == 0) break;       
+}      
+return null;    }    
+//    
+//  Function to create or update a cookie.    
+//    name - String object object containing the cookie name.    
+//    value - String object containing the cookie value.  May contain    
+//      any valid string characters.    
+//    [expires] - Date object containing the expiration data of the cookie.  If    
+//      omitted or null, expires the cookie at the end of the current session.    
+//    [path] - String object indicating the path for which the cookie is valid.    
+//      If omitted or null, uses the path of the calling document.    
+//    [domain] - String object indicating the domain for which the cookie is    
+//      valid.  If omitted or null, uses the domain of the calling document.    
+//    [secure] - Boolean (true/false) value indicating whether cookie transmission    
+//      requires a secure channel (HTTPS).      
+//    
+//  The first two parameters are required.  The others, if supplied, must    
+//  be passed in the order listed above.  To omit an unused optional field,    
+//  use null as a place holder.  For example, to call SetCookie using name,    
+//  value and path, you would code:    
+//    
+//      SetCookie ("myCookieName", "myCookieValue", null, "/");    
+//   
+//  Note that trailing omitted parameters do not require a placeholder.    
+//    
+//  To set a secure cookie for path "/myPath", that expires after the    
+//  current session, you might code:    
+//    
+//      SetCookie (myCookieVar, cookieValueVar, null, "/myPath", null, true);    
+//    
+function SetCookie (name, value) {      
+var argv = SetCookie.arguments;      
+var argc = SetCookie.arguments.length;      
+var expires = (argc > 2) ? argv[2] : null;      
+var path = (argc > 3) ? argv[3] : null;      
+var domain = (argc > 4) ? argv[4] : null;      
+var secure = (argc > 5) ? argv[5] : false;      
+document.cookie = name + "=" + escape (value) + ((expires == null) ? "" : ("; expires=" + expires.toGMTString())) + ((path == null) ? "" : ("; path=" + path)) + ((domain == null) ? "" : ("; domain=" + domain)) + ((secure == true) ? "; secure" : "");
+    }
+    
+//  Function to delete a cookie. (Sets expiration date to current date/time)   
+//    name - String object containing the cookie name    
+//    
+function DeleteCookie (name) {      
+var exp = new Date();      
+exp.setTime (exp.getTime() - 1);  
+// This cookie is history      
+var cval = GetCookie (name);      
+document.cookie = name + "=" + cval + "; expires=" + exp.toGMTString();    
+}
+// -->
+		</script>
+	</head>
+
+	<body text="white" bgcolor="black" link="#0088ec" vlink="red" alink="white">
+		<center>
+			<a name="top"></a>
+			<p>
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#186bde">
+				<tr>
+					<td><img src="../../graphics/logo_1.gif" width="125" height="60" alt="iwrestling.com" border="0"></td>
+					<td><br>
+					</td>
+					<td align="right"><img src="../../graphics/header.gif" width="475" height="60" alt="iwrestling.com " border="0"></td>
+				</tr>
+			</table>
+			<table width="100%" bgcolor="black" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td valign="top" width="125">
+						<table width="125" cellpadding="0" cellspacing="0" border="0">
+							<tr>
+								<td colspan="2" bgcolor="#186bde"><img src="../../graphics/logo_2.gif" width="125" height="80"></td>
+							</tr>
+							<tr>
+								<td bgcolor="#186bde"><img src="../../graphics/transparent.gif" width="15" height="1"></td>
+								<td width="110" bgcolor="black">
+									<table border="0" cellpadding="0" cellspacing="0" width="110">
+										<tr>
+											<td valign="top"><img src="../../graphics/nav1.gif" width="110" height="10"></td>
+										</tr>
+										<tr>
+											<td bgcolor="black">
+												<div align="right">
+													<table border="0" cellpadding="0" cellspacing="0" width="105">
+														<tr>
+															<td></td>
+														</tr>
+														<tr>
+															<td bgcolor="black"><font size="2" face="Arial" color="red"><i><b>what's inside</b></i></font></td>
+														</tr>
+														<tr>
+															<td><a href="http://www.iwrestling.com"><font size="2" face="Arial">Main Page</font></a><font size="2" face="Arial"><br>
+																<a href="/news">Latest News</a><br>
+																<a href="/columns">Editorials</a><br>
+																<a href="http://search.iwrestling.com">Links</a><br>
+																<img src="graphics/transparent.gif" width="5" height="1"> </font></td>
+														</tr>
+														<tr>
+															<td bgcolor="black"><font size="2" face="Arial" color="red"><i><b>interact</b></i></font></td>
+														</tr>
+														<tr>
+															<td><a href="/discussion"><font size="2" face="Arial">Discussion</font></a><font size="2" face="Arial"><br>
+																<a href="/chat">Chat</a><br>
+																<img src="graphics/transparent.gif" width="5" height="1"> </font></td>
+														</tr>
+														<tr>
+															<td bgcolor="black"><font size="2" face="Arial" color="red"><i><b>PPV's</b></i></font></td>
+														</tr>
+														<tr>
+															<td><a href="../../news/messages/3145.html"><font size="2" face="Arial">WWF WrestleMania 2000</font></a><font size="2" face="Arial"><br>
+																<a href="../../news/messages/2752.html">WCW Uncensored</a><br>
+																<a href="../../news/messages/2573.html">ECW Living Dangerously</a><br>
+																<img src="graphics/transparent.gif" width="5" height="1"> </font></td>
+														</tr>
+														<tr>
+															<td bgcolor="black"><font size="2" face="Arial" color="red"><i><b>results</b></i></font></td>
+														</tr>
+														<tr>
+															<td><a href="../../news/messages/3422.html"><font size="2" face="Arial">Heat</font></a><font size="2" face="Arial"><br>
+																<a href="../../news/messages/3423.html">ECW on TNN</a><br>
+																<a href="../../news/messages/3323.html">Smackdown</a><br>
+																<a href="../../news/messages/3284.html">Thunder</a><br>
+																<a href="../../news/messages/3175.html">Raw</a><br>
+																<a href="../../news/messages/3177.html">Nitro</a><br>
+																<a href="../../news/messages/3153.html">Jakked</a><br>
+																<a href="../../news/messages/3152.html">Sat. Night</a><br>
+																<img src="graphics/transparent.gif" width="5" height="1"> </font></td>
+														</tr>
+														<tr>
+															<td bgcolor="black"><font size="2" face="Arial" color="red"><i><b>general</b></i></font></td>
+														</tr>
+														<tr>
+															<td><a href="../../about.html"><font size="2" face="Arial">About Us</font></a><font size="2" face="Arial"><br>
+																<a href="../../contact.html">Contact Us</a><br>
+																<a href="../../advertising.html">Advertising</a> </font></td>
+														</tr>
+														<tr>
+															<td></td>
+														</tr>
+													</tr>
+												</table>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td valign="bottom"><img src="../../graphics/nav2.gif" width="110" height="10" border="0"></td>
+									</tr>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td valign="top">
+				<div align="right">
+					<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td width="50%" bgcolor="red"><img src="../../graphics/transparent.gif" width="5" height="1"><font color="white" size="2" face="Arial"><b>GALLERY</b></font></td>
+							<td width="50%" bgcolor="red" align="right"><font color="white" size="2" face="Arial">Today is
+								<script language="JavaScript"><!--
+// Copyright (c) 1997 Mecklermedia Corporation.
+          // http://www.webreference.com/js/
+          // License is granted if and only if this entire
+          // copyright notice is included. By Tomer Shiran.
+
+          function makeArray() {
+            var args = makeArray.arguments;
+            for (var i = 0; i < args.length; i++) {
+              this[i] = args[i];
+            }
+            this.length = args.length;
+          }
+
+          function fixDate(date) {
+            var base = new Date(0);
+            var skew = base.getTime();
+            if (skew > 0)
+              date.setTime(date.getTime() - skew);
+          }
+
+          function getString(date) {
+            var months = new makeArray("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+            return months[date.getMonth()] + " " +
+                   date.getDate() + ", " + (date.getYear());
+          }
+
+          var cur = new Date();
+          fixDate(cur);
+          var str = getString(cur);
+          document.write(str);
+// -->
+								</script>
+								<img src="../../graphics/transparent.gif" width="5" height="1"></font></td>
+						</tr>
+					</table>
+					<a href="http://www.ign.com"><img height="60" width="120" src="../../graphics/120x60_ign_yel.gif" border="0" hspace="4" vspace="4"></a></div>
+				<p> 
+
+<!-- Powered by BizDesign ImageFolio 2.1 - http://www.imagefolio.com -->
+
+<script language="JavaScript1.1">
+<!-- Begin
+function right(e) {
+if (navigator.appName == 'Netscape' && 
+(e.which == 2 || e.which == 3)) {
+alert('This Image is Copyright Protected by Snowball.com.');
+return false;
+}
+else if (navigator.appName == 'Microsoft Internet Explorer' && 
+(event.button==2 || event.button == 3)) {
+alert('This Image is Copyright Protected by Snowball.com.');
+return false;
+}
+return true;
+}
+document.onmousedown=right;
+if (document.layers) window.captureEvents(Event.MOUSEDOWN);
+window.onmousedown=right;
+//  End -->
+</script>
+</p>
+				<center>
+					<p>
+					<table border="0" cellspacing="1" cellpadding="0" width="460">
+						<tr>
+							<td><font face="Verdana,Arial,Helvetica" size="1" color="#666666"><b>C A T E G O R I E S</b></font><br>
+							</td>
+						</tr>
+						<tr>
+							<td>
+<form method=post action="/cgi/imageFolio.cgi">
+<table border=0 cellspacing=0 cellpadding=1><tr><td>
+<select name="direct">
+<option value="Staff_Favorite_Matches"> - Staff Favorite Matches</option><option value="WCW_Classics"> - WCW Classics</option><option value="Women_Of_Wrestling"> - Women Of Wrestling</option><option value="WWF_Classics"> - WWF Classics</option></select></td><td><input type=image src="http://www.iwrestling.com/folio/if_images/view.gif" border=0></td>
+</tr></table></form></td>
+						</tr>
+					</table>
+					<table border="0" width="460" cellspacing="0" cellpadding="4">
+						<tr>
+							<td>
+								<table border="0" width="100%" cellspacing="0" cellpadding="0" bgcolor="black">
+									<tr>
+										<td>
+											<table border="0" width="100%" cellspacing="1" cellpadding="0">
+												<tr bgcolor="#eeeeee">
+													<td align="center" nowrap valign="bottom" background="http://www.iwrestling.com/folio/if_images/topback.gif" bgcolor="red">
+														<table border="0" cellspacing="0" cellpadding="0" width="100%">
+															<tr>
+																<td align="center"><img height="6" width="460" src="../../graphics/transparent.gif"></td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+												<tr bgcolor="black">
+													<td>
+														<table border="0" width="100%" cellspacing="0" cellpadding="4">
+															<tr>
+																<td><font face="Arial,Helvetica" size="4" color="#ffcc00"><b>Che Physique (Che_04)</b></font></td>
+																<td align="right"><font face="Verdana,Arial,Helvetica" size="1" color="white">Displaying image 4 of 17<br>Manual Slideshow Mode</font></td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+												<tr bgcolor="#eeeeee">
+													<td>
+														<table border="0" cellpadding="3" cellspacing="0" width="100%">
+															<tr>
+																<td> <font face="Verdana,Arial,Helvetica" color="#000000" size=1><A HREF="http://www.iwrestling.com/cgi/imageFolio.cgi">Top</A> &gt;</font> <font face="Verdana,Arial,Helvetica" color="#000000" size=1><A HREF="../imageFolio.cgi?direct=Women_Of_Wrestling">Women Of Wrestling</A> &gt;</font> <font face="Verdana,Arial,Helvetica" color="#000000" size=1><a href="/cgi/imageFolio.cgi?direct=Women_Of_Wrestling/Che_Physique&img=">Che Physique</a> &gt; Che_04</font></td>
+																<td align="right"><a href="/cgi/imageFolio.cgi?action=view&link=Women_Of_Wrestling/Che_Physique&image=Che_03.jpg&img=&tt="><img src="http://www.iwrestling.com/folio/if_images/previous.gif" border=0 alt="Previous Page"></a><a href="http://www.iwrestling.com/cgi/imageFolio.cgi"><img src="http://www.iwrestling.com/folio/if_images/home.gif" border=0 alt="Return to Home Page"></a><a href="/cgi/imageFolio.cgi?action=view&link=Women_Of_Wrestling/Che_Physique&image=Che_05.jpg&img=&tt=&slideshow=1"><img src="http://www.iwrestling.com/folio/if_images/slideshow.gif" border=0 alt="Play Slideshow"></a><a href="/cgi/imageFolio.cgi?action=view&link=Women_Of_Wrestling/Che_Physique&image=Che_05.jpg&img=&tt="><img src="http://www.iwrestling.com/folio/if_images/next.gif" border=0 alt="Next Page"></a></td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+												<tr bgcolor="white">
+													<td valign="top" align="center"><br>
+														<a href="/cgi/imageFolio.cgi?direct=Women_Of_Wrestling/Che_Physique&img="><img
+   src="http://www.iwrestling.com/folio/gallery/Women_Of_Wrestling/Che_Physique/Che_04.jpg" border=0 alt="Che_04.jpg"></a><br>
+														<br>
+													</td>
+												</tr>
+												<tr bgcolor="#eeeeee">
+													<td valign="top" align="center">
+														<table border="0" cellspacing="10" cellpadding="0" width="100%">
+															<tr>
+																<td width="33%" valign="top"></td>
+																<td width="34%" align="center"><font face="Verdana,Arial,Helvetica" size="1"><nobr><a href="/cgi/imageFolio.cgi?direct=Women_Of_Wrestling/Che_Physique&img="><b>Return to Thumbnail View</b></a><br></nobr></font></td>
+																<td width="33%" align="right" valign="top"></td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</center>
+			</td>
+			<td width="1" bgcolor="#186bde"><img src="../../graphics/transparent.gif" width="1" height="20"></td>
+		</tr>
+	</table>
+	<table width="100%" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<td width="100%" bgcolor="#186bde" align="right"><img src="../../graphics/footer.gif" width="600" height="60" alt="footer" usemap="#footer" border="0"><map name="footer"><area href="#top" coords="7,35,90,54" shape="rect"><area href="../../search.html" coords="282,41,339,56" shape="rect"><area href="mailto:feedback@scoopscentral.com" coords="199,39,269,57" shape="rect"><area href="mailto:advertising@scoopscentral.com" coords="97,42,183,56" shape="rect"></map></td>
+		</tr>
+	</table>
+	<table width="100%" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<td width="100%" align="right"><font size="2" face="Arial">&copy; 2000 Snowball.com, Inc. All rights reserved.<br>
+				<a href="http://www.scoopswrestling.com/pages/privacy.html">Privacy Policy</a></font></td>
+		</tr>
+	</table>
+</center>
+</body>
+
+</html>

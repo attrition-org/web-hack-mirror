@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 3.0//EN" "html.dtd">
+<html>
+
+<head>
+<title>Dudley MBC: Search Form</title>
+<meta NAME="DESCRIPTION"
+CONTENT="Sample query form for Microsoft Index Server: Amended by Dudley MBC">
+<meta NAME="AUTHOR" CONTENT="Index Server Team">
+<meta NAME="KEYWORDS" CONTENT="query, content, hit">
+<meta NAME="SUBJECT" CONTENT="sample form">
+<meta NAME="MS.CATEGORY" CONTENT="Internet">
+<meta NAME="MS.LOCALE" CONTENT="EN-US">
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=Windows-1252">
+</head>
+
+<body background="../bg.gif">
+
+<table width="100%">
+  <tr>
+    <td valign="top" width="80%"><font color="#000000" face="Arial" size="5"><b>Search Form</b></font></td>
+    <td align="right" valign="top" width="20%"><p align="left"><font color="#000000"><b><img
+    src="../banner.gif" WIDTH="94" HEIGHT="34"></b></font></td>
+  </tr>
+</table>
+
+<form ACTION="query.idq" METHOD="GET">
+  <input type="hidden" name="CiScope" value="/"><input type="hidden"
+  name="CiMaxRecordsPerPage" value="10"><input type="hidden" name="TemplateName"
+  value="query"><input type="hidden" name="CiSort" value="rank[d]"><input type="hidden"
+  name="HTMLQueryForm" value="query.htm"><table>
+    <tr>
+      <td colspan="2"><font face="Arial">Enter your query below:</font></td>
+    </tr>
+    <tr>
+      <td colspan="2"><input name="CiRestriction" size="60"></td>
+    </tr>
+    <tr>
+      <td><input TYPE="submit" VALUE="Find"></td>
+      <td ALIGN="RIGHT"></td>
+    </tr>
+    <tr>
+      <td><font face="Arial"><input NAME="FreeText" TYPE="CHECKBOX" value="ON">Use <a
+      href="ixtiphlp.htm#FreeTextQueries">Free-Text Query</a>. </font></td>
+      <td><font face="Arial"><a HREF="ixtiphlp.htm">Tips for searching</a></font></td>
+    </tr>
+  </table>
+<!-- The CiScope parameter allows you to control which documents are searched. To search                the entire document set, use a value of "/", which corresponds to the root of your web                virtual namespace. To search a subset of your documents, set the value equal to the                virtual directory you want to search.  -->
+</form>
+</body>
+</html>

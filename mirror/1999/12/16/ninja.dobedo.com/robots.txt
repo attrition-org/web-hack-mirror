@@ -1,0 +1,6 @@
+# exclude help system from robots
+User-agent: *
+Disallow: /hilfe/ /manual/ /support-db/ /gif/
+# but allow htdig to index our doc-tree
+User-agent: susedig
+Disallow:

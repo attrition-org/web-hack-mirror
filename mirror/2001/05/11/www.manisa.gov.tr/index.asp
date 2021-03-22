@@ -1,0 +1,269 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1254">
+<meta http-equiv="Content-Language" content="tr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<META NAME="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="cache-control" CONTENT="no-cache">
+<title>T. C.&nbsp;&nbsp; M A N İ S A&nbsp;&nbsp; V A L İ L İ Ğ İ</title>
+<STYLE>A:link {
+	TEXT-DECORATION: none
+}
+A:hover {
+	TEXT-DECORATION: underline
+}
+A:visited {
+	TEXT-DECORATION: none
+}
+A:hover {
+	TEXT-DECORATION: underline
+}
+A:active {
+	TEXT-DECORATION: none
+}
+</STYLE><STYLE>A:link {
+	TEXT-DECORATION: none
+}
+A:hover {
+	TEXT-DECORATION: underline
+}
+A:visited {
+	TEXT-DECORATION: none
+}
+A:hover {
+	TEXT-DECORATION: underline
+}
+A:active {
+	TEXT-DECORATION: none
+}
+</STYLE><STYLE>A:link {
+	TEXT-DECORATION: none
+}
+A:hover {
+	TEXT-DECORATION: underline
+}
+A:visited {
+	TEXT-DECORATION: none
+}
+A:hover {
+	TEXT-DECORATION: underline
+}
+A:active {
+	TEXT-DECORATION: none
+}
+</STYLE>
+
+</head>
+
+<SCRIPT language=JavaScript type=text/javascript>
+ // Author: Long Huynh - Jan 30, 2000
+ // Purpose: check for cookie if not popup the survey
+ function getCookie (name) {
+  var myCookie = unescape(document.cookie);
+  var start = -1; 
+  if (myCookie.indexOf(name) > 0)
+   start = myCookie.indexOf("COMPLETEDSURVEY=1");
+  if (start == -1)  // survey not complete/found   
+   window.open("survey.asp","survey","resizable=0,scrollbars=1,HEIGHT=475,WIDTH=335,left=10,top=40"); 
+  return true;
+ } // end of cookie check
+ </SCRIPT>
+
+<body topmargin="0" leftmargin="0" background="images/back.jpg">
+
+
+<table border="0" width="764" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="707" align="center" valign="middle" bgcolor="#FFFFFF">
+      <p align="left"><img border="0" src="images/valia.jpg" width="756" height="77"></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="707" bgcolor="#A00000"><font color="#FFFFFF" face="Arial" size="2">Son Güncelleme&nbsp;
+     7 Mayıs 2001</font></td>
+  </tr>
+</table>
+
+
+<table border="0" width="764" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="707" colspan="2"></td>
+  </tr>
+  <tr>
+    <td width="150" valign="top">
+      <table border="0" width="100%">
+        <tr>
+          <td width="7%"></td>
+          <td width="93%" height="30"></td>
+        </tr>
+        <tr>
+          <td width="7%"></td>
+          <td width="93%"><strong><font color="#cccc99" face="Arial, Helvetica, sans-serif" size="2"><a style="color: rgb(204,204,153)" href="info.htm">GENELBİLGİLER</a></font></strong></td>
+        </tr>
+        <tr>
+          <td width="7%"></td>
+          <td width="93%"><strong><a style="color: rgb(204,204,153)" href="iletisim.htm"><font color="#cccc99" face="Arial, Helvetica, sans-serif" size="2">İLETİŞİM</font></a></strong></td>
+        </tr>
+        <tr>
+          <td width="7%"></td>
+          <td width="93%"><strong><font color="#cccc99" face="Arial, Helvetica, sans-serif" size="2"><a style="color: rgb(204,204,153)" href="projeler.htm">PROJELER</a></font></strong></td>
+        </tr>
+        <tr>
+          <td width="7%"></td>
+          <td width="93%"><strong><font color="#cccc99" face="Arial, Helvetica, sans-serif" size="2"><a style="color: rgb(204,204,153)" href="search.htm">ARAMA</a></font></strong></td>
+        </tr>
+        <tr>
+          <td width="7%"></td>
+          <td width="93%"></td>
+        </tr>
+        <tr>
+          <td width="7%"></td>
+          <td width="93%">
+          </td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</td>
+    <td width="610" valign="top"><img border="0" src="valilikyakin.jpg" width="601" height="403"></td>
+  </tr>
+  <tr>
+    <td width="150">
+      <blockquote>
+        <p>&nbsp;</p>
+      </blockquote>
+    </td>
+    <td width="610">
+      <div align="center">
+        <center>
+      <table border="1" width="97%" bordercolor="#800000" cellspacing="0" height="100%">
+        <tr>
+          <td width="50%" align="center" bgcolor="#800000" height="1"><font size="1" face="Arial" color="#FFFFFF"><b>MANİSA'DA
+            GEÇEN HAFTA</b></font></td>
+          <td width="50%" align="center" bgcolor="#800000" height="14"><font size="1" face="Arial" color="#FFFFFF"><b>MANİSA'DA
+            BU HAFTA</b></font></td>
+        </tr>
+					
+        <tr>
+          <td width="50%" height="16"><font face="Arial" size="2">&nbsp;<a href="haber.asp?dosya=1">
+		  ULUSAL EĞİTİME DESTEK KAMPANYASI PROJESİ 19 MAYIS’TA BAŞLAYACAKTIR</a></font></td>
+          <td width="50%" height="16"><font face="Arial" size="2">&nbsp;</font><a href="hafta.asp?dosya=1"><font face="Arial" size="2">
+		  2001 Yılı Uluslararası Karayolu Trafik Güvenliği Haftası</font></a></td>
+          </tr>
+		  
+     	
+        <tr>
+          <td width="50%" height="16"><font face="Arial" size="2">&nbsp;<a href="haber.asp?dosya=2">
+		  İL GENEL MECLİSİ MAYIS AYI OLAĞAN TOPLANTISININ İLKİ YAPILDI</a></font></td>
+          <td width="50%" height="16"><font face="Arial" size="2">&nbsp;</font><a href="hafta.asp?dosya=2"><font face="Arial" size="2">
+		  Sağlık Ocağı açılışı</font></a></td>
+          </tr>
+		  
+     	
+        <tr>
+          <td width="50%" height="16"><font face="Arial" size="2">&nbsp;<a href="haber.asp?dosya=3">
+		  İÇME SUYU İNŞAATLARI İÇİN 7 MİLYAR LİRALIKLIK 24,5 TON MUHTELİF DEMİR ALINACAKTIR</a></font></td>
+          <td width="50%" height="16"><font face="Arial" size="2">&nbsp;</font><a href="hafta.asp?dosya=3"><font face="Arial" size="2">
+		  Mesir İlköğretim Okulu, Okul Aile Birliği ve Koruma Derneği Üyeleri ziyareti</font></a></td>
+          </tr>
+		  
+     	
+        <tr>
+          <td width="50%" height="16"><font face="Arial" size="2">&nbsp;<a href="haber.asp?dosya=4">
+		  KÖYLERE İÇME SUYU YATIRIMLARI DEVAM EDİYOR</a></font></td>
+          <td width="50%" height="16"><font face="Arial" size="2">&nbsp;</font><a href="hafta.asp?dosya=4"><font face="Arial" size="2">
+		  “uyuşturucu” konulu panel</font></a></td>
+          </tr>
+		  
+     	
+        <tr>
+          <td width="50%" height="16"><font face="Arial" size="2">&nbsp;<a href="haber.asp?dosya=5">
+		  SARUHANLI GÜMÜLCELİ İLKÖĞRETİM OKULUNA BAHÇE DUVARI YAPILACAKTIR</a></font></td>
+          <td width="50%" height="16"><font face="Arial" size="2">&nbsp;</font><a href="hafta.asp?dosya=5"><font face="Arial" size="2">
+		  Akhisar Organize Sanayi Bölgesi Müteşebbis Heyeti Toplantısı</font></a></td>
+          </tr>
+		  
+     	
+        <tr>
+          <td width="50%" height="16"><font face="Arial" size="2">&nbsp;<a href="haber.asp?dosya=6">
+		  OKUL AİLE BİRLİKLERİ, YARDIMA MUHTAÇ ÇOCUKLAR YARARINA KERMES DÜZENLEDİ</a></font></td>
+          <td width="50%" height="16"><font face="Arial" size="2">&nbsp;</font><a href="hafta.asp?dosya=6"><font face="Arial" size="2">
+		  Kafeterya açılışı</font></a></td>
+          </tr>
+		  
+     	
+        <tr>
+          <td width="50%" height="16"><font face="Arial" size="2">&nbsp;<a href="haber.asp?dosya=7">
+		  MANİSALILAR YARDIMLAŞMA VE DAYANIŞMA DERNEĞİ VESTEL MANİSASPORLU FUTBOLCULARA TELEVİZYON HEDİYE ETTİ</a></font></td>
+          <td width="50%" height="16"><font face="Arial" size="2">&nbsp;</font><a href="hafta.asp?dosya=7"><font face="Arial" size="2">
+		  İl Daimi Encümen Toplantısı</font></a></td>
+          </tr>
+		  
+     	
+        <tr>
+          <td width="50%" height="16"><font face="Arial" size="2">&nbsp;<a href="haber.asp?dosya=8">
+		  7 MİLYAR LİRALIK AKARYAKIT ALINACAKTIR</a></font></td>
+          <td width="50%" height="16"><font face="Arial" size="2">&nbsp;</font><a href="hafta.asp?dosya=8"><font face="Arial" size="2">
+		  542. Akhisar Çağlak Festivali</font></a></td>
+          </tr>
+		  
+     	
+        <tr>
+          <td width="50%" height="16"><font face="Arial" size="2">&nbsp;<a href="haber.asp?dosya=9">
+		  SELENDİ-TAVAK KÖYÜNE DEVLET-VATANDAŞ İŞBİRLİĞİYLE 
+OKUL YAPILACAKTIR</a></font></td>
+          <td width="50%" height="16"><font face="Arial" size="2">&nbsp;</font><a href="hafta.asp?dosya=9"><font face="Arial" size="2">
+		  Bir Efsane zeki Müren Konseri</font></a></td>
+          </tr>
+		  
+     	
+        <tr>
+          <td width="50%" height="16"><font face="Arial" size="2">&nbsp;<a href="haber.asp?dosya=10">
+		  KULA-ÇARIKBALLI KÖYÜNDE HAYIRSEVERLERDEN OKUL YAPIMI İÇİN
+ARSA BAĞIŞI</a></font></td>
+          <td width="50%" height="16"><font face="Arial" size="2">&nbsp;</font><a href="hafta.asp?dosya=10"><font face="Arial" size="2">
+		  </font></a></td>
+          </tr>
+		  
+     	
+        <tr>
+          <td width="50%" height="16"><font face="Arial" size="2">&nbsp;<a href="haber.asp?dosya=11">
+		  DEVLET BAKANI DR. YÜKSEL YALOVA MANİSA'YI ZİYARET ETTİ</a></font></td>
+          <td width="50%" height="16"><font face="Arial" size="2">&nbsp;</font><a href="hafta.asp?dosya=11"><font face="Arial" size="2">
+		  </font></a></td>
+          </tr>
+		  
+     	
+        <tr>
+          <td width="50%" height="16"><font face="Arial" size="2">&nbsp;<a href="haber.asp?dosya=12">
+		  HIDRELLEZ KÜLTÜR-BAHAR BAYRAMI KUTLANDI</a></font></td>
+          <td width="50%" height="16"><font face="Arial" size="2">&nbsp;</font><a href="hafta.asp?dosya=12"><font face="Arial" size="2">
+		  </font></a></td>
+          </tr>
+		  
+     		  
+		  
+      </table>
+        </center>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="150">
+      <blockquote>
+        <p>&nbsp;</p>
+      </blockquote>
+    </td>
+    <td width="610">
+      <p align="center"><font face="Arial" size="1">Bu sitenin teknik desteği <a href="http://www.niobeweb.net" target="_blank">Niobeweb</a>
+      tarafından sağlanmaktadır.</font>
+    </td>
+  </tr>
+</table>
+
+</body>
+
+</html>
+FlorX cant stop it... my balls are killing me... HACK TO LIVE, AND LIVE TO HACK! Cyprus 14 - Turkey 0 ! Greets to Kounoub! 

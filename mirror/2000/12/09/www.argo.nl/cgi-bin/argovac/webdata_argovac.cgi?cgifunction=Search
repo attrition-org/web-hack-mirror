@@ -1,0 +1,104 @@
+<HEAD><TITLE>Search Results page </TITLE></HEAD><BODY BGCOLOR="WHITE">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>ARGO OFFICE</title>
+	<SCRIPT LANGUAGE="JavaScript">
+<!--
+function checkOS() {
+if(navigator.userAgent.indexOf('Win') != -1)
+    { var OpSys = "Windows"; }
+ else if(navigator.userAgent.indexOf('Mac') != -1)
+    { var OpSys = "Macintosh"; }
+  else { var OpSys = "other"; }
+  return OpSys;
+}
+
+var OpSys = checkOS();
+
+if (OpSys) 	{
+if (OpSys=="Windows")  { var Sheet="small.css";} 
+if (OpSys=="Macintosh")  { var Sheet="large.css";} }
+if (OpSys=="other")  { var Sheet="large.css";} 
+
+document.write("<link rel=Stylesheet HREF='http://www.argo.nl/styles/" + Sheet + "'>");
+// -->
+</SCRIPT>
+</head>
+
+<body marginheight=0 marginwidth=0 topmargin=0 leftmargin=0 rightmargin=0>
+
+<table width=780 CELLPADDING=0 CELLSPACING=0 BORDER=0>
+<tr>
+<td>
+<table width=779 CELLPADDING=0 CELLSPACING=0 BORDER=0>
+<tr>
+<td bgcolor="#000000"><img src="../../nav/main.jpg" width="779" height="43" alt="" border="0" usemap="#main">
+</td>
+</tr>
+
+<tr>
+<td bgcolor="#000000" height=1><img src="../../pics/nieuws.jpg" width="779" height="100" alt="" border="0">
+</td>
+</tr>
+
+<tr>
+<td valign=top>
+<table width=779 CELLPADDING=0 CELLSPACING=0 BORDER=0>
+<tr>
+<td valign=top>
+<table width=595 CELLPADDING=20 CELLSPACING=0 BORDER=0>
+<tr>
+<td valign=top>
+<img src="/pics/vacatures.gif" alt="" border="0">
+
+<table>
+<tr>
+<td><A HREF="javascript:viewform(971444915)"><IMG SRC="/pics/leesverder.gif" BORDER=0></A></td><td><div class="BodyText">CONSTRUCTEUR</div></td>
+</tr></table>
+<table>
+<tr>
+<td><A HREF="javascript:viewform(971367894)"><IMG SRC="/pics/leesverder.gif" BORDER=0></A></td><td><div class="BodyText">COMMERCIEEL MEDEWERKER VERKOOPBINNENDIENST</div></td>
+</tr></table>
+<table>
+<tr>
+<td><A HREF="javascript:viewform(971367843)"><IMG SRC="/pics/leesverder.gif" BORDER=0></A></td><td><div class="BodyText">MEDEWERKER FINANCIELE ADMINISTRATIE</div></td>
+</tr></table>
+<table>
+<tr>
+<td><A HREF="javascript:viewform(971367809)"><IMG SRC="/pics/leesverder.gif" BORDER=0></A></td><td><div class="BodyText">ASSEMBLAGE MEDEWERKER</div></td>
+</tr></table>
+<table>
+<tr>
+<td><A HREF="javascript:viewform(971367783)"><IMG SRC="/pics/leesverder.gif" BORDER=0></A></td><td><div class="BodyText">JUNIOR MEUBEL MONTEUR</div></td>
+</tr></table>
+</td></tr></table></td><td width=184 bgcolor="#9CA1A5" valign=top><table width=184 CELLPADDING=10 CELLSPACING=0 BORDER=0><tr><td valign=top><div class="KaderTextKop">VACATURES</div><div class="KaderText"><br> <br>
+ARGO OFFICE is een organisatie die investeert in mensen. Wil je je verder ontwikkelen in techniek of logistiek, of ben je meer commercieel ingesteld? Naast de hierboven genoemde functies hebben wij voortdurend mogelijkheden.
+<br> <br>
+Plezier hebben in je werk door zelfstandig te werken in een jonge en dynamische omgeving vinden wij, naast uitstekende arbeidsvoorwaarden, van het grootste belang.
+<br> <br>
+Dus, spreekt onze organisatie je aan en ben je op zoek naar een nieuwe uitdaging? Stuur dan je motivatie en CV per post, fax of <a href="mailto:gdevries@argo.nl>e-mail</a> naar ARGO OFFICE. Heb je nog vragen voor je wilt reageren? Uiteraard kun je ook bellen: Gwen de Vries, 030-69 369 12 of <a href="mailto:gdevries@argo.nl">gdevries@argo.nl</a>.<pre></pre></div></td></tr></table></td></tr></table></td></tr></table></td><td width=1 bgcolor="#000000"><img src="trans.gif" width="1" height="1" alt="" border="0"></td></table><map name="main">
+<area shape="rect" coords="146,8,202,35" href="../../index.html" title="">
+<area shape="rect" coords="215,8,295,35" href="../../overargo.html" title="">
+<area shape="rect" coords="306,8,369,35" href="../webdata_argonws.pl?cgifunction=Search" title="">
+<area shape="rect" coords="596,8,677,36" href="webdata_argovac.cgi?cgifunction=Search" title="">
+<area shape="rect" coords="381,8,451,36" href=" ../../collectie.html" title="">
+<area shape="rect" coords="463,6,584,36" href="http://argo.interkantoor.nl" title="" target="_blank">
+<area shape="rect" coords="690,7,758,36" href="../../contact.html" title="">
+<area shape="default" nohref>
+</map></body></html>
+ 
+<SCRIPT LANGUAGE=JavaScript> 
+function viewform(id) { 
+document.vf.fid.value=""+id; 
+document.vf.submit(); 
+} 
+</SCRIPT> 
+<FORM NAME="vf" ACTION="webdata_argovac.cgi" METHOD=GET> 
+<INPUT TYPE=HIDDEN NAME="fid"> 
+<INPUT TYPE=HIDDEN NAME="query" VALUE="pagenum=1&cgifunction=Search"> 
+<INPUT TYPE=HIDDEN NAME="cgifunction" VALUE="form"> 
+</FORM>
+</TABLE>
+<BR><BR>

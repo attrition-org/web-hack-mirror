@@ -1,0 +1,68 @@
+<HTML>
+ <HEAD>
+  <title>
+   Hacked for Christmas
+  </title>
+   <script language="JavaScript">
+
+        <!--
+                var     ScrollerID = 0,
+                                index = 0,
+                                WaitStates = 100;
+                var     DisplaySize = ((navigator.appName == "Netscape") && (navigator.appVersion.substring(0, 3) == "3.0")) ? 105 : 75;
+
+                function ScrollMarquee( display ) {
+                        OutputMarquee( display, display.defaultValue, index );
+                        index++;
+                        if( index >= display.defaultValue.length ) {
+                                index = 0;
+                        }
+                        clearTimeout( ScrollerID );
+                        ScrollerID = setTimeout( "ScrollMarquee( document.marquee.display )", WaitStates );
+                }
+
+                function OutputMarquee( MarqueeBox, MarqueeText, MarqueePosition ) {
+                        var     message = MarqueeText.substring( MarqueePosition, MarqueeText.length );
+
+                        while( message.length < DisplaySize ) {
+                                message += "  .  .  .  .  .  ";
+                                message += MarqueeText;
+                        }
+                        MarqueeBox.value = message.substring( 0, DisplaySize );
+                }
+
+        // -->
+        
+
+   </script>
+  </HEAD>
+ <body bgColor=#AA0000 onLoad="ScrollerID = setTimeout( 'ScrollMarquee( document.marquee.display )', WaitStates )">
+  <CENTER>
+   <A HREF="http://www.casema.net/~gin/index.html">
+    <IMG SRC="http://www.casema.net/~gin/phreaknl.gif" WIDTH="468" HEIGHT="60" ALT="#Phreak.nl" BORDER="0">
+   </A>
+  </CENTER>
+    <TABLE align="center" border="0" height="60" width="468">
+     <TBODY>
+      <tr bgColor=#006600>
+       <td height="75">
+        <font color=#004400 face="Arial" size="4" allign="top">
+         <center>
+          <b>
+           We wish you a scary christmas and a Phearfull Y2K
+          </b>
+         </center>
+        </font>
+       </td>
+      </tr>
+     </TBODY>
+    </table>
+  <form name="marquee">
+   <center>
+    <table border=0 cellspacing=0 cellpadding=1>
+     <td align=center valign=middle>
+      <input type=text name="display" size=64 value="Special Chrismas greets go out to...  bivak pudding drgenius scrippie gerrie sync- dvorak pippitaal nexu mitsai dagger02 stealth sibeling aus flyah panevino mrfloat. You all enriched my live, irl and online. Thnx,     DuGo" onSubmit="ScrollMarquee( document.marquee.display )"></td></table>
+</center>
+</form>
+  </BODY>
+ </HTML>

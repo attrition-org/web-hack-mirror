@@ -1,0 +1,33 @@
+--14:22:06--  http://www.foundation.org.cn:80/
+           => `www.foundation.org.cn/index.html'
+Connecting to www.foundation.org.cn:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+
+    0K ->
+
+14:22:07 (957.03 KB/s) - `www.foundation.org.cn/index.html' saved [980]
+
+Loading robots.txt; please ignore errors.
+--14:22:07--  http://www.foundation.org.cn:80/no-robots.txt
+           => `www.foundation.org.cn/no-robots.txt'
+Connecting to www.foundation.org.cn:80... connected!
+HTTP request sent, awaiting response... 404 找不到对象
+14:22:07 ERROR 404: 找不到对象.
+
+--14:22:07--  http://www.foundation.org.cn:80/dogabuse.jpg
+           => `www.foundation.org.cn/dogabuse.jpg'
+Connecting to www.foundation.org.cn:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 77,322 [image/jpeg]
+
+    0K -> .......... .......... .......... .......... .......... [ 66%]
+   50K -> .......... .......... .....                            [100%]
+
+14:22:09 (53.14 KB/s) - `www.foundation.org.cn/dogabuse.jpg' saved [77322/77322]
+
+Converting www.foundation.org.cn/index.html... done.
+
+FINISHED --14:22:09--
+Downloaded: 78,302 bytes in 2 files
+Converting www.foundation.org.cn/index.html... done.

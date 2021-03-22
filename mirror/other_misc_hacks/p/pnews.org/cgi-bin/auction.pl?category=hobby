@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+	<TITLE>Golem Designs - Open Auction</TITLE>
+</HEAD>
+<BODY TEXT=#000000 BGCOLOR=#FFFFFF LINK=#000088 VLINK=#000088 ALINK=#000088>
+	<TABLE WIDTH=100% BORDER=0><TR><TD VALIGN=TOP WIDTH=100%>
+		<FONT SIZE=+2>Golem Designs</FONT>
+		<BR>
+		<FONT SIZE=+1>Online Auction</FONT>
+	</TD><TD VALIGN=TOP ALIGN=LEFT>
+		<FORM ACTION=/cgi-bin/auction.pl METHOD=POST>
+		<INPUT TYPE=TEXT NAME=searchstring>
+		<INPUT TYPE=SUBMIT VALUE="Search">
+		<INPUT TYPE=HIDDEN NAME=action VALUE="search">
+		<FONT SIZE=-2><INPUT TYPE=RADIO NAME=searchtype VALUE="keyword" CHECKED>keyword <INPUT TYPE=RADIO NAME=searchtype VALUE="username">username </FONT>
+		</FORM>
+	</TD></TR></TABLE>
+	<P>
+<H2>Hobbyist Stuff</H2>
+<TABLE BORDER=1 WIDTH=100%>
+<TR><TD ALIGN=CENTER BGCOLOR=#BBBBBB><B>Item</B></TD><TD ALIGN=CENTER BGCOLOR=#BBBBBB><B>Closes</B></TD><TD ALIGN=CENTER BGCOLOR=#BBBBBB><B>Num Bids</B></TD><TD ALIGN=CENTER BGCOLOR=#BBBBBB><B>High Bid</B></TD></TR>
+</TABLE>
+<P><P ALIGN=CENTER><FONT SIZE=-1><A HREF=auction.pl>[Category List]</A> <A HREF=auction.pl?action=new>[Post New Item]</A> <A HREF=auction.pl?action=reg>[New Registration]</A> <A HREF=auction.pl?action=creg>[Change Registration]</A> <A HREF=auction.pl?action=closed>[Closed Auctions]</A> </FONT></P>
+<P>
+<CENTER><FONT SIZE=-1><A HREF="../index.html">TheGolemsPlace</A></FONT></CENTER>
+</BODY>
+</HTML>

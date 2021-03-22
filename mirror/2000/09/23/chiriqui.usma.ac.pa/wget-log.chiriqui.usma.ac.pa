@@ -1,0 +1,61 @@
+--03:20:35--  http://chiriqui.usma.ac.pa:80/
+           => `chiriqui.usma.ac.pa/index.html'
+Connecting to chiriqui.usma.ac.pa:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 3,404 [text/html]
+
+    0K -> ...                                                    [100%]
+
+03:20:37 (3.45 KB/s) - `chiriqui.usma.ac.pa/index.html' saved [3404/3404]
+
+Loading robots.txt; please ignore errors.
+--03:20:37--  http://chiriqui.usma.ac.pa:80/no-robots.txt
+           => `chiriqui.usma.ac.pa/no-robots.txt'
+Connecting to chiriqui.usma.ac.pa:80... connected!
+HTTP request sent, awaiting response... 404 Not Found
+03:20:38 ERROR 404: Not Found.
+
+--03:20:38--  http://chiriqui.usma.ac.pa:80/old.html
+           => `chiriqui.usma.ac.pa/old.html'
+Connecting to chiriqui.usma.ac.pa:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 703 [text/html]
+
+    0K ->                                                        [100%]
+
+03:20:39 (2.27 KB/s) - `chiriqui.usma.ac.pa/old.html' saved [703/703]
+
+--03:20:39--  http://chiriqui.usma.ac.pa:80/docs
+           => `chiriqui.usma.ac.pa/docs'
+Connecting to chiriqui.usma.ac.pa:80... connected!
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: http://chiriqui.usma.ac.pa/docs/ [following]
+--03:20:40--  http://chiriqui.usma.ac.pa:80/docs/
+           => `chiriqui.usma.ac.pa/docs/index.html'
+Connecting to chiriqui.usma.ac.pa:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 1,621 [text/html]
+
+    0K -> .                                                      [100%]
+
+03:20:42 (2.25 KB/s) - `chiriqui.usma.ac.pa/docs/index.html' saved [1621/1621]
+
+Converting chiriqui.usma.ac.pa/old.html... done.
+--03:20:42--  http://chiriqui.usma.ac.pa:80/universidad.swf
+           => `chiriqui.usma.ac.pa/universidad.swf'
+Connecting to chiriqui.usma.ac.pa:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 53,976 [application/x-shockwave-flash]
+
+    0K -> .......... .......... .......... .......... .......... [ 94%]
+   50K -> ..                                                     [100%]
+
+03:20:54 (5.11 KB/s) - `chiriqui.usma.ac.pa/universidad.swf' saved [53976/53976]
+
+Converting chiriqui.usma.ac.pa/index.html... done.
+
+FINISHED --03:20:54--
+Downloaded: 59,704 bytes in 4 files
+Converting chiriqui.usma.ac.pa/index.html... done.
+Converting chiriqui.usma.ac.pa/old.html... done.
+Converting chiriqui.usma.ac.pa/docs/index.html... done.

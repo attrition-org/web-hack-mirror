@@ -1,0 +1,34 @@
+--00:12:34--  http://dagoon.com:80/
+           => `dagoon.com/index.html'
+Connecting to dagoon.com:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 529 [text/html]
+
+    0K ->                                                        [100%]
+
+00:12:34 (516.60 KB/s) - `dagoon.com/index.html' saved [529/529]
+
+Loading robots.txt; please ignore errors.
+--00:12:34--  http://dagoon.com:80/robots.txt
+           => `dagoon.com/robots.txt'
+Connecting to dagoon.com:80... connected!
+HTTP request sent, awaiting response... 404 Not Found
+00:12:34 ERROR 404: Not Found.
+
+--00:12:34--  http://dagoon.com:80/bloody1.jpg
+           => `dagoon.com/bloody1.jpg'
+Connecting to dagoon.com:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 133,868 [image/jpeg]
+
+    0K -> .......... .......... .......... .......... .......... [ 38%]
+   50K -> .......... .......... .......... .......... .......... [ 76%]
+  100K -> .......... .......... ..........                       [100%]
+
+00:12:35 (120.49 KB/s) - `dagoon.com/bloody1.jpg' saved [133868/133868]
+
+Converting dagoon.com/index.html... done.
+
+FINISHED --00:12:35--
+Downloaded: 134,397 bytes in 2 files
+Converting dagoon.com/index.html... done.

@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+
+<SCRIPT LANGUAGE = "JavaScript">
+
+
+
+
+<!--
+browserName = navigator.appName;
+browserVer = parseInt(navigator.appVersion);
+if (browserName == "Netscape" && browserVer >= 3) 
+   version = "n3";
+else if (browserName == "Microsoft Internet Explorer" && browserVer >= 4) 
+   version = "n3";
+else version = "n2";
+if (version == "n3") {
+   rn_00on = new Image;
+   rn_00on.src = "graphics/left_1-2";
+   rn_00off = new Image;
+   rn_00off.src = "graphics/left_1.gif";
+   rn_01on = new Image;
+   rn_01on.src = "graphics/left_2-2.gif";
+   rn_01off = new Image;
+   rn_01off.src = "graphics/left_2.gif";
+   rn_02on = new Image;
+   rn_02on.src = "graphics/left_3-2.gif";
+   rn_02off = new Image;
+   rn_02off.src = "graphics/left_3.gif";
+   rn_03on = new Image;
+   rn_03on.src = "graphics/left_4-2.gif";
+   rn_03off = new Image(66, 27);
+   rn_03off.src = "graphics/left_4.gif";
+   rn_04on = new Image(66, 27);
+   rn_04on.src = "graphics/left_5-2.gif";
+   rn_04off = new Image(66, 27);
+   rn_04off.src = "graphics/left_5.gif";
+   
+  
+
+}
+
+function img_act(imgName) {
+   if (version == "n3") {
+      imgOn = eval(imgName + "on.src");
+      document [imgName].src = imgOn;
+      }
+    }
+
+function img_inact(imgName) {
+   if (version == "n3") {
+      imgOff = eval(imgName + "off.src");
+      document [imgName].src = imgOff;
+      }
+   }
+
+//-->
+
+</SCRIPT>
+
+
+</head>
+
+<body bgcolor="#FFFFFF" background="graphics/bg-2.gif">
+<p>&nbsp;</p><table width="40%" border="0" height="54" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td height="2"> 
+      <div align="center"><a href="need.htm" target="main"><img src="graphics/left_1.gif" width="85" height="23" border="0"></a></div>
+    </td>
+  </tr>
+  <tr> 
+    <td height="2"> 
+      <div align="center"><a href="special.htm" target="main"><img src="graphics/left_2.gif" width="85" height="23" border="0"></a></div>
+    </td>
+  </tr>
+</table>
+<p><font color="#FFFFFF"><font size="4" color="#666666"><font color="#FFFFFF"><font size="4" color="#666666"><font color="#FFFFFF"><b><font face="華康細圓體, 華康細圓體(P), 華康粗圓體(P), 標楷體, 新細明體">快速建構：</font></b></font></font></font></font></font></p>
+<table width="75%" border="1" cellspacing="0" cellpadding="0" bordercolor="#CCFFFF" bordercolorlight="#CCFFFF" bordercolordark="#CCFFFF" bgcolor="#CCFFFF">
+  <tr>
+    <td><a href="knowledge.htm" target="main"
+   onMouseOver="img_act('rn_02')" onMouseOut="img_inact('rn_02')"
+   onClick="img_act('rn_02')"><img name=rn_02 src="graphics/left_3.gif" border=0></a></td>
+  </tr>
+  <tr>
+    <td><a href="work.htm" target="main"
+   onMouseOver="img_act('rn_03')" onMouseOut="img_inact('rn_03')"
+   onClick="img_act('rn_03')"><img name=rn_03 src="graphics/left_4.gif" border=0 width=119 height=23></a></td>
+  </tr>
+  <tr>
+    <td><a href="information.htm" target="main"
+   onMouseOver="img_act('rn_04')" onMouseOut="img_inact('rn_04')"
+   onClick="img_act('rn_04')"><img name=rn_04 src="graphics/left_5.gif" border=0 width=119 height=23></a></td>
+  </tr>
+</table>
+<p> <a href="../default.asp" target="_parent"><img src="graphics/homepage.asp.gif" alt="喬篷首頁" border="0" width="119" height="26"></a></p>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<html><head><title>WEB STATICS</title></head>
+<body bgcolor="3366aa" text=000000 link=yellow alink=red vlink=lime>
+<center>
+<table border=0 width=640>
+<tr><td vlaign=top align=center>
+
+<script Language='JavaScript'>
+var now = new Date();
+var years = now.getYear();
+var months =now.getMonth();
+var days = now.getDate();
+var hours = now.getHours();
+var minutes = now.getMinutes();
+var seconds = now.getSeconds();
+var ram_num=Math.floor(Math.random()*10000);
+var markstr=""+years+"-"+months+"-"+days+"-"+hours+"-"+minutes+"-"+seconds+"-"+ram_num;
+var showcgiurl="http://www.thanks-cgi.com/cgi-bin/banker/banker_show.cgi";
+var clickcgiurl="http://www.thanks-cgi.com/cgi-bin/banker/banker_click.cgi";
+document.write('<a href='+clickcgiurl+'?'+markstr+'><img src='+showcgiurl+'?'+markstr+' border=0></a>');
+</script><hr>
+
+<table bgcolor="#000000" border=0 cellpadding=0 cellspacing=0 width="450"><tr><td>
+
+<table border=0 cellpadding=3 cellspacing=1 width="450">
+<tr align=center bgcolor="#000000">
+<td><font size=-1 face=arial color=#ffffff>
+<b>WEB-STAT</b>
+</font></td></tr>
+
+<tr valign=top align=left bgcolor="#ffffff">
+<td><font size=-1 face=arial>
+
+<h2>Check the statistics of your HOMEPAGE!!!</h2>
+
+You can easily find out where your visitors are from, which search engine or link they have used to come to your site, number of hits from each site....<br>
+<br>
+</font></td></tr>
+
+<tr align=center bgcolor="#000000">
+<td><font size=3 face=arial color=#ffffff>
+<b>
+<script language='JavaScript'> 
+document.write('<a href=cgi-bin/static/static.cgi?result><img src=cgi-bin/static/static.cgi?'+document.referrer+' border=0>SAMPLE</a>');
+</script>
+<font color=white>|</font>
+<a href="index.html">BACK TO MAIN PAGE</a>
+</b>
+</font></td></tr>
+
+</table>
+</td><tr></table>
+<hr>
+<font size=1>&copy; 1998, 1999 <a href="index.html">Thanks CGI resources</a></font>
+</td></tr></table>
+</body>
+</html>

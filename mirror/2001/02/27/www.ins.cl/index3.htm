@@ -1,0 +1,840 @@
+<html>
+<head>
+<title>Integral Net Service</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+</head>
+  <script language=javascript>
+<!--
+  function mOvr(src,clrOver) {
+    if (!src.contains(event.fromElement)) {
+	  src.style.cursor = 'hand';
+	  src.bgColor = clrOver;
+	}
+  }
+  function mOut(src,clrIn) {
+	if (!src.contains(event.toElement)) {
+	  src.style.cursor = 'default';
+	  src.bgColor = clrIn;
+	}
+  }
+  function mClk(src) {
+    if(event.srcElement.tagName=='TD'){
+	  src.children.tags('A')[0].click();
+    }
+  }
+// -->	
+function abre(){
+window.open("http://www.nic.cl","","height=250,width=790,directories=1,menubar=1,resizable=1,scrollbars=1,status=1,titlebar=1,toolbar=1,left=1,top=1")
+}
+
+
+
+function abrir(){
+window.open("http://www.networksolutions.com/cgi-bin/whois/whois?type=dominios&from=entry&STRING="+document.formulario.STRING.value,"","height=500,width=650,directories=0,scrollbars=1")
+}
+
+
+</script>
+<script>
+var months=new Array(12)
+months[0]="Enero"
+months[1]="Febrero"
+months[2]="Marzo"
+months[3]="Abril"
+months[4]="Mayo"
+months[5]="Junio"
+months[6]="Julio"
+months[7]="Agosto"
+months[8]="Septiembre"
+months[9]="Octubre"
+months[10]="Noviembre"
+months[11]="Diciembre"
+
+var nscp = (navigator.appName == "Netscape")
+var time = new Date()
+var lmonth = months[time.getMonth()]
+var date = time.getDate()
+var year = time.getYear()
+
+if ((navigator.appName == "Microsoft Internet Explorer") && (year < 2000))
+{	year = "19" + year
+}
+if (navigator.appName == "Netscape")
+{	year = 1900 + year
+}
+
+function writeDate()
+{	if (nscp)
+	{	document.write(date + " de " + lmonth + " del " + year)
+	}
+
+	else
+
+{	document.write(date + " de " + lmonth + " del " + year)	
+	}
+}
+</script>
+<body bgcolor="#FFFFFF"
+link="#006600" vlink="#006600" alink="#006600"
+LEFTMARGIN=0 TOPMARGIN=0 MARGINWIDTH="0" MARGINHEIGHT="0">
+<div align="center"> 
+  <table width="100%" border="0" cellpadding="0" cellspacing="0" vspace="0" hspace="0">
+    <tr> 
+      <td height="42" colspan="3"> 
+        <table width="760" border="0" cellpadding="0" cellspacing="0" bgcolor="#006600" height="80" align="center">
+          <tr> 
+            <td bgcolor="#3366CC" width="40%" rowspan="5" height="20" valign="top"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#3,0,0,0" width="400" height="84">
+                <param name="SRC" value="images/logo.swf">
+                <embed src="images/logo.swf" pluginspage="http://www.macromedia.com/shockwave/download/" type="application/x-shockwave-flash" width="400" height="84">
+                </embed> 
+              </object></td>
+            <td width="60%" colspan="2" valign="top" height="20" bgcolor="#3366CC"> 
+              <div align="center"><font face="arial" size="1" color="#FFFFff"><b> 
+                <script language="JavaScript">writeDate();</script>
+                .</b></font> </div>
+            </td>
+          </tr>
+          <tr>
+            <td width="60%" colspan="2" height="10" bgcolor="#3366CC"><img height=8 src="images/dummy.gif" width=10></td>
+          </tr>
+          <tr> 
+            <td width="60%" colspan="2" bgcolor="#3366CC"><img height=15 src="images/dummy.gif" width=10></td>
+          </tr>
+          <tr> 
+            <td width="60%" colspan="2" height="20" bgcolor="#3366CC"> 
+              <table width="90%" border="0" cellpadding="0" cellspacing="1" vspace="0" hspace="0" align="center" height="20"  >
+                <tr> 
+                  <td height=10 bgcolor="#FFFF99" onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');"  
+          width="33%"> <img height=8 src="images/dummy.gif" width=10><a 
+            href="index2.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inicio</font></a> 
+                  </td>
+                  <td height=2 bgcolor="#FFFF99" onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');"  
+          width="33%"> <img height=8 src="images/dummy.gif" width=10><a 
+            href="quienessomos.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">Quienes 
+                    Somos</font></a> </td>
+                  <td height=2 bgcolor="#FFFF99" onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');"  
+          width="33%"> <img height=8 src="images/dummy.gif" width=10><a 
+            href="mailto:ventasdominio@ins.cl" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">&nbsp;&nbsp;&nbsp;Consultas</font></a> 
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr> 
+            <td width="60%" colspan="2" height="20" bgcolor="#3366CC"><img height=22 src="images/dummy.gif" width=10></td>
+          </tr>
+          <tr valign="top" bgcolor="#3366CC"> 
+            <td colspan="3"> 
+              <table width="95%" border="0" cellpadding="0" cellspacing="1" vspace="0" hspace="0" align="center" height="20"  >
+                <tr> 
+                  <td height=10 bgcolor="#FFFF99" onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');"  
+          width="14%"> <img height=8 src="images/dummy.gif" width=10><a 
+            href="comprar.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Comprar</font></a> 
+                  </td>
+                  <td height=2 bgcolor="#FFFF99" onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');"  
+          width="14%"> <img height=8 src="images/dummy.gif" width=10><a 
+            href="vender.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vender</font></a> 
+                  </td>
+                  <td height=2 bgcolor="#FFFF99" onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');"  
+          width="14%"> <img height=8 src="images/dummy.gif" width=10><a 
+            href="alquilar.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></a><a 
+            href="vender.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">&nbsp;&nbsp;</font></a><a 
+            href="alquilar.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">Alquilar</font></a> 
+                  </td>
+                  <td height=2 bgcolor="#FFFF99" onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');"  
+          width="14%"> <img height=8 src="images/dummy.gif" width=10><a 
+            href="ensubasta.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;En 
+                    Subasta</font></a> </td>
+                  <td height=2 bgcolor="#FFFF99" onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');"  
+          width="14%"> <img height=8 src="images/dummy.gif" width=10><a 
+            href="mejoresdominios.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">Los 
+                    Mejores Dominios</font></a> </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr valign="top" bgcolor="#3366CC"> 
+            <td colspan="3" height="10"><img height=8 src="images/dummy.gif" width=10></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr> 
+      <td height="15" colspan="3"> 
+        <div align="center"><applet code="LVInter.class" align="top" width="750" height="15">
+            <param name="BgColor1" value="ffffff">
+            <param name="BgColor2" value="ffffff">
+            <param name="CPS" value="6">
+            <param name="DataFile" value="mensaje.txt">
+            <param name="DefaultMessage" value=" &iquest; A&uacute;n no estas en Internet ?                               Registra tu Dominio desde nuestra Web...      .cl .com                              Aqu&iacute; encontrar&aacute;s los mejores Dominios en venta para tus proyectos de Web.                              Comprar, Vender, Alquilar, Subastas, Consultas de Dominios, Registrar...                    www.ins.cl                              Registra tu dominio aqu&iacute;!!!                                        &iquest; A&uacute;n no estas en Internet ?                              Registra tu Dominio desde nuestra Web...      .cl .com                              Aqu&iacute; encontrar&aacute;s los mejores Dominios en venta para tus proyectos de Web.                              Comprar, Vender, Alquilar, Subastas, Consultas de Dominios, Registrar...                    www.ins.cl                              Registra tu dominio aqu&iacute;!!!">
+            <param name="DestinationFrame" value="_blank">
+            <param name="FgColor1" value="009900">
+            <param name="FgColor2" value="009900">
+            <param name="Font" value="Courier New, Courier, mono, 1, 10">
+            <param name="SleepTime" value="4">
+            <param name="param" value="value">
+          </applet></div>
+      </td>
+    </tr>
+    <tr valign="top"> 
+      <td height="450" colspan="3"> 
+        <table width="760" border="0" cellpadding="0" vspace="0" hspace="0" cellspacing="0" align="center">
+          <tr valign="top"> 
+            <td width="130"> 
+              <table border=0 cellpadding=0 cellspacing=0 width="80%">
+                <tbody> 
+                <tr bgcolor="#3366CC" > 
+                  <td height=16 width="100%"> 
+                    <div align="center"><font color=#ffffff 
+            face=Verdana,Arial,helvetica 
+          size=1><b>Categorias</b></font></div>
+                  </td>
+                </tr>
+                <tr> 
+                  <td height=1 bgcolor="#ff7900"><img height=1 src="images/au_pixel1.gif" width=137></td>
+                </tr>
+                <tr> 
+                  <td height=16 onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');"  
+          width="100%" bgcolor="#FFFF99"><img height=8 src="images/dummy.gif" width=10><a 
+            href="4letras.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">4 
+                    Letras</font></a></td>
+                </tr>
+                <tr> 
+                  <td height=1 bgcolor="#3366CC"><img height=1 src="images/au_pixel1.gif" width=137></td>
+                </tr>
+                <tr> 
+                  <td height=16 onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');" 
+          width="100%" bgcolor="#FFFF99"><img height=8 src="images/dummy.gif" width=10><a 
+            href="banca.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">Banca 
+                    </font></a></td>
+                </tr>
+                <tr> 
+                  <td height=1 bgcolor="#3366CC"><img height=1 src="images/au_pixel1.gif" 
+            width=137></td>
+                </tr>
+                <tr> 
+                  <td height=16 onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');"  
+          width="100%" bgcolor="#FFFF99"><font color="#000000"><img height=8 src="images/dummy.gif" width=10></font><a 
+            href="comercio.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">Comercio</font></a></td>
+                </tr>
+                <tr> 
+                  <td height=1 bgcolor="#3366CC"><font color="#000000"><img height=1 src="images/au_pixel1.gif" 
+            width=137></font></td>
+                </tr>
+                <tr bgcolor="#FFFF99"> 
+                  <td height=17 onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');"
+          width="100%"><font color="#000000"><img height=8 src="images/dummy.gif" width=10></font><a 
+            href="cultura.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">Cultura</font></a></td>
+                </tr>
+                <tr> 
+                  <td height=1 bgcolor="#3366CC"><font color="#000000"><img height=1 src="images/au_pixel1.gif" 
+            width=137></font></td>
+                </tr>
+                <tr> 
+                  <td height=16 onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');" 
+          width="100%" bgcolor="#FFFF99"><font color="#000000"><img height=8 src="images/dummy.gif" width=10></font><a 
+            href="deportes.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">Deportes</font></a></td>
+                </tr>
+                <tr> 
+                  <td height=1 bgcolor="#3366CC"><font color="#000000"><img height=1 src="images/au_pixel1.gif" 
+            width=137></font></td>
+                </tr>
+                <tr> 
+                  <td height=16 onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');"
+          width="100%" bgcolor="#FFFF99"><font color="#000000"><img height=8 src="images/dummy.gif" width=10></font><a 
+            href="empresa.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">Empresa</font></a></td>
+                </tr>
+                <tr> 
+                  <td height=1 bgcolor="#3366CC"><font color="#000000"><img height=1 src="images/au_pixel1.gif" 
+            width=137></font></td>
+                </tr>
+                <tr> 
+                  <td height=16 onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');"
+          width="100%" bgcolor="#FFFF99"><img height=8 src="images/dummy.gif" width=10><a 
+            href="esotericos.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">Esot&eacute;ricos</font></a></td>
+                </tr>
+                <tr> 
+                  <td height=1 bgcolor="#3366CC"><font color="#000000"><img height=1 src="images/au_pixel1.gif" 
+            width=137></font></td>
+                </tr>
+                <tr> 
+                  <td height=16 onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');"   
+          width="100%" bgcolor="#FFFF99"><font color="#000000"><img height=8 src="images/dummy.gif" width=10></font><a 
+            href="exposiciones.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">Exposiciones</font></a></td>
+                </tr>
+                <tr> 
+                  <td height=1 bgcolor="#3366CC"><font color="#000000"><img height=1 src="images/au_pixel1.gif" 
+            width=137></font></td>
+                </tr>
+                <tr> 
+                  <td height=16 onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');"
+          width="100%" bgcolor="#FFFF99"><font color="#000000"><img height=8 src="images/dummy.gif" width=10></font><a 
+            href="gente.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">Gente</font></a></td>
+                </tr>
+                <tr> 
+                  <td height=1 bgcolor="#3366CC"><font color="#000000"><img height=1 src="images/au_pixel1.gif" 
+            width=137></font></td>
+                </tr>
+                <tr> 
+                  <td height=15 onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');"
+          width="100%" bgcolor="#FFFF99"> 
+                    <p><font color="#000000"><img height=8 src="images/dummy.gif" width=10></font><a 
+            href="informativo.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">Informativo</font></a></p>
+                  </td>
+                </tr>
+                <tr> 
+                  <td height=1 bgcolor="#3366CC"><font color="#000000"><img height=1 src="images/au_pixel1.gif" 
+            width=137></font></td>
+                </tr>
+                <tr> 
+                  <td height=16 onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');" 
+          width="100%" bgcolor="#FFFF99"><font color="#000000"><img height=8 src="images/dummy.gif" width=10></font><a 
+            href="juegosapuestas.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">Juegos 
+                    y Apuestas</font></a></td>
+                </tr>
+                <tr> 
+                  <td height=1 bgcolor="#3366CC"><font color="#000000"><img height=1 src="images/au_pixel1.gif" 
+            width=137></font></td>
+                </tr>
+                <tr> 
+                  <td height=16 onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');"
+          width="100%" bgcolor="#FFFF99"><img height=8 src="images/dummy.gif" width=10><a 
+            href="miscelaneos.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">Miscelaneos</font></a></td>
+                </tr>
+                <tr> 
+                  <td height=1 bgcolor="#3366CC"><font color="#000000"><img height=1 src="images/au_pixel1.gif" 
+            width=137></font></td>
+                </tr>
+                <tr> 
+                  <td height=16 onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');"
+          width="100%" bgcolor="#FFFF99"><font color="#000000"><img height=8 src="images/dummy.gif" width=10></font><a 
+            href="moda.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">Moda</font></a></td>
+                </tr>
+                <tr> 
+                  <td height=1 bgcolor="#3366CC"><font color="#000000"><img height=1 src="images/au_pixel1.gif" 
+            width=137></font></td>
+                </tr>
+                <tr> 
+                  <td height=16 onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');"
+          width="100%" bgcolor="#FFFF99"><font color="#000000"><img height=8 src="images/dummy.gif" width=10></font><a 
+            href="negocios.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">Negocios</font></a></td>
+                </tr>
+                <tr> 
+                  <td height=1 bgcolor="#3366CC"><font color="#000000"><img height=1 src="images/au_pixel1.gif" 
+            width=137></font></td>
+                </tr>
+                <tr> 
+                  <td height=16 onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');"
+          width="100%" bgcolor="#FFFF99"><font color="#000000"><img height=8 src="images/dummy.gif" width=10></font><a 
+            href="ocio.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">Ocio</font></a></td>
+                </tr>
+                <tr> 
+                  <td height=1 bgcolor="#3366CC"><font color="#000000"><img height=1 src="images/au_pixel1.gif" 
+            width=137></font></td>
+                </tr>
+                <tr> 
+                  <td height=16 onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');"
+          width="100%" bgcolor="#FFFF99"><font color="#000000"><img height=8 src="images/dummy.gif" width=10></font><a 
+            href="pais.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">Pa&iacute;s</font></a></td>
+                </tr>
+                <tr> 
+                  <td height=1 bgcolor="#3366CC"><font color="#000000"><img height=1 src="images/au_pixel1.gif" 
+            width=137></font></td>
+                </tr>
+                <tr> 
+                  <td height=15 onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');"
+          width="100%" bgcolor="#FFFF99"><font color="#000000"><img height=8 src="images/dummy.gif" width=10></font><a 
+            href="politica.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">Pol&iacute;tica</font></a></td>
+                </tr>
+                <tr> 
+                  <td height=1 bgcolor="#3366CC"><font color="#000000"><img height=1 src="images/au_pixel1.gif" 
+            width=137></font></td>
+                </tr>
+                <tr> 
+                  <td height=16 onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');"
+          width="100%" bgcolor="#FFFF99"><font color="#000000"><img height=8 src="images/dummy.gif" width=10></font><a 
+            href="profesionales.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">Profesionales</font></a></td>
+                </tr>
+                <tr> 
+                  <td height=1 bgcolor="#3366CC"><font color="#000000"><img height=1 src="images/au_pixel1.gif" 
+            width=137></font></td>
+                </tr>
+                <tr> 
+                  <td height=16 onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');"
+          width="100%" bgcolor="#FFFF99"><font color="#000000"><img height=8 src="images/dummy.gif" width=10></font><a 
+            href="publicidad.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">Publicidad</font></a></td>
+                </tr>
+                <tr> 
+                  <td height=1 bgcolor="#3366CC"><font color="#000000"><img height=1 src="images/au_pixel1.gif" 
+            width=137></font></td>
+                </tr>
+                <tr> 
+                  <td height=16 onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');"
+          width="100%" bgcolor="#FFFF99"><font color="#000000"><img height=8 src="images/dummy.gif" width=10></font><a 
+            href="religiosos.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">Religiosos</font></a></td>
+                </tr>
+                <tr> 
+                  <td height=1 bgcolor="#3366CC"><font color="#000000"><img height=1 src="images/au_pixel1.gif" 
+            width=137></font></td>
+                </tr>
+                <tr> 
+                  <td height=16 onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');"
+          width="100%" bgcolor="#FFFF99"><font color="#000000"><img height=8 src="images/dummy.gif" width=10></font><a 
+            href="salud.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">Salud</font></a></td>
+                </tr>
+                <tr> 
+                  <td height=1 bgcolor="#3366CC"><font color="#000000"><img height=1 src="images/au_pixel1.gif" 
+            width=137></font></td>
+                </tr>
+                <tr> 
+                  <td height=16 onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');"
+          width="100%" bgcolor="#FFFF99"><font color="#000000"><img height=8 src="images/dummy.gif" width=10></font><a 
+            href="servicios.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">Servicios</font></a></td>
+                </tr>
+                <tr> 
+                  <td height=1 bgcolor="#3366CC"><font color="#000000"><img height=1 src="images/au_pixel1.gif" 
+            width=137></font></td>
+                </tr>
+                <tr> 
+                  <td height=16 onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');"  
+          width="100%" bgcolor="#FFFF99"><font color="#000000"><img height=8 src="images/dummy.gif" width=10></font><a 
+            href="social.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">Social</font></a></td>
+                </tr>
+                <tr> 
+                  <td height=1 bgcolor="#3366CC"><font color="#000000"><img height=1 src="images/au_pixel1.gif" 
+            width=137></font></td>
+                </tr>
+                <tr> 
+                  <td height=16 onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');"
+          width="100%" bgcolor="#FFFF99"><font color="#000000"><img height=8 src="images/dummy.gif" width=10></font><a 
+            href="tecnologia.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">Tecnolog&iacute;a</font></a></td>
+                </tr>
+                <tr> 
+                  <td height=1 bgcolor="#3366CC"><font color="#000000"><img height=1 src="images/au_pixel1.gif" 
+            width=137></font></td>
+                </tr>
+                <tr> 
+                  <td height=16 onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');"   
+          width="100%" bgcolor="#FFFF99"><font color="#000000"><img height=8 src="images/dummy.gif" width=10></font><a 
+            href="terceraedad.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">Tercera 
+                    Edad</font></a></td>
+                </tr>
+                <tr> 
+                  <td height=1 bgcolor="#3366CC"><font color="#000000"><img height=1 src="images/au_pixel1.gif" 
+            width=137></font></td>
+                </tr>
+                <tr> 
+                  <td height=16 onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');"   
+          width="100%" bgcolor="#FFFF99"><font color="#000000"><img height=8 src="images/dummy.gif" width=10></font><a 
+            href="turismo.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">Turismo</font></a></td>
+                </tr>
+                <tr> 
+                  <td height=1 bgcolor="#3366CC"><font color="#000000"><img height=1 src="images/au_pixel1.gif" 
+            width=137></font></td>
+                </tr>
+                <tr> 
+                  <td height=16 onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');"
+          width="100%" bgcolor="#FFFF99"><font color="#000000"><img height=8 src="images/dummy.gif" width=10></font><a 
+            href="vivienda.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">Vivienda</font></a></td>
+                </tr>
+                <tr> 
+                  <td height=1 bgcolor="#3366CC"><font color="#000000"><img height=1 src="images/au_pixel1.gif" 
+            width=137></font></td>
+                </tr>
+                <tr> 
+                  <td height=16 onClick=mClk(this); 
+          onMouseOut="mOut(this,'#FFFF99');" onMouseOver="mOvr(this,'#cccccc');"
+          width="100%" bgcolor="#FFFF99"><font color="#000000"><img height=8 src="images/dummy.gif" width=10></font><a 
+            href="xxx.htm" 
+            style="COLOR: rgb(255,255,255); TEXT-DECORATION: none" 
+            target=_top><font face="Verdana,Arial,Helvetica" size="1" color="#000000">XXX</font></a></td>
+                </tr>
+                <tr bgcolor="#3366CC"> 
+                  <td height=1><img height=1 src="images/au_pixel1.gif" 
+            width=137></td>
+                </tr>
+                </tbody> 
+              </table>
+            </td>
+            <td width="18">&nbsp;</td>
+            <td width="454"> 
+              <table width="100%" border="0" vspace="0" hspace="0" cellpadding="0" cellspacing="0" height="100%">
+                <tr valign="middle"> 
+                  <td height="100"> 
+                    <table width="95%" border="0" cellpadding="0" cellspacing="0" align="center">
+                      <tr valign="top"> 
+                        <td height="27"> 
+                          <table width="100%" border="1" bordercolor="#999999" cellpadding="0" cellspacing="0" vspace="0" hspace="0">
+                            <tr valign="top"> 
+                              <td height="26"> 
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" vspace="0" hspace="0">
+                                  <tr> 
+                                    <td height="4" width="44%" bgcolor="#FFFFEC" valign="middle" rowspan="2"> 
+                                      <div align="center"><font size="1" face="Verdana" color="#333333">Consulta 
+                                        la base de datos de registros de dominios 
+                                        de</font><font size="1" face="Verdana" color="#666666"><font color="#000000"> 
+                                        <b>Network Solutions</b></font> <font color="#333333">desde 
+                                        nuestra web. <br>
+                                        (.com .net .org)</font></font> </div>
+                                    </td>
+                                    <td bgcolor="#FFFFEC" align="center" valign="middle" height="34" width="56%"><a href="http://www.networksolutions.com" target="_blank"><img src="images/net.gif" width="150" height="25" border="0" alt="Network Solutions"></a></td>
+                                  </tr>
+                                  <tr> 
+                                    <td bgcolor="#FFFFEC" align="center" valign="middle" height="2" width="56%"> 
+                                      <form name="formulario">
+                                        <div align="center"><font face="Verdana" size="2"><b><font color="#000000">www.</font></b></font> 
+                                          <input name="STRING" size="12" value="nombre.com">
+                                          <input type="button" value="buscar" name="Button" onClick="abrir()">
+                                        </div>
+                                      </form>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr> 
+                  <td height="10"></td>
+                </tr>
+                <tr valign="top"> 
+                  <td height="74"> 
+                    <div align="center"> 
+                      <table width="100%" border="0" cellpadding="0" cellspacing="1" vspace="0" hspace="0">
+                        <tr valign="top"> 
+                          <td height="113"> 
+                            <table width="100%" border="0" cellpadding="0" cellspacing="1" vspace="0" hspace="0">
+                              <tr> 
+                                <td width="50%" align="left" valign="top" height="122"> 
+                                  <table width="100%" border="0" cellspacing="0" cellpadding="0" vspace="0" hspace="0" background="images/dominios.gif" height="50">
+                                    <tr valign="top"> 
+                                      <td height="134"> 
+                                        <div align="right"><br>
+                                          <br>
+                                          <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#3,0,0,0" width="200" height="87">
+                                            <param name="SRC" value="images/dominios.swf">
+                                            <embed src="images/dominios.swf" pluginspage="http://www.macromedia.com/shockwave/download/" type="application/x-shockwave-flash" width="200" height="87">
+                                            </embed> 
+                                          </object> </div>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                                <td width="50%" height="122" valign="top"> 
+                                  <table width="100%" border="1" cellpadding="0" cellspacing="0" vspace="0" bgcolor="#E6F2F2" bordercolor="#999999" height="120">
+                                    <tr valign="middle"> 
+                                      <td height="124"> 
+                                        <div align="center"> 
+                                          <table width="100%" border="0" cellpadding="0" cellspacing="0" vspace="0">
+                                            <tr> 
+                                              <td height="2" width="100%" colspan="3"> 
+                                                <div align="center"></div>
+                                                <div align="center"><font color="#333333"><b><font face="Verdana" size="2" color="#006600">Bienvenidos 
+                                                  a</font><font face="Verdana" size="2"> 
+                                                  <font color="#0000FF">www.</font><font color="#FF0000">Ins</font><font color="#0000FF">.cl</font></font></b></font></div>
+                                              </td>
+                                            </tr>
+                                            <tr> 
+                                              <td height="86" width="3%">&nbsp;</td>
+                                              <td height="86" width="94%"> 
+                                                <div align="center"><font face="Verdana" size="2"> 
+                                                  </font></div>
+                                                <div align="justify"><font face="Verdana" size="1" color="#000000">El 
+                                                  mejor lugar para vender y comprar 
+                                                  dominios en español. Cada día 
+                                                  miles de dominios son registrados 
+                                                  y ya es prácticamente imposible 
+                                                  encontrar un buen nombre de 
+                                                  dominio para tus proyectos, 
+                                                  pero aqu&iacute; los encontrar&aacute;s.</font></div>
+                                              </td>
+                                              <td height="86" width="3%">&nbsp;</td>
+                                            </tr>
+                                          </table>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </td>
+                </tr>
+                <tr valign="top"> 
+                  <td height="236">&nbsp;</td>
+                </tr>
+                <tr valign="top"> 
+                  <td height="2"> 
+                    <div align="center">
+                      <hr width="100%" size="1">
+                      <font size=1 face="Arial" color="#FFFFFF"><font color="#000000"> 
+                      © Copyright 2000, <font color="#3366CC">Integral Net Service</font> 
+                      <font color="#3366CC">S.A.</font> Todos los Derechos Reservados. 
+                      <br>
+                      <b>Resolución mínima de 800x600</b> </font></font></div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td width="18">&nbsp;</td>
+            <td width="130"> 
+              <table width="100%" border="0" cellpadding="0" cellspacing="1" vspace="0" hspace="0">
+                <tr> 
+                  <td height="2"> 
+                    <table width="100%" border="1" cellpadding="0" cellspacing="0" bordercolor="#009999" vspace="0" hspace="0">
+                      <tr bgcolor="#0000FF" valign="top"> 
+                        <td class="menu1" height="2"> 
+                          <table width="100%" border="0" cellpadding="0" cellspacing="0" vspace="0" hspace="0">
+                            <tr bgcolor="#009999"> 
+                              <td class="menu1" width="90%"> <b><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif" size="1"><img height=8 src="images/dummy.gif" width=8><font color="#FFFFFF">Registrar</font></font></b></td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr valign="top"> 
+                        <td height="2"> 
+                          <table width="100%" border="0" cellpadding="0" cellspacing="1">
+                            <tr> 
+                              <td height="14"><img height=8 src="images/dummy.gif" width=10> 
+                                <font color="#000000" face="Verdana, Arial, Helvetica, sans-serif, Century Gothic" size="1"><a href="registrocl.htm" target="_top">Registro 
+                                .CL</a></font></td>
+                            </tr>
+                            <tr> 
+                              <td height=1 bgcolor="#009999"><img height=1 src="images/au_pixel2.gif" width=137></td>
+                            </tr>
+                            <tr> 
+                              <td height="2"><img height=8 src="images/dummy.gif" width=10> 
+                                <font color="#000000" face="Verdana, Arial, Helvetica, sans-serif, Century Gothic" size="1"><a href="registrocom.htm" target="_top">Registro 
+                                .COM</a></font></td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr> 
+                  <td height="14"></td>
+                </tr>
+                <tr> 
+                  <td height="2"> 
+                    <table width="100%" border="1" cellpadding="0" cellspacing="0" bordercolor="#009999" vspace="0" hspace="0">
+                      <tr bgcolor="#0000FF" valign="top"> 
+                        <td class="menu1" height="2"> 
+                          <table width="100%" border="0" cellpadding="0" cellspacing="0" vspace="0" hspace="0">
+                            <tr bgcolor="#009999"> 
+                              <td class="menu1" width="90%"> <b><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif" size="1"><img height=8 src="images/dummy.gif" width=8><font color="#FFFFFF">Otros</font></font></b></td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr valign="top"> 
+                        <td height="2"> 
+                          <table width="100%" border="0" cellpadding="0" cellspacing="1">
+                            <tr> 
+                              <td height="2"><img height=8 src="images/dummy.gif" width=10> 
+                                <font color="#000000" face="Verdana, Arial, Helvetica, sans-serif, Century Gothic" size="1"><a href="disenoweb.htm" target="_top"> 
+                                Diseño WEB</a></font></td>
+                            </tr>
+                            <tr> 
+                              <td height=1 bgcolor="#009999"><img height=1 src="images/au_pixel2.gif" width=137></td>
+                            </tr>
+                            <tr> 
+                              <td height="2"><img height=8 src="images/dummy.gif" width=10> 
+                                <font color="#000000" face="Verdana, Arial, Helvetica, sans-serif, Century Gothic" size="1"><a href="webhosting.htm" target="_top"> 
+                                WEB Hosting</a></font></td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr> 
+                  <td height="14"> </td>
+                </tr>
+                <tr> 
+                  <td height="192"> 
+                    <table width="100%" border="1" cellpadding="0" cellspacing="0" bordercolor="#009999" vspace="0" hspace="0">
+                      <tr valign="top"> 
+                        <td> 
+                          <table width="100%" border="0" cellpadding="0" cellspacing="1">
+                            <tr valign="middle"> 
+                              <td height="60"> 
+                                <div align="center"><img src="images/gif.gif" width="100" height="50" border="1"></div>
+                              </td>
+                            </tr>
+                            <tr valign="middle"> 
+                              <td height="8"></td>
+                            </tr>
+                            <tr valign="middle"> 
+                              <td height="60"> 
+                                <div align="center"><a href="http://www.nic.cl" target="_blank"><img src="images/nic.gif" width="105" height="50" border="1" alt="Nic Chile"></a></div>
+                              </td>
+                            </tr>
+                           <tr valign="middle"> 
+                              <td height="8"></td>
+                            </tr>
+                            <tr valign="middle"> 
+                              <td height="60"> 
+                                <div align="center"><a href="http://www.tv/es-nsi-05b2dc96eba7/es/index.shtml" target="_blank"><img src="images/dottv.gif" width="100" height="49" border="1" alt="Dot TV"></a></div>
+                              </td>
+                            </tr>
+                             <tr valign="middle"> 
+                              <td height="8"></td>
+                            </tr>
+                            <tr valign="middle"> 
+                              <td height="60"> 
+                                <div align="center"><a href="http://www.register.com" target="_blank"><img src="images/register.gif" width="100" height="48" border="1" alt="Register.com"></a></div>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr> 
+                  <td>&nbsp;</td>
+                </tr>
+                <tr> 
+                  <td>&nbsp;</td>
+                </tr>
+                <tr> 
+                  <td>&nbsp;</td>
+                </tr>
+                <tr> 
+                  <td>&nbsp;</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr valign="top"> 
+            <td colspan="5" height="2"> <font size=1 face="Arial" color="#FFFFFF"><font color="#000000"></font></font></td>
+          </tr>
+        </table>
+        
+      </td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>

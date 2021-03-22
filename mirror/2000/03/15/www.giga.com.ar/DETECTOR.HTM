@@ -1,0 +1,57 @@
+<SCRIPT LANGUAGE="JavaScript"><!--
+   //DEFINICION DE VARIABLES PARA PREGUNTAR AL AGENT
+   var browser = "unknown"
+   var version = 0
+   var detected = false
+   var ua = window.navigator.userAgent
+
+   //VER SI ESTA USANDO IE O NETSCAPE
+   if (ua.substring(0,7) == "Mozilla") {
+      if (ua.indexOf("MSIE") > 0) {
+         browser = "Microsoft"
+      }
+      else {
+         browser = "Netscape"
+      }
+
+   //vER SI QUE VERSION ES
+      if (ua.indexOf("5.") > 0) {
+         version = 5
+      }
+      if (ua.indexOf("4.") > 0) {
+         version = 4
+      }
+      if (ua.indexOf("3.") > 0) {
+         version = 3
+      }
+   }
+
+      //AQUI DERIVO AL USUARIO
+
+   // Microsoft Internet Explorer 4 
+   if (browser == "Microsoft" && version >= 4) {
+      detected = true
+      location.href="DEFAULT2.htm"
+   }
+   //If Microsoft Internet Explorer 3 
+   if (browser == "Microsoft" && version == 3) {
+      detected = true
+      location.href="default3.htm"
+   }
+   //Netscape Navigator 4 
+   if (browser == "Netscape" && version == 4) {
+      detected = true
+      location.href="DEFAULT5.htm"
+   }
+   //Netscape Navigator 3
+   if (browser == "Netscape" && version == 3) {
+      detected = true
+      location.href="default5.htm"
+   }
+   //CUALQUIER OTRO BROWSER
+  
+   if (detected == false) {
+      detected = true
+      location.href = "default3.htm"
+   }
+//--></SCRIPT>

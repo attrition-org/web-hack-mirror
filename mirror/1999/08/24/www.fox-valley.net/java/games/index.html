@@ -1,0 +1,94 @@
+<HTML>
+<HEAD>
+  <TITLE>JAVA GAMES</TITLE>
+<STYLE>
+<!--
+#box {position: absolute; top:0; left: 0;z-index: 100; background: Black;
+layer-background-color:Black; border: .1px solid navy; clip: rect(0 100% 100% 0)}
+-->
+</STYLE>
+</HEAD>
+<BODY BGCOLOR="000000" TEXT="#ffffff" LINK="#ffff00" VLINK="#d2d200">
+<DIV ID=box></DIV>
+<SCRIPT LANGUAGE="JavaScript1.2">
+<!--
+// Box Transition Effect
+// Copyright 1998, InsideDHTML.com, LLC. All rights reserved
+// See http://www.insideDHTML.com for more information
+// This code can be reused as long as the above notice is retained.
+
+// Determine Browser Version
+var NS =navigator.appName == "Netscape"
+var MS = navigator.appName == "Microsoft Internet Explorer"
+var ver = parseInt(navigator.appVersion)
+var NS4 = NS && ver>=4
+var IE4 = MS && ver>=4
+
+var steps = 50 
+
+if (NS4 || IE4) {
+if (IE4) {
+var box = document.all.box
+var nWidth = box.style.pixelWidth = document.body.clientWidth 
+var nHeight = box.style.pixelHeight = document.body.clientHeight 
+} else {
+var box = document.layers.box
+var nWidth = box.clip.width = window.innerWidth
+var nHeight = box.clip.height = window.innerHeight
+}
+var nTop = nLeft = 0
+destWidth = nWidth/2
+destHeight = nHeight/2
+var stepWidth = destWidth/steps
+var stepHeight = destHeight/steps
+boxIn()
+}
+
+function boxIn() {
+nWidth -= stepWidth*2
+nHeight -= stepHeight*2
+nLeft += stepWidth
+nTop += stepHeight
+// Reset the clipping rect
+if (IE4) {
+// extra adjustment for IE
+nLeft += stepWidth
+nTop += stepHeight
+// Take into account possible scrolling
+box.style.pixelTop = document.body.scrollTop
+box.style.pixelLeft = document.body.scrollLeft
+box.style.clip = "rect(" + nTop + " " + nWidth + " " + nHeight + " " + nLeft + ")"
+}
+else
+{
+// Take into account possible scrolling
+box.top = window.pageYOffset
+box.left = window.pageXOffset
+box.clip.left = nLeft 
+box.clip.width = nWidth 
+box.clip.top = nTop 
+box.clip.height  = nHeight
+}
+steps--
+if (steps > 0)
+setTimeout("boxIn()",10)
+}
+// -->
+</SCRIPT>
+<P ALIGN=Center>
+  <FONT FACE="Verdana,Arial,Helvetica" SIZE="6" COLOR="#fffff">Java Games</FONT>
+<PRE> 
+ </PRE>
+<P>
+<P ALIGN=Center>
+<FONT FACE="Verdana,Arial,Helvetica" SIZE="2" COLOR="#000000"><A HREF="asternoids/index.html">Asteroids</A></FONT>
+<P>
+<P ALIGN=Center>
+<FONT FACE="Verdana,Arial,Helvetica" SIZE="2" COLOR="#000000"><A HREF="ufoattack/index.html">UFO Attack</A></FONT>
+<P>
+<P ALIGN=Center>
+<FONT FACE="Verdana,Arial,Helvetica" SIZE="2" COLOR="#000000"><A HREF="3dmaze/index.html">3dmaze</A></FONT>
+<P>
+<P ALIGN=Center>
+<FONT FACE="Verdana,Arial,Helvetica" SIZE="2" COLOR="#000000"><A HREF="breakout/index.html">Breakout</A></FONT>
+</BODY></HTML>

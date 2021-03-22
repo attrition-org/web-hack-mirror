@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<HTML>
+<HEAD>
+<TITLE>Anonymous FTP Access </TITLE>
+<LINK REL="stylesheet" TYPE="text/css" HREF="styles.css" TITLE="style">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<CENTER>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="550">
+<TR>
+<TD><IMG SRC="../images/calogo.gif" WIDTH="223" HEIGHT="15" BORDER="0" VSPACE="2"></TD>
+</TR>
+<TR>
+<TD BGCOLOR="#000066" HEIGHT="1"><IMG SRC="../images/trans.gif" WIDTH="1" HEIGHT="1"></TD>
+</TR>
+<TR>
+<TD ALIGN="LEFT" BGCOLOR="#000066"><IMG SRC="../images/trans.gif" WIDTH="5" HEIGHT="1"><A HREF="../index.html"><IMG SRC="../images/home.gif" WIDTH="47" HEIGHT="15" BORDER="0"></A><A HREF="../hosting/hostingplans.html"><IMG SRC="../images/hosting.gif" WIDTH="66" HEIGHT="15" BORDER="0"></A><A HREF="../commerce/commerce.html"><IMG SRC="../images/ecomm.gif" WIDTH="95" HEIGHT="15" BORDER="0"></A><A HREF="../design/design.html"><IMG SRC="../images/design.gif" WIDTH="86" HEIGHT="15" BORDER="0"></A><A HREF="../contactus.html"><IMG SRC="../images/contact.gif" WIDTH="90" HEIGHT="15" BORDER="0"></A><A HREF="./supportindex.html"><IMG SRC="../images/support.gif" WIDTH="68" HEIGHT="15" BORDER="0"></A></TD>
+</TR>
+<TR>
+<TD ALIGN="LEFT"><BR>
+<A HREF="javascript:history.go(-1)" ONMOUSEOVER="window.status = 'Go Back'; return true;" ONMOUSEOUT="window.status = ' '; return true;"><IMG SRC="./images/back.gif" BORDER="0" VSPACE="0" WIDTH="20" HEIGHT="22" HSPACE="4" ALIGN="TEXTTOP">Back</A><BR>
+<BR>
+
+<H3>Support - Anonymous FTP Access </H3></TD>
+</TR>
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP">
+<P>Virtual domain account users can allow anonymous FTP access to visitors
+wishing to download or upload files to your web site as if you were running your
+own FTP server.</P>
+<P>You can enable (and disable) ANON FTP access within <STRONG>Edit Account
+Information</STRONG> within your account <STRONG>Control Panel</STRONG>. Just
+check (or uncheck) the check box labeled &quot;Anonymous FTP Enabled&quot;.</P>
+<TABLE CELLPADDING="4" CELLSPACING="0" BORDERCOLOR="#000066" BORDER="1">
+<TR>
+<TD>
+<H4><FONT COLOR="#FF0000">Anonymous FTP warnings: </FONT></H4>
+<P><STRONG>Security<BR>
+</STRONG>Anonymous FTP will grant any and all users the ability to access your &quot;upload&quot;
+directory, or any directory on your domain that has been set for <STRONG>&quot;public&quot;
+read/write permissions</STRONG>. Anonymous users will have access to upload or
+download files to and from your domain. You <STRONG>must</STRONG> set the
+appropriate permissions for your directories to <STRONG>restrict</STRONG>
+anonymous FTP access. This is needed to ensure that anonymous users will not be
+able to access any existing files or directories. You can inhibit access to
+specific files and directories in your UNIX web hosting account using the
+<A HREF="fileman.html">File Manager</A> by disabling public read and/or write
+access to the files or folders you don't want people to see (ie. cgi-local). On
+NT, anonymous FTP access is only available in the &quot;anonymous/&quot;
+directory.</P>
+<P><STRONG>Responsibility</STRONG><BR>
+ As the account owner, you are responsible for any and all files that are stored
+on your domain. This would include files that were uploaded by you as well as by
+anonymous FTP users. With the use of anonymous FTP, your site is susceptible of
+becoming a &quot;warez&quot; site. Typically, these are sites that are used by &quot;hackers&quot;
+to trade (upload/download) illegally pirated copies of software programs with
+one another. As the account owner, the complete content of your account is your
+responsibility. If your site becomes a trading post for &quot;warez&quot;
+programs, you may face legal action that can be taken against you by the
+programmers/software companies of the copyrighted software. </P>
+<P><STRONG>Data Transfer<BR>
+</STRONG>Any and all FTP download transfers, anonymous FTP included, will be
+used in the calculation of the total data transfer for your account. If this
+total data transfer amount exceeds the limit that is set for your plan,
+<STRONG>you will be responsibility for any and all overage charges that occur.</STRONG>
+Please Note: There will be NO exceptions made for these overage charges. Once
+anonymous FTP has been enabled, it will be your responsibility to monitor the
+anonymous FTP activity for your account. All anonymous FTP activity is stored
+within the &quot;<STRONG>xferlog</STRONG>&quot; file. This file contains
+entries for each and every anonymous FTP upload/download session. This file is
+located within the /stats directory of your account. There is also a link
+provided off the &quot;View your web usage statistics &amp; logs&quot; page of
+your account control panel. You can also have our servers perform certain
+actions when your data transfer exceeds a pre-defined limit that you can
+specify. In your &quot;Edit Account Information screen look for the following
+section:</P>
+<P ALIGN="center"><IMG SRC="images/data_transfer_limit_options.gif" WIDTH="400" HEIGHT="50"></P>
+<P><STRONG>Disk Space<BR>
+</STRONG>If you are going to allow people to upload files to your site, make
+sure you keep track of your disk space usage via your Control Panel. Do not
+allow your disk space usage to get too close to your maximum disk space
+allocation or you may experience problems accessing your site via FrontPage
+and/or be unable to upload or modify files. You may purchase additional disk
+space if necessary in 5MB blocks.</P></TD>
+</TR>
+</TABLE>
+<P>Once you enable ANON FTP in Account Settings within your Control Panel,
+files can be accessed anonymously via a web browser using the following URL
+format: </P>
+<UL>
+<LI>ftp://ftp.yourdomain.com/&lt;FILENAME&gt; </LI>
+</UL>
+<P>Anonymous visitors wishing to access your site via FTP client (e.g. wsftp)
+must use your domain name as the FTP hostname, userid of anonymous and password
+of guest.</P><HR SIZE="1" NOSHADE="NOSHADE">
+<H3> How to set a custom &quot;Anonymous FTP Welcome Message&quot; on our UNIX
+servers: </H3>
+<P>When setting up anonymous ftp access to an account, you can set up a welcome
+message for people browsing the site with a web browser. You can easily
+accomplish this by following these instructions: </P>
+<OL>
+<LI>Create a text file called <STRONG>welcome.msg</STRONG><BR>
+ (Must be in lower case characters.)<BR>
+&nbsp;</LI>
+<LI>Place your greeting message into the file and save the file.<BR>
+&nbsp;</LI>
+<LI>Upload the welcome.msg file to the root directory.<BR>
+ (Transfer in ASCII format)<BR>
+&nbsp;</LI>
+<LI>Now set anonymous FTP active for your account.<BR>
+ (See this page for instructions)</LI>
+</OL>
+<P>Please be sure to set directory permissions for the appropriate directories.</P>
+<P><STRONG>Notes<BR>
+</STRONG>This will only work when you link to one directory. If you link to
+another directory after the initial directory the message will not be displayed.
+But it will be displayed if you come back to the original directory.</P></TD>
+</TR>
+<TR>
+<TD ALIGN="LEFT">
+<TABLE BORDER="0" ALIGN="CENTER" NOWRAP="NOWRAP" WIDTH="98%">
+<TR>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">&nbsp;</TD>
+<TD VALIGN="MIDDLE" ALIGN="RIGHT"></TD>
+</TR>
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><FONT SIZE="-2" FACE="Arial, Helvetica"><A HREF="mailto:webmaster@crowderassoc.com">webmaster@crowderassoc.com</A></FONT></TD>
+<TD VALIGN="TOP" ALIGN="RIGHT"><FONT SIZE="-2" FACE="Arial, Helvetica">&copy;1997-99
+Crowder Associates </FONT></TD>
+</TR>
+</TABLE></TD>
+</TR>
+</TABLE></CENTER>
+</BODY>
+</HTML>

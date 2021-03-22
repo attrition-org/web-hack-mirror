@@ -1,0 +1,87 @@
+<html><title>關於澎管處</title>
+
+
+
+<SCRIPT LANGUAGE="javascript">
+function scrollit_r2l(seed)
+{       
+       var m1  = " 歡迎來到澎管處的homepage,";
+       var m2  = " 在這裡有非常豐富的旅遊資料 ";  
+       var m3  = " 及本站將帶給您不一樣的視覺感受,";
+       var m4  = " 請用256色以上的螢幕顯示環境請慢慢欣賞  ";
+      var m5  = " 謝謝^_^ ";
+  
+      var msg=m1+m2+m3+m4+m5;
+ 
+      var out = " ";        var c   = 1;
+      if (seed > 100) 
+
+{                seed--;
+
+               var cmd="scrollit_r2l(" + seed + ")";
+ 
+
+               timerTwo=window.setTimeout(cmd,100);
+        }
+   
+     else if (seed <= 100 && seed > 0)
+{                for (c=0 ; c < seed ; c++) 
+ {                        out+=" ";
+
+               }              out+=msg;
+                seed--;
+                var cmd="scrollit_r2l(" + seed + ")";
+   
+                 window.status=out;
+                timerTwo=window.setTimeout(cmd,100);
+        }
+        else if (seed <= 0) {
+                if (-seed < msg.length)
+ {                        out+=msg.substring(-seed,msg.length);
+                        seed--;
+        
+
+                var cmd="scrollit_r2l(" + seed + ")";                        window.status=out;            
+           timerTwo=window.setTimeout(cmd,100);                }                
+else {                        window.status=" ";
+                        timerTwo=window.setTimeout("scrollit_r2l(100)",75);
+                }
+
+        }      }
+</SCRIPT>
+
+<BODY BACKGROUND="p-adm/temp3.jpg" onLoad="timerONE=window.setTimeout('scrollit_r2l(100)',500);">
+
+
+<p><center><img src="p-adm/sec0.gif" width="398" height="41"></img>
+
+<!/center>
+<p><img src="p-adm/h1-icon.gif" width="560" height="44"></img><p>
+<table><th><img src="p-adm/ball.gif" width="14" height="14"></img> <a href="adm2.html">
+<font size=+2>走過來時路</a><p><img src="p-adm/ball.gif" width="14" height="14"></img>
+<a href="adm3.html">組織與編制</a><p><img src="p-adm/ball.gif" width="14" height="14">
+</img><a href="adm4.html">展望與遠景</a></th><th> </th>
+<th>  </th><th><table border=1><th><img src="p-adm/admpic.jpg" width="350" height="219"></img></th></table>
+</th></table></font><p><center> 
+ 
+
+<hr size=6 width=60%><p>
+<b>[<a href="adm2.html">走過來時路</a>|<a href="adm3.html">組織與編制</a>|<a href="adm4.html">展望與遠景</a>]<p>
+
+<p>
+<hr size=6 width=60%>
+<font size=3>
+[<a href="../adm/adm1.html">關於澎管處</a>|<a 
+href="../find/find.html">發現澎湖</a>|<a 
+href="../tour/tour.html">尋幽訪勝</a>|<a href="../info/gohere.html">到此一遊</a>]
+<br>[<a href="../info/info1.html">旅遊訊息</a>|<a 
+href="../guest/guest1.html">交流園地</a>|<a href="../net/net.html">一
+
+網打盡</a>|<a href="../news.html">最新消息</a>]<br><img src="../home.gif" width="68" height="48"><A HREF="../chinese.html">首頁</A><p>
+
+
+
+</font>
+
+
+</center></B><p> </html>

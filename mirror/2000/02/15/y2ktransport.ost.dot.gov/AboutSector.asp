@@ -1,0 +1,125 @@
+
+
+<html>
+<head>
+
+<title>U.S. DOT - Y2K Transportation Sector - About the Transportation Sector</title>
+<script LANGUAGE="JavaScript">
+
+<!--// Hide from older browsers
+
+function message(txt){
+                window.status = txt;
+                setTimeout("remove()",8000);
+                }
+
+function remove(){
+                window.status="";
+                }
+// -->
+
+</script>
+</head>
+<body BGCOLOR="#FFFFFF">
+<a NAME="Top"> </a>
+
+<p ALIGN="LEFT">
+
+	<font FACE="trebuchet ms, arial, helvetica" SIZE="1"><b><a HREF="MainPage.asp" TARGET="MainFrame" OnMouseOver="message('Return Home'); return true">Home</a> :</b></font> 
+
+<font FACE="trebuchet ms, arial, helvetica" SIZE="2"><b><u>About the Sector</u></b></font>
+<hr WIDTH="20%" ALIGN="LEFT">
+</p>
+
+<blockquote>
+
+<h3>About the Transportation Sector</h3>
+
+	<blockquote>
+	<p ALIGN="LEFT"><font FACE="Times New Roman">President Clinton's Executive Order #13073
+	states that &quot;The American people expect reliable service from their Government and
+	deserve the confidence that&nbsp; critical government functions dependent on electronic
+	systems will be performed&nbsp; accurately and in a timely manner. Because of a design
+	feature in many electronic systems, a large number of activities in the public and private
+	sectors could be at risk beginning in the year 2000. Some computer systems and other
+	electronic devices will misinterpret the year '00' as 1900, rather than 2000. Unless
+	appropriate action is taken, this flaw, known as the 'Y2K problem', can cause systems that
+	support those functions to compute erroneously or simply not run. Minimizing the Y2K
+	problem will require a major technological and managerial effort, and it is critical that
+	the United States Government does its part in addressing this challenge.&quot;&nbsp; </font></p>
+
+	<p ALIGN="LEFT"><font FACE="Times New Roman">The order established executive branch policy
+	that agencies shall: </font></p>
+
+	<p ALIGN="LEFT"><font FACE="Times New Roman">(1) assure that no critical Federal program
+	experiences disruption because of the Y2K problem; </font></p>
+
+	<p ALIGN="LEFT"><font FACE="Times New Roman">(2) assist and cooperate with State, local,
+	and tribal governments to address the Y2K problem where those governments depend on
+	Federal information or information technology, or the Federal Government is dependent on
+	those governments to perform critical missions; </font></p>
+
+	<p ALIGN="LEFT"><font FACE="Times New Roman">(3) cooperate with the private sector
+	operators of critical national and local systems, including the banking and financial
+	system, the telecommunications system, the public health system, the transportation
+	system, and the electric power generation system, in addressing the Y2K problem; and,</font></p>
+
+	<p ALIGN="LEFT"><font FACE="Times New Roman">(4) communicate with their foreign
+	counterparts to raise awareness of and generate cooperative international arrangements to
+	address the Y2K problem. </font></p>
+
+	<p ALIGN="LEFT"><font FACE="Times New Roman">The order further established the <a HREF="http://www.y2k.gov" TARGET="_blank" OnMouseOver="message('Council Web Site'); return true"><strong>President's Council on Year 2000&nbsp; Conversion</strong></a>
+	(the &quot;Council&quot;). The Council Chair is an Assistant to the President, and the
+	Council is composed of one representative from each of the executive departments and other
+	Federal agencies as determined by the Chair. The Chair oversees the activities of agencies
+	to assure that their systems operate smoothly through the year 2000; acts as chief
+	spokesperson on the Y2K issue for the executive branch in national and international fora;
+	provides policy coordination of executive branch activities with State, local, and tribal
+	governments on the Y2K problem; and, promotes appropriate Federal roles with respect to
+	private sector Y2K activities.</font></p>
+
+	<p ALIGN="LEFT"><font FACE="Times New Roman">The Council Chair determined that an economic
+	sector methodology would be used for discussing the Council's Y2K outreach activities. A
+	lead agency was named for each economic sector (e.g., transportation, social services,
+	food supply, etc.), with each agency responsible for providing information about the
+	sector(s) that it is associated with.</font></p>
+
+	<p ALIGN="LEFT"><font FACE="Times New Roman">The Department of Transportation was
+	designated as the lead agency for the Y2K Transportation Sector which includes the United
+	States Postal Service, the Department of Interior, the Department of Treasury (Customs),
+	the Department of State, and the Department of Defense as member agencies. </font></p>
+	</blockquote>
+</blockquote>
+
+<BR>
+<BLOCKQUOTE>
+<CENTER>
+<HR WIDTH="60%">
+<P>
+<FONT SIZE=2><A HREF="MainPage.asp" TARGET="MainFrame" OnMouseOver="message('Return Home'); return true">Home</A> | </FONT>
+<FONT SIZE=2><A HREF="References.asp" TARGET="MainFrame" OnMouseOver="message('Go to References page'); return true">References</A> | </FONT>
+<FONT SIZE=2><A HREF="Search.asp" TARGET="MainFrame" OnMouseOver="message('Go to the Search page'); return true">Search</A> | </FONT>
+<FONT SIZE=2><A HREF="SiteMap.asp" TARGET="MainFrame" OnMouseOver="message('Go to the Site Map'); return true">Site Map</A></FONT>
+<BR>
+<FONT SIZE=2><A HREF="AboutSector.asp" TARGET="MainFrame" OnMouseOver="message('About the Transportation Sector'); return true">About the Sector</A> | </FONT>
+<FONT SIZE=2><A HREF="ProbSolution.asp" TARGET="MainFrame" OnMouseOver="message('The Problems and Their Solutions'); return true">Problems &amp; Solutions</A> | </FONT>
+<FONT SIZE=2><A HREF="Outreach.asp" TARGET="MainFrame" OnMouseOver="message('Outreach Activities Searchable Database'); return true">Outreach</A> | </FONT>
+<FONT SIZE=2><A HREF="NewsEvents.asp" TARGET="MainFrame" OnMouseOver="message('Whats New?'); return true">What's New</A> | </FONT>
+<FONT SIZE=2><A HREF="Links.asp" TARGET="MainFrame" OnMouseOver="message('General Y2K Links'); return true">General Y2K Links</A> | </FONT>
+<FONT SIZE=2><A HREF="Contacts.asp" TARGET="MainFrame" OnMouseOver="message('Contacts'); return true">Contacts</A></FONT>
+<br>
+<FONT SIZE=2><A HREF="/TextOnly/" TARGET="_parent" OnMouseOver="message('Text Only'); return true">Home</A> - Text Only/No Frames</FONT>
+</P>
+<P>
+<FONT SIZE=2><A HREF="http://www.dot.gov/" TARGET="_blank" OnMouseOver="message('Visit the U.S. DOT Home Page'); return true">U.S. DOT Home Page</A></FONT>
+</P>
+<P>
+<ADDRESS><FONT SIZE=1><A HREF="disclaim.htm" TARGET="MainFrame" OnMouseOver="message('U.S. DOT Privacy and Disclaimer Notice'); return true">U.S. DOT Privacy and Disclaimer Notice</A></FONT></ADDRESS>
+</P>
+</BLOCKQUOTE>
+<BR>
+</CENTER>
+
+
+</body>
+</html>

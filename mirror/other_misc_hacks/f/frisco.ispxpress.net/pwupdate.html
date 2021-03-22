@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+	<TITLE> Password Update</TITLE>
+</HEAD>
+
+<BODY bgcolor="#ffffff">
+<FORM ACTION="/cgi-bin/pwupdate.cgi" METHOD="POST" ENCTYPE="application/x-www-form-urlencoded">
+<P>
+<H1>Password Update</H1>
+
+<TABLE BORDER="0">
+	<TR>
+		<TH ALIGN="RIGHT">
+			<P ALIGN="RIGHT">Login name:
+		</TH>
+		<TD><INPUT TYPE="TEXT" NAME="uid" SIZE="10"></TD>
+	</TR>
+	<TR>
+		<TH ALIGN="RIGHT">
+			<P ALIGN="RIGHT">Current password:
+		</TH>
+		<TD><INPUT TYPE="PASSWORD" NAME="oldpw" SIZE="10"></TD>
+	</TR>
+	<TR>
+		<TH ALIGN="RIGHT">
+			<P ALIGN="RIGHT">New password:
+		</TH>
+		<TD><INPUT TYPE="PASSWORD" NAME="newpw" SIZE="10"></TD>
+	</TR>
+	<TR>
+		<TH ALIGN="RIGHT">
+			<P ALIGN="RIGHT">Verify new password:
+		</TH>
+		<TD><INPUT TYPE="PASSWORD" NAME="newpw2" SIZE="10"></TD>
+	</TR>
+	<TR>
+		<TD>
+			<P ALIGN="CENTER">
+<HR>
+
+		</TD>
+		<TD></TD>
+	</TR>
+</TABLE>
+<INPUT TYPE="SUBMIT" VALUE="Apply"> <INPUT TYPE="RESET" VALUE="Reset"> <INPUT TYPE="HIDDEN"
+NAME="locale" SIZE="-1" VALUE="en">
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,29 @@
+
+Starting nmap V. 2.54BETA3 ( www.insecure.org/nmap/ )
+Interesting ports on rontgen2.ls.huji.ac.il (132.64.64.98):
+(The 3 ports scanned but not shown below are in state: closed)
+Port       State       Service
+23/tcp     open        telnet                  
+80/tcp     open        http                    
+
+TCP Sequence Prediction: Class=64K rule
+                         Difficulty=1 (Trivial joke)
+Aggressive OS guesses: IRIX 6.2 - 6.5 (97%), IRIX 6.5 Origin2 (95%), IRIX 6.5 (95%), Cisco 1538M HUB running Cisco 1538M EES (1.00.00) or Assured Access Technology ISAS Switch Release-2.3.0 (93%), NetBSD 1.3I (after 19990119) to 1.4 x86 (93%), WNOS 5.0 on DOS 6.22 (93%), IRIX 6.4 - 6.5.3m (92%), Nortel Networks CVX1800 RAS. Software version 2.02 (92%)
+No exact OS matches for host (If you know what OS is running on it, see http://www.insecure.org/cgi-bin/nmap-submit.cgi).
+TCP/IP fingerprint:
+TSeq(Class=64K)
+TSeq(Class=RI%gcd=80%SI=E4)
+TSeq(Class=64K)
+T1(Resp=Y%DF=N%W=EF2A%ACK=S++%Flags=AS%Ops=MNWNNT)
+T2(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+T3(Resp=N)
+T4(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T5(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+T6(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T7(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+PU(Resp=Y%DF=N%TOS=0%IPLEN=38%RIPTL=148%RID=E%RIPCK=E%UCK=E%ULEN=134%DAT=E)
+
+
+
+
+Nmap run completed -- 1 IP address (1 host up) scanned in 14 seconds

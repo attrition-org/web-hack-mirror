@@ -1,0 +1,796 @@
+<HTML>
+<HEAD>
+ <TITLE>Linuxerfer.Com</TITLE>
+<META content="text/html; charset=EUC-KR" http-equiv=Content-Type>
+<STYLE type=text/css>
+A:link { TEXT-DECORATION: none }
+A:visited {TEXT-DECORATION: none}
+A:active {TEXT-DECORATION: none}
+A:hover {TEXT-DECORATION: underline}
+BODY {FONT-SIZE: 10pt}
+TD {FONT-SIZE: 10pt}
+</STYLE>
+</HEAD>
+
+<BODY bgColor=#ffffff text=#111111 link=#000000 aLink=#222222 vLink=#333333>
+
+<TABLE align=center bgColor=#ffffff border=0 cellPadding=0 cellSpacing=0 width=670>
+<TR>
+ <TD height="1"></TD>
+ <TD></TD>
+ <TD></TD>
+ <TD></TD>
+ <TD align=right>
+  <FONT color=#111111>Linuxerfer.com</FONT>&nbsp;&nbsp;</TD>
+ <TD bgColor=#000000 height="7" width="1">
+  <img src="image/empty.gif" width=1></TD>
+ <TD></TD>
+</TR>
+<TR>
+ <TD></TD>
+ <TD bgColor=#000000 height="7">
+  <img src="image/empty.gif" width=1></TD>
+ <TD></TD>
+ <TD></TD>
+ <TD></TD>
+ <TD bgColor=#000000 height="7">
+  <img src="image/empty.gif" width=1></TD>
+ <TD></TD>
+</TR>
+<TR>
+ <TD bgColor=#000000 colSpan=7 height=1>
+  <img src="image/empty.gif" height=1 width=100%></TD>
+</TR>
+<TR>
+ <TD></TD>
+ <TD bgColor=#000000 height=1>
+  <img src="image/empty.gif" width=1></TD>
+ <TD bgColor=#f1f1f1 align=right vAlign=top width=670 colspan=3>
+
+ <!-- -------------------------- 본  문 START ------------------------------ -->
+ <TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+ <TR>
+  <TD width=465 align=left bgColor=#e1e1e1 vAlign=middle>
+   <FONT color=#111111>&nbsp;&nbsp;<span lang=EN-US><B>웹서버 동시접속 만명 프로젝트(The C10K Problem)</B></span></FONT></TD>
+  <TD bgColor=#000000 height=25 width=1>
+   <img src="image/empty.gif" width=1></TD>
+  <TD width=265></TD>
+ </TR>
+ <TR>
+  <TD bgColor=#000000 colSpan=2 height=1 width=1>
+   <img src="image/empty.gif" width=1></TD>
+  <TD></TD>
+ </TR>
+ </TABLE>
+
+ <TABLE border=0 cellPadding=0 cellSpacing=10 width="100%">
+ <TR>
+  <TD><BR>
+   It's time for web servers to handle ten thousand clients simultaneously,
+   don't you think?  After all, the web is a big place now. <p>
+   And computers are big, too.  You can buy a 500MHz machine with 1 gigabyte of
+   RAM and six 100Mbit/sec Ethernet card for $3000 or so.  Let's see - at 10000
+   clients, that's 50KHz, 100Kbytes, and 60Kbits/sec per client.  It shouldn't
+   take any more horsepower than that to take four kilobytes from the disk and
+   send them to the network once a second for each of ten thousand clients. 
+   (That works out to $0.30 per client, by the way.  Those $100/client
+   licensing fees some operating systems charge are starting to look a little
+   heavy!)  So hardware is no longer the bottleneck.<P>
+
+   One of the busiest ftp sites, <a href="http://www.cdrom.com">cdrom.com</a>,
+   <a href="http://www.cdrom.com/press/wcarchive_milestone.phtml"> actually can
+   handle 10000 clients simultaneously</a> through a Gigabit Ethernet pipe to
+   its ISP.(<a href="http://www.sunworld.com/swol-04-1999/swol-04-silicon.html">
+   Here's a somewhat dated page about their configuration</a>.) Pipes this fast
+   aren't common yet, but technology is improving rapidly.<P>
+
+   There's interest in benchmarking this kind of configuration; see
+   <a href="http://kernelnotes.org/lnxlists/linux-kernel/lk_9906_04/msg01204.html">
+   the discussion on June 28th 1999</a> on linux-kernel, in which people
+   propose setting up a testbed that can be used for ongoing benchmarks.<P>
+
+   There appears to be interest in this direction from the NSF, too; see the
+   <a href="http://lwn.net/1999/features/Web100.phtml">Web100</a> project.<P>
+
+   With that in mind, here are a few notes on how to configure operating 
+   systems and write code to support thousands of clients.  The discussion
+   centers around Unix-like operating systems, for obvious reasons.<P>
+
+   <h2>Contents</h2>
+   <ul>
+   <li><a href="#top">The C10K problem</a>
+   <li><a href="#books">Book to Read First</a>
+   <li><a href="#strategies">I/O Strategies</a>
+   <ol>
+	<li><a href="#nb">Serve many clients with each server thread, and use nonblocking I/O</a>
+	<ul>
+		<li><a href="#nb.select">The traditional select()</a> 
+		<li><a href="#nb.poll">The traditional poll()</a>
+		<li><a href="#nb./dev/poll">/dev/poll</a>
+		<li><a href="#nb.kqueue">FreeBSD Kernel Queues (kqueue)</a>
+		<li><a href="#nb.sigio">Realtime Signals</a>
+	</ul>
+	<li><a href="#threaded">Serve one client with each server thread</a>
+	<li><a href="#aio">Serve many clients with each server thread, and use asynchronous I/O</a>
+	<li><a href="#kio">Build the server code into the kernel</a>
+   </ol>
+   <li><a href="#comments">Comments</a>
+   <li><a href="#limits.filehandles">Limits on open filehandles</a>
+   <li><a href="#limits.threads">Limits on threads</a>
+   <li><a href="#java">Java issues</a>
+   <li><a href="#tips">Other tips</a>
+   <ul>
+	<li><a href="#zerocopy">Zero-Copy</a>
+	<li><a href="#sendfile">The sendfile() system call can implement zero-copy networking.</a>
+	<li><a href="#writev">Avoid small frames by using writev (or TCP_CORK)</a>
+	<li><a href="#nativethreads">Some programs can benefit from using non-Posix threads.</a>
+	<li><a href="#caching">Caching your own data can sometimes be a win.</a>
+   </ul>
+   <li><a href="#limits.other">Other limits</a>
+   <li><a href="#kernel">Kernel Issues</a> 
+   <li><a href="#benchmarking">Measuring Server Performance</a>
+   <li><a href="#examples">Examples</a>
+   <ul>
+	<li><a href="#examples.nb.select">Interesting select()-based servers</a>
+	<li><a href="#examples.nb./dev/poll">Interesting <a href="#nb./dev/poll">/dev/poll</a>-based servers</a>
+	<li><a href="#examples.nb.kqueue">Interesting kqueue()-based servers</a>
+	<li><a href="#examples.nb.sigio">Interesting <a href="#nb.sigio">realtime signal</a>-based servers</a>
+	<li><a href="#examples.threaded">Interesting thread-based servers</a>
+	<li><a href="#examples.kio">Interesting in-kernel servers</a>
+   </ul>
+   <li><a href="#links">Other interesting links</a>
+   </ul>
+   <p>
+
+   <h2><a name="books">Book to Read First</a></h2>
+   <p>
+   If you haven't read it already, go out and get a copy of
+   <a href="http://www.amazon.com/exec/obidos/ASIN/013490012X/">
+   Unix Network Programming : Networking Apis: Sockets and Xti (Volume 1)</a>
+   by the late W. Richard Stevens.  It describes many of the I/O strategies and
+   pitfalls related to writing high-performance servers.
+   It even talks about the <a href="http://www.citi.umich.edu/projects/linux-scalability/reports/accept.html">'thundering herd'</a> problem.
+
+   <h2><a name="strategies">I/O Strategies</a></h2>
+   <p>
+   There seem to be four ways of writing a fast web server to handle many clients:
+   <ol>
+   <li><a href="#nb">serve many clients with each server thread, and use nonblocking I/O</a>
+   <li><a href="#threaded">serve one client with each server thread</a>
+   <li><a href="#aio">Serve many clients with each server thread, and use asynchronous I/O</a>
+   <li><a href="#kio">Build the server code into the kernel</a>
+   </ol>
+
+   <h3><a name="nb">1. Serve many clients with each server thread, and use nonblocking I/O</a></h3>
+   <p>
+   ... set nonblocking mode on all network handles, and use select() or poll()
+   to tell which network handle has data waiting. This is the traditional
+   favorite. It's still being improved; see e.g. 
+   <a href="http://linuxwww.db.erau.edu/mail_archives/linux-kernel/May_99/3633.html">Niels Provos' benchmarks</a> with hinting poll and thttpd.<BR>
+   An important bottleneck in this method is that read() or sendfile() from
+   disk blocks if the page is not in core at the moment; setting nonblocking
+   mode on a disk file handle has no effect. Same thing goes for memory-mapped
+   disk files. The first time a server needs disk I/O, its process blocks, all
+   clients must wait, and that raw nonthreaded performance goes to waste.<br>
+Worker threads or processes that do the disk I/O can get around this
+bottleneck.  One approach is to use memory-mapped files,
+and if mincore() indicates I/O is needed, ask a worker to do the I/O,
+and continue handling network traffic.  Jef Poskanzer mentions that
+Pai, Druschel, and Zwaenepoel's <a href="http://www.cs.rice.edu/~vivek/flash99/">Flash</a> web server uses this trick; they gave a talk at 
+<a href="http://www.usenix.org/events/usenix99/technical.html">Usenix '99</a> on it.
+It looks like mincore() is available in BSD-derived Unixes 
+like <a href="http://www.freebsd.org/cgi/man.cgi?query=mincore">FreeBSD</a>
+and Solaris, but is not part
+of the <a href="http://www.unix-systems.org/">Single Unix Specification</a>.
+It's available as part of Linux as of kernel 2.3.51, 
+<a href="http://www.citi.umich.edu/projects/citi-netscape/status/mar-apr2000.html">thanks to Chuck Lever</a>.
+<p>
+There are several ways for a single thread to tell which of a set of nonblocking sockets are ready for I/O:
+<ul>
+<li><a name="nb.select">The traditional select().</a>  Unfortunately,
+select() is limited to FD_SETSIZE handles.  This limit is compiled in to
+the standard library and user programs.  
+<p>
+<li><a name="nb.poll">The traditional poll()</a>.
+There is no hardcoded limit to the number of file descriptors poll() can handle,
+but it does get slow about a few thousand, since most of the file descriptors
+are idle at any one time, and scanning through thousands of file descriptors
+takes time.
+<p>
+<li><a name="nb./dev/poll">/dev/poll</a>
+<p>
+The idea behind /dev/poll is to take advantage of the fact that often
+poll() is called many times with the same arguments.
+With /dev/poll, you get an open handle to /dev/poll, and
+tell the OS just once what files you're interested in by writing to that handle;
+from then on, you just read the set of currently ready file descriptors from that handle.
+It looks like this is lower overhead than even the realtime signal approach described below.
+<p>
+It appeared quietly in Solaris 7
+(<a href="http://sunsolve.sun.com/pub-cgi/retrieve.pl?patchid=106541&collection=fpatches">see patchid 106541</a>)
+but its first public appearance was in 
+<a href="http://docs.sun.com:80/ab2/coll.40.6/REFMAN7/@Ab2PageView/55123?Ab2Lang=C&Ab2Enc=iso-8859-1">Solaris 8</a>; 
+<a href="http://www.sun.com/sysadmin/ea/poll.html">according to Sun</a>,
+at 750 clients, this has 10% of the overhead of poll().
+<p>
+Linux is also starting to support /dev/poll, although it's not in the kernel as of 2.3.99.  See 
+<i>N. Provos, C. Lever</i>,
+<a href="http://www.citi.umich.edu/techreports/reports/citi-tr-00-4.pdf">"Scalable Network I/O in Linux,"</a>
+May, 2000. [FREENIX track, Proc. USENIX 2000, San Diego, California (June, 2000).]
+<a href="http://www.citi.umich.edu/projects/linux-scalability/patches/devpoll-2.2.14.diff">A patch
+implementing /dev/poll for the 2.2.14 Linux kernel</a> is available 
+<a href="http://www.citi.umich.edu/projects/linux-scalability/patches/">from www.citi.umic.edu</a>.
+<p>
+Solaris's /dev/poll support may be the first practical example of
+the kind of API proposed in
+<a href="http://www.cs.rice.edu/~druschel/usenix99event.ps.gz">[Banga, Mogul, Drusha '99]</a>, although Winsock's WSAsyncSelect might qualify, too.
+<p>
+<li><a name="nb.kqueue">FreeBSD Kernel Queues</a>
+<p>
+FreeBSD 5.0 (and possibly 4.1) support a generalized alternative to poll() called
+<a href="http://www.FreeBSD.org/cgi/man.cgi?query=kqueue&apropos=0&sektion=0&manpath=FreeBSD+5.0-current&format=html">kqueue()/kevent()</a>.  (See also <a href="http://www.flugsvamp.com/~jlemon/fbsd/">Jonathan Lemon's page</a>.)
+Like /dev/poll, you allocate a listening object, but rather than opening the file /dev/poll, you
+call kqueue() to allocate one.  To change the events you are listening for, or to get the
+list of current events, you call kevent() on the descriptor returned by kqueue().
+It can listen not just for socket readiness, but also for plain file readiness, signals, and even for I/O completion.
+There's even a <a href="http://people.freebsd.org/~dwhite/PyKQueue/">python binding</a> for it.
+<p>
+<li><a name="nb.sigio">Realtime Signals</a>
+<p>
+<a href="http://kernelnotes.org/lnxlists/linux-kernel/lk_9910_02/msg01071.html">
+The 2.3.21 linux kernel introduced a way of using realtime signals to replace poll.</a>
+fcntl(fd, F_SETSIG, signum) associates a signal with each file descriptor, and raises that signal
+when a normal I/O function like read() or write() completes.
+<br>
+To use this, you choose a realtime signal number, mask that signal and SIGIO with sigprocmask(),
+use fcntl(fd, F_SETSIG, signum) on each fd, write a normal poll() outer loop, and
+inside it, after you've handled all the fd's noticed by poll(), you 
+<a href="http://linuxwww.db.erau.edu/mail_archives/linux-kernel/Jun_99/0079.html">loop</a> calling 
+<a href="http://www.opengroup.org/onlinepubs/007908799/xsh/sigwaitinfo.html">sigwaitinfo()</a>.<br>
+If sigwaitinfo returns your realtime signal, siginfo.si_fd and siginfo.si_band give the
+same information as pollfd.fd and pollfd.revents would after a call to poll(),
+so you handle the i/o, and continue calling sigwaitinfo().<br>
+If sigwaitinfo returns a traditional SIGIO, the signal queue overflowed,
+so you <a href="http://x36.deja.com/getdoc.xp?AN=526480649">flush the signal queue by temporarily changing the signal handler to SIG_DFL</a>,
+and break back to the outer poll() loop.  <br>
+You can support older kernels by surrounding
+the sigwaitinfo code with <tt>#if defined(LINUX_VERSION_CODE) && (LINUX_VERSION_CODE >= KERNEL_VERSION(2.3.21))</tt>
+<br>
+See <a href="#phhttpd">Zach Brown's phhttpd</a> for example code that uses this feature, and deals with some of the gotchas,
+e.g. events queued before an fd is dealt with or closed, but arriving afterwards.
+<p>
+</ul>
+
+<h3><a name="threaded">2. Serve one client with each server thread</a></h3>
+<p>
+... and let read() and write() block.  Has the disadvantage of using a whole stack
+frame for each client, which costs memory.  Many OS's also have trouble handling more
+than a few hundred threads.
+<p>
+
+
+<h3><a name="aio">3. Serve many clients with each server thread, and use asynchronous I/O</a></h3>
+<p>
+This has not yet become popular,
+probably because few operating systems support asynchronous I/O,
+also possibly because it's hard to use.
+Under Unix, this is done with <a href="http://www.opengroup.org/onlinepubs/007908799/xsh/realtime.html">the aio_ interface</a>
+(scroll down from that link to "Asynchronous input and output"), 
+which associates a signal and value with each I/O operation.
+Signals and their values are queued and delivered efficiently to the user process.
+This is from the POSIX 1003.1b realtime extensions, and is also in the Single Unix Specification,
+version 2, and in glibc 2.1.  The generic glibc 2.1 implementation
+may have been written for standards compliance rather than performance.
+<p>
+<b><a href="http://oss.sgi.com/projects/kaio/">SGI has implemented high-speed AIO</a>
+with kernel support</b>.  As of version 1.1, it's said to work well with both
+disk I/O and sockets.  It seems to use kernel threads.
+<p>
+Various people appear to be working on a different implementation that does
+not use kernel threads, and should scale better.  It won't be available
+until kernel 2.5, though, probably.
+<p>
+The O'Reilly book 
+<a href="http://www.oreilly.com/catalog/posix4/">POSIX.4: Programming for the Real World</a>
+is said to include a good introduction to aio.
+
+<h3><a name="kio">4. Build the server code into the kernel</a></h3>
+<p>
+Novell and Microsoft are both said to have done this at various times,
+at least one NFS implementation does this, 
+<a href="http://www.fenrus.demon.nl">khttpd</a> does this for Linux 
+and static web pages, and 
+<a href="http://slashdot.org/comments.pl?sid=00/07/05/0211257&cid=218">"TUX" (Threaded linUX webserver)</a>
+is a blindingly fast and flexible kernel-space HTTP server by Ingo Molnar for Linux.
+Ingo's <a href="http://boudicca.tux.org/hypermail/linux-kernel/2000week36/0780.html">September 1, 2000 announcement</a>
+says an alpha version of TUX can be downloaded from 
+<a href="ftp://ftp.redhat.com/pub/redhat/tux">ftp://ftp.redhat.com/pub/redhat/tux</a>,
+and explains how to join a mailing list for more info.
+
+<br>
+The linux-kernel list has been discussing the pros and cons of this
+approach, and the consensus seems to be instead of moving web servers 
+into the kernel, the kernel should have the smallest possible hooks added
+to improve web server performance.  That way, other kinds of servers
+can benefit.  See e.g. 
+<a href="http://kernelnotes.org/lnxlists/linux-kernel/lk_9906_03/msg01041.html">Zach Brown's remarks</a>
+about userland vs. kernel http servers.  
+
+<p>
+<h2><a name="comments">Comments</a></h2>
+<p>
+<a href="http://www.cs.wustl.edu/~schmidt/ACE.html">ACE</a>, a C++ I/O framework,
+contains object-oriented implementations of some of these I/O strategies.
+In particular, his Reactor is an OO way of doing nonblocking I/O, and
+Proactor is an OO way of doing asynchronous I/O, I think.  <i><small>(Caution: those who are
+allergic to Design Patterns may need to don a garlic necklace before reading the
+ACE docs.)</small></i>
+<p>
+Matt Welsh wrote <a href="http://www.cs.berkeley.edu/~mdw/papers/events.pdf">a paper</a>
+in April 2000 about how to balance the use of worker thread and
+event-drivent techniques when building scalable servers.
+<p>
+Richard Gooch has written 
+<a href="http://www.atnf.csiro.au/~rgooch/linux/docs/io-events.html">a paper discussing I/O options</a>.
+<p>
+The Apache mailing lists have some 
+<a href="http://www.humanfactor.com/cgi-bin/cgi-delegate/apache-ML/nh/1999/March/1st-half/0143.html">interesting posts</a>
+about why they prefer not to use select() (basically, they think that makes plugins harder).  Still, they're planning to use select()/poll()/sendfile() for
+static requests in Apache 2.0.
+<p>
+Mark Russinovich wrote 
+<a href="http://linuxtoday.com/stories/5499.html">an editorial</a> and
+<a href="http://www.winntmag.com/Articles/Index.cfm?ArticleID=5048">an article</a>
+discussing I/O strategy issues in the 2.2 Linux kernel.  Worth reading, even
+he seems misinformed on some points.  In particular, he
+seems to think that Linux 2.2's asynchronous I/O 
+(see F_SETSIG above) doesn't notify the user process when data is ready, only
+when new connections arrive.  This seems like a bizarre misunderstanding.
+See also 
+<a href="http://www.dejanews.com/getdoc.xp?AN=431444525">comments on an earlier draft</a>,
+<a href="http://www.dejanews.com/getdoc.xp?AN=472893693">a rebuttal</a> from Mingo, 
+<a href="http://www.kernelnotes.org/lnxlists/linux-kernel/lk_9905_01/msg00089.html">Russinovich's comments of 2 May 1999</a>,
+<a href="http://www.kernelnotes.org/lnxlists/linux-kernel/lk_9905_01/msg00263.html">a rebuttal</a> from Alan Cox,
+and various 
+<a href="http://www.dejanews.com/dnquery.xp?ST=PS&QRY=threads&DBS=1&format=threaded&showsort=score&maxhits=100&LNG=ALL&groups=fa.linux.kernel+&fromdate=jun+1+1998">posts to linux-kernel</a>.  
+I suspect he was trying to say that Linux doesn't support asynchronous disk I/O,
+which used to be true, but now that SGI has implemented <a href="#aio">KAIO</a>,
+it's not so true anymore.
+<p>
+See these pages at <a href="http://www.sysinternals.com/comport.htm">sysinternals.com</a> and 
+<a href="http://msdn.microsoft.com/library/techart/msdn_scalabil.htm">MSDN</a> for information
+on "completion ports", which he said were unique to NT; in a nutshell,
+win32's "overlapped I/O" turned out to be too low level to be convenient, and
+a "completion port" is a wrapper that provides a queue of copletion events.
+Compare this to Linux's <a href="#nb.sigio">F_SETSIG and queued signals</a> feature.
+<p>
+<a name="15k">There</a> was an interesting discussion on linux-kernel in September 1999 titled
+"<a href="http://kernelnotes.org/lnxlists/linux-kernel/lk_9909_01/msg00783.html">&gt; 15,000 Simultaneous Connections</a>".  
+(<a href="http://kernelnotes.org/lnxlists/linux-kernel/lk_9909_02/msg00001.html">second week</a>,
+<a href="http://kernelnotes.org/lnxlists/linux-kernel/lk_9909_03/msg00002.html">third week</a>)  Highlights:
+<ul>
+<li>
+Ed Hall 
+<a href="http://kernelnotes.org/lnxlists/linux-kernel/lk_9909_01/msg00807.html">posted</a> a few notes on his experiences; he's achieved 
+&gt;1000 connects/second on a UP P2/333 running Solaris.  His code
+used a small pool of threads (1 or 2 per CPU) each managing a large number 
+of clients using "an event-based model".
+<li>Mike Jagdis <a href="http://kernelnotes.org/lnxlists/linux-kernel/lk_9909_01/msg00831.html">posted an analysis of poll/select overhead</a>, and said
+"The current select/poll implementation can be improved significantly,
+especially in the blocking case, but the overhead will still increase
+with the number of descriptors because select/poll does not, and
+cannot, remember what descriptors are interesting. This would be
+easy to fix with a new API.  Suggestions are welcome..."
+<li>Mike <a href="http://kernelnotes.org/lnxlists/linux-kernel/lk_9909_01/msg00964.html">posted</a> about his <a href="http://www.purplet.demon.co.uk/linux/select/">work on improving select() and poll()</a>.
+<li>Mike <a href="http://kernelnotes.org/lnxlists/linux-kernel/lk_9909_01/msg00971.html">posted a bit about a possible API to replace poll()/select()</a>: 
+"How about a 'device like' API where you write 'pollfd like' structs,
+the 'device' listens for events and delivers 'pollfd like' structs
+representing them when you read it? ... "
+<li>Rogier Wolff 
+<a href="http://kernelnotes.org/lnxlists/linux-kernel/lk_9909_01/msg00979.html">suggested</a>
+using "the API that the digital guys suggested", 
+<a href="http://www.cs.rice.edu/~gaurav/papers/usenix99.ps">http://www.cs.rice.edu/~gaurav/papers/usenix99.ps</a>
+<li>Joerg Pommnitz <a href="http://kernelnotes.org/lnxlists/linux-kernel/lk_9909_02/msg00001.html">pointed out</a> that any new API along these lines should
+be able to wait for not just file descriptor events, but also signals and maybe 
+SYSV-IPC.  Our synchronization primitives should certainly be able to
+do what Win32's WaitForMultipleObjects can, at least.
+<li>Stephen Tweedie <a href="http://kernelnotes.org/lnxlists/linux-kernel/lk_9909_02/msg01198.html">asserted</a> that the combination of F_SETSIG, queued realtime
+signals, and sigwaitinfo() was a superset of the API proposed in 
+http://www.cs.rice.edu/~gaurav/papers/usenix99.ps.  He also mentions that
+you keep the signal blocked at all times if you're interested in performance;
+instead of the signal being delivered asynchronously, the process grabs the
+next one from the queue with sigwaitinfo().
+<li>Jayson Nordwick <a href="http://kernelnotes.org/lnxlists/linux-kernel/lk_9909_03/msg00002.html">compared</a>
+completion ports with the F_SETSIG synchronous event model,
+and concluded they're pretty similar.
+<li>Alan Cox <a href="http://kernelnotes.org/lnxlists/linux-kernel/lk_9909_03/msg00043.html">noted</a> that an older rev of SCT's SIGIO patch is included in
+2.3.18ac.
+<li>Jordan Mendelson <a href="http://kernelnotes.org/lnxlists/linux-kernel/lk_9909_03/msg00093.html">posted</a> some example code showing how to use F_SETSIG.
+<li>Stephen C. Tweedie <a href="http://kernelnotes.org/lnxlists/linux-kernel/lk_9909_03/msg00095.html">continued</a> the comparison of completion ports and F_SETSIG,
+and noted: "With a signal dequeuing mechanism, your application is going to get
+signals destined for various library components if libraries are using
+the same mechanism," but the library can set up its own signal handler,
+so this shouldn't affect the program (much).
+<li><a href="http://kernelnotes.org/lnxlists/linux-kernel/lk_9909_04/msg00900.html">Doug Royer</a> 
+noted that he'd gotten 100,000 connections on Solaris 2.6 while he
+was working on the Sun calendar server.
+Others chimed in with estimates of how much RAM that would require
+on Linux, and what bottlenecks would be hit.
+</ul>
+<p>
+Interesting reading!
+<p>
+
+<h2><a name="limits.filehandles">Limits on open filehandles</a></h2>
+<ul>
+<li>Any Unix: the limits set by ulimit or setrlimit.
+<li>Solaris: see <a
+href="http://www.wins.uva.nl/pub/solaris/solaris2/Q3.45.html">the Solaris FAQ,
+question 3.45</a>.
+<li>FreeBSD: use <tt>sysctl -w kern.maxfiles=nnnn</tt> to raise limit
+<li>Linux: See <a href="http://skaro.nightcrawler.com/~bb/Docs/proc.html">Bodo Bauer's /proc documentation</a>.
+On current 2.2.x kernels,
+<pre>echo 32768 &gt; /proc/sys/fs/file-max
+echo 65536 &gt; /proc/sys/fs/inode-max
+</pre>
+increases the system limit on open files, and
+<pre>ulimit -n 32768</pre>
+increases the current process' limit.   I verified that a process on Red Hat 6.0 
+(2.2.5 or so plus patches) can open at least 31000 file descriptors this way.
+Another fellow has verified that a process on 2.2.12 can open at least 
+90000 file descriptors this way (with appropriate limits).   The upper bound
+seems to be available memory.
+<br>
+Stephen C. Tweedie <a
+href="http://kernelnotes.org/lnxlists/linux-kernel/lk_9909_02/msg01092.html">posted</a>
+about how to set ulimit limits globally or per-user at boot time using
+initscript and pam_limit.
+<br>
+In older 2.2 kernels, though, the number of open files per process is 
+still limited to 1024, even with the above changes.
+<br>
+See also 
+<a href="http://www.dejanews.com/getdoc.xp?AN=313316592">Oskar's 1998 post</a>,
+which talks about the per-process and system-wide limits on file descriptors
+in the 2.0.36 kernel.
+</ul>
+
+<h2><a name="limits.threads">Limits on threads</a></h2>
+<p>
+On any architecture, you may need to reduce the amount
+of stack space allocated for each thread to avoid running
+out of virtual memory.  You can set this at runtime with
+pthread_attr_init() if you're using pthreads.
+<ul>
+<li>Solaris: it supports as many threads as will fit in memory, I hear.
+<li>FreeBSD: ?
+<li>Linux: Even the 2.2.13 kernel limits the number of threads,
+at least on Intel.  I don't know what the limits are on other architectures.
+<a href="http://www.kernelnotes.org/lnxlists/linux-kernel/lk_9812_02/msg00048.html">Mingo posted a patch
+for 2.1.131 on Intel</a> that removed this limit.  It appears to be integrated into 2.3.20.
+<p>
+See also <a href="http://www.volano.com/linux.html">Volano's detailed
+instructions for raising file, thread, and FD_SET limits in the 2.2 kernel</a>.  Wow.
+This stunning little document steps you through a lot of stuff that
+would be hard to figure out yourself.  <b>This is a must-read,</b>
+even though some of its advice is already out of date.
+<li>Java: See <a href="http://www.volano.com/benchmarks.html">Volano's detailed benchmark info</a>,
+plus their <a href="http://www.volano.com/server.html">info on how to tune various systems</a>
+to handle lots of threads.
+</ul>
+
+<h2><a name="java">Java issues</a></h2>
+<p>
+Java's networking libraries mostly offer the one-thread-per-client model.
+There is a way to do nonblocking reads, but no way to do nonblocking writes.
+<p>
+Sun's JDK 1.2 Production release for Solaris does contain an example of using JNI to access poll()
+(or /dev/poll, if present).  <a href="Poller.html">Here's the javadoc for the
+interface.</a><br>
+Juergen Kreileder of the Blackdown team writes:
+<blockquote><i>
+I once started to port the JNI-poll interface example from the Solaris
+production release JDK to Linux but never had to time finish it.  You
+can find a more or less usable version at:
+<a href="http://guiness.cs.uni-dortmund.de/~kreilede/poller/">
+http://guiness.cs.uni-dortmund.de/~kreilede/poller/
+</a>.
+The code requires a native threads VM, I recommend 1.2.2-RC4.
+</i></blockquote>
+<p>
+<a href="http://nitric.com/jnp/">"Java Network Programming" 2nd ed.</a> also touches on using JNI to access select().
+<p>
+HP's java now includes a <a href="http://www.devresource.hp.com/JavaATC/JavaPerfTune/pollapi.html">Thread Polling API</a>.
+<p>
+Matt Welsh has implemented nonblocking sockets for Java; his performance
+benchmarks show that they have advantages over blocking sockets in servers
+handling many (400) connections.  His class library is called
+<a href="http://www.cs.berkeley.edu/~mdw/proj/java-nbio/">java-nbio</a>.
+Check it out!
+<p>
+See also 
+<a href="http://boudicca.tux.org/hypermail/linux-kernel/2000week05/0210.html">Dean Gaudet's essay</a>
+on the subject of Java, network I/O, and threads, and the 
+<a href="http://www.cs.berkeley.edu/~mdw/papers/events.pdf">paper</a> by Matt Welsh
+on events vs. worker threads.
+<p>
+There are several proposals for improving Java's networking APIs:
+<ul>
+<li>Matt Welsh's 
+<a href="http://www.cs.berkeley.edu/~mdw/proj/jaguar/">Jaguar system</a>
+proposes preserialized objects, new Java bytecodes, and memory management
+changes to allow the use of asynchronous I/O with Java.
+<li><a
+href="http://www.cs.cornell.edu/Info/People/chichao/papers.htm">Interfacing
+Java to the Virtual Interface Architecture</a>, by C-C. Chang and
+T. von Eicken, proposes memory management changes to allow the use
+of asynchronous I/O with Java.
+<li>
+Sun's JSR-51 (
+<a href="http://java.sun.com/aboutJava/communityprocess/jsr/jsr_051_ioapis.html">New I/O APIs for the Java Platform</a>)
+is a working group which hopes to come up with APIs which will give
+Java excellent I/O.  Just getting started as of May 2000.
+</ul>
+
+<h2><a name="tips">Other tips</a></h2>
+<ul>
+<li><a name="zerocopy">Zero-Copy</a><br>
+Normally, data gets copied many times on its way from here to there.
+Any scheme that eliminates these copies to the bare physical minimum is called "zero-copy".
+<ul> 
+<li><a href="http://www.usenix.org/publications/library/proceedings/osdi99/full_papers/pai/pai_html/pai.html">IO-Lite</a> 
+is a proposal for a set of I/O primitives that gets rid of the need for many copies.
+<li>
+<a href="http://www.kernelnotes.org/lnxlists/linux-kernel/lk_9905_01/msg00263.html">Alan Cox noted that
+zero-copy is sometimes not worth the trouble</a> back in 1999.  (He did like sendfile(), though.)
+<li>Ingo <a href="http://boudicca.tux.org/hypermail/linux-kernel/2000week36/0979.html">implemented
+a form of zero-copy TCP</a> in the 2.4 kernel for TUX 1.0 in July 2000, and says he'll make it available to userspace soon.
+<li><a href="http://people.freebsd.org/~ken/zero_copy/">Drew Gallatin and Robert Picco have added 
+some zero-copy features to FreeBSD</a>; the idea seems to be that
+if you call write() or read() on a socket, the pointer is page-aligned,
+and the amount of data transferred is at least a page, *and* you
+don't immediately reuse the buffer, memory management tricks will be
+used to avoid copies.  But see 
+<a href="http://boudicca.tux.org/hypermail/linux-kernel/2000week39/0249.html">followups to this message on linux-kernel</a>
+for people's misgivings about the speed of those memory management tricks.
+<li><a name="sendfile">The sendfile() system call can implement zero-copy networking.</a><br>
+The sendfile() function in Linux and FreeBSD lets you tell the kernel to send part 
+or all of a file.  This lets the OS do it as efficiently as possible.
+It can be used equally well in servers using threads or servers using
+nonblocking I/O.  (In Linux, It's poorly documented at the moment; <a
+href="http://www.dejanews.com/getdoc.xp?AN=422899634">use _syscall4 to 
+call it</a>.  Andi Kleen is writing new man pages that cover this.)  
+<a href="http://www.dejanews.com/getdoc.xp?AN=423005088">Rumor has it</a>, 
+ftp.cdrom.com benefitted noticably from sendfile().
+<p>One developer using sendfile() with Freebsd reports that using
+POLLWRBAND instead of POLLOUT makes a big difference.  
+</ul>
+
+<li><a name="writev">Avoid small frames by using writev (or TCP_CORK)</a><br>
+A new socket option under Linux, TCP_CORK, tells the kernel to
+avoid sending partial frames, which helps a bit e.g. when there are
+lots of little write() calls you can't bundle together for some reason.
+Unsetting the option flushes the buffer.  Better to use writev(), though...
+<li><a name="nativethreads">Some programs can benefit from using non-Posix threads.</a><br>
+Not all threads are created equal.  The clone() function in Linux
+(and its friends in other operating systems)
+lets you create a thread that has its own current working directory,
+for instance, which can be very helpful when implementing an ftp server.
+See Hoser FTPd for an example of the use of native threads rather than pthreads.
+<li><a name="caching">Caching your own data can sometimes be a win.</a><br>
+"Re: fix for hybrid server problems" by Vivek Sadananda Pai 
+(vivek@cs.rice.edu) on 
+<a href="http://www.humanfactor.com/cgi-bin/cgi-delegate/apache-ML/nh/1999/">new-httpd</a>, May 9th, states:
+<blockquote> 
+<p>
+"I've compared the raw performance of a select-based server with a
+multiple-process server on both FreeBSD and Solaris/x86. On
+microbenchmarks, there's only a marginal difference in performance
+stemming from the software architecture. The big performance win for
+select-based servers stems from doing application-level caching. While
+multiple-process servers can do it at a higher cost, it's harder to
+get the same benefits on real workloads (vs microbenchmarks).
+I'll be presenting those measurements as part of a paper that'll
+appear at the next Usenix conference. If you've got postscript,
+the paper is available at 
+<a href="http://www.cs.rice.edu/~vivek/flash99/">http://www.cs.rice.edu/~vivek/flash99/</a>"
+</blockquote>
+</ul>
+
+<h2><a name="limits.other">Other limits</a></h2>
+<ul>
+<li>Old system libraries might use 16 bit variables to hold
+file handles, which causes trouble above 32767 handles.  glibc2.1 should be ok.
+<li>Many systems use 16 bit variables to hold process or thread id's.
+It would be interesting to port the <a href="http://www.volano.com/benchmarks.html">Volano scalability
+benchmark</a> to C, and see what the upper limit on number of threads is for the various operating systems.
+<li>Too much thread-local memory is preallocated by some operating systems;
+if each thread gets 1MB, and total VM space is 2GB, that creates an upper limit
+of 2000 threads.
+<li>Look at the performance comparison graph at the bottom of
+<a href="http://www.acme.com/software/thttpd/benchmarks.html">http://www.acme.com/software/thttpd/benchmarks.html</a>.
+Notice how various servers have trouble above 128 connections, even on Solaris 2.6?  
+Anyone who figures out why, let me know.  
+<br>
+Note: if the TCP stack has a bug that causes a short (200ms)
+delay at SYN or FIN time, as Linux 2.2.0-2.2.6 had, and the OS or
+http daemon has a hard limit on the number of connections open,
+you would expect exactly this behavior.  There may be other causes.
+</ul>
+
+<h2><a name="kernel">Kernel Issues</a></h2> 
+<p>
+For Linux, it looks like kernel bottlenecks are being fixed constantly.
+See <a href="mindcraft-redux.html">my Mindcraft Redux page</a>,
+<a href="http://www.kernelnotes.org/">Kernelnotes.org, 
+<a href="http://www.kt.opensrc.org/">Kernel Traffic</a>,
+and <a href="http://www.kernelnotes.org/lnxlists/linux-kernel/">the Linux-Kernel mailing list</a>
+(Example interesting posts by 
+<a href="http://www.kernelnotes.org/lnxlists/linux-kernel/lk_9904_03/msg00146.html">a user asking how to tune</a>, and
+<a href="http://www.kernelnotes.org/lnxlists/linux-kernel/lk_9904_03/msg00309.html">Dean Gaudet</a>)
+<p>
+In March 1999, Microsoft sponsored a benchmark comparing NT to Linux
+at serving large numbers of http and smb clients, in which they
+failed to see good results from Linux.  
+See also <a href="mindcraft_redux.html">my article on Mindcraft's April 1999 Benchmarks</a>
+for more info.
+<p>
+See also <a href="http://www.citi.umich.edu/projects/citi-netscape/">The Linux Scalability Project</a>.
+They're doing interesting work, including <a href="http://linuxwww.db.erau.edu/mail_archives/linux-kernel/May_99/4105.html">
+Niels Provos' hinting poll patch</a>, and some work on
+the <a href="http://www.citi.umich.edu/projects/linux-scalability/reports/accept.html">thundering herd problem</a>.
+<p>
+See also <a href="http://www.purplet.demon.co.uk/linux/select/">Mike Jagdis' work on improving select() and poll()</a>; here's <a href="http://kernelnotes.org/lnxlists/linux-kernel/lk_9909_01/msg00964.html">Mike's post</a> about it.
+<p>
+<a href="http://kernelnotes.org/lnxlists/linux-kernel/lk_9910_02/msg00889.html">Mohit Aron (aron@cs.rice.edu) 
+writes that rate-based clocking in TCP can improve HTTP response time over 'slow' connections by 80%.</a>
+
+<h2><a name="benchmarking">Measuring Server Performance</a></h2>
+<p>
+Two tests in particular are simple, interesting, and hard: 
+<ol>
+<li>raw connections per second (how many 512 byte files per second can you
+serve?)
+<li>total transfer rate on large files with many slow clients
+(how many 28.8k modem clients can simultaneously download
+from your server before performance goes to pot?)
+</ol>
+<p>
+Jef Poskanzer has published benchmarks comparing many web servers.
+See <a href="http://www.acme.com/software/thttpd/benchmarks.html">http://www.acme.com/software/thttpd/benchmarks.html</a>  
+for his results.
+<p>
+I also have 
+<a href="http://www.alumni.caltech.edu/~dank/fixing-overloaded-web-server.html">
+a few old notes about comparing thttpd to Apache</a> that may be of interest
+to beginners.
+<p>
+<a href="http://linuxhq.com/lnxlists/linux-kernel/lk_9906_02/msg00248.html">Chuck Lever keeps reminding us</a> about 
+<a href="http://www.cs.rice.edu/CS/Systems/Web-measurement/paper/paper.html">Banga and Druschel's paper on web server benchmarking</a>.  It's worth a read.
+<p>
+IBM has an excellent paper titled <a href="http://www.research.ibm.com/journal/sj/391/baylor.html">Java server benchmarks</a> [Baylor et al, 2000].  It's worth a read.
+
+<h1><a name="examples">Examples</a></h1>
+
+<h2><a name="examples.nb.select">Interesting select()-based servers</a></h2>
+<ul>
+<li><a href="http://www.acme.com/software/thttpd/">thttpd</a>
+Very simple.  Uses a single process.  It has good performance,
+but doesn't scale with the number of CPU's.
+<li><a href="http://mathop.diva.nl/">mathopd</a>.  Similar to thttpd.
+<li><a href="http://www.fhttpd.org/">fhttpd</a>
+<li><a href="http://www.boa.org/">boa</a>
+<li><a href="http://www.roxen.com/">Roxen</a>
+<li><a href="http://www.zeustech.net/">Zeus</a>, a commercial server that tries to be the absolute fastest.
+See their <a href="http://support.zeustech.net/faq/entries/tuning.html">tuning guide</a>.   
+<li>The other non-Java servers listed at <a href="http://www.acme.com/software/thttpd/benchmarks.html">http://www.acme.com/software/thttpd/benchmarks.html</a>
+<li><a
+href="http://ca.us.mirrors.freshmeat.net/appindex/1999/02/17/919251275.html">BetaFTPd</a>
+<li><a href="http://www.cs.rice.edu/~vivek/iol98/">Flash-Lite</a> -
+web server using IO-Lite.
+<li><a href="http://www.cs.rice.edu/~vivek/flash99/">Flash: An efficient and portable Web server</a> -- uses select(), mmap(), mincore()
+<li><a
+href="http://www.imatix.com/html/xitami/">xitami</a> - uses select() to
+implement its own thread abstraction for portability to systems without 
+threads.
+<li><a href="http://www.nightmare.com/medusa/medusa.html">Medusa</a> - a server-writing toolkit in Python that tries to deliver very high performance. 
+</ul>
+
+
+<h2><a name="examples.nb./dev/poll">Interesting <a href="#nb./dev/poll">/dev/poll</a>-based servers</a></h2>
+<ul>
+<li>
+<i>N. Provos, C. Lever</i>,
+<a href="http://www.citi.umich.edu/techreports/reports/citi-tr-00-4.pdf">"Scalable Network I/O in Linux,"</a>
+May, 2000. [FREENIX track, Proc. USENIX 2000, San Diego, California (June, 2000).]  Describes a
+version of thttpd modified to support /dev/poll.  Performance is compared
+with phhttpd.
+</ul>
+
+<h2><a name="examples.nb.kqueue">Interesting kqueue()-based servers</a></h2>
+<ul>
+<li><a href="http://www.advogato.org/person/benno/">Benno</a> has written a patch that
+<a href="http://netizen.com.au/~benno/squid-select.tar.gz">adds kqueue support to Squid.</a>  Haven't tried it myself.
+</ul>
+
+<h2><a name="examples.nb.sigio">Interesting realtime signal-based servers</a></h2>
+<ul>
+<li><a name="phhttpd">Zach Brown's</a> <a href="http://www.zabbo.net/phhttpd/">phhttpd</a> - "a
+quick web server that was written to showcase the sigio/siginfo event
+model. consider this code highly
+experimental and yourself highly mental if you try and use it in a production environment."
+Uses the <a href="#nb.sigio">siginfo</a> features of 2.3.21 or later, and includes the needed patches
+for earlier kernels.
+Rumored to be even faster than khttpd.
+See <a href="http://www.deja.com/getdoc.xp?AN=484192836">his post of 31 May 1999</a>
+for some notes.
+</ul>
+
+<h2><a name="examples.threaded">Interesting thread-based servers</a></h2>
+<ul>
+<li><a href="http://www.zabbo.net/hftpd/">Hoser FTPD</a>.
+See their <a href="http://www.zabbo.net/hftpd/bench.html">benchmark page</a>.
+<li><a
+href="http://ca.us.mirrors.freshmeat.net/appindex/1999/02/06/918317238.html">Peter Eriksson's phttpd</a> and <li><a href="http://ca.us.mirrors.freshmeat.net/appindex/1999/02/06/918313631.html">pftpd</a> 
+<li>The Java-based servers listed at <a href="http://www.acme.com/software/thttpd/benchmarks.html">http://www.acme.com/software/thttpd/benchmarks.html</a>
+<li>Sun's <a href="http://jserv.javasoft.com/">Java Web Server</a>
+(which has been 
+<a
+href="http://archives.java.sun.com/cgi-bin/wa?A2=ind9901&L=jserv-interest&F=&S=&P=47739">reported to handle 500 simultaneous clients</a>)
+</ul>
+
+<h2><a name="examples.kio">Interesting in-kernel servers</a></h2>
+<ul>
+<li><a href="http://www.fenrus.demon.nl">khttpd</a>
+<li><a href="http://slashdot.org/comments.pl?sid=00/07/05/0211257&cid=218">"TUX" (Threaded linUX webserver)</a> by Ingo Molnar et al.  For 2.4 kernel.
+</ul>
+
+<h2><a name="links">Other interesting links</a></h2>
+<ul>
+<li><a href="http://nakula.rvs.uni-bielefeld.de/made/artikel/Web-Bench/web-bench.html">Prof. Peter Ladkin's Web Server Performance</a> page.  Toll!  <b>25 May 2000</b>
+<li><a href="http://www.novell.com/bordermanager/ispcon4.html">Novell's
+FastCache</a> -- claims 10000 hits per second.  Quite the pretty performance graph.
+<li>Rik van Riel's <a href="http://linuxperf.nl.linux.org/">Linux Performance Tuning site</a>
+</ul>
+
+
+   <P ALIGN=RIGHT>
+   출처 : http://www.kegel.com/c10k.html &nbsp;&nbsp;</P>
+   </TD>
+ </TR>
+ </TABLE>
+ <P>
+ <!-- --------------------------- 본  문 END ------------------------------- -->
+
+ </TD>
+
+<!-- -----------------------------  꼬리말  -------------------------------- -->
+ <TD bgColor=#000000 height=1 width=1>
+  <img src="image/empty.gif" width=1></TD>
+ <TD height=1 width=7></TD>
+</TR>
+<TR>
+ <TD bgColor=#000000 colSpan=7 height=1 width=1>
+  <img src="image/empty.gif" width=1></TD>
+</TR>
+<TR>
+ <TD height=1 width=7></TD>
+ <TD bgColor=#000000 height=7 width=1>
+  <img src="image/empty.gif" width=1></TD>
+ <TD colspan=3></TD>
+ <TD bgColor=#000000 height=7 width=1>
+  <img src="image/empty.gif" width=1></TD>
+ <TD height=1 width=7></TD>
+</TR>
+<TR>
+ <TD height=1 width=7></TD>
+ <TD bgColor=#000000 height=7 width=1>
+  <img src="image/empty.gif" width=1></TD>
+ <TD vAlign=top>&nbsp;&copy;Linuxerfer.com<BR></TD>
+ <TD colspan=3 align=right><TT>2000/09/22</TT> <BR></TD>
+ <TD></TD>
+</TR>
+</TABLE>
+<P></P>
+</BODY>
+</HTML>

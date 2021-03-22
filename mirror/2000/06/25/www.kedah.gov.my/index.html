@@ -1,0 +1,283 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style>  
+<!--
+#mainMenu     { text-decoration : none; left : 0; top : 0; Z-INDEX : 10}
+
+#kedahMenu  { POSITION : absolute; Z-INDEX : 1;TOP : 50; LEFT :    80; VISIBILITY : hidden; }
+#masjidMenu    { POSITION : absolute; Z-INDEX : 1; TOP : 90; LEFT : 112; VISIBILITY : hidden; }
+#aduanMenu     { POSITION : absolute; Z-INDEX : 1; TOP : 105; LEFT : 112; VISIBILITY : hidden; } 
+#pekerjaanMenu     { POSITION : absolute; Z-INDEX : 1; TOP : 120; LEFT : 112; VISIBILITY : hidden; }
+#perumahanMenu    { POSITION : absolute; Z-INDEX : 1; TOP : 153; LEFT : 120; VISIBILITY : hidden; }
+#pelanconganMenu     { POSITION : absolute; Z-INDEX : 1; TOP : 173; LEFT : 158; VISIBILITY : hidden; }
+#penerbitanMenu    { POSITION : absolute; Z-INDEX : 1; TOP : 180; LEFT : 150; VISIBILITY : hidden; }
+#jabatanMenu    { POSITION : absolute; Z-INDEX : 1; TOP : 70; LEFT : 125; VISIBILITY : hidden; }
+
+.menus  { font-size : 8pt; color : #ffffff; font-family : arial, helvetica, sans serif;	 text-decoration:none;}
+//-->
+</style>
+<style><!--
+      A:link    {text-decoration: none; color: #000080; }
+        A:visited {text-decoration: none; color: #000080; }
+        A:active  {text-decoration: none; color: #000080; }
+        A:hover   {text-decoration: overline; color: #000080; }
+        A:hover   {text-decoration: underline; color: #000080; }
+--></style>
+<title></title>
+</head>
+<script language="JavaScript">
+<!--
+window.onerror = null;
+ var bName = navigator.appName;
+ var bVer = parseInt(navigator.appVersion);
+ var NS4 = (bName == "Netscape" && bVer >= 4);
+ var IE4 = (bName == "Microsoft Internet Explorer" && bVer >= 4);
+ var NS3 = (bName == "Netscape" && bVer < 4);
+ var IE3 = (bName == "Microsoft Internet Explorer" && bVer < 4);
+ var menuActive = 0
+ var menuOn = 0
+ var onLayer = null
+ var timeOn = null
+ var loaded = 0
+var ST = new Array('CT','DE','DC','RI','NH','MD','MA','ME','NY','NJ','PA','VA','VT','WV');
+	
+	//browser detect
+	browserName = navigator.appName;
+	browserVersion = parseInt(navigator.appVersion);
+	browserType = "default";
+	bver = navigator.appVersion.substring(0,4);
+	bverThree = "3.0 ";
+	bverThreeA = "3.0G";
+	bverThreeB = "3.00";
+	
+	if((bver != bverThree) && (bver != bverThreeA) && (bver != bverThreeB)) detect = 0; else detect = 1; 
+
+	if (browserName == "Netscape")
+		browserType = "NS";
+	else if (browserName == "Microsoft Internet Explorer")
+		browserType = "IE";
+	
+	browserType += browserVersion;
+
+function jumpto(jform) {
+      if (jform.hotlinks) {
+	  	if (jform.hotlinks.options[jform.hotlinks.selectedIndex].value != 'novalue') {
+			parent.location.href = jform.hotlinks.options[jform.hotlinks.selectedIndex].value;
+     	}
+			return false;
+	  }
+
+	  if (jform.hotlinks.options[jform.hotlinks.selectedIndex].value == 'novalue'){
+            return false;
+        }
+     }
+
+ 
+// MENU COLOR VARIABLE
+var menuColor = "#ffffff"
+
+//PRECACHE IMAGES HERE
+function LoadImgs(){
+  if (document.images) {
+  image1 = new Image(); image1.src = "spacer.jpg";
+  image2 = new Image(); image2.src = "dot-spin.gif";
+  btn0 = new Image(); btn0.src="blue-ball.gif"; btn1 = new Image(); btn1.src="pink-ball.gif";  btn3 = new Image();
+
+ loaded = 1
+  }
+ }
+
+// LAYER SWITCHING CODE
+if (NS4 || IE4) {
+ if (navigator.appName == "Netscape") {
+  layerStyleRef="layer.";
+  layerRef="document.layers";
+  styleSwitch="";
+  }else{
+  layerStyleRef="layer.style.";
+  layerRef="document.all";
+  styleSwitch=".style";
+ }
+}
+  
+// SHOW MENU
+function showLayer(layerName){
+if (NS4 || IE4) {
+ if (timeOn != null) {
+  clearTimeout(timeOn)
+  hideLayer(onLayer)
+ }
+ if (NS4 || IE4) {
+  eval(layerRef+'["'+layerName+'"]'+styleSwitch+'.visibility="visible"');
+ }   
+ onLayer = layerName
+ }
+}
+
+//BUTTON ROLLOVER
+function change(Name, No) {
+ if (document.images && (loaded == 1)) {
+   document [Name].src = eval(Name + No + ".src");
+  }
+ return true
+}
+
+//SWAP IMAGE
+function swapImg(imgName,imgPic){
+ if (NS4 || IE4){
+   document[imgName].src = eval(imgPic + ".src")
+ }
+}
+
+// HIDE MENU
+function hideLayer(layerName){
+ if (menuActive == 0) {
+  if (NS4 || IE4) {
+   eval(layerRef+'["'+layerName+'"]'+styleSwitch+'.visibility="hidden"');
+  }
+ }
+}
+
+// TIMER FOR BUTTON MOUSE OUT
+function btnTimer() {
+ timeOn = setTimeout("btnOut()",1000)
+}
+
+// BUTTON MOUSE OUT
+function btnOut(layerName) {
+ if (menuActive == 0) {
+  hideLayer(onLayer)
+  }
+}
+
+// MENU MOUSE OVER  
+function menuOver(itemName) {
+ clearTimeout(timeOn)
+ menuActive = 1
+ if (NS4 || IE4) {
+  if (NS4) {
+    document[onLayer].document.images[itemName].src = image2.src
+ } else {
+     document.all[itemName].src = image2.src
+ }
+ }
+}
+
+// MENU MOUSE OUT 
+function menuOut(itemName) {
+ menuActive = 0 
+  if (NS4 || IE4) {
+  if (NS4) {
+    document[onLayer].document.images[itemName].src = image1.src
+  } else {
+     document.all[itemName].src = image1.src
+  }
+  }
+  timeOn = setTimeout("hideLayer(onLayer)", 400)
+ }
+
+// Creates menu object
+function menuLink(title, url) {
+ this.title = title
+ this.url = url
+}
+
+// Builds menu table
+function menuMaker(menuArray) {
+ n = ""
+ j = eval(menuArray + ".length") - 1;
+ topTable = "<div ID='" + eval(menuArray + ".id") + "'><table  border='2' cellspacing='0' cellpadding='2' bgcolor='" + menuColor +"' bordercolor='#808080' bordercolorlight='#C0C0C0' bordercolordark='#000000'><tr><td><table border='0' cellspacing='0' cellpadding='0' bgcolor='" + menuColor + "'>"
+ endrow = "</td></tr>"
+ btmTable = "</table></td></tr></table></div>"
+ 
+ n += topTable
+ for( var i = 0; i <=j; i++) {
+  bgnrow = "<tr><td><img src='spacer.jpg' width=15 height=15 alt='' border='0' name='" + eval(menuArray + ".imgname") + i + "'></td><td>";
+  n += bgnrow + "<a href='" + eval(menuArray + "[" + i + "].url") + "' onMouseOver='menuOver(\"" + eval(menuArray + ".imgname") + i + "\")' onMouseOut='menuOut(\"" + eval(menuArray + ".imgname") + i + "\")' class='menus'>" + eval(menuArray + "[" + i + "].title") + "</a>" + endrow
+ }
+ n += btmTable
+ return n
+}
+
+//Menu Arrays
+Array.prototype.id = "kedahMenu"
+Array.prototype.imgname = "kd"
+
+kdMenu = new Array(2)
+kdMenu[0] = new menuLink("Versi Bahasa Malaysia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;", "http://www2.kedah.gov.my/bm/mukadimahfra.htm")
+kdMenu[1] = new menuLink("English Version&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;", "http://www.kedah.gov.my/ovframe.htm")
+
+msMenu = new Array(3)
+msMenu.id = "masjidMenu"
+msMenu.imgname = "ms"
+msMenu[0] = new menuLink("Halaman Masjid&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;", "http://www2.kedah.gov.my/masjid/index.htm")
+msMenu[1] = new menuLink("Satu Bulan Satu Masjid&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;", "http://www2.kedah.gov.my/1b1m/index.htm")
+msMenu[2] = new menuLink("Fatwa Kedah&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;", "http://www2.kedah.gov.my/mufti/sifat.htm")
+
+
+adMenu = new Array(2)
+adMenu.id = "aduanMenu"
+adMenu.imgname = "ad"
+adMenu[0] = new menuLink("Halaman Aduan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;", "http://www2.kedah.gov.my/psuk/cetusan.htm")
+adMenu[1] = new menuLink("Semakan Aduan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;", "http://www2.kedah.gov.my/psuk/semak.htm")
+
+pkMenu = new Array(1) 
+pkMenu.id = "pekerjaanMenu"
+pkMenu.imgname = "pk"
+//pkMenu[0] = new menuLink("Halaman Jabatan Tenaga Rakyat<br>Negeri Kedah Darul Aman", "")
+pkMenu[0] = new menuLink("Halaman Jabatan Tenaga Rakyat<br>Negeri Kedah Darul Aman&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;", "http://www.kedah.gov.my/jtr/index.htm")
+
+
+prMenu = new Array(1)
+prMenu.id = "perumahanMenu"
+prMenu.imgname = "pr"
+prMenu[0] = new menuLink("Halaman Cawangan Perumahan,<br>Pejabat Setiausaha Kerajaan Negeri Kedah", "http://www2.kedah.gov.my/inforumah/mukadepan2.html")
+
+plMenu = new Array(1)
+plMenu.id = "pelanconganMenu"
+plMenu.imgname = "pl"
+plMenu[0] = new menuLink("Destinasi Menarik<br>Di Negeri Jelapang Padi", "http://www2.kedah.gov.my/bm/pelancungan.htm")
+
+pnMenu = new Array(2)
+pnMenu.id = "penerbitanMenu"
+pnMenu.imgname = "pn"
+pnMenu[0] = new menuLink("Warta Darul Aman", "http://www2.kedah.gov.my/warta/index.htm")
+pnMenu[1] = new menuLink("Buletin MKJR", "http://www2.kedah.gov.my/mkjr/index.htm")
+
+jaMenu = new Array(3)
+jaMenu.id = "jabatanMenu"
+jaMenu.imgname = "ja"
+jaMenu[0] = new menuLink("Halaman Jabatan Kerajaan Negeri Kedah", "http://www2.kedah.gov.my/jabkedah/induk/index.htm")
+jaMenu[1] = new menuLink("Pejabat Setiausaha Kerajaan Negeri Kedah", "http://www2.kedah.gov.my/sukweb/utama.htm")
+jaMenu[2] = new menuLink("Unit Perancang Ekonomi Negeri Kedah", "http://www2.kedah.gov.my/upen/index.htm")
+
+
+//-->
+
+</script>
+
+
+<body topmargin="0" onload="LoadImgs()" marginheight="0" marginwidth="0" leftmargin="0"
+topmargin="0" text="#000080" alink="#FF00FF" vlink="#008080" bgproperties="fixed"
+link="#000080">
+<script language="JavaScript1.2">
+<!--
+document.write(menuMaker("kdMenu"))
+document.write(menuMaker("msMenu"))
+document.write(menuMaker("adMenu"))
+document.write(menuMaker("pkMenu"))
+document.write(menuMaker("prMenu"))
+document.write(menuMaker("plMenu"))
+document.write(menuMaker("pnMenu"))
+document.write(menuMaker("jaMenu"))//-->
+</script>
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; </p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; 0wn3d by McM4nus...Brazil Rulez......mcm4nus@programmer.net</p>
+</body>
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <title>Map Link</title>
+<SCRIPT LANGUAGE = "JavaScript">
+
+
+      <!--
+      conBrowser=0;
+      function display (stuff) { window.status = stuff; }  
+      //-->
+</SCRIPT>
+
+<SCRIPT LANGUAGE = "JavaScript1.1">
+
+         <!--    
+         conBrowser=1;
+         button1_on  = new Image(110,22); button1_on.src  = 'images/homeb.gif';
+         button1_off = new Image(110,22); button1_off.src = 'images/home.gif';
+		 button2_on  = new Image(110,22); button2_on.src  = 'images/maplinkb.gif';
+         button2_off = new Image(110,22); button2_off.src = 'images/maplink.gif';
+		 button3_on  = new Image(110,22); button3_on.src  = 'images/quesb.gif';
+         button3_off = new Image(110,22); button3_off.src = 'images/ques.gif';
+		 button4_on  = new Image(110,22); button4_on.src  = 'images/descripb.gif';
+         button4_off = new Image(110,22); button4_off.src = 'images/descrip.gif';
+		 button5_on  = new Image(110,22); button5_on.src  = 'images/mlcodeb.gif';
+         button5_off = new Image(110,22); button5_off.src = 'images/mlcode.gif';
+		 button6_on  = new Image(110,22); button6_on.src  = 'images/wildb.gif';
+         button6_off = new Image(110,22); button6_off.src = 'images/wild.gif';
+		 button7_on  = new Image(110,22); button7_on.src  = 'images/isbnb.gif';
+         button7_off = new Image(110,22); button7_off.src = 'images/isbn.gif';
+		 button8_on  = new Image(110,22); button8_on.src  = 'images/usgsb.gif';
+		 button8_off = new Image(110,22); button8_off.src = 'images/usgs.gif';
+        
+         //-->
+</SCRIPT>
+
+<SCRIPT LANGUAGE = "JavaScript">
+        <!--  
+        function HighLight(button_num) {
+              if (conBrowser) 
+              {
+               button_navn = eval(button_num + "_on");
+               document [button_num].src = button_navn.src;
+                }
+        }
+
+       function UndoHighLight(button_num) {
+        if (conBrowser) {
+                button_navn = eval(button_num + "_off");
+                document [button_num].src = button_navn.src;
+                }
+        }
+       //-->
+
+
+</SCRIPT>
+
+</head>
+<body link="#0c3f7f" alink="#990000" bgcolor="#596db8" border="0"
+leftmargin="3">
+<table cellpadding="0" cellspacing="0" >
+    <tr valign="top">
+        <td width ="16">
+		    <img src="images/filler.gif" width="16"><br>
+		</td> 
+		 <td valign="center" align="left" width="154">
+            <!--the ml tool bar-->
+	                  
+          <img src="images/filler.gif" height="5"><br>
+          
+            <A HREF="other.html" target="MainCol" onMouseover="HighLight('button1'); display('Home'); return true;" onMouseout="UndoHighLight('button1'); display('');">
+                    <img src="images/home.gif" border=0 name="button1" width="110" height="22" alt="Home"></a><BR>
+            <A HREF="aboutml.html" target="MainCol" onMouseover="HighLight('button2'); display('About Map Link'); return true;" onMouseout="UndoHighLight('button2'); display('');">
+                    <img src="images/maplink.gif" border=0 name="button2" width="110" height="22" alt="About Map Link"></a><BR>
+     
+            <A HREF="ques.html" target="MainCol" onMouseover="HighLight('button3'); display('Questions'); return true;" onMouseout="UndoHighLight('button3'); display('');">
+                    <img src="images/ques.gif" border=0 name="button3" width="110" height="22" alt="Questions"></a><BR>
+           
+		    <img src="images/filler.gif" height="15"><br>
+			<h5 align="center">SEARCH BY:</h5>
+			<A HREF="http://catalog.maplink.com/sframe.html" target="MainCol" onMouseover="HighLight('button4'); display('Description'); return true;" onMouseout="UndoHighLight('button4'); display('');">
+                    <img src="images/descrip.gif" border=0 name="button4" width="110" height="22" alt="Description"></a><BR>
+            <A HREF="http://catalog.maplink.com/pframe.html" target="MainCol" onMouseover="HighLight('button5'); display('Map Link Code'); return true;" onMouseout="UndoHighLight('button5'); display('');">
+                    <img src="images/mlcode.gif" border=0 name="button5" width="110" height="22" alt="ML Code"></a><BR>
+     
+            <A HREF="http://catalog.maplink.com/wframe.html" target="MainCol" onMouseover="HighLight('button6'); display('Wildcard'); return true;" onMouseout="UndoHighLight('button6'); display('');">
+                    <img src="images/wild.gif" border=0 name="button6" width="110" height="22" alt="Wildcard ML Code"></a><BR>
+            <A HREF="http://catalog.maplink.com/bframe.html" target="MainCol" onMouseover="HighLight('button7'); display('ISBN'); return true;" onMouseout="UndoHighLight('button7'); display('');">
+                    <img src="images/isbn.gif" border=0 name="button7" width="110" height="22" alt="ISBN Number"></a><BR>
+            <A HREF="http://catalog.maplink.com/pframeT.html" target="MainCol" onMouseover="HighLight('button8'); display('USGS'); return true;" onMouseout="UndoHighLight('button8'); display('');">
+                    <img src="images/usgs.gif" border=0 name="button8" width="110" height="22" alt="USGS"></a><BR>
+		    			        
+        </td>
+    
+       
+                     
+   </tr>
+            
+</table>  
+ 
+
+
+</body>
+</html>

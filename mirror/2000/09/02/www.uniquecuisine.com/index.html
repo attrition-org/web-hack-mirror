@@ -1,0 +1,128 @@
+<html>
+<head>
+</head>
+<BODY BGCOLOR="#000000" VLINK="#ffffff" TEXT="236b8e" LINK="#ffffff">
+
+<SCRIPT language=JavaScript1.2>
+<!--
+
+var message='Owned by Hackah Jak';
+var messagecolor='#ffffff'
+
+//Enter number of seconds for message to display  (0=perpetual)
+var dismissafter=0
+
+///no need to edit below/////////
+var amount=5,ypos=0,xpos=0,Ay=0,Ax=0,By=0,Bx=0,Cy=0,Cx=0,Dy=0,Dx=0,Ey=0,Ex=0;
+if (document.layers){
+for (i = 0; i < amount; i++)
+{document.write('<layer name=ns'+i+' top=0 left=0><font face="Courier New" size=3 color='+messagecolor+'>'+message+'</font></layer>')}
+window.captureEvents(Event.MOUSEMOVE);
+function nsmouse(evnt){xpos = evnt.pageX;ypos = evnt.pageY;makefollow()}
+}
+else if (document.all){
+document.write("<div id='outer' style='position:absolute;top:0px;left:0px'>");
+document.write("<div id='inner' style='position:relative'>");
+for (i = 0; i < amount; i++)
+{document.write('<div id="text"'+i+' style="position:absolute;top:0px;left:0px;font-family:Courier New;font-size:16px;color:'+messagecolor+'">'+message+'</div>')}
+document.write("</div>");
+document.write("</div>");
+function iemouse(){ypos = document.body.scrollTop + event.y;xpos = document.body.scrollLeft + event.x;makefollow()}
+}
+function makefollow(){
+if (document.layers){
+document.layers["ns0"].top=ay;document.layers["ns0"].left=ax;
+document.layers["ns1"].top=by;document.layers["ns1"].left=bx;
+document.layers["ns2"].top=cy;document.layers["ns2"].left=cx;
+document.layers["ns3"].top=Dy;document.layers["ns3"].left=Dx;
+document.layers["ns4"].top=Ey;document.layers["ns4"].left=Ex;
+}
+else if (document.all){
+outer.all.inner.all[0].style.pixelTop=ay;outer.all.inner.all[0].style.pixelLeft=ax;
+outer.all.inner.all[1].style.pixelTop=by;outer.all.inner.all[1].style.pixelLeft=bx;
+outer.all.inner.all[2].style.pixelTop=cy;outer.all.inner.all[2].style.pixelLeft=cx;
+outer.all.inner.all[3].style.pixelTop=Dy;outer.all.inner.all[3].style.pixelLeft=Dx;
+outer.all.inner.all[4].style.pixelTop=Ey;outer.all.inner.all[4].style.pixelLeft=Ex;
+}
+}
+function move(){
+if (dismissafter!=0)
+setTimeout("hidetrail()",dismissafter*1000)
+
+if (document.layers){window.onMouseMove = nsmouse}
+else if (document.all){window.document.onmousemove = iemouse}
+ey = Math.round(Ey+=((ypos+20)-Ey)*2/2);ex = Math.round(Ex+=((xpos+20)-Ex)*2/2);
+dy = Math.round(Dy+=(ey - Dy)*2/4);dx = Math.round(Dx+=(ex - Dx)*2/4);
+cy = Math.round(Cy+=(dy - Cy)*2/6);cx = Math.round(Cx+=(dx - Cx)*2/6);
+by = Math.round(By+=(cy - By)*2/8);bx = Math.round(Bx+=(cx - Bx)*2/8);
+ay = Math.round(Ay+= (by - Ay)*2/10);ax = Math.round(Ax+= (bx - Ax)*2/10);
+makefollow();
+jumpstart=setTimeout('move()',10);
+}
+
+function hidetrail(){
+if (document.all){
+for (i2=0;i2<amount;i2++){
+outer.all.inner.all[i2].style.visibility="hidden"
+clearTimeout(jumpstart)
+}
+}
+else if (document.layers){
+for (i2=0;i2<amount;i2++){
+temp="ns"+i2
+document.layers[temp].visibility="hide"
+clearTimeout(jumpstart)
+}
+}
+}
+
+window.onload=move;
+//-->
+</SCRIPT>
+
+<p>
+<br>
+<center>j00 got 0wned bah, Hackah Jak</center>
+<br>
+<br>
+unique  a : Being without a like or equal; unmatched; unequaled; unparalleled; single in kind or excellence; sole.<br>
+cuisine n : the practice or manner of preparing food<br>
+<br>
+---Note From Hacker---
+Ok, well, the only reasion I am defaceing this site is because I want some gawd daym food! And I went to order a pizza and no where delivers to where I live! Now, What is the deal with this?<br>
+Here is how the call went...<br>
+<br>
+*RING*<br>
+*RING*<br>
+Thank you for calling Pappa John's we are helping other customers, your call will be answered in the order that it was recived.<br>
+*WAIT* (10 mins.) Then...<br>
+---<br>
+(Worker) Thank you for calling Pappa John's, would you like to try our special?<br>
+(Jak) Nah, thats ok... I would just like a large pizza, with: Tomatoes, Bananna Peppers, Pepperoni, Sauage.<br>
+(Jak) Also miss, I have a discount card, for a large pizza for only $9.99.<br>
+(Worker) Alright, I have a large pizza, with the 4 topping for $9.99, is that correct?<br>
+(Jak) Yes. <br>
+(Worker) Will this be for pick up or delivery? <br>
+(Jak) uhhh delivery! <br>
+(Workser) That will be no problem, can I just get your address? <br>
+(Jak) Sure, its Jak at ************. (Of course I'm not puttin mah addy on here... mmk? heh)<br>
+(Worker) Sir, I'm sorry, the computer shows that we don't deliver to your area, if you would like, I could put it in for pick up.<br>
+(Jak) Listen, I am sitting at home naked, is my dong hangin here... I don't want to leave my house, could you just please have someone drop it off to me, I will give them a nice tip.<br>
+(Worker) Excuse me?<br>
+(Jak) What I'm tryin to say here is I don't want to pick the mother fucker up, now have someone deliver the fuckin thing!<br>
+(Worker) Maybe you should call Pizza Hut or somewhere else.<br>
+(Jak) I did, they told me to call here.<br>
+(Worker) Good bye sir<br>
+(Jak) Bitch, don't you fuckin hang.... *CLICK*<br>
+*HANGS UP THE PHONE*<br>
+<br>
+Yeah she was a bitch... grrr and i am still in need of food... heh<br>
+<br>
+<center>Greets to: aircop, tNc, Hackwiser,<br>
+rmac, #blacksun, and my borhter devil-c<br>
+scroll, doctah, opticmyst, pogo, da^bomb</center><br>
+</p>
+
+</body>
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

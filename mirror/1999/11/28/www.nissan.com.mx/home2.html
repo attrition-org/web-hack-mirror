@@ -1,0 +1,150 @@
+<html>
+<head>
+<title>Bienvenidos a Nissan Mexicana</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<SCRIPT LANGUAGE = "JavaScript">
+<!--
+// Written by Mauricio Pfeiffer - Cacto Arte e Ideas - http://www.cacto.com.mx
+<!--
+
+bName = navigator.appName;
+bVer = parseInt(navigator.appVersion);
+    if ((bName == "Netscape" && bVer >= 3) || 
+        (bName == "Microsoft Internet Explorer" && bVer >= 4)) br = "n3"; 
+    else br = "n2";
+    
+    if (br== "n3") {
+    img1on = new Image();          
+    img1on.src = "images/home/botnissan_on.gif";
+    img2on = new Image();          
+    img2on.src = "images/home/botvehiculos_on.gif";  
+    img3on = new Image();          
+    img3on.src = "images/home/botservicio_on.gif"; 
+    img4on = new Image();          
+    img4on.src = "images/home/botrefac_on.gif";        
+    img5on = new Image();          
+    img5on.src = "images/home/botred_on.gif";  
+
+    img1off = new Image();         
+    img1off.src = "images/home/botnissan_off.gif"; 
+    img2off = new Image();         
+    img2off.src = "images/home/botvehiculos_off.gif"; 
+    img3off = new Image();         
+    img3off.src = "images/home/botservicio_off.gif"; 
+    img4off = new Image();          
+    img4off.src = "images/home/botrefac_off.gif";       
+    img5off = new Image();          
+    img5off.src = "images/home/botred_off.gif";  
+
+    img1ad = new Image();         
+    img1ad.src = "images/home/home_nissan.gif"; 
+    img2ad = new Image();         
+    img2ad.src = "images/home/home_vehiculos.gif"; 
+    img3ad = new Image();         
+    img3ad.src = "images/home/home_servicio.gif"; 
+    img4ad = new Image();         
+    img4ad.src = "images/home/home_refacciones.gif"; 
+    img5ad = new Image();         
+    img5ad.src = "images/home/home_red.gif";
+ 
+          
+
+    }
+
+function imgAct(imgName) {
+    if (br== "n3") {
+    document[imgName].src = eval(imgName + "on.src");
+    document["holder"].src = eval(imgName + "ad.src");
+    }
+}
+
+function imgInact(imgName) {
+    if (br== "n3") {
+    document[imgName].src = eval(imgName + "off.src");
+    document["holder"].src = "images/home/home04.gif";
+    }
+}
+
+// -->
+
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</SCRIPT>
+</head>
+
+<body bgcolor="#FFFFFF" link="#0000FF" vlink="#009999">
+<div align="center">
+  <table width="487" border="0" cellspacing="0" cellpadding="0">
+    <tr align="left" valign="top"> 
+      <td width="92"><a href="nissan/index.html" onMouseOver = "imgAct('img1')" onMouseOut = "imgInact('img1')"><img src="images/home/botnissan_off.gif" width="107" height="78" name="img1" border="0" alt="Nissan en M&eacute;xico"></a></td>
+      <td width="77" rowspan="5"><img src="images/home/home01.gif" width="77" height="330" alt="Imagen 01"></td>
+      <td colspan="2"><img src="images/home/home02.gif" width="421" height="78" alt="Tecnolog&iacute;a, calidad, elegancia, seguridad..."></td>
+    </tr>
+    <tr align="left" valign="top"> 
+      <td width="92"><a href="vehiculos/index.html" onMouseOver = "imgAct('img2')" onMouseOut = "imgInact('img2')"><img src="images/home/botvehiculos_off.gif" width="107" height="43" name="img2" border="0" alt="Vehiculos"></a></td>
+      <td width="111" rowspan="3"><img src="images/home/home03.gif" width="111" height="161" alt="Imagen 02"></td>
+      <td width="321" rowspan="3"><img src="images/home/home04.gif" width="310" height="161" alt="En Nissan compartimos tus valores" name="holder"></td>
+    </tr>
+    <tr align="left" valign="top"> 
+      <td width="92"><a href="servicio/index.html" onMouseOver = "imgAct('img3')" onMouseOut = "imgInact('img3')"><img src="images/home/botservicio_off.gif" width="107" height="54" name="img3" border="0" alt="Servicio"></a></td>
+    </tr>
+    <tr align="left" valign="top"> 
+      <td width="92"><a href="refacciones/index.html" onMouseOver = "imgAct('img4')" onMouseOut = "imgInact('img4')"><img src="images/home/botrefac_off.gif" width="107" height="64" name="img4" border="0" alt="Refacciones"></a></td>
+    </tr>
+    <tr align="left" valign="top"> 
+      <td width="92"><a href="red/index.html" onMouseOver = "imgAct('img5')" onMouseOut = "imgInact('img5')"><img src="images/home/botred_off.gif" width="107" height="91" name="img5" border="0" alt="Distribuidores"></a></td>
+      <td colspan="2"><img src="images/home/home05.gif" width="421" height="91" alt="Altima"></td>
+    </tr>
+  </table>
+  <br>
+  <table width="600" border="0" cellspacing="4" cellpadding="0">
+    <tr align="center" valign="middle" bgcolor="#6666FF"> 
+      <td width="431" height="11"> <font size="3" face="Verdana, Arial, Helvetica, sans-serif" color="#FFFFFF"><b><font size="-1">Acceso 
+        &nbsp;Directo &nbsp;Autom&oacute;viles&nbsp; y&nbsp; otros&nbsp; sitios&nbsp; 
+        de &nbsp;Nissan&nbsp; en &nbsp;el&nbsp; Mundo</font></b></font></td>
+      <td width="157" height="11"> 
+        <form method="post" action="">
+          <script language=JavaScript>
+<!--
+function GoProd(s)
+{       var d = s.options[s.selectedIndex].value;
+window.open(d, TARGET='_top');s.selectedIndex=0;
+}
+//-->
+</script>
+          <select name=selection onChange=GoProd(this); language=JavaScript>
+            <option value="tsuru/index.html">Tsuru</option>
+            <option value="tsubame/index.html">Tsubame</option>
+            <option value="sentra/index.html">Sentra</option>
+            <option value="lucino/index.html">Lucino</option>
+            <option value="altima/index.html">Altima</option>
+            <option value="maxima/index.html">Maxima</option>
+            <option value="infiniti_i30/index.html">Infiniti I30</option>
+            <option value="infiniti_q45/index.html">infiniti Q45</option>
+            <option value="quest/index.html">Quest</option>
+            <option value="pathfinder/index.html">Pathfinder</option>
+            <option value="camiones/index.html">Camiones Nissan</option>
+            <option value="king_cab/index.html">King Cab</option>
+            <option value="nissan/index.html">Nissan en M&eacute;xico</option>
+            <option value="vehiculos/index.html">Autos</option>
+            <option value="servicio/index.html">Servicio</option>
+            <option value="refacciones/index.html">Refacciones</option>
+            <option value="red/index.html">Red de Distribuidores</option>
+            <option value="http://www.nissan.co.jp">Nissan Jap&oacute;n</option>
+            <option value="http://208.240.153.42/">Nissan USA</option>
+            <option value="http://www.nissan.be">Nissan B&eacute;lgica</option>
+            <option value="#" selected>Elija una opci&oacute;n</option>
+          </select>
+        </form>
+      </td>
+    </tr>
+  </table><p>&nbsp;</p><p><font face="Helvetica, Arial, sans-serif" size="-1"><b><font color="#3333FF">Este 
+    sitio se ve mejor con navegadores versi&oacute;n 4.0 &oacute; superior<br>
+    l <a href="http://www.microsoft.com/windows/Ie/Download/default.asp">Explorer 
+    4.0</a> l <a href="http://home.netscape.com/computing/download/index.html?cp=hom03prt1">Netscape 
+    4.0</a> l </font></b></font></p>
+</div>
+</body>
+</html>

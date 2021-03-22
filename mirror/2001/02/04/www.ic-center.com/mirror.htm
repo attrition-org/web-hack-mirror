@@ -1,0 +1,398 @@
+<html>
+<head> 
+<title>欢迎进入电子元件世界！！！</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css"><!--
+-->
+</style>
+<style type="text/css">
+<--
+a{font-style:normal;text-decoration:none;font-size:10pt}
+a:hover {font-style:normal;text-decoration:underline;font-size:10pt}
+a:active {font-style:normal;text-decoration:underline;font-size:10pt}
+-->
+</style>
+<!--SCRIPT>
+window.open("pop/1231.htm","NewWindow","toolbar=no,location=no,directories=no,status=no,manubar=no,scrollbars=no,resizable=no,copyhistory=yes,width=490,height=470")
+</SCRIPT-->
+</head>
+<body bgcolor="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="">
+<script language="VBScript" RunAt="Server">   
+Function GetCounterFilename()   
+   
+	Dim FullPath,PointPosition   
+   
+	FullPath = Request.ServerVariables("PATH_TRANSLATED")   
+	PointPosition = InStrRev(FullPath,".")   
+	GetCounterFilename = Mid(FullPath,1,PointPosition) & "cnt"   
+   
+End Function   
+   
+</script>   
+ <font color="#ECFFFF">  
+<%  
+CounterFileName = GetCounterFilename()  
+  
+Set objFileSystem = CreateObject("Scripting.FileSystemObject")  
+On Error Resume Next  
+  
+Set objReadedTextFile = objFileSystem.OpenTextFile(CounterFileName,1,-1,0)  
+HitRate = objReadedTextFile.ReadLine  
+objReadedTextFile.Close  
+  
+HitRate = CLng(HitRate) + 1  
+  
+Set objWritedTextFile = objFileSystem.CreateTextFile(CounterFileName,-1,0)  
+objWritedTextFile.WriteLine HitRate  
+objWritedTextFile.Close  
+  
+%>  
+
+<table width="778" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr bgcolor="#FFCC00"> 
+    <td width="234"> 
+      <div align="right"><font size="2">今天是 
+        <script language="JavaScript">
+now = new Date();
+year = (now.getYear());
+month = (now.getMonth()+1);
+date = (now.getDate());
+day = (now.getDay());
+document.write(year + "年" + month + "月" + date + "日 " + "星期");
+if(day==0 || day ==6){
+document.write(("日一二三四五六".substring(day,day+1)).fontcolor("#000000"));
+}else{
+document.write("日一二三四五六".substring(day,day+1)+"<br>");
+} 
+</script>
+        </font></div>
+    </td>
+    <td width="488"> 
+      <div align="right"><font size="2"><a href="wangzhangzizuo.htm">网站制作</a>|<a href="tech-info/dianzi-chanpin.htm">技术资料</a>|<a href="gycj/Electronic%20Components%20and%20Semiconductors.htm">国外厂商</a>|<a href="zhan-hui.htm">展会预告</a>|<a href="link/link.htm">友情链接</a></font></div>
+    </td>
+    <td width="56" bgcolor="#FFCC00" align="center"> <a href="huiyuan/Login.Asp"><font size="2">会员特区</font></a> 
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="3"> 
+      <table width="778" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr>
+          <td><img src="image/logo.gif" width="74" height="74">&nbsp; <img border="0" src="image/ic-world.gif" width="168" height="74">&nbsp;&nbsp;     
+            <img border="0" src="image/logo1.gif" width="468" height="60"></td>                                                          
+        </tr>                                                          
+      </table>                                                          
+        </td>                                                          
+  </tr>                                                          
+  <tr bgcolor="#FFCC00">                                                           
+    <td colspan="3"> <font size="2"><a href="market/login.asp"><font color="#FF0000"><b>电子交易市场</b></font></a>|<font color="#0000FF"><a href="Asp/search.asp">查询信息</a>|<a href="BBS/technic.asp">技术论坛</a>|<a href="BBS/bridge.asp">供求桥</a>|<a href="BBS/sxsy.asp">畅所欲言</a>|<a href="huiyuan/checkin.asp">成为会员</a>|<a href="About_us.htm">网站简介</a>|<a href="contact-us.htm">联系我们</a>|<a href="Book/BookShop.asp">网上书店</a>|<a href="wd.htm" target="_blank">问                    
+      与 答</a>|<a href="E-homepage.htm">ENGLISH</a>                    
+      　　　　<a href="javascript:window.external.AddFavorite('http://ic-world.net',%20'电子元器件世界网')">加入收藏</a></font></font></td>
+  </tr>
+</table>
+<table width="778" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td width="53%" valign="top"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td><img src="image/ggl.gif" width="168" height="34" name="Image1"></td>
+        </tr>
+      </table>
+      <table border="0" cellspacing="0" cellpadding="0" bgcolor="#F0F0F0">
+        <font color="#ECFFFF"> 
+        <tr> 
+          <td width="0%"><img src="image/jiao3.gif" width="20" height="20" name="Image2"></td>
+          <td width="98%">　</td>
+          <td width="2%"><img src="image/jiao4.gif" width="20" height="20"></td>
+        </tr>
+        </font>
+        <tr><font color="#ECFFFF"> 
+          <td width="0%">　</td>
+          </font> 
+          <td width="98%"> 
+            <p style="line-height: 150%"></font><font size="2">□请大家注意，新节过后我们网站将进行软件硬件齐升级，可能会出现短暂地影响大家浏览，请大家谅解！<br>
+□敬请留意：《电子元器件》月刊2001年全面改版，欢迎广大读者朋友索取样刊，欢迎厂商发布产品信息。<br>□由西安恒信电子资讯有限责任公司制作的“国外集成电路命名方法”近期推出。请大家多关注我们的公告栏。(2001.1.6)<br>
+            <font size="2">□最近我们接到了很多有关“电子交易市场”方面好的建议，我在此谢谢大家对我们的关心。如果大家还有什么更好的建议，希望能来电话或来信告诉我们。谢谢！(2001.1.4)<br>
+              □<span style="letter-spacing: -1">今天我们的“电子交易市场”已经正式开通！（2001.1.1)</span><br>
+              □<a href="hzjggb/ggb.htm">我们在此特别感谢业内各届朋友、会员，尤其是......</a><br>
+              □由于前任各论坛版主对大不家不太负责，我们已全部更换。（2000.12.23)<br>
+              □目前英特公司推出了世界上最快最小的30纳米晶体管。(2000.12.12)</font></p>          
+          </font>          
+          </td>          
+          <td width="2%">&nbsp;</td>          
+        </tr>          
+        <tr>           
+          <td width="0%"><img src="image/jiao2.gif" width="20" height="20"></td>          
+          <td width="98%">           
+            <div align="right"><font size="2"><font color="#FF3333"><a href="hzjggb/ggb.htm">更多内容</a></font><img src="image/qqq.gif" width="20" height="15"></font></div>          
+          </td>          
+          <td width="2%"><img src="image/jiao1.gif" width="20" height="20"></td>          
+        </tr>          
+      </table>          
+    </td>                                             
+    <td width="1%">&nbsp;</td>                                             
+    <td width="46%">                                              
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">                                             
+        <tr>                                              
+          <td height="12">&nbsp; </td>                                             
+        </tr>                                             
+      </table>                                             
+      <table border="0" cellspacing="0" cellpadding="0" align="center">                 
+        <tr bgcolor="#6666FF">                  
+          <td bgcolor="#99CC66"><img src="image/jiao3.gif" width="20" height="20"></td>                 
+          <td bgcolor="#99CC66"><font color="#FFFFFF">电子交易市场</font></td>                 
+          <td bgcolor="#99CC66">                  
+            <div align="right"><img src="image/jiao4.gif" width="20" height="20"></div>                 
+          </td>                 
+        </tr>                 
+        <tr bgcolor="#339966">                  
+          <td colspan="3">                  
+            <form method="POST" action="market/login2.asp" style="margin : 5px 5px 5px 5px">            
+              <div align="center">                 
+                <p><font size="2">用户名:</font>                  
+                  <input type="text" name="username" size="14">                   
+                　<font size="2"><a href="market/showsell.asp">查看买方信息</a><br>    
+                  密&nbsp; 码:</font>     
+                  <input type="password" name="userpassword" size="14">                   
+                　<a href="market/showbuy.asp"><font size="2">查看卖方信息</font></a></p>    
+                <p>     
+                  <input type="submit" value="进入" name="B1">    
+                  　　　    
+<input type="button" value="注册" name="B2" onClick="market/zhuce.asp">    
+                  <script for="B2" event="onClick" language="VBScript">                                           
+              surl="market/zhuce.asp"                                           
+              config="toolbar=no,location=no,directories=no,status=no,menubar=no,width=450,height=400,scrollbars=yes,resizable=yes"                                                     
+              pop = window.open(surl,"pop",config)                                          
+     </script>    
+                </p>    
+              </div>    
+            </form>    
+          </td>    
+        </tr>    
+        <tr bgcolor="#99CC66">     
+          <td>&nbsp;</td>    
+          <td><font color="#FFFFFF">会员登录：</font></td>    
+          <td>&nbsp;</td>    
+        </tr>    
+        <tr bgcolor="#339966">     
+          <td colspan="3">    
+              
+            <form method="POST" name ="aaa"  action="huiyuan/Login.Asp" style="margin : 5px 5px 5px 5px">  
+              <div align="center"><font size="2">会员号或网名:</font>   
+                <input type="text" name="name" size="10">            
+                <font size="2">密码:</font>             
+                <input type="password" name="pass" size="10">            
+                &nbsp; <br>            
+                <input type="button" name="aa" value="登录">            
+                　　　             
+                <input type="submit" name="Submit2" value="注册">            
+                <script for="aa" event="onClick" language="VBScript">                                                      
+           if aaa.name.value="" and aaa.pass.value="" then                                                         
+              surl="asp/login.asp"                                                        
+              config="toolbar=no,location=no,directories=no,status=no,menubar=no,width=450,height=400,scrollbars=yes,resizable=yes"                                                                  
+              pop = window.open(surl,"pop",config)               
+              else               
+              'end if               
+              surl = "hzj.Asp?name=" & aaa.name.value & "&pass=" & aaa.pass.Value                                                                  
+              config="toolbar=no,location=no,directories=no,status=no,menubar=no,width=450,height=400,scrollbars=yes,resizable=yes"                                                                  
+              pop = window.open(surl,"pop",config)                                                                  
+              end if                
+          </script>            
+              </div>            
+            </form>                 
+          </td>                 
+        </tr>                 
+        <tr bgcolor="#FFFF33">                  
+          <td bgcolor="#99CC66">&nbsp;</td>                 
+          <td bgcolor="#99CC66"><font color="#FFFFFF">综合查询：</font>            
+          </td>                 
+          <td bgcolor="#99CC66">&nbsp;</td>                 
+        </tr>                 
+        <tr bgcolor="#339966">                  
+          <td colspan="3">                  
+            <form method="post" action="asp/shop.asp" style="margin : 5px 5px 5px 5px">            
+              <div align="center"><font size="2"><font color="#FFFFFF">输入名称查询厂商：</font>             
+                <input type="text" name="sname" size="10">            
+                <input type="submit" name="b1" value="查找">            
+                </font> </div>            
+            </form>                 
+            <form method="POST" action="asp/price.asp" style="margin : 5px 5px 5px 5px">            
+              <div align="center"><font color="#FFFFFF" size="2">输入型号查询价格：</font>             
+                <input type="text" name="pmodel" size="10">            
+                <input type="submit" name="b1" value="查找">            
+              </div>            
+            </form>                 
+            <form method="POST" action="asp/ic.asp" style="margin : 5px 5px 5px 5px">            
+              <div align="center"><font size="2" color="#FFFFFF">输入型号查询性能：</font>             
+                <input type="text" name="icmodel" size="10">            
+                <input type="submit" name="b1" value="查找">            
+              </div>            
+            </form>                 
+            <form method="POST" action="asp/shop.asp" style="margin : 5px 5px 5px 5px">            
+              <div align="center"><font size="2" color="#FFFFFF">输入厂商代号查询： </font>             
+                <input type="text" name="sid" size="10">            
+                <input type="submit" name="b1" value="查找">            
+              </div>            
+            </form>                 
+          </td>                 
+        </tr>                 
+        <tr bgcolor="#333399">                  
+          <td bgcolor="#339966"><img src="image/jiao2.gif" width="20" height="20"></td>                 
+          <td bgcolor="#339966">&nbsp; </td>                 
+          <td bgcolor="#339966">                  
+            <div align="right"><img src="image/jiao1.gif" width="20" height="20"></div>                 
+          </td>                 
+        </tr>                 
+      </table>                                                       
+    </td>                                                       
+  </tr>                                                       
+</table>                                                       
+<table width="778" border="0" cellspacing="0" cellpadding="0" align="center">                                                 
+  <tr>                                                        
+    <td colspan="2">&nbsp;</td>                                                       
+    <td width="209">&nbsp;</td>                                                       
+    <td colspan="2">&nbsp;</td>                                                       
+  </tr>                                                       
+  <tr>                                                        
+    <td width="39" height="18">&nbsp;<a href="wd.htm"><img src="image/Q_mark4.gif" width="32" height="32" border="0"></a></td>                                                       
+    <td width="160" height="18"><a href="wd.htm"><img src="image/wyd.GIF" width="82" height="25" border="0"></a></td>                                                       
+    <td width="209" height="18">&nbsp; </td>                                                       
+    <td width="32" height="18"><a href="Book/BookShop.asp"><img src="image/newspsp.gif" width="32" height="32" border="0"></a></td>                                                      
+    <td width="338" height="18"><a href="Book/BookShop.asp"><img src="image/book.GIF" width="137" height="25" border="0"></a></td>                                                      
+  </tr>                                                      
+  <tr>                                                       
+    <td width="39">&nbsp;</td>                                                      
+    <td colspan="2">                
+      <p><font size="2">1.<a href="wd.htm">有关“电子交易市场”的一些问题</a>。<br>               
+        2.<a href="wd1.htm">有关网站查询功能的一些问题</a>。<br>               
+        3.<a href="wd2.htm">如何在网站书店买书</a>？<br>               
+        4.如果您还有什么不太了解的地方请给我们发信。<br>               
+      　　Email:　<a href="mailto:service@ic-center.com">service@ic-center.com</a></font></p>       
+      <p align="right"><font size="2"><font color="#FF3333"><a href="wd.htm">更多内容</a></font><img src="image/qqq.gif" width="20" height="15"><br>       
+        </font></p>       
+    </td>          
+    <td width="32">&nbsp;</td>          
+    <td width="338">       
+      <p><font size="2">☆<a href="mailto:hzjjw@ic-center.com">电子报(2000)年合订本(上、下)册</a>　　  
+      　　35元　<br>      
+        ☆<a href="mailto:hzjjw@ic-center.com">家庭电子(2000)年合订本</a>　　　　　　  
+      　　35元　       
+        <br>      
+        ☆<a href="mailto:hzjjw@ic-center.com">电子电脑报(2000)年合订本(电脑版)</a>　  
+      　　22元<br>      
+        ☆<a href="mailto:hzjjw@ic-center.com">电子电脑报(2000)年合订本(电子版)</a>     
+      　　　22元<br>      
+        ☆<a href="mailto:hzjjw@ic-center.com">电子文摘报(2000)年合订本(上、下)册</a>     
+      　　35元</font></p>      
+      <p align="right"><font size="2"><font color="#FF3333"><a href="Book/BookShop.asp">更多内容</a></font><img src="image/qqq.gif" width="20" height="15">　　</font>       
+      </p>      
+    </td>             
+  </tr>             
+  <tr>              
+    <td width="39" height="17"><a href="zhan-hui.htm"><img src="image/Sound02.gif" width="32" height="29" border="0"></a></td>             
+    <td width="160" height="17"><a href="zhan-hui.htm"><img src="image/zhyg.gif" width="82" height="25" border="0"></a></td>             
+    <td width="209" height="17">&nbsp;</td>             
+    <td width="32" height="17"><a href="BBS/technic.asp"><img src="image/Mic.gif" width="31" height="34" border="0"></a></td>             
+    <td width="338" height="17"><a href="BBS/technic.asp"><img src="image/jslt.gif" width="82" height="25" border="0"></a></td>             
+  </tr>             
+  <tr>              
+    <td width="39">&nbsp;</td>             
+    <td colspan="2">       
+      <p><font size="2">1.第七届深圳国际电子设备、电子元器件展览会<br>      
+        2.国际工厂自动化与电子信息仪器仪表、计量测试设备展览会 <br>      
+        3.2001第三届中国工业自动化仪器仪表工业装备郑州展览会<br>      
+        4.2001东莞国际电子元器件及生产设备、仪器仪表展览会</font></p>      
+      <p align="right"><font size="2" color="#FF3333"><a href="zhan-hui.htm">更多内容</a><img src="image/qqq.gif" width="20" height="15">       
+        </font></p>          
+    </td>          
+    <td width="32">&nbsp;</td>          
+    <td width="338">       
+      <p>1.<font size="2">新的一年里，&quot;技术论坛&quot;版主向大家问好了，新年好！<br>      
+        2.如果有喜欢与我共同管理技术论坛的朋友请与我联系！<br>      
+      　<a href="mailto:iic@ic-center.com">iic@ic-center.com</a><br>      
+        3.我急需ISD2560的详细技术资料<br>      
+        4.求助BU2025AF的性能资料</font></p>      
+      <p align="right"><font size="2" color="#FF3333"><a href="BBS/technic.asp">更多内容</a><img src="image/qqq.gif" width="20" height="15">　　　</font></p>      
+      </td>          
+  </tr>          
+  <tr>           
+    <td width="39">&nbsp;</td>          
+    <td width="160">&nbsp;</td>          
+    <td width="209">&nbsp;</td>          
+    <td width="32">&nbsp;</td>          
+    <td width="338">&nbsp; </td>          
+  </tr>          
+  <tr>           
+    <td colspan="5">&nbsp; </td>          
+  </tr>          
+</table>          
+<table width="778" border="0" cellspacing="0" cellpadding="0" align="center">       
+  <tr>           
+    <td width="37%">           
+      <div align="center">相关媒体</div>          
+    </td>          
+    <td width="63%">           
+      <div align="center">友情链接</div>          
+    </td>          
+  </tr>          
+  <tr>           
+    <td width="37%">           
+      <div align="center">           
+        <hr width="100" align="center">          
+      </div>          
+    </td>          
+    <td width="63%">           
+      <div align="center">           
+        <hr width="100" align="center">          
+      </div>          
+    </td>          
+  </tr>          
+  <tr>       
+    <td width="37%">       
+      <blockquote>       
+        <p style="line-height: 150%"><font size="2"><a href="jtdz&dzwz/homeic/homeicindex.htm" target="_blank">家庭电子</a>　　　<a href="jtdz&dzwz/dzwzb/dzwzbindex.htm" target="_blank">电子文摘报</a><a href="d-z-d-n-b/d-z-d-n-b.htm" target="_blank"><br>      
+          </a><a href="z-zhong-qi/zhongqi.htm" target="_blank">中企信息</a>　　　<a href="z-dian_zi_yuan_qi_jian_shi_chang/shi_chang11.htm" target="_blank">电子元器件市场</a><a href="z-zhong-qi/zhongqi.htm" target="_blank"><br>      
+          </a><a href="d-z-d-n-b/d-z-d-n-b.htm" target="_blank">电子电脑报</a>　　<a href="http://www.edw.com.cn">电子产品世界</a><br>      
+          <a href="edw/edw1.htm">电子产品世界宣传页</a></font></p>      
+      </blockquote>      
+    </td>                                  
+    <td width="63%">                                
+      <p align="center" style="LINE-HEIGHT: 150%; MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px"><font size="2">|<a href="http://www.today-zhgc.com" target="_blank">北京中发电子市场</a>|<a href="http://www.hq-online.com" target="_blank">深圳华强电子世界</a>|<a href="http://www.eastelectronics.com/" target="_blank">东部电子信息</a>|<a href="http://www.elec-info.com" target="_blank">上海电子信息</a>|<a href="shenyang/shenyang.htm" target="_blank">沈阳电子市场</a>|<br>                               
+        <a href="daxi.htm" target="_blank">沈阳大西电子市场</a>|<a href="http://www.eata.com.cn/chinese/index.htm" target="_blank">欧亚贸易桥中文版</a>|<a href="http://www.jsdz.net/" target="_blank">江苏电子商情</a>|<a href="http://www.wee.com" target="_blank">世界电子商报</a>|<a href="http://www.21ic.com" target="_blank">中国电子网</a>|<br>      
+        <a href="http://www.ccid-mrd.com.cn/" target="_blank">中国半导体信息网</a>|<a href="http://www.chinasei.com/" target="_blank">四川电子信息网</a>|<a href="http://gzdzw.51.net" target="_blank">广州电子技术网</a>|<a href="http://www.segem.com.cn/" target="_blank">深圳赛格信息网</a>|<a href="http://www.ele-china.com" target="_blank">电子中国</a>|<br>                               
+        |<a href="http://www.elec-info.com" target="_blank">上海电子行业信息网</a>|<a href="http://www.ceiinet.gov.cn/" target="_blank">电子行业投资信息网</a>|<a href="http://www.chinaecom.com.cn/" target="_blank">电子元器件信息交易网</a>|<a href="http://www.sm-lamp.com" target="_blank">特种灯泡</a>|<br>                         
+      <a href="http://www.bjttc.com.cn">拓天丰</a></font>                              
+    </td>                                
+  </tr>                                
+  <tr>                         
+    <td width="100%" colspan="2">    
+      <p align="center"><a href="http://WWW.i689.com" target="_blank"><img border="0" src="link/image/i689logo.gif" width="100" height="30"></a>&nbsp;&nbsp;&nbsp;&nbsp;      
+      <a href="http://www.icminer.com" target="_blank"><img border="0" src="link/image/icminer.com.gif" width="100" height="30"></a>&nbsp;           
+        <a href="http://www.chinaedeal.com" target="_blank"><img border="0" src="link/image/chinaedeal.com.gif" width="100" height="30"></a>&nbsp;       
+      <a href="http://www.chinaicip.com" target="_blank"><img border="0" src="link/image/chinaicip.com.gif" width="100" height="30"></a>&nbsp;&nbsp;&nbsp;   
+      <a href="http://www.asell.com" target="_blank"><img border="0" src="link/image/asell.com.gif" width="88" height="31"></a>&nbsp;&nbsp;&nbsp;&nbsp;   
+      <a href="http://www.ecomponents.sinobnet.com" target="_blank"><img border="0" src="link/image/ecomponents.sinobnet.com.gif" width="88" height="31"></a>&nbsp;<br>  
+      &nbsp;          
+        <a href="http://www.find-ic.com" target="_blank"><img border="0" src="link/image/find-ic.com.gif" width="100" height="30"></a>&nbsp;           
+        <a href="http://www.china-assembly.com" target="_blank"><img border="0" src="link/image/logo.GIF" width="88" height="31"></a>&nbsp;&nbsp;      
+      <a href="http://www.56789.com" target="_blank"><img src="link/image/qjzx.gif" width="88" height="31" border="0" alt="器件在线"></a>&nbsp;&nbsp;     
+      <a href="http://www.jicheng.net.cn/" target="_blank"><img border="0" src="link/image/dflogo.gif" width="88" height="31"></a>&nbsp;&nbsp;    
+      <a href="http://www.go2north.com.cn" target="_blank"><img border="0" src="link/image/kbanner88.gif" width="88" height="31"></a>&nbsp;&nbsp;  
+      <a href="http://www.automation.com.cn"><img border="0" src="link/image/auto.gif" width="88" height="31"></a><br>    
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     
+    </td>                                
+  </tr>                         
+</table>                                
+<table width="778" border="0" cellspacing="0" cellpadding="0" align="center">                               
+  <tr bgcolor="#FFCC00">                                 
+    <td width="778"><font size="2"><a href="market/login.asp"><font color="#FF0000"><b>电子交易市场</b></font></a>|<font color="#0000FF"><a href="Asp/search.asp">查询信息</a>|<a href="BBS/technic.asp">技术论坛</a>|<a href="BBS/bridge.asp">供求桥</a>|<a href="BBS/sxsy.asp">畅所欲言</a>|<a href="huiyuan/checkin.asp">成为会员</a>|<a href="About_us.htm">网站简介</a>|<a href="contact-us.htm">联系我们</a>|<a href="Book/BookShop.asp">网上书店</a>|<a href="wd.htm">问     
+      与 答</a>|<a href="E-homepage.htm">ENGLISH</a>  　　　　<a href="javascript:window.external.AddFavorite('http://ic-world.net',%20'电子元器件世界网')">加入收藏</a></font></font></td>                            
+  </tr>                            
+</table>                            
+<p align="center"><font size="2" color="#000000">(C)版权所有：京创信达信息咨询有限公司<br>  
+  All right reserved 1999-2000<br>  
+  电子邮件： webmaster@ic-center.com 或 service@ic-center.com <br>  
+  电话(Tel)：(010)6237 0720，8201 1426<br>  
+  传真(Fax)：8201 1426 </font><font size="2"><br>  
+  </font><a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=0102000101200003" target="_blank"><img border="0" src="image/GONGSHANG.gif" width="30" height="36"></a></p>                                
+</body>                                
+</html>                                                 

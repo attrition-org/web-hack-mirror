@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<title>
+			::: 123INC ::: Consumer Car Buying Service & More !
+		</title>
+<script language="JavaScript">
+function act(imgName) 
+{
+        if (document.images) 
+        document[imgName].src = eval(imgName + 'on.src');
+}
+self.name = "big";
+function openRemote()
+{
+        conWin = window.open('remote.html', 'Remote', 'width=250,height=356,resizeable=no,status=no');
+        <!--conWin.opener.name = "bigWindow";-->
+        conWin.creator = self;
+        replaceMe();
+}
+function replaceMe()
+{
+        history.go(+1);
+}
+</script>
+	</head>
+	<body bgcolor="#666699" link="#FFFFCA" vlink="#FFFFCA" alink="Purple" topmargin="5">
+		<center>
+			<table border=0 cellspacing=0 cellpadding=4>
+				<tr>
+					<td width=334 nowrap>
+						<font size="2" face="Verdana,Arial,Geneva" color="#FFFFCA">
+							<a href="javascript:openRemote(); window.status='';">
+								<img src="images/123inc.gif" width=148 height=41 align=left vspace="6" border=0 alt="123INC">
+							</a>
+								" The ultimate automotive search engine & consumer car buying guide. "
+							<p>
+						<font size="2" face="Verdana,Arial,Geneva" color="#FFFFFF">
+								Welcome to 123INC. Our site is the most comprehensive Internet resource for consumer car buying services, news & information.
+							<p>
+								We have combined all the best search sites & automotive services into a simple to use web 'Remote'. Find it fast with 123INC!
+							<p>
+								<a href="javascript:openRemote(); window.status='';"><img src="images/i_car.gif" width=49 height=32 border=0 align="RIGHT" alt="Start Here"></a>
+								<img src="images/arrow_r.gif" width=6 height=8 border=0> <a href="javascript:openRemote(); window.status='';">Start Your Engines Here.</a>
+							<p>
+								<img src="images/white.gif" width=300 height=1 border=0 vspace=8><br>
+								<font face="Arial, Helvetica, sans-serif" color=#b1bad6 size="1">
+									©1999 123INC. All rights reserved.
+								</font>
+					</td>
+				</tr>
+			</table>
+		</center>
+	</body>
+</html>

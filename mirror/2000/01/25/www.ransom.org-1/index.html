@@ -1,0 +1,406 @@
+<html>
+
+<head>
+<title>RMH Home Page era uma hp bonita que pena agora não é mais!! =)</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+
+<script LANGUAGE="JavaScript" FPTYPE="dynamicanimation">
+<!--
+  // If you want to change this script, you must also make the following
+  // changes so that FrontPage will not overwrite your new script.
+  // In the script tag, change type="dynamicanimation" to type="mydynamicanimation"
+  // In the first script statement, change "dynamicanimation" to "mydynamicanimation"
+  // Throughout the HTML content, change dynamicanimation= to mydynamicanimation=
+  // Change function dynAnimation to function mydynAnimation
+  // In the body tag, change onload="dynAnimation()" to onload="mydynAnimation()"
+  dynamicanimAttr = "dynamicanimation"
+  animateElements = new Array()
+  currentElement = 0
+  speed = 0
+  stepsZoom = 8
+  stepsWord = 8
+  stepsFly = 12
+  stepsSpiral = 16
+  steps = stepsZoom
+  step = 0
+  outString = ""
+  function dynAnimation()
+  {
+    var ms = navigator.appVersion.indexOf("MSIE")
+    ie4 = (ms>0) && (parseInt(navigator.appVersion.substring(ms+5, ms+6)) >= 4)
+    if(!ie4)
+    {
+      if((navigator.appName == "Netscape") &&
+         (parseInt(navigator.appVersion.substring(0, 1)) >= 4))
+      {
+        for (index=document.layers.length-1; index >= 0; index--)
+        {
+            layer=document.layers[index]
+            if (layer.left==10000)
+                layer.left=0
+        }
+      }
+      return
+    }
+    for (index=document.all.length-1; index >= document.body.sourceIndex; index--)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if(null != animation)
+      {
+        if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        {
+          ih = el.innerHTML
+          outString = ""
+          i1 = 0
+          iend = ih.length
+          while(true)
+          {
+            i2 = startWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, false, "")
+            if(i2 == iend)
+              break
+            i1 = i2
+            i2 = endWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, true, animation)
+            if(i2 == iend)
+              break
+            i1 = i2
+          }
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+        if(animation == "zoomIn" || animation == "zoomOut")
+        {
+          ih = el.innerHTML
+          outString = "<SPAN " + dynamicanimAttr + "=\"" + animation + "\" style=\"position: relative; left: 10000;\">"
+          outString += ih
+          outString += "</SPAN>"
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+      }
+    }
+    i = 0
+    for (index=document.body.sourceIndex; index < document.all.length; index++)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if (null != animation)
+      {
+        if(animation == "flyLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyRight")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyTop" || animation == "dropWord")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottom")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyTopLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyTopRight" || animation == "flyTopRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottomLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyBottomRight" || animation == "flyBottomRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "spiral")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "zoomIn")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else if(animation == "zoomOut")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        el.initLeft = el.style.posLeft
+        el.initTop = el.style.posTop
+        animateElements[i++] = el
+      }
+    }
+    window.setTimeout("animate();", speed)
+  }
+  function offsetLeft(el)
+  {
+    x = el.offsetLeft
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      x += e.offsetLeft;
+    return x
+  } 
+  function offsetTop(el)
+  {
+    y = el.offsetTop
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      y += e.offsetTop;
+    return y
+  } 
+  function startWord(ih, i)
+  {
+    for(tag = false; i < ih.length; i++)
+    {
+      c = ih.charAt(i)
+      if(c == '<')
+        tag = true
+      if(!tag)
+        return i
+      if(c == '>')
+        tag = false
+    }
+    return -1
+  }
+  function endWord(ih, i)
+  {
+    nonSpace = false
+    space = false
+    while(i < ih.length)
+    {
+      c = ih.charAt(i)
+      if(c != ' ')
+        nonSpace = true
+      if(nonSpace && c == ' ')
+        space = true
+      if(c == '<')
+        return i
+      if(space && c != ' ')
+        return i
+      i++
+    }
+    return -1
+  }
+  function outWord(ih, i1, i2, dyn, anim)
+  {
+    if(dyn)
+      outString += "<SPAN " + dynamicanimAttr + "=\"" + anim + "\" style=\"position: relative; left: 10000;\">"
+    outString += ih.substring(i1, i2)
+    if(dyn)
+      outString += "</SPAN>"
+  }
+  function animate()
+  {
+    el = animateElements[currentElement]
+    animation = el.getAttribute(dynamicanimAttr, false)
+    step++
+    if(animation == "spiral")
+    {
+      steps = stepsSpiral
+      v = step/steps
+      rf = 1.0 - v
+      t = v * 2.0*Math.PI
+      rx = Math.max(Math.abs(el.initLeft), 200)
+      ry = Math.max(Math.abs(el.initTop),  200)
+      el.style.posLeft = Math.ceil(-rf*Math.cos(t)*rx)
+      el.style.posTop  = Math.ceil(-rf*Math.sin(t)*ry)
+    }
+    else if(animation == "zoomIn")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(50+50*step/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else if(animation == "zoomOut")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(100+200*(steps-step)/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else
+    {
+      steps = stepsFly
+      if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        steps = stepsWord
+      dl = el.initLeft / steps
+      dt = el.initTop  / steps
+      el.style.posLeft = el.style.posLeft - dl
+      el.style.posTop = el.style.posTop - dt
+    }
+    if (step >= steps) 
+    {
+      el.style.posLeft = 0
+      el.style.posTop = 0
+      currentElement++
+      step = 0
+    }
+    if(currentElement < animateElements.length)
+      window.setTimeout("animate();", speed)
+  }
+//-->
+</script><meta name="Microsoft Theme" content="none, default"></head>
+
+<body bgproperties="fixed" bgcolor="#FFFFFF" background="images/NewsRMHBackground.jpg" onload="dynAnimation()">
+
+<p align="center"><img src="Images/RMHheadingbar.GIF" alt="RMHheadingbar.GIF (19911 bytes)" WIDTH="701" HEIGHT="131"><marquee align="middle" bgcolor="#800000" border="0" style="color: rgb(255,255,255); text-decoration: none; text-align: left; vertical-align: middle" scrollamount="5" scrolldelay="200" width="610" height="19">There is a difference in hospitals. . . . . . . . . . . . . . . . . . .at Ransom Memorial it's one you can feel.</marquee></p>
+
+<p align="center"><img src="l0g03.jpg" alt="l0g03.jpg (14692 bytes)" WIDTH="646" HEIGHT="56"></p>
+
+<h2 align="center">E eu que pensava que as paginas grigas eram mais seguras , e me
+enganei!</h2>
+
+<h1 align="center"><img src="brasil.gif" alt="brasil.gif (32163 bytes)" WIDTH="132" HEIGHT="95"></h1>
+
+<h2 align="center"><font face="Times New Roman">B R A Z I L </font></h2>
+
+<h2 align="center"><font face="Times New Roman">R U LE Z</font></h2>
+
+<h4 align="center"><font face="Times New Roman">Hacked by</font></h4>
+
+<h3 align="center"><font face="Times New Roman">thekiller_ , BlacKcODe , FuckSpy =)</font></h3>
+
+<p align="center">&nbsp;</p>
+<div align="center"><center>
+
+<table border="0" width="629" height="61" cellspacing="0" cellpadding="3">
+  <tr>
+    <td width="1150" height="1" bgcolor="#800000" colspan="3"></td>
+  </tr>
+  <tr>
+    <td width="1201" valign="top" align="center" height="1" colspan="3"><img src="Departments/Patient%20Services/Inpatient%20Services/SDU%20New%20Arrivals/Images/baby_sq3.gif" alt="baby_sq3.gif (4726 bytes)" WIDTH="100" HEIGHT="100">&nbsp; <img src="Images/computer_sq3.gif" alt="computer_sq3.gif (4514 bytes)" WIDTH="100" HEIGHT="100"> &nbsp; <img src="Images/nurse_sq3.gif" alt="nurse_sq3.gif (5688 bytes)" WIDTH="100" HEIGHT="100">&nbsp; <img src="Images/phy_therapy3.gif" alt="phy_therapy3.gif (4693 bytes)" WIDTH="100" HEIGHT="100"></td>
+  </tr>
+  <tr>
+    <td width="1150" height="1" bgcolor="#800000" colspan="3"></td>
+  </tr>
+  <tr>
+    <td width="1201" valign="top" align="center" height="14" colspan="3"><font color="#000080"><p align="center">
+    <applet code="fphover.class" codebase="_fpclass/" width="89" height="24">
+      <param name="text" value="Information">
+      <param name="textcolor" value="#800000">
+      <param name="effect" value="reverseGlow">
+      <param name="url" value="Concerning%20RMH/Contents.htm#Information" valuetype="ref">
+      <param name="font" value="TimesRoman">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+      <param name="hovercolor" value="#800000">
+      <param name="color" value="#FFFFFF">
+    </applet>
+    <applet code="fphover.class" codebase="_fpclass/" width="92" height="24">
+      <param name="text" value="Employment">
+      <param name="color" value="#FFFFFF">
+      <param name="hovercolor" value="#800000">
+      <param name="textcolor" value="#800000">
+      <param name="effect" value="reverseGlow">
+      <param name="url" value="Concerning%20RMH/Contents.htm#Employment" valuetype="ref">
+      <param name="font" value="TimesRoman">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    <applet code="fphover.class" codebase="_fpclass/" width="82" height="24">
+      <param name="text" value="Services">
+      <param name="color" value="#FFFFFF">
+      <param name="hovercolor" value="#800000">
+      <param name="textcolor" value="#800000">
+      <param name="effect" value="reverseGlow">
+      <param name="url" value="Concerning%20RMH/Contents.htm#Services" valuetype="ref">
+      <param name="font" value="TimesRoman">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    <applet code="fphover.class" codebase="_fpclass/" width="87" height="24">
+      <param name="text" value="Location">
+      <param name="color" value="#FFFFFF">
+      <param name="hovercolor" value="#800000">
+      <param name="textcolor" value="#800000">
+      <param name="effect" value="reverseGlow">
+      <param name="url" value="Concerning%20RMH/Contents.htm#Location" valuetype="ref">
+      <param name="font" value="TimesRoman">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    <applet code="fphover.class" codebase="_fpclass/" width="88" height="24">
+      <param name="text" value="Education">
+      <param name="color" value="#FFFFFF">
+      <param name="hovercolor" value="#800000">
+      <param name="textcolor" value="#800000">
+      <param name="effect" value="reverseGlow">
+      <param name="url" value="Concerning%20RMH/Contents.htm#Education" valuetype="ref">
+      <param name="font" value="TimesRoman">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    <applet code="fphover.class" codebase="_fpclass/" width="85" height="24">
+      <param name="text" value="Directory">
+      <param name="color" value="#FFFFFF">
+      <param name="hovercolor" value="#800000">
+      <param name="textcolor" value="#800000">
+      <param name="effect" value="reverseGlow">
+      <param name="url" value="Concerning%20RMH/Contents.htm#Directory" valuetype="ref">
+      <param name="font" value="TimesRoman">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    a </font></td>
+  </tr>
+  <tr>
+    <td width="1150" height="1" bgcolor="#800000" colspan="3"></td>
+  </tr>
+  <tr>
+    <td width="577" height="61" valign="middle" align="left" dynamicanimation="dropWord" style="position: relative !important; left: 10000 !important"><small><strong><font color="#000080"><p align="center"></font></strong></small><a href="Departments/Patient%20Services/Inpatient%20Services/SDU%20New%20Arrivals/SDU_New_Arrivals.html"><img src="Departments/Patient%20Services/Inpatient%20Services/SDU%20New%20Arrivals/Images/Y2KBlocks2.jpg" width="104" height="89" alt="New Deliveries in the Year 2000" border="0"></a><br>
+    <a href="Departments/Patient%20Services/Inpatient%20Services/SDU%20New%20Arrivals/SDU_New_Arrivals.html"><small><font color="#000080"><strong>Special Deliveries Happen Here</strong></font></small></a></td>
+    <td width="449" height="61" valign="middle" align="center" background="images/balloonsWHT.gif"><strong><small><font color="#000080"><p align="center"></font></small><big><a href="Departments/Business/Business%20Development/WinterGala.html"><em><big>RMH Auxiliary<br>
+    Winter Benefit Gala</big></em></a></big></strong></p>
+    <p align="left">&nbsp;</td>
+    <td width="325" height="61" valign="middle" align="left"><p align="center"><a href="Departments/Business/Business%20Development/SupportRMHCA.html"><strong><font color="#000080"><img src="Departments/Business/Business%20Development/latte.jpg" width="113" height="80" alt="latte.jpg (76745 bytes)" border="0"></font><br>
+    <font color="#004080"><small>Support</small><br>
+    <small>Ransom Memorial</small><br>
+    <small>Hospital</small> <small>Charitable</small><br>
+    <small>Association</small></font></strong></a></td>
+  </tr>
+  <tr>
+    <td width="1150" height="1" bgcolor="#800000" colspan="3"></td>
+  </tr>
+  <tr>
+    <td width="1264" height="29" valign="middle" align="center" colspan="3"><a href="Departments/Performance%20Improvement/ptsurvey.htm"><img src="images/ButtonSwan.GIF" alt="You Are Important To Us" border="0" WIDTH="53" HEIGHT="30"></a> <a href="Departments/Performance%20Improvement/ptsurvey.htm">Patient Survey</a>
+    &nbsp;&nbsp;&nbsp; <a href="mailto:belindah@ransom.org"><img src="Images/letusknow.gif" alt="Have a question?" border="0" WIDTH="248" HEIGHT="26"></a>&nbsp;&nbsp;&nbsp; <a href="Concerning%20RMH/disclaimer.htm"><img src="images/ButtonSwan.GIF" alt="RMH Disclaimer" border="0" WIDTH="53" HEIGHT="30"></a> <font color="#000080"><a href="Concerning%20RMH/disclaimer.htm">Disclaimer</a><br>
+    <small><small><small>WebSite Maintenance: <a href="mailto:belindah@ransom.org">Belinda K
+    Holloway</a></small></small></small></font></td>
+  </tr>
+  <tr>
+    <td width="1150" height="1" bgcolor="#800000" colspan="3"></td>
+  </tr>
+  <tr>
+    <td width="1150" height="21" colspan="3"></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

@@ -1,0 +1,93 @@
+<!doctype html public "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+
+<HEAD>
+
+<TITLE>Members Mailing List</TITLE>
+<LINK rel="stylesheet" href="../_private/main.css">
+<SCRIPT language="JavaScript">
+<!--
+function MM_validateForm() { //v2.0
+  var i,objStr,field,theCheck,atPos,theNum,colonPos,min,max,errors='';
+  for (i=0; i<(MM_validateForm.arguments.length-2); i+=3) {
+    objStr = MM_validateForm.arguments[(navigator.appName == 'Netscape')?i:i+1];
+    if ((objStr.indexOf('document.layers[')==0 && document.layers==null) ||
+        (objStr.indexOf('document.all[')   ==0 && document.all   ==null))
+      objStr = 'document'+objStr.substring(objStr.substring(0,objStr.lastIndexOf('.')).
+                 lastIndexOf('.'),objStr.length);  //fix layer ref if not supp
+    field = eval(objStr);
+    field.name = (field.name)?field.name:objStr;
+    theCheck = MM_validateForm.arguments[i+2];
+    if (field.value) { //IF NOT EMPTY FIELD
+      if (theCheck.indexOf('isEmail') != -1) { //CHECK EMAIL
+        atPos = field.value.indexOf('@');
+        if (atPos < 1 || atPos == (field.value.length - 1))
+          errors += '- '+field.name+' must contain an e-mail address.\n';
+      } else if (theCheck != 'R') { //START NUM CHECKS
+        theNum = parseFloat(field.value);
+        if (field.value != ''+theNum) errors += '- '+field.name+' must contain a number.\n';
+        if (theCheck.indexOf('inRange') != -1) { //CHECK RANGE
+          colonPos = theCheck.indexOf(':');
+          min = theCheck.substring(8,colonPos);
+          max = theCheck.substring(colonPos+1,theCheck.length);
+          if (theNum < min || max < theNum) //bad range
+            errors += '- '+field.name+' must contain a number between '+min+' and '+max+'.\n';
+    } } }
+    else if (theCheck.charAt(0) == 'R') errors += '- '+field.name+' is required.\n';
+  }
+  if (errors) alert('The following error(s) occurred:\n'+
+                    errors);
+  document.MM_returnValue = (errors == '')
+}
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY>
+
+<BLOCKQUOTE> 
+  <TABLE width="80%" border="0" align="center">
+    <TR> 
+      <TD> 
+        
+<H1 align="left">Members Mailing List</H1>
+      </TD>
+      <TD> 
+        
+<DIV align="left"><A href="../index.html"><IMG src="../graphics/cukgif100.gif" width="100" height="60" align="right" alt="ClanUK home page" border="0"></A></DIV>
+      </TD>
+    </TR>
+  </TABLE>
+
+  
+<P align=center><!-- Begin ListBot Code --> </P>
+<FORM method="post" action="http://www.listbot.com/cgi-bin/subscriber">
+<TABLE border=0 align="CENTER">
+<TR>
+<TD colspan=2> <FONT color="#FFFFFF">Join the ClanUK members only mailing list!<BR>
+Enter your email address below,<BR>
+then click the 'Join List' button:</FONT><BR>
+</TD></TR><TR><TD>
+<INPUT type=text name="e_mail">
+<INPUT type=hidden name="list_id" value="ClanUK1">
+<INPUT type=hidden name="Act" value="subscribe_list">
+</TD><TD>
+<INPUT type=image src="http://www.listbot.com/subscribe_button.gif" border=0 width=88 height=31 alt="Click here to join our mailing list!">
+</TD></TR><TR><TD colspan=2>
+<FONT size=1 face="arial"><A href="http://www.listbot.com/" target="_top">Powered by ListBot</A></FONT><BR>
+</TD></TR></TABLE>
+</FORM>
+<!-- End ListBot Code --> 
+<CENTER>
+<FONT color="#FFFFFF">Please note, if your correct details have not been registered 
+with the</FONT> <A href="mailto:brutus@clanuk.org">Membership Secretary</A><FONT color="#FFFFFF">, 
+you will not be granted access to the mailing list. </FONT> 
+</CENTER>
+<P>&nbsp;</P><CENTER><P><A href="../index.html"><FONT face="Arial, Helvetica, sans-serif" size="-1"><B>Back To ClanUK Home</B></FONT></A></P></CENTER>
+
+<P align="center"><FONT size="-1"><I>Copyright © ClanUK 1996-1999</I></FONT></P>
+
+</BLOCKQUOTE>
+
+</BODY>
+</HTML>

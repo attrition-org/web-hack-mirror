@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 2.0">
+<title>A palavra ou frase que digitar no espaço abaixo será
+utilizada para seleccionar uma lista de documentos,</title>
+
+</head>
+
+<body bgcolor="#FFFFFF">
+<script language="JavaScript">
+<!--
+
+function Control() {
+    
+    if (document.procurar.restriction.value == "") { 
+
+	alert("Tem especificar algum valor.");
+	return false;
+    } else {
+
+        //alert("Ok, o processo continua");
+
+	document.procurar.hidden.value = document.procurar.restriction.value;
+
+	document.procurar.submit();
+
+	return true
+
+    }
+
+ }
+
+//-->
+</script><!--webbot bot="Include" u-include="barra.htm" tag="BODY" startspan -->
+
+<p align="center"><font color="#000000" size="1" face="Arial"><strong><a href="index.htm" target="_top"><img src="images/Cml.gif" alt="CML" border="0" WIDTH="99" HEIGHT="27"></a><a href="Informacoes/52538.htm" target="_top"><img src="images/Inform.gif" alt="Informacoes" border="0" WIDTH="99" HEIGHT="27"></a><a href="query.htm" target="_top"><img src="images/Procurar.gif" alt="Procurar" border="0" WIDTH="99" HEIGHT="27"></a><a href="inquerito.htm" target="_top"><img src="images/Comentar.gif" alt="Comentar" border="0" WIDTH="99" HEIGHT="27"></a><a href="contactos.htm" target="_top"><img src="images/Contacto.gif" alt="Contactar" border="0" WIDTH="99" HEIGHT="27"></a></strong></font></p>
+<!--webbot bot="Include" endspan i-checksum="31411" --><div align="center"><center>
+
+<table border="0" cellpadding="10" cellspacing="0" width="100%">
+    <tr>
+        <td width="5%" bgcolor="#FFCC66">&nbsp;</td>
+        <td width="70%" bgcolor="#C0C0C0"><form action="/scripts/novoquery.idq" method="GET" name="procurar" onsubmit="return Control()">
+            <input type="hidden" name="hidden" value="1234"><p align="center"><font size="3" face="Arial"><strong><br>
+            </strong></font><font size="4" face="Arial"><strong>Procurar
+            nas páginas da CMLisboa</strong></font><font size="2" face="Verdana"><br>
+            </font><br>
+            <font size="2" face="Verdana">A palavra ou frase que
+            digitar no espaço abaixo será utilizada para
+            seleccionar uma lista de documentos, <strong>residentes
+            neste site</strong>, onde se encontram ocorrências
+            da mesma, poderá então ir directamente para um
+            documento simplesmente clicando no nome do mesmo</font></p>
+            <p align="left"><font size="2" face="Verdana">Poderá
+            refinar a procura através da utilização de
+            operadores lógicos entre palavras</font></p>
+            <p align="center"><font size="2" face="Verdana">Texto
+            a Procurar: <input type="text" size="60" maxlength="100" name="restriction"> <input type="button" name="executar" value="Executar" onclick="Control()"> <input type="reset" value="Limpar"> <br>
+            </font></p>
+        </form>
+        </td>
+    </tr>
+</table>
+</center></div>
+</body>
+</html>

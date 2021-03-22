@@ -1,0 +1,32 @@
+--03:30:45--  http://www.ufg.edu:80/
+           => `www.ufg.edu/index.html'
+Connecting to www.ufg.edu:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 1,868 [text/html]
+
+    0K -> .                                                      [100%]
+
+03:30:47 (3.00 KB/s) - `www.ufg.edu/index.html' saved [1868/1868]
+
+Loading robots.txt; please ignore errors.
+--03:30:47--  http://www.ufg.edu:80/no-robots.txt
+           => `www.ufg.edu/no-robots.txt'
+Connecting to www.ufg.edu:80... connected!
+HTTP request sent, awaiting response... 404 Not Found
+03:30:48 ERROR 404: Not Found.
+
+--03:30:48--  http://www.ufg.edu:80/doodoo.jpg
+           => `www.ufg.edu/doodoo.jpg'
+Connecting to www.ufg.edu:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 8,465 [image/jpeg]
+
+    0K -> ........                                               [100%]
+
+03:30:51 (6.23 KB/s) - `www.ufg.edu/doodoo.jpg' saved [8465/8465]
+
+Converting www.ufg.edu/index.html... done.
+
+FINISHED --03:30:51--
+Downloaded: 10,333 bytes in 2 files
+Converting www.ufg.edu/index.html... done.

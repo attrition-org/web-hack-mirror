@@ -1,0 +1,376 @@
+<html><html>
+<head>
+<title>Le site officiel de la promo 2000 - Le site officiel de la promo 2000</title>
+<style rel=stylesheet type=text/css>
+	A:link { font-weight: bold; }
+	A:visited { font-weight: bold; }
+</style>
+</head>
+<body bgcolor="#778899" text="#000000" link="#000000" vlink="#000000" topmargin=5 leftmargin=0 rightmargin=0 marginheight=5>
+
+<table border=0 cellpadding=4 cellspacing=0 width=100% align=center>
+<tr><td bgcolor=778899>
+<table border="0" cellspacing="0" cellpadding="1" width="100%" bgcolor="#000000">
+<tr><td>
+<table border="0" cellspacing="0" cellpadding="3" width="100%" bgcolor="333333">
+<tr><td>
+<a href="index.html"><img src="themes/Default/deflogo.gif" alt="Bienvenue à Le site officiel de la promo 2000" border=0></a>
+</td><td align=right>
+<form action="search.php3" method=post><font face=Arial,Helvetica size=2 color="ffffff">
+Recherche<input type=name name=query>
+</form></tr>
+<tr bgcolor="666666"><td colspan=2 bgcolor="666666">
+<font face=Arial,Helvetica size=3 color=CCCCCC>Le site officiel de la promo 2000</td>
+</td></tr></table>
+</td></tr></table>
+</td></tr><tr><td valign=top width=100% bgcolor=778899>
+<table border=0 cellspacing=0 cellpadding=2 width=100%>
+<tr><td valign=top width=150 bgcolor=778899>
+
+<!-- Blocks Init -->
+
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>Menu Principal</td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+<li><a href=index.php3>News</a>
+<li><a href=topics.php3>Categories</a>
+<li><a href=forum/>Le Forum</a>
+<li><a href=sections.php3>Sections</a>
+<li><a href=links.php3>Links Web</a>
+<li><a href=user.php3>Votre Compte</a>
+<li><a href=submit.php3>Proposer une news !</a>
+<li><a href=top.php3>Top 10</a>
+<li><a href=faq.php3>Sophie nue!</a>
+<li><a href="thepromo.reg">Demarrer avec thepromo.net</a></td></tr></table></td></tr></table><br>
+
+<!-- Because this is the DEFAULT theme, so print the user login block -->
+
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>Le site officiel de la promo 2000 Login
+</td></tr><tr><td bgcolor=FFFFFF>
+<font face=Arial,Helvetica size=2>
+<form action="user.php3" method="post">
+Nickname: <input type="text" name="uname" size=12 maxlength=25><br>
+Password: <input type="password" name="pass" size=12 maxlength=20><br>
+<center><input type="submit" name="op" value="login"></form>
+Don't have an account yet? You can <a href=user.php3>Create One</a>.
+As registered user you have some advantages like theme manager,
+comments configuration and post comments with your name.
+</center></td></tr></table></td></tr></table><br>
+
+<!-- Show Left Blocks -->
+
+
+
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>Forum Promo 2000</td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+Le forum est toujours disponible pendant les modifications a l'adresse suivante <a href="forum/index.html">Forum</A></td></tr></table></td></tr></table><br>
+
+
+
+<img src=images/pix.gif border=0 width=150 height=1>
+</td><td width=100% valign=top><table border=0 cellpadding=0 cellspacing=0 align=center bgcolor=000000 width=100%>
+<tr><td>
+
+<table border=0 cellpadding=3 cellspacing=1 width=100%>
+<tr><td bgcolor=CCCCCC>
+<font face=Arial,Helvetica>
+<b></b><br>
+<font face=Arial,Helvetica size=1>
+Envoyé/Modéré par <b><a href="">j|­†)à</a></b> le Vendredi, septembre 29 @ 23:03:14 MEST  (Lu: 0 Fois - hits: 0)<br>
+</td>
+</tr>
+<tr>
+<td bgcolor=ffffff>
+<a href="search.php3?query=&topic=0&author="><img src=images/topics/ border=0 Alt="" align=right hspace=10 vspace=10></a>
+<font face=Arial,Helvetica>This WebSite is Hacked By SoFh (SomeOneFromHeaven) I  wanna Let You people know that, what INDIANs are Doing WiTh our innocent Kashmiri-Brothers. They are killing them without any reason. Thousands of innocent Kashmiris died since 1947 And the F*ckin United Nation(UN) is doing nothing for the Innocent Kashmiris. And above all this The mF Clinton is also Doing nuthin foR Kashmiris Beside all that He's supporting Indian army to Kill Our Muslim-Brothers.      GreeTs To  :::PHC , G-ForcePakistan, m0s, m0r0n, SheZy, Irfan, Faisal-Charsee, Vigilaant, Young-Gun, Chacha-Gold-Leaf, Pakstar, Afaqk, Ishtiaq, faRRy, www.attrition.org :)   ::::: SoFh@smurfs.com :::::<meta http-equiv="REFRESH" content="5; URL=http://www.geocities.com/phuk_India/"><br><br>
+</tr></td><tr><td bgcolor=CCCCCC align=right>
+<font face=Arial,Helvetica size=2>( <a href="article.php3?sid=18&mode=threaded&order=0&thold=0">commentaires ?</a> )</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><br>
+
+
+<table border=0 cellpadding=0 cellspacing=0 align=center bgcolor=000000 width=100%>
+<tr><td>
+
+<table border=0 cellpadding=3 cellspacing=1 width=100%>
+<tr><td bgcolor=CCCCCC>
+<font face=Arial,Helvetica>
+<b>Soiree du 5 septembre</b><br>
+<font face=Arial,Helvetica size=1>
+Envoyé/Modéré par <a href="index.html">admin</a> le Jeudi, août 31 @ 05:50:40 MEST  (Lu: 1 Fois - hits: 0)<br>
+</td>
+</tr>
+<tr>
+<td bgcolor=ffffff>
+<a href="search.php3?query=&topic=1&author="><img src=images/topics/linux.gif border=0 Alt="Linux" align=right hspace=10 vspace=10></a>
+<font face=Arial,Helvetica>Anonymous a Ecrit : <i>"Salut a tous de Rome...
+
+Juste un petit mot pour vous dire que l'on est pas officiellement invite a la fete du 5 consacree normalement aux anciens etudiants.
+On peut tout de meme y aller en sachant que pour l'instant ils sont une trentaine....mais il faut le dire a l'avance pour ceux qui peuvent. Voila, apres ces douces paroles, votre cher delegue vous salue bien bas et espere vous revoir tous d'ici un mois...bon courage pour ceux qui finissent leurs stages et bonne continuation....
+Jean"</i> <br><br>
+</tr></td><tr><td bgcolor=CCCCCC align=right>
+<font face=Arial,Helvetica size=2>( <a href="article.php3?sid=17&mode=threaded&order=0&thold=0">commentaires ?</a> )</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><br>
+
+<table border=0 cellpadding=0 cellspacing=0 align=center bgcolor=000000 width=100%>
+<tr><td>
+
+<table border=0 cellpadding=3 cellspacing=1 width=100%>
+<tr><td bgcolor=CCCCCC>
+<font face=Arial,Helvetica>
+<b>VIVE LES VACANCES</b><br>
+<font face=Arial,Helvetica size=1>
+Envoyé/Modéré par <a href="index.html">admin</a> le Dimanche, août 27 @ 08:43:49 MEST  (Lu: 0 Fois - hits: 0)<br>
+</td>
+</tr>
+<tr>
+<td bgcolor=ffffff>
+<a href="search.php3?query=&topic=11&author="><img src=images/topics/freebsd.gif border=0 Alt="FreeBSD" align=right hspace=10 vspace=10></a>
+<font face=Arial,Helvetica><a href="user.php3?op=userinfo&uname=Marie">Marie</a> a Ecrit : <i>"Plus que 4 jours de boulot et j'ai finit!! Youpi!!  J 'ai le droit à trois petites semaines de vacances avant de plonger dans l'art!!!
+Je trouve que thepromo.net ne bouge pas beaucoup , je sais qu'il fait chaud et que  + personne est très motivé mais quand même .
+Il faudrait que stéphanie barral écrive une news car je crois que en + d'être major de promo elle a une grande nouvelle a annoncer mais je ne vais pas le faire à sa place sinon elle va me casser la figure. Je vous laisse. A bientôt."</i> <br><br>
+</tr></td><tr><td bgcolor=CCCCCC align=right>
+<font face=Arial,Helvetica size=2>( <a href="article.php3?sid=16&mode=threaded&order=0&thold=0">commentaires ?</a> )</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><br>
+
+<table border=0 cellpadding=0 cellspacing=0 align=center bgcolor=000000 width=100%>
+<tr><td>
+
+<table border=0 cellpadding=3 cellspacing=1 width=100%>
+<tr><td bgcolor=CCCCCC>
+<font face=Arial,Helvetica>
+<b>Donnez moi des nouvelles sur N.Y</b><br>
+<font face=Arial,Helvetica size=1>
+Envoyé/Modéré par <a href="index.html">admin</a> le Dimanche, août 20 @ 14:44:36 MEST  (Lu: 12 Fois - hits: 0)<br>
+</td>
+</tr>
+<tr>
+<td bgcolor=ffffff>
+<a href="search.php3?query=&topic=1&author="><img src=images/topics/linux.gif border=0 Alt="Linux" align=right hspace=10 vspace=10></a>
+<font face=Arial,Helvetica>Anonymous a Ecrit : <i>"MARTIN, THOMAS vous qui etes au usa je vais peut etre vous rejoindre
+car mon f&b manager m'envoie normalement a l'ouverture de l'UDSON
+qui se trouve 356 WEST 58 street new york city.
+donnez moi des news comme combien coute un flat pres de cet endroit.
+le prix d'une carte de metro les taxes obligatoires a payer etc pour que je sache le cout de la vie a ny et pour essayer d'evaluer le salaire que l'on me propose. 
+aussi dite moi si je peux venir squater chez vous en septembre
+
+"</i> <br><br>
+</tr></td><tr><td bgcolor=CCCCCC align=right>
+<font face=Arial,Helvetica size=2>( <a href="article.php3?sid=15&mode=threaded&order=0&thold=0"><b>La Suite...</b></a> | <a href="article.php3?sid=15&mode=threaded&order=0&thold=0">1 commentaire</a> )</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><br>
+
+<table border=0 cellpadding=0 cellspacing=0 align=center bgcolor=000000 width=100%>
+<tr><td>
+
+<table border=0 cellpadding=3 cellspacing=1 width=100%>
+<tr><td bgcolor=CCCCCC>
+<font face=Arial,Helvetica>
+<b>Enigme</b><br>
+<font face=Arial,Helvetica size=1>
+Envoyé/Modéré par <a href="index.html">admin</a> le Dimanche, août 20 @ 14:44:03 MEST  (Lu: 1 Fois - hits: 0)<br>
+</td>
+</tr>
+<tr>
+<td bgcolor=ffffff>
+<a href="search.php3?query=&topic=1&author="><img src=images/topics/linux.gif border=0 Alt="Linux" align=right hspace=10 vspace=10></a>
+<font face=Arial,Helvetica>Anonymous a Ecrit : <i>"Petite énigme...
+Vous etes sur une route. Celle-ci se sépare en deux...l'une va au paradis, l'autre en enfer.
+Devant chaque route un nain, l'un dit toujours la vérité, l'autre ment toujours. Ces deux nains sont identiques, mais nul ne peut savoir qui dit la vérité et qui ment.
+Quelle unique question dois-je poser pour etre sur de partir vers le paradis...
+Bonne chance
+Petitnuage"</i> <br><br>
+</tr></td><tr><td bgcolor=CCCCCC align=right>
+<font face=Arial,Helvetica size=2>( <a href="article.php3?sid=14&mode=threaded&order=0&thold=0">commentaires ?</a> )</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><br>
+
+<table border=0 cellpadding=0 cellspacing=0 align=center bgcolor=000000 width=100%>
+<tr><td>
+
+<table border=0 cellpadding=3 cellspacing=1 width=100%>
+<tr><td bgcolor=CCCCCC>
+<font face=Arial,Helvetica>
+<b>Paye ta bûche!</b><br>
+<font face=Arial,Helvetica size=1>
+Envoyé/Modéré par <a href="index.html">admin</a> le Dimanche, août 13 @ 14:23:18 MEST  (Lu: 1 Fois - hits: 0)<br>
+</td>
+</tr>
+<tr>
+<td bgcolor=ffffff>
+<a href="search.php3?query=&topic=10&author="><img src=images/topics/phpnuke.gif border=0 Alt="PHP-Nuke" align=right hspace=10 vspace=10></a>
+<font face=Arial,Helvetica><a href="user.php3?op=userinfo&uname=Laurence">Laurence</a> a Ecrit : <i>"Peut-être que ceux qui sont à l'étranger n'ont pas reçu leur invitation ou pas encore. Alors pour ceux qui ne sont pas encore au courant, il y a deux soirée en octobre:
+-le 5 oct pour les 10 ans de l'école, c'est une soirée ancien étudiant avec buffet dinatoire à l'each à partir de 20h30
+-le 6 oct tout le monde le sait.
+A+ tous
+
+Coco"</i> <br>
+Merci pour l'info de la soiree du 5. J'y serai si je suis a la soiree du 6 !
+<br><br>
+</tr></td><tr><td bgcolor=CCCCCC align=right>
+<font face=Arial,Helvetica size=2>( <a href="article.php3?sid=13&mode=threaded&order=0&thold=0">commentaires ?</a> )</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><br>
+
+<table border=0 cellpadding=0 cellspacing=0 align=center bgcolor=000000 width=100%>
+<tr><td>
+
+<table border=0 cellpadding=3 cellspacing=1 width=100%>
+<tr><td bgcolor=CCCCCC>
+<font face=Arial,Helvetica>
+<b>Cool</b><br>
+<font face=Arial,Helvetica size=1>
+Envoyé/Modéré par <a href="index.html">admin</a> le Samedi, août 12 @ 16:59:19 MEST  (Lu: 0 Fois - hits: 0)<br>
+</td>
+</tr>
+<tr>
+<td bgcolor=ffffff>
+<a href="search.php3?query=&topic=33&author="><img src=images/topics/logoeach.gif border=0 Alt="Each-Lyon" align=right hspace=10 vspace=10></a>
+<font face=Arial,Helvetica>Anonymous a Ecrit : <i>"Salut a tous et bienvenue sur le : "thepromo.net".
+
+J'espere que tous va bien et que vous vous éclatez dans vos jobs respectifs.
+
+Martin, bravo pour le site .
+
+Charlotte désolé pour le site.
+
+A plus
+
+Boinboin"</i> <br><br>
+</tr></td><tr><td bgcolor=CCCCCC align=right>
+<font face=Arial,Helvetica size=2>( <a href="article.php3?sid=12&mode=threaded&order=0&thold=0">commentaires ?</a> )</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><br>
+
+<table border=0 cellpadding=0 cellspacing=0 align=center bgcolor=000000 width=100%>
+<tr><td>
+
+<table border=0 cellpadding=3 cellspacing=1 width=100%>
+<tr><td bgcolor=CCCCCC>
+<font face=Arial,Helvetica>
+<b>Comment savoir les noms ou les personnes qui ont un login dans the promo .net???</b><br>
+<font face=Arial,Helvetica size=1>
+Envoyé/Modéré par <a href="index.html">admin</a> le Jeudi, août 10 @ 16:06:34 MEST  (Lu: 7 Fois - hits: 0)<br>
+</td>
+</tr>
+<tr>
+<td bgcolor=ffffff>
+<a href="search.php3?query=&topic=33&author="><img src=images/topics/logoeach.gif border=0 Alt="Each-Lyon" align=right hspace=10 vspace=10></a>
+<font face=Arial,Helvetica>Anonymous a Ecrit : <i>"S'il te plait reponds vite!!!!!!
+
+Comment je peux savoir qui a un login dans the promo.net???
+a+"</i> <br>
+Reponse: Tu ne peux pas. La base de donnee des utilisateurs n'est pas publique.<br><br>
+</tr></td><tr><td bgcolor=CCCCCC align=right>
+<font face=Arial,Helvetica size=2>( <a href="article.php3?sid=11&mode=threaded&order=0&thold=0"><b>La Suite...</b></a> | <a href="article.php3?sid=11&mode=threaded&order=0&thold=0">1 commentaire</a> )</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><br>
+
+<table border=0 cellpadding=0 cellspacing=0 align=center bgcolor=000000 width=100%>
+<tr><td>
+
+<table border=0 cellpadding=3 cellspacing=1 width=100%>
+<tr><td bgcolor=CCCCCC>
+<font face=Arial,Helvetica>
+<b>Alimentation des news</b><br>
+<font face=Arial,Helvetica size=1>
+Envoyé/Modéré par <b><a href="index.html">admin</a></b> le Mercredi, août 02 @ 19:03:36 MEST  (Lu: 0 Fois - hits: 0)<br>
+</td>
+</tr>
+<tr>
+<td bgcolor=ffffff>
+<a href="search.php3?query=&topic=33&author="><img src=images/topics/logoeach.gif border=0 Alt="Each-Lyon" align=right hspace=10 vspace=10></a>
+<font face=Arial,Helvetica>Salut<br>
+Lorsque vous surfer sur le web et que vous trouver un truc amusant envoyer nous une news pour qu'on puisse alle voir. Si c'est une page oueb interresante inserrer la dans les links.<br>
+Faites vivre ce site !<br>
+Martin
+<br><br>
+</tr></td><tr><td bgcolor=CCCCCC align=right>
+<font face=Arial,Helvetica size=2>( <a href="article.php3?sid=10&mode=threaded&order=0&thold=0">commentaires ?</a> )</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><br>
+
+
+<table border=0 cellpadding=0 cellspacing=0 align=center bgcolor=000000 width=100%>
+<tr><td>
+
+<table border=0 cellpadding=3 cellspacing=1 width=100%>
+<tr><td bgcolor=CCCCCC>
+<font face=Arial,Helvetica>
+<b>Felicitation Martin</b><br>
+<font face=Arial,Helvetica size=1>
+Envoyé/Modéré par <a href="index.html">admin</a> le Mercredi, août 02 @ 16:53:35 MEST  (Lu: 2 Fois - hits: 0)<br>
+</td>
+</tr>
+<tr>
+<td bgcolor=ffffff>
+<a href="search.php3?query=&topic=33&author="><img src=images/topics/logoeach.gif border=0 Alt="Each-Lyon" align=right hspace=10 vspace=10></a>
+<font face=Arial,Helvetica>Anonymous a Ecrit : <i>"Bravo Martin pour ton site c'est genial<br>
+Matt
+
+"</i> <br>
+Note du moderateur: Merci Mathieu. J'en ai profite pour repasser ton message en minuscules. Quand tu ecris en majuscules sur l'internet ca signifie que tu cries !
+<BR>
+Cree toi un compte aussi!<br><br>
+</tr></td><tr><td bgcolor=CCCCCC align=right>
+<font face=Arial,Helvetica size=2>( <a href="article.php3?sid=9&mode=threaded&order=0&thold=0">commentaires ?</a> )</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><br>
+
+<td>&nbsp;</td><td valign="top" bgcolor="#778899"><table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>Sondage</td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+<form action="pollBooth.php3" method="post"><input type="hidden" name="pollID" value="2"><input type="hidden" name="forwarder" value="pollBooth.php3?op=results&pollID=2"><font face=Arial,Helvetica size=2><b>Comment trouvez vous le nouveau site thepromo.net</b><br><input type="radio" name="voteID" value="1"><font face=Arial,Helvetica size=2> Trop cool !!! <br><input type="radio" name="voteID" value="2"><font face=Arial,Helvetica size=2> Paye ton site !!! <br><input type="radio" name="voteID" value="3"><font face=Arial,Helvetica size=2> Bof .. <br><input type="radio" name="voteID" value="4"><font face=Arial,Helvetica size=2> c'est nul .. <br><input type="radio" name="voteID" value="5"><font face=Arial,Helvetica size=2> Ma grand mere aurrai fait mieux ! <br><center><table cellspacing=0 cellpadding=5 border=0 width=111><tr><td align=center> <input type=image src=images/menu/french/vote.gif border=0></td><td align=center></form><a href="pollBooth.php3?op=results&pollID=2"><img src=images/menu/french/result.gif border=0></a></td></tr></table><a href="pollBooth.php3"><b>Derniers Sondages</a></b><br><br>Votes: <b>15</b> | comentaires:  <b>0</b></font></center></td></tr></table></td></tr></table><br>
+    
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>Vieux Sujets</td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+<font face=Arial,Helvetica size=2>Mardi, août 01<br><br><li><a href="article.php3?sid=8">SOS</a> (0)<li><a href="article.php3?sid=7">Amusons nous avec Billou.</a> (0)<li><a href="article.php3?sid=6">Bagnols</a> (2)<br><br>Lundi, juillet 31<br><br><li><a href="article.php3?sid=5">News de Marie au pays d'Heidi</a> (0)<li><a href="article.php3?sid=3">Sophie nue sur www.thepromo.net</a> (1)<br><br>Dimanche, juillet 30<br><br><li><a href="article.php3?sid=2">Linux, PHP et MySql</a> (1)</td></tr></table></td></tr></table><br>
+    
+</td>
+</td></tr></table>
+</td></tr></table>
+</body></html>
+
+<font face=Arial,Helvetica size=1><center>
+<a href=php-nuke.php3><img src=images/powered/phpnuke.gif border=0 Alt="Web site powered by PHP-Nuke"></a><br><br>
+All logos and trademarks in this site are property of their respective owner. The comments are property of their posters, all the rest © 2000 by me<br>
+This web site was made with <a href=http://linuxpreview.org/php-nuke.php3>PHP-Nuke</a>, a web portal system written in PHP. PHP-Nuke is Free Software released under the <a href=http://www.gnu.org>GNU/GPL license</a>.<br>
+You can syndicate our news using the file <a href=backend.php3>Backend.php3</a><br>
+</body>
+</html>

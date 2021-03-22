@@ -1,0 +1,39 @@
+--19:04:12--  http://www.ceqc.com.cn:80/
+           => `www.ceqc.com.cn/index.html'
+Connecting to www.ceqc.com.cn:80... connected!
+HTTP request sent, awaiting response... 
+Read error (Connection reset by peer) in headers.
+Retrying.
+
+--19:04:16--  http://www.ceqc.com.cn:80/
+  (try: 2) => `www.ceqc.com.cn/index.html'
+Connecting to www.ceqc.com.cn:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 1,312 [text/html]
+
+    0K -> .                                                      [100%]
+
+19:04:20 (1.25 MB/s) - `www.ceqc.com.cn/index.html' saved [1312/1312]
+
+Loading robots.txt; please ignore errors.
+--19:04:20--  http://www.ceqc.com.cn:80/no-robots.txt
+           => `www.ceqc.com.cn/no-robots.txt'
+Connecting to www.ceqc.com.cn:80... connected!
+HTTP request sent, awaiting response... 404 找不到对象
+19:04:21 ERROR 404: 找不到对象.
+
+--19:04:21--  http://www.ceqc.com.cn:80/index.gif
+           => `www.ceqc.com.cn/index.gif'
+Connecting to www.ceqc.com.cn:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 12,992 [image/gif]
+
+    0K -> .......... ..                                          [100%]
+
+19:04:43 (610.04 B/s) - `www.ceqc.com.cn/index.gif' saved [12992/12992]
+
+Converting www.ceqc.com.cn/index.html... done.
+
+FINISHED --19:04:43--
+Downloaded: 14,304 bytes in 2 files
+Converting www.ceqc.com.cn/index.html... done.

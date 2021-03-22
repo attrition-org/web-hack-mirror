@@ -1,0 +1,353 @@
+<html>
+
+<head>
+
+<!-- any edits to this banner must also be made to banner-absolute.html -->
+<script LANGUAGE="JavaScript">
+<!-- // hide from non javascript browsers
+
+  if (document.images) {            // Active Images
+     homeon = new Image();      
+     homeon.src = "/images/headers/home.on.gif"; 
+     emailon = new Image();      
+     emailon.src = "/images/headers/email.on.gif"; 
+     dialupon = new Image();      
+     dialupon.src = "/images/headers/dialup.on.gif"; 
+     networkengon = new Image();
+     networkengon.src = "/images/headers/network-eng.on.gif";
+     networkservon = new Image(); 
+     networkservon.src = "/images/headers/network-serv.on.gif";  
+     softwareon = new Image(); 
+     softwareon.src = "/images/headers/software.on.gif";  
+     tcpipon = new Image(); 
+     tcpipon.src = "/images/headers/tcpip.on.gif";  
+     supporton = new Image(); 
+     supporton.src = "/images/headers/support.on.gif";  
+     securityon = new Image(); 
+     securityon.src = "/images/headers/security.on.gif";  
+     contacton = new Image(); 
+     contacton.src = "/images/headers/contact.on.gif";  
+     searchon = new Image(); 
+     searchon.src = "/images/headers/search.on.gif";  
+
+     homeoff = new Image(); 		// Inactive Images
+     homeoff.src = "/images/headers/home.off.gif"; 
+     emailoff = new Image(); 
+     emailoff.src = "/images/headers/email.off.gif"; 
+     dialupoff = new Image(); 
+     dialupoff.src = "/images/headers/dialup.off.gif"; 
+     networkengoff = new Image();
+     networkengoff.src = "/images/headers/network-eng.off.gif";
+     networkservoff = new Image();          
+     networkservoff.src = "/images/headers/network-serv.off.gif"; 
+     softwareoff = new Image(); 
+     softwareoff.src = "/images/headers/software.off.gif"; 
+     tcpipoff = new Image(); 
+     tcpipoff.src = "/images/headers/tcpip.off.gif"; 
+     supportoff = new Image(); 
+     supportoff.src = "/images/headers/support.off.gif"; 
+     securityoff = new Image(); 
+     securityoff.src = "/images/headers/security.off.gif"; 
+     contactoff = new Image(); 
+     contactoff.src = "/images/headers/contact.off.gif"; 
+     searchoff = new Image(); 
+     searchoff.src = "/images/headers/search.off.gif"; 
+
+     homemenu = new Image();		// Menu Images
+     homemenu.src = "/images/headers/menu.off.gif";
+     emailmenu = new Image();
+     emailmenu.src = "/images/headers/menu.emails.gif";
+     dialupmenu = new Image();
+     dialupmenu.src = "/images/headers/menu.dialup.gif";
+     networkengmenu = new Image();
+     networkengmenu.src = "/images/headers/menu.networkeng.gif";
+     networkservmenu = new Image();
+     networkservmenu.src = "/images/headers/menu.networkserv.gif";
+     softwaremenu = new Image();
+     softwaremenu.src = "/images/headers/menu.software.gif";
+     tcpipmenu = new Image();
+     tcpipmenu.src = "/images/headers/menu.tcpip.gif";
+     supportmenu = new Image();
+     supportmenu.src = "/images/headers/menu.support.gif";
+     securitymenu = new Image();
+     securitymenu.src = "/images/headers/menu.security.gif";
+     contactmenu = new Image(); 
+     contactmenu.src = "/images/headers/menu.contact.gif"; 
+     searchmenu = new Image(); 
+     searchmenu.src = "/images/headers/menu.search.gif"; 
+
+     var last = "home";		// Set default variable for last image visited
+}
+
+// Function to 'deactivate' images.
+function imgOff(imgName) {
+        if (document.images) {
+            document[imgName].src = eval(imgName + "off.src");
+            document["menu"].src = "/images/headers/menu.off.gif";
+        }
+}                                                                   
+
+// Function to 'activate' images & swap out previous
+function imgOn(imgName) {
+        if (document.images) {
+	    imgOff(last);
+            document[imgName].src = eval(imgName + "on.src");
+            document["menu"].src = eval(imgName + "menu.src");
+	    last = imgName;
+        }
+}
+
+//function to use navigation bar imagemap
+function navmap(x) {
+        if (document.images) {
+		if (last == "email") {
+        		if (80 < x && x < 156) { 
+        		  	// pop
+        		  	window.location = "/email/pop/"; 
+        		  	}
+        		if (159 < x && x < 200) { 
+        		  	// eudora
+        		  	window.location = "/email/eudora/"; 
+        		  	}
+        		if (204 < x && x < 261) { 
+        		  	// x500
+        		  	window.location = "/x500/"; 
+        		  	}
+        		if (266 < x && x < 387) { 
+        		  	// majordomo
+        		  	window.location = "/email/majordomo/"; 
+        		  	}
+        		if (392 < x && x < 437) { 
+        		  	// more
+        		  	window.location = "/email/"; 
+        		  	}
+        		return;
+       		} 
+        	if (last == "dialup") {
+        		if (69 < x && x < 150) { 
+        		  	// introduction
+        		  	window.location = "/dialup/dialup.whatis.html"; 
+        		  	}
+        		if (152 < x && x < 219) { 
+        		  	// applications
+        		  	window.location = "/dialup/dialup.policy.html"; 
+        		  	}
+        		if (221 < x && x < 293) { 
+        		  	// configuration
+        		  	window.location = "/dialup/dialup.help.html"; 
+        		  	}
+        		if (295 < x && x < 350) { 
+        		  	// more
+        		  	window.location = "/dialup/"; 
+        		  	}
+        		return;
+        		}
+        	if (last == "networkeng") {
+        		if (20 < x && x < 96) { 
+        		  	// introduction
+        		  	window.location = "/network/introduction.html"; 
+        		  	}
+        		if (98 < x && x < 179) { 
+        		  	// cat5
+        		  	window.location = "/network/cat5/"; 
+        		  	}
+        		if (181 < x && x < 257) { 
+        		  	// atm
+        		  	window.location = "/network/atm.html"; 
+        		  	}
+        		if (259 < x && x < 352) { 
+        		  	// topology
+        		  	window.location = "/network/topology/"; 
+        		  	}
+        		if (353 < x && x < 406) { 
+        		  	// more
+        		  	window.location = "/network/"; 
+        		  	}
+        		return;
+        		}
+        	if (last == "networkserv") {
+        		if (77 < x && x < 161) { 
+        		  	// news
+        		  	window.location = "/netsvcs/usenet/"; 
+        		  	}
+        		if (164 < x && x < 216) { 
+        		  	// timehost
+        		  	window.location = "/netsvcs/timehost.html"; 
+        		  	}
+        		if (218 < x && x < 290) { 
+        		  	// web
+        		  	window.location = "/web/"; 
+        		  	}
+        		if (292 < x && x < 360) { 
+         		  	// more
+       		  		window.location = "/netsvcs/"; 
+        		  	}
+        		return;
+        		}
+        	if (last == "software") {
+        		if (93 < x && x < 142) { 
+        		  	// eudora
+        		  	window.location = "/email/eudora/"; 
+        		  	}
+        		if (144 < x && x < 196) { 
+        		  	// netscape
+        		  	window.location = "/software/netscape/"; 
+        		  	}
+        		if (198 < x && x < 286) { 
+        		  	// suitespot
+        		  	window.location = "/software/netscape/suitespot/"; 
+        		  	}
+        		if (288 < x && x < 336) { 
+        		  	// more
+        		  	window.location = "/software/"; 
+        		  	}
+        		return;
+        		}
+        	if (last == "tcpip") {
+        		if (52 < x && x < 161) { 
+        		  	// user ip reg
+        		  	window.location = "http://ultraman.gsfc.nasa.gov/ip-reg/CNE_reg_form.cgi"; 
+        		  	}
+        		if (163 < x && x < 201) { 
+        		  	// rib mgr ip reg
+        		  	window.location = "http://ultraman.gsfc.nasa.gov/ip-reg/ribmgr/CNE_rib_man.cgi"; 
+        		  	}
+        		if (204 < x && x < 237) { 
+        		  	// WINS
+        		  	window.location = "/tcpipsvcs/wins/"; 
+        		  	}
+        		if (239 < x && x < 323) { 
+        		  	// troubleshooting
+        		  	window.location = "/tcpipsvcs/ip-tri.html"; 
+        		  	}
+        		if (326 < x && x < 369) { 
+        		  	// more
+        		  	window.location = "/tcpipsvcs/"; 
+        		  	}
+        		return;
+        		}
+        	if (last == "support") {
+        		if (66 < x && x < 158) { 
+        		  	// troubleshooting
+        		  	window.location = "/support/troubles"; 
+        		  	}
+        		if (160 < x && x < 209) { 
+        		  	// tutorials
+        		  	window.location = "/support/tutorials"; 
+        		  	}
+        		if (210 < x && x < 286) { 
+        		  	// config guides
+        		  	window.location = "/support/config"; 
+        		  	}
+        		if (288 < x && x < 321) { 
+        		  	// FAQs
+        		  	window.location = "/support/faqs"; 
+        		  	}
+        		if (322 < x && x < 372) { 
+        		  	// more
+        		  	window.location = "/support/"; 
+        		  	}
+        		return;
+        		}
+        	if (last == "security") {
+        		if (55 < x && x < 159) { 
+        		  	// incident reporting
+        		  	window.location = "/security/reporting-incidents.html"; 
+        		  	}
+        		if (161 < x && x < 259) { 
+        		  	// spam
+        		  	window.location = "/email/other/spam.html"; 
+        		  	}
+        		if (261 < x && x < 317) { 
+        		  	// passwords
+        		  	window.location = "/email/eudora/password.html"; 
+        		  	}
+        		if (319 < x && x < 361) { 
+        		  	// more
+        		  	window.location = "/security/"; 
+        		  	}
+        		return;
+        		}
+        	if (last == "contact") {
+        		if (30 < x && x < 390) {
+        		  	// contact
+        		  	window.location = "/cgi-bin/contact.cgi";
+        		  	}
+        		return;
+        		}
+        	if (last == "search") {
+        		if (30 < x && x < 390) {
+        		  	// search
+        		  	window.location = "/cgi-bin/wwwwais";
+        		  	}
+        		return;
+        		}
+        } // if
+}
+
+//-->  
+
+</script>
+
+<title>NASA Privacy Statement</title>
+</head>
+
+<body bgcolor="#FFFFFF" background="../images/marble.jpg">
+
+<p><a name="top"></a></p>
+
+<h2>NASA Website Privacy Statement</h2>
+
+<hr>
+<!-- actual text of the page goes here, with links, bullets, tables, etc -->
+
+<p>This policy establishes how NASA will use information we gather about you from your
+visit to our website. The privacy of our customers is of utmost importance to NASA. </p>
+
+<p>If you visit a NASA site... 
+
+<ul>
+  <li><h3>To read or download information:</h3>
+    <p>We may collect and store information for statistical purposes. For example, we may
+    count the number of visitors to the different sections of our site to help us make them
+    more useful to visitors. Similar information is gathered for anonymous ftp, remote account
+    login, or for other comparable types of connections. <br>
+    </p>
+  </li>
+  <li><h3>To send us an E-mail:</h3>
+    <p>By sending us an electronic mail message, you may be sending us personal information
+    (e.g., name, address, E-mail address), as in an official Freedom of Information Act
+    request. We may store the name and address of the requester in order to respond to the
+    request or to otherwise resolve the subject matter of your E-mail. <br>
+    </p>
+  </li>
+  <li><h3>To register:</h3>
+    <p>Some of our sites ask visitors who request specific information to fill out a
+    registration form. For example, vendors looking for marketing opportunities by visiting
+    our Electronic Grants or NASA Acquisition Internet Service sites may be asked to
+    &quot;register&quot; to obtain copies of Requests for Proposals or other NASA
+    opportunities. Other information which may be collected at these sites through
+    questionnaires, feedback forms, or other means, enable us to determine a visitor's
+    interests, with the goal of providing better service to our customers. </p>
+  </li>
+</ul>
+
+<p><b><i>We want to be very clear: regardless of the information being transmitted to
+NASA, we will protect all such information consistent with applicable law. </i></b><!-- End text of page --> </p>
+
+<p>&nbsp;</p>
+
+<hr>
+
+<p><a HREF="../home.htm"><img SRC="../point.gif" BORDER="0" WIDTH="33" HEIGHT="14">Logistics
+Management Division, Code 230 Home Page</a> </p>
+
+<hr>
+<b>
+
+<p>Last Revised:</b> October 13, 1998 <br>
+<b>NASA Official:</b> <a HREF="mailto:tom.weisz@gsfc.nasa.gov">Tom Weisz</a></p>
+
+<p>&nbsp;</p>
+</body>
+</html>

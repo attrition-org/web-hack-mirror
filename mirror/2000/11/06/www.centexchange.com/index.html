@@ -1,0 +1,58 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=Hebrew (ISO Visual)";>
+<TITLE>Welcome to Centexchange.com</TITLE>
+<Style type="text/css">
+<!--
+A       { color:#0000FF; text-decoration: none; }
+A:hover, A:active { text-decoration: underline; color: #FF0000;}
+-->
+</Style>
+<SCRIPT LANGUAGE="JavaScript">
+function getCookie(Name) { 
+  var search = Name + "=";
+  if (document.cookie.length > 0) { // if there are any cookies
+      offset = document.cookie.indexOf(search);
+      if (offset != -1) { // if cookie exists
+          offset += search.length;          // set index of beginning of value
+         end = document.cookie.indexOf(";", offset);    // set index of end of cookie value
+         if (end == -1)
+             end = document.cookie.length;
+        return unescape(document.cookie.substring(offset, end));
+      }
+  }
+}
+
+function gotoURLT ()
+{
+  var index=document.forms[0].elements[0].selectedIndex;
+  //alert(index);
+  if (index>0) {
+    var url=document.forms[0].elements[0].options[ index ].value;
+    //alert(url);
+    parent.top.location= url+"3.html";
+    parent.main.location= url+"2.html";
+
+  }
+}
+
+</SCRIPT>
+</head>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- 
+    lang = getCookie("language");
+    if (lang && lang!="")
+	document.write("<body onload=window.location.href=(\"lang/"+lang+"/index3.html\")>");
+    else 
+	document.write("<body onload=window.location.href=(\"lang/english/index3.html\")>");
+
+-->
+</SCRIPT>
+<body onload=window.location.href=("lang/english/index3.html")>
+<font color="#FF0000" face="arial">
+<h3>Please wait .... Redirecting to english index</h3>
+</font><!--java gotoURLT(reload-language.cgi?english+lang/english/index); -->
+<a href="lang/english/index3.html">If you have not been redirected in 30 seconds please click
+here</a>
+  </body>
+  </HTML><!-- www.attrition.org web hack mirror - watermark or something -->

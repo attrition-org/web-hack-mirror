@@ -1,0 +1,37 @@
+<html>
+<head>
+</head>
+<body text="#FFFFFF" vlink="#551a8b" alink="#ff0000" link="#0000ee" bgcolor="#000000">
+
+<form method=post action="/cgi-bin/sinnerz-jwit">
+<input type=hidden name=sub value=deepthoughts>
+<input type=hidden name=action value=insert>
+<center>
+<table border=0 width=70%>
+<tr>
+<td width=50%>Your Name:
+<td width=50%>
+<select name=author size=1>
+<option>delirium
+<option>duke
+<option>fh
+<option selected>HoGs HeaD
+<option>jwit
+<option>sewz
+<option>siko
+</select>
+</tr>
+<tr>
+<td width=50%>Title: <td width=50%><input type=text name=title size=30>
+</tr>
+</table>
+
+<textarea name=message rows=5 cols=65 wrap=virtual>
+</textarea><br>
+<input type=submit>
+</form>
+</center>
+
+</body>
+</html>
+

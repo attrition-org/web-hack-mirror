@@ -1,0 +1,101 @@
+<html>
+
+<head>
+<title>Problema anului 2000</title>
+</head>
+
+<body bgcolor="#FFFFFF" background="../images/background/nefol/flatwhit.gif">
+
+<p><img src="Y2K.JPG" width="118" height="78" alt="Y2K.JPG (3233 bytes)"></p>
+<font color="#ff0000"><big><big>
+
+<p></big></big></font>Problema anului 2000 se refera la imposibilitatea unor sisteme
+computerizate de a defini corect data, dupa 31 decembrie 1999. Problemele legate deY2K
+sunt cauzate de&nbsp; renuntarea din lipsa de resurse, la doi dintre digitii din valoarea
+anului.</p>
+
+<p><strong>Problema anului 2000</strong> este legata de trei aspecte majore: 
+
+<ul>
+  <li>Stocarea anului pe doi digiti in manevrarea datelor calendaristice: </li>
+</ul>
+
+<blockquote>
+  <p>Este cea mai des intalnita problema, avand si efectele cele mai nefaste. Anumite
+  aplicatii care folosesc acest mod de stocare nu vor putea efectua corect calcule, deoarece
+  nu pot vedea anii din secolul 21 ca fiind numere mai mari decât anii din secolul 20
+  (exemplu: 2000 - 1998 = 2, dar 00 - 98 = -98 sau 98, daca aplicatia nu permite numere
+  negative). Asadar, programele care stocheaza anul pe doi digiti considera secolul 20
+  implicit. Rezultate eronate pot aparea, de exemplu, in programele de gestiune si
+  contabilitate, la fel de bine ca in aplicatiile care inregistreaza alarme sau parole sau
+  creeaza log-uri si rapoarte periodice. Tot o problema va fi si determinarea zilei
+  saptamanii in functie de data. </p>
+</blockquote>
+
+<ul>
+  <li>recunoasterea anului 2000 ca an bisect: </li>
+</ul>
+
+<blockquote>
+  <p>Anii bisecti se pot calcula dupa un algoritm matematic foarte simplu: toti anii care
+  sunt divizibili cu 4 si (in acelasi timp) nu sunt divizibili cu 100, precum si anii
+  divizibili cu 400 sunt ani bisecti ( Cu operatori logici arata cam asa: <small>div. cu 4 <font
+  color="#ff0000">AND</font> ( indiv. prin 100 <font color="#ff0000">OR</font> (div.cu 400 <font
+  color="#ff0000">AND</font> impartirea prin 900 genereaza rest 200 sau 600))&nbsp; )</small>.
+  Anul 1900 nu este deci un an bisect, in vreme ce anul 2000 este. Datorita neinvocarii
+  regulii divizibilitatii la 400, exista unele sisteme care nu recunosc anul 2000 ca fiind
+  bisect, deci toate datele de dupa 29 februarie 2000 vor fi decalate cu o zi. </p>
+</blockquote>
+
+<ul>
+  <li>anumite date au semnificatii speciale: </li>
+</ul>
+
+<blockquote>
+  <p>In anumite aplicatii mai vechi, scrierea eficienta a codului in scopul economiei de
+  memorie a dus la folosirea campurilor de tip data pentru operatii speciale. Data cea mai
+  frecvent folosita pentru aceste operatii este 9/9/99. Intelesul acestei date poate diferi,
+  in functie de autorii aplicatiei (exemple: 'salveaza aceasta entitate pentru totdeauna'
+  sau 'sterge aceasta entitate dupa 30 zile' sau 'sorteaza aceasta entitate la inceputul
+  raportului'). Aceasta folosire a datelor este unul din motivele pentru care nu exista un
+  remediu general valabil pentru corectarea folosirii defectuoase a datelor. </p>
+</blockquote>
+
+<p>&nbsp;</p>
+
+<hr>
+
+<p><a href="2000check.exe"><img src="2000check.gif" width="83" height="27"
+alt="2000check.gif (1320 bytes)" border="0"></a>&nbsp; pentru Windows 3.x , 95 si 98.</p>
+
+<p><a href="y2kfix.exe">y2kfix.exe</a>&nbsp;&nbsp;&nbsp; pentru Windows NT</p>
+
+<hr>
+
+<p><strong>Y2K link</strong></p>
+
+<p><a href="http://www.ibm.com/ibm/year2000/">IBM Year 2000 Home Page<br>
+</a><a href="http://www.microsoft.com/year2000/">Microsoft TechNet - Year 2000<br>
+</a><a href="http://www.mitre.org/research/y2k/docs/Y2K_LINKS.html">Other Links for the
+Year 2000 Problem<br>
+</a><a href="http://www.year2000.com/">The Year 2000 Information Center - Millennium Bug<br>
+</a><a href="http://members.tripod.com/~rtiess/y2k.htm">Y2K FOR TODAY - INFORMATION &amp;
+RESOURCES ON Y2K<br>
+</a><a href="http://www.computerworld.com/res/year_2000.html">Year 2000 resources
+Computerworld articles<br>
+</a><a href="http://www.zdnet.com/enterprise/zdy2k/?cob=home">ZDY2K Home<br>
+</a></p>
+
+<p><strong>Y2K tools</strong></p>
+
+<p><a href="http://www.gmt-2000.com/">Greenwich Mean Time<br>
+</a><a href="http://www.nstl.com/html/nstl_ymark2000.html">NSTL YMARK2000<br>
+</a><a href="http://www.y2ktool.com/">Y2K Preparedness Year 2000 Readiness and Personal
+Survival Contingency Planning<br>
+</a><a href="http://www.y2ktool.com/year2000/tip28.shtml">Year 2000 Downloads Y2K Testing
+Software Millennium Bug PC Shareware</a><br>
+<a href="http://www.areyouy2k.com/y2ksoftware.htm">Y2k Compatibility Checking Software</a>&nbsp;</p>
+
+<hr>
+</body>
+</html>

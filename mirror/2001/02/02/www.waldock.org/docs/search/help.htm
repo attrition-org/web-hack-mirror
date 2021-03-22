@@ -1,0 +1,58 @@
+<HTML>
+<HEAD>
+<TITLE>Sambar Server Search Help</TITLE>
+</HEAD>
+<BODY bgcolor="#ffffff" text="#000000" link="#0000ee" vlink="551a8b" alink="ff0000">
+<CENTER>
+<FONT SIZE=+3>S</FONT>AMBAR
+<FONT SIZE=+3>S</FONT>EARCH
+<FONT SIZE=+3>E</FONT>NGINE
+<FONT SIZE=+3>H</FONT>ELP
+</CENTER>
+<DL>
+<DT><strong>paris galerie louvre</strong>
+<DD>Finds documents containing as many of these words and phrases as
+possible, ranked so that documents with the most matches are presented first.
+<dd>Lower-case search will find matches of capitalized words also. For example,
+<em>paris</em> will find matches for <em> paris, Paris, </em> and 
+<em> PARIS</em>.
+<P>
+<DT><strong>noir  +film  -pinot</strong>
+<DD>Matches may be required, optional, or prohibited. Precede a required 
+word or phrase with + and a  prohibited one with -.  This query finds documents 
+containing <em>film</em> and <em>noir</em>, but not containing <em>pinot</em>.
+<P>
+These boolean operators are used to determine if a statement is true
+or false.  The following chart illustrates the usage samples:
+<P>
+<TABLE cellpadding=5 border=1>
+<TR><TH>Searching...</TH><TH>Results in...</TH></TR>
+<TR><TD>cable + car</TD><TD>Documents with both words.</TD></TR>
+<TR><TD>cable car</TD><TD>Documents with either words. This results in the greatest amount of matches</TD></TR>
+<TR><TD>cable -car</TD><TD>Documents about cable, but not about cable cars.</TD></TR>
+</TABLE>
+
+</DL>
+<HR>
+<h3>Ranking Simple Queries</h3>
+
+The Sambar Search engine ranks the results based on a scoring algorithm; 
+documents with a higher score appear at the head of the ranking list. 
+A document has a higher score if the following hold:
+<ul>
+ <li> the query words or phrases are found in the special sections of the
+	document such as the title, <B>in bold</B> or in <I>italics</I>.
+ <li> the document contains multiple instances of the query word or phrase.
+  
+</ul>
+<P>
+<CENTER>
+<FONT SIZE=-1>
+Copyright &#169; 1997
+<a href="http://www.sambar.com/">Sambar Technologies.</a>
+All rights reserved.
+</FONT></CENTER>
+<P>
+<A HREF="../../index.html" TARGET=_top><IMG border=0 SRC="../../sysimage/system/powerby.gif"></A>
+</BODY>
+</HTML>

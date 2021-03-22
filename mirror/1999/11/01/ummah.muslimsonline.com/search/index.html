@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+<TITLE>EasySearch</TITLE>
+</HEAD>
+<BODY BGCOLOR=FFFFFF TEXT=000000 LINK=FF0000 ALINK=FF0000 VLINK=FF0000>
+<CENTER>
+<FONT FACE="arial,helvetica" SIZE=2 COLOR=000000>
+<H1>EasySearch</H1>
+<A HREF="/search/">Home</A>|
+<A HREF="cgisearch/easysearch.cgi?action=showadd">Add URL</A>|
+<A HREF="cgisearch/easysearch.cgi?action=newurls">New URLs</A>|
+<A HREF="cgisearch/easysearch.cgi?action=randomurl">Random URL</A>
+</FONT>
+<HR WIDTH=400>
+
+<!-- The search form is below - it should not be changed -->
+<FORM METHOD=POST ACTION="cgisearch/easysearch.cgi">
+<TABLE>
+<TR>
+<TD VALIGN=TOP>
+<FONT FACE="arial, helvetica" SIZE=3 COLOR=0000>
+<B>Search For :</B>
+</FONT>
+</TD>
+<TD>
+<INPUT TYPE=HIDDEN NAME="action" VALUE="search">
+<INPUT TYPE=HIDDEN NAME="code" VALUE="0">
+<INPUT TYPE=TEXT NAME="keywords" SIZE=25>
+<BR>
+<FONT FACE="arial,helvetica" SIZE=2 COLOR=000000>
+<B>Mode :</B>
+<INPUT TYPE="radio" NAME="mode" VALUE="words" CHECKED>Words
+<INPUT TYPE="radio" NAME="mode" VALUE="phrases">Phrase
+<BR>
+<B>Safe : </B>
+<INPUT TYPE="checkbox" NAME="safe" CHECKED>Omit Offensive Slang
+</FONT>
+</TD>
+<TD VALIGN=TOP ALIGN=CENTER WIDTH=60>
+<INPUT TYPE=SUBMIT VALUE="Search!">
+</TD>
+</TR>
+</TABLE>
+</FORM>
+<!-- The search form is above - it should not be changed -->
+
+<HR WIDTH=400>
+<FONT FACE="arial,helvetica" SIZE=2 COLOR=000000>
+<A HREF="http://getperl.virtualave.net">EasySearch</A><BR>
+Copyright 1999<BR>
+All Rights Reserved.<BR>
+</FONT>
+</CENTER>
+</BODY>
+</HTML>

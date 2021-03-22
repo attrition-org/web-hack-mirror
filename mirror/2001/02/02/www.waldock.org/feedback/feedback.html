@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<META NAME="GENERATOR" CONTENT="Arachnophilia Version 2.1">
+<META NAME="FORMATTER" CONTENT="Arachnophilia Version 2.1">
+<title>Jeff's Feedback Form</title>
+</head>
+
+<BODY BACKGROUND="" BGCOLOR="#c0c0c0" TEXT="#000000" LINK="#0000ff" VLINK="#800080" ALINK="#ff0000">
+
+<h1><font color="#008000">Jeff's Feedback Form</font></h1>
+<hr>
+<p>Tell me what you think about my web site, or anything else
+that comes to mind. I welcome all (?!?) of your comments and
+suggestions.</p>
+
+<form method="POST" action="/cgi-bin/feedback.dll">
+<p><strong><FONT COLOR=#800040>What kind of comment would you like to send?</FONT></strong></p>
+    <dl>
+        <dd>
+	<input type="radio" name="MessageType"value="Complaint">Complaint 
+	<input type="radio"  name="MessageType" value="Problem">Problem
+	<input type="radio" checked name="MessageType"  value="Suggestion">Suggestion 
+	<input type="radio" name="MessageType" value="Praise">Praise
+        </dd>
+    </dl>
+<p><strong><FONT COLOR=#800040>What do you want to comment on?</FONT></strong></p>
+    <dl>
+        <dd>
+	<select name="Subject" size="1">
+               <option selected>Web Site</option>
+               <option>Sheffield Wednesday</option>
+               <option>Hot Chocolate</option>
+               <option>Peanut Butter Sandwiches</option>
+               <option>(Other)</option>
+            	</select> 
+	 Other: 	<input type="text" size="26"  maxlength="256" name="SubjectOther">
+          </dd>
+    </dl>
+<p><strong><FONT COLOR=#800040>Enter your comments in the space provided below:</FONT></strong></p>
+    <dl>
+        <dd><textarea name="Comments" rows="5" cols="42"></textarea></dd>
+    </dl>
+<p><strong><FONT COLOR=#800040>Supply as many of the following details as you wish! :</FONT></strong></p>
+    <dl>
+        <dd>
+	<pre>
+Name	<input type="text" size="35" maxlength="256" name="UserName">
+E-mail	<input type="text" size="35" maxlength="256" name="UserEmail">
+URL	<input type="text" size="35" maxlength="256" name="UserURL">
+Tel	<input type="text" size="35" maxlength="256" name="UserTel">
+FAX	<input type="text" size="35" maxlength="256" name="UserFAX"> 
+	</pre>
+        </dd>
+    </dl>
+<P><strong><FONT COLOR=#800040>Click here if you would like a reply .... </FONT></strong><input type="checkbox" name="ContactRequested"  value="ContactRequested">
+<p>
+	<input type="submit" value="Submit Comments"> 
+	<input type="reset" value="Clear Form">
+</p>
+</form>
+
+<hr>
+<TABLE cellpadding=4>
+<TR>
+   <TD><a href="/index.htm"> <IMG border=0 align=middle ALT="Back to the Home Page" SRC="../res/home.gif"></A>
+</TD>
+   <TD><FONT SIZE="2" COLOR="#800040" FACE="Tahoma">© Jeff Waldock, 1997 <BR>
+Revised: Thursday, May 22, 1997 11:52 AM
+</FONT></TD>
+</TR>
+</TABLE>
+</body>
+</html>

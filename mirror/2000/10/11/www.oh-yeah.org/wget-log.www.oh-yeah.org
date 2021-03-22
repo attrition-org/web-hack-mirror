@@ -1,0 +1,32 @@
+--02:03:06--  http://www.oh-yeah.org:80/
+           => `www.oh-yeah.org/index.html'
+Connecting to www.oh-yeah.org:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 1,228 [text/html]
+
+    0K -> .                                                      [100%]
+
+02:03:06 (1.17 MB/s) - `www.oh-yeah.org/index.html' saved [1228/1228]
+
+Loading robots.txt; please ignore errors.
+--02:03:06--  http://www.oh-yeah.org:80/no-robots.txt
+           => `www.oh-yeah.org/no-robots.txt'
+Connecting to www.oh-yeah.org:80... connected!
+HTTP request sent, awaiting response... 404 Not Found
+02:03:06 ERROR 404: Not Found.
+
+--02:03:06--  http://www.oh-yeah.org:80/suid1.jpg
+           => `www.oh-yeah.org/suid1.jpg'
+Connecting to www.oh-yeah.org:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 20,836 [image/jpeg]
+
+    0K -> .......... ..........                                  [100%]
+
+02:03:07 (72.41 KB/s) - `www.oh-yeah.org/suid1.jpg' saved [20836/20836]
+
+Converting www.oh-yeah.org/index.html... done.
+
+FINISHED --02:03:07--
+Downloaded: 22,064 bytes in 2 files
+Converting www.oh-yeah.org/index.html... done.

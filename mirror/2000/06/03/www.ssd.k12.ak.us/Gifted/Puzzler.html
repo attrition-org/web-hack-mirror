@@ -1,0 +1,61 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.5 (Macintosh; I; PPC) [Netscape]">
+   <title>Puzzle of the Day</title>
+<script language="JavaScript">
+// The Array Function 
+function makeArray(len) {
+    for (var i = 0; i < len; i++) this[i] = null;
+this.length = len;
+}
+
+// This is where the array of images/text is created.
+
+pics = new makeArray(6);
+pics[0] = "<IMG SRC='zero.jpeg'>";
+pics[1] = "<IMG SRC='one.jpeg'>"
+pics[2] = "<IMG SRC='two.jpeg'>"
+pics[3] = "<IMG SRC='three.jpeg'>"
+pics[4] = "<IMG SRC='four.jpeg'>"
+pics[5] = "<IMG SRC='five.jpeg'>"
+
+// The random number generator.
+
+function rand(n) {
+seed = (0x015a4e35 * seed) % 0x7fffffff;
+return (seed >> 16) % n;
+}
+var now = new Date()
+var seed = now.getTime() % 0xffffffff
+</script>
+<script Language="Javascript">
+<!--Beginning of Javascript-
+var stuff="takes you to some great ferret pictures"
+//-End of JavaScript-->
+</script>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#0000FF" vlink="#551A8B" alink="#0000FF">
+
+<center>
+<h1>
+Puzzle of the Day</h1></center>
+
+<center><script LANGUAGE = "JavaScript">
+//Where you place this is where the random object will be displayed.
+document.write(pics[rand(pics.length)])
+</script>
+</center>
+
+<div align=right><a href="Answers.html">Click here to see the answers but
+be</a>
+<br><a href="Answers.html">aware that you will see <b>all</b> of the answers...</a></div>
+
+<hr WIDTH="100%">
+<center><a href="../index.html">Sitka School District Main Page</a>
+- <a href="Gifted.html">Gifted Services Main Page</a> - <a href="Program.html">Program
+Information</a> - <a href="Lessons.html">Lesson Plans</a> - <a href="Resources.html">Resources</a></center>
+
+</body>
+</html>

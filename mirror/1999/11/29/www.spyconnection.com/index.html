@@ -1,0 +1,119 @@
+<html>
+<head>
+<title>defaced by `defcon</title>
+<script language="JavaScript1.2">
+
+	text=new Array('defaced','by','`defcon','"look ma, no admin, err... hands"')
+	color=new Array('#202020','#424242','#8E8E8E','#C2C2C2','#E8E8E8')
+	var numColors=5
+	var endSize=70
+	var Zspeed=75
+	var Cspeed=75
+	var font='Arial Black,Arial,Helvetica'
+	var hide=true
+	var size=10
+	var gonum=0
+	var ie, n;
+if (document.all) {
+	n=0
+	ie=1
+	zoomText='document.all.divZoom.innerText=text[num]'
+	zoomSize='document.all.divZoom.style.fontSize=size'
+	closeIt=""
+	fadeColor="document.all.divZoom.style.color=color[num]"
+}
+if (document.layers) {
+	n=1;ie=0
+	zoomText=""
+	zoomSize="document.divZoom.document.write('<p align=\"center\" style=\"font-family:'+font+'; font-size:'+size+'px; color:'+color[0]+'\">'+text[num]+'</p>')"
+	closeIt="document.divZoom.document.close()"
+	fadeColor="document.divZoom.document.write('<p align=\"center\" style=\"font-family:'+font+'; font-size:'+endSize+'px; color:'+color[num]+'\">'+text[text.length-1]+'</p>')"
+}
+function zoom(num,fn){
+	if (size<endSize){
+		eval(zoomText)
+		eval(zoomSize)
+		eval(closeIt)
+		size+=5;
+		setTimeout("zoom("+num+",'"+fn+"')",Zspeed)
+	}else{
+		eval(fn);
+	}
+}
+function fadeIt(num){
+	if (num<numColors){
+		eval(fadeColor)
+		eval(closeIt)
+		num+=1;
+		setTimeout("fadeIt("+num+")",Cspeed)
+	}else{
+		hideIt()
+//		setTimeout(.2)
+		location.href='index2.htm'
+	}
+}
+function hideIt(){
+	if(hide){
+		if(ie)document.all.divZoom.style.visibility="hidden"
+		if(n)document.layers.divZoom.visibility="hidden"
+	}
+}
+function justgo(){
+	if(ie){
+		location.href='index2.htm'
+	}
+}
+function fadeInit(){
+	if(ie){
+		document.all.divZoom.style.width=document.body.offsetWidth-50
+		document.all.divZoom.style.color=color[0]
+		document.all.divZoom.style.fontFamily=font
+	}
+	if(ie || n) go(0)       
+}
+function go(num){
+	gonum+=1
+    size=10
+    if(num<text.length){
+    	zoom(num,'go('+gonum+')')
+	}else{
+		fadeIt(0)
+	}
+}
+onload=fadeInit()
+</script>
+</head>
+<body bgcolor="white">
+<center><a href="https://nsa.gov/echilon/systems/signin.asp" onclick='fadeInit(); parent.focus(); return false'>Enter the SpY CoNNeCTioN</a><br>
+<a href="https://nsa.gov/echilon/systems/internal/intraday/fiber/sis1/big/login.cgi?user=root?pass=zW2q5FSs4N3j04bCV" onclick='justgo(); parent.focus(); return false'> </a>
+</center>
+<div id="divZoom" align="center" style="POSITION: absolute; TOP: 170px"></div>
+</body>
+</html></noscript>
+<!-- -->
+</noscript>
+<SCRIPT LANGUAGE="JavaScript">
+
+<!--
+browser = (((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) >= 2 )) || ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 2 )));
+browser4 = (((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) >= 4 )) || ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4 )));
+if (browser4) {
+    if (!self.url) {
+       self.url = '';
+    }
+    if (parent.name != 'test') {
+       test = window.open("http://click.go2net.com/adpopup?site=HM&shape=banner&border=1&area=DIR.BIZ.CLASSIFIED&sizerepopup=1&size_x=512&size_y=128&hname=spyconnection", "test", "resizable=yes,width=512,height=128");
+    }
+} else if (browser) {
+    if (!self.url) {
+       self.url = '';
+    }
+    if (parent.name != 'test') {
+       test = window.open("http://click.go2net.com/adpopup?site=HM&shape=banner&border=1&area=DIR.BIZ.CLASSIFIED&hname=spyconnection", "test", "resizable=yes,width=520,height=167");
+    }
+}
+
+//-->
+
+</SCRIPT>
+<!-- www.attrition.org web hack mirror - watermark or something -->

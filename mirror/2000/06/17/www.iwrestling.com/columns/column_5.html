@@ -1,0 +1,408 @@
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive 4">
+		<title>iwrestling.com - Columns - 5</title>
+		<meta name="keywords" content="Fantasy Wrestling, Pro Wrestling, Wrestling, wrestling newsletters, wrestling news, news, columns, Games, Scoops, Scoops Wrestling, WWF news, WCW News, ECW news, Raw Results, Nitro Results, PPV Results">
+		<meta name="description" content="The premiere pro wrestling source. Daily Pro Wrestling News,columns, and features. Plus wrestling games and videoa nd audio clips.">
+		<script language="JavaScript"><!--
+/* 	Cookies Demo	
+By Jerry Aman, Optima System, July 28, 1996.   	
+Cookie Functions written by Bill Dortch, hIdaho Design.	Part of the PageSpinner distribution.	
+We will not be held responsible for any unwanted 	
+effects due to the usage of this script or any derivative.  	
+No warrantees for usability for any specific application 	
+are given or implied.	
+You are free to use and modify this script,	
+if credits are kept in the source code*/	
+
+var cookieVisitID 	= 'my_LastVisitiwrestling';		
+var cookieNumVisitID 	= 'my_NumVisitsiwrestling';	
+
+// Change 'my_LastVisit' and 'my_NumVisits'						
+// to something unique for						
+// the current page, or else it						
+// won't work correctly if other uses						
+// this script!	
+var gLastVisit;	
+var gNumVisits;	
+SetLastVisit();	
+// Execute when loading page		
+if ( gLastVisit == "")		
+{		
+window.open("http://www.iwrestling.com/popup.html", "popDialog", "width=500,height=225,scrollbars=no,resize=no,");		}		
+else 		
+{        	
+}	
+function SetLastVisit (name, value){		
+var newVisitDate = new Date();		
+var expDate = new Date (); 		
+var numVisits = 0;			
+// The expDate is the date when the cookie should			
+// expire, we will keep it for a day		
+expDate.setTime( expDate.getTime() + (1 * 24 * 60 * 60 * 1000) ); 			
+// Info about last visit		
+if (GetCookie (cookieVisitID) != null)			
+gLastVisit = GetCookie (cookieVisitID);		
+else gLastVisit = "";		
+if (GetCookie (cookieNumVisitID) != null)			
+gNumVisits = GetCookie (cookieNumVisitID);			
+else gNumVisits = 0;			
+// Use eval() to convert a string to a number		
+numVisits = eval(gNumVisits) +1;				
+// Store info about this visit		
+SetCookie( cookieVisitID, newVisitDate, expDate); 		
+SetCookie( cookieNumVisitID, numVisits, expDate); 	}    
+// ---------------------------------------------------------------    
+// Cookie Functions - Second Helping  (21-Jan-96)    
+//  Written by:  Bill Dortch, hIdaho Design <BDORTCH@NETW.COM>    
+//  The following functions are released to the public domain.    
+//  The following changes were made to SetCookie:    
+//    
+//  1.  The expires parameter is now optional - that is, you can omit    
+//      it instead of passing it null to expire the cookie at the end    
+//      of the current session.    
+//    
+//  2.  An optional path parameter has been added.    
+//    
+//  3.  An optional domain parameter has been added.    
+//    
+//  4.  An optional secure parameter has been added.    
+//    
+//  For information on the significance of these parameters, and    
+//  and on cookies in general, please refer to the official cookie    
+//  spec, at:    
+//    
+//      http://www.netscape.com/newsref/std/cookie_spec.html        
+//    
+//    
+// "Internal" function to return the decoded value of a cookie    
+//    
+function getCookieVal (offset) {      
+var endstr = document.cookie.indexOf (";", offset);      
+if (endstr == -1)        endstr = document.cookie.length;      
+return unescape(document.cookie.substring(offset, endstr));    
+}    
+
+//    
+//  Function to return the value of the cookie specified by "name".    
+//    name - String object containing the cookie name.    
+//    returns - String object containing the cookie value, or null if   
+//      the cookie does not exist.    
+//    
+function GetCookie (name) {      
+var arg = name + "=";      
+var alen = arg.length;      
+var clen = document.cookie.length;      
+var i = 0;      
+while (i < clen) {        
+var j = i + alen;        
+if (document.cookie.substring(i, j) == arg)          
+return getCookieVal (j);        
+i = document.cookie.indexOf(" ", i) + 1;        
+if (i == 0) break;       
+}      
+return null;    }    
+//    
+//  Function to create or update a cookie.    
+//    name - String object object containing the cookie name.    
+//    value - String object containing the cookie value.  May contain    
+//      any valid string characters.    
+//    [expires] - Date object containing the expiration data of the cookie.  If    
+//      omitted or null, expires the cookie at the end of the current session.    
+//    [path] - String object indicating the path for which the cookie is valid.    
+//      If omitted or null, uses the path of the calling document.    
+//    [domain] - String object indicating the domain for which the cookie is    
+//      valid.  If omitted or null, uses the domain of the calling document.    
+//    [secure] - Boolean (true/false) value indicating whether cookie transmission    
+//      requires a secure channel (HTTPS).      
+//    
+//  The first two parameters are required.  The others, if supplied, must    
+//  be passed in the order listed above.  To omit an unused optional field,    
+//  use null as a place holder.  For example, to call SetCookie using name,    
+//  value and path, you would code:    
+//    
+//      SetCookie ("myCookieName", "myCookieValue", null, "/");    
+//   
+//  Note that trailing omitted parameters do not require a placeholder.    
+//    
+//  To set a secure cookie for path "/myPath", that expires after the    
+//  current session, you might code:    
+//    
+//      SetCookie (myCookieVar, cookieValueVar, null, "/myPath", null, true);    
+//    
+function SetCookie (name, value) {      
+var argv = SetCookie.arguments;      
+var argc = SetCookie.arguments.length;      
+var expires = (argc > 2) ? argv[2] : null;      
+var path = (argc > 3) ? argv[3] : null;      
+var domain = (argc > 4) ? argv[4] : null;      
+var secure = (argc > 5) ? argv[5] : false;      
+document.cookie = name + "=" + escape (value) + ((expires == null) ? "" : ("; expires=" + expires.toGMTString())) + ((path == null) ? "" : ("; path=" + path)) + ((domain == null) ? "" : ("; domain=" + domain)) + ((secure == true) ? "; secure" : "");
+    }
+    
+//  Function to delete a cookie. (Sets expiration date to current date/time)   
+//    name - String object containing the cookie name    
+//    
+function DeleteCookie (name) {      
+var exp = new Date();      
+exp.setTime (exp.getTime() - 1);  
+// This cookie is history      
+var cval = GetCookie (name);      
+document.cookie = name + "=" + cval + "; expires=" + exp.toGMTString();    
+}
+// -->
+		</script>
+	</head>
+
+	<body text="white" bgcolor="black" link="#0088ec" vlink="red" alink="white">
+		<center>
+			<a name="top"></a><a href="http://www.ign.com" target="_new"><img src="http://www.iwrestling.com/topads/ign.gif" width="70" height="60" border=0 alt="IGN"></a>
+
+			<img src="../graphics/transparent.gif" width="5" height="60" usemap="#" border="0"><map name=""></map>
+<A HREF="http://adserver.ign.com/click-ng/network=ign&size=468x60&category=entertainment&genre=entertainment&site=scoopswrestling&ord=42062?" target="_new"><img src="http://adserver.ign.com/image-ng/network=ign&size=468x60&category=entertainment&genre=entertainment&site=scoopswrestling&ord=42062?" width=468 height=60 border=0 alt="banner ad"></A>
+
+			<p>
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#186bde">
+				<tr>
+					<td><img src="../graphics/logo_1.gif" width="125" height="60" alt="iwrestling.com" border="0"></td>
+					<td><br>
+					</td>
+					<td align="right"><img src="../graphics/header.gif" width="475" height="60" alt="iwrestling.com " border="0"></td>
+				</tr>
+			</table>
+			<table width="100%" bgcolor="black" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td valign="top" width="125" bgcolor="#186bde"><img src="../graphics/logo_2.gif" width="125" height="80">
+						<table width="125" cellpadding="0" cellspacing="0" border="0">
+							<tr>
+								<td width="15" bgcolor="#186bde"><img src="../graphics/transparent.gif" width="15" height="1"></td>
+								<td width="110" bgcolor="black">
+									<div align="right">
+										<img src="../graphics/nav1.gif"><br>
+										<table border="0" cellpadding="0" cellspacing="0" width="96%">
+											<tr>
+												<td><tr><td width="105" bgcolor="#000000"><font size="2" face="arial" color="red">
+	<b><i>what's inside</i></b></font>
+</td></tr>
+<tr><td width="105">
+<font size="2" face="Arial">
+	<li><a href="http://www.iwrestling.com">Main Page</a><br>
+	<li><a href="/rose_report">Rose Report</a><br>
+	<li><a href="/news">News Board</a><br>
+	<li><a href="../cgi/imageFolio.cgi">Gallery</a><br>
+	<li><a href="/columns">Columns</a><br>
+	<li><a href="../search.html">Links</a><br>
+	<img src="graphics/transparent.gif" width="5" height="1">
+</font>
+	</td></tr>
+
+
+<tr><td width="105" bgcolor="black"><font size="2" face="arial" color="red">
+	<b><i>Image Gallery</i></b></font>
+</td></tr>
+<tr><td width="105">
+<font size="2" face="Arial">
+	<li><a href="../cgi/imageFolio.cgi?direct=Women_Of_Wrestling">Women Pics</a><br>
+	<li><a href="../cgi/imageFolio.cgi?direct=WWF_Classics">WWF Classics</a><br>
+	<li><a href="../cgi/imageFolio.cgi?direct=WCW_Classics">WCW Classics</a><br>
+	<img src="graphics/transparent.gif" width="5" height="1">
+</font>
+</td></tr>
+
+<tr><td width="105" bgcolor="black"><font size="2" face="arial" color="red">
+	<b><i>S*P*A*M Columns</i></b></font>
+</td></tr>
+<tr><td width="105">
+<font size="2" face="Arial">
+	<li><a href="column_1.html">Great Canadian</a><br>
+	<li><a href="column_2.html">The Couch</a><br>
+	<li><a href="column_3.html">The Analyst</a><br>
+	<li><a href="column_4.html">Turnbuckle</a><br>
+	<img src="graphics/transparent.gif" width="5" height="1">
+</font>
+</td></tr>
+
+<tr><td width="105" bgcolor="black"><font size="2" face="arial" color="red">
+	<b><i>interact</i></b></font>
+</td></tr>
+<tr><td width="105">
+<font size="2" face="Arial">
+	<li><a href="/discussion">Fan Forums</a><br>
+	<li><a href="/chat">Chat</a><br>
+	<img src="graphics/transparent.gif" width="5" height="1">
+</font>
+</td></tr>
+
+
+<tr><td width="105" bgcolor="black"><font size="2" face="arial" color="red">
+	<b><i>general</i></b></font>
+</td></tr>
+<tr><td width="105">
+<font size="2" face="Arial">
+	<li><a href="../about.html">About Us</a><br>
+	<li><a href="../contact.html">Contact Us</a><br>
+	<li><a href="../advertising.html">Advertising</a>
+</font>
+</td></tr>
+
+												</td>
+											</tr>
+										</table>
+										<br>
+										<img src="../graphics/nav2.gif"></div>
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td valign="top">
+						<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+							<tr>
+								<td width="50%" bgcolor="red"><font face="Times New Roman,Georgia,Times"><img src="../graphics/transparent.gif" width="5" height="1"></font><font color="white" face="Times New Roman,Georgia,Times"><b>S * P * A * M<br>
+									</b></font><font face="Arial" size="2"><img src="../graphics/transparent.gif" width="5" height="1"></font><font color="white" size="2" face="Arial"><b>Scoops Periodic Anecdotes and Musings</b></font></td>
+								<td width="50%" bgcolor="red" align="right"><font color="white" size="2" face="Arial">Today is
+									<script language="JavaScript"><!--
+// Copyright (c) 1997 Mecklermedia Corporation.
+          // http://www.webreference.com/js/
+          // License is granted if and only if this entire
+          // copyright notice is included. By Tomer Shiran.
+
+          function makeArray() {
+            var args = makeArray.arguments;
+            for (var i = 0; i < args.length; i++) {
+              this[i] = args[i];
+            }
+            this.length = args.length;
+          }
+
+          function fixDate(date) {
+            var base = new Date(0);
+            var skew = base.getTime();
+            if (skew > 0)
+              date.setTime(date.getTime() - skew);
+          }
+
+          function getString(date) {
+            var months = new makeArray("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+            return months[date.getMonth()] + " " +
+                   date.getDate() + ", " + (date.getYear());
+          }
+
+          var cur = new Date();
+          fixDate(cur);
+          var str = getString(cur);
+          document.write(str);
+// -->
+									</script>
+									<img src="../graphics/transparent.gif" width="5" height="1"></font></td>
+							</tr>
+						</table>
+						<br>
+						<table align="center" width="99%">
+							<tr>
+								<td valign="top"><font face="Arial"><b>Tales from the Turnbuckle</b>
+<br>by <i><a href="mailto:stingseven@yahoo.com">Sting7</a></i>
+<br>
+
+<p>
+<b>10 Things I've Learned about Wrestling this Week ending 6/16.</b><b>
+<br>
+</b>6/16/00
+
+<br>
+<font face="Arial" size="2">
+<br>
+
+WCW has had quite a week in the employee relations  department. Tammy Lyn Sytch appears to have been let go and Kimberly Page has up and quit. Both are unfortunate for different reasons. Tammy because this seems to be another chapter in the destruction of a once sizzling. Kimberly because she was coming into her own as a femme fatale. The fans were just beginning to get used to booing the beauty. 
+<P>
+Kimberly left on good terms with WCW, despite the creative differences she cited. Many are whispering this was ploy to get the time off to share with her husband, Diamond Dallas Page, that she wanted all along. Effectively, taking a leave of absence without pay. I hope that is true. Tammy's road looks a lot rougher than that. I can only hope that she gets the helps she needs and can find her way back to the ring and to her fans, in the condition that she can best highlight her considerable talent. Good luck to her.  
+<P>
+Hit my new fragrancin' music!!!
+<P>
+10.  The Triple Threat is back!!! That could be great or it could be horrible. Big risk trying to right stories for a faction you didn't create. I have a bad feeling about this.
+<P>
+9.   The Rikishi/Val Venis feud is looking like one of the most violent WWF has had to offer in a long time. This could be a feud that is not only good for three or four more PPV's, but could be legendary. It's good to see a talented worker like Val Venis getting something to sink his teeth into, metamorphisizing his character like HHH's was (remember when HHH was spoiled rich kid who couldn't win without help from Sable?).
+<P>
+8.   I noticed how difficult it is to remember who is holding what title in WCW. For the uninitiated, World champ is Jarrett, US champ is Scott Steiner, Cruiserweight is Chavo Guerrero (hell no I ain't calling him Lt. Loco) and Hardcore is Big Vito of the Marmalukes (more on them later). Tag Champs is Chuck Palumbo and Stan Stasiak.
+<P>
+7.   Trish Stratus is showing strong heel-ess potential. More reasons to look at her. 
+<P>
+6.    I ahve always been a fan of Vince McMahon's DeNiro like ability to tell a whole story with his facial expression. Vince Russo is a quickly gaining ground. The bit where he had the nervous breakdown over Ric Flair was hysterical.
+<P>
+5.   The Marmalukes should have been split a long time ago. Big Vito certainly has the chops to go it alone, Johnny the Bull (according to the internet chat rooms) is quickly becoming a female fave. Use that!
+<P>
+4.    WCW released a number of Mexican wrestlers last week, just nothing for them to do. WCW's roster is so big right now, they are clearly going to have to make more cuts. By the way, why does Sting need more time off? WE all know about the stunt man.........
+<P>
+3.    Miss Hancock and Daffney, Paisley and Major Guns....about a year ago, WCW had virtually no interest in the women other than Nitro Girls (I, for one, don't miss them). Times have changed.
+<P>
+2.    DDP gave one of the best shoots I ever saw on Nitro, what a "swan song."  Of course, he'll be back, I hope he shows that kind of mike skill when he gets back (my bet, with Kimberly).
+<P>
+1.     Ric Flair played a role in the hair cutting incident, it was his idea, as well as his family's involvement. I want all those dipsticks who keep clammering for his retirement to ask themselves how many other people are willing to humiliate themselves for the good of the company. Long live Flair!!
+
+<P>
+Wrestler of  the Week :   Ric Flair, though the commentators blew the significance of the match, it was sad to see that flowing gold mane brutalized, it felt like the end of an era. Flair sold it brilliantly.
+<P>
+Match of the Week  :  Rikishi and Val Venis. Intense!!! This is a fun feud to watch unfold.
+<P>
+Shoot of the Week :  DDP's was so excellent, he is the hands down winner. Honorable mention to Kevin Nash's Deliverance homily and Rock's bit about the Scooby snacks.
+<P>
+Line of the Week:  I'm not going to print the whole thing, but apparently Rock has marked down Stephanie from a $2 ho to a .50 ho. What happens during the blue light special???
+<P>
+No PPV's this weekend, the Great American Bash was a good show, enough setting people on fire though. Next weekend is King of the Ring. Be the King of your own Ring this weekend!!! 
+
+
+									</font></td>
+								<td width="5" valign="top"><br>
+								</td>
+								<td width="130" valign="top"><img src="../graphics/transparent.gif" width="130" height="10"><br>
+									<center><font size="2" face="Arial"><A HREF="http://www.iwrestling.com/news/messages/5053.html"><img src="http://www.iwrestling.com/graphics/iwcool.gif" width="130" height="104" border=0><br><b>PRO WRESTLING DAILY</b></a></font></center>	
+									<p><font size="2" face="Arial">
+									<table border="0" cellpadding="2" cellspacing="0" width="130">
+										<tr>
+											<td bgcolor="#186bde"></td>
+										</tr>
+									</table>
+									</font></p>
+									<p>
+									<table bgcolor="#f00000" width="130" border="0" cellspacing="0" cellpadding="1">
+										<tr>
+											<td><img src="http://www.iwrestling.com/graphics/transparent.gif" width="1" height="10"> <font size="2" face="Arial" color="white"><b>POLL</b></font></td>
+										</tr>
+										<tr>
+											<td>
+												<center>
+													<table bgcolor="black" width="120" border="0" cellspacing="0" cellpadding="4">
+														<tr>
+															<td>
+																<script src="http://www.scoopswrestling.com/funspot/cgi-bin/poll-js.pl?00000001" language="JavaScript1.1"></script>
+															</td>
+														</tr>
+													</table>
+												</center>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td width="1" bgcolor="#186bde"><img src="../graphics/transparent.gif" width="1" height="20"></td>
+				</tr>
+			</table>
+			<table width="100%" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td width="100%" bgcolor="#186bde" align="right"><img src="../graphics/footer.gif" width="600" height="60" alt="footer" usemap="#footer" border="0"><map name=""></map></td>
+				</tr>
+			</table>
+			<table width="100%" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td width="100%" align="right"><font size="2" face="Arial">&copy; 2000 Snowball.com, Inc. All rights reserved.<br>
+						<a href="http://www.scoopswrestling.com/pages/privacy.html">Privacy Policy</a></font></td>
+				</tr>
+			</table>
+		</center>
+	</body>
+
+</html>
+<map name="toolbar"><area shape="rect" coords="7,15,97,35" href="http://www.iwrestling.com/news"><area shape="rect" coords="7,40,96,61" href="../opinions/index.html"><area shape="rect" coords="7,64,97,85" href="../store/index.html"><area shape="rect" coords="6,90,98,110" href="../spotlight/index.html"><area shape="rect" coords="6,116,98,136" href="http://www.iwrestling.com/discussion"><area shape="rect" coords="6,142,98,163" href="../live/index.html"><area shape="default" nohref></map><map name="footer"><area shape="rect" coords="2,40,88,58" href="#top"><area shape="rect" coords="99,39,187,58" href="../advertising.html"><area shape="rect" coords="196,39,269,58" href="../feedback.html"><area shape="rect" coords="276,39,335,58" href="../search.html"><area shape="default" nohref></map>

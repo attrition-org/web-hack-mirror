@@ -1,0 +1,1 @@
+This page was hacked by n0-nam3 from petaguard ( diablo bm-freak H3X0r rapier n0-nam3 beculetz) text pt. ascultatorii romani bre heheheh da cool o fost party-ul de sambata pkt ca nu m-a putut trezi H3X0r sheat shi apropo ma fut in prxi-uri shi inconturi de ftp. :))  ( PENTRU IUBITA)mailto : mach_azazel@yahoo.com 

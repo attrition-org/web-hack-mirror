@@ -1,0 +1,649 @@
+
+<!--
+Version: 2.0
+DB: production
+SQL: select a.second_deck,a.url,a.pub_id,a.art_id,a.images,p.pub_name,a.stock_symbol,a.headline,a.extract,TO_CHAR((aw.lastmod_date+(3/24)),'MM/DD/YY, fmHH12fm:MI AM') as lastmod_date,TO_CHAR((aw.create_date+(3/24)),'MM/DD/YY, fmHH12fm:MI AM') as create_date,a.doc_id,a.byline,TO_CHAR((aw.prod_date+(3/24)),'MM/DD/YY, fmHH12fm:MI AM') as prod_date,a.teaser,a.proj_id,p.pub_url,a.prev_id,a.search_query,a.next_id,a.body 
+ from cd_pubs p,cd_articles a,cd_article_workflows aw 
+ where a.doc_id = 'TWB19990106S0018' and a.art_id = aw.art_id and a.pub_id = p.pub_id (+)  
+  order by a.prod_date desc
+Cat: 
+-->
+<HTML>
+<HEAD>
+
+<TITLE>Government Passes First Y2K Test </TITLE>
+<META NAME="DESCRIPTION" CONTENT="Unemployment insurance benefits claims filed on Jan. 4 are properly processed.">
+
+<!--
+<STYLE TYPE="text/css">
+	<!--
+	small {font-size: 9pt;  font-family: geneva, ms sans serif, helvetica;  line-height: 13pt}
+	small.scnd {font-size: 7pt;  font-family: geneva, ms sans serif, helvetica;  line-height: 10pt}
+	div {font-size: 11pt;  font-family: geneva, ms sans serif, helvetica;  line-height: 10pt}
+
+	A.white {color: #ffffff}
+
+	-->
+</STYLE>
+</HEAD>
+
+<body bgcolor=#ffffff link="#0022BB" vlink="#555555" alink="#EE0000"
+background="http://img.cmpnet.com/cmpnet/bgimages/btg/tw-winIE3.gif"
+>
+<!--  URI/news/story/TWB19990106S0018  -->
+
+<!-- TOP BAN -->
+<table border="0" cellpadding="0" cellspacing="0" width="600">
+<tr>
+
+<td width="129" align=center><a href="../../index.html"><img src="http://img.cmpnet.com/cmpnet/brandbars/techweb_cmp_blue.gif" alt="CMP's TechWeb" WIDTH="114" HEIGHT="57" border="0" hspace=0 align=center></a><br clear=all><img src="http://img.cmpnet.com/cmpnet/blank.gif" width=129 height=1 vspace=0 hspace=0 border=0></td>
+
+<td width="6"><img src="http://img.cmpnet.com/cmpnet/blank.gif" width="6" height="1" border="0"></td>        
+<td><img src="http://cookies.cmpnet.com/special/user/user.gif?event=964028892934496893&ref=http://www.techweb.com:80/wire/technews/year2000.html" width="5" height="1" border="0"><a target="_top" href="http://newads.cmpnet.com/event.ng/Type=click&ProfileID=460&RunID=3855&AdID=1944&GroupID=9&FamilyID=1&TagValues=163.178&Redirect=http:%2F%2Fwww.cmpnet.com"><img src="http://img.cmpnet.com/ads/graphics/cs/cg/heyyou.gif" border=1 height=60 width=468 alt="Click Here to Vist CMPNET"></a></td></tr>
+
+<!-- added instead of p tag beneath -->
+<tr><td colspan=3><img src="http://img.cmpnet.com/cmpnet/blank.gif" width="1" height="10" border=0 vspace=0 hspace=0></td></tr></table>
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="136" align="left">
+<tr><td width="129"><img src="http://img.cmpnet.com/cmpnet/blank.gif" width="1" height="6" border="0"><BR>
+<a href="/news"><img src="http://img.cmpnet.com/cmpnet/brandbars/ban_techwebnews.gif" alt="TechWeb News" align=top width="130" height="22" border="0"></a><p>
+
+
+
+
+<TABLE border=0 CELLPADDING="0" CELLSPACING="0" WIDTH="110" align=center>
+    <TR>
+	<TD VALIGN=TOP><font face="Geneva,ms sans serif,helvetica" size="1" color="#FFCC00"><small><B>Search</B></small></font></td>
+    </tr> 
+    <TR><TD valign="bottom">
+    <form method="get" action="/se/techsearch.cgi">
+    <table border=0 cellpadding=0 cellspacing=0> 
+	<tr>
+	    <td valign=top><input type="Radio" name="Search" value="TW" align="ABSMIDDLE" checked notab></td>
+	    <td><font face="Geneva,ms sans serif,helvetica" size="1"><small><font color="FFFFFF">Techweb News</font></small></font></td>
+	</tr> 
+	<tr>
+	    <td valign=top><input type="Radio" name="Search" value="eo_code:TNS-WEB" align="ABSMIDDLE" notab></td>
+	    <td><font face="Geneva,ms sans serif,helvetica" size="1"><small><font color="FFFFFF">More IT news on the Web</font></small></font></td>
+	</tr> 
+    </table>
+    </td>
+</tr> 
+<TR>
+    <TD valign="bottom"><small>&nbsp;<INPUT NAME="queryText" size=10 VALUE=""></td>
+</tr> 
+<tr>
+    <td><INPUT TYPE="submit" NAME="submitbutton" VALUE="Search"></small></td>
+</tr> 
+<tr>
+    <td><font size="2" face="Geneva,ms sans serif,helvetica"><a href="../../search/advsearch.html" class="white"><font color="#FFFFFF"><small>Advanced Search</small></font></a></font></td>
+</tr>
+</table>
+<BR clear=all>
+<INPUT TYPE=hidden NAME=eoTID           VALUE=1>
+<INPUT TYPE=hidden NAME=sorted          VALUE=true>
+<INPUT TYPE=hidden NAME=collname 	VALUE=current>
+<input type=hidden name="publication" 	value="All">
+</form>
+
+
+
+
+
+
+
+    <a href="/news"><img src="http://img.cmpnet.com/tw/general/btnTech2.gif" alt="Technology News" width="129" height="16" border="0"></a><br>
+
+
+  <a href="../../wire/finance/index.html"><img src="http://img.cmpnet.com/tw/general/btnStocks.gif" alt="Stocks & Finance News" width="129" height="17" border="0"></a><br>
+
+
+
+    <a href="../../today"><img src="http://img.cmpnet.com/tw/general/btn-Multimedia.gif" width=129 height=17 border=0 alt="Multimedia"></a><br>
+
+
+
+
+
+
+
+
+
+
+<img src="http://img.cmpnet.com/cmpnet/blank.gif" width="1" height="4" border="0"><br>
+
+<font size="2" face="Geneva,Arial,helvetica">
+
+<nobr>&nbsp;<b><font face="Geneva,ms sans serif,helvetica" size="1" color="FFCC00">News Categories</font></b><font size="4">&nbsp;</font></nobr><br>
+<font size="2" face="Geneva,Arial,helvetica">
+&nbsp;<small><a href="../../wire/desktop" class="white"><font color="#FFFFFF">Desktop Computing</font></a></small><br>
+&nbsp;<small><a href="../../wire/ebusiness" class="white"><font color="#FFFFFF">E-business</font></a></small><br>
+&nbsp;<small><a href="../../wire/internet" class="white"><font color="#FFFFFF">Internet</font></a></small><br>
+&nbsp;<small><a href="../../wire/mobile" class="white"><font 
+color="#FFFFFF">Mobile Computing</font></a></small><br>
+&nbsp;<small><a href="../../wire/networking" class="white"><font color="#FFFFFF">Networking</font></a></small><br>
+&nbsp;<small><a href="../../wire/chips" class="white"><font color="#FFFFFF">Processors/</font></a></small><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<small><a href="../../wire/chips" class="white"><font color="#FFFFFF">Components</font></a></small><br>
+&nbsp;<small><a href="../../wire/storage" class="white"><font color="#FFFFFF">Servers/Storage</font></a></small><br>
+&nbsp;<small><a href="../../wire/software" class="white"><font color="#FFFFFF">Software</font></a></small><br>
+&nbsp;<small><a href="../../wire/telecom" class="white"><font color="#FFFFFF">Telecom</font></a></small><br>
+<p>
+<nobr>&nbsp;<b><font face="Geneva,ms sans serif,helvetica" size="1" color="FFCC00">Finance Categories</font></b><font size="4">&nbsp;</font></nobr><br>
+&nbsp;<small><a href="../../wire/finance/earnings" class="white"><font color="#FFFFFF">Profits and Losses</font></a></small><br>
+&nbsp;<small><a href="../../wire/finance/mergers" class="white"><font color="#FFFFFF">Mergers &</font></a></small><br>
+&nbsp;&nbsp;&nbsp;<small><a href="../../wire/finance/mergers" class="white"><font color="#FFFFFF">Acquisitions</font></a></small><br>
+&nbsp;<small><a href="../../wire/finance/ipowatch" class="white"><font color="#FFFFFF">IPOs</font></a></small>
+<p>
+&nbsp;<small><a href="../../wire/allstories.html" class="white"><font color="#FFFFFF">Week&#146;s Headlines</font></a></small><br>
+&nbsp;<small><a HREF="javascript:openWindownewsPopUp('/newsPopUp/home', 'newsPopUp');" class="white"><font color="#FFFFFF">News Window</font></a></small><br>
+&nbsp;<small><a href="../../today/index.html" class="white"><font color="#FFFFFF">News On Video</font></a></small></font>
+<p>
+&nbsp;<small><a href="/encyclopedia" class="white"><font color="#FFFFFF">TechEncyclopedia</font></a></small><br>
+<font size="2" face="Geneva,Arial,helvetica">
+&nbsp;<small><a href="../../voices/home" class="white"><font color="#FFFFFF">Opinion</font></a></small><br>
+&nbsp;<small><a href="../../voices/humor/index.html" class="white"><font color="#FFFFFF">TechToons</font></a></small></font>
+<p>
+
+<font size=1 color="#ffffff" face="Geneva,MS Sans Serif,helvetica">&nbsp; Sponsored link:</font><br>
+<font size="2" face="Geneva,Arial,helvetica">
+&nbsp;<small><a href="http://www.cmpnet.com/3Dnewsstand.html" class="white"><font color="#FFFFFF">3-D Site Map</font></a></small></font>
+<p>
+
+
+<a href="http://newads.cmpnet.com/event.ng/Type=click&ProfileID=464&RunID=3858&AdID=1946&GroupID=10&FamilyID=1&TagValues=163.180&Redirect=http:%2F%2Fwww.cmpnet.com"><img src="http://img.cmpnet.com/tw/general/clickad.gif" width=127 height=13 alt="Click Advertisement" align=top border="0"></a><br>
+<a target="_top" href="http://newads.cmpnet.com/event.ng/Type=click&ProfileID=464&RunID=3858&AdID=1946&GroupID=10&FamilyID=1&TagValues=163.180&Redirect=http:%2F%2Fwww.cmpnet.com"><img src="http://img.cmpnet.com/ads/graphics/cs/cg/latest.gif" border=1 height=125 width=125 alt="Click Here to Vist CMPNET"></a>
+
+
+<p>
+
+<script language="JavaScript">
+<!-- 
+function openWindownewsPopUp(url, name) {
+ popupWin = window.open(url,
+name,'scrollbars,resizable,width=174,height=500');
+ popupWin.window.focus();
+}
+// -->
+</script>
+
+
+</font>
+<p>
+<img src="http://img.techweb.com/pit/2000/subheads/more_techweb_sites.gif" WIDTH="130" HEIGHT="22" alt="TechWeb Sites"><BR  clear=all><IMG src="http://img.techweb.com/cmpnet/blank.gif" WIDTH="130" HEIGHT=5 vspace=0 hspace=0><BR  clear=all>
+<font size="2" face="Geneva,Arial,helvetica">
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="http://www.byte.com" class="white"><font color="white">Byte.com</font></a></small><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="http://www.banktech.com/" class="white"><font color="white">Bank Systems &</font></a><BR>
+<SMALL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SMALL><small><a href="http://www.banktech.com/" class="white"><font color="white">Technology</font></a></SMALL><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="../../cmpmetrics" class="white"><font color="white">CMPmetrics</font></a></small><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="http://www.ebusinessexpo.com" class="white"><font color="white">eBusiness Expo</font></a></small><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="http://www.filemine.com" class="white"><font color="white">File Mine</font></a></small><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="http://www.informationweek.com" class="white"><font color="white">InformationWeek</font></a></small><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="http://www.internetwk.com" class="white"><font color="white">InternetWeek</font></a></small><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="http://www.networkcomputing.com" class="white"><font color="white">Network Computing</font></a></small><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="http://www.pcexpo.com" class="white"><font color="white">PC Expo</font></a></small><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="http://www.planetit.com" class="white"><font color="white">Planet IT</font></a></small><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="../../calendar" class="white"><font color="white">TechCalendar</font></a></small><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="http://www.techweb.com/encyclopedia" class="white"><font color="white">TechEncyclopedia</font></a></small><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="http://www.techlearning.com" class="white"><font color="white">TechLearning</font></a></small><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="http://www.techshopper.com" class="white"><font color="white">TechShopper</font></a></small><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="http://www.techweb.com/news" class="white"><font color="white">TechWeb News</font></a></small><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="../../today" class="white"><font color="white">TechWeb Today</font></A></small><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="http://www.webtools.com" class="white"><font color="white">WebTools</font></a></small><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="http://www.wallstreetandtech.com/" class="white"><font color="white">Wall Street &</font></a><BR>
+<SMALL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SMALL><small><a href="http://www.wallstreetandtech.com/" class="white"><font color="white">Technology</font></a></SMALL><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="http://www.winmag.com/" class="white"><font color="white">Winmag.com</font></a></small><br>
+<p>
+&nbsp;<small><a href="../../newsletters/subscribe" class="white"><font  color="white">E-mail Newsletters</font></a></small><br>
+&nbsp;<small><a href="mailto:feedback@techweb.com" class="white"><font  color="white">Send Feedback</font></a></small>
+</font>
+
+<p>
+
+<a target="_top" href="http://newads.cmpnet.com/event.ng/Type=click&ProfileID=476&RunID=3857&AdID=1947&GroupID=12&FamilyID=1&TagValues=168.181&Redirect=http:%2F%2Fwww.cmpnet.com"><img src="http://img.cmpnet.com/ads/graphics/cs/ab/shop2.gif" border=1 height=65 width=125 alt="Click Here to Vist CMPNET"></a>
+<p>
+
+<p>
+&nbsp;<b><font face="Geneva,ms sans serif,helvetica" size="1" color="FFCC00">
+Free E-mail</font></b><BR>
+<font size="2" face="Geneva,Arial,helvetica">
+&nbsp;<SMALL><a href="http://www.cmpnetmail.com/member/login.page" class="white"><font color="#FFFFFF">Login</font></a></SMALL> - <SMALL><a href="http://www.cmpnetmail.com/member/login.page/(shared)" class="white"><font color="#FFFFFF">Sign Up Now</font></a></SMALL></font>
+<p>
+<center>
+<BR>
+<!--
+-->
+</center>
+
+<P>
+<font size="1" face="Geneva,Arial,helvetica">
+&nbsp;&nbsp;<SMALL><a href="http://www.cmpnet.com/delivery/privacy.html" class="white"><font color="#FFFFFF">Privacy Statement</font></A></SMALL></font>
+
+
+</td>
+<td width="7"><img src="http://img.cmpnet.com/cmpnet/blank.gif" width="7" height="1" border="0"></td>
+</tr></table>
+
+
+
+
+
+
+
+
+	<TABLE WIDTH=339 BORDER=0 CELLSPACING=0 CELLPADDING=0>
+  <TR BGCOLOR="#010066" BACKGROUND="http://img.cmpnet.com/tw/wire/general/news-story-head.gif"> 
+    <TD HEIGHT=26>&nbsp;<FONT COLOR="#FFFFFF" FACE="geneva,Arial,Helvetica, sans-serif" size=2><B>Technology News</B></FONT>
+    </TD>
+  </TR>
+</TABLE>
+
+
+
+  <!-- MAIN CONTENT AREA-->
+
+
+
+
+    <SCRIPT LANGUAGE=javascript>
+      <!--
+	function launcher() {
+	  window.open( "/wire/emailBox?doc_id=TWB19990106S0018","","toolbar=no,scrollbars=auto,location=no,status=no,width=380,height=290,resizable=1" )
+	}
+      //-->
+    </SCRIPT>
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="470">
+  <TR valign=top> 
+    <TD width=336>
+      <IMG src="http://img.cmpnet.com/cmpnet/blank.gif" width="13" height="4"><BR>
+
+	  <FONT SIZE=5 COLOR="333300">Government Passes First Y2K Test </FONT><BR>
+
+      <FONT FACE="Geneva,Arial" SIZE=1>
+	  (01/06/99, 6:12 p.m. ET)
+	  By <A HREF="mailto:bcaldwel@cmp.com">Bruce Caldwell</A>,
+	<a href=http://www.informationweek.com>InformationWeek</a>
+      </FONT>
+
+    
+
+      <P>
+
+     <!-- <font face="Arial,Helvetica,sans-serif" COLOR="#333300"> -->
+      Government agencies have apparently  passed their first real-world year 2000 test  with flying colors. Unemployment insurance  benefits claims filed on Jan. 4 have been  properly and timely processed by all 50  states, Washington, D.C., and Puerto Rico,  according to John Sharkey, chief of the IT  division for unemployment insurance at the  Department of Labor.
+
+      <P>
+        Benefits claims processing was vulnerable to  year 2000 problems on Jan. 4, the first  business day of the new year, because the  claims expire 12 months later, forcing  systems to deal with dates in 2000. <P>  "We got a clean report" Tuesday night from all  regional offices, Sharkey said. Although some  states are still using computer code written 30  years ago, he said, everyone was able to  process claims using their year 2000  remediated systems. No one needed to resort  to a contingency plan, he adds. <P>  Sharkey credits the successful processing  with an early start and regular follow-up. Year  2000 assessment began in 1996, followed by  year 2000 project training of more than 250  state IT personnel, who were then formally  reviewed on a quarterly basis and informally  reviewed at other milestones in their projects.
+
+	  <A HREF="../../index.html"><IMG WIDTH=15 HEIGHT=9 ALT="TW" SRC="http://img.cmpnet.com/tw/general/dingbats/end.gif" BORDER=0></A>
+
+        <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width=336>
+  <TR><TD HEIGHT=9><IMG SRC="http://img.cmpnet.com/cmpnet/blank.gif" ALIGN=top WIDTH=1 HEIGHT=9 BORDER=0><TD></TR>
+  <TR><TD HEIGHT=1 BGCOLOR=E6E6FA><IMG SRC="http://img.cmpnet.com/cmpnet/blank.gif" ALIGN=top BORDER=0 WIDTH=1 HEIGHT=1></TD></TR>
+  <TR BGCOLOR="#E6E6FA"><TD><B><FONT COLOR="000066">Related Stories:</FONT></B></TD></TR>
+  <TR><TD HEIGHT=1 BGCOLOR=E6E6FA><IMG SRC="http://img.cmpnet.com/cmpnet/blank.gif" ALIGN=top BORDER=0 WIDTH=1 HEIGHT=1></TD></TR>
+  <TR><TD HEIGHT=3><IMG SRC="http://img.cmpnet.com/cmpnet/blank.gif" ALIGN=top BORDER=0 WIDTH=1 HEIGHT=1></TD></TR>
+</TABLE>
+
+    <a href="../../wire/story/TWB19990105S0013">Novell Readies Y2K Tools</a><P>
+    <a href="../../wire/story/TWB19990105S0011">N.Y. Legislator Pushes For Y2K Tax Break</a> <P>
+
+
+
+	  <FORM ACTION="/se/techsearch.cgi" METHOD=get TARGET="_top">
+
+<TABLE BORDER=0 CELLPADDING=2 CELLSPACING=0 WIDTH=336 BGCOLOR="#E6E6FA">
+  <TR ALIGN=center>
+    <TD>
+      <FONT COLOR="#FFFFFF" SIZE=2 FACE="Geneva,Arial"><A HREF="../../search/search.html">Search Archives</A></FONT>
+    </TD>
+
+    <TD>
+      <INPUT TYPE=text NAME=querytext SIZE=17 VALUE=""><BR>
+      <INPUT TYPE=hidden NAME="publication" VALUE="All">
+    </TD>
+
+    <TD><input type=submit name=submitbutton value=Search></td>
+  </TD>
+</TABLE>
+
+</FORM>
+
+
+    </TD>
+
+    <TD width=2><IMG src="http://img.cmpnet.com/cmpnet/blank.gif" align=top width=2 height=1 border=0></TD>
+    <TD width=1 bgcolor="333399"><IMG src="http://img.cmpnet.com/cmpnet/blank.gif" align=top width=1 height=1 border=0></TD>
+    <TD width=4><IMG src="http://img.cmpnet.com/cmpnet/blank.gif" align=top width=4 height=1 border=0></TD>
+
+    <TD WIDTH=127>
+    <P>
+
+
+
+
+
+
+
+    <P>
+    
+    <P>
+    <!--
+
+ARRAY(0x1172098)
+<OL>
+<LI>HASH(0x1143c80)
+<UL>
+<LI>'doc_id' => TWB20000718S0018</LI>
+<LI>'docId' => TWB20000718S0018</LI>
+<LI>'art_id' => 88014</LI>
+<LI>'pub_id' => TWB</LI>
+<LI>'url' => http://www.techweb.com/wire/story/TWB20000718S0018</LI>
+<LI>'proj_id' => TWB</LI>
+<LI>'headline' => Intel Delays Delivery of Itanium Chip</LI>
+<LI>'body' => </LI>
+</UL>
+</LI><LI>HASH(0x1173a30)
+<UL>
+<LI>'doc_id' => TWB20000719S0004</LI>
+<LI>'docId' => TWB20000719S0004</LI>
+<LI>'art_id' => 88032</LI>
+<LI>'pub_id' => TWB</LI>
+<LI>'url' => http://www.techweb.com/wire/story/TWB20000719S0004</LI>
+<LI>'proj_id' => TWB</LI>
+<LI>'headline' => Microsoft To Take Office:mac Out Of The Box</LI>
+<LI>'body' => </LI>
+</UL>
+</LI><LI>HASH(0x6dcbb8)
+<UL>
+<LI>'doc_id' => TWB20000719S0007</LI>
+<LI>'docId' => TWB20000719S0007</LI>
+<LI>'art_id' => 88104</LI>
+<LI>'pub_id' => EET</LI>
+<LI>'url' => http://www.techweb.com/wire/story/TWB20000719S0007</LI>
+<LI>'proj_id' => TWB</LI>
+<LI>'headline' => IBM Reveals Embedded Java Strategy</LI>
+<LI>'body' => </LI>
+</UL>
+</LI><LI>HASH(0x1171498)
+<UL>
+<LI>'create_date' => 19-JUL-00</LI>
+<LI>'lastmod_date' => 19-JUL-00</LI>
+<LI>'prod_date' => 19-JUL-00</LI>
+<LI>'doc_id' => TWB20000719S0006</LI>
+<LI>'second_deck' => </LI>
+<LI>'art_id' => 88111</LI>
+<LI>'pub_id' => SBN</LI>
+<LI>'url' => http://www.techweb.com/wire/story/TWB20000719S0006</LI>
+<LI>'teaser' => Good news for manufacturers is a Rambus promise not to seek royalties from OEMs for interfacing components.</LI>
+<LI>'category_string' =>  3382 2049 </LI>
+<LI>'proj_id' => TWB</LI>
+<LI>'headline' => Intel Might Get Some Rambus Royalties</LI>
+<LI>'extract' => Intel would earn royalty fees from Rambus if Direct RDRAMs ever takes off in the memory marketplace, according to a provision in the 1997 licensing agreement between the two companies.</LI>
+<LI>'body' => </LI>
+</UL>
+</LI><LI>HASH(0x113d3e0)
+<UL>
+<LI>'create_date' => 19-JUL-00</LI>
+<LI>'lastmod_date' => 19-JUL-00</LI>
+<LI>'prod_date' => 19-JUL-00</LI>
+<LI>'doc_id' => REU20000719S0006</LI>
+<LI>'second_deck' => </LI>
+<LI>'art_id' => 88082</LI>
+<LI>'pub_id' => REU</LI>
+<LI>'url' => http://www.techweb.com/wire/story/reuters/REU20000719S0006</LI>
+<LI>'teaser' => Tired of imitations, Apple Computer has unveiled a new line of iMacs in five earth-tone colors.</LI>
+<LI>'category_string' =>  2049 3660 </LI>
+<LI>'proj_id' => REU</LI>
+<LI>'headline' => iMac Flaunts Five New Hues</LI>
+<LI>'extract' => Tired of imitations, Apple Computer has unveiled a new line of iMacs in five earth-tone colors: "indigo," "ruby," "sage," "graphite," and "snow." </LI>
+<LI>'body' => </LI>
+</UL>
+</LI></OL>
+
+
+-->
+
+<TABLE BORDER=0 CELLPADDING=2 CELLSPACING=0 WIDTH=127>
+  <TR> 
+    <TD BGCOLOR="#333399">&nbsp;<FONT COLOR="#FFFFFF" face="Arial, Helvetica, sans-serif" size="2"><B><FONT face="geneva,Arial, Helvetica, sans-serif">Top Stories</FONT></B></FONT>
+    </TD>
+  </TR>
+
+  <TR BGCOLOR="#e6e6fa"> 
+    <TD>
+      <FONT FACE="geneva,ms sans serif" SIZE=1>
+	    <A HREF="../../wire/story/TWB20000718S0018">Intel Delays Delivery of Itanium Chip</A><P>
+	    <A HREF="../../wire/story/TWB20000719S0004">Microsoft To Take Office:mac Out Of The Box</A><P>
+	    <A HREF="../../wire/story/TWB20000719S0007">IBM Reveals Embedded Java Strategy</A><P>
+	    <A HREF="../../wire/story/TWB20000719S0006">Intel Might Get Some Rambus Royalties</A><P>
+	    <A HREF="../../wire/story/reuters/REU20000719S0006">iMac Flaunts Five New Hues</A><P>
+      </FONT>
+    <TD>
+  </TR>
+</TABLE>
+
+
+    <BR>
+
+
+    <TABLE BORDER=0 CELLPADDING=3 CELLSPACING=0 WIDTH=125 BGCOLOR="#FFFFCC">
+  <TR BGCOLOR="#E6E6FA"> 
+    <TD>
+      <FONT FACE="geneva,arial" SIZE=2>
+	<A HREF="../../printableArticle?doc_id=TWB19990106S0018"><IMG src="http://img.cmpnet.com/shared/general/icon-printer.gif" alt="Print" width=26 height=20 border=0 hspace=1 vspace=2 align=absmiddle></A> 
+	<A HREF="../../printableArticle?doc_id=TWB19990106S0018">Print this story</A><BR>
+	<A HREF=javascript:launcher()><IMG src="http://img.cmpnet.com/shared/general/icon-email.gif" alt="e-mail" width=26 height=20 border=0 hspace=1 vspace=2 align=absmiddle></A> 
+	<A HREF=javascript:launcher()>Send as e-mail</A>
+      </FONT>
+    </TD>
+  </TR>
+</TABLE>
+
+
+    <P>
+    <FONT FACE="Geneva,Arial" SIZE=2>
+
+<!--
+  <A HREF="/encyclopedia/"><IMG SRC="http://img.cmpnet.com/tw/general/dingbats/define.gif" WIDTH=14 HEIGHT=10 BORDER=0 ALT="*"></A> = See our <BR><A HREF="../../encyclopedia/index.html">Tech Encyclopedia</a> <BR>for more info.
+</FONT>
+/-->
+
+<table width="125" border="0" cellspacing="1" cellpadding="8" bgcolor="#E6E6FA">
+        <form action="http://www.techweb.com/encyclopedia/defineterm" METHOD=GET>
+          <tr> 
+			<td><font face="geneva, arial, helvetica" size="3"><b><small class="thirteen"><font color="000066">Define 
+              an IT Term</font></a></small></b></font><br>
+              <font face="Arial, Helvetica" size="1"> 
+              <input type=text size=12 name=term>
+              </font><font face="Arial, Helvetica" size="1"> 
+              <input type=submit value="Define">
+			  </font></td>
+          </tr>
+        </form>
+      </table>
+
+<br clear=all>
+    <P>
+    <TABLE WIDTH=127 BORDER=1 CELLPADDING=7 CELLSPACING=0>
+  <TR> 
+    <TD> 
+       <TABLE WIDTH=108 BORDER=0 CELLSPACING=0 CELLPADDING=0  BGCOLOR="#CCCCFF">
+  <TR BGCOLOR="#330066">
+    <TD HEIGHT=16>
+	&nbsp;<FONT SIZE=2 FACE="geneva,Arial,Helvetica,sans-serif" COLOR="#FFFFFF"><B>Technology</B></FONT> 
+    </TD>
+  </TR>
+</TABLE>
+<FONT FACE="geneva, ms sans serif" SIZE=1>
+ <a href="/wire/story/TWB20000718S0007?ls=TWH_000718_TWNmexico"><img src="http://img.cmpnet.com/tw/wire/news/2000/07/N-mexico0718-108.gif"
+ width=108 height=58 border=0 alt="Can Mexico's President Deliver The Tech Goods?">
+ Can Mexico's President Deliver The Tech Goods?</A>
+ </FONT>
+
+
+
+
+<!--
+<br><IMG src="http://img.cmpnet.com/cmpnet/blank.gif" width="1" height="6" border="0"><br>
+/-->
+
+
+
+
+
+
+
+     </TD>
+  </TR>
+</TABLE>
+    <P>
+    <TABLE WIDTH=127 BORDER=1 CELLPADDING=7 CELLSPACING=0>
+  <TR> 
+    <TD> 
+      
+    <!--
+<TABLE WIDTH=108 BORDER=0 CELLSPACING=0 CELLPADDING=0  BGCOLOR="#CCCCFF">
+  <TR BGCOLOR="#CC0000">
+    <TD HEIGHT=16>
+	&nbsp;<FONT SIZE=2 FACE="geneva,Arial,Helvetica,sans-serif" COLOR="#FFFFFF"><B>Breaking News</B></FONT> 
+    </TD>
+  </TR>
+</TABLE>
+
+-->
+
+<TABLE WIDTH=108 BORDER=0 CELLSPACING=0 CELLPADDING=0  BGCOLOR="#CCCCFF">
+  <TR BGCOLOR="#006600">
+    <TD HEIGHT=16>
+	&nbsp;<FONT SIZE=2 FACE="geneva,Arial,Helvetica,sans-serif" COLOR="#FFFFFF"><B>Finance</B></FONT> 
+    </TD>
+  </TR>
+</TABLE>
+
+<!--Market Open-->
+<!--
+<FONT FACE="geneva, ms sans serif" SIZE=1>
+<a href="/wire/finance/story/INV20000718S0003?ls=TWH_000718_TWFmarketopen"><img src="http://img.techweb.com/design/techweb/packages/finance/marketopen-108.gif"
+ width=108 height=58 border=0 alt="Market Open">
+Consumer Price Hike Pushes Futures Lower</A>
+    </FONT>
+-->
+
+<!--Spotlight-->
+
+<FONT FACE="geneva, ms sans serif" SIZE=1>
+<a href="/wire/finance/story/INV20000718S0002?ls=TWH_000718_TWFCisco"><img src="http://img.cmpnet.com/tw/wire/news/2000/07/N-homed0718-108.gif"
+width=108 height=58 border=0 alt="Cisco Invests In Home Director">
+Cisco Invests In Home Director</A>
+    </FONT>
+
+<!--
+<FONT FACE="geneva, ms sans serif" SIZE=1>
+   <a href="/wire/finance/story/INV20000714S0005?ls=TWH_000717_TWFskeptics"><img src="http://img.cmpnet.com/tw/wire/news/2000/07/N-informix0717-108.gif"
+width=108 height=58 border=0 alt="For Informix, Investor Skepticism Runs Deep"><BR>For Informix, Investor Skepticism Runs Deep</A>
+      </FONT>
+-->
+
+<br><IMG src="http://img.cmpnet.com/cmpnet/blank.gif" width="1" height="6" border="0"><br>
+
+
+
+    </TD>
+  </TR>
+</TABLE>
+    <P>
+    <TABLE WIDTH=127 BORDER=1 CELLPADDING=7 CELLSPACING=0>
+  <TR> 
+    <TD> 
+      <!-- TECHWEB TODAY -->
+
+<TABLE WIDTH=108 BORDER=0 CELLSPACING=0 CELLPADDING=0  BGCOLOR="#CCCCFF">
+  <TR BGCOLOR="#990000">
+    <TD HEIGHT=16>
+         &nbsp;<FONT SIZE=2 FACE="geneva,Arial,Helvetica,sans-serif"  COLOR="#FFFFFF"><B>Video</B></FONT> 
+    </TD>
+   </TR>
+ </TABLE>
+
+<FONT FACE="geneva, ms sans serif" SIZE=1><A HREF="../../today"><img src="http://img.cmpnet.com/tw/wire/news/2000/07/TWTexcite0718-108.gif"
+width=108 height=58 border=0 alt="Excite, Chello Chiefs On Asset Merger"><br>Excite@Home Takes Up The Chello</A><br></FONT>
+
+<IMG src="http://img.cmpnet.com/cmpnet/blank.gif" width="1" height="6" border="0"><br>
+
+
+
+
+
+
+
+    </TD>
+  </TR>
+</TABLE>
+
+    </TD>
+  </TR>
+</TABLE>
+
+
+
+
+
+<!-- /MAIN CONTENT AREA-->
+
+<!-- BEGIN SKYSCRAPER AD -->
+<DIV style="position:absolute;left:640;top:10">
+<a target="_top" href="http://newads.cmpnet.com/event.ng/Type=click&ProfileID=4304&RunID=22475&AdID=14515&GroupID=1&FamilyID=2267&TagValues=163.1910&Redirect=http:%2F%2Fwww.planetit.com"><img src="http://img.cmpnet.com/ads/graphics/cs/ja/pit_banner2_125x600.gif" border=1 height=600 width=125 alt=""></a>
+</DIV>
+<!-- END SKYSCRAPER AD -->
+
+
+
+<br clear=left>
+<p>
+<table border="0" cellpadding="0" cellspacing="0" width="600">
+<tr><td width="129" valign="bottom"><a href="http://www.cmpnet.com/"><img src="http://img.cmpnet.com/cmpnet/brandbars/cmpnet_logo.gif" alt="CMPnet" WIDTH="108" HEIGHT="64" border="0" hspace=15 vspace=10></a></td>	
+<td width="3" bgcolor="#ffffff"><img src="http://img.cmpnet.com/cmpnet/blank.gif" width="3" height="1" border="0"></td>
+<td align=right bgcolor="#ffffff">
+<!-- --------- CMPNET SUPPLEMENTS BOX ----------- -->
+<table border="0" cellpadding="2" cellspacing="0" width="470"> <tr><th bgcolor="#0800A2" colspan="5"><font face="Geneva,Arial,helvetica" size="2" color="#FFFFFF">New from Planet IT</font></th></tr> 
+<tr bgcolor="#FFF7CA" valign="TOP"> <td width="66"> 
+
+<img src="http://img.techweb.com/pit/supplements_graphics/storage_supp_plain.gif" border="0" > 
+
+</td> <td width="167"><font face="arial,helvetica"> Sony's <a href="http://www.planetit.com/docs/PIT20000714S0024">new CD-ROM format</a> stores over a megabyte of data.<br>
+ 
+</font></td> <td width="5"><img src="http://img.techweb.com/custom/bguide/blk.gif" width="1" height="60" border="0"></td> <td width="66"> 
+
+<img src="http://img.techweb.com/pit/supplements_graphics/roundtable_swoosh_supp.gif" border="0" > 
+
+</td> <td width="166"><font face="arial,helvetica"> Our roundtables let you <a href="http://planetit.com/resources/roundtables">chat one-on-one</A> with industry experts.  
+
+</font></td></tr><tr><td colspan="5" align="left" bgcolor="White"><font face="geneva,arial,helvetica" size="2"> 
+ 
+<font color="#0800A2">&#149;</font> Use advanced searches to find <a href="http://www.planetit.com/docs/PIT20000714S0001">job candidates</a> online. <br>
+
+<font color="#0800A2">&#149;</font> Email marketing is cost effective, but it <a href="http://planetit.com/docs/PIT20000712S0035">can be risky</a>.<br> 
+
+<font color="#0800A2">&#149;</font> <a href="http://www.planetit.com/docs/PIT20000712S0059">Consulting</a>: when well done, it's half art and half technology.<br> 
+
+<font color="#0800A2">&#149;</font> Controversial study reveals that <a href="http://planetit.com/docs/PIT20000711S0002">cost of handhelds</a> may be just too high.</font></td></tr></table>
+
+
+<!-- -------- END OF CMPNET SUPPLEMENTS TABLE --------- -->
+
+
+<p>
+<a target="_top" href="http://newads.cmpnet.com/event.ng/Type=click&ProfileID=462&RunID=3855&AdID=1944&GroupID=9&FamilyID=1&TagValues=163.179&Redirect=http:%2F%2Fwww.cmpnet.com"><img src="http://img.cmpnet.com/ads/graphics/cs/cg/heyyou.gif" border=1 height=60 width=468 alt="Click Here to Vist CMPNET"></a>
+</td></tr></table>
+</body></html>
+
+
+
+
+
+
+

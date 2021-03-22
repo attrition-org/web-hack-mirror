@@ -1,0 +1,221 @@
+<html>
+
+<head><script>
+
+/*
+Check required form elements script-
+By Website Abstraction (http://wsabstract.com)
+Over 200+ free scripts here!
+*/
+
+function checkrequired(which){
+var pass=true
+if (document.images){
+for (i=0;i<which.length;i++){
+var tempobj=which.elements[i]
+if (tempobj.name.substring(0,8)=="required"){
+if (((tempobj.type=="text"||tempobj.type=="textarea")&&tempobj.value=='')||(tempobj.type.toString().charAt(0)=="s"&&tempobj.selectedIndex==-1)){
+pass=false
+break
+}
+}
+}
+}
+if (!pass){
+alert("One or more of the required elements are not completed. Please complete them, then submit again!")
+return false
+}
+else
+return true
+}
+</script>
+
+<title>Online Help Desk</title>
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="686" height="65">
+  <tr>
+    <td height="42" rowspan="2" valign="top"><!--webbot bot="ImageMap" rectangle="(0,0) (200,97) index.htm" border="0" src="images/e1.GIF" width="202" height="99" startspan --><MAP NAME="FrontPageMap"><AREA SHAPE="RECT" COORDS="0, 0, 200, 97" HREF="index.htm"></MAP><a href="_vti_bin/shtml.exe/helpdesk.htm/map"><img ismap usemap="#FrontPageMap" border="0" height="99" src="images/e1.GIF" width="202"></a><!--webbot bot="ImageMap" endspan i-checksum="60722" --> <br>
+    </td>
+    <td height="77" bgcolor="#0099CC" valign="top"><img border="0" src="images/domsys-front-c6c.GIF" WIDTH="533" HEIGHT="77"></td>
+    <td width="90" height="42" rowspan="2" valign="top"><img border="0" src="images/e3.GIF" WIDTH="15" HEIGHT="99"></td>
+  </tr>
+  <tr>
+    <td height="1" valign="top" width="467"><!--webbot bot="ImageMap" rectangle="(2,2) (95, 21)  shop.htm" rectangle="(100,2) (190, 21)  bookshop.htm" rectangle="(210,2) (290, 21)  tech_services.htm" rectangle="(320,2) (380, 21)  search.htm" rectangle="(405,2) (495, 21)  contact_dsc.htm" border="0" src="images/e2b.gif" width="533" height="22" startspan --><MAP NAME="FrontPageMap1"><AREA SHAPE="RECT" COORDS="2, 2, 95, 21" HREF="shop.htm"><AREA SHAPE="RECT" COORDS="100, 2, 190, 21" HREF="bookshop.htm"><AREA SHAPE="RECT" COORDS="210, 2, 290, 21" HREF="tech_services.htm"><AREA SHAPE="RECT" COORDS="320, 2, 380, 21" HREF="search.htm"><AREA SHAPE="RECT" COORDS="405, 2, 495, 21" HREF="contact_dsc.htm"></MAP><a href="_vti_bin/shtml.exe/helpdesk.htm/map1"><img ismap usemap="#FrontPageMap1" border="0" height="22" src="images/e2b.gif" width="533"></a><!--webbot bot="ImageMap" endspan i-checksum="55979" --> <br>
+    </td>
+  </tr>
+</table>
+<div align="center"><center>
+
+<table border="0" cellspacing="0" cellpadding="0" width="615" height="268">
+  <tr>
+    <td height="170" width="509"><form onSubmit="return checkrequired(this)" action="/cgi-bin/contact_helpdesk2.cgi" method="POST">
+      <input type="hidden" name="Source_Page" value="*** From the Helpdesk Page ***"><div align="center"><center><p><img src="images/top_ov_onlinehelp.GIF" WIDTH="243" HEIGHT="44"></p>
+      </center></div><div align="left"><p><font face="Arial"><strong><small>I understand that I
+      will be contacted only during Dominant Systems business hours</small> </strong><small>which
+      are Monday through Friday. 9am to 5pm EST.</small> <small>If this is an <font color="#FF0000">emergency</font> we recommend you call our help desk support staff at
+      +1.734.971.1210.</small><br>
+      <small><strong>For pricing information</strong> please refer to our <a href="tech_service_prices.htm">Tech Services Price List.</a> If you have any questions on <strong>supported
+      operating systems</strong> please take a look at our <a href="tech_services.htm">Technical
+      Support Services Page.</a> &nbsp; For EMERGENCIES, we recommend that you use our Telephone
+      Help Desk at +1.734.971.1210. </small></font></p>
+      </div><div align="left"><p><small><font face="Arial">For <strong>AFTER HOURS</strong>
+      emergencies, please use our after-hours paging service at +1.734.473.0033. Please be aware
+      that you will be charged $100.00 for each emergency page, even if we are unable to resolve
+      your problem. Clients without established payment terms will need to have a Visa or
+      Mastercard credit card available. We strive to return pages within 15min.</font></small></p>
+      </div><div align="left"><p><small><font face="Arial">(<font color="#FF0000">*</font>required
+      elements)</font></small></p>
+      </div><div align="center"><center><table border="0" cellspacing="0" width="740" height="626">
+        <tr>
+          <td width="308" height="7"><u><strong><font face="Arial">General Information<br>
+          <br>
+          </font></strong></u></td>
+          <td width="428" height="7" colspan="2"></td>
+        </tr>
+        <tr>
+          <td width="308" height="6" valign="top"><font color="#FF0000" face="Arial"><strong><small>Current
+          Priority Level</small></strong></font></td>
+          <td width="428" height="6" colspan="2"><font face="Arial"><small><input type="checkbox" name="C24" value="ON">Emergency <input type="checkbox" name="requiredC25" value="ON">Moderate
+          <input type="checkbox" name="C26" value="ON">Low</small><br>
+          <br>
+          </font></td>
+        </tr>
+        <tr>
+          <td width="308" height="12"><small><strong><font face="Arial">Company Name<font color="#FF0000">*</font></font></strong></small></td>
+          <td width="428" height="12" colspan="2"><small><font face="Arial"><input type="text" size="45" maxlength="256" name="requiredContact_FullName"></font></small></td>
+        </tr>
+        <tr>
+          <td width="308" height="25"><strong><font face="Arial"><small>Client's full name<font color="#FF0000">*</font></small></font></strong></td>
+          <td width="428" height="25" colspan="2"><font face="Arial"><small><input type="text" size="45" maxlength="256" name="requiredContact_Email2"></small></font></td>
+        </tr>
+        <tr>
+          <td width="308" height="7" valign="top"><strong><font face="Arial"><small>Phone #<font color="#FF0000">*</font></small></font></strong></td>
+          <td width="428" height="7" colspan="2"><font face="Arial"><small><input type="text" size="45" maxlength="256" name="requiredContact_Title"></small></font></td>
+        </tr>
+        <tr>
+          <td width="308" height="6" valign="top"><strong><small><font face="Arial" color="#000000">Email</font><font color="#FF0000" face="Arial"> </font><font face="Arial" color="#000000">Address</font><font color="#FF0000" face="Arial">*</font></small></strong></td>
+          <td width="428" height="6" colspan="2"><font face="Arial"><small><input type="text" size="45" maxlength="256" name="requiredEmail5"></small></font></td>
+        </tr>
+        <tr>
+          <td width="308" height="12"><strong><font face="Arial"><u>Diagnosis<br>
+          <br>
+          </u></font></strong></td>
+          <td width="428" height="12" colspan="2"></td>
+        </tr>
+        <tr>
+          <td width="308" height="57" valign="top"><strong><font face="Arial"><small>What seems to
+          be the problem?<font color="#FF0000">*</font></small></font></strong></td>
+          <td width="428" height="57" colspan="2"><font face="Arial"><textarea rows="4" name="requiredS2" cols="45"></textarea></font><br>
+          <br>
+          </td>
+        </tr>
+        <tr>
+          <td width="308" height="23" valign="top"></td>
+          <td width="428" height="23" colspan="2"></td>
+        </tr>
+        <tr>
+          <td width="308" height="198" valign="top"><strong><font face="Arial"><small>What does it
+          say when the problem occurs?</small><br>
+          (<small>i.e. error message)</small></font></strong></td>
+          <td width="428" height="198" colspan="2"><font face="Arial"><textarea rows="4" name="S1" cols="45"></textarea></font></td>
+        </tr>
+        <tr>
+          <td width="308" height="77" valign="top"><strong><font face="Arial"><small>What changed to
+          cause this?</small></font></strong></td>
+          <td width="165" height="77"><font face="Arial"><small><input type="checkbox" name="C5" value="ON">Power problems<br>
+          <input type="checkbox" name="C6" value="ON">Hardware Failure<br>
+          <input type="checkbox" name="C7" value="ON">New hardware added</small><br>
+          <br>
+          </font></td>
+          <td width="261" valign="top" height="77"><small><font face="Arial"><input type="checkbox" name="C8" value="ON">New Software added<br>
+          <input type="checkbox" name="C10" value="ON">Other:<input type="text" name="T1" size="16"></font><br>
+          </small><br>
+          </td>
+        </tr>
+        <tr>
+          <td width="308" height="44" valign="top"><strong><font face="Arial"><small>What is the
+          server operating system?</small></font></strong></td>
+          <td width="215" height="44"><font face="Arial"><input type="checkbox" name="C11" value="ON"><small>NetWare<br>
+          <input type="checkbox" name="C12" value="ON">WinNT</small><br>
+          <br>
+          </font></td>
+          <td width="213" height="44" valign="top"><small><font face="Arial"><input type="checkbox" name="C13" value="ON">SCO UNIX<br>
+          <input type="checkbox" name="C14" value="ON">Other:<input type="text" name="T2" size="16"></font></small><br>
+          <br>
+          </td>
+        </tr>
+        <tr>
+          <td width="308" height="25" valign="top"><strong><small><font face="Arial">What is the
+          workstation os?</font></small></strong></td>
+          <td width="214" height="25"><small><font face="Arial"><input type="checkbox" name="C18" value="ON">Win95<br>
+          <input type="checkbox" name="C19" value="ON">Win98</font></small><br>
+          <br>
+          </td>
+          <td width="214" height="25" valign="top"><font face="Arial"><small><input type="checkbox" name="C20" value="ON">WinNT<br>
+          <input type="checkbox" name="C21" value="ON">Other:<input type="text" name="T5" size="16"></small><br>
+          </font></td>
+        </tr>
+        <tr>
+          <td width="308" height="39" valign="top"><strong><small><font face="Arial">What is the
+          application and version?</font></small></strong></td>
+          <td width="428" height="39" colspan="2"><br>
+          <small><font face="Arial"><input type="text" name="T4" size="45"></font></small><br>
+          <br>
+          <br>
+          </td>
+        </tr>
+        <tr>
+          <td width="308" height="40" valign="top"><strong><small><font face="Arial">What is the
+          hardware platform?</font></small></strong></td>
+          <td width="241" height="40"><font face="Arial"><small><input type="checkbox" name="C15" value="ON">Compaq <input type="checkbox" name="C16" value="ON">HP <br>
+          </small><br>
+          </font></td>
+          <td width="187" height="40" valign="top"><font face="Arial"><small><input type="checkbox" name="C17" value="ON">Other:<input type="text" name="T3" size="16"></small><br>
+          </font></td>
+        </tr>
+        <tr>
+          <td width="308" height="24"><small><strong><font face="Arial">Is the product under
+          warranty?<font color="#FF0000">*</font></font></strong></small></td>
+          <td width="428" height="24" colspan="2"><small><font face="Arial"><input type="checkbox" name="C22" value="ON">Yes <input type="checkbox" name="requiredC23" value="ON">No</font></small></td>
+        </tr>
+      </table>
+      </center></div><p><font face="Arial"><input type="submit" value="Submit Form" style="font-family: Arial; font-size: 10pt"> <input type="reset" value="Reset Form" style="font-family: Arial; font-size: 10pt"> <br>
+      <br>
+      </font></p>
+    </form>
+    </td>
+  </tr>
+</table>
+</center></div><div align="center"><center>
+
+<table border="0" cellspacing="0" width="604">
+  <tr>
+    <td width="602"><p align="left"><img src="bar461a.gif" alt="bar461a.gif (896 bytes)" WIDTH="750" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td width="602"><p align="center"><small><font face="Arial"><a href="index.htm" style="color: rgb(0,0,255)">Home</a> | <a href="shop.htm" style="color: rgb(0,0,255)">Web
+    Store</a> | <a href="bookshop.htm" style="color: rgb(0,0,255)">Bookshop</a> | <a href="tech_services.htm" style="color: rgb(0,0,255)">Services</a> | <a href="search.htm" style="color: rgb(0,0,255)">Search</a> | <a href="contact_dsc.htm" style="color: rgb(0,0,255)">Contact Us</a></font></small></td>
+  </tr>
+  <tr>
+    <td width="602"><img src="bar461a.gif" alt="bar461a.gif (896 bytes)" WIDTH="750" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td width="598"><p align="center"><font face="Arial"><small><small>Dominant Systems
+    Corporation 4201 Varsity Drive, #D Ann Arbor, MI 48108&nbsp; </small></small><br>
+    <small><small>+1.734.971.1210&nbsp; +1.734.677.3321 Fax</small></small></font></td>
+  </tr>
+  <tr>
+    <td width="602"><p align="center"><a href="mailto:info@domsys.com"><small><font face="Arial"><small>Info@domsys.com</small></font></small></a></td>
+  </tr>
+  <tr>
+    <td width="602" align="center"><p align="center"><font face="Arial" size="1">© Copyright
+    1996-2000 Dominant Systems Corporation <br>
+    Last Modified on <!--webbot bot="Timestamp" S-Type="EDITED" S-Format="%d %b %Y" startspan -->14 Jun 2000<!--webbot bot="Timestamp" endspan i-checksum="15049" --></font></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

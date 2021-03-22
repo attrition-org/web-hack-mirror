@@ -1,0 +1,146 @@
+<hr size=4>
+<h1 align=center>Netscape Server Logfile Analyzer</h1>
+<hr size=4>
+
+<h2 align=center>What can I do with this form?</h2>
+
+<p>This form is an interface to Netscape's Logfile Analyzer.  Place it and
+the analyzer binary in a directory accessible to your server and you can use
+it to get valuable information from your log files.</p>
+
+<p>Remember that the analyzer also has a powerful command line interface,
+so that you can set up a cron job to run nightly and produce these reports.</p>
+
+<hr size=3>
+<form method="POST" action="a_form.cgi">
+
+<h2 align=center>System information</h2>
+<p>Here is where you tell the analyzer where to find the log files, and what
+your server's name is.</p>
+
+<hr>
+
+<h3 align=center>Server Name</h3>
+
+<p>List here the name of your server, as you want it to appear on the 
+report.</p>
+
+<hr>
+<pre>Server name: <input type=text name=server_name size=25 value="WWW Server"></pre>
+
+<hr>
+
+<h3 align=center>Output type</h2>
+
+<hr>
+<input type=radio name=use_html value=1 checked> Output in HTML<br>
+<input type=radio name=use_html value=0> Output in plain text
+
+<hr>
+<h3 align=center>Output / Input files</h2>
+
+<p>Specify here the log file you wish to analyze (required) as either an
+absolute path or as a relative path from the location of this form.  You
+can also specify an output file - or, if you leave that entry blank, the
+results will be printed to your screen.</p>
+
+<pre><hr>
+   Log file: <input type=text name=input_file value="/local/ns-home/httpd-80/logs/access"> 
+Output file: <input type=text name=output_file value="">
+</pre>
+
+<hr size=3>
+
+<h2 align=center>What to report</h2>
+
+<p>The logfile analyzer can produce many different statistics about your
+server's load and usage patterns.  You can configure exactly what you
+want to see, and what you don't want to see.  You can even configure the
+order in which you see it.  Generating less information also makes the
+analysis use less memory.</p>
+
+<!-- counts -->
+<hr>
+
+<h3 align=center>Totals</h3>
+
+<p>The logfile analyzer can generate totals of certain statistics on your
+server, such as the total number of requests made during the period in
+the log file, total number of unique URL's, and total number of unique 
+hosts.  It can also track how many kilobytes were transferred, and how
+many kilobytes were saved by Netscape's cache.</p>
+<pre><hr>
+<input type=radio name=count_items value=0> Do not generate totals.
+<input type=radio name=count_items value=1 checked> Generate totals for:
+  <input type=checkbox name=count_hits value=1 checked> Total hits
+  <input type=checkbox name=count_304 value=1 checked> 304 (Not Modified) status codes
+  <input type=checkbox name=count_302 value=1 checked> 302 (Redirects) status codes
+  <input type=checkbox name=count_404 value=1 checked> 404 (Not Found) status codes
+  <input type=checkbox name=count_500 value=1 checked> 500 (Server Error) status codes
+  <input type=checkbox name=count_urls value=1 checked> Total unique URL's
+  <input type=checkbox name=count_hosts value=1 checked> Total unique hosts
+  <input type=checkbox name=count_kb value=1 checked> Total kilobytes transferred
+  <input type=checkbox name=count_cache value=1 checked> Total kilobytes saved by caches
+</pre>
+
+<!-- time -->
+<hr>
+
+<h3 align=center>Time statistics</h3>
+
+<p>This section allows you to list the times of the day when your server
+handled the heaviest load.  It also lists how many connections occurred 
+during that time and how much data was sent.</p>
+
+<pre><hr>
+<input type=radio name=time_stats value=0> Do not generate time statistics.
+<input type=radio name=time_stats value=1 checked> Generate time statistics:
+  <input type=checkbox name=time_seconds value=1 checked> Find top <input type=text name=seconds_num value="5" size=5> seconds of log
+  <input type=checkbox name=time_minutes value=1 checked> Find top <input type=text name=minutes_num value="5" size=5> minutes of log
+  <input type=checkbox name=time_hours value=1 checked> Find top <input type=text name=hours_num value="24" size=5> hours of log
+</pre>
+
+<!-- lists -->
+<hr>
+
+<h3 align=center>Generate lists</h3>
+
+<p>You can also have the server generate a list of how many times each URL
+on your server was accessed, and make a list of all the hostnames and IP
+addresses that accessed your server.  You can have it list only a certain
+number of entries, or, you can have it only list the item if more than a
+certain number of requests were made for (or by) it.</p>
+
+<pre><hr>
+<input type=radio name=list_items value=0> Do not generate any lists.
+<input type=radio name=list_items value=1 checked> Generate lists of:
+  <input type=checkbox name=list_urls value=1 checked> Most commonly accessed URLs:
+    <input type=radio name=list_utype value=0> <input type=text name=list_uonly value="5" size=5> most commonly accessed URLs.
+    <input type=radio name=list_utype value=1 checked> URLs that were accessed more than <input type=text name=list_umore value="5" size=5> times.
+
+  <input type=checkbox name=list_hosts value=1 checked> Hosts most often accessing your server:
+    <input type=radio name=list_htype value=0 checked> <input type=text name=list_honly value="5" size=5> hosts most often accessing your server.
+    <input type=radio name=list_htype value=1> Hosts that accessed yout server more than <input type=text name=list_hmore value="5" size=5> times.
+</pre>
+
+<!-- output_order -->
+<hr>
+
+<h3 align=center>Output Order</h3>
+
+<p>Finally, you can control the order in which the analyzer prints the data.
+Enter a "1" for the first item to print, a "2" in the second, and a "3" in
+the third.  If the item should not be printed, don't include its number.</p>
+
+<pre><hr>
+  <input type=text name=output_totals maxlength=1 value="1" size=2> Find totals
+  <input type=text name=output_time maxlength=1 value="2" size=2> Time statistics
+  <input type=text name=output_list maxlength=1 value="3" size=2> Make lists</pre>
+
+<hr size=3>
+<center>
+<input type=submit value="Begin analysis"> 
+<input type=reset value="Restore defaults">
+</center>
+<hr size=3>
+</form>

@@ -1,0 +1,215 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>You Have Been Owned By DodgY$p1d3R</title>
+<bgsound src="onetwo.mid" loop="infinite">
+<style>
+<!--
+#leftright, #topdown{
+position:absolute;
+left:0;
+top:0;
+width:1px;
+height:1px;
+layer-background-color:green;
+background-color:green;
+z-index:100;
+font-size:2px;
+}
+-->
+</style>
+</head>
+
+<body bgcolor="#000000" text="#00FF00">
+<script language="JavaScript1.2">
+
+if (document.all||document.getElementById){
+var thetitle=document.title
+document.title=''
+}
+
+////Animation code below
+////based on script from http://wsabstract.com/script/script2/statusanimate.shtml
+
+var data="0123456789abcdefghijklmnopqrstuvwxyz?!£$%^&*()";
+
+var done=1;
+function statusIn(text){
+	decrypt(text,2,1);
+}
+
+function statusOut(){
+self.status='';
+done=1;
+}
+
+//-------------------------\\
+//decrypt(string, int, int)\\
+//-------------------------\\
+//
+//text(string): the text to be decrypted on 
+//the status bar.
+//
+//max(int): the number of times a random string
+//is displayed before the next character is
+//'decrypted'.
+//
+//delay(int): the number of milliseconds between
+//each display of a random string
+//
+//Example:
+//decrypt('Enter my site.',10,10);
+//
+//text = 'Enter my site.' :: 'Enter my site.' is 
+//eventually decrypted
+//
+//max = 10 :: a different random string is dis-
+//played 10 times before a new character is
+//decrypted
+
+function decrypt(text, max, delay){
+	if (done){
+		done = 0;
+		decrypt_helper(text, max, delay,  0, max);
+		}
+	
+}
+
+function decrypt_helper(text, runs_left, delay, charvar, max){
+	if (!done){
+	runs_left = runs_left - 1;
+	var status = text.substring(0,charvar);
+	for(var current_char = charvar; current_char < text.length; current_char++){
+		status += data.charAt(Math.round(Math.random()*data.length));
+		}
+	document.title = status;
+	var rerun = "decrypt_helper('" + text + "'," + runs_left + "," + delay + "," + charvar + "," + max + ");"
+	var new_char = charvar + 1;
+	var next_char = "decrypt_helper('" + text + "'," + max + "," + delay + "," + new_char + "," + max + ");"
+	if(runs_left > 0){
+		setTimeout(rerun, delay);
+		}
+	else{
+		if (charvar < text.length){
+			setTimeout(next_char, Math.round(delay*(charvar+3)/(charvar+1)));
+			}
+		else
+			{
+			done = 1;
+			}
+		}
+	}
+}
+
+//if IE 4+ or NS 6+
+if (document.all||document.getElementById)
+statusIn(thetitle)
+</script>
+
+<p align="center"><font color="#FF0000" size="7"><strong>7</strong></font><font
+color="#FF8040" size="7"><strong>|</strong></font><font
+color="#FFFF00" size="7"><strong>3</strong></font></p>
+
+<p align="center"><font color="#80FF00" size="7"
+face="teen spirit"><strong>no no no!!!</strong></font><font
+color="#80FF00" size="7"><strong> </strong></font></p>
+
+<p align="center"><font color="#80FF00" size="3"><strong>you've
+got it all wrong, this page has been hacked by </strong></font></p>
+
+<p align="center"><marquee align="middle" direction="right"
+scrolldelay="80">DodgY$p1d3R</marquee></p>
+
+<p align="center"><font color="#00FF00" size="3"><strong>Himself!!<script
+language="JavaScript" <script>
+<!--
+
+var message="Now That Would Be Stealing";
+function click(e) {
+if (document.all) {
+if (event.button == 2) {
+alert(message);
+return false;
+}
+}
+if (document.layers) {
+if (e.which == 3) {
+alert(message);
+return false;
+}
+}
+}
+if (document.layers) {
+document.captureEvents(Event.MOUSEDOWN);
+}
+document.onmousedown=click;
+// --> 
+</script> </strong></font></p>
+
+<p align="left"><font color="#00FF00" size="3"><strong>Greetz: </strong></font></p>
+
+<p align="left"><font color="#FF8040"><marquee align="middle"
+behavior="slide">K0ston, L0rDHax0R, Graz, Voodoo|3, TBF and Solar1s</marquee></font></p>
+
+<p align="center"><font color="#FFFF00" size="3"><strong>admin!!
+i think you better protect your system a bit better,</strong></font></p>
+
+<p align="center"><font color="#FFFF00" size="3"><strong>don't
+you?</strong></font></p>
+<script language="JavaScript1.2">
+<!--
+
+if (document.all&&!window.print){
+leftright.style.width=document.body.clientWidth-2
+topdown.style.height=document.body.clientHeight-2
+}
+else if (document.layers){
+document.leftright.clip.width=window.innerWidth
+document.leftright.clip.height=1
+document.topdown.clip.width=1
+document.topdown.clip.height=window.innerHeight
+}
+
+
+function followmouse1(){
+//move cross engine for IE 4+
+leftright.style.pixelTop=document.body.scrollTop+event.clientY+1
+topdown.style.pixelTop=document.body.scrollTop
+if (event.clientX<document.body.clientWidth-2)
+topdown.style.pixelLeft=document.body.scrollLeft+event.clientX+1
+else
+topdown.style.pixelLeft=document.body.clientWidth-2
+}
+
+function followmouse2(e){
+//move cross engine for NS 4+
+document.leftright.top=e.y+1
+document.topdown.top=pageYOffset
+document.topdown.left=e.x+1
+}
+
+if (document.all)
+document.onmousemove=followmouse1
+else if (document.layers){
+window.captureEvents(Event.MOUSEMOVE)
+window.onmousemove=followmouse2
+}
+
+function regenerate(){
+window.location.reload()
+}
+function regenerate2(){
+setTimeout("window.onresize=regenerate",400)
+}
+if ((document.all&&!window.print)||document.layers)
+//if the user is using IE 4 or NS 4, both NOT IE 5+
+window.onload=regenerate2
+
+//-->
+</script>
+</body>
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

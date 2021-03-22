@@ -1,0 +1,182 @@
+<html>
+<head>
+   <meta name="Author" content="Jimmie Bean">
+   <title>Bevis LTC...... Yes...... We 0wned Them</title>
+
+<SCRIPT language=JavaScript1.2>
+<!--
+
+var message='Owned by Bevis LTC';
+var messagecolor='#000000'
+
+//Enter number of seconds for message to display  (0=perpetual)
+var dismissafter=0
+
+///no need to edit below/////////
+var amount=5,ypos=0,xpos=0,Ay=0,Ax=0,By=0,Bx=0,Cy=0,Cx=0,Dy=0,Dx=0,Ey=0,Ex=0;
+if (document.layers){
+for (i = 0; i < amount; i++)
+{document.write('<layer name=ns'+i+' top=0 left=0><font face="Courier New" size=3 color='+messagecolor+'>'+message+'</font></layer>')}
+window.captureEvents(Event.MOUSEMOVE);
+function nsmouse(evnt){xpos = evnt.pageX;ypos = evnt.pageY;makefollow()}
+}
+else if (document.all){
+document.write("<div id='outer' style='position:absolute;top:0px;left:0px'>");
+document.write("<div id='inner' style='position:relative'>");
+for (i = 0; i < amount; i++)
+{document.write('<div id="text"'+i+' style="position:absolute;top:0px;left:0px;font-family:Courier New;font-size:16px;color:'+messagecolor+'">'+message+'</div>')}
+document.write("</div>");
+document.write("</div>");
+function iemouse(){ypos = document.body.scrollTop + event.y;xpos = document.body.scrollLeft + event.x;makefollow()}
+}
+function makefollow(){
+if (document.layers){
+document.layers["ns0"].top=ay;document.layers["ns0"].left=ax;
+document.layers["ns1"].top=by;document.layers["ns1"].left=bx;
+document.layers["ns2"].top=cy;document.layers["ns2"].left=cx;
+document.layers["ns3"].top=Dy;document.layers["ns3"].left=Dx;
+document.layers["ns4"].top=Ey;document.layers["ns4"].left=Ex;
+}
+else if (document.all){
+outer.all.inner.all[0].style.pixelTop=ay;outer.all.inner.all[0].style.pixelLeft=ax;
+outer.all.inner.all[1].style.pixelTop=by;outer.all.inner.all[1].style.pixelLeft=bx;
+outer.all.inner.all[2].style.pixelTop=cy;outer.all.inner.all[2].style.pixelLeft=cx;
+outer.all.inner.all[3].style.pixelTop=Dy;outer.all.inner.all[3].style.pixelLeft=Dx;
+outer.all.inner.all[4].style.pixelTop=Ey;outer.all.inner.all[4].style.pixelLeft=Ex;
+}
+}
+function move(){
+if (dismissafter!=0)
+setTimeout("hidetrail()",dismissafter*1000)
+
+if (document.layers){window.onMouseMove = nsmouse}
+else if (document.all){window.document.onmousemove = iemouse}
+ey = Math.round(Ey+=((ypos+20)-Ey)*2/2);ex = Math.round(Ex+=((xpos+20)-Ex)*2/2);
+dy = Math.round(Dy+=(ey - Dy)*2/4);dx = Math.round(Dx+=(ex - Dx)*2/4);
+cy = Math.round(Cy+=(dy - Cy)*2/6);cx = Math.round(Cx+=(dx - Cx)*2/6);
+by = Math.round(By+=(cy - By)*2/8);bx = Math.round(Bx+=(cx - Bx)*2/8);
+ay = Math.round(Ay+= (by - Ay)*2/10);ax = Math.round(Ax+= (bx - Ax)*2/10);
+makefollow();
+jumpstart=setTimeout('move()',10);
+}
+
+function hidetrail(){
+if (document.all){
+for (i2=0;i2<amount;i2++){
+outer.all.inner.all[i2].style.visibility="hidden"
+clearTimeout(jumpstart)
+}
+}
+else if (document.layers){
+for (i2=0;i2<amount;i2++){
+temp="ns"+i2
+document.layers[temp].visibility="hide"
+clearTimeout(jumpstart)
+}
+}
+}
+
+window.onload=move;
+//-->
+</SCRIPT>
+</head>
+<body bgcolor="#FFFFFF" link="#008080" vlink="#FF6600">
+&nbsp;
+<table BORDER=0 CELLSPACING=0 CELLPADDING=3 WIDTH="600" >
+<tr>
+<td ALIGN=LEFT VALIGN=CENTER><img SRC="yucca.jpg" ALT="Silicon Desert" height=125 width=84><img SRC="silback2.gif" ALT="Silicon Desert" VSPACE=20 height=85 width=164>
+<p>Who Do You Want Us To 0wn Today?</td>
+
+<td ALIGN=RIGHT VALIGN=CENTER>
+<table BORDER=0 CELLSPACING=2 CELLPADDING=0 >
+<tr>
+<td>
+<h5>
+<font face="Arial, Helvetica, sans-serif"><font color="#0099CC">DSL Sucks...
+But its provided by:</font></font></h5>
+</td>
+</tr>
+
+<tr>
+<td><a href="ClearWireWebCopy.htm"><img SRC="Clearwirelogo.GIF" BORDER=0 height=47 width=150 align=RIGHT></a></td>
+</tr>
+
+<tr>
+<td HEIGHT="65">
+<div align=right><font face="Arial, Helvetica, sans-serif"><font size=-2>For
+more information, Please contact:</font></font>
+<br><font face="Arial, Helvetica, sans-serif"><font size=-2>Bill Walters
+(505) 555-1212</font></font>
+<br><font face="Arial, Helvetica, sans-serif"><font size=-2>0wned By: Bevis
+LTC.</font></font>
+<br><font face="Arial, Helvetica, sans-serif"><font size=-2>Email:<a href="mailto:bwalters@silicon-desert.com">bwalters@yep...i.got.0wned.com</a></font></font></div>
+
+<br><font face="Arial, Helvetica, sans-serif"><font size=-2><a href="mailto:bwalters@silicon-desert.com"></a></font></font>&nbsp;</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER VALIGN=CENTER COLSPAN="2"><img SRC="bar.gif" height=2 width=600></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER VALIGN=CENTER COLSPAN="2">
+<table CELLPADDING=6 WIDTH="100%" >
+<tr>
+<td ALIGN=LEFT VALIGN=TOP><b><font face="Arial">News.. HA.. Heres Real
+News</font></b>
+<br><a href="http://www.wunderground.com/US/NM/Albuquerque.html"><img SRC="bar.gif" ALT="Silicon Desert" VSPACE=5 BORDER=0 height=2 width=175></a>
+<br><font face="Arial"><a href="http://www.slashdot.org">/. Slashdot.org</a></font><font face="Arial"><a href="http://www.cnn.com"></a></font>
+<p><b><font face="Arial">Da Weather Up In Dis Bitch</font></b>
+<br><img SRC="bar.gif" ALT="Silicon Desert" VSPACE=5 height=2 width=175>
+<br><a href="http://www.wunderground.com/US/NM/Albuquerque.html"><img SRC="Albuquerque.gif" ALT="Albuquerque Temp" BORDER=0 height=28 width=53 align=LEFT></a>
+<font face="Arial"><a href="http://www.accuweather.com/weatherf/index_corp">Acuweather</a>,
+<a href="http://www.weather.com/twc/homepage.twc">Weather.com</a>, <a href="http://www.ahhh-allegra.com/pollen/ABQ.htm">Pollen
+Count</a></font>
+<p><b><font face="Arial">Business Pimps &amp; Money Hoes</font></b>
+<br><img SRC="bar.gif" ALT="Silicon Desert" VSPACE=5 height=2 width=175>
+<br><font face="Arial"><a href="http://www.dbc.com/cgi-bin/htx.exe/dbcfiles/indext.html?source=core/dbc">Market
+Indexes</a>,&nbsp; <a href="http://www.financeline.com/showrate.htm">Mortgage
+Rates</a>, <a href="http://www.cnnfn.com">CNNfn</a>, <a href="http://www.smithbarney.com">Smith
+Barney</a></font></td>
+
+<td ALIGN=LEFT VALIGN=TOP><b><font face="Arial">Local Shit For Shit Town</font></b>
+<br><img SRC="bar.gif" ALT="Silicon Desert" VSPACE=5 height=2 width=175>
+<br><font face="Arial"><a href="http://www.nmsource.com/movies/homepage.asp">Movie
+Showtimes</a>, <a href="http://www.abqjournal.com">Albuquerque Journal</a>,
+<a href="http://nmbw.nmsource.com/">NM Business Weekly</a>, <a href="http://www.desert.net/alibi">Weekly
+Alibi</a>, <a href="http://www.nmsource.com">NMSource.com</a></font>
+<p><b><font face="Arial">Sports Sucks</font></b>
+<br><img SRC="bar.gif" ALT="Silicon Desert" VSPACE=5 height=2 width=175>
+<br><font face="Arial"><a href="http://www.cnnsi.com/">CNNSI,</a> <a href="http://ESPN.SportsZone.com/">ESPN</a></font>
+<br><font face="Arial"><a href="http://www.majorleaguebaseball.com/">Major
+League Baseball</a>, <a href="http://www.nba.com/">NBA</a>, <a href="http://www.nfl.com/">NFL&nbsp;</a></font>
+<p><b><font face="Arial">Search Engines Suck Too</font></b>
+<br><img SRC="bar.gif" ALT="Silicon Desert" VSPACE=5 height=2 width=175>
+<br><font face="Arial"><font size=+0><a href="http://www.allthesites.com/">Allthesites</a>,
+<a href="http://www.altavista.digital.com/">Alta Vista</a>, <a href="http://www.excite.com/">Excite</a>,
+<a href="http://www.hotbot.com/">HotBot</a>, <a href="http://www.infoseek.com/">Infoseek</a>,
+<a href="http://www.yahoo.com/">Yahoo</a></font></font>
+<p><b><font face="Arial">Miscellaneous Bullshit</font></b>
+<br><img SRC="bar.gif" ALT="Silicon Desert" VSPACE=5 height=2 width=175>
+<br><font face="Arial"><font size=+0><a href="http://www.broadcast.com">Broadcast.com</a>,
+<a href="http://www.amazon.com">Amazon.com</a></font></font></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER VALIGN=TOP COLSPAN="2">
+<br><font face="Arial">Silicon Desert, LLC.</font>
+<br><font face="Arial">0wned By Bevis LTC.</font>
+<br><font face="Arial">Albuquerque, NM&nbsp;</font>
+<br><font face="Arial">505-555-1212</font></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

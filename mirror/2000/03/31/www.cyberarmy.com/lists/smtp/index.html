@@ -1,0 +1,604 @@
+<html><head>
+<META NAME="description" CONTENT="www.cyberarmy.com - fight for internet deregulation.">
+<META NAME="keywords" CONTENT="cyberarmy, cyber army, zebulun, MPAA, DeCSS, freedom, anonymity, cryptology, PGP, perl, linux, firewall, albert fong, web board">
+
+<STYLE TYPE="text/css">
+<!--
+A:hover   { 
+  color: #C0C0C0;
+  background: white;
+  text-decoration:underline; 
+}
+H1, H2, H3 { 
+  margin-left: 0%;
+  color: #FFAA33;
+ font-family: arial, verdana, helvetica, sans-serif;
+}
+-->
+</STYLE>
+</head>
+
+<body bgColor=#263C6D text="white" link="#ffffff" vlink="#C0C0C0" alink="#C0C0C0">
+
+<TABLE border=0 cellPadding=0 cellSpacing=3 width=600>
+  <TBODY>
+  <TR>
+    <TD width=260><A href="../../index.html" style="background:none"><IMG src="../../ssi/cyberarmy.jpg" border=0></a></TD>
+    <TD vAlign=center>
+      <CENTER><A href="http://portal.cyberarmy.com"><IMG border=0 
+      src="../../ssi/portal.gif"><BR><FONT face=Arial,Helvetica 
+      size=-1>portal</A></CENTER></FONT></TD>
+    <TD vAlign=center>
+      <CENTER><A href="http://search.cyberarmy.com"><IMG 
+      border=0 src="../../ssi/srch.gif"><BR><FONT face=Arial,Helvetica 
+      size=-1>srch</A></CENTER></FONT></TD>
+    <TD vAlign=center>
+      <CENTER><A href="http://www.cyberarmy.com/lists"><IMG border=0 
+      src="../../ssi/lists.gif"><BR><FONT face=Arial,Helvetica 
+      size=-1>lists</A></CENTER></FONT></TD>
+    <TD vAlign=center>
+      <CENTER><A href="http://www.cyberarmy.com/t-50"><IMG 
+      border=0 src="../../ssi/top.gif"><BR><FONT face=Arial,Helvetica 
+      size=-1>top</A></CENTER></FONT></TD>
+    <TD vAlign=center>
+      <CENTER><A href="../../wwwboard/index.shtml"><IMG border=0 
+      src="../../ssi/forum.gif"><BR><FONT face=Arial,Helvetica 
+      size=-1>forum</A></CENTER></FONT></TD>
+    <TD vAlign=center>
+      <CENTER><A href="http://home.cyberarmy.com"><IMG border=0 
+      src="../../ssi/land.gif"><BR><FONT face=Arial,Helvetica 
+      size=-1>land</A></CENTER></FONT></TD>
+</TR>
+</TBODY></TABLE>
+
+<br>
+
+<blockquote>
+
+<table border=0 width=595>
+<tr><td align=center>
+
+<!--Begin Flycast Ad Copyright 1998 Flycast Communications. All rights reserved. Patent Pending --> 
+<SCRIPT LANGUAGE="JAVASCRIPT"> 
+<!--
+FlycastSite= "CyberarmyInternet";
+FlycastPage= "All";
+FlycastWidth= 468;
+FlycastHeight= 60;
+FlycastPrintTag= true;
+FlycastNewAd= true;
+FlycastLoaded= false;
+FlycastVersion= 1.1;
+//--> 
+</SCRIPT> 
+<SCRIPT SRC="http://adex3.flycast.com/FlycastUniversal/" LANGUAGE="JAVASCRIPT"></SCRIPT>
+<SCRIPT LANGUAGE="JAVASCRIPT"> 
+<!-- 
+if (FlycastLoaded) FlycastDeliverAd(); 
+//--> 
+</SCRIPT> 
+<NOSCRIPT><IFRAME SRC="http://adex3.flycast.com/server/socket/127.0.0.1:2800/iframe/CyberarmyInternet/All/123" scrolling="no" marginwidth=0 marginheight=0 frameborder=0 vspace=0 hspace=0 width=468 height=60><A target=_top HREF="http://adex3.flycast.com/server/socket/127.0.0.1:2800/click/CyberarmyInternet/All/123"><IMG SRC="http://adex3.flycast.com/server/socket/127.0.0.1:2800/img/CyberarmyInternet/All/123" border=0 width=468 height=60></A></IFRAME></NOSCRIPT> 
+<!--End Flycast Ad Copyright 1998 Flycast Communications. All rights reserved. Patent Pending -->
+
+</td>
+    <TD vAlign=center>
+      <CENTER>
+
+
+<SCRIPT LANGUAGE="JAVASCRIPT">
+document.write('<a href="http://valet.flycast.com/valet/info/fc0323/?' + Math.floor(Math.random() * 100000) + '">');
+</SCRIPT> 
+<NOSCRIPT>
+<a href="http://valet.flycast.com/valet/info/fc0323/?123456">
+</NOSCRIPT>
+<IMG border=0 
+      src="../../ssi/shop.gif"><BR><FONT face=Arial,Helvetica 
+      size=-1>shop</A></CENTER></FONT></a>
+</TD>
+</tr></table>
+<font face="arial">
+
+</blockquote>
+
+ 
+
+<title>SMTP Database</title>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+ // retrieve a cookie.
+ function getCookie(name) {
+  var cname = name + "=";
+  var dc = document.cookie;
+  if (dc.length > 0) {
+   begin = dc.indexOf(cname);
+   if (begin != -1) {
+    begin += cname.length;
+    end = dc.indexOf(";", begin);
+    if (end == -1) end = dc.length;
+    return unescape(dc.substring(begin, end));
+   }
+  }
+  return null;
+ }
+ // save a cookie.
+ function setCookie(name, value, expires) {
+  document.cookie = name + "=" + escape(value) + "; path=/" + ((expires == null) ? "" : "; expires=" + expires.toGMTString());
+ }
+ // delete a cookie.
+ function delCookie(name) {
+  document.cookie = name + "=; expires=Thu, 01-Jan-70 00:00:01 GMT" + "; path=/";
+ }
+ // retrieve form element's value.
+ function getValue(element) {
+  var value = getCookie(element.name);
+  if (value != null) element.value = value;
+ }
+ // save form element's value.
+ function setValue(element) {
+  setCookie(element.name, element.value, exp);
+ }
+ var exp = new Date();
+ exp.setTime(exp.getTime() + (1000 * 3600 * 24 * 365));
+//-->
+</SCRIPT>
+
+
+<table border="0" cellpadding="15" cellspacing="15" width="35%" align="right">
+    <tr>
+        <td align="left"><br><img
+        src="../../ssi/tower.gif"></td>
+    </tr>
+</table>
+
+<h1>SMTP Database</h1>
+
+    <p>You are <i>attrition.org (208.225.201.200) using ATTRITION: We are mirroring your page after report of a security breach. www.attrition.org/mirror/</i>. Many of the following
+relays are the worst offenders - badly setup so that people such as spammers
+can use them to send unsolicited email. Not all the listings below are offenders, some will block relaying even if it accepts the smtp connection. A backend is also available: latest <a href="10.html">10</a>, <a href="25.html">25</a>, <a href="100.html">100</a>.</p>
+    <br><blockquote>
+
+        <form action="add.pl" method="POST" name="MyForm">
+            <table border="0">
+                <tr>
+                    <td>SMTP Relay: </td>
+                    <td><input type="text" size="25"
+                    maxlength="32" name="proxy"></td>
+                </tr>
+                <tr>
+                    <td>Your Name: </td>
+                    <td><input type="text" size="25"
+                    maxlength="20" name="name" onBlur="setValue(this)"> (Optional)</td>
+                </tr>
+              
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><input type="submit" value="submit"></td>
+                </tr>
+            </table>
+<input type="hidden" name="email" onBlur="setValue(this)">
+<input type="hidden" name="url" onBlur="setValue(this)">
+<input type="hidden" name="url_title" onBlur="setValue(this)">
+<input type="hidden" name="img" onBlur="setValue(this)">
+<input type="hidden" name="zebulun" onBlur="setValue(this)">
+<input type="hidden" name="magic" onBlur="setValue(this)">
+        </form>
+
+
+</blockquote><br>
+<table width="80%" align="center"><tr><td bgcolor="#000000" height="8" colspan="2"><spacer type="block" width="1" height="8"></td></tr></table>
+<blockquote>
+<small>
+<!--begin-->
+<!--1048--><b>amazone.com</b> [latency: 03/31/00 19:49:53 EST]<br>
+<!--1047--><b>smtp.aolempoweredupdates.com</b> [latency: 03/30/00 23:53:35 EST by raw</a>]<br>
+<!--1046--><b>smtp.prodigy.net</b> [latency: 03/30/00 21:13:29 EST]<br>
+<!--1045--><b>mail.boleh.net</b> [latency: 03/30/00 16:09:13 EST]<br>
+<!--1044--><b>mail.one.net</b> [latency: 03/30/00 07:01:51 EST by h4x0r f03 l1f3</a>]<br>
+<!--1043--><b>smtp.sinor.ru</b> [latency: 03/30/00 03:39:58 EST]<br>
+<!--1042--><b>jeflin.tju.edu</b> [latency: 03/30/00 01:54:53 EST by MrSandman</a>]<br>
+<!--1041--><b>centerof.thesphere.com</b> [latency: 03/30/00 01:53:34 EST by MrSandman</a>]<br>
+<!--1040--><b>bi-node.zerberus.de</b> [latency: 03/30/00 01:52:09 EST by MrSandman</a>]<br>
+<!--1039--><b>cvo.oneworld.com</b> [latency: 03/30/00 01:51:43 EST by MrSandman</a>]<br>
+<!--1038--><b>telis.org</b> [latency: 03/30/00 01:51:25 EST by MrSandman</a>]<br>
+<!--1037--><b>nccn.net</b> [latency: 03/30/00 01:51:13 EST by MrSandman</a>]<br>
+<!--1036--><b>zombie.com</b> [latency: 03/30/00 01:51:00 EST by MrSandman</a>]<br>
+<!--1035--><b>mail.hush-hush.com</b> [latency: 03/29/00 19:52:54 EST by daman</a>]<br>
+<!--1034--><b>apiit.edu.pk</b> [latency: 03/29/00 10:45:57 EST by KFJ</a>]<br>
+<!--1033--><b>rly-yh02.mx.aol.com</b> [latency: 03/29/00 01:30:41 EST by john</a>]<br>
+<!--1032--><b>mailhost.cambridgeinc.com</b> [latency: 03/28/00 08:07:32 EST by cpq</a>]<br>
+<!--1031--><b>haven.theonering.net</b> [latency: 03/27/00 10:51:25 EST]<br>
+<!--1030--><b>greenbooks.theonering.net</b> [latency: 03/27/00 10:23:42 EST]<br>
+<!--1029--><b>trimurti.roltanet.com</b> [latency: 03/27/00 10:09:34 EST]<br>
+<!--1028--><b>saintmail.net</b> [latency: 03/27/00 05:46:13 EST]<br>
+<!--1027--><b>fubu.com</b> [latency: 03/26/00 19:28:19 EST by bitcher</a>]<br>
+<!--1026--><b>mail.qwestip.net</b> [latency: 03/26/00 13:16:58 EST by cpq</a>]<br>
+<!--1025--><b>smtp.super11.com.br</b> [latency: 03/26/00 08:33:02 EST by DarkPriest</a>]<br>
+<!--1024--><b>smtp.ig.com.br</b> [latency: 03/26/00 08:32:37 EST by DarkPriest</a>]<br>
+<!--1023--><b>planetracing.com</b> [latency: 03/26/00 05:31:09 EST by Jewishnigger</a>]<br>
+<!--1022--><b>mail.reinhart.ch</b> [latency: 03/24/00 19:50:52 EST]<br>
+<!--1021--><b>mail2.eircom.net</b> [latency: 03/24/00 15:18:56 EST by UltraBite</a>]<br>
+<!--1020--><b>smtp.globalserve.net</b> [latency: 03/23/00 18:20:32 EST]<br>
+<!--1019--><b>rca-net.com</b> [latency: 03/23/00 15:35:57 EST by ownzu</a>]<br>
+<!--1018--><b>mail.fastpacket.net</b> [latency: 03/23/00 05:08:30 EST by JewishNigger</a>]<br>
+<!--1017--><b>mystartingpage.com(25)</b> [latency: 03/22/00 19:30:41 EST by A3r</a>]<br>
+<!--1016--><b>smtp.prodigy.net</b> [latency: 03/22/00 16:11:52 EST]<br>
+<!--1015--><b>ww7.eythan.com</b> [latency: 03/22/00 13:55:33 EST]<br>
+<!--1014--><b>aye.akermtw.de</b> [latency: 03/22/00 03:33:28 EST by WarDawg</a>]<br>
+<!--1013--><b>oric.rajabhat.ac.th</b> [latency: 03/22/00 03:07:27 EST by WarDawg</a>]<br>
+<!--1012--><b>cdr24-29.accesscable.net</b> [latency: 03/22/00 02:16:17 EST by WarDawg</a>]<br>
+<!--1011--><b>bemine.com</b> [latency: 03/22/00 00:47:30 EST by harry</a>]<br>
+<!--1010--><b>mail.hotmail.com</b> [latency: 03/21/00 08:49:10 EST by AznTyler</a>]<br>
+<!--1009--><b>robynet.com.br</b> [latency: 03/20/00 19:53:36 EST by wicked</a>]<br>
+<!--1008--><b>mail.colossus.net</b> [latency: 03/20/00 17:02:43 EST by BadREAPER2000</a>]<br>
+<!--1007--><b>mail.crosswinds.net</b> [latency: 03/20/00 11:19:38 EST by cprompt</a>]<br>
+<!--1006--><b>206.253.222.118</b> [latency: 03/20/00 09:45:04 EST by bubu</a>]<br>
+<!--1005--><b>HARDCORE.PLAYAZ.ORG</b> [latency: 03/20/00 08:41:08 EST by RSnake^</a>]<br>
+<!--1004--><b>HaCKeRs.CoM</b> [latency: 03/20/00 08:39:02 EST by RSnake^</a>]<br>
+<!--1003--><b>mail.mail1.com</b> [latency: 03/19/00 17:58:12 EST by dns</a>]<br>
+<!--1002--><b>kidrock.com</b> [latency: 03/19/00 17:58:01 EST by dns</a>]<br>
+<!--1001--><b>xl.com</b> [latency: 03/19/00 17:57:42 EST by dns</a>]<br>
+<!--1000--><b>fubu.com</b> [latency: 03/19/00 17:57:23 EST by dns</a>]<br>
+<!--999--><b>smtp.hitel.net</b> [latency: 03/19/00 16:20:02 EST by TheMeth</a>]<br>
+<!--998--><b>barneyonline.com</b> [latency: 03/19/00 16:19:25 EST by TheMeth</a>]<br>
+<!--997--><b>pop3.com</b> [latency: 03/19/00 16:18:37 EST by TheMeth</a>]<br>
+<!--996--><b>mail.ecu.edu</b> [latency: 03/19/00 00:47:55 EST by fadetoblaque</a>]<br>
+<!--995--><b>mail.gridusa.net</b> [latency: 03/19/00 00:47:37 EST by fadetoblaque</a>]<br>
+<!--994--><b>smtp.loclnet.com</b> [latency: 03/19/00 00:47:02 EST by fadetoblaque</a>]<br>
+<!--993--><b>mail.gmx.de</b> [latency: 03/18/00 19:20:12 EST]<br>
+<!--992--><b>hold.net</b> [latency: 03/18/00 17:18:11 EST by nitt0</a>]<br>
+<!--991--><b>atlanta.com</b> [latency: 03/18/00 13:00:52 EST by Judge-K0ng</a>]<br>
+<!--990--><b>acaena.clk.net</b> [latency: 03/17/00 19:15:54 EST by biotoxic</a>]<br>
+<!--989--><b>mail.tin.it</b> [latency: 03/17/00 16:02:44 EST]<br>
+<!--988--><b>smtp.inetmail.de</b> [latency: 03/16/00 16:05:24 EST by drDEATH</a>]<br>
+<!--987--><b>mail.gateway.net</b> [latency: 03/16/00 13:41:36 EST by b0nE487</a>]<br>
+<!--986--><b>mail.one.net</b> [latency: 03/16/00 13:40:49 EST by b0nE487</a>]<br>
+<!--985--><b>mail.one.com.au</b> [latency: 03/16/00 13:39:44 EST by b0nE487</a>]<br>
+<!--984--><b>mail.go-concepts.com</b> [latency: 03/16/00 13:39:01 EST by b0nE487</a>]<br>
+<!--983--><b>mail.wowzer.com</b> [latency: 03/16/00 13:38:09 EST by b0nE487</a>]<br>
+<!--982--><b>mail.freei.net</b> [latency: 03/16/00 13:37:43 EST by b0nE487</a>]<br>
+<!--981--><b>mail.tritium.net</b> [latency: 03/16/00 13:37:25 EST by b0nE487</a>]<br>
+<!--980--><b>mail.startfree.com</b> [latency: 03/16/00 13:37:04 EST by b0nE487</a>]<br>
+<!--979--><b>mail.worldspy.net</b> [latency: 03/16/00 13:36:29 EST by b0nE487</a>]<br>
+<!--978--><b>mail.netzero.com</b> [latency: 03/16/00 13:36:10 EST by b0nE487</a>]<br>
+<!--977--><b>mail.netzero.net</b> [latency: 03/16/00 13:35:54 EST by b0nE487</a>]<br>
+<!--976--><b>mail.loraincounty.net</b> [latency: 03/16/00 13:35:30 EST by b0nE487</a>]<br>
+<!--975--><b>mail.grg23vbs.asn-wien.ac.at</b> [latency: 03/16/00 09:39:18 EST by Cyberkov</a>]<br>
+<!--974--><b>rdrns.unilab.it</b> [latency: 03/15/00 11:55:37 EST by pr0</a>]<br>
+<!--973--><b>smtp.globalserve.net</b> [latency: 03/15/00 00:16:13 EST]<br>
+<!--972--><b>inext.ro</b> [latency: 03/14/00 21:55:38 EST]<br>
+<!--971--><b>emirates.net.ae</b> [latency: 03/14/00 11:19:16 EST by Ace^Nash</a>]<br>
+<!--970--><b>lums.edu.pk</b> [latency: 03/14/00 11:17:23 EST by Ace^Nash</a>]<br>
+<!--969--><b>y.net.ye</b> [latency: 03/14/00 11:16:45 EST by ^PoLar|s^</a>]<br>
+<!--968--><b>polaris.net</b> [latency: 03/14/00 11:12:31 EST by ^PoLar|s^</a>]<br>
+<!--967--><b>mail.dts.mg</b> [latency: 03/14/00 07:32:46 EST by spliff</a>]<br>
+<!--966--><b>smtp.ifrance.com</b> [latency: 03/14/00 07:28:42 EST by spliff</a>]<br>
+<!--965--><b>siamail.sia.it</b> [latency: 03/13/00 11:55:30 EST by Noog</a>]<br>
+<!--964--><b>mail.hotmail.com</b> [latency: 03/13/00 11:35:35 EST]<br>
+<!--963--><b>univ.uniyar.ac.ru</b> [latency: 03/13/00 08:52:47 EST]<br>
+<!--962--><b>mfda1.kaist.ac.kr</b> [latency: 03/13/00 05:10:38 EST]<br>
+<!--961--><b>smtp.vt4.net</b> [latency: 03/13/00 00:00:44 EST]<br>
+<!--960--><b>bi-node.zerberus.de</b> [latency: 03/12/00 23:32:37 EST by pr0</a>]<br>
+<!--959--><b>nccn.net</b> [latency: 03/12/00 23:31:21 EST by pr0*(pr0@n2.com)*</a>]<br>
+<!--958--><b>telis.org</b> [latency: 03/12/00 23:30:36 EST by pr0</a>]<br>
+<!--957--><b>cvo.oneworld.com</b> [latency: 03/12/00 23:30:21 EST by pr0</a>]<br>
+<!--956--><b>jeflin.tju.edu</b> [latency: 03/12/00 23:29:31 EST by pr0</a>]<br>
+<!--955--><b>lonepeak.vii.com</b> [latency: 03/12/00 23:28:11 EST by pr0</a>]<br>
+<!--954--><b>aldus.northnet.org</b> [latency: 03/12/00 23:27:44 EST by pr0</a>]<br>
+<!--953--><b>centerof.thesphere.com</b> [latency: 03/12/00 23:27:10 EST by pr0</a>]<br>
+<!--952--><b>mail.mindtrick.org</b> [latency: 03/12/00 23:26:26 EST by pr0</a>]<br>
+<!--951--><b>relay.cwplc.com</b> [latency: 03/12/00 23:25:41 EST by pr0</a>]<br>
+<!--950--><b>ww7.eythan.com</b> [latency: 03/12/00 23:24:01 EST by pr0</a>]<br>
+<!--949--><b>ns1.highenergyinternet.com</b> [latency: 03/12/00 23:23:19 EST by pr0</a>]<br>
+<!--948--><b>smtp.globalserve.net</b> [latency: 03/12/00 14:11:51 EST by CryoGen|C</a>]<br>
+<!--947--><b>apiit.edu.pk</b> [latency: 03/12/00 13:59:55 EST]<br>
+<!--946--><b>mail.tritium.net</b> [latency: 03/12/00 06:07:13 EST by KoRn_Klown™</a>]<br>
+<!--945--><b>mail.taipei.gov.tw</b> [latency: 03/12/00 01:10:33 EST by Saint_Anarchy</a>]<br>
+<!--944--><b>mailsrv.edge.com</b> [latency: 03/11/00 12:58:10 EST by zak</a>]<br>
+<!--943--><b>chenag.com</b> [latency: 03/11/00 12:58:01 EST by zak</a>]<br>
+<!--942--><b>mail.drexel.edu</b> [latency: 03/11/00 12:57:51 EST by zak</a>]<br>
+<!--941--><b>relay.co.za</b> [latency: 03/11/00 12:57:42 EST by zak</a>]<br>
+<!--940--><b>mail.immersia.com</b> [latency: 03/11/00 12:57:31 EST by zak</a>]<br>
+<!--939--><b>mail.gmx.net</b> [latency: 03/11/00 12:09:37 EST]<br>
+<!--938--><b>mail.kundenserver.de</b> [latency: 03/11/00 10:51:16 EST by gulli</a>]<br>
+<!--937--><b>mail.strongnet.co.nz</b> [latency: 03/11/00 08:33:28 EST by KrYpToNiX</a>]<br>
+<!--936--><b>mail.zero.net.nz</b> [latency: 03/11/00 08:30:39 EST]<br>
+<!--935--><b>mail.airmail.net</b> [latency: 03/10/00 11:25:18 EST]<br>
+<!--934--><b>193.130.32.225</b> [latency: 03/10/00 10:20:35 EST]<br>
+<!--933--><b>194.128.176.121</b> [latency: 03/10/00 10:19:55 EST]<br>
+<!--932--><b>mail.microxl.com</b> [latency: 03/10/00 05:35:37 EST by [Puppet|Master]</a>]<br>
+<!--931--><b>siamail.sia.it</b> [latency: 03/09/00 06:01:56 EST]<br>
+<!--930--><b>mail.lucky.org</b> [latency: 03/08/00 17:55:32 EST by cock-o-rama</a>]<br>
+<!--929--><b>smtp.seznam.cz</b> [latency: 03/08/00 13:56:32 EST]<br>
+<!--928--><b>cairo.osu.ac.jp</b> [latency: 03/08/00 01:34:26 EST by pr0</a>]<br>
+<!--927--><b>mail.lenshell.com</b> [latency: 03/08/00 01:32:26 EST by pr0</a>]<br>
+<!--926--><b>mail.loraincounty.net</b> [latency: 03/07/00 23:15:47 EST by Tony</a>]<br>
+<!--925--><b>mail.htp.org</b> [latency: 03/07/00 23:15:18 EST by Tony</a>]<br>
+<!--924--><b>mail.netzero.net</b> [latency: 03/07/00 23:14:34 EST by Tony</a>]<br>
+<!--923--><b>mail.worldspy.net</b> [latency: 03/07/00 23:13:55 EST by Tony</a>]<br>
+<!--922--><b>amazone.com</b> [latency: 03/07/00 18:33:54 EST by darius</a>]<br>
+<!--921--><b>mail.intermediatn.net</b> [latency: 03/07/00 10:43:39 EST]<br>
+<!--920--><b>mailhost.bestway.com.br</b> [latency: 03/07/00 09:37:39 EST by DarkPriest</a>]<br>
+<!--919--><b>imail.canal2000.com.br</b> [latency: 03/07/00 09:35:50 EST by DarkPriest</a>]<br>
+<!--918--><b>63.73.28.200</b> [latency: 03/07/00 01:53:13 EST]<br>
+<!--917--><b>relais.videotron.net</b> [latency: 03/06/00 17:09:16 EST by perez</a>]<br>
+<!--916--><b>mail.drexel.edu</b> [latency: 03/06/00 17:06:36 EST]<br>
+<!--915--><b>mail.immersia.com</b> [latency: 03/06/00 15:16:43 EST by r</a>]<br>
+<!--914--><b>mail.hotmail.com</b> [latency: 03/06/00 15:14:47 EST by r</a>]<br>
+<!--913--><b>smtp.ig.com.br</b> [latency: 03/06/00 07:50:10 EST by lilinha</a>]<br>
+<!--911--><b>mail.hotmail.com</b> [latency: 03/05/00 23:53:47 EST]<br>
+<!--909--><b>mail.immersia.com</b> [latency: 03/05/00 19:38:16 EST by JeLe</a>]<br>
+<!--907--><b>relay.co.za</b> [latency: 03/05/00 17:02:47 EST by 0men</a>]<br>
+<!--905--><b>mail.drexel.edu</b> [latency: 03/05/00 16:10:16 EST by ReallyWorks!!!!!!!!</a>]<br>
+<!--903--><b>chenag.com</b> [latency: 03/01/00 19:02:29 EST by symbols</a>]<br>
+<!--902--><b>cannabis.dgsca2.unam.mx</b> [latency: 03/01/00 19:02:17 EST by symbols</a>]<br>
+<!--901--><b>jupiter.egus.com</b> [latency: 03/01/00 19:01:25 EST by symbols</a>]<br>
+<!--900--><b>relay.datanet.hu</b> [latency: 03/01/00 19:01:16 EST by symbols</a>]<br>
+<!--899--><b>zoooom.net</b> [latency: 03/01/00 14:50:04 EST by ysltrack</a>]<br>
+<!--898--><b>smtp.aol.net.pk</b> [latency: 03/01/00 14:41:53 EST]<br>
+<!--897--><b>smtp2.libero.it</b> [latency: 03/01/00 11:23:33 EST]<br>
+<!--896--><b>mail.compuserve.com</b> [latency: 02/29/00 14:37:13 EST by ronnie</a>]<br>
+<!--895--><b>smtp.cabi.net.id</b> [latency: 02/29/00 06:57:28 EST by c13u</a>]<br>
+<!--894--><b>mail.hush-hush.com</b> [latency: 02/28/00 14:51:34 EST]<br>
+<!--893--><b>relais.videotron.net</b> [latency: 02/28/00 10:23:48 EST by el_MiLaNo</a>]<br>
+<!--892--><b>incognito.qc.ca</b> [latency: 02/28/00 10:23:18 EST by el_MiLaNo</a>]<br>
+<!--891--><b>amazone.com</b> [latency: 02/28/00 10:22:21 EST by el_MiLaNo</a>]<br>
+<!--890--><b>adult.com</b> [latency: 02/28/00 10:22:03 EST by el_MiLaNo</a>]<br>
+<!--889--><b>pascaldl.com</b> [latency: 02/28/00 10:21:54 EST by el_MiLaNo</a>]<br>
+<!--888--><b>mail.endirect.qc.ca</b> [latency: 02/28/00 10:21:34 EST by el_MiLaNo</a>]<br>
+<!--887--><b>c2.citeglobe.com</b> [latency: 02/28/00 10:21:13 EST by el_MiLaNo</a>]<br>
+<!--886--><b>admin.msjnet.edu</b> [latency: 02/27/00 13:31:58 EST by fa1l3n</a>]<br>
+<!--885--><b>203.96.153.124</b> [latency: 02/26/00 19:10:41 EST by sky</a>]<br>
+<!--884--><b>mail.reinhart.ch</b> [latency: 02/25/00 11:22:38 EST by DIABLO</a>]<br>
+<!--883--><b>vistaweb.com</b> [latency: 02/25/00 09:31:20 EST by somedude</a>]<br>
+<!--882--><b>mx1.gmx.net</b> [latency: 02/24/00 16:46:23 EST by CyberOptic</a>]<br>
+<!--881--><b>mx9.gmx.net</b> [latency: 02/24/00 16:45:44 EST by CyberOptic</a>]<br>
+<!--880--><b>Mail.privacyx.com</b> [latency: 02/24/00 14:17:48 EST by Jesus_lied</a>]<br>
+<!--879--><b>smtp1.sminter.com.ar</b> [latency: 02/24/00 10:37:50 EST]<br>
+<!--878--><b>mail.iname.com</b> [latency: 02/23/00 21:10:58 EST by xy.iname.com</a>]<br>
+<!--877--><b>smtp.tiscalinet.it</b> [latency: 02/23/00 09:56:47 EST]<br>
+<!--876--><b>mail.tvtoday.de</b> [latency: 02/23/00 08:47:42 EST by UnRaT</a>]<br>
+<!--875--><b>sonics.entangledweb.net</b> [latency: 02/22/00 20:16:23 EST by MrSandman</a>]<br>
+<!--874--><b>bridge.kalnet.net</b> [latency: 02/22/00 11:42:49 EST by symbols</a>]<br>
+<!--873--><b>secure.i1.net</b> [latency: 02/22/00 11:42:08 EST by symbols</a>]<br>
+<!--872--><b>server.ucatolica.edu.co</b> [latency: 02/22/00 10:26:35 EST by lancelote</a>]<br>
+<!--871--><b>ppp.kornet21.net</b> [latency: 02/21/00 21:29:33 EST by Zero</a>]<br>
+<!--870--><b>ns.sopron.hu</b> [latency: 02/21/00 11:14:54 EST]<br>
+<!--869--><b>206.253.222.118</b> [latency: 02/20/00 20:20:12 EST]<br>
+<!--868--><b>smtp.cvtci.com.ar</b> [latency: 02/20/00 20:16:55 EST]<br>
+<!--867--><b>smtp-khi1.super.net.pk</b> [latency: 02/20/00 11:14:29 EST by Sheraz</a>]<br>
+<!--866--><b>mail.fastforward.gr</b> [latency: 02/20/00 07:18:59 EST by FILC</a>]<br>
+<!--865--><b>mail.cut.org</b> [latency: 02/20/00 02:46:47 EST]<br>
+<!--864--><b>cybertrails.com</b> [latency: 02/19/00 19:48:33 EST]<br>
+<!--863--><b>cello.qnet.com</b> [latency: 02/19/00 00:52:31 EST]<br>
+<!--862--><b>smtp.wanadoo.nl</b> [latency: 02/18/00 09:29:39 EST by badwolf</a>]<br>
+<!--861--><b>mail.ruc.com</b> [latency: 02/18/00 08:44:31 EST by jo9876</a>]<br>
+<!--860--><b>mail.pimp.net</b> [latency: 02/18/00 08:42:53 EST by jo9876</a>]<br>
+<!--859--><b>204.106.181.12</b> [latency: 02/17/00 19:40:36 EST]<br>
+<!--858--><b>mail.hsij.nl</b> [latency: 02/17/00 17:24:46 EST]<br>
+<!--857--><b>smtp.web.de</b> [latency: 02/17/00 16:44:36 EST by theclue</a>]<br>
+<!--856--><b>mail.gmx.net</b> [latency: 02/17/00 12:35:14 EST by ödfls</a>]<br>
+<!--855--><b>warezmp3.com</b> [latency: 02/17/00 06:15:21 EST]<br>
+<!--854--><b>mail.parks.lv</b> [latency: 02/16/00 16:53:44 EST by fififi</a>]<br>
+<!--853--><b>smtp.infowest.com</b> [latency: 02/16/00 05:01:47 EST]<br>
+<!--852--><b>mail.skyrock.com</b> [latency: 02/14/00 21:19:23 EST by SmUrFeUrd'UnDeRnEt</a>]<br>
+<!--851--><b>apiit.edu.pk</b> [latency: 02/14/00 15:31:56 EST by ^PoLar|s^</a>]<br>
+<!--850--><b>polaris.net</b> [latency: 02/14/00 15:27:58 EST by ^PoLar|s^</a>]<br>
+<!--849--><b>vol.vnn.vn</b> [latency: 02/14/00 04:56:54 EST by HoangPhuc</a>]<br>
+<!--848--><b>mail.vol.com</b> [latency: 02/13/00 22:25:09 EST by Rigmythsins</a>]<br>
+<!--847--><b>mail.hush-hush.com</b> [latency: 02/13/00 13:48:59 EST by TrojanMan</a>]<br>
+<!--846--><b>mail.hotmail.com</b> [latency: 02/13/00 08:22:22 EST]<br>
+<!--845--><b>mailhost.mil.ameritech.net</b> [latency: 02/12/00 13:43:20 EST]<br>
+<!--844--><b>mail.privacyx.com</b> [latency: 02/12/00 03:38:35 EST by Genie</a>]<br>
+<!--843--><b>194.119.141.89</b> [latency: 02/11/00 16:00:59 EST by cyber_anders</a>]<br>
+<!--842--><b>194.119.138.203</b> [latency: 02/11/00 15:59:29 EST by cyber_anders</a>]<br>
+<!--841--><b>194.119.138.14</b> [latency: 02/11/00 15:59:06 EST by cyber_anders</a>]<br>
+<!--840--><b>mail.itdnet.net</b> [latency: 02/11/00 04:40:54 EST by Lightmaster</a>]<br>
+<!--839--><b>smtp.netzero.com</b> [latency: 02/10/00 23:06:21 EST by THeOnEAnDOnLy</a>]<br>
+<!--838--><b>usfamily.net</b> [latency: 02/08/00 18:35:33 EST]<br>
+<!--837--><b>smtp.wanadoo.nl</b> [latency: 02/08/00 15:40:37 EST by robbertv.d.Pas</a>]<br>
+<!--836--><b>mail.negativezero.com</b> [latency: 02/07/00 16:23:58 EST by Messju2</a>]<br>
+<!--835--><b>dauwe.freeservers.com</b> [latency: 02/07/00 15:21:34 EST]<br>
+<!--834--><b>playasamara.com</b> [latency: 02/07/00 02:55:44 EST]<br>
+<!--833--><b>aol.net.pk</b> [latency: 02/07/00 00:09:02 EST]<br>
+<!--832--><b>206.253.222.118</b> [latency: 02/06/00 10:48:15 EST]<br>
+<!--831--><b>mail.pamela.org</b> [latency: 02/05/00 17:39:58 EST by oop007</a>]<br>
+<!--830--><b>206.99.44.235</b> [latency: 02/04/00 20:48:44 EST by CGSA</a>]<br>
+<!--829--><b>mail.cybercable.fr</b> [latency: 02/04/00 16:38:38 EST by GovLog</a>]<br>
+<!--828--><b>smtp.EUnet.yu</b> [latency: 02/04/00 03:43:22 EST by Overclocker</a>]<br>
+<!--827--><b>dingdata.com</b> [latency: 02/03/00 15:34:44 EST by MiX(akaKeY)</a>]<br>
+<!--826--><b>ns3.whitlock.com</b> [latency: 02/03/00 04:59:23 EST by symbols</a>]<br>
+<!--825--><b>mail.texoma.net</b> [latency: 02/03/00 04:59:08 EST by symbols</a>]<br>
+<!--824--><b>zeus.theglobe.com</b> [latency: 02/03/00 04:58:29 EST by symbols</a>]<br>
+<!--823--><b>mx01.gis.net</b> [latency: 02/03/00 04:57:54 EST by symbols</a>]<br>
+<!--822--><b>sonic.sparklist.com</b> [latency: 02/03/00 04:57:33 EST by symbols</a>]<br>
+<!--821--><b>smtp.scan-net.ne.jp</b> [latency: 02/03/00 04:57:19 EST by symbols</a>]<br>
+<!--820--><b>mail.infowar.com</b> [latency: 02/03/00 04:57:06 EST by symbols</a>]<br>
+<!--819--><b>cello.qnet.com</b> [latency: 02/03/00 04:56:31 EST by symbols</a>]<br>
+<!--818--><b>warezmp3.com</b> [latency: 02/02/00 12:38:03 EST by tHe_PrEzIdEnT</a>]<br>
+<!--817--><b>keimyung.ac.kr</b> [latency: 02/02/00 10:26:32 EST by mk</a>]<br>
+<!--816--><b>smtp.cablewanadoo.nl</b> [latency: 02/01/00 18:39:53 EST by jazzz-man</a>]<br>
+<!--815--><b>mail.compuserve.com</b> [latency: 02/01/00 17:37:41 EST by alreadysubmitted</a>]<br>
+<!--814--><b>smtp.hitel.net</b> [latency: 02/01/00 14:09:16 EST by ZIONKIM</a>]<br>
+<!--813--><b>karmannext01.karmann.com</b> [latency: 02/01/00 13:01:51 EST by DragonDjax</a>]<br>
+<!--812--><b>promo2.eggheadlist.com</b> [latency: 02/01/00 02:27:36 EST by symbols</a>]<br>
+<!--811--><b>morpheus.eggheadlist.com</b> [latency: 02/01/00 02:27:24 EST by symbols</a>]<br>
+<!--810--><b>204.106.181.12</b> [latency: 02/01/00 02:27:17 EST by symbols</a>]<br>
+<!--809--><b>168.188.43.202</b> [latency: 02/01/00 02:27:08 EST by symbols</a>]<br>
+<!--808--><b>listserv.earthweb.com</b> [latency: 02/01/00 02:26:24 EST by symbols</a>]<br>
+<!--807--><b>mailhost.csg.org</b> [latency: 02/01/00 02:25:56 EST by symbols</a>]<br>
+<!--805--><b>195.159.94.130</b> [latency: 01/31/00 17:49:28 EST]<br>
+<!--804--><b>smtp.telebot.net</b> [latency: 01/31/00 12:51:42 EST]<br>
+<!--803--><b>smtp.cvtci.com.ar</b> [latency: 01/30/00 15:40:15 EST]<br>
+<!--802--><b>smtp1.sminter.com.ar</b> [latency: 01/30/00 15:38:39 EST]<br>
+<!--801--><b>mail.dot9.com</b> [latency: 01/30/00 13:13:21 EST by ^PoLar|s^</a>]<br>
+<!--800--><b>apiit.edu.pk</b> [latency: 01/30/00 13:09:25 EST by ^PoLar|s^</a>]<br>
+<!--799--><b>lego.rdsor.ro</b> [latency: 01/29/00 13:02:31 EST by darkm|nd</a>]<br>
+<!--798--><b>tctc.com</b> [latency: 01/29/00 11:37:30 EST by c0f0</a>]<br>
+<!--797--><b>smtp.tiscalinet.it</b> [latency: 01/29/00 10:11:06 EST]<br>
+<!--796--><b>pop.coin.missouri.edu</b> [latency: 01/28/00 23:53:52 EST by Artoink</a>]<br>
+<!--794--><b>140.239.100.8</b> [latency: 01/28/00 06:17:08 EST]<br>
+<!--793--><b>194.102.120.30</b> [latency: 01/27/00 18:30:10 EST by Genz0</a>]<br>
+<!--792--><b>193.231.207.129</b> [latency: 01/27/00 18:29:19 EST by Genz0</a>]<br>
+<!--791--><b>mail.gnet.tn</b> [latency: 01/27/00 17:07:58 EST by samy</a>]<br>
+<!--790--><b>directdownloads.com</b> [latency: 01/27/00 11:34:16 EST by tHe_PrEzIdEnT</a>]<br>
+<!--789--><b>ricky.net</b> [latency: 01/26/00 09:47:32 EST by tHe_PrEzIdEnT</a>]<br>
+<!--788--><b>crackstore.com</b> [latency: 01/26/00 09:36:52 EST by tHe_PrEzIdEnT</a>]<br>
+<!--787--><b>ultimatesoft.de</b> [latency: 01/26/00 09:36:20 EST by tHe_PrEzIdEnT</a>]<br>
+<!--786--><b>ultrapasswords.com</b> [latency: 01/26/00 09:35:27 EST by tHePrEzIdEnT</a>]<br>
+<!--785--><b>mail.concentric.net</b> [latency: 01/25/00 17:20:31 EST by scanky</a>]<br>
+<!--784--><b>dork.com</b> [latency: 01/25/00 16:30:26 EST by cozmo</a>]<br>
+<!--783--><b>sicom.fi</b> [latency: 01/24/00 13:33:53 EST by Metanol</a>]<br>
+<!--782--><b>mail.satyam.net.in</b> [latency: 01/24/00 11:04:24 EST by kewlDooD</a>]<br>
+<!--781--><b>ns.pyongtaek.kyonggi.kr</b> [latency: 01/24/00 10:47:46 EST by .:ÿBLAHackerÿ:.</a>]<br>
+<!--780--><b>ptbank.co.kr</b> [latency: 01/24/00 10:40:15 EST by .:ÿBLAHackerÿ:.</a>]<br>
+<!--779--><b>ns.ptuniv.ac.kr</b> [latency: 01/24/00 10:12:23 EST by .:ÿBLAHackerÿ:.</a>]<br>
+<!--778--><b>mail.hehe.net</b> [latency: 01/23/00 18:44:52 EST by cdr</a>]<br>
+<!--777--><b>mail.cybercable.fr</b> [latency: 01/23/00 18:21:26 EST by GovLog</a>]<br>
+<!--776--><b>mail.bbchs.k12.il.us</b> [latency: 01/23/00 02:05:53 EST by ZeroTolerance</a>]<br>
+<!--775--><b>mail.superconnect.de</b> [latency: 01/22/00 14:50:22 EST by NoTrust</a>]<br>
+<!--774--><b>smtpserver.get2net.dk</b> [latency: 01/19/00 20:06:17 EST]<br>
+<!--773--><b>mail.sterlink.net</b> [latency: 01/19/00 02:12:32 EST by trojan</a>]<br>
+<!--772--><b>cyberspace.org</b> [latency: 01/18/00 11:21:44 EST]<br>
+<!--771--><b>mail.ruc.com</b> [latency: 01/17/00 17:22:19 EST by graffix</a>]<br>
+<!--770--><b>sparticus.bright.net</b> [latency: 01/17/00 10:11:23 EST by symbols</a>]<br>
+<!--769--><b>keimyung.ac.kr</b> [latency: 01/16/00 09:26:20 EST by blahacker</a>]<br>
+<!--768--><b>mail.junctionnet.com</b> [latency: 01/16/00 00:04:25 EST by PHiSH</a>]<br>
+<!--767--><b>nocturnaldesigns.dhs.org</b> [latency: 01/16/00 00:03:31 EST by PHiSH</a>]<br>
+<!--766--><b>mail.tlnet.com.vn</b> [latency: 01/15/00 12:47:57 EST by test</a>]<br>
+<!--765--><b>slipknot2.com</b> [latency: 01/15/00 00:45:54 EST by NET~NiNja</a>]<br>
+<!--764--><b>insaneclownposse.com</b> [latency: 01/15/00 00:32:52 EST by NET~NiNja</a>]<br>
+<!--763--><b>USAFA.edu</b> [latency: 01/15/00 00:27:46 EST by NET~NiNja</a>]<br>
+<!--762--><b>warez.com</b> [latency: 01/15/00 00:23:25 EST by NET~NiNja</a>]<br>
+<!--761--><b>the-lamer.com</b> [latency: 01/15/00 00:20:41 EST by NET~NiNja</a>]<br>
+<!--760--><b>tlsecurity.com</b> [latency: 01/15/00 00:17:28 EST by NET~NiNja</a>]<br>
+<!--759--><b>ducktank.net</b> [latency: 01/15/00 00:14:24 EST by NET~NiNja</a>]<br>
+<!--758--><b>mninter.net</b> [latency: 01/15/00 00:07:24 EST by NET~NiNja</a>]<br>
+<!--757--><b>fishnet.com</b> [latency: 01/15/00 00:05:35 EST by NET~NiNja</a>]<br>
+<!--756--><b>smtp.korn.com</b> [latency: 01/15/00 00:04:11 EST by NET~NiNja</a>]<br>
+<!--755--><b>SMTP.hobbiton.org</b> [latency: 01/14/00 23:57:43 EST by NET~NiNja</a>]<br>
+<!--754--><b>kidrock.com</b> [latency: 01/14/00 23:53:30 EST by NET~NiNja</a>]<br>
+<!--753--><b>smtp.eth.net</b> [latency: 01/14/00 13:57:47 EST by Biju</a>]<br>
+<!--752--><b>umr.edu</b> [latency: 01/13/00 19:44:55 EST by NeoIntrus</a>]<br>
+<!--751--><b>209.50.251.101</b> [latency: 01/13/00 01:58:35 EST by Final_Conflict</a>]<br>
+<!--750--><b>209.50.164.102</b> [latency: 01/13/00 01:57:21 EST by Final_Conflict</a>]<br>
+<!--749--><b>mx1.screaming.net</b> [latency: 01/13/00 01:29:34 EST by Final_Conflict</a>]<br>
+<!--400--><b>smtp.obase.com</b> [latency: 08/21/99 18:34:14 PDT by Arthur Dent</a>]<br>
+<!--399--><b>mail.hackers.com</b> [latency: 08/21/99 13:48:52 PDT by ^Omega</a>]<br>
+<!--398--><b>mail.porn.com</b> [latency: 08/21/99 13:47:52 PDT by ^Omega</a>]<br>
+<!--397--><b>wsnet.ru</b> [latency: 08/21/99 05:27:04 PDT by telotrin</a>]<br>
+<!--396--><b>ugansk.wsnet.ru</b> [latency: 08/21/99 05:26:24 PDT by telotrin</a>]<br>
+<!--395--><b>mail.ugansk.intergrad.com</b> [latency: 08/21/99 05:17:33 PDT by telotrin</a>]<br>
+<!--394--><b>smtp-khi2.super.net.pk</b> [latency: 08/19/99 13:13:28 PDT by Manch</a>]<br>
+<!--393--><b>graham.nettlink.net.pk</b> [latency: 08/19/99 13:11:09 PDT by Manch</a>]<br>
+<!--391--><b>mail.cut.org </b> [latency: 08/19/99 11:14:08 PDT by néron</a>]<br>
+<!--389--><b>mail.cyberamy.com </b> [latency: 08/19/99 11:06:38 PDT]<br>
+<!--388--><b>mail.mendes-inc.com</b> [latency: 08/19/99 04:40:45 PDT by RALPH</a>]<br>
+<!--386--><b>zoooom.net</b> [latency: 08/18/99 19:34:39 PDT by kopkila</a>]<br>
+<!--380--><b>smtp.ozemail.com.au</b> [latency: 08/16/99 07:58:10 PDT]<br>
+<!--379--><b>mailgw.netvision.net.il</b> [latency: 08/14/99 23:04:29 PDT by Anton</a>]<br>
+<!--378--><b>smtp.mail.ru</b> [latency: 08/14/99 23:03:40 PDT by Anton</a>]<br>
+<!--376--><b>purg.com</b> [latency: 08/13/99 17:38:57 PDT]<br>
+<!--375--><b>jeg.eier.holmlia.com</b> [latency: 08/13/99 05:24:16 PDT by Music-BoY</a>]<br>
+<!--374--><b>saintmail.net</b> [latency: 08/12/99 07:20:17 PDT by trinity</a>]<br>
+<!--373--><b>pop.fast.co.za</b> [latency: 08/12/99 07:19:21 PDT]<br>
+<!--371--><b>smtp2.zdlists.com</b> [latency: 08/11/99 15:47:30 PDT by Razzon</a>]<br>
+<!--366--><b>mail.eexi.gr</b> [latency: 08/10/99 15:10:26 PDT]<br>
+<!--363--><b>mail.cyberamy.com</b> [latency: 08/08/99 20:36:08 PDT by noname</a>]<br>
+<!--362--><b>gilman.org</b> [latency: 08/08/99 13:19:37 PDT]<br>
+<!--361--><b>mail.friendsbalt.org</b> [latency: 08/08/99 13:19:21 PDT]<br>
+<!--360--><b>cache-rb03.proxy.aol.com </b> [latency: 08/07/99 09:41:00 PDT by Buddy McKay</a>]<br>
+<!--359--><b>merlin.sicher.priv.at</b> [latency: 08/06/99 21:29:33 PDT by DeadWrong</a>]<br>
+<!--358--><b>smtp.infovia.com.gt</b> [latency: 08/06/99 17:22:27 PDT]<br>
+<!--357--><b>zoooom.net</b> [latency: 08/06/99 11:14:00 PDT by CrazyNiga</a>]<br>
+<!--356--><b>aol.net.pk</b> [latency: 08/06/99 11:13:43 PDT by CrazyNigaq</a>]<br>
+<!--355--><b>169.207.154.209</b> [latency: 08/05/99 22:02:06 PDT by Razzon</a>]<br>
+<!--354--><b>cpqsysv.ipu.rssi.ru</b> [latency: 08/04/99 01:31:17 PDT]<br>
+<!--353--><b>hell.org</b> [latency: 08/03/99 21:41:46 PDT by Suid Flow</a>]<br>
+<!--352--><b>205.188.192.57</b> [latency: 08/03/99 21:27:53 PDT by vegan_5</a>]<br>
+<!--351--><b>216.192.10.4</b> [latency: 08/03/99 21:27:22 PDT by vegan_5</a>]<br>
+<!--350--><b>mail.net-magic.net</b> [latency: 08/03/99 16:18:49 PDT by Micheal Layland</a>]<br>
+<!--349--><b>mail.sojourn.com</b> [latency: 08/03/99 15:01:38 PDT by ZeScorpion</a>]<br>
+<!--346--><b>mail.q-texte.net.ma</b> [latency: 08/03/99 13:10:51 PDT by LeSaint</a>]<br>
+<!--345--><b>mail.netvision.net.il</b> [latency: 08/03/99 11:04:03 PDT]<br>
+<!--343--><b>fasolia-louvia.com.cy</b> [latency: 08/03/99 02:27:46 PDT by blah</a>]<br>
+<!--341--><b>Spacewalker.wanna.join.it.com </b> [latency: 08/01/99 15:40:28 PDT]<br>
+<!--340--><b>mail.start.com.au</b> [latency: 08/01/99 07:27:25 PDT by QuaKeee</a>]<br>
+<!--339--><b>mail.vestelnet.com</b> [latency: 08/01/99 07:26:41 PDT by QuaKeee</a>]<br>
+<!--338--><b>205.149.115.147</b> [latency: 08/01/99 04:06:16 PDT by KeKoA</a>]<br>
+<!--335--><b>bareed.ayna.com</b> [latency: 07/30/99 07:03:24 PDT]<br>
+<!--333--><b>youthnet.org</b> [latency: 07/30/99 01:11:21 PDT by vegan_%</a>]<br>
+<!--331--><b>inext.ro </b> [latency: 07/28/99 14:35:02 PDT by latency</a>]<br>
+<!--330--><b>iccnet.icc.net.sa</b> [latency: 07/28/99 14:02:54 PDT by none</a>]<br>
+<!--328--><b>mail.eexi.gr</b> [latency: 07/27/99 15:39:30 PDT]<br>
+<!--326--><b>mail.dnt.ro</b> [latency: 07/27/99 01:00:59 PDT by DitZi</a>]<br>
+<!--324--><b>mail.compuserve.com</b> [latency: 07/26/99 13:11:15 PDT by CyberNissart</a>]<br>
+<!--323--><b>pg.net.my</b> [latency: 07/25/99 09:23:19 PDT by [X]r3Wt</a>]<br>
+<!--321--><b>scholar.cc.emory.edu</b> [latency: 07/24/99 14:49:04 PDT by Cougar</a>]<br>
+<!--320--><b>imail.young-world.com</b> [latency: 07/24/99 08:34:44 PDT by The Lord</a>]<br>
+<!--312--><b>mail.cut.org</b> [latency: 07/22/99 17:40:19 PDT by AniXter</a>]<br>
+<!--311--><b>205.244.102.167</b> [latency: 07/22/99 14:47:28 PDT by Razzon</a>]<br>
+<!--309--><b>relay.cyber.net.pk</b> [latency: 07/22/99 03:24:48 PDT by crush2</a>]<br>
+<!--308--><b>mail.lanalyst.nl</b> [latency: 07/22/99 00:55:18 PDT by phobetor</a>]<br>
+<!--307--><b>mail.lig.bellsouth.net</b> [latency: 07/22/99 00:48:27 PDT by Deth Penguin</a>]<br>
+<!--305--><b>batelco.com.bh</b> [latency: 07/21/99 12:54:53 PDT by asswipe</a>]<br>
+<!--303--><b>ns1.infonet-dev.co.jp</b> [latency: 07/20/99 18:25:11 PDT by bokuden</a>]<br>
+<!--302--><b>inext.ro</b> [latency: 07/20/99 15:11:39 PDT by the_aDb</a>]<br>
+<!--301--><b>siamail.sia.it</b> [latency: 07/20/99 13:07:27 PDT by The Lord</a>]<br>
+
+
+</small>
+</blockquote>
+
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var MyForm = document.MyForm;
+ MyForm.name.Value = getValue(MyForm.name);
+ MyForm.email.Value = getValue(MyForm.email);
+ MyForm.url.Value = getValue(MyForm.url);
+ MyForm.url_title.Value = getValue(MyForm.url_title);
+ MyForm.img.Value = getValue(MyForm.img);
+ MyForm.zebulun.Value = getValue(MyForm.zebulun);
+// -->
+</SCRIPT>
+
+
+
+<p>&nbsp;</p><font face="Arial">
+
+
+<center>
+<TABLE BORDER="0" CELLPADDING="1" CELLSPACING="0" BGCOLOR="#000000" WIDTH="75%"><TR><TD>
+<TABLE WIDTH="100%" BORDER="0" CELLSPACING="1" CELLPADDING="3">
+<TR><TD ALIGN="center" BGCOLOR="#FFAA33"><B><FONT FACE="Lucida,Verdana,Helvetica,Arial"><FONT COLOR="#000000"><small>current mission / news</small></FONT></FONT>
+</FONT></FONT>&nbsp;&nbsp;&nbsp;<A HREF="javascript:void(0);" onClick="window.open('http://www.cyberarmy.com/ssi/music.html','_music','toolbar=no,location=no,directories=no,status=no,width=150,height=150');"><img src="../../ssi/music.gif" border=0></a></TD></TR><TR><TD BGCOLOR="#263C6D"><SMALL><FONT FACE="Lucida,Verdana,Helvetica,Arial">
+
+<table border=0 cellpadding=3><tr><td width=70%>
+<center><small>
+Proposition #69 - <i>Anti Echelon Mission</i>: 
+Echelon has been exposed!  I just got <a href="http://home.cyberarmy.com/angel11/letter.htm">this</a> from my senator stating that investigations have begun.  Go to <a href="http://www.aclu.org/cgi-bin/take_action2000.pl?GetDoc=296&dir=aclu
+&redirect=http://www.aclu.org/action/actthank.htm">echelon watch</a> to make sure that echelon goes down!<br>
+(proposed by <img src="../../zebulun/zbadge/marshal.gif" height=15 width=15> Mar. The 11th Angel)</li>
+
+</small></center>
+</td><td width=30%>
+<center><small><form method=get action="http://www.cyberarmy.com/zebulun/mission_complete.pl">
+<input type=submit value="Mission Done">
+</form>
+(completed 317
+ times)<br><br><a href="../../zebulun/recruit.shtml">Join CyberArmy</a></small></center>
+</td></tr></table><br>
+</TD></TR><TR><TD BGCOLOR="#263C6D"><SMALL><FONT FACE="Lucida,Verdana,Helvetica,Arial">
+
+- You can chat about our current internet freedom campaign on our IRC channel, DALNet #zebulun. There is also a <a href="../../wwwboard/irc.shtml">web based applet</a>.<br>
+
+<br><center><a href="../../index.html">main</a> | <a href="http://portal.cyberarmy.com">portal</a> | <a href="http://search.cyberarmy.com">haksearch</a> | <a href="http://www.cyberarmy.com/lists">lists</a> | <a href="http://www.cyberarmy.com/t-50">top50</a> | <a href="../../wwwboard/index.shtml">discussion</a>
+| <a href="http://home.cyberarmy.com">homeland</a><br></center>
+
+&nbsp;</FONT></SMALL></TD></TR></TABLE></TD></TR></TABLE>
+</center>
+
+
+
+</body></html>

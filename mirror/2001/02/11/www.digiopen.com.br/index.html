@@ -1,0 +1,91 @@
+<html>
+<title>Sekurity</title>
+<STYLE type=text/css>
+A {	COLOR: #666666; TEXT-DECORATION: none }
+A:hover { text-decoration: underline; COLOR: #444444; }
+A:active { COLOR: #666666; TEXT-DECORATION: none }
+</STYLE>
+
+
+<body onload="fade(0, 0, 0, 255, 255, 255, 64)"
+onunload="fade(255, 255, 255, 0, 0, 0, 64)" bgcolor="#FFFFFF" text="#000000" link="#666666" vlink="#666666" alink="#666666" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<p><script language="JavaScript"><!--
+
+function toHex(dec) {
+
+        var hexCharacters = "0123456789ABCDEF"
+
+        if (dec < 0)
+
+                return "00"
+
+        if (dec > 255)
+
+                return "FF"
+
+        var i = Math.floor(dec / 16)
+
+        var j = dec % 16
+
+        return hexCharacters.charAt(i) + hexCharacters.charAt(j)
+
+}
+
+
+
+
+
+function setbgColor(red, green, blue) {
+
+         document.bgColor = "#" + toHex(red) + toHex(green) + toHex(blue)
+
+}
+
+
+
+
+
+function fade(sred, sgreen, sblue, ered, egreen, eblue, step) {
+
+        for(var i = 0; i <= step; ++i) {
+
+                // set current red descriptor
+
+                var red = Math.floor(sred * ((step - i) / step) + ered * (i / step))
+
+
+
+                // set current green descriptor
+
+                var green = Math.floor(sgreen * ((step - i) / step) + egreen * (i / step))
+
+
+
+                // set current green descriptor
+
+                var blue = Math.floor(sblue * ((step - i) / step) + eblue * (i / step))
+
+
+
+                // set background color according to descriptors
+
+                setbgColor(red, green, blue)
+
+        }
+
+}
+
+
+
+// --></script> </p>
+<div align="center"><font face="verdana, helvetica" size="2">
+<img src="logo2.gif" ><br>
+<b>Hacked by Backz<br><br>
+Gr33ts: Morfeu, TankDS, t0rl3y, Sepulturä<br>
+<a href="mailto:backzoverflow@yahoo.com">backzoverflow@yahoo.com</a><br>
+Br4z1l
+</b></font>
+
+</div>
+</body>
+</html><!-- www.attrition.org web hack mirror - watermark or something -->

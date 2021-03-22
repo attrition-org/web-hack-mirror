@@ -1,0 +1,165 @@
+<HTML>
+<HEAD>
+<TITLE>Send email to tentil.com</TITLE>
+<META NAME="Description" CONTENT="The BEST graphics and web page design">
+<META NAME="generator" CONTENT="Notepad">
+<META NAME="author" CONTENT="Karla Fulfer">
+<META NAME="keywords" CONTENT="graphics,design,tips,Windows95,tricks,Fulfer">
+
+<script language="JavaScript">
+           <!--
+           browsok = (((navigator.appName == "Netscape")
+           && (parseInt(navigator.appVersion) >= 3))
+           || ((navigator.appName == "Microsoft Internet Explorer")
+           && (parseInt(navigator.appVersion)>=3)));
+           if(browsok){
+             // MouseOn   
+             // Note: the 100 is for the WIDTH, 15 is for the HEIGHT
+                tips1 = new Image(100, 15);
+                tips1.src = "button1a.gif";
+                com1 = new Image(100, 15);
+                com1.src = "button2a.gif";
+                home1 = new Image(100, 15);
+                home1.src = "button3a.gif";
+                ten1 = new Image(100, 15);
+                ten1.src = "button4a.gif";
+
+             // MouseOff
+             // Note: the 100 is for the WIDTH, 15 is for the HEIGHT
+                tips0 = new Image(100, 15);
+                tips0.src = "button1.gif";
+                com0 = new Image(100, 15);
+                com0.src = "button2.gif";
+                home0 = new Image(100, 15);
+                home0.src = "button3.gif";
+                ten0 = new Image(100, 15);
+                ten0.src = "button4.gif";
+
+           }
+           function BNB_mouseon(n){
+                if(browsok){
+                     imageON = eval(n + "1.src");
+                     document [n].src = imageON;
+                     }
+           }
+           function BNB_mouseoff(n){
+                if(browsok){
+           imageOFF = eval(n + "0.src");
+                document [n].src = imageOFF;
+                     }
+           }
+           // -->
+           </SCRIPT>
+
+</HEAD>
+<BODY BACKGROUND="blubkg.gif" BGCOLOR="#FFFFFF">
+<CENTER>
+<IMG SRC="eform.gif" WIDTH="400" HEIGHT="150" ALT="email">
+<FONT FACE="arial" COLOR="FF0000">
+with auto reply!</FONT>
+
+<P>
+<TABLE CELLPADDING="6" CELLSPACING="0" BORDER="0">
+<FORM METHOD="POST" ACTION="/cgi-bin/bnbform.cgi">
+ <tr>
+  <TD colspan="2" ALIGN="center" BGCOLOR="ff0000">
+ <FONT FACE="arial" COLOR="000000">
+          fields marked with * are required!</font>
+  </td></tr>
+
+ <TR><TD BGCOLOR="000000">
+ <FONT FACE="arial" COLOR="FFFFFF">
+ Your Name:</font><FONT FACE="arial" COLOR="FF0000">*</FONT>
+ </TD>
+ <TD BGCOLOR="000000">
+  <INPUT TYPE="TEXT" NAME="name" SIZE=35 MAXLENGTH=50>
+  </td></TR>
+
+ <TR><TD BGCOLOR="000000">
+ <FONT FACE="arial" COLOR="FFFFFF">
+ E-Mail Address:</FONT><FONT FACE="arial" COLOR="FF0000">*</FONT>
+ </TD><TD BGCOLOR="000000">
+        <INPUT TYPE="TEXT" NAME="submit_by" SIZE=35 MAXLENGTH=50>
+ </TD></TR>
+ <TR><TD BGCOLOR="000000">
+ <FONT FACE="arial" COLOR="FFFFFF">How did you find me:
+ </TD>
+ <TD BGCOLOR="000000">
+   <INPUT TYPE="TEXT" NAME="how_found" SIZE=35 MAXLENGTH=50>
+ </TD></TR>
+ <TR><TD BGCOLOR="000000">
+ <FONT FACE="arial" COLOR="FFFFFF">
+  How much do<BR>
+  you hate surveys?<BR>
+  (OK .. not required)
+ </td><TD BGCOLOR="000000">
+               <INPUT TYPE="CHECKBOX" NAME="ok"><FONT FACE="arial" COLOR="FFFFFF">oh, they're OK<BR>
+               <INPUT TYPE="CHECKBOX" NAME="annoy">they annoy me<BR>
+               <INPUT TYPE="CHECKBOX" NAME="rice">I'd rather eat rice cakes</FONT>
+  </TD></TR>
+ <TR><TD BGCOLOR="000000">
+ <FONT FACE="arial" COLOR="FFFFFF">
+ Your Message<FONT COLOR="FF0000">*</FONT>
+ </TD><TD BGCOLOR="000000">
+ <textarea name="message" wrap=virtual rows=6 cols=40>
+             </textarea>
+ </TD></TR>
+ <TR><TD ALIGN="center" BGCOLOR="000000" COLSPAN="2">
+       &nbsp;  
+ </TD></TR>
+ <TR><TD ALIGN="center" BGCOLOR="000000" COLSPAN="2">
+      <INPUT TYPE="submit" VALUE="Send Mail!"> &nbsp;  
+      <input type="reset" value="Panic">                                                         
+ </TD></TR></TABLE>
+</FONT>
+
+
+<!--  SCRIPT CONFIGURATION SECTION -->
+<INPUT TYPE="HIDDEN" NAME="required" 
+    VALUE="name,submit_by,message">
+<INPUT TYPE="HIDDEN" NAME="data_order" 
+    VALUE="name,submit_by,how_found,
+           ok,annoy,rice,message">
+<INPUT TYPE="HIDDEN" NAME="submit_to" VALUE="tentil@tentil.com">
+<INPUT TYPE="HIDDEN" NAME="autorespond" VALUE="yes">
+<INPUT TYPE="HIDDEN" NAME="automessage" VALUE="mymessage.txt">
+<INPUT TYPE="HIDDEN" NAME="outputfile" VALUE="form.log">
+<INPUT TYPE="HIDDEN" NAME="form_id" VALUE="Website Form">
+<INPUT TYPE="HIDDEN" NAME="ok_url" 
+     VALUE="http://www.tentil.com/thanks.html">
+<INPUT TYPE="HIDDEN" NAME="not_ok_url" 
+     VALUE="http://www.tentil.com/oops.html">
+<!--  END OF SCRIPT CONFIGURATION SECTION -->
+
+</FORM>
+<P>&nbsp;</P>
+<a href="bnbform.html" 
+                   onmouseout="BNB_mouseoff('tips')" onmouseover=
+                  "BNB_mouseon('tips');return true ">
+               <img src="button1.gif" name="tips" 
+                  WIDTH=100 HEIGHT=15 VSPACE=0 border=0 alt=email></a>
+
+<a href="index.html" 
+                   onmouseout="BNB_mouseoff('com')" onmouseover=
+                  "BNB_mouseon('com');return true ">
+               <img src="button2.gif" name="com" 
+                  WIDTH=100 HEIGHT=15 VSPACE=0 border=0 alt=com></a>
+
+<a href="tips.html" 
+                   onmouseout="BNB_mouseoff('home')" onmouseover=
+                  "BNB_mouseon('home');return true ">
+               <img src="button3.gif" name="home" 
+                  WIDTH=100 HEIGHT=15 VSPACE=0 border=0 alt="windows tips"></a>
+
+<a href="home.html" 
+                   onmouseout="BNB_mouseoff('ten')" onmouseover=
+                  "BNB_mouseon('ten');return true ">
+               <img src="button4.gif" name="ten" 
+                  WIDTH=100 HEIGHT=15 VSPACE=0 border=0 alt="Ten's Home"></a>
+ <P>
+<A HREF="#top"><IMG SRC="top.gif" WIDTH="30" HEIGHT="40" ALT="Top" BORDER="0" ALIGN="right"></A>
+
+</CENTER>
+</BODY>
+</HTML>
+

@@ -1,0 +1,89 @@
+<HTML>
+<HEAD>
+  <TITLE>Sign up procedure</TITLE>
+</HEAD>
+<BODY TEXT="#352c25" BGCOLOR="#bfab87" LINK="#424042" VLINK="#353235" BACKGROUND="/images/1/backgrd/tl_com.gif" bgproperties="fixed" topmargin="0" leftmargin="0">
+<form action="/cgi-bin/visualmail" method="post">
+<input name="signup" type="hidden" value="yes">
+<input name="inside" type="hidden" value="yes">
+<input name="template" type="hidden" value="1">
+
+<TABLE WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0" HEIGHT="100%">
+
+<TR><TD>
+
+<table border="0" cellspacing="0" cellpadding="2" width="590">
+<tr>
+<td align="left" nowrap><font face="verdana,tahoma,arial" size="2"><b>Sign Up Procedure</b></font></td>
+</tr>
+<tr><td>&nbsp;</td></tr>
+<tr>
+		<td align="right" ><font face="verdana,tahoma,arial" size="-2">Login Name</font></td>
+		<td valign="middle" nowrap><input name="user" type="text" size="12" maxlenght="18"><b>&nbsp;&nbsp;&nbsp;</td>
+		<td><font face="verdana,tahoma,arial" size="-2">You can use letters (a-z), numbers (0-9) and some special characters (- and _).</font></td>
+</tr>
+<tr>
+		<td align="right" ><font face="verdana,tahoma,arial" size="-2">Domain</font></td>
+		<td valign="middle" nowrap><select name="domainlist" size="1">
+<option selected value="0">alfabrasil.net</option>
+</select>
+<b>&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+		<td></td>
+		<td></td>
+		<td><hr noshade size=1></td>
+</tr>
+<tr>
+		<td align="right" ><font face="verdana,tahoma,arial" size="-2">First Name</font></td>
+		<td><input name="firstname" type="text" size="23" maxlength="30"></td>
+		<td rowspan=2>
+			<font face="verdana,tahoma,arial" size="-2">Your full name will be sent with all outbound mail messages.</font>
+		</td>
+</tr><tr>
+		<td align="right" ><font face="verdana,tahoma,arial" size="-2">Last Name</font></td>
+		<td><input name="lastname" type="text" size="23" maxlength="35"></td>
+</tr>
+<tr>
+		<td></td>
+		<td></td>
+		<td><hr noshade size=1></td>
+</tr>
+
+<tr>
+		<td align="right" ><font face="verdana,tahoma,arial" size="-2">Password</font></td>
+		<td><input name="new1pass" type="password" size="23" maxlenght="9"></td>
+		<td rowspan=2><font face="verdana,tahoma,arial" size="-2">Passwords may have only numbers (0-9) and letters (a-z).</font></td>
+</tr><tr>
+		<td align="right" ><font face="verdana,tahoma,arial" size="-2">Re-enter Password</font></td>
+		<td><input name="new2pass" type="password" size="23" maxlenght="9"></td>
+</tr><tr><td></td><td></td><td><a name="hintqtop"><hr noshade size=1></a></td></tr><tr>
+		<td align="right" ><font face="verdana,tahoma,arial" size="-2">Secret Question</font></td>
+		<td><textarea name="questionr" rows="3" cols="20"></textarea>
+</td>
+		<td rowspan=2><font face="verdana,tahoma,arial" size="-2">If at some future time you
+forget your password, you will be required to correctly answer your secret question in order to regain access to your account.</font></td>
+</tr><tr>
+		<td align="right" ><font face="verdana,tahoma,arial" size="-2"><a name="dirstop">Answer to Secret Question</a></font></td>
+		<td><input name="passremin" type="text" size="23" maxlenght="16"></td>
+</tr><tr><td></td><td></td><td><hr noshade size=1></td></tr>
+
+
+<TR valign="bottom">
+	<TD height="55" colspan="3" align="center"><P ALIGN=CENTER>
+	<INPUT TYPE="image" name="yesok" SRC="/images/1/button/ok.gif" ALIGN="BOTTOM" BORDER="0">
+	<A HREF="/cgi-bin/visualmail"><IMG SRC="/images/1/button/cancel.gif" ALIGN="BOTTOM" BORDER="0"></A>
+</TD>
+</TR>
+
+
+</table>
+</TD></TR>
+<TR>
+	<TD WIDTH="100%" ALIGN="RIGHT" VALIGN="BOTTOM"><IMG SRC="/images/1/lines/footer.gif" WIDTH="231" HEIGHT="45" ALIGN="BOTTOM" BORDER="0"></TD>
+</TR>
+
+</TABLE>
+</form>
+</BODY>
+</HTML>

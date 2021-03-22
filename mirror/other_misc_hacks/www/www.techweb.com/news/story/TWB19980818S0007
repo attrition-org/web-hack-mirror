@@ -1,0 +1,717 @@
+
+<!--
+Version: 2.0
+DB: production
+SQL: select a.second_deck,a.url,a.pub_id,a.art_id,a.images,p.pub_name,a.stock_symbol,a.headline,a.extract,TO_CHAR((aw.lastmod_date+(3/24)),'MM/DD/YY, fmHH12fm:MI AM') as lastmod_date,TO_CHAR((aw.create_date+(3/24)),'MM/DD/YY, fmHH12fm:MI AM') as create_date,a.doc_id,a.byline,TO_CHAR((aw.prod_date+(3/24)),'MM/DD/YY, fmHH12fm:MI AM') as prod_date,a.teaser,a.proj_id,p.pub_url,a.prev_id,a.search_query,a.next_id,a.body 
+ from cd_pubs p,cd_articles a,cd_article_workflows aw 
+ where a.doc_id = 'TWB19980818S0007' and a.art_id = aw.art_id and a.pub_id = p.pub_id (+)  
+  order by a.prod_date desc
+Cat: 
+-->
+<HTML>
+<HEAD>
+
+<TITLE>Corporations Still Behind In Year 2000 Race</TITLE>
+<META NAME="DESCRIPTION" CONTENT="With 500 days to go before the new century, the IT industry takes stock of its progress.  progress in solving the Year 2000  problem.">
+
+<!--
+<STYLE TYPE="text/css">
+	<!--
+	small {font-size: 9pt;  font-family: geneva, ms sans serif, helvetica;  line-height: 13pt}
+	small.scnd {font-size: 7pt;  font-family: geneva, ms sans serif, helvetica;  line-height: 10pt}
+	div {font-size: 11pt;  font-family: geneva, ms sans serif, helvetica;  line-height: 10pt}
+
+	A.white {color: #ffffff}
+
+	-->
+</STYLE>
+</HEAD>
+
+<body bgcolor=#ffffff link="#0022BB" vlink="#555555" alink="#EE0000"
+background="http://img.cmpnet.com/cmpnet/bgimages/btg/tw-winIE3.gif"
+>
+<!--  URI/news/story/TWB19980818S0007  -->
+
+<!-- TOP BAN -->
+<table border="0" cellpadding="0" cellspacing="0" width="600">
+<tr>
+
+<td width="129" align=center><a href="../../index.html"><img src="http://img.cmpnet.com/cmpnet/brandbars/techweb_cmp_blue.gif" alt="CMP's TechWeb" WIDTH="114" HEIGHT="57" border="0" hspace=0 align=center></a><br clear=all><img src="http://img.cmpnet.com/cmpnet/blank.gif" width=129 height=1 vspace=0 hspace=0 border=0></td>
+
+<td width="6"><img src="http://img.cmpnet.com/cmpnet/blank.gif" width="6" height="1" border="0"></td>        
+<td><img src="http://cookies.cmpnet.com/special/user/user.gif?event=964028973245783625&ref=http://www.techweb.com:80/wire/technews/y2karchive.html" width="5" height="1" border="0"><a target="_top" href="http://newads.cmpnet.com/event.ng/Type=click&ProfileID=460&RunID=3855&AdID=1944&GroupID=9&FamilyID=1&TagValues=163.178&Redirect=http:%2F%2Fwww.cmpnet.com"><img src="http://img.cmpnet.com/ads/graphics/cs/cg/heyyou.gif" border=1 height=60 width=468 alt="Click Here to Vist CMPNET"></a></td></tr>
+
+<!-- added instead of p tag beneath -->
+<tr><td colspan=3><img src="http://img.cmpnet.com/cmpnet/blank.gif" width="1" height="10" border=0 vspace=0 hspace=0></td></tr></table>
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="136" align="left">
+<tr><td width="129"><img src="http://img.cmpnet.com/cmpnet/blank.gif" width="1" height="6" border="0"><BR>
+<a href="/news"><img src="http://img.cmpnet.com/cmpnet/brandbars/ban_techwebnews.gif" alt="TechWeb News" align=top width="130" height="22" border="0"></a><p>
+
+
+
+
+<TABLE border=0 CELLPADDING="0" CELLSPACING="0" WIDTH="110" align=center>
+    <TR>
+	<TD VALIGN=TOP><font face="Geneva,ms sans serif,helvetica" size="1" color="#FFCC00"><small><B>Search</B></small></font></td>
+    </tr> 
+    <TR><TD valign="bottom">
+    <form method="get" action="/se/techsearch.cgi">
+    <table border=0 cellpadding=0 cellspacing=0> 
+	<tr>
+	    <td valign=top><input type="Radio" name="Search" value="TW" align="ABSMIDDLE" checked notab></td>
+	    <td><font face="Geneva,ms sans serif,helvetica" size="1"><small><font color="FFFFFF">Techweb News</font></small></font></td>
+	</tr> 
+	<tr>
+	    <td valign=top><input type="Radio" name="Search" value="eo_code:TNS-WEB" align="ABSMIDDLE" notab></td>
+	    <td><font face="Geneva,ms sans serif,helvetica" size="1"><small><font color="FFFFFF">More IT news on the Web</font></small></font></td>
+	</tr> 
+    </table>
+    </td>
+</tr> 
+<TR>
+    <TD valign="bottom"><small>&nbsp;<INPUT NAME="queryText" size=10 VALUE=""></td>
+</tr> 
+<tr>
+    <td><INPUT TYPE="submit" NAME="submitbutton" VALUE="Search"></small></td>
+</tr> 
+<tr>
+    <td><font size="2" face="Geneva,ms sans serif,helvetica"><a href="../../search/advsearch.html" class="white"><font color="#FFFFFF"><small>Advanced Search</small></font></a></font></td>
+</tr>
+</table>
+<BR clear=all>
+<INPUT TYPE=hidden NAME=eoTID           VALUE=1>
+<INPUT TYPE=hidden NAME=sorted          VALUE=true>
+<INPUT TYPE=hidden NAME=collname 	VALUE=current>
+<input type=hidden name="publication" 	value="All">
+</form>
+
+
+
+
+
+
+
+    <a href="/news"><img src="http://img.cmpnet.com/tw/general/btnTech2.gif" alt="Technology News" width="129" height="16" border="0"></a><br>
+
+
+  <a href="../../wire/finance/index.html"><img src="http://img.cmpnet.com/tw/general/btnStocks.gif" alt="Stocks & Finance News" width="129" height="17" border="0"></a><br>
+
+
+
+    <a href="../../today"><img src="http://img.cmpnet.com/tw/general/btn-Multimedia.gif" width=129 height=17 border=0 alt="Multimedia"></a><br>
+
+
+
+
+
+
+
+
+
+
+<img src="http://img.cmpnet.com/cmpnet/blank.gif" width="1" height="4" border="0"><br>
+
+<font size="2" face="Geneva,Arial,helvetica">
+
+<nobr>&nbsp;<b><font face="Geneva,ms sans serif,helvetica" size="1" color="FFCC00">News Categories</font></b><font size="4">&nbsp;</font></nobr><br>
+<font size="2" face="Geneva,Arial,helvetica">
+&nbsp;<small><a href="../../wire/desktop" class="white"><font color="#FFFFFF">Desktop Computing</font></a></small><br>
+&nbsp;<small><a href="../../wire/ebusiness" class="white"><font color="#FFFFFF">E-business</font></a></small><br>
+&nbsp;<small><a href="../../wire/internet" class="white"><font color="#FFFFFF">Internet</font></a></small><br>
+&nbsp;<small><a href="../../wire/mobile" class="white"><font 
+color="#FFFFFF">Mobile Computing</font></a></small><br>
+&nbsp;<small><a href="../../wire/networking" class="white"><font color="#FFFFFF">Networking</font></a></small><br>
+&nbsp;<small><a href="../../wire/chips" class="white"><font color="#FFFFFF">Processors/</font></a></small><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<small><a href="../../wire/chips" class="white"><font color="#FFFFFF">Components</font></a></small><br>
+&nbsp;<small><a href="../../wire/storage" class="white"><font color="#FFFFFF">Servers/Storage</font></a></small><br>
+&nbsp;<small><a href="../../wire/software" class="white"><font color="#FFFFFF">Software</font></a></small><br>
+&nbsp;<small><a href="../../wire/telecom" class="white"><font color="#FFFFFF">Telecom</font></a></small><br>
+<p>
+<nobr>&nbsp;<b><font face="Geneva,ms sans serif,helvetica" size="1" color="FFCC00">Finance Categories</font></b><font size="4">&nbsp;</font></nobr><br>
+&nbsp;<small><a href="../../wire/finance/earnings" class="white"><font color="#FFFFFF">Profits and Losses</font></a></small><br>
+&nbsp;<small><a href="../../wire/finance/mergers" class="white"><font color="#FFFFFF">Mergers &</font></a></small><br>
+&nbsp;&nbsp;&nbsp;<small><a href="../../wire/finance/mergers" class="white"><font color="#FFFFFF">Acquisitions</font></a></small><br>
+&nbsp;<small><a href="../../wire/finance/ipowatch" class="white"><font color="#FFFFFF">IPOs</font></a></small>
+<p>
+&nbsp;<small><a href="../../wire/allstories.html" class="white"><font color="#FFFFFF">Week&#146;s Headlines</font></a></small><br>
+&nbsp;<small><a HREF="javascript:openWindownewsPopUp('/newsPopUp/home', 'newsPopUp');" class="white"><font color="#FFFFFF">News Window</font></a></small><br>
+&nbsp;<small><a href="../../today/index.html" class="white"><font color="#FFFFFF">News On Video</font></a></small></font>
+<p>
+&nbsp;<small><a href="/encyclopedia" class="white"><font color="#FFFFFF">TechEncyclopedia</font></a></small><br>
+<font size="2" face="Geneva,Arial,helvetica">
+&nbsp;<small><a href="../../voices/home" class="white"><font color="#FFFFFF">Opinion</font></a></small><br>
+&nbsp;<small><a href="../../voices/humor/index.html" class="white"><font color="#FFFFFF">TechToons</font></a></small></font>
+<p>
+
+<font size=1 color="#ffffff" face="Geneva,MS Sans Serif,helvetica">&nbsp; Sponsored link:</font><br>
+<font size="2" face="Geneva,Arial,helvetica">
+&nbsp;<small><a href="http://www.cmpnet.com/3Dnewsstand.html" class="white"><font color="#FFFFFF">3-D Site Map</font></a></small></font>
+<p>
+
+
+<a href="http://newads.cmpnet.com/event.ng/Type=click&ProfileID=464&RunID=3858&AdID=1946&GroupID=10&FamilyID=1&TagValues=163.180&Redirect=http:%2F%2Fwww.cmpnet.com"><img src="http://img.cmpnet.com/tw/general/clickad.gif" width=127 height=13 alt="Click Advertisement" align=top border="0"></a><br>
+<a target="_top" href="http://newads.cmpnet.com/event.ng/Type=click&ProfileID=464&RunID=3858&AdID=1946&GroupID=10&FamilyID=1&TagValues=163.180&Redirect=http:%2F%2Fwww.cmpnet.com"><img src="http://img.cmpnet.com/ads/graphics/cs/cg/latest.gif" border=1 height=125 width=125 alt="Click Here to Vist CMPNET"></a>
+
+
+<p>
+
+<script language="JavaScript">
+<!-- 
+function openWindownewsPopUp(url, name) {
+ popupWin = window.open(url,
+name,'scrollbars,resizable,width=174,height=500');
+ popupWin.window.focus();
+}
+// -->
+</script>
+
+
+</font>
+<p>
+<img src="http://img.techweb.com/pit/2000/subheads/more_techweb_sites.gif" WIDTH="130" HEIGHT="22" alt="TechWeb Sites"><BR  clear=all><IMG src="http://img.techweb.com/cmpnet/blank.gif" WIDTH="130" HEIGHT=5 vspace=0 hspace=0><BR  clear=all>
+<font size="2" face="Geneva,Arial,helvetica">
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="http://www.byte.com" class="white"><font color="white">Byte.com</font></a></small><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="http://www.banktech.com/" class="white"><font color="white">Bank Systems &</font></a><BR>
+<SMALL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SMALL><small><a href="http://www.banktech.com/" class="white"><font color="white">Technology</font></a></SMALL><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="../../cmpmetrics" class="white"><font color="white">CMPmetrics</font></a></small><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="http://www.ebusinessexpo.com" class="white"><font color="white">eBusiness Expo</font></a></small><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="http://www.filemine.com" class="white"><font color="white">File Mine</font></a></small><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="http://www.informationweek.com" class="white"><font color="white">InformationWeek</font></a></small><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="http://www.internetwk.com" class="white"><font color="white">InternetWeek</font></a></small><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="http://www.networkcomputing.com" class="white"><font color="white">Network Computing</font></a></small><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="http://www.pcexpo.com" class="white"><font color="white">PC Expo</font></a></small><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="http://www.planetit.com" class="white"><font color="white">Planet IT</font></a></small><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="../../calendar" class="white"><font color="white">TechCalendar</font></a></small><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="http://www.techweb.com/encyclopedia" class="white"><font color="white">TechEncyclopedia</font></a></small><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="http://www.techlearning.com" class="white"><font color="white">TechLearning</font></a></small><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="http://www.techshopper.com" class="white"><font color="white">TechShopper</font></a></small><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="http://www.techweb.com/news" class="white"><font color="white">TechWeb News</font></a></small><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="../../today" class="white"><font color="white">TechWeb Today</font></A></small><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="http://www.webtools.com" class="white"><font color="white">WebTools</font></a></small><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="http://www.wallstreetandtech.com/" class="white"><font color="white">Wall Street &</font></a><BR>
+<SMALL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SMALL><small><a href="http://www.wallstreetandtech.com/" class="white"><font color="white">Technology</font></a></SMALL><br>
+<SMALL>&nbsp;&nbsp;</SMALL><small><a href="http://www.winmag.com/" class="white"><font color="white">Winmag.com</font></a></small><br>
+<p>
+&nbsp;<small><a href="../../newsletters/subscribe" class="white"><font  color="white">E-mail Newsletters</font></a></small><br>
+&nbsp;<small><a href="mailto:feedback@techweb.com" class="white"><font  color="white">Send Feedback</font></a></small>
+</font>
+
+<p>
+
+<a target="_top" href="http://newads.cmpnet.com/event.ng/Type=click&ProfileID=476&RunID=3857&AdID=1947&GroupID=12&FamilyID=1&TagValues=168.181&Redirect=http:%2F%2Fwww.cmpnet.com"><img src="http://img.cmpnet.com/ads/graphics/cs/ab/shop2.gif" border=1 height=65 width=125 alt="Click Here to Vist CMPNET"></a>
+<p>
+
+<p>
+&nbsp;<b><font face="Geneva,ms sans serif,helvetica" size="1" color="FFCC00">
+Free E-mail</font></b><BR>
+<font size="2" face="Geneva,Arial,helvetica">
+&nbsp;<SMALL><a href="http://www.cmpnetmail.com/member/login.page" class="white"><font color="#FFFFFF">Login</font></a></SMALL> - <SMALL><a href="http://www.cmpnetmail.com/member/login.page/(shared)" class="white"><font color="#FFFFFF">Sign Up Now</font></a></SMALL></font>
+<p>
+<center>
+<BR>
+<!--
+-->
+</center>
+
+<P>
+<font size="1" face="Geneva,Arial,helvetica">
+&nbsp;&nbsp;<SMALL><a href="http://www.cmpnet.com/delivery/privacy.html" class="white"><font color="#FFFFFF">Privacy Statement</font></A></SMALL></font>
+
+
+</td>
+<td width="7"><img src="http://img.cmpnet.com/cmpnet/blank.gif" width="7" height="1" border="0"></td>
+</tr></table>
+
+
+
+
+
+
+
+
+	<TABLE WIDTH=339 BORDER=0 CELLSPACING=0 CELLPADDING=0>
+  <TR BGCOLOR="#010066" BACKGROUND="http://img.cmpnet.com/tw/wire/general/news-story-head.gif"> 
+    <TD HEIGHT=26>&nbsp;<FONT COLOR="#FFFFFF" FACE="geneva,Arial,Helvetica, sans-serif" size=2><B>Technology News</B></FONT>
+    </TD>
+  </TR>
+</TABLE>
+
+
+
+  <!-- MAIN CONTENT AREA-->
+
+
+
+
+    <SCRIPT LANGUAGE=javascript>
+      <!--
+	function launcher() {
+	  window.open( "/wire/emailBox?doc_id=TWB19980818S0007","","toolbar=no,scrollbars=auto,location=no,status=no,width=380,height=290,resizable=1" )
+	}
+      //-->
+    </SCRIPT>
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="470">
+  <TR valign=top> 
+    <TD width=336>
+      <IMG src="http://img.cmpnet.com/cmpnet/blank.gif" width="13" height="4"><BR>
+
+	  <FONT SIZE=5 COLOR="333300">Corporations Still Behind In Year 2000 Race</FONT><BR>
+
+      <FONT FACE="Geneva,Arial" SIZE=1>
+	  (08/18/98, 3:34 p.m. ET)
+	  By Tim Wilson,
+	<a href=http://www.internetwk.com>InternetWeek</a>
+      </FONT>
+
+    
+
+      <P>
+
+     <!-- <font face="Arial,Helvetica,sans-serif" COLOR="#333300"> -->
+      With 500 days to go before the new century, the IT industry is looking deeply into the mirror to take stock of itsprogress in solving the year 2000 problem.
+
+
+      <P>
+      
+Many in the industry say they aren't too pleased with what they see.
+<P>
+"Some sectors are ahead of others in solving the problem, but really, everybody we talked to said they are behind" in their remediation efforts, said Howard Rubin, president of RubinSystems, a consulting firm that published the results of a Y2K survey last week along with Cap Gemini America.
+<P>
+Several other new studies support Rubin's assessment. Gartner Group published a year 2000 update study last week that indicates 23 percent of companies have not yet started any Y2K remediation effort. About 80 percent of those are small companies with fewer than 2,000 employees, according to theGartner Group study.
+<P>
+In a survey to be published this week, <i>InformationWeek</i> reports nearly 80  percent of IT executives believe    fixing the date bug is having moderate to  high impact on the rest of their  departments' projects. Many  Internet-related projects are among  those suffering from the millennium  effect, including corporate websites,  intranet-to-legacy applications,  e-commerce, supply-chain  applications, and extranets.
+<P>
+  Want more data? The Cutter Consortium  issued earlier this month a study  indicating Y2K remediation efforts at  non-U.S. companies are lagging U.S.  efforts by three to 12 months. And Miller  Freeman, in a survey conducted with  Software AG Americas, reported    with fewer than 350 business days to go,  only 21 percent of U.S. companies have  certified all their mission-critical  software as Y2K-ready.
+<P>
+  "According to our study, only about 15  percent of companies expect to have  more than 75 percent of their  applications Y2K-ready by the end of  this year, but about 88 percent of  companies expect to have more than 75  percent of their applications fixed by the  end of 1999," Rubin said. "What that  means is there are a lot of  companies that expect to get a lot done  in the eleventh hour."
+<P>
+  What -- or who -- is holding up the  worldwide effort to fix the date bug?  Researchers and other observers  offered many different answers to that  question.
+<P>
+  <!-- PULL-QUOTE --><table border="0" cellpadding="6" cellspacing="3" width="150" align=left><tr><td><hr noshade size=1><font face="Arial,Helvetica" color="CC0000"><b>'There are a lot of  companies that expect to get a lot done  in the eleventh hour.'</b><br></font>-- Howard Rubin<br>Rubin Systems<br><hr noshade size=1></td></tr></table><!-- /PULL-QUOTE -->
+<P>
+Experts agree the problem is worse  overseas than it is in the United States.  "Eastern Europe, Russia, India,  Pakistan, Southeast Asia, Japan, most  of South America, most of the Middle  East, and central Africa all lag the United  States by more than 12 months," said  Gartner Group analyst Lou Marcoccio in  his Y2K status report.
+<P>
+  The Cutter Consortium report concurred.  Non-U.S. firms rate Y2K project priority  lower than do U.S. firms, and Y2K-spending at non-U.S. companies is  about 50 percent less than at  comparably sized U.S. firms, the report  says. 
+<P>
+  But some segments of the U.S.  economy -- particularly government  agencies -- are even further behind,  according to the Cap Gemini study. "The  public sector is 16 percent behind the  least prepared private industry  category," the study says. 
+<P>
+  In his first major remarks on the  millennium problem, President Clinton  told the National Academy of  Sciences last month, "This is not a challenge that is susceptible to a single  government program or an easy fix."
+<P>
+  But Rubin said Clinton's statements -- and  more important, funding and resources  for government Y2K projects -- are  coming too late. The public sector "is  just ordering its soup while the rest of  U.S. industry is already halfway through  its entree," he said.
+<P>
+  Other U.S. industry sectors that are  behind in their remediation efforts are  health care, farming, and construction,  Gartner Group reported. The insurance  and investment sectors are frequently  cited by Stamford, Conn.-based Gartner Group and other  researchers as being furthest ahead.
+<P>
+  The extent of the problem remains  difficult to assess because many  companies are reluctant to release  information about the status of their Y2K  projects.
+<P>
+  The U.S. Securities and Exchange  Commission (SEC) moved to break  down that barrier last month, voting unanimously to  require all publicly owned firms to  disclose risks of Y2K-related failures in  their quarterly and annual reports.
+<P>
+  "I am concerned that many companies  are not adequately disclosing their year  2000 readiness," said SEC chairman  Arthur Levitt Jr. in testimony before  Congress. "Our economy is more  interconnected than ever before. One  company's lack of readiness could have  adverse consequences for countless  other companies."
+<P>
+  That sort of interdependency is an area  most companies have only just begun to  consider. Only about 23 percent of  companies have evaluated the Y2K  problem's effects on the supply chain,  Gartner Group found.
+<P>
+  "On the other hand, some companies  are already saying they will not do  business with companies that cannot  demonstrate Y2K compliance," Rubin  said.
+<P>
+  Embedded systems -- the microchips  used in everything from elevators to  manufacturing gear -- are another factor  that is largely unknown, according to the  Gartner Group report. Only 11 percent of  companies have even begun to  investigate potential Y2K-related  problems in embedded systems, the  report says. 
+<P>
+  And what will happen when systems fail,  as experts say they inevitably will?  Nearly half the  companies surveyed by  <i>InformationWeek</i> didn't have an answer  to that question because they have not  yet begun development of a Y2K  contingency plan.
+<P>
+  Although research companies and other  industry observers continued to raise the  alarm on the status of Y2K problem  resolution, they also offered some  detailed information on the cost of the  date-bug effort.
+<P>
+  Several researchers said organizations  that started their Y2K projects late are  now spending more than those that  started earlier. 
+<P>
+  Organizations that report below-average  compliance are spending an average of  52 percent more on their Y2K efforts  than organizations that report  above-average compliance, according  to the <i>InformationWeek</i> study.
+<P>
+  But Rubin said companies will not be  able to make up lost time by throwing  money and resources at the problem.  "You can't buy time," he said. "No matter  what resources you have, there are still  only 500 days left."
+<P>
+  IT departments will spend about 30  percent of their budgets on Y2K  remediation efforts in 1998, Gartner  Group projected. That figure is up  significantly from 1997, when IT  departments spent about 5 percent of  their budgets on the date bug. Yet 91  percent of companies said their IT  budgets decreased or remained the  same between 1997 and 1998, the  Gartner Group report says. 
+<P>
+  The costs of fixing the problem are  raising some eyebrows, according to the  the Miller Freeman/Software AG study.  About 15 percent of IT executives  expressed surprise at  higher-than-expected costs of resolving  the millennium problem. Another 15  percent said they were surprised at the  length of time it is taking to find and fix  the date problem.
+<P>
+  No matter what the size of the company is,  internal staffing makes up the largest  chunk of Y2K remediation costs,  according to the Gartner Group study.  Large companies of more than 20,000  employees spend about 68 percent of  their Y2K budgets on internal staff,   midsized companies of 2,000 to 20,000  spend about 59 percent, and small firms  of fewer than 2,000 employees spend  about 29 percent.
+
+	  <A HREF="../../index.html"><IMG WIDTH=15 HEIGHT=9 ALT="TW" SRC="http://img.cmpnet.com/tw/general/dingbats/end.gif" BORDER=0></A>
+
+        
+
+	  <FORM ACTION="/se/techsearch.cgi" METHOD=get TARGET="_top">
+
+<TABLE BORDER=0 CELLPADDING=2 CELLSPACING=0 WIDTH=336 BGCOLOR="#E6E6FA">
+  <TR ALIGN=center>
+    <TD>
+      <FONT COLOR="#FFFFFF" SIZE=2 FACE="Geneva,Arial"><A HREF="../../search/search.html">Search Archives</A></FONT>
+    </TD>
+
+    <TD>
+      <INPUT TYPE=text NAME=querytext SIZE=17 VALUE=""><BR>
+      <INPUT TYPE=hidden NAME="publication" VALUE="All">
+    </TD>
+
+    <TD><input type=submit name=submitbutton value=Search></td>
+  </TD>
+</TABLE>
+
+</FORM>
+
+
+    </TD>
+
+    <TD width=2><IMG src="http://img.cmpnet.com/cmpnet/blank.gif" align=top width=2 height=1 border=0></TD>
+    <TD width=1 bgcolor="333399"><IMG src="http://img.cmpnet.com/cmpnet/blank.gif" align=top width=1 height=1 border=0></TD>
+    <TD width=4><IMG src="http://img.cmpnet.com/cmpnet/blank.gif" align=top width=4 height=1 border=0></TD>
+
+    <TD WIDTH=127>
+    <P>
+
+
+
+
+
+
+
+    <P>
+    
+    <P>
+    
+<!--
+Version: 2.0
+DB: production
+SQL: select a.second_deck,a.url,a.pub_id,a.art_id,a.category_string,a.headline,a.extract,a.doc_id,a.teaser,a.proj_id,aw.lastmod_date,aw.create_date,aw.prod_date 
+ from cd_articles a,cd_article_workflows aw 
+ where a.prod_date >= '20000712000000' and (a.proj_id in ('TWB','INV','NIN','REU')) and (a.category_string like '%2051%' or a.category_string like '%2049%' or a.category_string like '%2050%') and a.prev_id is null and a.art_id = aw.art_id  
+  order by a.prod_date desc
+Cat: 2051,2049,2050
+-->
+<!--
+
+ARRAY(0x1315338)
+<OL>
+<LI>HASH(0x1558f08)
+<UL>
+<LI>'doc_id' => TWB20000718S0018</LI>
+<LI>'docId' => TWB20000718S0018</LI>
+<LI>'art_id' => 88014</LI>
+<LI>'pub_id' => TWB</LI>
+<LI>'url' => http://www.techweb.com/wire/story/TWB20000718S0018</LI>
+<LI>'proj_id' => TWB</LI>
+<LI>'headline' => Intel Delays Delivery of Itanium Chip</LI>
+<LI>'body' => </LI>
+</UL>
+</LI><LI>HASH(0x1547acc)
+<UL>
+<LI>'doc_id' => TWB20000719S0004</LI>
+<LI>'docId' => TWB20000719S0004</LI>
+<LI>'art_id' => 88032</LI>
+<LI>'pub_id' => TWB</LI>
+<LI>'url' => http://www.techweb.com/wire/story/TWB20000719S0004</LI>
+<LI>'proj_id' => TWB</LI>
+<LI>'headline' => Microsoft To Take Office:mac Out Of The Box</LI>
+<LI>'body' => </LI>
+</UL>
+</LI><LI>HASH(0x15de4d4)
+<UL>
+<LI>'doc_id' => TWB20000719S0007</LI>
+<LI>'docId' => TWB20000719S0007</LI>
+<LI>'art_id' => 88104</LI>
+<LI>'pub_id' => EET</LI>
+<LI>'url' => http://www.techweb.com/wire/story/TWB20000719S0007</LI>
+<LI>'proj_id' => TWB</LI>
+<LI>'headline' => IBM Reveals Embedded Java Strategy</LI>
+<LI>'body' => </LI>
+</UL>
+</LI><LI>HASH(0x1558a24)
+<UL>
+<LI>'lastmod_date' => 19-JUL-00</LI>
+<LI>'create_date' => 19-JUL-00</LI>
+<LI>'second_deck' => </LI>
+<LI>'doc_id' => TWB20000719S0006</LI>
+<LI>'prod_date' => 19-JUL-00</LI>
+<LI>'url' => http://www.techweb.com/wire/story/TWB20000719S0006</LI>
+<LI>'pub_id' => SBN</LI>
+<LI>'art_id' => 88111</LI>
+<LI>'category_string' =>  3382 2049 </LI>
+<LI>'teaser' => Good news for manufacturers is a Rambus promise not to seek royalties from OEMs for interfacing components.</LI>
+<LI>'proj_id' => TWB</LI>
+<LI>'headline' => Intel Might Get Some Rambus Royalties</LI>
+<LI>'extract' => Intel would earn royalty fees from Rambus if Direct RDRAMs ever takes off in the memory marketplace, according to a provision in the 1997 licensing agreement between the two companies.</LI>
+<LI>'body' => </LI>
+</UL>
+</LI><LI>HASH(0x1552940)
+<UL>
+<LI>'lastmod_date' => 19-JUL-00</LI>
+<LI>'create_date' => 19-JUL-00</LI>
+<LI>'second_deck' => </LI>
+<LI>'doc_id' => REU20000719S0006</LI>
+<LI>'prod_date' => 19-JUL-00</LI>
+<LI>'url' => http://www.techweb.com/wire/story/reuters/REU20000719S0006</LI>
+<LI>'pub_id' => REU</LI>
+<LI>'art_id' => 88082</LI>
+<LI>'category_string' =>  2049 3660 </LI>
+<LI>'teaser' => Tired of imitations, Apple Computer has unveiled a new line of iMacs in five earth-tone colors.</LI>
+<LI>'proj_id' => REU</LI>
+<LI>'headline' => iMac Flaunts Five New Hues</LI>
+<LI>'extract' => Tired of imitations, Apple Computer has unveiled a new line of iMacs in five earth-tone colors: "indigo," "ruby," "sage," "graphite," and "snow." </LI>
+<LI>'body' => </LI>
+</UL>
+</LI></OL>
+
+
+-->
+
+<TABLE BORDER=0 CELLPADDING=2 CELLSPACING=0 WIDTH=127>
+  <TR> 
+    <TD BGCOLOR="#333399">&nbsp;<FONT COLOR="#FFFFFF" face="Arial, Helvetica, sans-serif" size="2"><B><FONT face="geneva,Arial, Helvetica, sans-serif">Top Stories</FONT></B></FONT>
+    </TD>
+  </TR>
+
+  <TR BGCOLOR="#e6e6fa"> 
+    <TD>
+      <FONT FACE="geneva,ms sans serif" SIZE=1>
+	    <A HREF="../../wire/story/TWB20000718S0018">Intel Delays Delivery of Itanium Chip</A><P>
+	    <A HREF="../../wire/story/TWB20000719S0004">Microsoft To Take Office:mac Out Of The Box</A><P>
+	    <A HREF="../../wire/story/TWB20000719S0007">IBM Reveals Embedded Java Strategy</A><P>
+	    <A HREF="../../wire/story/TWB20000719S0006">Intel Might Get Some Rambus Royalties</A><P>
+	    <A HREF="../../wire/story/reuters/REU20000719S0006">iMac Flaunts Five New Hues</A><P>
+      </FONT>
+    <TD>
+  </TR>
+</TABLE>
+
+
+    <BR>
+
+
+    <TABLE BORDER=0 CELLPADDING=3 CELLSPACING=0 WIDTH=125 BGCOLOR="#FFFFCC">
+  <TR BGCOLOR="#E6E6FA"> 
+    <TD>
+      <FONT FACE="geneva,arial" SIZE=2>
+	<A HREF="/printableArticle?doc_id=TWB19980818S0007"><IMG src="http://img.cmpnet.com/shared/general/icon-printer.gif" alt="Print" width=26 height=20 border=0 hspace=1 vspace=2 align=absmiddle></A> 
+	<A HREF="/printableArticle?doc_id=TWB19980818S0007">Print this story</A><BR>
+	<A HREF=javascript:launcher()><IMG src="http://img.cmpnet.com/shared/general/icon-email.gif" alt="e-mail" width=26 height=20 border=0 hspace=1 vspace=2 align=absmiddle></A> 
+	<A HREF=javascript:launcher()>Send as e-mail</A>
+      </FONT>
+    </TD>
+  </TR>
+</TABLE>
+
+
+    <P>
+    <FONT FACE="Geneva,Arial" SIZE=2>
+
+<!--
+  <A HREF="/encyclopedia/"><IMG SRC="http://img.cmpnet.com/tw/general/dingbats/define.gif" WIDTH=14 HEIGHT=10 BORDER=0 ALT="*"></A> = See our <BR><A HREF="../../encyclopedia/index.html">Tech Encyclopedia</a> <BR>for more info.
+</FONT>
+/-->
+
+<table width="125" border="0" cellspacing="1" cellpadding="8" bgcolor="#E6E6FA">
+        <form action="http://www.techweb.com/encyclopedia/defineterm" METHOD=GET>
+          <tr> 
+			<td><font face="geneva, arial, helvetica" size="3"><b><small class="thirteen"><font color="000066">Define 
+              an IT Term</font></a></small></b></font><br>
+              <font face="Arial, Helvetica" size="1"> 
+              <input type=text size=12 name=term>
+              </font><font face="Arial, Helvetica" size="1"> 
+              <input type=submit value="Define">
+			  </font></td>
+          </tr>
+        </form>
+      </table>
+
+<br clear=all>
+    <P>
+    <TABLE WIDTH=127 BORDER=1 CELLPADDING=7 CELLSPACING=0>
+  <TR> 
+    <TD> 
+       <TABLE WIDTH=108 BORDER=0 CELLSPACING=0 CELLPADDING=0  BGCOLOR="#CCCCFF">
+  <TR BGCOLOR="#330066">
+    <TD HEIGHT=16>
+	&nbsp;<FONT SIZE=2 FACE="geneva,Arial,Helvetica,sans-serif" COLOR="#FFFFFF"><B>Technology</B></FONT> 
+    </TD>
+  </TR>
+</TABLE>
+<FONT FACE="geneva, ms sans serif" SIZE=1>
+ <a href="/wire/story/TWB20000718S0007?ls=TWH_000718_TWNmexico"><img src="http://img.cmpnet.com/tw/wire/news/2000/07/N-mexico0718-108.gif"
+ width=108 height=58 border=0 alt="Can Mexico's President Deliver The Tech Goods?">
+ Can Mexico's President Deliver The Tech Goods?</A>
+ </FONT>
+
+
+
+
+<!--
+<br><IMG src="http://img.cmpnet.com/cmpnet/blank.gif" width="1" height="6" border="0"><br>
+/-->
+
+
+
+
+
+
+
+     </TD>
+  </TR>
+</TABLE>
+    <P>
+    <TABLE WIDTH=127 BORDER=1 CELLPADDING=7 CELLSPACING=0>
+  <TR> 
+    <TD> 
+      
+    <!--
+<TABLE WIDTH=108 BORDER=0 CELLSPACING=0 CELLPADDING=0  BGCOLOR="#CCCCFF">
+  <TR BGCOLOR="#CC0000">
+    <TD HEIGHT=16>
+	&nbsp;<FONT SIZE=2 FACE="geneva,Arial,Helvetica,sans-serif" COLOR="#FFFFFF"><B>Breaking News</B></FONT> 
+    </TD>
+  </TR>
+</TABLE>
+
+-->
+
+<TABLE WIDTH=108 BORDER=0 CELLSPACING=0 CELLPADDING=0  BGCOLOR="#CCCCFF">
+  <TR BGCOLOR="#006600">
+    <TD HEIGHT=16>
+	&nbsp;<FONT SIZE=2 FACE="geneva,Arial,Helvetica,sans-serif" COLOR="#FFFFFF"><B>Finance</B></FONT> 
+    </TD>
+  </TR>
+</TABLE>
+
+<!--Market Open-->
+<!--
+<FONT FACE="geneva, ms sans serif" SIZE=1>
+<a href="/wire/finance/story/INV20000718S0003?ls=TWH_000718_TWFmarketopen"><img src="http://img.techweb.com/design/techweb/packages/finance/marketopen-108.gif"
+ width=108 height=58 border=0 alt="Market Open">
+Consumer Price Hike Pushes Futures Lower</A>
+    </FONT>
+-->
+
+<!--Spotlight-->
+
+<FONT FACE="geneva, ms sans serif" SIZE=1>
+<a href="/wire/finance/story/INV20000718S0002?ls=TWH_000718_TWFCisco"><img src="http://img.cmpnet.com/tw/wire/news/2000/07/N-homed0718-108.gif"
+width=108 height=58 border=0 alt="Cisco Invests In Home Director">
+Cisco Invests In Home Director</A>
+    </FONT>
+
+<!--
+<FONT FACE="geneva, ms sans serif" SIZE=1>
+   <a href="/wire/finance/story/INV20000714S0005?ls=TWH_000717_TWFskeptics"><img src="http://img.cmpnet.com/tw/wire/news/2000/07/N-informix0717-108.gif"
+width=108 height=58 border=0 alt="For Informix, Investor Skepticism Runs Deep"><BR>For Informix, Investor Skepticism Runs Deep</A>
+      </FONT>
+-->
+
+<br><IMG src="http://img.cmpnet.com/cmpnet/blank.gif" width="1" height="6" border="0"><br>
+
+
+
+    </TD>
+  </TR>
+</TABLE>
+    <P>
+    <TABLE WIDTH=127 BORDER=1 CELLPADDING=7 CELLSPACING=0>
+  <TR> 
+    <TD> 
+      <!-- TECHWEB TODAY -->
+
+<TABLE WIDTH=108 BORDER=0 CELLSPACING=0 CELLPADDING=0  BGCOLOR="#CCCCFF">
+  <TR BGCOLOR="#990000">
+    <TD HEIGHT=16>
+         &nbsp;<FONT SIZE=2 FACE="geneva,Arial,Helvetica,sans-serif"  COLOR="#FFFFFF"><B>Video</B></FONT> 
+    </TD>
+   </TR>
+ </TABLE>
+
+<FONT FACE="geneva, ms sans serif" SIZE=1><A HREF="../../today"><img src="http://img.cmpnet.com/tw/wire/news/2000/07/TWTexcite0718-108.gif"
+width=108 height=58 border=0 alt="Excite, Chello Chiefs On Asset Merger"><br>Excite@Home Takes Up The Chello</A><br></FONT>
+
+<IMG src="http://img.cmpnet.com/cmpnet/blank.gif" width="1" height="6" border="0"><br>
+
+
+
+
+
+
+
+    </TD>
+  </TR>
+</TABLE>
+
+    </TD>
+  </TR>
+</TABLE>
+
+
+
+
+
+<!-- /MAIN CONTENT AREA-->
+
+<!-- BEGIN SKYSCRAPER AD -->
+<DIV style="position:absolute;left:640;top:10">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=125 HEIGHT=230>
+	<TR>
+		<TD>
+			<a href="../../index.html"><IMG 
+SRC="http://img.cmpnet.com/ads/graphics/cs/df/tw04_cr2.jpg" WIDTH=125 HEIGHT=230 
+BORDER=0></a></TD>
+	</TR>
+	<TR>
+		<TD>
+			<a href="../../index.html"><IMG 
+SRC="http://img.cmpnet.com/ads/graphics/cs/df/tw04_c11.gif" WIDTH=125 HEIGHT=370 
+BORDER=0></a></TD>
+	</TR>
+</TABLE>
+</DIV>
+<!-- END SKYSCRAPER AD -->
+
+
+
+<br clear=left>
+<p>
+<table border="0" cellpadding="0" cellspacing="0" width="600">
+<tr><td width="129" valign="bottom"><a href="http://www.cmpnet.com/"><img src="http://img.cmpnet.com/cmpnet/brandbars/cmpnet_logo.gif" alt="CMPnet" WIDTH="108" HEIGHT="64" border="0" hspace=15 vspace=10></a></td>	
+<td width="3" bgcolor="#ffffff"><img src="http://img.cmpnet.com/cmpnet/blank.gif" width="3" height="1" border="0"></td>
+<td align=right bgcolor="#ffffff">
+<!-- --------- CMPNET SUPPLEMENTS BOX ----------- -->
+<table border="0" cellpadding="2" cellspacing="0" width="470"> <tr><th bgcolor="#0800A2" colspan="5"><font face="Geneva,Arial,helvetica" size="2" color="#FFFFFF">New from Planet IT</font></th></tr> 
+<tr bgcolor="#FFF7CA" valign="TOP"> <td width="66"> 
+
+<img src="http://img.techweb.com/pit/supplements_graphics/storage_supp_plain.gif" border="0" > 
+
+</td> <td width="167"><font face="arial,helvetica"> Sony's <a href="http://www.planetit.com/docs/PIT20000714S0024">new CD-ROM format</a> stores over a megabyte of data.<br>
+ 
+</font></td> <td width="5"><img src="http://img.techweb.com/custom/bguide/blk.gif" width="1" height="60" border="0"></td> <td width="66"> 
+
+<img src="http://img.techweb.com/pit/supplements_graphics/roundtable_swoosh_supp.gif" border="0" > 
+
+</td> <td width="166"><font face="arial,helvetica"> Our roundtables let you <a href="http://planetit.com/resources/roundtables">chat one-on-one</A> with industry experts.  
+
+</font></td></tr><tr><td colspan="5" align="left" bgcolor="White"><font face="geneva,arial,helvetica" size="2"> 
+ 
+<font color="#0800A2">&#149;</font> Use advanced searches to find <a href="http://www.planetit.com/docs/PIT20000714S0001">job candidates</a> online. <br>
+
+<font color="#0800A2">&#149;</font> Email marketing is cost effective, but it <a href="http://planetit.com/docs/PIT20000712S0035">can be risky</a>.<br> 
+
+<font color="#0800A2">&#149;</font> <a href="http://www.planetit.com/docs/PIT20000712S0059">Consulting</a>: when well done, it's half art and half technology.<br> 
+
+<font color="#0800A2">&#149;</font> Controversial study reveals that <a href="http://planetit.com/docs/PIT20000711S0002">cost of handhelds</a> may be just too high.</font></td></tr></table>
+
+
+<!-- -------- END OF CMPNET SUPPLEMENTS TABLE --------- -->
+
+
+<p>
+<a target="_top" href="http://newads.cmpnet.com/event.ng/Type=click&ProfileID=462&RunID=3855&AdID=1944&GroupID=9&FamilyID=1&TagValues=163.179&Redirect=http:%2F%2Fwww.cmpnet.com"><img src="http://img.cmpnet.com/ads/graphics/cs/cg/heyyou.gif" border=1 height=60 width=468 alt="Click Here to Vist CMPNET"></a>
+</td></tr></table>
+</body></html>
+
+
+
+
+
+
+

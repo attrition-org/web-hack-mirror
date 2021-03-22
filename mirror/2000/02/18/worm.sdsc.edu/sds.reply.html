@@ -1,0 +1,318 @@
+<html>
+
+<head>
+
+<!-- Enter Title Here -->
+<title>
+SDSC's Security Experiment
+</title>
+
+</head>
+
+<!-- begin security header -->
+<body bgcolor="#ffffff" link="#336699" vlink="#996633" alink="#ff6699">
+
+<a href="/"><img src="/images/security.gif" width=444 height=112 border=0 alt="SDSC & NPACI Security"></a>
+
+<!-- end security header -->
+
+
+<table border=0 cellpadding=0 cellspacing=10 width=90%>
+  <tr>
+    <td width=25% valign=top bgcolor="#dddddd">
+      <table border=0 cellpadding=10 cellspacing=0 width=100%>
+  <tr><td bgcolor="#2266aa">
+  <font color="#ffffff" face="arial, helvetica" size=3>
+    <b>Quick List</b></font><br>
+  </td></tr>
+  <tr><td bgcolor="#dddddd">
+  <font face="arial, helvetica" size=2>
+    <br>
+    <a href="/"><i>Home</i></a><br>
+    <br>
+    <a href="/site_index.shtml"><i>Site Index</i></a><br>
+    <br>
+    <a href="/activities/">Activities</a><br>
+    <br>
+    <a href="/help/">Help</a><br>
+    <br>
+    <a href="/response/">Incident Response</a><br>
+    <br>
+    <a href="/incidents/">Incident Data</a><br>
+    <br>
+    <a href="/news/">News</a><br>
+    <br>
+    <a href="/policy/">Policy</a><br>
+    <br>
+    <a href="/publications/">Publications</a><br>
+    <br>
+    <a href="/tools/">Tools</a><br>
+    <br>
+  </font>
+  </td></tr>
+</table>
+
+    </td>
+    <td width=75% valign=top>
+
+    <table border=0 cellpadding=5 cellspacing=0 width=100%>
+      <tr>
+       <td bgcolor="#2266aa">
+       <font color="#ffffff" face="arial, helvetica" size=3>
+         <b>
+
+         <!-- Enter Topic Here -->
+	 SDSC's Security Experiment - worm.sdsc.edu
+
+         </b>
+       </font>
+       </td>
+      </tr>
+      <tr>
+       <td bgcolor="#dddddd">
+       <font size=2 face="arial, helvetica">
+       
+       <!-- Enter Content Here -->
+       <HTML><HEAD><TITLE>SDSC Hacked! (Sort of)</TITLE>
+</HEAD>
+
+<P>
+<h1>What really happened to worm.sdsc.edu?</h1>
+
+<P>
+
+"Welcome, visitors from Attrition!"
+<P>
+
+<B>
+We are re-directing http://worm.sdsc.edu to this page.  This is NOT the
+server that was defaced on 18 Feb 2000.
+</B>
+
+<P>
+
+
+On 18 Feb 2000, at about 1700 PST, someone intruded into a computer at
+the
+<A HREF="http://www.sdsc.edu/">San Diego Supercomputer Center</a>.
+
+The intruders were able to exploit a well-known flaw in the operating
+system of "worm.sdsc.edu" to gain "root" access.  They then "defaced"
+its web page by replacing the
+
+<a href="apache_success.html">standard Apache "Congratulations" page</a>
+
+with
+
+<a href="hacked_index.html"> one of their own</a>.
+
+<P>
+
+We haven't decided if their motive was to claim credit for the recent
+Distributed Denial of Service (DDoS) attacks, or to pay homage to
+those who did perform those attacks.
+
+<P>
+
+This activity was quickly reported by the intruders on several IRC
+channels and sent (anonymously, we presume) to
+
+<a href="http://www.attrition.org">Attrition</a>
+
+which mirrors 
+
+<A HREF="http://www.attrition.org/mirror/attrition"> defaced web sites</a>.
+
+
+<P>
+
+What the intruders didn't know was that this host was really part of
+an experiment by the
+
+<a href="http://security.sdsc.edu/"> SDSC security group</a>.
+
+
+<h1>What is this host "worm.sdsc.edu"</h1>
+
+Worm is an old Pentium host that we installed as part of a security
+experiment in late December 1999.  The machine was running an obsolete
+(version 5.2), completely unpatched, vanilla, un-secured version of
+
+<a href="http://www.redhat.com">Red Hat Linux</a>, and was installed
+on one of our "untrusted" networks.
+
+<P>
+
+Next to worm.sdsc.edu, and sharing an Ethernet hub, is a more modern
+machine with metric oodles of disk space that captures each and every
+packet to or from worm.sdsc.edu :-)
+
+<h1>What is the security experiment?</h1>
+
+The purpose of this experiment is to determine the "life expectancy"
+of a popular commercial operating system when attached to the public
+Internet.  Yes, in this particular case, this version of Red Hat is
+very obsolete.  But we feel that it is representative of the hosts run
+by people new to Linux/Unix in university, home (cable modem), and
+small commercial environments.
+
+<P>
+We'll obviously be repeating this experiment with other operating
+systems.  Watch for a paper at a
+
+<a href="http://www.usenix.org">USENIX</a> Security conference!
+
+<P>
+
+We always see increased probe activity and intrusion attempts during
+the weeks leading up to the Christmas holiday, and usually continuing
+through the beginning of the new year.  Activity can also be
+correlated to mainstream and industry news, as shown by our
+recent 
+
+<a href="http://security.sdsc.edu/incidents/"> analysis </a>
+
+of the activity concerning the release of Kevin Mitnick from prison,
+or the recent Distributed Denial of Service news.
+
+
+<h1>Results of the experiment</h1>
+
+Over the course of its lifetime, worm.sdsc.edu was actually probed
+quite heavily and intruded into several times.  Here is a brief
+chronology of the life of this host:
+
+<ul>
+
+<P><li>23 Dec 1999 - installation of Red hat 5.2.  Choose "install
+everything" option, give it a hostname and IP address, walk away.
+
+<P><li>24 Dec 1999 - less than 8 hours after installation, someone probes
+the entire subnet that worm lives on for the Sun/Solaris RPC
+vulnerability.  They apparently fail to notice this defenseless host.
+
+<P><li>25 Dec 1999 - SDSC has the "quietest" Christmas day since we
+started keeping records 6 years ago.  Where have all the 3l337 Hax0rs
+gone?  Gone to
+<a href="http://www.takedown.com/">Takedown.com</a>,
+
+<a href="http://security.sdsc.edu/incidents/Takedown.pdf"> every
+one</a>.
+
+<P><li>14-18 Jan 2000 - Over the course of several days, someone tries
+over 20 exploits for POP, IMAP, TELNET, RPC, mountd, and others to
+worm.sdsc.edu.  Unfortunately for them, their tools are "too new".
+They are trying Red Hat 6.x exploits, never reading the TELNET banner
+(returned to them by some of their tools) that would have shown that
+this was a version 5.2 host, and vulnerable to older (but still easily
+obtained) exploits.
+
+<P><li>XX Feb 2000 - An intruder comes in via a known vulnerability of the
+POP server.
+
+He quickly FTP's in his toolkit from one of his FTP archives and 
+wipes out some, but not all of the system logs, and installs a
+"rootkit", including a trojan'ed TELNET daemon and a network sniffer.
+
+<P>
+
+Bonus points for picking the right vulnerability, minus points for
+botching the install of the rootkit: All the trojan'ed binaries are
+mode "700" and owned by the owner in the tar file, instead of bin.
+This makes it trivial to find all the rootkit programs.  Also, our
+sniffer picked up the FTP of the tar files, so we have all his tools.
+
+<P>
+This intruder only comes back once or twice, checks his sniffer logs,
+and then never comes back.
+
+<P><li>18 Feb 2000 (approx 1700 PST) - A different intruder hits the
+machine with an exploit.  He never notices that the machine was
+running a trojan TELNET, or didn't know the password, or didn't care.
+
+<P>
+
+This intruder installs his defaced web pages, and then just kills off
+all incoming network services, except the web server.  He quickly goes
+to IRC to brag and sends email to attrition.  Several hours later,
+attrition sends the usual notice to the domain contacts for SDSC.EDU
+
+
+</ul>
+
+<h1>Frequently Asked Questions</h1>
+
+<ul>
+
+<P><li> Hey!  Isn't this entrapment?
+
+<p>No.  "Entrapment" is a really cool movie, and "what cops do" :-) We
+aren't law enforcement, and we didn't "coerce, compel, or lead anyone
+to take any action they were not already inclined to take".
+
+<P><li>Isn't this "Bait"?
+
+<P>No.  "Bait" implies that we advertised the existence of this
+machine in order to capture someone or something.  That would have
+been contrary to the design of the experiment.  All we did was install
+a "weak" host; the slowest animal in the herd, if you will.  There was
+NO activity taken to advertise the host, or attract people to it.
+
+<P><li>Will you publish more details?
+
+<P>Perhaps.  We have every packet that touched this host since it was
+installed.  This includes the TELNET sessions, FTP data, RPC probes,
+and web traffic.  We may publish more details on our web site, or in
+conference papers.
+
+<P>
+
+The details from the earlier intruders will likely be published first,
+if at all, as law enforcement has taken an interest in this case.
+This intrusion may be related to the recent DDoS attacks, and we have
+decided to withhold certain details of the attack, and our collected
+data relating to it.
+
+<br>
+
+<hr>
+This document was last updated on $Date: 2000/02/19 23:04:42 $
+       
+
+       </font>
+      </td>
+      </tr>
+    </table>
+
+    </td>
+  </tr>
+</table>
+
+<!-- begin footer -->
+
+<hr align=left width=90%>
+
+<table border="0" cellpadding="3" cellspacing="0" frame="" width=90%>
+  <tr>
+    <td valign="top"><br>
+    <h5>NPACI -- UC San Diego, MC 0505 -- 9500 Gilman Drive -- 
+        La Jolla, CA 92093-0505<br>
+        858-534-5000 -- 858-534-5152 (fax) -- 
+        <a href="mailto:security@sdsc.edu">security@sdsc.edu</a><p>
+	Last Modified: Saturday, 19-Feb-2000 14:59:13 PST</h5>
+    </td>
+    <td>
+    <a href="http://www.nsf.gov/">
+       <img width="50" src="/images/nsf.gif" border="0" align="right"
+       alt="NSF logo" height="51"></a>
+    </td>
+  </tr>
+</table>
+
+<!-- end footer -->
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,73 @@
+<html> 
+ 
+<head> 
+<title>Text Search</title> 
+<meta NAME="FORMATTER" CONTENT="Microsoft Visual InterDev 1.0"> 
+ 
+</head> 
+ 
+<body> 
+ 
+<h1><a NAME="top">Text Search</a></h1> 
+ 
+<hr> 
+ 
+<p>Use the form below to search for documents in this web 
+containing specific words or combinations of words. The text 
+search engine will display a weighted list of matching documents, 
+with better matches shown first. Each list item is a link to a
+matching document; if the document has a title it will be shown, 
+otherwise only the document's file name is displayed. A brief <a HREF="#querylang">explanation</a> of the query language is 
+available, along with examples.</p> 
+<!--webbot bot="Search" s-link s-fields="TimeStamp,DocumentK," s-index="All" s-dsn="default" tag="FORM" s-text="Search for:" i-size="20" s-submit="Start Search" s-clear="Clear" startspan b-useindexserver="0" --><form action="_vti_bin/shtml.dll/search.htm" method="POST"><input type="hidden" name="VTI-GROUP" value="0"><p><b>Search for: </b><input type="text" name="search" size="20" value></p><p><input type="submit" value="Start Search"><input type="reset" value="Clear"></p></form><!--webbot bot="Search" endspan i-checksum="12680" --> 
+ 
+<hr> 
+ 
+<h2><a NAME="querylang">Query Language</a></h2> 
+ 
+<p>The text search engine allows queries to be formed from 
+arbitrary Boolean expressions containing the keywords AND, OR,
+and NOT, and grouped with parentheses. For example:</p> 
+ 
+<blockquote> 
+    <dl> 
+        <dt><strong><tt>information retrieval</tt></strong></dt> 
+        <dd>finds documents containing 'information' or 
+            'retrieval'<br> 
+            <br> 
+        </dd> 
+        <dt><strong><tt>information or retrieval</tt></strong></dt> 
+        <dd>same as above<br> 
+            <br> 
+        </dd> 
+        <dt><strong><tt>information and retrieval</tt></strong></dt>
+        <dd>finds documents containing both 'information' and 
+            'retrieval'<br> 
+            <br> 
+        </dd> 
+        <dt><strong><tt>information not retrieval</tt></strong></dt> 
+        <dd>finds documents containing 'information' but not 
+            'retrieval'<br> 
+            <br> 
+        </dd> 
+        <dt><strong><tt>(information not retrieval) and WAIS</tt></strong></dt> 
+        <dd>finds documents containing 'WAIS', plus 'information'
+            but not 'retrieval'<br> 
+            <br> 
+        </dd> 
+        <dt><strong><tt>web*</tt></strong></dt> 
+        <dd>finds documents containing words starting with 'web'<br> 
+            <br> 
+        </dd> 
+    </dl> 
+</blockquote> 
+ 
+<h5><a HREF="#top">Back to Top</a></h5> 
+ 
+<hr> 
+ 
+<h5>Author information goes here.<br> 
+Copyright © 1995 Your Company Name. All rights reserved.<br> 
+</h5> 
+</body> 
+</html>

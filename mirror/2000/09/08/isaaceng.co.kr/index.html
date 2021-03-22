@@ -1,0 +1,110 @@
+<html>
+<head><style>
+a{text-decoration:none}
+A:hover {text-decoration: underline;}
+</style>
+<title>You've Been Owned By: Scurvy</title>
+<style>
+.spanstyle {
+	position:absolute;
+	visibility:visible;
+	top:-50px;
+	font-size:8pt;
+	font-family:Verdana;
+      font-weight:bold;
+	color:#00FF00;
+}
+</style>
+<script>
+
+var x,y
+var step=20
+var flag=0
+
+var message="Scurvy "
+message=message.split("")
+
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	xpos[i]=-50
+}
+
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	ypos[i]=-50
+}
+
+function handlerMM(e){
+	x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+	y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+	flag=1
+}
+
+function makesnake() {
+	if (flag==1 && document.all) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("span"+(i)+".style")
+    		thisspan.posLeft=xpos[i]
+			thisspan.posTop=ypos[i]
+    	}
+	}
+	
+	else if (flag==1 && document.layers) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("document.span"+i)
+    		thisspan.left=xpos[i]
+			thisspan.top=ypos[i]
+    	}
+	}
+		var timer=setTimeout("makesnake()",30)
+}
+
+</script>
+
+</head>
+<BODY onLoad="makesnake()" style="width:100%;overflow-x:hidden;overflow-y:scroll" bgcolor="#000000" bgproperties="fixed" text="#B00000#BB0000" link="#00FF00" alink="#ff0000" vlink="#B00000#BB0000">
+<basefont size="3"><script>
+<!-- Beginning of JavaScript -
+
+for (i=0;i<=message.length-1;i++) {
+    document.write("<span id='span"+i+"' class='spanstyle'>")
+	document.write(message[i])
+    document.write("</span>")
+}
+
+if (document.layers){
+	document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+
+// - End of JavaScript - -->
+</script>
+<div align="center">
+<img src="http://www.angelfire.com/co3/rewted/scurvy.jpg" alt="Root Shell Hackers">
+</div>
+<table width="100%" height="100%" cellspacing="3" cellpadding="3" border="0">
+  <tr>
+    <td width="40%"><b><strong>This site was owned by Scurvy. Scurvy is a little bitch. Scurvy wants to be in RSH, but he's not cool enough. Scurvy sucks. Scurvy is lonely. Scurvy doesn't like admin, because they suck even worse than Scurvy. Scurvy has scurvy which isn't cool. Scurvy was here and Scurvy was there. You now have Scurvy. You can brag to all of your friends that you have Scurvy, and Scurvy ownz you!</b></strong></td>
+    <td><font color="#0000A0"><b><strong>Scurvy wants to greet the following: <big>Datagram</big>, Piffy, Vortex, rootx11, rakaen, B3RN, the cool admin that made this possible, everyone in RSH, Ashley, and whoever I forgot to mention.<br><br><br>
+	Scurvy wants to say fuck to all the NT hackers, and NT hacking groups, it takes a real bitch to hack Winblowz (but I can't do it so what the fuck?), all the cool people, because I'm a dork, Amy (she's stupid), and whoever else deserves a fuck.</font></td>
+  </tr>
+
+</table><br><div align="center"><img src="http://www.angelfire.com/co3/rewted/rootshell.jpg" alt="RSH Groupie!"><br><br><strong><b>E-mail me if you have any questions: <a href="mailto:irewtedjoo@mail.com">irewtedjoo@mail.com</a>
+<br><br><div align="center"><font size="0"><b><tt>Copyrights © Suck Ass, anything public shouldn't be copyrighted.</tt></font></b>
+</BODY>
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

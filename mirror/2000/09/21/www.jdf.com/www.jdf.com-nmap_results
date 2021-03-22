@@ -1,0 +1,46 @@
+
+Starting nmap V. 2.54BETA3 ( www.insecure.org/nmap/ )
+Insufficient responses for TCP sequencing (2), OS detection may be less accurate
+Interesting ports on host15.rosebud.fr (195.68.32.144):
+(The 2 ports scanned but not shown below are in state: closed)
+Port       State       Service
+23/tcp     open        telnet                  
+25/tcp     open        smtp                    
+80/tcp     open        http                    
+
+TCP Sequence Prediction: Class=random positive increments
+                         Difficulty=33200 (Worthy challenge)
+Aggressive OS guesses: Solaris 2.6 - 2.7 (97%), Solaris 2.6 - 7 X86 (94%), Solaris 2.6 - 2.7 with tcp_strong_iss=2 (94%), Solaris 2.6 - 2.7 with tcp_strong_iss=0 (94%), Sun Solaris 8 early acces beta through actual release (92%), Solaris 2.5, 2.5.1 (92%), HP-UX B11.00 U 9000/839 (91%), Solaris 2.6 (90%)
+No exact OS matches for host (If you know what OS is running on it, see http://www.insecure.org/cgi-bin/nmap-submit.cgi).
+TCP/IP fingerprint:
+TSeq(Class=RI%gcd=1%SI=B2AB)
+T1(Resp=Y%DF=Y%W=2297%ACK=S++%Flags=AS%Ops=NNTNWME)
+TSeq(Class=RI%gcd=1%SI=81B0)
+T1(Resp=Y%DF=Y%W=2297%ACK=S++%Flags=AS%Ops=NNTNWME)
+T2(Resp=N)
+T1(Resp=Y%DF=Y%W=2297%ACK=S++%Flags=AS%Ops=NNTNWME)
+T2(Resp=N)
+T3(Resp=N)
+T2(Resp=N)
+T3(Resp=N)
+T4(Resp=Y%DF=Y%W=0%ACK=O%Flags=R%Ops=)
+T3(Resp=N)
+T4(Resp=Y%DF=Y%W=0%ACK=O%Flags=R%Ops=)
+T5(Resp=Y%DF=Y%W=0%ACK=S++%Flags=AR%Ops=)
+T4(Resp=Y%DF=Y%W=0%ACK=O%Flags=R%Ops=)
+T5(Resp=Y%DF=Y%W=0%ACK=S++%Flags=AR%Ops=)
+T6(Resp=Y%DF=Y%W=0%ACK=O%Flags=R%Ops=)
+T5(Resp=Y%DF=Y%W=0%ACK=S++%Flags=AR%Ops=)
+T6(Resp=Y%DF=Y%W=0%ACK=O%Flags=R%Ops=)
+T7(Resp=Y%DF=Y%W=0%ACK=S%Flags=AR%Ops=)
+T6(Resp=Y%DF=Y%W=0%ACK=O%Flags=R%Ops=)
+T7(Resp=Y%DF=Y%W=0%ACK=S%Flags=AR%Ops=)
+PU(Resp=Y%DF=Y%TOS=60%IPLEN=70%RIPTL=148%RID=E%RIPCK=E%UCK=E%ULEN=134%DAT=E)
+T7(Resp=Y%DF=Y%W=0%ACK=S%Flags=AR%Ops=)
+PU(Resp=Y%DF=Y%TOS=60%IPLEN=70%RIPTL=148%RID=E%RIPCK=E%UCK=E%ULEN=134%DAT=E)
+PU(Resp=Y%DF=Y%TOS=60%IPLEN=70%RIPTL=148%RID=E%RIPCK=E%UCK=E%ULEN=134%DAT=E)
+
+
+
+
+Nmap run completed -- 1 IP address (1 host up) scanned in 31 seconds

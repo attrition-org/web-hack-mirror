@@ -1,0 +1,408 @@
+<HTML>
+<HEAD>
+	<TITLE>CHS.Peer Counseling</TITLE>
+	<LINK rel=STYLESHEET href="http://columbin.jeffco.k12.co.us/style/style.css" type="text/css">
+		<SCRIPT language="javascript">
+	<!--
+	if(document.layers){origWidth=innerWidth;origHeight=innerHeight;onresize=function(){if(innerWidth!=origWidth||innerHeight!=origHeight)location.reload()}}
+	
+	IE4 = (document.all) ? 1 : 0;
+	NS4 = (document.layers) ? 1 : 0;
+	ver4 = (IE4 || NS4) ? 1 : 0;
+	topLayer = "primeLayer";
+	
+	rCor = 138;
+	
+	if (ver4) {
+		
+		arCors = new Array()
+		
+		function setCors(which,top,bottom,left) {
+			arCors[which] = new Array();
+			arCors[which][0] = top;
+			arCors[which][1] = bottom;
+			arCors[which][2] = left;
+		}
+		
+		setCors(1,5,21,87);
+		setCors(2,22,39,73);
+		setCors(3,40,56,20);
+		setCors(4,57,72,83);
+		setCors(5,73,90,6);
+		setCors(6,91,107,71);
+		setCors(7,108,123,71);
+		setCors(8,124,141,46);
+		setCors(9,142,158,46);
+		setCors(10,159,175,5);
+		setCors(11,176,192,58);
+		
+		function mapOver (which,on) {
+				
+			tCor = arCors[which][0];
+			bCor = arCors[which][1];
+			lCor = arCors[which][2];
+			
+			if (NS4) {
+				if (on) {
+				document.menu.document.menuOn.clip.top = tCor
+				document.menu.document.menuOn.clip.right = rCor
+				document.menu.document.menuOn.clip.bottom = bCor
+				document.menu.document.menuOn.clip.left = lCor
+				document.menu.document.menuOn.visibility = "show"				
+				}
+				else {
+				document.menu.document.menuOn.clip.top = 0
+				document.menu.document.menuOn.clip.right = 0
+				document.menu.document.menuOn.clip.bottom = 0
+				document.menu.document.menuOn.clip.left = 0
+				}
+			}					
+	
+			if (IE4) {
+				if (on) {
+					document.all.menuOn.style.clip = "rect(" + tCor + " " + rCor + " " + bCor + " " + lCor + 	")"
+					document.all.menuOn.style.visibility = "visible"
+				}
+				else {document.all.menuOn.style.clip = "rect(0 0 0 0)"}}
+			}
+			
+			function show(id,pic) {
+
+			if (NS4) {
+				document.layers[topLayer].visibility = "hide"
+				document.layers[id].visibility = "show"
+				if (pic) {
+					document.layers[id].document.images[pic].src = "images/" + pic + ".gif"
+				}
+				topLayer = [id]
+				}
+			else if (IE4) {
+				document.all[topLayer].style.visibility = "hidden"
+				document.all[id].style.visibility = "visible"
+				document.images[pic].src = "images/" + pic + ".gif"
+				topLayer = [id]
+				}
+			}
+			
+		}
+	//-->
+	</SCRIPT>
+</HEAD>
+
+<BODY>
+
+<DIV STYLE="position: absolute; top:0; text-align:right"><A HREF="mailto:yoshi@hosedown.com"><IMG src="../images/corner_e.gif" WIDTH=9 HEIGHT=5 BORDER=0 ALT="Email"></A>
+</DIV>
+
+<DIV id="mainHeader">
+<P><A href="http://columbin.jeffco.k12.co.us/index.html"><IMG src="../images/chsheader.gif" width=320 height=10 alt="Columbine High School" border=0></A>
+
+&nbsp; 6201 South Pierce Street &nbsp; Littleton, CO 80123 &nbsp; 303.982.4400</P>
+</DIV>
+
+<DIV id="menu">
+	
+		<MAP name="mainmenu">
+		<!-- #$-:Image Map file created by Map THIS! -->
+		<!-- #$-:Map THIS! free image map editor by Todd C. Wilson -->
+		<AREA shape=RECT coords="87,5,138,21" href="http://columbin.jeffco.k12.co.us/ego/ego.html"
+		onMouseOver="mapOver('1',1)" onMouseOut="mapOver('1',0)">
+		<AREA shape=RECT coords="73,22,138,39" href="http://columbin.jeffco.k12.co.us/index.html"
+		onMouseOver="mapOver('2',1)" onMouseOut="mapOver('2',0)">
+		<AREA shape=RECT coords="20,40,138,56" href="http://columbin.jeffco.k12.co.us/feed/feed.html"
+		onMouseOver="mapOver('3',1)" onMouseOut="mapOver('3',0)">
+		<AREA shape=RECT coords="83,57,138,72" href="../info/info.html"
+		onMouseOver="mapOver('4',1)" onMouseOut="mapOver('4',0)">
+		<AREA shape=RECT coords="6,73,138,90" href="http://columbin.jeffco.k12.co.us/res/res.html"
+		onMouseOver="mapOver('5',1)" onMouseOut="mapOver('5',0)">
+		<AREA shape=RECT coords="71,91,138,107" href="http://columbin.jeffco.k12.co.us/admin/admin.html"
+		onMouseOver="mapOver('6',1)" onMouseOut="mapOver('6',0)">
+		<AREA shape=RECT coords="71,108,138,123" href="http://columbin.jeffco.k12.co.us/dept/dept.html"
+		onMouseOver="mapOver('7',1)" onMouseOut="mapOver('7',0)">
+		<AREA shape=RECT coords="46,124,138,141" href="http://columbin.jeffco.k12.co.us/sports/sports.html"
+		onMouseOver="mapOver('8',1)" onMouseOut="mapOver('8',0)">
+		<AREA shape=RECT coords="46,142,138,158" href="http://columbin.jeffco.k12.co.us/clubs/clubs.html"
+		onMouseOver="mapOver('9',1)" onMouseOut="mapOver('9',0)">
+		<!--<AREA shape=RECT coords="5,159,138,175" href="http://columbin.jeffco.k12.co.us/counsel/counsel.html"
+		onMouseOver="mapOver('10',1)" onMouseOut="mapOver('10',0)">-->
+		<AREA shape=RECT coords="58,176,138,192" href="http://columbin.jeffco.k12.co.us/alumni/alumni.html"
+		onMouseOver="mapOver('11',1)" onMouseOut="mapOver('11',0)">
+		</MAP>
+	
+	
+	<DIV id="menuBg"></DIV>
+
+	<DIV id="menuOn"></DIV>
+
+	<DIV id="menuImg"><IMG src="../images/menu.gif" usemap="#mainmenu" width=143 height=199 alt="menu" border=0></DIV>
+
+</DIV>
+
+<!-- zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz-->
+
+<DIV CLASS="pageTitle"><p>&nbsp; peer counseling</p></DIV>
+
+<DIV class="pageLinksSmall"><A href="javascript:show('primeLayer',0)">Main</A> &nbsp;<A href="javascript:show('kim','kim_pic')">Kim</A>&nbsp;
+<A href="javascript:show('tammy','tammy_pic')">Tammy</A> &nbsp;<A href="javascript:show('ross','ross_pic')">Ross</A> &nbsp;
+<A href="javascript:show('krissa','krissa_pic')">Krissa</A> &nbsp;<A href="javascript:show('kerri','kerri_pic')">Kerri</A> &nbsp;
+<A href="javascript:show('val','val_pic')">Val</A> &nbsp;<A href="javascript:show('matt','matt_pic')">Matt</A> &nbsp;
+<A href="javascript:show('monica','monica_pic')">Monica</A> &nbsp;<A href="javascript:show('angela','angela_pic')">Angela</A> &nbsp;
+<A href="javascript:show('amalia','amalia_pic')">Amalia</A> &nbsp;<A href="javascript:show('alyson','alyson_pic')">Alyson</A> &nbsp;
+<A href="javascript:show('steve','steve_pic')">Steve</A></DIV>
+
+<!-- zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz-->
+
+<DIV id="primeLayer" class="textLayer" style="width:577; visibility: visible"> 
+  <p><IMG src="images/peer_group.jpg" WIDTH=577 HEIGHT=244 BORDER=0 ALT=""></p>
+  <P>Peer Counseling is a program designed to allow students to talk with others their own age
+   about a variety of issues.  There are two peer counselors available in the counseling office
+    every hour who have been trained to handle these different issues.  Students are encouraged
+	 to come and address their concerns with the peer counselors on their free period.</P>
+	 <P>The Counselors can receive email at <a href="mailto:peers@imaginemail.com">peers@imaginemail.com</a>.  They are able to answer
+	 questions on any issue you might have.</P>
+</DIV>
+
+<DIV id="kim" class="textLayer" style="visibility: hidden">
+<DIV class="sectionTitle"><p>kim</p></DIV>
+<P>Hi my name is Kimberly Lorenz.
+  I became a peer counselor because I love helping people and I wanted to make a difference
+  in our high school. My other activities at CHS include being a member of the National Honor Society
+  and the captain of the Poms squad.<IMG ALIGN="left" name="kim_pic" SRC="../images/dot.gif" WIDTH=227 HEIGHT=108 ALT="Picture of Kim">
+  I have been a pom for two years and I was a JV cheerleader
+  before that.  Between doing homework, practicing, going to games and planning activities for
+  peer counseling I don't have very much free time.  When I do find some time for myself I enjoy
+  working out, hanging out with my friends, and drawing.  I have a small family of four including
+  a little sister named Melissa who is a freshman this year.  I am going to attend the University of
+  Colorado in Boulder next school year.  I can't wait for the freedom of living on my own and handling
+  my own life.  I plan to try out for Express next year, which is the pom squad at CU.  I am not
+  positive about what I want to do for a career but I am thinking about something in marketing or
+  psychology.</P>
+  <P>	I think our peer-counseling program is a really great way for students to get help from people
+  that know more about problems they may be having.  I hope that I can help as many people as possible
+  this year!</P>
+</DIV>
+
+<DIV id="tammy" class="textLayer" style="visibility: hidden">
+<DIV class="sectionTitle"><p>tammy</p></DIV>
+<P>Hi!  My name is Tammy and I am here to help you.  <IMG ALIGN="RIGHT" name="tammy_pic" SRC="../images/dot.gif" WIDTH=156 HEIGHT=94 ALT="picture of Tammy">
+  I enjoy going to the movies and anything that deals
+  with the outdoors.  I have played softball since I was five years old and I also run track.  I love to go
+  rollerblading and mountain biking on the weekends.  I also like to go snowboarding in the winter.  Some
+  of my favorite movies are Titanic (which is my favorite of all time), Meet Joe Black, Ace Ventura, Dumb
+  and Dumber, Shakespeare in Love, Patch Adams, She's All that, Saving Private Ryan, and GI Jane, only to
+  list a few.  Just in case anyone was wondering I don't like the movies just because of the actors (i.e.
+  Leonardo DiCaprio and Brad Pitt).  My favorite actor and actress of all time are Tom Hanks and Sandra Bullock.</P>
+  <P>My family life is pretty normal.  I have a younger sister and one mother and father.  I have Jack
+  Russell Terrier named Fireball.  We get along most of the time, even though my sister is a freshman this
+  year and she gets on my nerves sometimes.  We moved to Colorado four years ago from San Diego.  I was a
+  freshman at the time and it was one of the most devastating times of my life.</P>
+  <P>My school life is pretty normal also.  I take two AP classes and Calculus is the hardest class I have
+  ever taken in my life.  My college plans are a little bit different than most people because I have
+  enlisted in the Navy and I hopefully will get an ROTC scholarship so I can go to college and not pay
+  for it.  Looking back on high school I am almost glad it is over and I can move on.  I am going to miss
+  the people that I have met and am friends with but I'm glad that I am going to meet new people next year.
+  The one piece of advice that I could give to any high school student is to always work hard even when you
+  think that it is not going to take you anywhere. Believe me, when your senior year comes and you can't get
+  into a college because you slacked off your freshman year you are going to be kicking yourself.  Other than
+  that high school was a wonderful experience and I sure am going to miss it but I am happy to be moving on.</P>
+  <P>The reason that I became a counselor was first of all that I wanted to help others, but it was also
+  because I wanted to dig into myself and figure what kind of person I am.  Before I became a peer counselor
+  I didn't truly know who I was.  While I was being trained to counsel others I realized things about myself
+  that I had never paid attention to before.  I learned to look more deeply in the things that were bothering
+  me and figure out the root of where my anger and frustration came from.  I am now able to better perceive
+  people's emotions by the signals and mannerisms they send out.  With this "talent" I notice things that
+  people are trying to tell me about myself but they're not actually saying it.  This has taught me a lot
+  and I hope to one day pursue the counseling aspect of life even if it is not professionally. </P>
+</DIV>
+
+<DIV id="ross" class="textLayer" style="visibility: hidden">
+<DIV class="sectionTitle"><p>ross</p></DIV>
+<P>Hey, I'm Ross.  In my free time I mostly just like to relax and hang out with friends.  I love doing things on the
+  net, and I  also enjoy music, movies and TV.  Some of my favorite musicians are Orgy, Janet Jackson, Rufus Wainwright
+  and Sugar Ray.</P>
+  <P>  I have a younger brother who is a sophomore at Columbine, and I live right by the school.  I have only lived in this
+  area for four years, but I have lived in Colorado my entire life.
+  <IMG ALIGN="right" name="ross_pic" SRC="../images/dot.gif" WIDTH=302 HEIGHT=93 ALT="Picture of Ross">
+  However, I do enjoy traveling to places like Hawaii,
+  Las Vegas, California and Texas when time and money permit.</P>
+  <P>I currently have 7 classes, including AP English, AP History and Newspaper and as of first semester this year I still
+  have a 4.0 GPA.  I plan on either going to CU at Denver, UNC or Denver Tech after Columbine.</P>
+  <P>I decided to become a peer counselor for several reasons.  Most of all I feel that I am a good listener and I can help
+  other people by giving them an outlet for what they want to talk about.  I also wanted to get 
+more involved in school since I had not been involved in too many things up to my senior year.  I, along with the others,
+have learned many valuable skills and insights into human feelings and behavior, as well 
+as learning more about myself. </P>
+<P>Feel free to come by and see me during 7th hour if you have anything you want to talk about.</P>
+</DIV>
+
+<DIV id="krissa" class="textLayer" style="visibility: hidden">
+<DIV class="sectionTitle"><p>krissa</p></DIV>
+<P>Hi! My name is Krissa Eggert!  I am a peer counselor at Columbine High School, and I am a senior.  I am involved in
+many activities at CHS; my favorite is track.  I have gone to
+<IMG align="left" name="krissa_pic" SRC="../images/dot.gif" WIDTH=190 HEIGHT=101 ALT="Picture of Krissa">
+CHS all four years and I have run for four years also.
+I am involved in as many activities as I can because I feel it is really important to be involved in your school.  Because
+I have participated in many activities, I have had the chance to meet a lot of diverse people!  When I am not at school,
+I find myself working out, hanging out with friends and family or just relaxing.  I love to try new things and because of
+that I have had many unique and exciting experiences.  I love to be around a lot of people and I feel the best when I am
+around a lot of people (I think my personality feeds on it ).  Next year I am planning on attending a four-year University
+in Texas, majoring in Occupational or Physical therapy.  </P>
+<P>I wanted to become a peer counselor because since I was a little girl my dream was to help others.  When I heard that by
+ becoming a peer counselor I could help others and make a difference in our school, I jumped at the opportunity; plus I get
+ to meet a lot of new people.  Since I have become a peer counselor I have had the opportunity to make new friends, become a
+  better listener, and improve my family and friend relationships.  I feel I am a very good listener and an easy person to
+  talk to.  I, along with many others have had a not-so-perfect life, so I can relate first hand about what goes on in a
+  teenagers mind.  I feel confident that if you were to come and talk to me that I would be very helpful. I am in the peer
+  counseling office Monday through Friday 2nd hour, from 8:25-9-20.  So come and talk to me, I am here to listen and learn
+  from you!  Hope to see you soon! </P>
+</DIV>
+
+<DIV id="kerri" class="textLayer" style="visibility: hidden">
+<DIV class="sectionTitle"><p>kerri</p></DIV>
+<P>Hi, my name is Kerri and I am here to help you.   First of all, I would describe myself as
+an understanding and
+<IMG name="kerri_pic" ALIGN="RIGHT" SRC="../images/dot.gif" WIDTH=155 HEIGHT=123 ALT="Picture of Kerri">
+outgoing individual.  I love to help anyone with their problems.  The
+peer counselors are probably the best group of people in all of Columbine.  We are
+understanding and will help you with anything you need.</P>
+<P>I play soccer at Columbine and I've played soccer for almost fifteen years.  It takes up
+most of my time, but I make time for extra things.   I was on junior varsity my freshman year
+and from my sophomore year on I've been on varsity.  It has been a great experience. My team
+went to the state finals last year and lost, but this year I think we have a good chance of
+taking it all the way.</P>
+</DIV>
+
+
+<DIV id="val" class="textLayer" style="visibility: hidden">
+<DIV class="sectionTitle"><p>val</p></DIV>
+<P>Hey! My name is Val! I became a peer counselor because I enjoy working with other people.  I had also
+hoped itwould give me some insight into the counseling profession.  Through this program I have met many
+new students from this school, as well
+<IMG name="val_pic" ALIGN="RIGHT" SRC="../images/dot.gif" WIDTH=99 HEIGHT=113 ALT="Picture of Val">
+ as seniors in my class that I did not know very well.  I have
+enjoyed being a part of this program because I have learned more about who I am as a person.  Besides
+being a peer counselor, I am an active member of National Honor Society and in the past have been a
+member of Key Club.  Both of these activities I have enjoyed because of all the community service we do.
+On a more personal level, outside of  school, I hold a job where I work six days a week which keeps me
+very busy.  When I'm not running around, I enjoy hiking and working out. I also enjoy messing around with
+my two three year old dogs, Kodiak and Koa Kai.  They are the best friends a person could have. When I
+have spare time, I love to travel.  I have been all over the States with my family and have been on my
+own to visit England, Italy and France. It was the best experience because I learned and experienced
+other cultures along with some of my friends. My favorite thing to do when I'm on my own is listen to
+music. I like Dave Matthews, Jewell, The Beatsie Boys, and V.A.S.T. </P>
+<P>When I graduate, I am planning to go to University of Northern Colorado in Greeley.  I hope to teach
+for a couple of years. Then I am considering going back to school and get my masters in guidance
+counseling so that I can continue working with students just on a different level.  Right now, I am
+available in the counseling office during 4th hour if you need to talk or have any questions.  I look
+forward to your visit!!!</P>
+<P><BLOCKQUOTE>"One can't discover new oceans unless he has courage to lose sight of the shore."</BLOCKQUOTE></P>
+</DIV>
+
+
+<DIV id="matt" class="textLayer" style="visibility: hidden">
+<DIV class="sectionTitle"><p>matt</p></DIV>
+<P><IMG name="matt_pic" SRC="../images/dot.gif" WIDTH=92 HEIGHT=189 ALT="Picture of Matt"></P>
+</DIV>
+
+
+<DIV id="monica" class="textLayer" style="visibility: hidden">
+<DIV class="sectionTitle"><p>monica</p></DIV>
+<P><IMG name="monica_pic" SRC="../images/dot.gif" WIDTH=175 HEIGHT=85 ALT="Picture of Monica"></P>
+</DIV>
+
+
+<DIV id="angela" class="textLayer" style="visibility: hidden">
+<DIV class="sectionTitle"><p>angela</p></DIV>
+<P><IMG name="angela_pic" ALIGN="LEFT" SRC="../images/dot.gif" WIDTH=218 HEIGHT=87 ALT="Picture of Angela">
+Hello! My name is Angela.  I am the eldest of four girls.  I am 
+close to my family and love doing the silly family outings every 
+once in awhile.  I know what it is like to be dished out a lot of 
+pressure from family due to the fact that I am my sisters' role 
+model.  I enjoy going to the movies and anything that deals with 
+the outdoors. I especially like to go skiing because I truly love the mountains. </P>
+<P>My sisters are 12, 14,  and 16.  Melanie is also a student here, 
+she is a sophomore JV Cheerleader.  Christa goes to Ken Caryl Middle 
+School and is in the 8th grade.  She is an awesome ballerina.  Kaylee 
+is a 6th grader at Dutch Creek Elem.  She is a talented and strong gymnast.  
+</P>
+<P>I currently am a member of the yearbook staff, NHS and am in AP
+English.  I love to write and to find depth in things.  I am always 
+searching for ways to solve my problems and seek advice from friends 
+and family.  I like to learn from people and from my experiences. 
+ I have been on various trips and find that hands-on experiences 
+are the best way to get to know yourself.</P>
+<P>I am fairly involved in school functions and met not only a lot
+of students here that way, but also met a lot of the faculty in 
+the process.  On the first day of school I had to go to the counseling 
+office because there were problems in my schedule.  I was a scared 
+freshman and the whole idea seemed scary to me.  The counselors 
+were very nice to assist me and I felt comfortable there.  I also 
+met some of the peer counselors when I was in middle school, so 
+needless to say, I knew more about them then most people did my 
+freshman year.  It has always been my dream to help even one person 
+through their troubles.  I love working with people and I currently 
+hold a job as an afterschool/daycare provider at Shaffer Elementary 
+School.  I love to talk and am always ready to listen.</P>
+</DIV>
+
+
+<DIV id="amalia" class="textLayer" style="visibility: hidden">
+<DIV class="sectionTitle"><p>amalia</p></DIV>
+<P><IMG name="amalia_pic" SRC="../images/dot.gif" WIDTH=86 HEIGHT=281 ALT="Picture of Amalia"></P>
+</DIV>
+
+
+<DIV id="alyson" class="textLayer" style="visibility: hidden">
+<DIV class="sectionTitle"><p>alyson</p></DIV>
+<P>HI guys! My name is Alison Brock. I'm just going to tell you all a little bit about myself.
+<IMG name="alyson_pic" align="left" SRC="../images/dot.gif" WIDTH=107 HEIGHT=193 ALT="Picture of Alyson">
+Please restrain from laughing while you read this if you're in the library.</P>
+<P> So I'll start with hobbies
+I have. I really enjoy bowling (I actually bowl a 90, which is pretty good for me!) and going
+to skateparks with friends. Mostly though I like hanging with my friends, even if we just sit
+and do nothing. Movies are pretty fun to go to with friends. Some really good ones (if you want
+a good laugh) would be Austin Powers, Monty Python and the Search for the Holy grail, and Robin
+Hood: Men in Tights. I'm an outside person so I really like to be in the mountains doing mountainy
+things, like snowboarding, snowshoeing, mountain biking, rock climbing, repelling, etc. I like
+this whole long list just cuz being outside is like being stress free (unless I'm falling or
+something) and just being myself without any worries of anyone making fun of me. You know what
+ I mean?</P>
+ <P>The reason I became a peer counselor was because I wanted to help people out with trials
+ they were facing, and I wanted to find out more about myself (yup it really helps out when
+ you have rough times in your life) and it just seemed like a fun thing to do. Plus a good
+ way to meet new people in all grades.</P>
+</DIV>
+
+
+<DIV id="steve" class="textLayer" style="visibility: hidden">
+<DIV class="sectionTitle"><p>steve</p></DIV>
+<P>Hi!  My name is Steve Vaughan and I am here to listen to anything you want to talk about.  First,
+let me tell you a little bit about myself.  I have two sisters.  Molly is a sophomore at CHS and Keely
+is an 8th grader at Ken Caryl.  I  have a dog named Shawnee and a fish named Smithers.   I enjoy
+listening to music, singing, playing hockey, and hanging out with friends.  I also like to make movies,
+although I am not very good at it.  Some of my favorite movies include Schinder's List, Saving Private
+Ryan, There's Something About Mary, and Swingers.
+ <IMG name="steve_pic" ALIGN="RIGHT" SRC="../images/dot.gif" WIDTH=162 HEIGHT=95 ALT="Picture of Steve">
+ My all-time favorite director is Steven Speilberg
+and my favorite actor is Tom Hanks.  Some of my favorite bands include The Barenaked Ladies, Dave
+Matthews Band, Collective Soul, and Blues Traveler.  I don't get a chance to watch too much television
+but when I do I love to watch the Simpsons. I love that show!!! I am a member of National Honor
+Society and have participated in all four musicals.  Freshman year I was Motel in Fiddler on the Roof.
+Sophomore year I was Albert Peterson in Bye Bye Birdie.  Last year I was Harold Hill in Music Man and
+this year I was Will Parker in Oklahoma.  I love performing on stage because it relieves stress and
+allows me to step into someone else's shoes for awhile.  Next year I plan on going to Creighton
+University in Omaha, Nebraska.  I want to major in elementary school education and minor in music.
+Overall, I am really looking forward to moving on with my life but I will miss some aspects of high
+school, such as my friends.  It is really important to appreciate your friends while they are around
+ you because you never know when they'll be gone for good.  I urge anyone to come into the counseling
+ office during 3rd hour and we'll talk about anything you want.  I am here for you.
+</P>
+<P><BLOCKQUOTE>"Some people come into our lives and quickly go.  Others stay for awhile and leave footprints on out
+hearts.  And we are never, ever the same."<BR><BR>-Unknown</BLOCKQUOTE></P>
+</DIV>
+
+
+
+
+</BODY>
+</HTML>

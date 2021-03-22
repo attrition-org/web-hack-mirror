@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><HTML><head>
+<script language="JavaScript">
+
+var IW= 0;
+var IH= 0;
+var PX= 0;
+var PY= 0;
+var ZIN= 0;
+var us= null;
+var IMGW= 100;
+var IMGH= 89;
+var LSAFETY= 20;
+var TSAFETY= 17;
+function branding() {
+ oldIW= IW;
+ oldIH= IH;
+ oldPX= PX;
+ oldPY= PY;
+ if (navigator.appName == 'Netscape') {
+  if ((window.innerHeight != oldIH)||(window.innerWidth != oldIW)||(window.pageXOffset != oldPX)||(window.pageYOffset != oldPY))
+    {
+    if (us == null)
+      {
+      for (i=0; i<document.layers.length; i++)
+        {
+        us= document.layers[i];
+        if (us.id == "Valley")
+          break;
+        }
+      }
+    if (us != null)
+      {
+      us.visibility= "hide";
+      IH= window.innerHeight;
+      IW= window.innerWidth;
+      PX= window.pageXOffset;
+      PY= window.pageYOffset;
+
+
+      (IH > IMGH) ? us.top= (IH+PY-(IMGH+TSAFETY)) : us.top= 0;
+      (IW > IMGW) ? us.left= (IW+PX-(IMGW+LSAFETY)) : us.left= 0;
+
+
+      for (i=0; i<document.layers.length; i++)
+        {
+        templay= document.layers[i];
+
+        if (templay.zIndex > ZIN)
+          ZIN= (templay.zIndex + 1);
+        }
+      us.zIndex= ZIN;
+      us.visibility= "show";
+      }
+    }
+ }
+ else{
+  if (navigator.appVersion.indexOf("Mac") == -1)
+    {
+    if ((document.body.clientHeight != oldIH)||(document.body.clientWidth != oldIW)||(document.body.scrollLeft != oldPX)||(document.body.scrollTop != oldPY))      {
+      alldivs= document.all.tags("DIV");
+      if (us == null){ 
+        for (i=0; i<alldivs.length; i++)
+          {
+          us= alldivs(i);
+          if (us.id == "Valley")
+            break;
+          }
+      }
+      if (us != null){
+        us.style.display= "none";
+        IH= document.body.clientHeight;
+        IW= document.body.clientWidth;
+        PX= document.body.scrollLeft;
+        PY= document.body.scrollTop;
+        us.style.top= (IH+PY-(IMGH+TSAFETY)+12);
+        us.style.left=(IW+PX-(IMGW+LSAFETY)+15);
+        for (i=0; i<alldivs.length; i++){
+          templay= alldivs(i);
+          if (templay.style.zIndex > ZIN)
+            us.style.zindex= (templay.style.zIndex + 1);
+        }
+        us.style.display= "";
+      }
+  }
+ }
+ }
+}
+if ((document.all) || (document.layers)){
+ setInterval("branding()",100);
+}
+</SCRIPT>
+<META http-equiv=Content-Type content="text/html; charset=unicode"></HEAD><BODY>
+<DIV align=right class=fixlogo id=fixlogo 
+style="POSITION: absolute; TOP: 1px"></DIV>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG 
+src="mfakaz.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<body bgcolor="#FFFFFF">
+<P>&nbsp;<FONT color=#808080 face=Verdana size=1>&nbsp;&gt;&gt; Got 
+ya!</FONT></P>
+<P><FONT color=#808080 face=Verdana size=1>&nbsp; &gt;&gt; Admin please patch 
+your system !</FONT></P>
+<P><FONT color=#808080 face=Verdana size=1>&nbsp; &gt;&gt; I've e-mail u 
+earlier, but u did nothing...</FONT></P>
+<P><FONT color=#808080 face=Verdana size=1>&nbsp; &gt;&gt; I did 
+nothing&nbsp;to&nbsp;your system ( just change default page.. )</FONT></P>
+<P><FONT color=#808080 face=Verdana size=1>&nbsp; &gt;&gt; Shout out to 
+<STRONG>-</STRONG> ( Joes Angels ), <STRONG>blueskrinz </STRONG>( thanks 
+), otteck45, cerky, xeo, yiss, spiner, mohawk</FONT></P>
+<P><FONT color=#808080 face=Verdana size=1>&nbsp; &gt;&gt; Long live 
+<STRONG>Joes Angels</STRONG> ! Hail to #smtas #darulaman</FONT></P>
+<P><FONT color=#808080 face=Verdana size=1>&nbsp; &gt;&gt; Click on the logo for 
+the old default page..</FONT></P>
+<P><FONT color=#808080 face=Verdana size=1>&nbsp;</FONT></P>
+<P><FONT color=#808080 face=Verdana 
+size=1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</FONT><A href="http://target/defaced.htm"><IMG border=0 
+src="mfaka.gif"></A></P>
+<P><FONT color=#808080 face=Verdana size=1></FONT>&nbsp;</P>
+<P><FONT color=#808080 face=Verdana size=1>Written by c9 [ <A href="mailto:cn1ner@yahoo.com">cn1ner@yahoo.com</A> 
+]</FONT></P></BODY></html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

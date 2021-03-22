@@ -1,0 +1,418 @@
+<html>
+
+<head><script LANGUAGE="JavaScript">
+// set speed of banner (pause in milliseconds between addition of new character)
+var speed = 10 
+
+// decrease value to increase speed (must be positive)
+// set pause between completion of message and beginning of following message
+var pause = 3500 
+
+// increase value to increase pause
+// set initial values
+var timerID = null
+var bannerRunning = false
+
+// create array
+var ar = new Array()
+
+// assign the strings to the array's elements
+ar[0] = "Melhor se vizualizada em 800x600 com 16 bits"
+ar[1] = "ABE - Associação Brasileria de Educação"
+ar[2] = "Última atualização: 03-08-2000 1143"
+ar[3] = "" 
+// assign index of current message
+var message = 0
+
+// empty string initialization
+var state = ""
+
+// no value is currently being displayed
+clearState()
+
+// stop the banner if it is currently running
+function stopBanner() {	
+	// if banner is currently running	
+	if (bannerRunning)		
+	// stop the banner		
+	clearTimeout(timerID)	
+	// timer is now stopped	
+	timerRunning = false
+}
+
+// start the banner
+function startBanner() {	
+	// make sure the banner is stopped	
+	stopBanner()	
+	// start the banner from the current position	
+	showBanner()
+}
+
+// assign state a string of "0" characters of the length of the current message
+function clearState() {	
+	// initialize to empty string	
+	state = ""	
+	// create string of same length containing 0 digits	
+	for (var i = 0; i < ar[message].length; ++i) {		
+		state += "0"	
+	}
+}
+
+// display the current message
+function showBanner() {	
+	// if the current message is done	
+	if (getString()) {		
+		// increment message		
+		message++		
+		// if new message is out of range wrap around to first message		
+	if (ar.length <= message)			
+		message = 0		
+		// new message is first displayed as empty string		
+		clearState()		
+		// display next character after pause milliseconds		
+		timerID = setTimeout("showBanner()", pause)	
+	} 
+	else {		
+		// initialize to empty string		
+		var str = ""		
+		// built string to be displayed (only character selected thus far are displayed)		
+	for (var j = 0; j < state.length; ++j) {			
+		str += (state.charAt(j) == "1") ? ar[message].charAt(j) : "     "		
+	}		
+	// partial string is placed in status bar		
+	window.status = str		
+	// add another character after speed milliseconds		
+	timerID = setTimeout("showBanner()", speed)	
+	}
+}
+
+function getString() {	
+	// set variable to true (it will stay true unless proven otherwise)	
+	var full = true	
+	// set variable to false if a free space is found in string (a not-displayed char)	
+	for (var j = 0; j < state.length; ++j) {		
+		// if character at index j of current message has not been placed in displayed string		
+		if (state.charAt(j) == 0)			
+		full = false	
+	}	
+	// return true immediately if no space found (avoid infinitive loop later)	
+	if (full) return true	
+	// search for random until free space found (braoken up via break statement)	
+	while (1) {		
+		// a random number (between 0 and state.length - 1 == message.length - 1)		
+		var num = getRandom(ar[message].length)		
+		// if free space found break infinitive loop		
+	if (state.charAt(num) == "0")			
+		break	
+	}	
+	// replace the 0 character with 1 character at place found	
+	state = state.substring(0, num) + "1" + state.substring(num + 1, state.length)	
+	// return false because the string was not full (free space was found)	
+	return false
+}
+
+function getRandom(max) {	
+	// create instance of current date	
+	var now = new Date()		
+	// create a random number (good generator)	
+	var num = now.getTime() * now.getSeconds() * Math.random()	
+	// cut random number to value between 0 and max - 1, inclusive	
+	return num % max
+}
+// -->
+</script>
+<script Language="JavaScript">
+isamap = new Object();
+isamap[0] = "_df"
+isamap[1] = "_ov"
+isamap[2] = "_ot"
+isamap[3] = "_dn"
+
+function isimgact(id, act)
+{
+	if(document.images) document.images[id].src = eval( "isimages." + id + isamap[act] + ".src");
+}
+
+if (document.images) { // ensure browser can do JavaScript rollovers.
+isimages = new Object();
+isimages.menu15_df = new Image();
+isimages.menu15_df.src = "images/menuadministra__o.jpg";
+
+isimages.menu15_ov = new Image();
+isimages.menu15_ov.src = "images/menuadministra__oov.jpg";
+
+isimages.menu19_df = new Image();
+isimages.menu19_df.src = "images/menuhist_rico.jpg";
+
+isimages.menu19_ov = new Image();
+isimages.menu19_ov.src = "images/menuhist_ricoov.jpg";
+
+isimages.menu23_df = new Image();
+isimages.menu23_df.src = "images/menueventos.jpg";
+
+isimages.menu23_ov = new Image();
+isimages.menu23_ov.src = "images/menueventosov.jpg";
+
+isimages.menu27_df = new Image();
+isimages.menu27_df.src = "images/menurevista.jpg";
+
+isimages.menu27_ov = new Image();
+isimages.menu27_ov.src = "images/menurevistaov.jpg";
+
+isimages.menu31_df = new Image();
+isimages.menu31_df.src = "images/menulinks.jpg";
+
+isimages.menu31_ov = new Image();
+isimages.menu31_ov.src = "images/menulinksov.jpg";
+
+isimages.menu35_df = new Image();
+isimages.menu35_df.src = "images/menuwebmaster.jpg";
+
+isimages.menu35_ov = new Image();
+isimages.menu35_ov.src = "images/menuwebmasterov.jpg";
+
+}
+// end generated JavaScript. -->
+</script>
+
+<title>ABE - Associação Brasileira de Educação</title>
+</head>
+
+<body BGcolor="#FFFFFF" leftmargin="20" topmargin="0" marginheight="0" marginwidth="20"
+onLoad="startBanner()" vlink="#0000FF" alink="#0000FF">
+
+<table Border="0" CellSpacing="0" CellPadding="0">
+  <tr>
+    <td Width="363" Height="271" ColSpan="4"><table Border="0" CellSpacing="0" CellPadding="0">
+      <tr>
+        <td Width="74" Height="1"><img Src="images/menupane1_1_.jpg" Border="0" Name="menu" Alt
+        WIDTH="74" HEIGHT="1"></td>
+        <td Width="18" Height="1"><img Src="images/menupane2_1_.jpg" Border="0" Name="menu1" Alt
+        WIDTH="18" HEIGHT="1"></td>
+        <td Width="18" Height="1"><img Src="images/menupane3_1_.jpg" Border="0" Name="menu2" Alt
+        WIDTH="18" HEIGHT="1"></td>
+        <td Width="18" Height="1"><img Src="images/menupane4_1_.jpg" Border="0" Name="menu3" Alt
+        WIDTH="18" HEIGHT="1"></td>
+        <td Width="18" Height="1"><img Src="images/menupane5_1_.jpg" Border="0" Name="menu4" Alt
+        WIDTH="18" HEIGHT="1"></td>
+        <td Width="18" Height="1"><img Src="images/menupane6_1_.jpg" Border="0" Name="menu5" Alt
+        WIDTH="18" HEIGHT="1"></td>
+        <td Width="31" Height="1"><img Src="images/menupane7_1_.jpg" Border="0" Name="menu6" Alt
+        WIDTH="31" HEIGHT="1"></td>
+        <td Width="9" Height="1"><img Src="images/menupane8_1_.jpg" Border="0" Name="menu7" Alt
+        WIDTH="9" HEIGHT="1"></td>
+        <td Width="14" Height="1"><img Src="images/menupane9_1_.jpg" Border="0" Name="menu8" Alt
+        WIDTH="14" HEIGHT="1"></td>
+        <td Width="1" Height="1"><img Src="images/menupane10_1_.jpg" Border="0" Name="menu9" Alt
+        WIDTH="1" HEIGHT="1"></td>
+        <td Width="1" Height="1"><img Src="images/menupane11_1_.jpg" Border="0" Name="menu10" Alt
+        WIDTH="1" HEIGHT="1"></td>
+        <td Width="62" Height="1"><img Src="images/menupane12_1_.jpg" Border="0" Name="menu11" Alt
+        WIDTH="62" HEIGHT="1"></td>
+        <td Width="81" Height="1"><img Src="images/menupane13_1_.jpg" Border="0" Name="menu12" Alt
+        WIDTH="81" HEIGHT="1"></td>
+      </tr>
+      <tr>
+        <td Width="363" Height="35" ColSpan="13"><img Src="images/menupane1_2_.jpg" Border="0"
+        Name="menu13" Alt WIDTH="363" HEIGHT="35"></td>
+      </tr>
+      <tr>
+        <td Width="74" Height="30"><img Src="images/menupane1_3_.jpg" Border="0" Name="menu14" Alt
+        WIDTH="74" HEIGHT="30"></td>
+        <td Width="145" Height="30" ColSpan="9"><a Href="admin_menu.htm"
+        OnMouseOut="isimgact( 'menu15',0)" OnMouseOver="isimgact( 'menu15',1)"><img
+        Src="images/menuadministra__o.jpg" Border="0" Name="menu15" Alt="Administração"
+        WIDTH="145" HEIGHT="30"></a></td>
+        <td Width="144" Height="30" ColSpan="3"><img Src="images/menupane11_3_.jpg" Border="0"
+        Name="menu16" Alt WIDTH="144" HEIGHT="30"></td>
+      </tr>
+      <tr>
+        <td Width="363" Height="4" ColSpan="13"><img Src="images/menupane1_4_.jpg" Border="0"
+        Name="menu17" Alt WIDTH="363" HEIGHT="4"></td>
+      </tr>
+      <tr>
+        <td Width="92" Height="30" ColSpan="2"><img Src="images/menupane1_5_.jpg" Border="0"
+        Name="menu18" Alt WIDTH="92" HEIGHT="30"></td>
+        <td Width="103" Height="30" ColSpan="5"><a Href="obra_menu.htm"
+        OnMouseOut="isimgact( 'menu19',0)" OnMouseOver="isimgact( 'menu19',1)"><img
+        Src="images/menuhist_rico.jpg" Border="0" Name="menu19" Alt="Histórico" WIDTH="103"
+        HEIGHT="30"></a></td>
+        <td Width="168" Height="30" ColSpan="6"><img Src="images/menupane8_5_.jpg" Border="0"
+        Name="menu20" Alt WIDTH="168" HEIGHT="30"></td>
+      </tr>
+      <tr>
+        <td Width="363" Height="4" ColSpan="13"><img Src="images/menupane1_6_.jpg" Border="0"
+        Name="menu21" Alt WIDTH="363" HEIGHT="4"></td>
+      </tr>
+      <tr>
+        <td Width="110" Height="30" ColSpan="3"><img Src="images/menupane1_7_.jpg" Border="0"
+        Name="menu22" Alt WIDTH="110" HEIGHT="30"></td>
+        <td Width="94" Height="30" ColSpan="5"><a href="seminario_menu.htm"
+        OnMouseOut="isimgact( 'menu23',0)" OnMouseOver="isimgact( 'menu23',1)"><img
+        Src="images/menueventos.jpg" Border="0" Name="menu23" Alt="Eventos" WIDTH="94" HEIGHT="30"></a></td>
+        <td Width="159" Height="30" ColSpan="5"><img Src="images/menupane9_7_.jpg" Border="0"
+        Name="menu24" Alt WIDTH="159" HEIGHT="30"></td>
+      </tr>
+      <tr>
+        <td Width="363" Height="4" ColSpan="13"><img Src="images/menupane1_8_.jpg" Border="0"
+        Name="menu25" Alt WIDTH="363" HEIGHT="4"></td>
+      </tr>
+      <tr>
+        <td Width="128" Height="30" ColSpan="4"><img Src="images/menupane1_9_.jpg" Border="0"
+        Name="menu26" Alt WIDTH="128" HEIGHT="30"></td>
+        <td Width="90" Height="30" ColSpan="5"><a Href="revistas_menu_102.htm"
+        OnMouseOut="isimgact( 'menu27',0)" OnMouseOver="isimgact( 'menu27',1)"><img
+        Src="images/menurevista.jpg" Border="0" Name="menu27" Alt="Revista" WIDTH="90" HEIGHT="30"></a></td>
+        <td Width="145" Height="30" ColSpan="4"><img Src="images/menupane10_9_.jpg" Border="0"
+        Name="menu28" Alt WIDTH="145" HEIGHT="30"></td>
+      </tr>
+      <tr>
+        <td Width="363" Height="2" ColSpan="13"><img Src="images/menupane1_10_.jpg" Border="0"
+        Name="menu29" Alt WIDTH="363" HEIGHT="2"></td>
+      </tr>
+      <tr>
+        <td Width="146" Height="30" ColSpan="5"><img Src="images/menupane1_11_.jpg" Border="0"
+        Name="menu30" Alt WIDTH="146" HEIGHT="30"></td>
+        <td Width="74" Height="30" ColSpan="6"><a Href="links_menu.htm"
+        OnMouseOut="isimgact( 'menu31',0)" OnMouseOver="isimgact( 'menu31',1)"><img
+        Src="images/menulinks.jpg" Border="0" Name="menu31" Alt="Links" WIDTH="74" HEIGHT="30"></a></td>
+        <td Width="143" Height="30" ColSpan="2"><img Src="images/menupane12_11_.jpg" Border="0"
+        Name="menu32" Alt WIDTH="143" HEIGHT="30"></td>
+      </tr>
+      <tr>
+        <td Width="363" Height="2" ColSpan="13"><img Src="images/menupane1_12_.jpg" Border="0"
+        Name="menu33" Alt WIDTH="363" HEIGHT="2"></td>
+      </tr>
+      <tr>
+        <td Width="164" Height="30" ColSpan="6"><img Src="images/menupane1_13_.jpg" Border="0"
+        Name="menu34" Alt WIDTH="164" HEIGHT="30"></td>
+        <td Width="118" Height="30" ColSpan="6"><a Href="mailto:webmaster@abe1924.org.br"
+        OnMouseOut="isimgact( 'menu35',0)" OnMouseOver="isimgact( 'menu35',1)"><img
+        Src="images/menuwebmaster.jpg" Border="0" Name="menu35" Alt="Fale Conosco" WIDTH="118"
+        HEIGHT="30"></a></td>
+        <td Width="81" Height="30"><img Src="images/menupane13_13_.jpg" Border="0" Name="menu36"
+        Alt WIDTH="81" HEIGHT="30"></td>
+      </tr>
+      <tr>
+        <td Width="363" Height="39" ColSpan="13"><img Src="images/menupane1_14_.jpg" Border="0"
+        Name="menu37" Alt WIDTH="363" HEIGHT="39"></td>
+      </tr>
+    </table>
+    </td>
+    <td Width="370" Height="343" RowSpan="2" ColSpan="5"><img Src="images/menuimage.jpg"
+    Border="0" Name="menu38" Alt="Associação Brasileira de Educação - Fundada em 1924"
+    WIDTH="370" HEIGHT="343"></td>
+  </tr>
+  <tr>
+    <td Width="67" Height="171" RowSpan="7"><img Src="images/menuimage1.jpg" Border="0"
+    Name="menu39" Alt WIDTH="67" HEIGHT="171"></td>
+    <td Width="5" Height="72"></td>
+    <td Width="289" Height="162" RowSpan="6"><p align="center">&nbsp; 
+    <applet code="CreditRoll.class" align="baseline" width="286" height="117"
+    style="font-size: 2pt">
+      <param name="BGCOLOR" value="FFFFFF">
+      <param name="FADEZONE" value="30">
+      <param name="FONTSIZE" value="17">
+      <param name="REPEAT" value="yes">
+      <param name="SPEED" value="35">
+      <param name="TEXT1" value="PLANO NACIONAL DE EDUCAÇÃO">
+      <param name="TEXT10" value="LOCAL: CENTRO DE CONVENÇÕES">
+      <param name="TEXT11" value="HOTEL GLÓRIA">
+      <param name="TEXT12" value="(Rio de Janeiro)">
+      <param name="TEXT13">
+      <param name="TEXT14" value="VEJA EM EVENTOS">
+      <param name="TEXT2" value="(Lei nº 10.172 de 09 /01/01)">
+      <param name="TEXT3">
+      <param name="TEXT4" value="SEMINÁRIO">
+      <param name="TEXT5">
+      <param name="TEXT6" value="P A R A ">
+      <param name="TEXT7" value="DIVULGA-LO, EXPLICA-LO ">
+      <param name="TEXT8" value="DEBATÊ-LO">
+      <param name="TEXT9" value="DIAS: 09 e 10 DE OUTUBRO / 2001">
+      <param name="TEXTCOLOR" value="000000">
+      <param name="URL" value="congresso_menu.htm">
+      <param name="VSPACE" value="3">
+    </applet>
+    </td>
+    <td Width="2" Height="72"></td>
+  </tr>
+  <tr>
+    <td Width="5" Height="60"></td>
+    <td Width="2" Height="60"></td>
+    <td Width="18" Height="60"></td>
+    <td Width="77" Height="60"></td>
+    <td Width="146" Height="60"><p align="center"><small><font color="#000000"><small>Você é
+    o visitante n.º</small></font></small>&nbsp; <br>
+<!-- Start of TheCounter.com Code -->    <script TYPE="text/javascript" LANGUAGE="javascript">
+s="na";c="na";j="na";f=""+escape(document.referrer)
+</script> <script
+    TYPE="text/javascript" LANGUAGE="javascript1.2">
+s=screen.width;v=navigator.appName
+if (v != "Netscape") {c=screen.colorDepth}
+else {c=screen.pixelDepth}
+j=navigator.javaEnabled()
+</script> <script TYPE="text/javascript"
+    LANGUAGE="javascript">
+function pr(n) {document.write(n,"\n");}
+NS2Ch=0
+if (navigator.appName == "Netscape" &&
+navigator.appVersion.charAt(0) == "2") {NS2Ch=1}
+if (NS2Ch == 0) {
+r="&size="+s+"&colors="+c+"&referer="+f+"&java="+j+""
+pr("<A HREF=\"http://www.TheCounter.com\" TARGET=\"_top\"><IMG"+
+" BORDER=0 SRC=\"http://c2.thecounter.com/id=1075146"+r+"\"><\/A>")}
+</script> <noscript><a HREF="http://www.TheCounter.com" TARGET="_top"><img
+    SRC="http://c2.thecounter.com/id=1075146" ALT="Seja bem vindo!!!" BORDER="0"></a> </noscript> <!-- End of TheCounter.com Code --></td>
+    <td Width="77" Height="60"></td>
+    <td Width="52" Height="60"></td>
+  </tr>
+  <tr>
+    <td Width="5" Height="13"></td>
+    <td Width="2" Height="13"></td>
+    <td Width="18" Height="13"></td>
+    <td Width="300" Height="13" ColSpan="3"><p align="center"><a href="mailto:alparbr@ibm.net"><img
+    src="images/menupowered_by_alparbr___co.jpg" alt border="0" WIDTH="257" HEIGHT="13"></a></td>
+    <td Width="52" Height="13"></td>
+  </tr>
+  <tr>
+    <td Width="5" Height="1"></td>
+    <td Width="2" Height="1"></td>
+    <td Width="18" Height="1"></td>
+    <td Width="77" Height="1"></td>
+    <td Width="146" Height="1"></td>
+    <td Width="77" Height="1"></td>
+    <td Width="52" Height="1"></td>
+  </tr>
+  <tr>
+    <td Width="5" Height="13"></td>
+    <td Width="2" Height="13"></td>
+    <td Width="18" Height="13"></td>
+    <td Width="77" Height="13"></td>
+    <td Width="146" Height="13"><a href="mailto:webmaster@abe1924.org.br"><img
+    Src="images/menuwebmaster_abe1924_org_b.jpg" Border="0" Name="menu42"
+    Alt="E-mail de contato do WebMaster." WIDTH="146" HEIGHT="13"></a></td>
+    <td Width="77" Height="13"></td>
+    <td Width="52" Height="13"></td>
+  </tr>
+  <tr>
+    <td Width="5" Height="3"></td>
+    <td Width="2" Height="3"></td>
+    <td Width="18" Height="3"></td>
+    <td Width="77" Height="3"></td>
+    <td Width="146" Height="3"></td>
+    <td Width="77" Height="3"></td>
+    <td Width="52" Height="3"></td>
+  </tr>
+  <tr>
+    <td Width="5" Height="9"></td>
+    <td Width="289" Height="9"></td>
+    <td Width="2" Height="9"></td>
+    <td Width="18" Height="9"></td>
+    <td Width="77" Height="9"></td>
+    <td Width="146" Height="9"></td>
+    <td Width="77" Height="9"></td>
+    <td Width="52" Height="9"></td>
+  </tr>
+</table>
+</body>
+</html>

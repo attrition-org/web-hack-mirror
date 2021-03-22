@@ -1,0 +1,150 @@
+<HTML><HEAD><TITLE>:: GForce :: Yeh Undar Ki Baat Hai </TITLE>
+<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+<META content="GForce Pakistan" name=Author>
+<META content="GForce Arts." name=GENERATOR>
+<SCRIPT><!--
+var x,y
+var step=20
+var flag=1
+
+var message="GForce Pakistan."
+message=message.split("")
+
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	xpos[i]=-50
+}
+
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	ypos[i]=-50
+}
+
+function handlerMM(e){
+	x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+	y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+	flag=1
+}
+
+function makesnake() {
+	if (flag==1 && document.all) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("span"+(i)+".style")
+    		thisspan.posLeft=xpos[i]
+			thisspan.posTop=ypos[i]
+    	}
+	}
+	
+	else if (flag==1 && document.layers) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("document.span"+i)
+    		thisspan.left=xpos[i]
+			thisspan.top=ypos[i]
+    	}
+	}
+		var timer=setTimeout("makesnake()",30)
+}
+// -->
+		</SCRIPT>
+
+<STYLE type=text/css>.format {
+	TEXT-ALIGN: justify; font-face: Arial, Helvetica, Sans-Serif; size: 10pt
+}
+.spanstyle {
+	COLOR: blue; FONT-FAMILY: Trebuchet MS, Verdana; FONT-SIZE: 10pt; FONT-WEIGHT: bold; POSITION: absolute; TOP: -50px; VISIBILITY: visible
+}
+</STYLE>
+</HEAD>
+<BODY aLink=#66FF00 bgColor=#333333 link=#CCFFFF onload=makesnake() text=#FFFFFF 
+vLink=#CCCCCC tracingsrc="http://www9.50megs.com/gforce/" tracingopacity="100">
+<DL> 
+  <DIV align=center> 
+    <CENTER>
+      <p>&nbsp;</p>
+      <table cellspacing=0 border=0 width=593 height="316">
+        <tr> 
+          <td valign="TOP" bgcolor="#000000" height=492> 
+            <p>.</p>
+            <blockquote> 
+              <blockquote> 
+                <blockquote> 
+                  <blockquote> 
+                    <blockquote> 
+                      <blockquote> 
+                        <blockquote> 
+                          <p> <font color="#FFFFFF"><i><b><font size="2">GFORCE</font></b></i></font> 
+                          </p>
+                        </blockquote>
+                      </blockquote>
+                    </blockquote>
+                  </blockquote>
+                </blockquote>
+              </blockquote>
+            </blockquote>
+            <p>Free Kashmir.</p>
+            <p>World Domination</p>
+            <p><font face="Verdana" size="1" color="#FFFFFF">Greets to : PHC #flem 
+              XPERiENCE crew, Attrition.org,</font><font size="1" color="#FFFFFF"> 
+              safemode.org </font><font face="Verdana" size="1" color="#FFFFFF">Projectgamma.com, 
+              hackernews.com, packetstorm.securify.org, self-evident.com,</font> 
+              <font face="Verdana" size="1" color="#FFFFFF">rest of #!GFORCE and 
+              Freedom fighters of Kashmir (the mujhaideens), safemode.org,.hexa 
+              labs.MAN|AC, Peacemaker, msgmen0t, aekpani, , DEATHaCES, DEADgH0sT, 
+              cen, RR, symetrixx, , root66, Sysop, justagirl dayzee ,blueberry 
+              ,apathy13, antipent, Jaguar ,BigPoppa, PoWerPr0, bo-k-rra, core, 
+              bs, live, none(leviatan),&nbsp; cruciphux, SugarKing espionage, 
+              defcon, melt, slader, lyp0x, xessor, max0r, wrLiner, DA^BOMB, #rootworrm, 
+              axess, hwa-security, !b0f, all peeps at flem, rsh, f0rpaxe, Ursel 
+              ,Earizer ,stella, divine, isn, c65.org, incubus, oreo and who ever 
+              we've missed</font> </p>
+            <p><font color="#FFFFFF"><a href="http://www9.50megs.com/gforce/mirror.htm"><b><font size="3">| 
+              Previous work</font></b></a><b><font size="3"> | </font><font face="Book Antiqua" size="3"> 
+              <a 
+href="mailto:g-force@nightmail.com">Contact</a> |</font></b></font></p>
+          </td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+    </CENTER>
+  </DIV>
+</DL>
+<P></P>
+<DIV align=center> 
+  <CENTER>
+  </CENTER>
+</DIV>
+<P align=center>&nbsp;</P>
+<SCRIPT>
+<!--
+for (i=0;i<=message.length-1;i++) {
+    document.write("<span id='span"+i+"' class='spanstyle'>")
+	document.write(message[i])
+    document.write("</span>")
+}
+
+if (document.layers){
+	document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+// -->
+		</SCRIPT>
+<blockquote>
+  <blockquote>&nbsp; </blockquote>
+</blockquote>
+</BODY></HTML>
+<!-- www.attrition.org web hack mirror - watermark or something -->

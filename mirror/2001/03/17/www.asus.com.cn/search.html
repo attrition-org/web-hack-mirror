@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>Search the ASUS Web</title>
+</head>
+
+<body bgcolor="ffffff" vlink="0000ff">
+
+<p align="left">
+<table>
+<tr>
+   <td align="left">
+	<table border="0" cellpadding="0" cellspacing="0">
+    	<tr>
+        <td align="right" valign="top"><a href="/index.html"><img src="/Image/logo-title.gif" border="0" WIDTH="94" HEIGHT="25"></a></td>
+        <td valign="bottom"><a href="/Company/index.html"><img src="/Image/icon-company.gif" border="0" WIDTH="100" HEIGHT="25"></a><a href="/Products/index.html"><img src="/Image/icon-product.gif" border="0" WIDTH="85" HEIGHT="25"></a><a href="search.html"><img src="/Image/icon-search.gif" border="0" WIDTH="80" HEIGHT="25"></a><a href="/Company/support.html"><img src="/Image/icon-support.gif" border="0" WIDTH="85" HEIGHT="25"></a><a href="/Whatsnew/index.html"><img src="/Image/icon-news.gif" border="0" WIDTH="90" HEIGHT="25"></a><a href="/index.html"><img src="/Image/icon-home.gif" border="0" WIDTH="80" HEIGHT="25"></a></td>
+    	</tr>
+	</table>
+   </td>
+</tr>
+<tr>
+<td valign="top" width="650"><table border="0" cellpadding="0" cellspacing="0" width="650">
+                    <tr>
+                        <td align="right" valign="top" width="170"><img src="/Image/search_title.jpg" WIDTH="170" HEIGHT="40"></td>
+                        <td valign="bottom" width="480" bgcolor="#000000"><img src="/Image/ad.gif"></td>
+                    </tr>
+                </table>
+</td>
+</tr>
+</table>
+<table width="100%" cellpadding="3" border="0" cellspacing="3">
+<tr><td>
+<br>
+</form>
+<form ACTION="/scripts/samples/search/query.idq" METHOD="GET">
+<input TYPE="HIDDEN" NAME="CiMaxRecordsPerPage" VALUE="10">
+<input TYPE="HIDDEN" NAME="CiScope" VALUE="/">
+<input TYPE="HIDDEN" NAME="TemplateName" VALUE="query">
+<input TYPE="HIDDEN" NAME="CiSort" VALUE="rank[d],write[d]">
+<input TYPE="HIDDEN" NAME="HTMLQueryForm" VALUE="/search.html">
+<input TYPE="HIDDEN" NAME="CiLocale" VALUE="EN-US">
+This is a searchable index of ASUS WWW Server.<br>
+You can use keyword(s) with AND, OR, NEAR and AND NOT to form the query 
+<a HREF="ixtiphlp.htm">(see tips)</a>.<br>
+Enter keyword(s): <input TYPE="TEXT" NAME="CiRestriction" SIZE="30" VALUE>
+<input type="submit" value=" Search "> <input type="reset" value=" Reset ">
+<p>
+<b>Where to Search:</b></font>
+<table border=0 cellspacing=0 cellpadding=0>
+<tr><td colspan=2><input type=radio name=CiTemp checked value="! (#vpath \China\* | #vpath \Chinese\* | #vpath \Products\NEWS\* | #vpath \SupportNews\*)">ASUS Web Pages</td></tr>
+<tr><td colspan=2><input type=radio name=CiTemp value=" #vpath \SupportNews\english\*">ASUS Technical Support Newsgroups (All Products)</td></tr>
+<tr><td width=20>&nbsp;</td><td><input type=radio name=CiTemp value=" #vpath \SupportNews\english\mainboard\*">Mainboard
+<input type=radio name=CiTemp value=" #vpath \SupportNews\english\multimedia\*">Multimedia
+<input type=radio name=CiTemp value=" #vpath \SupportNews\english\notebook\*">Notebook
+<input type=radio name=CiTemp value=" #vpath \SupportNews\english\server\*">Server Only</td></tr>
+<tr><td colspan=2><input type=radio name=CiTemp value=" #vpath \Products\NEWS\*">ASUS Internet Newsgroup (alt.comp.periphs.mainboard.asus)</td></tr>
+</table>
+</form>
+</td></tr>
+</table>
+<hr>
+
+<address>
+<font size="-1"><a HREF="Company/copyright.html">Copyright</a> (C) ASUSTeK COMPUTER INC. All Rights Reserved.</font>
+</address>
+<font size="-2"><i>Last-Madified: 01/30/97</i></font>
+
+</body>
+</html>

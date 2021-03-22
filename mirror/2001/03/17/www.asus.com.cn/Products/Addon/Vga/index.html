@@ -1,0 +1,415 @@
+<html>
+
+<head><script LANGUAGE="JavaScript">
+<!--
+var ready = false; 
+var imageDB = new Array();
+var imagepath = "Images/Menu/";
+
+function getImages() {
+  	if (document.images){
+   		
+		imageDB['home']=new Array();
+		imageDB['home']['off'] = new Image(100,16); 	
+		imageDB['home']['off'].src=imagepath +  "multimedia.gif";
+	   	imageDB['home']['on'] = new Image(100,16); 		
+		imageDB['home']['on'].src=imagepath + "multimedia-1.gif";
+
+		imageDB['enthusiast']=new Array();
+		imageDB['enthusiast']['off'] = new Image(100,16); 	
+		imageDB['enthusiast']['off'].src=imagepath + "enthusiast.gif";
+	   	imageDB['enthusiast']['on'] = new Image(100,16); 	
+		imageDB['enthusiast']['on'].src=imagepath + "enthusiast-1.gif";
+
+		imageDB['performance']=new Array();
+		imageDB['performance']['off'] = new Image(100,16); 	
+		imageDB['performance']['off'].src=imagepath + "performance.gif";
+	   	imageDB['performance']['on'] = new Image(100,16); 		
+		imageDB['performance']['on'].src=imagepath + "performance-1.gif";
+
+		imageDB['basic']=new Array();
+		imageDB['basic']['off'] = new Image(100,16); 	
+		imageDB['basic']['off'].src=imagepath + "basic.gif";
+	   	imageDB['basic']['on'] = new Image(100,16); 	
+		imageDB['basic']['on'].src=imagepath + "basic-1.gif";
+
+		imageDB['archives']=new Array();
+		imageDB['archives']['off'] = new Image(100,16); 	
+		imageDB['archives']['off'].src=imagepath + "archives.gif";
+	   	imageDB['archives']['on'] = new Image(100,16); 	
+		imageDB['archives']['on'].src=imagepath + "archives-1.gif";
+
+		imageDB['cdrom']=new Array();
+		imageDB['cdrom']['off'] = new Image(100,16); 	
+		imageDB['cdrom']['off'].src=imagepath + "cdrom.gif";
+	   	imageDB['cdrom']['on'] = new Image(100,16); 	
+		imageDB['cdrom']['on'].src=imagepath + "cdrom-1.gif";
+
+		imageDB['award']=new Array();
+		imageDB['award']['off'] = new Image(100,16); 		
+		imageDB['award']['off'].src=imagepath + "award.gif";
+	   	imageDB['award']['on'] = new Image(100,16); 		
+		imageDB['award']['on'].src=imagepath + "award-1.gif";
+
+		imageDB['driver']=new Array();
+		imageDB['driver']['off'] = new Image(100,16); 		
+		imageDB['driver']['off'].src=imagepath + "driver.gif";
+	   	imageDB['driver']['on'] = new Image(100,16); 		
+		imageDB['driver']['on'].src=imagepath + "driver-1.gif";
+
+		imageDB['manual']=new Array();
+		imageDB['manual']['off'] = new Image(100,16); 		
+		imageDB['manual']['off'].src=imagepath + "manual.gif";
+	   	imageDB['manual']['on'] = new Image(100,16); 		
+		imageDB['manual']['on'].src=imagepath + "manual-1.gif";
+
+		imageDB['techref']=new Array();
+		imageDB['techref']['off'] = new Image(100,16); 		
+		imageDB['techref']['off'].src=imagepath + "techref.gif";
+	   	imageDB['techref']['on'] = new Image(100,16); 		
+		imageDB['techref']['on'].src=imagepath + "techref-1.gif";
+		ready = true;
+  	}
+};
+
+function gethlight(_sect){
+   if (ready) document.images[_sect].src=imageDB[_sect]['on'].src;
+   return true;
+};
+
+function offlight(_sect){
+   if (ready) document.images[_sect].src=imageDB[_sect]['off'].src;
+   return true;
+}; 
+// -->
+</script>
+
+<title>ASUS Multimedia Home</title>
+</head>
+
+<body vlink="#0000FF" onLoad="getImages();">
+
+<table border="0" width="660" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100%"><a href="../../../index.html"><img src="../../../image/logo-title.gif"
+    border="0" width="94" height="25"></a><a href="/Company/index.html"><img
+    src="../../../image/icon-company.gif" border="0" width="100" height="25"></a><a
+    href="/Products/index.html"><img src="../../../image/icon-product.gif" border="0"
+    width="85" height="25"></a><a href="../../../search.html"><img
+    src="../../../image/icon-search.gif" border="0" width="80" height="25"></a><a
+    href="/Company/support.html"><img src="../../../image/icon-support.gif" border="0"
+    width="85" height="25"></a><a href="/Whatsnew/index.html"><img
+    src="../../../image/icon-news.gif" border="0" width="90" height="25"></a><a
+    href="/index.html"><img src="../../../image/icon-home.gif" border="0" width="80"
+    height="25"></a></td>
+  </tr>
+</table>
+
+<table border="0" width="645" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100" valign="top" align="left" background="middle.gif"><table border="0"
+    width="100%" align="left" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="100%"><img src="Images/Menu/top.gif" width="99" height="5"></td>
+      </tr>
+      <tr>
+        <td width="100%"><img src="Images/multimedia-1.gif" width="100" height="16"></td>
+      </tr>
+      <tr>
+        <td width="100%"><img src="middle.gif" width="100" height="5" border="0"></td>
+      </tr>
+      <tr>
+        <td width="100%"><a href="enthusiast.html" onMouseOver="return gethlight('enthusiast');"
+        onMouseOut="return offlight('enthusiast');"><img name="enthusiast"
+        src="Images/Menu/enthusiast.gif" border="0" width="100" height="16"></a></td>
+      </tr>
+      <tr>
+        <td width="100%"><img src="middle.gif" width="100" height="5"></td>
+      </tr>
+      <tr>
+        <td width="100%"><a onMouseOver="return gethlight('performance');"
+        onMouseOut="return offlight('performance');" href="performance.html"><img
+        name="performance" src="Images/Menu/performance.gif" border="0" width="100" height="16"></a></td>
+      </tr>
+      <tr>
+        <td width="100%"><img src="middle.gif" width="100" height="5"></td>
+      </tr>
+      <tr>
+        <td width="100%"><a href="basic.html" onMouseOver="return gethlight('basic');"
+        onMouseOut="return offlight('basic');"><img name="basic" src="Images/Menu/basic.gif"
+        border="0" width="100" height="16"></a></td>
+      </tr>
+      <tr>
+        <td width="100%"><img src="middle.gif" width="100" height="5"></td>
+      </tr>
+      <tr>
+        <td width="100%"><a href="archives.html" onMouseOver="return gethlight('archives');"
+        onMouseOut="return offlight('archives');"><img name="archives"
+        src="Images/Menu/archives.gif" border="0" width="100" height="16"></a></td>
+      </tr>
+      <tr>
+        <td width="100%"><img src="middle.gif" width="100" height="5"></td>
+      </tr>
+      <tr>
+        <td width="100%"><a href="cdrom.html" onMouseOver="return gethlight('cdrom');"
+        onMouseOut="return offlight('cdrom');"><img name="cdrom" src="Images/Menu/cdrom.gif"
+        width="100" height="16" border="0"></a></td>
+      </tr>
+      <tr>
+        <td width="100%"><img src="between.gif" width="100" height="10"></td>
+      </tr>
+      <tr>
+        <td width="100%"><a href="award.html" onMouseOver="return gethlight('award');"
+        onMouseOut="return offlight('award');"><img name="award" src="Images/Menu/award.gif"
+        width="100" height="16" border="0"></a></td>
+      </tr>
+      <tr>
+        <td width="100%"><img src="between.gif" width="100" height="10"></td>
+      </tr>
+      <tr>
+        <td width="100%"><a href="asuse/predrivere.htm" onMouseOver="return gethlight('driver');"
+        onMouseOut="return offlight('driver');"><img name="driver" src="Images/Menu/driver.gif"
+        width="100" height="16" border="0"></a></td>
+      </tr>
+      <tr>
+        <td width="100%"><img src="middle.gif" width="100" height="5"></td>
+      </tr>
+      <tr>
+        <td width="100%"><a href="manual.html" onMouseOver="return gethlight('manual');"
+        onMouseOut="return offlight('manual');"><img name="manual" src="Images/Menu/manual.gif"
+        width="100" height="16" border="0"></a></td>
+      </tr>
+      <tr>
+        <td width="100%"><img src="middle.gif" width="100" height="5"></td>
+      </tr>
+      <tr>
+        <td width="100%"><a href="ref.html"
+        onMouseOver="return gethlight('techref');" onMouseOut="return offlight('techref');"><img
+        name="techref" src="Images/Menu/techref.gif" border="0" width="100" height="16"></a></td>
+      </tr>
+      <tr>
+        <td width="100%"><img src="middle.gif" width="100" height="5"></td>
+      </tr>
+      <tr>
+        <td width="100%"><img src="middle.gif" width="100" height="5"></td>
+      </tr>
+     <tr> 
+        <td width="100%"><font face="Arial" size="2" color="#ffff00"><strong>
+        <a href="http://www.ecolor.com/extra/asustek/pwi.html" target="ecolor"><img src="Images/Menu/e-color.jpg" 
+        width="83" height="33" alt="E-Color" border="0" hspace="2"></a></strong></font></td>
+     </tr>
+    </table>
+    </td>
+    <td width="390" valign="top" align="center" rowspan="2"><img src="Images/ad.gif"
+    width="370" height="143"><table border="0" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="100%" bgcolor="#FFFFFF"><font face="Arial" size="2" color="#FFFF00"><strong><img
+        src="clear.gif" width="2" height="2"></strong></font></td>
+      </tr>
+      <tr>
+        <td width="100%" bgcolor="#FFFFFF"><img src="Images/pnew.gif" width="385" height="25"><img
+        src="clear.gif" width="3" height="3"></td>
+      </tr>
+      <tr>
+        <td width="100%" bgcolor="#FFFFFF"><img src="clear.gif" width="5" height="5"></td>
+      </tr>
+    </table>
+    <table border="0" width="100%" cellspacing="1">
+   <tr>
+        <td width="100" valign="top" align="left"><a href="agpv7700d/index.html"><img src="v7700d.jpg" border="1"></a></td>
+        <td valign="top" align="left"><font face="Arial" size="2"><a href="agpv7700d/index.html"><strong>AGP-V7700 GeForce2 GTS Deluxe
+        </strong>
+        </a><br>
+        ASUS AGP-V7700 GeForce2 GTS Deluxe now bundled with <a href="soldiers.jpg">Soldier of Fortune</a> and 
+        <a href="snowman.jpg">3Deep</a>, <a href="../../../whatsnew/whatsnew2001.html#videosec">
+        VideoSecurity</a>, <a href="/whatsnew/whatsnew9911.html">SmartDoctor<sup>TM</sup></a> and 3D Glasses.
+        </font></td>
+      </tr>
+      <tr>
+        <td width="100" valign="top" colspan="2" align="left"><img src="clear.gif" width="2"
+        height="2"></td>
+      </tr>
+   <tr>
+        <td width="100" valign="top" align="left"><a href="agpv7100/index.html"><img 
+        src="v7100.jpg" width="94" border="1"></a></td>
+        <td valign="top" align="left"><font face="Arial" size="2"><a
+        href="agpv7100/index.html"><strong>ASUS AGP-V7100 GeForce2 MX Series</strong></a><br>
+        ASUS AGP-V7100 Series now features TwinView<sup>TM</sup> and Digital Vibrance Control for 
+        simultaneous/independent dual TV display. <a href="7100t.jpg" border="0">TV-Out</a> and <a href="7100dvi.jpg" border="0">DVI</a> 
+        models are now available.</font></td>
+      </tr>
+      <tr>
+        <td width="100" valign="top" colspan="2" align="left"><img src="clear.gif" width="2"
+        height="2"></td>
+      </tr>
+   <tr>
+        <td width="100" valign="top" align="left"><a href="agpv6800d/index.html"><img src="v6800.jpg" border="1"></a></td>
+        <td valign="top" align="left"><font face="Arial" size="2"><a href="agpv6800d/index.html"><strong>AGP-V6800 GeForce256 
+        DDR Deluxe</strong>
+        </a><br>
+        ASUS AGP-V6800 DDR Deluxe now bundled with Drakan, Rollcage and 12 3D games with 3D Glasses, 
+        ASUSDVD S/W with TV/Video Capturing functionality, <a href="../../../whatsnew/whatsnew2001.html#videosec">
+        VideoSecurity</a>, <a href="/whatsnew/whatsnew9911.html">SmartDoctor<sup>TM</sup></a>, 
+        <a href="http://www.ulead.com/vs/runme.htm">Ulead<sup>&reg;</sup> VideoStudio</a>; etc.</font></td>
+      </tr>
+      <tr>
+        <td width="100" valign="top" colspan="2" align="left"><img src="clear.gif" width="2"
+        height="2"></td>
+      </tr>
+      
+      <tr>
+        <td width="100" valign="top" align="left"><a href="agpv6600d/index.html"><img src="v6600d.jpg" border="1" width="95"></a></td>
+        <td valign="top" align="left"><font face="Arial" size="2"><a href="agpv6600d/index.html"><strong>AGP-V6600 GeForce 256 Deluxe</strong>
+        </a><br>
+        ASUS AGP-V6600 Deluxe now bundled with 3D Glasses, ASUSDVD Software, Inbuit TV-out and Video-in functionality,
+        <a href="/whatsnew/whatsnew9911.html">SmartDoctor<sup>TM</sup> technologies</a>, 
+        <a href="http://www.ulead.com/vs/runme.htm">Ulead<sup>&reg;</sup> VideoStudio</a> MPEG/II Encoder and 3D Game CDs.</font></td>
+      </tr>
+      <tr>
+        <td width="100" valign="top" colspan="2" align="left"><img src="clear.gif" width="2"
+        height="2"></td>
+      </tr>
+    <!---------- 
+     <tr>
+        <td width="100" valign="top" align="left"><a href="agpv6600/index.html"><img src="v6600.jpg" border="1"></a></td>
+        <td valign="top" align="left"><font face="Arial" size="2"><a href="agpv6600/index.html"><strong>AGP-V6600 GeForce 256 Pure</strong>
+        </a><br>
+        ASUS AGP-V6600 series use Nvidia GeForce 256<sup>TM</sup> GPU technology and supports OpenGL.</font></td>
+      </tr>
+      <tr>
+        <td width="100" valign="top" colspan="2" align="left"><img src="clear.gif" width="2"
+        height="2"></td>
+      </tr>
+     <tr>
+        <td width="100" valign="top" align="left"><a href="pci-v3800/index.html"><img src="pci-v3800/pci3800s2.gif" 
+        border="0"></a></td>
+        <td valign="top" align="left"><font face="Arial" size="2"><a href="pci-v3800/index.html"><strong>PCI-V3800</strong>
+        </a><br>
+        ASUS PCI-V3800 series is really the best PCI TNT2 card that equipped with all the features of
+        an AGP-V3800 on a non-AGP motherboard.</font></td>
+      </tr>
+      <tr>
+        <td width="100" valign="top" colspan="2" align="left"><img src="clear.gif" width="2"
+        height="2"></td>
+      </tr>
+        <tr>
+        <td width="100" valign="top" align="left"><a href="Agpv3800/index.html"><img src="Images/p4.gif" border=0></a></td> 
+        <td valign="top" align="left"><a href="Agpv3800/index.html"><strong><font
+        face="Arial, Helvetica" size="2">AGP-V3800</a> / <a href="pci-v3800/index.html">PCI-V3800</a></font></strong>
+        <font face="Arial" size="2"><br>
+        </font><font face="Arial, Helvetica" size="2">ASUS AGP-V3800/PCI-V3800 is the best TNT2 card to 
+        provide you with complete 3D gaming, video editing and other needs. </font></td>
+      </tr>
+      <tr>
+        <td width="100" valign="top" align="left" colspan="2"><img src="clear.gif" width="2"
+        height="2"></td>
+      </tr>//------------>
+ 
+      <tr>
+        <td width="100" valign="top" align="left"><a href="/Products/cdrom/index.html"><img 
+        src="dvdrom.jpg" width="100" border="1"></a></td>
+        <td valign="top" align="left"><font face="Arial" size="2"><a
+        href="/Products/cdrom/index.html"><strong>ASUS 8X DVD-ROM</strong></a><br>
+        The ASUS 8X DVD-ROM offers 10,800 KB/sec with various speed changes.</font></td>
+      </tr>
+        
+    </table>
+    </td>
+    <td width="5" valign="top" align="left" rowspan="2"><img src="clear.gif" width="5"
+    height="5"></td>
+    <td width="150" valign="top" align="left" rowspan="2"><img src="Images/tech.gif"
+    ><table border="0" width="100%" cellspacing="1">
+      <tr>
+        <td width="100%" bgcolor="#EBF5D3"><a
+        href="/Products/Techref/Faq/mbmm/mm20003.html"><font face="Arial, Helvetica"
+        color="#0000FF" size="2"><strong>Latest Multimedia Product FAQs</strong>
+        </font></a><img src="/products/motherboard/images/pnew.gif" width="28" height="12" alt="pnew.gif"> </td>
+      </tr>
+      
+      <tr>
+        <td width="100%" bgcolor="#EBF5D3"><a
+        href="/Products/Techref/Tech-report/mthvgaqa.html"><font face="Arial, Helvetica"
+        color="#0000FF" size="2"><strong>September Multimedia Product Column</strong>
+        </font></a><img src="/products/motherboard/images/pnew.gif" width="28" height="12" alt="pnew.gif"> </td>
+      </tr>
+      <tr>
+        <td width="100%" bgcolor="#EEEEEE"><a href="/Products/Techref/Multimedia/glossary.html"><font
+        face="Arial" size="2"><strong>3D Glossary</strong></font></a></td>
+      </tr>
+      <tr>
+        <td width="100%" bgcolor="#EBF5D3"><a href="/Products/Techref/Multimedia/agp_feature.html"><font
+        face="Arial" size="2"><strong>AGP Features</strong></font></a></td>
+      </tr>
+      <tr>
+        <td width="100%" bgcolor="#EEEEEE"><a href="/Products/Techref/Multimedia/mcd.html"><font
+        face="Arial" size="2"><strong>OpenGL MCD &amp; ICD</strong></font></a></td>
+      </tr>
+      <tr>
+        <td width="100%" bgcolor="#EBF5D3"><a href="/Products/Techref/Multimedia/dvd.html"><font
+        face="Arial" size="2"><strong>DVD Copy Protection</strong></font></a></td>
+      </tr>
+      <tr>
+        <td width="100%"><strong><font face="Arial" size="2"><img src="Images/tech-b.gif"
+        width="150" height="6"></font></strong></td>
+      </tr>
+    </table>
+    <table border="0" width="100%" cellspacing="1">
+      <tr>
+        <td width="100%"><img src="clear.gif" width="4" height="4"></td>
+      </tr>
+    </table>
+   <img src="Images/award-ad.gif" width="149" height="45">
+    <table border="0" width="100%" cellspacing="1">
+      <tr>
+        <td width="100%" bgcolor="#FFFFFF"><center>
+        <a href="http://www.pcworld.com/top400/article/0,1361,17649+4+4,00.html"><img src="pcworld.jpg" border="0"></a></center>
+	
+        <font face="Arial" size="2">
+        <strong><a href="/Products/Addon/Vga/Agpv7700/index.html">ASUS AGP-V7700</a>
+        <font face="Arial" size="2"> received</font>
+        &quot;<a href="http://www.pcworld.com/top400/article/0,1361,17649+1+0,00.html">Top 10 Graphics Boards for Gamers</a>&quot; 
+        </font><font face="Arial" size="2">from <a href="http://www.pcworld.com/top400/article/0,1361,17649+1+0,00.html">
+        PC World.Com </a>, USA (2000/07/21)</strong></font></td>
+      </tr>
+      <tr>
+        <td width="100%" bgcolor="#FF9900"><img src="clear.gif" width="1" height="1"></td>
+      </tr>
+      <tr>
+        <td width="100%" bgcolor="#FFFFD0"><font face="Arial" size="2">The <a href="agpv6600d/index.html">AGP-V6600 Deluxe</a> 
+        received &quot;PC World Top 10&quot; ranking since <a 
+        href="http://www.pcworld.com/top400/article/chart/0,2078,15744+2+0,00.html">May</a>, 
+            <a href="http://www.pcworld.com/top400/article/chart/0,2078,16357+2+0,00.html">June</a>, 
+            <a href="http://www.pcworld.com/top400/article/chart/0,2078,16764+2+0,00.html">July</a>, and <a 
+            href="http://www.pcworld.com/top400/article/chart/0,2078,17160+2+0,00.html">August</a>
+          from <a href="http://www.pcworld.com/current_issue/">PC World Magazine</a>, USA (2000/08)</font></td>
+      </tr>
+      <tr>
+        <td width="100%" bgcolor="#FF9900"><img src="clear.gif" width="1" height="1"></td>
+      </tr>
+      <tr>
+        <td width="100%" bgcolor="#FFFFFF"><a href="award.html"><font face="Arial" size="2"><strong>Read 
+        More ..... </strong></font></a></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100" valign="bottom" align="left" background="middle.gif"><table border="0"
+    width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="100%"><img src="Images/Menu/down.gif" width="100" height="7"></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+
+<table border="0" width="650" cellspacing="1">
+  <tr>
+    <td width="100%"><hr width="98%" size="1">
+    <p align="center"><font face="Arial" size="2"><a href="../../../Company/copyright.html">Copyright 
+    (C)</a> ASUSTeK COMPUTER INC. All Rights Reserved.</font></td>
+  </tr>
+</table>
+</body>
+</html>

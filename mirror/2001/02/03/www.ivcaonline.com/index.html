@@ -1,0 +1,242 @@
+<html>
+<head>
+
+<!-- Don't steal the code of the snake! 8-) -->
+
+<style>
+a{text-decoration:none}
+A:hover {text-decoration: underline;}
+</style>
+<title>==:: Hatee toh naheen aap kee? ::==</title>
+<style>
+.spanstyle {
+	position:absolute;
+	visibility:visible;
+	top:-50px;
+	font-size:8pt;
+	font-family:Verdana;
+      font-weight:bold;
+	color:#00FF00;
+}
+</style>
+<script>
+
+var x,y
+var step=20
+var flag=0
+
+var message="|:| W  F  D |:| "
+message=message.split("")
+
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	xpos[i]=-50
+}
+
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	ypos[i]=-50
+}
+
+function handlerMM(e){
+	x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+	y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+	flag=1
+}
+
+function makesnake() {
+	if (flag==1 && document.all) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("span"+(i)+".style")
+    		thisspan.posLeft=xpos[i]
+			thisspan.posTop=ypos[i]
+    	}
+	}
+	
+	else if (flag==1 && document.layers) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("document.span"+i)
+    		thisspan.left=xpos[i]
+			thisspan.top=ypos[i]
+    	}
+	}
+		var timer=setTimeout("makesnake()",30)
+}
+
+</script>
+
+</head>
+<BODY onLoad="makesnake()" style="width:100%;overflow-x:hidden;overflow-y:scroll" bgcolor="#003300" bgproperties="fixed" text="#000000" link="#00FF00" alink="#ff0000" vlink="#B00000#BB0000">
+<basefont size="3"><script>
+<!-- Beginning of JavaScript -
+
+for (i=0;i<=message.length-1;i++) {
+    document.write("<span id='span"+i+"' class='spanstyle'>")
+	document.write(message[i])
+    document.write("</span>")
+}
+
+if (document.layers){
+	document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+
+// - End of JavaScript - --></script>
+<p align="center"><font face="Abadi MT Condensed Light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Fixedsys" size="5" color="#00FF00">m0r0n
+and nightman&nbsp;</font></p>
+<p align="center"><font face="Fixedsys" size="5" color="#00FF00">&nbsp;&nbsp; of</font></p>
+<blockquote>
+  <blockquote>
+    <p><img src="http://www.liquid2k.com/wfd/wfd00.gif" width="562" height="143"></p>
+    <p align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#00FF00" face="Fixedsys" size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    hack yet another </font><font face="Fixedsys" size="3" color="#FFFFFF">In</font><font face="Fixedsys" size="3" color="#FF9900">di</font><font face="Fixedsys" size="3" color="#008000">an</font><font color="#00FF00" face="Fixedsys" size="3">
+    site!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></p>
+  </blockquote>
+</blockquote>
+<p>&nbsp;<font color="#00FF00" size="5" face="Andale Mono">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></p>
+<p align="center"><b><font color="#008000" size="6">----------------------------------------------</font><font face="Tempus Sans ITC" color="#00ff00" size="6">&nbsp;</font></b></p>
+<p align="center"><b><font face="Tempus Sans ITC" color="#00ff00" size="6">&quot;</font><font face="Tempus Sans ITC" color="#ffffff" size="6">Kas</font><font face="Tempus Sans ITC" color="#00ff00" size="6">hm</font><font face="Tempus Sans ITC" color="#ffffff" size="6">ir
+D</font><font face="Tempus Sans ITC" color="#00ff00" size="6">ay h</font><font face="Tempus Sans ITC" color="#ffffff" size="6">ac</font><font face="Tempus Sans ITC" color="#00ff00" size="6">k
+at</font><font face="Tempus Sans ITC" color="#ffffff" size="6">tac</font><font face="Tempus Sans ITC" color="#00ff00" size="6">k&quot;.&nbsp;</font></b></p>
+<p align="center"><font face="Arial" color="#ffffff" size="2">================================================================</font></p>
+<p>&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;</p>
+<p><font color="#008000" face="Impact" size="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Impact" size="6" color="#00FF00">&nbsp;
+</font><a name="February - Kashmir solidarity day"><font face="Impact" size="6"><font color="#00FF00">5th
+February</font> --<font color="#FF0000"> Kashmir solidarity day</font></font></a></p>
+<p align="center">&nbsp;</p>
+<p align="left"><font face="Arial" size="2" color="#00FF00">Kashmir solidarity
+day is being observed on 5<sup>th</sup> February in different parts of the world
+including Pakistan and Azad Jammu &amp; Kashmir. On this day rallies,
+demonstrations, seminars and conferences will be held at different places to
+highlight the various aspects of Kashmir freedom struggle.</font></p>
+<p align="left"><font face="Arial" size="2"><b><font color="#FF0000">Kashmir
+being an international dispute and an oldest unresolved conflict on UN agenda
+needs a dispassionate and an objective assessment on this day. Nuclearisation of
+the subcontinent and subsequent confrontation at Kargil heights between the two
+neighbours India and Pakistan has signaled to the international community that
+peace in South Asia is gravely threatened if the core issue of Kashmir is not
+resolved in accordance with the wishes of the people of Jammu &amp; Kashmir. The
+people living in the UN mandated disputed territory of Jammu &amp; Kashmir are
+an integral component of the global family. As such the international community
+should fulfill its obligations towards their fellow humans in Kashmir</font></b><font color="#FF0000">.</font>
+A <font color="#00FF00">conducive climate needs to be generated for eliminating
+the excesses and atrocities on them. The world community will owe an explanation
+to the contemporary and future historian if it fails to take a humanitarian
+cognizance of the prevailing situation in Kashmir.</font></font></p>
+<p align="left"><font color="#FF0000" size="2" face="Arial">Kashmir has been
+converted into a towering inferno with the unprecedented ruthless violations and
+repression of all human rights through naked use of force by the military and
+its civilian agents.</font></p>
+<p align="left"><font face="Arial" size="2" color="#00FF00">An Indian women's
+team led by Rita Dewan was on a fact finding mission to Kashmir. An extract from
+this teams eyewitness report says, &quot;Life itself is not secure… the young
+men walks in fear, fear of being named a suspect or militant, picked up
+interrogated, tortured, killed. The women live in fear of humiliation,
+harassment, molestation, rape. Families live in fear of crackdowns, raids,
+searches. The looting of household goods is common. The forces can enter homes,
+shops, schools, hospitals at any time without warning or restriction. The
+invasion of privacy is almost total.&quot;</font></p>
+<p align="left"><font face="Arial" size="2" color="#00FF00">What Human Rights
+Watch August 1994, vol. 6, no.8 said a few years ago is correct even today. For
+their part, Indian troops continue to summarily execute detainees, kill
+civilians in reprisal attacks and burn down neighbourhoods and villages as a
+collective punishment for those suspected of supporting the militants….
+Torture also continues to be routine. Human rights groups have compiled a list
+of over fifty-five interrogation centres where detainees are kept in
+unacknowledged detention and tortured. The security forces routinely defy court
+orders to produce the detainees and several thousand habeas corpus petitions
+filed in these cases remain pending without result according to Jammu &amp;
+Kashmir Bar Association. All of these actions are in clear violation of the
+international covenant on civil and political rights to which India is a party.
+Although government claims to have punished security personnel for abuses, to
+Human Rights Watch/Asia's knowledge not a single soldier has been prosecuted for
+the murder or torture of a detainee.&quot;</font></p>
+<p align="left"><font face="Arial" size="2"><b>The Indian troops on 10<sup>th</sup>
+January 2000 at around 5 p.m. torched 87 shops and 15 residential houses at
+Pattan, highway town of Baramulla district, a twelve year old boy was also
+killed. It has been phenomenal that the revengeful Indian forces usually target
+the non combatant civilians and they exhibit an inhuman behaviour.</b></font></p>
+<p align="left"><font face="Arial" size="2"><b>Commenting on the tragedy at
+Pattan, Kashmir Times Jammu writes in its editorial note &quot;while they fail
+to apprehend the militants their anger is turned against the peaceful citizens
+and as a matter of revenge the forces open the mouths of their guns to fire at
+citizens or set their houses and shops ablaze… the Pattan incident calls for a
+high level independent probe followed by stringent action against the
+culprits.&quot;</b></font></p>
+<font face="Arial" size="3">
+<p align="left"><font color="#00FF00"><b>A Kashmiri poet Parwaz Naqash has
+summed up the behaviour of Indian occupation authority in the following verses:</b></font></p>
+<blockquote>
+  <blockquote>
+    <p align="left"><b><font color="#C0C0C0">&quot;See the dance of death &amp;
+    destruction</font></b></p>
+    <p align="left"><b><font color="#C0C0C0">Smell the stench of charred human
+    flesh</font></b></p>
+    <p align="left"><b><font color="#C0C0C0">Come to Kashmir</font></b></p>
+    <p align="left"><b><font color="#C0C0C0">When the mangled bodies of newly
+    born babies bear testimony</font></b></p>
+    <p align="left"><b><font color="#C0C0C0">To man's cruelty to man</font></b></p>
+    <p align="left"><b><font color="#C0C0C0">Where young girls are raped, and</font></b></p>
+    <p align="left"><b><font color="#C0C0C0">Their bosoms ripped apart</font></b></p>
+    <p align="left"><b><font color="#C0C0C0">Where it is a crime to be young</font></b></p>
+    <p align="left"><b><font color="#C0C0C0">Because if you are young</font></b></p>
+    <p align="left"><b><font color="#C0C0C0">You are fit to be slain.&quot;</font></b></p>
+  </blockquote>
+</blockquote>
+</font>
+<p>&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; <b> <font face="Fixedsys" color="#00ff00" size="4">Hand shakes :-</font></b></p>
+<p align="center"><b><font face="Garamond" size="4" color="#000000">* Gforce
+Pakistan (<font color="#ffffff" size="2">Sniper, heataz, Rsnake,
+instinct, miller and rave-</font>)</font></b></p>
+<p align="center"><b><font face="Garamond" color="#000000" size="4">* Hi-tech Hate,
+DoctorNuker,
+m0s and Nitr8!, All of Quit crew)</font></b></p>
+<p align="center"><b><font face="Garamond" color="#000000" size="4">&nbsp;*
+Drumcode, Icefist, dislexik, DownKaos, mar1no, piffy, datagram, Scurvy, dodi and
+philer!</font></b></p>
+<p align="center"><b><font face="Garamond" size="4" color="#000000">&nbsp;*
+Aniclator, Silver Lords, Devil-Soul, Data Masters -- thepr0digy, Rsh, Hackweiser,
+moshack, ScorpionKTX, Prime Suspects and Dr-hacker.</font></b></p>
+<p align="center"><b><font face="Garamond" color="#000000" size="4">&nbsp;*
+kr4kr0k, |ncubus_, seninel-, vol, senn, Cool-dude, Undercover and everyone else&nbsp;&nbsp;who
+supports our cause.</font></b></p>
+<p align="center"><b><font face="Garamond" color="#000000" size="4">&nbsp;*
+Alldas and Attrition (good mirroring sites)</font></b></p>
+<p align="center"><b><font size="4" color="#000000" face="Garamond">* n00gie,
+cyberpunk, B_real, sub-0, hellriaser, laughingeyes,</font></b></p>
+<p align="center"><font color="#000000" face="Garamond"><b><font size="4">binarycode,</font>
+<font size="4">brakeoff and takenologic</font></b></font></p>
+<p align="center"><font color="#00ff00" face="Fixedsys" size="4">=================================================================================================</font></p>
+<p align="center"><font face="Comic Sans MS"><b><font color="#ffffff" size="5">Reach
+all of </font><font color="#00ff00" size="6">us</font><font face="Impact" color="#ffffff" size="5">
+@ </font></b><a href="mailto:wfd2001@nightmail.com?Subject=You people r0ck!"><font face="Impact" color="#00ff00" size="5">wfd2001@nightmail.com</font></a></font></p>
+<p align="center">&nbsp;<font face="Comic Sans MS"><font color="#ffffff" size="5">Reach
+</font><font face="Impact" color="#00ff00" size="5">m0r0n</font></font><font face="Impact" color="#00ff00" size="5">
+and nightman</font><font face="Comic Sans MS"><font face="Impact" color="#00ff00" size="5">&nbsp;
+@ </font><a href="mailto:m0r0nandnightman@doityourself.com?subject=Happy Birthday m0r0n."><font color="#00ff00" size="5">m0r0nandnightman@doityourself.com</font></a></font></p>
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p align="center"><font face="Comic Sans MS" size="1" color="#FFFFCC"><i>Thou shalt
+not get caught.</i></font></p>
+<p align="center">&nbsp;</p>
+<p>&nbsp;</p>
+<!-- www.attrition.org web hack mirror - watermark or something -->

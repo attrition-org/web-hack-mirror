@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+<TITLE>Transit Montréal</TITLE>
+
+</HEAD>
+<BODY BGCOLOR="#FFCC00" BACKGROUND="../ima/boardingpass.jpg" TEXT="#FFFFFF" TOPMARGIN="1" LEFTMARGIN="1" LINK="#FFFFFF" VLINK="#CCFF00" ALINK="#CCFF00">
+<SCRIPT language="JavaScript">
+<!--//
+parent.menuframe.clic('light6',6)
+//-->
+</SCRIPT>
+<IMG SRC="../ima/pix.gif" WIDTH=1 HEIGHT=2 BORDER=0 VSPACE=15><BR>
+<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0 WIDTH=550>
+<FORM METHOD="post" ACTION="/cgi-bin/formpak.cgi">
+<TR>
+<TD>
+<IMG SRC="../ima/pix.gif" WIDTH=1 HEIGHT=1 BORDER=0 HSPACE=12><BR>
+</TD>
+<TD WIDTH=550>
+<FONT SIZE=1 FACE="Verdana,Arial,Geneva">
+<B>BOARDING PASS</B><BR>
+Inscrivez-vous à la liste d'envoi et nous vous communiquerons les prochaines destinations.<BR>
+<BR>
+Transit Montréal s'engage à ne pas vendre, louer ou divulguer d'une façon quelconque votre adresse électronique ou toute autre information personnelle.<BR>
+<BR>
+<INPUT TYPE="hidden" NAME="recipient" VALUE="liste@transitmontreal.com">
+<INPUT TYPE="hidden" NAME="subject" VALUE="Transit Montreal - Boarding Pass">
+<INPUT TYPE="hidden" NAME="print_config" VALUE="subject,email">
+<INPUT TYPE="hidden" NAME="redirect" VALUE="confirm.html">
+email<BR>
+<INPUT NAME="email" TYPE="TEXT" SIZE="20" VALUE="@">&nbsp;&nbsp;<INPUT TYPE=submit VALUE="J'embarque!">
+</FORM>
+
+</FONT>
+</TD>
+</TR>
+</TABLE>
+
+</BODY>
+</HTML>

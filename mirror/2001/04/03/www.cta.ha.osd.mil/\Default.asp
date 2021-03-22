@@ -1,0 +1,50 @@
+<html>
+
+<head>
+<title>Hacked by Hi Tech Hate Crew :-)</title>
+</head>
+
+<body bgcolor="#800080" text="#0000FF" link="#000000"
+vlink="#000000" alink="#000000">
+
+<p align="center"><font size="4" face="Verdana">another site
+hacked? It's impossible, but it's true :-)</font></p>
+
+<p align="center"><font size="4" face="Verdana">oh, yeah....
+another site hacked by:</font></p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center"><font size="7" face="Verdana"><em><strong>Hi
+Tech Hate Crew</strong></em></font></p>
+
+<p align="center"><font color="#000000" size="4"><em><strong>www.cta.ha.osd.mil</strong></em></font></p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center"><font size="3" face="Verdana"><strong>B4dBoy</strong>
+dedicates this one to <b>Simona</b>: please remember I WILL LOVE
+YOU FOREVER<br>
+<br>
+<strong>naDrol Rah'S</strong> dedicates this one to his love <b>Linda</b></font></p>
+
+<p align="center"><font size="3" face="Verdana"><strong>E-@ack</strong>
+dedicates this to <strong>Laura</strong></font></p>
+
+<p align="center"><font size="3" face="Verdana"><strong>DauthiJackal</strong>
+dedicates this one to his love <strong>Giorgia</strong><br>
+<br>
+<br>
+<br>
+</font><font size="2" face="Verdana">note to sysadmin: no file
+has been deleted (?) or looked at , original index page is </font><a
+href="mirror.htm" target="here"><font
+size="2" face="Verdana">here</font></a></p>
+
+<p align="center"><font size="2" face="Verdana">mail us at </font><a
+href="mailto:hitech_hate@email.com"><font size="2" face="Verdana">hitech_hate@email.com</font></a><font
+size="2" face="Verdana"> fan mails <b>only</b> are welcome <b>don't</b>
+expect any response, we <b>won't</b> reply anyone and above all: <b>don't</b>
+ask us how to hack, learn by yourselves instead</font></p>
+</body>
+</html>

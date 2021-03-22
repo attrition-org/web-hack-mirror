@@ -1,0 +1,364 @@
+<html>
+
+<head>
+<title>Welcome to Putnam County</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<script LANGUAGE="JavaScript" FPTYPE="dynamicanimation">
+<!--
+  // If you want to change this script, you must also make the following
+  // changes so that FrontPage will not overwrite your new script.
+  // In the script tag, change type="dynamicanimation" to type="mydynamicanimation"
+  // In the first script statement, change "dynamicanimation" to "mydynamicanimation"
+  // Throughout the HTML content, change dynamicanimation= to mydynamicanimation=
+  // Change function dynAnimation to function mydynAnimation
+  // In the body tag, change onload="dynAnimation()" to onload="mydynAnimation()"
+  dynamicanimAttr = "dynamicanimation"
+  animateElements = new Array()
+  currentElement = 0
+  speed = 0
+  stepsZoom = 8
+  stepsWord = 8
+  stepsFly = 12
+  stepsSpiral = 16
+  steps = stepsZoom
+  step = 0
+  outString = ""
+  function dynAnimation()
+  {
+    var ms = navigator.appVersion.indexOf("MSIE")
+    ie4 = (ms>0) && (parseInt(navigator.appVersion.substring(ms+5, ms+6)) >= 4)
+    if(!ie4)
+    {
+      if((navigator.appName == "Netscape") &&
+         (parseInt(navigator.appVersion.substring(0, 1)) >= 4))
+      {
+        for (index=document.layers.length-1; index >= 0; index--)
+        {
+            layer=document.layers[index]
+            if (layer.left==10000)
+                layer.left=0
+        }
+      }
+      return
+    }
+    for (index=document.all.length-1; index >= document.body.sourceIndex; index--)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if(null != animation)
+      {
+        if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        {
+          ih = el.innerHTML
+          outString = ""
+          i1 = 0
+          iend = ih.length
+          while(true)
+          {
+            i2 = startWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, false, "")
+            if(i2 == iend)
+              break
+            i1 = i2
+            i2 = endWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, true, animation)
+            if(i2 == iend)
+              break
+            i1 = i2
+          }
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+        if(animation == "zoomIn" || animation == "zoomOut")
+        {
+          ih = el.innerHTML
+          outString = "<SPAN " + dynamicanimAttr + "=\"" + animation + "\" style=\"position: relative; left: 10000;\">"
+          outString += ih
+          outString += "</SPAN>"
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+      }
+    }
+    i = 0
+    for (index=document.body.sourceIndex; index < document.all.length; index++)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if (null != animation)
+      {
+        if(animation == "flyLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyRight")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyTop" || animation == "dropWord")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottom")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyTopLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyTopRight" || animation == "flyTopRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottomLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyBottomRight" || animation == "flyBottomRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "spiral")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "zoomIn")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else if(animation == "zoomOut")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        el.initLeft = el.style.posLeft
+        el.initTop = el.style.posTop
+        animateElements[i++] = el
+      }
+    }
+    window.setTimeout("animate();", speed)
+  }
+  function offsetLeft(el)
+  {
+    x = el.offsetLeft
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      x += e.offsetLeft;
+    return x
+  } 
+  function offsetTop(el)
+  {
+    y = el.offsetTop
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      y += e.offsetTop;
+    return y
+  } 
+  function startWord(ih, i)
+  {
+    for(tag = false; i < ih.length; i++)
+    {
+      c = ih.charAt(i)
+      if(c == '<')
+        tag = true
+      if(!tag)
+        return i
+      if(c == '>')
+        tag = false
+    }
+    return -1
+  }
+  function endWord(ih, i)
+  {
+    nonSpace = false
+    space = false
+    while(i < ih.length)
+    {
+      c = ih.charAt(i)
+      if(c != ' ')
+        nonSpace = true
+      if(nonSpace && c == ' ')
+        space = true
+      if(c == '<')
+        return i
+      if(space && c != ' ')
+        return i
+      i++
+    }
+    return -1
+  }
+  function outWord(ih, i1, i2, dyn, anim)
+  {
+    if(dyn)
+      outString += "<SPAN " + dynamicanimAttr + "=\"" + anim + "\" style=\"position: relative; left: 10000;\">"
+    outString += ih.substring(i1, i2)
+    if(dyn)
+      outString += "</SPAN>"
+  }
+  function animate()
+  {
+    el = animateElements[currentElement]
+    animation = el.getAttribute(dynamicanimAttr, false)
+    step++
+    if(animation == "spiral")
+    {
+      steps = stepsSpiral
+      v = step/steps
+      rf = 1.0 - v
+      t = v * 2.0*Math.PI
+      rx = Math.max(Math.abs(el.initLeft), 200)
+      ry = Math.max(Math.abs(el.initTop),  200)
+      el.style.posLeft = Math.ceil(-rf*Math.cos(t)*rx)
+      el.style.posTop  = Math.ceil(-rf*Math.sin(t)*ry)
+    }
+    else if(animation == "zoomIn")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(50+50*step/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else if(animation == "zoomOut")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(100+200*(steps-step)/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else
+    {
+      steps = stepsFly
+      if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        steps = stepsWord
+      dl = el.initLeft / steps
+      dt = el.initTop  / steps
+      el.style.posLeft = el.style.posLeft - dl
+      el.style.posTop = el.style.posTop - dt
+    }
+    if (step >= steps) 
+    {
+      el.style.posLeft = 0
+      el.style.posTop = 0
+      currentElement++
+      step = 0
+    }
+    if(currentElement < animateElements.length)
+      window.setTimeout("animate();", speed)
+  }
+//-->
+</script></head>
+
+<body onload="dynAnimation()" bgcolor="#FFFFFF" text="#000000">
+<div align="left">
+
+<table border="0" width="752" height="25" bgcolor="#FFFFFF">
+  <tr>
+    <td width="153" height="25" dynamicanimation="flyBottom"
+    style="position: relative !important; left: 10000 !important"><img src="images/momap.gif"
+    alt="Missouri Map" align="right" width="124" height="108"></td>
+    <td width="61" colspan="2"></td>
+    <td width="526" height="25" valign="middle" align="left" bgcolor="#FFFFFF"><img
+    src="Putco%20Front%20Page/putcobanner.gif" alt="Welcome to Putnam County" WIDTH="514"
+    HEIGHT="108" align="left"></td>
+  </tr>
+  <tr>
+    <td width="704" height="25" colspan="4"><img src="images/Blueline.gif" width="719"
+    height="13" alt="Blueline.gif (1026 bytes)"></td>
+  </tr>
+  <tr>
+    <td width="349" height="25" colspan="2"><p align="center">.</td>
+    <td width="230" height="25" align="center"></td>
+    <td width="149" height="25" align="left" valign="top" nowrap bgcolor="#FFFFFF"><a
+    href="fsa.htm"><img src="Putco%20Front%20Page/FSA.gif" alt="FSA.gif (2738 bytes)"
+    hspace="2" align="left" vspace="2" width="97" height="23"></a><a href="http://www.nemr.net"><img
+    src="Putco%20Front%20Page/nemrnet.gif" alt="nemrnet.gif(2345 bytes)" border="2" hspace="2"
+    align="left" vspace="2" width="97" height="24"></a><a href="http://www.state.mo.us/"><img
+    src="Putco%20Front%20Page/MOgovt.gif" width="97" height="24" alt="MOgovt.gif (2319 bytes)"
+    border="2" hspace="2" align="left" vspace="2"></a><a
+    href="http://www.wunderground.com/US/MO/Kirksville.html"><img
+    src="Putco%20Front%20Page/Weather.gif" width="97" height="24" alt="Weather.gif2352 bytes)"
+    border="2" hspace="2" align="left" vspace="2"></a><a href="http://www.nemr.net/~fair"><img
+    src="Putco%20Front%20Page/index.1.gif" width="97" height="24"
+    alt="PCFair.gif (2229 bytes)" border="2" hspace="2" align="left" vspace="2"></a></td>
+  </tr>
+</table>
+</div>
+
+<table border="0" width="740" height="1" bgcolor="#FFFFFF">
+  <tr>
+    <td width="120" height="1" align="center" valign="top"><a
+    href="http://www.wunderground.com/US/MO/Kirksville.html"><img height="108"
+    src="http://banners.wunderground.com/banner/infobox/US/MO/Unionville.gif" width="144"></a><p><a
+    href="About%20Putnam%20County/aboutputnamco.htm"><img
+    src="Putco%20Front%20Page/aboutbut.gif" alt="About Putnam Co" width="143" height="30"></a></p>
+    <p><a href="Activities%20page/activities.htm"><img src="Putco%20Front%20Page/actbut.gif"
+    alt="Activities/Events" width="143" height="30"></a></p>
+    <p><a href="Ag%20Page/AGPAGE.htm"><img src="Putco%20Front%20Page/Agriculturebut.gif"
+    width="143" height="30" alt="Agriculture.gif (4587 bytes)"></a></p>
+    <p><a href="Churches/Churches.htm"><img src="Putco%20Front%20Page/churchbut.gif"
+    alt="Churches" width="143" height="30"></a></p>
+    <p><a href="Education%20Page/education.htm"><img
+    src="Putco%20Front%20Page/educationbut.gif" alt="education" width="143" height="28"></a></p>
+    <p><a href="Organizations%20Page/organizations.htm"><img
+    src="Putco%20Front%20Page/orgbut.gif" alt="Organizations" width="143" height="30"></a></p>
+    <p><a href="POINTPage.htm"><img src="POINT%20Page/POINTbut" width="143" height="30"
+    alt="POINT.gif (4806 bytes)"></a></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</td>
+    <td width="101" height="1" rowspan="4"></td>
+    <td width="915" height="1" checked="false" align="left" valign="top"><p align="left"><strong><font
+    color="#0000FF"><big><big><big>N</big></big></big></font></strong><font color="#400040"
+    face="Arial" size="3">estled in the rolling green hills of north central Missouri, Putnam
+    County is home to friendly people who value education, strong families, and outdoor
+    recreation. &nbsp; This quiet rural community's county seat is <a
+    href="http://www.ecodev.state.mo.us/medms/commrprt.asp?txtCommID=169&amp;txtCountyName=Putnam">Unionville</a>,
+    with surrounding towns of Graysville, Hartford, Lemons, Livonia, Lucerne, Martinstown,
+    Powersville and Worthington.</font><strong><font color="#0000FF"><img
+    src="Easter%20Bunny.jpg" width="268" height="200" alt="Easter Bunny(45370 bytes)"
+    align="left" border="4" hspace="2" vspace="2"> </font></strong><img
+    src="Easter%20Kids.gif" alt="wpe3.gif (27126 bytes)" align="right" border="4" hspace="2"
+    vspace="2" width="234" height="200"></p>
+    <p align="left">&nbsp;</p>
+    <p align="left">&nbsp;</p>
+    <p align="left">&nbsp;</p>
+    <p align="left">&nbsp;</p>
+    <p align="left"><strong><font color="#0000FF"><big><big><big>&nbsp;</big></big></big></font></strong></p>
+    <p align="left"><strong><font color="#0000FF"><big><big><big>A</big></big></big></font></strong><font
+    color="#400040" face="Arial" size="3">n agricultural based community, major income sources
+    are beef cattle, hay, corn and soybeans.&nbsp;&nbsp; For the wildlife enthusiasts, there
+    is an abundance of deer, wild turkey&nbsp; and other wildlife.&nbsp;&nbsp;&nbsp; Lake
+    Thunderhead provides a retirement&nbsp; retreat, as well as an attraction for those of all
+    ages who love fishing, boating&nbsp; and the water.<br>
+    </font><font color="#0000FF" face="Times New Roman"><strong><big><big><big>T</big></big></big></strong></font><font
+    color="#400040" face="Arial" size="3">he citizens of Putnam County&nbsp; take a great deal
+    of pride in their farms and towns and the beauty of the landscape and natural woodlands.</font></p>
+    <p align="left"><big><big><big><strong><font color="#0000FF">P</font></strong><font
+    face="Arial" size="3">lease take this opportunity to visit our community.</font></big></big></big></p>
+    <p align="center"><font color="#400040" face="Arial" size="1">This page managed by:</font></p>
+    <p align="center"><img src="images/smpoint.gif" alt="P.O.I.N.T." width="215" height="205"></p>
+    <p align="center"><strong>Putnam Online Information Network Team<br>
+    <a href="images/momap.gif">floodn@missouri.edu</a></strong></p>
+    <p align="center">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

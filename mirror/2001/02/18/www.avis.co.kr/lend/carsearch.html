@@ -1,0 +1,290 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<title>AVIS</title>
+<meta name="generator" content="Namo WebEditor v3.0">
+<style type="text/css">
+<!--
+
+    BODY {font-size:10pt}
+
+    A:link {font-size:10pt ; text-decoration:"none"}
+
+    A:visited {font-size:10pt ; text-decoration:none ; color:blue}
+
+    A:active {font-size:10pt ; text-decoration:none}
+
+    a:hover{background-color:yellow}
+-->
+</style>
+<script LANGUAGE=JavaScript>
+
+<!-- //
+ function change(form) {
+ if (form.url.selectedIndex != 0)
+ parent.location = form.url.options[form.url.selectedIndex].value
+}
+
+// Definitions
+
+// size of AdCorner image
+// You should change this when you change the image.
+var     nAdCornerWidth          = 60;
+var     nAdCornerHeight         = 80;
+
+// right and bottom margin
+var nAdCornerMarginX  = 2;
+var nAdCornerMarginY  = 2;
+
+// window's scrollbar width and height
+var nScrollBarWidth  = 16;
+var nScrollBarHeight = 16;
+
+// navigator check
+var isMSIE   = 0;
+var nVersion  = 3;
+
+// refresh interval of AdCorner
+var nInterval  = 200;
+
+var isLoaded  = 0;
+
+function setup ()
+{
+ // Detect Navigator
+ nVersion = parseInt (navigator.appVersion); // chang
+ if (navigator.appName == "Microsoft Internet Explorer")
+ {
+  isMSIE = 1;
+  if (navigator.userAgent.indexOf ("MSIE 5") != -1)
+  {
+   nVersion = 5;
+  }
+ }
+ else
+ {
+  isMSIE = 0;
+  if (nVersion >= 4)
+  {
+   window.captureEvents (Event.MOUSEMOVE);
+  }
+ }
+
+ if (nVersion >= 4)
+ {
+  window.setInterval ("AdCornerMove();", nInterval);
+ }
+}
+
+function AdCornerMove ()
+{
+ if (isLoaded == 0)
+ {
+  return;
+ }
+ if (isMSIE)
+ {
+  nAdCornerOriginX = document.body.clientWidth - idAdCorner.width - nAdCornerMarginX;
+  nAdCornerOriginY = document.body.clientHeight - idAdCorner.height - nAdCornerMarginY;
+
+  nAdCornerOriginX += document.body.scrollLeft;
+  nAdCornerOriginY += document.body.scrollTop;
+
+  idAdCorner.style.pixelLeft = nAdCornerOriginX;
+  idAdCorner.style.pixelTop = nAdCornerOriginY;
+ }
+ else
+ {
+  nAdCornerOriginX = window.innerWidth + window.pageXOffset - nAdCornerWidth - nAdCornerMarginX;
+  nAdCornerOriginY = window.innerHeight + window.pageYOffset - nAdCornerHeight - nAdCornerMarginY;
+
+  if (window.scrollbars.visible == true)
+  {
+   nAdCornerOriginX -= nScrollBarWidth;
+   nAdCornerOriginY -= nScrollBarHeight;
+  }
+
+  document.layers["idAdCorner"].pageX = nAdCornerOriginX;
+  document.layers["idAdCorner"].pageY = nAdCornerOriginY;
+ }
+}
+
+
+ //-->
+</script></head>
+
+<body bgcolor="white" text="black" link="blue" vlink="purple" alink="red">
+
+<p align="center">&nbsp; 
+<div align="center"><table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+        <td><p><img src="images/search1.gif" width="153" height="22" border="0"></td>
+        <td><p><img src="images/search2.gif" width="123" height="22" border="0"></td>
+        <td><p><img src="images/search3.gif" width="126" height="22" border="0"></td>
+    </tr>
+    <tr>
+        <td><p><img src="images/search4.gif" width="153" height="78" border="0"></td>
+        <td><p><a href="고급형.htm" onmouseover="test1.src='images/1/search5.gif' ; return true"
+             onmouseout="test1.src='images/search5-1.gif' ; return true"><img
+             src="images/search5-1.gif" width="123" height="78" border="0" name="test1"></a></td>
+        <td><p><a href="중형차.htm" onmouseover="test2.src='images/1/search6.gif' ; return true"
+             onmouseout="test2.src='images/search6-1.gif' ; return true"><img
+             src="images/search6-1.gif" width="126" height="78" border="0" name="test2"></a></td>
+    </tr>
+    <tr>
+        <td height="57"><p><img src="images/search7.gif" width="153" height="74"
+             border="0"></td>
+        <td height="57"><p><a href="승합.htm" onmouseover="test3.src='images/1/search8.gif' ; return true"
+             onmouseout="test3.src='images/search8-1.gif' ; return true"><img
+             src="images/search8-1.gif" width="123" height="74" border="0" name="test3"></a></td>
+        <td height="57"><p><a href="소형차.htm" onmouseover="test4.src='images/1/search9.gif' ; return true"
+             onmouseout="test4.src='images/search9-1.gif' ; return true"><img
+             src="images/search9-1.gif" width="126" height="74" border="0" name="test4"></a></td>
+    </tr>
+</table></div>
+<p>&nbsp;</p>
+<p>&nbsp; 
+<div align="center"><table border="0" cellspacing="0" width="540">
+    <tr>
+        <td width="113"><p align="left"><img src="images/smallcar1.gif" width="65"
+             height="29" border="0"></td>
+        <td width="105"><p align="left"><img src="images/omnicar1.gif" width="54"
+             height="29" border="0"></td>
+        <td width="112"><p align="left"><img src="images/middlecar1.gif" width="53"
+             height="29" border="0"></td>
+        <td width="122"><p align="left"><img src="images/highcar1.gif" width="54"
+             height="29" border="0"></td>
+    </tr>
+    <tr>
+        <td width="113"><p>&nbsp;</p>
+            <p><a href="소형차.htm#a"><font size="2" color="#FFCC33">▶</font></a><a
+             href="소형차.htm#a"><font size="2"> </font></a><a href="소형차.htm#a"><font
+             size="2" color="dimgray">마티즈</font></a></td>
+        <td width="105"><p>&nbsp;</p>
+            <p style="line-height:100%; margin-top:0; margin-bottom:0;"><font
+             size="2" color="#FFCC33">▶</font><font size="2"> </font><a href="승합.htm#이스타나"><font
+             size="2" color="dimgray">이스타나</font></a></td>
+        <td width="112" valign="bottom"><p style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+            <p style="line-height:100%; margin-top:0; margin-bottom:0;"><font
+             size="2" color="#FFCC33">▶</font><font size="2"> </font><a href="중형차.htm#레간자1"><font
+             size="2" color="dimgray">레간자 1.8</font></a></td>
+        <td width="122" valign="bottom"><p style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+            <p style="line-height:100%; margin-top:0; margin-bottom:0;"><font
+             size="2" color="#FFCC33">▶</font><font size="2" color="dimgray"> 
+            </font><a href="고급형.htm#무쏘"><font size="2" color="dimgray">무쏘</font></a></td>
+    </tr>
+    <tr>
+        <td width="113"><p style="line-height:100%; margin-top:0; margin-bottom:0;"><font
+             size="2" color="#FFCC33">▶</font><font size="2" color="dimgray"> 
+            </font><a href="소형차.htm#b"><font size="2" color="dimgray">라노스</font></a></td>
+        <td width="105"><p style="line-height:100%; margin-top:0; margin-bottom:0;"><font
+             size="2" color="#FFCC33">▶</font><font size="2"> </font><a href="승합.htm#프레지오"><font
+             size="2" color="dimgray">프레지오</font></a></td>
+        <td width="112"><p style="line-height:100%; margin-top:0; margin-bottom:0;"><font
+             size="2" color="#FFCC33">▶</font><font size="2"> </font><a href="중형차.htm#누비라"><font
+             size="2" color="dimgray">누비라스페건</font></a></td>
+        <td width="122"><p style="line-height:100%; margin-top:0; margin-bottom:0;"><font
+             size="2" color="#FFCC33">▶</font><font size="2"> </font><a href="고급형.htm#코란도"><font
+             size="2" color="dimgray">코란도</font></a></td>
+    </tr>
+    <tr>
+        <td width="113"><p style="line-height:100%; margin-top:0; margin-bottom:0;"><font
+             size="2" color="#FFCC33">▶</font><font size="2" color="dimgray"> 
+            </font><a href="소형차.htm#c"><font size="2" color="dimgray">누비라</font></a></td>
+        <td width="105"><p style="line-height:100%; margin-top:0; margin-bottom:0;"><font
+             size="2" color="#FFCC33">▶</font><font size="2" color="dimgray"> 
+            </font><a href="승합.htm#스타렉스"><font size="2" color="dimgray">스타렉스</font></a></td>
+        <td width="112"><p style="line-height:100%; margin-top:0; margin-bottom:0;"><font
+             size="2" color="#FFCC33">▶</font><font size="2"> </font><a href="중형차.htm#레간자2"><font
+             size="2" color="dimgray">레간자 2.0</font></a></td>
+        <td width="122"><p style="line-height:100%; margin-top:0; margin-bottom:0;"><font
+             size="2" color="#FFCC33">▶</font><font size="2"> </font><a href="고급형.htm#브로엄"><font
+             size="2" color="dimgray">브로엄</font></a></td>
+    </tr>
+    <tr>
+        <td width="113"><p style="line-height:100%; margin-top:0; margin-bottom:0;"><font
+             size="2" color="#FFCC33">▶</font><font size="2"> </font><a href="소형차.htm#d"><font
+             size="2" color="dimgray">누비라스페건1.5</font></a></td>
+        <td width="105"><p style="line-height:100%; margin-top:0; margin-bottom:0;"><font
+             size="2" color="#FFCC33">▶</font><font size="2"> </font><a href="승합.htm#카니발"><font
+             size="2" color="dimgray">카니발</font></a></td>
+        <td width="112"><p style="line-height:100%; margin-top:0; margin-bottom:0;"><font
+             size="2" color="#FFCC33">▶</font><font size="2"> </font><a href="중형차.htm#레간자3"><font
+             size="2" color="dimgray">레간자 ULTRA</font></a></td>
+        <td width="122"><p style="line-height:100%; margin-top:0; margin-bottom:0;"><font
+             size="2" color="#FFCC33">▶</font><font size="2"> </font><a href="고급형.htm#아카디아"><font
+             size="2" color="dimgray">아카디아슈퍼</font></a></td>
+    </tr>
+    <tr>
+        <td width="113"><p style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</td>
+        <td width="105"><p style="line-height:100%; margin-top:0; margin-bottom:0;"><font
+             size="2" color="#FFCC33">▶</font><font size="2"> </font><a href="승합.htm#콤비"><font
+             size="2" color="dimgray">콤비</font></a></td>
+        <td width="112"><p style="line-height:100%; margin-top:0; margin-bottom:0;"><font
+             size="2" color="#FFCC33">▶</font><font size="2"> </font><a href="중형차.htm#갤로퍼"><font
+             size="2" color="dimgray">갤로퍼</font></a></td>
+        <td width="122"><p style="line-height:100%; margin-top:0; margin-bottom:0;"><font
+             size="2" color="#FFCC33">▶</font><font size="2" color="dimgray"> 
+            </font><a href="고급형.htm#벤츠e"><font size="2" color="dimgray">벤츠 
+            E-230</font></a></td>
+    </tr>
+    <tr>
+        <td width="113"><p style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</td>
+        <td width="105"><p style="line-height:100%; margin-top:0; margin-bottom:0;"><font
+             size="2" color="#FFCC33">▶</font><a href="승합.htm#이스타나2"><font
+             size="2" color="dimgray">이스타나15인승</font></a></td>
+        <td width="112"><p style="line-height:100%; margin-top:0; margin-bottom:0;"><font
+             size="2" color="#FFCC33">▶ </font><a href="중형차.htm#스포티지"><font
+             size="2" color="dimgray">스포티지</font></a></td>
+        <td width="122"><p style="line-height:100%; margin-top:0; margin-bottom:0;"><font
+             size="2" color="#FFCC33">▶</font><font size="2"> </font><a href="고급형.htm#체어맨"><font
+             size="2" color="dimgray">체어맨</font></a></td>
+    </tr>
+    <tr>
+        <td width="113"><p style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</td>
+        <td width="105"><p style="line-height:100%; margin-top:0; margin-bottom:0;"><font
+             size="2" color="#FFCC33">▶</font><font size="2"> </font><a href="승합.htm#아스트로벤"><font
+             size="2" color="dimgray">아스트로벤</font></a></td>
+        <td width="112"><p style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</td>
+        <td width="122"><p style="line-height:100%; margin-top:0; margin-bottom:0;"><font
+             size="2" color="#FFCC33">▶</font><font size="2"> </font><a href="고급형.htm#볼보"><font
+             size="2" color="dimgray">볼보 V70</font></a></td>
+    </tr>
+    <tr>
+        <td width="113"><p style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</td>
+        <td width="105"><p style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</td>
+        <td width="112"><p style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</td>
+        <td width="122"><p style="line-height:100%; margin-top:0; margin-bottom:0;"><font
+             size="2" color="#FFCC33">▶</font><font size="2"> </font><a href="고급형.htm#벤츠s"><font
+             size="2" color="dimgray">벤츠s-280</font></a></td>
+    </tr>
+    <tr>
+        <td width="113"><p style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</td>
+        <td width="105"><p style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</td>
+        <td width="112"><p style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</td>
+        <td width="122"><p style="line-height:100%; margin-top:0; margin-bottom:0;"><font
+             size="2" color="#FFCC33">▶</font><font size="2"> </font><a href="고급형.htm#리무진"><font
+             size="2" color="dimgray">캐딜락 리무진</font></a></td>
+    </tr>
+    <tr>
+        <td width="113"><p style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</td>
+        <td width="105"><p style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</td>
+        <td width="112"><p style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</td>
+        <td width="122"><p style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</td>
+    </tr>
+</table></div>
+<p><layer id="layer1" left=10 top=1000 width=200 height=200 z-index=1 name="idAdCorner"
+ zindex="2">
+    <p><a href="../reserve/reserve.html" target="new"><img src="reservation.gif"
+     border="0" id="idAdCorner" style="position:absolute; z-index:2; left=10;top=1000;"> 
+    <script language="JavaScript">
+//<!--
+ window.onload=setup;
+ isLoaded = 1;
+//-->
+                                                </script>
+     </a></p>
+</layer></p>
+</body>
+
+</html>

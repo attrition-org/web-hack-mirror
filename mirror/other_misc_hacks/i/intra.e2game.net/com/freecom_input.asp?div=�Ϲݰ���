@@ -1,0 +1,253 @@
+
+<script language="JavaScript">
+function Check(strVAR)
+{
+  if (strVAR.com_name.value == '')
+  {
+    alert("회사명를 입력하세요.");
+    strVAR.com_name.focus();
+  }
+  else if (strVAR.id.value == '')
+  {
+    alert("아이디를 입력하세요.");
+    strVAR.id.focus();
+  }
+  else if (strVAR.id.value.length < 4)
+  {
+    alert("아이디를 4자 이상 입력하십시요.");
+    strVAR.id.focus();
+  }
+  else if (strVAR.password.value == '')
+  {
+    alert("비밀번호를 입력하세요.");
+    strVAR.password.focus();
+  }
+  else if (strVAR.password2.value == '')
+  {
+    alert("비밀번호를 확인을 입력하세요.");
+    strVAR.password2.focus();
+  }
+  else if (strVAR.password.value.length < 4)
+  {
+    alert("비밀번호는 4자 이상입력하세요.");
+    strVAR.password.focus();
+  }
+  else if (strVAR.password2.value != strVAR.password.value)
+  {
+    alert("비밀번호와 확인번호가 일치하지 않습니다.");
+    strVAR.password.focus();
+  }
+  else if (strVAR.boss.value == '')
+  {
+    alert("대표자명을 입력하세요.");
+    strVAR.boss.focus();
+  }
+  else if (strVAR.job_kind.value == '')
+  {
+    alert("공사종류를 선택하십시요.");
+    strVAR.job_kind.focus();
+  }
+  else if (strVAR.area_name.value == '')
+  {
+    alert("공사/작업 지역을 선택하세요.");
+    strVAR.area_name.focus();
+  }
+  else if (strVAR.address.value == '')
+  {
+    alert("회사주소를 넣으세요.");
+    strVAR.address.focus();
+  }
+  else if (strVAR.address.value.length < 10)
+  {
+     alert("정확한 주소를 입력바랍니다.");
+     strVAR.address.focus();
+  }
+  else if (strVAR.tel_num.value == '')
+  {
+    alert("회사전화번호를 넣으세요.");
+    strVAR.tel_num.focus();
+  }
+  else{
+	strVAR.submit();
+  }
+}
+
+function Openwin1(){
+  window.open('IDcheck.asp?id='+escape(document.all.id.value),"idcheck","width=400,height=250,toolbar=no,directories=no,status=no,scrollbars=yes,resize=no,menubar=no");
+}
+function Openwin(){    window.open('searchzip1.asp?iname2='+escape(document.all.zipcode.value),"searchzip1","width=500,height=330,toolbar=no,directories=no,status=yes,scrollbars=yes,resize=no,menubar=no");}
+</script>
+
+<html>
+<head>
+<title>webbid - 전문시공업체 등록</title>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<STYLE TYPE="text/css"></STYLE>
+</head>
+<!-- #### Start::공통 삽입 코드 #### -->
+<body bgcolor="#ffffff" leftmargin="0" topmargin="1" >
+
+<SCRIPT language=JavaScript src="../menu/toolbar.js"></SCRIPT>
+<SCRIPT language=JavaScript src="../menu/local_pss.js"></SCRIPT>
+<DIV id=TBDownLevelDiv></DIV>
+<SCRIPT language=JavaScript>
+  <!--                                                                                         
+   var ToolBar_Supported = ToolBar_Supported;  
+   if (ToolBar_Supported != null && ToolBar_Supported == true)                              
+   {   TBDownLevelDiv.style.display ='none';                                                                                                  
+	   drawToolbar();                                                                                                                      
+   }   //-->                                                                                                                      
+</SCRIPT>
+<!-- #### End::공통 삽입 코드 #### --><br><br>
+<div align="center"> 
+<FORM NAME="inform" ACTION="./freecom_input_end.asp" METHOD=post> 
+  <table  width="131">
+    <tr><td height=36>
+	    
+         <img src="images/ilban_list.gif" width="167" height="36">
+		</td>
+ </tr>
+</table> <br>
+<TABLE width="780" border=0 cellspacing=1 cellpadding=1>
+ <TR><td height=30 width=170 bgcolor=#295429 align=center> <font face="돋움" size="2" color="white"><b>
+     
+	    ◆ 일반 건설업체 등록
+	 
+	 </b></font></td>
+     <td width=510 bgcolor=white><input type=hidden name="div" value="일반공사"></td>
+ </TR>
+ <tr bgcolor="#82AC82"><td colspan=2 align=center height="137"> 
+    <TABLE ID="Table1" BORDER=0 CELLSPACING=1 CELLPADDING=2 WIDTH="100%" bgcolor=#FFFFFF>
+	 <TR><td align=center BGCOLOR=#F3F6ED width=25%><FONT SIZE="2" face=돋움>* 아 이 디</FONT></td>
+	     <td colspan=3><input type=text name="id" maxlength=15 size=15>
+		 <input type="button" name="IDCheck" value="ID 중복체크" onclick="Openwin1();">&nbsp;&nbsp;&nbsp;&nbsp;
+		 <FONT size=2 color=darkred face=돋움>☞ 영문/숫자를 4~15자 범위내에서 입력하세요.</FONT></td>
+	 </TR>
+	 <TR><TD align=center  BGCOLOR=#F3F6ED><font color="#003148" size="-1" face="돋움">* 비밀번호</font></TD>             
+         <TD bgcolor="#ffffff" colspan=3><INPUT type=password NAME=password MAXLENGTH=15 size="15" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  <FONT COLOR="#000000" SIZE="-1" FACE="돋움">비밀번호 확인</FONT>
+          <INPUT type=password NAME=password2 MAXLENGTH=15 size="15"><br>
+		  <FONT size=2 color=darkred face=돋움>☞ 영문/숫자를 4~15자 범위내에서 입력하세요.</FONT></TD>                             
+     </TR> 
+	 <tr><TD align=center  BGCOLOR=#F3F6ED><font color="#003148" size="-1" face="돋움">* 회 사 명</font></TD>             
+              <TD bgcolor="#ffffff"><INPUT NAME="com_name" size=20 MAXLENGTH=30></TD>                                                 
+          <TD align=center BGCOLOR=#F3F6ED><font color="#003148" size="-1" face="돋움">* 대 표 자</font></TD>              
+              <TD bgcolor="#ffffff"><INPUT NAME="boss" MAXLENGTH=20 size="18"></TD>                                   
+     </TR>
+	 <TR><TD align=center  BGCOLOR=#F3F6ED >
+	      <font color="#003148" size="-1" face="돋움">담 당 자</font></TD>             
+         <TD bgcolor="#ffffff"><INPUT type=text NAME="workman" MAXLENGTH=20 size="18" ></TD>
+		 <TD align=center  BGCOLOR=#F3F6ED width="25%"><font color="#003148" size="-1" face="돋움">전 국 순 위</font></TD>
+         <TD width="25%" bgcolor="#ffffff"><INPUT type=text NAME="all_ranking" MAXLENGTH=20 size="18"></TD>                             
+      </TR>
+	  <TR><td align=center BGCOLOR=#F3F6ED><FONT SIZE="2" face=돋움>* 사업자 등록번호</FONT></td>
+	     <td colspan=3><input type=text name="co_reg_num" maxlength=20 size=20></td>
+	 </TR>
+	 <TR><TD align=center BGCOLOR=#F3F6ED><font color="#003148" size="-1" face="돋움">* 공사 종류</font></TD>
+         <TD bgcolor="#ffffff">
+			
+			   <select name="job_kind" size=6 multiple>
+                 <option value="토건">&nbsp;&nbsp;토 &nbsp;&nbsp;&nbsp;&nbsp;건</option>
+				 <option value="토목">&nbsp;&nbsp;토 &nbsp;&nbsp;&nbsp;&nbsp;목</option>
+				 <option value="건축">&nbsp;&nbsp;건 &nbsp;&nbsp;&nbsp;&nbsp;축</option>
+				 <option value="조경">&nbsp;&nbsp;조 &nbsp;&nbsp;&nbsp;&nbsp;경</option>
+				 <option value="산업설비">&nbsp;&nbsp;산업설비</option>
+				 <option value="기타">&nbsp;&nbsp;기 &nbsp;&nbsp;&nbsp;&nbsp;타</option>
+			   
+				</select>
+			  </TD>
+			  <TD bgcolor="#ffffff" colspan=2><FONT SIZE="2" color=darkred face="돋움">☞ 귀사의 업체종류를 선택하세요.<br>
+			        ☞ 여러 선택 가능(선택 방법 : Ctrl + 마우스 클릭)</font></td>
+	 </TR>
+	 <TR><TD align=center  BGCOLOR=#F3F6ED><font color="#003148" size="-1" face=돋움>* 공사/작업<br>가능지역</font></TD>
+         <TD colspan=3 bgcolor="#ffffff"><font size=2 face="돋움"><BR>
+			   <input type=radio name="sell_area" onclick="inform.area_name.value='전국'">전 국&nbsp;&nbsp;<BR>
+				 <font color=darkblue>
+				 <input type=radio name="sell_area" onclick="inform.area_name.value='수도권'">수도권
+				 <input type=radio name="sell_area" onclick="inform.area_name.value='강원지역'">강원지역
+				 <input type=radio name="sell_area" onclick="inform.area_name.value='충청지역'">충정지역
+				 <input type=radio name="sell_area" onclick="inform.area_name.value='호남지역'">호남지역
+				 <input type=radio name="sell_area" onclick="inform.area_name.value='영남지역'">영남지역 <BR></font>
+				 <input type=radio name="sell_area" onclick="inform.area_name.value='서울'">서 울&nbsp;&nbsp;
+				 <input type=radio name="sell_area" onclick="inform.area_name.value='부산'">부 산&nbsp;&nbsp;
+				 <input type=radio name="sell_area" onclick="inform.area_name.value='대전'">대 전&nbsp;&nbsp;
+				 <input type=radio name="sell_area" onclick="inform.area_name.value='대구'">대 구&nbsp;&nbsp;
+				 <input type=radio name="sell_area" onclick="inform.area_name.value='춘천'">춘 천&nbsp;&nbsp;
+				 <input type=radio name="sell_area" onclick="inform.area_name.value='인천'">인 천&nbsp;&nbsp;<BR>
+				 <input type=radio name="sell_area" onclick="inform.area_name.value='울산'">울 산&nbsp;&nbsp;
+				 <input type=radio name="sell_area" onclick="inform.area_name.value='경기'">경 기&nbsp;&nbsp;
+				 <input type=radio name="sell_area" onclick="inform.area_name.value='강원'">강 원&nbsp;&nbsp;
+                 <input type=radio name="sell_area" onclick="inform.area_name.value='충남'">충 남&nbsp;&nbsp;
+				 <input type=radio name="sell_area" onclick="inform.area_name.value='충북'">충 북&nbsp;&nbsp;
+				 <input type=radio name="sell_area" onclick="inform.area_name.value='경남'">경 남&nbsp;&nbsp;<BR>
+				 <input type=radio name="sell_area" onclick="inform.area_name.value='경북'">경 북&nbsp;&nbsp;
+				 <input type=radio name="sell_area" onclick="inform.area_name.value='전남'">전 남&nbsp;&nbsp;
+				 <input type=radio name="sell_area" onclick="inform.area_name.value='전북'">전 북&nbsp;&nbsp;
+				 <input type=radio name="sell_area" onclick="inform.area_name.value='제주'">제 주<BR><BR></font>
+				 <input type=hidden name="area_name" MAXLENGTH="10" size="10">
+			 </TD>
+	  </TR>
+      <TR><TD align=center  BGCOLOR=#F3F6ED ><P><font color="#003148" size="-1" face="돋움">* 우 편 번 호</font></P></TD>	 
+          <TD colspan=3 bgcolor="#ffffff"><INPUT type="text" name=zipcode size="7" maxlength=7><input type="button" name="Searchzip1" value=" 검  색 " onclick="Openwin();">
+      </TR>
+      <TR><TD align=center BGCOLOR=#F3F6ED ><font color="#003148" size="-1" face="돋움">* 회 사 주 소</font></TD>		
+          <TD colspan=3 bgcolor="#ffffff"><INPUT NAME="address" size=63 MAXLENGTH=68></TD>                
+      </TR> 
+      <TR><TD align=center  BGCOLOR="#F3F6ED" ><font color="#003148" size="-1" face="돋움">* 전 화 번 호</font></TD>	
+          <TD bgcolor="#ffffff"><INPUT type="text" name=tel_num size="18" maxlength=14></td>
+          <TD align=center  BGCOLOR="#F3F6ED" ><P><FONT COLOR="#000000" SIZE="-1" FACE="돋움">FAX 번 호</FONT></P></TD>	
+          <TD bgcolor="#ffffff"><INPUT type="text" name=fax size="18" maxlength=14></TD>                         
+      </TR>
+	  <TR><TD align=center  BGCOLOR=#F3F6ED ><font color="#003148" size="-1" face="돋움">* E-mail</font></TD>	
+          <TD colspan=3 bgcolor="#ffffff"><INPUT type="text" name=email size="30" maxlength=30></td>
+	  </TR>
+	  <TR>
+          <TD align=center  BGCOLOR="#F3F6ED" ><P><FONT COLOR="#000000" SIZE="-1" FACE="돋움">홈페이지</FONT></P></TD>	
+          <TD colspan=3 bgcolor="#ffffff"><INPUT type="text" name=http size="40" maxlength=50></TD>                         
+      </TR>
+	  </TABLE>
+	  </td></tr>
+	  <TR><td colspan=2 height=30></td></TR>
+      <TR bgcolor="#295429"> 
+            <td width=170 height=30 align=center><font face="돋움" size="2" color="white"><b>◆ 시공능력 평가액 입력 </b></font></td>
+			<td width=510 bgcolor=white></td>
+	  </TR>
+	  <tr bgcolor="#82AC82"> 
+      <td colspan=2 align=center> 
+        <TABLE ID="Table1" BORDER=0 CELLSPACING=1 CELLPADDING=2 WIDTH="100%" bgcolor=#FFFFFF>
+           <TR><TD align=center bgcolor=#F3F6ED height=60 width=25%>
+              <P><font color="#003148" size="-1" face="돋움">* 시공능력 평가액</font><FONT COLOR="#000000" SIZE="-1" FACE="돋움"><br>
+                <FONT color=red>(단위:백만원)</FONT></FONT></P>
+            </TD>               	           
+              <TD bgcolor="#ffffff" colspan=3><INPUT type="text" name=ability_money size="70" maxlength=70>
+			    <font size=2 color=blue>백만원</font><br>
+				<font size=2 color=darkblue face=돋움>
+				
+				  입력예 : 토건(5,000), 토목(2,000), 건축(2,000), 조경(1,000)
+				</font></TD>
+           </TR> 
+           <TR><TD align=center BGCOLOR=#F3F6ED>
+              <P><font color="#003148" size="-1" face="돋움">회사소개</font></P></TD>		
+              <TD colspan=3 bgcolor="#ffffff">
+			  <textarea NAME="com_pr" cols=70 rows=6 wrap="hard">
+▣ 회 사 소 개
+</textarea></TD>                
+           </TR>
+		   <TR><td colspan=4 bgcolor="#3E803E" height=1></td></TR>                          
+           <TR align=middle>                
+            <TD COLSPAN=4 bgcolor="#F3F6ED" height=35><P>
+			    <INPUT TYPE=button NAME="FormsButton1" VALUE=" 등   록 " onclick="Check(this.form)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			    <INPUT TYPE="reset" NAME="reset" VALUE=" 취   소 "></P>
+			 </TD>
+		   </TR>
+	   </TABLE>
+  </td></tr></table>
+</FORM>
+
+<font size="2" color="darkblue">1. 모든 정보를 정확하게 입력하세요<br>
+2. 정확한 입력이 정확한 검색을 보장합니다.</font><br>
+<br>
+<CENTER><img src="../images/sep2.gif" width="80%" height=1 border="0"><br><br>
+<font face="굴림" size="2" color="#3131a3">Copyright 1999-2000 <B>Lead Information System Inc.</B> All rights reserved.</font></CENTER>
+</BODY>
+</html>  

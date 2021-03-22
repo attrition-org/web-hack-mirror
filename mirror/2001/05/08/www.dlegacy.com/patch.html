@@ -1,0 +1,203 @@
+<html>
+<head>
+<title>&quot;Damn kids. They're all alike.&quot;</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+body {  font-family: Tahoma, Verdana; font-size: 11px; color: #000000}
+td {  font-family: Tahoma, Verdana; font-size: 11px; color: #000000}
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<div align="center"></div>
+<table width="50%" border="0" cellspacing="1" cellpadding="3" align="center">
+  <tr>
+    <td>
+      <div align="center"><img src="tbsg.gif" width="315" height="123"></div>
+    </td>
+  </tr>
+</table>
+<br>
+<table width="50%" border="0" cellspacing="1" cellpadding="3" align="center" bgcolor="#000000">
+  <tr>
+    <td bgcolor="#FFFFFF">
+      <div align="center"><b><font color="#FF0000">Notice to System Administrator</font></b><br>
+        Don't waste your time looking for logs, there are none.<br>
+        <br>
+        This is how we compromised your system..<br>
+        <br>
+      </div>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td><b>Windows 2000 IIS 5.0 Remote buffer overflow vulnerability (Remote 
+            SYSTEM Level Access)</b><br>
+            <br>
+            <b>Release Date:</b><br>
+            May 01, 2001<br>
+            <br>
+            <b>Severity:</b><br>
+            High (Remote SYSTEM level code execution)<br>
+            <br>
+            <b>Systems Affected:</b><br>
+            Microsoft Windows 2000 Internet Information Services 5.0<br>
+            Microsoft Windows 2000 Internet Information Services 5.0 + Service 
+            Pack 1<br>
+            <br>
+            <b>Description:</b><br>
+            A wise man once said, "When a single exploit is released, it's a good 
+            hack. When you are the first to hack each successive version of a 
+            product run on millions of computers all over the internet, you create 
+            a dynasty."<br>
+            <br>
+            It seems sometimes the greatest discoveries are the ones that are 
+            the hardest to share with the world. It's not about a lack of wanting 
+            to tell everyone, but a lack of not knowing exactly how to put it 
+            so that people's jaws do not drop so fast that their heads snap back 
+            as they realize just how fragile our world is becoming. We are slowly 
+            pushing society into the digital world people only dreamed about years 
+            ago -- a world in which everything is being connected and little is 
+            being done to shore up the large looming gaps that are in existence 
+            in today's networked systems.<br>
+            <br>
+            And without further ado... eEye Digital Security presents, "Remote 
+            SYSTEM level access to any default Windows 2000 IIS 5.0 Web server."<br>
+            <br>
+            <b>The Discovery:</b><br>
+            This bug was first discovered while Riley Hassell, of eEye Digital 
+            Security, was updating <a 
+                        href="http://www.eeye.com/html/Products/Retina/index.html">Retina's</a> 
+            <a 
+                        href="http://www.eeye.com/html/Research/Papers/DS20010106.html">CHAM 
+            (Common Hacking Attack Methods)</a> technology to look for unknown 
+            vulnerabilities within some of the new features that Windows 2000 
+            IIS 5.0 provides. One of the features that was added to be audited 
+            by CHAM was the .printer ISAPI filter extension. Once the .printer 
+            ISAPI filter was added to the list of ISAPI's to audit, as well as 
+            various aspects of the new Web DAV functionality within IIS, the latest 
+            <a 
+                        href="http://www.eeye.com/html/Products/Retina/index.html">Retina</a> 
+            development code was let loose against a test server in our lab. Within 
+            a matter of minutes, a debugger kicked in on inetinfo.exe because 
+            of a "buffer overflow error."<br>
+            <br>
+            <b>The Explanation:</b><br>
+            It turns out the latest development code of <a 
+                        href="http://www.eeye.com/html/Products/Retina/index.html">Retina</a> 
+            was able to find a buffer overflow within the .printer ISAPI filter 
+            (C:\WINNT\System32\msw3prt.dll) which provides Windows 2000 with support 
+            for the Internet Printing Protocol (IPP) which allows for the Web 
+            based control of various aspects of networked printers.<br>
+            <br>
+            The vulnerability arises when a buffer of aprox. 420 bytes is sent 
+            within the HTTP Host: header for a .printer ISAPI request.<br>
+            <br>
+            <b>Example:</b><br>
+            GET /NULL.printer HTTP/1.0<br>
+            Host: [buffer]<br>
+            <br>
+            Where [buffer] is aprox. 420 characters.<br>
+            <br>
+            At this point an attacker has sucessfully caused a buffer overflow 
+            within IIS and has overwritten EIP. Now normally the Web server would 
+            stop responding once you have "buffer overflowed" it. However, Windows 
+            2000 will automatically restart the Web server if it notices that 
+            the Web server has crashed. While the feature is nice to help create 
+            a longer period of "up time", it is actually a feature that makes 
+            it easier for remote attacks to execute code against Windows 2000 
+            IIS 5.0 Web servers.<br>
+            <br>
+            As we stated earlier, our overflow is able to overwrite the EIP register 
+            with whatever we want. That basically means we can overwrite EIP with 
+            a location in memory that jumps to our "exploit" code, in memory, 
+            and then executes our code with SYSTEM level access.<br>
+            <br>
+            <b>The Exploit:</b><br>
+            Ryan Permeh, resident shellcode ninja of eEye Digital Security, has 
+            created an example exploit to be used as a "proof-of-concept". Our 
+            proof-of-concept exploit will, when run against an IIS 5 Web server, 
+            create a text document on the remote server with instructions directing 
+            readers to a Web page on eeye.com that has information on how to patch 
+            the system so that the Web server is no longer vulnerable to this 
+            flaw. This exploit is to only be considered a proof-of-concept exploit 
+            and anyone with Windows 2000 should install the Microsoft supplied 
+            patch ASAP. <br>
+            <br>
+            Proof of concept exploit:<br>
+            <a 
+                        href="http://www.eeye.com/html/research/Advisories/iishack2000.c">http://www.eeye.com/html/research/Advisories/iishack2000.c</a><br>
+            This exploit will simply create a file in the root of drive c:\ with 
+            instructions on how to patch your vulnerable server. If you are running 
+            Windows 2000 then please install the Microsoft security patch and 
+            do not depend on this exploit as being a tool to test whether your 
+            vulnerable or not because if you have not installed the patch then 
+            you are most likely vulnerable.<br>
+            <br>
+            We would like to note that eEye Digital Security did provide Microsoft 
+            with a working exploit. This exploit, when ran against a Web server, 
+            will bind a cmd.exe command prompt to an IIS remote port within seconds. 
+            This allows a remote attacker to execute commands with SYSTEM level 
+            access and thereby have full control over the vulnerable machine.<br>
+            <br>
+            <b>The Log:</b><br>
+            Actually there is no log because this vulnerability, like most IIS 
+            buffer overflows, does not get logged. That means some of the largest 
+            Web servers on the Internet running Windows 2000 are vulnerable to 
+            this attack and when exploited, there will be no IIS log anywhere 
+            that records the attack.<br>
+            <br>
+            <b>The Fallout:</b><br>
+            As with our first remote SYSTEM level exploit for IIS 4.0 two years 
+            ago, the fallout from this second IIS remote overflow is also rather 
+            large. Once again it does not matter what kind of security systems 
+            you have in place, Firewalls, IDS's, etc., because all of these systems 
+            can be bypassed and your Web server CAN be broken into via this vulnerability. 
+            To quote our last advisory: "Even a server that's locked in a guarded 
+            room behind a Cisco Pix can be broken into with this hole. This is 
+            a reminder to all software vendors that testing for common security 
+            holes in your software is a must. Demand more from your software vendors." 
+            There are millions of Windows 2000 Web servers on the Internet right 
+            now that are wide open to this vulnerability.<br>
+            <br>
+            <b>The Magic:</b> <br>
+            About two weeks ago eEye Digital Security released, <a 
+                        href="http://www.eeye.com/html/Products/SecureIIS/index.html">SecureIIS</a> 
+            which stops both known and unknown IIS Web server vulnerabilities. 
+            Our SecureIIS code base from about 4 weeks ago actually stopped this 
+            latest IIS 5.0 buffer overflow vulnerability without actually knowing 
+            anything about it. It is this power to stop both known and unknown 
+            vulnerabilities that sets SecureIIS apart from every other security 
+            product in the market. Visit <a 
+                        href="http://www.eeye.com/SecureIIS">http://www.eeye.com/SecureIIS</a> 
+            to learn more about this ground-breaking product.<br>
+            <br>
+            <b>Vendor Status:</b><br>
+            We would like to thank Microsoft for working hard with us to create 
+            a patch for this vulnerability.<br>
+            You can download the Microsoft supplied patch from: http://www.microsoft.com/technet/security/bulletin/ms01-023.asp<br>
+            Also eEye Digital Security recommends removing the .printer ISAPI 
+            filter from your Web server if it does not provide your Web server 
+            with any _needed_ functionality.<br>
+            <br>
+            <b>Credit:</b><br>
+            Discovery: Riley Hassell<br>
+            Exploit: Ryan Permeh<br>
+            <br>
+            <b>Related Links:</b><br>
+            Retina - The Network Security Scanner.<br>
+            <a 
+                        href="http://www.eeye.com/Retina">http://www.eeye.com/Retina</a><br>
+            <br>
+            SecureIIS - HTTP Application Firewall<br>
+            <a 
+                        href="http://www.eeye.com/SecureIIS">http://www.eeye.com/SecureIIS</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<div align="center">brought to you by..<b><br>
+  lks</b> and <b>nsr</b></div>
+</body>
+</html>

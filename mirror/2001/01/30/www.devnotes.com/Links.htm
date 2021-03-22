@@ -1,0 +1,89 @@
+<HTML>
+<HEAD>
+
+<TITLE>William Remmert's Resume</TITLE>
+<Base target=Documents>
+</HEAD>
+<BODY BACKGROUND="Wall2.gif" link="#8E6B23"
+vlink="#8E236B">
+<FONT SIZE=2><B>
+<A HREF="Summary.htm">Summary</A><BR>
+<A HREF="Highlights.htm">Career Highlights</A><BR>
+<A HREF="Experience.htm">Experience</A><BR>
+<A HREF="Awards.htm">Awards</A><BR>
+<A HREF="Sample_Apps.htm">Sample Apps.</A><BR>
+
+<A HREF="Links2.htm" target=_self>Education</A><BR>
+<A HREF="Resume.htm" target=_top>Resume in Full</A><BR>
+<A HREF="References.htm">References</A><BR>
+<A HREF="JustForFun.htm">Just for Fun</A><BR>
+
+<A HREF="Download.htm">Download Resume</A>
+
+</B></FONT>
+<BR><BR><BR>
+
+
+<script language="JavaScript">
+var selectedImage = new Image();
+selectedImage.src = "BannerButton.gif";
+var deselectedImage = new Image();
+deselectedImage.src = "Greekkey.gif";
+
+function selectImage(imageName) {
+	document.images[imageName].src = selectedImage.src;
+}
+
+function deselectImage(imageName) {
+	document.images[imageName].src = deselectedImage.src;
+}
+</script>
+<CENTER>
+<A HREF="Credits.htm"
+
+<a href="#Back To Top" onMouseOver="selectImage('Image1');" onMouseOut="deselectImage('Image1');"><img name="Image1" src="DiamondFlash.gif" vspace=5 hspace=5 border=0 width="17" height="17"></a>
+</A><BR></CENTER>
+<!-- Greekkey.gif
+ -->
+
+<FONT face="Arial Narrow, arial, sans-serif" SIZE=-1 COLOR="#8E6B23"><P align=center>
+<PRE><CENTER><script LANGUAGE="JavaScript">
+var Today = new Date();
+var ThisDay = Today.getDate();
+var ThisMonth = Today.getMonth()+1;
+var ThisYear = Today.getFullYear();
+
+var Weekday = new Array();
+		Weekday[1]="Monday";
+		Weekday[2]="Tuesday";
+		Weekday[3]="Wednesday";
+		Weekday[4]="Thursday";
+		Weekday[5]="Friday";
+		Weekday[6]="Saturday";
+		Weekday[0]="Sunday";
+var WeekdayIndex =Today.getDay();
+var TheDay = Weekday[WeekdayIndex];
+
+var Month = new Array();
+		Month[0]="January";
+		Month[1]="February";
+		Month[2]="March";
+		Month[3]="April";
+		Month[4]="May";
+		Month[5]="June";
+		Month[6]="July";
+		Month[7]="August";
+		Month[8]="September";
+		Month[9]="October";
+		Month[10]="November";
+		Month[11]="December";
+var MonthIndex = Today.getMonth();
+var TheMonth = Month[MonthIndex];
+
+document.writeln(TheDay);
+document.write(TheMonth+" "+ThisDay+", "+ThisYear)
+</script></CENTER></PRE>
+
+</FONT></P>
+</BODY>
+</HTML>

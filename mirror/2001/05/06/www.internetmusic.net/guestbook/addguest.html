@@ -1,0 +1,135 @@
+<html>
+
+                       <head>
+
+                       <title>Cool JavaScript</title>
+
+                       </head>
+
+  <BODY TEXT="#FFFFFF" BGCOLOR="#000000" LINK="#FFEC12" VLINK="#FF0000" ALINK="#FF2213" BACKGROUND="http://internetmusic.net/space7.jpg">
+<center><a href="/guestbook/index.shtml">If you are using, 3.0 browser click here</a></center>
+<div id="splashcontainer" style="position:absolute;width:350"></div>
+
+                       <layer id="splashcontainerns" width=450></layer>
+
+                       <script language="JavaScript">
+
+                       var intervals=4000
+
+                       var targetdestination="/guestbook/index.shtml"  
+
+                       var splashmessage=new Array()
+
+                       var openingtags='<font face="verdana" size="4">'
+
+                       splashmessage[0]="After You Sign Our Guestbook ..."
+
+                       splashmessage[1]="You'll Be Notified Via Your Email Account..."
+
+                       splashmessage[2]="Hang on while we take you to our Guestbook ..."                  
+
+                       var closingtags='</font>'
+
+                       var i=0
+
+                       function displaysplash_ie(){
+
+                       if (i<splashmessage.length){
+
+                       sc_ie.style.visibility="hidden"
+
+                       sc_ie.innerHTML='<b><center>'+openingtags+splashmessage[i]+closingtags+'</center></b>'
+
+                       sc_ie.style.top=document.body.scrollTop+document.body.clientHeight/2-sc_ie.offsetHeight/2
+
+                       sc_ie.style.visibility="visible"
+
+                       i++
+
+                       }
+
+                       else{
+
+                       window.location=targetdestination
+
+                       return
+
+                       }
+
+                       setTimeout("displaysplash_ie()",intervals)
+
+                       }
+
+                       function displaysplash_ns(){
+
+                       if (i<splashmessage.length){
+
+                       sc_ns.visibility="hide"
+
+                       sc_ns.document.write('<b>'+openingtags+splashmessage[i]+closingtags+'</b>')
+
+                       sc_ns.document.close()
+
+                       sc_ns.left=pageXOffset+window.innerWidth/2-sc_ns.document.width/2
+
+                       sc_ns.top=pageYOffset+window.innerHeight/2-sc_ns.document.height/2
+
+                       sc_ns.visibility="show"
+
+                       i++
+
+                       }
+
+                       else{
+
+                       window.location=targetdestination
+
+                       return
+
+                       }
+
+                       setTimeout("displaysplash_ns()",intervals)
+
+                       }
+
+                       function positionsplashcontainer(){
+
+                       if (document.all){
+
+                       sc_ie=document.all.splashcontainer
+
+                       sc_ie.style.left=document.body.scrollLeft+document.body.clientWidth/2-sc_ie.offsetWidth/2
+
+                       sc_ie.style.top=document.body.scrollTop+document.body.clientHeight/2-sc_ie.offsetHeight/2
+
+                       displaysplash_ie()
+
+                       }
+
+                       else if (document.layers){
+
+                       sc_ns=document.splashcontainerns
+
+                       sc_ns.left=pageXOffset+window.innerWidth/2-sc_ns.document.width/2
+
+                       sc_ns.top=pageYOffset+window.innerHeight/2-sc_ns.document.height/2
+
+                       sc_ns.visibility="show"
+
+                       displaysplash_ns()
+
+                       }
+
+                       else
+
+                       window.location=targetdestination
+
+                       }
+
+                       window.onload=positionsplashcontainer
+
+                       </script>
+
+                       </body>
+
+                       </html> 

@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>Pre-Registered Verification Check</title>
+</head>
+
+<body background="slate1.jpg" bgproperties="fixed">
+
+<h1 align="center"><font face="Arial">CUMBERLAND COLLEGE</font></h1>
+
+<p align="center"><font size="4" face="Arial"><strong>Demographic Verification Form</strong></font></p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center"><font color="#800000" face="Arial"><em><strong>Note: We require that all
+pre-registered students, that have been cleared for the Spring 2000 term, submit an updated
+demographic form between November 29th. 1999 and December 17th. 1999.</strong></em></font></p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center"><font face="Arial"><strong>Submit your Last Name, Social Security
+Number,</strong></font></p>
+
+<p align="center"><font face="Arial"><strong>and Student Identification number for
+verification.</strong></font></p>
+
+<!--webbot BOT="GeneratedScript" PREVIEW=" " startspan --><script Language="JavaScript"><!--
+function FrontPage_Form1_Validator(theForm)
+{
+
+  if (theForm.LName.value == "")
+  {
+    alert("Please enter a value for the \"LName\" field.");
+    theForm.LName.focus();
+    return (false);
+  }
+
+  if (theForm.LName.value.length < 1)
+  {
+    alert("Please enter at least 1 characters in the \"LName\" field.");
+    theForm.LName.focus();
+    return (false);
+  }
+
+  if (theForm.LName.value.length > 24)
+  {
+    alert("Please enter at most 24 characters in the \"LName\" field.");
+    theForm.LName.focus();
+    return (false);
+  }
+
+  if (theForm.SSNum.value.length > 9)
+  {
+    alert("Please enter at most 9 characters in the \"Social Security Number\" field.");
+    theForm.SSNum.focus();
+    return (false);
+  }
+
+  var checkOK = "0123456789- \t\r\n\f";
+  var checkStr = theForm.SSNum.value;
+  var allValid = true;
+  for (i = 0;  i < checkStr.length;  i++)
+  {
+    ch = checkStr.charAt(i);
+    for (j = 0;  j < checkOK.length;  j++)
+      if (ch == checkOK.charAt(j))
+        break;
+    if (j == checkOK.length)
+    {
+      allValid = false;
+      break;
+    }
+  }
+  if (!allValid)
+  {
+    alert("Please enter only digit and whitespace characters in the \"Social Security Number\" field.");
+    theForm.SSNum.focus();
+    return (false);
+  }
+  return (true);
+}
+//--></script><!--webbot BOT="GeneratedScript" endspan --><form method="POST" action="demograp.idc" onsubmit="return FrontPage_Form1_Validator(this)" name="FrontPage_Form1">
+  <div align="center"><center><table border="0">
+    <tr>
+      <td align="center"><font face="Arial"><strong>Last Name:</strong></font> <!--webbot bot="Validation" S-Data-Type="String" B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="24" --><input type="text" size="24" name="LName" maxlength="24"><p><font face="Arial"><strong>Social
+      Security Number:</strong></font> <!--webbot bot="Validation" S-Display-Name="Social Security Number" S-Data-Type="String" B-Allow-Digits="TRUE" B-Allow-WhiteSpace="TRUE" I-Maximum-Length="9" --><input type="text" size="9" name="SSNum" maxlength="9">(no dashes)</p>
+      <p><font face="Arial"><strong>Cumberland College Identification Number:</strong></font> <input type="number" size="7" maxlength="7" name="IDNumber"></td>
+      <td><input type="submit" value="Submit" name="B1"></td>
+    </tr>
+  </table>
+  </center></div>
+</form>
+</body>
+</html>

@@ -1,0 +1,15 @@
+#
+#	@(#) inetd.conf 
+#
+telnet	stream	tcp	nowait	root	/usr/local/s/tcpd /usr/sbin/telnetd
+auth	stream	tcp	nowait	root	/usr/local/s/in.identd in.identd -l
+ftp	stream	tcp	nowait	root	/usr/local/s/tcpd /usr/sbin/ftpd -l -t120 -T600
+ns      stream  tcp     nowait  root    /usr/local/s/tcpd /usr/local/bin/qi -d -t30
+shell	stream	tcp	nowait 	root	/usr/local/s/tcpd /usr/sbin/rshd
+#bootps	dgram	udp	wait 	root 	/usr/sbin/joind joind -d1
+#tftp   dgram   udp     wait    root     /usr/local/s/tcpd /usr/sbin/tftpd -r /usr/local/bootfiles
+trs-server  stream  tcp  nowait  root  /usr/local/trs/server/trs_server /usr/local/trs/server/trs_server
+### Messaging project update - Antony Somerville 30/5/00
+smtp    stream  tcp  nowait root   /usr/local/s/tcpd /usr/sbin/sendmail -bs
+### Update End 30/5/00
+<!-- www.attrition.org web hack mirror - watermark or something -->

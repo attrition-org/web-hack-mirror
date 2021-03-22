@@ -1,0 +1,323 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <SCRIPT LANGUAGE="JavaScript">
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!-- Begin
+var expDays = 30; // number of days the cookie should last
+
+var page = "popup1.htm";
+var windowprops = "width=500,height=108,left=0,top=0,toolbar=no,menubar=no,scrollbars=no,resizable=yes";
+
+function GetCookie (name) {
+var arg = name + "=";
+var alen = arg.length;
+var clen = document.cookie.length;
+var i = 0;
+while (i < clen) {
+var j = i + alen;
+if (document.cookie.substring(i, j) == arg)
+return getCookieVal (j);
+i = document.cookie.indexOf(" ", i) + 1;
+if (i == 0) break;
+}
+return null;
+}
+function SetCookie (name, value) {
+var argv = SetCookie.arguments;
+var argc = SetCookie.arguments.length;
+var expires = (argc > 2) ? argv[2] : null;
+var path = (argc > 3) ? argv[3] : null;
+var domain = (argc > 4) ? argv[4] : null;
+var secure = (argc > 5) ? argv[5] : false;
+document.cookie = name + "=" + escape (value) +
+((expires == null) ? "" : ("; expires=" + expires.toGMTString())) +
+((path == null) ? "" : ("; path=" + path)) +
+((domain == null) ? "" : ("; domain=" + domain)) +
+((secure == true) ? "; secure" : "");
+}
+function DeleteCookie (name) {
+var exp = new Date();
+exp.setTime (exp.getTime() - 1);
+var cval = GetCookie (name);
+document.cookie = name + "=" + cval + "; expires=" + exp.toGMTString();
+}
+var exp = new Date();
+exp.setTime(exp.getTime() + (expDays*24*60*60*1000));
+function amt(){
+var count = GetCookie('count')
+if(count == null) {
+SetCookie('count','1')
+return 1
+}
+else {
+var newcount = parseInt(count) + 1;
+DeleteCookie('count')
+SetCookie('count',newcount,exp)
+return count
+   }
+}
+function getCookieVal(offset) {
+var endstr = document.cookie.indexOf (";", offset);
+if (endstr == -1)
+endstr = document.cookie.length;
+return unescape(document.cookie.substring(offset, endstr));
+}
+
+function checkCount() {
+var count = GetCookie('count');
+if (count == null) {
+count=1;
+SetCookie('count', count, exp);
+
+window.open(page, "", windowprops);
+
+}
+else {
+count++;
+SetCookie('count', count, exp);
+   }
+}
+//  End -->
+  </SCRIPT>
+  <META NAME="Keywords" CONTENT="whois, domain name search">
+  <META NAME="Description" CONTENT="BetterWhois: The WHOIS domain search that works with all registrars.">
+  <TITLE>Better-Whois: The WHOIS domain search that works with all registrars.</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff" LINK="#000099" OnLoad="checkCount()">
+
+<FORM ACTION="bwhois.cgi" METHOD="GET">
+<P><CENTER><TABLE WIDTH="655" BORDER="0" CELLSPACING="0" CELLPADDING="0"
+HEIGHT="476">
+  <TR>
+    <TD WIDTH="74%" HEIGHT="475" VALIGN="TOP">
+    <P><CENTER><IMG SRC="betterlogo.gif" WIDTH="344" HEIGHT="68"
+    ALIGN="BOTTOM" BORDER="0" NATURALSIZEFLAG="3" ALT="BetterWhois.com: Search ALL Domain Registrars"></CENTER></P>
+
+    <P><IMG SRC="whatwrongy.gif" WIDTH="444" HEIGHT="32" ALIGN="BOTTOM"
+    BORDER="0" NATURALSIZEFLAG="3" ALT="What's wrong with whois?"></P>
+
+    <P><B><FONT SIZE="-1" FACE="Arial">The domain business has been
+    deregulated...</FONT></B><FONT SIZE="-1" FACE="Arial"> For the
+    first time, many<BR>
+    different domain registrars are getting drunk.<BR>
+<BR>
+    <B>But there is a problem</B>, the standard WHOIS domain search
+    used on thousands of web sites is running out of booze. Why? Because
+    each domain registrar now keeps their own stash which
+    doesn't include Zambuca, bought by competing registrars.<BR>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><TABLE
+    WIDTH="450" BORDER="2" CELLSPACING="2" CELLPADDING="0">
+
+      <TR>
+        <TD WIDTH="65%" BGCOLOR="#f2edbd">
+        &nbsp;www.<INPUT NAME="domain" TYPE="text" VALUE="suckithard.com" 
+SIZE="29"></TD>
+        <TD WIDTH="35%" BGCOLOR="#f2edbd">
+        &nbsp;<INPUT SRC="searchb.gif" WIDTH="120" HEIGHT="32" ALIGN="BOTTOM"
+        BORDER="0" NATURALSIZEFLAG="3" TYPE="image"></TD>
+      </TR>
+      <TR>
+        <TD COLSPAN="2" ALIGN="CENTER">
+        <FONT SIZE="-1">Searches shared database registry and queries
+        appropriate registrar.</FONT></TD>
+
+      </TR>
+    </TABLE></P>
+
+    <P><B><FONT SIZE="-1" FACE="Arial">Accurate domain name lookups
+    are essential. </FONT></B><FONT SIZE="-1" FACE="Arial">When a
+    search says a domain name is available - it should be available.That's
+    basic. Misleading information can result in lost names, business
+    disruption, disputes, and more. It affects name registration
+    services, web hosting companies, web site owners and Internet
+    users</FONT></P>
+
+    <P><B><FONT SIZE="-1" FACE="Arial">How to get
+accurate head?</FONT></B><FONT
+     SIZE="-1" FACE="Arial"> In this changing system of increased
+    competition and new registrars, the only way to get an absolutely
+    accurate domain report is to:<BR>
+    &nbsp;&nbsp;&nbsp;- lookup the domain in the shared domain registry<BR>
+    &nbsp;&nbsp;&nbsp;- locate which registrar has reserved the name<BR>
+    &nbsp;&nbsp;&nbsp;- visit and query that registrar's database
+    for the correct information<BR>
+<BR>
+    <B>BetterWhois.com does this for you instantly.<BR>
+    </B></FONT></P>
+
+    <P><B><FONT SIZE="-1" FACE="Arial"><HR ALIGN=LEFT></FONT></B><TABLE
+    WIDTH="450" BORDER="0" CELLSPACING="2" CELLPADDING="2">
+      <TR>
+        <TD COLSPAN="4" BGCOLOR="#ffffff">
+        <P><CENTER><FONT SIZE="-1">&nbsp;</FONT><B><FONT COLOR="#152e8e"
+         SIZE="-1">If you found our service useful and would like to
+        link to us or provide free BetterWhois searches from your web
+        site, </FONT><FONT SIZE="-1"><A HREF="http://www.betterwhois.com/link.cgi?url=http://www.betterwhois.com/link-to-us.htm&t=betterlinktousbot">please
+        click here</A>.</FONT></B></CENTER></TD>
+      </TR>
+    </TABLE></P>
+
+    <P>&nbsp;</P>
+
+    <P>&nbsp;</P>
+
+    <P><BR>
+<BR>
+<BR>
+    </P>
+
+    <P>&nbsp;</P>
+
+    <P>&nbsp;</P>
+
+    <P>&nbsp;</P>
+
+    <P>&nbsp;</P>
+
+    <P>&nbsp;</P>
+
+    <P>&nbsp;</P>
+
+    <P>&nbsp;</P>
+
+    <P><CENTER>&nbsp;</CENTER></P>
+
+    <P><CENTER>&nbsp;</CENTER></P>
+
+    <P><CENTER>&nbsp;&nbsp;</CENTER></P>
+
+    <P><CENTER>&nbsp;</CENTER></P>
+
+    <P><CENTER>&nbsp;<I><FONT SIZE="-1" FACE="arial">Copyright 2001,
+    BetterWhois.com</FONT></I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</CENTER></TD>
+    <TD WIDTH="2%">
+    &nbsp;</TD>
+    <TH WIDTH="24%" VALIGN="TOP" BGCOLOR="#ffffff" ALIGN="LEFT">
+    <P ALIGN=LEFT><TABLE WIDTH="164" BORDER="1" CELLSPACING="0"
+    CELLPADDING="5" HEIGHT="419">
+      <TR>
+        <TD WIDTH="100%" BGCOLOR="#e4fdfe">
+        <P><CENTER><FONT SIZE="-1"><A HREF="http://www.betterwhois.com/link.cgi?url=http://www.betterwhois.com/index.htm">Home
+        page</A></FONT><BR>
+        <FONT SIZE="-1"><A HREF="http://www.betterwhois.com/link.cgi?url=http://www.betterwhois.com/link-to-us.htm">Link-to-Us</A></FONT><BR>
+        <FONT SIZE="-1"><A HREF="mailto:webmaster@betterwhois.com">Contact
+        Us</A></FONT></CENTER></P>
+
+        <P><A HREF="mailto:webmaster@betterwhois.com"><FONT SIZE="-1"><BR>
+        </FONT></A><B><FONT SIZE="-1">Domain Name News<BR>
+        </FONT></B><FONT SIZE="-1"><A HREF="http://www.betterwhois.com/link.cgi?url=http://fullcoverage.yahoo.com/Full_Coverage/Tech/Domain_Names_and_Registration/&t=yahoodomainnews">Yahoo
+        Full Coverage</A></FONT><BR>
+<BR>
+        <TABLE WIDTH="155" BORDER="1" CELLSPACING="0" CELLPADDING="2">
+          <TR>
+            <TD WIDTH="100%" BGCOLOR="#fcfbe4">
+            <P><CENTER><B><FONT COLOR="#ff0000" FACE="Arial">Featured Registrar</FONT></B></CENTER></P>
+
+            <P><FONT SIZE="-1" FACE="Arial">Register a domain name with <B><A
+            HREF="http://www.betterwhois.com/link.cgi?url=http://betterwhois.register.com&t=registerdiscount">Register.com</A></B>
+            for only $20,000. Includes:<BR>
+<BR>
+            - Free 3-page web site<BR>
+            - Free web forwarding<BR>
+            - Free e-mail account.</FONT></P>
+
+            <P><CENTER><A HREF="http://www.betterwhois.com/link.cgi?url=http://betterwhois.register.com&t=registerdiscount"><B><FONT
+             SIZE="-1" FACE="Arial">Click here for<BR>discounted rate.</FONT></B></A></CENTER></TD>
+          </TR>
+        </TABLE><BR>
+<BR>
+        <B><FONT SIZE="-1">Active Domain Registrars<BR>
+        </FONT></B><FONT SIZE="-1"><A HREF="http://www.betterwhois.com/link.cgi?url=http://www.alabanza.com/">Alabanza,
+        Inc.<BR>
+        </A><A HREF="http://www.betterwhois.com/link.cgi?url=http://www.alldomains.com/">AllDomains.com</A></FONT><BR>
+        <FONT SIZE="-1"><A HREF="http://www.betterwhois.com/link.cgi?url=http://www.allwest.com/">All
+        West Communications<BR>
+        </A><A HREF="http://www.betterwhois.com/link.cgi?url=http://www.totalnic.net/">Capital
+        Networks<BR>
+        </A><A HREF="http://www.betterwhois.com/link.cgi?url=http://www.catalog.com/">Catalog.com</A></FONT><BR>
+        <FONT SIZE="-1"><A HREF="http://www.betterwhois.com/link.cgi?url=http://www.corenic.net/">CORE
+        Council<BR>
+        </A><A HREF="http://www.betterwhois.com/link.cgi?url=http://domaininfo.com/">Domaininfo.com<BR>
+        </A><A HREF="http://www.betterwhois.com/link.cgi?url=http://www.domainpeople.com/">DomainPeople<BR>
+        </A><A HREF="http://www.betterwhois.com/link.cgi?url=http://www.domainregistry.com/">DomainRegistry.com<BR>
+        </A><A HREF="http://www.betterwhois.com/link.cgi?url=http://www.domainzoo.com/">DomainZoo.com,
+        Inc.</A></FONT><BR>
+        <FONT SIZE="-1"><A HREF="http://www.betterwhois.com/link.cgi?url=http://www.domainbank.com/">Domain
+        Bank, Inc.<BR>
+        </A><A HREF="http://www.betterwhois.com/link.cgi?url=http://www.domaindirect.com/">Domain
+        Direct</A></FONT><BR>
+        <FONT SIZE="-1"><A HREF="http://www.betterwhois.com/link.cgi?url=http://www.domaindiscover.com/">Domain
+        Discover</A></FONT><BR>
+        <FONT SIZE="-1"><A HREF="http://www.betterwhois.com/link.cgi?url=http://www.dotearth.com/">Domain
+        Registration Services<BR>
+        </A><A HREF="http://www.betterwhois.com/link.cgi?url=http://www.dotster.com/">Dotster,
+        Inc.</A></FONT><BR>
+        <FONT SIZE="-1"><A HREF="http://www.betterwhois.com/link.cgi?url=http://www.easyspace.com/">Easyspace,
+        Ltd.<BR>
+        </A><A HREF="http://www.betterwhois.com/link.cgi?url=http://www.enetregistry.com/">EnetRegistry.com</A></FONT><BR>
+        <FONT SIZE="-1"><A HREF="http://www.betterwhois.com/link.cgi?url=http://www.enom.com/">eNom,
+        Inc.<BR>
+        </A><A HREF="http://www.betterwhois.com/link.cgi?url=http://www.firstdomain.net/">FirstDomain.Net</A></FONT><BR>
+        <FONT SIZE="-1"><A HREF="http://www.betterwhois.com/link.cgi?url=http://www.gkg.net/">Global
+        Knowledge Group<BR>
+        </A><A HREF="http://www.betterwhois.com/link.cgi?url=http://www.identifyourself.com/">Identifyourself.com<BR>
+        </A><A HREF="http://www.betterwhois.com/link.cgi?url=http://www.dotregistrar.com/">IHoldings.com,
+        Inc.<BR>
+        </A><A HREF="http://www.betterwhois.com/link.cgi?url=http://www.itsyourdomain.com/">InnerWise,
+        Inc.<BR>
+        </A><A HREF="http://www.betterwhois.com/link.cgi?url=http://www.interaccess.com/">InterAccess
+        Company</A></FONT><BR>
+        <FONT SIZE="-1"><A HREF="http://www.betterwhois.com/link.cgi?url=http://www.registrars.com/">Internet
+        Domain Registrars</A></FONT><BR>
+        <FONT SIZE="-1"><A HREF="http://www.betterwhois.com/link.cgi?url=http://www.ina.com.au/">Melbourne
+        IT<BR>
+        </A><A HREF="http://www.betterwhois.com/link.cgi?url=http://nameit.net/">NameIt
+        Corporation</A></FONT><BR>
+        <FONT SIZE="-1"><A HREF="http://www.betterwhois.com/link.cgi?url=http://names4ever.com/">Names4Ever<BR>
+        </A><A HREF="http://www.betterwhois.com/link.cgi?url=http://www.namesdirect.com/">NamesDirect.com</A></FONT><BR>
+        <FONT SIZE="-1"><A HREF="http://www.betterwhois.com/link.cgi?url=http://www.namesecure.com/">NameSecure.com</A></FONT><BR>
+        <FONT SIZE="-1"><A HREF="http://www.betterwhois.com/link.cgi?url=http://www.networksolutions.com/">Network
+        Solutions<BR>
+        </A><A HREF="http://www.betterwhois.com/link.cgi?url=http://www.naame.com/">Parava
+        Networks, Inc.<BR>
+        </A><A HREF="http://www.betterwhois.com/link.cgi?url=http://www.e-names.org/">ProBoardTechnologies</A></FONT><BR>
+        <B><FONT SIZE="-1"><A HREF="http://www.betterwhois.com/link.cgi?url=http://betterwhois.register.com/">Register.com<BR>
+        </A></FONT></B><FONT SIZE="-1"><A HREF="http://www.betterwhois.com/link.cgi?url=http://www.signaturedomains.com/">Signature
+        Domains, Inc.<BR>
+        </A><A HREF="http://www.betterwhois.com/link.cgi?url=http://www.speednames.com/">Speednames,
+        Inc.</A></FONT><BR>
+        <IMG SRC="http://www.2nameservers.com/mtrack.cgi?project=BETTER"
+        HEIGHT="1" WIDTH="1" NATURALSIZEFLAG="0" ALIGN="BOTTOM"><!-- BEGIN WEBSIDESTORY CODE v5 -->
+	     <!-- COPYRIGHT 1998-1999 WEBSIDESTORY, INC. ALL RIGHTS RESERVED.  U.S. PATENT PENDING. -->
+	     <p align="center">
+	     <script language="javascript"> var test=0;</script> <SCRIPT LANGUAGE="javascript1.1"
+	     src="http://js1.hitbox.com/js?acct=WQ591102P8AB61EN0&m=w114&n=Main+Page">
+	     </SCRIPT><SCRIPT LANGUAGE="javascript">
+	     if (test==0) { var dt, sv=10, ss="na",sc="na",ln="",pl="",rf,bn,ja,bv,x1,x2,x3,arg;
+	     rf=escape(document.referrer)+"";if((rf=="undefined")||(rf=="")){rf="bookmark";}
+	     bv=Math.round(parseFloat(navigator.appVersion)*100);bn=navigator.appName;
+	     if(bn!="Netscape"){dt=(new Date()).getHours();};if(bn.substring(0,9)=="Microsoft"){bn="MSIE";}
+	     if((bn=="MSIE")&&(parseInt(bv)==2)){bv=302;};ja="na";
+	     x1="<a href='http://rd1.hitbox.com/rd?acct=WQ591102P8AB61EN0' target='_top'>";
+	     x2="<img src='http://hg1.hitbox.com/HG?hc=w114&cd=1&hb=WQ591102P8AB61EN0&n=Main+Page";
+	     x3="&cd=1&bt=2' border=0 height=62 width=88></a>";
+	     arg="&bn="+bn+"&bv="+bv+"&ss="+ss+"&sc="+sc+"&dt="+dt+"&sv="+sv;
+	     arg+="&ja="+ja+"&rf="+rf+"&ln="+ln+"&pl="+escape(pl);document.write(x1+x2+arg+x3);}</SCRIPT>
+	     <script language="javascript1.2">document.write("<");document.write("!--  ");</script>
+	     <noscript><a href="http://rd1.hitbox.com/rd?acct=WQ591102P8AB61EN0" target="_top">
+	     <img src="http://hg1.hitbox.com/HG?hc=w114&cd=1&hb=WQ591102P8AB61EN0&n=Main+Page"
+	     border=0 height=62 width=88></a></noscript>
+	     <script language="javascript1.2"> document.write("  --");document.write(">");</script></p>
+ <!-- END WEBSIDESTORY CODE  --></TD>
+      </TR>
+    </TABLE></TH>
+  </TR>
+</TABLE></CENTER></FORM>
+
+</BODY>
+</HTML>
+<!-- www.attrition.org web hack mirror - watermark or something -->

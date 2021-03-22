@@ -1,0 +1,201 @@
+<html>
+
+<head>
+<meta Http-equiv="content-type" Content="text/html;charset=iso-8859-1">
+<meta Name="GENERATOR" Content="Microsoft FrontPage 3.0">
+<title>Mob Header Document</title>
+<csscriptdict>
+	<script><!--
+
+<!-- Fireworks 3.0  GoLive 4/Cyberstudio 3.1 target.  Created Tue Jul 25 13:50:50 GMT-0700 (Pacific Daylight Time) 2000 -->
+
+function CSScriptInit() {
+CSILoad('britelogo',new  Array(/*URL*/'../images/britelogo.gif',/*URL*/'../images/britelogo_f2.gif',/*URL*/'../images/britelogo_f3.gif',''));
+CSILoad('main',new Array(/*URL*/'../images/main_b.jpg',/*URL*/'../images/main_h.jpg',/*URL*/'../images/main_c.jpg','goto Main Page'));
+CSILoad('DoDwarning',new Array(/*URL*/'../images/DoDwarn_b.jpg',/*URL*/'../images/DoDWarn_h.jpg',/*URL*/'../images/DoDwarn_c.jpg','goto DoD Warning page'));
+CSILoad('contact',new Array(/*URL*/'../images/contact_b.jpg',/*URL*/'../images/contact_h.jpg',/*URL*/'../images/contact_c.jpg','e-mail the MOB Staff'));
+
+CSAction(new Array('1426e006'));
+CSAction(new Array('1426e007'));
+CSAction(new Array('1426e008'));
+CSAction(new Array('1426e009'));
+}
+
+CSAg = window.navigator.userAgent;CSBVers = parseInt(CSAg.charAt(CSAg.indexOf("/")+1),10);
+
+function IsIE() {
+    return CSAg.indexOf("MSIE") > 0;
+}
+
+function CSIEStyl(s) {
+    return document.all.tags("div")[s].style;
+}
+
+function CSNSStyl(s) {
+    return CSFindElement(s, 0);
+}
+
+function CSFindElement(n, ly) {
+    if (CSBVers < 4) {
+        return document[n];
+    }
+    var curDoc = ly ? ly.document : document;
+    var elem = curDoc[n];
+    if (!elem) {
+        for (var i = 0; i < curDoc.layers.length; i++) {
+            elem = CSFindElement(n, curDoc.layers[i]);
+            if (elem) {
+                return elem;
+            }
+        }
+    }
+    return elem;
+}
+
+function CSButtonReturn() {
+    var bAgent = window.navigator.userAgent;
+    var bAppName = window.navigator.appName;
+    if ((bAppName.indexOf("Explorer") >= 0) && (bAgent.indexOf("Mozilla/3") >= 0) && (bAgent.indexOf("Mac") >= 0)) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+function CSClickReturn() {
+    var bAgent = window.navigator.userAgent;
+    var bAppName = window.navigator.appName;
+    if ((bAppName.indexOf("Explorer") >= 0) && (bAgent.indexOf("Mozilla/3") >= 0) && (bAgent.indexOf("Mac") >= 0)) {
+        return false;
+    } else {
+        return true;
+    }
+}
+CSIm = new Object();
+
+function CSIShow(n, i) {
+    if (document.images) {
+        if (CSIm[n]) {
+            var img = (!IsIE()) ? CSFindElement(n, 0) : document[n];
+            if (img) {
+                img.src = CSIm[n][i].src;
+                self.status = CSIm[n][3];
+            }
+            return true;
+        }
+    }
+    return false;
+}
+
+function CSILoad(im, ar) {
+    if (document.images) {
+        CSIm[im] = new Object();
+        for (var i = 0; i < 3; i++) {
+            if (ar[i] != "") {
+                CSIm[im][i] = new Image();
+                CSIm[im][i].src = ar[i];
+            } else {
+                CSIm[im][i] = 0;
+            }
+        }
+        CSIm[im][3] = ar[3];
+    }
+}
+
+function CSAction(array) {
+    var result;
+    for (var i = 0; i < array.length; i++) {
+        result = CSAct[array[i]][0](CSAct[array[i]]);
+    }
+    return result;
+}
+CSAct = new Object;
+
+function CSSetImageURL(action) {
+    var img = null;
+    if (document.images) {
+        if (!IsIE()) {
+            img = CSFindElement(action[1], 0);
+        } else {
+            img = document.images[action[1]];
+        }
+        if (img) {
+            img.src = action[2];
+        }
+    }
+}
+
+function CSSetStatus(action) {
+    self.status = action[1];
+}
+CSImages=new Array();
+
+function CSPreloadImage(action) {
+    if (document.images) {
+        CSImages[CSImages.length] = new Image();
+        CSImages[CSImages.length - 1].src = action[1];
+    }
+}
+CSAct['1426e006'] = new Array(CSPreloadImage,/*URL*/ '../images/britelogo_f3.gif');
+CSAct['1426e007'] = new Array(CSPreloadImage,/*URL*/ '../images/main_c.jpg');
+CSAct['1426e008'] = new Array(CSPreloadImage,/*URL*/ '../images/DoDWarn_h.jpg');
+CSAct['1426e009'] = new Array(CSPreloadImage,/*URL*/ '../images/contact_h.jpg');
+// --></script>
+</csscriptdict>
+<csactions>
+	<csaction name="1426e006" class="Preload Image" val0="../images/britelogo_f3.gif">
+	<csaction name="1426e007" class="Preload Image" val0="../images/main_c.jpg">
+	<csaction name="1426e008" class="Preload Image" val0="../images/DoDWarn_h.jpg">
+	<csaction name="1426e009" class="Preload Image" val0="../images/DoDWarn_h.jpg">
+</csactions>
+	<csactionitem name="1426e006">
+	<csactionitem name="1426e007">
+	<csactionitem name="1426e008">
+	<csactionitem name="1426e009">
+</csactionitem>
+
+<base Href="http://mob.nfesc.navy.mil/frames/" Target="content">
+</head>
+
+<body Bgcolor="#FFFFFF" Leftmargin="0" Topmargin="0" Onload="CSScriptInit();" marginwidth="0" marginheight="0">
+<table Cool Width="644" Border="0" Cellpadding="0" Cellspacing="0" Gridx="16"
+Gridy="16">
+  <tr Height="1" Cntrlrow>
+    <td Width="122"><SPACER Type="block" Width="122" Height="1"></td>
+    <td Width="64"><SPACER Type="block" Width="64" Height="1"></td>
+    <td Width="141"><SPACER Type="block" Width="141" Height="1"></td>
+    <td Width="106"><SPACER Type="block" Width="84" Height="1"></td>
+    <td Width="105"><SPACER Type="block" Width="127" Height="1"></td>
+    <td Width="103"><SPACER Type="block" Width="103" Height="1"></td>
+  </tr>
+  <tr Height="47">
+    <td Colspan="5" Valign="top" Align="left"><img Src="../images/mob_banner.jpg"
+    Border="0" Alt="Mobile Offshore Base" width="538" height="47"></td>
+    <td Width="103" Rowspan="2" Valign="top" Align="left" Xpos="538"> <csobj w="98" h="68" t="Button"  ht="../images/britelogo_f2.gif" cl="../images/britelogo_f3.gif"> 
+      <a href="../frames/access_body.html"" onmouseover="return CSIShow('britelogo',1)"  onmouseout="return CSIShow('britelogo',0)" onclick="CSIShow('britelogo',2);return CSButtonReturn()" target="body"><img name="britelogo" src="../images/britelogo.gif" width="98" height="68" border="0"></a></csobj> 
+      <!-- This HTML was automatically created with Macromedia Fireworks 3.0 http://www.macromedia.com --></td>
+  </tr>
+  <tr Height="28">
+    <td Width="122" Valign="top" Align="left"><img Src="../images/title_fill.jpg"
+    Border="0" width="123" height="28"></td>
+    <td Width="64" Valign="top" Align="left" Xpos="122"><CSOBJ W="64" H="28" T="Button" Ht="../images/main_h.jpg" Cl="../images/main_c.jpg"><a Href="../default.html"
+    Target="content" Onmouseover="return CSIShow('main',1)"
+    Onmouseout="return CSIShow('main',0)" Onclick="CSIShow('main',2);return CSButtonReturn()"><img
+    Src="../images/main_b.jpg" Width="64" Height="28" Name="main" Border="0"
+    Alt="goto Main Page"></a></CSOBJ></td>
+    <td Width="141" Valign="top" Align="left" Xpos="186"><CSOBJ W="141" H="28" T="Button" Ht="../images/DoDWarn_h.jpg" Cl="../images/DoDwarn_c.jpg"><a Href="../warning.htm"
+    Target="content" Onmouseover="return CSIShow('DoDwarning',1)"
+    Onmouseout="return CSIShow('DoDwarning',0)"
+    Onclick="CSIShow('DoDwarning',2);return CSButtonReturn()"><img
+    Src="../images/DoDwarn_b.jpg" Width="141" Height="28" Name="DoDwarning" Border="0"
+    Alt="goto DoD Warning page"></a></CSOBJ></td>
+    <td Width="106" Valign="top" Align="left" Xpos="327"><CSOBJ W="106" H="28" T="Button" Ht="../images/contact_h.jpg" Cl="../images/contact_c.jpg"><a
+    Href="mailto:mobinfo@nfesc.navy.mil" Onmouseover="return CSIShow('contact',1)"
+    Onmouseout="return CSIShow('contact',0)"
+    Onclick="CSIShow('contact',2);return CSButtonReturn()"><img Src="../images/contact_b.jpg"
+    Width="106" Height="28" Name="contact" Border="0" Alt="e-mail the MOB Staff"></a></CSOBJ></td>
+    <td Width="105" Valign="top" Align="left" Xpos="411"></td>
+  </tr>
+</table>
+</body>
+</html>

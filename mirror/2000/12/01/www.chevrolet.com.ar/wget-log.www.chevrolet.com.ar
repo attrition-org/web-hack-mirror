@@ -1,0 +1,32 @@
+--00:10:03--  http://www.chevrolet.com.ar:80/
+           => `www.chevrolet.com.ar/index.html'
+Connecting to www.chevrolet.com.ar:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 1,326 [text/html]
+
+    0K -> .                                                      [100%]
+
+00:10:03 (1.26 MB/s) - `www.chevrolet.com.ar/index.html' saved [1326/1326]
+
+Loading robots.txt; please ignore errors.
+--00:10:03--  http://www.chevrolet.com.ar:80/no-robots.txt
+           => `www.chevrolet.com.ar/no-robots.txt'
+Connecting to www.chevrolet.com.ar:80... connected!
+HTTP request sent, awaiting response... 404 Object Not Found
+00:10:04 ERROR 404: Object Not Found.
+
+--00:10:04--  http://www.chevrolet.com.ar:80/prime1.gif
+           => `www.chevrolet.com.ar/prime1.gif'
+Connecting to www.chevrolet.com.ar:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 7,532 [image/gif]
+
+    0K -> .......                                                [100%]
+
+00:10:05 (10.79 KB/s) - `www.chevrolet.com.ar/prime1.gif' saved [7532/7532]
+
+Converting www.chevrolet.com.ar/index.html... done.
+
+FINISHED --00:10:05--
+Downloaded: 8,858 bytes in 2 files
+Converting www.chevrolet.com.ar/index.html... done.

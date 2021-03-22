@@ -1,0 +1,32 @@
+--17:18:46--  http://foia.state.gov:80/
+           => `foia.state.gov/index.html'
+Connecting to foia.state.gov:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+
+    0K -> ..
+
+17:18:46 (154.07 KB/s) - `foia.state.gov/index.html' saved [2682]
+
+Loading robots.txt; please ignore errors.
+--17:18:46--  http://foia.state.gov:80/no-robots.txt
+           => `foia.state.gov/no-robots.txt'
+Connecting to foia.state.gov:80... connected!
+HTTP request sent, awaiting response... 404 Object Not Found
+17:18:46 ERROR 404: Object Not Found.
+
+--17:18:46--  http://foia.state.gov:80/logo.jpg
+           => `foia.state.gov/logo.jpg'
+Connecting to foia.state.gov:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 32,150 [image/jpeg]
+
+    0K -> .......... .......... .......... .                     [100%]
+
+17:18:47 (53.12 KB/s) - `foia.state.gov/logo.jpg' saved [32150/32150]
+
+Converting foia.state.gov/index.html... done.
+
+FINISHED --17:18:47--
+Downloaded: 34,832 bytes in 2 files
+Converting foia.state.gov/index.html... done.

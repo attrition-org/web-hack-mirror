@@ -1,0 +1,346 @@
+<html>
+<script language=Javascript>
+
+<!--
+
+var x,y
+
+var step=10
+
+var flag=0
+
+
+
+var message="Free Kashmir !!"
+
+message=message.split("")
+
+
+
+var xpos=new Array()
+
+for (i=0;i<=message.length-1;i++) {
+
+	xpos[i]=-50
+
+}
+
+
+
+var ypos=new Array()
+
+for (i=0;i<=message.length-1;i++) {
+
+	ypos[i]=-50
+
+}
+
+
+
+function handlerMM(e){
+
+	x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+
+	y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+
+	flag=1
+
+}
+
+
+
+function makesnake() {
+
+	if (flag==1 && document.all) {
+
+    	for (i=message.length-1; i>=1; i--) {
+
+   			xpos[i]=xpos[i-1]+step
+
+			ypos[i]=ypos[i-1]
+
+    	}
+
+		xpos[0]=x+step
+
+		ypos[0]=y
+
+	
+
+		for (i=0; i<message.length-1; i++) {
+
+    		var thisspan = eval("span"+(i)+".style")
+
+    		thisspan.posLeft=xpos[i]
+
+			thisspan.posTop=ypos[i]
+
+    	}
+
+	}
+
+	
+
+	else if (flag==1 && document.layers) {
+
+    	for (i=message.length-1; i>=1; i--) {
+
+   			xpos[i]=xpos[i-1]+step
+
+			ypos[i]=ypos[i-1]
+
+    	}
+
+		xpos[0]=x+step
+
+		ypos[0]=y
+
+	
+
+		for (i=0; i<message.length-1; i++) {
+
+    		var thisspan = eval("document.span"+i)
+
+    		thisspan.left=xpos[i]
+
+			thisspan.top=ypos[i]
+
+    	}
+
+	}
+
+		var timer=setTimeout("makesnake()",30)
+
+}
+
+// -->
+
+		</script><head>
+
+<style>
+
+<!--
+
+.spanstyle { color: #FF0033; font-size: 6pt; font-family: Arial; position: absolute; top: -50px; visibility: visible }
+
+-->
+
+</style>
+
+
+
+<style type="text/css">
+
+<!--
+
+.format { text-align: justify; font-face: Arial, Helvetica, Sans-Serif; size: 10pt; }
+
+//-->
+
+</style>
+
+
+
+<script>
+
+
+
+<!--
+
+
+
+function filter(imagename,objectsrc){
+
+if (document.images)
+
+document.images[imagename].src=eval(objectsrc+".src")
+
+}
+
+
+
+//-->
+
+
+
+</script>
+
+<script language="JavaScript">
+<!--
+
+function MM_popupMsg(msg) { //v1.0
+  alert(msg);
+}
+//-->
+</script>
+
+<title>::[m O s]:: - Zor Ka Jhatka</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+.mOs {  font-family: Arial, Helvetica, sans-serif; text-decoration: none}
+.format { text-align: justify; font-face: Arial, Helvetica, Sans-Serif; size: 10pt; }
+-->
+</style>
+</head>
+<script>
+
+<!--
+
+for (i=0;i<=message.length-1;i++) {
+
+    document.write("<span id='span"+i+"' class='spanstyle'>")
+
+	document.write(message[i])
+
+    document.write("</span>")
+
+}
+
+
+
+if (document.layers){
+
+	document.captureEvents(Event.MOUSEMOVE);
+
+}
+
+document.onmousemove = handlerMM;
+
+// -->
+
+</script>
+
+<body bgcolor="#000000" text="#000000" link="#000000" vlink="#000000" alink="#000000" class="mOs" onLoad="makesnake()">
+<table width="83%" border="0" cellspacing="2" cellpadding="2" align="center" bgcolor="#999999" name="main" class="mOs">
+  <tr>
+    <td height="1521"> 
+      <div align="center"> 
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">: : [ m 
+          O s ] : :<br>
+          This defacement brought to you by <br>
+          &quot;<font color="#660000">doodh nahee piyo gey to aisa he ho ga!</font>&quot;</font></p>
+        <p><img src="1001.gif" width="300" height="50" alt="1001 Faces" name="faces"></p>
+        <p><font size="1">Part 1</font></p>
+        <p align="left"><font size="2">Today we're going to discuss the treacherous 
+          Indian schemes, lies and the ongoing struggle for freedom in Kashmir. 
+          Yes, that's right, we're going to show all of you some extracts from 
+          the telegrams/broadcasts made by the first Indian Prime Minister, Jawaher 
+          Lal Nehru to the Pakistani Prime Minister, Liaqat Ali Khan along with 
+          a few extracts from Jawaher Lal Nehru's addresses to the Indian Nation.</font></p>
+        <p align="left">&nbsp;</p>
+        <table width="75%" border="0" cellspacing="2" cellpadding="2" align="center" bgcolor="#006666">
+          <tr>
+            <td>
+              <div align="center"><font size="2" color="#FFFFFF">Nehru's cable 
+                to attlee on Kashmir</font></div>
+            </td>
+          </tr>
+        </table>
+        <p align="left"><font size="2">Excerpts of telegram dated 26 October, 
+          1947 from Jawaharlal Nehru to the British Prime Minister,Clement Attlee. 
+          </font></p>
+        <p align="left"><font size="2">"For Prime Minister United Kingdom from 
+          Prime Minister India. </font></p>
+        <p align="left"><font size="2">We have received urgent appeal for assistance 
+          from Kashmir Government. We would be disposed to give favourable consideration 
+          to such, request from any friendly State. Kashmir’s Northern frontiers, 
+          as you are aware, run in common with those of three countries, Afghanistan, 
+          the Union of Soviet Socialist Republics and China. Security of Kashmir, 
+          which must depend upon control of internal tranquillity and existence 
+          of stable Government, is vital to security of India especially since 
+          part of Southern boundary of Kashmir and India are common. Helping Kashmir, 
+          therefore, is an obligation of national interest to India. We are giving 
+          urgent consideration to question as to what assistance we can give to 
+          State to defend itself. </font></p>
+        <p align="left"><font size="2" color="#0000FF">I should like to make it 
+          clear that question of aiding Kashmir in this emergency is not designed 
+          in any way to influence the State to accede to India</font><font size="2">. 
+          Our view which we have repeatedly made public is that the question of 
+          accession in any disputed territory or State must be decided in accordance 
+          with wishes of people and we adhere to this view. It is quite clear, 
+          however, that no free expression of will of people of Kashmir is possible 
+          if external aggression succeeds in imperilling integrity of its territory. 
+          I have thought it desirable to inform you of situation because of its 
+          threat of international complications. </font></p>
+        <p align="left">&nbsp;</p>
+        <table width="75%" border="0" cellspacing="2" cellpadding="2" bgcolor="#006666">
+          <tr>
+            <td height="23">
+              <div align="center"><font size="2" color="#FFFFFF">Nehru's telegram 
+                to Liaqat Ali Khan</font></div>
+            </td>
+          </tr>
+        </table>
+        <p align="left"><font size="2">On 27 October 1947, the day the Indian 
+          army officially intervened in Kashmir, Jawaharlal Nehru sent the following 
+          telegram to Liaqat Ali Khan, the Prime Minister of Pakistan.</font></p>
+        <p align="left"><font size="2" color="#0000FF">"I should like to make 
+          it clear that the question of aiding Kashmir in this emergency is not 
+          designed in any way to influence the State to accede to India. Our view 
+          which we have repeatedly made public is that the question of accession 
+          in any disputed territory or State must be decided in accordance with 
+          the wishes of people and we adhere to this view......"</font><font size="2"> 
+          </font></p>
+        <p align="left">&nbsp;</p>
+        <table width="75%" border="0" cellspacing="2" cellpadding="2" bgcolor="#006666">
+          <tr> 
+            <td height="23"> 
+              <div align="center"><font size="2" color="#FFFFFF">Nehru's telegram 
+                to Liaqat Ali Khan</font></div>
+            </td>
+          </tr>
+        </table>
+        <p align="left"><font size="2">Four days later, in his telegram of 31 
+          October, 1947, to Pakistan Prime Minister Liaqat li Khan, Nehru said: 
+          </font></p>
+        <p align="left"><font size="2">.... "<font color="#0000FF">Our assurance 
+          that we shall withdraw our troops from kashmir as soon as peace and 
+          order are restored</font> and leave the decision about the future of 
+          the State to the people of the State is not merely a pledge to your 
+          government but also the people of Kashmir and to the world." </font></p>
+        <p align="left">&nbsp;</p>
+        <table width="75%" border="0" cellspacing="2" cellpadding="2" bgcolor="#006666">
+          <tr> 
+            <td height="23"> 
+              <div align="center"><font size="2" color="#FFFFFF">Nehru's Pledge</font></div>
+            </td>
+          </tr>
+        </table>
+        <p align="left"><font size="2">Extract from Nehru’s Broadcast on 2 November, 
+          1947. </font></p>
+        <p align="left"><font size="2">"We have declared that the fate of Kashmir 
+          is ultimately to be decided by the people. That pledge we have given, 
+          and the Maharaja has supported it not only to the people of Kashmir 
+          but the world. <font color="#0000FF">We will not, and cannot back out 
+          of it</font>. We are prepared when peace and law and order have been 
+          established to have a referendum held under international auspices like 
+          the United Nations. We want it to be a fair and just reference to the 
+          people, and we shall accept their verdict. I can imagine no fairer and 
+          juster offer." </font></p>
+        <p align="left">&nbsp;</p>
+        <p align="center"><font size="2" face="Arial, Helvetica, sans-serif"><tt>to 
+          be continued..</tt></font></p>
+        <p align="left">&nbsp;</p>
+        <p align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">mOs 
+          art archived <a href="http://www.fuckindia.org/" class="mOs"><font color="#000000"><b>here</b></font></a>.</font></p>
+        <p align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="mailto:angelz@fuckindia.org?subject=wces.ernet.in%20%20(lets%20free%20kashmir!)" class="mOs"><b>Media 
+          Contact</b></a></font></p>
+        <p align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Members 
+          : shahmir, evilroot, Sl|der, paulski, qrs, teddy, afkdemon, angelz & 
+          miller.</font></p>
+        <p align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Greets 
+          : XORG, <a href="http://www.etc-crew.org/" class="mOs">etC!</a>, GForce, 
+          Makaveli Crew, <a href="http://sr2.xoom.com/doctornuker/" class="mOs">PHC</a>, 
+          b1nary outlaws, [<a href="http://www.hackunlimited.com/" class="mOs">HUC</a>], 
+          mirinda, macwizard, aekpani, the Marlboro booger, michelle pfeiffer, 
+          the Mujahideen and the people supporting the Kashmiri cause !</font></p>
+        <p align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">:: 
+          [ mOs ] :: - Zor Ka Jhatka, Dheray Se Lagay </font></p>
+        </div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

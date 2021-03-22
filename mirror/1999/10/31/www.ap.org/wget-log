@@ -1,0 +1,52 @@
+--10:01:00--  http://www.ap.org:80/
+           => `www.ap.org/index.html'
+Connecting to www.ap.org:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 2,465 [text/html]
+
+    0K -> ..                                                     [100%]
+
+10:01:00 (2.35 MB/s) - `www.ap.org/index.html' saved [2465/2465]
+
+Loading robots.txt; please ignore errors.
+--10:01:00--  http://www.ap.org:80/robots.txt
+           => `www.ap.org/robots.txt'
+Connecting to www.ap.org:80... connected!
+HTTP request sent, awaiting response... 404 Object Not Found
+10:01:01 ERROR 404: Object Not Found.
+
+--10:01:01--  http://www.ap.org:80/top.jpg
+           => `www.ap.org/top.jpg'
+Connecting to www.ap.org:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 43,208 [image/jpeg]
+
+    0K -> .......... .......... .......... .......... ..         [100%]
+
+10:01:01 (82.25 KB/s) - `www.ap.org/top.jpg' saved [43208/43208]
+
+--10:01:01--  http://www.ap.org:80/trick.jpg
+           => `www.ap.org/trick.jpg'
+Connecting to www.ap.org:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 25,044 [image/jpeg]
+
+    0K -> .......... .......... ....                             [100%]
+
+10:01:02 (59.94 KB/s) - `www.ap.org/trick.jpg' saved [25044/25044]
+
+--10:01:02--  http://www.ap.org:80/spin.gif
+           => `www.ap.org/spin.gif'
+Connecting to www.ap.org:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 31,169 [image/gif]
+
+    0K -> .......... .......... ..........                       [100%]
+
+10:01:03 (74.06 KB/s) - `www.ap.org/spin.gif' saved [31169/31169]
+
+Converting www.ap.org/index.html... done.
+
+FINISHED --10:01:03--
+Downloaded: 101,886 bytes in 4 files
+Converting www.ap.org/index.html... done.

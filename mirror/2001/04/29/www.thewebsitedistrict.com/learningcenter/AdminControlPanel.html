@@ -1,0 +1,546 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML><HEAD><TITLE>Administrator's Business Console and Control Panel</TITLE>
+<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+<META content="MSHTML 5.00.2314.1000" name=GENERATOR></HEAD>
+<BODY aLink=#cc0000 
+background="images/right-back2.gif" 
+bgColor=#000000 link=#0000cc text=#000000 vLink=#000066>
+<div align="center"><font face="Courier New, Courier, mono" size="3" color="#FFFFFF"><b>Demonstration 
+  Only - Functions are inoperable</b></font></div>
+<TABLE align=center bgColor=#ffffff border=0 cellPadding=0 cellSpacing=0 
+width=640>
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffcc00 vAlign=top width="29%" height="10"> 
+      <DIV align=left><FONT color=#000000><a href="http://thewebsitedistrict.com"><IMG height=20 
+      src="images/bupperleft.gif" 
+      width=19 border="0"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="1">HOME</font></b></a></FONT></DIV>
+    </TD>
+    <TD bgColor=#ffcc00 width="54%" height="10"> 
+      <DIV align=right><font color="#FF0000"><font size=-1><font color="#FF0000"><font color="#FF0000"><font size=-1><font color="#FF0000"><font size=-1>
+        <script language="JavaScript">
+
+
+
+<!--Web Author 99 - WinGear Software-->
+
+
+
+<!-- Begin
+
+
+
+var day="";
+
+
+
+var month="";
+
+
+
+var ampm="";
+
+
+
+var ampmhour="";
+
+
+
+var myweekday="";
+
+
+
+var year="";
+
+
+
+mydate = new Date();
+
+
+
+myday = mydate.getDay();
+
+
+
+mymonth = mydate.getMonth();
+
+
+
+myweekday= mydate.getDate();
+
+
+
+weekday= myweekday;
+
+
+
+myhours = mydate.getHours();
+
+
+
+ampmhour  =  (myhours > 12) ? myhours - 12 : myhours;
+
+
+
+ampm =  (myhours >= 12) ? ' PM PST' : ' AM PST';
+
+
+
+mytime = mydate.getMinutes();
+
+
+
+myminutes =  ((mytime < 10) ? ':0' : ':') + mytime;
+
+
+
+if(myday == 0)
+
+
+
+day = " Sunday, ";
+
+
+
+else if(myday == 1)
+
+
+
+day = " Monday, ";
+
+
+
+
+
+else if(myday == 2)
+
+
+
+day = " Tuesday, ";
+
+
+
+else if(myday == 3)
+
+
+
+day = " Wednesday, ";
+
+
+
+else if(myday == 4)
+
+
+
+day = " Thurday, ";
+
+
+
+else if(myday == 5)
+
+
+
+day = " Friday, ";
+
+
+
+else if(myday == 6)
+
+
+
+day = " Saturday, ";
+
+
+
+if(mymonth == 0) {
+
+
+
+month = "January ";}
+
+
+
+else if(mymonth ==1)
+
+
+
+month = "February ";
+
+
+
+else if(mymonth ==2)
+
+
+
+month = "March ";
+
+
+
+else if(mymonth ==3)
+
+
+
+month = "April ";
+
+
+
+else if(mymonth ==4)
+
+
+
+month = "May ";
+
+
+
+else if(mymonth ==5)
+
+
+
+month = "June ";
+
+
+
+else if(mymonth ==6)
+
+month = "July ";
+
+else if(mymonth ==7)
+
+month = "August ";
+
+else if(mymonth ==8)
+
+month = "September ";
+
+else if(mymonth ==9)
+
+month = "October ";
+
+else if(mymonth ==10)
+
+month = "November ";
+
+else if(mymonth ==11)
+
+month = "December ";
+
+// End -->
+
+</script>
+        </font></font> 
+        <script>
+
+document.write("<b><font color=#FFFFFF size='-1' face='Arial, Helvetica, sans-serif'></b>" + ampmhour + "" + myminutes + ampm)
+
+document.write(" | " + day + month);
+
+document.write(myweekday + ",  " + year + "</font>");
+
+</script>
+        <font face="Fixedsys" size="1"> <font size="-1" color="#ff0000"><font face="Arial, Helvetica, sans-serif"><FONT COLOR="#FF0033">2000</FONT></font></font></font></font></font> 
+        </font></font></font></DIV>
+    </TD>
+    <TD bgColor=#ffcc00 vAlign=top width="17%" height="10"> 
+      <DIV align=right><FONT color=#000000 
+      face="Verdana, Arial, Helvetica, sans-serif" size=-2><IMG height=20 
+      src="images/bupperright.gif" 
+      width=20></FONT></DIV></TD></TR>
+  <TR bgColor=#5050b8>
+    <TD colSpan=3><FONT color=#ffffff 
+      face="Verdana, Arial, Helvetica, sans-serif" 
+      size=-1><B>&nbsp;&nbsp;&nbsp; Business Console &amp; Control Panel</B></FONT></TD>
+  </TR>
+  <TR vAlign=top>
+    <TD colSpan=3 height=412>
+      <TABLE bgColor=#ffffff border=0 cellPadding=3 cellSpacing=2 
+        width="100%"><TBODY>
+        <TR>
+          <TD 
+          background="images/globegray.gif" 
+          height=302 noWrap vAlign=top width="38%"><IMG align=middle height=26 
+            src="images/computer.gif" 
+            width=30><B><FONT color=#5050b8 
+            face="Verdana, Arial, Helvetica, sans-serif" size=-2>Web Site Management</FONT></B> 
+            <SCRIPT language=javascript>
+
+
+
+                        function LinkUp() 
+
+                        {
+
+                        var number = document.DropDown.webserver.selectedIndex;
+
+                        location.href =
+
+                        document.DropDown.webserver.options[number].value;
+
+                        }
+
+                        </SCRIPT>
+             
+            <FORM name=DropDown>
+              <select name=webserver>
+                <option 
+              selected>Account Maintenance</option>
+                <option 
+              value=/welcomemartvhcgi/showuser.pl>List FTP accounts</option>
+                <option 
+              value=adduser.html>Add new FTP account</option>
+                <option 
+              value=rmuser.html>Remove FTP account</option>
+               
+        
+              </select>
+              <INPUT onclick=LinkUp() type=button value=GO> </FORM>
+            <SCRIPT language=javascript>
+                        function LinkUp3() 
+                        {
+                        var number = document.DropDown3.email.selectedIndex;
+                        location.href =
+                        document.DropDown3.email.options[number].value;
+                        }
+                        </SCRIPT>
+
+            <FORM name=DropDown3>
+<SELECT name=email>
+ <OPTION selected value=server.html>System Utilities</OPTION> 
+<OPTION value=vhchmod.html>Set file permissions</OPTION> 
+<OPTION value=/welcomemartvhcgi/disku.pl>Measure disk space</OPTION> 
+ <OPTION value=adduser.html>Set all CGI executable </OPTION> 
+ <OPTION value=adduser.html>Check CGI for errors</OPTION> 
+             </SELECT> 
+
+<INPUT onclick=LinkUp3() type=button value=GO> </FORM>
+            <SCRIPT language=javascript>
+                        function LinkUp4() 
+                        {
+                        var number = document.DropDown4.advanced.selectedIndex;
+                        location.href =
+                        document.DropDown4.advanced.options[number].value;
+                        }
+                        </SCRIPT>
+
+            <FORM name=DropDown4><SELECT name=advanced> <OPTION selected 
+              value=virtualemail.html>Manage Email Accounts</OPTION><OPTION 
+              value=virtualemail.html>Create Email Accounts</OPTION>  <OPTION 
+              value=virtualemail.html>Remove Email Accounts</OPTION> 
+              <OPTION value=Viewall>View Email Account File</OPTION> 
+			</SELECT> <INPUT onclick=LinkUp4() type=button value=GO> </FORM>
+            <SCRIPT language=javascript>
+                        function LinkUp5() 
+                        {
+                        var number = document.DropDown5.installnew.selectedIndex;
+                        location.href =
+                        document.DropDown5.installnew.options[number].value;
+                        }
+                        </SCRIPT>
+
+            <FORM name=DropDown5><SELECT name=installnew> <OPTION 
+              selected>Install New Services</OPTION> <OPTION 
+              value=http://www.thewebsitedistrict.com/domainsearch1.html>Register a Domain Name</OPTION> 
+              <OPTION value=http://digiverge.net>Order Internet Access</OPTION> 
+              <OPTION value=guestbookadd.html>Order Guestbook</OPTION> <OPTION 
+              value=/cpanelcgi/shop-install.pl>Order Shopping Cart</OPTION>  
+              <OPTION value=/cpanelcgi/msql-install.pl>Order mSQL 
+              Server</OPTION> <OPTION value=vhcgibin.html>Order CGI-BIN 
+              </OPTION> <OPTION value=http://www.expectsecure.com/cgi/quikstore.cgi?page=hosting_orderform2.html>Order Hosting Upgrade
+              </OPTION></SELECT> <INPUT name=Button onclick=LinkUp5() type=button value=GO> </FORM>
+            <SCRIPT language=javascript>
+                        function LinkUp6() 
+                        {
+                        var number = document.DropDown6.ecommerce.selectedIndex;
+                        location.href =
+                        document.DropDown6.ecommerce.options[number].value;
+                        }
+                        </SCRIPT>
+
+            <FORM name=DropDown6><SELECT name=ecommerce> <OPTION selected 
+              value=server.html>Ecommerce Services</OPTION> <OPTION 
+              value=https://www.i-axis.com/secureapps/csiapp/default.asp?agent=csi/webd>Order Merchant Account</OPTION> 
+              <OPTION value=https://registration.signio.com/registration.dll?goreg&partner=webdistrict&product=PFL>Order Transaction 
+              Gateway</OPTION> <OPTION value=http://digitalstorefronts.com/home/store.asp?cartdir=3006&id=LbrSImVH>Order 
+              Digital Store Front</OPTION></SELECT> <INPUT onclick=LinkUp6() type=button value=GO> </FORM></TD>
+          <TD height=302 noWrap vAlign=top width="29%"><IMG align=middle 
+            height=26 
+            src="images/computer.gif" 
+            width=30> <FONT color=#5050b8 
+            face="Verdana, Arial, Helvetica, sans-serif" size=-2><B>Member Support 
+            Services</B></FONT> 
+            <LI><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><a href="../acctman.html">Password 
+              Reminder</a></font>
+            <LI><FONT face="Verdana, Arial, Helvetica, sans-serif" size=-2><A 
+            href="http://thewebsitedistrict.com/members/">Send Ticket to Support</A> 
+              </FONT> 
+            <LI><FONT face="Verdana, Arial, Helvetica, sans-serif" size=-2><A 
+            href="http://thewebsitedistrict.com/members/" target=_blank>Send Ticket 
+              to Billing</A></FONT> 
+            <LI><FONT face="Verdana, Arial, Helvetica, sans-serif" size=-2><A 
+            href="http://thewebsitedistrict.com/members/" target=_blank>View Billing 
+              Status</A> </FONT> 
+            <LI><FONT face="Verdana, Arial, Helvetica, sans-serif" size=-2><A 
+            href="http://thewebsitedistrict.com/members/" target=_blank>View Network Status 
+              </A></FONT> 
+            <LI><FONT face="Verdana, Arial, Helvetica, sans-serif" size=-2><A 
+            href="http://thewebsitedistrict.com/members/" target=_blank>Search Support Library</A></FONT> 
+            <LI><FONT face="Verdana, Arial, Helvetica, sans-serif" size=-2><A 
+            href="http://thewebsitedistrict.com/members/">Order Site Enhancers</A></FONT> 
+            <LI><FONT face="Verdana, Arial, Helvetica, sans-serif" size=-2><A 
+            href="http://thewebsitedistrict.com/members/.htm">Upgrade Hosting 
+              Plan </A><BR>
+              </FONT> 
+            <LI><FONT face="Verdana, Arial, Helvetica, sans-serif" size=-2><A 
+            href="http://TheWebsiteDistrictcom.net/newsletters/">View Latest Newsletter</A></FONT> 
+            <LI><A href="http://thewebsitedistrict.com/members/"><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=-2>View Ticket Status</FONT></A><BR>
+              <BR>
+              <BR>
+              <FONT color=#000000 
+            face="Verdana, Arial, Helvetica, sans-serif" size=-2><FONT 
+            color=#5050b8><B><IMG height=26 
+            src="images/check.gif" 
+            width=30><A href="http://www.expectsecure.com/cgi/cdomain_domain/cdplus.pl?root_allowed=1">Register 
+              a Domain Name</A></B></FONT><BR>
+              </FONT><font color=#000000 
+            face="Verdana, Arial, Helvetica, sans-serif" size=-2><b><font color=#000000 
+            face="Verdana, Arial, Helvetica, sans-serif" size=-2> </font><font 
+            color=#5050b8 face="Verdana, Arial, Helvetica, sans-serif" 
+            size=-2><img height=26 
+            src="images/check.gif" 
+            width=30></font><font color=#5050b8><a 
+            href="../affiliate/affiliateframe.html" target=_blank>Sign 
+              up as a Affiliate</a></font></b></font></LI>
+            </TD>
+          <TD height=302 vAlign=top width="33%">
+            <DIV align=center><IMG align=bottom height=55 
+            src="images/newblue2.gif" 
+            width=169> <IMG height=136 
+            src="images/vpcpic2.jpg" 
+            width=150> <BR>
+            <FORM name=fm>
+            <SCRIPT language=JavaScript>
+
+
+
+<!--
+function srchnow(fm)
+  {
+  var http;
+  var sterms="";
+  var j=0;
+  var k;
+  var l;
+  var engvar;
+  var tmp=fm.terms.value;
+  k=tmp.length;
+  for (j=0;j<k;j++)
+    {
+    if (tmp.charAt(j)==" ")
+      {
+      sterms+="+";
+      }
+    else
+      {
+      sterms+=tmp.charAt(j);
+      }
+    }
+  l=fm.engine.options.length;
+  for (j=0;j<l;j++)
+    {
+    if (fm.engine.options[j].selected==true)
+      {
+      engvar=fm.engine.options[j].text;
+      }
+    }
+
+  if (engvar=="infoSeek")
+    http="http://www.infoseek.com/Titles?qt="+sterms+"&col=WW&sv=N3&lk=noframes&nh=10";
+  if (engvar=="Excite")
+    http="http://www.excite.com/search.gw?c=web&search="+sterms+"&trace=a&x=47&y=16";
+  if (engvar=="Lycos")
+    http="http://www.lycos.com/cgi-bin/pursuit?query="+sterms+"&cat=lycos&x=28&y=9";
+  if (engvar=="WebCrawler")
+    http="http://www.webcrawler.com/cgi-bin/WebQuery?mode=compact&maxHits=25&searchText="+sterms;
+  if (engvar=="AltaVista")
+    http="http://www.altavista.digital.com/cgi-bin/query?pg=q&what=web&fmt=.&q="+sterms;
+  if (engvar=="HotBot")
+    http="http://www.hotbot.com/?SW=web&SM=MC&MT="+sterms+"&DC=10&DE=2&RG=NA&_v=2&act.search.x=85&act.search.y=3"
+  window.open(http,"Results","toolbar=yes,location=yes,directories=no,status=yes,menubar=no,scrollbars=yes,resizable=yes,copyhistory=yes,width=600,height=500");
+  return;
+  }
+// -->
+</SCRIPT>
+<!-- Insert Here --><FONT color=#c20000 
+            face="Verdana, Arial, Helvetica, sans-serif" 
+            size=-2><B>&nbsp;&nbsp;Search the Internet:</B></FONT><FONT 
+            color=#ffffff face="Arial, Helvetica, sans-serif" size=-2> <INPUT 
+            name=terms> </FONT><SELECT name=engine> <OPTION selected 
+              value=Lycos>Lycos<OPTION value=WebCrawler>WebCrawler<OPTION 
+              value=Excite>Excite<OPTION value=infoSeek>infoSeek<OPTION 
+              value=AltaVista>AltaVista<OPTION 
+            value=HotBot>HotBot</OPTION></SELECT> <INPUT name=button onclick=srchnow(this.form) type=button value=Search> 
+            </FORM><FONT color=#990000 
+            face="Verdana, Arial, Helvetica, sans-serif" size=-1><FONT 
+            color=#5050b8 size=-2>Deactivation Notices<BR>Latest Service 
+            Offerings<BR>Important Updates<BR>
+              </FONT></FONT><B><FONT 
+            face="Arial, Helvetica, sans-serif" size=-1><A 
+            href="http://TheWebsiteDistrict.com/important.htm" target=_blank><IMG border=0 
+            src="images/clickforinfo.gif"></A></FONT></B></DIV>
+          </TD></TR>
+        <TR>
+          <TD bgColor=#eaeaea colSpan=3 height=56 vAlign=top>
+            <P><FONT color=#000000 face="Verdana, Arial, Helvetica, sans-serif" 
+            size=-2><B><FONT color=#5050b8 
+            face="Verdana, Arial, Helvetica, sans-serif" size=-2><BR>Check it 
+            Out!</FONT><FONT face="Verdana, Arial, Helvetica, sans-serif" 
+            size=-2> <A href="http://selfpromotion.com/" target=_blank>Self 
+            Promotion.com</A> -</FONT></B><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=-2>Here you will 
+            learn how to properly promote your website and automatically 
+            register it with all the important search engines and 
+            indexes.</FONT> <BR></FONT></P></TD></TR></TBODY></TABLE></TD></TR>
+  <TR bgColor=#5050b8>
+    <TD colSpan=3 height=22>
+      <DIV align=center><FONT face="Verdana, Arial, Helvetica, sans-serif" 
+      size=-2><a href="../hosting/hosting_index.html">&nbsp;<FONT 
+      color=#ffffff>Hosting </FONT></a><FONT color=#ffffff>| <A 
+      href="http://theewebsitedistrict.com/ecommerce/ecommerce2.html"><FONT color=#ffffff>Merchant 
+        Account</FONT> </A>|</FONT><FONT color=#ffffff 
+      face="Verdana, Arial, Helvetica, sans-serif" size=-2> </FONT><FONT 
+      color=#ffffff><A href="http://thewebsitedistrict.com/sitesales/sitesales_sellproducts.html"><FONT 
+      color=#ffffff>Transaction Gateway</FONT></A> | <A 
+      href="http://www.expectsecure.com/cgi/cdomain_domain/cdplus.pl?root_allowed=1"><FONT color=#ffffff>Domain 
+        Registration</FONT></A> | <A href="http://thewebsitedistrict.com/gtc/"><FONT 
+      color=#ffffff>Internet Access</FONT></A> |</FONT></FONT><FONT 
+      color=#ffffff face="Verdana, Arial, Helvetica, sans-serif" size=-2> <A 
+      href="http://veribiz.com/"><FONT color=#ffffff> </FONT></A></FONT> </DIV>
+    </TD></TR>
+  <TR>
+    <TD bgColor=#ffcc00 vAlign=bottom width="29%"><IMG height=20 
+      src="images/blowerleft.gif" 
+      width=20></TD>
+    <TD bgColor=#ffcc00 width="54%"> 
+      <DIV align=center><FONT face="Verdana, Arial, Helvetica, sans-serif" 
+      size=-2><A href="http://cnn.com/" target=_blank><FONT 
+      color=#000000>CNN</FONT></A><FONT color=#000000> | <A 
+      href="http://weather.com/" target=_blank><FONT 
+      color=#000000>Weather.com</FONT></A> | <A href="http://espn.com/" 
+      target=_blank><FONT color=#000000>ESPN</FONT></A> | <A 
+      href="http://thewebsitedistrict.com/members/" target=_blank><FONT 
+      color=#000000>Developer.com</FONT></A></FONT></FONT></DIV></TD>
+    <TD bgColor=#ffcc00 vAlign=bottom width="17%"> 
+      <DIV align=right><IMG height=20 
+      src="images/blowerright.gif" 
+      width=20></DIV></TD></TR></TBODY></TABLE><BR>
+<CENTER><IFRAME frameBorder=0 height=60 marginHeight=0 marginWidth=0 noResize 
+scrolling=no src="images/banner.html" 
+width=468></IFRAME></CENTER>
+<DIV align=center><FONT face="Arial, Helvetica, sans-serif" 
+size=-2>&nbsp;&nbsp;<A href="http://thewebsitedistrict.com/advertise/advertise_index.html" 
+target=_blank>&nbsp;<FONT color=#ffffff><B>Advertise Here<BR>
+  </B></FONT></A></FONT><FONT color=#ffffff 
+face="Verdana, Arial, Helvetica, sans-serif" size=-2 font>&nbsp;&nbsp;</FONT> 
+</DIV>
+</BODY></HTML>

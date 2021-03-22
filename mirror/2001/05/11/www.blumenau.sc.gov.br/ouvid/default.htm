@@ -1,0 +1,193 @@
+<html>
+
+<head>
+<title>Cadastro - Página do Cidadão </title>
+</head>
+
+<body bgcolor="#EEEEEE" topmargin="0" leftmargin="0">
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100%"><img src="../images/barrasup.gif" width="778" height="47"></td>
+  </tr>
+</table>
+
+<table border="0" width="778" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="25%"><img src="../images/menu1.gif" WIDTH="413" HEIGHT="20"></td>
+    <td width="25%"><a href="mailto:ouvidoria@blumenau.sc.gov.br"><img src="../images/menu2.gif" border="0" WIDTH="126" HEIGHT="20"></a></td>
+    <td width="25%"><a href="../Default.htm"><img src="../images/menu3.gif" border="0" WIDTH="108" HEIGHT="20"></a></td>
+    <td width="25%"><a href="../mapa.htm"><img src="../images/menu4.gif" border="0" WIDTH="132" HEIGHT="20"></a></td>
+  </tr>
+</table>
+
+<table border="0" width="778" cellpadding="0" cellspacing="0" height="74">
+  <tr>
+    <td width="100%" height="19"></td>
+  </tr>
+  <tr>
+    <td width="100%" height="19"><p align="center"><strong><font face="Arial" color="#000000">Cadastramento</font></strong></td>
+  </tr>
+  <tr>
+    <td width="100%" height="13"><small><font face="Arial" color="#000000"><small><small><small>&nbsp;
+    </small></small></small></font></small></td>
+  </tr>
+  <tr>
+    <td width="100%" height="23"><p align="center"><font face="Arial" color="#000000"><small>(Preencha
+    todos os campos, informando sua dúvida e em breve entraremos em contato.)</small></font></td>
+  </tr>
+</table>
+
+<!--webbot BOT="GeneratedScript" PREVIEW=" " startspan --><script Language="JavaScript"><!--
+function FrontPage_Form1_Validator(theForm)
+{
+
+  if (theForm.FORMSOLICITANTE.value == "")
+  {
+    alert("Digite um valor para o campo \"FORMSOLICITANTE\".");
+    theForm.FORMSOLICITANTE.focus();
+    return (false);
+  }
+
+  if (theForm.FORMSOLICITANTE.value.length < 1)
+  {
+    alert("Digite pelo menos 1 caracteres no campo \"FORMSOLICITANTE\".");
+    theForm.FORMSOLICITANTE.focus();
+    return (false);
+  }
+
+  if (theForm.FORMSOLICITANTE.value.length > 35)
+  {
+    alert("Digite no máximo 35 caracteres no campo \"FORMSOLICITANTE\".");
+    theForm.FORMSOLICITANTE.focus();
+    return (false);
+  }
+  return (true);
+}
+//--></script><!--webbot BOT="GeneratedScript" endspan --><form method="POST" action="cadastro.asp" onsubmit="return FrontPage_Form1_Validator(this)" name="FrontPage_Form1">
+  <div align="right"><table border="0" width="659" cellspacing="0" cellpadding="0" height="91">
+    <tr>
+      <td width="133" height="6" align="left"><font face="Arial" color="#000000"><small>Nome</small></font></td>
+      <td width="557" height="6" align="left"><font face="Arial" color="#000000"><!--webbot
+        bot="Validation" B-Value-Required="TRUE" I-Minimum-Length="1"
+        I-Maximum-Length="35" --><input type="text" name="FORMSOLICITANTE" size="58" maxlength="35" tabindex="1"></font></td>
+    </tr>
+    <tr>
+      <td width="133" height="7" align="left"><font face="Arial" color="#000000"><small>Data
+      Nascimento:</small></font></td>
+      <td width="557" height="7" align="left"><font face="Arial" color="#000000"><small><input type="text" name="FORMNASCIMENTO" size="20" tabindex="2">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Utilize o formato: <strong>dd/mm/aaaa</strong></small></font></td>
+    </tr>
+    <tr>
+      <td width="133" height="7" align="left"><font face="Arial" color="#000000"><small>Rua</small></font></td>
+      <td width="557" height="7" align="left"><table border="0" cellpadding="0" cellspacing="0" width="428">
+        <tr>
+          <td width="419"><font face="Arial" color="#000000"><input type="text" name="FORMRUA" size="43" tabindex="2"></font></td>
+          <td width="31"><div align="right"><p><font face="Arial" color="#000000"><small>Nº</small></font>
+            </div>
+          </td>
+          <td width="133"><font face="Arial" color="#000000"><input type="text" name="FORMNRCASA" size="8" tabindex="3"></font></td>
+        </tr>
+      </table>
+      </td>
+    </tr>
+    <tr>
+      <td width="133" height="13" align="left"><font face="Arial" color="#000000"><small>Complemento</small></font></td>
+      <td width="557" height="13" align="left"><font face="Arial" color="#000000"><input type="text" name="FORMCOMPLEMENTO" size="58" tabindex="4"></font></td>
+    </tr>
+    <tr>
+      <td width="133" height="13" align="left"><font face="Arial" color="#000000"><small>CEP</small></font></td>
+      <td width="557" height="13" align="left"><table border="0" cellpadding="0" cellspacing="0" width="432">
+        <tr>
+          <td width="106"><font face="Arial" color="#000000"><input type="text" name="FORMCEP" size="9" tabindex="5"></font></td>
+          <td width="52"><font face="Arial" color="#000000"><small>Bairro</small></font></td>
+          <td width="375"><font face="Arial" color="#000000"><input type="text" name="FORMBAIRRO" size="41" tabindex="6"></font></td>
+        </tr>
+      </table>
+      </td>
+    </tr>
+    <tr>
+      <td width="133" height="11" align="left"><font face="Arial" color="#000000"><small>Cidade</small></font></td>
+      <td width="557" height="11" align="left"><table border="0" cellpadding="0" cellspacing="0" width="429">
+        <tr>
+          <td width="235"><font face="Arial" color="#000000"><input type="text" name="FORMCIDADE" size="47" tabindex="7"></font></td>
+          <td width="23"><div align="right"><p><font face="Arial" color="#000000"><small>UF</small></font>
+            </div>
+          </td>
+          <td width="114"><font color="#000000"><select name="FORMESTADO" size="1">
+            <option value="SC">SC</option>
+            <option value="AC">AC</option>
+            <option value="AL">AL</option>
+            <option value="AM">AM</option>
+            <option value="AP">AP</option>
+            <option value="BA">BA</option>
+            <option value="CE">CE</option>
+            <option value="DF">DF</option>
+            <option value="ES">ES</option>
+            <option value="GO">GO</option>
+            <option value="MA">MA</option>
+            <option value="MG">MG</option>
+            <option value="MS">MS</option>
+            <option value="MT">MT</option>
+            <option value="PA">PA</option>
+            <option value="PB">PB</option>
+            <option value="PE">PE</option>
+            <option value="PI">PI</option>
+            <option value="PR">PR</option>
+            <option value="RJ">RJ</option>
+            <option value="RN">RN</option>
+            <option value="RO">RO</option>
+            <option value="RR">RR</option>
+            <option value="RS">RS</option>
+            <option value="SE">SE</option>
+            <option value="SP">SP</option>
+            <option value="TO">TO</option>
+          </select></font></td>
+        </tr>
+      </table>
+      </td>
+    </tr>
+    <tr>
+      <td width="133" height="16" align="left"><font face="Arial" color="#000000"><small>Telefone</small></font></td>
+      <td width="557" height="16" align="left"><font face="Arial" color="#000000"><input type="text" name="FORMTELEFONE" size="15" maxlength="15" tabindex="9"> </font></td>
+    </tr>
+    <tr>
+      <td width="133" height="3" align="left" valign="top"><font face="Arial" color="#000000"><small>Dúvida
+      /</small><br>
+      <small>Problema</small></font><p>&nbsp;</td>
+      <td width="557" bordercolordark="#FFFFFF" valign="bottom" align="left" height="7"><table border="1" width="413" bordercolordark="#C0C0C0" cellpadding="0" bordercolorlight="#000000" cellspacing="0" height="125">
+        <tr>
+          <td width="416" bordercolorlight="#FFFFFF" style="border-right: medium none rgb(212,212,212); border-bottom: medium none rgb(255,255,255)" valign="top" height="123"><table border="0" width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="100%"><font face="Arial" color="#000000"><big><input type="text" name="FORMCAMPO1" size="58" style="border-left: medium none; border-right: medium none; border-top: medium none; border-bottom: 1px solid rgb(192,192,192)" tabindex="10" maxlength="50"></big></font></td>
+            </tr>
+          </table>
+          <table border="0" width="113%" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="100%"><font face="Arial" color="#000000"><big><input type="text" name="FORMCAMPO2" size="58" style="border-left: medium none; border-right: medium none; border-top: medium none; border-bottom: 1px solid rgb(192,192,192)" maxlength="50" tabindex="11"></big></font></td>
+            </tr>
+          </table>
+          <table border="0" width="100%" cellspacing="0" cellpadding="0" height="22">
+            <tr>
+              <td width="100%" height="22"><font face="Arial" color="#000000"><big><input type="text" name="FORMCAMPO3" size="58" style="border: medium none" maxlength="50" tabindex="12"></big></font></td>
+            </tr>
+            <tr>
+              <td width="100%" height="22"><big><font face="Arial" color="#000000"><input type="text" name="FORMCAMPO4" size="58" style="border: medium none" maxlength="50" tabindex="12"></font></big></td>
+            </tr>
+            <tr>
+              <td width="100%" height="22"><big><font face="Arial" color="#000000"><input type="text" name="FORMCAMPO5" size="58" style="border: medium none" maxlength="50" tabindex="12"></font></big></td>
+            </tr>
+          </table>
+          </td>
+        </tr>
+      </table>
+      </td>
+    </tr>
+  </table>
+  </div><div align="center"><center><p><font color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="submit" value="Enviar" name="Enviar" tabindex="13">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="reset" value="Limpar" name="Limpar" tabindex="14"> </font></p>
+  </center></div>
+</form>
+</body>
+</html>

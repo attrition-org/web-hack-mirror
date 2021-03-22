@@ -1,0 +1,124 @@
+<html>
+
+<head>
+
+<title>CM& La Noticia</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<script language="JavaScript">
+
+<!--
+
+function MM_swapImgRestore() { //v2.0
+
+  if (document.MM_swapImgData != null)
+
+    for (var i=0; i<(document.MM_swapImgData.length-1); i+=2)
+
+      document.MM_swapImgData[i].src = document.MM_swapImgData[i+1];
+
+}
+
+
+
+function MM_preloadImages() { //v2.0
+
+  if (document.images) {
+
+    var imgFiles = MM_preloadImages.arguments;
+
+    if (document.preloadArray==null) document.preloadArray = new Array();
+
+    var i = document.preloadArray.length;
+
+    with (document) for (var j=0; j<imgFiles.length; j++) if (imgFiles[j].charAt(0)!="#"){
+
+      preloadArray[i] = new Image;
+
+      preloadArray[i++].src = imgFiles[j];
+
+  } }
+
+}
+
+
+
+function MM_swapImage() { //v2.0
+
+  var i,j=0,objStr,obj,swapArray=new Array,oldArray=document.MM_swapImgData;
+
+  for (i=0; i < (MM_swapImage.arguments.length-2); i+=3) {
+
+    objStr = MM_swapImage.arguments[(navigator.appName == 'Netscape')?i:i+1];
+
+    if ((objStr.indexOf('document.layers[')==0 && document.layers==null) ||
+
+        (objStr.indexOf('document.all[')   ==0 && document.all   ==null))
+
+      objStr = 'document'+objStr.substring(objStr.lastIndexOf('.'),objStr.length);
+
+    obj = eval(objStr);
+
+    if (obj != null) {
+
+      swapArray[j++] = obj;
+
+      swapArray[j++] = (oldArray==null || oldArray[j-1]!=obj)?obj.src:oldArray[j];
+
+      obj.src = MM_swapImage.arguments[i+2];
+
+  } }
+
+  document.MM_swapImgData = swapArray; //used for restore
+
+}
+
+//-->
+
+</script>
+
+<link rel="stylesheet" title="Default Styles"
+
+    href="general.css" media="screen" type="text/css">
+
+</head>
+
+
+
+<body bgcolor="#FFFFFF" background="images/bkg_portada2.gif" onLoad="MM_preloadImages('images/btn_inicio_over.gif','#921503890390');MM_preloadImages('images/btn_indicadores_over.gif','#921504038530')">
+
+<div align="center"> 
+  <table width="600" border="0" align="left">
+    <tr> 
+      <td colspan="5"> 
+        <div align="center"><img src="images/img_linea.gif" width="500" height="1" align="bottom"></div>
+      </td>
+    </tr>
+    <tr> 
+      <td width="79" height="2"> 
+        <div align="left"><a href="portada.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.Image1','document.Image1','images/btn_inicio_over.gif','#921503890390')" target="principal"><img name="Image1" border="0" src="images/btn_inicio_up.gif" width="72" height="14"></a></div>
+      </td>
+      <td width="120" height="2"> 
+        <div align="left"><font face="Arial, Helvetica, sans-serif" size="2"><b><font color="#FF3333">D&oacute;lar 
+          </font></b> $1.873,00</font></div>
+      </td>
+      <td width="115" height="2"> 
+        <div align="left"><font face="Arial, Helvetica, sans-serif" size="2"><b><font color="#FF3333">Caf&eacute;:</font></b> 
+          US$1,36</font></div>
+      </td>
+      <td width="120" height="2"> 
+        <div align="left"><font face="Arial, Helvetica, sans-serif" size="2"><b><font color="#FF3333">UPAC:</font></b>$16.533,69</font></div>
+      </td>
+      <td width="138" height="2"> 
+        <div align="left"><a href="economia/0001e.htm#indic" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.Image2','document.Image2','images/btn_indicadores_over.gif','#921504038530')" target="principal"><img name="Image2" border="0" src="images/btn_indicadores_up.gif" width="136" height="14"></a></div>
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+</body>
+
+</html>
+

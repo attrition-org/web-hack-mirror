@@ -1,0 +1,610 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+<TITLE>Administrator's Business Console and Control Panel</TITLE>
+<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+<META content="MSHTML 5.00.2314.1000" name=GENERATOR>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- 
+
+CookieName = 'AITResellinfo.Cookie';
+numDays       = 30;  //Days 'till Cookie expires.(eg. 30 days = 1 month)
+
+
+function Form1_Validator(theForm)
+{
+        if (theForm.custnum.value == "")
+        {
+          alert("Please enter your Customer Number.\nThis can be found on your billing statement.\nIf you cannot remember your customer number,\nyou can use your primary domain name.");
+          theForm.custnum.focus();
+          return (false);
+        }
+
+        if (theForm.Contact.value == "")
+        {
+          alert("Please enter your name.");
+          theForm.Contact.focus();
+          return (false);
+        }
+
+        if (theForm.Contact_Phone.value == "")
+        {
+          alert("Please enter your Phone Number.\nWe need if in case there are questions about your order.\nPhone number will only be used to clarify questions about your order.");
+          theForm.Contact_Phone.focus();
+          return (false);
+        }
+
+
+        if (theForm.username.value == "")
+        {
+          alert("Please enter a current email address.");
+          theForm.username.focus();
+          return (false);
+        }
+
+        var Ap = (theForm.username.value);
+        if (Ap.indexOf ('@',0) == -1){
+                alert("The E-mail address you entered does not appear to be a valid email address.");
+                theForm.username.focus();
+                return (false);
+        }
+
+        var Dp = (theForm.username.value);
+        if (Dp.indexOf ('.',0) == -1){
+                alert("Please check the domain name you entered for the E-mail address,\nit does not appear to be a valid domain name.");
+                theForm.username.focus();
+                return (false);
+        }
+
+        return (true);
+}
+
+function WriteCookie () {
+
+ var expire = new Date ();
+ var Primaryname = prompt("Please provide your primary domain name\nfor our order department");
+
+ expire.setTime (expire.getTime() + (numDays * 24 * 3600000)); 
+//1 month from now!                    (dd) (hr) (ms in hr)
+
+ var AITReseller = expire ;
+
+//Text entry
+
+ AITReseller = AITReseller + '`' + document.forms[0].custnum.value;
+ AITReseller = AITReseller + '`' + document.forms[0].Contact.value;
+ AITReseller = AITReseller + '`' + document.forms[0].Contact_Phone.value;
+ AITReseller = AITReseller + '`' + document.forms[0].username.value;
+ AITReseller = AITReseller + '`' + Primaryname;
+
+ document.cookie = CookieName +"=" + escape (AITReseller) + "; expires=" + expire.toGMTString();
+
+}
+
+function PopulateTable() {
+
+ MakeCookieArray(GetCookie(CookieName));
+
+ if (ckArray[0] != "*") {
+
+  document.forms[0].custnum.value = ckArray[1];
+  document.forms[0].Contact.value = ckArray[2];
+  document.forms[0].Contact_Phone.value = ckArray[3];
+  document.forms[0].username.value = ckArray[4];
+  document.forms[0].Primary_domain_name.value = ckArray[5];
+ }
+
+}
+
+function GetCookie (CookieName) {
+
+ var cname = CookieName + "=";
+ var i = 0;
+
+ while (i < document.cookie.length) {
+    var j = i + cname.length;
+    if (document.cookie.substring(i, j) == cname){
+        var leng = document.cookie.indexOf (";", j);
+        if (leng == -1) leng = document.cookie.length;
+        return unescape(document.cookie.substring(j, leng));
+    }
+
+    i = document.cookie.indexOf(" ", i) + 1;
+    if (i == 0) break; //thats -1 plus 1, duh.
+ }
+ return "*";
+}
+
+//Parse The Cookie.
+
+function MakeCookieArray(cookieValue) {
+
+ var i = 0,indx = 0, citemlen =0;
+ ckArray = new Array();
+ while (citemlen < cookieValue.length) {
+    citemlen=(cookieValue.indexOf("`", indx)>0)
+    ?cookieValue.indexOf("`", indx):cookieValue.length;
+    ckArray[i]= cookieValue.substring(indx, citemlen); i++;
+    indx = citemlen + 1;
+ }
+
+
+
+}
+
+//--> </SCRIPT>
+</HEAD>
+<BODY aLink=#cc0000 bgColor=#000000 link=#0000cc text=#000000 vLink=#000066 onLoad="PopulateTable()">
+<div align="center"></div>
+<TABLE align=center bgColor=#ffffff border=0 cellPadding=0 cellSpacing=0 
+width=600>
+   <TBODY> 
+   <TR>
+      <TD bgColor=#ffcc00 vAlign=MIDDLE width="29%" height="10"> 
+         <DIV align=left><FONT color=#000000><a href="http://welcomemart.com"><IMG HEIGHT=20 
+      SRC="images/bupperleft.gif" 
+      WIDTH=19 BORDER="0"><b></b></a></FONT></DIV>
+    </TD>
+    <TD bgColor=#ffcc00 width="54%" height="10"> 
+      <DIV align=right><font color="#FF0000"><font size=-1><font color="#FF0000"><font color="#FF0000"><font size=-1><font color="#FF0000"><font size=-1>
+        <script language="JavaScript">
+
+
+
+<!--Web Author 99 - WinGear Software-->
+
+
+
+<!-- Begin
+
+
+
+var day="";
+
+
+
+var month="";
+
+
+
+var ampm="";
+
+
+
+var ampmhour="";
+
+
+
+var myweekday="";
+
+
+
+var year="";
+
+
+
+mydate = new Date();
+
+
+
+myday = mydate.getDay();
+
+
+
+mymonth = mydate.getMonth();
+
+
+
+myweekday= mydate.getDate();
+
+
+
+weekday= myweekday;
+
+
+
+myhours = mydate.getHours();
+
+
+
+ampmhour  =  (myhours > 12) ? myhours - 12 : myhours;
+
+
+
+ampm =  (myhours >= 12) ? ' PM PST' : ' AM PST';
+
+
+
+mytime = mydate.getMinutes();
+
+
+
+myminutes =  ((mytime < 10) ? ':0' : ':') + mytime;
+
+
+
+if(myday == 0)
+
+
+
+day = " Sunday, ";
+
+
+
+else if(myday == 1)
+
+
+
+day = " Monday, ";
+
+
+
+
+
+else if(myday == 2)
+
+
+
+day = " Tuesday, ";
+
+
+
+else if(myday == 3)
+
+
+
+day = " Wednesday, ";
+
+
+
+else if(myday == 4)
+
+
+
+day = " Thurday, ";
+
+
+
+else if(myday == 5)
+
+
+
+day = " Friday, ";
+
+
+
+else if(myday == 6)
+
+
+
+day = " Saturday, ";
+
+
+
+if(mymonth == 0) {
+
+
+
+month = "January ";}
+
+
+
+else if(mymonth ==1)
+
+
+
+month = "February ";
+
+
+
+else if(mymonth ==2)
+
+
+
+month = "March ";
+
+
+
+else if(mymonth ==3)
+
+
+
+month = "April ";
+
+
+
+else if(mymonth ==4)
+
+
+
+month = "May ";
+
+
+
+else if(mymonth ==5)
+
+
+
+month = "June ";
+
+
+
+else if(mymonth ==6)
+
+month = "July ";
+
+else if(mymonth ==7)
+
+month = "August ";
+
+else if(mymonth ==8)
+
+month = "September ";
+
+else if(mymonth ==9)
+
+month = "October ";
+
+else if(mymonth ==10)
+
+month = "November ";
+
+else if(mymonth ==11)
+
+month = "December ";
+
+// End -->
+
+</script>
+        </font></font> 
+        <script>
+
+document.write("<b><font color=#FFFFFF size='-1' face='Arial, Helvetica, sans-serif'></b>" + ampmhour + "" + myminutes + ampm)
+
+document.write(" | " + day + month);
+
+document.write(myweekday + ",  " + year + "</font>");
+
+</script>
+        <font face="Fixedsys" size="1"> <font size="-1" color="#ff0000"><font face="Arial, Helvetica, sans-serif"><font color="#FFFFFF">2000</font></font></font></font></font></font> 
+        </font></font></font></DIV>
+    </TD>
+    <TD bgColor=#ffcc00 vAlign=top width="17%" height="10"> 
+         <DIV align=right><FONT COLOR=#000000 
+      FACE="Verdana, Arial, Helvetica, sans-serif" SIZE=-2><IMG HEIGHT=20 
+      SRC="images/bupperright.gif" 
+      WIDTH=20></FONT></DIV>
+      </TD></TR>
+  <TR bgColor=#5050b8>
+      <TD colSpan=3><FONT color=#ffffff 
+      face="Verdana, Arial, Helvetica, sans-serif" 
+      size=-1><B>&nbsp;&nbsp;&nbsp; Business Console &amp; Administrator's Control 
+         Panel</B></FONT></TD>
+  </TR>
+  <TR vAlign=top>
+      <TD colSpan=3 height=882> 
+         <TABLE bgColor=#ffffff border=0 cellPadding=3 cellSpacing=2 
+        width="100%">
+            <TBODY> 
+            <TR> 
+               <TD bgColor=#eaeaea colSpan=3 height=794 vAlign=top><FONT FACE="Verdana, Arial, Helvetica, sans-serif" SIZE="2">Please 
+                  complete the following information to order at no additional 
+                  charge to your account. Information marked with an asterisk 
+                  is required (<FONT COLOR=#ff0000>*</FONT>).</FONT> 
+                  
+                  <FORM METHOD="POST" ACTION="/cgi-bin/fmail.pl" onSubmit="return Form1_Validator(this)" NAME="Form1">
+                     <INPUT TYPE="hidden" NAME="recipient" VALUE="help@thewebsitedistrict.com">
+                     <INPUT TYPE="hidden" NAME="subject" VALUE="TWD Technical Support Request">
+                     <INPUT TYPE="hidden" NAME="thankurl" VALUE="http://www.thewebsitedistrict.com/customercare/vpanel_thankyou.html">
+                     <TABLE BORDER WIDTH="500" ALIGN="center" >
+                        <TR BGCOLOR="#F1F1E2"> 
+                           <TD BGCOLOR="#F1F1E2"><A HREF="../dotclinic/orderinfo.html#custnum" TARGET="_blank"><FONT FACE="Verdana, Arial, Helvetica, sans-serif" SIZE="2">Member's 
+                              Primary Domain (Website)</FONT> </A><FONT COLOR="#FF0000" FACE="Verdana, Arial, Helvetica, sans-serif" SIZE="2">(Required)</FONT>: 
+                              <BR>
+                              Please enter your primary domain name.<BR>
+                              <INPUT TYPE="text" NAME="custnum" SIZE=30>
+                           </TD>
+                        </TR>
+                        <TR BGCOLOR="#F1F1E2"> 
+                           <TD HEIGHT="55"><FONT FACE="Arial,Helvetica"><FONT SIZE=-1><A HREF="../dotclinic/orderinfo.html#Resellersname" TARGET="_blank">Member's 
+                              Name</A> </FONT><FONT COLOR="#FF0000">(Required)</FONT><FONT SIZE=-1>:</FONT></FONT> 
+                              <BR>
+                              <INPUT TYPE="text" NAME="Contact" SIZE=30>
+                           </TD>
+                        </TR>
+                        <TR BGCOLOR="#F1F1E2"> 
+                           <TD><FONT FACE="Arial,Helvetica"><FONT SIZE=-1><A HREF="../dotclinic/orderinfo.html#Resellersphone" TARGET="_blank">Member's 
+                              Phone</A> </FONT><FONT COLOR="#FF0000">(Required)</FONT><FONT SIZE=-1>:&nbsp;</FONT></FONT> 
+                              <BR>
+                              <INPUT TYPE="text" NAME="Contact_Phone" SIZE=30>
+                           </TD>
+                        </TR>
+                        <TR BGCOLOR="#F1F1E2"> 
+                           <TD><FONT FACE="Arial,Helvetica"><FONT SIZE=-1><A HREF="../dotclinic/orderinfo.html#Resellersfax" TARGET="_blank">Members's 
+                              FAX</A>:(Optional)</FONT></FONT> <BR>
+                              <INPUT TYPE="text" NAME="Contact_FAX" SIZE=30>
+                           </TD>
+                        </TR>
+                        <TR BGCOLOR="#F1F1E2"> 
+                           <TD><FONT FACE="Arial,Helvetica"><FONT SIZE=-1><A HREF="../dotclinic/orderinfo.html#Resellersemail" TARGET="_blank">Member's 
+                              Email</A> </FONT><FONT COLOR="#FF0000">(Required)</FONT><FONT SIZE=-1>:</FONT></FONT> 
+                              <BR>
+                              <INPUT TYPE="text" NAME="username" SIZE=30>
+                           </TD>
+                        </TR>
+                     </TABLE>
+                     <P ALIGN="CENTER"> 
+                        <INPUT 
+        NAME=Primary_domain_name TYPE=hidden>
+                        <INPUT NAME=cookie 
+        onClick=WriteCookie() TYPE=checkbox VALUE=yes>
+                        <FONT FACE="Verdana, Arial, Helvetica, sans-serif" COLOR="#0033CC" SIZE="2">Click 
+                        Here to save this information in your computer for future 
+                        use. </FONT><B><FONT FACE=Arial,Helvetica><FONT SIZE=-1> 
+                        </FONT></FONT></B> </P>
+                     <P>&nbsp; 
+                     <TABLE BORDER=0 WIDTH="100%">
+                        <TBODY> 
+                        <TR BGCOLOR=#fffff0> 
+                           <TD VALIGN=top WIDTH=433 HEIGHT="9"><FONT 
+                  FACE="Arial,&#10;Helvetica, sans-serif" 
+                  SIZE=-1><B>Services to install: Please submit no more than 2 
+                              per order. Instructions will be provided via email.</B></FONT></TD>
+                        </TR>
+                        <TR VALIGN="TOP"> 
+                           <TD HEIGHT=244 WIDTH=100%> <BR>
+                              <TABLE WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="4">
+                                 <TR> 
+                                    <TD WIDTH="15%" HEIGHT="25">&nbsp;</TD>
+                                    <TD WIDTH="62%" HEIGHT="25"><B><FONT FACE="Verdana, Arial, Helvetica, sans-serif" SIZE="2">Click 
+                                       the service you want activated </FONT></B></TD>
+                                    <TD WIDTH="23%" HEIGHT="25"><B><FONT FACE="Verdana, Arial, Helvetica, sans-serif">Setup 
+                                       time</FONT></B></TD>
+                                 </TR>
+                                 <TR> 
+                                    <TD WIDTH="15%" HEIGHT="22">&nbsp;</TD>
+                                    <TD WIDTH="62%" HEIGHT="22"> <FONT FACE="Verdana, Arial, Helvetica, sans-serif" SIZE="2"> 
+                                       <INPUT TYPE="checkbox" NAME="GuestBook" VALUE="Guestbook">
+                                       Guest Book </FONT></TD>
+                                    <TD WIDTH="23%" HEIGHT="22"><FONT FACE="Verdana, Arial, Helvetica, sans-serif" SIZE="2"><FONT SIZE="1">(24 
+                                       hours)</FONT></FONT> </TD>
+                                 </TR>
+                                 <TR> 
+                                    <TD WIDTH="15%" HEIGHT="23">&nbsp;</TD>
+                                    <TD WIDTH="62%" HEIGHT="23"> <FONT FACE="Verdana, Arial, Helvetica, sans-serif" SIZE="2"> 
+                                       <INPUT TYPE="checkbox" NAME="ShoppingCart" VALUE="ShoppingCart">
+                                       Shopping Cart </FONT></TD>
+                                    <TD WIDTH="23%" HEIGHT="23"><FONT FACE="Verdana, Arial, Helvetica, sans-serif" SIZE="2"><FONT SIZE="1">(24 
+                                       hours)</FONT></FONT> </TD>
+                                 </TR>
+                                 <TR> 
+                                    <TD WIDTH="15%" HEIGHT="27">&nbsp;</TD>
+                                    <TD WIDTH="62%" HEIGHT="27"> <FONT FACE="Verdana, Arial, Helvetica, sans-serif" SIZE="2"> 
+                                       <INPUT TYPE="checkbox" NAME="MySql " VALUE="MySql">
+                                       MySql (not supported) </FONT></TD>
+                                    <TD WIDTH="23%" HEIGHT="27"><FONT FACE="Verdana, Arial, Helvetica, sans-serif" SIZE="2"><FONT SIZE="1">(24 
+                                       hours)</FONT></FONT> </TD>
+                                 </TR>
+                                 <TR> 
+                                    <TD WIDTH="15%">&nbsp;</TD>
+                                    <TD WIDTH="62%"> 
+                                       <INPUT TYPE="checkbox" NAME="ContactForm" VALUE="ContactForm">
+                                       <FONT FACE="Verdana, Arial, Helvetica, sans-serif" SIZE="2">Contact 
+                                       Form</FONT></TD>
+                                    <TD WIDTH="23%"><FONT FACE="Verdana, Arial, Helvetica, sans-serif" SIZE="2"><FONT SIZE="1">(24 
+                                       -48 hours)</FONT></FONT></TD>
+                                 </TR>
+                                 <TR> 
+                                    <TD HEIGHT="29" WIDTH="15%">&nbsp;</TD>
+                                    <TD HEIGHT="29" WIDTH="62%"> 
+                                       <INPUT TYPE="checkbox" NAME="CGIBIN" VALUE="ContactForm">
+                                       <FONT FACE="Verdana, Arial, Helvetica, sans-serif" SIZE="2">CGI 
+                                       BIN</FONT></TD>
+                                    <TD WIDTH="23%" HEIGHT="29"><FONT FACE="Verdana, Arial, Helvetica, sans-serif" SIZE="2"><FONT SIZE="1">(24 
+                                       hours)</FONT></FONT></TD>
+                                 </TR>
+                                 <TR> 
+                                    <TD WIDTH="15%" HEIGHT="34">&nbsp;</TD>
+                                    <TD WIDTH="62%" HEIGHT="34"> 
+                                       <INPUT TYPE="checkbox" NAME="Traffic Reporter" VALUE="ContactForm">
+                                       <FONT FACE="Verdana, Arial, Helvetica, sans-serif" SIZE="2">Web 
+                                       Traffic Reporter <FONT SIZE="1"> </FONT></FONT></TD>
+                                    <TD WIDTH="23%" HEIGHT="34"><FONT FACE="Verdana, Arial, Helvetica, sans-serif" SIZE="2"><FONT SIZE="1">(24 
+                                       hours)</FONT></FONT></TD>
+                                 </TR>
+                                 <TR> 
+                                    <TD HEIGHT="26" WIDTH="15%">&nbsp;</TD>
+                                    <TD HEIGHT="26" WIDTH="62%">&nbsp;</TD>
+                                    <TD HEIGHT="26" WIDTH="23%">&nbsp;</TD>
+                                 </TR>
+                              </TABLE>
+                              <FONT 
+                  FACE="Arial,&#10;Helvetica, sans-serif" SIZE=-1> </FONT></TD>
+                        </TR>
+                        <TR> 
+                           <TD COLSPAN=2 WIDTH=433 HEIGHT="37"> 
+                              <DIV ALIGN="CENTER"><FONT 
+                  FACE="Arial,&#10;Helvetica, sans-serif" SIZE=-1> 
+                                 <INPUT NAME=submit TYPE=submit VALUE="Submit  Request">
+                                 </FONT></DIV>
+                           </TD>
+                        </TR>
+                        <TR> 
+                           <TD COLSPAN=2 WIDTH=433 HEIGHT="19"><FONT 
+                  FACE="Arial, Helvetica,&#10;sans-serif" 
+              SIZE=-1></FONT></TD>
+                        </TR>
+                        </TBODY> 
+                     </TABLE>
+                     
+                     <!--
+End input data table --> 
+                  </FORM>
+                  <P><BR>
+                  </P>
+                  <P>&nbsp; </P>
+                  <DIV ALIGN=right></DIV>
+                  <P><FONT color=#000000 face="Verdana, Arial, Helvetica, sans-serif" 
+            size=-2><B><FONT color=#5050b8 
+            face="Verdana, Arial, Helvetica, sans-serif" size=-2><BR>
+                     Check it Out!</FONT><FONT face="Verdana, Arial, Helvetica, sans-serif" 
+            size=-2> <A href="../promotions/promotions_index.html" target=_blank> 
+                     Promotion It </A>-</FONT></B><FONT 
+            face="Verdana, Arial, Helvetica, sans-serif" size=-2>Here you will 
+                     learn how to properly promote your website. </FONT> <BR>
+                     <B><FONT COLOR=#5050b8 
+            FACE="Verdana, Arial, Helvetica, sans-serif" SIZE=-2><BR>
+                     Check it Out!</FONT><FONT FACE="Verdana, Arial, Helvetica, sans-serif" 
+            SIZE=-2> <A HREF="http://www.wemaintainit.com" TARGET=_blank> WeMaintainIt.com</A>-</FONT></B><FONT 
+            FACE="Verdana, Arial, Helvetica, sans-serif" SIZE=-2>Here you will 
+                     find help maintaining your site. From simple text changes 
+                     to full database integration. </FONT> <BR>
+                     </FONT></P>
+               </TD>
+            </TR>
+            </TBODY>
+         </TABLE>
+      </TD></TR>
+  <TR bgColor=#5050b8>
+    <TD colSpan=3 height=22>
+         <DIV align=center><FONT FACE="Verdana, Arial, Helvetica, sans-serif" 
+      SIZE=-2><A HREF="http://theewebsitedistrict.com/hosting/hosting_index.html">&nbsp;<FONT 
+      COLOR=#ffffff>Hosting </FONT></A><FONT COLOR=#ffffff>| <A 
+      HREF="../sitesales/sitesales_sellproducts.html"><FONT COLOR=#ffffff>Merchant 
+            Account</FONT></A> |</FONT><FONT COLOR=#ffffff 
+      FACE="Verdana, Arial, Helvetica, sans-serif" SIZE=-2> </FONT><FONT 
+      COLOR=#ffffff><A HREF="http://thewebsitedistrict.com/sitesales/sitesales_sellproducts.html"><FONT 
+      COLOR=#ffffff>Transaction Gateway</FONT></A> | <A 
+      HREF="../domainnames/domainname_index.html"><FONT COLOR=#ffffff>Domain 
+            Registration</FONT></A> | <A HREF="http://digiverge.net/"><FONT 
+      COLOR=#ffffff>Internet Access</FONT></A> |</FONT></FONT><FONT 
+      COLOR=#ffffff FACE="Verdana, Arial, Helvetica, sans-serif" SIZE=-2> <A 
+      HREF="http://veribiz.com/"><FONT COLOR=#ffffff>Digital Certificate</FONT></A></FONT> 
+         </DIV>
+    </TD></TR>
+  <TR>
+      <TD bgColor=#ffcc00 vAlign=bottom width="29%"><IMG HEIGHT=20 
+      SRC="images/blowerleft.gif" 
+      WIDTH=19></TD>
+    <TD bgColor=#ffcc00 width="54%"> 
+      <DIV align=center><FONT face="Verdana, Arial, Helvetica, sans-serif" 
+      size=-2><A href="http://cnn.com/" target=_blank><FONT 
+      color=#000000>CNN</FONT></A><FONT color=#000000> | <A 
+      href="http://weather.com/" target=_blank><FONT 
+      color=#000000>Weather.com</FONT></A> | <A href="http://espn.com/" 
+      target=_blank><FONT color=#000000>ESPN</FONT></A> | <A 
+      href="http://thewebsitedistrict.com/members/" target=_blank><FONT 
+      color=#000000>Developer.com</FONT></A></FONT></FONT></DIV></TD>
+    <TD bgColor=#ffcc00 vAlign=bottom width="17%"> 
+         <DIV align=right><IMG HEIGHT=20 
+      SRC="images/blowerright.gif" 
+      WIDTH=20></DIV>
+      </TD></TR></TBODY></TABLE><BR>
+
+<DIV align=center><FONT face="Arial, Helvetica, sans-serif" 
+size=-2>&nbsp;<A href="../advertise/advertise_index.html" 
+target=_blank><FONT color=#ffffff><B> </B></FONT></A></FONT><FONT color=#ffffff 
+face="Verdana, Arial, Helvetica, sans-serif" size=-2 font>&nbsp;&nbsp;</FONT> 
+</DIV>
+</BODY></HTML>

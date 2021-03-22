@@ -1,0 +1,294 @@
+<html>
+
+<head>
+<title>RedHotPrice Request Form</title>
+</head>
+
+<body background="images/greyback.gif">
+
+<!--webbot BOT="GeneratedScript" PREVIEW=" " startspan --><script Language="JavaScript"><!--
+function FrontPage_Form1_Validator(theForm)
+{
+
+  if (theForm.type.value == "")
+  {
+    alert("Please enter a value for the \"Appliance Type\" field.");
+    theForm.type.focus();
+    return (false);
+  }
+
+  if (theForm.type.value.length < 1)
+  {
+    alert("Please enter at least 1 characters in the \"Appliance Type\" field.");
+    theForm.type.focus();
+    return (false);
+  }
+
+  if (theForm.type.value.length > 200)
+  {
+    alert("Please enter at most 200 characters in the \"Appliance Type\" field.");
+    theForm.type.focus();
+    return (false);
+  }
+
+  if (theForm.model.value == "")
+  {
+    alert("Please enter a value for the \"Model\" field.");
+    theForm.model.focus();
+    return (false);
+  }
+
+  if (theForm.model.value.length < 1)
+  {
+    alert("Please enter at least 1 characters in the \"Model\" field.");
+    theForm.model.focus();
+    return (false);
+  }
+
+  if (theForm.model.value.length > 200)
+  {
+    alert("Please enter at most 200 characters in the \"Model\" field.");
+    theForm.model.focus();
+    return (false);
+  }
+
+  if (theForm.fname.value == "")
+  {
+    alert("Please enter a value for the \"First Name\" field.");
+    theForm.fname.focus();
+    return (false);
+  }
+
+  if (theForm.fname.value.length < 1)
+  {
+    alert("Please enter at least 1 characters in the \"First Name\" field.");
+    theForm.fname.focus();
+    return (false);
+  }
+
+  if (theForm.fname.value.length > 200)
+  {
+    alert("Please enter at most 200 characters in the \"First Name\" field.");
+    theForm.fname.focus();
+    return (false);
+  }
+
+  if (theForm.lname.value == "")
+  {
+    alert("Please enter a value for the \"Last Name\" field.");
+    theForm.lname.focus();
+    return (false);
+  }
+
+  if (theForm.lname.value.length < 1)
+  {
+    alert("Please enter at least 1 characters in the \"Last Name\" field.");
+    theForm.lname.focus();
+    return (false);
+  }
+
+  if (theForm.lname.value.length > 200)
+  {
+    alert("Please enter at most 200 characters in the \"Last Name\" field.");
+    theForm.lname.focus();
+    return (false);
+  }
+
+  if (theForm.street1.value == "")
+  {
+    alert("Please enter a value for the \"street1\" field.");
+    theForm.street1.focus();
+    return (false);
+  }
+
+  if (theForm.street1.value.length < 1)
+  {
+    alert("Please enter at least 1 characters in the \"street1\" field.");
+    theForm.street1.focus();
+    return (false);
+  }
+
+  if (theForm.street1.value.length > 250)
+  {
+    alert("Please enter at most 250 characters in the \"street1\" field.");
+    theForm.street1.focus();
+    return (false);
+  }
+
+  if (theForm.city.value == "")
+  {
+    alert("Please enter a value for the \"City\" field.");
+    theForm.city.focus();
+    return (false);
+  }
+
+  if (theForm.city.value.length < 1)
+  {
+    alert("Please enter at least 1 characters in the \"City\" field.");
+    theForm.city.focus();
+    return (false);
+  }
+
+  if (theForm.city.value.length > 200)
+  {
+    alert("Please enter at most 200 characters in the \"City\" field.");
+    theForm.city.focus();
+    return (false);
+  }
+
+  if (theForm.state.value == "")
+  {
+    alert("Please enter a value for the \"State\" field.");
+    theForm.state.focus();
+    return (false);
+  }
+
+  if (theForm.state.value.length < 1)
+  {
+    alert("Please enter at least 1 characters in the \"State\" field.");
+    theForm.state.focus();
+    return (false);
+  }
+
+  if (theForm.state.value.length > 200)
+  {
+    alert("Please enter at most 200 characters in the \"State\" field.");
+    theForm.state.focus();
+    return (false);
+  }
+
+  if (theForm.zip.value == "")
+  {
+    alert("Please enter a value for the \"Zip Code\" field.");
+    theForm.zip.focus();
+    return (false);
+  }
+
+  if (theForm.zip.value.length > 100)
+  {
+    alert("Please enter at most 100 characters in the \"Zip Code\" field.");
+    theForm.zip.focus();
+    return (false);
+  }
+
+  if (theForm.dareacode.value == "")
+  {
+    alert("Please enter a value for the \"Area Code for Daytime Phone\" field.");
+    theForm.dareacode.focus();
+    return (false);
+  }
+
+  if (theForm.dareacode.value.length < 1)
+  {
+    alert("Please enter at least 1 characters in the \"Area Code for Daytime Phone\" field.");
+    theForm.dareacode.focus();
+    return (false);
+  }
+
+  if (theForm.dareacode.value.length > 100)
+  {
+    alert("Please enter at most 100 characters in the \"Area Code for Daytime Phone\" field.");
+    theForm.dareacode.focus();
+    return (false);
+  }
+
+  if (theForm.dnumber.value == "")
+  {
+    alert("Please enter a value for the \"Phone Number for Daytime Phone\" field.");
+    theForm.dnumber.focus();
+    return (false);
+  }
+
+  if (theForm.dnumber.value.length < 1)
+  {
+    alert("Please enter at least 1 characters in the \"Phone Number for Daytime Phone\" field.");
+    theForm.dnumber.focus();
+    return (false);
+  }
+
+  if (theForm.dnumber.value.length > 100)
+  {
+    alert("Please enter at most 100 characters in the \"Phone Number for Daytime Phone\" field.");
+    theForm.dnumber.focus();
+    return (false);
+  }
+  return (true);
+}
+//--></script><!--webbot BOT="GeneratedScript" endspan --><form method="POST" action="mail.asp" onsubmit="return FrontPage_Form1_Validator(this)" name="FrontPage_Form1">
+  <div align="left"><p><strong><small>&nbsp;</small>&nbsp; <small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </small>No purchase obligation! Get the BEST Price!<br>
+  <small>Fill out this on-line form and you will receive a quote via e-mail, fax or phone </small><big>within
+  24 hours.</big><br>
+  <font color="#FF0000"><small>Fields marked with an asterisk (*) are optional.</small></font></strong></p>
+  </div><div align="left"><table border="0" width="500">
+    <tr>
+      <td width="100%"><font face="Arial"><strong><small>Appliance Type:</small></strong> <!--webbot bot="Validation" S-Display-Name="Appliance Type" B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="200" --><input type="text" name="type" size="25" maxlength="200"><br>
+      <small><strong>Make:</strong></small> <select name="make" size="1">
+        <option value="GE">GE</option>
+        <option value="Amana">Amana</option>
+        <option value="Aiwa">Aiwa</option>
+        <option value="Amana">Asko</option>
+        <option value="Baytheon">Baytheon</option>
+        <option value="BTC">BTC</option>
+        <option value="Bosch">Bosch</option>
+        <option value="Broan">Broan</option>
+        <option value="Dacor">Dacor</option>
+        <option value="Direct TV">Direct TV</option>
+        <option value="Dish Network">Dish Network</option>
+        <option value="Echostar">Echostar</option>
+        <option value="Garland">Garland</option>
+        <option value="Go-video">Go-video</option>
+        <option value="Fisher &amp; Paykel">Fisher &amp; Paykel</option>
+        <option value="Franke">Franke</option>
+        <option value="Frigidaire">Frigidaire</option>
+        <option value="Hitachi">Hitachi</option>
+        <option value="Hotpoint">Hotpoint</option>
+        <option value="Jenn-Air">Jenn-Air</option>
+        <option value="JVC">JVC</option>
+        <option value="Kitchen Aid">Kitchen Aid</option>
+        <option value="Maytag">Maytag</option>
+        <option value="Mitsubushi">Mitsubushi</option>
+        <option value="RCA">RCA</option>
+        <option value="Roper">Roper</option>
+        <option value="Sharp">Sharp</option>
+        <option value="Sony">Sony</option>
+        <option value="Sub Zero">Sub Zero</option>
+        <option value="Thomson">Thomson</option>
+        <option value="Toshiba">Toshiba</option>
+        <option value="U-Line">U-Line</option>
+        <option value="Viking">Viking</option>
+        <option value="Whirlpool">Whirlpool</option>
+        <option value="Other">Other</option>
+      </select><br>
+      <strong><small>Model #</small></strong> <!--webbot bot="Validation" S-Display-Name="Model" B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="200" --><input type="text" name="model" size="20" maxlength="200">&nbsp;
+      <br>
+      <strong><small>Color:</small></strong> <select name="color" size="1">
+        <option value="White">White</option>
+        <option value="Black">Black</option>
+        <option value="Stainless Steel">Stainless Steel</option>
+        <option value="Almond">Almond</option>
+        <option value="Biscuit">Biscuit</option>
+        <option value="other">Other</option>
+      </select>&nbsp; <br>
+      <strong><small>First Name </small></strong><!--webbot bot="Validation" S-Display-Name="First Name" B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="200" --><input type="text" name="fname" size="25" maxlength="200">&nbsp;&nbsp; <br>
+      <small><strong>Middle Initial:</strong></small> *<input type="text" name="minitial" size="6"><br>
+      <strong><small>Last Name </small></strong><!--webbot bot="Validation" S-Display-Name="Last Name" B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="200" --><input type="text" name="lname" size="39" maxlength="200"><br>
+      <strong><small>Street Address 1: <!--webbot bot="Validation" B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="250" --><input type="text" name="street1" size="39" maxlength="250"><br>
+      Street Address 2: <small><input type="text" name="street2" size="39"></small></small></strong><br>
+      <strong><small>City:</small></strong> <!--webbot bot="Validation" S-Display-Name="City" B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="200" --><input type="text" name="city" size="20" maxlength="200">&nbsp;
+      <small><strong>State:</strong></small> <!--webbot bot="Validation" S-Display-Name="State" B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="200" --><input type="text" name="state" size="15" maxlength="200"> <br>
+      <small><strong>Zip:</strong></small><!--webbot bot="Validation" S-Display-Name="Zip Code" B-Value-Required="TRUE" I-Maximum-Length="100" --><input type="text" name="zip" size="8" maxlength="100"><br>
+      <strong><small>Daytime Phone: Area Code&nbsp; </small></strong><!--webbot bot="Validation" S-Display-Name="Area Code for Daytime Phone" B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="100" --><input type="text" name="dareacode" size="3" maxlength="100"><small><strong>
+      Number: </strong></small><!--webbot bot="Validation" S-Display-Name="Phone Number for Daytime Phone" B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="100" --><input type="text" name="dnumber" size="7" maxlength="100"><br>
+      <strong><small>Evening Phone: *Area Code </small></strong><input type="text" name="eareacode" size="3"> <small><strong>Number: </strong></small><input type="text" name="enumber" size="7"><br>
+      <small><strong>Fax:</strong></small>* <input type="text" name="fax" size="10"><strong><small>
+      </small><br>
+      <small>E-Mail Address: *&nbsp; </small></strong><input type="text" name="email" size="20"><br>
+      </font></td>
+    </tr>
+  </table>
+  </div><div align="center"><center><p><input type="submit" value="Submit" name="B1"><input type="reset" value="Reset" name="B2"></p>
+  </center></div>
+</form>
+</body>
+</html>

@@ -1,0 +1,374 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-CN">
+<meta http-equiv="Content-Type" content="text/html; charset=gb_2312-80">
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>视讯宽带网上旅游</title>
+<script LANGUAGE="JavaScript" FPTYPE="dynamicanimation">
+<!--
+  // If you want to change this script, you must also make the following
+  // changes so that FrontPage will not overwrite your new script.
+  // In the script tag, change type="dynamicanimation" to type="mydynamicanimation"
+  // In the first script statement, change "dynamicanimation" to "mydynamicanimation"
+  // Throughout the HTML content, change dynamicanimation= to mydynamicanimation=
+  // Change function dynAnimation to function mydynAnimation
+  // In the body tag, change onload="dynAnimation()" to onload="mydynAnimation()"
+  dynamicanimAttr = "dynamicanimation"
+  animateElements = new Array()
+  currentElement = 0
+  speed = 0
+  stepsZoom = 8
+  stepsWord = 8
+  stepsFly = 12
+  stepsSpiral = 16
+  steps = stepsZoom
+  step = 0
+  outString = ""
+  function dynAnimation()
+  {
+    var ms = navigator.appVersion.indexOf("MSIE")
+    ie4 = (ms>0) && (parseInt(navigator.appVersion.substring(ms+5, ms+6)) >= 4)
+    if(!ie4)
+    {
+      if((navigator.appName == "Netscape") &&
+         (parseInt(navigator.appVersion.substring(0, 1)) >= 4))
+      {
+        for (index=document.layers.length-1; index >= 0; index--)
+        {
+            layer=document.layers[index]
+            if (layer.left==10000)
+                layer.left=0
+        }
+      }
+      return
+    }
+    for (index=document.all.length-1; index >= document.body.sourceIndex; index--)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if(null != animation)
+      {
+        if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        {
+          ih = el.innerHTML
+          outString = ""
+          i1 = 0
+          iend = ih.length
+          while(true)
+          {
+            i2 = startWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, false, "")
+            if(i2 == iend)
+              break
+            i1 = i2
+            i2 = endWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, true, animation)
+            if(i2 == iend)
+              break
+            i1 = i2
+          }
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+        if(animation == "zoomIn" || animation == "zoomOut")
+        {
+          ih = el.innerHTML
+          outString = "<SPAN " + dynamicanimAttr + "=\"" + animation + "\" style=\"position: relative; left: 10000;\">"
+          outString += ih
+          outString += "</SPAN>"
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+      }
+    }
+    i = 0
+    for (index=document.body.sourceIndex; index < document.all.length; index++)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if (null != animation)
+      {
+        if(animation == "flyLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyRight")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyTop" || animation == "dropWord")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottom")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyTopLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyTopRight" || animation == "flyTopRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottomLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyBottomRight" || animation == "flyBottomRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "spiral")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "zoomIn")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else if(animation == "zoomOut")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        el.initLeft = el.style.posLeft
+        el.initTop = el.style.posTop
+        animateElements[i++] = el
+      }
+    }
+    window.setTimeout("animate();", speed)
+  }
+  function offsetLeft(el)
+  {
+    x = el.offsetLeft
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      x += e.offsetLeft;
+    return x
+  } 
+  function offsetTop(el)
+  {
+    y = el.offsetTop
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      y += e.offsetTop;
+    return y
+  } 
+  function startWord(ih, i)
+  {
+    for(tag = false; i < ih.length; i++)
+    {
+      c = ih.charAt(i)
+      if(c == '<')
+        tag = true
+      if(!tag)
+        return i
+      if(c == '>')
+        tag = false
+    }
+    return -1
+  }
+  function endWord(ih, i)
+  {
+    nonSpace = false
+    space = false
+    while(i < ih.length)
+    {
+      c = ih.charAt(i)
+      if(c != ' ')
+        nonSpace = true
+      if(nonSpace && c == ' ')
+        space = true
+      if(c == '<')
+        return i
+      if(space && c != ' ')
+        return i
+      i++
+    }
+    return -1
+  }
+  function outWord(ih, i1, i2, dyn, anim)
+  {
+    if(dyn)
+      outString += "<SPAN " + dynamicanimAttr + "=\"" + anim + "\" style=\"position: relative; left: 10000;\">"
+    outString += ih.substring(i1, i2)
+    if(dyn)
+      outString += "</SPAN>"
+  }
+  function animate()
+  {
+    el = animateElements[currentElement]
+    animation = el.getAttribute(dynamicanimAttr, false)
+    step++
+    if(animation == "spiral")
+    {
+      steps = stepsSpiral
+      v = step/steps
+      rf = 1.0 - v
+      t = v * 2.0*Math.PI
+      rx = Math.max(Math.abs(el.initLeft), 200)
+      ry = Math.max(Math.abs(el.initTop),  200)
+      el.style.posLeft = Math.ceil(-rf*Math.cos(t)*rx)
+      el.style.posTop  = Math.ceil(-rf*Math.sin(t)*ry)
+    }
+    else if(animation == "zoomIn")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(50+50*step/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else if(animation == "zoomOut")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(100+200*(steps-step)/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else
+    {
+      steps = stepsFly
+      if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        steps = stepsWord
+      dl = el.initLeft / steps
+      dt = el.initTop  / steps
+      el.style.posLeft = el.style.posLeft - dl
+      el.style.posTop = el.style.posTop - dt
+    }
+    if (step >= steps) 
+    {
+      el.style.posLeft = 0
+      el.style.posTop = 0
+      currentElement++
+      step = 0
+    }
+    if(currentElement < animateElements.length)
+      window.setTimeout("animate();", speed)
+  }
+//-->
+</script></head>
+
+<body bgcolor="#FFFFFF" text="#666666" link="#000066" vlink="#0000FF" alink="#FF1C2C"
+topmargin="0" leftmargin="0" onload="dynAnimation()">
+
+<table border="0" cellpadding="0" cellspacing="0" width="620">
+  <tr>
+    <td valign="top" width="148" bgcolor="#000066"><a href="../index.html"><img
+    src="media_left.jpg" border="0" width="148" height="127" start="fileopen"></a></td>
+    <td valign="top" colspan="2" width="462"><img src="media_right.jpg" width="462"
+    height="127"></td>
+    <td rowspan="2" width="10"></td>
+  </tr>
+  <tr>
+    <td valign="top" width="148" bgcolor="#000063"><p align="center"><img
+    src="toc_filler_148x25.gif" alt=" " width="148" height="25"><br>
+    <a href="travel/fq.htm"><img src="1.jpg" alt="1.jpg (3880 bytes)" border="0" width="148"
+    height="25"></a></p>
+    <p align="center"><a href="travel/au.htm"><img src="2.jpg" alt="2.jpg (3560 bytes)"
+    border="0" width="148" height="25"></a></p>
+    <p align="center"><a href="travel/jp.htm"><img src="3.jpg" alt="3.jpg (4051 bytes)"
+    border="0" width="148" height="25"></a></p>
+    <p align="center"><a href="travel/japan.htm"><img src="4.jpg" alt="4.jpg (6061 bytes)"
+    border="0" width="148" height="25"></a></p>
+    <p align="center"><a href="travel/south.htm"><img src="5.jpg" alt="5.jpg (4598 bytes)"
+    border="0" width="148" height="25"></a></p>
+    <p align="center"><a href="travel/london.htm"><img src="6.jpg" alt="6.jpg (3600 bytes)"
+    border="0" width="148" height="25"></a></p>
+    <p align="center"><a href="../index.html"><img src="Back.jpg"
+    alt="Back.jpg (3458 bytes)" border="0" width="148" height="25"></a></p>
+    <p align="center">&nbsp; </td>
+    <td width="16"><img src="trans16.gif" alt=" " width="16" height="1"></td>
+    <td valign="top" width="446"><table border="0" cellpadding="0" cellspacing="0" width="446">
+      <tr>
+        <td valign="top"></td>
+      </tr>
+      <tr>
+        <td align="center"><p align="left" dynamicanimation="flyBottom"
+        style="position: relative !important; left: 10000 !important">&nbsp;&nbsp;&nbsp;</p>
+        <table border="0" width="100%">
+          <tr>
+            <td width="25%" dynamicanimation="flyRight"
+            style="position: relative !important; left: 10000 !important"><a href="travel/jp.htm"><font
+            color="#008080" size="2"><strong><img
+            src="../server/travel/jp-title.JPG" border="0" width="141"
+            height="101"></strong></font></a></td>
+            <td width="25%" dynamicanimation="flyRight"
+            style="position: relative !important; left: 10000 !important"><p align="center"><a
+            href="travel/south.htm"><img src="../server/travel/s-title.gif"
+            border="0" width="131" height="100"></a></td>
+            <td width="25%" dynamicanimation="flyRight"
+            style="position: relative !important; left: 10000 !important"><a href="travel/london.htm"><font
+            color="#008080" size="2"><strong><img
+            src="../server/travel/ld-title.JPG" border="0" width="129"
+            height="99"></strong></font></a></td>
+          </tr>
+          <tr>
+            <td width="25%"></td>
+            <td width="25%"></td>
+            <td width="25%"></td>
+          </tr>
+          <tr>
+            <td width="25%" dynamicanimation="flyRight"
+            style="position: relative !important; left: 10000 !important"><a href="travel/japan.htm"><font
+            color="#008080" size="2"><strong><img
+            src="../server/travel/j-title.JPG" border="0" width="140"
+            height="100"></strong></font></a></td>
+            <td width="25%" dynamicanimation="flyRight"
+            style="position: relative !important; left: 10000 !important"><p align="center"><a
+            href="travel/fq.htm"><font color="#008080" size="2"><strong><img
+            src="../server/travel/fq03.JPG" border="0" width="131" height="102"></strong></font></a></td>
+            <td width="25%" dynamicanimation="flyRight"
+            style="position: relative !important; left: 10000 !important"><p align="center"><a
+            href="travel/au.htm"><font color="#008080" size="2"><strong><img
+            src="../server/travel/au-title.gif" border="0" width="140"
+            height="107"></strong></font></a></td>
+          </tr>
+        </table>
+        <p align="left" dynamicanimation="flyBottom"
+        style="position: relative !important; left: 10000 !important">　<img src="ly.gif"
+        alt="ly.gif (61440 bytes)" width="387" height="51"></p>
+        <p><a href="../server/travel/jp01.htm"></a>　</p>
+        <p align="left">&nbsp;&nbsp;&nbsp; </td>
+      </tr>
+    </table>
+    <p><br>
+    </p>
+    <div align="right"><table border="0">
+      <tr>
+        <td align="right"><img src="shixun.jpg" width="100" height="78"> </td>
+        <td align="center"><font size="2">广东视讯宽带网服务中心　GDCATV HIGHWAY 
+        COMPANY<br>
+        地址(add)：广州市环市东路331号录制演播中心六楼<br>
+        电话(Tel):(020)83350536 邮编(P.C)：510066 <br>
+        网址：</font><a href="htp://www.gdcatv.com.cn"><font size="2">http://www.gdcatv.com.cn</font></a><font
+        size="2"><br>
+        电子邮箱:</font><font size="2"><a href="mailto:travel@gdcatv.com.cn">travel@gdcatv.com.cn 
+        </a></font></td>
+      </tr>
+    </table>
+    </div><p align="center"><a href="#top"><img src="top.gif" alt="Top" border="0" width="27"
+    height="23"></a></td>
+  </tr>
+</table>
+</body>
+</html>

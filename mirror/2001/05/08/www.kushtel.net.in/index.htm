@@ -1,0 +1,286 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0026)http://www.kushtel.net.in/ -->
+<!-- saved from url=(0023)http://www.kushtel.com/ -->
+<html>
+
+<head>
+<title>KushTel-Life on Line</title>
+<meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
+<script language="Javascript">
+<!--
+
+var nn;
+function setLink(num){
+if(num==1){nn="http://lc2.law5.hotmail.com/cgi-bin/dologin";
+}
+if(num==2){nn="http://login.yahoo.com/config/login?b5fv1o937bb4k";}
+if(num==0){nn="";}
+}
+function address(){
+document.ktlemail.action=nn;
+}
+
+var MAX_HOMEWIZ=42;var HOMEWIZ_STRING="hm+wz";function MakeArray(n){for(var i=1;i<=n;i++){this[i]=0;
+}
+this.maxlen=n;this.len=0;return this;
+}
+var hwiz=new MakeArray(MAX_HOMEWIZ);function find_substring(wiz,home){var i,wizn=wiz.length,homelen=home.length;for(i=0;i<=homelen-wizn;i++){if(wiz==home.substring(i,i+wizn))return i;
+}
+return false;
+}
+function Homewiz(name,opts,home,search){var ehgo=find_substring(HOMEWIZ_STRING,search);this.name=name;this.opts=opts;this.home=home;this.pre_ehgo=search.substring(0,ehgo);this.post_ehgo=search.substring(ehgo+HOMEWIZ_STRING.length,search.length);
+}
+function Add(name,opts,home,search){hwiz.len++;if(hwiz.len<=hwiz.maxlen){hwiz[hwiz.len]=new Homewiz(name,opts,home,search)
+}
+else{alert("Add")
+}
+}
+function DisplayForm(){document.writeln('<table border=0 width="100%" cellspacing=0 cellpadding=1>');document.writeln('<form name=HWform OnSubmit="HandleForm(this);return false">');document.writeln('<td><input size=22 maxsize=40 name=query style="font-size : 12"></td>');document.writeln('<td><select name=service style="font-size : 12">');for(i=1;i<=hwiz.len;i++){document.writeln("<option "+hwiz[i].opts+"> "+hwiz[i].name);
+}
+document.writeln('</select>&nbsp;<input type=image src="images/gobtn.gif" alt="Search the Web" ></td></tr></form></table>');query=self.location.search;if(query != null && query !=''){if (query.length > 1){query = query.substring(1, query.length);document.HWform.query.value=query
+}
+}
+document.HWform.query.focus()
+}
+function HandleForm(form){var i,newq="",oldq=form.query.value;for(i=0;i<oldq.length;i++){var thischar=oldq.charAt(i);if(thischar != ' ')newq += thischar;else if(lastchar != ' ')newq += '+';lastchar=thischar;
+}
+var hw=hwiz[1+form.service.selectedIndex];parent.parent.location.href=newq ? hw.pre_ehgo+newq+hw.post_ehgo : hw.home;document.HWform.query.focus()
+}
+Add("Select One","selected","http://www.cyberhaat.com/cyberhaat/index.html","http://www.altavista.com/cgi-bin/query?q=hm+wz&text=yes" );Add("altavista","","help","http://www.altavista.com/cgi-bin/query?q=hm+wz&text=yes");Add("yahoo","","http://37.com/help","http://search.yahoo.com/bin/search?p=hm+wz");Add("infoseek","","http://37.com/help","http://www.infoseek.com/Titles?qt=hm+wz");
+
+//-->
+</script>
+
+<style>BODY {
+	COLOR: #434457; FONT-FAMILY: arial; FONT-SIZE: 12px
+}
+TABLE {
+	COLOR: #434457; FONT-FAMILY: arial; FONT-SIZE: 12px
+}
+TD {
+	COLOR: #434457; FONT-FAMILY: arial; FONT-SIZE: 12px
+}
+INPUT {
+	MARGIN-TOP: 0px
+}
+A:link {
+	COLOR: #434457
+}
+A:active {
+	COLOR: #434457
+}
+A:visited {
+	COLOR: #434457
+}
+</style>
+<meta content="Microsoft FrontPage 3.0" name="GENERATOR">
+</head>
+
+<body bgColor="#ffffff" bottomMargin="0" leftMargin="0" rightMargin="0" text="#434457"
+topMargin="0" marginheight="0" marginwidth="0">
+<div align="center"><center>
+
+<table border="0" cellPadding="0" cellSpacing="0" width="600">
+<TBODY>
+  <tr>
+    <td align="middle" vAlign="top"><!-- TABLE FOR TOP PORTION-LOGO,TITLE,BANNER-BEGINS HERE --> <table border="0" cellPadding="0" cellSpacing="0"
+    width="600">
+<TBODY>
+      <tr>
+        <td align="left" vAlign="top"><img height="80" src="images/logo_ani.gif" width="80"></td>
+        <td align="left" vAlign="top"><img height="91" src="images/title11.gif" width="220"></td>
+        <td align="middle" vAlign="top"></td>
+      </tr>
+</TBODY>
+    </table>
+    <table border="0" cellPadding="0" cellSpacing="0" width="600">
+<TBODY>
+      <tr>
+        <td align="left" vAlign="top" width="218"><div align="left"><table border="0"
+        cellSpacing="4" width="100%">
+<TBODY>
+          <tr>
+            <td align="middle" bgColor="#c888ee" vAlign="center" width="68%"><a
+            href="http://user.kushtel.net.in:8001/"><font color="#ffffff" face="Arial" size="2"><strong>Usage
+            Hour</strong></font></a></td>
+            <td width="50%"></td>
+          </tr>
+          <tr>
+            <td align="middle" bgColor="#c888ee" vAlign="center" width="68%"><a
+            href="http://user.kushtel.net.in:8001/"><font color="#ffffff" face="Arial" size="2"><strong>Change
+            Password</strong></font></a></td>
+            <td width="50%"></td>
+          </tr>
+          <tr>
+            <td align="middle" bgColor="#c888ee" vAlign="center" width="68%"><a
+            href="custom.htm"><font color="#ffffff" face="Arial" size="2"><strong>Customer
+            Care</strong></font></a></td>
+            <td width="50%"></td>
+          </tr>
+          <tr>
+            <td align="middle" bgColor="#c888ee" vAlign="center" width="68%"><a
+            href="http://www.kushtel.net.in/ccform.htm"><font color="#ffffff" face="Arial" size="2"><strong>Help
+            Desk</strong></font></a></td>
+            <td width="50%"></td>
+          </tr>
+          <tr>
+            <td align="middle" bgColor="#c888ee" vAlign="center" width="68%"><a
+            href="profile.htm"><font color="#ffffff" face="Arial" size="2"><strong>Profile</strong></font></a></td>
+            <td width="50%"></td>
+          </tr>
+          <tr>
+            <td align="middle" bgColor="#c888ee" vAlign="center" width="68%"><a
+            href="price.htm"><font color="#ffffff" face="Arial" size="2"><strong>Price
+            List</strong></font></a></td>
+            <td width="50%"></td>
+          </tr>
+          <tr>
+            <td align="middle" bgColor="#c888ee" vAlign="center" width="68%"><a
+            href="http://www.kushtel.net.in/downloads.htm"><font color="#ffffff" face="Arial" size="2"><strong>Downloads</strong></font></a></td>
+            <td width="50%"></td>
+          </tr>
+          <tr>
+            <td align="middle" bgColor="#c888ee" vAlign="center" width="68%"><a
+            href="contact.htm"><font color="#ffffff" face="Arial" size="2"><strong>Contact
+            Us</strong></font></a></td>
+            <td width="50%"></td>
+          </tr>
+</TBODY>
+        </table>
+        </div><div align="center"><center><table border="0" width="100%">
+          <tr>
+            <td width="100%" valign="middle" align="center" bgcolor="#FFFFE1"><font face="Arial"
+            size="4" color="#FF9F71"><strong><a href="http://www.cyberkanpur.com">Kanpur</a></strong></font></td>
+          </tr>
+        </table>
+        </center></div></td>
+        <td><!-- TABLE FOR SEARCH AND EMAIL BEGINS HERE --> <table border="0" cellPadding="0" cellSpacing="0"
+        style="FONT-FAMILY: arial; FONT-SIZE: 12px" width="95%">
+<TBODY>
+          <tr>
+            <td align="middle" bgColor="#e8e993" colSpan="2"><font color="#ae4820">Search through the
+            Web </font></td>
+          </tr>
+          <tr bgColor="#7872a0">
+            <td align="middle" width="50%"><font color="#ffffff">Search </font></td>
+            <td><font color="#ffffff"><p style="MARGIN-LEFT: 4em">In </font></td>
+          </tr>
+          <tr>
+            <td colSpan="2"><script language="javascript">
+DisplayForm();</script> </td>
+          </tr>
+          <tr>
+            <td align="middle" bgColor="#e8e993" colSpan="2"><font color="#ae4820">Email </font></td>
+          </tr>
+          <tr>
+            <td bgColor="#7872a0" colSpan="2"><font color="#ffffff">Login
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Password
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Account </font></td>
+          </tr>
+          <tr>
+            <td colSpan="2"><form method="post" name="ktlemail" onsubmit="address();">
+              <p><input maxLength="50" name="login" size="10" style="FONT-SIZE: 11px"> <input
+              maxLength="50" name="passwd" size="10" style="FONT-SIZE: 11px" type="password">
+              &nbsp;&nbsp;&nbsp; <select name="email_select" onchange="setLink(this.selectedIndex);"
+              size="1" style="FONT-SIZE: 11px">
+                <option selected value>Select any</option>
+                <option value="hotmail">Hotmail</option>
+                <option value="yahoomail">Yahoomail</option>
+              </select> &nbsp; <input border="0" height="16" src="images/gobtn.gif"
+              style="MARGIN-TOP: 1px" type="image" width="22"> </p>
+            </form>
+            </td>
+          </tr>
+</TBODY>
+        </table>
+        </td>
+        <td rowSpan="3" vAlign="top" width="104"><!-- TABLE FOR RIGHT STRIP BEGINS HERE --> <table border="0" cellPadding="0"
+        cellSpacing="0" width="100%">
+<TBODY>
+          <tr>
+            <td><a href="http://www.cyberhaat.com/" target="_new"><img border="0" height="107"
+            src="images/right-strip_ani.gif" width="104"></a></td>
+          </tr>
+          <tr>
+            <td vAlign="top"><!--webbot bot="ImageMap" startspan
+            rectangle="(4,71) (100,91) http://www.kushtel.net.in/tourism/mpmap.htm##_self"
+            rectangle="(5,98) (97,116) http://www.kushtel.net.in/tourism/upindex.htm##_self"
+            rectangle="(8,121) (93,144) http://www.kushtel.net.in/tourism/rajasthan.htm##_self"
+
+            rectangle="(0,0) (0,0) " border="0" src="images/right-strip_b.gif" width="104"
+            height="157" --><MAP NAME="FrontPageMap0"><AREA SHAPE="RECT" COORDS="4, 71, 100, 91" HREF="http://www.kushtel.net.in/tourism/mpmap.htm" TARGET="_self"><AREA SHAPE="RECT" COORDS="5, 98, 97, 116" HREF="http://www.kushtel.net.in/tourism/upmap.htm" TARGET="_self"><AREA SHAPE="RECT" COORDS="8, 121, 93, 144" HREF="http://www.kushtel.net.in/tourism/rajasthan.htm" TARGET="_self"><AREA SHAPE="RECT" COORDS="0, 0, 0, 0" NOHREF></MAP><img border="0" src="images/right-strip_b.gif" width="104" height="157" usemap="#FrontPageMap0"><!--webbot bot="ImageMap" i-checksum="8683" endspan --></td>
+          </tr>
+          <tr>
+            <td background="rightbg.gif" vAlign="top"><font color="#ffffff"><p
+            style="MARGIN-LEFT: 1ex">Business <br>
+            Travel Tickets <br>
+            Food &amp; Health </font></td>
+          </tr>
+</TBODY>
+        </table>
+        </td>
+      </tr>
+      <tr>
+        <td align="middle" vAlign="top"><!-- TABLE FOR LOCAL NEWS BEGINS HERE --> <table border="0" cellPadding="2" cellSpacing="2"
+        width="96%">
+<TBODY>
+          <tr>
+            <td background="creambg.gif"><a href="http://cnn.com/WEATHER/cities/asiapcf.html"
+            target="new"><img border="0" height="32" src="images/weather-btn.gif" width="160"></a></td>
+          </tr>
+          <tr>
+            <td background="creambg.gif"><a href="http://www.bollywood.com/" target="new"><img
+            border="0" height="32" src="images/movies-btn.gif" width="214"></a> </td>
+          </tr>
+          <tr>
+            <td><a href="http://www.khel.com/" target="new"><img border="0" height="32"
+            src="images/sports-btn.gif" width="214"> </a></td>
+          </tr>
+</TBODY>
+        </table>
+        </td>
+        <td align="middle" vAlign="top"><!-- TABLE FOR NATIONAL NEWS BEGINS HERE --> <table border="0" cellPadding="0" cellSpacing="2"
+        width="96%">
+<TBODY>
+          <tr>
+            <td><a href="http://www.jagran.com/" target="_new"><img border="0" height="35"
+            src="images/news1.gif" width="250"></a></td>
+          </tr>
+          <tr>
+            <td background><a href="http://www.timesofindia.com/" target="new"><img border="0"
+            height="40" src="images/news.gif" width="250"></a></td>
+          </tr>
+          <tr>
+            <td><a href="http://cnn.com/" target="new"><img border="0" height="35"
+            src="images/internews.gif" width="250"></a> </td>
+          </tr>
+</TBODY>
+        </table>
+        </td>
+      </tr>
+      <tr>
+        <td align="middle" colSpan="2"><hr width="90%">
+        <p><!--webbot bot="HTMLMarkup" startspan ALT="Site Meter" -->
+<script type="text/javascript" language="JavaScript">var site="sm3kushtel"</script>
+<script type="text/javascript" language="JavaScript1.2" src="http://sm3.sitemeter.com/js/counter.js?site=sm3kushtel">
+</script>
+<noscript>
+<a href="http://sm3.sitemeter.com/stats.asp?site=sm3kushtel" target=_top>
+<img src="http://sm3.sitemeter.com/meter.asp?site=sm3kushtel" title="Site Meter" border=0></a>
+</noscript>
+<!-- Copyright (c)2000 Site Meter -->
+<!--webbot
+        bot="HTMLMarkup" endspan --></p>
+        <p>Copyrights KushTel. <br>
+        </td>
+        <td background="images/rightbg.gif"></td>
+      </tr>
+</TBODY>
+    </table>
+    </td>
+  </tr>
+</TBODY>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!-- Vignette StoryServer 4 Mon Jan 03 11:08:52 2000 -->
+  
+<html>
+
+<head><!-- ************************************************************** -->
+<!-- DO NOT REMOVE or CHANGE THE SCRIPT BELOW -->
+<script LANGUAGE="JavaScript">
+<!--
+if (document.images) {       //if image object is available     
+pic1on = new Image();		// MouseOver Images
+pic1on.src = "/images/home/menu/ben-on.gif"; 
+pic2on = new Image();
+pic2on.src = "/images/home/menu/book-on.gif";  
+pic3on = new Image();
+pic3on.src = "/images/home/menu/care-on.gif";
+pic4on = new Image();
+pic4on.src = "/images/home/menu/edu-on1.gif";
+pic5on = new Image();
+pic5on.src = "/images/home/menu/feed-on.gif";
+pic6on = new Image();
+pic6on.src = "/images/home/menu/find-on.gif";
+pic7on = new Image();
+pic7on.src = "/images/home/menu/found-on.gif";
+pic8on = new Image();
+pic8on.src = "/images/home/menu/join-on.gif";
+pic9on = new Image();
+pic9on.src = "/images/home/menu/mag-on.gif";
+pic10on = new Image();
+pic10on.src = "/images/home/menu/meet-on.gif";
+pic11on = new Image();
+pic11on.src = "/images/home/menu/memb-on.gif";
+pic12on = new Image();
+pic12on.src = "/images/home/menu/news-on.gif";
+pic13on = new Image();
+pic13on.src = "/images/home/menu/prof-on.gif";
+pic14on = new Image();
+pic14on.src = "/images/home/menu/pub-on.gif";
+pic15on = new Image();
+pic15on.src = "/images/home/menu/res-on.gif";
+pic16on = new Image();
+pic16on.src = "/images/home/menu/serv-on.gif";
+pic17on = new Image();
+pic17on.src = "/images/home/menu/site-on.gif";
+
+
+pic1off = new Image();		  	// MouseOut Images
+pic1off.src = "/images/home/menu/ben-of.gif"; 
+pic2off = new Image();          
+pic2off.src = "/images/home/menu/book-of.gif";
+pic3off = new Image();
+pic3off.src = "/images/home/menu/care-of.gif";
+pic4off = new Image();
+pic4off.src = "/images/home/menu/edu-of1.gif";
+pic5off = new Image();
+pic5off.src = "/images/home/menu/feed-of.gif";
+pic6off = new Image();
+pic6off.src = "/images/home/menu/find-of.gif";
+pic7off = new Image();
+pic7off.src = "/images/home/menu/found-of.gif";
+pic8off = new Image();
+pic8off.src = "/images/home/menu/join-of.gif";
+pic9off = new Image();
+pic9off.src = "/images/home/menu/mag-of.gif";
+pic10off = new Image();
+pic10off.src = "/images/home/menu/meet-of.gif";
+pic11off = new Image();
+pic11off.src = "/images/home/menu/memb-of.gif";
+pic12off = new Image();
+pic12off.src = "/images/home/menu/news-of.gif";
+pic13off = new Image();
+pic13off.src = "/images/home/menu/prof-of.gif";
+pic14off = new Image();
+pic14off.src = "/images/home/menu/pub-of.gif";
+pic15off = new Image();
+pic15off.src = "/images/home/menu/res-of.gif";
+pic16off = new Image();
+pic16off.src = "/images/home/menu/serv-of.gif";
+pic17off = new Image();
+pic17off.src = "/images/home/menu/site-of.gif";
+
+
+pic1rol = new Image();         
+pic1rol.src = "/images/home/rollover/ben-rol.gif";  // Secondary Images
+pic2rol = new Image();
+pic2rol.src = "/images/home/rollover/book-rol.gif";
+pic3rol = new Image();
+pic3rol.src = "/images/home/rollover/care-rol.gif";  
+pic4rol = new Image();
+pic4rol.src = "/images/home/rollover/edu-rol.gif";  
+pic5rol = new Image();
+pic5rol.src = "/images/home/rollover/rol-off.gif";  
+pic6rol = new Image();
+pic6rol.src = "/images/home/rollover/find-rol.gif";  
+pic7rol = new Image();
+pic7rol.src = "/images/home/rollover/rol-off.gif";  
+pic8rol = new Image();
+pic8rol.src = "/images/home/rollover/rol-off.gif";  
+pic9rol = new Image();
+pic9rol.src = "/images/home/rollover/mag-rol.gif";  
+pic10rol = new Image();
+pic10rol.src = "/images/home/rollover/rol-off.gif";  
+pic11rol = new Image();
+pic11rol.src = "/images/home/rollover/memb-rol.gif";  
+pic12rol = new Image();
+pic12rol.src = "/images/home/rollover/news-rol.gif";  
+pic13rol = new Image();
+pic13rol.src = "/images/home/rollover/prof-rol.gif";  
+pic14rol = new Image();
+pic14rol.src = "/images/home/rollover/pub-rol.gif";  
+pic15rol = new Image();
+pic15rol.src = "/images/home/rollover/res-rol.gif";  
+pic16rol = new Image();
+pic16rol.src = "/images/home/rollover/rol-off.gif";  
+pic17rol = new Image();
+pic17rol.src = "/images/home/rollover/rol-off.gif";  
+}
+
+function turnon(imgName,flag) {        
+	if (document.images) {
+	document[imgName].src = eval(imgName + "on.src");
+	document["holder"].src = eval(imgName + "rol.src"); // Added lines
+	}
+	if (flag==1) {
+	document["holder2"].src = "/images/home/rollover/roll-2.gif";
+		} else {
+	document["holder2"].src = "/images/home/ltb_spcr.gif";
+	}
+ }
+
+			
+function turnoff(imgName) {        
+	if (document.images) {
+	document[imgName].src = eval(imgName + "off.src");
+	document["holder"].src = "/images/home/rollover/rol-off.gif";
+	document["holder2"].src = "/images/home/ltb_spcr.gif";
+	}
+ }
+
+
+
+//-->
+</script>
+<script language="JavaScript">
+
+<!--
+function bookstore(newURL, newName, newFeatures, orgName) {
+  var remote = open(newURL, newName, newFeatures);
+  if (remote.opener == null)
+    remote.opener = window;
+  remote.opener.name = orgName;
+  return remote;
+}
+
+function bookstoreRemote() {
+  myRemote = bookstore("http://shop.asaenet.org/asaebooks/default.asp", TARGET="_new", "height=500,width=425,channelmode=0,dependent=0,directories=0,fullscreen=0,location=0,menubar=0,resizable=1,scrollbars=1,status=0,toolbar=0");
+}
+// -->
+                
+
+</script>
+
+<title>Eat mad Pussy!!!!!!!</title>
+</head>
+
+<body BGCOLOR="#003399" TEXT="#FFFFFF" LINK="#FFCC00" ALINK="#FFCC00" VLINK="#FFCC00" TOPMARGIN="0" LEFTMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0">
+<!-- ************************************************************** -->
+<!-- - - - - - Begin MAIN LAYOUT TABLE. - - - - - -->
+
+<table BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="780" height="401">
+<!-- ************************************************************** -->
+<!-- The FIRST ROW contains a Spacer Image.  -->
+<!-- ************************************************************** -->
+  <tr ALIGN="LEFT" VALIGN="TOP">
+    <td COLSPAN="3" width="780" height="218"><p align="center"><img src="teamecho3.jpg" alt="teamecho3.jpg (118049 bytes)" WIDTH="480" HEIGHT="216"></td>
+  </tr>
+<!-- ************************************************************** -->
+<!-- The SECOND ROW contains Spacer Images and the Main Menu Rollover Text. -->
+<!-- ************************************************************** -->
+  <tr ALIGN="LEFT" VALIGN="TOP">
+    <td ROWSPAN="5" width="22" height="183"><strong></strong></td>
+    <td BGCOLOR="#3366CC" width="635" height="159"><strong>Tuesday, January 4th 2000:&nbsp; We
+    were bored so we decided to hack you.&nbsp; Prolly cuz your web site blows fat sweat
+    monkey balls, and that the president of your orginazation has sexual relations with
+    animals, if you don't believe me, search the site for pictures we left here as
+    proof.&nbsp; Well thats pretty much it you commie fucking inbred man whores.</strong><p><strong>&nbsp;</strong></p>
+    <p><strong><font color="#FFFF00">Shouts:&nbsp;&nbsp; Bansh33, Dukj, Zenomorph, Analognet,
+    himi, Sys-Edit,Sh00ter, Nocx,&nbsp; Dragon, Metro.</font></strong></td>
+    <td ROWSPAN="2" width="33" height="170"></td>
+  </tr>
+</table>
+</body>
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

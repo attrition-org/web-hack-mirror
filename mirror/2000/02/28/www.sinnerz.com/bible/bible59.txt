@@ -1,0 +1,265 @@
++-+------------------------------------------------------------------------+
+|S|-------[The Holy Bible © 1997-1998 Self-Induced Negativity]-------------| 
++-+-----------------------[ICKill Trojan Analysis]-------------------------+ 
+|I|--------------------------[By: The Messiah]-----------------------------|
++-+-----------------------[Released: July 3, 1998]-------------------------+
+|N|-----------------------[http://www.sinnerz.com]-------------------------|
++-+------------------------------------------------------------------------+
+
+Contents:
+---------
+	o Summary			- a summary of the trojan
+	o Removal			- how to remove the trojan
+	o Threat Analysis		- the possible dangers
+	o Prevention			- how to keep this from happening
+	o File Information		- information on the .EXE file
+	o Unit Information 		- information on what 3rd party packages it uses
+	o Form 1 			- information on the first window found in the application
+	o Form 2 			- information on the second window found in the application
+	o Thoughts 			- conjecture of mine
+
+
+Summary:
+--------
+
+The exe (ickill.exe, 98s.exe, icqhijaak.exe) was made with Borland Delphi, 
+either version 2 or 3, as it is a 32-bit application. When executed, it 
+copies itself to the Windows directory, and creates registry entries to make 
+it start up when Windows starts. Once opened, it sets up a server on port 
+5000 or 7789, which allows certain persons to download, upload, delete, and 
+create files, and perhaps to even take screenshots.
+
+Removal:
+--------
+
+1.) Ctrl+Alt+Del and end any task named "mschv32.exe" or any second explorer or
+    any task named "1.exe"
+2.) Delete *any* instance of MSCHV32.EXE or 1.EXE
+3.) If there is an EXPLORER.EXE in your WINDOWS\SYSTEM directory, delete it
+4.) Open WINDOWS\REGEDIT.EXE and use Edit | Find to find and delete any
+	references to 1.EXE or MSCHV.EXE
+
+Threat Analysis:
+----------------
+
+Backdoor-style trojans such as these pose a serious threat to the average user. 
+Most people are used to having installation programs crap out on them, and so 
+when a program gives them an error message and "quits," they delete the EXE 
+and move on. If the user has any sensitive information on their computer, 
+they will indubitably wish to keep it private.
+
+
+Prevention:
+-----------
+
+One way to prevent such a trojan being installed unwittingly on your machine 
+is to change the way you install programs. InControl 3, available at
+http://www.zdnet.com/pcmag/pctech/content/15/13/ut1513.001.html
+is a utility which tracks the changes to a system a program makes. Use it 
+whenever you're installing a program, regardless of the program's pedigree. 
+You can look at the log later to see what registry keys have been added, what 
+INI files have been changed, what directories and files have been changed, 
+added, or deleted. This kind of trojan is too new to be detected with a virus 
+scanner, and trojans are simple to make. The best defense in this case is 
+good program hygiene.
+
+
+File Information:
+-----------------
+
+Filename: ICKILL.EXE, 98S.EXE, ICQHIJAAK.EXE
+File Size: 335,872 bytes
+MD5 Message Digest: 711DFB9A0F23058CB238302EB2D46C35
+
+
+Unit Information:
+-----------------
+
+
+The units used are this:
+
+   ¿    #   =Cheval ÛFileCtrl «Consts  «System  ÅSysInit †Dialogs ëExtCtrls
+   3Messages KWindows SysUtils ^Classes QTypInfo sActiveX &Controls  ≥Forms
+   ∞Printers WWinSpool +Graphics vMenus ¡Imm Commctrl dStdCtrls IDlgs
+   3CommDlg ¬Buttons :Scrute °Spin !WSocket ±WSockbuf £Wait ©WinSock *ShellAPI
+   8Registry  ¯Unit2  Óunit1
+
+All units here are standard Delphi units except for Scrute, WSocket, WSockbuf, 
+Wait, Unit2, and unit1. Scrute is an unknown unit, whose name, in French, 
+means "scan". WSocket, WSockbuf, and Wait are all units for a common winsock 
+Delphi component, TWSocket. Unit2 and unit1 are the two forms used by the 
+project.
+
+
+Form 1:
+-------
+
+The property list for the first form looks like this:
+
+object Form1: TForm1
+  Left = 370
+  Top = 198
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'Form1'
+  ClientHeight = 115
+  ClientWidth = 436
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  Position = poScreenCenter
+  OnClose = FormClose
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object ChatPort: TEdit
+    Left = 10
+    Top = 41
+    Width = 31
+    Height = 21
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+    Text = '5000'
+    Visible = False
+  end
+  object DelaiDistant: TSpinEdit
+    Left = 45
+    Top = 41
+    Width = 41
+    Height = 22
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    MaxValue = 500
+    MinValue = 0
+    ParentFont = False
+    TabOrder = 1
+    Value = 0
+    Visible = False
+  end
+  object SrvSocket: TWSocket
+    Proto = 'tcp'
+    MultiThreaded = False
+    OnSessionAvailable = SrvSocketSessionAvailable
+    FlushTimeout = 60
+    SendFlags = wsSendNormal
+    Left = 5
+    Top = 4
+  end
+  object CliSocket: TWSocket
+    Proto = 'tcp'
+    MultiThreaded = False
+    OnDataAvailable = CliSocketDataAvailable
+    OnSessionClosed = CliSocketSessionClosed
+    FlushTimeout = 60
+    SendFlags = wsSendNormal
+    Left = 37
+    Top = 5
+  end
+end
+
+We can see it is a form, default size, screen center, with an edit box (named
+ChatPort, default text = '5000'), and a spin box (named DelaiDistant, default
+value = 500). It has two TWSockets, one a server (apparently), the other a
+client. The server has some event for when someone tries to connect to it.
+What that does is unknown. The client has event handlers for when someone
+sends the client data, and for when the client is disconnected. Again,
+what it does is unknown.
+
+Form 2:
+-------
+
+
+The property list for the second form:
+
+object Form_HD: TForm_HD
+  Left = 415
+  Top = 189
+  Width = 138
+  Height = 87
+  BorderIcons = [biSystemMenu, biMaximize]
+  Caption = 'Form_HD'
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  Position = poScreenCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object DriveComboBox: TDriveComboBox
+    Left = 20
+    Top = 38
+    Width = 89
+    Height = 19
+    TabOrder = 0
+    Visible = False
+  end
+  object Scrute: TScruteDossier
+    Dossier = 'c:\'
+    Filtre = '*.*'
+    SousDossier = False
+    OnFichier = ScruteFichier
+    OnDossier = ScruteDossier
+    OnFinExecute = ScruteFinExecute
+    MaxPenetration = 10000
+    Left = 70
+    Top = 4
+  end
+  object FileCliSocket: TWSocket
+    Proto = 'tcp'
+    MultiThreaded = False
+    OnDataAvailable = FileCliSocketDataAvailable
+    OnSessionConnected = FileCliSocketSessionConnected
+    FlushTimeout = 60
+    SendFlags = wsSendNormal
+    Left = 31
+    Top = 3
+  end
+end
+
+This is the engine of the program. The form is non-default size (87x138). It 
+has an unknown component, TScruteDossier, which presumably scans the directory 
+tree, returning file names, paths, attributes, etc. "Scrute Dossier" in 
+French means "scan file." It also has a drive combo box, which is simply a 
+combo box with a list of all drives on the machine. It has a TWSocket client, 
+which has event handlers for when the client receives data, and when the 
+client connects to a server.
+
+
+Thoughts:
+---------
+(None of these are supported by fact, so don't mistake them for the truth,
+they are *my* opinions only):
+
+I think this program was created by someone relatively new to Delphi 
+programming.
+
+Why:
+	* The author uses Delphi components to do things like scan the directory 
+	  tree, check for all the drives on a machine, when code for this is 
+	  readily available in easier-to-use code snippits.
+	* Naming conventions: this program doesn't follow any Delphi naming 
+	  conventions. Most professional or intermediate Delphi programmers 
+	  follow some sort of naming convention, either Hungarian notation, 
+	  or their own personal conventions.
+	* The number of forms, etc. If this was a good programmer, they could 
+	  have made it much smaller, and much more obtrusive.
+
+I'm told this program is called "Master's Paradise" and that it's made by 
+someone/some group/some place/somewhatever called the Munich Brain House. 
+Searches on the internet have turned up squat, save for some pages about 
+vibrators. No idea why. But apparently, every woman needs a "Deep Stroker." 
+I should put that on my business card.
+
+Anyways, if you have any more information about this trojan, where it came 
+from, who made it, etc, please mail me at messiah@jps.net. Thanks.

@@ -1,0 +1,475 @@
+ 
+<html><!-- #BeginTemplate "/Templates/top_only.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>Screenplay Systems</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript">
+<!--
+function MM_findObj(n, d) { //v3.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document); return x;
+}
+
+function MM_showHideLayers() { //v3.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+
+function MM_swapImgRestore() { //v2.0
+  if (document.MM_swapImgData != null)
+    for (var i=0; i<(document.MM_swapImgData.length-1); i+=2)
+      document.MM_swapImgData[i].src = document.MM_swapImgData[i+1];
+}
+
+function MM_preloadImages() { //v2.0
+  if (document.images) {
+    var imgFiles = MM_preloadImages.arguments;
+    if (document.preloadArray==null) document.preloadArray = new Array();
+    var i = document.preloadArray.length;
+    with (document) for (var j=0; j<imgFiles.length; j++) if (imgFiles[j].charAt(0)!="#"){
+      preloadArray[i] = new Image;
+      preloadArray[i++].src = imgFiles[j];
+  } }
+}
+
+function MM_swapImage() { //v2.0
+  var i,j=0,objStr,obj,swapArray=new Array,oldArray=document.MM_swapImgData;
+  for (i=0; i < (MM_swapImage.arguments.length-2); i+=3) {
+    objStr = MM_swapImage.arguments[(navigator.appName == 'Netscape')?i:i+1];
+    if ((objStr.indexOf('document.layers[')==0 && document.layers==null) ||
+        (objStr.indexOf('document.all[')   ==0 && document.all   ==null))
+      objStr = 'document'+objStr.substring(objStr.lastIndexOf('.'),objStr.length);
+    obj = eval(objStr);
+    if (obj != null) {
+      swapArray[j++] = obj;
+      swapArray[j++] = (oldArray==null || oldArray[j-1]!=obj)?obj.src:oldArray[j];
+      obj.src = MM_swapImage.arguments[i+2];
+  } }
+  document.MM_swapImgData = swapArray; //used for restore
+}
+
+function MM_initTimelines() {
+    //MM_initTimelines() Copyright 1997 Macromedia, Inc. All rights reserved.
+    var ns = navigator.appName == "Netscape";
+    document.MM_Time = new Array(1);
+    document.MM_Time[0] = new Array(1);
+    document.MM_Time["menuoff"] = document.MM_Time[0];
+    document.MM_Time[0].MM_Name = "menuoff";
+    document.MM_Time[0].fps = 15;
+    document.MM_Time[0][0] = new String("behavior");
+    document.MM_Time[0][0].frame = 13;
+    document.MM_Time[0][0].value = "MM_showHideLayers('Layer1','','hide')";
+    document.MM_Time[0].lastFrame = 13;
+    for (i=0; i<document.MM_Time.length; i++) {
+        document.MM_Time[i].ID = null;
+        document.MM_Time[i].curFrame = 0;
+        document.MM_Time[i].delay = 1000/document.MM_Time[i].fps;
+    }
+}
+//-->
+</script>
+<style type="text/css">
+<!--
+.basic {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt; font-style: normal}
+-->
+</style>
+<meta name="keywords" content="movie magic, dramatica, DreamKit, Storyview, screenwriter, budgeting, scheduling, outlining, timeline, visual outliner, story, writer, screenwriting, software, writing, screenplay, plays, novels, production, education, entertainment, movies, film, filmmaking, filmmakers, narrative theory, structure, narrative">
+<meta name="description" content="Tools and Resources for Screenwriting, Story Development, and Outlining. Home of Movie Magic Screenwriter 2000, StoryView, and Dramatica Pro software. For creative writers, screenwriting, screenplays, plays, novels, scripts, movies, film making. ">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="MM_preloadImages('../images/home/pnav7sitemapon.gif','../Templates/1')" link="#666633" vlink="#999966" alink="#996600">
+<span class="basic"></span> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0" background="../images/home/topbar_.gif">
+  <tr> 
+    <td height="60"><a href="../home.html"><img src="../images/products/topbar_static.gif" width="800" height="68" name="homebar" border="0"></a></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#CCCC99">
+  <tr bgcolor="#CCCC99" nowrap> 
+    <td height="20" nowrap><a href="../products/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.products','document.products','../images/home/pnav3productson.gif','1')"><img src="../images/home/pnav3products.gif" width="76" height="19" name="products" border="0"></a><a href="index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.resources','document.resources','../images/home/pnav4resourceson.gif','1')"><img src="../images/home/pnav4resources.gif" width="80" height="19" name="resources" border="0"></a><a href="http://www.digitalriver.com/dr/v2/ec_MAIN.Entry11?sp=10007&PN=1&xid=21675" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.store','document.store','../images/home/pnav4storeon.gif','1')"><img src="../images/home/pnav4store.gif" width="51" height="19" border="0" name="store"></a><a href=" http://www.digitalriver.com/dr/v2/ec_MAIN.Entry11?SP=10034&PN=0&xid=21675" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.cart','document.cart','../images/home/pnav45carton.gif','1')"><img src="../images/home/pnav45cart.gif" width="26" height="19" border="0" name="cart"></a><a href="../events/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.events','document.events','../images/home/pnav5eventson.gif','1')"><img src="../images/home/pnav5events.gif" width="62" height="19" name="events" border="0"></a><a href="../support/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.support','document.support','../images/home/pnav6supporton.gif','1')"><img src="../images/home/pnav6support.gif" width="67" height="19" name="support" border="0"></a><a href="../about/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.about','document.about','../images/home/pnav2abouton.gif','1')"><img src="../images/home/pnav2about.gif" width="73" height="19" name="about" border="0"></a><a href="../sitemap/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.sitemap','document.sitemap','../images/home/pnav7sitemapon.gif','1')"><img src="../images/home/pnav7sitemap.gif" width="73" height="19" name="sitemap" border="0"></a> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td bgcolor=#666633><img height=1 
+      src="../Templates/images/home/cleardot.gif" 
+      width=1 border=0></td>
+        </tr>
+        <tr> 
+          <td bgcolor=#999966><img height=1 
+      src="../Templates/images/home/cleardot.gif" 
+      width=1 border=0></td>
+        </tr>
+        <tr bgcolor="#999966" nowrap> 
+          <td height="19" nowrap> 
+            <table width="508" border="0" cellspacing="0" cellpadding="0" bgcolor="#999966">
+              <tr> 
+                <td width="2">&nbsp;</td>
+                <form name="siteindex">
+                  <td width="20"> 
+                    <select name="select"
+   onChange="if(options[selectedIndex].value)
+   window.location.href=
+   (options[selectedIndex].value)">
+                      <option selected>Site Index</option>
+                      <option>&#151; Products &#151;</option>
+                      <option value="http://www.screenplay.com/products/dpro/index.html">Dramatica 
+                      Pro</option>
+                      <option value="http://www.screenplay.com//products/dreamkit/index.html">Dramatica 
+                      Writer's DreamKit</option>
+                      <option value="http://www.screenplay.com//products/storyview/index.html">StoryView</option>
+                      <option value="http://www.screenplay.com/products/mmscreenwriter/index.html">Movie 
+                      Magic Screenwriter 2000</option>
+                      <option value="http://www.screenplay.com/products/hscreenwriter/index.html">Hollywood 
+                      Screenwriter</option>
+                      <option value="http://www.screenplay.com/products/scheduling/index.html">Movie 
+                      Magic Scheduling</option>
+                      <option value="http://www.screenplay.com/products/budgeting/index.html">Movie 
+                      Magic Budgeting</option>
+                      <option value="http://www.screenplay.com/products/contracts/index.html">Movie 
+                      Magic Contracts</option>
+                      <option>&#151; Resources &#151;</option>
+                      <option value="http://www.screenplay.com/reel_people/index.html">Reel 
+                      People</option>
+                      <option value="http://www.screenplay.com/events/index.html">Scriptapalooza</option>
+                      <option value="http://www.screenplay.com/board.html">Message 
+                      Boards</option>
+                      <option value="http://www.screenplay.com/resources/scriptindex.html">On-line 
+                      Script Library</option>
+                      <option value="http://www.screenplay.com/resources/index.html">Production 
+                      Bible</option>
+                      <option value="http://www.screenplay.com/resources/interviews.html">Interviews</option>
+                      <option value="http://www.screenplay.com/resources/classes.html">Classes</option>
+                      <option value="http://www.screenplay.com/resources/articles.html">How 
+                      To Articles</option>
+                      <option value="http://www.screenplay.com/resources/books.html">Book 
+                      Reviews</option>
+                      <option value="http://www.screenplay.com/resources/news.html">Industry 
+                      News</option>
+                      <option value="http://www.screenplay.com/resources/links.html">Featured 
+                      Links</option>
+                      <option value="http://www.screenplay.com/resources/newsletter.html">Newsletter</option>
+                      <option>&#151; Events &#151;</option>
+                      <option value="http://www.screenplay.com/events/index.html">Scriptapalooza</option>
+                      <option>&#151; About Us &#151;</option>
+                      <option value="http://www.screenplay.com/about/contact.html">Contact 
+                      Us</option>
+                      <option value="http://www.screenplay.com/about/history.html">Company 
+                      History</option>
+                      <option value="http://www.screenplay.com/about/jobs.html">Join 
+                      the Team</option>
+                      <option value="http://www.screenplay.com/about/directions.html">Directions</option>
+                      <option value="http://www.screenplay.com/about/service.html">Services</option>
+                      <option value="http://www.screenplay.com/about/reseller.html">Resellers</option>
+                      <option value="http://www.screenplay.com/about/affiliate.html">Affiliates</option>
+                      <option value="http://www.screenplay.com/about/press.html">Press</option>
+                      <option value="http://www.screenplay.com/about/y2k.html">Y2K</option>
+                      <option>&#151; Technical Support &#151;</option>
+                      <option value="http://www.screenplay.com/Support/">Support 
+                      Home</option>
+                    </select>
+                  </td>
+                </form>
+                <form method="GET" action="http://mysearch.looksmart.com/query.go" name="Search">
+                  <td width="%" align="right"> 
+                    <input type="text" name="query" size="15" maxlength="800" value="Search">
+                  </td>
+                  <td width="2"> 
+                    <input type="hidden" name="db" value="db_39498">
+                  </td>
+                  <td width="36" valign="bottom"> 
+                    <input type="image" src="../images/home/find.gif" border="0" alt="Find!" name="submit" width="36" height="14">
+                  </td>
+                </form>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td bgcolor=#999966><img height=1 
+      src="../Templates/images/home/cleardot.gif" 
+      width=1 border=0></td>
+        </tr>
+        <tr> 
+          <td bgcolor=#666633><img height=1 
+      src="../Templates/images/home/cleardot.gif" 
+      width=1 border=0></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td colspan="2"><!-- #BeginEditable "title" --><img src="../images/resources/header_small.gif" width="600" height="20"><!-- #EndEditable --></td>
+  </tr>
+</table>
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="15">&nbsp;</td>
+    <td width="%" class="basic" valign="top"><!-- #BeginEditable "body" --> 
+      <table width="90%" border="0" height="43" cellpadding="5">
+        <tr bordercolor="#FFFFFF"> 
+          <td colspan="3" height="14" bgcolor="#FFFFFF"><font size="1">&nbsp;</font></td>
+        </tr>
+        <tr> 
+          <td bordercolor="#000000" colspan="3" height="34" bgcolor="#000000"> 
+            <div align="center"><font face="Arial, Helvetica, sans-serif" size="3"><b><font size="5" color="#FFFFCC">Resources</font></b></font></div>
+          </td>
+        </tr>
+        <tr> 
+          <td bordercolor="#000000" colspan="3" height="34" bgcolor="#FFFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b><br>
+            Welcome to the Screenplay Systems Resource Center!</b> Hone your skills 
+            by reading your favorite feature scripts, discuss the art of screenwriting 
+            with fellow writers, and create realistic characters with our new 
+            and unique Reel People web resource. All our resources are<b> free 
+            of charge</b>, so be sure to bookmark our site! 
+            <script language="JavaScript">
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!-- Begin
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) {
+
+var url="http://www.screenplay.com";
+var title="Screenplay.com- Tools for Screenwriting";
+
+document.write('<A HREF="javascript:window.ext');
+document.write('ernal.AddFavorite(url,title);" ');
+document.write('onMouseOver=" window.status=');
+document.write("'Add our site to your favorites!'; return true ");
+document.write('"onMouseOut=" window.status=');
+document.write("' '; return true ");
+document.write('">(Click here to bookmark screenplay.com)</a>');
+}
+else {
+var msg = "";
+if(navigator.appName == "Netscape") msg += "(Netscape users- type CTRL-D to bookmark our site)";
+document.write(msg);
+}
+
+// End -->
+</script>
+            <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">In 
+              the coming months, we will be striving to add the best resources 
+              to help your writing - so please send any suggestions to <b>webmaster@screenplay.com.<br>
+              </b></font> </p>
+            </font></td>
+        </tr>
+        <tr> 
+          <td colspan="3" bordercolor="#FFFFFF" bgcolor="#FFFFCC"> 
+            <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Be 
+              sure to sign up for our monthly email newsletter for the latest 
+              news<br>
+              and updates about our site:</font><font color="#FFFFFF" face="Verdana, Arial, Helvetica, sans-serif" size="1"> 
+              <b> 
+              <input type="text" name="e_mail2" size="10" maxlength="50">
+              </b> 
+              <input type=hidden name="list_id2" value="ScreenplayScoop">
+              <input type=hidden name="Act2" value="subscribe_list">
+              <a href="javascript:document.forms[0].submit();" ><img src="../images/home/submit2.gif" border="0" alt="Click here to join our mailing list!" align="bottom"></a></font> 
+              </font></div>
+          </td>
+        </tr>
+        <tr> 
+          <td width="33%" height="14"> 
+            <div align="center"><font size="2"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><i><font size="3">Featured 
+              Resource:</font></i></font></b></font></div>
+          </td>
+          <td colspan="2" height="14"><font size="2"></font></td>
+        </tr>
+        <tr> 
+          <td width="33%" valign="top" height="161"> <a href="storybay.html"><br>
+            <img src="storybay.gif" width="201" height="73" border="0"></a></td>
+          <td colspan="2" valign="top" height="161"> 
+            <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="storybay.html"><b>Storybay<br>
+              </b></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b><font color="#FF0000" size="1"><i>NEW 
+              TO SCREENPLAY.COM!!!</i></font></b></font></font></p>
+            <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Getting 
+              your finished work in front of Hollywood executives, agents, and 
+              managers has always been the biggest challenge for new writers. 
+              If your script is ready for the marketplace, Storybay will give 
+              you the exposure you need.<b> </b></font></p>
+            <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> <a href="storybay.html"><b>Click 
+              here to learn more.</b></a></font><br>
+            </p>
+          </td>
+        </tr>
+        <tr> 
+          <td height="19" colspan="3" bgcolor="#666633"> 
+            <div align="center"><font size="2"></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><b><font color="#FFFFFF" size="3">All 
+              Resources</font></b></font><font size="2"></font></div>
+          </td>
+        </tr>
+        <tr> 
+          <td width="33%" valign="top" height="34" bgcolor="#CECE9C"> 
+            <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b><font color="#000000">World 
+              of Screenwriting</font></b></font></font></div>
+          </td>
+          <td width="34%" valign="top" height="34" bgcolor="#CECE9C"> 
+            <p align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b><font color="#000000">Research 
+              Library</font></b></font></p>
+          </td>
+          <td width="33%" valign="top" height="34" bgcolor="#CECE9C"> 
+            <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b><font color="#000000">Helpful 
+              How To's</font></b></font></font></div>
+          </td>
+        </tr>
+        <tr> 
+          <td width="33%" bgcolor="#FFFFCC" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b><a href="../events/index.html"><font color="#000000">Scriptapalooza 
+            Screenwriting Competition</font></a></b><br>
+            <font size="1">Screenplay Systems, Inc. and Scriptapalooza, Inc. present 
+            the 3rd Annual Scriptapalooza Screenwriting Competition. Cash and 
+            prizes equaling $40,000.</font></font></font><i><font size="1"> (<a href="http://www.screenplay.com/events/index_coupon.html">Click 
+            here</a> for $5 off the entry fee!)</font></i></td>
+          <td width="34%" bgcolor="#FFFFCC" valign="top"> 
+            <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b><a href="../reel_people/index.html"><font color="#000000">Reel 
+              People: Make Your Characters Come to Life!</font></a></b><br>
+              </font><font size="1" face="Verdana, Arial, Helvetica, sans-serif">REEL 
+              PEOPLE is a valuable reference for creating believable stories and 
+              authentic characters. Each character "type" is cross-referenced 
+              with easy to understand descriptions and "reel world" examples from 
+              popular films and fiction. </font></p>
+          </td>
+          <td width="33%" bgcolor="#FFFFCC" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b><a href="articles.html"><font color="#000000">How 
+            To Articles</font></a></b></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"></font><font color="#000000"> 
+            </font></b> <br>
+            <font size="1">Here you'll find in-depth articles on how to improve 
+            your writing skills get the extra edge.</font></font></td>
+        </tr>
+        <tr> 
+          <td width="33%" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="storybay.html"><b><font color="#000000">StoryBay 
+            </font></b></a></font><b><br>
+            </b><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><font color="#FF0000" size="1"><i><b>New 
+            to Screenplay.com!</b></i></font></font></font><br>
+            <font size="1">Getting your finished work in front of Hollywood executives, 
+            agents, and managers has always been the biggest challenge for new 
+            writers. If your script is ready for the marketplace, Storybay will 
+            give you the exposure you need.<b> </b></font></font></td>
+          <td width="34%" valign="top"> 
+            <div align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b> 
+              </b></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b><a href="scriptindex.html"><font color="#000000">Online 
+              Script Library</font><br>
+              </a></b><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><font color="#FF0000" size="1"><i><b>New 
+              to Screenplay.com!</b></i></font></font></font></font><font size="1"><br>
+              <font face="Verdana, Arial, Helvetica, sans-serif">One of the best 
+              ways to learn more about the craft of screenwriting is to read scripts. 
+              <font face="Verdana, Arial, Helvetica, sans-serif">See how other 
+              writers communicate images through words and keep the reader turning 
+              pages.</font></font></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><b> 
+              </b></font></div>
+          </td>
+          <td width="33%" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b><a href="interviews.html"><font color="#000000">Feature 
+            Interviews </font></a></b></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+            <font size="1">We interview professional writers and other industry 
+            experts to give you insight into improving your skills.</font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+            </font></td>
+        </tr>
+        <tr> 
+          <td width="33%" valign="top" bgcolor="#FFFFCC"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="/board"><b><font color="#000000">Screenplay.com 
+            Message Board</font></b></a></font><b><br>
+            </b><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><font color="#FF0000" size="1"><i><b>New 
+            to Screenplay.com!</b></i></font></font></font><br>
+            <font size="1">Share tips, tricks, and experiences with other writers 
+            such as yourself. Topics include Inspiration, The Writing Process, 
+            Breaking In, Story Theory, Character, Setting, and more.</font><b> 
+            </b></font></td>
+          <td width="34%" valign="top" bgcolor="#FFFFCC"> 
+            <div align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b> 
+              </b></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b><a href="http://www.dramatica.com" target="_blank"><font color="#000000">Dramatica.com</font></a></b></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+              <font size="1">Dramatica is both a series of software products for 
+              writers and a relatively unique perspective of how stories work. 
+              This site is the home of hundreds of pages of materials and tools 
+              for anyone interested in creating, critiquing, analyzing, writing, 
+              or otherwise working with stories.</font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><b> 
+              </b></font></div>
+          </td>
+          <td width="33%" valign="top" bgcolor="#FFFFCC"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b><a href="books.html"><font color="#000000">Book 
+            Reviews</font></a></b> <br>
+            <font size="1">Which books are worth your time and money? Read our 
+            in-depth book reviews to find out which books deserve a place on your 
+            bookshelf. </font></font></td>
+        </tr>
+        <tr> 
+          <td width="33%" height="94" valign="top"> 
+            <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b><a href="greenlight.html"><font color="#000000">Project 
+              Greenlight </font></a></b><br>
+              <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><font color="#FF0000" size="1"><i><b>New 
+              to Screenplay.com!</b></i></font></font></font></font><br>
+              <font size="1">Executive 
+              Producers Ben Affleck and Matt Damon are calling upon all amateur 
+              screenwriters and filmmakers to submit their original screenplays 
+              online.</font></font> <font face="Verdana, Arial, Helvetica, sans-serif" size="1">The 
+              winning contestant(s) will become eligible to direct their original 
+              screenplay into a Miramax-distributed feature film!</font></p>
+          </td>
+          <td width="34%" height="94" valign="top"> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="classes.html"><font color="#000000">Dramatica 
+            Theory Classes</font></a></font><font color="#FF0000"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><i> 
+            </i></font></b></font></b><font size="1"><br>
+            <font face="Verdana, Arial, Helvetica, sans-serif">Chris Huntley, 
+            co-creator of the Dramatica Theory of Story, will lead six workshops 
+            designed as an introduction to the Dramatica Theory of Story</font>. 
+            <a href="classes.html">Click here for complete notes from all our 
+            previous classes</a>.</font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b> 
+            </b></font></td>
+          <td width="33%" height="94" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b><a href="productionbible.pdf"><font color="#000000">Screenwriter 
+            Production Bible</font></a></b></font><font size="1"><br>
+            <font face="Verdana, Arial, Helvetica, sans-serif">This is an invaluable 
+            guide to anyone who uses Movie Magic Screenwriter's production features. 
+            It covers everything from A-pages to production breakdowns to export 
+            into Movie Magic Scheduling.</font></font></font></td>
+        </tr>
+        <tr> 
+          <td width="33%" valign="top" bgcolor="#FFFFCC"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b><a href="news.html"><font color="#000000">Latest 
+            Industry News</font></a></b><br>
+            <font size="1">Read about the latest script deals and development 
+            news, straight from Reuters.<br>
+            <i>(Updated continuously)</i></font><b> </b></font></td>
+          <td width="34%" valign="top" bgcolor="#FFFFCC"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b><a href="contracts/index.html"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b></b></font></a></b></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+            </font></td>
+          <td width="33%" valign="top" bgcolor="#FFFFCC"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b><a href="newsletter.html"><font color="#000000">Newsletter 
+            Archive </font></a></b> <br>
+            <font size="1">The Screenplay Scoop delivers special features and 
+            bonus offers every month to bring you the best in the world of screenplay.</font></font></td>
+        </tr>
+        <tr> 
+          <td width="33%" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b><a href="links.html"><font color="#000000">Featured 
+            Links </font></a></b> <br>
+            <font size="1">There's a world of resources at your fingertips- </font></font><font size="1">we're 
+            searching the web to bring you the best right here!</font></td>
+          <td width="34%" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b><a href="contracts/index.html"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b></b></font></a></b></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+            </font></td>
+          <td width="33%" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"></font></td>
+        </tr>
+        <tr> 
+          <td height="31" colspan="3" bgcolor="#666633"> 
+            <div align="center"><font size="2"></font></div>
+          </td>
+        </tr>
+      </table>
+      <p> 
+      <!-- #EndEditable --></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td> 
+      <div align="center"> 
+        <p>&nbsp;</p>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><a href="../copyright.html">Copyright</a> 
+          &copy; 1999-2000 Screenplay Systems, Inc. All Rights Reserved.</font></p>
+      </div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

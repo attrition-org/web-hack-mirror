@@ -1,0 +1,1 @@
+<h1><b>ZIONISM FOREVER!  This site has been 0wned by the Zionist Units of Lohamei Herut Yisrael.  The Islamic Gateway has been targeted for its open support of criminal terrorists, including Osama Bin Laden.  Fundamentalists, beware!  The Jihad ends NOW!  http://ummah.muslimsonline.com/index.shtml</b></h1>

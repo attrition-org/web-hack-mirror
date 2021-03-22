@@ -1,0 +1,30 @@
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=EUC-JP">
+<title>Translation Results</title>
+<script language="JavaScript" src="/honyaku/popup.js">
+</script>
+</head>
+<body bgcolor="#ffffff">
+<font face="verdana,Times,serif" size=2>
+<b>Welcome to the dictionary!</b>
+
+<br>
+This Japanese/English English/Japanese web dictionary is built upon Jim Breen's freely available EDICT dictionary file.  To read more about the EDICT project, please <a  target="new" href="http://www.csse.monash.edu.au/~jwb/j_edict.html">follow this link.</a>
+</p>
+
+<p><b>How to Use</b><br>
+Type in a word in Japanese or English or romanized Japanese (romaji to hiragana conversion not fully completed yet..) and select the appropriate choices from the drop downs and check boxes.  Then click 'Lookup'.  It's that easy. Results are displayed in SJIS encoding in the results window.</p>
+
+<p><b>About</b><br>
+I have tried to make this dictionary as FAST as possible.  I loaded the entire EDICT file into a PostgreSQL multibyte database table and use Perl DBI and FastCGI to query the database and execute lookups.  Results vary but it is possible to get your results in less than 0.25 seconds.  The fastest queries are those in which you select 'Simple' and the number of matches is less than 100 or so.  'Simple' searches where the first part of the word matches while 'Detailed' will search for any instance of the word.  For example if you select 'Simple' and search for the English word 'student' you will only get words that start with 'student'.  If you wanted to look up 'medical student' for example with 'student' as your search query, you would need to select 'Detailed'.</p>
+
+<p>
+I will give more details about this dictionary project as time permits.  </p>
+
+
+  
+
+</body>
+</html>
+

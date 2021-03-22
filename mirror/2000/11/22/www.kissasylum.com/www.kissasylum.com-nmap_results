@@ -1,0 +1,30 @@
+
+Starting nmap V. 2.54BETA3 ( www.insecure.org/nmap/ )
+Interesting ports on  (209.17.153.119):
+(The 2 ports scanned but not shown below are in state: closed)
+Port       State       Service
+22/tcp     open        ssh                     
+25/tcp     open        smtp                    
+80/tcp     open        http                    
+
+TCP Sequence Prediction: Class=random positive increments
+                         Difficulty=36947 (Worthy challenge)
+Aggressive OS guesses: FreeBSD 2.2.1 - 4.1 (95%), FreeBSD 3.2-STABLE (94%), Cabletron Systems SSR 8000 System Software, Version 3.1.B.16 (93%), Juniper Router running JUNOS (93%), BSDI BSD/OS 4.0.1 Kernel (93%), Acorn RiscOS 3.7 using AcornNet TCP/IP stack (93%), Mirapoint M1000 (OS v 1.0.0) (92%), FreeBSD 4.0-20000208-CURRENT (92%)
+No exact OS matches for host (If you know what OS is running on it, see http://www.insecure.org/cgi-bin/nmap-submit.cgi).
+TCP/IP fingerprint:
+TSeq(Class=RI%gcd=1%SI=95E6)
+TSeq(Class=RI%gcd=1%SI=7D01)
+TSeq(Class=RI%gcd=1%SI=9053)
+T1(Resp=Y%DF=Y%W=403D%ACK=S++%Flags=AS%Ops=MNWNNT)
+T2(Resp=N)
+T3(Resp=Y%DF=Y%W=403D%ACK=S++%Flags=AS%Ops=MNWNNT)
+T4(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T5(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+T6(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T7(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+PU(Resp=Y%DF=N%TOS=0%IPLEN=38%RIPTL=148%RID=E%RIPCK=E%UCK=0%ULEN=134%DAT=E)
+
+
+
+
+Nmap run completed -- 1 IP address (1 host up) scanned in 6 seconds

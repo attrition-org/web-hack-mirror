@@ -1,0 +1,37 @@
+
+Starting nmap V. 2.54BETA3 ( www.insecure.org/nmap/ )
+Insufficient responses for TCP sequencing (2), OS detection may be less accurate
+Insufficient responses for TCP sequencing (3), OS detection may be less accurate
+Interesting ports on tac.eustis.army.mil (155.217.90.208):
+(The 3 ports scanned but not shown below are in state: closed)
+Port       State       Service
+25/tcp     open        smtp                    
+80/tcp     open        http                    
+
+TCP Sequence Prediction: Class=truly random
+                         Difficulty=9999999 (Good luck!)
+Aggressive OS guesses: Cayman 2E <http://www.cayman.com/> (88%), AIX v4.2 (88%)
+No exact OS matches for host (If you know what OS is running on it, see http://www.insecure.org/cgi-bin/nmap-submit.cgi).
+TCP/IP fingerprint:
+T1(Resp=N)
+TSeq(Class=TR)
+T2(Resp=Y%DF=N%W=F969%ACK=S%Flags=R%Ops=)
+T1(Resp=N)
+T3(Resp=Y%DF=N%W=F969%ACK=S%Flags=R%Ops=)
+T2(Resp=Y%DF=N%W=F969%ACK=S%Flags=R%Ops=)
+T4(Resp=N)
+T3(Resp=Y%DF=N%W=F969%ACK=S%Flags=R%Ops=)
+T5(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+T4(Resp=N)
+T6(Resp=N)
+T5(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+T7(Resp=N)
+T6(Resp=N)
+PU(Resp=Y%DF=N%TOS=0%IPLEN=38%RIPTL=148%RID=E%RIPCK=E%UCK=E%ULEN=134%DAT=E)
+T7(Resp=N)
+PU(Resp=Y%DF=N%TOS=0%IPLEN=38%RIPTL=148%RID=E%RIPCK=E%UCK=E%ULEN=134%DAT=E)
+
+
+
+
+Nmap run completed -- 1 IP address (1 host up) scanned in 43 seconds

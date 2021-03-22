@@ -1,0 +1,212 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Windows Tips &amp; How-To's</title>
+</head>
+
+<body link="#9C1C08" vlink="#9C1C08" alink="#000000" background="images/images/rghtbor.gif">
+
+<table BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="514">
+  <tr>
+    <td><img SRC="images/images/how_2windows_tips___how_to_-01-01.jpg" BORDER="0" WIDTH="171" HEIGHT="65"></td>
+    <td><img SRC="images/images/how_2windows_tips___how_to_-01-02.jpg" BORDER="0" WIDTH="172" HEIGHT="65"></td>
+    <td><img SRC="images/images/how_2windows_tips___how_to_-01-03.jpg" BORDER="0" WIDTH="171" HEIGHT="65"></td>
+  </tr>
+  <tr>
+    <td><img SRC="images/images/how_2windows_tips___how_to_-02-01.jpg" BORDER="0" WIDTH="171" HEIGHT="65"></td>
+    <td><img SRC="images/images/how_2windows_tips___how_to_-02-02.jpg" BORDER="0" WIDTH="172" HEIGHT="65"></td>
+    <td><img SRC="images/images/how_2windows_tips___how_to_-02-03.jpg" BORDER="0" WIDTH="171" HEIGHT="65"></td>
+  </tr>
+</table>
+
+<table border="0" width="612" cellspacing="4" cellpadding="0" height="512">
+  <tr>
+    <td width="118" height="512" valign="top" align="left" background="images/rghtbor_1.gif"><p align="center"><!--webbot bot="ImageMap" rectangle=" (5,6) (84, 73)  synaps-it.htm" src="images/images/synaps_it_1synaps___it_1.jpg" alt="Synaps-it! Impression Program" border="0" startspan --><MAP NAME="FrontPageMap"><AREA SHAPE="RECT" COORDS="5, 6, 84, 73" HREF="synaps-it.htm"></MAP><a href="_vti_bin/shtml.exe/winhow_2.htm/map"><img height="81" ismap alt="Synaps-it! Impression Program" border="0" src="images/images/synaps_it_1synaps___it_1.jpg" usemap="#FrontPageMap" width="86"></a><!--webbot bot="ImageMap" endspan i-checksum="59538" --><br>
+    </p>
+    <p align="center">&nbsp;</td>
+    <td width="390" height="512" valign="top" align="left"><img src="images/logo_bottom.gif" alt="Image provided by MicroSoft OEM program." WIDTH="138" HEIGHT="34"><p><small><font face="Arial"><strong>Here
+    we pass on tips for Windows</strong> from our own archives and experience.&nbsp; Need to
+    rename an icon that won't allow you to rename it?&nbsp; Want to make windows better out of
+    the box or do you need help with NT Drive Maintenance? &nbsp; The help you need may not be
+    far away and we will post new tips and how-to's weekly.&nbsp; Tips and How-To's are listed
+    randomly.&nbsp; The latest post being at the end of the nav bar.</font></small></p>
+    <p align="center"><font face="Arial"><small>| <a href="#Hiding Annoying">Hide Screen Tips</a>
+    | <a href="#Renaming the Recycle Bin">Rename Recycle Bin</a> |</small><br>
+    <small>| <a href="#Cascade">Remove Favorites Cascading Menu</a> | <a href="#Ever">Speedy
+    Menus</a> |</small><br>
+    <small>| <a href="#Most Y2K">Y2K Added Insurance</a> |</small></font></p>
+    <table border="0" width="100%" bordercolor="#000000" cellpadding="0" bordercolorlight="#808080" bordercolordark="#C0C0C0" cellspacing="10">
+      <tr>
+        <td width="100%"><hr color="#38A3D6">
+        <p><font face="Arial"><small><strong><a name="Hiding Annoying">Hiding Annoying ScreenTips
+        in Windows 98</a> </strong>as seen when you point at a desktop icon or at the Close,
+        Minimize, and restore icons in any window and a description of what your pointing at
+        appears.&nbsp; This annoying feature can be removed from the desktop by a simple checkbox,
+        but you have to hack the Registry to hide the others.</small><br>
+        <small><strong>Step 1:</strong>&nbsp; Open Explorer and choose View, Folder Options.
+        &nbsp; Click the View tab and uncheck the box labeled Show Pop-up Description for Folder
+        and Desktop Items.</small><br>
+        <small><strong>Step 2: </strong>Click Start, Run, and type in REGEDIT.&nbsp; Find the key
+        HKEY_CURRENT_USER\Control Panel\desktop, and locate</small><br>
+        <small>UserPreferanceMask.&nbsp; This Value consists of four groups of two characters.
+        &nbsp; You'll need to change the first character in the first value; if the value is AE 00
+        00 00. for example, the character you'll change is A.</small><br>
+        <small><strong>Step 3:</strong>&nbsp; Double-click the UserPreferenceMask value and
+        replace the first two-character value.&nbsp; Use the following list to re[place the first
+        character: A=2, B=3, C=4, E=6, 8=0.&nbsp; <em>Do not change the second character</em>.&nbsp;
+        For example, AE becomes 2E.</small><br>
+        <small><strong>Step 4:</strong>&nbsp; Exit REGEDIT</small></font></td>
+      </tr>
+      <tr>
+        <td width="100%"><hr color="#38A3D6">
+        </td>
+      </tr>
+      <tr>
+        <td width="100%"><font face="Arial"><small><strong><a name="Renaming the Recycle Bin">Renaming
+        the Recycle Bin</a> </strong>is not as easy as it is to rename your other desktop icons.
+        &nbsp; It will take a registry hack to do it.</small><br>
+        <small><strong>Step 1: </strong>First back up the registry.&nbsp; That way if you make a
+        mistake you only need to restore the file to get your system back to normal.</small><br>
+        <small><strong>Step 2:</strong>&nbsp; Click Start button, select run, type regedit and hit
+        ENTER.</small><br>
+        <small><strong>Step 3:</strong>&nbsp; Navigate to (find) <small>HKEY_CLASSES_ROOT\CLSID\{645FF040-5081-101B-9F08-002F954E</small></small><br>
+        <small>Double-click on the default key and enter your new name for the Recycle Bin.</small><br>
+        <small><strong>Step 4: </strong>Exit Regedit, click on the Recycle Bin and press F5 to
+        make the name change appear on the desk top.</small></font></td>
+      </tr>
+      <tr>
+        <td width="100%"><hr color="#38A3D6">
+        </td>
+      </tr>
+      <tr>
+        <td width="100%"><font face="Arial"><small><a name="Cascade"><strong>When you install IE4
+        or later, it adds</strong></a> a cascading menu to the Start Menu, letting you display the
+        contents of your Favorites folder without opening a new window.&nbsp; If your Favorites
+        folder has been well stocked with shortcuts and subfolders, you'll quickly find out that
+        the new menu is nearly unusable.&nbsp; This usability blunder can be eliminated
+        fortunately.</small><br>
+        <small><strong>Step 1:</strong>&nbsp; Bring up Regedit by clicking Start, Run, then type
+        REGEDIT.</small><br>
+        <small><strong>Step 2:</strong>&nbsp; Navigate to the key <small>HKEY_CURRENT_USER\Software\</small><br>
+        <small>Microsoft\Windows\CurrentVersion\Policies\Explorer </small>Choose Edit, New, DWORD
+        value.</small><br>
+        <small><strong>Step 3:</strong>&nbsp; Change the default name to NoFavoritesMenu and press
+        Enter and change the contents of the Value Data to 1.</small><br>
+        <small><strong>Step 4:</strong>&nbsp; Click OK and close the Registry Editor.&nbsp; The
+        next time you start Windows the Favorites menu will be available from any Explorer window,
+        but you won't see it on the start menu.</small></font></td>
+      </tr>
+      <tr>
+        <td width="100%"><hr color="#38A3D6">
+        </td>
+      </tr>
+      <tr>
+        <td width="100%"><small><font face="Arial"><a name="Ever"><strong>Ever notice that when
+        you click on the Start button</strong></a>, then Programs how the menu takes a second or
+        more to appear?&nbsp; That's because Windows has a built-in delay before displaying the
+        fly-out menus.&nbsp; Follow these steps to reduce that delay for quicker service.<br>
+        <strong>Step 1:</strong>&nbsp; Back up the REGISTRY.<br>
+        <strong>Step 2:</strong>&nbsp; Bring up Regedit by clicking Start, Run, then type REGEDIT.<br>
+        S<strong>tep 3:</strong>&nbsp; Find the key <small>HKEY_CURRENT_USER\Control
+        Panel\Desktop\</small>. &nbsp; Choose edit, New, String Value, and call the new value
+        MenuShowDelay. &nbsp; Right-click on the new key, choose Modify and enter a value of 1.<br>
+        <strong>Step 4:</strong>&nbsp; Exit Regedit.&nbsp; Restart Windows click the Start button
+        and any of the fly-out menus and see how they run!</font></small></td>
+      </tr>
+      <tr>
+        <td width="100%"><hr color="#38A3D6">
+        </td>
+      </tr>
+      <tr>
+        <td width="100%"><font face="Arial"><small><a name="Most Y2K"><strong>Most Y2K problems
+        happen because</strong></a> a program misinterprets a two-digit date you enter,&nbsp; in a
+        spreadsheet program like Excel for example.&nbsp; One way to make Y2K problems less likely
+        is to change the Windows Short Date format so it always displays the full year.&nbsp; To
+        make the change;</small><br>
+        <small><strong>Step 1:</strong>&nbsp; Open the Control Panel and select Regional Settings
+        option.</small><br>
+        <small><strong>Step 2:</strong>&nbsp; Click the Date tab, and select the M/d/yyyy option
+        in the Short Date section.</small><br>
+        <small><strong>Step 3:</strong>&nbsp; Click OK to make the change permanent.</small></font></td>
+      </tr>
+      <tr>
+        <td width="100%"><hr color="#38A3D6">
+        </td>
+      </tr>
+      <tr>
+        <td width="100%"></td>
+      </tr>
+      <tr>
+        <td width="100%"></td>
+      </tr>
+      <tr>
+        <td width="100%"></td>
+      </tr>
+      <tr>
+        <td width="100%"></td>
+      </tr>
+      <tr>
+        <td width="100%"></td>
+      </tr>
+      <tr>
+        <td width="100%"></td>
+      </tr>
+      <tr>
+        <td width="100%"></td>
+      </tr>
+      <tr>
+        <td width="100%"></td>
+      </tr>
+    </table>
+    </td>
+    <td valign="top" align="left"><table BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="90">
+      <tr>
+        <td><!--webbot bot="ImageMap" circle="(43,29) 27  ../../../../triadhost/triadpages.htm" SRC="images/images/main_navtriadpages-01-01.gif" BORDER="0" startspan --><MAP NAME="FrontPageMap1"><AREA SHAPE="CIRCLE" COORDS="43, 29, 27" HREF="../../../../triadhost/triadpages.htm"></MAP><a href="_vti_bin/shtml.exe/winhow_2.htm/map1"><img height="57" ismap border="0" src="images/images/main_navtriadpages-01-01.gif" usemap="#FrontPageMap1" width="90"></a><!--webbot bot="ImageMap" endspan i-checksum="9971" --></td>
+      </tr>
+      <tr>
+        <td><!--webbot bot="ImageMap" circle="(42,27) 27  ../../../../triadhost/tcam_1.htm" SRC="images/images/main_navtriadpages-02-01.gif" BORDER="0" startspan --><MAP NAME="FrontPageMap2"><AREA SHAPE="CIRCLE" COORDS="42, 27, 27" HREF="../../../../triadhost/tcam_1.htm"></MAP><a href="_vti_bin/shtml.exe/winhow_2.htm/map2"><img height="56" ismap border="0" src="images/images/main_navtriadpages-02-01.gif" usemap="#FrontPageMap2" width="90"></a><!--webbot bot="ImageMap" endspan i-checksum="11932" --></td>
+      </tr>
+      <tr>
+        <td><!--webbot bot="ImageMap" circle="(43,28) 28  http://www.triadhost.com:8080/" SRC="images/images/main_navtriadpages-03-01.gif" BORDER="0" startspan --><MAP NAME="FrontPageMap3"><AREA SHAPE="CIRCLE" COORDS="43, 28, 28" HREF="index.html"></MAP><a href="_vti_bin/shtml.exe/winhow_2.htm/map3"><img height="57" ismap border="0" src="images/images/main_navtriadpages-03-01.gif" usemap="#FrontPageMap3" width="90"></a><!--webbot bot="ImageMap" endspan i-checksum="23588" --></td>
+      </tr>
+      <tr>
+        <td><!--webbot bot="ImageMap" circle="(44,28) 28  http://www.triadhost.com/mmm/wwwboard.html" SRC="images/images/main_navtriadpages-04-01.gif" BORDER="0" startspan --><MAP NAME="FrontPageMap4"><AREA SHAPE="CIRCLE" COORDS="44, 28, 28" HREF="mmm/wwwboard.html"></MAP><a href="_vti_bin/shtml.exe/winhow_2.htm/map4"><img height="56" ismap border="0" src="images/images/main_navtriadpages-04-01.gif" usemap="#FrontPageMap4" width="90"></a><!--webbot bot="ImageMap" endspan i-checksum="24370" --></td>
+      </tr>
+      <tr>
+        <td><!--webbot bot="ImageMap" circle="(43,26) 26  ../../../../triadhost/news.htm" SRC="images/images/main_navtriadpages-05-01.gif" BORDER="0" startspan --><MAP NAME="FrontPageMap5"><AREA SHAPE="CIRCLE" COORDS="43, 26, 26" HREF="../../../../triadhost/news.htm"></MAP><a href="_vti_bin/shtml.exe/winhow_2.htm/map5"><img height="55" ismap border="0" src="images/images/main_navtriadpages-05-01.gif" usemap="#FrontPageMap5" width="90"></a><!--webbot bot="ImageMap" endspan i-checksum="27656" --></td>
+      </tr>
+      <tr>
+        <td><!--webbot bot="ImageMap" circle="(42,29) 28  ../../../../triadhost/ebiz.htm" SRC="images/images/main_navtriadpages-06-01.gif" BORDER="0" startspan --><MAP NAME="FrontPageMap6"><AREA SHAPE="CIRCLE" COORDS="42, 29, 28" HREF="../../../../triadhost/ebiz.htm"></MAP><a href="_vti_bin/shtml.exe/winhow_2.htm/map6"><img height="58" ismap border="0" src="images/images/main_navtriadpages-06-01.gif" usemap="#FrontPageMap6" width="90"></a><!--webbot bot="ImageMap" endspan i-checksum="26926" --></td>
+      </tr>
+      <tr>
+        <td><!--webbot bot="ImageMap" circle="(44,29) 26  ../../../../triadhost/whne.htm" SRC="images/images/main_navtriadpages-07-01.gif" BORDER="0" startspan --><MAP NAME="FrontPageMap7"><AREA SHAPE="CIRCLE" COORDS="44, 29, 26" HREF="../../../../triadhost/whne.htm"></MAP><a href="_vti_bin/shtml.exe/winhow_2.htm/map7"><img height="55" ismap border="0" src="images/images/main_navtriadpages-07-01.gif" usemap="#FrontPageMap7" width="90"></a><!--webbot bot="ImageMap" endspan i-checksum="29442" --></td>
+      </tr>
+      <tr>
+        <td><!--webbot bot="ImageMap" circle="(42,26) 26  ../../../../triadhost/map.htm" SRC="images/images/main_navtriadpages-08-01.gif" BORDER="0" startspan --><MAP NAME="FrontPageMap8"><AREA SHAPE="CIRCLE" COORDS="42, 26, 26" HREF="../../../../triadhost/map.htm"></MAP><a href="_vti_bin/shtml.exe/winhow_2.htm/map8"><img height="56" ismap border="0" src="images/images/main_navtriadpages-08-01.gif" usemap="#FrontPageMap8" width="90"></a><!--webbot bot="ImageMap" endspan i-checksum="37722" --></td>
+      </tr>
+      <tr>
+        <td><!--webbot bot="ImageMap" circle="(41,26) 26  ../../../../triadhost/sales.htm" SRC="images/images/main_navtriadpages-09-01.gif" BORDER="0" startspan --><MAP NAME="FrontPageMap9"><AREA SHAPE="CIRCLE" COORDS="41, 26, 26" HREF="../../../../triadhost/sales.htm"></MAP><a href="_vti_bin/shtml.exe/winhow_2.htm/map9"><img height="55" ismap border="0" src="images/images/main_navtriadpages-09-01.gif" usemap="#FrontPageMap9" width="90"></a><!--webbot bot="ImageMap" endspan i-checksum="61" --></td>
+      </tr>
+      <tr>
+        <td><!--webbot bot="ImageMap" circle="(44,28) 28  mailto:info@triadhost.com" SRC="images/images/main_navtriadpages-10-01.gif" BORDER="0" startspan --><MAP NAME="FrontPageMap10"><AREA SHAPE="CIRCLE" COORDS="44, 28, 28" HREF="mailto:info@triadhost.com"></MAP><a href="_vti_bin/shtml.exe/winhow_2.htm/map10"><img height="57" ismap border="0" src="images/images/main_navtriadpages-10-01.gif" usemap="#FrontPageMap10" width="90"></a><!--webbot bot="ImageMap" endspan i-checksum="50564" --></td>
+      </tr>
+      <tr>
+        <td><!--webbot bot="ImageMap" circle="(43,27) 27  http://www.triadhost.com/global/meta101/index.htm" SRC="images/images/main_navtriadpages-11-01.gif" BORDER="0" startspan --><MAP NAME="FrontPageMap11"><AREA SHAPE="CIRCLE" COORDS="43, 27, 27" HREF="global/meta101/index.htm"></MAP><a href="_vti_bin/shtml.exe/winhow_2.htm/map11"><img height="60" ismap border="0" src="images/images/main_navtriadpages-11-01.gif" usemap="#FrontPageMap11" width="90"></a><!--webbot bot="ImageMap" endspan i-checksum="36401" --></td>
+      </tr>
+    </table>
+    <dl>
+      <p>&nbsp;</p>
+    </dl>
+    </td>
+  </tr>
+</table>
+
+<dl>
+  <p><font face="Arial"><small>©TriadHost.Com All Rights Reserved.<br>
+  Help &amp; Information about this sight or services call:</small><br>
+  <small>(336)631-9067 or (800)303-2598. <a href="../../../../../../../triadhost/legal.htm"><small>Legal
+  Notices</small></a></small></font></p>
+</dl>
+</body>
+</html>

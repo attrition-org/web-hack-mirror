@@ -1,0 +1,306 @@
+<html>
+
+<head>
+<title>DAMM YOUVE BEEN HACKED</title>
+<script LANGUAGE="JavaScript" FPTYPE="dynamicanimation">
+<!--
+  // If you want to change this script, you must also make the following
+  // changes so that FrontPage will not overwrite your new script.
+  // In the script tag, change type="dynamicanimation" to type="mydynamicanimation"
+  // In the first script statement, change "dynamicanimation" to "mydynamicanimation"
+  // Throughout the HTML content, change dynamicanimation= to mydynamicanimation=
+  // Change function dynAnimation to function mydynAnimation
+  // In the body tag, change onload="dynAnimation()" to onload="mydynAnimation()"
+  dynamicanimAttr = "dynamicanimation"
+  animateElements = new Array()
+  currentElement = 0
+  speed = 0
+  stepsZoom = 8
+  stepsWord = 8
+  stepsFly = 12
+  stepsSpiral = 16
+  steps = stepsZoom
+  step = 0
+  outString = ""
+  function dynAnimation()
+  {
+    var ms = navigator.appVersion.indexOf("MSIE")
+    ie4 = (ms>0) && (parseInt(navigator.appVersion.substring(ms+5, ms+6)) >= 4)
+    if(!ie4)
+    {
+      if((navigator.appName == "Netscape") &&
+         (parseInt(navigator.appVersion.substring(0, 1)) >= 4))
+      {
+        for (index=document.layers.length-1; index >= 0; index--)
+        {
+            layer=document.layers[index]
+            if (layer.left==10000)
+                layer.left=0
+        }
+      }
+      return
+    }
+    for (index=document.all.length-1; index >= document.body.sourceIndex; index--)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if(null != animation)
+      {
+        if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        {
+          ih = el.innerHTML
+          outString = ""
+          i1 = 0
+          iend = ih.length
+          while(true)
+          {
+            i2 = startWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, false, "")
+            if(i2 == iend)
+              break
+            i1 = i2
+            i2 = endWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, true, animation)
+            if(i2 == iend)
+              break
+            i1 = i2
+          }
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+        if(animation == "zoomIn" || animation == "zoomOut")
+        {
+          ih = el.innerHTML
+          outString = "<SPAN " + dynamicanimAttr + "=\"" + animation + "\" style=\"position: relative; left: 10000;\">"
+          outString += ih
+          outString += "</SPAN>"
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+      }
+    }
+    i = 0
+    for (index=document.body.sourceIndex; index < document.all.length; index++)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if (null != animation)
+      {
+        if(animation == "flyLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyRight")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyTop" || animation == "dropWord")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottom")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyTopLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyTopRight" || animation == "flyTopRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottomLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyBottomRight" || animation == "flyBottomRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "spiral")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "zoomIn")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else if(animation == "zoomOut")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        el.initLeft = el.style.posLeft
+        el.initTop = el.style.posTop
+        animateElements[i++] = el
+      }
+    }
+    window.setTimeout("animate();", speed)
+  }
+  function offsetLeft(el)
+  {
+    x = el.offsetLeft
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      x += e.offsetLeft;
+    return x
+  } 
+  function offsetTop(el)
+  {
+    y = el.offsetTop
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      y += e.offsetTop;
+    return y
+  } 
+  function startWord(ih, i)
+  {
+    for(tag = false; i < ih.length; i++)
+    {
+      c = ih.charAt(i)
+      if(c == '<')
+        tag = true
+      if(!tag)
+        return i
+      if(c == '>')
+        tag = false
+    }
+    return -1
+  }
+  function endWord(ih, i)
+  {
+    nonSpace = false
+    space = false
+    while(i < ih.length)
+    {
+      c = ih.charAt(i)
+      if(c != ' ')
+        nonSpace = true
+      if(nonSpace && c == ' ')
+        space = true
+      if(c == '<')
+        return i
+      if(space && c != ' ')
+        return i
+      i++
+    }
+    return -1
+  }
+  function outWord(ih, i1, i2, dyn, anim)
+  {
+    if(dyn)
+      outString += "<SPAN " + dynamicanimAttr + "=\"" + anim + "\" style=\"position: relative; left: 10000;\">"
+    outString += ih.substring(i1, i2)
+    if(dyn)
+      outString += "</SPAN>"
+  }
+  function animate()
+  {
+    el = animateElements[currentElement]
+    animation = el.getAttribute(dynamicanimAttr, false)
+    step++
+    if(animation == "spiral")
+    {
+      steps = stepsSpiral
+      v = step/steps
+      rf = 1.0 - v
+      t = v * 2.0*Math.PI
+      rx = Math.max(Math.abs(el.initLeft), 200)
+      ry = Math.max(Math.abs(el.initTop),  200)
+      el.style.posLeft = Math.ceil(-rf*Math.cos(t)*rx)
+      el.style.posTop  = Math.ceil(-rf*Math.sin(t)*ry)
+    }
+    else if(animation == "zoomIn")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(50+50*step/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else if(animation == "zoomOut")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(100+200*(steps-step)/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else
+    {
+      steps = stepsFly
+      if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        steps = stepsWord
+      dl = el.initLeft / steps
+      dt = el.initTop  / steps
+      el.style.posLeft = el.style.posLeft - dl
+      el.style.posTop = el.style.posTop - dt
+    }
+    if (step >= steps) 
+    {
+      el.style.posLeft = 0
+      el.style.posTop = 0
+      currentElement++
+      step = 0
+    }
+    if(currentElement < animateElements.length)
+      window.setTimeout("animate();", speed)
+  }
+//-->
+</script></head>
+
+<body BGCOLOR="#000000" TEXT="#db0929" LINK="#dbdbdb" VLINK="#dbdbdb" ALINK="#dbdbdb" onload="dynAnimation()">
+
+<blockquote>
+  <h1 align="center" dynamicanimation="zoomIn" style="position: relative !important; left: 10000 !important"><img src="file:///E:/pics/in1.jpg" width="572" height="139" alt="in1.jpg (20341 bytes)"><br>
+  DAMM YOUVE BEEN HACKED!</h1>
+  <p align="center"><strong><big>Have you ever had one of those days? Well im having one of
+  those weeks. These days it seems to be nuthing but cold fusion this cold fusion that well
+  im here to say this aint <font color="#FFFFFF">COLDFUSION</font> script kiddies.</big></strong></p>
+  <p align="center"><strong><big>So you went to <a href="http://www.genocide2600.com/~tattooman/new.shtml#latest">Genocide2600</a> and
+  downloaded your little <a href="http://www.genocide2600.com/~tattooman/exploits-Apr-99/ConFusion.zip">Confusion</a>
+  proggie.&nbsp; Your still leting some one else do the hackin for ya.&nbsp; Be true to your
+  self and learn ive seen more hackin groups pop up in the last 2 months claiming to be l33t
+  and every hack they have is <font color="#FFFFFF">Coldfusion.</font></big></strong></p>
+  <p align="center"><strong><big><font color="#FFFFFF">Just For Starters</font></big></strong></p>
+  <p align="center"><img src="http://www.attrition.org/mirror/attrition/c4iweb.spawar.navy.mil/logo.gif"></p>
+  <p align="center"><img src="http://www.attrition.org/mirror/attrition/image/anti.gif" width="256" height="90"></p>
+  <a href="http://www.zo0mer.net"><p align="center"><img alt="NUKENOW.JPG (27700 bytes)" border="0" src="http://www.attrition.org/mirror/attrition/www.cdmusicsales.com/NUKENOW.JPG"></a></p>
+  <p align="center"><img src="http://www.attrition.org/mirror/attrition/image/mst.jpg"></p>
+  <p align="center"><big><strong>HOPE I DIDNT HURT ANYONE'S FEELINGS!</strong></big></p>
+  <p align="center"><big><strong>Learn To Hack!!</strong></big></p>
+  <p align="center" dynamicanimation="flyBottomRightWord" style="position: relative !important; left: 10000 !important"><big><big><font color="#0000FF"><strong>Shoutz to Devil-C (learning the trade) ne0h (makin the trade
+  insane) rudog (telling us we should'nt) aeon- (for who she is) MaRKEy (for always sayin
+  how in the)&nbsp; p0go (for finally findin psychic) and the Bots (for kickin my ass)</strong></font></big></big></p>
+  <p align="center" dynamicanimation="flyBottomRightWord" style="position: relative !important; left: 10000 !important"><big><big><font color="#0000FF"><strong>And everyone else i missed!!!</strong></font></big></big></p>
+  <p align="center" dynamicanimation="flyBottomRightWord" style="position: relative !important; left: 10000 !important">&nbsp;</p>
+  <p align="center" dynamicanimation="flyBottomRightWord" style="position: relative !important; left: 10000 !important"><a HREF="http://www.linux.org"><img SRC="linux.jpg" BORDER="0" WIDTH="64" HEIGHT="82"></a></p>
+  <h1 align="center" dynamicanimation="flyBottomRightWord" style="position: relative !important; left: 10000 !important"><img src="file:///E:/pics/psy2.jpg" width="540" height="241" alt="psy2.jpg (17643 bytes)"></h1>
+  <a href="http://www.attrition.org/"><p align="center"><img src="http://www.hackernews.com/images/att-banr.jpg"></a></p>
+  <p align="center">&nbsp;</p>
+  <a href="http://www.hackernews.com/affiliates.html"><p align="center"><img border="0" src="http://www.hackernews.com/images/affiliate-tr.gif"></a></p>
+  <p align="center"><br>
+  <a href="160.79.232.138"><strong>Original Site</strong></a></p>
+  <p align="center" dynamicanimation="flyBottomRightWord" style="position: relative !important; left: 10000 !important"><small><small><small>Because
+  im a good person</small></small></small></p>
+  <p align="center" dynamicanimation="flyBottomRightWord" style="position: relative !important; left: 10000 !important"><small><small><small>and
+  your site is funny as shit!</small></small></small></p>
+</blockquote>
+</body>
+</html>

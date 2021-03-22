@@ -1,0 +1,214 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 3.0//EN" "html.dtd">
+<HTML>
+<HEAD>
+<TITLE>INSTITUTO DE INGENIERIA, UNAM</TITLE>
+
+</HEAD>
+
+<BODY BGCOLOR="White" BACKGROUND="fondo.gif"
+LEFTMARGIN=0 TOPMARGIN=0 MARGINHEIGHT="0" MARGINWIDTH="0">
+
+<script language="JavaScript"><!--
+
+// Detector de browser
+
+bName = navigator.appName; //detector para Netscape 3+ o IE 4+
+bVer = parseInt(navigator.appVersion);
+if ((bName == "Netscape" && bVer >= 3) ||
+	(bName == "Microsoft Internet Explorer" && bVer >=4)) br = "n3";
+else br = "n2";
+// Create image objects, preload all active and inactive images.
+if (br== "n3") {
+//Botones activos
+	btn1on = new Image();
+	btn1on.src = "btn1a.gif";
+	btn2on = new Image();
+	btn2on.src = "btn2a.gif";
+	btn3on = new Image();
+	btn3on.src = "btn3a.gif";
+	btn4on= new Image();
+	btn4on.src = "btn4a.gif";
+	btn5on= new Image();
+	btn5on.src = "btn5a.gif";
+	btn6on= new Image();
+	btn6on.src = "btn6a.gif";
+	btn7on= new Image();
+	btn7on.src = "btn7a.gif";
+	btn8on= new Image();
+	btn8on.src = "btn8a.gif";
+	btn9on= new Image();
+	btn9on.src = "btn9a.gif";
+	btn10on= new Image();
+	btn10on.src = "btn10a.gif";
+	btn11on= new Image();
+	btn11on.src = "btn11a.gif";
+	btn12on= new Image();
+	btn12on.src = "btn12a.gif";
+	btn13on= new Image();
+	btn13on.src = "btn13a.gif";
+
+//Botones inactivos normales
+	btn1off = new Image();
+	btn1off.src = "btn1.gif";
+	btn2off = new Image();
+	btn2off.src = "btn2.gif";
+	btn3off = new Image();
+	btn3off.src = "btn3.gif";
+	btn4off = new Image();
+	btn4off.src = "btn4.gif";
+	btn5off = new Image();
+	btn5off.src = "btn5.gif";
+	btn6off = new Image();
+	btn6off.src = "btn6.gif";
+	btn7off = new Image();
+	btn7off.src = "btn7.gif";
+	btn8off = new Image();
+	btn8off.src = "btn8.gif";
+	btn9off = new Image();
+	btn9off.src = "btn9.gif";
+	btn10off = new Image();
+	btn10off.src = "btn10.gif";
+	btn11off = new Image();
+	btn11off.src = "btn11.gif";
+	btn12off = new Image();
+	btn12off.src = "btn12.gif";
+	btn13off = new Image();
+	btn13off.src = "btn13.gif";
+
+}
+
+function imgAct(imgName) {
+	if (br == "n3") {
+		document[imgName].src = eval(imgName + "on.src");
+	}
+}
+
+function imgInact(imgName) {
+	if (br == "n3") {
+		document[imgName].src = eval(imgName + "off.src");
+	}
+}
+//-->
+</script>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0>
+<TR>
+	<!-- inicia el menu -->
+	<TD VALIGN="TOP" WIDTH=176 height="461"> 
+      <TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0>
+<TR>
+	      <TD ALIGN="RIGHT"><A HREF="index.html"><IMG SRC="1.gif" WIDTH=89 HEIGHT=46 BORDER=0></A><IMG SRC="top1.gif" WIDTH=64 HEIGHT=54 BORDER=0 alt=""></TD>
+</TR>
+<TR>
+	<TD><IMG SRC="top.gif" WIDTH=176 HEIGHT=31 BORDER=0 alt=""></TD>
+</TR>
+<TR>
+	<TD><A HREF="infins/index.html" onMouseover = "imgAct('btn1'); window.status='Informaci&oacute;n Institucional'; return true" onMouseout = "imgInact('btn1')">
+	<IMG SRC="btn1.gif" WIDTH=176 HEIGHT=31 BORDER=0 name="btn1" ALT="Informaci&oacute;n Institucional"></a></TD><A>
+</a></TR>
+<TR>
+	<TD><A HREF="dir/index.html" onMouseover = "imgAct('btn2'); window.status='Director'; return true" onMouseout = "imgInact('btn2')">
+	<IMG SRC="btn2.gif" WIDTH=176 HEIGHT=20 BORDER=0 name="btn2" ALT="Director"></a></TD><A>
+</a></TR>
+<TR>
+	<TD><A HREF="sec/index.html" onMouseover = "imgAct('btn3'); window.status='Secretar&iacute;as'; return true" onMouseout = "imgInact('btn3')">
+	<IMG SRC="btn3.gif" WIDTH=176 HEIGHT=18 BORDER=0 name="btn3" ALT="Secretar&iacute;as"></a></TD>
+</TR>
+<TR>
+	<TD><A HREF="org/index.html" onMouseover = "imgAct('btn4'); window.status='Organigrama'; return true" onMouseout = "imgInact('btn4')">
+	<IMG SRC="btn4.gif" WIDTH=176 HEIGHT=21 BORDER=0 name="btn4" ALT="Organigrama"></a></TD>
+</TR>
+<TR>
+	<TD><A HREF="directorio/directorio.html" onMouseover = "imgAct('btn5'); window.status='Directorio del Personal Acad&eacute;mico'; return true" onMouseout = "imgInact('btn5')">
+	<IMG SRC="btn5.gif" WIDTH=176 HEIGHT=30 BORDER=0 name="btn5" ALT="Directorio del Personal Acad&eacute;mico"></a></TD>
+</TR>
+<TR>
+	<TD><A HREF="caii/index.html" onMouseover = "imgAct('btn6'); window.status='Colegio Acad&eacute;mico'; return true" onMouseout = "imgInact('btn6')">
+	<IMG SRC="btn6.gif" WIDTH=176 HEIGHT=22 BORDER=0 name="btn6" ALT="Colegio Acad&eacute;mico"></a></TD>
+</TR>
+<TR>
+	<TD><A HREF="areas/index.html" onMouseover = "imgAct('btn7'); window.status='Areas de Investigaci&oacute;n'; return true" onMouseout = "imgInact('btn7')">
+	<IMG SRC="btn7.gif" WIDTH=176 HEIGHT=21 BORDER=0 name="btn7" ALT="Areas de Investigaci&oacute;n"></a></TD>
+</TR>
+<TR>
+	<TD><A HREF="proyec/index.html" onMouseover = "imgAct('btn8'); window.status='Proyectos'; return true" onMouseout = "imgInact('btn8')">
+	<IMG SRC="btn8.gif" WIDTH=176 HEIGHT=21 BORDER=0 name="btn8" ALT="Proyectos"></a></TD>
+</TR>
+<TR>
+	<TD><A HREF="pub/index.html" onMouseover = "imgAct('btn9'); window.status='Publicaciones'; return true" onMouseout = "imgInact('btn9')">
+	<IMG SRC="btn9.gif" WIDTH=176 HEIGHT=20 BORDER=0 name="btn9" ALT="Publicaciones"></a></TD>
+</TR>
+<TR>
+	<TD><A HREF="asa/index.html" onMouseover = "imgAct('btn10'); window.status='Actividades y Servicios Acad&eacute;micos'; return true" onMouseout = "imgInact('btn10')">
+	<IMG SRC="btn10.gif" WIDTH=176 HEIGHT=32 BORDER=0 name="btn10" ALT="Actividades y Servicios Acad&eacute;micos"></a></TD>
+</TR>
+<TR>
+	<TD><A HREF="asocia/index.html" onMouseover = "imgAct('btn11'); window.status='Asociaciones de Ingenier&iacute;a'; return true" onMouseout = "imgInact('btn11')">
+	<IMG SRC="btn11.gif" WIDTH=176 HEIGHT=30 BORDER=0 name="btn11" ALT="Asociaciones de Ingenier&iacute;a"></a></TD>
+</TR>
+<TR>
+	<TD><A HREF="posgrado/index.html" onMouseover = "imgAct('btn12'); window.status='Estudios de Posgrado'; return true" onMouseout = "imgInact('btn12')">
+	<IMG SRC="btn12.gif" WIDTH=176 HEIGHT=31 BORDER=0 name="btn12" ALT="Estudios de Posgrado"></a></TD>
+</TR>
+<TR>
+	<TD><A HREF="otros/index.html" onMouseover = "imgAct('btn13'); window.status='Otros Sistemas www'; return true" onMouseout = "imgInact('btn13')">
+	<IMG SRC="btn13.gif" WIDTH=176 HEIGHT=41 BORDER=0 name="btn13" ALT="Otros Sistemas www"></a></TD>
+</TR>
+<TR>
+	<TD><IMG SRC="fin.gif" WIDTH=176 HEIGHT=21 BORDER=0 alt=""></TD>
+</TR>
+<TR>
+	      <TD><A HREF="mailto:www@pumas.iingen.unam.mx"><IMG SRC="Mail.gif" WIDTH=18 HEIGHT=17 BORDER=0 HSPACE=40 ALT="Envie un mensaje, consulta o comentario"></A><br>
+          </TD>
+</TR>
+</TABLE>
+
+
+
+
+
+
+
+	</TD>
+	<!-- termina el menu -->
+	
+												<!-- cuerpo -->
+
+	<TD VALIGN="TOP" COLSPAN=0 ROWSPAN=0 WIDTH=550 height="461"> <a href="homeesp.html"><IMG SRC="head.gif" WIDTH=333 HEIGHT=42 BORDER=0 alt=""></a><a href="mapa/mapa.html"><img src="head1.gif" width=141 height=42 alt="Mapa del Sitio" border="0"></a> 
+      <P>
+
+<CENTER>
+        <table border="0">
+          <TR>
+	        <TD width="343" height="351" valign="top"> <IMG SRC="collage2.jpg" ALT="Imagen de Presentaci&oacute;n" WIDTH=310 HEIGHT=330  hspace=10 border=0 vspace="10"> 
+            </TD>
+	        <TD VALIGN="TOP" width="160" height="351"> 
+              <p align="left"><a href="program/index.html"> <img src="compu.gif" width=71 height=71 alt="Programas de C&oacute;mputo" border=0 hspace=30 vspace="0"></a><br>
+                <br>
+                <br>
+              <div align="center"> <a href="pub/gacetilla/index.html"><img src="tmp/pil.gif" width=48 height=36 alt="" border=0><img src="pub/gacetilla/gace2.gif" width=100 height=39 alt="Consulte la gacetilla de Febrero" border=0></a><br>
+                <br>
+                <br>
+                <a href="posgrado/posing/portada.html"><img src="tmp/gorra.gif" width="32" height="24" border="0"><br>
+                <font face="Arial, Helvetica, sans-serif" size="1">Programa de<br>
+                Posgrado en Ingenier&iacute;a</font></a><br>
+              </div>
+              </TD>
+</TR>
+</TABLE>
+</CENTER>
+
+
+
+
+
+
+	</TD>
+</TR>
+</TABLE>
+								<!-- termina el cuerpo -->
+
+
+
+
+</BODY>
+</HTML>

@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+<TITLE>INSTITUTO NACIONAL DE ENFERMEDADES RESPIRATORIAS</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+
+function bannerObject(p,d)
+{
+  this.msg   = MESSAGE
+  this.out   = " "
+  this.pos   = POSITION
+  this.delay = DELAY
+  this.i     = 0
+  this.reset = clearMessage
+}
+
+function clearMessage()
+{
+  this.pos = POSITION
+}
+
+var POSITION = 50
+var DELAY    = 100
+var MESSAGE  = "  Bienvenido a la Página del  INSTITUTO  NACIONAL  DE  ENFERMEDADES  RESPIRATORIAS "
+             + "  Esperamos te sirva ésta información.  "
+             + "                      "
+var scroll = new bannerObject()
+
+function scroller()
+{
+  for (scroll.i = 0; scroll.i < scroll.pos; scroll.i++)
+  {
+   scroll.out += " "
+  }
+    if (scroll.pos >= 0)
+   scroll.out += scroll.msg
+  else scroll.out = scroll.msg.substring(-scroll.pos,scroll.msg.length)
+  document.bannerform.banner.value = scroll.out
+  scroll.out = " "
+  scroll.pos--
+  if (scroll.pos < -(scroll.msg.length))
+  {
+    scroll.reset()
+  }
+  setTimeout ('scroller()',scroll.delay)
+}
+
+// End -->
+
+</SCRIPT>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#C0C0C0" LINK="#008080" VLINK="#C0C0C0" ALINK="#FF8040" BACKGROUND="/images/clouds.jpg" onload="scroller()">
+<CENTER><FORM NAME="bannerform"><INPUT TYPE="text" name="banner" size="90"></FORM></CENTER>
+</BODY>
+</HTML>

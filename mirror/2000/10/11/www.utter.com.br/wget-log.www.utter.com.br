@@ -1,0 +1,32 @@
+--20:15:00--  http://www.utter.com.br:80/
+           => `www.utter.com.br/index.html'
+Connecting to www.utter.com.br:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 4,417 [text/html]
+
+    0K -> ....                                                   [100%]
+
+20:15:03 (2.85 KB/s) - `www.utter.com.br/index.html' saved [4417/4417]
+
+Loading robots.txt; please ignore errors.
+--20:15:03--  http://www.utter.com.br:80/no-robots.txt
+           => `www.utter.com.br/no-robots.txt'
+Connecting to www.utter.com.br:80... connected!
+HTTP request sent, awaiting response... 404 Not Found
+20:15:06 ERROR 404: Not Found.
+
+--20:15:06--  http://www.utter.com.br:80/logo.jpg
+           => `www.utter.com.br/logo.jpg'
+Connecting to www.utter.com.br:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 11,999 [image/jpeg]
+
+    0K -> .......... .                                           [100%]
+
+20:15:12 (3.67 KB/s) - `www.utter.com.br/logo.jpg' saved [11999/11999]
+
+Converting www.utter.com.br/index.html... done.
+
+FINISHED --20:15:12--
+Downloaded: 16,416 bytes in 2 files
+Converting www.utter.com.br/index.html... done.

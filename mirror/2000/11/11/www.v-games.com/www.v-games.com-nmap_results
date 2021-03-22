@@ -1,0 +1,38 @@
+
+Starting nmap V. 2.54BETA3 ( www.insecure.org/nmap/ )
+Insufficient responses for TCP sequencing (3), OS detection may be less accurate
+Insufficient responses for TCP sequencing (2), OS detection may be less accurate
+Interesting ports on ip-216-23-50-173.adsl.one.net (216.23.50.173):
+(The 2 ports scanned but not shown below are in state: closed)
+Port       State       Service
+23/tcp     filtered    telnet                  
+25/tcp     open        smtp                    
+80/tcp     open        http                    
+
+TCP Sequence Prediction: Class=random positive increments
+                         Difficulty=9250 (Worthy challenge)
+Aggressive OS guesses: Windows 2000 RC1 through final release (97%), Windows Millenium Edition v4.90.3000 (97%), FreeBSD 3.2-STABLE (97%), MS Windows2000 Professional RC1/W2K Advance Server Beta3 (95%), Windows NT 5 Beta2 or Beta3 (93%), FreeBSD 2.2.1 - 4.1 (92%), Windows 2000 Professional, Build 2183 (RC3) (90%), Windows NT4 / Win95 / Win98 (90%)
+No exact OS matches for host (If you know what OS is running on it, see http://www.insecure.org/cgi-bin/nmap-submit.cgi).
+TCP/IP fingerprint:
+T1(Resp=Y%DF=Y%W=402E%ACK=S++%Flags=AS%Ops=MNWNNT)
+TSeq(Class=RI%gcd=1%SI=2422)
+T2(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+T1(Resp=Y%DF=Y%W=402E%ACK=S++%Flags=AS%Ops=MNWNNT)
+T3(Resp=Y%DF=Y%W=402E%ACK=S++%Flags=AS%Ops=MNWNNT)
+T2(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+T4(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T3(Resp=Y%DF=Y%W=402E%ACK=S++%Flags=AS%Ops=MNWNNT)
+T5(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+T4(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T6(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T5(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+T7(Resp=N)
+T6(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+PU(Resp=Y%DF=N%TOS=0%IPLEN=38%RIPTL=148%RID=E%RIPCK=E%UCK=F%ULEN=134%DAT=E)
+T7(Resp=N)
+PU(Resp=Y%DF=N%TOS=0%IPLEN=38%RIPTL=148%RID=E%RIPCK=E%UCK=F%ULEN=134%DAT=E)
+
+
+
+
+Nmap run completed -- 1 IP address (1 host up) scanned in 16 seconds

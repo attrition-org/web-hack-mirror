@@ -1,0 +1,235 @@
+<html lang="EN-US" dir="LTR">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="Description" CONTENT=""><META NAME="KeyWords" CONTENT="Candy, chocolate, kosher, lactose free, corporate gifts, gifts, holiday, favors"><title>Candy Designs by Fran</title>
+<script language="JavaScript">
+<!--
+var currentLocation;
+var currentContent="front.html";
+var cdataLoaded=false;
+var goodBrowser=false;
+var appName=navigator.appName;
+var appVersion=parseInt(navigator.appVersion);
+if(appName=="Netscape") if(appVersion>=3) goodBrowser=true;
+if(appName=="Microsoft Internet Explorer")
+	if(appVersion<=2)
+		appVersion=3;
+	else
+		goodBrowser=true;
+if(appVersion<3){
+	alert("This shopping cart utilises frames and advanced JavaScript, and as such requires a version 3 browser.");
+	history.go(-1);
+}
+function splitStr(str,del) {
+	if(goodBrowser) return(str.split(del));
+	else {
+		var a=new Array();
+		var i=0; var j=0; k=0;
+		while(i!=-1) {
+			j=str.indexOf(del,i);
+			if(j!=-1) {
+				a[k]=str.substring(i,j);
+				k++;
+				i=j+del.length;
+				if(i==str.length) i=-1;
+			} else {
+				a[k]=str.substring(i,str.length);
+				i=-1;
+			}
+		}
+		return(a);
+	}
+}
+var mainLoaded=false;
+var coreLoaded=false;
+var totalLoaded=false;
+
+var cookiePath="";
+if(cookiePath=="" && location.pathname!="" && location.protocol.toLowerCase().substring(0,4)!="file") cookiePath=location.pathname;
+if(cookiePath!="") cookiePath=cookiePath.substring(0,cookiePath.lastIndexOf("/")+1);
+
+var cookieDomain="";
+if(cookieDomain=="" && location.hostname!="" && location.protocol.toLowerCase().substring(0,4)!="file") cookieDomain=location.hostname;
+
+var serverProtocol="";
+if(serverProtocol=="" && cookieDomain!="") serverProtocol="http://";
+
+function mArr(n) {
+	this.count=n;
+	return(this);
+}
+function parameter(name, value) {
+	this.name=name;
+	this.value=value;
+	return(this);
+}
+var queryString=location.search;
+var parameters=new mArr(0);
+var clickThrough="";
+if(queryString!="") {
+	queryString=queryString.substring(1,queryString.length);
+	var pairs=splitStr(queryString,"&");
+	for(var i=0; i<pairs.length; i++) {
+		temp=splitStr(pairs[i],"=");
+		parameters.count++;
+		parameters[i+1]=new parameter(unescape(temp[0]),unescape(temp[1]));
+		if(parameters[i+1].name.toLowerCase()=="mid") {
+			if(parameters[i+1].value!="") {
+				clickThrough=parameters[i+1].value;
+			}	
+		}
+		if(parameters[i+1].name.toLowerCase()=="target") {
+			if(parameters[i+1].value!="") {
+				currentContent=parameters[i+1].value;
+			}
+		}
+	}
+}
+if(clickThrough=="") {
+	clickThrough=getCookStr("CLICK_THROUGH");
+} else {
+	savCookStr("CLICK_THROUGH",clickThrough,90);
+}
+function savCookStr(name,str,exp) {
+	var strPath=cookiePath;
+	var strDomain=cookieDomain;
+	if(location.protocol.toLowerCase().substring(0,4)=="file") {
+		strPath="";
+		strDomain="";
+	}
+	var cookieStr="0400"+str;	// set version number
+	var cookie=name+"="+escape(cookieStr);
+	var expiration=new Date();
+	if (exp==-1) {
+		expiration.setYear(2010);
+		expiration.setMonth(01);
+		expiration.setDate(01);
+	} else {
+		var t=expiration.getTime();
+		var msPerDay=24*60*60*1000;
+		t+=(msPerDay*exp);
+		expiration.setTime(t);
+	}
+	if(exp!=0) {
+		cookie+="; expires="+expiration.toGMTString();
+	} else {	// zero duration...  explicitly clear cookie
+		cookie=name+"=";
+	}
+	if(strPath!="") {
+		cookie+="; path="+strPath;
+	}
+	if(strDomain!="") {
+		cookie+="; domain="+strDomain;
+	}
+	document.cookie=cookie;
+}
+
+function getCookStr(name) {
+	var allCookies=document.cookie;
+	var start=allCookies.indexOf(name+"=");
+	if(start==-1)
+		return("");
+	start+=name.length+1;
+	var end=allCookies.indexOf(';',start);
+	if(end==-1) end=allCookies.length;
+	var cookieStr=unescape(allCookies.substring(start,end));
+	if(cookieStr.length<4) return("");
+	if(cookieStr.substring(0,4)!="0400") return("");	// check version number
+	cookieStr=cookieStr.substring(4,cookieStr.length);
+	return(cookieStr);
+}
+
+function demo_alert() {
+	if(location.protocol.toLowerCase().substring(0,4)!="file") {
+		alert("Shops created with ShopFactory demo will not function online. Please register at http://www.shopfactory.com/");
+	}
+}
+
+
+
+function currency(currency_name, iso, currencyAbbrev, currency_multiplier, decimal_places) {
+	this.index = 0;
+	this.name = currency_name;
+	this.iso = iso;
+	this.abbrev = currencyAbbrev;
+	this.multiplier = currency_multiplier;
+	this.decimal_places = decimal_places;
+}
+var baseCurrency = new currency("", "", "", 1.0, 2);
+var currentCurrency = new currency("", "", "", 1.0, 2);
+var shopCurrency = new currency("", "", "", 1.0, 2);
+var euroCurrencies=new mArr(12);
+euroCurrencies[1]=new currency("European Currency Units", "EUR", "Euro",1.0,2);
+euroCurrencies[2]=new currency("Austrian Schillings", "ATS", "öS",13.7603,2);
+euroCurrencies[3]=new currency("Belgian Francs", "BEF", "BF",40.3399,2);
+euroCurrencies[4]=new currency("Dutch Guilders", "NLG", "fl.",2.20371,2);
+euroCurrencies[5]=new currency("Finnish Markka", "FIM", "Fmk",5.94573,2);
+euroCurrencies[6]=new currency("French Francs", "FRF", "F",6.55957,2);
+euroCurrencies[7]=new currency("German Marks", "DEM", "DM",1.95583,2);
+euroCurrencies[8]=new currency("Irish Punt", "IEP", "IEP",0.787564,2);
+euroCurrencies[9]=new currency("Italian Lira", "ITL", "Lit",1936.27,0);
+euroCurrencies[10]=new currency("Luxembourg Francs", "LUF", "LuxF",40.3399,2);
+euroCurrencies[11]=new currency("Portugese Escudo", "PTE", "Esc",200.482,2);
+euroCurrencies[12]=new currency("Spanish Pesetas", "ESP", "Ptas",166.386,2);
+function loadCurrencyData() {
+	if(goodBrowser) {
+		if(location.protocol.toLowerCase().substring(0,4)=="file") {
+			if(confirm("Currency conversion will only work if you are online.\nSelect 'Cancel' if you are NOT connected to the Internet.")) self.extra.cdata.location="cload.html";
+		} else self.extra.cdata.location="cload.html";
+	}
+}
+
+document.writeln("<frameset rows=\"35,*,23\"  framespacing=0 border=0>"); document.writeln("<frame src=\"button.html\" name=\"buttons\" noresize scrolling=\"no\" marginwidth=\"0\" marginheight=\"0\" frameborder=\"0\">"); document.writeln("<frame src=\"loading.html\" name=\"main\" marginwidth=\"0\" marginheight=\"0\" frameborder=\"0\">"); document.writeln("<frame src=\"extra.html\" name=\"extra\" noresize scrolling=\"no\" marginwidth=\"0\" marginheight=\"0\" frameborder=\"0\">"); document.writeln("</frameset>");
+
+//-->
+</script>
+</head>
+
+
+<body background="media/backforspecialty.jpg" bgcolor="#ffffff" link="#000000" vlink="#000000" text="#000000">
+<noscript>
+
+<center><font size=+3><B>Candy Designs by Fran</B></font></center>
+
+<TABLE cellspacing=20>
+<TR>
+	<TD valign=top><B>Oops,</B><BR>
+	 your browser does not support frames or you have <A HREF="#java">JavaScript</A> not enabled. You can still visit our shop - but you will have to manually add your order to the secure order form.</TD>
+	<TD valign=top><A HREF="toc.html"><B><FONT SIZE="+1">ENTER SHOP</FONT></B></A>
+	<P><A HREF="about.html"><b></B></A><P>
+	<A HREF="#up"><FONT SIZE="-1"><B>Upgrade browser</B></FONT></A>
+	<P><A HREF="#java"><FONT SIZE="-1"><B>Enable JavaScript</B></FONT></A>
+
+	</TD>
+	<TD valign=top><B><A HREF="http://www.aol.com/downloadaol.adp">AOL</A> or
+	<A HREF="http://www.compuserve.com/content/download.asp">Compuserve</A> users:</B><BR>
+	 <A HREF="#up">The newer versions</A> of your browsers support this shop. You can also minimize your browser when online to call up a Microsoft or Netscape browser on your computer to access all shop functions.</TD>
+</TR>
+</TABLE>
+
+<center><TABLE cellspacing=20>
+<tr><td>
+<B><A NAME="up"></A>Upgrade browser:</B>&nbsp;&nbsp;&nbsp;<A HREF="http://www.aol.com/downloadaol.adp">AOL</A>&nbsp;&nbsp;&nbsp;<A HREF="http://www.compuserve.com/content/download.asp">Compuserve</A>&nbsp;&nbsp;&nbsp;<A HREF="http://www.microsoft.com/ie/ie40/download/">Microsoft</A>&nbsp;&nbsp;&nbsp;<A HREF="http://www.netscape.com/computing/download/index.html?cp=hom11tdow">Netscape</A></TD>
+</TR>
+</TABLE></CENTER>
+<CENTER><TABLE>
+<TR>
+	<TD><B><A NAME="java"></A>Enable JavaScript</B>
+<P>
+<B>Netscape Navigator:</B> Choose OPTIONS from your menu bar. Choose NETWORK PREFERENCES. Choose LANGUAGES. Make sure that ENABLE JAVA, and ENABLE JAVA SCRIPT is enabled. Choose OK.<P>
+
+<B>Internet Explorer:</B> Choose VIEW from your Menu bar. Choose OPTIONS. Choose the ADVANCED tab. Make sure that ENABLE JAVA JIT COMPILER, and ENABLE JAVA LOGGING are both checked. Choose OK. Restart your browser for the settings to take effect.</TD>
+</TR>
+</TABLE></CENTER>
+
+
+</TD>
+</TR>
+</TABLE>
+
+
+</noscript>
+</body>
+</html>
+

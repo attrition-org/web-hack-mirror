@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<HTML>
+<HEAD>
+<TITLE>SMUS Virtual Tour</TITLE>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+	<META NAME="description" CONTENT="St. Michaels University School is a coeducational independent boarding school located in Victoria, BC, Canada.">
+	<META name="keywords" lang="en" content="SMUS, S.M.U.S., St. Michaels, St. Michaeals University, St. Michaels University School, education, K-12, independent school, boarding school, private school, coeducational school, Victoria, British Columbia, Canada, Independent Education, British Columbia Education, North American Boarding Schools">
+	<META name="author" content="David Stoll">
+	<META name="date" content="12 Aug 1998 14:30:00 PST">
+   <BASEFONT SIZE=3 FACE="Arial, Helvetica,Times Roman" > 
+</HEAD>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- hide script from old browsers
+//This script is reserved for non-commercial use only.
+//Contact the author for information regarding free use. licensing, and latest enhancements.
+//David Stoll <dstoll@smus.bc.ca> 6 March 1998
+//Browser compatibility check use:       if (document.images) { ... }
+//If object does not  exist, not supported by browser, evaluates as null (false).
+//If object is supported by the browser is not null, evaluates to not null (true)
+//stop JS error messages
+function stopError() { return true; }
+          window.onerror = stopError;
+
+function statusmsg(){
+   window.defaultStatus = "Welcome to St. Michaels University School in Victoria British Columbia Canada";
+}
+
+if (document.images) {
+    var delay = 6000;			 // delay rotating image display
+
+    var imgNumber = 0;		// first image to display
+    var maxImages = 2;		// total number of images not including 0
+    var startpic =0;			// Boolean picture flip
+    var now=new Date( );     		 // create new Date object
+    var loadpic = now.getDate( );	 // get day in month, load pic offset
+    loadpic = (loadpic *2) -1;
+
+   picArray = new Array();	
+   picArray[0] = new Image (500, 100);
+   picArray[0].src = "../images/rotate/Image0.jpg";
+   for (i = 1; i <= maxImages; i++) {
+	picArray[i] = new Image (500, 100);
+	picArray[i].src = "../images/rotate/Image" + ((loadpic + i)-1) + ".jpg";
+     }
+}
+
+    function Switch(){
+	if (startpic==0){
+	   document.nextpic.src = picArray[0].src;
+	    startpic =-1;}
+	else{
+	   document.nextpic.src = picArray[imgNumber].src;
+	   startpic =0;}
+	imgNumber++;
+	if (imgNumber > maxImages){
+	   imgNumber = 0;}
+	return;
+    }
+
+// end script hiding -->
+</SCRIPT>
+
+<BODY BGCOLOR="#FFFFCC" BACKGROUND="images/smuvw6003.gif"TEXT="#000000" LINK="#0000FF" VLINK="#800080" ALINK="#FF0000" onLoad="statusmsg()";>
+<CENTER>
+<TABLE CELLPADDING=1 CELLSPACING=1 WIDTH=620 LANG=en DIR=LTR  BORDER=0>
+
+<TR>
+	<TD ALIGN="LEFT" VALIGN="TOP"  WIDTH="210" HEIGHT="1"><IMG SRC="../img_menu/ivory1.jpg" WIDTH=135 HEIGHT=1 BORDER=0></TD>
+	<TD ALIGN="LEFT" VALIGN="TOP"  WIDTH="390" HEIGHT="1"><IMG SRC="../img_menu/ivory1.jpg" WIDTH=500 HEIGHT=1 BORDER=0></TD></TR>
+
+<TR>
+	<TD ALIGN="center"  WIDTH="160" COLSPAN=1 ROWSPAN=1>
+		<A HREF="../directory.htm"><IMG SRC="../img_menu/smus_sm.gif" ALT="St. Michaels University School" WIDTH=157 HEIGHT=45 HSPACE=2 VSPACE=0 BORDER=0 ALIGN="absmiddle"></A><BR><FONT SIZE=-2 COLOR="#0000cc">Victoria, British Columbia, Canada</FONT></TD>
+
+	<TD ALIGN="right" VALIGN="TOP" WIDTH="500" COLSPAN=1 ROWSPAN=1>
+	<CENTER>
+	<IMG  NAME="nextpic" SRC="images/anicrest.gif" ALT="SMUS animated crest" WIDTH=500 HEIGHT=100  VSPACE=1 BORDER=0  ALT="SMUS Crest" onload="setTimeout( 'Switch()', delay)">
+	</CENTER></TD></TR>
+
+<TR>
+	<TD ALIGN="left" VALIGN="TOP"  COLSPAN=2>
+		<FONT SIZE=-1><B>Please select a tour starting point, or follow the tour icon.</B></FONT></TD>
+
+<TR>
+	<TD ALIGN="left" VALIGN="bottom"  WIDTH="135">
+	<FONT SIZE=-2>|| <A HREF="../index.htm">SMUS Home Page</A> ||<BR>|| <A HREF="../directory.htm">SMUS Directory</A>&nbsp;&nbsp;&nbsp; ||</FONT></TD>
+
+	<TD ALIGN="left" VALIGN="TOP" WIDTH="500" COLSPAN=1 ROWSPAN=1>
+	<A HREF="welcome.htm"><IMG SRC="../img_menu/tour.gif" ALT="Tour SMUS" WIDTH=52 HEIGHT=49 HSPACE=2 VSPACE=22 BORDER=0 ALIGN="right"></A>
+		<UL TYPE="circle">
+		<LI><FONT SIZE=-1><A HREF="welcome.htm"><B>Welcome</B></A></FONT>
+		<LI><FONT SIZE=-1><A HREF="juniorsc.htm"><B>Junior School</B></A></FONT>
+		<LI><FONT SIZE=-1><A HREF="middlesc.htm"><B>Middle School</B></A></FONT>
+		<LI><FONT SIZE=-1><A HREF="seniorsc.htm"><B>Senior School</B></A></FONT>
+		<LI><FONT SIZE=-1><A HREF="thearts.htm"><B>Fine Arts</B></A></FONT>
+		<LI><FONT SIZE=-1><A HREF="outdoored.htm"><B>Outdoor Education</B></A></FONT>
+		<LI><FONT SIZE=-1>Sports</FONT>
+		<LI><FONT SIZE=-1><A HREF="admissions.htm"><B>Admissions</B></A></FONT>
+		<LI><FONT SIZE=-1><A HREF="boarding.htm"><B>Boarding</B></A></FONT>
+
+<LI><IMG SRC="images/3flags.gif" USEMAP="#flags" WIDTH=220 HEIGHT=48 HSPACE=1 VSPACE=1 BORDER=0 ALIGN="absmiddle">
+<MAP NAME="flags">
+<AREA SHAPE=RECT COORDS="2,1,71,47" HREF="../admissns/ad/adjpn.htm">
+<AREA SHAPE=RECT COORDS="76,1,145,47" HREF="../admissns/ad/adkor.htm">
+<AREA SHAPE=RECT COORDS="150,2,218,47" HREF="../admissns/ad/adger.htm">
+<AREA SHAPE=default HREF="../admissns/ad/index.htm">
+</MAP>
+		</UL></TD></TR>
+
+</TABLE>
+</CENTER>
+
+</BODY>
+</HTML>

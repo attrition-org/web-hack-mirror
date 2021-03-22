@@ -1,0 +1,175 @@
+<HTML>
+<HEAD><TITLE>The Bakersfield Underground - powered by the Ultimate Bulletin Board</title>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- HIDE
+var noNewLogin = "false";
+var dc = document.cookie;
+var sessionLogin = escape("");
+var sessionLoginDT = escape("");
+
+if (document.cookie) {
+var DaysPrune = getCookie("DaysPrune");
+	if (DaysPrune == null) {
+		var DaysPrune = "60";
+	}
+} else {
+var DaysPrune = "60";
+}
+
+expireDate = new Date;
+if (expireDate.getYear() < 100) {
+expireDate.setYear(expireDate.getYear() + 1900 + 1);
+} else {
+expireDate.setYear(expireDate.getYear()+1);
+}
+
+if (noNewLogin != "true") {
+
+if (document.cookie != "") {
+	thisCookie = document.cookie.split(";");
+	expireDate2 = new Date;
+	expireDate2.setYear(expireDate2.getYear()-1);
+	
+	for (i=0; i<thisCookie.length; i++) {
+	
+		cookieName = thisCookie[i].split("=")[0];
+		if ((cookieName == "lastLogin") || (cookieName == "LastLoginDT") || (cookieName == "sessionLogin") || (cookieName == "sessionLoginDT")) {
+		document.cookie = cookieName + "=;expires=" + expireDate2.toGMTString() + ";";
+		}
+	}
+}
+
+
+var CookieLogin = escape("2451650.1932");
+var CookieLoginDT = escape("04-15-2000 07:32 PM");
+
+	  document.cookie = "lastLogin=" + CookieLogin + ";expires=" + expireDate.toGMTString() + ";";
+  document.cookie = "LastLoginDT=" + CookieLoginDT + ";expires=" + expireDate.toGMTString() + ";";
+	  document.cookie = "sessionLogin=" + sessionLogin + ";";
+document.cookie = "sessionLoginDT=" + sessionLoginDT + ";";
+}
+
+function getCookie(name){
+var cname = name + "=";               
+var dc = document.cookie;
+if (dc.length > 0) {              
+    begin = dc.indexOf(cname);
+	 if (begin != -1) {           
+        begin += cname.length;
+		end = dc.indexOf(";", begin);
+            if (end == -1) end = dc.length;
+            return unescape(dc.substring(begin, end));        }
+}
+return null;
+}
+// STOP HIDING FROM OTHER BROWSERS -->
+</SCRIPT>
+</head>
+ <BODY bgcolor="#000000"   text="#000000" link="#ff0000" alink="#ff0000" vlink="#ff0000">
+<FONT FACE="Verdana, Arial" SIZE="2">
+<TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<TR>
+<TD WIDTH="84" VALIGN="BOTTOM"><A HREF="../index.html"><IMG SRC="../bakbal1.gif" WIDTH="84" HEIGHT="81" BORDER="0" ALT="{short description of image}"></A></TD>
+<TD WIDTH="100%" VALIGN="BOTTOM">&nbsp; 
+<TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0" VALIGN="BOTTOM" BORDER="0">
+<TR>
+<TD VALIGN="BOTTOM" HEIGHT="21">&nbsp;</TD>
+</TR>
+<TR>
+<TD BGCOLOR="#FFFF00" VALIGN="BOTTOM" HEIGHT="24"><P ALIGN="LEFT"><FONT COLOR="#000000" FACE="Arial, Helvetica">The Bakersfield Underground</FONT></P></TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>ALIGN="TOP"></A>
+<center>
+<table border=0 width=95%>
+<tr>
+<TD>
+<CENTER>
+<A HREF="Ultimate.cgi"><IMG SRC="http://www.bakunder.com/board/ubbhtml/bbtitle5.jpg"  BORDER=0></A>
+</CENTER>
+</td>
+<td>
+<CENTER>
+<B><FONT SIZE="3" FACE="Verdana, Arial" COLOR="#ffff00">The Bakersfield Underground</FONT></B>
+<br><FONT SIZE="1" FACE="Verdana, Arial">
+<A HREF="http://www.bakunder.com/board/ubbmisc.cgi?action=editbio&Browser=&DaysPrune=60&LastLogin="><ACRONYM TITLE="Click here to edit your profile.">profile</ACRONYM></A> | <A HREF="http://www.bakunder.com/board/Ultimate.cgi?action=agree"><ACRONYM TITLE="Registration is free!">register</ACRONYM></A> | <A HREF="http://www.bakunder.com/board/ubbmisc.cgi?action=setprefs"><ACRONYM TITLE="Set your preferences.">preferences</ACRONYM></A> | <A HREF="http://www.bakunder.com/board/ubbhtml/faq.html" target=_blank><ACRONYM TITLE="Frequently Asked Questions">faq</ACRONYM></A> | <A HREF="http://www.bakunder.com/board/search.cgi?action=intro"><ACRONYM TITLE="Perform a search by keyword, date, or name.">search</ACRONYM></A> 
+
+</FONT>
+</CENTER>
+</td></TR>
+</table>
+</center><FONT SIZE="1" FACE="Verdana, Arial"><A HREF="http://www.bakunder.com/board/search.cgi?action=getdaily">Click Here To View Today's Active Topics (all public forums)</A></FONT>
+<BR>
+<center>
+<table cellpadding=0 border=0 width="95%">
+<TR>
+<td valign=bottom align=left>
+<FONT SIZE="1" FACE="Verdana, Arial"></font>
+</td>
+<td valign=bottom align=right><FONT SIZE="1" FACE="Verdana, Arial"></font></td></tr>
+</table>
+
+
+
+<table cellpadding=4 cellspacing=1 border=0 width="95%">
+<tr bgcolor="#ffffff">
+<TD>&nbsp;</TD>
+<td valign=bottom>
+<FONT SIZE="1" FACE="Verdana, Arial" COLOR="#000000"><B>Forum</B></FONT>
+</td>
+<td NOWRAP valign=bottom align=center><b>
+<FONT SIZE="1" FACE="Verdana, Arial" COLOR="#000000">Topics</FONT></B>
+</td><td NOWRAP valign=bottom align=center><B>
+<FONT SIZE="1" FACE="Verdana, Arial" COLOR="#000000">Posts</FONT></B>
+</td>
+<td NOWRAP valign=bottom align=center>
+<FONT SIZE="1" FACE="Verdana, Arial" COLOR="#000000"><B>Last Post</B></FONT>
+</td>
+<td valign=bottom>
+<FONT SIZE="1" FACE="Verdana, Arial" COLOR="#000000"><B>Moderator</B></FONT>
+</td></tr>
+<TR>
+<TD bgcolor="#000000" valign=top></td>
+<TD bgcolor="#f7f7f7" valign=top><FONT SIZE="2" FACE="Verdana, Arial"><B>
+<A HREF="http://www.bakunder.com/board/forumdisplay.cgi?action=topics&forum=General+Discussions&number=1&DaysPrune=60&LastLogin=">General Discussions</A></B></FONT><BR>
+<FONT SIZE="1" FACE="Verdana, Arial">
+
+</FONT>
+</td>
+<td bgcolor="#dedfdf" align=center valign=top NOWRAP>
+<FONT SIZE='2' FACE="Verdana, Arial">0</FONT>
+</td><td bgcolor="#f7f7f7" align=center valign=top NOWRAP>
+<FONT SIZE='2' FACE="Verdana, Arial">0</FONT>
+</td><td bgcolor="#dedfdf" NOWRAP valign=top align=center>
+<FONT SIZE="" FACE="Verdana, Arial"> <FONT COLOR="#ffffff" SIZE="" FACE="Verdana, Arial">&nbsp;</FONT>
+</td>
+<td bgcolor="#f7f7f7" valign=top>
+<FONT SIZE='2' FACE="Verdana, Arial">&nbsp;</FONT></td></tr>
+</table>
+
+<P>
+<table border=0 width=95%>
+<TR>
+<td valign=top align=left>
+<FONT SIZE="1" FACE="Verdana, Arial"></font>
+</td><TD valign=top align=left>
+<FONT SIZE="1" FACE="Verdana, Arial">All times are PT (US).</font></td></tr></table>
+</center>
+<P><FONT SIZE="1" FACE="Verdana, Arial">
+<P></font><P><center>
+<B><FONT SIZE="2" FACE="Verdana, Arial">
+<A HREF="mailto:webmaster@bakunder.com">Contact Us</A> | <A HREF="../index.html" target=_top>http://www.bakunder.com</A>
+</B></FONT>
+<P>
+<FONT COLOR="#dedfdf" size="1" FACE="Verdana, Arial">
+<P>
+Powered by: 
+Ultimate Bulletin Board, Version 5.38a<BR>&copy; Madrona Park, Inc., 1998-1999.
+<br><br>
+</FONT>
+</CENTER></font>
+
+</body></html>

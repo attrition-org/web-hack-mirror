@@ -1,0 +1,39 @@
+<body text="#FFFFFF" background="http://www.gni.com.cn/icon/vod_back.gif" link="#00FF00" vlink="#00FFFF" alink="#FF0000">
+<h3>视讯 VOD <FONT size=+2 COLOR="#FFFF00">影视 </font>点播搜索</h3><hr size=2>
+<form action="/gdcatv/owa/vod.searchMedia" method="post">
+<p>影片名字数:<select name=s_number size=1>
+<option></option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
+<option>10</option>
+<option>11</option>
+<option>12</option>
+<option>13</option>
+<option>14</option>
+<option>15</option>
+<option>>15</option>
+</select></p>
+<p>影片名包含词:<input type=text size=20 maxlength=30 name="s_keyword"></p>
+<p>产地分类:<select name="s_detail_type" size=1>
+<option selected></option>
+<option>西片</option>
+</select></p>
+<p>译后语种:<select name="s_language" size=1>
+<option selected></option>
+<option>Not known(空值)</option>
+<option>国语</option>
+<option>英语</option>
+</select></p>
+<input type=hidden name=s_singer value="">
+<input type=hidden name=s_type value=电影>
+<input type=hidden name=s_page value="1">
+<input type=submit name=s_button value="搜索(Search)">
+<input type=reset value="清除(Reset)">
+</form></body>

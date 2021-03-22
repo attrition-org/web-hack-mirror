@@ -1,0 +1,142 @@
+<HTML>
+<BODY BGCOLOR=#FFFFFF>
+<CENTER>
+<!--#exec cmd="/www/wwwfiles/FantasySportsNET/cgi-bin/ad_image.pl" -->
+</CENTER>
+<FONT SIZE=-3>
+<A HREF="advertise.html">Advertising Corner</A>
+</FONT>
+<Hr>
+<CENTER>
+<H1>Rank the MLB players</H1>
+<H3>Fantasy SportsNET lets you rank the MLB players by your scoring method!  No more
+wondering how your scoring method might affect the way a site has the players ranked,
+use your method to find the player rankings right now!</H3>
+</CENTER>
+<B>Stats are now up through the end of the season</B><BR>
+<FORM METHOD="POST" ACTION="http://fsn.thetop.net/cgi-bin/rankbase">
+
+   <P>What stats would you like to use?
+   <OL>
+    <LI>1999 Season <INPUT NAME="stats" TYPE=radio VALUE="1999">
+    <LI>Last Season (2000) <INPUT NAME="stats" TYPE=radio VALUE="last_season">
+    <LI>This season (2001)<INPUT NAME="stats" TYPE=radio VALUE="this_season">
+   </OL>
+
+   <P>Rank:
+   <OL>
+    <LI>Batters <INPUT NAME="rankwho" TYPE=radio VALUE="batters">
+    <LI>Pitchers <INPUT NAME="rankwho" TYPE=radio VALUE="pitchers">
+    <LI>Both <INPUT NAME="rankwho" TYPE=radio VALUE="both">
+   </OL>
+
+   <P>Rank by:
+   <OL>
+    <LI>Position<INPUT NAME="rankby" TYPE=radio VALUE="position">
+    <LI>Overall <INPUT NAME="rankby" TYPE=radio VALUE="overall">
+   </OL>
+
+    <P>What sorting method do you wish to implement?
+    <OL>
+	<LI>Fantasy Points Per Game Played <INPUT NAME="sort" TYPE=radio VALUE="sort_fppg">
+	<LI>Total Fantasy Points <INPUT NAME="sort" TYPE=radio VALUE="sort_tfp">
+	<LI>Alphabetically <INPUT NAME="sort" TYPE=radio VALUE="alpha">
+    </OL>
+<P> Please enter minimum games played to list: <INPUT NAME="minimum_gp" TYPE=text SIZE=2 VALUE="1">
+<P> Please enter number of players to list: <INPUT NAME="rank_num" TYPE=text SIZE=3 VALUE="10">
+<P> Now enter the value of each category in your fantasy league (if you are ranking both batters and pitchers
+then you must set values for batters<B> AND </B> pitchers):<BR>
+(The value entered here will be multiplied times the stat category listed)<BR>
+<H4> Batters </H4>
+<TABLE CELLPADDING=8>
+<TR>
+<TD>
+AVE<BR><INPUT NAME="avg" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+<TD>
+SLG<BR><INPUT NAME="slg" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+<TD>
+OBP<BR><INPUT NAME="obp" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+<TD>
+HIT<BR><INPUT NAME="hit" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+<TD>
+2B<BR><INPUT NAME="doub" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+<TD>
+3B<BR><INPUT NAME="trip" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+</TR>
+<TR>
+<TD>
+HR<BR><INPUT NAME="hr" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+<TD>
+SB<BR><INPUT NAME="sb" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+<TD>
+CS<BR><INPUT NAME="cs" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+<TD>
+BB<BR><INPUT NAME="bbb" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+<TD>
+K<BR><INPUT NAME="so" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+<TD>
+Run<BR><INPUT NAME="runb" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+<TD>
+RBI<BR><INPUT NAME="rbi" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+<TD>
+Error<BR><INPUT NAME="err" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+</TR>
+</TABLE>
+<H4>Pitchers</H4>
+<TABLE CELLPADDING=8>
+<TR>
+<TD>
+ERA<BR><INPUT NAME="era" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+<TD>
+WHIP<BR><INPUT NAME="whip" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+<TD>
+IP<BR><INPUT NAME="ip" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+<TD>
+K<BR><INPUT NAME="k" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+<TD>
+ER<BR><INPUT NAME="er" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+<TD>
+Run Allowed<BR><INPUT NAME="runp" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+<TD>
+BB<BR><INPUT NAME="bbp" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+</TR>
+<TR>
+<TD>
+W<BR><INPUT NAME="w" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+<TD>
+L<BR><INPUT NAME="l" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+<TD>
+SV<BR><INPUT NAME="sv" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+<TD>
+</TR>
+</TABLE>
+<P><INPUT TYPE=submit VALUE="Get Rankings!"> <INPUT TYPE=reset>
+</FORM>
+</body>
+<!--#exec cgi="cgi-bin/log.cgi" -->
+</html>
+

@@ -1,0 +1,97 @@
+<html>
+
+<head>
+<title>Unisis</title>
+<base target="contents">
+<style>
+    a.menulink {
+		text-decoration: none;
+		font-size:12px;
+		color: white;
+		font-family : Verdana,Tahoma, Arial;
+		}
+
+
+	A:HOVER {
+		text-decoration : none;
+		color: lightblue;
+
+
+		}
+	A:ACTIVE {
+		text-decoration: none;
+		color: white;
+
+	}
+	A:VISITED {
+		text-decoration: none;
+		color: white;
+
+	}
+ 	A:VISITED:HOVER {
+		text-decoration : none;
+		color: lightblue;
+
+		}
+
+</style>
+<script Language="JavaScript">
+   function Array(num) {
+	   this.length = num;
+	 for (var i=0;i<num;i++) {
+		this[i] = 0;
+	 }
+	return this;
+   }
+
+  var texto = new Array(5);
+  var texton = new Array(5);
+
+// Netscape
+
+texton[0]="<font face='Tahoma,Verdana,Arial' size='-1' color='black'>  Tradição e Experiência em Controle Patrimonial e Avaliações </font>";
+texton[1]="<font face='Tahoma,Verdana,Arial' size='-1' color='black'>  Serviços e Produtos oferecidos pela Unisis </font>";
+texton[2]="<font face='Tahoma,Verdana,Arial' size='-1' color='black'>  Perguntas e respostas mais frequentes  (FAQ) </font> ";
+texton[3]="<font face='Tahoma,Verdana,Arial' size='-1' color='black'>  Dicas e dúvidas sobre nossos sistemas </font> ";
+
+// Internet Explorer
+texto[0]="<font face='Tahoma,Verdana,Arial' size='-1' color='black'>  Tradição e Experiência em Controle Patrimonial e Avaliações </font>";
+texto[1]="<font face='Tahoma,Verdana,Arial' size='-1' color='black'>  Serviços e Produtos oferecidos pela Unisis </font>";
+texto[2]="<font face='Tahoma,Verdana,Arial' size='-1' color='black'>  Perguntas e respostas mais frequentes  (FAQ) </font> ";
+texto[3]="<font face='Tahoma,Verdana,Arial' size='-1' color='black'>  Dicas e dúvidas sobre nossos sistemas </font> ";
+
+function printTexto(valor){
+
+	navegador = (navigator.appName == "Microsoft Internet Explorer");
+
+	if(navegador){
+		Texto.innerHTML = texto[valor];
+	} else {
+		document["Texto"].document.write(texton[valor]);
+		document["Texto"].document.close();
+	}
+}
+</script>
+</head>
+
+<body topmargin="0" leftmargin="0" bgcolor="#687E99" MARGINWIDTH="0" MARGINHEIGHT="0" BOTTOMMARGIN="0" RIGHTMARGIN="0" LEFTMARGIN="0">
+<table border="0" width="800" cellspacing="0" cellpadding="0" height="66">
+  <tr>
+    <td rowspan="2" bgcolor="#000000" width="135" height="66"><p align="center"><img src="images/logo.gif" width="67" height="64"></td>
+    <td rowspan="2" bgcolor="#000000" width="56" height="66"><img src="images/button/menusup.gif" WIDTH="56" HEIGHT="66"></td>
+    <td bgcolor="#000000" width="631" height="16]"><p align="right"><i><font color="#FFFFFF"><a class="menulink" href="servicos.htm" target="corpo" onMouseOver="printTexto(1)" onMouseOut="printTexto(0)">&nbsp;&nbsp;&nbsp;
+    Serviços/Produtos &nbsp;&nbsp;</a> <a class="menulink" href="action/action.asp?pagina=../faq.htm&permisao=1" target="corpo" onMouseOver="printTexto(2)" onMouseOut="printTexto(0)">&nbsp;&nbsp;
+    &nbsp;FAQ&nbsp;&nbsp;&nbsp;</a></font> 
+      <a class="menulink" href="ajuda.htm" style="cursor:help" target="corpo" onMouseOver="printTexto(3)" onMouseOut="printTexto(0)">&nbsp;&nbsp;&nbsp;Ajuda&nbsp;&nbsp;&nbsp;</a> </i></td>
+  </tr>
+  <tr>
+    <td width="609" height="49" background="images/fundotab.gif">&nbsp;&nbsp; </td>
+  </tr>
+</table>
+<div id="Texto" style="position:absolute;width:810;height:19;top: 35;left:430"><font face="Tahoma,Verdana,Arial" size="-1" color="black">
+
+<p>Tradição e Experiência em Controle Patrimonial e Avaliações </font></p>
+</div>
+</body>
+</bottommargin="0">
+</html>

@@ -1,0 +1,719 @@
+<html>
+<head>
+<meta content="HTML Tidy, see www.w3.org" name="generator">
+<!-- #BeginEditable "doctitle" -->
+<title>Weather: UK</title>
+<!-- #EndEditable -->
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<script type="text/javascript" language="JavaScript"
+src="js/adcode.js">
+</script>
+
+<script lanuage="javascript">
+<!-- hide
+
+//ARRAYS FOR SUB MENUS - ('linktext','linkurl')
+
+//Home sub menu
+homeSub = new Array();
+//homeSub[0] = new Array('linktext','linkurl');
+//homeSub[1] = new Array('linktext','linkurl');
+
+//Britain sub menu
+britainSub = new Array();
+//britainSub[0] = new Array('linktext','linkurl');
+
+//World sub menu
+worldSub = new Array();
+//worldSub[0] = new Array('linktext','linkurl');
+//worldSub[1] = new Array('linktext','linkurl');
+//worldSub[2] = new Array('linktext','linkurl');
+
+//Business sub menu
+businessSub = new Array();
+//businessSub[0] = new Array('linktext','linkurl');
+
+//Sport sub menu
+sportSub = new Array();
+//sportSub[0] = new Array('linktext','linkurl');
+
+//Entertainment sub menu
+entertainmentSub = new Array();
+//entertainmentSub[0] = new Array('linktext','linkurl');
+
+//Weather sub menu
+weatherSub = new Array();
+weatherSub[0] = new Array('UK Regions','/weather/regions_southeast.shtml');
+
+
+
+//HTML CODE FOR SUBMENU ITEM
+subLinkHtml_pt1 = '<tr><td width="15" valign="top"><img src="/images/menu_arrow_off.gif" width="17" height="10" vspace="2" name=';
+
+subLinkHtml_pt2 = '><br></td><td width="106" valign="top"><font face="Arial, Helvetica, sans-serif" size="1" color="#FFFFFF" class="navChannelsSmall"><a href="';
+
+subLinkHtml_pt3 = '" class="leftnav">&nbsp;';
+
+subLinkHtml_pt4 = '</a></font><br clear=left></td></tr>';
+
+
+
+//CODE TO FIND CHANNEL NAME//
+	
+	//get file path name
+	var pageUrl = window.location + "";
+	
+	//set up default values
+	var channelName = "default";
+	var channelSubPageName = "default";
+	
+	//get server root...
+	var re = /[^\/]+\/\/[^\/]+\/?/;
+	var resultsArray = re.exec( pageUrl );
+	var root = resultsArray[0];
+	
+	//...and remove it from file path
+	var localFilePath = ( pageUrl ).slice(root.length); 
+	
+	//special case for home page if page is name not entered in browser
+	if (localFilePath == "")
+	{
+		channelName = "index";
+	}
+	else
+	{
+		//if top level file (no more /'s) remove file suffix to get the channel name...
+		if (localFilePath.indexOf("/") == -1)
+		{
+			channelName = localFilePath.slice(0,localFilePath.indexOf("."));
+		}
+		else
+		{
+			//...otherwise - get the channel name from the first level directory
+			channelName = localFilePath.slice(0,localFilePath.indexOf("/"));
+			
+			//if it it's a news or archive page we need the channel from within the news directory
+			if (channelName == "news" || channelName == "archive")
+			{
+				tempChannelName = (localFilePath.slice(0,localFilePath.lastIndexOf("/")));	
+				channelName = tempChannelName.slice(tempChannelName.lastIndexOf("/")+1);
+			}
+			else
+			{
+				//otherwise it's a sub-page and we need the name of the file itself...
+				tempChannelSubPageName = (localFilePath.slice(localFilePath.lastIndexOf("/")+1));	
+				channelSubPageName = (tempChannelSubPageName.slice(0,tempChannelSubPageName.indexOf(".")));
+			}
+		}
+	}
+	
+	//extra fix (bodge) for weather section as some sub-pages should still point to 'weather'
+	if ((channelName == "weather") && (channelSubPageName != "default"))
+	{
+		if ((channelSubPageName == "uktomorrow") || (channelSubPageName == "ukoutlook"))
+		{
+			channelSubPageName = "default";
+		}
+		else
+		{
+			channelSubPageName = "regions_southeast";
+		}
+	}
+
+	//extra fix (bodge) for specials section 
+	if (channelName == "specials")
+	{
+		channelSubPageName = "default";
+	}
+	
+	//CODE TO OUTPUT CORRECT SUBMENU
+	
+	//initialise array to hold submenu html code
+	var printArray = new Array("","","","","","","");
+	
+	//set up master array of sub menus
+	channelArray = new Array(new Array('index',homeSub),new Array('britain',britainSub),new Array('world',worldSub),new Array('business',businessSub),new Array('sport',sportSub),new Array('entertainment',entertainmentSub),new Array('weather',weatherSub));
+	
+	
+	//set up appropriate sub menu
+	for (x=0; x < channelArray.length; x++) 
+	{
+		if (channelArray[x][0] == channelName) 
+		{
+			if (channelArray[x][0].length > 0) 
+			{
+				for (i=0; i < channelArray[x][1].length; i++) 
+				{
+					linkText = channelArray[x][1][i][0];
+					linkUrl = channelArray[x][1][i][1];
+					imgName = linkUrl.slice(0,linkUrl.indexOf("."));
+				
+					if (imgName.lastIndexOf("/") != -1) 
+					{
+						imgName = imgName.slice(imgName.lastIndexOf("/")+1);
+					}
+				
+					printArray[x] += subLinkHtml_pt1 + imgName + subLinkHtml_pt2 + linkUrl + subLinkHtml_pt3 + linkText + subLinkHtml_pt4;
+				}
+			}	
+		}
+	}
+	
+
+//hilite the correct section
+function hiliteArrow() {
+	if (channelSubPageName != "default") {
+		if (document.images[channelSubPageName]) {
+			document.images[channelSubPageName].src = "/images/sub_menu_arrow.gif";
+		}
+	}
+	else
+	{
+		if (document.images[channelName]) {
+			document.images[channelName].src = "/images/menu_arrow.gif";
+		}
+	}
+}
+	
+	
+function MM_reloadPage(init) {  //fixes stylesheet bug in Nav4 and reloads the window if resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+
+function MM_swapImage() { //v3.0, used by all button rollovers
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function MM_swapImgRestore() { //v3.0, used by all button rollovers
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v3.0, used by all button rollovers
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document); return x;
+}
+
+//function to generate image directory path and preload images for home page
+function preloadImagesHome() {
+	
+//build the image directory path
+	imageDir = "/images/"
+
+//preload images from appropriate directory
+	image1 = new Image();
+	image1.src = imageDir + "rltvon.gif";
+
+	image2 = new Image();
+	image2.src = imageDir + "rlradioon.gif";
+
+	image3 = new Image();
+	image3.src = imageDir + "rlaudioon.gif";
+
+	image3 = new Image();
+	image3.src = imageDir + "rldemandon.gif";
+
+	image3 = new Image();
+	image3.src = imageDir + "rltickeron.gif";
+}
+
+
+
+//function to generate image directory path and preload images for section pages
+function preloadImagesSection() {
+	
+//build the image directory path
+	//imageDir = "/" + channelName + "/images/"
+
+//preload images from appropriate directory
+	//image1 = new Image();
+	//image1.src = imageDir + "rl1on.gif";
+
+	//image2 = new Image();
+	//image2.src = imageDir + "rl2on.gif";
+
+	//image3 = new Image();
+	//image3.src = imageDir + "rl3on.gif";
+}
+
+
+
+function gotoUrl(url) {//used by all drop down jump menus 
+ if (url!= "") top.location=url}
+
+
+function popPoll() {//pops up vote window
+  popupWin = window.open('/cgi-bin/poll.cgi', 'ITN', 'noscrollbars,non-resizable,width=492,height=200')
+}
+
+
+function popTicker(){//pops up news ticker window
+window.open("/media/news_ticker/ticker.htm","headlines","width=390,height=100,scrollbars=no,toolbar=no");
+}
+
+
+
+function popUpWin(srcFile) {
+	options = "toolbar=0,status=0,menubar=0,scrollbars=0,resizable=0,width=540,height=540"; 
+	newwindow=window.open(srcFile,"ITN", options);
+}
+
+
+function searchFunction(formRef) 
+{
+
+  if ( formRef.q.value == '' )
+        {
+            return false;
+        }
+        var e;
+        for ( var i = 0;i < formRef.engine.length;i++ )
+        {
+            if ( formRef.engine[i].checked )
+            {
+                e = formRef.engine[i].value;
+            }
+        }
+        if ( e == 'Google' )
+        {
+            var q = formRef.q.value;
+            window.open(
+                'http://www.ukplus.com/ukplus/SilverStream/Pages/pgUKPlusSearch.html?search=' + q,
+                '_blank'
+            );
+            return false;
+        }
+        if ( e == 'ITN' )
+        {
+            var q = formRef.q.value;
+            window.open(
+                '/search?q=' + q,
+                '_self'
+            );
+            return false;
+        }
+        if ( e == 'Ask Jeeves' )
+        {
+            var q = formRef.q.value;
+            window.open(
+                'http://www.ask.co.uk/main/askjeeves.asp?ask=' + q,
+                '_blank'
+            );
+            return false;
+        }
+        return true;
+}
+
+
+
+
+// seek -->
+</script>
+
+<!-- #BeginEditable "cssExternal" -->
+
+<!-- #EndEditable -->
+<link href="/css/section.css" rel="stylesheet" type="text/css">
+</head>
+<body background="/images/background_sub.gif" link="#000000" bgcolor="#FFFFFF" text="#000000" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" onLoad="hiliteArrow();">
+<script language="javascript">
+<!--  Adds div layer to Mac IE4 and above to prevent text flow breaks between tables
+//detect versions of Mac Internet Explorer versions 4 and above
+var agt = navigator.userAgent.toLowerCase();
+var is_iemac = agt.indexOf('msie') != -1 && agt.indexOf("mac")!=-1;
+var majorVersion = parseInt(navigator.appVersion);
+
+if(is_iemac && (majorVersion >= 4)){
+document.write('<div id="pageSpace" style="position:absolute; width:775; left: 0; top: 0; overflow: auto">');
+}
+//-->
+</script>
+<!-- Table Block for Left Nav begins -->
+<table align="left" cellpadding="0" cellspacing="0" border="0" width="146">
+<tr>
+<td width="140" valign="top">
+        <img src="images/ITN_logo_arrows.gif" width="138" height="155" BORDER="0" ALT="ITN"><br> <!-- #BeginLibraryItem "/dwLib/global.navChannels.dynamic.lbi" --><table width="121" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="15" align="left" valign="middle" height="9"><img src="images/menu_arrow_off.gif" width="17" height="13" name="index"></td>
+    <td width="106" class="navChannels" height="9"> <font face="Arial, Helvetica, sans-serif" size="3" class="navChannels"><a href="index.shtml" class="leftnav">Home</a></font></td>
+  </tr>
+  
+<script language="javascript">
+<!-- hide
+if (printArray) {
+	document.writeln(printArray[0]);
+}
+// seek -->
+</script>
+  
+  <tr> 
+    <td width="15"><img src="images/menu_arrow_off.gif" width="17" height="13" vspace="2" name="britain"></td>
+    <td width="106" class="navChannels"> <font face="Arial, Helvetica, sans-serif" size="3" color="#FFFFFF" class="navChannels"><a href="britain.shtml" onMouseOver="window.status='The latest news in Britain, brought to you by ITN';return true;" onMouseOut="window.status='';return true" class="leftnav">Britain</a></font></td>
+  </tr>
+  
+<script language="javascript">
+<!-- hide
+if (printArray) {
+	document.writeln(printArray[1]);
+}
+// seek -->
+</script>
+
+  <tr> 
+    <td width="15"><img src="images/menu_arrow_off.gif" width="17" height="13" vspace="2" name="world"></td>
+    <td width="106" class="navChannels"> <font face="Arial, Helvetica, sans-serif" size="3" color="#FFFFFF" class="navChannels"><a href="world.shtml" onMouseOver="window.status='World news brought to you by ITN\'s international team of journalists';return true;" onMouseOut="window.status='';return true" class="leftnav">World</a></font></td>
+  </tr>
+  
+<script language="javascript">
+<!-- hide
+if (printArray) {
+	document.writeln(printArray[2]);
+}
+// seek -->
+</script>
+
+  <tr> 
+    <td width="15"><img src="images/menu_arrow_off.gif" width="17" height="13" vspace="2" name="business"></td>
+    <td width="106" class="navChannels"> <font face="Arial, Helvetica, sans-serif" size="3" color="#FFFFFF" class="navChannels"><a href="business.shtml" onMouseOver="window.status='ITN brings the latest commercial news to your desktop';return true;" onMouseOut="window.status='';return true" class="leftnav">Money</a></font></td>
+  </tr>
+  
+<script language="javascript">
+<!-- hide
+if (printArray) {
+	document.writeln(printArray[3]);
+}
+// seek -->
+</script>
+
+  <tr> 
+    <td width="15"><img src="images/menu_arrow_off.gif" width="17" height="13" vspace="2" name="sport"></td>
+    <td width="106" class="navChannels"> <font face="Arial, Helvetica, sans-serif" size="3" color="#FFFFFF" class="navChannels"><a href="sport.shtml" onMouseOver="window.status='Sports news from ITN plus a fan\'s forum, goal ticker, sports archive and much more';return true;" onMouseOut="window.status='';return true" class="leftnav">Sport</a></font></td>
+  </tr>
+  
+<script language="javascript">
+<!-- hide
+if (printArray) {
+	document.writeln(printArray[4]);
+}
+// seek -->
+</script>
+
+  <tr> 
+    <td width="15"><img src="images/menu_arrow_off.gif" width="17" height="13" vspace="2" name="entertainment"></td>
+    <td width="106" class="navChannels"> <font face="Arial, Helvetica, sans-serif" size="3" color="#FFFFFF" class="navChannels"><a href="entertainment.shtml" onMouseOver="window.status='ITN brings you the latest in celebrity news - fashion, music and of course Hollywood';return true;" onMouseOut="window.status='';return true" class="leftnav">Entertainment</a></font></td>
+  </tr>
+  
+<script language="javascript">
+<!-- hide
+if (printArray) {
+	document.writeln(printArray[5]);
+}
+// seek -->
+</script>
+
+  <tr> 
+    <td width="15"><img src="images/menu_arrow_off.gif" width="17" height="13" vspace="2" name="weather"></td>
+    <td width="106" class="navChannels"> <font face="Arial, Helvetica, sans-serif" size="3" color="#FFFFFF" class="navChannels"><a href="weather.shtml" onMouseOver="window.status='National forecast, UK cities, satellite image and regional weather';return true;" onMouseOut="window.status='';return true" class="leftnav">Weather</a></font></td>
+  </tr>
+  
+<script language="javascript">
+<!-- hide
+if (printArray) {
+	document.writeln(printArray[6]);
+}
+// seek -->
+</script>
+	<tr>
+	<td>&nbsp;</td><td>&nbsp;</td>
+	</tr>
+
+  <tr> 
+    <td width="15"><img src="images/menu_arrow_off.gif" width="17" height="13" vspace="2" name="olympics"></td>
+    <td width="106" class="navChannels"> <font face="Arial, Helvetica, sans-serif" size="3" color="#FFFFFF" class="navChannels"><a href="olympics/index.shtml" onMouseOver="window.status='In depth coverage of the Sydney 2000 games from the ITN Olympic team';return true;" onMouseOut="window.status='';return true" class="leftnav">Olympics 
+      2000</a></font></td>
+  </tr>
+	<tr>
+	<td>&nbsp;</td><td>&nbsp;</td>
+	</tr>
+	<tr> 
+    <td width="15"><img src="images/menu_arrow_off.gif" width="17" height="13" name="specials"></td>
+    <td width="106" class="navChannels"><font face="Arial, Helvetica, sans-serif" size="1" color="#FFFFFF" class="navChannelsSmall"><a href="specials.shtml" class="leftnav">Special Reports</a></font></td>
+	</tr>
+	<tr> 
+    <td colspan="2"><img src="images/menu_arrow_off.gif" width="1" height="2"></td>
+	</tr>
+ 	<tr> 
+    <td width="15"><img src="images/menu_arrow_off.gif" width="17" height="13" name="contacts"></td>
+    <td width="106" class="navChannels"><font face="Arial, Helvetica, sans-serif" size="1" color="#FFFFFF" class="navChannelsSmall"><a href="contacts.shtml" class="leftnav">Contact 
+        ITN</a></font></td>
+	</tr>
+	<tr> 
+    <td width="15"><img src="images/menu_arrow_off.gif" width="17" height="13" name="help"></td>
+    <td width="106" class="navChannels"><font face="Arial, Helvetica, sans-serif" size="1" color="#FFFFFF" class="navChannelsSmall"><a href="help.shtml" class="leftnav">Help</a></font></td>
+	</tr>
+	<tr> 
+    <td width="15"><img src="images/menu_arrow_off.gif" width="17" height="13" name="company"></td>
+    <td width="106" class="navChannels"><font face="Arial, Helvetica, sans-serif" size="1" color="#FFFFFF" class="navChannelsSmall"><a href="company.shtml" class="leftnav">The Company</a></font></td>
+	</tr>
+	<tr> 
+    <td width="15"><img src="images/menu_arrow_off.gif" width="17" height="13" name="terms"></td>
+    <td width="106" class="navChannels"><font face="Arial, Helvetica, sans-serif" size="1" color="#FFFFFF" class="navChannelsSmall"><a href="terms.shtml" class="leftnav">Terms/Conditions</a></font></td>
+	</tr>
+</table><!-- #EndLibraryItem --><br>
+<p></p>
+<form method="post" action="">
+</form>
+<!-- #BeginLibraryItem "/Library/global.navSearchBox.lbi" -->
+<table width="120" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+<form method=GET action="/search" name="searchForm" onSubmit="return searchFunction(this)">
+    <td width="17"><img src="images/menu_arrow_off.gif" width="17" height="13" vspace="2"></td><td width="103" colspan="2" bgcolor="003366"> 
+        <table cellpadding="4" width="100%">
+          <tr> 
+            <td> <font face="Arial, Helvetica, sans-serif" size="3" class="main_nav_boxedhead"><span class="navSearchBoxHead">Search</span></font><br>
+<input type=RADIO name=engine CHECKED value="ITN"  class="NavSearchBoxInput">
+              <font face="Arial, Helvetica, sans-serif" size="1" class="navChannelsSmall">ITN 
+              <br>
+<input type=RADIO name=engine value="ukplus"  class="NavSearchBoxInput">
+              UK Plus
+
+</font> 
+              <table border="0" cellspacing="0" cellpadding="2" width="100%">
+                <tr> 
+                  <td valign="top" align=center><font face="Verdana,Arial, Helvetica, sans-serif" size="1"> 
+                    <input type="text" name="q" size="12" maxlength="25" class="NavSearchBoxInput"> 
+                  </font><br> <font face="Arial, Helvetica, sans-serif" size="1"
+                  class="navChannelsSmall"><a href="advsearch" class="navLine">Advanced</a></font> 
+                </td></tr>
+              </table></td></tr>
+        </table></td></form></tr>
+  </table><!-- #EndLibraryItem -->
+
+
+      </td><td width="6" valign="top"><img height="8" width="6" src="images/pixel_clear.gif"></td>
+</tr>
+</table>
+<!-- Table Block for Left Nav ends -->
+
+<!-- Table Block for Header and Main Content begins -->
+<table align="left" border="0" cellspacing="0" cellpadding="0" width="468">
+<tr>
+<td width="468" valign="top">
+<table height="66" border="0" cellspacing="0" cellpadding="0" width="468">
+<tr>
+<td height="66" valign="top"><script type="text/javascript" language="JavaScript">
+                 <!--
+                 insert_ad( );
+                 document.write('<br /><img src="images/pixel_clear.gif" width="468" height="6" />');
+                 // -->
+               </script></td>
+</tr>
+</table>
+<table width="468" cellpadding="0" cellspacing="0" border="0">
+<tr bgcolor="#003366">
+<td valign="top"><b>
+<font color="#FFFFFF" size="3" face="Arial, Helvetica, sans-serif">
+<p class="sectionTitle">Weather: UK Summary</p>
+</font>
+</b></td>
+</tr>
+</table>
+<table width="468" cellpadding="0" cellspacing="0" border="0">
+<tr height="15">
+<td width="78" bgcolor="#ffffff" align="center" valign="middle"><b>
+<font class="navTabText" color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">
+<img height="15" width="2" src="images/pixel_clear.gif"></font>
+</b></td><td width="78" bgcolor="#ffffff" align="center" valign="middle"><b>
+<font class="navTabText" color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">
+</font>
+</b></td><td width="78" bgcolor="#ffffff" align="center" valign="middle"><b>
+<font class="navTabText" color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">
+</font>
+</b></td><td class="navTabHiLite" width="78" bgcolor="#99ccff" align="center" valign="middle"><b>
+<font class="navTabTextHiLite" color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">
+            Today </font>
+</b></td><td class="navTab" width="78" bgcolor="#3399ff" align="center" valign="middle"><b>
+<font class="navTabText" color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">
+<a class="navTabLink" href="/weather/uktomorrow.shtml">Tomorrow</a>
+</font>
+</b></td><td class="navTab" width="78" bgcolor="#3399ff" align="center" valign="middle"><b>
+<font class="navTabText" color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">
+<a class="navTabLink" href="/weather/ukoutlook.shtml">Outlook</a>
+</font>
+</b></td>
+</tr>
+</table>
+<p>&nbsp;
+         </p>
+<table align="left" width="468" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="233" valign="top"><img height="250" width="233" src="/weather/pics/wsi_itnweb_uk_pm.jpg"><img height="15" width="8" src="images/pixel_clear.gif"><img height="250" width="233" src="/weather/pics/wsi_itnweb_uk_tonight.jpg"></td><td width="8"><img height="2" width="8" src="images/pixel_clear.gif"></td><td valign="top"><b>
+<font size="3" face="Arial, Helvetica, sans-serif">
+<p class="sectionSubhead">Tonight</p>
+</font>
+</b>
+<p>Rain will be pushing eastwards across England overnight with some heavy bursts across some southern counties and the risk of some local flooding. It will also be windy with fresh to strong southerly winds for a while. Across western parts there will be a mix of clear spells and some blustery showers, many of these showers across western coasts and hills. There may also be some mist and fog patches forming during the night. Temperatures will fall to lows of between 10-13 Celsius.</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top">
+        <!-- #BeginLibraryItem "/Library/global.footerBlue.lbi" -->
+      <center>
+<h5>
+<font color="004ad5">
+<br>
+<img border="0" vspace="8" height="1" width="468" src="/images/pixel_itnblue.gif"><br>
+<a class="corpBlue" href="index.shtml">Home</a> |
+            <a class="corpBlue" href="britain.shtml">Britain</a> |
+            <a class="corpBlue" href="world.shtml">World</a> |
+            <a class="corpBlue" href="business.shtml">Business</a> |
+            <a class="corpBlue" href="sport.shtml">Sport</a> |
+            <a class="corpBlue" href="entertainment.shtml">Entertainment</a> |
+            <a class="corpBlue" href="weather.shtml">Weather</a>
+</font>
+</h5>
+<script type="text/javascript" language="JavaScript">
+            <!--
+              insert_ad( );
+            //-->
+          </script>
+</center>
+        <!-- #EndLibraryItem -->
+      </td>
+</tr>
+</table>
+<!-- Table Block for Header and Main Content ends -->
+
+<!-- Table Block for Right Bar Content begins -->
+<table cellpadding="0" cellspacing="0" border="0" width="161">
+<tr>
+<td width="8" valign="top"><img height="8" width="8" src="images/pixel_clear.gif"></td><td width="153" valign="top">
+         
+<table width="153" border="0" cellspacing="0" cellpadding="0" height="66">
+  <tr valign="top" bgcolor="003366"> 
+    <td valign="top" align="left"> 
+      <p class="featureBoxTitle">QuickNav</p>
+    </td></tr>
+		
+  <tr bgcolor="3399ff"> 
+    <form>
+      <td valign="top"> 
+        <table cellpadding="0" cellspacing="0">
+          <tr height="40">
+			<td align="left" valign="top"  height="40"> <!--<img src="/images/pixel_clear.gif" width="2" height="40">--></td>
+			<td align="left" valign="middle"  height="40"><font face="Verdana,Arial, Helvetica, sans-serif" size="1">&nbsp; 
+              <select name="quickNav" onChange="gotoUrl(this.options[this.selectedIndex].value)" class="navQuickMenu">
+                <option selected>Choose One:</option>
+                <option>--------------</option>
+                <option value="/index.shtml">Home</option>
+                <option value="/britain.shtml">Britain</option>
+                <option value="/world.shtml">World</option>
+                <option value="/business.shtml">Money</option>
+                <option value="/sport.shtml">Sport</option>
+                <option value="/entertainment.shtml">Entertainment</option>
+                <option value="/weather.shtml">Weather</option>
+                <option value="/weather/regions_scotland.shtml">&nbsp;&nbsp;&nbsp;Scotland</option>
+                <option value="/weather/regions_nireland.shtml">&nbsp;&nbsp;&nbsp;N. 
+                Ireland</option>
+                <option value="/weather/regions_wales.shtml">&nbsp;&nbsp;&nbsp;Wales</option>
+                <option value="/weather/regions_northwest.shtml">&nbsp;&nbsp;&nbsp;North 
+                West</option>
+                <option value="/weather/regions_northeast.shtml">&nbsp;&nbsp;&nbsp;North 
+                East</option>
+                <option value="/weather/regions_midlands.shtml">&nbsp;&nbsp;&nbsp;Midlands</option>
+                <option value="/weather/regions_eastanglia.shtml">&nbsp;&nbsp;&nbsp;East 
+                Anglia</option>
+                <option value="/weather/regions_southwest.shtml">&nbsp;&nbsp;&nbsp;South 
+                West</option>
+                <option value="/weather/regions_southeast.shtml">&nbsp;&nbsp;&nbsp;South 
+                East</option>
+                <option>--------------</option>
+                <option value="/specials.shtml">Special Reports</option>
+                <option>--------------</option>
+                <option value="/contacts.shtml">Contact ITN</option>
+                <option value="/help.shtml">Help</option>
+                <option value="/company.shtml">The Company</option>
+                <option value="/terms.shtml">Terms</option>
+              </select>
+              </font></td>
+          </tr>
+		</table>
+		</td>
+        </form></tr>
+		<tr>
+		<td valign="top"><img src="images/pixel_clear.gif" width="153" height="6"></td></tr>
+		</table>
+
+      <table cellpadding="0" cellspacing="0" border="0" width="153">
+<tr>
+<td valign="top">
+              
+            
+              <table width="153" border="0" cellspacing="0" cellpadding="0">
+  <tr bgcolor="003366"> 
+    <td valign="top" align="left" width="153" bgcolor="003366"> 
+      <p class="featureBoxTitle">Resources</p>
+    </td>
+  </tr>
+  <tr bgcolor="99ccff"> 
+    <td valign="top" align="left" class="featureBoxBody" width="153"> 
+      <table border="0" cellspacing="0" cellpadding="2" width="150">
+        <tr> 
+          <td valign="top" align="top" width="21"><img src="/images/bullet_arrow.gif" width="21" height="12" border="0" vspace="2" hspace="3"></td>
+          <td valign="top" width="127"> 
+            <p class="featureBoxBody"><span class="featureBoxBody"><a href="http://www.intellicast.com" class="featureBox">Weather 
+              around the world</a></span></p>
+          </td>
+        </tr>
+      </table>
+      <table border="0" cellspacing="0" cellpadding="2" width="150">
+        <tr> 
+          <td valign="top" align="top" width="21"><img src="/images/bullet_arrow.gif" width="21" height="12" border="0" vspace="2" hspace="3"></td>
+          <td valign="top" width="127"> 
+            <p class="featureBoxBody"><span class="featureBoxBody"><a href="http://www.unfccc.de/" class="featureBox">The 
+              UN and climate change</a></span></p>
+          </td>
+        </tr>
+      </table>
+      <table border="0" cellspacing="0" cellpadding="2" width="150">
+        <tr> 
+          <td valign="top" align="top" width="21"><img src="/images/bullet_arrow.gif" width="21" height="12" border="0" vspace="2" hspace="3"></td>
+          <td valign="top" width="127"> 
+            <p class="featureBoxBody"><span class="featureBoxBody"><a href="http://www.nhc.noaa.gov/" class="featureBox">US 
+              Hurricane Centre</a></span></p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+            </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- Table Block for Right Bar Content ends -->
+<script language="javascript">
+<!--//Adds closing div tag to Mac IE4 and above
+var isMacIE4 = 'false';
+var agt = navigator.userAgent.toLowerCase();
+var is_iemac = agt.indexOf('msie') != -1 && agt.indexOf("mac")!=-1;
+var majorVersion = parseInt(navigator.appVersion);
+
+if(is_iemac && (majorVersion >= 4)){
+document.write('</div>');
+}
+//-->
+</script>
+</body>
+</html>

@@ -1,0 +1,1203 @@
+<html>
+<head>
+<title>Agendabh</title>
+<meta http-equiv="Content-Type" content="text/asp; charset=iso-8859-1">
+<script language="JavaScript1.2" src="popups.js"></script>
+<SCRIPT>
+var now = new Date();
+var dName = now.getDay() + 1;
+
+if(dName==1) Day = "Domingo";
+if(dName==2) Day = "Segunda";
+if(dName==3) Day = "Ter&ccedil;a";
+if(dName==4) Day = "Quarta";
+if(dName==5) Day = "Quinta";
+if(dName==6) Day = "Sexta";
+if(dName==7) Day = "S&aacute;bado";
+
+var todaysDia =(""+ Day +"");
+</SCRIPT>
+
+
+<STYLE type="text/css">
+<!--
+A.link.def {color:#0099CC;}
+A.link.cin {color:#DD5E5E;}
+A.link.tea {color:#34619C;}
+A.link.gas {color:#DE9000;}
+A.link.noi {color:#B183D6;}
+A.link.sho {color:#DD5E5E;}
+A.link.ser {color:#6DBC00;}
+A.link.eve {color:#41B8B8;}
+A.link.div {color:#4F8800;}
+-->
+</STYLE>
+
+</head>
+
+<body bgcolor="#F59815" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" text="#000000" link="#000000" vlink="#000000" alink="#000000">
+
+<form>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr align="left" valign="top"> 
+    <td width="5%"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td><a href="index.asp"><img src="imgs/logotipo.gif" border="0" alt="Agendabh - voltar para a capa"></a></td>
+        </tr>
+        <tr> 
+            <td><img src="imgs/m-inclusao.gif" usemap="#Map3" border="0"><map name="Map3"><area shape="poly" coords="137,3,137,19,55,19,55,11,57,6,63,3,139,3" href="incluir-est.asp" alt="Inclus&atilde;o de estabelecimento" title="Inclus&atilde;o de estabelecimento"><area shape="rect" coords="138,3,177,20" href="incluir-eve.asp" alt="Inclus&atilde;o de evento" title="Inclus&atilde;o de evento"></map></td>
+        </tr>
+      </table>
+    </td>
+    <td width="94%" align="right"> 
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr valign="top" align="right" bgcolor="#F59815"> 
+          <td><img src="imgs/t.gif" width="1" height="11"></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr align="right" valign="top" bgcolor="#3D786F"> 
+          <td> 
+            <table border="0" cellspacing="0" cellpadding="0">
+              <tr valign="top" align="right" bgcolor="#3D786F"> 
+                <td><img src="imgs/t.gif" width="1" height="1"></td>
+              </tr>
+              <tr valign="top" align="right" bgcolor="#3D786F"> 
+                <td> 
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr> 
+                      <td align="right" valign="top">
+					    <!-- TRECHO DE CÓDIGO ALTERADO - INICIO--> 
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr align="left" valign="top"> 
+                            <td width="50%" height="36"><img src="imgs/i-data.gif" width="12" height="11"><br>
+                              <font size="1" face="Verdana, Arial, Helvetica, sans-serif" color="#FFFFFF">
+							  <b><script>document.write(todaysDia);</script>,</b><br>
+                              25/04/2001
+							  </font>
+							</td>
+                            <td width="50%" rowspan="2" align="right"><A HREF="CategRedir.asp?url=http://www.agendabh.com.br&image=banners/ban-agendafull.gif" ><IMG SRC="banners/ban-agendafull.gif" ALT="AgendaBH" WIDTH=486 HEIGHT=60 BORDER=0></A><img src="imgs/t.gif" width="1" height="1"></td>
+                          </tr>
+                          <tr align="left" valign="top"> 
+                            <td valign="bottom" align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#CCCCCC">oferecimento&nbsp;</font></td>
+                          </tr>
+                        </table>
+                        <!-- TRECHO DE CÓDIGO ALTERADO - FIM-->
+					  </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr valign="top" align="right" bgcolor="#3D786F"> 
+                <td><img src="imgs/t.gif" width="1" height="1"></td>
+              </tr>
+              <tr valign="top" align="right" bgcolor="#3D786F"> 
+                <td><img src="imgs/m-superior.gif" usemap="#Map2" border="0" width="566" height="21"><map name="Map2"><area shape="rect" coords="11,3,129,17" href="javascript:agendamail('receba.asp');" alt="Receba novidades por e-mail." title="Receba novidades por e-mail."><area shape="rect" coords="158,2,273,18" href="sugestoes.asp" alt="Ajude-nos a melhorar o Agendabh." title="Ajude-nos a melhorar o Agendabh."><area shape="rect" coords="304,2,409,17" href="sorteados.asp" alt="Confira a lista dos ganhadores." title="Confira a lista dos ganhadores."><area shape="rect" coords="436,4,560,18" href="privacidade.asp" alt="No Agendabh sua privacidade est&aacute; protegida." title="No Agendabh sua privacidade est&aacute; protegida."></map></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr valign="top" align="right" bgcolor="#F59815"> 
+            <td><img src="imgs/m-eve.gif" usemap="#Map" border="0"><map name="Map"><area shape="rect" coords="66,0,133,36" href="teatros.asp" alt="Teatro e Cultura" title="Teatro e Cultura"><area shape="rect" coords="356,0,433,36" href="servicos.asp" alt="Servi&ccedil;os e Com&eacute;rcio" title="Servi&ccedil;os e Com&eacute;rcio"><area shape="rect" coords="135,0,228,36" href="gastronomia.asp" alt="Gastronomia" title="Gastronomia"><area shape="rect" coords="230,0,291,36" href="noite.asp" alt="Noite em BH" title="Noite em BH"><area shape="rect" coords="293,0,355,36" href="shows.asp" alt="Shows" title="Shows"><area shape="rect" coords="435,0,498,36" href="eventos.asp" alt="Eventos" title="Eventos"><area shape="rect" coords="500,0,580,36" href="diversao.asp" alt="Divers&atilde;o e Turismo" title="Divers&atilde;o e Turismo"><area shape="poly" coords="63,0,63,35,0,35,0,7,2,2,7,0" href="cinema.asp" alt="Cinema" title="Cinema"></map></td>
+        </tr>
+      </table>
+    </td>
+    <td width="1%" align="right"><img src="imgs/t.gif" width="14" height="1"></td>
+  </tr>
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="1%"><img src="imgs/t.gif" width="12" height="1"></td>
+      <td width="98%" bgcolor="#6FCBCC"><img src="imgs/t.gif" width="1" height="8"></td>
+    <td width="1%"><img src="imgs/t.gif" width="14" height="1"></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="1%"><img src="imgs/t.gif" width="12" height="1"></td>
+    <td width="98%"> 
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr align="left" valign="top"> 
+            <td width="1%" bgcolor="#6FCBCC" align="center"> 
+            
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+  <tr align="center" valign="top"> 
+    <td>       <form name="form1" method="post" action="busca.asp">
+      <table border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td> 
+                    <input type="text" name="textfield" size="16">
+                  </td>
+                  <td>
+                    
+              <input type="image" border="0" name="imageField" src="imgs/b-ok-eve.gif" width="25" height="21">
+                  </td>
+                </tr>
+              </table>
+              
+          
+        <img src="imgs/c-procurar-eve.gif" height="15"> 
+      </form>
+      <table border="0" cellspacing="0" cellpadding="0" width="155">
+        <tr> 
+          <td><a href="cinema.asp"><img src="../imgs/ce-temp-eve.gif" width="155" height="22" border="0"></a></td>
+        </tr>
+        <tr bgcolor="#F5FFFF"> 
+          <td> 
+            <table border="0" cellspacing="0" cellpadding="3" width="100%">
+              <tr align="left" valign="top"> 
+                <td><font face="Arial, Helvetica, sans-serif" size="2"><b>Unibanco 
+                  Ponteio</b></font><br>
+                  <font face="Verdana, Arial, Helvetica, sans-serif" size="1"><b><font color="#0099CC"><a href="cin-reg.asp?SelectReg=148"><img src="../cinema/fotos/mexicana01-50.jpg" align="left" border="0" width="50" height="50"></a></font></b><font color="#000000"><b><font color="#41B8B8">A 
+                  Mexicana </font></b><br>
+                  </font>Welbach &eacute; um caixeiro-viajante que vive um grande 
+                  dilema, j&aacute; que recebeu dois ultimatos. O primeiro &eacute; 
+                  do seu chefe mafioso: viajar at&eacute; o M&eacute;xico, reaver 
+                  uma antiga pistola de pre&ccedil;o inestim&aacute;vel, conhecida 
+                  como &quot;a mexicana&quot; ou sofrer as consequ&ecirc;ncias.<br>
+                  <a href="reg_sorteio.asp?Sorteio=%22Unibanco%20Ponteio%20-%20A%20Mexicana%22"><img src="imgs/b-sorteio.gif" width="58" height="19" border="0"></a> 
+                  </font></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr valign="top"> 
+                <td align="left" width="2%"><img src="../imgs/ee-boxe-eve.gif" width="18" height="15"></td>
+                <td align="right" bgcolor="#F5FFFF" width="96%"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><b><a href="cin-reg.asp?SelectReg=148" class="eve">» 
+                  Saiba mais</a></b></font></td>
+                <td align="right" width="2%"><img src="../imgs/ee-boxd-eve.gif" width="18" height="15"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+            </td>
+            <td width="1%"><img src="imgs/t.gif" width="4" height="1"></td>
+            <td width="98%" bgcolor="#FFFFFF"> 
+              <table width="100%" border="0" cellspacing="0" cellpadding="2">
+                <tr align="left" valign="top"> 
+                  <td width="90%"> 
+                    <table width="100%" border="0" cellspacing="0" cellpadding="2">
+                      <tr align="left" valign="top"> 
+                        <td> 
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr valign="top" align="center"> 
+                              <td colspan="2"> 
+                                <table width="100%" border="0" cellspacing="0" cellpadding="2">
+                                  <tr> 
+                                    <td> 
+                                      <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#6FCBCC">
+                                        <tr> 
+                                          <td align="left" valign="top" width="2%"><img src="imgs/t-eve.gif"></td>
+                                          <td align="left" valign="top" width="2%"><img src="imgs/et-eve-esq.gif"></td>
+                                          <td align="right" valign="middle" width="94%"> 
+                                            <img src="imgs/ban-cinema.gif" align="top" width="161" height="37"></td>
+                                          <td align="right" valign="top" width="2%"><img src="imgs/et-eve-dir.gif"></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                  <tr align="left"> 
+                                    <td><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><a href="javascript:history.back();"><img src="imgs/s-voltar.gif" border="0">&nbsp;<b>voltar</b></a></font></td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="2">
+                      <tr> 
+                        <td>
+                          <table width="100%" border="0" cellspacing="0" cellpadding="2">
+                            <tr> 
+                              <td align="left" valign="top"><font face="Arial, Helvetica, sans-serif" color="#009999" size="2">De 26/04 à 28/04</font><br>
+							  <font face="Arial, Helvetica, sans-serif" color="#009999" size="3"><b>Eletronika</b></font></td>
+                              
+							
+							</tr>
+                          </table>
+                          <font face="Arial, Helvetica, sans-serif" size="2" color=#000000>
+                          						  
+						  	<b>Hor&aacute;rio: </b>Dia 26h das 21h às 02h, dia 27 das 18h às 04h, dia 28 das 16h às 02h<br>
+						  
+						  	  <b>Local: </b>
+							  	  Centro Cultural Casa do Conde de Santa Marinha.<br>
+						  
+						  <b>Endere&ccedil;o: </b>
+   						   Januária 130, Centro.
+						    
+							<br><b>Telefone de Contato: </b>3223-2234<br>
+                            
+							<b>Pre&ccedil;o: </b>R$10 por noite, R$15 antecipados, R$25 na portaria, R$25 pacote para as três noites.<br>
+                          
+						  </font><br>
+                          
+						<table width="100%" border="0" cellspacing="0" cellpadding="2">
+                            <tr bgcolor="#eeeeee">
+                              <td>&nbsp;</td>
+                              <td><font face="Arial, Helvetica, sans-serif" size="2"> 
+                                    
+<p><font face="Arial, Helvetica, sans-serif" size="2"><b><img src="../eventos/fotos/eletronika2-135.jpg" width="135" height="135" align="left">PROGRAMA&Ccedil;&Atilde;O 
+  ELETRONIKA</b><br>
+  <br>
+  <b>Dia 26/04, Quinta -feira</b><br>
+  <br>
+  Tenda MTV/Amp (a partir de 21 horas)<br>
+  Lounge com DJs do Caf&eacute; com Letras: Marcos Corr&ecirc;a (pop contempor&acirc;neo) 
+  e Klang (downtempo e electro) <br>
+  <br>
+  Eletronika Club<br>
+  21:00 Anderson Soares (DJ, house music, S&atilde;o Paulo) <br>
+  22:00 AD (show, m&uacute;sica eletr&ocirc;nica, S&atilde;o Paulo) <br>
+  23:00 O Discurso (show, m&uacute;sica eletr&ocirc;nica com m&uacute;sica regional, 
+  S&atilde;o Paulo) <br>
+  00:00 Jon Spencer Blues Explosion (show, rock, New York, USA) <br>
+  01:30 DJ Robson (DJ, house music, Belo Horizonte) <br>
+  <br>
+  Eletronika BH (a partir de meia-noite)<br>
+  00:00 DJ Tee (DJ, tecno/trance, Belo Horizonte) <br>
+  02:00 Raul Aguilera (DJ, techno, Curitiba)<br>
+  <br>
+  </font><font face="Arial, Helvetica, sans-serif" size="2"><b>Dia 27/04, Sexta-feira</b><br>
+  <br>
+  </font><font face="Arial, Helvetica, sans-serif" size="2">Arena Digital <br>
+  18:00 Workshop: M&uacute;sica Eletronica e Imagens Digitais<br>
+  Feito &agrave; M&atilde;os (Belo Horizonte) <br>
+  19:00 Palestra: M&uacute;sica Eletronica e Novas Subjetividades<br>
+  Erik Davis (USA) </font></p>
+<p> <font face="Arial, Helvetica, sans-serif" size="2">Tenda MTV/Amp <br>
+  20:00 Mostra de V&iacute;deos: Sambaloco Records/Trama Music <br>
+  22:00 Lounge com DJs do Caf&eacute; com Letras <br>
+  <br>
+  Eletronika Club <br>
+  21:00 Anvil FX convida Jo&atilde;o Parahyba e Miguel Barella (show, drum&acute;n&acute;bass, 
+  Sao Paulo) <br>
+  22:00 XRS Land (show, drum&acute;n&acute;bass, Sao Paulo) <br>
+  23:00 Flanger (show, m&uacute;sica eletr&ocirc;nica com m&uacute;sica latina, 
+  Alemanha/Chile) <br>
+  00:00 Nicola Conte e Gianluca Petrella (show, m&uacute;sica eletr&ocirc;nica 
+  com jazz e bossa nova, It&aacute;lia)<br>
+  01:30 Amon Tobin (DJ, drum&acute;n&acute;bass, Inglaterra)<br>
+  03:00 DJ Patife (DJ, drum&acute;n&acute;bass, Sao Paulo) <br>
+  Visuais: VJ Andyvision (Inglaterra) <br>
+  <br>
+  Eletronika BH<br>
+  00:00 DJ Fog (DJ, house music, Belo Horizonte) <br>
+  02:00 Filipe Foratini (DJ, house music, Belo Horizonte) <br>
+  04:00 DJ Daniel D (DJ, house music, Belo Horizonte)<br>
+  <br>
+  <b>Dia 28/4, s&aacute;bado </b><br>
+  <br>
+  Arena Digital <br>
+  16:00 Workshop: M&uacute;sica e tecnologia<br>
+  Asian Dub Foundation (Inglaterra) <br>
+  <br>
+  Tenda MTV/Amp<br>
+  18:00 Lounge com DJs do Caf&eacute; com Letras: L&eacute;o Mille (deep house)<br>
+  20:00 Mostra de v&iacute;deos: Ag&ecirc;ncia Black Dog Films (Inglaterra) <br>
+  <br>
+  Plataforma Eletronika (jardim externo) <br>
+  21:00 DJ Dolores (DJ, Recife) <br>
+  22:00 Na&ccedil;&atilde;o Zumbi (show, Recife) <br>
+  23:00 Asian Dub Foundation (show, ragga, jungle, rock, Inglaterra) <br>
+  <br>
+  Eletronika Rave (mesmo espa&ccedil;o do Eletronika Club)<br>
+  01:00 Angel Molina (DJ, tecno, Espanha) <br>
+  03:00 Anderson Noise (DJ, tecno, Belo Horizonte) <br>
+  Visuais: Workshop Feito a M&atilde;os<br>
+  <br>
+  Eletronika BH <br>
+  00:00 DJ LP (DJ, drum&acute;n&acute;bass, belo horizonte) <br>
+  01:00 Roger Moore (DJ com percuss&otilde;es + partic. Alda Resende, Belo Horizonte)<br>
+  02:30 Daniel Maia (DJ, drum&acute;n&acute;bass, belo horizonte) <br>
+  Participac&ccedil;&atilde;o: MC Oliver (S&atilde;o Paulo) <br>
+  <br>
+  <b>INGRESSOS E INFORMA&Ccedil;&Otilde;ES</b><br>
+  </font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="2">Informa&ccedil;&otilde;es 
+  para o p&uacute;blico: <br>
+  www.eletronika-telemigcelular.com.br <br>
+  (31) 3223-2234 <br>
+  </font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="2"><b>Venda de ingressos - 
+  A partir de 10/04: </b><br>
+  R$10,00 por noite (antecipado);<br>
+  R$15,00 por noite (na porta);<br>
+  R$25,00 pacote promocional para as 3 noites ;<br>
+  <br>
+  -Motor Music (R. Pernambuco, 1000, loja 10, Savassi, 3261 9464), <br>
+  -Lojas Forum Savassi, BH Shopping e Shopping Cidade <br>
+  -Caf&eacute; com Letras (R. Ant&ocirc;nio de Albuquerque, 781, Savassi, 3225 
+  9973) </font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="2"><b><img src="../eventos/fotos/eletronika3-135.jpg" width="135" height="135" align="left">M&Uacute;SICA 
+  DO PRESENTE</b><br>
+  Em sua segunda edi&ccedil;&atilde;o, o festival ELETRONIKA mostra um novo formato 
+  e a amplia&ccedil;&atilde;o de seu foco conceitual. <br>
+  Se em seu primeiro ano o evento preocupou-se em mostrar a diversidade da m&uacute;sica 
+  eletr&ocirc;nica ao final dos 90, nesta segunda edi&ccedil;&atilde;o o festival 
+  pretende, sem abandonar as suas quest&otilde;es originais, promover o di&aacute;logo 
+  de compositores e m&uacute;sicos tendo como ponto principal a influ&ecirc;ncia 
+  dos ritmos tradicionais brasileiros na cena musical mundial.<br>
+  Os mais de 20 shows programadas dar&atilde;o ao espectador a oportunidade de 
+  conhecer, compreender e apreciar o que criadores brasileiros, americanos, alem&atilde;es, 
+  ingleses, espanh&oacute;is e italianos v&ecirc;m fazendo nos &uacute;ltimos 
+  anos, muitas vezes na contram&atilde;o da cultura vigente, primando pela inventividade, 
+  o experimentalismo e a ousadia.<br>
+  Os shows ser&atilde;o distribu&iacute;dos em tr&ecirc;s palcos instalados dentro 
+  da Vila Eletronika, que ser&aacute; montada no Centro Cultural Casa do Conde 
+  de Santa Marinha (r. Janu&aacute;ria, 130, Centro). <br>
+  Buscando tamb&eacute;m esclarecer as possibilidades de utiliza&ccedil;&atilde;o 
+  massiva das novas tecnologias, o ELETRONIKA apresentar&aacute; uma mostra de 
+  v&iacute;deos da conceituada produtora inglesa Black Dog, para a qual o talentoso 
+  produtor ingl&ecirc;s Chris Cunigham realizou v&iacute;deos para artistas como 
+  Squarepusher, Bj&ouml;rk, Madonna e Aphex Twin, entre outros. <br>
+  Um semin&aacute;rio internacional &#150; Eletronika Digital &#150; ir&aacute; 
+  contar com a participa&ccedil;&atilde;o de um dos mais renomados &quot;engenheiros 
+  conceituais&quot; do final de mil&ecirc;nio: o americano Erik Davis (editor 
+  da revista Wired). <br>
+  A forma&ccedil;&atilde;o de amadores e profissionais se dar&aacute; atrav&eacute;s 
+  de dois workshops: o primeiro, sob responsabilidade da associa&ccedil;&atilde;o 
+  de v&iacute;deo produtores Feito &agrave; M&atilde;os, ir&aacute; abordar a 
+  quest&atilde;o da utiliza&ccedil;&atilde;o tecnologia digital na cria&ccedil;&atilde;o 
+  de v&iacute;deos musicais. As imagens elaboradas pelos videomakers ser&atilde;o 
+  exibidas no &uacute;ltimo dia do festival, em uma possibilidade in&eacute;dita 
+  de interatividade entre criadores e espectadores. <br>
+  O trabalho inovador e engajado da ADFED (Asian Dub Foundation Education), subvencionado 
+  pela prefeitura de Londres, ser&aacute; apresentado na forma de um workshop 
+  de m&uacute;sica e tecnologia voltado para adolescentes. <br>
+  <br>
+  <b>UM ESPET&Aacute;CULO COMPLETO</b><br>
+  N&atilde;o se trata de uma festa, ou uma rave, ou nada parecido. &Eacute; mais!<br>
+  Criado em 1999 pelos produtores Haroldo Botelho, Aluizer Malab (tamb&eacute;m 
+  empres&aacute;rio do grupo &gt;Pato Fu), Jefferson Santos e Marcos Boffa (ambos 
+  s&oacute;cios da produtora Motor Music) e pelo jornalista Israel do Vale, o 
+  ELETRONIKA &eacute; um f&oacute;rum de discuss&otilde;es sobre os rumos, tend&ecirc;ncias 
+  e influ&ecirc;ncias da m&uacute;sica eletr&ocirc;nica na atualidade dentro de 
+  um ambiente festivo e moderno, como as grandes produ&ccedil;&otilde;es internacionais.<br>
+  Os espectadores do ELETRONIKA ter&atilde;o uma bela oportunidade de viver e 
+  compartilhar um misto de shows de bandas e performances de DJs, de espet&aacute;culo 
+  e festa, com informa&ccedil;&atilde;o e forma&ccedil;&atilde;o, divers&atilde;o 
+  e milit&acirc;ncia, criatividade e atitude. <br>
+  &Eacute; bom que todos estejam preparados para fortes doses de emo&ccedil;&atilde;o 
+  e adrenalina., por que atra&ccedil;&otilde;es como as bandas THE JON SPENCER 
+  BLUES EXPLOSION, ASIAN DUB FOUNDATION, NA&Ccedil;&Atilde;O ZUMBI, XRS LAND, 
+  e djs, produtores e m&uacute;sicos como AMON TOBIN, ANDERSON SOARES, NICOLA 
+  CONTE, DOLORES, muitos dos quais nunca se apresentaram em BH, prometem tomar 
+  de assaltos ouvidos atentos e desatentos.<br>
+  <b><br>
+  PLATAFORMA DE DESCOBERTAS E REVELA&Ccedil;&Otilde;ES</b><br>
+  Em dezembro de 1999 aconteceu em Belo Horizonte a primeira edi&ccedil;&atilde;o 
+  do festival. Durante tr&ecirc;s dias, em cinco diferentes pontos da cidade, 
+  discutiu-se a diversidade da m&uacute;sica eletr&ocirc;nica, atrav&eacute;s 
+  de palestras e da apresenta&ccedil;&atilde;o de dezenas artistas: dos americanos 
+  Tortoise (que misturam o rock ao experimentalismo eletr&ocirc;nico) e Anthony 
+  &quot;Shake&quot; Shakir (representante do techno e da house music de Detroit) 
+  aos ingleses Ed Rush (expoente do drum&acute;n&acute;bass brit&acirc;nico) e 
+  Richard Sen (metade do projeto de breakbeat Bronx Dog), passando pelos brasileiros 
+  Pato Fu, Anvil FX, Edgard Scandurra, Rebeca Matta, Otto, Anderson Noise e outros. 
+  <br>
+  Muitos dos participantes nunca haviam se apresentado por aqui antes. Isso revela 
+  outra faceta do festival, que &eacute; o de introduzir e apresentar para o grande 
+  p&uacute;blico atra&ccedil;&otilde;es de peso pouco conhecidas.<br>
+  Durante o ano de 2000, o ELETRONIKA investiu em uma agenda de eventos e se concentrou 
+  na segunda edi&ccedil;&atilde;o, a ser realizada em abril de 2001. <br>
+  Foi assim que se viabilizou a vinda a Belo Horizonte do evento ARCHITETTURA 
+  (no Museu de Arte da Pampulha), tra&ccedil;ando um paralelo entre m&uacute;sica 
+  eletr&ocirc;nica e arquitetura, atrav&eacute;s de shows de artistas do selo 
+  americano Caipirinha Music e mostra de slides de projetos de famosos arquitetos 
+  internacionalmente conhecidos. <br>
+  O segundo evento aconteceu no antigo Cine M&eacute;xico &#150; antigo cinema 
+  reaberto paro o evento - e contou com a presen&ccedil;a do grupo ingl&ecirc;s 
+  STEREOLAB. <br>
+  O terceiro e &uacute;ltimo evento de 2000, a festa BUNGALOW CLUB, foi realizada 
+  no dia 16 de dezembro, com a presen&ccedil;a do DJ HOLGER BEIER (do grupo alem&atilde;o 
+  LE HAMMOND INFERNO) e a cantora PAT C, acompanhada do projeto Anvil FX, al&eacute;m 
+  dos DJs mineiros L&eacute;o Mille e Robson.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="2"><b>BIOGRAFIAS, DISCOGRAFIAS</b><br>
+  Conhe&ccedil;a um pouco dos artistas que v&atilde;o detonar no Eletronika Telemig 
+  Celular<br>
+  <br>
+  <b>ARTISTAS</b><br>
+  01. ASIAN DUB FOUNDATION <br>
+  02. THE JON SPENCER BLUES EXPLOSION<br>
+  03. AMON TOBIN <br>
+  04. FLANGER<br>
+  05. NA&Ccedil;&Atilde;O ZUMBI <br>
+  06. DJ PATIFE <br>
+  07. NICOLA CONTE<br>
+  08. ANVIL FX <br>
+  09. ANDERSON NOISE <br>
+  10. XRS LAND <br>
+  11. ANGEL MOLINA <br>
+  12. DJ ROBSON <br>
+  13. DJ LP<br>
+  14. DJ DANIEL MAIA<br>
+  15. DJ FILIPE FORATTINI <br>
+  16. DJ TEE <br>
+  <br>
+  EVENTOS PARALELOS <br>
+  01. ERIK DAVIS <br>
+  02. BLACK DOG FILMS <br>
+  03. ADF Education (ADFED) <br>
+  <br>
+  -------------------------------------------------------------------------------------------------------------------------<br>
+  <br>
+  <b>ARTISTAS</b><br>
+  <br>
+  01. ASIAN DUB FOUNDATION <br>
+  O ASIAN DUB FOUNDATION &eacute; um grupo de cinco ingleses descendentes de indianos 
+  que fazem um estrondoso sucesso tanto nos festivais de rock quanto nos de World 
+  Music e tamb&eacute;m nas festas de m&uacute;sica eletr&ocirc;nica. Quem gosta 
+  de grupos como Rage Against The Machine, Beastie Boys, Manu Chao, Planet Hemp 
+  e O Rappa vai se identificar com o ADF. <br>
+  Seu som inconfund&iacute;vel &eacute; uma mistura de pesados ritmos tirados 
+  do ragga e do jungle, linhas de baixo vindas do dub, guitarras inspiradas por 
+  c&iacute;taras, letras pol&iacute;ticas e conscientes e sons &quot;tradicionais&quot;, 
+  influenciados pelas cole&ccedil;&otilde;es de discos de seus pais. Seu disco 
+  &quot;Rafi&acute;s Revenge&quot; (London Records, 1998) foi aclamado pela cr&iacute;ticae 
+  recebeu uma nomea&ccedil;&atilde;o para o Mercury Prize. Mesmo j&aacute; sendo 
+  considerada uma das melhores bandas ao vivo da Inglaterra o disco ajudou a criar 
+  um novo p&uacute;blico para o ADF. <br>
+  O ADF n&atilde;o fala apenas sobre racismo ou sobre a experi&ecirc;ncia de asi&aacute;ticos 
+  na Inglaterra, mas tamb&eacute;m sobre justi&ccedil;a social. Seus pontos de 
+  vista s&atilde;oresultados de seus constantes envolvimentos em campanhas e grupos 
+  educacionais. Sua m&uacute;sica tamb&eacute;m tem o objetivo de encorajar as 
+  pessoas a desenvolverem sua pr&oacute;pria criatividade. <br>
+  A banda iniciou suas atividades em 1993 na organiza&ccedil;&atilde;o londrina 
+  Community Music, onde o baixista Dr Das ensinava tecnologia musical. Ele se 
+  encontrou com um de seus alunos, o rapper Deeder Zaman e com o defensor dos 
+  direitos civis DJ Pandit G para formar um grupo para tocar em festas anti-racistas. 
+  <br>
+  No ano seguinte recrutaram o guitarrista Chandrasonic e seguiram carreira. Com 
+  Sun-J se juntando ao grupo em 1995 para cuidar dos teclados e dos &quot;movimentos 
+  radicais&quot;, a forma&ccedil;&atilde;o estava completa. <br>
+  Seu &aacute;lbum de estr&eacute;ia, 'Facts and Fictions' (Nation Records) saiu 
+  em 1995 e foi desprezado pelos ingleses, interessados apenas em grupos de guitar 
+  rock. <br>
+  Com o desprezo dos seus compatriotas, a banda viu oportunidades para fazer turn&ecirc;s. 
+  Seu segundo disco, &quot;R.A.F.I.&quot;, come&ccedil;ou a chamar a aten&ccedil;&atilde;o 
+  principalmente dos franceses, onde foi lan&ccedil;ado em 97. &quot;Rafi&acute;s 
+  Revenge&quot;, &eacute;, na verdade, uma grava&ccedil;&atilde;o de &quot;R.A.F.I.&quot;, 
+  refor&ccedil;ado pela experi&ecirc;ncia de shows do grupo. <br>
+  Foi o grupo Primal Scream quem finalmente chamou a aten&ccedil;&atilde;o dos 
+  ingleses para o Asian Dub Foundation. Ap&oacute;s assinarem com o selo London, 
+  o grupo excursionou pelo Reino Unido no ver&atilde;o de 1997. Os membros do 
+  Primal Scream tamb&eacute;m colaboraram com o ADF no single da m&uacute;sica 
+  &quot;Free Satpal Ram&quot;, que chamava a aten&ccedil;&atilde;o para o fato 
+  de um asi&aacute;tico condenado erradamente pela justi&ccedil;a inglesa. <br>
+  O Asian Dub Foundation passou a maior parte do ano de 1998 excursionando, consolidando 
+  sua reputa&ccedil;&atilde;o em shows e atraindo audi&ecirc;ncias mistas. O grupo 
+  tocou em importantes festivais na Europa e no Fuji Rock, no Jap&atilde;o. Como 
+  banda de abertura para o Beastie Boys, o ADF excursionou pelos Estados Unidos 
+  pela primeira vez. <br>
+  A presen&ccedil;a do ADF ajudou a quebrar muitos estere&oacute;tipos com rela&ccedil;&atilde;o 
+  aos m&uacute;sicos asi&aacute;ticos e, em conseq&uuml;&ecirc;ncias, do povo 
+  asi&aacute;tico em geral. O reconhecimento disto veio na forma do BBC Asian 
+  Award for Music em dezembro de 98. O pr&ecirc;mio serviu para o grupo atrair 
+  fundos do London Arts Board e criar o ADF Education (ADFED). Em 1999 o ADF fez 
+  sua primeira turn&ecirc; como banda principal nos Estados Unidos, onde os ingressos 
+  para a maioria dos shows estavam esgotados. Seu &gt;terceiro e mais recente 
+  disco, &quot;Community Music&quot; foi lan&ccedil;ado em mar&ccedil;o de 2000, 
+  recebendo, mais uma vez, criticas favor&aacute;veis na imprensa mundial.<br>
+  &Aacute;lbuns: 1995 - &quot;Facts and Fictions&quot; (Nation); 1998-&quot;Rafi's 
+  Revenge&quot; &gt;(Polygram)*; 1999- &quot;Conscious Party&quot; (Virgin France); 
+  2000- &quot;Community Music&quot; (EMI)*; 2000-&quot;R.A.F.I.&quot; (Virgin 
+  France). Colet&acirc;neas: 1995- &quot;Facts and Fictions&quot; (JVC Japan); 
+  Singles: 1997-&quot;Split Single&quot; (Sub Rosa); 1998-&quot;Buzzin'&quot; 
+  (white label); 1998-&quot;Black White&quot; (ffrr) * No Brasil os &aacute;lbuns 
+  &quot;Rafi&acute;s Revenge&quot; e &quot;Community Music&quot; foram editados 
+  pela WEA. <br>
+  <br>
+  02. THE JON SPENCER BLUES EXPLOSION<br>
+  O trio de Nova York THE JON SPENCER BLUES EXPLOSION toca blues, rock e funk 
+  como nunca foi feito antes, com irrever&ecirc;ncia e adrenalina capazes de chamar 
+  a aten&ccedil;&atilde;o at&eacute; mesmo dos ouvidos menos atentos. A criatividade 
+  das composi&ccedil;&otilde;es e arranjos deram ao grupo posi&ccedil;&atilde;o 
+  de destaque no seleto grupo dos &quot;reinventores do rock&quot;. <br>
+  Foi em 1991, depois de deixar a seminal banda Pussy Galore, que o l&iacute;der 
+  e guitarrista Jon Spencer recrutou o ex-baterista da banda Honeymoon Killers, 
+  Russell Simins, e o estiloso guitarrista Judah Bauer, para formarem o explosivo 
+  trio. <br>
+  Sua fama vem crescendo tanto nos &uacute;ltimos tempos que v&aacute;rios produtores 
+  e artistas se convidaram a participar das grava&ccedil;&otilde;es do mais recente 
+  &aacute;lbum, &quot;XTRA ACME USA&quot;. Entre eles est&atilde;o MOBY, DAVID 
+  HOLMES, CALVIN JOHNSON, DANTE ROSS, STEVE ALBINI and THE AUTOMATOR.<br>
+  Outros m&uacute;sicos se juntaram ao trio nas grava&ccedil;&otilde;es, a exemplo 
+  do legend&aacute;rio bluesman ANDRE WILLIAMS (&quot;Jailbait&quot;, &quot;Greasy 
+  Chicken&quot;), do her&oacute;i da bateria, OTHAR TURNER, do tecladista dos 
+  Beastie Boys, MONEY MARK, e da vocalista da banda Luscious Jackson, JILL CUNNIFF.<br>
+  No disco, al&eacute;m de blues e rock, o ouvinte pode conferir a habilidade 
+  dos m&uacute;sicos em tocar hip hop, funk, jazz e outras &quot;doideiras&quot; 
+  de forma estonteante e ousada. Mais um ponto positivo na trajet&oacute;ria irrepar&aacute;vel 
+  desta grande banda.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="2">&Aacute;lbuns: 1992-&quot;Jon 
+  Spencer Blues Explosion&quot; (Caroline); 1992-&quot;Crypt Style&quot; (Crypt); 
+  1993-&quot;Extra Width&quot; (Matador); 1994-&quot;Orange&quot; (Matador); 1996-&quot;Now 
+  I Got Worry&quot; (Matador/Capitol) *; 1997-&quot;Controversial Negro: Live 
+  in Tucson (Toy's Factory); 1998-&quot;Acme&quot; (Matador/Capitol)*; 1999-&quot;Xtra 
+  Acme USA&quot; (Matador)*; Colet&acirc;neas: 1999-&quot;Emergency Call from 
+  Japan&quot; (Import); EPs, Singles: 1995-&quot;Mo Width&quot; [EP] (Au-Go-Go); 
+  1995-&quot;Experimental Remixes&quot; [EP] (Matador); 1996-&quot;2 Kindsa Love&quot; 
+  (Mute); 1996-&quot;Get with It/Down Low (In the Red)&quot;; 1997- &quot;Wail 
+  #2&quot; (Mute); 1997-&quot;Wail #1&quot; (Mute); 1998-&quot;Rocketship&quot; 
+  [EP] (Au-Go-Go); 1998-&quot;Talk About the Blues&quot; [US] (Matador); 1999-&quot;Talk 
+  About the Blues&quot; [UK] (Mute); 1999-&quot;Calvin&quot; (Import); 2000-&quot;Experimental 
+  Remixes&quot; [Import Bonus... [EP] (BMG); 2000-&quot;Magical Colours&quot; 
+  [EP] (Mute); &quot;Heavy&quot; (Remix) [EP] (Mute) <br>
+  <br>
+  03. AMON TOBIN <br>
+  AMON TOBIN &eacute; um DJ e produtor &quot;ingl&ecirc;s&quot; nascido no Brasil. 
+  Um de seus trabalhos mais badalados &eacute; a participa&ccedil;&atilde;o no 
+  disco de estr&eacute;ia da cantora Bebel Gilberto. Seus sets como DJ fazem seus 
+  ossos sa&iacute;rem do ch&atilde;o mais do que as leis da gravidade permitem 
+  e seus discos eram os mais subestimados dos anos 90.<br>
+  'Supermodified', seu segundo disco para o selo Ninja Tunes, p&ocirc;s um basta 
+  &gt;nisso. &acute;Supermodified&acute;, seu disco mais acess&iacute;vel - mas 
+  n&atilde;o menos experimental que seu antecessor 'Adventures In Foam' - &eacute; 
+  uma espetacular mistura de jazz, ritmos latinos e atitude drum&acute;n&acute;bass. 
+  <br>
+  Certamente ele s&atilde;o se pertuba por seus discos n&atilde;o se encaixarem 
+  no drum&acute;n&acute;bass propriamente dito. &quot;Eu tento n&atilde;o fazer 
+  um disco para ser inclu&iacute;do em um estilo ou g&ecirc;nero espec&iacute;fico&quot;, 
+  diz. &quot;Talvez outros produtores tenha essa preocupa&ccedil;&atilde;o, mas 
+  eu n&atilde;o. Eu s&oacute; fa&ccedil;o a &gt;m&uacute;sica. Quem vai decidir 
+  em qual categoria ela estar&aacute; ser&atilde;o os jornalistas e quem compra 
+  o disco. Eu penso nelas mais como jazz do que drum&acute;n&acute;bass. Mas o 
+  drum&acute;n&acute;bass &eacute; um estilo h&iacute;brido e elas certamente 
+  se identificam com ele&quot;<br>
+  Nascido no Rio de Janeiro, Amon Tobin mudou-se para a Europa com um ano de idade, 
+  voltando para o Brasil eventualmente ou indo para Brighton, onde mora, porque 
+  &quot;l&aacute; &eacute; onde voc&ecirc; pode estar mais ao sul na Inglaterra&quot;. 
+  Talvez isto possa explicar, em partes, o ritmo e os sons diferentes de seus 
+  discos. <br>
+  &Aacute;lbuns: 1997-&quot;Bricolage&quot; (Ninja Tune); 1998-&quot;Permutation&quot; 
+  (Ninja Tune); 2000-&quot;Supermodified&quot; (Ninja Tune); EPs/Singles: 1996-&quot;Creatures&quot; 
+  EP [EP] (Ninja Tune); 1997-&quot;Chomp Samba EP&quot; [EP] (Ninja Tune); 1997-&quot;Mission/Tubukula 
+  Beach Resort&quot; (Ninja Tune); 1997&#150;&quot;Piranha Breaks EP&quot; [EP] 
+  (Ninja Tune); 1998-&quot;Like Regular Chickens&quot; (Remixes) (Ninja Tune); 
+  &quot;2000 Slowly&quot; (Ninja Tune);s 2000-&quot;4 Ton Mantis&quot; (Ninja 
+  Tune); Outros projetos: Coldcut - &quot;More Beats&quot; + &quot;Pieces&quot; 
+  (1997) Produtor; &quot;Adventures in Foam (1996) Produtor; Bebel Gilberto &#150; 
+  &quot;Tanto Tempo&quot; (2000) Arranjador, programador, produtor; &quot;Irresistible 
+  Force Nepalese Bliss&quot; (1998); &quot;Remixing Airto Revenge of the Killer 
+  Bees&quot; (2000); &quot;Mixing Various Artists Cold Krush Cuts&quot; (1997) 
+  Produtor; &quot;Various Artists Trip Hop &amp; Jazz, Vol. 3&quot; (1997) Produtor; 
+  &quot;Various Artists Very Serious Smokin', Vol. 2&quot; (1997) Produtor; &quot;Various 
+  Artists Lo Recordings, Vol. 4: Further...&quot; (1998) Produtor; &quot;Various 
+  Artists Funkungfusion: Ninja Cuts, Vol. 3&quot; (1998) Produtor; &quot;Various 
+  Artists Trip Hop &amp; Jazz, Vol. 4&quot; (1998) Produtor; &quot;Various Artists 
+  Pure Abstrakt: Adventures in Dub&quot; (1998) Produtor; &quot;Various Artists 
+  Cinematique: Scenes from a Movie&quot; (1998) Produtor; &quot;Various Artists 
+  Caipirissima: Batucada Electronica&quot; (2000) Produtor<br>
+  <br>
+  04. FLANGER<br>
+  Depois de passarem um ano separados mapeando as novas fronteiras da m&uacute;sica 
+  moderna, Burnt Friedman (bateria, percuss&atilde;o e programa&ccedil;&atilde;o) 
+  e Atom Heart (piano, vibrafone, baixo e programa&ccedil;&atilde;o) est&atilde;o 
+  juntos novamente como Flanger. <br>
+  Burnt Friedman, de Cologne, na Alemanha, &eacute; um nome familiar para quem 
+  gosta de m&uacute;sica latina, dub, electr&ocirc;nica e in&uacute;meros outros 
+  estilos musicais. Seus &gt;discos lan&ccedil;ados este ano pelo selo Pole's 
+  Scape (Just Landed) e pela sua pr&oacute;pria gravadora, Nonplace (Con Ritmo) 
+  chamaram mais aten&ccedil;&atilde;o que todos os seus projetos anteriores, com 
+  o qual ele vem trabalhando a mais de uma &gt;d&eacute;cada (Nonplace Urban Field, 
+  Drome, Some More Crime). <br>
+  Conhecido apenas por sua m&atilde;e como Uwe Schmidt, a outra metade do Flanger 
+  &eacute; &gt;conhecido do p&uacute;blico por alguns de seus prol&iacute;ficos 
+  projetos, como Atom Heart, LB (ou Lassigue Benthaus), Se&ntilde;or Coconut, 
+  Geeez'n'Gosh, Los Samplers ou Subsequence. Nascido em Frankfurt, ele atualmente 
+  vive em Santiago, Chile. Sua variedade de estilos e sons vai de prim&oacute;rdias 
+  experi&ecirc;ncias com a &gt;acid house, passa por excurs&otilde;es na m&uacute;sica 
+  ambiente e termina sem defini&ccedil;&otilde;es com os lan&ccedil;amentos de 
+  seu pr&oacute;prio selo, Rather Interesting. <br>
+  O rec&eacute;m lan&ccedil;ado disco de Se&ntilde;or Coconut (onde executa m&uacute;sicas 
+  do Kraftwerk em estilo latino) ou o &uacute;ltimo disco do LB (com cl&aacute;ssicos 
+  do rock e funk em vers&atilde;o electro) s&atilde;o provas disso. Atom leva 
+  a m&uacute;sica eletr&ocirc;nica ao extremo de suas possibilidades: tem mais 
+  de 150 discos lan&ccedil;ados (incluindo &gt;colabora&ccedil;&otilde;es com 
+  Bill Laswell, Haruomi Hosono, Tetsu Inoue e Pete Namlook).<br>
+  O Flanger foi formado em 1997. Sua m&uacute;sica est&aacute; na barreira entre 
+  o real, o fake e o surreal, com sons n&atilde;o repetitivos, onde finalmente 
+  o el&eacute;trico e o &gt;ac&uacute;stico se tornam um. Seu segundo disco, Midnight 
+  Sound, &eacute; uma viagem profunda no mundo do cyberjazz (se assim podemos 
+  chamar o estilo). Mais mel&oacute;dico que o disco anterior, Midnight Sound 
+  traz Friedman executando sua complexa bateria, cheia de grooves latinos, sobre 
+  a qual Schnudt sobrep&otilde;e acordes de pianos Rhodes, vibrafones, programa&ccedil;&otilde;es 
+  e ocasionalmente guitarras. <br>
+  &Aacute;lbuns: 1999-&quot;Templates&quot; (NTone); 2000-&quot;Midnight Sound&quot; 
+  (Ninja Tune)<br>
+  <br>
+  05. NA&Ccedil;&Atilde;O ZUMBI <br>
+  Os recifences do NA&Ccedil;&Atilde;O ZUMBI entraram para a hist&oacute;ria da 
+  MPB ao lado do ex-l&iacute;der do grupo, o inesquec&iacute;vel Chico Science. 
+  Suas pesquisas sonoras e a mistura de ritmos tradicionais com elementos modernos 
+  v&ecirc;m ampliando o alcance de sua m&uacute;sica, cada vez mais universal. 
+  <br>
+  Depois de um per&iacute;odo de abalo com a morte de Science em 97, os remanescentes 
+  partiram para a elabora&ccedil;&atilde;o do disco &quot;R&aacute;dio S. A.M.B. 
+  A&quot;, um coquetel percussivo e psicod&eacute;lico que mostrou para a cr&iacute;tica 
+  e f&atilde;s a criatividade e a personalidade dos mangue-boys. <br>
+  No S&aacute;bado, 28/04, a banda se apresentar&aacute; logo ap&oacute;s um outro 
+  colega de cidade e de cena cultural, o DJ DOLORES, que &eacute; hoje uma das 
+  grandes refer&ecirc;ncias musicais de Recife, com trabalhos de remixes e de 
+  cria&ccedil;&otilde;es ousadas e ricas, mostrando que a capital pernambucana 
+  tem um potencial enorme e diverso.<br>
+  &Aacute;lbuns: Na&ccedil;&atilde;o Zumbi Chico Science &amp; Na&ccedil;&atilde;o 
+  Zumbi: &quot;Da Lama Ao Caos&quot; (Sony) Chico &gt;Science &amp; Na&ccedil;&atilde;o 
+  Zumbi: Afrociberdelia (Sony) Chico Science &amp; Na&ccedil;&atilde;o Zumbi: 
+  CSNZ (Sony) Na&ccedil;&atilde;o Zumbi: R&aacute;dio S.A.M.B.A. (YBrasil?Music)<br>
+  <br>
+  06. DJ PATIFE <br>
+  O DJ PATIFE &eacute; um nome forte na bolsa de apostas da conex&atilde;o Brasil-Londres. 
+  Sua primeira experi&ecirc;ncia com as pick-ups foi junto ao grupo de hip hop 
+  Fatos Reais. Depois disso, em 1995 ele abra&ccedil;ou a m&uacute;sica eletr&ocirc;nica. 
+  Ao lado do DJ Marky, ele &eacute; um dos disc-j&oacute;queis brasileiros mais 
+  conhecidos na Inglaterra, onde j&aacute; se apresentou ao lado de artistas renomados 
+  do drum&#146;n&#146;bass.<br>
+  &Aacute;lbum: DJ Patife: Presents the Sound of Drum&acute;n&acute;bass (Sambaloco/Trama<br>
+  <br>
+  07. NICOLA CONTE (convida Gianluca Petrella) <br>
+  Durante a &uacute;ltima d&eacute;cada surgiu um novo modelo para sons modernos 
+  na Pen&iacute;nsula It&aacute;lica. Conectada principalmente com uma est&eacute;tica 
+  retr&ocirc; estilizada, permeada de refer&ecirc;ncias visuais e musicais caracter&iacute;sticas 
+  das produ&ccedil;&otilde;es italianas dos anos 60 e 70, a aproxima&ccedil;&atilde;o 
+  quase intelectual sofisticada dos m&uacute;sicos e produtores de Bari alcan&ccedil;ou 
+  um reconhecimento mundial. <br>
+  Mesmo n&atilde;o sendo a produ&ccedil;&atilde;o de uma &uacute;nica pessoa, 
+  mas sobretudo uma produ&ccedil;&atilde;o &gt;coletiva, Nicola Conte constitui 
+  a refer&ecirc;ncia pensante atr&aacute;s desta nova &gt;est&eacute;tica musical. 
+  <br>
+  Com uma forma&ccedil;&atilde;o musical cl&aacute;ssica, Nicola Conte esteve 
+  envolvido primeiramente na cena internacional de new jazz como DJ e produtor 
+  de discos. Desenvolveu trabalhos para grupos diversos tais como Paolo Achenza 
+  Trio, Quintetto X, Fez Combo, Intensive Jazz Sextet e Balan&atilde;o, dentre 
+  outros. <br>
+  Ap&oacute;s criar um nome e uma identidade para o selo Schema, possivelmente 
+  o selo italiano com maior renome fora da It&aacute;lia nos dias atuais, Nicola 
+  se vinculou ao movimento musical chamado Fez, que foi o primeiro a recolocar 
+  a Bossa Nova em evid&ecirc;ncia para o p&uacute;blico italiano e a misturar 
+  elementos de jazz com a cultura clubber. O estilo do Dj Nicola Conte mescla 
+  o new jazz, bossa nova, cinematic sound (trilha sonoras de filmes italianos) 
+  e &eacute; basicamente inspirado pela m&uacute;sica brasileira. <br>
+  No Eletronika Telemig, Celular Nicola ir&aacute; se apresentar ao lado do sofisticado 
+  m&uacute;sico de jazz Gianluca Petrella (trombone e teclados). V&aacute;rios 
+  trabalhos de Nicola foram remixados por importantes nomes da lounge music: Ursula 
+  1000 (ESLM), Thievery Corporation (ESLM), Les Gammas (Compost), Rainer Truby 
+  (Compost), Konishi/Pizzicato Five (Readymade), Mansfield (Readymade), Kyoto 
+  Jazz Massive (Compost), Gotan Project (Ya Basta!), Boozoo Bajou (Stereo DeLuxe), 
+  Karminsky Experience e Richard &gt;Dorfmeister (G-Stone).<br>
+  &Aacute;lbuns: 2000-&quot;Jet Sounds&quot; (Schema Records) Outros projetos: 
+  Paolo Achenza: &quot;Ombre&quot; (1997) Arranjador, Produtor art&iacute;stico; 
+  &quot;Balanco: Bossa &amp; Balanco&quot; (1987) Produtor art&iacute;stico; Balanco: 
+  &quot;More&quot; (1999) Arranjador, programador, Produtor art&iacute;stico; 
+  Fez Combo: &quot;Follow the Spirit (1996) Arranjador&quot;; Rosario Giuliani 
+  Quartetto: &quot;Tension: Jazz Themes from Italian...&quot; (1999) Produtor 
+  art&iacute;stico; Intensive Jazz Sextet: &quot;Today's Sound&quot; (1997) Produtor 
+  art&iacute;stico; Jazz Convention: &quot;Up Up with the Jazz Convention&quot; 
+  (1998) Produtor, Produtor art&iacute;stico; Quartetto Moderno: &quot;Ecco!&quot; 
+  (1999) Produtor; Schema Sextet: &quot;Look Out&quot; (2000) Produtor art&iacute;stico; 
+  Various Artists: &quot;Break N' Bossa: Chapter 3&quot; Produtor; Various Artists: 
+  &quot;Break N' Bossa: Chapter&quot; 2 Produtor <br>
+  <br>
+  08. ANVIL FX <br>
+  (convida: Andrea Marquee, Jo&atilde;o Parahyba - Trio Mocot&oacute;, Miguel 
+  &gt;Barella - Volunt&aacute;rios da P&aacute;tria e Akira S)<br>
+  Anvil FX &eacute; o alter ego do m&uacute;sico, produtor e multi-instrumentista 
+  mineiro Paulo Beto. Nascido em Juiz de Fora, Paulo Beto produz e pesquisa m&uacute;sica 
+  eletr&ocirc;nica a mais de 10 anos. Comp&ocirc;s a trilha sonora original para 
+  os v&iacute;deos &quot;Viaduto do Ch&aacute;&quot; (pr&ecirc;mio de melhor trilha 
+  sonora original no festival de cinema do Maranh&atilde;o em 1994), &quot;Fogo 
+  de Amore&quot; e &quot;A Vida Entre Quatro Paredes&quot;. A convite da Continental 
+  V&iacute;deo, musicou os filmes &quot;Metropolis&quot; de Fritz Lang e &quot;O 
+  Gabinete do Dr. Caligari&quot;, de Robert Wiene. Como Anvil FX lan&ccedil;ou 
+  em 99 o &aacute;lbum &quot;Lo-Fi Genesis&quot;, onde mistura drum&#146;n&#146; 
+  bass e m&uacute;sica brasileira, dentre outras influ&ecirc;ncias (como o jazz, 
+  a m&uacute;sica tribal e a m&uacute;sica eletroac&uacute;stica). Aclamado pela 
+  cr&iacute;tica, &quot;Lo-Fi Genesis&quot; tem participa&ccedil;&otilde;es especiais 
+  das cantoras Rena Engels e Tarsila Broder e samplers de artistas como Juliette 
+  Greco, Bobbie Gillespie e da Banda de P&iacute;faros de Caruaru. Anvil FX tamb&eacute;m 
+  participa do disco tributo a Luiz Gonzaga e do projeto Shiva Las Vegas, ao lado 
+  de Alex Antunes e do grupo Tetine, dentre outros. Em janeiro de 2000 a gravadora 
+  americana Caipirinha incluiu a faixa &quot;1000&quot; em seu disco Caipir&iacute;ssima.<br>
+  Sua apresenta&ccedil;&atilde;o no festival deste ano &eacute; uma das promessas 
+  de bons shows, visto sua lista de convidados de primeiro time.<br>
+  &Aacute;lbum: &quot;Lo Fi Genesis&quot; (Motor Music) <br>
+  <br>
+  09. ANDERSON NOISE <br>
+  &quot;Pioneiro &eacute; aquele que primeiro abre ou descobre caminhos atrav&eacute;s 
+  de regi&otilde;es desconhecidas&quot;. Esta &eacute; uma frase que bem define 
+  o DJ Anderson Noise e a import&acirc;ncia de sua contribui&ccedil;&atilde;o 
+  para a cena de m&uacute;sica eletr&ocirc;nica em Belo Horizonte.<br>
+  Chegando aos 10 anos de carreira e sendo elogiado por in&uacute;meras pessoas 
+  pela sua dedica&ccedil;&atilde;o e profissionalismo, Noise tem um s&oacute;lido 
+  &quot;background&quot;, que inspira confian&ccedil;a em quem ainda n&atilde;o 
+  o conhece e serve de exemplo para qualquer um que queira seguir a carreira de 
+  DJ e produtor.<br>
+  Seu segundo CD de compila&ccedil;&otilde;es, &quot;Outubro&quot; (2000), que 
+  vem sendo esperado h&aacute; 4 anos pelo p&uacute;blico e pela m&iacute;dia 
+  especializada, j&aacute; que desde 1996 Noise n&atilde;o lan&ccedil;a um CD. 
+  &quot;Outubro&quot; vem confirmar o que muitos j&aacute; sabem: um DJ n&atilde;o 
+  &eacute; um mero &quot;tocador de m&uacute;sicas&quot;. <br>
+  Ao contr&aacute;rio, atualmente, o (bom) DJ &eacute; considerado um artista, 
+  porque, ao fazer todo um trabalho de pesquisa, sele&ccedil;&atilde;o e encadeamento 
+  das m&uacute;sicas (o que demanda um alto grau de sensibilidade e refinamento 
+  musical), ele as recria, apropriando-se delas e formando um novo e harm&ocirc;nico 
+  conjunto. Sendo assim, as m&uacute;sicas do CD &quot;Outubro&quot; sinalizam 
+  o momento musical que Anderson Noise vive<br>
+  &Aacute;lbum Anderson Noise: &quot;Outubro&quot; (Noise Music/Trama) <br>
+  <br>
+  10. XRS LAND <br>
+  XRS Land, projeto do DJ e produtor paulista Xerxes de Oliveira, est&aacute; 
+  cada &gt;vez mais firme na proposta da uni&atilde;o do drum'n'bass com a MPB, 
+  a bossanova e o jazz. <br>
+  Seu primeiro disco, &quot;Sarau&quot;, traz elementos suaves, como pianos, cordas 
+  e flautas aliados &agrave; for&ccedil;a do groove do drum'n'bass e da percuss&atilde;o 
+  brasileira. Nos shows a proposta mantida, e um time de primeira fica respons&aacute;vel 
+  por mais esse tempero: Rael Gimenes: guitarra, Luis Felipe Oliveira: teclados, 
+  Fernanda Porto: vocais e Xerxes: DJ/sequencer/teclado. <br>
+  &Aacute;lbum: XRS Land: Sarau (Sambaloco/Trama) <br>
+  <br>
+  11. ANGEL MOLINA <br>
+  Do selo barcelon&ecirc;s Minifunk , Angel Molina &eacute; considerado um dos 
+  melhores Dj&#146;s espanhois de techno. Tendo lan&ccedil;ado por este selo uma 
+  serie experimental e hipnotica chamada &quot;Loops&quot; (# 1&quot; 1998 e # 
+  2&quot;, 1999).<br>
+  Nas pick ups foi denominado &quot;the spanish jeff mills&quot; devido a forma 
+  com que manipula o crossfader e ao seu bomb&aacute;stico estilo techno . Mas 
+  sua grande habilidade em se conectar com o publico na pista de dan&ccedil;a 
+  se deve a capacidade de transitar entre diferentes estilos (tech &#150; house, 
+  electro ou hard funk) durante seus sets. <br>
+  <br>
+  12. DJ ROBSON <br>
+  Carisma , simpatia, conhecimento musical e um set variando do house ao techno, 
+  fizeram de &quot;Robinho&quot; um dos djs mais respeitados da cidade. A experi&ecirc;ncia 
+  que adquiriu ao longo de sua carreira, fez dele um dj vers&aacute;til na pista 
+  de dan&ccedil;a. <br>
+  Sua especialidade, house music, foi aos poucos se tornando a caracter&iacute;stica 
+  principal de suas memor&aacute;veis resid&ecirc;ncias em dois importantes clubes 
+  de Belo Horizonte, al&eacute;m de ter colaborado essencialmente para firmar 
+  o estilo na cidade. <br>
+  <br>
+  13. DJ LP<br>
+  &Eacute; a promessa do drum &#145;n' bass na capital mineira. Com uma historia 
+  iniciada no movimento hip hop, de onde prov&eacute;m sua t&eacute;cnica surpreendente 
+  nos toca discos, LP ganhou fama e p&uacute;blico cativo. Desde 97 se dedicou 
+  ao drum n'bass, ritmo fren&eacute;tico marcado por batidas quebradas, e energ&eacute;tico, 
+  tocado nas principais pistas de todo o mundo. <br>
+  A densidade e qualidade musical &eacute; fator determinante em seu set e &eacute; 
+  uma de suas principais caracter&iacute;sticas. Variando sempre o BPM (batidas 
+  por minuto), LP &eacute; capaz de incendiar uma pista como tamb&eacute;m leva-la 
+  somente no groove dos poderosos baixos do drum 'n&#146; bass. Suas mixagens 
+  minuciosas fazem os term&ocirc;metros subirem e tiram o p&uacute;blico do ch&atilde;o<br>
+  <br>
+  14. DJ DANIEL MAIA<br>
+  &Eacute; sem d&uacute;vida o Dj mais popular de drum &#145;n&#146; bass de Belo 
+  Horizonte. Suas influ&ecirc;ncias v&ecirc;m de 1994 do estilo &quot;hard core/ 
+  jungle de onde surgiu o seu interesse para o ent&atilde;o chamado drum n&#146; 
+  bass. O seu aperfei&ccedil;oamento foi r&aacute;pido e hoje sua t&eacute;cnica 
+  &eacute; indiscut&iacute;vel. <br>
+  Elogiado pelo melhor dj do mundo no estilo; DJ Marky, e citado por revistas 
+  especializadas; Daniel Maia consagra se cada vez mais em suas apresenta&ccedil;&otilde;es, 
+  que s&atilde;o recheadas de energia e simpatia com o p&uacute;blico, al&eacute;m 
+  &eacute; claro de seus &quot;scrathes&quot; avassaladores. Seu set, &eacute; 
+  caracterizado por um Dn&#146;B mais energ&eacute;tico e de BPM r&aacute;pido 
+  (batidas por minuto), aliado a sua t&eacute;cnica r&aacute;pida e surpreendente 
+  e seu jeito brincalh&atilde;o. Brevemente falando: &eacute; lenha do in&iacute;cio 
+  ao fim. <br>
+  <br>
+  15. DJ FILIPE FORATTINI <br>
+  Come&ccedil;ou como produtor de eventos em BH. Festas pequenas e conceituais 
+  como as &quot;freakout&quot; e &quot;remedio&quot;. Seu in&iacute;cio foi diferente 
+  dos outros; come&ccedil;ou a fazer m&uacute;sica e se apresentar em clubes e 
+  festas fazendo &quot;live pa&quot; , usando apenas um computador munido de soft 
+  synths e sequencers.<br>
+  Em 1999 Filipe &quot;deixou&quot; de lado as produ&ccedil;&otilde;es e partiu 
+  para a intensa pesquisa musical al&eacute;m de aliar se a t&eacute;cnica de 
+  Dj. Conhecimento musical, &eacute; o seu sobrenome e tamb&eacute;m, o seu grande 
+  diferencial. Seu conhecimento vai &agrave; fundo dentro da musica eletr&ocirc;nica 
+  e &eacute; bem aplicado em seus sets e suas apresenta&ccedil;&otilde;es, que 
+  podem ir do deep house, com influ&ecirc;ncias de jazz passando pelos vocais, 
+  house com tempero funk e indo at&eacute; o tech-house, e de l&aacute; caminhando 
+  para techno com groove. <br>
+  Filipe concilia o seu tempo entre suas apresenta&ccedil;&otilde;es e seu projeto 
+  junto ao dj Tee.<br>
+  <br>
+  16. DJ TEE <br>
+  Divide a carreira entre o Dj e o produtor da ag&ecirc;ncia FILTRO, da qual &eacute; 
+  membro e fundador. TEE se estabelece dentro da cena eletr&ocirc;nica da capital 
+  mineira, que a cada dia se torna promissora. O Dj j&aacute; tocou ao lado de 
+  grandes nomes como, Cristhian Smith (Su&eacute;cia) e o promissor Produtor/ 
+  Dj Casey Hogan (NY) da sonic groove. <br>
+  Seu set &eacute; basicamente voltado aos sons progressivos; um som, diga-se 
+  de passagem, que vai de Londres &agrave; IBIZA, que &eacute; caracterizado por 
+  uma batida as vezes mais &quot;house&quot; outras horas mais &quot;techno&quot;, 
+  mas sempre progressivo e mel&oacute;dico, outra hora percussiva com tend&ecirc;ncias 
+  do tribalismo, caracter&iacute;stico do famoso &quot;ver&atilde;o de Ibiza&quot;, 
+  sem &eacute; claro, deixar-se levar pelo lado mais pop da ilha espanhola. <br>
+  Sua varia&ccedil;&atilde;o &eacute; incontest&aacute;vel e sua t&eacute;cnica 
+  nas mixagens durante o set s&atilde;o cl&aacute;ssicas, sendo longas e como 
+  o seu pr&oacute;prio som, progressivas. <br>
+  <br>
+  EVENTOS PARALELOS<br>
+  <br>
+  01. ERIK DAVIS <br>
+  Erik Davis, autor independente residente em San Francisco, abordou temas diversos 
+  como a tecnologia, a m&uacute;sica e a teoria cr&iacute;tica desde que terminou 
+  seus estudos na Universidade de Yale em 1988. Colaborou com diversas publica&ccedil;&otilde;es 
+  americanas como The Village Voice, Mediamatic, The Utne Reader, Spin, Lingua 
+  Franca e The Nation. Seu ensaio &quot;Techgnosis: Magic, Memory, and The Angels 
+  of Information&quot; foi apresentado na IV Cyberconf realizada em Banff, Canad&aacute;, 
+  e foi publicada no livro Flame Wars. <br>
+  Recentemente colaborou em um n&uacute;mero so ciberfanzine FringeWare Review, 
+  de Austin, Texas. Em 1997, publicou pela editora Hyperion o livro Techgnosis: 
+  Myth, Magic and Religion in the Information Age. <br>
+  Atualmente &eacute; editor da revista Wired.<br>
+  <br>
+  02. BLACK DOG FILMS <br>
+  Los Angeles 1988: dois jovens diretores combinando seus talentos e ambi&ccedil;&otilde;es 
+  fundam a agora reconhecida mundialmente Black Dog Films. Jake Scott e Marcus 
+  Nispel come&ccedil;aram a ag&ecirc;ncia Black Dog/Portfolio (abreviada recentemente 
+  para Black Dog). Desta colabora&ccedil;&atilde;o resultaram diversos v&iacute;deos 
+  clipes para grupos como Radiohead, No Doubt, Puff Daddy e o altamente aclamado 
+  MTV Music Awards do REM.<br>
+  Em 1997, Black Dog abre suas portas em Londres e com o talentos de jovens produtores 
+  ingleses, ganha rapidamente o reconhecimento equivalente &agrave; irm&atilde; 
+  americana. O escrit&oacute;rio de Londres produziu v&iacute;deos premiados para 
+  Aphex Twin, Garbage, Madona, Squarepusher, All Seing I and Bj&ouml;rk. Por &uacute;ltimo, 
+  em 2000, o v&iacute;deo clipe All Full in Love (Bj&ouml;rk) recebeu ineditamente 
+  o Gold Pencil na premia&ccedil;&atilde;o da renomada D&amp;AD. <br>
+  <br>
+  03. ADF Education (ADFED) <br>
+  Criado pelos integrantes da banda Asian Dub Foundation, o programa tem como 
+  objetivo promover e ensinar m&uacute;sica e tecnologia aos jovens. O ADFED j&aacute; 
+  organizou v&aacute;rios workshops em Londres e tamb&eacute;m na Hungria com 
+  o suporte do British Council.</font></p>
+
+								 </font></td>
+                            </tr>
+                          </table>
+						
+                        </td>
+                     </tr>
+                    </table>
+                    <br>
+                    <hr size="1" align="center" noshade width="98%">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="2">
+                      <tr> 
+                        <td> <img src="imgs/c-pes-eve.gif" width="146" height="21"><br>
+                          <br>
+                          <font face="Arial, Helvetica, sans-serif" size="2"><b>&nbsp;&nbsp;<img src="imgs/i-pesquisa.gif" align="absmiddle">&nbsp;Data 
+                          e Nome do Evento<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b> 
+                          <select name="registro" onChange="submit();">
+                            <option> Selecione um Evento  
+                            <option value="208">25/04 
+                            - Mostra de V&#237;deo</option>
+                             
+                            <option value="232">26/04 
+                            - Curtabelas</option>
+                             
+                            <option value="240">26/04 
+                            - Indie 2001</option>
+                             
+                            <option value="199">27/04 
+                            - Amadeo Lorenzato</option>
+                             
+                            <option value="235">27/04 
+                            - Sylberto Sette Zucheratto</option>
+                             
+                            <option value="222">28/04 
+                            - Eletronika</option>
+                             
+                            <option value="244">28/04 
+                            - Lan&#231;amento</option>
+                             
+                            <option value="165">28/04 
+                            - Pinturas e Esculturas</option>
+                             
+                            <option value="241">29/04 
+                            - Circ Alpha</option>
+                             
+                            <option value="210">29/04 
+                            - S&#233;rgio Tochner</option>
+                             
+                            <option value="23">30/04 
+                            - BH 1893 -1922</option>
+                             
+                            <option value="228">30/04 
+                            - Sally</option>
+                             
+                            <option value="239">30/04 
+                            - Trof&#233;u Pr&#243;-Musica 2000</option>
+                             
+                            <option value="211">01/05 
+                            - Camping &amp; Rock</option>
+                             
+                            <option value="242">02/05 
+                            - Fot&#243;grafas da National Geographic</option>
+                             
+                            <option value="237">06/05 
+                            - Brasil Ind&#237;gena</option>
+                             
+                            <option value="138">06/05 
+                            - RJ 1862-1927</option>
+                             
+                            <option value="212">13/05 
+                            - Festival do Paladar</option>
+                             
+                            <option value="229">13/05 
+                            - Mostre o Seu Talento</option>
+                             
+                            <option value="204">20/05 
+                            - M&#225;rio Arreguy</option>
+                             
+                            <option value="220">31/05 
+                            - Arte Sequencial</option>
+                             
+                            <option value="147">09/06 
+                            - Maria In&#234;z Starling M&#243;l</option>
+                             
+                            <option value="223">14/06 
+                            - Imagens do Brasil</option>
+                             
+                            <option value="202">23/06 
+                            - S&#233;rgio Machado</option>
+                             
+                            <option value="224">31/07 
+                            - Projeto Mural 2001</option>
+                             
+                            <option value="154">09/02 
+                            - Impress&#245;es de Minas</option>
+                             
+                            <option value="217">29/03 
+                            - Velhos Horizontes</option>
+                             
+                          </select>
+                          <b>&nbsp;&nbsp;</b> </font><font size="1" face="Verdana, Arial, Helvetica, sans-serif" color="#999999"><br>
+                          &nbsp;&nbsp;&nbsp;(Para ver o conte&uacute;do, basta 
+                          selecionar uma op&ccedil;&atilde;o nas listas)</font></td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td width="10%"> 
+                 <table width="100%" border="0" cellspacing="0" cellpadding="3">
+                      
+<tr align = "center" valign = "top"> 
+  <td><a href="http://www.savassifm.com.br"><IMG border=0 src="../imgs/ban-savassifm2.gif" width="170" height="45"></a><br>
+     </td>
+</tr>
+<tr align = "center" valign = "top"> 
+	<td height = "2"> 
+    	
+    <table border="0" cellspacing="0" cellpadding="0" width="168">
+      <tr><td><IMG border=0 src="imgs/cd-def-acontece.gif"></td></tr>
+			<tr bgcolor="#e7f9ff"> 
+            	<td height="2"> 
+          			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+            			<tr valign="top" align="left" bgcolor="#e7f9ff">
+             				<td height="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#0099cc"> 
+                				1.<a href ="eve-reg.asp?registro=208" class=def >Mostra de Vídeo</a><BR>
+                				 </font> </td>  
+						</tr>
+					</table>
+				</td>
+			</tr>
+		<tr> 
+			<td height="2"> 
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+                	<tr valign="top"> 
+                    	<td align="left" width="2%"><IMG src="imgs/ed-boxe.gif"></td>
+                        <td align="right" bgcolor="#e7f9ff" width="96%" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#0099cc"><b>&nbsp;</b></font></td>
+                        <td align="right" width="2%"><IMG src="imgs/ed-boxd.gif"></td>
+                    </tr>
+                </table>
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+<tr align = "center" valign = "top"> 
+	<td height = "2"> 
+    <table border="0" cellspacing="0" cellpadding="0" width="168">
+      <tr> 
+        <td><A href="eventos.asp"><IMG border=0 src="imgs/cd-def-franca.gif"></a></td>
+      </tr>
+      <tr valign="top" align="left" bgcolor="#e7f9ff"> 
+        <td height="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#0099cc"> 
+          1
+          .<a href ="eve-reg.asp?registro=199" class=def>
+          Amadeo Lorenzato</a><BR>
+          2
+          .<a href ="eve-reg.asp?registro=220" class=def>
+          Arte Sequencial</a><BR>
+          3
+          .<a href ="eve-reg.asp?registro=23" class=def>
+          BH 1893 -1922</a><BR>
+          4
+          .<a href ="eve-reg.asp?registro=237" class=def>
+          Brasil Indígena</a><BR>
+          5
+          .<a href ="eve-reg.asp?registro=241" class=def>
+          Circ Alpha</a><BR>
+          6
+          .<a href ="eve-reg.asp?registro=232" class=def>
+          Curtabelas</a><BR>
+          7
+          .<a href ="eve-reg.asp?registro=242" class=def>
+          Fotógrafas da National Geographic</a><BR>
+          8
+          .<a href ="eve-reg.asp?registro=223" class=def>
+          Imagens do Brasil</a><BR>
+          9
+          .<a href ="eve-reg.asp?registro=154" class=def>
+          Impressões de Minas</a><BR>
+          10
+          .<a href ="eve-reg.asp?registro=240" class=def>
+          Indie 2001</a><BR>
+          11
+          .<a href ="eve-reg.asp?registro=244" class=def>
+          Lançamento</a><BR>
+          12
+          .<a href ="eve-reg.asp?registro=147" class=def>
+          Maria Inêz Starling Mól</a><BR>
+          13
+          .<a href ="eve-reg.asp?registro=204" class=def>
+          Mário Arreguy</a><BR>
+          14
+          .<a href ="eve-reg.asp?registro=208" class=def>
+          Mostra de Vídeo</a><BR>
+          15
+          .<a href ="eve-reg.asp?registro=229" class=def>
+          Mostre o Seu Talento</a><BR>
+          16
+          .<a href ="eve-reg.asp?registro=165" class=def>
+          Pinturas e Esculturas</a><BR>
+          17
+          .<a href ="eve-reg.asp?registro=224" class=def>
+          Projeto Mural 2001</a><BR>
+          18
+          .<a href ="eve-reg.asp?registro=138" class=def>
+          RJ 1862-1927</a><BR>
+          19
+          .<a href ="eve-reg.asp?registro=228" class=def>
+          Sally</a><BR>
+          20
+          .<a href ="eve-reg.asp?registro=202" class=def>
+          Sérgio Machado</a><BR>
+          21
+          .<a href ="eve-reg.asp?registro=210" class=def>
+          Sérgio Tochner</a><BR>
+          22
+          .<a href ="eve-reg.asp?registro=235" class=def>
+          Sylberto Sette Zucheratto</a><BR>
+          23
+          .<a href ="eve-reg.asp?registro=239" class=def>
+          Troféu Pró-Musica 2000</a><BR>
+          24
+          .<a href ="eve-reg.asp?registro=217" class=def>
+          Velhos Horizontes</a><BR>
+          
+          </font></td>
+      </tr>
+      <tr> 
+        <td height="2"> 
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr valign="top"> 
+              <td align="left" width="2%"><IMG src="imgs/ed-boxe.gif"></td>
+              <td align="right" bgcolor="#e7f9ff" width="96%" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#0099cc"><b>&nbsp;</b></font></td>
+              <td align="right" width="2%"><IMG src="imgs/ed-boxd.gif"></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    
+    <br>
+  </td>
+                    </tr>
+                    <tr align = "center" valign = "top"> 
+                      <td> 
+                        <table width="100%" border="0" cellspacing="0" cellpadding="1">
+                          <tr align="middle" valign="top"> 
+                            
+        <td width="96%" valign="top" align="center"> <font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#0099cc"> 
+          <a href="http://www.webminas.com.br"><img src="../imgs/webminas(selo3).gif" width="72" height="76" border="0"></a><br>
+          <br>
+          apoio&nbsp;</font><a href="http://www.otempo.com.br"><IMG align=middle border=0 height=18 src="imgs/b-otempo.gif" width=100></a><br>
+          <br>
+          <a href="http://www.wunderground.com/global/stations/83587.html"> <img src="http://banners.wunderground.com/banner/gizmotemp/global/stations/83587.gif" height=41 width=127 border="0"></a> 
+          <br>
+          <a href="http://www.wunderground.com/global/stations/83587.html"> <br>
+          </a> </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+
+					 
+                  </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr align="left" valign="top"> 
+            <td width="1%" bgcolor="#6FCBCC" align="center"><font size="1">&nbsp;</font></td>
+            <td width="1%"><font size="1">&nbsp;</font></td>
+            <td width="98%" bgcolor="#FFFFFF"> 
+              <table width="100%" border="0" cellspacing="0" cellpadding="2">
+                <tr align="left" valign="top"> 
+                  <td width="70%" align="center" bgcolor="#eeeeee"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Para 
+                    ver o site, utilize <b>resolução mínima</b> de <b>800x600</b>.</font></td>
+                  <td width="30%" align="center" bgcolor="#dddddd"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">© 
+                    Copyright 2000, <b>AgendaBH</b></font></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+    </td>
+    <td width="1%"><img src="imgs/t.gif" width="14" height="1"></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="1%"><img src="imgs/t.gif" width="12" height="1"></td>
+      <td width="98%" bgcolor="#6FCBCC"><img src="imgs/t.gif" width="1" height="8"></td>
+    <td width="1%"><img src="imgs/t.gif" width="14" height="1"></td>
+  </tr>
+</table>
+<div align="right">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr> 
+        <td width="1%"><img src="imgs/t.gif" width="12" height="1"></td>  
+        <td width="98%" align="left"> 
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td align="left" valign="top"><img src="imgs/assinatura.gif" usemap="#Map5" border="0"><map name="Map5"><area shape="rect" coords="74,4,156,20" href="quemsomos.asp" alt="Agendabh" title="Agendabh"><area shape="rect" coords="168,2,207,20" href="javascript:diw('diw.asp');" alt="Digital Interaction for Web" title="Digital Interaction for Web"></map></td>
+              <td align="right" valign="top"><img src="imgs/rodape.gif" width="543" height="23" usemap="#Map4Map2" border="0"><map name="Map4Map2"><area shape="rect" coords="251,0,347,20" href="publicidade.asp"><area shape="rect" coords="348,1,455,21" href="parcerias.asp"><area shape="poly" coords="249,1,249,19,198,19,191,16,188,10,187,0" href="contato.asp"><area shape="poly" coords="456,1,456,16,460,20,466,20,538,19,538,1" href="quemsomos.asp"></map><map name="Map4Map"><area shape="rect" coords="251,0,347,20" href="publicidade.asp"><area shape="rect" coords="348,1,455,21" href="parcerias.asp"><area shape="poly" coords="249,1,249,19,198,19,191,16,188,10,187,0" href="contato.asp"><area shape="poly" coords="456,1,456,16,460,20,466,20,538,19,538,1" href="quemsomos.asp"></map><map name="Map4"><area shape="rect" coords="248,0,394,19" href="publicidade.asp"><area shape="rect" coords="395,0,456,19" href="parcerias.asp"><area shape="poly" coords="246,0,246,19,198,19,191,16,188,10,187,0" href="contato.asp"><area shape="poly" coords="459,0,458,15,462,19,468,19,540,18,540,0" href="quemsomos.asp"></map></td>
+            </tr>
+          </table>
+        </td>
+        <td width="1%"><img src="imgs/t.gif" width="14" height="1"></td>
+    </tr>
+  </table>
+  
+</div>
+<br>
+</form>
+</body>
+</html>

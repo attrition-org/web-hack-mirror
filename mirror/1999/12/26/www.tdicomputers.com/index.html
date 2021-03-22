@@ -1,0 +1,111 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="FORMATTER" content="Arachnophilia 3.9">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>do u mean root ? ! illusions team !</title>
+</head>
+
+<body bgcolor="#000000" text="#FFFFFF" link="#FFFFFF"
+vlink="#808080">
+
+<p align="left"><br>
+<img src="illusions09.jpg"> <br>
+<br>
+<font size="2" face="verdana"><b>.model small <br>
+.stack 100h <br>
+.data <br>
+menu db ' U've just been hacked by g_RaX@illusion_team99 on
+xx/12/99',10,13 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db 'greetz
+to wh0le illusions team',10,13 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db 'no
+fuckz for this time off the year, only to redattack',10,13 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db 'Happy
+NewYear Admin :)',10,13 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db ' 0-
+mail him and give him a job.',10,13 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db ' 1-
+make your server secure.',10,13 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db ' 2-
+respect illusions team.',10,13 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db ' Enter
+your choice:',10,13,'$' <br>
+<br>
+mail &nbsp;db'grax@most-wanted.com',10,13 <br>
+<br>
+cya &nbsp;db ' game over, try again l8r. ;p ',10,13 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db ' Merry
+X-Mas &amp; Happy New Year ',10,13,'$' <br>
+<br>
+&nbsp;.code <br>
+&nbsp;&nbsp;MAIN proc <br>
+&nbsp;&nbsp;&nbsp;mov ax,@data <br>
+&nbsp;&nbsp;&nbsp;mov ds,ax <br>
+begenning: mov ah,00h; mode video 3 <br>
+&nbsp;&nbsp;&nbsp;mov al,03h <br>
+&nbsp;&nbsp;&nbsp;int 10h <br>
+&nbsp;&nbsp;&nbsp;mov ax,0b800h <br>
+&nbsp;&nbsp;&nbsp;mov es,ax <br>
+<br>
+&nbsp;&nbsp;&nbsp;mov al,00h &nbsp;; clear screen <br>
+&nbsp;&nbsp;&nbsp;mov ah,06h <br>
+&nbsp;&nbsp;&nbsp;mov bh,7 <br>
+&nbsp;&nbsp;&nbsp;mov cx,0 <br>
+&nbsp;&nbsp;&nbsp;mov dh,24 <br>
+&nbsp;&nbsp;&nbsp;mov dl,79 <br>
+&nbsp;&nbsp;&nbsp;int 10h <br>
+<br>
+&nbsp;&nbsp;&nbsp;mov dx,offset menu &nbsp;; print on screen the
+menu <br>
+&nbsp;&nbsp;&nbsp;mov ah,9 <br>
+&nbsp;&nbsp;&nbsp;int 21h <br>
+<br>
+&nbsp;&nbsp;&nbsp;mov ah,1 <br>
+&nbsp;&nbsp;&nbsp;int 21h <br>
+<br>
+&nbsp;&nbsp;&nbsp;cmp al,'0' <br>
+&nbsp;&nbsp;&nbsp;je zero <br>
+&nbsp;&nbsp;&nbsp;cmp al,'1' <br>
+&nbsp;&nbsp;&nbsp;je one <br>
+&nbsp;&nbsp;&nbsp;cmp al,'2' <br>
+&nbsp;&nbsp;&nbsp;je two <br>
+&nbsp;&nbsp;&nbsp;jmp begenning <br>
+<br>
+zero: jmp end1 <br>
+<br>
+one: <br>
+&nbsp;&nbsp;&nbsp;mov dx,offset mail ; g_RaX mail <br>
+&nbsp;&nbsp;&nbsp;mov ah,9 <br>
+&nbsp;&nbsp;&nbsp;int 21h <br>
+<br>
+two:&nbsp;&nbsp;&nbsp;mov dx,offset mail ; g_RaX mail <br>
+&nbsp;&nbsp;&nbsp;mov ah,9 <br>
+&nbsp;&nbsp;&nbsp;int 21h <br>
+<br>
+end1: <br>
+&nbsp;&nbsp;&nbsp;mov al,00h &nbsp;&nbsp;&nbsp;; clear screen <br>
+&nbsp;&nbsp;&nbsp;mov ah,06h <br>
+&nbsp;&nbsp;&nbsp;mov bh,7 <br>
+&nbsp;&nbsp;&nbsp;mov cx,0 <br>
+&nbsp;&nbsp;&nbsp;mov dh,24 <br>
+&nbsp;&nbsp;&nbsp;mov dl,79 <br>
+&nbsp;&nbsp;&nbsp;int 10h <br>
+<br>
+&nbsp;&nbsp;&nbsp;mov dx,offset cya <br>
+&nbsp;&nbsp;&nbsp;mov ah,9 <br>
+&nbsp;&nbsp;&nbsp;int 21h <br>
+<br>
+&nbsp;&nbsp;&nbsp;mov ax,04c00h <br>
+&nbsp;&nbsp;&nbsp;int 21h <br>
+&nbsp;&nbsp;&nbsp;main endp <br>
+<br>
+&nbsp;&nbsp;&nbsp;end main </b></font><br>
+<br>
+<font size="2" face="verdana"><b>[copyrighted illusions team 99
+©] </b></font></p>
+</body>
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

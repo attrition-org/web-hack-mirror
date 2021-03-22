@@ -1,0 +1,32 @@
+--02:52:07--  http://kitchen.princeton.edu:80/
+           => `kitchen.princeton.edu/index.html'
+Connecting to kitchen.princeton.edu:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 1,620 [text/html]
+
+    0K -> .                                                      [100%]
+
+02:52:07 (1.54 MB/s) - `kitchen.princeton.edu/index.html' saved [1620/1620]
+
+Loading robots.txt; please ignore errors.
+--02:52:07--  http://kitchen.princeton.edu:80/no-robots.txt
+           => `kitchen.princeton.edu/no-robots.txt'
+Connecting to kitchen.princeton.edu:80... connected!
+HTTP request sent, awaiting response... 404 Not Found
+02:52:08 ERROR 404: Not Found.
+
+--02:52:08--  http://kitchen.princeton.edu:80/hacker3.jpg
+           => `kitchen.princeton.edu/hacker3.jpg'
+Connecting to kitchen.princeton.edu:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 45,680 [image/jpeg]
+
+    0K -> .......... .......... .......... .......... ....       [100%]
+
+02:52:09 (72.77 KB/s) - `kitchen.princeton.edu/hacker3.jpg' saved [45680/45680]
+
+Converting kitchen.princeton.edu/index.html... done.
+
+FINISHED --02:52:09--
+Downloaded: 47,300 bytes in 2 files
+Converting kitchen.princeton.edu/index.html... done.

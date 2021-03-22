@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<TITLE>Document Title</TITLE>
+</HEAD>
+
+<BODY>
+
+<script language="JavaScript">
+<!--
+    if ( navigator.appName == "Netscape" )
+    {
+        //-- This next line ensures that any plugins just installed are updated in the Browser
+        //-- without quitting the browser.
+        navigator.plugins.refresh();
+        // We don't need the APPLET within IE
+        // ***Please note that if you do not need to script events, you can safely remove the next two lines
+        document.write("\x3C" + "applet MAYSCRIPT Code=NPDS.npDSEvtObsProxy.class")
+        document.writeln(" width=5 height=5 name=appObs\x3E \x3C/applet\x3E")
+    }
+//-->
+</script>
+
+<!-- Set ShowControls, ShowDisplay, ShowStatusBar to value 0 to not display the corresponding thing under the video window -->
+<OBJECT ID="NSPlay" WIDTH=160 HEIGHT=128 classid="CLSID:22D6F312-B0F6-11D0-94AB-0080C74C7E95"
+codebase="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=5,1,52,701"
+standby="Loading Microsoft Windows Media Player components..."
+type="application/x-oleobject">
+    <PARAM NAME="FileName" VALUE="mms://CC3.CUMBER.EDU/wezj">
+    <PARAM NAME="ShowControls" VALUE="1">
+    <PARAM NAME="ShowDisplay" VALUE="1">
+    <PARAM NAME="ShowStatusBar" VALUE="1">
+    <PARAM NAME="AutoSize" VALUE="1">
+    <Embed type="application/x-mplayer2"
+        pluginspage="http://www.microsoft.com/Windows/Downloads/Contents/Products/MediaPlayer/"
+        filename="wezj.asx"
+        src="wezj.asx"
+        Name=NSPlay
+        ShowControls=1
+        ShowDisplay=1
+        ShowStatusBar=1
+        width=290
+        height=320>
+    </embed>
+</OBJECT>
+
+</BODY>
+</HTML>

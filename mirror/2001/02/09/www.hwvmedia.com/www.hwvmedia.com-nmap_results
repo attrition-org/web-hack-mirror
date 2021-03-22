@@ -1,0 +1,44 @@
+
+Starting nmap V. 2.54BETA3 ( www.insecure.org/nmap/ )
+Insufficient responses for TCP sequencing (3), OS detection may be less accurate
+Insufficient responses for TCP sequencing (2), OS detection may be less accurate
+Interesting ports on hwvmedia.com (12.42.235.4):
+(The 2 ports scanned but not shown below are in state: closed)
+Port       State       Service
+23/tcp     open        telnet                  
+25/tcp     open        smtp                    
+80/tcp     open        http                    
+
+Aggressive OS guesses: BSDI BSD/OS 4.0.1 Kernel (90%), Linux 2.1.122 - 2.2.16 (88%), HP-UX B11.00 U 9000/839 (88%), Windows NT4 / Win95 / Win98 (88%), NetBSD 1.3I (after 19990119) to 1.4 x86 (87%), Linux 2.2.12 (87%), AIX v4.2 (86%), Juniper Router running JUNOS (86%)
+No exact OS matches for host (If you know what OS is running on it, see http://www.insecure.org/cgi-bin/nmap-submit.cgi).
+TCP/IP fingerprint:
+T1(Resp=Y%DF=Y%W=5B4%ACK=S++%Flags=AS%Ops=MNNT)
+TSeq(Class=RI%gcd=1%SI=1730D)
+T1(Resp=Y%DF=Y%W=5B4%ACK=S++%Flags=AS%Ops=MNNT)
+T2(Resp=N)
+T1(Resp=Y%DF=Y%W=5B4%ACK=S++%Flags=AS%Ops=MNNT)
+T2(Resp=N)
+T3(Resp=Y%DF=Y%W=5B4%ACK=S++%Flags=AS%Ops=MNNT)
+T2(Resp=N)
+T3(Resp=Y%DF=Y%W=5B4%ACK=S++%Flags=AS%Ops=MNNT)
+T4(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T3(Resp=Y%DF=Y%W=5B4%ACK=S++%Flags=AS%Ops=MNNT)
+T4(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T5(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+T4(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T5(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+T6(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T5(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+T6(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T7(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+T6(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T7(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+PU(Resp=Y%DF=N%TOS=0%IPLEN=38%RIPTL=148%RID=E%RIPCK=E%UCK=E%ULEN=134%DAT=E)
+T7(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+PU(Resp=Y%DF=N%TOS=0%IPLEN=38%RIPTL=148%RID=E%RIPCK=E%UCK=E%ULEN=134%DAT=E)
+PU(Resp=Y%DF=N%TOS=0%IPLEN=38%RIPTL=148%RID=E%RIPCK=E%UCK=E%ULEN=134%DAT=E)
+
+
+
+
+Nmap run completed -- 1 IP address (1 host up) scanned in 13 seconds

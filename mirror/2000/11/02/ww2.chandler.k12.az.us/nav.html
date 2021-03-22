@@ -1,0 +1,77 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Jeff La Benz">
+   <meta name="GENERATOR" content="Mozilla/4.73 [en] (Win98; U) [Netscape]">
+   <title>banner</title>
+<script LANGUAGE="JavaScript">
+<!--
+//	TEMPLATE FOR BOOK WITHOUT SOUND.
+//	NOTHING BELOW NEEDS TO BE CHANGED!
+
+function makeArray(n){
+	this.length = n
+	return this
+}
+
+if (document.images) {            // Active Images
+	homeOn = new Image();      
+	homeOn.src = "home2-b.gif"; 
+	districtOn = new Image();      
+	districtOn.src = "programs2.gif"; 
+	contactOn = new Image();      
+	contactOn.src = "contact2-b.gif";
+	schoolsOn = new Image();      
+	schoolsOn.src = "schools2-b.gif";
+	jobsbenefitsOn = new Image();      
+	jobsbenefitsOn.src = "jobs-benefits2-b.gif";
+
+	homeOff = new Image();      
+	homeOff.src = "home2-a.gif";
+ 	districtOff = new Image(); 
+	districtOff.src = "programs1.gif";
+ 	contactOff = new Image(); 
+	contactOff.src = "contact2-a.gif";
+	schoolsOff = new Image();      
+	schoolsOff.src = "schools2-a.gif";
+	jobsbenefitsOff = new Image();      
+	jobsbenefitsOff.src = "jobs-benefits2-a.gif";
+}
+
+// Function to 'activate' buttons.
+function imgOn(imgName) {
+        if (document.images) {
+		document[imgName].src = eval(imgName + "On.src");
+        }
+}
+
+// Function to 'deactivate' buttons.
+function imgOff(imgName) {
+        if (document.images) {
+		document[imgName].src = eval(imgName + "Off.src");
+        }
+}
+
+// Function to quit this project.
+function quit(){
+	parent.closeIt()
+}
+
+function test(ID){
+	if((ID == "home")||(ID == "our-district")||(ID == "schools")){
+		parent.content.location.href = ID + ".html"
+//		imgOff(ID)
+	} else {
+		alert("This page is still under construction.\nTry again soon.")
+//		imgOff(ID)
+	}
+}
+
+// -->
+</script>
+</head>
+<body text="#000000" bgcolor="#663333" link="#0000EE" vlink="#551A8B" alink="#FF0000" background="bricks0a.jpg"><img src="top-bricks4a.jpg" width=147 height=28><br><img src="spacer.gif" height=5 width=5><br><a href="javascript:test('home');" onMouseOver="imgOn('home'); self.status='CUSD Homepage'; return true" onMouseOut="imgOff('home'); self.status=''; return true"><img SRC="home2-a.gif" NAME="home" alt="Home" HSPACE=10 BORDER=0 height=38 width=57></a><br><a href="javascript:test('our-district');" onMouseOver="imgOn('district'); self.status='Programs and Departments'; return true" onMouseOut="imgOff('district'); self.status=''; return true"><img SRC="programs1.gif" NAME="district" VSPACE=27 BORDER=0 height=36 width=83></a><br><a href="javascript:parent.goOn(12);" onMouseOver="imgOn('jobsbenefits'); self.status='Jobs and Benefits'; return true" onMouseOut="imgOff('jobsbenefits'); self.status=''; return true"><img SRC="jobs-benefits2-a.gif" NAME="jobsbenefits" HSPACE=2 BORDER=0 height=37 width=77></a><a href="javascript:parent.goOn(19);" onMouseOver="imgOn('schools'); self.status='Visit our schools'; return true" onMouseOut="imgOff('schools'); self.status=''; return true"><img SRC="schools2-a.gif" NAME="schools" HSPACE=2 VSPACE=27 BORDER=0 height=36 width=76></a><br><a href="javascript:parent.goOn(20);" onMouseOver="imgOn('contact'); self.status='Contact Us'; return true" onMouseOut="imgOff('contact'); self.status=''; return true"><img SRC="contact2-a.gif" NAME="contact" HSPACE=2 BORDER=0 height=37 width=77></a>
+
+</body>
+</html>

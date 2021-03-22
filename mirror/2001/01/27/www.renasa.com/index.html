@@ -1,0 +1,167 @@
+<html>
+<head>
+<title>[ConClaveCrew]</title>
+
+<style>
+a{text-decoration:none}
+A:hover {text-decoration: underline;}
+</style>
+
+<style>
+.spanstyle
+ {
+  position:absolute;
+  visibility:visible;
+  top:-50px;
+  font-size:8pt;
+  font-family:Verdana;
+  font-weight:bold;
+  color:#978CFF;
+ }
+</style>
+
+<script>
+var x,y
+var step=10
+var flag=0
+var message="/me and #sh "
+message=message.split("")
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++)
+ {
+  xpos[i]=-50
+ }
+
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++)
+ {
+  ypos[i]=-50
+ }
+
+function handlerMM(e)
+ {
+  x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+  y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+  flag=1
+ }
+
+function makesnake()
+ {
+  
+  if (flag==1 && document.all)
+   {
+     for (i=message.length-1; i>=1; i--)
+      {
+       xpos[i]=xpos[i-1]+step
+       ypos[i]=ypos[i-1]
+      }
+
+     xpos[0]=x+step
+     ypos[0]=y
+	
+     for (i=0; i<message.length-1; i++)
+      {
+       var thisspan = eval("span"+(i)+".style")
+       thisspan.posLeft=xpos[i]
+       thisspan.posTop=ypos[i]
+      }
+   }
+	
+else if (flag==1 && document.layers)
+ {
+  for (i=message.length-1; i>=1; i--)
+   {
+    xpos[i]=xpos[i-1]+step
+    ypos[i]=ypos[i-1]
+   }
+
+   xpos[0]=x+step
+   ypos[0]=y	
+   for (i=0; i<message.length-1; i++)
+    {
+     var thisspan = eval("document.span"+i)
+     thisspan.left=xpos[i]
+     thisspan.top=ypos[i]
+    }
+
+ }
+var timer=setTimeout("makesnake()",0)
+}
+
+</script>
+</head>
+<BODY onLoad="makesnake()" style="width:100%;overflow-x:hidden;overflow-y:scroll"
+bgcolor="#000000" bgproperties="fixed" text="#FFFFFF" LINK="00806B" VLINK="007080" ALINK="004260">
+
+<script>
+for (i=0;i<=message.length-1;i++)
+ {
+  document.write("<span id='span"+i+"' class='spanstyle'>")
+  document.write(message[i])
+  document.write("</span>")
+ }
+if (document.layers){document.captureEvents(Event.MOUSEMOVE);}
+document.onmousemove = handlerMM;
+</script>
+
+<CENTER>
+<HR>
+<H1>MASSHACK-3</H1>
+<H2>Defaced by<BR>
+<IMG src="http://defaced.alldas.de/mirror/2000/12/15/www.start.ch/banner.gif"></H2>
+<BR>
+
+<H3>
+[www.controversia.lima.net.pe]<BR>
+[www.ronald-co.limaperu.net]<BR>
+[www.axisnet.perured.net]<BR>
+[www.computermarvell.net]<BR>
+[www.marvell.limaperu.net]<BR>
+[www.isoc-mirror.limaperu.net]<BR>
+[www.mirror.isoc-peru.org]<BR>
+[perro_sin_pelo_peru.limaperu.net]<BR>
+[www.audio.perured.net]<BR>
+[www.overlandes.com]<BR>
+[www.perured.net]<BR>
+[www.custersportswear.com]<BR>
+[www.webhomes.lima.net.pe]<BR>
+[kjb-av-1611.lima.net.pe]<BR>
+[www.ptt.perured.net]<BR>
+[rhema-av-1611.lima.net.pe]<BR>
+[www.oftalmosalud.com]<BR>
+[www.futuroinvest.com.pe]<BR>
+[www.lima.net.pe]<BR>
+[www.transnautica.com]<BR>
+[www.apco.limaperu.net]<BR>
+[sta-ines-loft.limaperu.net]<BR>
+[www.paul.lima.net.pe]<BR>
+[www.rayluz.lima.net.pe]<BR>
+[www.agromarindustrial.com]<BR>
+[www.homesystempe.com]<BR>
+[www.mundonet.limaperu.net]<BR>
+[www.dicscamec.ayf.limaperu.net]<BR>
+[www.cistronix.limaperu.net]<BR>
+[www.idex.lima.net.pe]<BR>
+[www.infodataperu.com]<BR>
+[www.mulanovich.com]<BR>
+[www.orsonwelles.edu.pe]<BR>
+[www.csmoviles.com]<BR>
+[www.family.lima.net.pe]<BR>
+[www.delcerro.lima.net.pe]<BR>
+[www.renasa.com]<BR>
+[www.serviweb.lima.net.pe]<BR>
+[www.compuweb.limaperu.net]<BR>
+[www.multicomp.limaperu.net]<BR>
+[www.chankas.com]<BR>
+[www.hidroponia.limaperu.net]<BR>
+[www.isoc-peru.org]<BR>
+[www.mirror.isoc-peru.org]<BR>
+[www.controversia.limaperu.net]<BR>
+
+<BR><BR>
+/me and #sh
+<BR><BR>
+</H2>
+</CENTER>
+</body>
+</html>

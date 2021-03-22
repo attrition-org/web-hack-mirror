@@ -1,0 +1,177 @@
+<html>
+
+<head><script language="JavaScript1.1">
+//==============================================================================
+// JavaScript menu for frames.
+//
+// NOTE: For "Reload" events to set the "On" menu item correctly, the URL that
+//       each menu item points to MUST contain the name of the item's graphic.
+//       eg: prod_on.gif and www.somesite.com/products.htm
+//==============================================================================
+
+// Set variables to common objects.
+var loc = this.location;
+var doc = parent.menu.document;
+var img = doc.images;
+
+// Set variables used by JavaScript snippets in documents.
+var mainTitle = "";
+var mainHref = "";
+var mainIcon = "";
+var mainCategory = 0;
+
+// Get the BASE URL (eg: http://www.somesite.com/directorypath/)
+baseURL = loc.href.substring (0,loc.href.lastIndexOf("/")+1);
+
+// Set the target frame where documents will display after clicking graphics.
+var frameTarget = "main";
+
+// Initialize the image sub-directory and naming conventions.
+dirImages   = "images/";
+suffixOff   = "_off.jpg";
+suffixOn    = "_on.jpg";
+
+// Initialize the menu array stuff
+var menuArray    = new Array();
+var menuArrayMax = 0;
+var menuCurrent  = -1;
+
+//==============================================================================
+// Menu setup functions.
+//==============================================================================
+
+function menuCreateItem (width,height,name,text,link)
+{
+  this.width  = width;
+  this.height = height;
+  this.name   = name;
+  this.link   = link;
+
+  // Setup the "Off" graphic
+  this.off     = new Image (width,height);
+  this.off.src = dirImages + name + suffixOff;
+
+  // If there is a link for this graphic, do the "On".
+  if (link != "")
+  {
+    this.on     = new Image (width,height);
+    this.on.src = dirImages + name + suffixOn;
+    this.text = text;
+  }
+}
+
+function menuAddItem (width,height,name,text,link)
+{
+  menuArray[menuArrayMax] = new menuCreateItem (width,height,name,text,link);
+  menuArrayMax++;
+}
+
+//==============================================================================
+// Menu event handler functions.
+//==============================================================================
+
+function doMouseDown (menuNumber)
+{
+  if (menuNumber != menuCurrent)
+  {
+    if (menuCurrent != -1)
+    {
+      img[menuArray[menuCurrent].name].src = menuArray[menuCurrent].off.src;
+    }
+    menuCurrent = menuNumber;
+    img[menuArray[menuCurrent].name].src  = menuArray[menuCurrent].on.src;
+  }
+}
+
+function doMouseOver (menuNumber)
+{
+  self.status = menuArray[menuNumber].text;
+}
+
+function doMouseOut ()
+{
+  self.status = "";
+}
+
+function doOnLoad (menuNumber)
+{
+  // Set frame target URL correctly
+  currentPage = parent.frames[frameTarget].location.href;
+
+  // Find the graphic that corresponds to the page currently displayed in the 
+  // "main" frame. If found, force a "Click" event.
+  for (menuRecent=0;menuRecent<menuArrayMax;menuRecent++)
+  {
+    if (currentPage.indexOf(menuArray[menuRecent].name) > 0)
+    {
+      doMouseDown (menuRecent);
+      return (1);
+    }
+  }
+  // Could not locate appropriate graphic, force a click on the most recent one.
+  if (menuRecent >= menuArrayMax)
+  {
+    doMouseDown (menuNumber);
+  }
+  return (-1);
+}
+
+//==============================================================================
+// Generate the contents menu
+//==============================================================================
+
+menuAddItem (113,44,"home","Home","home.htm");
+menuAddItem (113,44,"serv","Services","services.htm");
+menuAddItem (113,44,"cons","Consulting","consult.htm");
+menuAddItem (113,44,"prod","Products","products.htm");
+menuAddItem (113,44,"cont","Contact Us","contact.htm");
+
+doc.open ('text/html');
+doc.write ('<base target="main">\n');
+doc.write ('<title>Welcome to ShadowScape Technologies Inc.</title>\n');
+doc.write ('</head>\n');
+doc.write ('<body background="images/circuit.gif" bgcolor="#FFFFFF" onload="doOnLoad(0)">\n');
+doc.write ('<div align="center"><center>\n');
+doc.write ('<table border="0" cellpadding="0" cellspacing="0" width="116">\n');
+for (i=0;i<menuArrayMax;i++)
+{
+  if (menuArray[i].link != "")
+  {
+    // Link enabled graphics.
+    doc.write ('<tr><td align="middle"><a target="' + frameTarget + '" href="' + menuArray[i].link + '" onMouseOver="doMouseOver(' + i + '); return true" onMouseOut="doMouseOut()" onClick="doMouseDown(' + i + ')" onMouseDown="doMouseDown(' + i + ')"><img name="' + menuArray[i].name + '" src="' + menuArray[i].off.src + '" alt="' + menuArray[i].text + '" width="' + menuArray[i].width + '" height="' + menuArray[i].height + '" border="0"></a></td></tr>\n');
+  }
+  else
+  {
+    // Link disabled graphics.
+    doc.write ('<tr><td align="middle"><img src="' + menuArray[i].off.src + '" alt="' + menuArray[i].text + '" width="' + menuArray[i].width + '" height="' + menuArray[i].height + '" border="0"></td></tr>\n');
+  }
+}
+doc.write ('</table></center></div>\n');
+</script>
+
+<noscript>
+<base target="main">
+<title>Welcome to ShadowScape Technologies Inc.</title>
+</head>
+<body background="images/circuit.gif" bgcolor="#FFFFFF">
+
+<div align="center"><center>
+<table border="0" cellpadding="0" cellspacing="0" width="116" border="0">
+
+  <tr><td align="middle"><a href="home.htm"><img src="images/home_on.jpg" alt="Home" border="0" WIDTH="113" HEIGHT="44"></a></td></tr>
+
+  <tr><td align="middle"><a href="services.htm"><img src="images/serv_on.jpg" alt="Outsourcing" border="0" WIDTH="113" HEIGHT="44"></a></td></tr>
+
+  <tr><td align="middle"><a href="consult.htm"><img src="images/cons_on.jpg" alt="Consulting" border="0" WIDTH="113" HEIGHT="44"></a></td></tr>
+
+  <tr><td align="middle"><a href="products.htm"><img src="images/prod_on.jpg" alt="Products" border="0" WIDTH="113" HEIGHT="44"></a></td></tr>
+
+  <tr><td align="middle"><a href="contact.htm"><img src="images/cont_on.jpg" alt="Contact Us" border="0" WIDTH="113" HEIGHT="44"></a></td></tr>
+
+</table>
+</center>
+</div>
+</noscript>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<html>
+
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb_2312-80">
+<meta NAME="GENERATOR" CONTENT="Microsoft FrontPage 3.0">
+<title>送上您的祝福</title>
+<script language="javascript">
+function getindex(check)
+{
+  for(var i=0;i<check.length;i++)
+            if(check[i].checked == true) {
+                var n=i;
+              }
+        return n;
+
+  
+}
+function check(){
+ var ff=document.form1;
+    if(( ff.re_email.value.indexOf("@")==-1) ||(ff.re_email.value.length < 6)||(ff.re_email.value.indexOf(".")==-1)) {
+                window.alert ("请输入您朋友的正确的Email地址")
+                ff.re_email.focus();return false;}
+ else {
+if(ff.se_email.value=="") {window.alert ("请输入您的Email地址");return false}
+else {if ((ff.se_name.value.indexOf("'")!=-1)||(ff.re_name.value.indexOf("'")!=-1)||(ff.content.value.indexOf("'")!=-1))
+  { window.alert ("请注意，在您的个人资料中不能含有单引号'")
+	return false}
+
+	else
+	return true;}
+  }
+}
+</script>
+</head>
+
+<body TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#FFFFFF" VLINK="#FFFFFF" ALINK="#FF0000">
+
+<table BORDER="0" WIDTH="100%">
+  <tr>
+    <td ALIGN="CENTER" WIDTH="100%" BGCOLOR="#EA2509"><font COLOR="#FFFF00">送上您的祝福</font></td>
+  </tr>
+</table>
+
+<form action="http://www.gdcatv.com.cn:4000/intra/owa/wish.preview" name="form1"
+method="POST" onsubmit="return check()">
+  <div align="center"><center><table BORDER="0" width="575">
+    <tr>
+      <td ALIGN="CENTER" width="571"><a HREF="birth01.gif"><img SRC="birth01-1.gif" HEIGHT="85"
+      WIDTH="70" border="0"></a><input type="radio" checked name="sele_image"
+      value="birth01.gif"><a HREF="birth02.jpg"><img SRC="birth02-1.jpg" HEIGHT="85" WIDTH="70"></a><input
+      type="radio" name="sele_image" value="birth02.jpg"><a HREF="birth03.jpg"><img
+      SRC="birth03-1.jpg" HEIGHT="75" WIDTH="70" border="0"></a><input type="radio"
+      name="sele_image" value="birth03.jpg"><a HREF="birth04.jpg"><img SRC="birth04-1.jpg"
+      HEIGHT="85" WIDTH="70"></a><input type="radio" name="sele_image" value="birth04.jpg">&nbsp; 
+      <br>
+      <big><big><big>&nbsp; </big></big></big><table border="0" width="100%">
+        <tr>
+          <td width="50%"><font face="宋体" size="3">接收人E_mail:<!--webbot bot="Validation"
+          startspan B-Value-Required="TRUE" I-Maximum-Length="40" --><!--webbot bot="Validation"
+          endspan --><input type="text" size="22" name="re_email" maxlength="40"></font></td>
+          <td width="50%"><font face="宋体" size="3">接收人姓名：<!--webbot
+          bot="Validation" startspan B-Value-Required="TRUE" I-Maximum-Length="12" --><!--webbot
+          bot="Validation" endspan --><input type="text" size="12" name="re_name" maxlength="12"></font></td>
+        </tr>
+        <tr>
+          <td width="50%"><font face="宋体"><font size="3"><br>
+          祝词请写在下面：</font><big><big><big>&nbsp; </big></big></big></font></td>
+          <td width="50%"></td>
+        </tr>
+        <tr>
+          <td width="100%" colspan="2"><big><big><big><font face="宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+          <textarea name="content" rows="3" cols="28" style="font-family: 宋体"></textarea></font></big></big></big></td>
+        </tr>
+        <tr>
+          <td width="50%"><font face="宋体" size="3"><br>
+          您的E_mail:<!--webbot bot="Validation" startspan B-Value-Required="TRUE"
+          I-Maximum-Length="40" --><!--webbot bot="Validation" endspan --><input type="text"
+          size="22" name="se_email" maxlength="40"></font></td>
+          <td width="50%"><font face="宋体" size="3"><br>
+          您的姓名：<!--webbot bot="Validation" startspan B-Value-Required="TRUE"
+          I-Maximum-Length="12" --><!--webbot bot="Validation" endspan --><input type="text"
+          size="12" name="se_name" maxlength="12"></font></td>
+        </tr>
+        <tr>
+          <td width="100%" colspan="2"><div align="center"><center><p><br>
+          <big><big><big><font face="宋体"><input type="submit" value="预览"> <input
+          type="reset" value="重填"></font></big></big></big></td>
+        </tr>
+      </table>
+      </td>
+    </tr>
+  </table>
+  </center></div><div align="center"><center><p>　</p>
+  </center></div>
+</form>
+</body>
+</html>

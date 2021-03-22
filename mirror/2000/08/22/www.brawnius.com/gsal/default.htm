@@ -1,0 +1,174 @@
+
+<HTML>
+<HEAD>
+<LINK rel="stylesheet" href="gsal.css" type="text/css">
+<TITLE>Gu&iacute;a de Seguridad del Administrador de Linux</TITLE>
+</HEAD>
+<BODY>
+<IMG SRC=http://segurinet.com/images/1gsal.gif" WIDTH=1 Height=1>
+<BR><H2>Gu&iacute;a de Seguridad del Administrador de Linux</H2><BR>
+<P>Por <a href="mailto:seifried@seifried.org">Kurt Seifried</a> (<A href="mailto:seifried@seifried.org">seifried@seifried.org</A>) <A href="seifried-pgp.asc">(Llave de cifrado)</A>, la <A href="licencia.htm">GSAL tiene licencia OpenContent.</A></P>
+<P>Traducci&oacute;n al espa&ntilde;ol de <a href="mailto:revilla@segurinet.com">Jos&eacute; Antonio Revilla</a> (<A href="mailto:revilla@segurinet.com">revilla@segurinet.com</A>) <A href="revilla-pgp.asc">(Llave de cifrado)</A></P>
+<P align="JUSTIFY">La versi&oacute;n original de la GSAL est&aacute; disponible en <A href="http://www.securityportal.com/lasg">http://www.securityportal.com/lasg</A></P>
+<P>&Uacute;ltima versi&oacute;n en espa&ntilde;ol disponible en <A href="http://segurinet.com/gsal">http://segurinet.com/gsal</A></P><BR>
+<h5>GSAL se encuentra en constante desarrollo. Env&iacute;e un correo en blanco a <a href="mailto:gsal@segurinet.com">gsal@segurinet.com</a> si desea ser notificado cada vez que sea actualizada.</h5><BR>
+<BR>
+<P><A href="revisiones.txt">&Uacute;ltimos cambios de la versi&oacute;n en espa&ntilde;ol: 28-Nov-99</A></P>
+<BR>
+<P><B><H4>Burocracia</B></P></H4>
+<UL>
+	<LI><A href="licencia.htm">Licencia y garant&iacute;a</A>
+	<LI><A href="prefacio.htm">Prefacio</A>
+	<LI><A href="acercaautor.htm">Acerca del Autor</A>
+	<LI><A href="acercatraductor.htm">Acerca del Traductor</A>
+	<LI><A href="comentarios.htm">Comentarios a la traducci&oacute;n</A>
+	<LI><A href="contribuciones.htm">Contribuciones</A>
+	<LI><A href="colaboradores.htm">Colaboradores</A>
+	<LI><A href="quees.htm">Qu&eacute; es y qu&eacute; no es esta gu&iacute;a</A>
+	<LI><A href="modificaciones.htm">Modificaciones</A>
+</UL>
+<P><B><H4>Empezando</B></P></H4>
+<UL>
+	<LI><A href="comodeterminar.htm">C&oacute;mo determinar qu&eacute; asegurar y c&oacute;mo asegurarlo</A>
+	<LI><A href="instalacionsegura.htm">Instalaci&oacute;n segura de Linux</A>
+	<LI><A href="conceptosgenerales.htm">Conceptos generales, servidor versus estaciones de trabajo, etc.</A>
+</UL>
+<P><B><H4>El n&uacute;cleo del sistema</B></P></H4>
+<UL>
+	<LI><A href="ficheros.htm">Ficheros del sistema</A>
+	<LI><A href="seguridadficheros.htm">Seguridad de Ficheros / Sistema de Ficheros</A>
+	<LI><A href="pam.htm">PAM</A>
+</UL>
+<P><B><H4>Seguridad f&iacute;sica / consola</B>
+<UL>
+	<LI><A href="seguridadfisica.htm">Seguridad F&iacute;sica / de Arranque</A>
+</UL>
+<P><B><H4>Contrase&ntilde;as</B></P></H4>
+<UL>
+	<LI><A href="seguridadcontrasenas.htm">Seguridad de contrase&ntilde;as</A>
+	<LI><A href="almacenamiento.htm">Almacenamiento de contrase&ntilde;as</A>
+</UL>
+<P><B><H4>Seguridad b&aacute;sica de red</B></P></H4>
+<UL>
+	<LI><A href="seguridadbasica.htm">Seguridad b&aacute;sica de servicios de red</A>
+	<LI><A href="ficherosbasicos.htm">Ficheros b&aacute;sicos de configuraci&oacute;n de red</A>
+</UL>
+<P><B><H4>Seguridad TCP-IP</B></P></H4>
+<UL>
+	<LI><A href="tcp-ip.htm">TCP-IP y seguridad de red</A>
+	<LI><A href="seguridadppp.htm">Seguridad PPP
+	<LI><A href="seguridadip.htm">Seguridad IP (IPSec)</A>
+	<LI><A href="cifrado.htm">Cifrado de datos / servicios</A>
+	<LI><A href="rutado.htm">Rutado</A></LI>
+</UL>
+<P><B><H4>Cortafuegos / Proxies</B></P></H4>
+<UL>
+	<LI><A href="softwareproxy.htm">Software de Proxy</A>
+	<LI><A href="cortafuegos.htm">Cortafuegos</A></LI>
+</UL>
+<P><B><H4>Servicios de Red</B></P></H4>
+<UL>
+	<LI><A href="telnet.htm">Telnet</A>
+	<LI><A href="ssh.htm">SSH</A>
+	<LI><A href="ftp.htm">FTP</A>
+	<LI><A href="http.htm">HTTP / HTTPS</A>
+	<LI><A href="smtp.htm">SMTP</A>
+	<LI><A href="pop.htm">POP</A>
+	<LI><A href="imapd.htm">IMAPD</A>
+	<LI><A href="dns.htm">DNS</A>
+	<LI><A href="nntp.htm">NNTP</A>
+	<LI><A href="dhcp.htm">DHCP</A>
+	<LI><A href="rsh.htm">rsh, rexec, rcp</A>
+	<LI><A href="nfs.htm">NFS</A>
+	<LI><A href="tftp.htm">TFTP</A>
+	<LI><A href="bootp.htm">BOOTP</A>
+	<LI><A href="snmp.htm">SNMP</A>
+	<LI><A href="finger.htm">FINGER</A>
+	<LI><A href="identd.htm">IDENTD</A>
+	<LI><A href="ntp.htm">NTP</A>
+	<LI><A href="cvs.htm">CVS</A>
+	<LI><A href="rsync.htm">rsync</A>
+	<LI><A href="lpd.htm">lpd</A>
+	<LI><A href="smb.htm">SMB (SAMBA)</A>
+	<LI><A href="ldap.htm">LDAP</A>
+	<LI><A href="sistemaxwindow.htm">Sistema X Window</A>
+	<LI><A href="conectividadsna.htm">Conectividad SNA</A>
+	<LI><A href="softwareautoridad.htm">Software de Autoridad de Certificaci&oacute;n para Linux</A>
+</UL><BR>
+<P><B><H4>Seguridad del Kernel</B></P></H4>
+<UL>
+	<LI><A href="kernel.htm">El Kernel de Linux</A>
+	<LI><A href="parches.htm">Parches de seguridad del Kernel y del Compilador</A>
+</UL>
+<P><B><H4>Administraci&oacute;n del 
+Sistema</B></P></H4>
+<UL>
+	<LI><A href="herramientas.htm">Herramientas administrativas</A>
+	<LI><A href="gestionsoftware.htm">Gesti&oacute;n de software</A>
+</UL>
+<P><B><H4>Registro de logs y 
+monitorizaci&oacute;n</B></P></H4>
+<UL>
+	<LI><A href="herramientasmonitorizacion.htm">Herramientas de monitorizaci&oacute;n de Hosts</A>
+	<LI><A href="ficheroslog.htm">Ficheros de log y otros m&eacute;todos de monitorizaci&oacute;n</A>
+	<LI><A href="limitacion.htm">Limitaci&oacute;n y monitorizaci&oacute;n de usuarios</A>
+</UL>
+<P><B><H4>Seguridad de Red</B></P></H4>
+<UL>
+	<LI><A href="listacomprobacion.htm">Lista de comprobaci&oacute;n para la conexi&oacute;n a Internet</A>
+	<LI><A href="metodoscomparticion.htm">M&eacute;todos de compartici&oacute;n de ficheros</A>
+	<LI><A href="lectores.htm">Lectores de correo basados en WWW</A>
+	<LI><A href="autentificacion.htm">Autentificaci&oacute;n basada en red</A>
+	<LI><A href="softwarelistas.htm">Software de listas de correo</A>
+</UL>
+<P><B><H4>Intrusiones y detecci&oacute;n de 
+intrusos</B></P></H4>
+<UL>
+	<LI><A href="herramientasescaneo.htm">Herramientas de escaneo / intrusos</A>
+	<LI><A href="herramientasdeteccion.htm">Herramientas de detecci&oacute;n de escaneos / intrusos</A>
+	<LI><A href="sniffers.htm">Sniffers de paquetes</A>
+	<LI><A href="normas.htm">Normas de comportamiento / integridad del sistema</A>
+</UL>
+<P><B><H4>Copias de seguridad y 
+auditor&iacute;as</B></P></H4>
+<UL>
+	<LI><A href="gestionauditorias.htm">Gesti&oacute;n de auditor&iacute;as</A>
+	<LI><A href="copiasseguridad.htm">Copias de seguridad</A>
+</UL>
+<P><B><H4>Acciones hostiles</B></P></H4>
+<UL>
+	<LI><A href="enfrentandose.htm">Enfrent&aacute;ndose a los ataques</A>
+	<LI><A href="ataquesnegacion.htm">Ataques de negaci&oacute;n de servicio</A>
+	<LI><A href="ejemplosataques.htm">Ejemplos de ataques</A>
+	<LI><A href="virus.htm">Virus, Cabayos de Troya y Gusanos</A>
+</UL>
+<P><B><H4>Distribuciones</B></P></H4>
+<UL>
+	<LI><A href="distribuciones.htm">Distribuciones seguras de Linux</A>
+	<LI><A href="informacionespecifica.htm">Informaci&oacute;n espec&iacute;fica por Distribuci&oacute;n</A>
+	<LI><A href="informacioncontacto.htm">Informaci&oacute;n de contacto con el Vendedor</A>
+</UL>
+<P><B><H4>Seguridad de 
+aplicaciones</B></P></H4>
+<UL>
+	<LI><A href="programacion.htm">Programaci&oacute;n segura</A>
+</UL>
+<P><B><H4>Ap&eacute;ndices</B></P></H4>
+<UL>
+	<LI><A href="apendicea.htm">Ap&eacute;ndice A: Libros y revistas</A>
+	<LI><A href="apendicec.htm">Ap&eacute;ndice C: Otras documentaciones de seguridad en Linux</A>
+	<LI><A href="apendiced.htm">Ap&eacute;ndice D: Documentaci&oacute;n de seguridad en l&iacute;nea</A>
+	<LI><A href="apendicee.htm">Ap&eacute;ndice E: Sitios generales de seguridad</A>
+	<LI><A href="apendicef.htm">Ap&eacute;ndice F: Sitios generales de Linux</A>
+</UL>
+<P><B><H4>Secciones obsoletas / 
+interrumpidas</B></P></H4>
+<UL>
+	<LI><A href="historial.htm">Historial de versiones (interrumpida)</A>
+	<LI><A href="paginaslasg.htm">P&aacute;ginas LASG antiguas con enlaces a la versi&oacute;n PDF</A>
+</UL><BR>
+<DIV align="center">
+<P>Copyright &copy; 1999, <a href="mailto:seifried@seifried.org">Kurt Seifried</a>, <a href="mailto:revilla@segurinet.com">Jos&eacute; Antonio Revilla</a></P>
+<P>Todos los derechos reservados.</P></DIV><BR><BR>
+</BODY>
+</HTML>

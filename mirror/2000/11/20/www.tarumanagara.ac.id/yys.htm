@@ -1,0 +1,283 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>New Page 4</title>
+
+<SCRIPT language=JavaScript>
+<!-- begin script
+function VersionNavigateur(Netscape, Explorer) {
+  if ((navigator.appVersion.substring(0,3) >= Netscape && navigator.appName == 'Netscape') ||      
+      (navigator.appVersion.substring(0,3) >= Explorer && navigator.appName.substring(0,9) == 'Microsoft'))
+    return true;
+else return false;
+}
+//  end script -->
+</SCRIPT>
+
+<SCRIPT>
+
+
+var x,y
+var step=20
+var flag=0
+
+var message="U n t a r "
+message=message.split("")
+
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	xpos[i]=-50
+}
+
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	ypos[i]=-50
+}
+
+function handlerMM(e){
+	x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+	y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+	flag=1
+}
+
+function makesnake() {
+	if (flag==1 && document.all) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("span"+(i)+".style")
+    		thisspan.posLeft=xpos[i]
+			thisspan.posTop=ypos[i]
+    	}
+	}
+	
+	else if (flag==1 && document.layers) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("document.span"+i)
+    		thisspan.left=xpos[i]
+			thisspan.top=ypos[i]
+    	}
+	}
+		var timer=setTimeout("makesnake()",30)
+}
+
+</SCRIPT>
+<STYLE>.special {
+	FONT-FAMILY: Courier New; FONT-SIZE: 10pt
+}
+TABLE {
+	FONT-FAMILY: Tahoma, Verdana, Arial; FONT-SIZE: 10pt
+}
+BODY {
+	FONT-FAMILY: Tahoma, Verdana, Arial; FONT-SIZE: 10pt; OVERFLOW: scroll; OVERFLOW-X: hidden
+}
+A:link {
+	COLOR: #ff8040; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #ff8040; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: red; TEXT-DECORATION: none
+}
+.popper {
+	POSITION: absolute; VISIBILITY: hidden
+}
+.spanstyle {
+	COLOR: blue; FONT-FAMILY: Comic Sans MS; FONT-SIZE: 8pt; FONT-WEIGHT: bold; POSITION: absolute; TOP: -50px; VISIBILITY: visible
+}
+</STYLE>
+
+</head>
+
+
+<body bgColor="" leftMargin="5" onload="makesnake()" style="OVERFLOW-X: hidden; OVERFLOW-Y: scroll; WIDTH: 100%" topMargin="0" marginheight="0" marginwidth="0">
+
+
+
+<SCRIPT>
+<!-- Beginning of JavaScript -
+
+for (i=0;i<=message.length-1;i++) {
+    document.write("<span id='span"+i+"' class='spanstyle'>")
+	document.write(message[i])
+    document.write("</span>")
+}
+
+if (document.layers){
+	document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+
+// - End of JavaScript - -->
+
+</SCRIPT>
+
+<div align="center">
+  <center>
+  <table border="0" cellpadding="0" cellspacing="0" width="95%">
+    <tr>
+      <td width="100%">
+        <div align="center">
+          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+              <td width="100%" colspan="3">
+                <p align="center"><b><font size="3" face="Arial Narrow" color="#FF0000"><img border="0" src="images/yys.gif" width="500" height="50"><br>
+                </font></b></td>
+            </tr>
+          </center>
+          <tr>
+            <td width="100%" colspan="3">
+                <p align="justify"><font face="Arial Narrow" size="2">
+                Yayasan Tarumanagara yang berdiri sejak tanggal 18 Juni 1959
+                berkembang sesuai dengan kebutuhan. Pengurus Yayasan pertama
+                yang pada saat didirikan umumnya terdiri atas para pendiri, pada
+                tahun 1976 telah disempurnakan dengan memasukkan berbagai unsur
+                sehingga menjadi Badan yang dinamakan Keluarga Besar
+                Tarumanagara.</font></p>
+                <p align="left"><font face="Arial Narrow" size="2">Keluaraga
+                Besar Tarumanagara terdiri atas empat golongan :</font></p>
+                <div align="center">
+                  <center>
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                      <td width="4%" valign="top"><font size="2" face="Arial Narrow">a.</font></td>
+                      <td width="96%" valign="top">
+                        <p align="justify"><font size="2" face="Arial Narrow">Golongan
+                        Purna Bakti (A) terdiri atas perorangan atau badan yang
+                        telah berjasa yaitu perintis, pendiri, simpatisan, dan
+                        mantan Dewan Pimpinan.</font></td>
+                    </tr>
+                    <tr>
+                      <td width="4%" valign="top"><font size="2" face="Arial Narrow">b.</font></td>
+                      <td width="96%" valign="top"><font size="2" face="Arial Narrow">Golongan
+                        Masa Bakti (B) terdiri atas Dewan Pimpinan yang sedang
+                        menjabat</font></td>
+                    </tr>
+                    <tr>
+                      <td width="4%" valign="top"><font size="2" face="Arial Narrow">c.</font></td>
+                      <td width="96%" valign="top">
+                        <p align="justify"><font size="2" face="Arial Narrow">Golongan
+                        Bakti Universitas (C) terdiri atas Sivitas Akademika,
+                        Alumni, serta Korps Karyawan di lingkungan Yayasan dan
+                        Universitas Tarumanagara.</font></td>
+                    </tr>
+                    <tr>
+                      <td width="4%" valign="top"><font size="2" face="Arial Narrow">d.</font></td>
+                      <td width="96%" valign="top">
+                        <p align="justify"><font size="2" face="Arial Narrow">Golongan
+                        Penunjang (D) terdiri atas unsur donatur, unsur orang
+                        tua tau wali mahasiswa yang masih aktif, dan wakil badan
+                        yang membantu secara aktif baik moral maupun material
+                        kepada usaha yayasan.</font></td>
+                    </tr>
+                  </table>
+                  </center>
+                </div>
+                <p align="justify"><font face="Arial Narrow" size="2">Untuk masa
+                bakti 1997-2001 Badan Pengurus Yayasan Tarumanagara membentuk <b>Badan
+                Pelaksana Harian Badan Penyelenggara Perguruan Tinggi Swasta (BPH
+                BP-PTS) Yayasan Tarumanagara</b>. Susunan Badan Pelakasana
+                Harian itu adalah sebagai berikut :</font></p>
+                <div align="center">
+                  <center>
+                  <table border="1" cellspacing="3" width="80%" bordercolorlight="#FFFFFF" bgcolor="#C0C0C0">
+                    <tr>
+                      <td width="38%"><font face="Arial Narrow" size="3">Ketua</font></td>
+                      <td width="62%"><font face="Arial Narrow" size="3">Prof.
+                        Dr. Singgih Dirgagunarsa</font></td>
+                    </tr>
+                    <tr>
+                      <td width="38%"><font face="Arial Narrow" size="3">Wakil
+                        ketua</font></td>
+                      <td width="62%"><font face="Arial Narrow" size="3">Handaya
+                        Surya Wibawa,SH</font></td>
+                    </tr>
+                    <tr>
+                      <td width="38%"><font face="Arial Narrow" size="3">Sekretaris</font></td>
+                      <td width="62%"><font face="Arial Narrow" size="3">Drs.
+                        Tato Syanto</font></td>
+                    </tr>
+                    <tr>
+                      <td width="38%"><font face="Arial Narrow" size="3">Wakil
+                        Sekretaris</font></td>
+                      <td width="62%"><font face="Arial Narrow" size="3">Drg.
+                        Honggo Wibisono</font></td>
+                    </tr>
+                    <tr>
+                      <td width="38%"><font face="Arial Narrow" size="3">Bendahara</font></td>
+                      <td width="62%"><font face="Arial Narrow" size="3">Drs.
+                        Susikto</font></td>
+                    </tr>
+                    <tr>
+                      <td width="38%"><font face="Arial Narrow" size="3">Anggota</font></td>
+                      <td width="62%"><font face="Arial Narrow" size="3">Prof.
+                        Dr. Budhi Paramita,SE,MBA</font></td>
+                    </tr>
+                  </table>
+                  </center>
+                </div>
+                <p align="justify"><font face="Arial Narrow" size="2">Badan
+                Pelaksana Harian Yayasan Tarumanagara ditunjuk dan bertindak
+                atas nama Yayasan Tarumanagara selaku Badan Penyelenggara
+                Perguruan Tinggi Swasta sesuai dengan Surat&nbsp; Keputusan
+                Menteri Pendidikan dan Kebudayaan Nomor 0339/U/1994 tanggal 23
+                Desember 1994 tentang Ketentuan Pokok Penyelenggara Perguruan
+                Tinggi Swasta.
+                <b><br>
+                <br>
+                </b></font></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="100%" bgcolor="#000000" colspan="3">
+       <p align="center"><b><font size="2" face="Arial Narrow" color="#FFFFFF">ALAMAT
+       UNIVERSITAS TARUMANAGARA</font></b></td>
+            </tr>
+            <tr>
+              <td width="34%">
+       <p align="center"><font face="Arial Narrow" size="2"><b>Kampus I</b><br>
+       Jl. Letjen. S. Parman No. 1&nbsp;<br>
+ Jakarta 11440<br>
+       Telp. (021) 5671747 (hunting)&nbsp;<br>
+ Fax. (021) 560-4478</font></td>
+              <td width="33%">
+       <p align="center"><font face="Arial Narrow" size="2"><b>Kampus II<br>
+        </b>Jl. Tanjung Duren Utara No.1&nbsp;<br>
+ Jakarta
+                        11470<br>
+       Telp. (021) 5655507-10<br>
+       Fax. (021) 5655521</font></td>
+              <td width="33%">
+       <p align="center"><font face="Arial Narrow" size="2"><b>Kampus III<br>
+        </b>Jl. Letjen T.B.Simatupang No.1&nbsp;<br>
+ Jakarta
+                12550<br>
+       Telp. (021) 7806408, 7805387&nbsp;<br>
+ Fax (021) 7805388</font></td>
+            </tr>
+          </table>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</body>
+
+</html>

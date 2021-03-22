@@ -1,0 +1,208 @@
+<html>
+
+<head>
+<style>
+<!--
+a:hover{color:red;}
+-->
+</style>
+<title>Contact Us</title>
+</head>
+
+<body bgcolor="#FFCC00" vlink="#000000" topmargin="0" leftmargin="0" link="#000000" alink="#E30000">
+
+<p align="center"><img src="images/new%20www/lovebar.gif" alt="Love's Country Stores" WIDTH="699" HEIGHT="59"></p>
+
+<table border="0" cellspacing="0" cellpadding="3">
+  <tr>
+    <td rowspan="2" valign="top"><p align="center"><font face="Arial" color="#000000"><a href="default.htm"><big><strong>Home</strong></big></a></font></p>
+    <p align="center"><font face="Arial" color="#000000"><a href="aboutus.htm"><big><strong>About
+    Us</strong></big></a></font></p>
+    <p align="center"><font face="Arial" color="#000000"><a href="locations.htm"><big><strong>Locations</strong></big></a></font></p>
+    <p align="center"><font face="Arial" color="#000000"><a href="services.htm"><big><strong>Services</strong></big></a></font></p>
+    <p align="center"><font face="Arial" color="#000000"><a href="Careers/careers.htm"><big><strong>Careers</strong></big></a></font></p>
+    <p align="center"><font face="Arial" color="#000000"><a href="Giving%20Back.htm"><big><strong>Giving
+    Back</strong></big></a></font></p>
+    <p align="center"><img src="images/new%20www/small_hearts.gif" alt="small_hearts.gif (978 bytes)" WIDTH="23" HEIGHT="22"><font face="Arial" color="#E30000"><big><strong>Contact
+    Us</strong></big></font><img src="images/new%20www/small_hearts.gif" alt="small_hearts.gif (978 bytes)" WIDTH="23" HEIGHT="22"></p>
+    <p align="center"><font face="Arial" color="#000000"><a href="realestateform.htm"><big><strong>Real
+    Estate</strong></big></a></font></p>
+    <p align="center"><img src="images/new%20www/35year_yellowbck.gif" alt="Love's 35th Anniversary" WIDTH="155" HEIGHT="161"></td>
+    <td rowspan="2" valign="top"></td>
+    <td bgcolor="#FFFFFF"><img src="images/titles/Contactus.gif" alt="Contact Us - Love's Country Stores" WIDTH="158" HEIGHT="37"></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><font face="Arial"><small>Tell us what you think about our web site,
+    our products, our organization, or anything else that comes to mind. We welcome all of
+    your comments and suggestions.</small><br>
+    </font><table border="0" cellpadding="3" cellspacing="0" width="100%">
+      <tr>
+        <td width="15%" align="left" bgcolor="#FFFFFF"><img src="images/phone.gif" alt="Phone" WIDTH="74" HEIGHT="21"></td>
+        <td width="75%" bgcolor="#FFFFFF"><font face="Arial"><small>1-800-388-0983 or
+        1-405-302-6500</small></font></td>
+      </tr>
+      <tr>
+        <td width="15%" align="left" bgcolor="#FFFFFF"><img src="images/email.jpg" alt="E-Mail" WIDTH="74" HEIGHT="21"></td>
+        <td width="75%" bgcolor="#FFFFFF"><a href="mailto:wwwcomments@loves.com"><strong><font face="Arial"><small>wwwcomments@loves.com</small></font></strong></a></td>
+      </tr>
+      <tr>
+        <td width="15%" align="left" bgcolor="#FFFFFF"><img src="images/Comment_card.gif" alt="Comment Card" WIDTH="138" HEIGHT="21"></td>
+        <td width="75%" bgcolor="#FFFFFF"><small><font face="Arial">Complete a postage paid
+        comment card available at any Love's Country Store location</font></small></td>
+      </tr>
+      <tr>
+        <td width="15%" align="left" bgcolor="#FFFFFF"><img src="images/postal_mail.gif" alt="Postal Mail" WIDTH="108" HEIGHT="21"></td>
+        <td width="75%" bgcolor="#FFFFFF"><small><font face="Arial">Love's Country Stores<br>
+        PO Box 26210<br>
+        Oklahoma City, OK&nbsp; 73126</font></small></td>
+      </tr>
+      <tr>
+        <td width="15%" align="left" bgcolor="#FFFFFF"></td>
+        <td width="75%" bgcolor="#FFFFFF"><small><font face="Arial">Or complete and submit the
+        following form</font></small></td>
+      </tr>
+    </table>
+    <!--webbot BOT="GeneratedScript" PREVIEW=" " startspan --><script Language="JavaScript"><!--
+function FrontPage_Form1_Validator(theForm)
+{
+
+  if (theForm.Comments.value == "")
+  {
+    alert("Please enter a value for the \"Comments\" field.");
+    theForm.Comments.focus();
+    return (false);
+  }
+
+  var checkOK = "0123456789-.,";
+  var checkStr = theForm.Contact_Phone.value;
+  var allValid = true;
+  var decPoints = 0;
+  var allNum = "";
+  for (i = 0;  i < checkStr.length;  i++)
+  {
+    ch = checkStr.charAt(i);
+    for (j = 0;  j < checkOK.length;  j++)
+      if (ch == checkOK.charAt(j))
+        break;
+    if (j == checkOK.length)
+    {
+      allValid = false;
+      break;
+    }
+    if (ch == ".")
+    {
+      allNum += ".";
+      decPoints++;
+    }
+    else if (ch != ",")
+      allNum += ch;
+  }
+  if (!allValid)
+  {
+    alert("Please enter only digit characters in the \"Contact_Phone\" field.");
+    theForm.Contact_Phone.focus();
+    return (false);
+  }
+
+  if (decPoints > 1)
+  {
+    alert("Please enter a valid number in the \"Contact_Phone\" field.");
+    theForm.Contact_Phone.focus();
+    return (false);
+  }
+
+  var checkOK = "0123456789-.,";
+  var checkStr = theForm.Contact_FAX.value;
+  var allValid = true;
+  var decPoints = 0;
+  var allNum = "";
+  for (i = 0;  i < checkStr.length;  i++)
+  {
+    ch = checkStr.charAt(i);
+    for (j = 0;  j < checkOK.length;  j++)
+      if (ch == checkOK.charAt(j))
+        break;
+    if (j == checkOK.length)
+    {
+      allValid = false;
+      break;
+    }
+    if (ch == ".")
+    {
+      allNum += ".";
+      decPoints++;
+    }
+    else if (ch != ",")
+      allNum += ch;
+  }
+  if (!allValid)
+  {
+    alert("Please enter only digit characters in the \"Contact_FAX\" field.");
+    theForm.Contact_FAX.focus();
+    return (false);
+  }
+
+  if (decPoints > 1)
+  {
+    alert("Please enter a valid number in the \"Contact_FAX\" field.");
+    theForm.Contact_FAX.focus();
+    return (false);
+  }
+  return (true);
+}
+//--></script><!--webbot BOT="GeneratedScript" endspan --><form method="POST" action="_vti_bin/shtml.dll/ContactUs.htm" onsubmit="return FrontPage_Form1_Validator(this)" name="FrontPage_Form1" webbot-action="--WEBBOT-SELF--">
+      <!--webbot bot="SaveResults" S-Email-Format="TEXT/PRE" B-Email-Label-Fields="TRUE" B-Email-Subject-From-Field="FALSE" S-Email-Subject="Comment Confirmation" S-Builtin-Fields="Date Time REMOTE_USER HTTP_USER_AGENT" U-Confirmation-Url="Comment Confirmation.htm" S-Email-Address="wwwcomments@loves.com" startspan --><input TYPE="hidden" NAME="VTI-GROUP" VALUE="0"><!--webbot bot="SaveResults" endspan i-checksum="43374" --><p><small><font face="Arial"><strong>What kind of comment
+      would you like to send?</strong></font></small><dl>
+        <dd><small><font face="Arial"><input type="radio" name="MessageType" value="Complaint">Complaint
+          <input type="radio" name="MessageType" value="Problem">Problem <input type="radio" checked name="MessageType" value="Suggestion">Suggestion <input type="radio" name="MessageType" value="Praise">Praise</font></small></dd>
+      </dl>
+      <p><small><font face="Arial"><strong>What about us do you want to comment on?</strong></font></small><dl>
+        <dd><select name="Subject" size="1">
+            <option selected>Web Site</option>
+            <option>Company</option>
+            <option>Products</option>
+            <option>Store</option>
+            <option>Employee</option>
+            <option>(Other)</option>
+          </select> <small><font face="Arial">Other:</font></small> <input type="text" size="26" maxlength="256" name="SubjectOther"></dd>
+      </dl>
+      <p><small><font face="Arial"><strong>Enter your comments in the space provided below:</strong></font></small><dl>
+        <dd><!--webbot bot="Validation" S-Display-Name="Comments" B-Value-Required="TRUE" --><textarea name="Comments" rows="5" cols="42"></textarea></dd>
+      </dl>
+      <p><small><font face="Arial"><strong>Tell us how to get in touch with you:</strong></font></small></p>
+      <blockquote>
+        <p><font face="Arial"><strong><small>Name</small><br>
+        <small><input TYPE="text" SIZE="25" NAME="Contact_Name"> </small><br>
+        <small>Phone</small> <small><small>(Include Area Code)</small></small><br>
+        <small><!--webbot bot="Validation" S-Data-Type="Number" S-Number-Separators=",." --><input TYPE="text" SIZE="15" NAME="Contact_Phone"> <br>
+        FAX</small> <small><small>(Include Area Code)</small></small><br>
+        <small><!--webbot bot="Validation" S-Data-Type="Number" S-Number-Separators=",." --><input TYPE="text" SIZE="15" NAME="Contact_FAX"> <br>
+        E-mail</small><br>
+        <small><input TYPE="text" SIZE="25" NAME="Contact_Email" maxlength="256"> </small></strong></font></p>
+      </blockquote>
+      <dl>
+        <dd><input type="checkbox" name="ContactRequested" value="Yes"> <small><font face="Arial">Please
+          contact me as soon as possible regarding this matter.</font></small></dd>
+      </dl>
+      <p><input type="submit" value="Submit Comments"> <input type="reset" value="Clear Form"></p>
+    </form>
+    <hr>
+    <h5><font face="Arial">Copyright © 1999 Love's Country Stores.&nbsp; All rights reserved.<br>
+    Revised: <!--webbot bot="TimeStamp" S-Type="EDITED" S-Format="%B %d, %Y" startspan -->November 08, 1999<!--webbot bot="TimeStamp" endspan i-checksum="41301" -->.</font></h5>
+    </td>
+    <td></td>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="8" width="100%">
+  <tr>
+    <td><p align="center"><strong><font face="Arial" color="#000000"><a href="default.htm">Home</a>
+    &nbsp;&nbsp; <a href="aboutus.htm">About Us</a>&nbsp;&nbsp; <a href="locations.htm">Locations</a>&nbsp;&nbsp;
+    <a href="services.htm">Services</a>&nbsp;&nbsp; <a href="Careers/careers.htm">Careers</a>
+    &nbsp; <br>
+    <a href="Giving%20Back.htm">Giving Back</a>&nbsp;&nbsp; </font><font face="Arial" color="#E30000">Contact Us</font><font face="Arial" color="#000000">&nbsp;&nbsp; <a href="realestateform.htm">Real Estate</a></font></strong></td>
+  </tr>
+</table>
+</body>
+</html>

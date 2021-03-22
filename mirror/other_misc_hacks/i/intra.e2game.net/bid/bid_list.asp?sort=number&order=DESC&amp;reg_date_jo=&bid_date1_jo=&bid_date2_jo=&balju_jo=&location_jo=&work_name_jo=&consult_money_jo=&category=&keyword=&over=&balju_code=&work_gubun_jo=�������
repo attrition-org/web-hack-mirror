@@ -1,0 +1,435 @@
+
+<html>
+<script language="JavaScript">
+function send(){
+	document.thisForm1.submit();
+	return true;
+}
+function check(){
+	thisForm = document.thisForm1;	
+	for (var i=0; i < thisForm.sort.options.length; i++)
+	{
+	 if(thisForm.sort.options[i].value == "number")
+	 { thisForm.sort.options[i].selected = true; }
+	}	
+}
+</script>
+<script language=javascript>
+var control = 1;
+function flash() {
+  if (control == 1) {
+      window.status="안녕하세요! 웹비드입니다.";
+      control=2;
+    }  
+  else if (control == 2) {
+      window.status="웹비드의 입찰정보는 매일 100여건이상씩 업데이트됩니다.";
+      control=3;
+    }
+  else if (control == 3){
+      window.status="자세한 입찰정보는 공고번호를 누르세요.";
+      control=4;
+  }
+  else if (control == 4){
+      window.status="원하시는 공종별, 발주처별, 지역별로 조회가 가능합니다.";
+      control=5;
+  }
+  else if (control == 5){
+      window.status="등록,입찰일시별이나 설계금액등의 검색은 자세히찾기를 누르세요.";
+      control=6;
+  }
+  else if (control == 6){
+      window.status="우리회사입찰정보로의 등록은 체크박스를 체크후 등록을 누르세요.";
+      control=1;
+  }
+  setTimeout("flash()",3000);
+}
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+<title>Webbid - 입찰 정보 목록</title>
+<style type="text/css">
+ A            {text-decoration: none; color:#000000}
+ A:hover      {text-decoration: underline; color:red}
+ .asp	{ color:black; background:yellow}
+ .count { background: color: #3333cc}
+</style>
+</head>
+<body topmargin=1 leftmargin=0 onload="check();">
+<SCRIPT language=JavaScript src="../menu/toolbar.js"></SCRIPT>
+<SCRIPT language=JavaScript src="../menu/local_pss.js"></SCRIPT>
+<DIV id=TBDownLevelDiv></DIV>
+  <SCRIPT language=JavaScript>
+  <!--
+   var ToolBar_Supported = ToolBar_Supported;
+   if (ToolBar_Supported != null && ToolBar_Supported == true)
+   {   TBDownLevelDiv.style.display ='none';
+	   drawToolbar();
+   }   //-->
+</SCRIPT><div align=center><br>
+<table width=10% border=0 cellspacing=0 cellpadding=0 align=center>
+  <tr>
+    <td height=38><img src="images/ipchalgongo_joha.gif" width=167 height=36></td>
+  </tr>
+</table><br>
+<table border=0 cellspacing=0 width=95% height=95 cellpadding=0>
+  <tr><td valign=top>
+      <table border=0 cellspacing=1 width=100% cellpadding=1>
+        <tr bgcolor=#99CCFF> 
+          <td width=12.5% align=left> 
+            <font face=돋움 size=-1 color=blue>  
+              <a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&balju_code=&work_gubun_jo=">전체</a> 
+              </font>
+          </td>
+          <td width=12.5% align=left> 
+            <font face=돋움 size=-1 color=blue>  
+              <a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&balju_code=&work_gubun_jo=토건">토건</a> 
+              </font>
+          </td>
+          <td width=12.5% align=left> 
+            <font face=돋움 size=-1 color=blue>  
+              <a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&balju_code=&work_gubun_jo=토목">토목</a> 
+              </font>
+          </td>
+          <td width=12.5% align=left> 
+            <font face=돋움 size=-1 color=blue>  
+              <a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&balju_code=&work_gubun_jo=건축">건축</a> 
+              </font>
+          </td>
+          <td width=12.5% align=left> 
+            <font face=돋움 size=-1 color=blue>  
+              <a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&balju_code=&work_gubun_jo=조경">조경</a> 
+              </font>
+          </td>
+          <td width=12.5% align=left> 
+            <font face=돋움 size=-1 color=blue> <b>산업설비</b></font>
+          </td>
+          <td width=12.5% align=left>
+            <font face=돋움 size=-1 color=blue>  
+              <a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&balju_code=&work_gubun_jo=전기공사업">전기</a> 
+              </font>
+          </td>
+          <td width=12.5% align=left> 
+            <font face=돋움 size=-1 color=blue>  
+              <a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&balju_code=&work_gubun_jo=정보통신공사업">정보통신</a> 
+              </font>
+          </td>
+        </tr>
+        <tr bgcolor=#E6F2FF> 
+          <td> 
+            <font face=돋움 size=-1 color=blue>  
+              <a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&balju_code=&work_gubun_jo=실내건축공사업">실내건축</a> 
+              </font>
+          </td>
+          <td> 
+            <font face=돋움 size=-1 color=blue>  
+              <a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&balju_code=&work_gubun_jo=토공사업">토공</a> 
+              </font>
+          </td>
+          <td> 
+            <font face=돋움 size=-1 color=blue>  
+              <a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&balju_code=&work_gubun_jo=미장방수공사업">미장방수</a> 
+              </font>
+          </td>
+          <td> 
+            <font face=돋움 size=-1 color=blue>  
+              <a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&balju_code=&work_gubun_jo=석공사업">석공</a> 
+              </font>
+          </td>
+          <td> 
+            <font face=돋움 size=-1 color=blue>  
+              <a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&balju_code=&work_gubun_jo=도장공사업">도장</a> 
+              </font>
+          </td>
+          <td> 
+            <font face=돋움 size=-1 color=blue>  
+              <a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&balju_code=&work_gubun_jo=시설물유지관리공사업">시설물유지관리</a> 
+              </font>
+          </td>
+          <td> 
+            <font face=돋움 size=-1 color=blue>  
+              <a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&balju_code=&work_gubun_jo=조적공사업">조적</a> 
+              </font>
+          </td>
+          <td> 
+            <font face=돋움 size=-1 color=blue>  
+              <a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&balju_code=&work_gubun_jo=비계공사업">비계</a> 
+              </font>
+          </td>
+        </tr>
+        <tr bgcolor=#99CCFF> 
+          <td> 
+            <font face=돋움 size=-1 color=blue>  
+              <a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&balju_code=&work_gubun_jo=창호공사업">창호</a> 
+              </font>
+          </td>
+          <td> 
+            <font face=돋움 size=-1 color=blue>  
+              <a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&balju_code=&work_gubun_jo=지붕공사업">지붕</a> 
+              </font>
+          </td>
+          <td> 
+            <font face=돋움 size=-1 color=blue>  
+              <a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&balju_code=&work_gubun_jo=철콘공사업">철콘</a> 
+              </font>
+          </td>
+          <td> 
+            <font face=돋움 size=-1 color=blue>  
+              <a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&balju_code=&work_gubun_jo=철물공사업">철물</a> 
+              </font>
+          </td>
+          <td> 
+            <font face=돋움 size=-1 color=blue>  
+              <a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&balju_code=&work_gubun_jo=상하수도공사업">상하수도</a> 
+              </font>
+          </td>
+          <td> 
+            <font face=돋움 size=-1 color=blue>  
+              <a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&balju_code=&work_gubun_jo=보링공사업">보링</a> 
+              </font>
+          </td>
+          <td> 
+            <font face=돋움 size=-1 color=blue>  
+              <a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&balju_code=&work_gubun_jo=철도궤도공사업">철도궤도</a> 
+              </font>
+          </td>
+          <td> 
+            <font face=돋움 size=-1 color=blue>  
+              <a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&balju_code=&work_gubun_jo=포장공사업">포장</a> 
+              </font>
+          </td>
+        </tr>
+        <tr bgcolor=#E6F2FF> 
+          <td> 
+            <font face=돋움 size=-1 color=blue>  
+              <a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&balju_code=&work_gubun_jo=수중공사업">수중</a> 
+              </font>
+          </td>
+          <td> 
+            <font face=돋움 size=-1 color=blue>  
+              <a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&balju_code=&work_gubun_jo=조경식재공사업">조경식재</a> 
+              </font>
+          </td>
+          <td> 
+            <font face=돋움 size=-1 color=blue>  
+              <a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&balju_code=&work_gubun_jo=조경시설물공사업">조경시설물</a> 
+              </font>
+          </td>
+          <td> 
+            <font face=돋움 size=-1 color=blue>  
+              <a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&balju_code=&work_gubun_jo=건축물조립공사업">건축물조립</a> 
+              </font>
+          </td>
+          <td> 
+            <font face=돋움 size=-1 color=blue>  
+              <a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&balju_code=&work_gubun_jo=강구조물공사업">강구조물</a> 
+              </font>
+          </td>
+          <td> 
+            <font face=돋움 size=-1 color=blue>  
+              <a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&balju_code=&work_gubun_jo=온실공사업">온실</a> 
+              </font>
+          </td>
+          <td> 
+            <font face=돋움 size=-1 color=blue>  
+              <a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&balju_code=&work_gubun_jo=승강기공사업">승강기</a> 
+              </font>
+          </td>
+          <td> 
+            <font face=돋움 size=-1 color=blue> 
+              <a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&balju_code=&work_gubun_jo=기계설비공사업">기계설비</a> 
+              </font>
+          </td>
+        </tr>
+        <tr bgcolor=#99CCFF> 
+          <td> 
+            <font face=돋움 size=-1 color=blue> 
+              <a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&balju_code=&work_gubun_jo=소방공사업">소방</a> 
+              </font>
+          </td>
+          <td> 
+            <font face=돋움 size=-1 color=blue> 
+              <a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&balju_code=&work_gubun_jo=가스공사업">가스</a> 
+              </font>
+          </td>
+          <td colspan=7></td></tr></table></td></tr></table>
+<p style="line-height:70%; margin-top:0; margin-bottom:0;">&nbsp;
+<table border=0 cellspacing=0 height=19 width=95% cellpadding=0 bgcolor=#7f7f7f>
+<tr><td valign=center>
+<table border=0 cellspacing=0 width=100% height=17 cellpadding=0>
+<tr><td bgcolor=#efefef>
+<table border=0 cellspacing=0 width=100% cellpadding=0>
+<tr><td>
+<font face=돋움 size=-1 color=blue>
+		<b>전체</b></font></td>
+		<td><font face=돋움 size=-1 color=blue>
+		
+		<a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&work_gubun_jo=산업설비&balju_code=1">국방부조달본부</a>
+		</font></td>
+		<td><font face=돋움 size=-1 color=blue>
+		
+		<a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&work_gubun_jo=산업설비&balju_code=2">대한주택공사</a>
+		</font></td>
+		<td><font face=돋움 size=-1 color=blue>
+		
+		<a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&work_gubun_jo=산업설비&balju_code=3">재정경제부</a>
+		</font></td>
+		<td><font face=돋움 size=-1 color=blue>
+		
+		<a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&work_gubun_jo=산업설비&balju_code=4">조달청</a>
+		</font></td>
+		<td><font face=돋움 size=-1 color=blue>
+		
+		<a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&work_gubun_jo=산업설비&balju_code=5">한국가스공사</a>
+		</font></td>
+		<td><font face=돋움 size=-1 color=blue>
+		
+		<a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&work_gubun_jo=산업설비&balju_code=6">한국도로공사</a>
+		</font></td>
+		<td><font face=돋움 size=-1 color=blue>
+		
+		<a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&work_gubun_jo=산업설비&balju_code=7">한국전력공사</a>
+		</font></td>
+		<td><font face=돋움 size=-1 color=blue>
+		
+		<a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&work_gubun_jo=산업설비&balju_code=8">한국토지공사</a>
+		</font></td>
+		<td><font face=돋움 size=-1 color=blue>
+		
+		<a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&work_gubun_jo=산업설비&balju_code=9">한국통신</a>
+		</font></td>
+		<td><font face=돋움 size=-1 color=blue>
+		
+		<a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=&work_name_jo=&consult_money_jo=&category=&keyword=&over=&work_gubun_jo=산업설비&balju_code=10">행정자치부</a>
+		</font></td>
+	</tr>
+</table></td></tr></table></td></tr></table>
+<p style="line-height:70%; margin-top:0; margin-bottom:0;">&nbsp;
+<table border=0 cellspacing=0 height="19" width="95%" cellpadding=0 bgcolor="#7f7f7f">
+<tr><td valign=center>
+<table border=0 cellspacing=0 width=100% height="17" cellpadding=0>
+<tr><td bgcolor="#efefef">
+<table border=0 cellspacing=0 width=100% cellpadding=0 >
+<tr><td>
+	<tr>
+		<td><font face=돋움 size=-1 color=blue>
+		<b>전체</b></font></td>
+		<td><font face=돋움 size=-1 color=blue>
+		
+		<a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=전국&work_name_jo=&consult_money_jo=&category=&keyword=&over=&work_gubun_jo=산업설비&balju_code=">전국</a>
+		</font></td>
+		<td><font face=돋움 size=-1 color=blue>
+		
+		<a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=서울&work_name_jo=&consult_money_jo=&category=&keyword=&over=&work_gubun_jo=산업설비&balju_code=">서울</a>
+		</font></td>
+		<td><font face=돋움 size=-1 color=blue>
+		
+		<a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=부산&work_name_jo=&consult_money_jo=&category=&keyword=&over=&work_gubun_jo=산업설비&balju_code=">부산</a>
+		</font></td>
+		<td><font face=돋움 size=-1 color=blue>
+		
+		<a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=인천&work_name_jo=&consult_money_jo=&category=&keyword=&over=&work_gubun_jo=산업설비&balju_code=">인천</a>
+		</font></td>
+		<td><font face=돋움 size=-1 color=blue>
+		
+		<a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=대구&work_name_jo=&consult_money_jo=&category=&keyword=&over=&work_gubun_jo=산업설비&balju_code=">대구</a>
+		</font></td>
+		<td><font face=돋움 size=-1 color=blue>
+		
+		<a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=광주&work_name_jo=&consult_money_jo=&category=&keyword=&over=&work_gubun_jo=산업설비&balju_code=">광주</a>
+		</font></td>
+		<td><font face=돋움 size=-1 color=blue>
+		
+		<a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=대전&work_name_jo=&consult_money_jo=&category=&keyword=&over=&work_gubun_jo=산업설비&balju_code=">대전</a>
+		</font></td>
+		<td><font face=돋움 size=-1 color=blue>
+		
+		<a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=울산&work_name_jo=&consult_money_jo=&category=&keyword=&over=&work_gubun_jo=산업설비&balju_code=">울산</a>
+		</font></td>
+		<td><font face=돋움 size=-1 color=blue>
+		
+		<a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=경기&work_name_jo=&consult_money_jo=&category=&keyword=&over=&work_gubun_jo=산업설비&balju_code=">경기</a>
+		</font></td>
+		<td><font face=돋움 size=-1 color=blue>
+		
+		<a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=강원&work_name_jo=&consult_money_jo=&category=&keyword=&over=&work_gubun_jo=산업설비&balju_code=">강원</a>
+		</font></td>
+		<td><font face=돋움 size=-1 color=blue>
+		
+		<a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=충북&work_name_jo=&consult_money_jo=&category=&keyword=&over=&work_gubun_jo=산업설비&balju_code=">충북</a>
+		</font></td>
+		<td><font face=돋움 size=-1 color=blue>
+		
+		<a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=충남&work_name_jo=&consult_money_jo=&category=&keyword=&over=&work_gubun_jo=산업설비&balju_code=">충남</a>
+		</font></td>
+		<td><font face=돋움 size=-1 color=blue>
+		
+		<a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=전북&work_name_jo=&consult_money_jo=&category=&keyword=&over=&work_gubun_jo=산업설비&balju_code=">전북</a>
+		</font></td>
+		<td><font face=돋움 size=-1 color=blue>
+		
+		<a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=전남&work_name_jo=&consult_money_jo=&category=&keyword=&over=&work_gubun_jo=산업설비&balju_code=">전남</a>
+		</font></td>
+		<td><font face=돋움 size=-1 color=blue>
+		
+		<a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=경북&work_name_jo=&consult_money_jo=&category=&keyword=&over=&work_gubun_jo=산업설비&balju_code=">경북</a>
+		</font></td>
+		<td><font face=돋움 size=-1 color=blue>
+		
+		<a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=경남&work_name_jo=&consult_money_jo=&category=&keyword=&over=&work_gubun_jo=산업설비&balju_code=">경남</a>
+		</font></td>
+		<td><font face=돋움 size=-1 color=blue>
+		
+		<a href="bid_list.asp?sort=number&order=DESC&amp;reg_date_jo=&bid_date1_jo=&bid_date2_jo=&balju_jo=&location_jo=제주&work_name_jo=&consult_money_jo=&category=&keyword=&over=&work_gubun_jo=산업설비&balju_code=">제주</a>
+		</font></td>
+	</tr>
+</table></td></tr></table></td></tr></table></p>
+<p style="line-height:70%; margin-top:0; margin-bottom:0;">&nbsp;
+      <table border=0 cellspacing=0 width="95%">
+        <tr>
+      <td height=20>
+      <table border=0 cellspacing=2 width=100% cellpadding=1 bgcolor=#0055AA>
+      <form method="post" action="bid_list.asp" name="thisForm1">
+          <font face=돋움 size=-1 color=blue> 정렬 : </font>
+          <select name="sort" onChange="send()">
+            <option value="number">등록순</option>
+            <option value="bid_num">공고번호</option>
+            <option value="bid_date">입찰일자</option>
+            <option value="work_meet_date">현장설명일</option>
+            <option value="consult_money">설계금액</option>
+          </select>
+          <font size=2 face=돋움 color=#000000> 
+          <input type=radio name="order" value="DESC" checked>내림
+          <input type=radio name="order" value="ASC" onclick="send()">오름  </font>&nbsp;&nbsp;   
+		  <font size=2 face=돋움 color="blue">검색 : </font>
+          <select name="category" size=1 style="font-family: 돋움체;border: 1px dashed" >
+           <option value="balju">발주처</option>
+           <option value="work_name">공사명</option>
+           <option value="bid_num">공고번호</option>
+          </select>
+          <input type=text name=keyword id=key1 value="" size=10 style="border: 1px dashed">
+		 <input type=submit name=sub value=" 찾기 " style="border: 1px dashed">
+		 &nbsp;&nbsp;<a href="./bid_find.asp"><font size=2 face=돋움 color=blue><u>자세히 찾기</u></a><font color=black> (찾기예-서울특별시->서울, 경상남도->경남)</font></font>
+       </form></table></td></tr>
+	<form action="bid_list_com.asp" Method="POST" name="frmlink">
+          <table border=0 cellspacing=1 width="95%" bordercolor="#033f75" cellpadding=2>
+            <tr>
+			
+              <td width=35 bgcolor=#0055AA style="padding-top: 3; padding-bottom: 3" align=center>
+                <font face=굴림 size=2 color=#FFFFFF><strong>번호</strong></font></td>
+              <td bgcolor=#0055AA style="padding-top: 3; padding-bottom: 3" align=center>
+                <font face=굴림 size=2 color=#FFFFFF><strong>공사명</strong></font></td>
+			  <td bgcolor=#0055AA style="padding-top: 3; padding-bottom: 3" align=center>
+                <font face=굴림 size=2 color=#FFFFFF><strong>발주처</strong></font></td>
+              <td width=35 bgcolor=#0055AA style="padding-top: 3; padding-bottom: 3" align=center>
+                <font face=굴림 size=2 color=#FFFFFF><strong>지역</strong></font></td>
+              <td width=100 bgcolor=#0055AA style="padding-top: 3; padding-bottom: 3" align=center>
+                <font face=굴림 size=2 color=#FFFFFF><strong>입찰일시</strong></font></td>
+            </tr>
+<tr><td style='padding-top: 0; padding-bottom: 0' height=16 bgcolor=#9fcff7 rowspan=2><p align=center><font face=돋움 size=2 color=#000000>1</font></td><input type=hidden name=rank value=1><td align=left style='padding-left: 10; padding-top: 0; padding-bottom: 0' height=16 bgcolor=#ddf0ff onmouseover=this.style.background='#ffcb33' onmouseout=this.style.background='#ddf0ff'><font face=돋움 size=-1 color=#000000>공고번호-</font><a href='bid_detail.asp?number=1758' style='text-decoration:none;'><font face=돋움 size=2 color=#000000>경북청송군공고제2000-37호</font></a></td><td style='padding-top: 0; padding-bottom: 0' height=16 bgcolor=#9fcff7 rowspan=2><p align=center><font face=돋움 size=2 color=#000000>경북 청송군</font></td><td style='padding-top: 0; padding-bottom: 0' height=16 bgcolor=#9fcff7 rowspan=2><p align=center><font face=돋움 size=2 color=#000000>경북</font></td><td style='padding-top: 0; padding-bottom: 0' height=16 bgcolor=#9fcff7 rowspan=2><p align=center><font face=돋움 size=2 color=#000000>2000-03-30 오전 11</font></td></tr><tr><td align=center style='padding-left: 10; padding-top: 0; padding-bottom: 0' height=20 bgcolor=#9fcff7><font face=돋움 size=2 color=#003399> 청송읍 청운마을 하수처리시설공사</font></td></tr><tr><td style='padding-top: 0; padding-bottom: 0' height=16 bgcolor=#9fcff7 rowspan=2><p align=center><font face=돋움 size=2 color=#000000>2</font></td><input type=hidden name=rank value=2><td align=left style='padding-left: 10; padding-top: 0; padding-bottom: 0' height=16 bgcolor=#ddf0ff onmouseover=this.style.background='#ffcb33' onmouseout=this.style.background='#ddf0ff'><font face=돋움 size=-1 color=#000000>공고번호-</font><a href='bid_detail.asp?number=792' style='text-decoration:none;'><font face=돋움 size=2 color=#000000>강원도교육청공고제2000-11호</font></a></td><td style='padding-top: 0; padding-bottom: 0' height=16 bgcolor=#9fcff7 rowspan=2><p align=center><font face=돋움 size=2 color=#000000>강원도교육청</font></td><td style='padding-top: 0; padding-bottom: 0' height=16 bgcolor=#9fcff7 rowspan=2><p align=center><font face=돋움 size=2 color=#000000>전국</font></td><td style='padding-top: 0; padding-bottom: 0' height=16 bgcolor=#9fcff7 rowspan=2><p align=center><font face=돋움 size=2 color=#000000>2000-03-24 오후 2:</font></td></tr><tr><td align=center style='padding-left: 10; padding-top: 0; padding-bottom: 0' height=20 bgcolor=#9fcff7><font face=돋움 size=2 color=#003399> 강원학생수련원 신축 설비공사</font></td></tr><tr><td style='padding-top: 0; padding-bottom: 0' height=16 bgcolor=#9fcff7 rowspan=2><p align=center><font face=돋움 size=2 color=#000000>3</font></td><input type=hidden name=rank value=3><td align=left style='padding-left: 10; padding-top: 0; padding-bottom: 0' height=16 bgcolor=#ddf0ff onmouseover=this.style.background='#ffcb33' onmouseout=this.style.background='#ddf0ff'><font face=돋움 size=-1 color=#000000>공고번호-</font><a href='bid_detail.asp?number=249' style='text-decoration:none;'><font face=돋움 size=2 color=#000000>한전공고태안화력본부공고제2000-7호</font></a></td><td style='padding-top: 0; padding-bottom: 0' height=16 bgcolor=#9fcff7 rowspan=2><p align=center><font face=돋움 size=2 color=#000000>한국전력공사(태안화력본부)</font></td><td style='padding-top: 0; padding-bottom: 0' height=16 bgcolor=#9fcff7 rowspan=2><p align=center><font face=돋움 size=2 color=#000000>전국</font></td><td style='padding-top: 0; padding-bottom: 0' height=16 bgcolor=#9fcff7 rowspan=2><p align=center><font face=돋움 size=2 color=#000000>2000-02-29 오후 2:</font></td></tr><tr><td align=center style='padding-left: 10; padding-top: 0; padding-bottom: 0' height=20 bgcolor=#9fcff7><font face=돋움 size=2 color=#003399> 제1호기 중요밸브 완전분해 점검 및 반출정비공사</font></td></tr><input type=hidden name=sort value=number><input type=hidden name=com_num value=><input type=hidden name=reg_date_jo value=><input type=hidden name=bid_date1_jo value=><input type=hidden name=bid_date2_jo value=><input type=hidden name=balju_jo value=><input type=hidden name=location_jo value=><input type=hidden name=work_name_jo value=><input type=hidden name=work_gubun_jo value=산업설비><input type=hidden name=consult_money_jo value=></form></table></td></tr><tr><td><div align=center><center><td><table border=0 cellspacing=0 width=95% bgcolor=#033f75><tr><td><p align=center><font face=돋움 color=white size=2>총<font color=yellow>3</font>개의 자료가 있습니다.</font><b><font face=돋움 color=white size=2>&nbsp;&nbsp;&nbsp;</font></b><font face=돋움 size=2 color=white><font face=돋움 color=white size=2>[이전]</font><font face=돋움 color=white size=2>[다음]</font></font><font color=white>[<b><font face=돋움 color=yellow size=2> 1</font></b> ]</font></font></td></tr></table></center></div></td></tr>
+
+<img src="../spcounter/count.cgi?id=bid_list&img=large&digit=7&val=total" width="1" height="1" border="0">
+<img src="../spcounter/count.cgi?id=bid_list&img=large&digit=7&val=today" width="1" height="1" border="0">
+<br><br><img src="../images/sep2.gif" width="95%" height=1 border=0><br>
+<font face=굴림 size=2 color=darkblue>Copyright 1999-2000 <B>Lead Infomation System Inc.</B> All rights reserved.</font>
+</div>
+</body>
+</html>

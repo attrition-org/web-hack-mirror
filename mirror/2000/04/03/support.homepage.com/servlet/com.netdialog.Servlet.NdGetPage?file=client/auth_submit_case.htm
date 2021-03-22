@@ -1,0 +1,423 @@
+<html>
+<!-- Screen No. 23 -->
+<head>
+<title>Contact Us</title>
+
+
+
+
+
+
+
+
+  
+  
+<script>
+var submitted = false;
+ // checks if from field is filled
+
+
+function validateForm()
+ {
+    len = document.NDSUBMIT_CASE.NDCLIENT_MESSAGE.value.length;
+
+    if( len > 0 )
+    {
+/*
+        var openTag  = /</g; 
+        var closeTag = />/g;
+
+
+        document.NDSUBMIT_CASE.NDCLIENT_MESSAGE.value = document.NDSUBMIT_CASE.NDCLIENT_MESSAGE.value.replace( openTag, "&LT;" );
+        document.NDSUBMIT_CASE.NDCLIENT_MESSAGE.value = document.NDSUBMIT_CASE.NDCLIENT_MESSAGE.value.replace( closeTag, "&GT;" );
+
+
+        document.NDSUBMIT_CASE.NDCLIENT_MESSAGE.value = document.NDSUBMIT_CASE.NDCLIENT_MESSAGE.value.replace( openTag, "&#91;" );
+        document.NDSUBMIT_CASE.NDCLIENT_MESSAGE.value = document.NDSUBMIT_CASE.NDCLIENT_MESSAGE.value.replace( closeTag, "&#93;" );
+*/
+
+    }
+
+    
+    if (  document.NDSUBMIT_CASE.FirstName.value == "")
+    {
+        alert("Please enter your firstname.");
+        return false;
+    } else
+    if (  document.NDSUBMIT_CASE.LastName.value == "")
+    {
+        alert("Please enter your lastname.");
+        return false;
+    } else
+
+
+    email = document.NDSUBMIT_CASE.NDCLIENT_EMAIL.value;
+    //This check is only applicable for EMAIL_ONLY
+    
+    if (  email == "")
+    {
+        alert("Please enter your email address before submitting a question.");
+        return false;
+    } else
+    
+
+
+    var form1 = document.NDSUBMIT_CASE;
+
+    amp_index = email.indexOf("@");
+    email_name_part = email.substr(0, amp_index);
+    email_domain_part = email.substr(amp_index+1);
+    dot_index = email_domain_part.indexOf(".");
+    email_domtype_part = email_domain_part.substr(dot_index+1);
+    if (amp_index <= 0 || email_name_part == "" || email_domain_part == "" || dot_index <= 0 || email_domtype_part == "")
+    {
+        alert("Invalid email address.");
+        return false;
+    } 
+
+    //Determine if more than one e-mail is present.
+    if (email_domain_part.indexOf("@") >= 0)
+    {
+        alert("Only one e-mail address is allowed.");
+        return false;
+    }
+
+    if ( len > 2000)
+    {
+        alert("You cannot submit more than 2000 characters.  Please remove "+(len - 2000)+" characters.");
+        return false;
+    } else
+    if (form1.NDCLIENT_SUBJECT.options[form1.NDCLIENT_SUBJECT.options.selectedIndex].value == "")
+    {
+        alert("Please enter a subject before submitting a question.");
+        return false;
+    } else
+    if ( document.NDSUBMIT_CASE.NDCLIENT_MESSAGE.value == "")
+    {
+        alert("Please enter a question before submitting.");
+        return false;
+    } else
+    if ( document.NDSUBMIT_CASE.NDCLIENT_HOMEPAGEADDR.value != "")
+    {
+    	addr = document.NDSUBMIT_CASE.NDCLIENT_HOMEPAGEADDR.value;
+	hmpg_domain = "homepage.com";
+	hmpg_index = addr.indexOf(hmpg_domain);
+    	user_name_part = addr.substr(0, hmpg_index);
+	dot_index = user_name_part.indexOf(".");
+	junk_part = addr.substr(hmpg_index+hmpg_domain.length);
+    	if (hmpg_index <= 0 || user_name_part == "" || junk_part != "" || dot_index <= 0)
+    	{
+        	alert("Invalid HomePage.com address.");
+        	return false;
+    	}
+    } else
+    if (submitted) 
+    {
+        alert("Your request has been submitted.  Press the Clear button to submit another request.");
+        return false;
+    } else
+    {
+        submitted = true;
+        return true;
+    }
+ }
+
+
+
+
+
+function route()
+{
+	if (document.NDSUBMIT_CASE.NDCLIENT_SUBJECT.options[document.NDSUBMIT_CASE.NDCLIENT_SUBJECT.options.selectedIndex].value == "Abuse/Spam")
+	{
+            //document.NDSUBMIT_CASE.NDADVISOR_TEAMID.value="10001";  // For staging server
+            document.NDSUBMIT_CASE.NDADVISOR_TEAMID.value="10040";    // For production
+
+		//document.NDSUBMIT_CASE.NDCLIENTTRACK.value = "NDCP####NDWTC_DUR=1 1171 ####NDWTC_URL=1 50 http://conserv5.netdialog.com/homepage/default.htm ####NDWTC_TITLE=1 21 Homepage - Abuse/Spam ";
+
+
+		return true;
+	}
+        else
+        {
+            //document.NDSUBMIT_CASE.NDADVISOR_TEAMID.value="1";      // For staging server
+            document.NDSUBMIT_CASE.NDADVISOR_TEAMID.value="10020";    // For production
+            return false;
+            
+        }
+ return false;
+}
+
+</script>
+</head>
+<body bgcolor="#FFFFFF">
+<CENTER>
+<TABLE bgColor=#ffffff border=0 cellPadding=0 cellSpacing=0 width=600>
+  <TBODY>
+  <TR>
+    <TD height=9 width=9>
+      <P>&nbsp;</P></TD>
+    <TD colSpan=2 height=9><IMG height=9 src="http://5h4r3d.homepage.com/images/space.gif"></TD>
+    <TD align=right height=9 width=9>&nbsp;</TD></TR>
+  <TR>
+    <TD width=9>&nbsp;</TD>
+    <TD><a href="http://www.homepage.com"> 
+	    <IMG height=54 src="/html/client/media/logopublic.gif" width=164 border="0"> </a></TD>
+    <TD>
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD rowSpan=3 width=20>&nbsp;</TD>
+          <TD colSpan=3 width=340><FONT color=#ff3300
+            face="Arial, Helvetica, sans-serif" size=4><B>Sign Up For Your FREE
+            Web Site Now!</B></FONT></TD></TR>
+        <TR>
+          <FORM action=http://www.homepage.com/signup/ method=post>
+          <TD width=100><INPUT name=domain size=12> </TD>
+          <TD width=120>
+            <CENTER><FONT face=Arial,Helvetica,sans-serif
+            size=2><B>.HomePage.com</B></FONT> </CENTER></TD>
+          <TD><INPUT border=0 name=image src="/html/client/media/hp3_reserve.gif"
+            type=image> </TD></form></TR>
+        <TR>
+          <TD width=100><FONT color=#ff3300
+            face="Arial, Helvetica, sans-serif" size=1>Enter a Name
+          Above</FONT></TD>
+          <TD width=120>&nbsp;</TD>
+          <TD><IMG height=1 src="http://5h4r3d.homepage.com/images/space.gif" width=23><FONT
+            color=#ff3300 face="Arial, Helvetica, sans-serif" size=1>Click Here
+            </FONT></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+<center>
+<TABLE bgColor=#ff6600 border=0 cellPadding=0 cellSpacing=0 width=600>
+  <TBODY>
+  <TR>
+        <TD><IMG border=0 height=19 src="/html/client/media/bar-support-blk.gif"
+      useMap=#corporate width=591></TD>
+      </TR></TBODY></TABLE>
+    <MAP
+  name=corporate><AREA coords=31,0,155,20
+  href="http://www.homepage.com/corporate/" shape=RECT><AREA
+  coords=155,0,289,20 href="http://www.homepage.com/advertise/"
+  shape=RECT><AREA coords=287,0,365,20
+  href="http://www.homepage.com/aboutus/" shape=RECT><AREA
+  coords=365,0,415,20 href="http://www.homepage.com/jobs/" shape=RECT><AREA
+  coords=415,0,481,20 href="http://www.homepage.com/privacy/"
+  shape=RECT><AREA coords=481,0,587,20
+  href="auth_submit_case.htm"
+  shape=RECT></MAP><BR>
+
+
+
+
+
+</center>
+
+
+<center>
+<TABLE bgColor=#ffffff border=0 cellPadding=0 cellSpacing=0 width=600>
+  <tr>
+        <td width="150" valign="top" height="120"> 
+          <center>
+          <br>
+            <img src="/html/client/media/woman.gif" width="88" height="88"> 
+          </center>
+      </td>  
+      <td width="435" valign="top">
+          <p><br>
+            <font color="#FF6600" size="4"> <font face="Arial, Helvetica, sans-serif"> 
+            <font color="#FF0000">Customer Support </font></font> </font> </p>
+          <p><font face="Arial, Helvetica, sans-serif" size="2">Please use the 
+            form below to give us comments and ask us questions.<br>
+            </font> </p>
+        </td>
+      <td width="15">&nbsp;
+ 		         
+      </td>
+  </tr>    
+
+  <tr> 
+        <td colspan="3" width=600 align="left" height="22" valign="top">
+	<table border=0 cellPadding=0 cellSpacing=0 width=600>
+	          <td width=400 align="left" height="22" bgcolor="#3366CC"> <img src="/html/client/media/fillouttheformbelowtocontac.gif" width="400" height="22"></td>    
+              <td bgcolor="#3366CC"></td>	
+	</table>
+        </td>
+    </tr>
+
+
+
+  <tr>
+        <td colspan="3">
+             
+             
+             </form><form action="/servlet/com.netdialog.Servlet.NdLoginProxy" method="post"  name="NDSUBMIT_CASE" onsubmit="return validateForm();">
+                    <input type="hidden" name="ND_Url" value="/servlet/com.netdialog.Servlet.Client.NdSubmitCase">
+		    <input type="hidden" name="ND_RedirectMethod" value="post">
+             
+
+
+                <input type=hidden name="file" value="client/auth_thankyou_case.htm">
+
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    
+                <td width="30" height="556"><img src="/html/media/space.gif" width="30" height="9"> 
+                </td>
+                    <td width="535" height="556">
+                     
+                  <p>&nbsp; </p>
+                  <p><font face="Arial, Helvetica, sans-serif" size="2">Your First 
+                    Name: </font> <font face="Arial, Helvetica, sans-serif" size="2"> 
+                    <br>
+                    <input type="text" name="FirstName" size="40">
+                    </font> <font face="Arial, Helvetica, sans-serif" size="2" color="#FF0000"> 
+                    *Required </font> </p>
+
+                     <p>
+                          <font face="Arial, Helvetica, sans-serif" size="2">
+                             Your Last Name:
+                          </font> 
+                          <font face="Arial, Helvetica, sans-serif" size="2"> 
+                             <br>
+                             <input type="text" name="LastName" size="40">
+                          </font>
+                          <font face="Arial, Helvetica, sans-serif" size="2" color="#FF0000">
+                              *Required
+                          </font>
+                      </p>
+                      
+                      <p>
+                          <font face="Arial, Helvetica, sans-serif" size="2">
+                              email Address:
+                          </font>
+                          <font face="Arial, Helvetica, sans-serif" size="2"> 
+                          <br>
+                          
+                           
+                               
+                               
+                              <input size="40" maxlength="254" name="NDCLIENT_EMAIL" value="">
+                              
+                           
+
+                          <font faceArialHelveticasans-serif" size="2" color="#FF0000">
+                              * Required
+                          </font>
+                        </font></p><font face="Arial, Helvetica, sans-serif" size="2">
+                        <p>
+                            <font face="Arial, Helvetica, sans-serif" size="2">
+                              Your HomePage.com Address:&nbsp;&nbsp; (i.e. scott.homepage.com)
+                           </font> 
+                           <font face="Arial, Helvetica, sans-serif" size="2"> 
+                               <br>
+                               <input type="text" name="NDCLIENT_HOMEPAGEADDR" size="50" maxlength="255">
+                            </font> 
+                        </p>
+                         <p>
+                            <font face="Arial, Helvetica, sans-serif" size="2">
+                                  The Subject of your message:
+                            </font>
+                            <br>
+                           <select name="NDCLIENT_SUBJECT" size="1" onChange="route();">
+		              <option selected>Choose one
+                              <option value="Abuse/Spam">Abuse/Spam</option>
+                              <option value="Password">Password</option>
+                              <option value="Can't Access">Can't Access</option>
+                              <option value="Building Homepage">Building Homepage</option>
+                              <option value="Chat">Chat</option>
+                              <option value="E-mail Issues">E-mail Issues</option>
+                              <option value="Other">Other</option>
+                           </select>
+                           <font face="Arial, Helvetica, sans-serif" size="2" color="#FF0000">
+                               *Required
+                           </font>
+                         </p>
+
+                           <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                             <tr>
+	                       <td width="575">
+                                 <font size="2" face="Arial, Helvetica, sans-serif">
+                                   <br>
+                                   <strong> 
+                                      Please be as descriptive as possible 
+                                   </strong> 
+                                   so that we can better resolve your issue; 
+                                   i.e., if you are getting an error message, what
+                                   did it say, and what were you doing at that time? Remember (please): we
+                                   get many emails and it may take as long as three or four days to
+                                   return your message. 
+                                  <br>
+                                  <br>
+                                  <font size="2" face="Arial, Helvetica, sans-serif" color="red">
+                                     *Message in textbox is required
+                                  </font>
+	                        </font>
+                              </td>
+                              <td width="20">&nbsp;</td>
+                            </tr>
+                          </table>
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td width="5">&nbsp;
+                                 
+                              </td>
+                              <td>
+                                  <h3><font face="Arial, Helvetica, sans-serif" size="2">
+                                  </font><font size="2" face="Arial, Helvetica, sans-serif">
+                                  <textarea name="NDCLIENT_MESSAGE" wrap="virtual" rows="10" cols="60"></textarea>
+                                  </font><font size="2" face="Arial, Helvetica, sans-serif"> </font></h3>
+                              </td>
+                              <td width="15">&nbsp;
+                                
+                              </td>
+                            </tr>
+                          </table>
+                     </font></td>
+                  </tr>
+             </table>
+
+            <table width="575" border="0" cellspacing="0" cellpadding=0">
+            <tr>
+              <td width="30">&nbsp;
+                 
+              </td>
+              <td width="575" align="center">
+                  <font size="2" face="Arial, Helvetica, sans-serif"> 
+
+                          <input type=hidden name="NDCLIENTTRACK" value="">
+                          <input type="hidden" name="NDADVISOR_TEAMID" value="">
+                          <INPUT TYPE=submit NAME="Submit" VALUE="Send">
+                          <INPUT TYPE=reset VALUE="Start over">
+
+
+                  </font>
+               </td>
+            </tr>
+          </table>
+        </FORM>
+      </td>	
+  </tr>
+  
+</table>
+</center>
+
+<CENTER>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width=600>
+  <TBODY>
+  <TR>
+        <TD bgColor=#ff6600><img border=0 height=19
+      src="/html/client/media/whatsnewbar.gif" usemap=#public
+width=591><map name=public><area coords=75,-1,174,20
+  href="http://www.homepage.com/whatsnew.html" shape=RECT><area
+  coords=172,0,338,20 href="http://www.homepage.com/whyhave_a_homepage/"
+  shape=RECT><area coords=336,0,432,20 href="http://www.homepage.com/tour/"
+  shape=RECT><area coords=430,0,480,20 href="http://www.homepage.com/help/"
+  shape=RECT><area coords=480,0,652,20
+  href="http://www.homepage.com/login/" shape=RECT></map></TD>
+      </TR></TBODY></TABLE><FONT face=Arial,Helvetica,sans-serif
+size=1>© Copyright 1999-2000 HomePage.com, Inc. All rights reserved. <BR>
+
+</FONT></CENTER>
+
+</center></body>
+</html>

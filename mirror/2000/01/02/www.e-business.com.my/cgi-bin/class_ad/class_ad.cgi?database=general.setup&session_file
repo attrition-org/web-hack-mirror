@@ -1,0 +1,125 @@
+    <HTML><HEAD><TITLE>Nasionet WWW Site - The Classified Ad Manager</TITLE></HEAD>
+    <BODY BGCOLOR = "#FFFFFF" TEXT = "000000" background="../../images/nasionet/bg.gif">
+<!--This file modified 4/9/97 1-10-97 by Joseph Home Page version 2.0b1--><X-SAS-WINDOW TOP=68 BOTTOM=436 LEFT=63 RIGHT=593>
+
+<A NAME="top"></A>
+
+<TABLE><TR>
+<TD WIDTH=60></TD><TD WIDTH=61></TD>
+<TD align=center><CENTER><IMG SRC="../../images/nasionet/logo2.jpg"></CENTER>
+</TD></TR></TABLE>
+
+<TABLE border=0 CELLSPACING=4 CELLPADDING=3 WIDTH=599 >
+<TR><TD VALIGN=top WIDTH=90 ALIGN=left>
+<IMG SRC="/images/nasionet/classmap.gif" USEMAP="#csimap" border=0>
+<MAP NAME="csimap">
+<!-- #0:Image Map file created by Map THIS! -->
+<!-- #0:Map THIS! free image map editor by Todd C. Wilson -->
+<!-- #0:Please do not edit lines starting with "#  -->
+<!-- #:1.30 -->
+<!-- #:Wed Mar 19 14:54:29 1997 -->
+<!-- #:indexmap.GIF -->
+<AREA SHAPE=RECT COORDS="0,0,96,21" HREF="../../index.html">
+<AREA SHAPE=RECT COORDS="0,22,96,44" HREF="../../news/new.html">
+<AREA SHAPE=RECT COORDS="0,44,95,66" HREF="../../aboutus/about.html">
+<AREA SHAPE=RECT COORDS="0,66,96,89" HREF="../../service/support.html">
+<AREA SHAPE=RECT COORDS="0,90,96,110" HREF="../../service/services.html">
+<AREA SHAPE=RECT COORDS="0,111,96,133" HREF="../../website/sites.html">
+<AREA SHAPE=RECT COORDS="0,134,96,157" HREF="../../service/search.html">
+<AREA SHAPE=RECT COORDS="0,158,95,179" HREF="../../service/netmeet.html">
+<AREA SHAPE=RECT COORDS="0,180,96,200" HREF="../../games/games.html">
+<AREA SHAPE=RECT COORDS="0,201,96,222" HREF="class_ad.cgi?database=general.setup&session_file">
+</MAP>
+
+<TABLE><TR><A HREF="/service/websites.html"><IMG SRC="../../images/nasionet/icsite.gif" border=0"></A></TR>
+<TR><A HREF="../../service/infomap.html"><IMG SRC="../../images/nasionet/icsite1.gif" border=0"></A></TR>
+<TR><A HREF="../../service/emailus.html"><IMG SRC="../../images/nasionet/emailus.gif" border=0"></A></TR>
+<TR><BR><A HREF="../../mylinks/free.html"><IMG SRC="../../images/nasionet/frees.gif" border=0"></A><BR></TR>
+<TR><BR><center><FONT SIZE=-2 Color="#545454">Best Viewed with </FONT></CENTER></TR>
+<TR><A HREF="http://home.netscape.com/download/nav_download.html?navigatorgold3.01"><IMG SRC="../../images/nasionet/nsani.gif" border=0"></A></TR>
+<TR><A HREF="http://www.microsoft.com/ie/download"><IMG SRC="../../images/nasionet/bestwith.gif" border=0"></A></TR>
+</TABLE>
+<center><FONT size=-2 COLOR="#545454">&copy; Swiftcom 1997</FONT></center>
+</TD>
+
+<TD width=10><!--nothing here--></td>
+
+<TD valign="top"> <!--***************************-->
+<TABLE cellspacing=0 cellpadding=0 border=0 WIDTH="100%">
+<tr><TD width="100%" VALIGN=TOP></td></tr>
+<tr><td>
+<img src="../../images/nasionet/ad.jpg" border=0><BR><BR>
+Welcome to the Nasionet Classified Ads Section. This is a new service provided by nasionet where you can potentially reach a market of millions in Malaysia and around the world.
+And it is currently FREE for all to use.<BR>
+Before you place or read an ad, please read our disclaimer below :
+<BR><BR>
+<B> Rules and Regulations </B><BR><BR>
+<table><tr><TD width="5%" valign=top>1. </td><td>No profanity.</td></tr>
+<tr><TD width="5%" valign=top>2.</td><td> The information provided is, to the best of the advertiser's knowledge, true,
+   accurate and free of copyright claims or restriction.</td></tr>
+<tr><TD width="5%" valign=top>3.</td>
+<td> And this Swiftcom Sdn. Bhd. will not be held responsible for any information published through this service.
+</td></tr>
+<tr><TD width="5%" valign=top>4.</td><td> Swiftcom Sdn. Bhd. reserves the right to edit/reject/remove all or part of 
+   the ads at any given time, without prior notice.</td></tr></table>
+<BR><BR>
+</center></td></tr>
+
+<tr><td>
+Please select one of the options below. Except for viewing, all other
+options will require first time users to register. This is free and is for 
+    the users to manage their own ads and to keep others from altering them.
+    If one item has been sold, rented or matched, please return here and 
+    delete it. Good luck!
+    </BLOCKQUOTE>
+</td></tr>
+<tr><td>
+    <FORM METHOD = "post" ACTION = "class_ad.cgi">
+    <INPUT TYPE = "hidden" NAME = "database" VALUE = "general.setup">
+    <INPUT TYPE = "hidden" NAME = "session_file" VALUE = "">    
+    <table border=1><tr><td width="20%" align=center valign=top>
+<INPUT TYPE = "submit" NAME = "search_form_view" 
+	   VALUE = "View Classified Ads Listing"></td>
+    <td valign=top width="80%">Leads you to browse Nasionet Classified Ads database using different criteria.</td></tr>
+
+    <tr><td width="20%" align=center valign=top> 
+    <INPUT TYPE = "submit" NAME = "add_form" VALUE = "Submit an Ad"></td>
+    <td width="80%" valign=top>This is where you will submit your ads. First 
+    time users will have to register themselves. Make sure to record your user_id 
+    and password.</td></tr>
+    <tr><td width="20%" align=center valign=top>     
+    <INPUT TYPE = "submit" NAME = "search_form_delete" 
+	   VALUE = "Delete Your Ad"></td>
+<td width="80%" valign=top>If you want to delete an ad, you would have to 
+go here. You will be required to enter your user_id and password.</td></tr>
+<tr><td width="20%" align=center valign=top>  
+<INPUT TYPE = "submit" NAME = "search_form_modify" 
+	   VALUE = "Modify Your Ad"></td>
+<td width="80%" valign=top>If you feel that your ad just doesn't look right,
+go here to modify it.</td></tr>
+<tr><td width="20%" align=center valign=top>
+<INPUT TYPE = "submit" NAME = "return_to_frontpage"
+           VALUE = "Return to Frontpage"></td>
+<td width="80%" valign=top>Will bring you back to this page again !</td></tr>
+</table>
+</td></tr>
+
+<tr><td><BR><BR><FONT SIZE=-1>Back to <A HREF="#top">top</A></FONT> <BR>
+</td></tr>
+
+<tr><td VALIGN=TOP colspan=4><HR></td></tr>
+<tr><td colspan=4>
+<br><center>
+<FONT SIZE=-1>For more information regarding our products and services<BR>
+please email us at <A HREF="mailto:request@nasionet.net">request@nasionet.net</A><BR>
+&copy; 1997 Swiftcom Sdn. Bhd.</FONT></CENTER>
+</td></tr>
+</TD>
+</TR>
+</TABLE>
+
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</BODY></HTML>
+

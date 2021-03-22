@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Honker's network counterattack battle.(By H.U.C)</title>
+<style type="text/css">
+<!--
+p {  margin-top: 1px; margin-bottom: 1px}
+-->
+</style>
+<bgsound src="china.mid" loop="-1">
+</head>
+<body bgcolor=black text=#FF0000>
+<center>
+  <center>
+    <font face="arial"> </font> 
+    <center>
+      <p><b><img src="china.gif" width="161" height="110"></b></p>
+      <p><b><font size="7">我是中国人!</font></b></p>
+      <p><font color="#FF0000"><b><font size="5" face="arial">Beat down Imperialism 
+        of American!</font></b></font> </p>
+      <p><font face="arial"><b>Powered by<b></b></b><font size=-1><b><b><br>
+        </b></b></font><b>Honker Union of China</b></font></p>
+      <p><font face="arial"><b><b>======</b></b></font><font face="arial"><font size=-1><b><b><font size="+7"> 
+        H.U.C </font></b></b></font><b><b>======</b></b></font></p>
+      <p><b><font color="#FF0000" face="arial">The manifesto of Honker:</font></b> 
+      </p>
+      <p align="center"><font face="arial"><b>Maintains the reunification of the 
+        motherland<font color="#FF0000"><b>!</b></font></b></font></p>
+      <p align="center"><font face="arial"><b>Guards the national sovereignty<font color="#FF0000"><b>!</b></font></b></font></p>
+      <p align="center"><font face="arial"><b>Outside consistent resistance shame<font color="#FF0000"><b>!</b></font> 
+        </b></font></p>
+      <p align="center"><font face="arial"><b>Attack anti-Chinese arrogance</b><font color="#FF0000"><b>!</b></font></font></p>
+      <p align="center"><font face="arial" color="#FF00FF"><b>Attack 
+      BY----H.U.C-2894-(LiLa)</b></font></p>
+      <p align="center"><script src="http://www.xcinfo.ha.cn/jsq/default.asp?User=hacking&amp;Length=6&amp;x=15&amp;y=20&amp;Mode=001"></script>
+      <b>2001/4/30</b></p>
+      </center>
+  </center>
+</center>
+</html>
+

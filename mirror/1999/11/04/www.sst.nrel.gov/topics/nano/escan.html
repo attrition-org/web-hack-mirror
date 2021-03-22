@@ -1,0 +1,195 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>NREL-SST: Folded Spectrum Method</title>
+<link rel="stylesheet" type="text/css" href="../../sst.css">
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<h1>The Folded Spectrum Method (FSM)</h1>
+
+<p>The conventional approach to solving for the eigenstates of a Hamiltonian containing a
+mean-field potential is to minimize the expectation value of the Hamiltonian with respect
+to the expansion coefficients of the wavefunction (such as plane-wave coefficients). The
+first eigenstate obtained is then the lowest energy eigenstate of that Hamiltonian. To
+find higher states, one needs to orthogonalise each wavefunction to all the previously
+converged states. This orthogonalization process scales as N<sup>3</sup>, and therefore
+only small systems (no. atoms &lt;100) can be studied. The central point of the folded
+spectrum approach is that eigenfunctions of the standard Hamiltonian, H, are also
+eigenfunctions of (H-Eref)2. This is illustrated in the figure below where the spectrum of
+H has been folded at the reference energy Eref into the spectrum of (H-Eref)2. Now the
+lowest eigenstate of the folded spectrum is the eigenstate with energy closest to Eref.
+Hence, by placing Eref in the physically interesting range , one transforms an arbitrarily
+high eigensolution into the lowest one, thus removing the need for the costly
+orthogonalization step. For example, if one places Eref within the band gap the lowest
+eigensolution of the folded Hamiltonian is either the valence band maximum or the
+conduction band minimum. </p>
+
+<p align="center" class="center"><img src="../../images/escan.gif"
+alt="Folded  eigenvalue spectrum" width="313" height="197"></p>
+
+<p>The code proceeds to solve for these few interesting eigensolutions of the folded
+Hamiltonian, by minimizing the expectation value of the folded Hamiltonian, with respect
+to the plane-wave expansion coefficients of the wavefunctions. A conjugate gradient
+algorithm is used to perform this minimization. </p>
+
+<h2>Applications of the Folded Spectrum Method</h2>
+
+<h3>FSM for Disordered Superlattices <a href="#ref">[10,11]</a></h3>
+
+<p>Here we studied wavefunction localization in (AlAs)<sub>n</sub>(GaAs)<sub>m</sub>(AlAs)<sub>p</sub>...
+superlattices, where the periods (n,m,p....) were random. We discovered that disordering
+enhances the transition probabilities. </p>
+
+<h3><a href="../../research/dot.html">FSM for Free Standing 
+Quantum Dots</a><a href="#ref1">[1,3,4,6]</a></h3>
+
+<center><a href="../../research/dot.html"><img
+src="../../images/dot.contour.gif" alt="Quantum dot" align="center" hspace="0" width="150"
+height="140"></a></center>
+
+<p>There has recently been considerable interest in the electronic,
+optical, transport and structural properties of semiconductor quantum dots.&nbsp; This is
+interest is due both to the rich, novel physical properties exhibited by these systems
+(Coulomb Blockade, quantum confinement, exchange enhancement and shape dependent
+spectroscopy) and because of their promise for applications such as lasers.&nbsp; We have
+used our FSM code to study the near-edge states of GaAs<a href="#ref4">[4]</a>, InAs, InP<a
+href="#ref1">[1,3]</a> and CdSe free standing quantum dots.&nbsp; These calculations have
+enabled us to calculate band gaps<a href="#ref1">[1,3,4,6]</a>, transition probabilities<a
+href="#ref1">[1,3]</a>, exchange splittings<a href="#ref4">[4]</a> and red shifts<a
+href="#ref3">[3]</a> for these dots.<p>
+
+<h3>FSM for Self Assembled Quantum Dots</h3>
+
+<p>Self Assembled or &quot;Stranski-Krastonow&quot; (SK) dots offer the possibility of
+using standard MBE and MOVPE techniques to manufacture high quality, dislocation free
+quantum dots with a narrow (&lt;10%) size distributions. The most popular system used for
+constructing such dots is InAs dots embedded within GaAs dots. The solid state theory
+group is actively researching the properties of such dots. In particular we are interested
+in the effects on the electronic structure of altering the size and shape of the embedded
+InAs dots, or applying hydrostatic pressure to the system containing the dots. </p>
+
+<p><img src="../../images/InAs_cover.gif" align="center" hspace="0" width="658" height="557"></p>
+
+<p>This figure is taken from the front cover of the <a
+href="http://www.mrs.org/publications/bulletin/1998/feb">February 1998 issue of the MRS
+Bulletin</a>. It shows the electronic structure of a 45A high, 90A base, strained InAs
+pyramidal quantum dot embedded within GaAs. The strain-modified potential offsets in a
+(001) plane through the center of the pyramid are shown above the atomic structure. They
+exhibit a well for both heavy holes and electrons. These are localized within the pyramid
+and wetting layer as shown by the blue raised(lowered) triangle and ridge(trough)
+respectively. </p>
+
+<p>Isosurface plots of the 4 highest hole states and 4 lowest electron states, as obtained
+from pseudopotential calculations are shown on the left and right. The lowest electron
+state (CBM) is s-like, while the next 2 states (CBM+1 and CBM+2) are non-degenerate
+p-like. From J. Kim, L.W. Wang, A.J. Williamson and A. Zunger (unpublished). See also the
+article by A. Zunger in the MRS Bulletin. </p>
+
+<p>Click here to download a high quality copy of the above figure <a
+href="../../images/InAs.pdf"><img src="../../images/pdf.gif" border="0" width="34"
+height="20"> </a></p>
+
+<p>&nbsp;</p>
+
+<img src="nano.h1.gif" alt="Electron and Hole state in InAs/GaAs" align="center"
+hspace="0" width="677" height="464">
+
+<p>The above figure shows isosurface plots of the 4 highest energy hole states and the 
+4 lowest energy conduction states, calculated using the FSM.</p>
+
+
+<h3>FSM for Comparison of Free Standing and Embedded Quantum Dots</h3>
+
+<center><img src="potentials.gif" align="center" hspace="0" width="400" height="600">
+</center>
+
+<p>This figure shows the strain modified electron, heavy hole and light hole potential
+offsets in the {010} plane through the center of a GaAs embedded (a) spherical InAs dot
+with 42.2A diameter and (b) a pyramidal InAs dot with 30.3AA height and 60.6\AA base. The
+scale bars show the maximum depth of the electron and hole wells in eV. The black lines
+mark the approximate edges of the electron and hole wells.</p>
+
+<p>Click here for high quality version <a href="potentials.pdf"><img
+src="../../images/pdf.gif" border="0" width="34" height="20"></a></p>
+
+
+
+<p align="left">The effect of the above offsets is to only weekly localize electrons and
+holes within the GaAs embedded quantum dots. This can be seen in the figure below which
+clearly shows how electron and hole wavefunctions are strongly localized in free standing
+InAs quantum dots, but only weakly localized in GaAs embedded quantum dots. For more
+information, see the publication A.J. Williamson and Alex Zunger, &quot;<em>InAs quantum
+dots: Predicted electronic structure of free-standing vs. GaAs embedded structures</em>&quot;.</p>
+
+<center><img src="InAs_contours.gif" align="center" hspace="0" width="500"
+height="600"></center>
+
+
+<p align="left">Contour plots of the electron and hole wavefunctions in the {001} plane
+through the center of a free standing InAs dot (top), the smae InAs dot embedded in
+GaAs(middle) and a pyramidal InAs dot with the same volume, embedded in GaAs (bottom).</p>
+
+<p align="left">Click here for high quality version <a href="InAs_wavefuns.pdf"><img
+src="../../images/pdf.gif" border="0" width="34" height="20"></a></p>
+
+<h2>Parallel Version of Folded Spectrum Code</h2>
+
+<p align="left">Andrew Canning(LBL), <a href="../personnel/williamson/williamson.html">Andrew
+Williamson</a>(NREL) and L.W. Wang(NREL) have ported the Folded Spectrum code to work on
+the Cray T3E at NERSC. There were two main parts of the parallelization process. (i)
+Efficiently distributing the set of reciprocal lattice vectors across all the nodes so
+that operations performed in reciprocal space, such as calculating the kinetic energy can
+then be performed in parallel. (ii) Implementing Fast Fourier Transforms (FFT) that work
+in parallel so that the wavefunctions can be efficiently transformed between real and
+reciprocal space. On all the systems we have studied the code demonstrated excellent
+scaling with the number of processing elements used. This is illustrated in the figure
+below, which shows the total wallclock time and the inverse of this time for a
+nanostructure calculation. </p>
+
+<p align="center" class="center"><img src="../../images/parallel.gif"
+alt="Scaling of Parallel FSM Code" width="411" height="311"></p>
+
+<p>The above system was stored on a real space grid of 480x480x240 and 20 line
+minimizations of the conjugate gradient routine were used in the timing. We estimate that
+the parallel FSM code performs at approximately 110-130Mflops per node on the T3E900.</p>
+
+<h2><a name="ref">Folded Spectrum Method References</a></h2>
+
+<ol>
+  <li><p><a name="ref1">Huaxiang Fu; Zunger, A.,&quot;InP quantum dots: electronic structure,
+    surface effects, and the red-shifted emission&quot;,Phys. Rev. B,56, no.3, 1496, (1997) </a></p></li>
+  <li><p><a name="ref1">Bellaiche, L.; Wei, S.-H.; Zunger, A., &quot;Band gaps of GaPN and GaAsN
+    alloys.&quot;, Appl. Phys. Lett.,70,26,3558, (1997) </a></p></li>
+  <li><p><a name="ref3">Fu, H.; Zunger, A.,&quot;Local density-derived semi empirical
+    pseudopotentials for InP, with applications to large quantum dots&quot;, Phys. Rev. B, 55,
+    3, 1642, (1997) </a></p></li>
+  <li><p><a name="ref4">Franceschetti, A.; Zunger, A., &quot;Direct pseudopotential calculation
+    of exciton Coulomb and exchange energies in semiconductor quantum dots&quot;, Phys. Rev.
+    Lett., 78, 5, 915, (1997) </a></p></li>
+  <li><p><a name="ref4">Wang and Zunger, Chapter in &quot;Nanocrystalline materials,&quot; eds.
+    Kamat&nbsp; and Meisel, Elsevier Science (1996). </a></p></li>
+  <li><p><a name="ref4">Franceschetti and Zunger, &quot;GaAs quantum structures: comparison
+    between direct pseudopotential and single-band truncated-crystal calculations&quot;, J.
+    Chem. Phys. 104, 5572 (1996). </a></p></li>
+  <li><p><a name="ref4">Wang and Zunger, &quot;Pseudopotential calculations of nanoscale CdSe
+    quantum dots&quot;, Phys. Rev. B53, 9579 (1996). </a></p></li>
+  <li><p><a name="ref4">Wood, Zunger and Gershoni, &quot;Origins of k.p errors for [001]
+    GaAs/AlAs heterostructures&quot;, Europhysics Lett. 33, 383 (1996). </a></p></li>
+  <li><p><a name="ref4">Franceschetti and Zunger, &quot;Free-standing versus AlAs-embedded GaAs
+    quantum dots, wires, and films: the emergence of a zero-confinement state&quot;, Appl.
+    Phys. Lett. 68, 3455 (1996). </a></p></li>
+  <li><p><a name="ref4">Mader, Wang and Zunger, &quot;Electronic consequences of random
+    layer-thickness fluctuations in AlAs/GaAs superlattices.&quot;, Phys. Rev. Lett. 74, 2555
+    (1995). </a></p></li>
+  <li><p><a name="ref4">Mader and Zunger, &quot;Localization and band gap pinning in
+    semiconductor superlattices with layer thickness fluctuations.&quot;, Europhysics Lett.
+    31, 107 (1995). </a></p></li>
+  <li><p><a name="ref12">J.Kim, J.W. Wilkins, F.S. Khan and A. Canning, &quot;Extended Si {311}
+    defects&quot;, Phys. Rev. B, 55, 16186 (1997) </a></p></li>
+</ol>
+</body>
+</html>

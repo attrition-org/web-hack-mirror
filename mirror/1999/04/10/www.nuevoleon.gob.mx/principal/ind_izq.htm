@@ -1,0 +1,111 @@
+<html>
+<script LANGUAGE="JavaScript">
+
+
+<!--
+function MakeArray() {
+        var lngth = MakeArray.arguments.length;
+        for ( i = 0 ; i < lngth ; i++ ) { this[i]=MakeArray.arguments[i] }
+        }
+
+
+function switch_page() {
+var select = eval(document.menuform.language.selectedIndex);
+if( (select > 0) && (select <4) ) {
+var int1=new MakeArray( '', 
+'http://www.nl.gob.mx/educa/educa.htm'  , 
+'http://www.nl.gob.mx/tesoreria/inicio.htm', 
+'http://www.nl.gob.mx/strab/inicio.htm', 
+'http://www.nl.gob.mx/procu/pgj.htm');
+location=int1[document.menuform.language.selectedIndex];
+}
+}
+
+
+function switch_page2() {
+var select2 = eval(document.menuform2.language.selectedIndex);
+if( (select2 > 0) && (select2 < 5) ) {
+var int2=new MakeArray( '', 'http://tribunal.uson.mx/tribunal/caborca/civil/pcivilcab.htm', 
+'http://tribunal.uson.mx/tribunal/caborca/penal/ppenalcab.htm', 'http://tribunal.uson.mx/tribunal/caborca/regional/civilescab.htm',
+'http://tribunal.uson.mx/tribunal/caborca/regional/penalescab.htm'); 
+
+location=int2[document.menuform2.language.selectedIndex];
+}
+}
+
+
+function switch_page3() {
+var select3 = eval(document.menuform3.language.selectedIndex);
+if( (select3 > 0) && (select3 < 9) ) {
+var int3=new MakeArray( '', 'http://tribunal.uson.mx/tribunal/obregon/civil/pcivil.htm', 
+'http://tribunal.uson.mx/tribunal/obregon/civil/scivil.htm', 'http://tribunal.uson.mx/tribunal/obregon/civil/tcivil.htm',
+'http://tribunal.uson.mx/tribunal/obregon/familiar/familiar.htm',
+'http://tribunal.uson.mx/tribunal/obregon/penal/ppenal.htm',
+'http://tribunal.uson.mx/tribunal/obregon/penal/spenal.htm',
+'http://tribunal.uson.mx/tribunal/obregon/regional/civiles.htm',
+'http://tribunal.uson.mx/tribunal/obregon/regional/penales.htm'); 
+
+location=int3[document.menuform3.language.selectedIndex];
+}
+}
+
+
+//-->
+
+
+</script>
+
+
+<head>
+<base target="content">
+<title>Gobierno del Estado de Nuevo León</title>
+</head>
+
+<body background="../../principal/imagenes/fondo2.gif" bgcolor="#FFFFFF">
+
+<p><img src="palacio.jpg" alt="wpe30.jpg (3989 bytes)" width="117" height="82"><br>
+<strong><font face="Abadi MT Condensed Light"><br>
+<big>INDICE</big></font></strong></p>
+
+<p><script language="javascript">
+
+<!--begin hiding from non-JS browsers
+function openNewPage () {
+top.location.href=(document.TOCNavigator.pageToGoTo.options 
+[document.TOCNavigator.pageToGoTo.selectedIndex].value);
+document.TOCNavigator.pageToGoTo.selectedIndex="0";
+}
+//end hiding from non-JS browsers -->
+
+</script></p>
+
+<form ACTION METHOD="GET" NAME="TOCNavigator" TARGET="_top">
+  <p><select NAME="pageToGoTo" SIZE="1" TARGET="_top" onChange="openNewPage()">
+    <option value="Secretarías">Secretarías</option>
+    <option value="../educa/educa.htm">Educación</option>
+    <option value="../tesoreria/teso.htm">Tesorería</option>
+    <option value="../strab/inicio.htm">Trabajo</option>
+    <option value="../procu/pgj.htm">Procuraduría</option>
+    <option value="http://www.nl.gob.mx/des_eco/default.htm">D. Económico</option>
+  </select></p>
+</form>
+
+<p><font face="Abadi MT Condensed Light" size="2"><a target="content"
+href="../general/depende.htm">ORGANIGRAMA</a><br>
+<br>
+<a href="../des_eco/index.html">DESARROLLO ECONOMICO</a><br>
+<br>
+<a target="content" href="../educa/estadis/estadisa.htm">EDUCACION</a></font></p>
+
+<p><font face="Abadi MT Condensed Light" size="2"><a target="content"
+href="../strab/default.htm">TRABAJO</a><br>
+<br>
+<a target="content" href="../tesoreria/derecha.htm">FINANZAS</a><br>
+<br>
+<a target="content" href="../plan/html/planest.htm">PLAN ESTATAL DE DESARROLLO</a><br>
+&nbsp;<br>
+<a target="content" href="../informe/1informe/1informe.htm">INFORME DE GOBIERNO</a><br>
+<br>
+</font></p>
+</body>
+</html>

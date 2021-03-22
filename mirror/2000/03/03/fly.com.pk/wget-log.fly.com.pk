@@ -1,0 +1,32 @@
+--10:58:39--  http://fly.com.pk:80/
+           => `fly.com.pk/index.html'
+Connecting to fly.com.pk:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+
+    0K ->
+
+10:58:39 (995.12 KB/s) - `fly.com.pk/index.html' saved [1019]
+
+Loading robots.txt; please ignore errors.
+--10:58:39--  http://fly.com.pk:80/robots.txt
+           => `fly.com.pk/robots.txt'
+Connecting to fly.com.pk:80... connected!
+HTTP request sent, awaiting response... 404 File Not Found
+10:58:39 ERROR 404: File Not Found.
+
+--10:58:39--  http://fly.com.pk:80/thing.gif
+           => `fly.com.pk/thing.gif'
+Connecting to fly.com.pk:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 12,915 [image/gif]
+
+    0K -> .......... ..                                          [100%]
+
+10:58:39 (61.22 KB/s) - `fly.com.pk/thing.gif' saved [12915/12915]
+
+Converting fly.com.pk/index.html... done.
+
+FINISHED --10:58:39--
+Downloaded: 13,934 bytes in 2 files
+Converting fly.com.pk/index.html... done.

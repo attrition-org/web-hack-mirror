@@ -1,0 +1,137 @@
+<html>
+<head><style>
+a{text-decoration:none}
+A:hover {text-decoration: underline;}
+</style>
+<title>[ElectronicSouls]</title>
+<style>
+.spanstyle {
+	position:absolute;
+	visibility:visible;
+	top:-50px;
+	font-size:8pt;
+	font-family:Verdana;
+      font-weight:bold;
+	color:#00FF00;
+}
+</style>
+<script>
+
+var x,y
+var step=20
+var flag=0
+var message="BrainStorm  "
+message=message.split("")
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	xpos[i]=-50
+}
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	ypos[i]=-50
+}
+function handlerMM(e){
+	x = (document.layers) ? e.pageX
+: document.body.scrollLeft+event.clientX
+	y = (document.layers) ? e.pageY
+: document.body.scrollTop+event.clientY
+	flag=1
+}
+function makesnake() {
+	if (flag==1 && document.all) {
+    	for (i=message.length-1; i>=1; i--) {
+	xpos[i]=xpos[i-1]+step
+	ypos[i]=ypos[i-1]
+    	}
+	xpos[0]=x+step
+	ypos[0]=y
+	
+for (i=0; i<message.length-1; i++) {
+	var thisspan = eval("span"+(i)+".style")
+	thisspan.posLeft=xpos[i]
+		thisspan.posTop=ypos[i]
+    	}
+}
+	
+else if (flag==1 && document.layers) {
+    	for (i=message.length-1; i>=1; i--) {
+		xpos[i]=xpos[i-1]+step
+		ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("document.span"+i)
+    		thisspan.left=xpos[i]
+			thisspan.top=ypos[i]
+    	}
+}
+var timer=setTimeout("makesnake()",30)
+}
+
+</script>
+</head>
+<BODY
+onLoad="makesnake()" style="width:100%;overflow-x:hidden;overflow-y:scroll" bgcolor="#000000" bgproperties="fixed" text="#FFFFFF" link="#00FF00" alink="#ff0000" vlink="#B00000#BB0000">
+<basefont size="3"><script>
+<!-- Beginning of JavaScript -
+for (i=0;i<=message.length-1;i++) {
+    document.write("<span id='span"+i+"' class='spanstyle'>")
+	document.write(message[i])
+    document.write("</span>")
+}
+if (document.layers){
+	document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+// - End of JavaScript --thx to scurvy ;)--->
+</script>
+<center>
+<BASEFONT FACE="Tahoma"><h1>((BrainStorm)) [ElectronicSouls]</h1>
+<h3>..r00ted the NASA again ;)</h3>
+<H4></H4>
+<h4> Admin, i`ve patched ur shit ! ..and made a backup of the old html
+crap
+<br>
+ ..normally i just keep root on ur boxes, but i have to tell u again that ur shit needs to be patched !</h4>
+<h4>..i see how it goes, u blame us for showing u the security risks and probably call us crackers, 
+<br> but think of what would happen if a cracker would own this system...
+<br> just think of it..and realize what we did for u, we r not evil and if u need help we r there, for free
+<br> ..now go on and call us evil or crackers :P </h4>
+
+<h4>i do YOUR work for free, cuz u r too stupid bitch !</h4>
+<h2> BrainStorm r00ted ya asS f00l .. </h2>
+<P ALIGN=LEFT>------------------------------------------------ 0x01 - Rooted: YES
+<BR>
+------------------------------------------------ 0x02 - Damage: Syslog Deamons Killed
+<br>
+------------------------------------------------ 0x03 - Defaced: YES
+<br>
+------------------------------------------------ 0x04 - Patched: YES
+<br>
+------------------------------------------------ 0x04 - Admin Skill Level: 0
+<br>
+------------------------------------------------ 0x05 - Security: 2
+<br>
+------------------------------------------------ 0x06 - My chix0r: r0x
+<br>
+------------------------------------------------ 0x07 - ElectronicSouls: owns
+</P>
+<h5> i`m not evil, if u need help to secure ur system, or u want more info about this hack, send mail to:
+<br>
+<a href="mailto:BrainStorm@ElectronicSouls.zzn.com">BrainStorm@ElectronicSouls.zzn.com</a>
+<br>
+<br>
+<br>shoutz: </br>
+<br>LordLunatic,DX aKa Icefist,RobBbot,s0lar,it_fresh,initd_,doom,morpho,FreQ,KeltecSub9,DoomeD,</br>
+<br>CraigTM,FiberOptik,ghQst,JW23,elf,digitalenemy,websk8ter,le0n,gneisenau..and
+al i forgot... + Ox7f,RSH,IC of course ;)</br>
+<br>fear my K-RAD vi tekneeq =) </br>
+
+</h5>
+
+</center>
+</body>
+</html>
+
+<!-- www.attrition.org web hack mirror - watermark or something -->

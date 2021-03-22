@@ -1,0 +1,23 @@
+root:*:0:0:Charlie &:/root:/bin/csh
+toor:*:0:0:Bourne-again Superuser:/root:
+daemon:*:1:1:Owner of many system processes:/root:/sbin/nologin
+operator:*:2:5:System &:/:/sbin/nologin
+bin:*:3:7:Binaries Commands and Source,,,:/:/sbin/nologin
+tty:*:4:65533:Tty Sandbox:/:/sbin/nologin
+kmem:*:5:65533:KMem Sandbox:/:/sbin/nologin
+games:*:7:13:Games pseudo-user:/usr/games:/sbin/nologin
+news:*:8:8:News Subsystem:/:/sbin/nologin
+man:*:9:9:Mister Man Pages:/usr/share/man:/sbin/nologin
+bind:*:53:53:Bind Sandbox:/:/sbin/nologin
+uucp:*:66:66:UUCP pseudo-user:/var/spool/uucppublic:/usr/libexec/uucp/uucico
+xten:*:67:67:X-10 daemon:/usr/local/xten:/sbin/nologin
+pop:*:68:6:Post Office Owner:/nonexistent:/sbin/nologin
+nobody:*:65534:65534:Unprivileged user:/nonexistent:/sbin/nologin
+ct:*:1001:0:Communitech Tech Login:/home/ct:/bin/sh
+ctsu:*:1002:0:Communitech Tech Login:/home/ctsu:/bin/sh
+admin:*:1000:0:Customer Login:/home/admin:/usr/local/bin/bash
+happyhippo:*:1003:1003:HappyHippo:/home/happyhippo:/usr/local/bin/bash
+happyhip:*:1004:1004:HappyHip:/home/happyhip:/usr/local/bin/bash
+sponsorfind:*:1005:1005:SponsorFind:/home/sponsorfind:/usr/local/bin/bash
+coolsitez:*:1006:1006:CoolSitez:/home/coolsitez:/usr/local/bin/bash
+mandie:*:1007:1007:Amanda Grigg:/home/mandie:/usr/local/bin/bash

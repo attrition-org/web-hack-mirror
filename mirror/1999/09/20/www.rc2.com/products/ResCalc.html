@@ -1,0 +1,158 @@
+<html>
+<head>
+
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="KeyWords" CONTENT="Reservoir Characterization Modeling and Description, Volumetrics, Surface and Model Operations, Uncertainty Analysis, Connectivity Analysis, Geostatistics, Reservoir Modeling, Petroleum Reservoir Modelling, Reservoir Characterization, Reservoir Description, Software ">
+
+<title>Geostatistical Model Uncertainty, Statistics, Operations, Connectivity Analysis = ResCalc</title>
+
+<!-- Welcome to the source. 
+Created by Steve McKay 
+for (RC)2 • 1996
+contact: mckay@pacbell.net -->
+
+</head>
+
+<body
+	background="/_images/sub_bg.gif"
+	bgcolor="#FFFFFF"
+	text="#000000"
+	link="#0000FF"
+	alink="#FFFFFF"
+	vlink="#800080">
+
+	
+
+
+<a href="/cgi-bin/imagemap/_maps/key.map">
+<img src="/_images/sub_key.gif" width=558 height=53 border=0 alt="(RC)2 Navigational Key" ISMAP USEMAP="#key"></a>
+<MAP NAME="key">
+<!-- #$GIF:sub_key.gif -->
+<AREA SHAPE=RECT COORDS="100,22,193,50" HREF="../corporate/index.html">
+<AREA SHAPE=RECT COORDS="307,22,394,51" HREF="../products/index.html">
+<AREA SHAPE=RECT COORDS="202,22,303,51" HREF="../services/index.html">
+<AREA SHAPE=RECT COORDS="398,23,469,50" HREF="../sales/index.html">
+<!AREA SHAPE=RECT COORDS="398,23,469,50" HREF="../training/index.html">
+<AREA SHAPE=RECT COORDS="472,22,553,49" HREF="../new/index.html">
+<AREA SHAPE=RECT COORDS="0,0,50,16" HREF="../index.html">
+</MAP>
+
+<p>
+<!tracking script >
+<script><!--
+an=navigator.appName;sr='http://x3.extreme-dm.com/';srw="na";srb="na";d=document;r=41;function pr(n) {
+d.write("<img src=\""+sr+"n\/?tag=rc2&p=http%3A%2F%2Fwww.rc2.com%2Fproducts%2FResCalc.html&j=y&srw="+srw+"&srb="+srb+"&l="+escape(parent.document.referrer)+"&rs="+r+"\" height=1 width=1>");}//-->
+</script><script language="javascript1.2"><!--
+s=screen;srw=s.width;an!="Netscape"?srb=s.colorDepth:srb=s.pixelDepth//-->
+</script><script><!--
+pr()//-->
+</script><noscript><img src=http://x3.extreme-dm.com/z/?tag=rc2&p=http%3A%2F%2Fwww.rc2.com%2Fproducts%2FResCalc.html&j=n height=1 width=1></noscript>
+
+<center>
+<!-- Main Table -->
+<table width="90%">
+<tr><td>
+<i><b><font face="ARIAL,HELVETICA,HELV,SANS SERIF" size="+2">ResCalc: Model Calculation Utilities and Uncertainty Analysis</font></b></i>
+<p>
+<img src="_images/rescalc.gif" width=232 height=206 alt="Rescalc Screen Capture" border=0 align=left hspace=10>
+<br>
+This program is provided as a complement to <a href="ResMod.html">ResMod</a> to visualize and perform calculations on multiple realizations.
+Support can be reached through email <a href="mailto:rescalc@rc2.com">rescalc@rc2.com</a> or through our <a href="../addresses/Denver.html">Denver</a> office. 
+<p>
+ResCalc is a model operations and uncertainty assessment program that allows the user to post-process data cubes from ResMod.  There are several modules in ResCalc.  Most important and directly applicable to everyday operating company projects is the Model Operations Module.  Here the user can read in any number of sessions from ResMod, and run the data cubes through a very user friendly equation parser.  A simple example would be to calculate an OOIP data cube from EFFPOR and WSAT cubes.  The operation would be entered as follows:
+<p>
+<center><code><B>OOIP = EFFPOR / 100. * (1. - WSAT)</b></code></center>
+<p>
+Here, effective porosity, in percent,  is converted to fractional porosity and then multiplied against the OSAT (1. - WSAT).  The equation parser handles the following operands:
+<p>
+<blockquote>
+<table border=0>
+<tr>
+<td width=50><B>+</B></td><td><B>addition</B></td></tr><tr>
+<td width=50><B>-</B></td><td><B>subtraction</B></td></tr><tr>
+<td width=50><B>*</B></td><td><B>multiplication</B></td></tr><tr>
+<td width=50><B>/</B></td><td><B>division</B></td></tr><tr>
+<td width=50><B>%</B></td><td><B>modulus</B></td></tr><tr>
+<td width=50><B>^</B></td><td><B>exponentiation</B></td></tr><tr>
+<td width=50><B>( )</B></td><td><B>parentheses</B></td></tr>
+</table>
+</blockquote>
+<p>
+The equation parser has robust error checking and catches mismatched parens and syntax errors.  The user may supply different equations for different reservoir zones.  After the new cube is calculated, the user may readily view the cube and use it for subsequent calculations.  Boolean logic such as if-then-else or if-and if or if-or logic may be used in all of the model operation logic.  The user can specify up to 10 boolean operators per reservoir zone.
+<p>
+The Map Maker Module allows the user to build a variety of maps such as net, gross, net-to-gross, net pore volume etc.. from 3D data cubes.  The user is able to generate maps for different reservoir zones and is also allowed to planimeritize the grid with a polygon tool.  The user may constrain the map calculations by using boolean operators such as "only calculate the net for a cell if the water saturation cube is below x amount."  Any number of model constraints may be used for calculating the maps.  The user is also allowed to bring in external surfaces, such as oil-water contacts, and calculate the maps while constrained by the external surfaces (e.g. "only calculate a cell volume if the cell centroid is below or above a given surface.  All of the generated maps are readily available for viewing and appropriately labeled in our surface 
+viewer.
+<p>
+Also available in ResCalc is the uncertainty assessment module.  Here the user reads in any number of realizations generated from any simulation algorithm or via spatial bootstrapping.  Cdf's are calculated for each cell using all of the realizations and the user may display the uncertainty as probability isoshells in our 3D viewer or as uncertainty cross sections in the interactive uncertainty viewer.  All statistical parameters such as mean std, variance etc.. are calculated for each cell and are interactively shown when the cursor is dragged over a cell.  The user may also view the cell cdf's interactively and pan all of the realizations at once using an interactive viewer.
+<p>
+A univariate statistics option is also available to compare the model results with the input data from well control.  A qunatile-quantile plot is also available in a separate window to compare the two distributions. 
+<p>
+
+<i><b><font face="ARIAL,HELVETICA,HELV,SANS SERIF" size=3>Features:</font></b></i>
+<ul type=square>
+	<li>Mathematical operations on models
+	<li>Calculation of volumetrics
+	<ul type=disc>
+		<li>Single model gross, net, and net-to-gross calculations
+		<li>Uncertainty using a automated jackknife procedure
+	</ul>
+	<li>Local uncertainty calculation using ResBatch results
+        <li>Map maker module
+	<li>Difference, crossplot maps between any two realizations per area and zone
+	<li>Univariate and bivariate statistics for any set of realizations
+        <li>Well planning capabilities (in development)
+        <li>Drainage volume and connected pore volume calculations (in development)
+	<li>Customer requested model calculations
+</ul>
+
+
+
+<p>
+
+<ul type=square>
+	<li>Product Features
+</ul>
+
+</td></tr>
+</table>
+
+<!-- End Main Table -->
+
+<hr noshade size="1" width="95%">
+
+<!-- Last Modified Table -->
+<table WIDTH="450" border=0 cellpadding=5 bgcolor="#F3F3F3">
+	<tr>
+	
+	<td colspan=3><b><font color="#000000" size=3 face="ARIAL,HELVETICA,HELV,SANS SERIF"><a href="/support/pub/index.html">ResCalc binaries download:</a></font></b><p></td>
+	</tr>
+</table>
+
+<!-- End Last Modified Table -->
+
+<hr noshade size="1" width="95%">
+
+</center>
+
+<p>
+
+<center>
+
+<font face="ARIAL,HELVETICA,HELV,SANS SERIF" size="-1"><b><i>
+<a href="/corporate/">Corporate Overview</a> • 
+<a href="/services/">Consulting Services</a> • 
+<a href="/products/">Products</a> • 
+<a href="/sales/">Sales</a> • 
+<a href="/training/">Training</a> • 
+<a href="/new/">What's New</a> • 
+<a href="../index.html">Home</a>
+</i></b></font>
+
+<p>
+
+<a href="../index.html"><img src="../_images/logo.gif" width=83 height=34 border=0 alt="(RC)2"></a>
+
+</center>
+
+</body>
+</html>

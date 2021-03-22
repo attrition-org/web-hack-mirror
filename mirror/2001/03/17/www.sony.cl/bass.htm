@@ -1,0 +1,127 @@
+<html>
+<head>
+<title>Sony Chile</title>
+<script language="javascript" src="http://www.world.sony.com/GlobalLink/world_global_link.js"></script>
+
+<script language="JavaScript">
+//  window.open("erratas.htm","buscar", "resizable=no,menubar=no,location=no,toolbar=no,status=no,scrollbars=no,directories=no,width=400,height=200");
+
+</script>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript">
+<!--
+var delay = 8000;
+      var imgs = new picarray;
+      var index = 0;
+      var count = 2; //colocar la cantidad de imagenes a intercambiar en forma secuencial
+      var navegador= navigator.appName
+      var version =parseInt(navigator.appVersion);
+	  var i = 1; 
+      
+     ns4 = (document.layers)? true:false  //check si es netscape 4.x
+       ie4 = (document.all)? true:false  // check si es internet explorer 4.x , 5.x
+       ns6 = (document.getElementById)?true:false // check si es netscape 6 gecko 
+
+ 
+      function picarray() {
+      //Aqui se genera la lista de imagenes a intercambiar , colocandoles el Path desde donde son llamadas
+              this[0] = "images/not1.jpg"; 
+              this[1] = "images/not2.jpg";
+                  }
+//esta funcion cambia las imagenes
+      function change() {
+              if (i < count-1) {
+                      i += 1;
+              } else {
+                      i = 0;
+              }
+			   if (i==0 ){
+                 if (ns4) {
+			         document.Lay1.visibility="visible"
+                     document.Lay2.visibility="hidden"
+               } 
+               if (ns6){ 
+                     document.getElementById('Lay1').style.visibility="visible"
+        	         document.getElementById('Lay2').style.visibility="hidden"
+               }
+               if (ie4) {
+                     Lay1.style.visibility="visible"
+                     Lay2.style.visibility="hidden"
+			   }
+               }
+               if (i==1){
+               if (ns4) {
+                     document.Lay1.visibility="hidden"
+			         document.Lay2.visibility="visible"
+                     } 
+               if (ns6){ 
+                     document.getElementById('Lay1').style.visibility="hidden"
+        	         document.getElementById('Lay2').style.visibility="visible"
+                     }
+               if (ie4) {
+                     Lay1.style.visibility="hidden"
+                     Lay2.style.visibility="visible"
+		    	     }
+               }
+              
+              document.images.banner.src = imgs[i];
+              setTimeout("change()",delay);
+      }
+//-->
+
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+<style type="text/css">
+<!--
+#Lay1{position:absolute; left:3px; top:12px; width:297px; height:33px; z-index:1; background-color:#F3F3F3; layer-background-color:#F3F3F3; border: 1px none #000000; visibility: visible;font-family: Verdana, Arial, Helvetica, sans-serif; font-size:7.4pt; color: #003366; text-decoration: none; text-align: justify}
+#Lay2{position:absolute; left:3px; top:12px; width:297px; height:33px; z-index:1; background-color:#F3F3F3; layer-background-color:#F3F3F3; border: 1px none #000000; visibility: hidden;font-family: Verdana, Arial, Helvetica, sans-serif; font-size:7.4pt; color: #003366; text-decoration: none; text-align: justify}
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF" onLoad="setTimeout('change()',delay);"  background="images/fondoabajo.gif">
+<div id="Layer1" style="position:absolute; left:498px; top:30px; width:126px; height:43px; z-index:11"><a href="#" onClick="MM_openBrWindow('serviciotecnico/consultas.htm','informacion','width=430,height=496')"><img src="images/info.gif" width="91" height="23" border="0" alt="Informaci&oacute;n al Cliente"></a></div>
+<table width="425" border="0" cellspacing="0" cellpadding="0" height="57" bgcolor="#003468">
+  <tr valign="middle" align="center"> 
+    <td height="55"> 
+      <table width="421" border="0" cellspacing="0" cellpadding="0" bgcolo0r="#F3F3F3" height="53">
+        <tr> 
+          <td width="72"   height="7" bgcolor="#003366"><img src="images/noticias.gif" width="70" height="10"></td>
+          <td width="227"   height="7" bgcolor="#F3F3F3">
+            <div align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><a href="Noticias/index.htm" target="_top">Ver 
+              más...</a> </font></div>
+          </td>
+          <td rowspan="2" height="50" width="20"><img src="images/lateral.gif" width="20" height="50"></td>
+          <td rowspan="2" height="50" width="102"><a href="Noticias/index.htm" target="_top"><img src="images/not1.jpg" name="banner" width="101" height="52" border="0" alt="Ver m&aacute;s noticias"></a></td>
+        </tr>
+        <tr> 
+          <th colspan="2" height="42" nowrap bgcolor="#F3F3F3" align="left">&nbsp; </th>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<div id="Lay1" >Con la llegada del Cine Digital Sony, podr&aacute; convertir su 
+  hogar en un verdadero cine. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+<div id="Lay2"  >Nuevos productos Sony de audio y video vienen con Memory 
+  Stick, para acercar al usuario a la red hogareña digital</div>
+<div id="caja" style="position:absolute; width:125px; height:31px; z-index:6; left: 449px; top: 1px; visibility: visible"> 
+  <div id="formSony"> 
+    <form name="">
+      <div align="right"> 
+        <script>world_global_link();</script>
+        <noscript>
+</noscript> 
+      </div>
+    </form>
+  </div>
+</div>
+<div id="Layer3" style="position:absolute; left:231px; top:60px; width:186px; height:18px; z-index:10"><a href="#" onClick="MM_openBrWindow('copy.htm','','scrollbars=yes,width=400,height=400')"><img src="images/copyright.gif" width="152" height="16" name="copy" border="0"></a></div>
+</body>
+</html>

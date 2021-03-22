@@ -1,0 +1,460 @@
+<html>
+
+<head>
+<title>Government Of the British Virgin Islands</title>
+<meta NAME="keywords" CONTENT="millennium, milennium, milenium, millenium, 2000, y2k, Y2K, bug, year, compliant, compliance, Gartner, BSI, DTI, PAEP, Hollerith, countdown,">
+<meta NAME="description" CONTENT="The British Virgin Islands (Caribbean) Y2K (Millennium) Website provides information about the BVI Government's Y2K National Plan, compliance of critical sectors, information about a PAEP campaign, description of the Year 2000 Bug and much more." <meta NAME="rating" CONTENT="General">
+<meta NAME="revisit-after" CONTENT="14 days">
+<meta NAME="ROBOTS" CONTENT="ALL">
+<style type="text/css">
+<!--
+     #div01 {position:relative;}
+     #cntdown {position:relative;}
+
+     h1 { font-family: Verdana, Arial, Helvetica, sans-serif;
+         font-size: large;
+         font-weight: 600;
+         color: #006400;
+     }
+     h2 { font-family: Verdana, Arial, Helvetica, sans-serif;
+         font-size: medium;
+         font-weight: 600;
+         color: #006400;
+     }
+     em { font-style: italic; color: #006400;
+        }
+     div.scrip1 { font-family: 'Comic Sans MS', Arial, sans-serif;
+        color: #000040;
+        font-size: medium;
+        font-weight: 400;
+     }
+     div.norm1 { font-family: Arial, Helvetica, sans-serif;
+        color: #000000;
+        font-size: small;
+        font-weight: 400;
+       }
+    -->
+</style>
+<script language="JavaScript">
+    var timerCD = null
+    function araVob() {
+    }
+    var daytab = new araVob()
+    daytab[1]=31
+    daytab[2]=28
+    daytab[3]=31
+    daytab[4]=30
+    daytab[5]=31
+    daytab[6]=30
+    daytab[7]=31
+    daytab[8]=31
+    daytab[9]=30
+    daytab[10]=31
+    daytab[11]=30
+    daytab[12]=31
+    var Montab=new araVob()
+    Montab[1]='Jan'
+    Montab[2]='Feb'
+    Montab[3]='Mar'
+    Montab[4]='Apr'
+    Montab[5]='May'
+    Montab[6]='Jun'
+    Montab[7]='Jul'
+    Montab[8]='Aug'
+    Montab[9]='Sep'
+    Montab[10]='Oct'
+    Montab[11]='Nov'
+    Montab[12]='Dec'
+    
+    var thisYear = null
+    var thisMon = null
+    var thisDay = null
+    var thisHour = null
+    var thisMinute = null
+    var thisSecond = null
+    var today = null
+    var DispMsg=' '
+    var timeleft=' '
+   if (document.layers){
+    strtWidth = innerWidth;
+    strtHeight = innerHeight;
+   }  
+    function DisplayTime() {
+     today = new Date()
+     thisYear = today.getYear()
+     thisMon = today.getMonth()
+     thisDay = today.getDate()
+     thisHour = today.getHours()
+     thisMinute = today.getMinutes()
+     thisSecond = today.getSeconds()
+     thisMon = thisMon + 1 
+      /*
+        getMonth returns a value from 0 to 11 (as you might expect) but 
+        getDate returns a value from 1 to 31!  Go Figure! (RNB)
+      */ 
+     today = null
+     if (thisYear<100) {
+      DoTimeLeft ()
+     }
+     else {
+      DoTimeDisp ()
+     }
+     DoDisplay()
+    }
+    
+    function DoTimeLeft () {
+      var Yearleft = 99 - thisYear
+      var Monleft = 12 - thisMon
+      var DaysLeft = daytab[thisMon] - thisDay
+      var Hourleft = 23 - thisHour
+      var Minuteleft = 59 - thisMinute
+      var Secondleft = 59 - thisSecond
+    
+      if (Yearleft!=1) {
+        var SufYear="s"} 
+      else {var SufYear=""}
+      var Dispyear=Yearleft +' year'+ SufYear +', '
+      if (Monleft!=1) {
+        var SufMon="s"} 
+      else {var SufMon=""}
+      var Dispmon=Monleft +' month' + SufMon +', '
+      if (DaysLeft!=1) {
+        var SufDays="s"} 
+      else {var SufDays=""}
+      var Dispday=DaysLeft +' day' + SufDays +', '
+      if (Hourleft!=1) {
+        var SufHour="s"} 
+      else {var SufHour=""}
+      var Disphour=Hourleft +' hour' + SufHour +', '
+      if (Minuteleft!=1) {
+        var SufMin="s"} 
+      else {var SufMin=""}
+      var Dispmin=Minuteleft +' minute' + SufMin +' and '
+      if (Secondleft!=1) {
+        var SufSecs="s"} 
+      else {var SufSecs=""}
+      var Dispsec=Secondleft +' second' + SufSecs +' until 2000 A.D.! '
+    
+      if (Yearleft<=0) {
+       Dispyear=""
+       if (Monleft<=0) {
+        Dispmon=""
+        if (DaysLeft<=0) {
+         Dispday=""
+         if (Hourleft<=0) {
+          Disphour=""
+          if (Minuteleft<=0) {
+           Dispmin=""
+          }
+         }
+        }
+       }
+      }
+      DispMsg=Dispyear+Dispmon+Dispday+Disphour+Dispmin+Dispsec
+      if (Secondleft==0 && DispMsg==Dispsec) {
+       DispMsg = 'Now is The Time ....!'
+      }
+      else {
+       DispMsg='Only '+DispMsg
+      }
+    }
+    
+    function DoTimeDisp() {
+     if (thisHour<10) {
+      thisHour='0'+thisHour
+     }
+     if (thisMinute<10) {
+      thisMinute='0'+thisMinute
+     }
+     if (thisSecond<10) {
+      thisSecond='0'+thisSecond
+     }
+     if (thisYear<2000) {
+      thisYear=1900+thisYear  // to accomodate Opera and older versions
+    // from Netscape  & Microsoft. Navigator 3 on and IE 4 go to 2000. 
+     }
+      DispMsg='The Time has Come and Gone!  It is now - ' +thisHour+':'+thisMinute+':'+thisSecond+' on '+Montab[thisMon]+'  '+thisDay+', '+thisYear+' '
+    }
+    
+    function DoDisplay() {
+     timeleft="<div class='scrip1'; align='center';>"+DispMsg+"</div>"
+     if (document.layers){
+      document.layers.cntdown.document.write(timeleft)
+      document.layers.cntdown.document.close()
+     }
+     else if (document.all)
+      cntdown.innerHTML=timeleft
+     else {
+      document.forms[0].elements[0].value=DispMsg
+     }
+     timerCD = setTimeout("DisplayTime()",1000)
+   }
+  
+   function NNlode(){
+    if (innerWidth != strtWidth || innerHeight != strtHeight) {
+     strtWidth = innerWidth;
+     strtHeight = innerHeight;
+     window.location.reload()
+    }
+   }
+
+   function StartIt(){
+   if (document.layers){
+    timerCD = setTimeout("DisplayTime()",1000)     
+   }
+   else {
+    DisplayTime()
+   }
+   }
+     if (document.layers){
+       onresize=NNlode
+     }
+  
+    // -->
+    
+
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" onLoad="StartIt()" leftmargin="0" vlink="#E79423" alink="#FF0000" topmargin="0" link="#C0C0C0" background="bluebar.jpg" style="background-image: url('bluebar.jpg'); background-attachment: fixed; background-repeat: repeat-y; background-position: left top">
+<div align="left">
+
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top" align="left" width="124" style="margin-left: 0px"><div align="center"><center><table border="0" cellpadding="2" cellspacing="0" width="101" height="408" style="margin-left: 0px" align="left">
+      <tr>
+        <td align="left" width="90" valign="top" style="margin-left: -2px; margin-top: -2px" height="118"><p align="center"><strong><font face="Verdana" size="1"><img src="vigilate3.GIF" alt="British Virgin Islands Vigilate" WIDTH="98" HEIGHT="102"></font></strong></td>
+      </tr>
+      <tr>
+        <td width="90" height="6"><font face="Verdana" size="1"><strong><img src="border1.gif" alt="border1.gif (88 bytes)" WIDTH="100" HEIGHT="3"></strong></font></td>
+      </tr>
+      <tr>
+        <td width="90" height="16"><strong><font face="Verdana" size="1"><a href="Y2k/WelcomeY2K/index.htm">Welcome</a></font></strong></td>
+      </tr>
+      <tr>
+        <td width="90" height="6"><strong><font face="Verdana" size="1"><img src="border1.gif" alt="border1.gif (88 bytes)" WIDTH="100" HEIGHT="3"></font></strong></td>
+      </tr>
+      <tr>
+        <td width="90" height="30"><strong><font face="Verdana" size="1"><a href="Y2k/WhatistheY2KBug/WhatistheBug.htm">What is the Millenium/Y2K Bug</a></font></strong></td>
+      </tr>
+      <tr>
+        <td width="90" height="6"><strong><font face="Verdana" size="1"><img src="border1.gif" alt="border1.gif (88 bytes)" WIDTH="100" HEIGHT="3"></font></strong></td>
+      </tr>
+      <tr>
+        <td width="90" height="16"><a href="Y2k/BVIY2KStatus/bviy2kstatus.htm"><strong><font face="Verdana" size="1">BVI Y2K Status</font></strong></a></td>
+      </tr>
+      <tr>
+        <td width="90" height="6"><strong><font face="Verdana" size="1"><img src="border1.gif" alt="border1.gif (88 bytes)" WIDTH="100" HEIGHT="3"></font></strong></td>
+      </tr>
+      <tr>
+        <td width="100" height="16"><a href="Y2k/WorldNews/WorldNews.htm"><font face="Verdana" size="1"><strong>Y2K World News</strong></font></a></td>
+      </tr>
+      <tr>
+        <td width="90" height="6"><strong><font face="Verdana" size="1"><img src="border1.gif" alt="border1.gif (88 bytes)" WIDTH="100" HEIGHT="3"></font></strong></td>
+      </tr>
+      <tr>
+        <td width="90" height="16"><strong><font face="Verdana" size="1"><a href="Y2k/LatestUpdatesY2K/BVIlatestnews.htm">Latest Updates</a></font></strong></td>
+      </tr>
+      <tr>
+        <td width="90" height="6"><strong><font face="Verdana" size="1"><img src="border1.gif" alt="border1.gif (88 bytes)" WIDTH="100" HEIGHT="3"></font></strong></td>
+      </tr>
+      <tr>
+        <td width="90" height="16"><strong><font face="Verdana" size="1"><a href="Y2k/WhatHapY2k/whatson.htm">What's Happening</a></font></strong></td>
+      </tr>
+      <tr>
+        <td width="90" height="6"><strong><font face="Verdana" size="1"><img src="border1.gif" alt="border1.gif (88 bytes)" WIDTH="100" HEIGHT="3"></font></strong></td>
+      </tr>
+      <tr>
+        <td width="90" height="16"><strong><font face="Verdana" size="1"><a href="Y2k/NationalPlan/National1.htm">National Plan</a></font></strong></td>
+      </tr>
+      <tr>
+        <td width="90" height="6"><strong><font face="Verdana" size="1"><img src="border1.gif" alt="border1.gif (88 bytes)" WIDTH="100" HEIGHT="3"></font></strong></td>
+      </tr>
+      <tr>
+        <td width="90" height="16"><strong><font face="Verdana" size="1"><a href="Y2k/Documents/ComplianceGuide.htm">Documents</a></font></strong></td>
+      </tr>
+      <tr>
+        <td width="90" height="6"><strong><font face="Verdana" size="1"><img src="border1.gif" alt="border1.gif (88 bytes)" WIDTH="100" HEIGHT="3"></font></strong></td>
+      </tr>
+      <tr>
+        <td width="90" height="16"><strong><font face="Verdana" size="1"><a href="Y2k/Y2KInfo/Y2KInfoMenu.htm">Y2K Info</a></font></strong></td>
+      </tr>
+      <tr>
+        <td width="90" height="6"><strong><font face="Verdana" size="1"><img src="border1.gif" alt="border1.gif (88 bytes)" WIDTH="100" HEIGHT="3"></font></strong></td>
+      </tr>
+      <tr>
+        <td width="90" height="15"><font face="Verdana" size="1"><strong><a href="Y2k/PubliAware/Y2KAwareness.htm">Public Awareness</a></strong></font></td>
+      </tr>
+      <tr>
+        <td width="90" height="5"><strong><font face="Verdana" size="1"><img src="border1.gif" alt="border1.gif (88 bytes)" WIDTH="100" HEIGHT="3"></font></strong></td>
+      </tr>
+      <tr>
+        <td width="90" height="15"><strong><font face="Verdana" size="1"><a href="Y2k/Y2kPrepare/Preparedness.htm">Y2K Preparedness</a></font></strong></td>
+      </tr>
+      <tr>
+        <td width="90" height="5"><strong><font face="Verdana" size="1"><img src="border1.gif" alt="border1.gif (88 bytes)" WIDTH="100" HEIGHT="3"></font></strong></td>
+      </tr>
+      <tr>
+        <td width="90" height="8"><a href="Y2k/Y2KTouristInfo/touristinfo.htm"><font face="Verdana" size="1"><strong>Tourist Information</strong></font></a></td>
+      </tr>
+      <tr>
+        <td width="90" height="3"><font face="Verdana" size="1"><strong><img src="border1.gif" alt="border1.gif (88 bytes)" WIDTH="100" HEIGHT="3"></strong></font></td>
+      </tr>
+      <tr>
+        <td width="90" height="2"><a href="Y2k/Y2KforKids/BVIY2KKids.htm"><font face="Verdana" size="1"><strong>Y2K for Kids</strong></font></a></td>
+      </tr>
+      <tr>
+        <td width="90" height="1"><font face="Verdana" size="1"><strong><img src="border1.gif" alt="border1.gif (88 bytes)" WIDTH="100" HEIGHT="3"></strong></font></td>
+      </tr>
+      <tr>
+        <td width="90" height="1"><strong><font face="Verdana" size="1"><a href="Y2k/links/links.htm">Links</a></font></strong></td>
+      </tr>
+      <tr>
+        <td width="90" height="0"><font face="Verdana" size="1"><strong><img src="border1.gif" alt="border1.gif (88 bytes)" WIDTH="100" HEIGHT="3"></strong></font></td>
+      </tr>
+      <tr>
+        <td width="90" height="15"><font face="Verdana" size="1"><strong><a href="mailto:y2kproject@mail.bvigovernment.org">Contact Us</a></strong></font></td>
+      </tr>
+      <tr>
+        <td width="90" height="4"><font face="Verdana" size="1"><strong><img src="border1.gif" alt="border1.gif (88 bytes)" WIDTH="100" HEIGHT="3"></strong></font></td>
+      </tr>
+      <tr>
+        <td width="90" height="15"><font face="Verdana" size="1"><strong><a href="default.htm">Home</a></strong></font></td>
+      </tr>
+    </table>
+    </center></div><p><br>
+    </p>
+    <p>&nbsp;</td>
+    <td bgcolor="#FFFFFF" style="margin-left: 12; margin-right: 12; margin-top: 2; margin-bottom: 12; padding-left: 25; padding-right: 25; padding-top: 2; padding-bottom: 12"><p align="center"><font face="Perpetua" size="4" color="#000066"><strong>THE GOVERNMENT OF
+    THE BRITISH VIRGIN ISLANDS</strong></font></p>
+    <div align="center"><center><table border="0" cellpadding="0" cellspacing="0" width="98%">
+      <tr>
+        <td rowspan="2" width="20%"></td>
+        <td width="60%"><strong><p style="text-align: center"><font face="Perpetua" size="4" color="#000066">Office of the Chief Minister</font></strong></td>
+        <td width="20%" rowspan="2"><img src="computergreen.gif" alt="British Virgin Islands Y2K" WIDTH="80" HEIGHT="80"></td>
+      </tr>
+      <tr>
+        <td width="60%"><strong><p style="text-align: center"><font face="Perpetua" size="5" color="#FF0000">Y2K PROJECT</font></strong></td>
+      </tr>
+    </table>
+    </center></div><hr width="80%" size="5">
+    <div align="center"><center><table border="0" cellpadding="0" cellspacing="0" width="500">
+      <tr>
+        <td width="100%"><div class="scrip1"><span id="cntdown"><h2 align="center">&nbsp;The Clock
+        is Ticking! &nbsp; </h2>
+        </span></div><div><script language="javascript">
+
+<!-- 
+  if (!document.layers&&!document.all)
+   document.write(" <div align='center'><form name= 'msgform' action=' '><input type='text' size=80 name='message' value='Powered with JavaScript (or JScript).'></form></div>")
+ 
+ // -->
+
+</script>
+</div><div id="div01"></div></td>
+      </tr>
+    </table>
+    </center></div><p align="center"><a href="Y2k/WelcomeY2K/index.htm"><img src="computerphoto3.jpg" border="0" alt="Welcome to the British Virgin Islands Y2K Project - Click to Enter." WIDTH="320" HEIGHT="304"></a></p>
+    <p style="text-align: center"><font face="Arial" size="2" color="#000040"><strong><em>Clockwise
+    from the top left: KMarks Supermarket, Roadtown, <br>
+    Tropical Shipping in Port Purcell, Wickham's Cay Service Station,<br>
+    Beef Island Airport, British Virgin Islands.</em></strong></font></p>
+    <hr width="80%" size="5" style="font-family: cursive">
+    <div align="center"><center><table border="1" width="400" style="background-color: rgb(0,0,128)" bgcolor="#000080" height="100">
+      <tr>
+        <td><p align="center"><font face="Arial" size="3" color="#C0C0C0"><strong>For current Y2K
+        Status news from around the world please click on:<br>
+        <br>
+        <a target="_blank" href="http://www.iy2kcc.org/">IY2KCC Global Status Watch</a></strong></font></td>
+      </tr>
+      <tr>
+        <td style="background-color: rgb(192,192,192)" bgcolor="#C0C0C0"><p align="center"><font face="Arial" size="3" color="#000053"><strong>170 countries will be taking part in the
+        Global Watch and we have been asked to report to it from midnight on 31st December 1999. <br>
+        <br>
+        The IY2KCC will then issue press releases about twice a day and allow the public to access
+        the country information posted at any time. <br>
+        <br>
+        This is the best way for the public and media to have current country information from
+        around the world.</strong></font></td>
+      </tr>
+    </table>
+    </center></div><p style="text-align: center"><font face="Arial" size="3" color="#000040"><strong><img src="Y2k/PubliAware/bviflag.gif" alt="bviflag.gif (2640 bytes)" align="left" border="0" WIDTH="45" HEIGHT="37">Welcome
+    to the British Virgin Islands Y2K Website</strong></font><img src="Y2k/PubliAware/bviflag.gif" alt="bviflag.gif (2640 bytes)" align="right" WIDTH="45" HEIGHT="37"><font face="Arial" size="3" color="#000040"><strong><br>
+    Click on computer graphic to enter</strong></font></p>
+    <hr width="80%" size="5" style="font-family: cursive">
+    <p style="text-align: left"><font face="Arial" size="3" color="#000040">This website is
+    categorised by the<font face="Arial" size="3" color="#000040"> International Y2K
+    Cooperation Centre </font><a href="http://www.iy2kcc.org/">(IY2KCC)</a> as Highly
+    Informative.&nbsp;&nbsp; &quot;Highly Informative&quot; is the IY2KCC's top rating.</font></p>
+    <p style="text-align: left"><font face="Arial" size="3" color="#000040">Other countries in
+    the top category include the United Kingdom, United States, Australia and Canada.</font></p>
+    <p style="text-align: left"><font face="Arial" size="3" color="#000040">The IY2KCC was
+    created in February 1999 by the United Nations and is funded by the World Bank.&nbsp; Its
+    mission is to promote increased cooperation and action among governments and the private
+    sector to minimise the impact of Y2K.<br>
+    </font></p>
+    <hr width="80%" size="5" style="font-family: cursive">
+    <p style="text-align: justify"><font face="Arial" color="#808080"><small><strong>Some
+    documents on this government website are available in Microsoft Word (.doc) and Adobe
+    Acrobat (.pdf) formats. If you do not have Adobe Acrobat Reader and would like a copy,
+    please go to <a href="http://adobe/acrobat.htm"><font face="Arial">http://www.adobe/acrobat.htm</font></a>
+    for a free download. To download any documents on to your own PC computer, click right
+    mouse button, choose &quot;Save Target As&quot; and save to a folder of your choice.
+    &nbsp;&nbsp;&nbsp; </strong></small></font></p>
+    <hr width="80%" size="5" style="font-family: cursive">
+    <p style="text-align: center"><img src="bviflyingflag.gif" alt="British Virgin Islands Flag" align="center" WIDTH="152" HEIGHT="83"></p>
+    <!--webbot bot="Include" U-Include="bottom_main.htm" TAG="BODY" startspan -->
+<h3><font color = "red">
+AHHH! Oh No!!!! All yu niggas gettin paid top-dolla'z fer yur crappy ass y2k consultin, while the acidk|own here
+is sittin in the dark with his phinga's up his ass and defacing websites...i'm quite jealous. therefore, i'm
+gonna deface this site and let you be embarrassed by 1,000++ pplz. my newyrz resolutiuon is to buy bigger
+undies...----><img border="0" src="me.jpg">
+
+<p align="center"><font color="#000066" face="Arial"><img src="beatthebug.gif" alt="Beat the Y2K Bug!!!" WIDTH="200" HEIGHT="100"></font></p>
+
+<hr WIDTH="80%" size="3">
+
+<p align="center"><font color="#000080" face="Times New Roman"><strong><big>Y2K Project</big><br>
+Chief Minister's Office<big> </big></strong><br>
+<small>Government of the British Virgin Islands<br>
+Central Administration Complex</small><br>
+<small>33 Admin Drive,<br>
+Road Town, Tortola,<br>
+British Virgin Islands<br>
+Email: </font><font color="#000080" face="Times New Roman"><a href="mailto:y2kproject@mail.bvigovernment.org">y2kproject@mail.bvigovernment.org</a><br>
+Telephone: 284-494-3701 x 2626&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Facsimile: 284-494-6413</font></small></p>
+
+<p align="center"><small><em><font color="#000080" face="Times New Roman">This website
+designed and created by </font><a href="mailto:webmistress@bviy2k.vg"><font color="#000080" face="Times New Roman">CPMD</font></a></em></small></p>
+
+<p align="center"><em><font face="Times New Roman" size="1" color="#808080">This website
+has been hosted by <a href="http://www.candw.vg/" target="_top">Cable &amp; Wireless
+(W.I.) Ltd. in the British Virgin Islands</a><br>
+as a service to the public.</font><br>
+<small><font color="#808080"><small>This page was last updated on: 12/29/99 06:22:59 PM</small></font></small></em></p>
+<!--webbot bot="Include" endspan i-checksum="59936" -->
+<p align="left"><br>
+    <font face="Arial" color="#408080"><em><small><strong>This site is best viewed using
+    Microsoft Internet Explorer 4.0 or better</strong></small></em></font><br>
+    <!--webbot bot="HTMLMarkup" StartSpan --><font size=1 color=white>
+<a target="_top" href="http://v.extreme-dm.com/?login=dawnone">
+<img name=im src="http://v1.extreme-dm.com/i.gif" height=38
+border=0 width=41 alt=""></a><script language="javascript"><!--
+an=navigator.appName;d=document;function
+pr(){d.write("<img src=\"http://v0.extreme-dm.com",
+"/0.gif?tag=dawnone&j=y&srw="+srw+"&srb="+srb+"&",
+"rs="+r+"&l="+escape(d.referrer)+"\" height=1 ",
+"width=1>");}srb="na";srw="na";//-->
+</script><script language="javascript1.2"><!--
+s=screen;srw=s.width;an!="Netscape"?
+srb=s.colorDepth:srb=s.pixelDepth;//-->
+</script><script language="javascript"><!--
+r=41;d.images?r=d.im.width:z=0;pr();//-->
+</script><noscript><img height=1 width=1 alt="" 
+src="http://v0.extreme-dm.com/0.gif?tag=dawnone&j=n"></noscript>
+</font><!--webbot BOT="HTMLMarkup" endspan --></td>
+  </tr>
+</table>
+</div>
+</body>
+</html>

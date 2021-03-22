@@ -1,0 +1,759 @@
+<html>
+<head>
+<title>
+24 February 2001
+Budget 2001
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="http://www.economictimes.com/today/styles1.css">
+<style type="text/css">
+<!--
+.left {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt; font-weight: bold}
+.rightdark {  font-family: Arial; font-size: 8pt }
+.text1 {  font-family: Arial, Helvetica, sans-serif; font-size: 8pt}
+.text {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt}
+.headline {  font-family: Arial, Helvetica, sans-serif; font-size: 13pt; font-weight: bold}
+-->
+</style>
+</head>
+<script language="JavaScript">
+
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+window.open(theURL,winName,features);
+}
+
+function pollwin(){
+	pollwindow=window.open("","pollwindow","status=no,resize=no,toolbar=no,scrollbars=no,width=375,height=300,maximize=null")
+}
+
+function alerter()
+{
+  alert("This is a fixed field. Value cannot be changed.");
+} 
+
+function onchangerestricted()
+{
+	alerter();
+	var temp = document.myform.elements["bas"] ;
+	temp.focus() ;
+}
+
+function validnumber(field)
+{
+	var temp=returnnumber(field);
+	if(isNaN(temp)) //bc2bc//
+	return false
+	else 
+	return true
+}
+
+function validnum(field)
+{
+var temp=field;
+if(!validnumber(field))
+	{
+		alert("Please enter numbers only");
+		temp.focus();
+		temp.value="";
+		return false ;
+	}
+else
+	{
+		return true ;
+	}
+}
+
+
+function returnnumber(fieldname) {
+var reg = ".";
+ var str=fieldname.value;
+ var rtn = str.replace(reg,"");
+ rtn = (rtn == "") ? 0 : rtn ;
+ return( rtn ) 
+ 
+}
+
+
+function onfieldchange(field)
+{	
+	if(validnum(field))
+	{
+	if(validitycheck(field))
+		{
+		}
+	}
+	
+}
+
+
+function validitycheck(field)
+{
+	var checked = false ;
+	var amt = returnnumber(field) ;
+	if (amt >= 0) 
+		checked = true;
+	else
+	{
+		alert("Amount should not be negative ");
+		field.value="" ;
+		field.focus() ;
+	}
+	return checked ;
+}
+
+function computation()
+{
+
+var a=eval(document.myform.bas.value);
+  
+var b = 0;
+
+if(a > 150000)
+{
+  b = (19000 +((a - 150000)* 0.3))*1.17;
+}
+else
+{
+  if(a > 60000)
+  {
+  b = 1120 +(a-60000)* 0.224;
+  }
+  else
+    {
+     if(a > 50000)
+      {
+        b =(a-50000)*0.1;
+      }
+     else
+      {
+       b=0;
+       alert("Annual Income should be higher than Rs.50,000 to be taxable");
+      }
+   }
+}	
+
+if((a > 60000) && (a < 60151))
+     {
+       if (b > (1000 + (a - 60000))) 
+        {
+           b = (1000 + (a - 60000)) ;  
+        }
+     }
+if((a > 150000) && (a < 151461))
+     {
+       if (b > (21280 + (a - 150000))) 
+        {
+           b = (21280 + (a - 150000)) ;  
+        }
+     }
+	document.myform.netli.value=Math.round(b);
+
+    }
+
+</script>
+<SCRIPT LANGUAGE=JavaScript>
+function popupmenu(choice)
+{
+var winOpts='toolbar=no,resize=no,titlebar=no,location=no,directories=no,status=no,scrollbars=yes,menubar=no,width=525,height=30,maximize=null';
+confirmWin=window.open(choice,'theconfirmWin',winOpts);
+window.open(choice,'theconfirmWin',winOpts);
+}
+function init()
+ {
+    if (window.loaded)
+	 {
+        return;
+   	 }
+    window.loaded = true;
+    if (document.layers)
+	 {
+        loadMenus();
+     }
+ }
+function update(page)
+{
+		   var browser = navigator.appName;
+           var version = versionNumber();
+           var the_string = browser + " " + version;
+		   if ((browser  == "Netscape" || browser == "Microsoft Internet Explorer") && (version >= 4)) 
+   		{
+var winOpts='toolbar=no,resize=no,titlebar=no,location=no,directories=no,status=no,scrollbars=no,menubar=no,width=510,height=30,maximize=null';
+ confirmWin=window.open(page,'theconfirmWin',winOpts);
+  window.open(page,'theconfirmWin',winOpts);		
+		}
+		 else
+		{
+			 return;
+		 }
+
+}
+  function versionNumber()
+		{
+        return parseFloat(navigator.appVersion)
+        }
+function formHandler(){
+	var URL = document.form.site.options[document.form.site.selectedIndex].value;
+	window.location.href = URL;
+}
+function formHandler1(form1){
+	var URL = document.form1.invest.options[document.form1.invest.selectedIndex].value;
+	window.location.href = URL;
+}
+
+</SCRIPT>
+<body bgcolor="#FFFFFF" link="#333333" vlink="#333333" alink="#333333">
+<table width="760" border="0" cellspacing="0" cellpadding="0" background="mainback5.gif" align="center">
+  <tr> 
+
+	<form action=http://203.197.64.220:88/perform/timessearch method=get>
+
+	  <td height="62" width="350"><a href="../today/pagehome.htm"><img src="TET.gif" width="274" height="26" alt="The Economic Times" border="0"></a></td>
+
+      <td width="429" height="74"> 
+        <div align="right"><img src="budget.jpg"></div>
+      </td>
+
+	
+
+    </form>  </tr>
+
+
+  </table>
+<!-- Main table starts here -->
+<table width="760" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td width="152">&nbsp;</td>
+    <td width="11">&nbsp;</td>
+    <td width="435">&nbsp;</td>
+    <td width="10">&nbsp;</td>
+    <td width="152">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="152" valign="top" bgcolor="#E2E2E2" > 
+      <table width="100%" border="0" cellspacing="2" cellpadding="2" >
+        <tr> 
+          <td height="18" class="left"><a href="../today/pagehome.htm" style="color:maroon">ET Home</a></td>
+        </tr>
+		<tr> 
+          <td height="18" class="left"><a href="pagebudget.htm" style="color:maroon">Budget Home</a></td>
+        </tr>
+          <td height="18" class="left"><a href="pagesurvey.htm" style="color:maroon">Economic Survey 2001</a></td>
+        </tr>
+<tr><td height="18" class="left"><a href="pagerail.htm" style="color:maroon">Railway Budget 2001-02</a></td></tr>
+		
+<tr><td height="18" class="left">Sector Snapshots
+<a href="pageinfo.htm"><li>Infotech</li></a>
+<a href="pageauto.htm"><li>Automobile</li></a>
+<a href="pagecement.htm"><li>Cement</li></a>
+<a href="pagefarm.htm"><li>Agriculture</li></a>
+<a href="pagemedia.htm"><li>Media</li></a>
+<a href="pagefmcg.htm"><li>FMCG</li></a>
+<a href="pageoil.htm"><li>Oil & Gas</li></a>
+<a href="pagepharma.htm"><li>Pharma</li></a>
+<a href="pagefert.htm"><li>Fertiliser</li></a>
+<a href="pageroads.htm"><li>Roads</li></a>
+<a href="pagehouse.htm"><li>Housing</li></a>
+<a href="pagemetal.htm"><li>Metals</li></a>
+<a href="pagebank.htm"><li>Banking</li></a>
+<a href="pagetrans.htm"><li>Transport</li></a>
+<a href="pagefina.htm"><li>Finance</li></a>
+<a href="pageretail.htm"><li>Retail</li></a>
+<a href="pagetele.htm"><li>Telecom</li></a>
+<a href="pagepower.htm"><li>Power</li></a>
+<a href="pagetax.htm"><li>Tax</li></a>
+</td></tr>
+
+<tr><td height="18" class="left"><a href="http://www.economictimes.com/budget2000/pagespee.htm">FM's 
+            Speech 2000</a></td>
+        </tr>
+        <tr> 
+          <td height="18" class="left"><a href="http://www.economictimes.com/budget2000/pagefina.htm">Finance 
+            Bill 2000</a></td>
+        </tr>
+        <tr> 
+          <td height="18" class="left"><a href="http://www.economictimes.com/budget2000/pagehigh.htm">Budget 
+            Highlights 2000</a></td>
+        </tr>
+   		        <tr> 
+          <td height="18" class="left"><a href="http://www.economictimes.com/budget2000/00ecosurmain.htm">Economic 
+            Survey 2000</a></td>
+        </tr>
+        <tr> 
+          <td height="18" class="left"><a href="http://www.economictimes.com/budget2000/rail00.htm">Railway 
+            Budget 2000</a></td>
+        </tr>
+		<form name=form1>
+        <tr> 
+          <td height="18" class="left">Previous Budgets<!--<li>--><font face="ariel, helvatica" size="2">
+ <select name=invest size="1" onChange=formHandler1() style="width: 150px">
+ <option >Choose Year</option>
+ <option value="http://www.finmin.nic.in/bud/bud1.htm" >1996</option>
+ <option value="http://www.nic.in/indiabudget/budget" >1997</option>
+ <option value="http://www.nic.in/indiabudget/budget98-99" >1998</option>
+ <option value="http://www.economictimes.com/budget2000/prevbud2.htm" >1999</option>
+ <option value="http://www.economictimes.com/budget2000/" >2000</option>
+
+<!--<a href="http://www.finmin.nic.in/bud/bud1.htm" target="_blank">1996</a>
+</font></li>
+<li><font face="ariel, helvatica" size="2"><a href="http://www.nic.in/indiabudget/budget" target="_blank">1997</a>
+</font></li>
+<li><font face="ariel, helvatica" size="2"><a href="http://www.nic.in/indiabudget/budget98-99" target="_blank">1998</a></font></li>
+<li><a href="http://www.economictimes.com/budget2000/prevbud2.htm"><font face="ariel, helvatica" size="2">1999</font></a></li>
+<li><font face="ariel, helvatica" size="2"><a href="http://www.economictimes.com/budget2000/">2000</a></font></li>-->
+</td>
+        </tr>
+				</form>
+	<form name=form>
+        <tr> 
+          <td height="18" class="left">Previous Surveys
+		   <select name=site size="1" onChange=formHandler() style="width: 150px">
+ <option >Choose Year</option>
+ <option value="http://www.nic.in/indiabudget/es97/welcome.html" >1996</option>
+ <option value="http://www.nic.in/indiabudget/es97-98/welcome.html" >1997</option>
+ <option value="http://www.nic.in/indiabudget/es98-99/welcome.html" >1998</option>
+ <option value="http://www.economictimes.com/budget2000/ecosur01.htm" >1999</option>
+ <option value="http://www.economictimes.com/budget2000/00ecosurmain.htm" >2000</option>
+		  
+		 <!-- <li><font face="ariel, helvatica" size="2"><a href="http://www.nic.in/indiabudget/es97/welcome.html" target="_blank">1996</a>
+</font></li>
+<li><font face="ariel, helvatica" size="2"><a href="http://www.nic.in/indiabudget/es97-98/welcome.html" target="_blank">1997</a>
+</font></li>
+<li><font face="ariel, helvatica" size="2"><a href="http://www.nic.in/indiabudget/es98-99/welcome.html" target="_blank">1998</a></font></li>
+<li><a href="http://www.economictimes.com/budget2000/ecosur01.htm"><font face="ariel, helvatica" size="2">1999</font></a></li>
+<li><font face="ariel, helvatica" size="2"><a href="http://www.economictimes.com/budget2000/00ecosurmain.htm">2000</a></font></li>--></td>
+        </tr>
+        </form>
+         <tr> 
+          <td height="18" class="left"><a href="budgloss.htm">Budget 
+            Glossary</a></td>
+        </tr>
+        <tr> 
+          <td height="18" class="left"><a href="webresource.htm">Web 
+            Resources</a></td>
+        </tr>
+        <tr> 
+          <td height="18" class="left"><a href="http://etinvest.indiatimes.com" target="_blank">BSE 
+            Quotes Live</a></td>
+        </tr>
+		
+		<tr> 
+          <td bgcolor="#c80000" height="18" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#ffffff"><b>&nbsp;&nbsp;&nbsp;ET Tax Calculator</b></font></td>
+        </tr>
+        <tr> 
+          <form name="myform">
+                  <td><font face="Arial" size="2">
+                    
+                    Taxable Income<b>&nbsp;Rs.</b>
+                    <input type="text" name="bas" size="10" onBlur="onfieldchange(this)" >
+                    <input type="button" value="Go" onClick="computation()" name="button">
+                    <br>
+                    Tax Payable&nbsp;<b>Rs.</b><br>
+                    <input type="text" name="netli" size="10" onFocus="onchangerestricted()" >
+                    <input type="reset" value="Clear" name="reset">
+                    <br>
+                    <br>
+                    </font></td>
+                </form>
+        </tr>
+        <tr> 
+          <td class="left"><a href="http://www.etinvest.com/ettax/calculator.htm" target="_blank"><b>Advanced Calculator</b></a></td>
+        </tr>       
+ <tr> 
+          <td class="left"><a href="http://www.etinvest.com/budget/login.htm" target="_blank"  style="text-decoration:none"><b>Household Calculator</b><br><img src="calculator.gif" width="149" height="30"></a></td>
+        </tr>
+		<tr> 
+          <td height="18" class="left"><a href="http://www.etinvest.com/ettax/index.html" target="_blank">Tax 
+            Centre</a>
+			</td>
+        </tr>
+		<tr> 
+          <td height="18" class="left"><a href="pagegraph.htm">Tax Graphs</a>
+			</td>
+        </tr>
+<tr> 
+          <td height="18" class="left"><a href="pageint.htm" target="_blank">Interviews</a></td>
+        </tr>
+<tr> 
+          <td height="18" class="left"><a href="pagechat.htm" target="_blank">Chat Transcripts</a></td>
+        </tr>
+      </table>
+    </td>
+    <td width="11" height="457">&nbsp;</td>
+
+<td width="435" valign="top" height="457"> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<span class="maroon">
+Friday
+23 February 2001
+</span><hr></td></tr>
+       
+ <tr><td bgcolor="#005500" height="20"><font color="#fff9fc" face="Arial, Helvetica, sans-serif" size="3"><b><center>ECONOMIC SURVEY 2000-01</center></b></font></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+highlights.htm
+" target="_top" style="color:maroon">
+Economic Survey 2000-01 highlights
+</a></span><br><font size=2 face=arial>
+<font face="arial, helvetica, sans-serif" size="2"><img src="survey.gif" align=left>
+FOLLOWING are the highlights of the Economic Survey 2000-01 tabled in Parliament on Friday.
+<tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey01.htm
+" target="_top" style="color:maroon">
+High on morality, low on delivery?
+</a></span><br><font size="2" face="arial">
+THE ECONOMIC Survey for 2000-01 has not minced words. It is pretty transparent on the country's difficult economic situation, and lists out measures which should be adopted by the government. High on the agenda is cutting fiscal deficit and increasing the pace of reforms. 
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey02.htm
+" target="_top" style="color:maroon">
+External sector takes a knock, deficit up .6%
+</a></span><br><font size="2" face="arial">
+FOR A government, which had taken credit for a strong external sector even during the post-Pokhran phase, developments on the external front have not been as promising during 2000-01.
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey03.htm
+" target="_top" style="color:maroon">
+Direct tax rates at par with global level
+</a></span><br><font size="2" face="arial">
+HERE’S A sign of the times to come. There’s nothing like a free lunch no more. All those sops that went into your advance tax planning, may no longer be available. 
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey04.htm
+" target="_top" style="color:maroon">
+Begin exercise to cut flab
+</a></span><br><font size="2" face="arial">
+WHEN you get on the weighing scales the next time, dump unneccessary hand baggage first. At least that’s what the Economic Survey seems to be telling a central government whose rosters are tipping the scales at 37 lakh employees. 
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey05.htm
+" target="_top" style="color:maroon">
+Receipts up by a mere 1.34% againt 15.6% target
+</a></span><br><font size="2" face="arial">
+IT’S AN oil slick all right. The midterm excise and Customs rationalisation carried out last September has bled the exchequer by Rs 4,000 crore. 
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey06.htm
+" target="_top" style="color:maroon">
+Setting up of rail tariff body mooted
+</a></span><br><font size="2" face="arial">
+EVEN AS railway minister Mamata Banerjee gears up to present her second budget in a row, the government has, in line with scores of expert committee reports, suggested the setting up of a rail tariff authority.
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey07.htm
+" target="_top" style="color:maroon">
+Capital mkt fund mobilisation down by 26% 
+</a></span><br><font size="2" face="arial">
+WHEN the beat is off, it’s difficult to tango. So, reflecting the overall slowdown in the economy, corporate India’s resource mobilisations through the capital market route showed a sharp decline in the current fiscal. 
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey08.htm
+" target="_top" style="color:maroon">
+Shore up derivative trading
+</a></span><br><font size="2" face="arial">
+THE ECONOMIC Survey has stressed the need for reforms in derivatives trading and debt instruments for further development of the capital markets. 
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey09.htm
+" target="_top" style="color:maroon">
+FII investment up, MFs net sellers
+</a></span><br><font size="2" face="arial">
+THE CAPITAL markets witnessed divergent investment trends from its two largest institutional players — FIIs and mutual funds. According to the Economic Survey, while the first turned buyer, the second flashed the sell signal. 
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey10.htm
+" target="_top" style="color:maroon">
+Dhaba culture to fuel highway dream
+</a></span><br><font size="2" face="arial">
+Here’s hope laced with some concern. Private sector investment in the prime minister’s dream Rs 54,000-crore highway project has begun. But money’s only trickling in.
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey11.htm
+" target="_top" style="color:maroon">
+Reforms in Contract labour Act stressed
+</a></span><br><font size="2" face="arial">
+EVEN AS the labour ministry continues to play stick in the mud, pressures for amending the Contract Labour Law are mounting on the government. 
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey12.htm
+" target="_top" style="color:maroon">
+Power subsidy burden to be a staggering Rs 41,238 crore
+</a></span><br><font size="2" face="arial">
+WHEN policymakers start popping idea bulbs, the system can blow its fuse. Wonder what we are talking about? According to the status revealed in the Economic Survey, India’s power subsidy burden is expected to be a staggering Rs 41,238 crore in 2001-02. 
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey13.htm
+" target="_top" style="color:maroon">
+Social services spend up four-fold in 8 yrs
+</a></span><br><font size="2" face="arial">
+THE Centre may well pat itself on its back that total expenditure on various social sector services actually increased from Rs 9,608 crore in 1992-93 to Rs 36,270 crore in 2000-2001. That’s a cool four-fold increase but the question uppermost in the people’s mind is, about the status of state spending
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey14.htm
+" target="_top" style="color:maroon">
+Sugar sector must be removed from PDS
+</a></span><br><font size="2" face="arial">
+PARTING may be sweet sorrow for some but the Economic Survey says that the country’s sugar sector should be deregulated and removed from the PDS system. 
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey15.htm
+" target="_top" style="color:maroon">
+Finally, fair sex gets a better deal
+</a></span><br><font size="2" face="arial">
+THE SHADOWLINES are lifting. After years of criticism about women being the invisible sex in the entire economic data gathering process, the Economic Survey has bowed to common sense. 
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey16.htm
+" target="_top" style="color:maroon">
+Time to do away with retention price scheme
+</a></span><br><font size="2" face="arial">
+THE proposal to reduce fertiliser subsidy by dismantling the retention price scheme and increased urea imports to top up any shortfall in availability reflects the government’s continued inability to get to the root.
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey17.htm
+" target="_top" style="color:maroon">
+Oilseed output dip to hit exporters
+</a></span><br><font size="2" face="arial">
+A SUBSTANTIAL overall decline in oilseed production is likely. But consumers may not be affected as cheap imported edible oil continues to flow in. 
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey18.htm
+" target="_top" style="color:maroon">
+Survey seeks drastic measures to hasten reforms
+</a></span><br><font size="2" face="arial">
+PAINTING a difficult economic situation, the pre-budget Economic Survey warned of a continued slowdown in growth rate in the coming fiscal, and sought drastic measures in the upcoming budget to cut fiscal deficit and hasten reforms. 
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey19.htm
+" target="_top" style="color:maroon">
+Survey casts shadow over markets
+</a></span><br><font size="2" face="arial">
+THE STOCKMARKETS barometer BSE Sensex plunged soon after the government tabled the Economic Survey for 2000-01 around noon. 
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey20.htm
+" target="_top" style="color:maroon">
+Public sale of State-run firms suggested
+</a></span><br><font size="2" face="arial">
+INDIA'S nearly 250 State-run companies should be privatised to make them more efficient and competitive, the Economic Survey urged on Friday. 
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey21.htm
+" target="_top" style="color:maroon">
+Industry chambers call for growth-oriented Budget
+</a></span><br><font size="2" face="arial">
+INDUSTRY chambers have called for growth-oriented Budget to counter the economic slowdown as highlighted in the Economic Survey. The measures to kick start growth in the economy include reforms to be carried out in infrastructure, public finance and the financial sector among others. 
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey22.htm
+" target="_top" style="color:maroon">
+Indian masses suffer 6-yr high 8.2% inflation
+</a></span><br><font size="2" face="arial">
+INDIAN masses had to bear the brunt of higher price pressures with inflation shooting to a six-year high of over eight per cent during the current fiscal owing to a spurt in energy costs which more than neutralised the easy trends in food items and manufactured products. 
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey23.htm
+" target="_top" style="color:maroon">
+Software amongst fastest growing sectors in economy
+</a></span><br><font size="2" face="arial">
+THE ECONOMIC Survey on Friday complimented the government for taking major policy initiatives to promote knowledge-based industries to realise its export potential and said software industry has emerged one of the fastest-growing sectors in the economy. 
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey24.htm
+" target="_top" style="color:maroon">
+Foodgrain production may decline by 4.7%
+</a></span><br><font size="2" face="arial">
+THE ECONOMIC Survey warned that India's foodgrain production would decline by 4.7 per cent in the current fiscal, and asked the government to remove all restrictions on agriculture-related products -- including reservation for small-scale sector. 
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey25.htm
+" target="_top" style="color:maroon">
+Negative export credit pattern reversed
+</a></span><br><font size="2" face="arial">
+THE EXPORT credit has registered a growth of 2.6 per cent during April-October, 2001, compared to a decline of 1.8 per cent in this lending, the Economic Survey for 2000-01 said. 
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey26.htm
+" target="_top" style="color:maroon">
+Survey concerned over slowdown, blames bureaucracy
+</a></span><br><font size="2" face="arial">
+THE ECONOMIC Survey on Friday expressed concern over slowdown in industry, mainly due to poor showing of the manufacturing sector, and asked the government to cut bureaucracy and ensure easy and affordable finance to industry. 
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey27.htm
+" target="_top" style="color:maroon">
+High global oil prices jolt economy
+</a></span><br><font size="2" face="arial">
+HIGH international crude oil prices, which consumed one-third of India's foreign exchange outgo to meet energy needs, jolted the country as consumers shelled out 30 per cent more for their fuel requirement since October 1999, the Economic Survey said on Friday. 
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey28.htm
+" target="_top" style="color:maroon">
+Large borrowing needs led to broad money growth
+</a></span><br><font size="2" face="arial">
+THE ECONOMIC Survey has attributed the sudden spurt in money supply during the year to "unsterilised" foreign exchange intervention by the Reserve Bank of India through purchase of State Bank's India millennium Deposits Scheme for meeting large borrowing requirements of government. 
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey29.htm
+" target="_top" style="color:maroon">
+Enhance capacity of railways, regain bulk traffic share
+</a></span><br><font size="2" face="arial">
+THE ECONOMIC Survey asked the Railways to regain its share of bulk traffic, which had gradually shifted in favour of roads, through tariff rationalisation and suggested creation of a "rail tariff authority" for the purpose. 
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey30.htm
+" target="_top" style="color:maroon">
+Sebi lauded for pushing ahead with reforms
+</a></span><br><font size="2" face="arial">
+DESPITE despite volatility and a dip in resource mobilisation from the market, the Economic Survey spoke highly of the Securities & Exchange Board of India for pushing ahead with capital market reforms -- including introduction of index futures, rolling settlement and internet trading on Indian bourses. 
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey31.htm
+" target="_top" style="color:maroon">
+Lower employment growth cause for concern
+</a></span><br><font size="2" face="arial">
+THE ECONOMIC Survey on Friday warned that employment growth in the organised sector was waning with the spread of reforms and is a major cause of concern in the face of growing population. 
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey32.htm
+" target="_top" style="color:maroon">
+Centre fails to buoy private sector in telecom
+</a></span><br><font size="2" face="arial">
+PRIVATE sector participation in telecom services failed to take off in the country as various policy issues -- such as tariff rebalancing and opening of internet telephony -- remained unaddressed, according to the Economic Survey. 
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey33.htm
+" target="_top" style="color:maroon">
+Survey sees rise in power losses 
+</a></span><br><font size="2" face="arial">
+THE ECONOMIC Survey on Friday said commercial losses of state power utilities could climb to Rs 28,445 crore ($6.1 billion) in 2001/02 and reiterated the need to rationalise tariffs. 
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey34.htm
+" target="_top" style="color:maroon">
+Government draws flak for regulatory bodies
+</a></span><br><font size="2" face="arial">
+THE ECONOMIC Survey on Friday criticised the government for "differing approaches" of the ministries on regulators, saying immediate steps be taken to ensure long-term finances for infrastructure projects for guaranteeing higher economic growth. 
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey35.htm
+" target="_top" style="color:maroon">
+Widen service tax net, lower Customs
+</a></span><br><font size="2" face="arial">
+EXPRESSING concern over the high fiscal deficit that threatens to raise borrowings and interest rates, the Economic Survey has asked the government to widen the scope of service sector, phase out tax exemptions and lower Customs duties. 
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey36.htm
+" target="_top" style="color:maroon">
+A-I makes operating profit after 5 years
+</a></span><br><font size="2" face="arial">
+FOR THE first time in five years, Air-India has turned around its loss-making financial performance and recorded an operating profit of Rs 76 crore. 
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey37.htm
+" target="_top" style="color:maroon">
+India ranks 9th heavily-debted nation
+</a></span><br><font size="2" face="arial">
+INDIA figures among the top-ten heavily-debted countries, but the Economic Survey says this was not a cause of concern now as its indebtedness has improved to 20.7 per cent of the gross domestic product so far during the current fiscal from 21.9 per cent last year. 
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+survey38.htm
+" target="_top" style="color:maroon">
+Consumer electronics records 22% growth
+</a></span><br><font size="2" face="arial">
+THE PRE-BUDGET Economic Survey noted that the consumer electronics sector continues to consolidate its production base and achieved Rs 11,200 crore worth of output in 1999-2000, growing at 22 per cent. 
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+snip1.htm
+" target="_top" style="color:maroon">
+Is Life Beautiful?
+</a></span><br><font size="2" face="arial">
+THE MOST comprehensive way to measure the quality of life is to ask, "How long can a person born in India today expect to live?" The answer to this, called life expectancy at birth, takes into account the effects of nutrition, healthcare, environmental quality -- everything that goes to improve health and longevity.
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+snip2.htm
+" target="_top" style="color:maroon">
+The Kids Aren't All Right
+</a></span><br><font size="2" face="arial">
+INDIA'S neglect of basic health and hygiene standards extracts a terrible toll. It has one of the highest incidences of infant mortality -- the number of children who die in infancy -- among all nations today.
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+snip3.htm
+" target="_top" style="color:maroon">
+Teach Your Children
+</a></span><br><font size="2" face="arial">
+INDIA is supposed to be building a knowledge economy. But is there enough education going around?
+</font></td></tr><tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=381 colspan="2" align="center"></td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+snip4.htm
+" target="_top" style="color:maroon">
+Cough, choke, wheeze
+</a></span><br><font size="2" face="arial">
+GROWING at an average of 6 per cent every year for nearly 20 years, India's economy might choke its environment. 
+</font></td></tr>
+
+<!---this is new-->
+<!--till here-->
+<tr><td>&nbsp;</td></tr>
+		
+<tr><td align="right"><span class="text"><b><a href="pagebupda.htm" style="color:maroon">More Updates</a></b></span></td></tr>
+
+      </table>
+            </td>
+    <td width="10" height="457">&nbsp;</td>
+    <td width="152" valign="top" height="457"> 
+<table width="100%" border="0" cellspacing="2" cellpadding="2">
+<!----from here--------->
+
+<!----till here--------->
+<td><tr>&nbsp;</tr></td>
+        <tr> 
+          <td> 
+<table width="100%" border="0" cellspacing="2" cellpadding="2">
+<tr bgcolor="#f1f1f1"> 
+<td ><a href="http://www.economictimes.com/Budgetcountdown/pageesurvey.htm" style="text-decoration:none"><font face="verdana, garamond" size="-1"><b><center>The Full Report</center></font>
+<font face="verdana, garamond" size="0"><li>General Review</li>
+           <li>Public Finance</li>
+           <li>Monetary and &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Banking &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Developments</li>
+           <li>Capital and Money &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Markets</li>
+           <li>Prices and &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Distribution</li>
+           <li>External Sector</li>
+           <li>Industrial Policy and &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Development</li>
+           <li>Agriculture</li>
+           <li>Infrastructure</li>
+           <li>Social Sector</li>
+           <li>Pictorial View</li></b></font>
+
+</a></td>
+        </tr>
+        <tr> 
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>&nbsp;</td>
+        </tr>
+      </table></td>
+        </tr>      </table>
+ <tr><td bgcolor="e2e2e2" align="center"><a href="#top"><img src="../dmd/images/top.gif" width="13" height="13" border="0"></a><br></td><td bgcolor="#AD0000"  align="center" colspan="4"><font face="Arial, helvetica" size="-1" color="White"><b> I&nbsp;n&nbsp;d&nbsp;i&nbsp;a&nbsp;'&nbsp;s&nbsp;&nbsp;N&nbsp;o&nbsp;1&nbsp;&nbsp;B&nbsp;u&nbsp;s&nbsp;i&nbsp;n&nbsp;e&nbsp;s&nbsp;s&nbsp;&nbsp;N&nbsp;e&nbsp;w&nbsp;s&nbsp;p&nbsp;a&nbsp;p&nbsp;e&nbsp;r</b></font></td></tr>
+    </td>
+  </tr>
+</table>
+<br>
+<script language=javascript src=http://www.indiatimes.com/footerown.js></script><table border=0 cellpadding=4 cellspacing=0 width=768><tr><td align=center><font face=arial size="-2" color=#000000>Copyright © 2000 Times Internet Limited. All rights reserved.&nbsp;|&nbsp;<a href="http://www.indiatimes.com/terms/tou.html" target="_top">Terms of Use</a>&nbsp;|&nbsp;<a href="../feedback/feedback.htm" target="_top">Feedback</a>&nbsp;|&nbsp;<a href="../today/sitemap.htm" target="_top">Sitemap</a></font></td></tr></table>
+
+</body>
+</html>
+

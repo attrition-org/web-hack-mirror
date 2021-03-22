@@ -1,0 +1,59 @@
+<html>
+<head><title>Welcome to admetam.com</title>
+<SCRIPT LANGUAGE="JavaScript">
+
+
+
+<!--
+var go=0;
+var bc = 8;
+var path = "images/basp";
+var ext = "gif";
+var bname = "b";
+var buttonOnImg, buttonOffImg;
+function loadImages()
+        {
+                if (document.images)
+                {
+                        buttonOnImg = new Array(bc);
+                        buttonOffImg = new Array(bc);
+            buttonName = new Array("01","02","03","04","05","06","07","08");
+                for (var i = 1; i <= bc; i++)
+                {
+                        buttonOnImg[i]=new Image();
+                        buttonOffImg[i]=new Image();
+                        buttonOnImg[i].src=path + buttonName[i-1] + "b." + ext;
+                        buttonOffImg[i].src=path + buttonName[i-1] + "a." + ext;
+                }
+        }
+}
+function buttonOn(num)
+{
+        if(document.images && go)
+                document.images[bname + num].src = buttonOnImg[num].src;
+}
+function buttonOff(num)
+{
+        if(document.images && go)
+                document.images[bname + num].src =  buttonOffImg[num].src;
+}
+//-->
+
+</SCRIPT>
+</head>
+<body topmargin="10"  marginheight="10"  leftmargin="0"  marginwidth="0" onLoad="loadImages();go=1;" text="#C2A64A" link="#C2A64A" bgcolor="#E8E1BC" alink="#84712D" vlink="#C2A64A">
+<table  cellpadding="0" cellspacing="0" border="0">
+<tr align="left" valign="bottom">
+<td ><a href="../default.html" target="_top"><img src="images/logo.gif" width="112" height="12" border="0" hspace="10"></a></td>
+<td ><A HREF="footwearw.html" TARGET="_top" onMouseOver="buttonOn(1);return true;" onMouseOut="buttonOff(1)"><img NAME="b1"    src="images/basp01a.gif" border="0" hspace="8"></A></td>
+<td ><A HREF="sw_m.html" TARGET="main" onMouseOver="buttonOn(2);return true;" onMouseOut="buttonOff(2)"><img NAME="b2"    src="images/basp02a.gif" border="0" hspace="8"></A></td>
+<td ><A HREF="testimonialw.html" TARGET="_top" onMouseOver="buttonOn(3);return true;" onMouseOut="buttonOff(3)"><img NAME="b3"    src="images/basp03a.gif" border="0" hspace="8"></A></td>
+<td ><A HREF="technologyw.html" TARGET="_top" onMouseOver="buttonOn(4);return true;" onMouseOut="buttonOff(4)"><img NAME="b4"    src="images/basp04a.gif" border="0" hspace="8"></A></td>
+<td ><A HREF="advertisingw.html" TARGET="_top" onMouseOver="buttonOn(5);return true;" onMouseOut="buttonOff(5)"><img NAME="b5"    src="images/basp05a.gif" border="0" hspace="8"></A></td>
+<td ><A HREF="eventsw.html" TARGET="_top" onMouseOver="buttonOn(6);return true;" onMouseOut="buttonOff(6)"><img NAME="b6"    src="images/basp06a.gif" border="0" hspace="8"></A></td>
+<td ><A HREF="distributorsw.html" TARGET="_top" onMouseOver="buttonOn(7);return true;" onMouseOut="buttonOff(7)"><img NAME="b7"    src="images/basp07a.gif" border="0"  hspace="8"></A></td>
+<td ><A HREF="conceptw.html" TARGET="_top" onMouseOver="buttonOn(8);return true;" onMouseOut="buttonOff(8)"><img NAME="b8"    src="images/basp08a.gif" border="0" hspace="8"></A></td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,846 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="sv">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Bjorn's 3D World - Your guide to NVidia gaming</title>
+<meta name="description" content="Bjorn's 3D world aim to give you the best info about NVidia's different chipsets as wella s general 3D gaming">
+<meta name="keywords" content="rendition,Rendition,V2200,V1000,Thriller,geforce,256,geforce256,gforce,g-force,riva,RIVA,Riva,TNT,tnt,nvidia,Nvidia,NVIDIA,games,demos,drivers,unreal,Unreal,Unread Tournament,quake,Quake,Allegiance,AOEII,forsaken,incoming,D3D,d3d,opengl,OpenGL,Open GL,Microsoft,gaming,news,game demos,,Diamond,Stealth,Canopus,Elsa,Tekram,Hercules,Jazz,Creative Labs,Creative,3d,graphics">
+<style>a { Text-Decoration : None }<!--a:hover{ color:Black; font-weight:bold; text-decoration:Underline; }--></style>
+<STYLE type="text/css">
+<!--
+    
+TD.noimage {
+background-image: none;
+}    
+    
+// -->
+</STYLE>
+
+</head>
+
+<body bgcolor="#84ADFF" topmargin="2" leftmargin="2" link="#FF0000" vlink="#FF0000">
+
+<div align="center">
+  <center>
+  <table border="0" width="723" height="142" background="../../../bilder/front.gif" bgcolor="#84ADFF" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="100%" valign="top">
+        <table border="0">
+          <tr>
+            <td width="220" height="10" class="noimage"></td>
+            <td height="10" width="469" class="noimage"></td>
+          </tr>
+          <tr>
+            <td width="220" valign="top" class="noimage"></td>
+            <td height="61" valign="top" width="469" class="noimage" bgcolor="#FFFFFF"><!-- BEGIN RICH-MEDIA BURST! CODE --> 
+<script language="JavaScript"> 
+<!-- /* © 1997-1999 BURST! Media, LLC. All Rights Reserved.*/ 
+var TheAdcode = 'ad7450a'; 
+var bN = navigator.appName; 
+var bV = parseInt(navigator.appVersion); 
+var base='http://www.burstnet.com/'; 
+var Tv=''; 
+var agt=navigator.userAgent.toLowerCase(); 
+if (bV>=4) 
+  {ts=window.location.pathname+window.location.search; 
+   i=0; Tv=0; while (i< ts.length) 
+      { Tv=Tv+ts.charCodeAt(i); i=i+1; } Tv="/"+Tv;} 
+  else   {Tv=escape(window.location.pathname); 
+   if( Tv.charAt(0)!='/' ) Tv="/"+Tv; 
+          else if (Tv.charAt(1)=="/")
+Tv=""; 
+  if( Tv.charAt(Tv.length-1) == "/") 
+    Tv = Tv + "_";} 
+if (bN=='Netscape'){ 
+     if ((bV>=4)&&(agt.indexOf("mac")==-1))
+{  document.write('<s'+'cript src="'+ 
+      base+'cgi-bin/ads/'+TheAdcode+'.cgi/RETURN-CODE/JS' 
+      +Tv+'">'); 
+     document.write('</'+'script>');    
+} 
+     else if (bV>=3) {document.write('<'+'a href="'+base+'ads/'+ 
+        TheAdcode+'-map.cgi'+Tv+'"target=_top>'); 
+        document.write('<img src="' + base + 'cgi-bin/ads/' + 
+        TheAdcode + '.cgi' + Tv + '" ismap width="468" height="60"' + 
+        ' border="0" alt="Click Here"></a>');} 
+ } 
+if (bN=='Microsoft Internet Explorer') 
+ document.write('<ifr'+'ame id="BURST" src="'+base+'cgi-bin/ads/'
++ 
+  TheAdcode + '.cgi' + Tv + '/RETURN-CODE" width="468" height="60"' + 
+  'marginwidth="0" marginheight="0" hspace="0" vspace="0" ' + 
+  'frameborder="0" scrolling="no"></ifr'+'ame>'); 
+// --> 
+</script> <noscript><a href="http://www.burstnet.com/ads/ad7450a-map.cgi" target="_top"> 
+<img src="http://www.burstnet.com/cgi-bin/ads/ad7450a.cgi" 
+ width="468" height="60" border="0" alt="Click Here"></a> 
+</noscript> 
+<!-- END BURST CODE --></td>
+          </tr>
+          <tr>
+            <td width="220" class="noimage"></td>
+            <td width="469" bgcolor="#FFFFFF" class="noimage"><font size="1" face="Verdana"><b>Latest Reviews:</b> 
+<a href="../rally/index.html">Rally
+                Championship review</a> .. <a href="../outrageousDDR/index.html">Outrageous
+3D Graphics DDR</a> .. <a href="../outrageous3D/index.shtml">Outrageous
+3D Sound</a> .. <a href="index.shtml" target="_self">Guillemot Cougar Video Edition</a> .. 
+<a href="../allegiance/index.shtml" target="_self">Allegiance Preview</a> ..
+<a href="../fortissimo/index.shtml"> 
+Guillemot MaxiSound Fortissimo</a> .. <a href="../3dprophet/index.shtml"> 
+Guillemot 3D Prophet SDR</a>  </font>
+</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  </center>
+  <table border="0" width="635" height="58" cellspacing="0" cellpadding="0" background="../../../bilder/pics/menu3.gif">
+    <tr>
+      <td width="100%">
+        <div align="center">
+          <center>
+          <table border="0" width="95%" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="100%" align="center" class="noimage"><b><font face="Tahoma" size="2"><a href="../../../index.html">News</a> ..
+                <a href="../../../noncgi/newnews/archive/arch.shtml"> Archive</a> ..
+                <a href="../../../cgi-bin/forum/Ultimate.cgi"> Forums</a> ..
+                <a href="../previews.shtml">
+                P/Reviews</a> .. <a href="../articles.shtml"> Articles</a> ..
+                <a href="../../download/drivers.shtml"> Drivers</a> ..
+                <a href="../../download/otherfiles.shtml"> &quot;Other&quot; Files</a> ..
+                <a href="../../links/links.shtml">
+                Links</a> .. <a href="../../siteinfo/privacy.shtml">Privacy</a></font></b></td>
+            </tr>
+            <tr>
+              <td width="100%" align="center" class="noimage"><b><font face="Tahoma" size="2">&nbsp;
+                <a href="http://www.ibuyer.net/bjorn3d/">Hardware/Software Price Watch</a> ..
+                <a href="http://www.bjorn3d.com/conferenceroom.shtml"> Chat</a> ..
+                <a href="../../siteinfo/siteinfo.shtml"> About Site</a> ..
+                <a href="../../siteinfo/adverts.shtml"> Advertisment</a> ..
+                <a href="../../siteinfo/siteinfo.shtml">
+                Contact Us</a>&nbsp;</font></b></td>
+            </tr>
+          </table>
+          </center>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+<p align="center"><a href="http://www.ibuyer.net/bjorn3d/"><img border="0" src="../../../bilder/pricewatch.gif" alt="Check for the best prices for software and hardware" width="500" height="25"></a></p>
+<div align="left">
+  <table border="0" cellspacing="1" width="100%">
+    <tr>
+      <td valign="top" width="175">
+        <table border="0" width="175" cellspacing="0" cellpadding="0">
+          <tr>
+            <td>
+              <table border="0" width="170" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td width="170" background="../../../bilder/pics/x1.gif" height="31">
+                    <p align="center">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td width="100%" background="../../../bilder/pics/x2.gif">
+                    <div align="center">
+                      <center>
+                    <table border="0" width="96%" cellspacing="0" cellpadding="0" class="noimage">
+                      <tr>
+                        <td width="100%"><font size="2" face="Arial"></font></td>
+                      </tr>
+                    </table>
+                      </center>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="170" background="../../../bilder/pics/x3.gif" height="29">
+                    <p align="center">&nbsp;</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p align="center"><b><!-- BEGIN BURST! CODE -->
+<iframe SRC="http://www.burstnet.com/cgi-bin/ads/bt7450a.cgi/RETURN-CODE/if/201/" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" width="120" height="60">
+<A target="_top" HREF="http://www.burstnet.com/ads/bt7450a-map.cgi/201">
+<IMG SRC="http://www.burstnet.com/cgi-bin/ads/bt7450a.cgi/201" border="0" width="120" height="60" alt="Please support our sponsor.">
+</A></iframe>
+<!-- END BURST! CODE --></b></p>
+            </td>
+          </tr>
+          <tr>
+            <td height="27">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p align="center"><!-- BEGIN BURST! CODE -->
+<iframe SRC="http://www.burstnet.com/cgi-bin/ads/cb7450a.cgi/RETURN-CODE/if/101/" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" width="125" height="125">
+<A target="_top" HREF="http://www.burstnet.com/ads/cb7450a-map.cgi/101">
+<IMG SRC="http://www.burstnet.com/cgi-bin/ads/cb7450a.cgi/101" border="0" width="125" height="125" alt="Please support our sponsor.">
+</A></iframe>
+<!-- END BURST! CODE --></td>
+          </tr>
+          <tr>
+            <td>
+              <p align="center"></td>
+          </tr>
+          <tr>
+            <td>
+              <p align="center"><a target="_top" href="http://v.extreme-dm.com/?login=bjorn3d">
+<img name=im src="http://v1.extreme-dm.com/i.gif" height=38
+border=0 width=41 alt=""></a><script language="javascript"><!--
+an=navigator.appName;d=document;function
+pr(){d.write("<img src=\"http://v0.extreme-dm.com",
+"/0.gif?tag=bjorn3d&j=y&srw="+srw+"&srb="+srb+"&",
+"rs="+r+"&l="+escape(d.referrer)+"\" height=1 ",
+"width=1>");}srb="na";srw="na";//-->
+</script><script language="javascript1.2"><!--
+s=screen;srw=s.width;an!="Netscape"?
+srb=s.colorDepth:srb=s.pixelDepth;//-->
+</script><script language="javascript"><!--
+r=41;d.images?r=d.im.width:z=0;pr();//-->
+</script><noscript><img alt="" 
+src="http://v0.extreme-dm.com/0.gif?tag=bjorn3d&j=n"></noscript></td>
+          </tr>
+        </table>
+      </td>
+      <td valign="top">
+        <hr width="60%" color="#800000">
+        <table border="0" cellspacing="0" cellpadding="0" width="100%" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000">
+          <tr>
+            <td valign="middle" bgcolor="#84ADFF">
+              <img border="0" src="../../../bilder/pics/t1.gif" width="27" height="27"></td>
+            <td valign="middle" bgcolor="#0000FF" background="../../../bilder/pics/t2.gif">
+              <p align="left">&nbsp;</td>
+            <td valign="middle" bgcolor="#84ADFF">
+              <img border="0" src="../../../bilder/pics/t3.gif" width="27" height="27"></td>
+          </tr>
+          <tr>
+            <td bgcolor="#84ADFF" background="../../../bilder/pics/m1.gif">&nbsp;</td>
+            <td bgcolor="#FFFFFF">
+              <center>
+              <div align="center">
+                <table border="0" cellspacing="1">
+                  <tr>
+                    <td valign="top"><img border="0" src="images/index.35.jpg" width="269" height="168"></td>
+                    <td valign="top">
+                      <p align="center"><img border="0" src="images/index.36.gif" width="150" height="80"><font face="Arial" size="5"><br>
+                      </font><font face="Arial" size="6">Cougar Video Edition</font><font face="Arial" size="7"><br>
+                      </font><font face="Arial" size="1">By Darin Genereux&nbsp;
+                      000221</font></td>
+                  </tr>
+                </table>
+              </div>
+              </center>
+              <h1><a name="_Toc475735514"><span lang="EN-US"><font face="Arial" size="4">Summary</font></span></a><span lang="EN-US"><font size="3" face="Arial"><o:p>
+              </o:p>
+              </font></span></h1>
+              <p class="MsoNormal"><span lang="EN-US"><font size="3" face="Arial">Built
+              around the TNT2 M64 graphics chipset from NVidia, the Guillemot
+              Cougar Video Edition provides respectable 3D acceleration and
+              excellent video capture for value oriented consumers.<span style="mso-spacerun: yes">&nbsp;
+              </span>Don’t let the low price fool you, this is a complete
+              video solution in a small package.</font></span></p>
+              <h1><a name="_Toc475735515"><span lang="EN-US"><font face="Arial" size="4">Introduction</font></span></a><span lang="EN-US"><font size="3" face="Arial"><o:p>
+              </o:p>
+              </font></span></h1>
+              <p class="MsoNormal"><span lang="EN-US"><font size="3" face="Arial">Guillemot
+              has been getting a lot of attention these days.<span style="mso-spacerun: yes">&nbsp;
+              </span>After releasing the highly acclaimed GeForce 3D Prophet and
+              with the recent acquisition of Hercules, Guillemot has attempted
+              to secure itself as one of the few remaining video card
+              manufacturers who do not produce their own chipsets.<span style="mso-spacerun: yes">&nbsp;
+              </span>Through all the mergers last year, it was inevitable that
+              only a handful of companies would survive the ensuing cataclysm.<span style="mso-spacerun: yes">&nbsp;
+              </span>Undaunted, Guillemot’s aggressive product development and
+              marketing departments have positioned their company into the top
+              tiers of an ever-changing multimedia marketplace.<o:p>
+              </o:p>
+              </font></span></p>
+              <p class="MsoNormal"><span lang="EN-US"><font size="3" face="Arial">However,
+              even amongst all the rave reviews and glamorous publicity that
+              follows today’s hottest products, Guillemot has not forgotten
+              the needs of the special few.<span style="mso-spacerun: yes">&nbsp;
+              </span>They realize that out in the real world exist customers who
+              are need of more than the fastest polygon pusher.<span style="mso-spacerun: yes">&nbsp;
+              </span>These consumers want more video features without the
+              wallet-bleeding wizardry.<span style="mso-spacerun: yes">&nbsp; </span>They
+              want video cards that can do it all, from video capture to DVD
+              acceleration, and without breaking the bank in the process.<o:p>
+              </o:p>
+              </font></span></p>
+              <p class="MsoNormal"><span lang="EN-US"><font size="3" face="Arial">The
+              idea of producing an ultimate all-in-one consumer video board is
+              not new.<span style="mso-spacerun: yes">&nbsp; </span>I believe it
+              was ATI who pioneered the trend, and thus set the stage for more
+              powerful and versatile products such as their latest All-in-Wonder
+              32MB Fury, the Matrox Marvel G400, and the ASUS V6600 Deluxe.<span style="mso-spacerun: yes">&nbsp;
+              </span>Still, as great as those products may be, they are very
+              expensive and therefore not very practical to a large majority of
+              consumers.<span style="mso-spacerun: yes">&nbsp;</span><o:p>
+              </o:p>
+              </font></span></p>
+              <p class="MsoNormal"><span lang="EN-US"><font size="3" face="Arial">Thankfully,
+              Guillemot has introduced the 32MB Cougar Video Edition.<span style="mso-spacerun: yes">&nbsp;
+              </span>Using the ever-popular NVidia TNT2 M64 chipset, it comes
+              standard with video capture, TV output, 3D acceleration, and DVD
+              decoding abilities.<span style="mso-spacerun:
+yes">&nbsp;</span><o:p>
+              </o:p>
+              </font></span></p>
+              <p class="MsoNormal"><span lang="EN-US"><font size="3" face="Arial">Throughout
+              the rest of this review I will examine the Cougar Video in detail.<span style="mso-spacerun: yes">&nbsp;
+              </span>I will include 3D benchmarks against a NVidia TNT video
+              board, provide test results of the video capture feature, and
+              describe my experiences with the card’s user friendliness and
+              image quality.<span style="mso-spacerun: yes">&nbsp; </span>In
+              addition, the video capture tests will be performed on two degrees
+              of computing power—a high end Athlon 700Mhz and a more moderate
+              K6-2 300Mhz system.<o:p>
+              &nbsp;</font></span></p>
+              <h1><a name="_Toc475735516"><span lang="EN-US"><font face="Arial" size="4">Features</font></span></a></h1>
+              <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><font size="3" face="Arial"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1025" type="#_x0000_t75" style='width:375pt;height:264.75pt'
+ fillcolor="window">
+ <v:imagedata src="file:///f:/Temp/FrontPageTempDir/wpe3.jpg" o:title="cougar-small"/>
+</v:shape><![endif]-->
+              <span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:
+10.0pt;font-family:&quot;Times New Roman&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA"><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:375pt;
+ height:264.75pt' fillcolor="window">
+ <v:imagedata src="../allegiance/images/index.37.jpg" o:title="cougar-small"/>
+</v:shape><![endif]-->
+              <img src="images/index.37.jpg" v:shapes="_x0000_i1025" width="500" height="353"></span></font></span></p>
+              <p class="MsoNormal"><span lang="EN-US"><font size="3" face="Arial">&nbsp;<o:p>
+              </o:p>
+              </font></span></p>
+              <p class="MsoNormal" style="margin-bottom:3.0pt"><b style="mso-bidi-font-weight:
+normal"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">G</span></font></b><font size="3" face="Arial"><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="mso-bidi-font-size: 10.0pt; layout-grid-mode: line">ENERAL
+              </span><span lang="EN-US" style="layout-grid-mode: line">S</span><span lang="EN-US" style="mso-bidi-font-size: 10.0pt; layout-grid-mode: line">PECIFICATIONS</span></b><span lang="EN-US" style="layout-grid-mode: line"><o:p>
+              </o:p>
+              </span></font></p>
+              <ul>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l3 level1 lfo5;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">125MHz
+                  128-bit NVIDIA RIVA TNT2 M64 processor<o:p>
+                  </o:p>
+                  </span></font></li>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l3 level1 lfo5;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">32MB
+                  on-board Synchronous RAM clocked at 150MHz<o:p>
+                  </o:p>
+                  </span></font></li>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l3 level1 lfo5;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">Vision-friendly
+                  32-bit SVGA display performed through a 300MHz RAMDAC<o:p>
+                  </span></font></li>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l3 level1 lfo5;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">Extended
+                  display resolution up to 1920x1200 in 16 million colors<o:p>
+                  </o:p>
+                  </span></font></li>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l3 level1 lfo5;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">2X/4X
+                  AGP interface with full AGP texturing support<o:p>
+                  </o:p>
+                  </span></font></li>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l3 level1 lfo5;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">Meets
+                  all Microsoft PC 98 hardware design requirements<o:p>
+                  </o:p>
+                  </span></font></li>
+              </ul>
+              <p class="MsoNormal" style="margin-bottom:3.0pt"><b style="mso-bidi-font-weight:
+normal"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">3D
+              F</span></font></b><font size="3" face="Arial"><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="mso-bidi-font-size: 10.0pt; layout-grid-mode: line">UNCTIONS<o:p>
+              </o:p>
+              </span></b></font></p>
+              <ul>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l4 level1 lfo4;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line"><span style="font-style: normal; font-variant: normal; font-weight: normal">&nbsp;</span>Complete
+                  DirectX 6.X and OpenGL ICD support<o:p>
+                  </o:p>
+                  </span></font></li>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l4 level1 lfo4;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">100%
+                  hardware triangle setup<o:p>
+                  </o:p>
+                  </span></font></li>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l4 level1 lfo4;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">Anti-aliasing<o:p>
+                  </o:p>
+                  </span></font></li>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l4 level1 lfo4;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">TwiN
+                  Texel (TNT) 32-bit graphics pipeline<o:p>
+                  </o:p>
+                  </span></font></li>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l4 level1 lfo4;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">Texture
+                  blend support (Bump map - texture modulation - reflection
+                  map…)<o:p>
+                  </o:p>
+                  </span></font></li>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l4 level1 lfo4;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">Backend
+                  blend (32-bit ARGB rendering - bilinear, trilinear and
+                  anisotropic filtering…)<o:p>
+                  </o:p>
+                  </span></font></li>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l4 level1 lfo4;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">Per
+                  pixel perspective correction mapping (fog, light, mip-mapping)<o:p>
+                  </o:p>
+                  </span></font></li>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l4 level1 lfo4;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">32-bit
+                  Z-buffer:<span style="mso-spacerun: yes">&nbsp; </span>24-bit
+                  Z-buffer and 8-bit stencil buffer<o:p>
+                  </o:p>
+                  </span></font></li>
+              </ul>
+              <p class="MsoNormal" style="margin-bottom:3.0pt"><b style="mso-bidi-font-weight:
+normal"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">2D
+              F</span></font></b><font size="3" face="Arial"><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="mso-bidi-font-size: 10.0pt; layout-grid-mode: line">UNCTIONS</span></b><span lang="EN-US" style="layout-grid-mode: line"><o:p>
+              </o:p>
+              </span></font></p>
+              <ul>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l7 level1 lfo3;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">Optimization
+                  for minimal software overhead on Windows GDI calls<o:p>
+                  </o:p>
+                  </span></font></li>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l7 level1 lfo3;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">DirectDraw
+                  acceleration:<span style="mso-spacerun:
+yes">&nbsp; </span>Direct Frame Buffer (DFB) access<o:p>
+                  </o:p>
+                  </span></font></li>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l7 level1 lfo3;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">Accelerated
+                  primitives for color translation, points, line display<o:p>
+                  </o:p>
+                  </span></font></li>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l7 level1 lfo3;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">Pipeline
+                  optimized for multiple color depths (8, 15, 16, 24, 32 bits
+                  per pixel)<o:p>
+                  </o:p>
+                  </span></font></li>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l7 level1 lfo3;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">Execution
+                  of all Microsoft Windows defined 256 raster operations<o:p>
+                  </o:p>
+                  </span></font></li>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l7 level1 lfo3;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">Fast
+                  text rendering from a hardware font cache<o:p>
+                  </o:p>
+                  </span></font></li>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l7 level1 lfo3;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">DMA
+                  Pusher using NVIDIA Vanta multi-tasking features in the 2D
+                  graphics pipeline<o:p>
+                  </o:p>
+                  </span></font></li>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l7 level1 lfo3;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">True
+                  color hardware cursor, hardware color dithering <o:p>
+                  </o:p>
+                  </span></font></li>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l7 level1 lfo3;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">Multi-buffering
+                  (double, triple and quad-buffer) smoothing animation</span></font></li>
+              </ul>
+              <p class="MsoNormal" style="margin-bottom:3.0pt"><b style="mso-bidi-font-weight:
+normal"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">DVD
+              V</span></font></b><font size="3" face="Arial"><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="mso-bidi-font-size: 10.0pt; layout-grid-mode: line">IDEO
+              </span><span lang="EN-US" style="layout-grid-mode: line">A</span><span lang="EN-US" style="mso-bidi-font-size: 10.0pt; layout-grid-mode: line">CCELERATION</span></b><span lang="EN-US" style="layout-grid-mode: line"><o:p>
+              </o:p>
+              </span></font></p>
+              <ul>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l11 level1 lfo2;
+tab-stops:list 18.0pt"><span lang="EN-US" style="layout-grid-mode: line"><font size="3" face="Arial">Palette-DAC
+                  pipeline. This accelerates full-motion video playback,
+                  sustaining</font></span> <span lang="EN-US" style="layout-grid-mode: line"><font size="3" face="Arial">30
+                  frames per second while retaining high quality color
+                  resolution, implementing true bilinear filtering for scaled
+                  video and compensating for filtering losses using edge
+                  enhancement algorithms.<o:p>
+                  </o:p>
+                  </font></span></li>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l11 level1 lfo2;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">Video
+                  Acceleration for Microsoft DirectShow, MPEG-1 and MPEG-2<o:p>
+                  </o:p>
+                  </span></font></li>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l11 level1 lfo2;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">DVD
+                  sub-picture alpha blending composition<o:p>
+                  </o:p>
+                  </span></font></li>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l11 level1 lfo2;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">Backend
+                  hardware video scaling for video playback<o:p>
+                  </o:p>
+                  </span></font></li>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l11 level1 lfo2;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">Hardware
+                  color space conversion (YUV 4:2:0 and 4:2:2)<o:p>
+                  </o:p>
+                  </span></font></li>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l11 level1 lfo2;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">Planar
+                  YUV 4:2:0 and 4:2:2 conversion for software MPEG acceleration<o:p>
+                  </o:p>
+                  </span></font></li>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l11 level1 lfo2;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">Multiple
+                  video windows with hardware color space conversion and
+                  filtering<o:p>
+                  </o:p>
+                  </span></font></li>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l11 level1 lfo2;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">Per-pixel
+                  color keying<o:p>
+                  </o:p>
+                  </span></font></li>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l11 level1 lfo2;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">Support
+                  for scaled field interframing to reduce motion artifacts<o:p>
+                  </o:p>
+                  </span></font></li>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l11 level1 lfo2;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">Multi-tap
+                  X and Y filtering<o:p>
+                  </o:p>
+                  </span></font></li>
+              </ul>
+              <p class="MsoNormal" style="margin-bottom:3.0pt;mso-pagination:widow-orphan lines-together;
+page-break-after:avoid"><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="layout-grid-mode:line"><font size="3" face="Arial">V</font></span></b><font size="3" face="Arial"><b style="mso-bidi-font-weight:
+normal"><span lang="EN-US" style="mso-bidi-font-size: 10.0pt; layout-grid-mode: line">IDEO
+              </span><span lang="EN-US" style="layout-grid-mode:
+line">I/O</span></b><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="mso-bidi-font-size: 10.0pt; layout-grid-mode: line">
+              </span><span lang="EN-US" style="layout-grid-mode:line">P</span></b><b style="mso-bidi-font-weight:
+normal"><span lang="EN-US" style="mso-bidi-font-size: 10.0pt; layout-grid-mode: line">ORTS<o:p>
+              </o:p>
+              </span></b></font></p>
+              <p class="MsoNormal"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">1
+              SVGA monitor jack<o:p>
+              </o:p>
+              <br>
+              1 S-VHS video input<o:p>
+              </o:p>
+              <br>
+              1 Composite video input<o:p>
+              </o:p>
+              <br>
+              1 S-VHS video output and <o:p>
+              </o:p>
+              <br>
+              1 S-VHS to composite converter cable<o:p>
+              </span></font><b style="mso-bidi-font-weight:
+normal"><font size="3" face="Arial"><span lang="EN-US" style="layout-grid-mode: line">&nbsp;<o:p>
+              </o:p>
+              </span></font></b></p>
+              <p class="MsoNormal" style="margin-bottom:3.0pt"><b style="mso-bidi-font-weight:
+normal"><span lang="EN-US"><font size="3" face="Arial">S</font></span></b><font size="3" face="Arial"><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="mso-bidi-font-size: 10.0pt">OFTWARE</span><span lang="EN-US"><o:p>
+              </o:p>
+              </span></b></font></p>
+              <ul>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo12;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US">Ulead
+                  VideoStudio 3.0 SE</span></font></li>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo12;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US">Netshow
+                  3.0 Encoder and Tools</span></font></li>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo12;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US">Xing DVD
+                  Player 2.0.5</span></font></li>
+                <li>
+                  <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo12;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US">Variety of
+                  game and graphics demos</span></font></li>
+              </ul>
+              <h1><a name="_Toc475735517"><span lang="EN-US"><font face="Arial" size="4">Installation</font></span></a></h1>
+              <p class="MsoNormal"><span lang="EN-US"><font size="3" face="Arial">Installation
+              of the Cougar VE couldn’t be any easier.<span style="mso-spacerun: yes">&nbsp;
+              </span>For those unaccustomed to adding and removing new hardware,
+              Guillemot has provided a very comprehensive manual on the entire
+              procedure.<span style="mso-spacerun: yes">&nbsp; </span>For even
+              further info, a PDF manual on the driver CD explains all the
+              advance D3D and OpenGL settings that are available.<span style="mso-spacerun: yes">&nbsp;&nbsp;</span></font></span></p>
+              <p class="MsoBodyText"><span lang="EN-US"><font size="3" face="Arial"><i>Be
+              warned that due to the video capture feature, you must install the
+              drivers from the CD or else the video capture device will not be
+              recognized.<span style="mso-spacerun: yes">&nbsp; </span>Even
+              though the drivers on the CD are fairly outdated, based off
+              NVidia’s 2.40 reference drivers, I did not encounter any
+              noticeable bugs.<span style="mso-spacerun: yes">&nbsp; </span>However,
+              the later reference drivers provide better 3D performance and it
+              is possible to install them without compromising the video capture
+              functionality.<span style="mso-spacerun: yes">&nbsp;</span></i></font></span></p>
+              <p class="MsoNormal"><span lang="EN-US"><font size="3" face="Arial">After
+              the initial drivers are loaded, the CDROM setup program installs
+              all the necessary software and video CODECs required for jumping
+              into the video capture fray.</font></span></p>
+              <h1><a name="_Toc475735518"><span lang="EN-US"><font face="Arial" size="4">2D
+              Windows</font></span></a></h1>
+              <p class="MsoNormal"><span lang="EN-US"><font size="3" face="Arial">With
+              a 300Mhz RAMDAC and the NVidia TNT2 chipset, the Windows desktop
+              never looked better.<span style="mso-spacerun:
+yes">&nbsp; </span>The Cougar VE definitely delivers the sharpest imagery I have
+              ever witnessed on my trusty 17” monitor.<span style="mso-spacerun: yes">&nbsp;&nbsp;
+              </span>I definitely have no complaints concerning the Cougar’s
+              2D abilities.</font></span></p>
+              <p class="MsoNormal"><span lang="EN-US"><font size="3" face="Arial">I’ve
+              noticed that a lot of video cards will tend to lose image quality
+              when pushed to their maximum refresh rate, especially text
+              crispness which can be very distracting.<span style="mso-spacerun: yes">&nbsp;
+              </span>By incorporating a 300Mhz RAMDAC, Guillemot has pretty much
+              assured that this card will not suffer the same fate.</font></span></p>
+              <h1><a name="_Toc475735519"><span lang="EN-US"><font face="Arial" size="4">Video
+              Capture</font></span></a></h1>
+              <p class="MsoNormal"><span lang="EN-US"><font size="3" face="Arial">The
+              first thing I noticed after installation was a new icon in the
+              system tray.<span style="mso-spacerun:
+yes">&nbsp; </span>This handy little icon provides quick access to the video
+              editing and recording tools, as well as adjusting monitor settings
+              and launching a video-in monitoring window.<span style="mso-spacerun: yes">&nbsp;
+              </span>The video window is great for watching a TV program or
+              movie from an external source, and even has nifty feature that
+              places the video into the Windows background.</font></span></p>
+              <p class="MsoNormal" align="center"><font size="3" face="Arial"><!--[if gte vml 1]><v:shape id="_x0000_s1027" type="#_x0000_t75"
+ style='position:absolute;margin-left:237.6pt;margin-top:6.2pt;width:225pt;
+ height:162pt;z-index:2;mso-position-horizontal-relative:text;
+ mso-position-vertical-relative:text' o:allowincell="f">
+ <v:imagedata src="file:///f:/Temp/FrontPageTempDir/wpe4.jpg" o:title="ulead_screenshot_small"/>
+ <w:wrap type="square" side="left"/>
+</v:shape><![endif]-->
+              <img border="0" src="images/index.38.jpg" width="300" height="216"></font></p>
+              <p class="MsoNormal"><span lang="EN-US"><font size="3" face="Arial">Of
+              course live video capturing is what it’s all about, and here is
+              where the bundled software comes into play.<span style="mso-spacerun: yes">&nbsp;
+              </span>Ulead’s VideoStudio makes the process as simple as
+              pointing and clicking.<span style="mso-spacerun: yes">&nbsp; </span>The
+              basic interface may seem a bit too user-friendly with its stylish
+              buttons and curvaceous control panel--typically a sign of reduced
+              functionality.<span style="mso-spacerun: yes">&nbsp; </span>However,
+              after a few sessions all the appropriate icons become very
+              familiar and its clear that versatility has not been compromised.</font></span></p>
+              <p class="MsoNormal"><span lang="EN-US"><font size="3" face="Arial">VideoStudio
+              (VS) functions as a complete video-editing package.<span style="mso-spacerun: yes">&nbsp;
+              </span>It captures video and audio to AVI and MPG files using
+              practically any CODEC (compression/decompression routines)
+              currently installed on your system (thankfully the Cougar VE setup
+              program installs the latest CODECs).<span style="mso-spacerun: yes">&nbsp;
+              </span>Each CODEC usually has its own set of parameters for
+              adjusting the image quality vs. compression ratio, and VS allows
+              you to modify them.<span style="mso-spacerun: yes">&nbsp; </span>In
+              addition to basic capturing, VS uses a film-style motif for
+              creating compilations of video, images, music, voice-overs, title
+              pages, and fancy transition effects.<span style="mso-spacerun: yes">&nbsp;
+              </span>For those who have never experienced video capture,
+              VideoStudio makes the whole experience very smooth and addicting.</font></span></p>
+              <h2><a name="_Toc475735520"><font face="Arial" size="4"><u><span lang="EN-US">Capture
+              Performance</span></u></font></a><font face="Arial" size="4"><u><span lang="EN-US"><o:p>
+              </span></u></font><span lang="EN-US"><u><font size="3" face="Arial"></o:p>
+              </font></u></span></h2>
+              <p class="MsoNormal"><span lang="EN-US"><font size="3" face="Arial">I
+              captured video using two different machines to get an idea of how
+              much horsepower is really necessary.<span style="mso-spacerun: yes">&nbsp;
+              </span>The first consisted of an AMD K7 700Mhz, UDMA/66 hard
+              drive, and 256MB of SDRAM<span style="mso-spacerun: yes">&nbsp; </span>(see
+              the <b style="mso-bidi-font-weight:normal">3D Performance</b>
+              section for complete details).<span style="mso-spacerun: yes">&nbsp;
+              </span>The second machine had the following hardware:</font></span></p>
+              <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l9 level1 lfo8;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US">Ø<span style="font-style: normal; font-variant: normal; font-weight: normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </span>AMD K6-2 300Mhz</span></font></p>
+              <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l9 level1 lfo8;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US">Ø<span style="font-style: normal; font-variant: normal; font-weight: normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </span>FIC VA-503+ mainboard</span></font></p>
+              <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l9 level1 lfo8;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US">Ø<span style="font-style: normal; font-variant: normal; font-weight: normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </span>128MB SDRAM</span></font></p>
+              <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l9 level1 lfo8;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US">Ø<span style="font-style: normal; font-variant: normal; font-weight: normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </span>Quantum Fireball 1.0GB hard drive</span></font></p>
+              <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l9 level1 lfo8;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US">Ø<span style="font-style: normal; font-variant: normal; font-weight: normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </span>IBM Deskstar 4.3GB hard drive</span></font></p>
+              <p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l9 level1 lfo8;
+tab-stops:list 18.0pt"><font size="3" face="Arial"><span lang="EN-US">Ø<span style="font-style: normal; font-variant: normal; font-weight: normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </span>Aztech PCI-338 A3D soundcard</span></font></p>
+              <p class="MsoNormal"><span lang="EN-US"><font size="3" face="Arial">I
+              tried capturing with a variety of CODECs and audio formats.<span style="mso-spacerun: yes">&nbsp;
+              </span>For best quality capture, I used the Full Frames
+              (uncompressed) option.<span style="mso-spacerun: yes">&nbsp; </span>To
+              reduce the file size, I tried several compression CODECs including
+              Intel Indeo 5.06, Microsoft MPEG-4 V3, and Radius Cinepak.<span style="mso-spacerun: yes">&nbsp;
+              </span>Unfortunately the only one that would successfully compress
+              on the fly was an Indeo RAW format.<span style="mso-spacerun: yes">&nbsp;
+              </span>The RAW format produced files about 25% smaller, but at a
+              cost of performance.<span style="mso-spacerun: yes">&nbsp; </span>Image
+              quality appeared to be similar to the uncompressed captures.</font></span></p>
+              <p class="MsoNormal"><span lang="EN-US"><font size="3" face="Arial">All
+              tests were performed at a standard resolution of 320x240 and 30fps
+              (the NTSC frame rate).<span style="mso-spacerun: yes">&nbsp; </span>For
+              the test sequence, I chose to use the snow speeder sequence from
+              Star Wars: The Empire Strikes Back<sup>®</sup>.<span style="mso-spacerun: yes">&nbsp;
+              </span>This sequence has lots of full motion video that provide a
+              good stress test for the compression algorithms.<span style="mso-spacerun: yes">&nbsp;
+              </span>After capturing, I used the Windows Media Player to verify
+              the actual capture rate and image quality.</font></span></p>
+              <h4><span lang="EN-US"><font size="3" face="Arial">System 1 - K7
+              Athlon</font></span></h4>
+              <p class="MsoBodyTextIndent"><span lang="EN-US"><font size="3" face="Arial">As
+              expected, this machine had no problems with capturing full motion
+              video at 30fps using the uncompressed capture method.<span style="mso-spacerun: yes">&nbsp;
+              </span>Of course the file sizes are pretty large, roughly 2.7MB
+              per second of video and 44Khz stereo audio.<span style="mso-spacerun: yes">&nbsp;
+              </span>A 5 minute clip required approximately 800MB of free space,
+              not very appealing for long vid</font></span></p>
+              <p class="MsoBodyTextIndent"><span lang="EN-US"><font size="3" face="Arial">Even
+              with 700Mhz of Athlon power, the most the RAW CODEC could capture
+              at was about 22 frames per second using my test sequence.<span style="mso-spacerun: yes">&nbsp;
+              </span>The frame rate varied slightly depending on the amount of
+              action in the video stream, as scenes with slower moving video
+              needed less CPU power.<span style="mso-spacerun: yes">&nbsp;</span></font></span></p>
+              <h4><span lang="EN-US"><font size="3" face="Arial">System 2 - K6-2</font></span></h4>
+              <p class="MsoBodyTextIndent"><span lang="EN-US"><font size="3" face="Arial">First
+              off, DMA would not function properly using the old 1GB Fireball
+              hard drive.<span style="mso-spacerun:
+yes">&nbsp; </span>The most I could capture was at about 15 fps with DMA
+              disabled.<span style="mso-spacerun: yes">&nbsp; </span>After
+              adding the IBM Deskstar, DMA mode functioned properly and helped
+              the framerate quite a bit.<span style="mso-spacerun: yes">&nbsp; </span>However,
+              still using uncompressed capturing, it was limited to around 23
+              fps.<span style="mso-spacerun: yes">&nbsp; </span>Not bad really,
+              as I had expected worse.<span style="mso-spacerun:
+yes">&nbsp; </span>Limiting the capture rate to 24 fps helped to significantly
+              reduce lag effects in the final output.<span style="mso-spacerun: yes">&nbsp;
+              </span>Of course RAW mode faired worse, though a constant 15 fps
+              was attainable.</font></span></p>
+              <p class="MsoNormal"><span lang="EN-US"><font size="3" face="Arial">After
+              capturing and editing, the next step was to compress/recompress
+              the video segments into a single AVI or MPG file.<span style="mso-spacerun: yes">&nbsp;
+              </span>Again, VideoStudio provides a choice of CODEC and
+              compression options for tweaking the desired quality vs. file size
+              ratio.<span style="mso-spacerun: yes">&nbsp; </span>The final
+              rendering process can take a <i style="mso-bidi-font-style:normal">long</i>
+              time (depending on the CPU), but it’s worth the wait.<span style="mso-spacerun:
+yes">&nbsp; </span>For example, using the MPEG-4 V3 CODEC, a 40 second 110MB
+              clip reduced was reduced to approximately 20MB with very little
+              loss in quality.<span style="mso-spacerun: yes">&nbsp; </span>Sacrificing
+              image and sound quality can attain much higher compression rates.</font></span></p>
+              <p class="MsoNormal"><span lang="EN-US"><font size="3" face="Arial">Alternative
+              to recompressing with VideoStudio, the provided NetShow encoder
+              can also be used.<span style="mso-spacerun: yes">&nbsp; </span>It
+              managed some really spectacular compression ratios, though the
+              setup options aren’t quite as inclusive as I was looking for.<span style="mso-spacerun: yes">&nbsp;
+              </span>The Netshow encoder is geared for streaming over the
+              Internet and therefore it doesn’t have a lot of high quality
+              options.<span style="mso-spacerun: yes">&nbsp; </span>However, it
+              managed to do a respectable job on 1GB uncompressed AVI file
+              recorded at 172Kbps stereo and 24fps.<span style="mso-spacerun: yes">&nbsp;
+              </span>The final output was only 96Kbps stereo and 15 fps, but the
+              file size was a mere 10MB!</font></span></p>
+              <p class="MsoBodyTextIndent" style="margin-left:0cm"><font size="3" face="Arial"><b style="mso-bidi-font-weight:
+normal"><span lang="EN-US">Bottom line:</span></b><span lang="EN-US"><span style="mso-spacerun: yes">&nbsp;
+              </span>To adequate capture video, you’ll need a) plenty of hard
+              drive space, b) a properly functioning DMA mode, and c) a decent
+              amount of CPU power.<span style="mso-spacerun: yes">&nbsp; </span>From
+              my experience, I’d say that the K6-2 300 would be a realistic
+              minimum.<span style="mso-spacerun: yes">&nbsp;</span></span></font></p>
+              <p align="center"><font size="3" face="Arial"><b><a href="../allegiance/index2.shtml">Go
+              to Page 2</a></b></font><p align="center"><font size="2" face="Arial"><b>&nbsp;
+<A target="_top" HREF="http://www.burstnet.com/ads/ba7450a-map.cgi/1">
+<IMG SRC="http://www.burstnet.com/cgi-bin/ads/ba7450a.cgi/1" border="0" width="468" height="60" alt="Please support our sponsor.">
+</A></iframe>
+<!-- END BURST! CODE --></b></font></td>
+            <td bgcolor="#84ADFF" background="../../../bilder/pics/m3.gif">&nbsp;</td>
+          </tr>
+          <tr>
+            <td bgcolor="#84ADFF"><img border="0" src="../../../bilder/pics/b1.gif" width="27" height="23"></td>
+            <td bgcolor="#FFFFFF" background="../../../bilder/pics/b2.gif">
+              <p align="center">&nbsp;
+            </td>
+            <td bgcolor="#84ADFF"><img border="0" src="../../../bilder/pics/b3.gif" width="27" height="23"></td>
+          </tr>
+        </table>
+        
+        
+        
+        
+      </td>
+    </tr>
+  </table>
+</div>
+
+<p align="center"><img border="0" src="../../../bilder/copyright.gif" width="759" height="100"></p>
+
+</body>
+
+</html>

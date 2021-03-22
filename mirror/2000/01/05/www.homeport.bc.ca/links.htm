@@ -1,0 +1,385 @@
+<html>
+
+<head>
+<meta name="keywords"
+content="scouts, venturers, cubs, sailing, sails, marine engines, water, sea, river, ocean, straight, indian arm, yacht, Georgia Straight, Fraser River, Pacific Ocean, navigation, compasses, paddles, PFD, lifejackets, yachts, charters, cruise ships, GPS, radio, charts, maps, dinghy, boats, marinas, reed point boat rentals, reed point, boat, rentals, homeport, web, site, hosting, web site hosting, fund, the, Sea, Scouting, activities, rigging, ships, Sea Scouts, Bazan bay, Burnaby, British Columbia, Vancouver, Canada, Pacific, Northwest, bathtubs, battleships, destroyers, submarines, nuclear weapons, camping, stoves, coleman, lanterns, adventures, hiking, overboard, float, sink, swim">
+<title>Sites of Interest</title>
+<script LANGUAGE="JavaScript" FPTYPE="dynamicanimation">
+<!--
+  // If you want to change this script, you must also make the following
+  // changes so that FrontPage will not overwrite your new script.
+  // In the script tag, change type="dynamicanimation" to type="mydynamicanimation"
+  // In the first script statement, change "dynamicanimation" to "mydynamicanimation"
+  // Throughout the HTML content, change dynamicanimation= to mydynamicanimation=
+  // Change function dynAnimation to function mydynAnimation
+  // In the body tag, change onload="dynAnimation()" to onload="mydynAnimation()"
+  dynamicanimAttr = "dynamicanimation"
+  animateElements = new Array()
+  currentElement = 0
+  speed = 0
+  stepsZoom = 8
+  stepsWord = 8
+  stepsFly = 12
+  stepsSpiral = 16
+  steps = stepsZoom
+  step = 0
+  outString = ""
+  function dynAnimation()
+  {
+    var ms = navigator.appVersion.indexOf("MSIE")
+    ie4 = (ms>0) && (parseInt(navigator.appVersion.substring(ms+5, ms+6)) >= 4)
+    if(!ie4)
+    {
+      if((navigator.appName == "Netscape") &&
+         (parseInt(navigator.appVersion.substring(0, 1)) >= 4))
+      {
+        for (index=document.layers.length-1; index >= 0; index--)
+        {
+            layer=document.layers[index]
+            if (layer.left==10000)
+                layer.left=0
+        }
+      }
+      return
+    }
+    for (index=document.all.length-1; index >= document.body.sourceIndex; index--)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if(null != animation)
+      {
+        if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        {
+          ih = el.innerHTML
+          outString = ""
+          i1 = 0
+          iend = ih.length
+          while(true)
+          {
+            i2 = startWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, false, "")
+            if(i2 == iend)
+              break
+            i1 = i2
+            i2 = endWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, true, animation)
+            if(i2 == iend)
+              break
+            i1 = i2
+          }
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+        if(animation == "zoomIn" || animation == "zoomOut")
+        {
+          ih = el.innerHTML
+          outString = "<SPAN " + dynamicanimAttr + "=\"" + animation + "\" style=\"position: relative; left: 10000;\">"
+          outString += ih
+          outString += "</SPAN>"
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+      }
+    }
+    i = 0
+    for (index=document.body.sourceIndex; index < document.all.length; index++)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if (null != animation)
+      {
+        if(animation == "flyLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyRight")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyTop" || animation == "dropWord")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottom")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyTopLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyTopRight" || animation == "flyTopRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottomLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyBottomRight" || animation == "flyBottomRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "spiral")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "zoomIn")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else if(animation == "zoomOut")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        el.initLeft = el.style.posLeft
+        el.initTop = el.style.posTop
+        animateElements[i++] = el
+      }
+    }
+    window.setTimeout("animate();", speed)
+  }
+  function offsetLeft(el)
+  {
+    x = el.offsetLeft
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      x += e.offsetLeft;
+    return x
+  } 
+  function offsetTop(el)
+  {
+    y = el.offsetTop
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      y += e.offsetTop;
+    return y
+  } 
+  function startWord(ih, i)
+  {
+    for(tag = false; i < ih.length; i++)
+    {
+      c = ih.charAt(i)
+      if(c == '<')
+        tag = true
+      if(!tag)
+        return i
+      if(c == '>')
+        tag = false
+    }
+    return -1
+  }
+  function endWord(ih, i)
+  {
+    nonSpace = false
+    space = false
+    while(i < ih.length)
+    {
+      c = ih.charAt(i)
+      if(c != ' ')
+        nonSpace = true
+      if(nonSpace && c == ' ')
+        space = true
+      if(c == '<')
+        return i
+      if(space && c != ' ')
+        return i
+      i++
+    }
+    return -1
+  }
+  function outWord(ih, i1, i2, dyn, anim)
+  {
+    if(dyn)
+      outString += "<SPAN " + dynamicanimAttr + "=\"" + anim + "\" style=\"position: relative; left: 10000;\">"
+    outString += ih.substring(i1, i2)
+    if(dyn)
+      outString += "</SPAN>"
+  }
+  function animate()
+  {
+    el = animateElements[currentElement]
+    animation = el.getAttribute(dynamicanimAttr, false)
+    step++
+    if(animation == "spiral")
+    {
+      steps = stepsSpiral
+      v = step/steps
+      rf = 1.0 - v
+      t = v * 2.0*Math.PI
+      rx = Math.max(Math.abs(el.initLeft), 200)
+      ry = Math.max(Math.abs(el.initTop),  200)
+      el.style.posLeft = Math.ceil(-rf*Math.cos(t)*rx)
+      el.style.posTop  = Math.ceil(-rf*Math.sin(t)*ry)
+    }
+    else if(animation == "zoomIn")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(50+50*step/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else if(animation == "zoomOut")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(100+200*(steps-step)/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else
+    {
+      steps = stepsFly
+      if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        steps = stepsWord
+      dl = el.initLeft / steps
+      dt = el.initTop  / steps
+      el.style.posLeft = el.style.posLeft - dl
+      el.style.posTop = el.style.posTop - dt
+    }
+    if (step >= steps) 
+    {
+      el.style.posLeft = 0
+      el.style.posTop = 0
+      currentElement++
+      step = 0
+    }
+    if(currentElement < animateElements.length)
+      window.setTimeout("animate();", speed)
+  }
+//-->
+</script></head>
+
+<body onload="dynAnimation()">
+
+<p dynamicanimation="flyBottomRight"
+style="position: relative !important; left: 10000 !important"><u><big><big><big><big>Sites
+of Interest </big></big></big></big></u></p>
+<div align="center"><center>
+
+<table border="0" width="977" height="59">
+  <tr>
+    <td width="473" height="59" dynamicanimation="flyLeft"
+    style="position: relative !important; left: 10000 !important"></td>
+    <td width="492" height="59"><p align="right"><img src="homeportwave1.gif" width="185"
+    height="49" alt="homeportwave1.gif (60963 bytes)"></td>
+  </tr>
+</table>
+</center></div>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%"><u><strong><font size="3">Name</font></strong></u></td>
+    <td width="50%"><strong><u><font size="3">Site URL</font></u></strong></td>
+  </tr>
+  <tr>
+    <td width="50%"><font size="3">Campion Boats</font></td>
+    <td width="50%"><font size="3"><a href="http://www.campionboats.com">http://www.campionboats.com</a></font></td>
+  </tr>
+  <tr>
+    <td width="50%"><font size="3">Olympic Boat Centres</font></td>
+    <td width="50%"><font size="3"><a href="http://www.boatnet.com">http://www.boatnet.com</a></font></td>
+  </tr>
+  <tr>
+    <td width="50%"><font size="3">Skipper Cress - Yacht Sales and Service</font></td>
+    <td width="50%"><font size="3"><a href="http://www.skippercress.com">http://www.skippercress.com</a></font></td>
+  </tr>
+  <tr>
+    <td width="50%"><font size="3">The British Columbia Multihull Society</font></td>
+    <td width="50%"><font size="3"><a href="http://www.bcms.bc.ca/index.html">http://www.bcms.bc.ca/index.html</a></font></td>
+  </tr>
+  <tr>
+    <td width="50%"><font size="3">Canadian Coast Guard, Pacific Coast Region</font></td>
+    <td width="50%"><font size="3"><a
+    href="http://www.pacific.ccg-gcc.gc.ca/Epages/Home/Home.htm">http://www.pacific.ccg-gcc.gc.ca/Epages/Home/Home.htm</a></font></td>
+  </tr>
+  <tr>
+    <td width="50%"><font size="3">Canadian Hydrographic Service</font></td>
+    <td width="50%"><font size="3"><a href="http://www.ios.bc.ca">http://www.ios.bc.ca</a></font></td>
+  </tr>
+  <tr>
+    <td width="50%"><font size="3">Canadian Power and Sail Squadrons</font></td>
+    <td width="50%"><font size="3"><a href="http://www.cps-ecp.ca/english.html">http://www.cps-ecp.ca/english.html</a></font></td>
+  </tr>
+  <tr>
+    <td width="50%"><font size="3">Mast Mate Climbing System</font></td>
+    <td width="50%"><font size="3"><a href="http://www.mastmate.com/">http://www.mastmate.com/</a></font></td>
+  </tr>
+  <tr>
+    <td width="50%"><font size="3">BC Ferries</font></td>
+    <td width="50%"><font size="3"><a href="http://www.bcferries.bc.ca/">http://www.bcferries.bc.ca/</a></font></td>
+  </tr>
+  <tr>
+    <td width="50%"><font size="3">Sidney Marine Supply</font></td>
+    <td width="50%"><font size="3"><a href="http://www.sidneymarine.com/">http://www.sidneymarine.com/</a></font></td>
+  </tr>
+  <tr>
+    <td width="50%"><font size="3">National Weather Service for Western Canada</font></td>
+    <td width="50%"><font size="3"><a href="http://www.nws.fsu.edu/buoy/wcan.html">http://www.nws.fsu.edu/buoy/wcan.html</a></font></td>
+  </tr>
+  <tr>
+    <td width="50%"><font size="3">Red Sky At Night </font></td>
+    <td width="50%"><font size="3"><a href="http://www.redskyatnight.com">http://www.redskyatnight.com</a></font></td>
+  </tr>
+  <tr>
+    <td width="50%"><font size="3">Pacific Yachting</font></td>
+    <td width="50%"><font size="3"><a href="http://www.oppub.com/html/pacific_yachting.html">http://www.oppub.com/html/pacific_yachting.html</a></font></td>
+  </tr>
+  <tr>
+    <td width="50%"><font size="3">Reed Point Marina</font></td>
+    <td width="50%"><a href="http://reedpointmarina.homeport.bc.ca">http://reedpointmarina.homeport.bc.ca</a></td>
+  </tr>
+  <tr>
+    <td width="50%"></td>
+    <td width="50%"></td>
+  </tr>
+  <tr>
+    <td width="50%"></td>
+    <td width="50%"></td>
+  </tr>
+  <tr>
+    <td width="50%"></td>
+    <td width="50%"></td>
+  </tr>
+  <tr>
+    <td width="50%"></td>
+    <td width="50%"></td>
+  </tr>
+  <tr>
+    <td width="50%"></td>
+    <td width="50%"></td>
+  </tr>
+  <tr>
+    <td width="50%"></td>
+    <td width="50%"></td>
+  </tr>
+  <tr>
+    <td width="50%"></td>
+    <td width="50%"></td>
+  </tr>
+  <tr>
+    <td width="50%"></td>
+    <td width="50%"></td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+</body>
+</html>

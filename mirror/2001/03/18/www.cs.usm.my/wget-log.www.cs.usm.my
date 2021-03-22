@@ -1,0 +1,32 @@
+--10:01:51--  http://www.cs.usm.my:80/
+           => `www.cs.usm.my/index.html'
+Connecting to www.cs.usm.my:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 1,374 [text/html]
+
+    0K -> .                                                      [100%]
+
+10:01:53 (1.31 MB/s) - `www.cs.usm.my/index.html' saved [1374/1374]
+
+Loading robots.txt; please ignore errors.
+--10:01:53--  http://www.cs.usm.my:80/no-robots.txt
+           => `www.cs.usm.my/no-robots.txt'
+Connecting to www.cs.usm.my:80... connected!
+HTTP request sent, awaiting response... 404 Object Not Found
+10:01:54 ERROR 404: Object Not Found.
+
+--10:01:54--  http://www.cs.usm.my:80/pirata.jpg
+           => `www.cs.usm.my/pirata.jpg'
+Connecting to www.cs.usm.my:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 7,565 [image/jpeg]
+
+    0K -> .......                                                [100%]
+
+10:02:01 (1.27 KB/s) - `www.cs.usm.my/pirata.jpg' saved [7565/7565]
+
+Converting www.cs.usm.my/index.html... done.
+
+FINISHED --10:02:01--
+Downloaded: 8,939 bytes in 2 files
+Converting www.cs.usm.my/index.html... done.

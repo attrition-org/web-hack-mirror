@@ -1,0 +1,511 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>The College Fund UNCF/Pledge to UNCF</title>
+</head>
+
+<body onload="Reset()" bgcolor="#ffffff" background="../images/back.gif" link="#008080" vlink="#008080" alink="#008080">
+
+<!--#config timefmt="%A, %B %e, %Y" -->
+<SCRIPT LANGUAGE=javascript>
+<!--
+function Reset()
+{
+	document.FrontPage_Form1.SEL_reference.value = "0";
+	document.FrontPage_Form1.TXT_fname.value = "";
+	document.FrontPage_Form1.TXT_mi.value = "";
+	document.FrontPage_Form1.TXT_lname.value = "";
+	document.FrontPage_Form1.TXT_address1.value = "";
+	document.FrontPage_Form1.TXT_address2.value = "";
+	document.FrontPage_Form1.TXT_city.value = "";
+	document.FrontPage_Form1.SEL_state.value = "0";
+	document.FrontPage_Form1.ZIP_code.value = "";
+	document.FrontPage_Form1.SEL_country.value = "0";
+	document.FrontPage_Form1.TXT_Hphone.value = "";
+	document.FrontPage_Form1.TXT_Wphone.value = "";
+	document.FrontPage_Form1.TXT_email.value = "";
+	document.FrontPage_Form1.MON_pamount.value = "";
+
+	document.FrontPage_Form1.TXT_fname.focus();
+}
+//-->
+</SCRIPT>
+
+<script language="JavaScript">
+<!-- hide contents from old browsers
+
+  var gb = false;
+
+  if 
+((navigator.userAgent.substring(0,9) == "Mozilla/3") || 
+	(navigator.userAgent.substring(0,9) == "Mozilla/4") || (navigator.userAgent.indexOf("MSIE 4.0") >= 0)) 
+
+{   gb = true;
+
+    loc1 = "../images/";
+
+    home_a = new Image();
+    home_a.src = loc1 + "homebuta.gif";
+	home_in = new Image();
+    home_in.src = loc1 + "homebut.gif";
+    
+    miss_a = new Image();
+    miss_a.src = loc1 + "missnbuta.gif";
+    miss_in = new Image();
+    miss_in.src = loc1 + "missnbut.gif";
+    
+    help_a = new Image();
+    help_a.src = loc1 + "howa.gif";
+    help_in = new Image();
+    help_in.src = loc1 + "how.gif";
+    
+    what2_a = new Image();
+    what2_a.src = loc1 + "whatbut2a.gif";
+    what2_in = new Image();
+    what2_in.src = loc1 + "whatbut2.gif";
+    
+    what_a = new Image();
+    what_a.src = loc1 + "whatbuta.gif";
+    what_in = new Image();
+    what_in.src = loc1 + "whatbut.gif";
+     
+    programs_a = new Image();
+    programs_a.src = loc1 + "progmbuta.gif";
+    programs_in = new Image();
+    programs_in.src = loc1 + "progmbut.gif";
+    
+    local_a = new Image();
+    local_a.src = loc1 + "localbuta.gif";
+    local_in = new Image();
+    local_in.src = loc1 + "localbut.gif";
+    
+    affairs_a = new Image();
+    affairs_a.src = loc1 + "govrnbuta.gif";
+    affairs_in = new Image();
+    affairs_in.src = loc1 + "govrnbut.gif";
+
+    member_a = new Image();
+    member_a.src = loc1 + "membrbuta.gif";
+    member_in = new Image();
+    member_in.src = loc1 + "membrbut.gif";
+ 
+    key_a = new Image();
+    key_a.src = loc1 + "keybuta.gif";
+    key_in = new Image();
+    key_in.src = loc1 + "keybut.gif";
+    
+    merck_a = new Image();
+    merck_a.src = loc1 + "merckbuta.gif";
+    merck_in = new Image();
+    merck_in.src = loc1 + "merckbut.gif";
+    
+    fred_a = new Image();
+    fred_a.src = loc1 + "fredbuta.gif";
+    fred_in = new Image();
+    fred_in.src = loc1 + "fredbut.gif";
+    }
+// End hide from old browsers -->
+</script>
+<SCRIPT LANGUAGE="JavaScript" RUNAT = Server>
+// ***
+// *** validateForm(): Check all required fields
+// ***
+
+var theRequiredFields = new Array(15);
+
+theRequiredFields[0] = 'Title';
+theRequiredFields[1] = 'First Name';
+theRequiredFields[2] = 'Middle Name';
+theRequiredFields[3] = 'Last Name';
+theRequiredFields[4] = 'Address 1';
+theRequiredFields[5] = 'Address 2';
+theRequiredFields[6] = 'City';
+theRequiredFields[7] = 'State/Province';
+theRequiredFields[8] = 'Zip Code';
+theRequiredFields[9] = 'Country';
+theRequiredFields[10] = 'Home Phone';
+theRequiredFields[11] = 'Work Phone';
+theRequiredFields[12] = 'E-mail address';
+theRequiredFields[13] = 'Pledge Amount';
+
+var header = "______________________________\n";
+var footer = "______________________________";
+var lookup = 0;
+
+// *** Validate main form
+function FrontPage_Form1_validateForm(f)
+{
+  msg = "";
+
+
+  // *** Check for blank mandatory demographic fields
+  var error = 0;
+  var error_number = 0;
+  var error_demographics = "Please provide the following:\n";
+
+  for (var i = 0; i < 14; i++) 
+  {
+    var theField = f.elements[i];
+
+    if (!theField.optional)
+    {
+      if (theField.name.substring(0,3) == 'TXT') 
+	  {
+        if ((theField.value == null) || (theField.value == "") || (theField.value == " "))
+        {
+          error = 1;  
+          msg = msg + "       " + theRequiredFields[i] + "\n";
+        } 
+      }
+      else if (theField.name.substring(0,3) == 'SEL') 
+	  {
+        if (theField.selectedIndex < 1) 
+        {
+          error = 1;  
+          msg = msg + "       " + theRequiredFields[i] + "\n";
+        }
+      }
+      // *** Check pamount field
+      else if (theField.name.substring(0,3) == 'MON') 
+	  {
+        if ((theField.value == null) || (theField.value == "") || (theField.value == " "))
+        {
+			error = 1;  
+			msg = msg + "       " + theRequiredFields[i] + "\n";
+        }
+        else if ((isMoney(theField)) == false)
+        {
+			error = 1;  
+			msg = msg + "       " + theRequiredFields[i] + "\n";
+		}
+      }
+      else if (theField.name.substring(0,3) == 'ZIP') 
+	  {
+		if ((theField.value == null) || (theField.value == "") || (theField.value == " "))
+		{
+			error = 1;  
+			msg = msg + "       " + theRequiredFields[i] + "\n";
+        }
+        else if ((validZip(theField)) == false)
+        {
+          error = 1;  
+          msg = msg + "       " + theRequiredFields[i] + "\n";
+        } 
+      }
+    }
+    else if (!theField.value)
+      f.elements[i].value = ' ';
+  }
+  if (error)
+    msg = msg + header;
+
+  // *** Alert the user of blank demographic fields
+  if (error)
+  {
+    alert("The following errors were encountered:\n" + header + error_demographics + msg + footer);
+    return false;
+  }
+  else
+  {
+    return true;
+  }
+}
+
+// *** Check MON_pamount field to not take space or zero
+function isMoney(theField)
+{
+	var theInput = theField.value;
+  	var theLength = theInput.length;
+	var goodChar = true;
+
+	if (theInput != "" || theInput != " ")
+	{
+		for (var i = 0; i < theLength; i++)
+		{
+			var theChar = theInput.substring(i, i+1)
+			if ((theChar < "0" || theChar > "9") && (theChar != "."))
+			{
+				theField.select();
+				theField.focus();
+				return false;
+			}
+			else if (theInput == 0)
+			{
+				theField.select();
+				theField.focus();
+				return false;
+			}
+		 }
+	}
+	else
+	{
+		for (var i = 0; i < theLength; i++)
+		{
+			var theAlpha = theInput.substring(i, i+1)
+			if ((theAlpha >= "a" || "z" >= theAlpha || theAlpha >= "A" || "Z" >= theAlpha))
+			{
+				theField.select();
+				theField.focus();
+				return false;
+			}
+		}
+	}
+	return true;
+	 
+}
+// ***Validating Zip Code
+function validZip(theField)
+{
+	var theInput = theField.value;
+	var theLength = theInput.length;
+	var goodZip = true;
+
+	if (theLength < 5)
+	{
+		goodZip = false;
+		theField.select();
+		theField.focus();
+		return false;
+	}
+	else if (theLength >= 5)
+	{
+		for (var i = 0; i < theLength; i++)
+		{
+			var theChar = theInput.substring(i,i+1)
+			if ((theChar < 0 || theChar > 9 || theChar == " " || theChar == "") && (theChar != "-"))
+			{
+				goodZip = false;
+				theField.select();
+				theField.focus();
+				return false;
+			}
+			else
+			{
+				return true;
+			}
+		}
+	}
+	else
+	{
+		return false;
+	}
+}
+</SCRIPT>
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="697">
+  <tr>
+    <td valign="top" rowspan="12" width="143"><a href="../index.htm" onmouseover="if (gb) home.src =home_a.src" onmouseout="if (gb) home.src=home_in.src"><img src="../images/homebut.gif" border="0" name="home" WIDTH="132" HEIGHT="17"></a><br>
+    <a href="../mission.htm" onmouseover="if (gb) miss.src =miss_a.src" onmouseout="if (gb) miss.src=miss_in.src"><img src="../images/missnbut.gif" border="0" name="miss" WIDTH="132" HEIGHT="17"></a><br>
+    <a href="../help.htm" onmouseover="if (gb) help.src =help_a.src" onmouseout="if (gb) help.src=help_in.src"><img src="../images/how.gif" border="0" name="help" WIDTH="132" HEIGHT="17"></a><br>
+    <a href="../whatnew2.htm" onmouseover="if (gb) what2.src =what2_a.src" onmouseout="if (gb) what2.src=what2_in.src"><img src="../images/whatbut2.gif" border="0" name="what2" WIDTH="132" HEIGHT="17"></a><br>
+    <a href="../whatnew.htm" onmouseover="if (gb) what.src =what_a.src" onmouseout="if (gb) what.src=what_in.src"><img src="../images/whatbut.gif" border="0" name="what" WIDTH="132" HEIGHT="17"></a><br>
+    <a href="../programs/programs.htm" onmouseover="if (gb) programs.src =programs_a.src" onmouseout="if (gb) programs.src=programs_in.src"><img src="../images/progmbut.gif" border="0" name="programs" WIDTH="132" HEIGHT="30"></a><br>
+    <a href="../offices/index.htm" onmouseover="if (gb) local.src =local_a.src" onmouseout="if (gb) local.src=local_in.src"><img src="../images/localbut.gif" border="0" name="local" WIDTH="132" HEIGHT="17"></a><br>
+    <a href="../affairs.htm" onmouseover="if (gb) affairs.src =affairs_a.src" onmouseout="if (gb) affairs.src=affairs_in.src"><img src="../images/govrnbut.gif" border="0" name="affairs" WIDTH="132" HEIGHT="17"></a><br>
+    <a href="../institut.htm" onmouseover="if (gb) member.src =member_a.src" onmouseout="if (gb) member.src=member_in.src"><img src="../images/membrbut.gif" border="0" name="member" WIDTH="132" HEIGHT="17"></a><br>
+    <a href="../key_off.htm" onmouseover="if (gb) key.src =key_a.src" onmouseout="if (gb) key.src=key_in.src"><img src="../images/keybut.gif" border="0" width="132" height="25" name="key"></a><p><a href="../merck/index.htm" onmouseover="if (gb) merck.src =merck_a.src" onmouseout="if (gb) merck.src=merck_in.src"><img src="../images/merckbut.gif" border="0" name="merck" WIDTH="132" HEIGHT="30"></a><br>
+    <a href="http://www.patterson-uncf.org" onmouseover="if (gb) fred.src =fred_a.src" onmouseout="if (gb) fred.src=fred_in.src"><img src="../images/fredbut.gif" border="0" name="fred" WIDTH="132" HEIGHT="43"></a></p>
+    <p><img src="trans.gif" width="141" height="1"><br>
+    <br>
+    <br></p>
+    </td>
+    <td valign="top" colspan="2" width="554"><img src="../images/logo3a.gif" align="top" WIDTH="379" HEIGHT="77"><br>
+    <img src="../images/helpbar2.gif" align="top" width="448" height="28" ></td>
+  </tr>
+  <tr>
+    <td rowspan="7" width="23"><img src="trans.gif" width="32" height="1"></td>
+    <td valign="top" width="499"><font color="#008080"><strong>(For Donating to 
+            The College Fund)</strong></font><br>
+    <img src="../images/pldgehead.gif" WIDTH="170" HEIGHT="27"> <form name="FrontPage_Form1" method="post" 
+	action="session.asp" onsubmit="
+	this.TXT_mi.optional = true;
+    this.TXT_address2.optional = true;		  
+    this.TXT_Hphone.optional = true;
+    this.TXT_Wphone.optional = true;
+    this.TXT_email.optional = true;
+    return FrontPage_Form1_validateForm(this);" 
+           >
+      <table border="0" height="576" width="497" cellspacing="2">
+        <tr>
+          <td height="26" width="180"><strong><font color="#ff0000">*</font>Title:</strong></td>
+          <td height="40" width="316"><select name="SEL_reference" size="1" maxlength  
+                        = "10">
+            <option SELECTED VALUE="0"> --- Choose One ---
+            <option value="Mrs.">Mrs.
+            <option value="Ms.">Ms.
+            <option value="Dr.">Dr.
+            <option value="Mr.">Mr.
+          </select></td>
+        </tr>
+        <tr>
+          <td height="40" width="180"><strong><font color="#ff0000">*</font>First Name: </strong></td>
+          <td height="40" width="316"><input maxlength="20" name="TXT_fname" >  
+                        </td>
+        </tr>
+        <tr>
+          <td height="40" width="180"><strong>&nbsp; Middle Initial: </strong></td>
+          <td height="40" width="316"><input size="5" maxlength="10" name="TXT_mi" ></td>
+        </tr>
+        <tr>
+          <td height="40" width="180"><strong><font color="#ff0000">*</font>Last Name: </strong></td>
+          <td height="40" width="316"><input maxlength="20" name="TXT_lname" ></td>
+        </tr>
+        <tr>
+          <td height="40" width="180"><strong><font color="#ff0000">*</font>Address 1: </strong></td>
+          <td height="40" width="316"><input size="30" maxlength="40" name="TXT_address1" ></td>
+        </tr>
+        <tr>
+          <td height="40" width="180"><strong>&nbsp; Address 2: </strong></td>
+          <td height="40" width="316"><input size="30" maxlength="40" name="TXT_address2" ></td>
+        </tr>
+        <tr>
+          <td valign="top" height="1" width="180"><strong><font color="#ff0000">*</font>City: </strong></td>
+          <td height="1" width="316"><input name="TXT_city" maxlength="40" >  
+                </td>
+        </tr>
+        <tr>
+          <td valign="top" height="28" width="180"><strong><font color="#ff0000">*</font>State/Province:</strong></td>
+          <td height="29" width="316"><select NAME="SEL_state" SIZE="1">
+            <option SELECTED VALUE="0"> --- Choose One ---
+            <option VALUE="AB">Alberta
+            <option VALUE="AK">Alaska
+            <option VALUE="AL">Alabama
+            <option VALUE="AR">Arkansas
+            <option VALUE="AZ">Arizona
+            <option VALUE="BC">British 
+                                Columbia
+            <option VALUE="CA">California
+            <option VALUE="CO">Colorado
+            <option VALUE="CT">Connecticut
+            <option VALUE="DC">District 
+                                Of Columbia
+            <option VALUE="DE">Delaware
+            <option VALUE="FL">Florida
+            <option VALUE="GA">Georgia
+            <option VALUE="GU">Guam
+            <option VALUE="HI">Hawaii
+            <option VALUE="IA">Iowa
+            <option VALUE="ID">Idaho
+            <option VALUE="IL">Illinois
+            <option VALUE="IN">Indiana
+            <option VALUE="KS">Kansas
+            <option VALUE="KY">Kentucky
+            <option VALUE="LA">Louisiana
+            <option VALUE="MA">Massachusetts
+            <option VALUE="MB">Manitoba
+            <option VALUE="MD">Maryland
+            <option VALUE="ME">Maine
+            <option VALUE="MI">Michigan
+            <option VALUE="MN">Minnesota
+            <option VALUE="MO">Missouri
+            <option VALUE="MS">Mississippi
+            <option VALUE="MT">Montana
+            <option VALUE="NB">New 
+                                Brunswick
+            <option VALUE="NC">North 
+                                Carolina
+            <option VALUE="ND">North 
+                                Dakota
+            <option VALUE="NE">Nebraska
+            <option VALUE="NF">Newfoundland
+            <option VALUE="NH">New 
+                                Hampshire
+            <option VALUE="NJ">New Jersey
+            <option VALUE="NM">New Mexico
+            <option VALUE="NS">Nova 
+Scotia
+            <option VALUE="NT">Northwest 
+                                Territories
+            <option VALUE="NV">Nevada
+            <option VALUE="NY">New York
+            <option VALUE="OH">Ohio
+            <option VALUE="OK">Oklahoma
+            <option VALUE="ON">Ontario
+            <option VALUE="OR">Oregon
+            <option VALUE="PA">Pennsylvania
+            <option VALUE="PE">Prince 
+                                Edward Island
+            <option VALUE="PR">Puerto 
+Rico
+            <option VALUE="PQ">Quebec
+            <option VALUE="RI">Rhode 
+                                Island
+            <option VALUE="SC">South 
+                                Carolina
+            <option VALUE="SD">South 
+                                Dakota
+            <option VALUE="SK">Saskatchewan
+            <option VALUE="TN">Tennessee
+            <option VALUE="TX">Texas
+            <option VALUE="UT">Utah
+            <option VALUE="VA">Virginia
+            <option VALUE="VI">Virgin 
+                                Islands
+            <option VALUE="VT">Vermont
+            <option VALUE="WA">Washington
+            <option VALUE="WI">Wisconsin
+            <option VALUE="WV">West 
+                                Virginia
+            <option VALUE="WY">Wyoming
+            <option VALUE="YT">Yukon 
+                                Territory
+            <option VALUE="Other">Other
+          </select>
+                         </td>
+        </tr>
+        <tr>
+          <td valign="top" height="1" width="173"><strong><font color="#ff0000">*</font>Zip Code:</strong></td>
+          <td height="23" width="316"><input size="15" maxlength="10" name="ZIP_code"></td>
+        </tr>
+        <tr>
+          <td valign="top" height="1" width="173"><strong><font color="#ff0000">*</font>Country:</strong></td>
+          <td width="316"><select NAME="SEL_country" size="1">
+            <option VALUE="0" selected>--- Choose One ---
+            <option VALUE="CA">Canada
+            <option VALUE="US">United 
+                                States
+          </select>
+ 
+          </td>
+        </tr>
+        <tr>
+          <td height="16" width="180"><strong>&nbsp; Home Phone: </strong><br>&nbsp; <font color="#0000ff">ex.(111 222-3333)</font></td>
+          <td height="1" width="316"><input maxlength="12" name="TXT_Hphone" ></td>
+        </tr>
+        <tr>
+          <td height="23" width="180"><strong>&nbsp; Work Phone: </strong><br>&nbsp; <font color="#0000ff">ex.(444 555-6666)</font></td>
+          <td height="23" width="316"><input maxlength="20" name="TXT_Wphone" >
+          </td>
+        </tr>
+        <tr>
+          <td height="34" width="180"><strong>&nbsp; E-mail address:</strong></td>
+          <td height="34" width="316"><input size="30" maxlength="50" name="TXT_email" ></td>
+        </tr>
+        <tr>
+          <td height="11" width="180"><strong><font color="#ff0000">*</font>Pledge Amount: </strong><br>&nbsp; <font color="#0000ff">ex.(1000.00)</font></td>
+          <td height="11" width="316"><input size="14" maxlength="13" name="MON_pamount"></td>
+        </tr>
+      </table>
+	  <p ><font color="#008080" size="4"><strong>Your pledge is deeply 
+            appreciated. 
+    </strong></font></p>
+      <div><p><font color="#ff0000"><strong>* Required Fields&nbsp; 
+            </strong></font><input type="submit" value="Submit"> <input type="reset" value=" Clear "></p>
+      </div><div align="center"><center><p>Please wait while we process your donation. 
+            </p>
+      </center></div><p><a href="mailto:webmaster@uncf.org"><strong>Questions please 
+            E-mail to UNCF webmaster@uncf.org</a></STRONG></p>
+      <hr>
+      <div align="center"><center><p><a href="pledge.htm"><img src="../images/pledgebut2.gif" border="0" WIDTH="110" HEIGHT="33"></a> <br>
+      <a href="mailto:webmaster@uncf.org"><img src="../images/commtbut.gif" border="0" WIDTH="110" HEIGHT="50"></a> </p>
+      </center></div>
+    </form>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

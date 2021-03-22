@@ -1,0 +1,139 @@
+<html>
+
+<head>
+<title>Art Award Slide Show</title>
+<script language="javascript">
+<!--
+swapping = "no"
+// -->
+</script>
+<script language="javascript1.1">
+<!--
+swapping = "yes"
+// -->
+</script>
+<script language="javascript">
+<!-- This script was written by Craig Corvin for Cut-N-Paste JavaScript (7/97). 
+
+if (swapping == "yes") {
+pict1 = new Image()
+pict1.src = "/images/ironc.jpg"
+pict2 = new Image()
+pict2.src = "/images/lizardc.jpg" 
+pict3 = new Image()
+pict3.src = "/images/summerc.jpg"
+pict4 = new Image()
+pict4.src = "/images/birdsc.jpg"
+pict5 = new Image()
+pict5.src = "/images/smilesc.jpg"
+}
+
+slides = 5
+rotations = 100
+speed = 7000
+jackie = "Jackie L\'Heureux"
+
+//document.theform.thefield.value
+
+function runit() {
+if (swapping == "yes") {
+for (x=1, y=0 ; x < (slides*rotations); x=x+slides, y=0) {
+setTimeout("document.slideshow.src = '/images/lizardc.jpg';document.display.T1.value='\"The Lizard King\"';document.display.T2.value='Karen Raymond';document.display.T3.value='Print';document.display.T4.value='Silver Key Award'",((x + y) * speed))
+y++; setTimeout("document.slideshow.src = '/images/summerc.jpg';document.display.T1.value='\"Summer Reflections\"';document.display.T2.value='Nick Fortin';document.display.T3.value='Tempera Paint';document.display.T4.value='Honorable Mention'",((x + y) * speed))
+y++; setTimeout("document.slideshow.src = '/images/birdsc.jpg';document.display.T1.value='\"Mysterious Cave\"';document.display.T2.value=jackie;document.display.T3.value='Tempera Paint';document.display.T4.value='Honorable Mention'",((x + y) * speed))
+y++; setTimeout("document.slideshow.src = '/images/smilesc.jpg';document.display.T1.value='\"Smiles\"';document.display.T2.value='Ben Pease';document.display.T3.value='Plaster Cast';document.display.T4.value='Honorable Mention'",((x + y) * speed))
+y++; setTimeout("document.slideshow.src = '/images/ironc.jpg';document.display.T1.value='\"The Iron\"';document.display.T2.value='Ben Pease';document.display.T3.value='Oil Painting';document.display.T4.value='Silver Key Award'",((x + y) * speed))
+}
+}
+}
+
+function openWindow() {
+var currentpic = document.slideshow.src
+if (currentpic.indexOf("birdsc.jpg") != -1) {
+var picurl = "images/birdsc.html"
+}
+if (currentpic.indexOf("ironc.jpg") != -1) {
+var picurl = "images/ironc.html"
+}
+if (currentpic.indexOf("lizardc.jpg") != -1) {
+var picurl = "images/lizardc.html"
+}
+if (currentpic.indexOf("smilesc.jpg") != -1) {
+var picurl = "images/smilesc.html"
+}
+if (currentpic.indexOf("summerc.jpg") != -1) {
+var picurl = "images/summerc.html"
+}
+
+if (window.remote) {
+popupWin.close()
+}
+
+  popupWin = window.open(picurl, 'remote', 'width=240,height=187')
+
+//if (window.focus) {
+//popupWin.focus();
+//}
+
+}
+
+
+// -->
+</script>
+</head>
+
+<body BGCOLOR="#000000" BACKGROUND="redblack.gif" text="#FFFFFF" vlink="#FFFFFF" link="#FFFFFF" alink="#000000" onload="runit()">
+
+<table CELLPADDING="0" CELLSPACING="0" BORDER="0" WIDTH="608">
+  <tr>
+    <td WIDTH="116" VALIGN="TOP"><p align="center"><br>
+    <a href="index.html"><strong><u>Home Page</u></strong></a></p>
+    <hr noshade color="#000000">
+    <p align="center"><a href="calendar.html"><strong><u>Calendar</u></strong></a></p>
+    <hr noshade color="#000000">
+    <p align="center"><a href="sports.html"><strong><u>Sports Schedule</u></strong></a></p>
+    <hr noshade color="#000000">
+    <p align="center"><a href="menu.html"><strong><u>Lunch Menu</u></strong></a></p>
+    <hr noshade color="#000000">
+    <p align="center"><a href="homework.html"><strong><u>Homework Listings</u></strong></a></p>
+    <hr noshade color="#000000">
+    <p align="center"><a href="news.html"><strong><u>School Newsletter</u></strong></a></p>
+    <hr noshade color="#000000">
+    <p align="center"><a href="tour.html"><strong><u>Virtual Tour</u></strong></a></p>
+    <hr noshade color="#000000">
+    <p align="center"><a href="links.html"><strong>Academic Links</strong></a></p>
+    <hr noshade color="#000000">
+    <font color="#000000" size="4"><em><a href="mailto:question@arrsd.mec.edu"><p align="center"></a><img src="email.jpg" alt="email.jpg (870 bytes)" WIDTH="36" HEIGHT="15"><br>
+    </em></font><font size="3"><strong><a href="mailto:question@arrsd.mec.edu">Email Questions
+    Comments?</a></strong></font></td>
+    <td WIDTH="20"></td>
+    <td WIDTH="472" VALIGN="top"><p align="center"><img src="banner.gif" alt="Welcome To AHS" WIDTH="462" HEIGHT="59"><br>
+    <br>
+    <strong><font face="Arial" size="4" color="#FF0000"><em>Boston Globe Art Award Slideshow</em></font></strong></p>
+    <p align="center"><a href="javascript:onclick=openWindow()"><img name="slideshow" src="/images/ironc.jpg" border="0" WIDTH="240" HEIGHT="187"></a> </p>
+    <form name="display">
+      <div align="center"><center><table border="0" width="35%">
+        <tr>
+          <td width="19%"><font face="Courier">Title: </font></td>
+          <td width="81%"><input type="text" name="T1" size="20" value="&quot;The Iron&quot;"></td>
+        </tr>
+        <tr>
+          <td width="19%"><font face="Courier">Artist:</font></td>
+          <td width="81%"><input type="text" name="T2" size="20" value="Ben Pease"></td>
+        </tr>
+        <tr>
+          <td width="19%"><font face="Courier">Medium:</font></td>
+          <td width="81%"><input type="text" name="T3" size="20" value="Oil Painting"></td>
+        </tr>
+        <tr>
+          <td width="19%"><font face="Courier">Award:</font></td>
+          <td width="81%"><input type="text" name="T4" size="20" value="Silver Key Award"></td>
+        </tr>
+      </table>
+      </center></div>
+    </form>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

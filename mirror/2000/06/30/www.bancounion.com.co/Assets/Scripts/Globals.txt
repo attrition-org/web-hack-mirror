@@ -1,0 +1,127 @@
+ //- - - DEFINICIONES DE CONSTANTES - - -
+ var MENUINFANUAL = 1;
+ //- - - DEFINICIONES DE VARIABLES - - -
+ var menuactivo1=false;//Esta variable indica si el menú "Informe Anual está activado o nó"
+ var intervalomenu1;//Para almacenar el intervalo de espera para desactivar el menú MENUINFANUAL
+//--------------------- 
+
+ function desactivarMenu(nummenu){
+  if(nummenu==MENUINFANUAL){
+    /**Hace invisibles los elementos del menú*/
+      hallaimagen("imgopinfanual1").src = "Assets/Images/imgnada.gif";
+      hallaimagen("imgopinfanual2").src = "Assets/Images/imgnada.gif";
+      hallaimagen("imgopinfanual3").src = "Assets/Images/imgnada.gif";
+      menuactivo1 = false
+  }//if
+  /**Detiene la desactivacion de menú*/
+  window.clearInterval(intervalomenu1);
+ }//function
+
+//--------------------- 
+
+function hallaimagen(nomimagen){
+//Dado el nombre de una imagen, retorna la misma del archivo actual
+ //Halla la imagen
+ for(i=0;i<document.images.length;i++)
+  if(document.images[i].name==nomimagen)
+   return document.images[i];
+ return null;
+}
+
+function modifimagen(nomimagen){
+//Dado el nombre de una imagen, modifica su archivo fuente
+ var imagen = hallaimagen(nomimagen);
+ var recurso = imagen.src;
+
+  if(nomimagen=="imgopinfanual1")
+   if(recurso.indexOf("imgOpInfoAnualbuc.jpg")!=-1)
+    imagen.src = "./assets/images/imgOpInfoAnualbuc1.jpg";
+   else
+    imagen.src = "./assets/images/imgOpInfoAnualbuc.jpg";
+
+  else if(nomimagen=="imgopinfanual2")
+   if(recurso.indexOf("imgOpInfoAnualfid.jpg")!=-1)
+    imagen.src = "./assets/images/imgOpInfoAnualfid1.jpg";
+   else
+    imagen.src = "./assets/images/imgOpInfoAnualfid.jpg";
+
+  else if(nomimagen=="imgopinfanual3")
+   if(recurso.indexOf("imgOpInfoAnualunb.jpg")!=-1)
+    imagen.src = "./assets/images/imgOpInfoAnualunb1.jpg";
+   else
+    imagen.src = "./assets/images/imgOpInfoAnualunb.jpg";
+
+  else if(nomimagen=="imginfocorp")
+   if(recurso.indexOf("imgbuc1.jpg")!=-1)
+    imagen.src = "./assets/images/imgbuc2.jpg";
+   else
+    imagen.src = "./assets/images/imgbuc1.jpg";
+
+  else if(nomimagen=="imgBancaPersonas")
+   if(recurso.indexOf("imgbanpersons1.jpg")!=-1)
+    imagen.src = "./assets/images/imgbanpersons2.jpg";
+   else
+    imagen.src = "./assets/images/imgbanpersons1.jpg";
+
+  else if(nomimagen=="imgBancaEmpresas")
+   if(recurso.indexOf("imgbanempres1.jpg")!=-1)
+    imagen.src = "./assets/images/imgbanempres2.jpg";
+   else
+    imagen.src = "./assets/images/imgbanempres1.jpg";
+
+ else if(nomimagen=="imgFidunion")
+   if(recurso.indexOf("imgfidu1.jpg")!=-1)
+    imagen.src = "./assets/images/imgfidu2.jpg";
+   else
+    imagen.src = "./assets/images/imgfidu1.jpg";
+
+ else if(nomimagen=="imgunionBank")
+   if(recurso.indexOf("imgunion1.jpg")!=-1)
+    imagen.src = "./assets/images/imgunion2.jpg";
+   else
+    imagen.src = "./assets/images/imgunion1.jpg";
+
+ else if(nomimagen=="imgcomercioexterior")
+   if(recurso.indexOf("imgcomercioexterior1.jpg")!=-1)
+    imagen.src = "./assets/images/imgcomercioexterior2.jpg";
+   else
+    imagen.src = "./assets/images/imgcomercioexterior1.jpg";
+}
+
+ /**
+ *Dado el nombre de un menú y la imagen correspondiente al mismo, escoge una acción a tomar. Nota: Esta
+ *función sólo es llamada en los eventos onMouseOver y onMouseOut, de los ancor que contienen a la imágenes
+ *el parámetro modo, corresponde al tipo de evento; true si onmouseOver; false de lo contrario
+ */
+//--------------------- 
+ function procesamenu(nommenu,nomimagen,modo){
+  var imagen;
+  if(nommenu==MENUINFANUAL){
+   if(modo){//Si el evento fué mouseover
+    /**Ya sabe cual es el menú, ahora busca la imagen a la que afectó el evento*/
+    if(nomimagen=="imginfanual"){
+    /**Hace visibles los elementos del menú*/
+     hallaimagen("imgopinfanual1").src = "./Assets/images/imgOpInfoAnualbuc.jpg";
+     hallaimagen("imgopinfanual2").src = "./Assets/images/imgOpInfoAnualfid.jpg";
+     hallaimagen("imgopinfanual3").src = "./Assets/images/imgOpInfoAnualunb.jpg";
+    }//if(nomimagen=="imginfanual"){
+    else if(menuactivo1)
+     modifimagen(nomimagen);
+     
+    /**Activa el menu*/
+    menuactivo1 = true;
+    
+    /**Detiene la desactivacion de menú*/
+    window.clearInterval(intervalomenu1);
+   }//if(modo)
+   
+   /**Si salió de cualquier imagen del menú, el mismo se desactiva luego de algún tiempo a 
+   menos que entre a otra antes de este tiempo*/
+   else{
+    if(menuactivo1)
+     modifimagen(nomimagen);
+    intervalomenu1 = window.setInterval("desactivarMenu(MENUINFANUAL)",1000);
+   }
+  }//if(nommenu==MENUINFANUAL)
+ }//function
+ 

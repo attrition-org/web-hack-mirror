@@ -1,0 +1,641 @@
+<html>
+<head>
+<title>
+28 February 2001
+Budget 2001
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="http://www.economictimes.com/today/styles1.css">
+<style type="text/css">
+<!--
+.left {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt; font-weight: bold}
+.rightdark {  font-family: Arial; font-size: 8pt }
+.text1 {  font-family: Arial, Helvetica, sans-serif; font-size: 8pt}
+.text {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt}
+.headline {  font-family: Arial, Helvetica, sans-serif; font-size: 13pt; font-weight: bold}
+-->
+</style>
+</head>
+<script language="JavaScript">
+
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+window.open(theURL,winName,features);
+}
+
+function pollwin(){
+	pollwindow=window.open("","pollwindow","status=no,resize=no,toolbar=no,scrollbars=no,width=375,height=300,maximize=null")
+}
+
+function alerter()
+{
+  alert("This is a fixed field. Value cannot be changed.");
+} 
+
+function onchangerestricted()
+{
+	alerter();
+	var temp = document.myform.elements["bas"] ;
+	temp.focus() ;
+}
+
+function validnumber(field)
+{
+	var temp=returnnumber(field);
+	if(isNaN(temp)) //bc2bc//
+	return false
+	else 
+	return true
+}
+
+function validnum(field)
+{
+var temp=field;
+if(!validnumber(field))
+	{
+		alert("Please enter numbers only");
+		temp.focus();
+		temp.value="";
+		return false ;
+	}
+else
+	{
+		return true ;
+	}
+}
+
+
+function returnnumber(fieldname) {
+var reg = ".";
+ var str=fieldname.value;
+ var rtn = str.replace(reg,"");
+ rtn = (rtn == "") ? 0 : rtn ;
+ return( rtn ) 
+ 
+}
+
+
+function onfieldchange(field)
+{	
+	if(validnum(field))
+	{
+	if(validitycheck(field))
+		{
+		}
+	}
+	
+}
+
+
+function validitycheck(field)
+{
+	var checked = false ;
+	var amt = returnnumber(field) ;
+	if (amt >= 0) 
+		checked = true;
+	else
+	{
+		alert("Amount should not be negative ");
+		field.value="" ;
+		field.focus() ;
+	}
+	return checked ;
+}
+
+function computation()
+{
+
+var a=eval(document.myform.bas.value);
+  
+var b = 0;
+
+if(a > 150000)
+{
+  b = (19000 +((a - 150000)* 0.3))*1.17;
+}
+else
+{
+  if(a > 60000)
+  {
+  b = 1120 +(a-60000)* 0.224;
+  }
+  else
+    {
+     if(a > 50000)
+      {
+        b =(a-50000)*0.1;
+      }
+     else
+      {
+       b=0;
+       alert("Annual Income should be higher than Rs.50,000 to be taxable");
+      }
+   }
+}	
+
+if((a > 60000) && (a < 60151))
+     {
+       if (b > (1000 + (a - 60000))) 
+        {
+           b = (1000 + (a - 60000)) ;  
+        }
+     }
+if((a > 150000) && (a < 151461))
+     {
+       if (b > (21280 + (a - 150000))) 
+        {
+           b = (21280 + (a - 150000)) ;  
+        }
+     }
+	document.myform.netli.value=Math.round(b);
+
+    }
+
+</script>
+<SCRIPT LANGUAGE=JavaScript>
+function popupmenu(choice)
+{
+var winOpts='toolbar=no,resize=no,titlebar=no,location=no,directories=no,status=no,scrollbars=yes,menubar=no,width=525,height=30,maximize=null';
+confirmWin=window.open(choice,'theconfirmWin',winOpts);
+window.open(choice,'theconfirmWin',winOpts);
+}
+function init()
+ {
+    if (window.loaded)
+	 {
+        return;
+   	 }
+    window.loaded = true;
+    if (document.layers)
+	 {
+        loadMenus();
+     }
+ }
+function update(page)
+{
+		   var browser = navigator.appName;
+           var version = versionNumber();
+           var the_string = browser + " " + version;
+		   if ((browser  == "Netscape" || browser == "Microsoft Internet Explorer") && (version >= 4)) 
+   		{
+var winOpts='toolbar=no,resize=no,titlebar=no,location=no,directories=no,status=no,scrollbars=no,menubar=no,width=510,height=30,maximize=null';
+ confirmWin=window.open(page,'theconfirmWin',winOpts);
+  window.open(page,'theconfirmWin',winOpts);		
+		}
+		 else
+		{
+			 return;
+		 }
+
+}
+  function versionNumber()
+		{
+        return parseFloat(navigator.appVersion)
+        }
+function formHandler(){
+	var URL = document.form.site.options[document.form.site.selectedIndex].value;
+	window.location.href = URL;
+}
+function formHandler1(form1){
+	var URL = document.form1.invest.options[document.form1.invest.selectedIndex].value;
+	window.location.href = URL;
+}
+
+</SCRIPT>
+<body bgcolor="#FFFFFF" link="#333333" vlink="#333333" alink="#333333">
+<table width="760" border="0" cellspacing="0" cellpadding="0" background="mainback5.gif" align="center">
+  <tr> 
+
+	<form action=http://203.197.64.220:88/perform/timessearch method=get>
+
+	  <td height="62" width="350"><a href="../today/pagehome.htm"><img src="TET.gif" width="274" height="26" alt="The Economic Times" border="0"></a></td>
+
+      <td width="429" height="74"> 
+        <div align="right"><img src="budget.jpg"></div>
+      </td>
+
+	
+
+    </form>  </tr>
+
+
+  </table>
+<!-- Main table starts here -->
+<table width="760" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td width="152">&nbsp;</td>
+    <td width="11">&nbsp;</td>
+    <td width="435">&nbsp;</td>
+    <td width="10">&nbsp;</td>
+    <td width="152">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="152" valign="top" bgcolor="#E2E2E2" > 
+      <table width="100%" border="0" cellspacing="2" cellpadding="2" >
+        <tr> 
+          <td height="18" class="left"><a href="../today/pagehome.htm" style="color:maroon">ET Home</a></td>
+        </tr>
+		<tr> 
+          <td height="18" class="left"><a href="pagebudget.htm" style="color:maroon">Budget Home</a></td>
+        </tr>
+
+<tr><td height="18" class="left"><a href="pagesurvey.htm" style="color:maroon">Economic Survey 2001</a></td></tr>
+<tr><td height="18" class="left"><a href="pagerail.htm" style="color:maroon">Railway Budget 2001-02</a></td></tr>
+
+<tr><td height="18" class="left">Sector Snapshots
+<a href="pageinfo.htm"><li>Infotech</li></a>
+<a href="pageauto.htm"><li>Automobile</li></a>
+<a href="pagecement.htm"><li>Cement</li></a>
+<a href="pagefarm.htm"><li>Agriculture</li></a>
+<a href="pagemedia.htm"><li>Media</li></a>
+<a href="pagefmcg.htm"><li>FMCG</li></a>
+<a href="pageoil.htm"><li>Oil & Gas</li></a>
+<a href="pagepharma.htm"><li>Pharma</li></a>
+<a href="pagefert.htm"><li>Fertiliser</li></a>
+<a href="pageroads.htm"><li>Roads</li></a>
+<a href="pagehouse.htm"><li>Housing</li></a>
+<a href="pagemetal.htm"><li>Metals</li></a>
+<a href="pagebank.htm"><li>Banking</li></a>
+<a href="pagetrans.htm"><li>Transport</li></a>
+<a href="pagefina.htm"><li>Finance</li></a>
+<a href="pageretail.htm"><li>Retail</li></a>
+<a href="pagetele.htm"><li>Telecom</li></a>
+<a href="pagepower.htm"><li>Power</li></a>
+<a href="pagetax.htm"><li>Tax</li></a>
+</td></tr>
+
+<tr> 
+          <td height="18" class="left"><a href="pageint.htm" target="_blank">Interviews</a></td>
+        </tr>
+<tr> 
+          <td height="18" class="left"><a href="pagechat.htm" target="_blank">Chat Transcripts</a></td>
+        </tr>
+
+<tr><td height="18" class="left"><a href="http://www.economictimes.com/budget2000/pagespee.htm">FM's 
+            Speech 2000</a></td>
+        </tr>
+        <tr> 
+          <td height="18" class="left"><a href="http://www.economictimes.com/budget2000/pagefina.htm">Finance 
+            Bill 2000</a></td>
+        </tr>
+        <tr> 
+          <td height="18" class="left"><a href="http://www.economictimes.com/budget2000/pagehigh.htm">Budget 
+            Highlights 2000</a></td>
+        </tr>
+   		        <tr> 
+          <td height="18" class="left"><a href="http://www.economictimes.com/budget2000/00ecosurmain.htm">Economic 
+            Survey 2000</a></td>
+        </tr>
+        <tr> 
+          <td height="18" class="left"><a href="http://www.economictimes.com/budget2000/rail00.htm">Railway 
+            Budget 2000</a></td>
+        </tr>
+		<form name=form1>
+        <tr> 
+          <td height="18" class="left">Previous Budgets<!--<li>--><font face="ariel, helvatica" size="2">
+ <select name=invest size="1" onChange=formHandler1() style="width: 150px">
+ <option >Choose Year</option>
+ <option value="http://www.finmin.nic.in/bud/bud1.htm" >1996</option>
+ <option value="http://www.nic.in/indiabudget/budget" >1997</option>
+ <option value="http://www.nic.in/indiabudget/budget98-99" >1998</option>
+ <option value="http://www.economictimes.com/budget2000/prevbud2.htm" >1999</option>
+ <option value="http://www.economictimes.com/budget2000/" >2000</option>
+
+<!--<a href="http://www.finmin.nic.in/bud/bud1.htm" target="_blank">1996</a>
+</font></li>
+<li><font face="ariel, helvatica" size="2"><a href="http://www.nic.in/indiabudget/budget" target="_blank">1997</a>
+</font></li>
+<li><font face="ariel, helvatica" size="2"><a href="http://www.nic.in/indiabudget/budget98-99" target="_blank">1998</a></font></li>
+<li><a href="http://www.economictimes.com/budget2000/prevbud2.htm"><font face="ariel, helvatica" size="2">1999</font></a></li>
+<li><font face="ariel, helvatica" size="2"><a href="http://www.economictimes.com/budget2000/">2000</a></font></li>-->
+</td>
+        </tr>
+				</form>
+	<form name=form>
+        <tr> 
+          <td height="18" class="left">Previous Surveys
+		   <select name=site size="1" onChange=formHandler() style="width: 150px">
+ <option >Choose Year</option>
+ <option value="http://www.nic.in/indiabudget/es97/welcome.html" >1996</option>
+ <option value="http://www.nic.in/indiabudget/es97-98/welcome.html" >1997</option>
+ <option value="http://www.nic.in/indiabudget/es98-99/welcome.html" >1998</option>
+ <option value="http://www.economictimes.com/budget2000/ecosur01.htm" >1999</option>
+ <option value="http://www.economictimes.com/budget2000/00ecosurmain.htm" >2000</option>
+		  
+		 <!-- <li><font face="ariel, helvatica" size="2"><a href="http://www.nic.in/indiabudget/es97/welcome.html" target="_blank">1996</a>
+</font></li>
+<li><font face="ariel, helvatica" size="2"><a href="http://www.nic.in/indiabudget/es97-98/welcome.html" target="_blank">1997</a>
+</font></li>
+<li><font face="ariel, helvatica" size="2"><a href="http://www.nic.in/indiabudget/es98-99/welcome.html" target="_blank">1998</a></font></li>
+<li><a href="http://www.economictimes.com/budget2000/ecosur01.htm"><font face="ariel, helvatica" size="2">1999</font></a></li>
+<li><font face="ariel, helvatica" size="2"><a href="http://www.economictimes.com/budget2000/00ecosurmain.htm">2000</a></font></li>--></td>
+        </tr>
+        </form>
+         <tr> 
+          <td height="18" class="left"><a href="budgloss.htm">Budget 
+            Glossary</a></td>
+        </tr>
+        <tr> 
+          <td height="18" class="left"><a href="webresource.htm">Web 
+            Resources</a></td>
+        </tr>
+        <tr> 
+          <td height="18" class="left"><a href="http://etinvest.indiatimes.com" target="_blank">BSE 
+            Quotes Live</a></td>
+        </tr>
+		
+		<tr> 
+          <td bgcolor="#c80000" height="18" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#ffffff"><b>&nbsp;&nbsp;&nbsp;ET Tax Calculator</b></font></td>
+        </tr>
+        <tr> 
+          <form name="myform">
+                  <td><font face="Arial" size="2">
+                    
+                    Taxable Income<b>&nbsp;Rs.</b>
+                    <input type="text" name="bas" size="10" onBlur="onfieldchange(this)" >
+                    <input type="button" value="Go" onClick="computation()" name="button">
+                    <br>
+                    Tax Payable&nbsp;<b>Rs.</b><br>
+                    <input type="text" name="netli" size="10" onFocus="onchangerestricted()" >
+                    <input type="reset" value="Clear" name="reset">
+                    <br>
+                    <br>
+                    </font></td>
+                </form>
+        </tr>
+        <tr> 
+          <td class="left"><a href="http://www.etinvest.com/ettax/calculator.htm" target="_blank"><b>Advanced Calculator</b></a></td>
+        </tr>
+        <tr> 
+          <td class="left"><a href="http://www.etinvest.com/budget/login.htm" target="_blank"  style="text-decoration:none"><b>Household Calculator</b><br><img src="calculator.gif" width="149" height="30"></a></td>
+        </tr>
+		<tr> 
+          <td height="18" class="left"><a href="http://www.etinvest.com/ettax/index.html" target="_blank">Tax 
+            Centre</a>
+			</td>
+        </tr>
+		<tr> 
+          <td height="18" class="left"><a href="pagegraph.htm">Tax Graphs</a>
+			</td>
+        </tr>
+		
+		<tr><td height="18" align="center"><br><font  color="Maroon" size="-2" face="arial,Helvetica Narrow">Create your personalised ticker to track your stock on budget</font><br><a href="http://www.etinvest.com/ETTICKER.ZIP"><img align="middle" src="ticker.gif" width="100" height="57" alt="" border="0"></a><br><font size="-2" face="arial,Helvetica Narrow"><a href="http://www.etinvest.com/downloadhelp.htm" target="_blank">How to download ( Help )</a></font></td></tr>
+      </table>
+    </td>
+    <td width="11" height="457">&nbsp;</td>
+
+<td width="435" valign="top" height="457"> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td valign="top"><img src="mamspk.gif" width="434" height="100"></td></tr>
+
+<tr><td>&nbsp;</td></tr>
+
+<tr><td><span class="maroon">
+Wednesday
+28 February 2001
+</span><hr></td></tr>
+       
+<tr><td bgcolor="#336600" height="27"><center><font color="#FFFFFF" face="Arial, Helvetica, sans-serif" size="3"><b>COUNTDOWN TO BUDGET 2001</b></font></center></td></tr>
+
+        <tr><td>&nbsp;</td></tr>
+<!--Global View-->
+<tr><td><center><img src="graph27.gif" border="1"></center><br></td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+cbud01.htm
+" target="_top" style="color:maroon">
+Will the PC become a household name?
+</a></span><br><font size=2 face=arial>
+<font face="arial, helvetica, sans-serif" size="2"><img src=bn01.gif align=left>
+WILL the personal computer, which has come a long way from its heyday in the 90s to become the internet access device of choice, be able to compete with colour TVs in Indian households? The answer is no, unless the finance minister, in a rather magnanimous mood, decides to give a largesse in waiving off all duties and taxes on the PC.
+<tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+cbud02.htm
+" target="_top" style="color:maroon">
+Lower duty rates, lifting of QRs worry liquor cos
+</a></span><br><font size="2" face="arial"><img src=cbud02.gif align=right>
+IN ALL likelihood, your tipple may bring you greater cheer at sundown on budget day. There is a whiff in the air that duties on foreign brands of liquor will be brought down, which could be followed by Quantitative Restrictions on the import of foreign liquor being lifted. 
+</font></td></tr>        <tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+cbud03.htm
+" target="_top" style="color:maroon">
+Hotel industry wants expenditure tax lifted
+</a></span><br><font size="2" face="arial">
+DESPITE being ignored by the ministry of finance for past four years, the tourism and hospitality industry hopes to find a positive mention in the budget this year. Natural calamities, coupled with economic slowdown, may force the government to look at the potential of the service industry. 
+</font></td></tr>        <tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+cbud04.htm
+" target="_top" style="color:maroon">
+Poor demand, cheap imports hit engg units
+</a></span><br><font size="2" face="arial"><img src=cbud04.gif align=left>
+THE INDIAN engineering industry is going through a depressed phase. Demand growth in the sector has already turned negative and order books are drying up fast.
+</font></td></tr>        <tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=381 colspan="2" align="center"></td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+cbud05.htm
+" target="_top" style="color:maroon">
+Weak public finance to cast shadow on rating outlook
+</a></span><br><font size="2" face="arial">
+THE FM won’t like this. Two of the three international rating agencies that rate India have decided to have a `stable’ rather than a `positive’ outlook on India’s sovereign rating. Now, the third is also having second thoughts on retaining its `positive’ outlook.   
+</font></td></tr>        <tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+cbud06.htm
+" target="_top" style="color:maroon">
+Future of SSIs hinges on Budget pronouncements
+</a></span><br><font size="2" face="arial"><img src=cbud06.gif align=right>
+THE BUDGET ‘01-02 may prove to be a watershed in the history of the small scale industry. The future of the sector could hinge of the pronouncements of the finance minister.
+</font></td></tr>        <tr><td>&nbsp;</td></tr>
+<tr valign=top><td width=100%><span class="headline"><a href="
+cbud07.htm
+" target="_top" style="color:maroon">
+Admen pray for easy ride this year  
+</a></span><br><font size="2" face="arial">
+EVERYTHING is contagious in this global village we inhabit. They say that if the US economy catches a cold then the rest of the world sneezes. Similarly, if advertisers across industries burn with a fever, then ad agencies need to be taken to the doctor for a cash transfusion. 
+</font></td></tr>        <tr><td>&nbsp;</td></tr>
+<!---this is new-->
+<!--till here-->
+<tr><td>&nbsp;</td></tr>
+		
+<tr><td align="right"><span class="text"><b><a href="pagebupda.htm" style="color:maroon">More Updates</a></b></span></td></tr>
+
+      </table>
+            </td>
+    <td width="10" height="457">&nbsp;</td>
+    <td width="152" valign="top" height="457"> 
+<table width="100%" border="0" cellspacing="2" cellpadding="2">
+        <tr> 
+          <td> 
+            <table width="100%" border="0" cellspacing="1" cellpadding="1" bordercolor="" bgcolor="">
+              <tr> 
+                <td class="rightdark"> 
+                  <div align="center"><b>
+									<img src="b&y13.gif" width="152" height="276" alt="" border="0">	
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+		<tr><td><TABLE border=1 borderColor=#cccccc cellPadding=2 cellSpacing=0>
+        <TR><TD bgColor=#cccccc><center><b><font face="Arial, Helvetica, sans-serif" size="2" color="#000000">Budget Poll</font></b><br></TD></TR>
+        <TR><TD><span class="eight"><center>Are budget initiatives sufficient to pull the Railways out of the red?</span><br>
+                          <span class="ten"><font color="#990000"><b><a href="budpoll.html" onClick="pollwin()" target="pollwindow" style="color:#990000">Vote</a></b></font> 
+                          </span></center></TD></TR> </TABLE></td></tr>
+        <tr> 
+          <td height="10"></td>
+        </tr>
+		<tr> 
+          <td> 
+            <table width="100%" border="1" cellspacing="0" cellpadding="0" bordercolor="#336600" bgcolor="F1f1f1">
+              <tr> 
+                <td class="rightdark" align="center"><a href="mailto:etbudget@indiatimes.com"><img src="http://www.economictimes.com/Budgetcountdown/icra1.gif" border=0> 
+            </a>ICRA experts answer your queries related to the Budget                  
+                  </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td height="10"></td>
+        </tr>
+		
+<!--        <tr> 
+          <td> 
+            <table width="100%" border="1" cellspacing="0" cellpadding="0" bordercolor="#336600" bgcolor="D9EDC3">
+              <tr> 
+                <td class="rightdark" > 
+                  <div align="center"><b>INTERVIEW</b><br>
+                    <br>
+                    <img src="sinha.jpg" width="42" height="44" align="left">Yashwant 
+                    Sinha <br>
+                    Finance Minister</div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td height="10"></td>
+        </tr>
+        <tr> 
+          <td> 
+            <table width="100%" border="1" cellspacing="0" cellpadding="0" bordercolor="#336600" bgcolor="#ECF5E0">
+              <tr> 
+                <td height="65" class="rightdark"> 
+                  <div align="center"><b>INDIATIMES 
+                    CHAT</b><br>
+                    Transcript <br>
+                     <li> 
+                      <div align="left">Anand Rathi&nbsp;&nbsp;</div>
+                    </li>
+                    <li> 
+                      <div align="left">Sameer Arora</div>
+                    </li>
+                    <li> 
+                      <div align="left">Kiran Karnik</div>
+                    </li>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td height="10"></td>
+        </tr>-->
+        <tr> 
+          <td> 
+            <table width="100%" border="1" cellspacing="0" cellpadding="0" bordercolor="#cccccc">
+              <tr> 
+                <td class="rightdark" bgcolor="#cccccc"> 
+                  <div align="center"><b>BUDGET 
+                    WISHLIST </b><br></td></tr>
+<tr><td class="rightdark"><ul>                    <li> 
+                      <div align="left"><a href="cii.htm"><font color="#000000">CII</font></a></div>
+                    </li>
+                    <li> 
+                      <div align="left"><a href="ficci.htm"><font color="#000000">FICCI</font></a></div>
+                    </li>
+					<li> 
+                      <div align="left"><a href="nasscom.htm"><font color="#000000">NASSCOM</font></a></div>
+                    </li>
+					<li> 
+                      <div align="left"><a href="acma.htm"><font color="#000000">ACMA</font></a></div>
+                    </li>
+                  </div>
+					<li> 
+                      <div align="left"><a href="hardware.htm"><font color="#000000">MAIT</font></a></div>
+                    </li>
+<li> 
+                      <div align="left"><a href="siam.htm"><font color="#000000">SIAM</font></a></div>
+                    </li>
+                    <li> 
+                      <div align="left"><a href="pageothers.htm"><font color="#000000">Others</font></a></div>
+                    </li>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td height="10"></td>
+        </tr>
+		<tr> 
+          <td> 
+            <table width="100%" border="1" cellspacing="0" cellpadding="0" bordercolor="#cccccc">
+              <tr> 
+                <td bgcolor="#cccccc" class="rightdark"> 
+<b><div align="center"><a href="pageedit.htm">EDITORIALS</div></b></td></tr>                    
+<tr><td class="rightdark"><ul>
+<li>B plus report</li>
+<li>Crunch time for states</li>
+<li>Feel-good taxation</li>
+<li>Package it right</a></li>
+<li>Drop it</a></li>
+                  </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+		
+		<tr> 
+          <td height="10"></td>
+
+        </tr>
+		
+		<tr><td class="rightdark" bgcolor="#cccccc">
+		  <a href="#" onMouseDown="MM_openBrWindow('chatsche.htm','','scrollbars=yes,width=500,height=450')"><CENTER><b>Chat Schedule</b></CENTER></a></tr>
+		
+		</tr>
+<!--		<tr> 
+          <td> 
+            <table width="100%" border="1" cellspacing="0" cellpadding="0" bordercolor="#336600" bgcolor="F1f1f1">
+              <tr> 
+                <td height="52" class="rightdark"> 
+                  <img src="dummy.jpg" align="left"><b><a href="budgloss.htm">KNOW YOUR BUDGET</a></b>                    
+                  </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+       <tr> 
+          <td height="10"></td>
+        </tr>-->
+		
+		
+        <tr> 
+          <td class="left"><a href="pagebecon.htm">Economists' 
+            Corner</a></td>
+        </tr>
+        <tr> 
+          <td class="left"><a href="http://ichat.dhakdhak.com:4080/mb/user/login.html">Message 
+            Board</a></td>
+        </tr>      </table>
+ <tr><td bgcolor="e2e2e2" align="center"><a href="#top"><img src="../dmd/images/top.gif" width="13" height="13" border="0"></a><br></td><td bgcolor="#AD0000"  align="center" colspan="4"><font face="Arial, helvetica" size="-1" color="White"><b> I&nbsp;n&nbsp;d&nbsp;i&nbsp;a&nbsp;'&nbsp;s&nbsp;&nbsp;N&nbsp;o&nbsp;1&nbsp;&nbsp;B&nbsp;u&nbsp;s&nbsp;i&nbsp;n&nbsp;e&nbsp;s&nbsp;s&nbsp;&nbsp;N&nbsp;e&nbsp;w&nbsp;s&nbsp;p&nbsp;a&nbsp;p&nbsp;e&nbsp;r</b></font></td></tr>
+    </td>
+  </tr>
+</table>
+<br>
+<script language=javascript src=http://www.indiatimes.com/footerown.js></script><table border=0 cellpadding=4 cellspacing=0 width=768><tr><td align=center><font face=arial size="-2" color=#000000>Copyright © 2000 Times Internet Limited. All rights reserved.&nbsp;|&nbsp;<a href="http://www.indiatimes.com/terms/tou.html" target="_top">Terms of Use</a>&nbsp;|&nbsp;<a href="../feedback/feedback.htm" target="_top">Feedback</a>&nbsp;|&nbsp;<a href="../today/sitemap.htm" target="_top">Sitemap</a></font></td></tr></table>
+
+</body>
+</html>
+

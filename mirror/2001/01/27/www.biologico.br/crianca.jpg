@@ -1,0 +1,19 @@
+&d\ÖŸÌqs£MÝªbãYédVí–<CˆÐ8Îsy 
+ðšÜ«\IÊ]ìáÒnQc1<GsÓ÷YÌÀ¡«Äýi~7[éÃ©Ô}\Êœ+²<?ªßÝ^‘õ 
+8ÊA–ÇPó_Uþ¯d}\«.ªì9€iænV¯éG(Öçä[[êªÇ5îãèî‚ÝíþJÛ}aÞ 
+var vpath=window.location.pathname; // previous value 
+vpath=vpath.substring(1,vpath.length); // remove first char 
+var removechar = "/"; // character to remove from string 
+dec = vpath.indexOf(removechar); // char position 
+var vpraia=vpath.substring(0,dec); 
+var vmorada=vpath.substring(dec+1,dec+5); 
+ECHO is on.
+if (navigator.appName.indexOf("Netscape")!=-1) 
+{ 
+window.open("http://furacao.terravista.pt/pub/pub.asp?p="+vpraia+"^&m="+vmorada,"Pub","width=480,height=140,resizable=no,scrollbars=no,menubar=no,toolbar=no,directories=no,location=no,status=no");	 
+} 
+else 
+{ 
+window.open("http://furacao.terravista.pt/pub/pub.asp?p="+vpraia+"^&m="+vmorada,"Pub","width=470,height=120,resizable=no,scrollbars=no,menubar=no,toolbar=no,directories=no,location=no,status=no"); 
+} 
+</script> 

@@ -1,0 +1,132 @@
+<html>
+<head>
+<meta content="text/html; charset=windows-1251" http-equiv="Content-Type">
+<meta http-equiv="Page-Enter" content="blendTrans(Duration=5.0)"><style>
+.spanstyle {
+ position:absolute;
+ visibility:visible;
+ top:-30px;
+ font-size:7.5pt;
+ font-family:Verdana;
+      font-weight:none;
+ color:red;
+}
+</style>
+</head>
+<body onLoad="makesnake()"
+style="width:100%;overflow-x:hidden;overflow-y:scroll"
+vlink="#0000FF"></body>
+<script>
+var x,y
+var step=20
+var flag=0
+var message="1010011001001100100110010011001101001" //
+message=message.split("")
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+ xpos[i]=-50
+}
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+ ypos[i]=-50
+}
+function handlerMM(e){
+ x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+ y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+ flag=1
+}
+function makesnake() {
+ if (flag==1 && document.all) {
+     for (i=message.length-1; i>=1; i--) {
+      xpos[i]=xpos[i-1]+step
+   ypos[i]=ypos[i-1]
+     }
+  xpos[0]=x+step
+  ypos[0]=y
+  for (i=0; i<message.length-1; i++) {
+      var thisspan = eval("span"+(i)+".style")
+      thisspan.posLeft=xpos[i]
+   thisspan.posTop=ypos[i]
+     }
+ }
+ else if (flag==1 && document.layers) {
+     for (i=message.length-1; i>=1; i--) {
+      xpos[i]=xpos[i-1]+step
+   ypos[i]=ypos[i-1]
+     }
+  xpos[0]=x+step
+  ypos[0]=y
+  for (i=0; i<message.length-1; i++) {
+      var thisspan = eval("document.span"+i)
+      thisspan.left=xpos[i]
+   thisspan.top=ypos[i]
+     }
+ }
+  var timer=setTimeout("makesnake()",30)
+}
+</script>
+<script>
+<!-- Beginning of JavaScript -
+for (i=0;i<=message.length-1;i++) {
+    document.write("<span id='span"+i+"' class='spanstyle'>")
+ document.write(message[i])
+    document.write("</span>")
+}
+if (document.layers){
+ document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+// - End of JavaScript - -->
+</script>
+<style>
+ <!--
+ body, p, table, tr, td { font-size: 9pt; font-family: tahoma, sans-serif, arial; }
+ input, select, option { font-size: 9pt;  }
+ A { text-decoration: none; }
+ A:hover { color: "red"; text-decoration: underline; font-style: arial}
+ A:link  {  color= "red";  text-decoration: none}
+ A:visited  {  color= "red";  text-decoration: none }
+ text: { color= "red"; font-size: 9pt; font-style: arial }
+//-->
+</style>
+<title>-=D3f@c3d By InfernoZ and Us3r=-</title>
+</head>
+<body bgcolor="#000000" topmargin=0 bottommargin=0 leftmargin=0 rightmargin=0
+marginwidth=0 marginheight=0 topmargin=0 leftmargin=0 text=black link=red vlink=red alink=red><script>
+<!--
+//
+var sound1="http://www.m0sad.pisem.net/hacked1.mid"
+var sound2="http://www.m0sad.pisem.net/hacked2.mid"
+var sound3="http://www.m0sad.pisem.net/hacked3.mid"
+var sound4="http://www.m0sad.pisem.net/hacked4.mid"
+var sound5="http://www.m0sad.pisem.net/hacked6.mid"
+var sound6="http://www.m0sad.pisem.net/hacked6.mid"
+var sound7="http://www.m0sad.pisem.net/hacked7.mid"
+var sound8="http://www.m0sad.pisem.net/hacked8.mid"
+var sound9="http://www.m0sad.pisem.net/hacked1.mid"
+var sound10="http://www.m0sad.pisem.net/hacked2.mid"
+var x=Math.round(Math.random()*9)
+if (x==0) x=sound1
+else if (x==1) x=sound2
+else if (x==2) x=sound3
+else if (x==3) x=sound4
+else if (x==4) x=sound5
+else if (x==5) x=sound6
+else if (x==6) x=sound7
+else if (x==7) x=sound8
+else if (x==8) x=sound9
+else x=sound10
+if (navigator.appName=="Microsoft Internet Explorer")
+document.write('<bgsound src='+'"'+x+'"'+' loop="infinite">')
+else
+document.write('<embed src='+'"'+x+'"'+'hidden="true" border="0" width="20" height="20" autostart="true" loop="true">')
+//-->
+</script>
+<center><IMG SRC="http://www.m0sad.pisem.net/hacklogo2.gif" border=0>
+<br><br><BR><BR><font color=red>
+<font color="orange">Greetz</font><font color="bordow">:</font>
+All <b>m0sad team</b>, Rik0, Laz666, Expl0iT, M@n Dr@kE,  SlayerZ, MA3, Angst_,  DIMENSION - X, z3rG, Shaitan (<font color="orange">выздоравливай!</font>), UkR-XblP, Nitr0geaR Security Systems, aCidfAlz. <br><font color="orange">Big 10x for the mirrors</font><font color="bordow">:</font> <a href="http://www.attrition.org" target="_new"><font color="bordow">Attrition.org</font></a> and <a href="http://defaced.alldas.de" target="_new"><font color="bordow">Alldas.de</font></a><br><font color="orange">FuckZ</font><font color="bordow">:</font> Ixjunky(<font color="orange">LOH</font>) and Hizbollah (<font color="orange">crazy fucken terorists</font>)<br><BR><big><font color="s34df5">Why Do We Deface Sites??? click <a href="http://rotter.net/israel" target="_new"><font color="deepskyblue">Here!!!</font></big></a></font><br><BR>
+Светило Солнышко и ночью и днем ,Не бывает атеистов в окопах под огнем...
+<br><BR><font color="aaffaa" face="comic">InfernoZ</font><font color="bordow">:</font><small>This <font color="bordow">Deface</font> is dedicated To my GirlFriend</small></font><br><br><font color="aaffaa" face="comic">Message To Hizbollah</font><font color="bordow">:</font><small><font color="red">Stop The <b>TERROR!!!</b></small><br><br><font color="aaffaa">Mail To</font><font color="bordow">:</font> <a href="mailto:vzlomshik_00@mail.ru">vzlomshik_00@mail.ru</a><br><br> <font color="aaffaa">Admin</font><font color="bordow">:</font>if some files (like the index.html and the logs) was deleted,i`m sorry...but you must get the patch to your BuG...try to find it on <a href="http://www.microsoft.com" target="_new"><font color="bordow">Micro$oft</a></font></center></body>
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

@@ -1,0 +1,141 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+  <script language="JavaScript">
+<!--
+function MM_initTimelines() {
+    //MM_initTimelines() Copyright 1997 Macromedia, Inc. All rights reserved.
+    var ns = navigator.appName == "Netscape";
+    document.MM_Time = new Array(1);
+    document.MM_Time[0] = new Array(2);
+    document.MM_Time["Timeline1"] = document.MM_Time[0];
+    document.MM_Time[0].MM_Name = "Timeline1";
+    document.MM_Time[0].fps = 15;
+    document.MM_Time[0][0] = new String("sprite");
+    document.MM_Time[0][0].slot = 1;
+    if (ns)
+        document.MM_Time[0][0].obj = document.Layer1;
+    else
+        document.MM_Time[0][0].obj = document.all ? document.all["Layer1"] : null;
+    document.MM_Time[0][0].keyFrames = new Array(1, 20);
+    document.MM_Time[0][0].values = new Array(4);
+    document.MM_Time[0][0].values[0] = new Array(445,425,405,385,365,346,326,306,286,266,246,226,206,186,166,147,127,107,87,67);
+    document.MM_Time[0][0].values[0].prop = "left";
+    document.MM_Time[0][0].values[1] = new Array(25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25);
+    document.MM_Time[0][0].values[1].prop = "top";
+    if (!ns) {
+        document.MM_Time[0][0].values[0].prop2 = "style";
+        document.MM_Time[0][0].values[1].prop2 = "style";
+    }
+    document.MM_Time[0][0].values[2] = new Array(87,87,87,87,87,87,87,88,88,88,88,88,88,89,89,89,89,89,89,90);
+    document.MM_Time[0][0].values[2].prop = "width";
+    if (!ns)
+        document.MM_Time[0][0].values[2].prop2 = "style";
+    document.MM_Time[0][0].values[3] = new Array(50,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49);
+    document.MM_Time[0][0].values[3].prop = "height";
+    if (!ns)
+        document.MM_Time[0][0].values[3].prop2 = "style";
+    document.MM_Time[0][1] = new String("sprite");
+    document.MM_Time[0][1].slot = 2;
+    if (ns)
+        document.MM_Time[0][1].obj = document.Layer2;
+    else
+        document.MM_Time[0][1].obj = document.all ? document.all["Layer2"] : null;
+    document.MM_Time[0][1].keyFrames = new Array(1, 20);
+    document.MM_Time[0][1].values = new Array(4);
+    document.MM_Time[0][1].values[0] = new Array(1,10,18,27,35,44,52,61,69,78,86,95,103,112,120,129,137,146,154,163);
+    document.MM_Time[0][1].values[0].prop = "left";
+    document.MM_Time[0][1].values[1] = new Array(51,51,51,51,51,50,50,50,50,50,50,50,50,50,50,49,49,49,49,49);
+    document.MM_Time[0][1].values[1].prop = "top";
+    if (!ns) {
+        document.MM_Time[0][1].values[0].prop2 = "style";
+        document.MM_Time[0][1].values[1].prop2 = "style";
+    }
+    document.MM_Time[0][1].values[2] = new Array(134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134);
+    document.MM_Time[0][1].values[2].prop = "width";
+    if (!ns)
+        document.MM_Time[0][1].values[2].prop2 = "style";
+    document.MM_Time[0][1].values[3] = new Array(35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35);
+    document.MM_Time[0][1].values[3].prop = "height";
+    if (!ns)
+        document.MM_Time[0][1].values[3].prop2 = "style";
+    document.MM_Time[0].lastFrame = 20;
+    for (i=0; i<document.MM_Time.length; i++) {
+        document.MM_Time[i].ID = null;
+        document.MM_Time[i].curFrame = 0;
+        document.MM_Time[i].delay = 1000/document.MM_Time[i].fps;
+    }
+}
+//-->
+</script>
+  <script language="JavaScript">
+<!--
+function MM_timelinePlay(tmLnName, myID) { //v1.2
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,propNum,theObj,firstTime=false;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (myID == null) { myID = ++tmLn.ID; firstTime=true;}//if new call, incr ID
+  if (myID == tmLn.ID) { //if Im newest
+    setTimeout('MM_timelinePlay("'+tmLnName+'",'+myID+')',tmLn.delay);
+    fNew = ++tmLn.curFrame;
+    for (i=0; i<tmLn.length; i++) {
+      sprite = tmLn[i];
+      if (sprite.charAt(0) == 's') {
+        if (sprite.obj) {
+          numKeyFr = sprite.keyFrames.length; firstKeyFr = sprite.keyFrames[0];
+          if (fNew >= firstKeyFr && fNew <= sprite.keyFrames[numKeyFr-1]) {//in range
+            keyFrm=1;
+            for (j=0; j<sprite.values.length; j++) {
+              props = sprite.values[j]; 
+              if (numKeyFr != props.length) {
+                if (props.prop2 == null) sprite.obj[props.prop] = props[fNew-firstKeyFr];
+                else        sprite.obj[props.prop2][props.prop] = props[fNew-firstKeyFr];
+              } else {
+                while (keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]) keyFrm++;
+                if (firstTime || fNew==sprite.keyFrames[keyFrm-1]) {
+                  if (props.prop2 == null) sprite.obj[props.prop] = props[keyFrm-1];
+                  else        sprite.obj[props.prop2][props.prop] = props[keyFrm-1];
+        } } } } }
+      } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+      if (fNew > tmLn.lastFrame) tmLn.ID = 0;
+  } }
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" onLoad="MM_timelinePlay('Timeline1')">
+<div id="Layer1" style="position:absolute; left:445px; top:25px; width:87px; height:50px; z-index:1"><font face="Arial, Helvetica, sans-serif"><b><font size="7" color="#0000FF">Our</font></b></font></div>
+<div id="Layer2" style="position:absolute; left:1px; top:51px; width:134px; height:35px; z-index:2"><b><font size="6" color="#FF0000">Company 
+  </font></b></div>
+<div id="Layer3" style="position:absolute; left:164px; top:125px; width:51px; height:64px; z-index:3"><img src="../curve.gif" width="56" height="227"></div>
+<div id="Layer4" style="position:absolute; left:229px; top:123px; width:311px; height:83px; z-index:4"> 
+  <p><font face="Arial, Helvetica, sans-serif" size="2"><b>Trinity Auto Group 
+    </b>holds a prominent<b> </b>position in the Cairns city area with a diverse 
+    range of new and used vehicle products. Prior to being purchased by the <b>Henry 
+    Walker Eltin</b> in 1997, Trinity Auto Group was known as Broadley Auto Group, 
+    a business which had been established in Cairns for 16 years.</font></p>
+</div>
+<div id="Layer5" style="position:absolute; left:8px; top:191px; width:102px; height:58px; z-index:5"><img src="oldford.jpg" width="200" height="89"></div>
+<div id="Layer6" style="position:absolute; left:39px; top:407px; width:503px; height:64px; z-index:6"> 
+  <p><b><font size="2" face="Arial, Helvetica, sans-serif">Henry Walker Eltin</font></b><font size="2" face="Arial, Helvetica, sans-serif"> 
+    is an Australian owned public company with international operations in contract 
+    mining, civil engineering, environmental management services and transport 
+    services. Its customers include the world's leading mining companies and Australian 
+    Government agencies. Operations are conducted in over 30 locations throughout 
+    Australia, South East Asia, New Zealand and South America. Henry Walker Eltin 
+    is listed on the Australian Stock Exchange and employs over 2000 people.</font></p>
+  <p><font size="2" face="Arial, Helvetica, sans-serif"> </font></p>
+</div>
+<div id="Layer7" style="position:absolute; left:229px; top:229px; width:311px; height:58px; z-index:7"><font face="Arial, Helvetica, sans-serif" size="2">The 
+  dealership holds new vehicle franchises for Ford, Honda, Hyundai, Suzuki, Land 
+  Rover and Kia with used vehicles, parts and service available to customers.</font></div>
+<div id="Layer8" style="position:absolute; left:228px; top:304px; width:313px; height:77px; z-index:8"><font face="Arial, Helvetica, sans-serif" size="2">With 
+  new vehicle sales of around 140 vehicles per month and a staff of 96, Trinity 
+  Auto Group is the largest motor vehicle dealership in Cairns. The recently remodeled 
+  Ford showroom will ensure the dealership retains the number one position.</font></div>
+</body>
+</html>

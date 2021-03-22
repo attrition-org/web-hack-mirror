@@ -1,0 +1,239 @@
+<!-- Area:signup CGI:signup Step:step_1.txt Partner:freeservers.com Template:signup.html -->
+<HTML>
+<HEAD>
+<TITLE>Freeservers.com -- Sign-up</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="stylesheet" HREF="/fs_img/freeservers.css" TYPE="TEXT/CSS">
+<STYLE TYPE="TEXT/CSS">
+<!--
+-->
+</STYLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000099" LINK="#000099" VLINK="#000099" ALINK="#000099">
+<TABLE WIDTH="99%" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+  <TR> 
+    <TD> 
+      <TABLE WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+        <TR> 
+          <TD BGCOLOR="#3366CC" VALIGN="MIDDLE" ALIGN="LEFT"><IMG SRC="/fs_img/fs2/freeserverslogo2.gif" WIDTH="220" HEIGHT="48" VSPACE="5" HSPACE="11"> 
+          </TD>
+          <TD BGCOLOR="#3366CC" VALIGN="BOTTOM" WIDTH="1%"> 
+            <TABLE WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+              <TR VALIGN="BOTTOM"> 
+                <TD BGCOLOR="#000099" VALIGN="BOTTOM" ALIGN="LEFT"><IMG SRC="/fs_img/fs2/bigcurve.gif" WIDTH="31" HEIGHT="32"></TD>
+                <TD BGCOLOR="#000099" ALIGN="RIGHT" VALIGN="BOTTOM"> 
+                  <TABLE WIDTH="100%" BORDER="0" CELLSPACING="1" CELLPADDING="0">
+                    <TR ALIGN="RIGHT" VALIGN="BOTTOM"> 
+                      <TD><IMG SRC="/fs_img/fs2/work_rev_icon.gif" WIDTH="23" HEIGHT="23" HSPACE="5" ALIGN="ABSMIDDLE"></TD>
+                      <TD NOWRAP WIDTH="1%"><SPAN CLASS="areatitle">Sign-up </SPAN></TD>
+                    </TR>
+                  </TABLE>
+                </TD>
+                <TD BGCOLOR="#000099" CLASS="areatitle" WIDTH="1%"><IMG SRC="/fs_img/fs2/spacer.gif" WIDTH="30" HEIGHT="28"></TD>
+              </TR>
+            </TABLE>
+          </TD>
+        </TR>
+      </TABLE>
+    </TD>
+  </TR>
+  <TR> 
+    <TD BGCOLOR="#000099"><IMG SRC="/fs_img/fs2/spacer.gif" WIDTH="30" HEIGHT="10"></TD>
+  </TR>
+  <TR> 
+    <TD BGCOLOR="#000099"> 
+
+      <TABLE WIDTH="100%" BORDER="0" CELLSPACING="3" CELLPADDING=5>
+        <TR VALIGN="TOP" BGCOLOR="#FFFFFF"> 
+          <TD VALIGN="TOP"><!-- include -- Partner "freeservers.com" -- File "signup/step_1.txt" -->
+<FORM METHOD="post">
+<INPUT TYPE=hidden NAME=my_action VALUE=get_subdomain>
+  <TABLE WIDTH="100%" BORDER="0" CELLSPACING="5" CELLPADDING="0">
+
+    <TR> 
+
+      <TD> 
+
+        <TABLE WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="3">
+
+          <TR> 
+
+            <TD
+COLSPAN="2"><B> </B></TD>
+
+          </TR>
+
+
+          <TR BGCOLOR="CCCCEB"> 
+
+            <TD COLSPAN="2"><B> <FONT FACE="Arial,Helvetica" COLOR="000099" SIZE="2">Select 
+              a domain name </FONT></B></TD>
+
+          </TR>
+
+        </TABLE>
+
+      </TD>
+
+    </TR>
+
+  </TABLE>
+
+  <TABLE WIDTH="100%" BORDER="0" CELLSPACING="5" CELLPADDING="5">
+
+    <TR> 
+      <TD> 
+        <UL>
+          <LI><FONT FACE="Arial,Helvetica" COLOR="#000099" SIZE="2"><B>Option 
+            1 - Free Domain -<FONT FACE="Arial,Helvetica" COLOR="000099" SIZE="2"><BR>
+            </FONT></B>Choose from one of our many free domain name options.</FONT></LI>
+        </UL>
+      </TD>
+
+    </TR>
+
+  </TABLE>
+
+  
+  <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="4" WIDTH="100%">
+    <TR> 
+      <TD ALIGN="left" WIDTH="20"><IMG SRC="/cgi-bin/image/images/0.gif" WIDTH="20" HEIGHT="1"></TD>
+      <TD ALIGN="left" BGCOLOR="#E7E7F7" WIDTH=100%> <FONT SIZE=3> 
+        </FONT> 
+        <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0">
+          <TR> 
+            <TD ALIGN="RIGHT"><FONT FACE="Arial,Helvetica" COLOR="#000099" SIZE="2">ie 
+              yourname</FONT></TD>
+            <TD><FONT FACE="Arial,Helvetica" COLOR="#000099" SIZE="2">.freeservers.com</FONT></TD>
+          </TR>
+          <TR> 
+            <TD ALIGN="RIGHT"> 
+              <INPUT TYPE=text NAME=subdomain VALUE="" SIZE=20>
+            </TD>
+            <TD><B><FONT COLOR=#000099 FACE=Arial,Helvetica>.</FONT></B> 
+              <FONT SIZE=3>
+<SELECT NAME=partner_domain>
+  <OPTION>freeservers.com
+  <OPTION>8m.com
+  <OPTION>8m.net
+  <OPTION>8k.com
+  <OPTION>4t.com
+  <OPTION>s5.com
+  <OPTION>itgo.com
+  <OPTION>iwarp.com
+  <OPTION>4mg.com
+  <OPTION>gq.nu
+  <OPTION>faithweb.com
+  <OPTION>tvheaven.com
+  <OPTION>freehosting.net
+  <OPTION>htmlplanet.com
+  <OPTION>scriptmania.com
+</SELECT>
+ 
+              <INPUT TYPE="submit" VALUE="Register" NAME="submit">
+              </FONT></TD>
+          </TR>
+        </TABLE>
+      </TD>
+      <TD ALIGN="left" WIDTH="20"><IMG SRC="/cgi-bin/image/images/0.gif" WIDTH="20" HEIGHT="1"></TD>
+    </TR>
+  </TABLE>
+</FORM><FORM METHOD="post">
+  <INPUT TYPE=hidden NAME=my_action VALUE=register_domain>
+  <TABLE WIDTH="100%" BORDER="0" CELLSPACING="5" CELLPADDING="5">
+    <TR> 
+      <TD> 
+        <UL>
+          <LI><FONT FACE="Arial,Helvetica" COLOR="#000099" SIZE="2"><B>Option 
+            2- Register your own ".com" -<FONT FACE="Arial,Helvetica" COLOR="000099" SIZE="2"><BR>
+            </FONT></B></FONT><FONT FACE="Arial,Helvetica" COLOR="#000099" SIZE="2">Get 
+            your own &quot;.com&quot;, &quot;.net&quot;, or &quot;.org&quot; domain 
+            name.</FONT></LI>
+        </UL>
+      </TD>
+    </TR>
+  </TABLE>
+  <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="4" WIDTH="100%">
+    <TR>
+      <TD ALIGN="left" WIDTH="20"><IMG SRC="/cgi-bin/image/images/0.gif" WIDTH="20" HEIGHT="1"></TD>
+      <TD ALIGN="left" BGCOLOR="#E7E7F7" WIDTH=100%> <B><FONT COLOR=#000099 FACE=Arial,Helvetica> 
+        </FONT></B> 
+        <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0">
+          <TR> 
+            <TD ALIGN="RIGHT"><FONT FACE="Arial,Helvetica" COLOR="#000099" SIZE="2">ie 
+              yourname</FONT></TD>
+            <TD><FONT FACE="Arial,Helvetica" COLOR="#000099" SIZE="2">.com</FONT></TD>
+          </TR>
+          <TR> 
+            <TD ALIGN="RIGHT"><B><FONT COLOR=#000099 FACE=Arial,Helvetica> 
+              <INPUT TYPE="text" NAME="register_domain" VALUE="" SIZE="20">
+              </FONT></B> </TD>
+            <TD><FONT SIZE=3><B><FONT COLOR=#000099 FACE=Arial,Helvetica>.</FONT></B> 
+              <SELECT NAME="register_extension">
+                <OPTION VALUE="com" selected>com</OPTION>
+                <OPTION VALUE="net">net</OPTION>
+                <OPTION VALUE="org">org</OPTION>
+              </SELECT>
+              <INPUT TYPE="submit" VALUE="Register" NAME="submit2">
+              </FONT></TD>
+          </TR>
+        </TABLE>
+      </TD>
+      <TD ALIGN="left" WIDTH="20"><IMG SRC="/cgi-bin/image/images/0.gif" WIDTH="20" HEIGHT="1"></TD>
+    </TR>
+  </TABLE>
+</FORM>
+<FORM METHOD="post">
+  <INPUT TYPE=hidden NAME=my_action VALUE=transfer_domain>
+		<INPUT TYPE=hidden NAME=next_page VALUE=temp_domain_info_page>
+		<INPUT TYPE=hidden NAME=verify_transfer VALUE=1>
+  <TABLE WIDTH="100%" BORDER="0" CELLSPACING="5" CELLPADDING="5">
+    <TR> 
+      <TD> 
+        <UL>
+          <LI><FONT FACE="Arial,Helvetica" COLOR="#000099" SIZE="2"><B><FONT FACE="Arial,Helvetica" COLOR="#000099" SIZE="2"><B>Option 
+            3 - Transfer a domain -</B></FONT><FONT FACE="Arial,Helvetica" COLOR="000099" SIZE="2"><BR>
+            </FONT></B></FONT><FONT FACE="Arial,Helvetica" COLOR="#000099" SIZE="2">I 
+            already own my domain and would like to host it on FreeServers.</FONT></LI>
+        </UL>
+      </TD>
+    </TR>
+  </TABLE>
+  <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="4" WIDTH="100%">
+    <TR> 
+      <TD ALIGN="left" WIDTH="20"><IMG SRC="/cgi-bin/image/images/0.gif" WIDTH="20" HEIGHT="1"></TD>
+      <TD ALIGN="left" BGCOLOR="#E7E7F7" WIDTH=100%> <B><FONT COLOR=#000099 FACE=Arial,Helvetica> 
+        </FONT></B> <FONT SIZE=3> </FONT> 
+        <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0">
+          <TR> 
+            <TD ALIGN="RIGHT"><FONT FACE="Arial,Helvetica" COLOR="#000099" SIZE="2">ie 
+              yourname.com</FONT></TD>
+            <TD>&nbsp;</TD>
+          </TR>
+          <TR> 
+            <TD ALIGN="RIGHT"><B><FONT COLOR=#000099 FACE=Arial,Helvetica> 
+              <INPUT TYPE="text" NAME="domain" VALUE="" SIZE="20">
+              </FONT></B> </TD>
+            <TD><FONT SIZE=3> 
+              <INPUT TYPE="submit" VALUE="Transfer" NAME="submit3">
+              </FONT></TD>
+          </TR>
+        </TABLE>
+      </TD>
+      <TD ALIGN="left" WIDTH="20"><IMG SRC="/cgi-bin/image/images/0.gif" WIDTH="20" HEIGHT="1"></TD>
+    </TR>
+  </TABLE>
+</FORM>
+</TD>
+        </TR>
+      </TABLE>
+
+    </TD>
+  </TR>
+  <TR BGCOLOR="#3366CC" ALIGN="CENTER"> 
+    <TD><IMG SRC="/fs_img/fs2/spacer.gif" WIDTH="30" HEIGHT="25"></TD>
+  </TR>
+</TABLE>
+</BODY>
+</HTML>

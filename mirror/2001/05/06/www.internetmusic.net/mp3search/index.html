@@ -1,0 +1,120 @@
+<html>
+<head>
+<title>MP3 Search - Control Panel</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript">
+<!--
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+//-->
+</script>
+</head>
+
+
+
+
+<body bgcolor="#FFFFFF" background="../space7.jpg" link="#FFFF00" vlink="#FF0000">
+<form METHOD="post">
+  <p> 
+    <input TYPE="button" VALUE="Back" onClick="goHist(-1)">
+    <input type="button" value="Close" onClick="window.close()" name="button2">
+    <select name="Navigator" onChange="MM_jumpMenu('parent',this,0)">
+      <option selected>Navigator</option>
+      <option value="/mp3search/index.html">Mp3 Search </option>
+      <option value="/excite/search.html">Local Search</option>
+    </select>
+    <br>
+  </p>
+  </form>
+<!-- --> 
+<table width="260" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td bgcolor="#003399"> 
+      <div align="center"><font face="Courier New, Courier, mono" size="5"><b><font color="#FFCC00">MP3 
+        Search Engine</font></b></font></div>
+    </td>
+  </tr>
+  <tr> 
+    <td> 
+      <p>&nbsp; </p>
+      <div align="center"><font color="#FFFFFF" face="verdana, helvetica, arial" size="2"><b>
+        <div align="left">If you can't find a song or an artist on the first location, 
+          move to next location down the list<br>
+        </div>
+        </b></font></div>
+      <div align="left"><font color="#FFFFFF" face="verdana, helvetica, arial" size="2"><br>
+        If your request contains words, separate with underscores (.i.e. Dj_Vinatea, 
+        if_it's_over_it's_alright, etc.)</font></div>
+      <font face="verdana, helvetica, arial" size="2"><br>
+      </font> 
+      <form method="post" target="_blank" action="/cgi-local/mpsearch.cgi" name="mpsearch">
+        <p><font color="#FFFFFF" face="Arial, Helvetica, sans-serif" size="2"><b> 
+          type the artist or mp3 song name<br>
+          <input type="text" name="keywords">
+          <br>
+          <br>
+          <select name="location">
+            <option value="emp3.com" selected>Emp3 Finder</option>
+            <option value="Kermit">Kermit</option>
+            <option value="Fast MP3">Fast MP3</option>
+            <option value="musicgrab">Musicgrab</option>
+            <option value="2look4">2 Look 4</option>
+            <option value="gnutella">Gnutella</option>
+            <option value="astraweb">Astraweb</option>
+            <option value="mp3box">Mp3.box</option>
+            <option value="mircx">MircX</option>
+            <option value="musicseek">Musicseek</option>
+            <option value="acidsearch">Acidsearch</option>
+            <option value="audiofind">Audiofind</option>
+            <option value="cybertropix">Cybertropix</option>
+            <option value="mp3board">Mp3 Board</option>
+            <option value="realaudio">Realaudio</option>
+          </select>
+          <input type="submit" name="Submit" value="Search">
+          </b></font></p>
+        <p>&nbsp;</p>
+        <p align="center"><font face="verdana, helvetica, arial" size="2"><b><font color="#FFFFFF"><a href="/mp3search/indexb.html">[Lyrics 
+          Search]</a></font></b></font><font face="verdana, helvetica, arial" size="2"> 
+          <b><font color="#FFFFFF"><a href="/mp3search/indexb.html"></a></font><font face="verdana, helvetica, arial" size="2"><b><font color="#FFFFFF"><a href="/index.shtml" target="_blank">[Main 
+          Page]</a></font></b></font></b></font><font face="verdana, helvetica, arial" size="2"></font><font face="verdana, helvetica, arial" size="2"> 
+          </font></p>
+        </form>
+      </td>
+  </tr>
+</table>
+<div align="left"></div>
+<p>&nbsp;</p>
+
+<!-- this script and more from a1javascripts.com --><script LANGUAGE="JavaScript">
+
+<!-- hide this script tag's contents from old browsers
+
+ function goHist(a)
+
+ 
+
+{  
+
+ history.go(a);
+
+      // Go back one.
+
+
+
+} 
+
+
+
+//
+
+<!-- done hiding from old browsers -->
+
+</script> 
+
+
+ 
+<td valign="top" width="120" bgcolor="#FFFFFF">&nbsp; </td>
+          </body>
+</html>

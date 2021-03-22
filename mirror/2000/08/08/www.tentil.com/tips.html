@@ -1,0 +1,278 @@
+<HTML>
+<HEAD>
+<STYLE>
+<!--
+A{text-decoration:none}
+-->
+</STYLE>
+<TITLE>TenTil's Tips</TITLE>
+<META NAME="Description" CONTENT="The BEST graphics and web page design, AND Windows tips too">
+<META NAME="generator" CONTENT="Notepad">
+<META NAME="author" CONTENT="TenTil">
+<META NAME="keywords" CONTENT="graphics,design,tips,Windows95,tricks,Fulfer">
+
+<script language="JavaScript">
+           <!--
+           browsok = (((navigator.appName == "Netscape")
+           && (parseInt(navigator.appVersion) >= 3))
+           || ((navigator.appName == "Microsoft Internet Explorer")
+           && (parseInt(navigator.appVersion)>=3)));
+           if(browsok){
+             // MouseOn   
+             // Note: the 100 is for the WIDTH, 15 is for the HEIGHT
+                tips1 = new Image(100, 15);
+                tips1.src = "button1a.gif";
+                com1 = new Image(100, 15);
+                com1.src = "button2a.gif";
+                home1 = new Image(100, 15);
+                home1.src = "button3a.gif";
+                ten1 = new Image(100, 15);
+                ten1.src = "button4a.gif";
+
+             // MouseOff
+             // Note: the 100 is for the WIDTH, 15 is for the HEIGHT
+                tips0 = new Image(100, 15);
+                tips0.src = "button1.gif";
+                com0 = new Image(100, 15);
+                com0.src = "button2.gif";
+                home0 = new Image(100, 15);
+                home0.src = "button3.gif";
+                ten0 = new Image(100, 15);
+                ten0.src = "button4.gif";
+
+           }
+           function BNB_mouseon(n){
+                if(browsok){
+                     imageON = eval(n + "1.src");
+                     document [n].src = imageON;
+                     }
+           }
+           function BNB_mouseoff(n){
+                if(browsok){
+           imageOFF = eval(n + "0.src");
+                document [n].src = imageOFF;
+                     }
+           }
+           // -->
+           </SCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" BACKGROUND="dropbkg5.gif" TEXT="#000000" LINK="#FF0000" ACTIVE="#FF0000" VLINK="#0066FF">
+<BASEFONT FACE="Arial">
+<A NAME="top">
+<TABLE WIDTH="610" CELLPADDING="0" CELLSPACING="0" BORDER="0">
+ <TR>
+  <TD WIDTH="50" ROWSPAN="4">
+<IMG SRC="spacer.gif" WIDTH="50" HEIGHT="10" ALT="">
+  </TD>
+  <TD COLSPAN="2" WIDTH="600">
+<a href="bnbform.html" 
+                   onmouseout="BNB_mouseoff('tips')" onmouseover=
+                  "BNB_mouseon('tips');return true ">
+               <img src="button1.gif" name="tips" 
+                  WIDTH=100 HEIGHT=15 VSPACE=0 border=0 alt=email></a>
+
+<a href="index.html" 
+                   onmouseout="BNB_mouseoff('com')" onmouseover=
+                  "BNB_mouseon('com');return true ">
+               <img src="button2.gif" name="com" 
+                  WIDTH=100 HEIGHT=15 VSPACE=0 border=0 alt=com></a>
+
+<a href="tips.html" 
+                   onmouseout="BNB_mouseoff('home')" onmouseover=
+                  "BNB_mouseon('home');return true ">
+               <img src="button3.gif" name="home" 
+                  WIDTH=100 HEIGHT=15 VSPACE=0 border=0 alt="windows tips"></a>
+
+<a href="home.html" 
+                   onmouseout="BNB_mouseoff('ten')" onmouseover=
+                  "BNB_mouseon('ten');return true ">
+               <img src="button4.gif" name="ten" 
+                  WIDTH=100 HEIGHT=15 VSPACE=0 border=0 alt="Ten's Home"></a>
+ <P>&nbsp;</P>
+  </TD>
+ </TR>
+ <TR>
+  <TD>
+<IMG SRC="tip1.gif" HEIGHT="100" WIDTH="400" ALT="TenTil's Tips & Tricks">
+<P>&nbsp;</P> 
+  </TD>
+ 
+
+ 
+  <TD BGCOLOR="000000" ALIGN="center"><FONT FACE="arial" COLOR="FFFFFF">
+   Click the egg to go <I>HUNTING</I>.</FONT>
+	<A HREF="eggs.html"><IMG SRC="eggsm.gif" BORDER="0" WIDTH="40" HEIGHT="40" ALT="Eggs">
+       </A></TD></TR><P>
+ <TR>
+  <TD COLSPAN="2">
+
+<P>
+
+
+<P>&nbsp;</P>
+<FONT SIZE="+1">Wanna have your own logo <B> and </B> a Support Information button?
+</FONT><P>
+<IMG SRC="support.gif" WIDTH="304" HEIGHT="149" ALT="Support Button" Align="left">
+Right click the <B> My Computer </B> icon on your desktop.. then click
+Properties.  Shown here is the section on the bottom of the General tab.  Yours may
+be blank or show the logo of your computer manufacturer. 
+This is done with two files located in your Windows/system folder. 
+<I>Oeminfo.ini</I>, is a simple text file that can be either created
+ or edited with notepad. <I>Oemlogo.bmp</I>, is the Logo (picture)
+under Manufactured and Supported by:
+<P>
+<B>Tell me more...  you say?</B>
+<P>
+Well...  Let's start with the text file (<I>Oeminfo.ini</I>). The format of this file is
+as follows: 
+
+<P>
+
+[General]<BR>
+Manufacturer=TenTil  :)<BR>
+Model=<BR>
+<P>
+[Support Information]<BR>
+Line1="--------------------------"<BR>
+Line2="If you are looking for support..."<BR>
+Line3="Look to a friend..."<BR>
+Line4=""<BR>
+Line5="      TenTil  :)"<BR>
+Line6="--------------------------"<BR>
+<P>
+Copy the above text and paste into Notepad.  Save the file as <I>
+Oeminfo.ini</I> in your Windows\system folder (usually C:\Windows\system).
+You now have a Support Information button. You can edit it to your liking.
+The first section is what is displayed to the right of the logo.  You may
+enter whatever text you wish after Manufacture and Model.  You'll notice
+I've chosen to leave Model blank.<P>
+The second section is what appears in the dialog box when the user clicks
+the Support Information button. The sequential line numbers must be used
+here.  You seem to be able to add as many lines as you wish. The double quotes
+are also required.  Have fun!!
+
+<P>
+<B>Wait Ten..  what about the logo??</B>
+<P>
+Oh yeah..  the logo..  Use any graphics program (Paint Shop Pro is one
+of my favorites) Windows95 Paint will work fine. Either edit the
+bitmap file Oemlogo.bmp you already have, or create a new one.  It must be called <I>Oemlogo.bmp</I>
+and saved to the Windows\system folder (usually C:\Windows\system)
+The bitmap needs to be no larger than 180 by 114 pixels, and 256 colors
+seem to work best.  Now for the tip nobody else will tell you. *smile*
+Windows is going to read all pixels matching the bottom left pixel as 
+transparent!!  cool huh?  
+<P>
+<HR SIZE="3" NOSHADE>
+<P>
+<FONT SIZE=+1>
+Wanna remove <B>Network Neighborhood</B> from your desktop?
+</FONT>
+<P>
+<I> I know you do ..  we all do.  We don't use it so we don't wanna look
+at it.  Well, here is a fairly "safe" way of doing it.</I>
+<P>
+<OL><LI>Start <B> Poledit</B>.  (You can find Poledit on the Windows95 CD 
+in \Admin\Apptools\Poledit )
+<LI>click File .. Open Registry
+<LI>select Local User 
+<LI>select Shell
+<LI>select Restrictions
+<LI>check Hide Network Neighhborhood
+<LI>click OK
+<LI>close Poledit
+</OL>
+When asked to save changes to Registry choose yes.
+<P>
+<HR SIZE="3" NOSHADE>
+<P>
+<FONT SIZE=+1>
+Wanna use <B>Windows Explorer</B> rather than <B> My Computer</B>
+for viewing Folders?</FONT>
+<P>
+Change the default for My Computer from<I> Open</I> to <I>Explore</I>.<BR>
+(saving the need for a separate shortcut).
+<P>
+
+Double click My Computer<BR>
+Select View / Options, Folder tab,<BR>
+make sure that browsing in a single window is selected.<BR>
+Select the File Types tab, scroll down and click on <I>Folder</I>,
+then the <I>Edit</I> button. Click on <I>Explore</I> and then <I>Set Default</I>.
+Click Close and Close again.
+Now when you double click My Computer on your desktop you will get
+Windows Explorer. <BR>
+(You can still right click and use Open if needed.)
+<HR SIZE="3" NOSHADE>
+<P> 
+<FONT SIZE=+1>Wanna change your computer's name?</FONT><BR>
+(Registered Owner)
+<P>
+Start Registery Editor<BR>
+Go to HKEY_LOCAL_MACHINE / SOFTWARE / Microsoft / Windows / CuttentVersion /
+<BR>
+In the right plane, double click RegisteredOwner<BR>
+Under value data: type in your name (or any name you wish) and click OK.<BR>
+Close Registery Editor
+<HR SIZE="3" NOSHADE>
+<P>
+<FONT Size="+1">Wanna add a program to the right
+ click on your Start button?</FONT>
+<P>
+Open Control Panel<BR>
+Click view / Options / File Types tab<BR>
+Scroll down until you see File Folder .. Click File Folder<BR>
+Click the Edit button.. Click New button<BR>
+Type the name you want in the Action box..  Radio for example (I gotta
+keep the tunes handy)
+Next type the path to the application you want to use .. in our example
+it would be C:\FMRadio\FMradio.exe .. or click the Browse button and
+select the application file you want.<BR>
+Next click Close.. then Close again.
+<P>
+<HR SIZE="3" NOSHADE>
+<P>
+<FONT Size="+1">Wanna change your Start button?</FONT>
+<P>
+
+<IMG SRC="stbutton.gif" WIDTH="51" HEIGHT="37" ALIGN="middle" ALT="Start">
+Look at mine.  Cute huh?
+<P>
+I'll tell you all about how I did it..  just not now .. cause now I..
+<P>
+Gotta go..  TenTil  :-)
+<P>
+
+  </TD>
+ </TR>
+
+<TR>
+ <TD WIDTH="600" ALIGN="RIGHT">
+<A HREF="#top"><IMG SRC="top.gif" WIDTH="30" HEIGHT="40" ALT="Top" BORDER="0" ALIGN="right"></A>
+ </TD>
+ </TR>
+</TABLE>
+<P>&nbsp;</P>
+<CENTER> 
+<FONT FACE="arial" SIZE="-3" COLOR="000000">
+| <A HREF="poems.html">Poems</A> |
+<A HREF="bnbform.html">Email</A> |
+<A HREF="faq.html">FAQs</A> | <BR>
+| <A HREF="contact.html">Contact</A> |
+<A HREF="home.html">Ten's Home</A> |
+<A HREF="index.html">tentil.com</A> |
+</FONT>
+<P>
+<FONT FACE="arial" SIZE="-2" COLOR="000000">
+web page designed<br>
+and hosted by</font>
+<A HREF="index.html">
+<IMG SRC="smlogo.gif" ALIGN="top" WIDTH="57" HEIGHT="34" BORDER="0" ALT="TenTil Design"></A>
+<P>&nbsp;</P> 
+<P><FONT FACE="arial" SIZE="-2">
+* f u cn rd ths, u cn gt a gd jb n cmptr prgrmmng. </FONT>
+</CENTER>
+</BODY>
+</HTML>

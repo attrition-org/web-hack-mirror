@@ -1,0 +1,69 @@
+<HTML>
+ <HEAD>
+  <title>
+   Hacked again, for Christmas
+  </title>
+   <script language="JavaScript">
+
+        <!--
+                var     ScrollerID = 0,
+                                index = 0,
+                                WaitStates = 100;
+                var     DisplaySize = ((navigator.appName == "Netscape") && (navigator.appVersion.substring(0, 3) == "3.0")) ? 105 : 75;
+
+                function ScrollMarquee( display ) {
+                        OutputMarquee( display, display.defaultValue, index );
+                        index++;
+                        if( index >= display.defaultValue.length ) {
+                                index = 0;
+                        }
+                        clearTimeout( ScrollerID );
+                        ScrollerID = setTimeout( "ScrollMarquee( document.marquee.display )", WaitStates );
+                }
+
+                function OutputMarquee( MarqueeBox, MarqueeText, MarqueePosition ) {
+                        var     message = MarqueeText.substring( MarqueePosition, MarqueeText.length );
+
+                        while( message.length < DisplaySize ) {
+                                message += "  .  .  .  .  .  ";
+                                message += MarqueeText;
+                        }
+                        MarqueeBox.value = message.substring( 0, DisplaySize );
+                }
+
+        // -->
+        
+
+   </script>
+  </HEAD>
+ <body bgColor=#AA0000 onLoad="ScrollerID = setTimeout( 'ScrollMarquee( document.marquee.display )', WaitStates )">
+  <CENTER>
+   <A HREF="http://www.casema.net/~gin/index.html">
+    <IMG SRC="http://www.casema.net/~gin/phreaknl.gif" WIDTH="468" HEIGHT="60" ALT="#Phreak.nl" BORDER="0">
+   </A>
+  </CENTER>
+    <TABLE align="center" border="0" height="60" width="468">
+     <TBODY>
+      <tr bgColor=#006600>
+       <td height="75">
+        <font color=#004400 face="Arial" size="4" allign="top">
+         <center>
+          <b>
+           #phreak.nl wishes you a scary christmas and a 2001 full of phjear!
+          </b>
+         </center>
+        </font>
+       </td>
+      </tr>
+     </TBODY>
+    </table>
+  <form name="marquee">
+   <center>
+    <table border=0 cellspacing=0 cellpadding=1>
+     <td align=center valign=middle>
+      <input type=text name="display" size=64 value="Special Chrismas greets go out to...  bivak(for growing) maxima(for sucking willem) pudding(for gerderLAN) safumufh(for sending me back to Amsterdam) scrippie(for being truly 31337) gerrie(for all his lies) bruce(for keeping my business spirit awake) sync-(for being big) dvorak(for breaking stuff) pippitaal(for eating my surplus energy) nexu(for the retention fee) mitsai(for keeping my feet on the ground) ploink(for he is just like me) dagger02(for learning) stealth(for honest questions) sibeling(for he knows his shit) aus(for sharp remarks) fly(for sitting) carla(are you back?) panevino(for kewl perl) MrFloat(for being a real nerd) Cinder(for finding the child in me) barby(for the dreams about your knockers) Mace(because we rule nl) ScreamOnl(for being a true follower) ^herman^(for keeping my awk skillz sharp) Leander(for what are you in #hit2000?) Patrcia(for making me feel I have a life) Femke(for I can count on you) Michael(for encouraging me to have a life) Loise(for giving me shelter) prospo(for pr0n) x-matrix(for bringing Baudot back) soupnazi(for being soulmate) ragnarox(for paying bitches for me) jimjones(for the USA connection) ratcorpse(for pointing out the important things in life). You all enriched my live bigtime, irl and online. Thanks dudes ...     DuGo" onSubmit="ScrollMarquee( document.marquee.display )"></td></table>
+</center>
+</form>
+<center><h3><font color=#006600>Note to the admin of this junk: Yo! admin, dude! Who is being the lame ass here, me for redoing your site again, like last year, or you, for not patching.</h3></center>
+  </BODY>
+ </HTML>

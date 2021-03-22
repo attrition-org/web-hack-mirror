@@ -1,0 +1,399 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>第 五 篇</TITLE>
+<META NAME="Template" CONTENT="F:\CWORD60\TEMPLATE\manual1.dot">
+</HEAD>
+<BODY LINK="#0000ff">
+
+<FONT SIZE=7><P ALIGN="CENTER">Transaction Server</P>
+</FONT><FONT FACE="全真中隸書,細明體" LANG="ZH-TW" SIZE=7><P ALIGN="CENTER">三層式架構技巧速成</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4><P ALIGN="RIGHT">刊登於</FONT><FONT SIZE=4>RUN!PC 1998/11</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4>月號</P>
+<P ALIGN="RIGHT">作者</FONT><FONT SIZE=4> </FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4>喬篷科技</FONT><FONT FACE="華康少女文字體W4,細明體" LANG="ZH-TW" SIZE=4> </FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4>周世雄</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>本文重點</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">在前幾期的</FONT><FONT SIZE=3>IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>專欄當中，我們看到了威力強大的</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Internet Information Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）</FONT><FONT SIZE=3>4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>之</FONT><FONT SIZE=3>30</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>個特異功能、</FONT><FONT SIZE=3>SSL</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>與數位認證、如何使用</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>設計一個生動的網站、如何將</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料庫化、</FONT><FONT FACE="華康少女文字體W4,細明體" LANG="ZH-TW" SIZE=3>IIS 4.0</FONT><FONT FACE="超研澤中隸,新細明體" LANG="ZH-TW" SIZE=3>網站進階管理</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、和如何將網站元件化等單元。本期將探討<A NAME="_Toc430342998"></FONT><FONT SIZE=3>Transaction Server</A></FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>三層式架構的技巧。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW"><P ALIGN="JUSTIFY"></P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">作者為微軟台北廳研討會講師，著作有「</FONT><FONT SIZE=3>IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>超級網站速成班</FONT><FONT FACE="標楷體" LANG="ZH-TW">」</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、「動態網頁設計99招 Part 2/3」等網站網頁設計十幾本電腦書籍，並以簡體版本發行於大陸。</P>
+<P ALIGN="JUSTIFY">作者從蘋果二號玩到網際網路，有十幾年電腦研發與行銷的工作經驗，現任「喬篷科技」公司總經理，從事</FONT><FONT SIZE=3>Internet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>Intranet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>之</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料庫應用設計、網站網頁規劃架設、電子商務等服務。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>示範網站</FONT><FONT FACE="華康少女文字體W4,細明體" LANG="ZH-TW">：</FONT>www.asp.com.tw</P>
+<FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">連絡</FONT><FONT SIZE=3>E-mail</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>：</FONT><FONT SIZE=3>jackchou@tpts5.seed.net.tw</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>MTS</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>（</FONT><FONT FACE="Arial" SIZE=5>Microsoft Transaction Server</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>）</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">NT Option Pack</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>之</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Microsoft Transaction Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）提供甚麼功能呢？</P>
+<P ALIGN="JUSTIFY">於三層式（</FONT><FONT SIZE=3>3-tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）架構當中，所謂三層係指使用者介面層（</FONT><FONT SIZE=3>presentation tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）、商業邏輯層（</FONT><FONT SIZE=3>business logic tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）、和資料服務層（</FONT><FONT SIZE=3>data services tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Microsoft Transaction Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）係微軟公司為了建構商業邏輯層（</FONT><FONT SIZE=3>business logic tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）所提供的產品。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>為開發分散式、和以元件（</FONT><FONT SIZE=3>component</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）為基礎的的異動（</FONT><FONT SIZE=3>transaction</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）處理系統，讓您開發出</FONT><FONT SIZE=3>Internet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>和</FONT><FONT SIZE=3>intranet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的應用程式。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">MTS Explorer</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>提供一個使用者圖形介面，用來配置及管理應用程式的元件（</FONT><FONT SIZE=3>component</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）。您可以使用</FONT><FONT SIZE=3>MTS Explorer</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>登錄並管理在</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>執行時期中執行的元件。</P>
+<P ALIGN="JUSTIFY">本文介紹以下數個單元，讓您快速了解</FONT><FONT SIZE=3>Transaction Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的功能：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>何謂三層式（</FONT><FONT SIZE=3>3-tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）架構呢？</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>提供那些功能呢？</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>MTS 2.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>新增加那些功能呢？</LI></P>
+<P ALIGN="JUSTIFY"><LI>如何使用</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>系統管理物件呢？</LI></P>
+<P ALIGN="JUSTIFY"><LI>如何自動安裝</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>套件呢？</LI></P></UL>
+
+</FONT><FONT FACE="全真中隸書,細明體" LANG="ZH-TW" SIZE=6><P>何謂三層式（</FONT><FONT FACE="Arial" SIZE=6>3-tier</FONT><FONT FACE="全真中隸書,細明體" LANG="ZH-TW" SIZE=6>）架構呢？</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>主從式（</FONT><FONT FACE="Arial" SIZE=5>client/server</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>）架構</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">在傳統的主從式（</FONT><FONT SIZE=3>client/server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）架構當中，為兩層式（</FONT><FONT SIZE=3>2-tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）架構，包括用戶端的使用者介面層（</FONT><FONT SIZE=3>presentation tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），和伺服器端的資料服務層（</FONT><FONT SIZE=3>data services tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）。</P>
+<P ALIGN="JUSTIFY">用戶端的使用者介面層（</FONT><FONT SIZE=3>presentation tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），負責接收使用者的資料輸入，和將結果顯示出來，譬如用戶端應用程式。一般會包括商業邏輯（</FONT><FONT SIZE=3>business logic</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的工作，包括計算、輸入核對、用戶端電腦管理、與伺服器溝通等工作。</P>
+<P ALIGN="JUSTIFY">伺服器端的資料服務層（</FONT><FONT SIZE=3>data services tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），負責伺服器的工作，包括資料庫的資料處理和網站伺服器（</FONT><FONT SIZE=3>web server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），有時也會一一些商業邏輯（</FONT><FONT SIZE=3>business logic</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的工作。</P>
+<P ALIGN="JUSTIFY">傳統主從式（</FONT><FONT SIZE=3>client/server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）架構最大的缺點，為隨著功能的增加，用戶端的應用程式會愈來愈複雜，不但維護不易，用戶端電腦的負荷也愈來愈大。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>三層式（</FONT><FONT FACE="Arial" SIZE=5>3-tier</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>）架構</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">三層式（</FONT><FONT SIZE=3>3-tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）架構與傳統兩層式架構最大的差異處，為將商業邏輯（</FONT><FONT SIZE=3>business logic</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）單獨分離出來，以減輕放置於用戶端或伺服器端電腦的負擔。</P>
+<P ALIGN="JUSTIFY">於三層式（</FONT><FONT SIZE=3>3-tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）架構當中，所謂三層係指使用者介面層（</FONT><FONT SIZE=3>presentation tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）、商業邏輯層（</FONT><FONT SIZE=3>business logic tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）、和資料服務層（</FONT><FONT SIZE=3>data services tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）。</P>
+<P ALIGN="JUSTIFY">使用者介面層（</FONT><FONT SIZE=3>presentation tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），負責接收使用者的資料輸入，和將結果顯示出來，譬如瀏覽器或其他用戶端應用程式。</P>
+<P ALIGN="JUSTIFY">商業邏輯層（</FONT><FONT SIZE=3>business logic tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），作為使用者介面與資料庫的橋樑，負責商業法則（</FONT><FONT SIZE=3>business rules</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）、與業務有關的資料處理、網站伺服器（</FONT><FONT SIZE=3>web server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）等工作，譬如使用</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的網站伺服器，採得</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>撰寫程式，並透過</FONT><FONT SIZE=3>DCOM</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>與</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Microsoft Transaction Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的元件相溝通，再透過</FONT><FONT SIZE=3>ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>與各種支援</FONT><FONT SIZE=3>ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的資料庫相連接。</P>
+<P ALIGN="JUSTIFY">資料服務層（</FONT><FONT SIZE=3>data services tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），負責資料庫或訊息的處理，譬如使用</FONT><FONT SIZE=3>SQL Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料庫的預儲程序（</FONT><FONT SIZE=3>stored procedures</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），或使用</FONT><FONT SIZE=3>MSMQ</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>做訊息的處理等。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>建構三層式（</FONT><FONT FACE="Arial" SIZE=5>3-tier</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>）架構所須考慮之處</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">當我們建構三層式（</FONT><FONT SIZE=3>3-tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）架構時，所須所須考慮的地方，如下：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>是否有異動（</FONT><FONT SIZE=3>transaction</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的功能，當變動數筆相關的資料，有的變動失敗時，其他的資料變動會不會自動恢復過來，即不是「同生」就是「共死」。</LI></P>
+<P ALIGN="JUSTIFY"><LI>多人使用時的效率問題，是否能夠資源共享。</LI></P>
+<P ALIGN="JUSTIFY"><LI>存取權限安全控制問題，是否夠安全。</LI></P></UL>
+
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Microsoft Transaction Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），係微軟公司為了建構商業邏輯層（</FONT><FONT SIZE=3>business logic tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）所提供的產品。</P>
+</FONT><FONT FACE="Arial" SIZE=6><P>MTS</FONT><FONT FACE="全真中隸書,細明體" LANG="ZH-TW" SIZE=6>提供那些功能呢？</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Microsoft Transaction Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）提供的功能，如下：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>異動（</FONT><FONT SIZE=3>transaction</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）功能</LI></P>
+<P ALIGN="JUSTIFY"><LI>資源共享（</FONT><FONT SIZE=3>resource pooling</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）功能</LI></P>
+<P ALIGN="JUSTIFY"><LI>存取權限安全控制功能</LI></P>
+<P ALIGN="JUSTIFY"><LI>用戶端安裝元件（</FONT><FONT SIZE=3>component</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）功能</LI></P>
+<P ALIGN="JUSTIFY"><LI>管理功能</LI></P></UL>
+
+<P ALIGN="JUSTIFY">詳細介紹如下：</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>異動（</FONT><FONT FACE="Arial" SIZE=5>transaction</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>）功能</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Microsoft Transaction Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）提供了異動（</FONT><FONT SIZE=3>transaction</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>或譯為「交易」）的功能。</P>
+<P ALIGN="JUSTIFY">何謂異動（</FONT><FONT SIZE=3>transaction</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）呢？所謂異動（</FONT><FONT SIZE=3>transaction</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）指得是：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>資料庫之間的「同生共死」功能</LI></P>
+<P ALIGN="JUSTIFY"><LI>元件之間的「協調同步」功能</LI></P></UL>
+
+<P ALIGN="JUSTIFY">所謂資料庫之間的「同生共死」功能，譬如說您將甲帳戶的錢匯款到乙帳戶：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>假設甲帳戶的資料庫資料已經扣除一萬元</LI></P>
+<P ALIGN="JUSTIFY"><LI>但是當匯款到乙帳戶時，將乙帳戶資料庫資料加上一萬元時卻失敗</LI></P></UL>
+
+<P ALIGN="JUSTIFY">如此一來，甲帳戶和乙帳戶資料庫的資料就無法平衡了。</P>
+<P ALIGN="JUSTIFY">有了異動（</FONT><FONT SIZE=3>transaction</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的功能，就不用擔心這個問題，所有的資料變動不是「同生」就是「共死」，</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的專門述語叫做確認（</FONT><FONT SIZE=3>commit</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）和終止（</FONT><FONT SIZE=3>abort</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>確認（</FONT><FONT SIZE=3>commit</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）：即「同生」，所有資料庫的資料更新成功時，才確認。</LI></P>
+<P ALIGN="JUSTIFY"><LI>終止（</FONT><FONT SIZE=3>abort</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）：即「共死」，有一個資料庫的資料更新失敗時，所有資料庫的資料變動都恢復成原狀。</LI></P></UL>
+
+<P ALIGN="JUSTIFY">目前</FONT><FONT SIZE=3>SQL Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>和</FONT><FONT SIZE=3>Oracle</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料庫，都支援</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的異動（</FONT><FONT SIZE=3>transaction</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）功能，其他的資料庫也正在支援當中，一些檔案型式的資料庫譬如</FONT><FONT SIZE=3>Access</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>或</FONT><FONT SIZE=3>dBase</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>都未支援</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的異動（</FONT><FONT SIZE=3>transaction</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）功能。</P>
+<P ALIGN="JUSTIFY">在</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式當中，異動（</FONT><FONT SIZE=3>transaction</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的開始和結束，係以一個</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>檔案為起頭和結尾，換句話說，一個</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>檔案當中所有資料庫的資料更新不是「同生」就是「共死」，即不是「確認（</FONT><FONT SIZE=3>commit</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）」就是「終止（</FONT><FONT SIZE=3>abort</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）」。</P>
+<P ALIGN="JUSTIFY">元件（</FONT><FONT SIZE=3>component</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）也可以加入異動（</FONT><FONT SIZE=3>transaction</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的功能，在元件（</FONT><FONT SIZE=3>component</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）當中，異動（</FONT><FONT SIZE=3>transaction</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的開始和結束，則以一個</FONT><FONT SIZE=3>function</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>為起頭和結尾。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Microsoft Transaction Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的異動功能，除了提供資料庫之間的「同生共死」功能外，另外一個重要的功能為元件之間的「協調同步」，譬如：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>當數個元件同時存取相同的資源時，</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>將解決可能會造成的衝突問題。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>將協調元件之間的溝通工作，達到同步一致的效果。</LI></P></UL>
+
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>資源共享（</FONT><FONT FACE="Arial" SIZE=5>resource pooling</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>）功能</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Microsoft Transaction Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），有一個重要的功能，就是提供了以下資源共享（</FONT><FONT SIZE=3>resource pooling</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的功能：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>資料庫連結共享（</FONT><FONT SIZE=3>database connection pooling</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）</LI></P>
+<P ALIGN="JUSTIFY"><LI>執行緒共享（</FONT><FONT SIZE=3>thread pooling</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）</LI></P>
+<P ALIGN="JUSTIFY"><LI>物件共享（</FONT><FONT SIZE=3>object pooling</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）</LI></P></UL>
+
+<P ALIGN="JUSTIFY">一個用戶端應用程式連結存取資料庫的資料時，就需要與資料庫建立一個連結的動作，假如數百個用戶端應用程式連結存取資料庫的資料時，就需要建立數百個連結的動作，既耗時又浪費資源。</P>
+<P ALIGN="JUSTIFY">以</FONT><FONT SIZE=3>SQL Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>而言，每一個資料庫的連結，會吃掉資料庫電腦約</FONT><FONT SIZE=3>50k bytes</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的記憶體空間，如果同時有</FONT><FONT SIZE=3>100</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>使用者上線，就會吃掉</FONT><FONT SIZE=3>5MB</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的記憶體空間。</P>
+<P ALIGN="JUSTIFY">資料庫連結共享（</FONT><FONT SIZE=3>database connection pooling</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），可以讓數百個元件（</FONT><FONT SIZE=3>component</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）或應用程式，共享資料庫連結，只運用數個資料庫連結，就可以存取資料庫的資料。</P>
+<P ALIGN="JUSTIFY">資料庫連結共享（</FONT><FONT SIZE=3>database connection pooling</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的功能，為</FONT><FONT SIZE=3>ODBC 3.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的功能，因此您必須安裝</FONT><FONT SIZE=3>ODBC 3.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>或以後的版本。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>讓您開發一個元件（</FONT><FONT SIZE=3>component</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）時，可以使用單執行緒（</FONT><FONT SIZE=3>single thread</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的方式來設定，而不需要考慮多執行緒（</FONT><FONT SIZE=3>multiple thread</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的執行問題。</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>使用執行緒共享（</FONT><FONT SIZE=3>thread pooling</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的功能，來解決多人使用的資源共享問題。</P>
+<P ALIGN="JUSTIFY">使用元件（</FONT><FONT SIZE=3>component</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）時必須先產生物件（</FONT><FONT SIZE=3>create object</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），由於產生物件（</FONT><FONT SIZE=3>object</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）將耗費記憶體的資源，</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的物件共享（</FONT><FONT SIZE=3>object pooling</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）功能，建立一個物件的資源共享區，讓物件可以重覆使用。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>將於</FONT><FONT SIZE=3>2.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>以後的版本才支援物件共享（</FONT><FONT SIZE=3>object pooling</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的功能。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>並負責管理使用元件（</FONT><FONT SIZE=3>component</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）所須物件產生的生命週期，包括準備產生物件的環境、產生物件、維護物件、摧毀物件。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>負責管理元件（</FONT><FONT SIZE=3>component</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的位置，用戶端的應用程式不需要知道元件（</FONT><FONT SIZE=3>component</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）在那一台電腦上執行。換句話說，變更元件（</FONT><FONT SIZE=3>component</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的位置，不需要修改用戶端的應用程式。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>安全功能</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>對所管理的元件，提供以下兩種方式的存取權限控制：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>可以對每一個「元件」（</FONT><FONT SIZE=3>component</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）提供權限控制的功能。</LI></P>
+<P ALIGN="JUSTIFY"><LI>也可以對一個元件（</FONT><FONT SIZE=3>component</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）中的每一個「介面」提供權限控制的功能。</LI></P></UL>
+
+<P ALIGN="JUSTIFY">對每一個「元件」（</FONT><FONT SIZE=3>component</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）提供權限控制的功能，譬如設定</FONT><FONT SIZE=3>pack2.cls2</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>元件的</FONT><FONT SIZE=3> [</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>權限成員</FONT><FONT SIZE=3>] </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>為</FONT><FONT SIZE=3> [</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>主任</FONT><FONT SIZE=3>] </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</P>
+<P ALIGN="JUSTIFY">也可以對一個元件（</FONT><FONT SIZE=3>component</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）中的每一個「介面」提供權限控制的功能，所謂一個「介面」只得是一組方法，於</FONT><FONT SIZE=3>VB</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>當中指得是一個</FONT><FONT SIZE=3>Class</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，譬如設定</FONT><FONT SIZE=3>pack2.cls2</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>元件的</FONT><FONT SIZE=3>_cls2</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>介面之</FONT><FONT SIZE=3> [</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>權限成員</FONT><FONT SIZE=3>] </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>為</FONT><FONT SIZE=3> [</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>經理</FONT><FONT SIZE=3>] </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">[</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>主任</FONT><FONT SIZE=3>]</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、或</FONT><FONT SIZE=3> [</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>經理</FONT><FONT SIZE=3>] </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，係於</FONT><FONT SIZE=3> [</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>權限</FONT><FONT SIZE=3>] </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>所定義的權限名稱，對應到</FONT><FONT SIZE=3>Windows NT</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的使用者或群組，如下將</FONT><FONT SIZE=3> [</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>主任</FONT><FONT SIZE=3>] </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3> [</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>使用者</FONT><FONT SIZE=3>] </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>對應到</FONT><FONT SIZE=3>Users</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>和</FONT><FONT SIZE=3>Administrators</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>管理安全的方法，為當用戶端的使用者進入</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>存取呼叫「元件」（</FONT><FONT SIZE=3>component</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）或元件的「介面」時，依照其於</FONT><FONT SIZE=3>MTS Explorer</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3> [</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>權限成員</FONT><FONT SIZE=3>] </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>設定，檢查是否有權存取這個「元件」或元件的「介面」。</P>
+<P ALIGN="JUSTIFY">使用這個方式的最大好處，是當使用者異動時，只要修改</FONT><FONT SIZE=3> [</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>權限</FONT><FONT SIZE=3>] </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3> [</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>使用者</FONT><FONT SIZE=3>] </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>設定即可，不需要修改元件的程式部份。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>用戶端安裝元件（</FONT><FONT FACE="Arial" SIZE=5>component</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>）功能</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">當您於</FONT><FONT SIZE=3>MTS Explorer</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>匯出套件時，將自動於匯出路徑下的\</FONT><FONT SIZE=3>clients</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>子目錄產生一個</FONT><FONT SIZE=3>exe</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>檔案，這個</FONT><FONT SIZE=3>exe</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>檔案讓您於用戶端的每一台電腦上執行後，將自動完成</FONT><FONT SIZE=3>DCOM</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的系統登錄設定。</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>MTS</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>管理功能</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Microsoft Transaction Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）提供整合於</FONT><FONT SIZE=3>MMC</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>MTS Explorer</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>管理介面。</P>
+<P ALIGN="JUSTIFY">在</FONT><FONT SIZE=3>MTS Explorer</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>左邊樹狀圖中，包含下列的資料夾：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>電腦：包含從這個伺服器所管理的電腦。本台電腦命名為</FONT><FONT SIZE=3> [</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>我的電腦</FONT><FONT SIZE=3>]</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</LI></P>
+<P ALIGN="JUSTIFY"><LI>安裝的套件：包含已安裝在給予電腦上的套件。</LI></P>
+<P ALIGN="JUSTIFY"><LI>遠端元件：包含於電腦上的套件所使用之遠端電腦元件。</LI></P>
+<P ALIGN="JUSTIFY"><LI>異動清單：顯示</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>應用程式目前的異動。</LI></P>
+<P ALIGN="JUSTIFY"><LI>異動統計：顯示本台電腦的異動統計。</LI></P>
+<P ALIGN="JUSTIFY"><LI>追蹤訊息：顯示目前由</FONT><FONT SIZE=3>MS DTC</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Microsoft Distributed Transaction Coordinator</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）所發出的追蹤訊息。</LI></P></UL>
+
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"> MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Microsoft Transaction Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）提供以下數種的管理方法：</P>
+<OL>
+
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）：透過瀏覽器，使用</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式，來管理</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>WSH</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Windows Scripting Host</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）：從</FONT><FONT SIZE=3>Windows</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的檔案總管當中，執行一個</FONT><FONT SIZE=3>.vbs</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>檔案，或</FONT><FONT SIZE=3>DOS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>指令行下執行</FONT><FONT SIZE=3> cscript xxx.vbs</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，使用</FONT><FONT SIZE=3>WSH</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>來管理</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>Visual Basic</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>或</FONT><FONT SIZE=3>Visual C++</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>：使用</FONT><FONT SIZE=3>Visual Basic</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>或</FONT><FONT SIZE=3>Visual C++</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式來管理</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</LI></P>
+<P ALIGN="JUSTIFY"><LI>手動操作</FONT><FONT SIZE=3>MTS Explorer</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方式。</LI></P></OL>
+
+</FONT><FONT FACE="Arial" SIZE=6><P>MTS 2.0</FONT><FONT FACE="全真中隸書,細明體" LANG="ZH-TW" SIZE=6>新增加那些功能呢？</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Microsoft Transaction Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）</FONT><FONT SIZE=3>2.0 </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>版新增加許多的功能，包括以下各項：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>與</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Internet Information Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）</FONT><FONT SIZE=3>4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>版完全整合</LI></P>
+<P ALIGN="JUSTIFY"><LI>支援</FONT><FONT SIZE=3>XA</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>異動（</FONT><FONT SIZE=3>transaction</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）通訊協定</LI></P>
+<P ALIGN="JUSTIFY"><LI>支援</FONT><FONT SIZE=3>Windows NT 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>和</FONT><FONT SIZE=3> Windows 95</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>作業系統</LI></P>
+<P ALIGN="JUSTIFY"><LI>支援</FONT><FONT SIZE=3>Microsoft Cluster Server</LI></P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY"><LI>增強系統管理的功能</LI></P>
+<P ALIGN="JUSTIFY"><LI>增強程式設計的功能</LI></P></UL>
+
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>與</FONT><FONT FACE="Arial" SIZE=5>IIS 4.0</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>完全整合</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">MTS 2.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>與</FONT><FONT SIZE=3>IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>完全整合，新增加的功能包括：</FONT><FONT SIZE=3> </P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>Transactional Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>：</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的程式碼檔現在提供異動（</FONT><FONT SIZE=3>transaction</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的功能，換句話說，在一個</FONT><FONT SIZE=3>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>檔案中所做的數個資料庫的變動，都具有同生共死的異動（</FONT><FONT SIZE=3>transaction</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）功能，當有一個資料庫的變動失敗時，所有資料庫的變動將恢復成原狀。可以使用</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>管理異動（</FONT><FONT SIZE=3>transaction</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），將</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>異動的功能擴充到整個網路的應用程式。只要於</FONT><FONT SIZE=3>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>檔案的第一行加上「</FONT><FONT SIZE=3>TRANSACTION=Required</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」，整個</FONT><FONT SIZE=3>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>檔案即具有異動（</FONT><FONT SIZE=3>transaction</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的功能。</FONT><FONT SIZE=3>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式如下：</LI></P></UL>
+<DIR>
+<DIR>
+
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;%@ TRANSACTION=Required LANGUAGE="VBScript" %&gt;</P></DIR>
+</DIR>
+
+
+<UL>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY"><LI>異動（</FONT><FONT SIZE=3>transaction</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）事件（</FONT><FONT SIZE=3>event</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）：當一個</FONT><FONT SIZE=3>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>檔案中變動數個資料庫的資料時，若都成功，將觸發「</FONT><FONT SIZE=3>OnTransactionCommit()</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」事件；當有一個資料庫的變動失敗時，將觸發「</FONT><FONT SIZE=3>OnTransactionAbort()</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」事件。您可以於所觸發的事件中，自已訂立網路應用程式的回應訊息。</FONT><FONT SIZE=3>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式如下：</LI></P></UL>
+<DIR>
+<DIR>
+
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;%</P>
+<P>     Sub OnTransactionCommit()</P>
+<P>        … </P>
+<P>     end sub</P>
+
+<P>     Sub OnTransactionAbort()</P>
+<P>         …</P>
+<P>     end sub</P>
+<P>%&gt;</P></DIR>
+</DIR>
+
+
+<UL>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>應用程式的故障保護：</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>應用程式可以在本身的</FONT><FONT SIZE=3>MTS </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>套件當中執行，提供隔離的處理程序、和保護系統故障的功能。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>可以追蹤由</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>內建物件所管理的過程資訊。</LI></P>
+<P ALIGN="JUSTIFY"><LI>整合安裝與管理：</FONT><FONT SIZE=3>MTS </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>和</FONT><FONT SIZE=3> IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的安裝整合在一起，並使用</FONT><FONT SIZE=3>MMC</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Microsoft Management Console</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）做為管理主控台，降低建置及管理應用程式的複雜性。</LI></P></UL>
+
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>支援</FONT><FONT FACE="Arial" SIZE=5>XA</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>異動通訊協定</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">MTS 2.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>支援</FONT><FONT SIZE=3>XA</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>異動（</FONT><FONT SIZE=3>transaction</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）通訊協定，包括</FONT><FONT SIZE=3> Oracle </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的原始支援</FONT><FONT SIZE=3> </P>
+<P ALIGN="JUSTIFY">MTS 2.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>支援</FONT><FONT SIZE=3>XA</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>transaction</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）異動通訊協定，使</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>應用程式能夠配合</FONT><FONT SIZE=3> IBM DB2</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>Informix</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>Oracle</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>及其他透過</FONT><FONT SIZE=3>ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>在</FONT><FONT SIZE=3>Windows NT Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、及非</FONT><FONT SIZE=3> Microsoft </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>作業系統（譬如</FONT><FONT SIZE=3>UNIX</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）上執行的</FONT><FONT SIZE=3>XA-compliant</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料庫。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">MTS 2.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>包括</FONT><FONT SIZE=3>Oracle</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>使用的</FONT><FONT SIZE=3>Microsoft ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>驅動程式，使</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>應用程式能夠透過</FONT><FONT SIZE=3>ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>使用</FONT><FONT SIZE=3>Oracle 7.3</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>版或更新版本來管理異動（</FONT><FONT SIZE=3>transaction</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）。</FONT><FONT SIZE=3> </P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>支援</FONT><FONT FACE="Arial" SIZE=5>Windows NT/95</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>作業系統</FONT><FONT FACE="Arial" SIZE=5> </P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">MTS </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>原可以在</FONT><FONT SIZE=3>Windows NT 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>作業系統下執行，</FONT><FONT SIZE=3>MTS 2.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>版也可以在</FONT><FONT SIZE=3>Windows 95/98</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>作業系統下執行。</FONT><FONT SIZE=3> </P>
+<P ALIGN="JUSTIFY">Windows 95/98</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>可以當作開發</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>元件的開發平台，也可以當作</FONT><FONT SIZE=3>Windows NT</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>上所執行之</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>應用程式的系統管理用戶端。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">Windows 95</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>上的</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，不支援</FONT><FONT SIZE=3>Microsoft Cluster Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>或</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>權限安全設定。</FONT><FONT SIZE=3> </P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>支援</FONT><FONT FACE="Arial" SIZE=5>Microsoft Cluster Server </P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">MTS 2.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>支援</FONT><FONT SIZE=3>Microsoft Cluster Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>MSCS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），提供</FONT><FONT SIZE=3>MTS </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>套件故障自動回復的功能，使</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>應用程式具有高度的可用性。</FONT><FONT SIZE=3> </P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>增強系統管理的功能</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">MTS 2.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>增強系統管理的功能，包括：</FONT><FONT SIZE=3> </P>
+
+<UL>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY"><LI>採用</FONT><FONT SIZE=3>MMC</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>管理介面：</FONT><FONT SIZE=3>MTS Explorer</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>採用</FONT><FONT SIZE=3>MMC</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Microsoft Management Console</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）來管理，您可以和其他例如</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>等產品，在相同</FONT><FONT SIZE=3>MMC</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的系統管理主控台來管理</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>套件。</LI></P>
+<P ALIGN="JUSTIFY"><LI>可以關閉個別的套件：</FONT><FONT SIZE=3>MTS 2.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>讓您可以關閉</FONT><FONT SIZE=3>MTS Explorer</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>中的個別套件，卻不需要將整個</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>伺服器處理程序關閉。如將套件</FONT><FONT SIZE=3> [</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>關機</FONT><FONT SIZE=3>]</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，會終止使用該套件之應用程式的伺服器處理程序。</LI></P>
+<P ALIGN="JUSTIFY"><LI>改良套件的啟動設定：套件的啟動設定，不是設定在本機啟動的伺服器，就是在元件的用戶端呼叫者處理程序啟動的程式庫。</LI></P>
+<P ALIGN="JUSTIFY"><LI>在套件之間移動元件：可以使用拉曳和下拉方式，在套件之間，將元件從一個套件移動到另一套件。</LI></P></UL>
+
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>增強程式設計的功能</FONT><FONT FACE="Arial" SIZE=5> </P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">MTS 2.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>增強程式設計的功能，主要為可以使用</FONT><FONT SIZE=3>WSH</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>管理</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，可以管理</FONT><FONT SIZE=3>MTS Explorer</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>中的套件配置及維護，也可使用</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>和</FONT><FONT SIZE=3>VB</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>來管理</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</P>
+</FONT><FONT FACE="全真中隸書,細明體" LANG="ZH-TW" SIZE=6><P>如何使用</FONT><FONT FACE="Arial" SIZE=6>MTS</FONT><FONT FACE="全真中隸書,細明體" LANG="ZH-TW" SIZE=6>系統管理物件呢？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">如何使用</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>系統管理物件呢？</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>系統管理物件，包括如下：</P>
+
+<UL>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>Catalog Collection</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（目錄集合）物件層</LI></P>
+<P ALIGN="JUSTIFY"><LI>公用程式物件層</LI></P></UL>
+
+<P ALIGN="JUSTIFY">您可以使用</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>WSH</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>Visual Basic</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>Visual C++</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，來呼叫</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>系統管理物件，以程式來管理</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>Catalog Collection</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>（目錄集合）物件層</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">何謂</FONT><FONT SIZE=3>Catalog</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（目錄）呢？關鍵的地方，為</FONT><FONT SIZE=3>MTS Explore</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的每一個「資料夾」，就相當於儲存在</FONT><FONT SIZE=3>Catalog</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（目錄）的</FONT><FONT SIZE=3>Collection</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（集合）。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">Catalog</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>CatalogObject </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>和</FONT><FONT SIZE=3>CatalogCollection</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>物件構成</FONT><FONT SIZE=3>Catalog Collection</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（目錄集合）物件層，這些物件讓您能將使用程式來完成</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>一般系統管理的程序，譬如建立、刪除或修改物件。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">Catalog Collection</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（目錄集合）物件層，包括如下：</P>
+
+<UL>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>Catalog</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>物件：連接到特定伺服器並存取集合。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>CatalogObject </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>物件：取得並設定物件的屬性。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>CatalogCollection</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>物件：列舉、建立、刪除、修改物件，以及存取相關的集合。</LI></P></UL>
+
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">Catalog</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>物件連接到特定伺服器並存取集合，譬如</FONT><FONT SIZE=3>MTS Explore</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的資料夾，如圖</FONT><FONT SIZE=3>4</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</P>
+<P ALIGN="JUSTIFY">使用</FONT><FONT SIZE=3>CreateObject("MTSAdmin.Catalog.1") </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>可以存取</FONT><FONT SIZE=3> [</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>我的電腦</FONT><FONT SIZE=3>] </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料夾，程式如下：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>Set catalog = CreateObject("MTSAdmin.Catalog.1")</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>GetCollection</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>方法</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">若要存取</FONT><FONT SIZE=3> [</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>我的電腦</FONT><FONT SIZE=3>] </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3> [</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>安裝的套件</FONT><FONT SIZE=3>] </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料夾，要如何做呢？</P>
+<P ALIGN="JUSTIFY">使用</FONT><FONT SIZE=3>CatalogCollection</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>物件，從任何一個</FONT><FONT SIZE=3>MTS Explorer</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料夾存取任何型別的集合或資料。</P>
+<P ALIGN="JUSTIFY">您可以從</FONT><FONT SIZE=3>Catalog </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>物件呼叫</FONT><FONT SIZE=3>GetCollection</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法，指定一個集合名稱，即可存取</FONT><FONT SIZE=3>MTS Explorer</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料夾的指定集合，譬如</FONT><FONT SIZE=3>GetCollection("Packages")</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>可以存取</FONT><FONT SIZE=3> [</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>我的電腦</FONT><FONT SIZE=3>] </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3> [</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>安裝的套件</FONT><FONT SIZE=3>] </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料夾，程式如下：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>'</FONT><FONT FACE="華康中楷體,細明體" LANG="ZH-TW" SIZE=3>取得</FONT><FONT FACE="Arial" SIZE=3>packages collection</P>
+<P>Set packages = catalog.GetCollection("Packages")</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">若要存取</FONT><FONT SIZE=3> [</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>安裝的套件</FONT><FONT SIZE=3>] </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>下各套件的</FONT><FONT SIZE=3> [</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>元件</FONT><FONT SIZE=3>] </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>或</FONT><FONT SIZE=3> [</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>權限</FONT><FONT SIZE=3>] </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料夾：</P>
+<P ALIGN="JUSTIFY">方法為使用</FONT><FONT SIZE=3>GetCollection("ComponentsInPackage", …) </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>以存取</FONT><FONT SIZE=3> [</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>元件</FONT><FONT SIZE=3>] </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料夾，</FONT><FONT SIZE=3>GetCollection("RolesInPackage", …) </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>則可以存取</FONT><FONT SIZE=3> [</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>權限</FONT><FONT SIZE=3>] </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料夾，程式如下：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>'</FONT><FONT FACE="華康中楷體,細明體" LANG="ZH-TW" SIZE=3>取得套件的</FONT><FONT FACE="Arial" SIZE=3>components collection</P>
+<P>Set components = packages.GetCollection("ComponentsInPackage", newPackage.Value("ID"))</P>
+</FONT><FONT FACE="華康中楷體,細明體" LANG="ZH-TW" SIZE=3>
+</FONT><FONT FACE="Arial" SIZE=3><P>'</FONT><FONT FACE="華康中楷體,細明體" LANG="ZH-TW" SIZE=3>取得套件的</FONT><FONT FACE="Arial" SIZE=3>roles collection </P>
+<P>Set rolesInPack = packages.GetCollection("RolesInPackage", newPackage.Value("ID"))</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>Populate</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>方法</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">若要從</FONT><FONT SIZE=3>Catalog</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>讀取或變更集合中的資料，首先需呼叫</FONT><FONT SIZE=3>Populate</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>或</FONT><FONT SIZE=3> PopulateByKey</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法。</FONT><FONT SIZE=3>Populate</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>會將所有的資料讀取到集合，</FONT><FONT SIZE=3>PopulateByKey </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>則只會讀取您指定的物件。譬如</FONT><FONT SIZE=3>packages.Populate</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>讀取所有安裝的套件，程式如下：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>packages.Populate</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>For Each</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>陳述式</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">CatalogCollection</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>物件支援重複集合中的物件方法，您可以重複使用</FONT><FONT SIZE=3>For Each</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>陳述式，以及</FONT><FONT SIZE=3>Item</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>及</FONT><FONT SIZE=3>Count</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>屬性取得集合中的項目和總數，用物件的</FONT><FONT SIZE=3> Value</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>屬性提供屬性名稱以存取物件屬性，譬如尋找名稱為</FONT><FONT SIZE=3>ntopsamp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的套件，找到後使得</FONT><FONT SIZE=3>Remove</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法移除此套件，程式如下：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>For i = packages.Count - 1 To 0 Step -1</P>
+<P>    If packages.Item(i).Value("Name") = “ntopsamp” Then</P>
+<P>        packages.Remove (i)</P>
+<P>    End If</P>
+<P>Next</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>Add</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>方法</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">若要建立新的物件，可以使用</FONT><FONT SIZE=3>Add</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法，譬如使用</FONT><FONT SIZE=3>Add</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>安裝新增一個套件，程式如下：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>Set newPackage = packages.Add</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>SaveChanges</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>方法</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">各種變更，包括用</FONT><FONT SIZE=3>Add</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法所新增的物件，以及用</FONT><FONT SIZE=3>Remove </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法刪除物件等變更，在您呼叫</FONT><FONT SIZE=3>SaveChanges</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法以前都保留在記憶體內。若要儲存各種變更，必須再呼叫</FONT><FONT SIZE=3> SaveChanges </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法，將</FONT><FONT SIZE=3>CatalogCollection </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>物件的任何變更套用到</FONT><FONT SIZE=3>Catalog</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（目錄）。程式如下：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>'</FONT><FONT FACE="華康中楷體,細明體" LANG="ZH-TW" SIZE=3>儲存所做的變更動作</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>packages.SaveChanges</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">若在呼叫</FONT><FONT SIZE=3>SaveChanges</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法之前，就釋放了</FONT><FONT SIZE=3>CatalogCollection </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>物件；或在呼叫</FONT><FONT SIZE=3>SaveChanges</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法之前，就呼叫</FONT><FONT SIZE=3> Populate </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>或</FONT><FONT SIZE=3> PopulateByKey </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法，那麼所有未儲存的變更都會遺失。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>公用程式物件層</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">公用程式物件層，可用來直接在</FONT><FONT SIZE=3>Catalog</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（目錄）執行指定的動作，例如安裝元件或安裝預建的套件。</P>
+<P ALIGN="JUSTIFY">公用程式物件層，包括如下：</P>
+
+<UL>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>PackageUtil</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>物件</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>ComponentUtil</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>物件</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>RemoteComponentUtil</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>物件</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>RoleAssociationUtil</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>物件</FONT><FONT SIZE=3> </LI></P></UL>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">您可在</FONT><FONT SIZE=3>CatalogCollection</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>物件呼叫</FONT><FONT SIZE=3>GetUtilInterface</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法以取得公用程式物件。譬如再使用</FONT><FONT SIZE=3>InstallComponent</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法安裝一個元件</FONT><FONT SIZE=3>test.dll</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，程式如下：</P>
+</FONT><FONT FACE="華康中楷體,細明體" LANG="ZH-TW" SIZE=3>
+</FONT><FONT FACE="Arial" SIZE=3><P>Set util = components.GetUtilInterface</P>
+<P>util.InstallComponent "c:\ntopsamp\mts\test.dll", "", ""</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">使用公用程式物件時，對</FONT><FONT SIZE=3>Catalog</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（目錄）所作的變更，</FONT><FONT SIZE=3>CatalogCollection</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>物件必須呼叫</FONT><FONT SIZE=3>Populate</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>或</FONT><FONT SIZE=3>PopulateByKey</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法，以檢視所做的任何變更。</P>
+<P ALIGN="JUSTIFY">由於變更會立刻寫入</FONT><FONT SIZE=3>Catalog</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（目錄），因此在使用公用程式方法之後，不需要呼叫</FONT><FONT SIZE=3>SaveChanges</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法以儲存變更。</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>MTS</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>錯誤處理</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">執行</FONT><FONT SIZE=3>Catalog</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（目錄）集合和公用程式的方法時，會傳回執行的成功或失敗結果，您可在</FONT><FONT SIZE=3>Visual Basic</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>中使用</FONT><FONT SIZE=3>On Error</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>處理程式，和</FONT><FONT SIZE=3>Err</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>物件以取得錯誤的資料。</P>
+<P ALIGN="JUSTIFY">呼叫方法失敗時，失敗程式碼將儲存於</FONT><FONT SIZE=3>ErrorInfo</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>集合，您可以使用</FONT><FONT SIZE=3>GetCollection</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法存取</FONT><FONT SIZE=3>ErrorInfo</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>集合。</P>
+</FONT><FONT FACE="全真中隸書,細明體" LANG="ZH-TW" SIZE=6><P>如何自動安裝</FONT><FONT FACE="Arial" SIZE=6>MTS</FONT><FONT FACE="全真中隸書,細明體" LANG="ZH-TW" SIZE=6>套件呢？</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>MTS</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>套件（</FONT><FONT FACE="Arial" SIZE=5>package</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>）</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">一個套件（</FONT><FONT SIZE=3>package</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）包括一個或數個元件（</FONT><FONT SIZE=3>component</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）以及使用權限。套件定義了在伺服器電腦上所執行處理程序的分隔。</P>
+<P ALIGN="JUSTIFY">譬如，兩個不同的套件中的元件將因處理程序而互相隔離，會在不同的程序中執行，當一個套件中的元件因應用程式嚴重錯誤而意外終止時，另一個套件中的元件可以繼續執行其處理程序。</P>
+<P ALIGN="JUSTIFY">如何安裝一個先前匯出的</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>套件呢？</P>
+<P ALIGN="JUSTIFY">這個單元，需要一個已經匯出的</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>套件</FONT><FONT SIZE=3>pak</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>檔案。您也可以直接安裝</FONT><FONT SIZE=3>dll</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>元件。</P>
+<P ALIGN="JUSTIFY">若要安裝一個先前匯出的</FONT><FONT SIZE=3>ntopsamp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，您可以使用</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>WSH</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>Visual Basic</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、或以手動操作</FONT><FONT SIZE=3>MTS Explorer</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方式，來安裝</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>套件。</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>WSH</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>範例</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">如何使用</FONT><FONT SIZE=3>WSH</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>來安裝一個先前匯出的</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>套件呢？</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4><P ALIGN="JUSTIFY"><FONT FACE="Wingdings">&#70;</FONT>
+</FONT><FONT SIZE=4> </FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4>技巧</P><DIR>
+
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">安裝一個先前匯出的</FONT><FONT FACE="Arial" SIZE=3>MTS</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=3>套件的技巧，為使用</FONT><FONT FACE="Arial" SIZE=3>InstallPackage</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=3>方法以從一個</FONT><FONT FACE="Arial" SIZE=3>.pak</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=3>檔案安裝套件。</P></DIR>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">讓我們看個例子，從</FONT><FONT SIZE=3>Windows</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的檔案總管當中，使用滑鼠快速按兩下範例為</FONT><FONT SIZE=3>instpak.vbs</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>vbs</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>檔案，或</FONT><FONT SIZE=3>DOS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>指令行下執行</FONT><FONT SIZE=3> cscript instpak.vbs</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，使用</FONT><FONT SIZE=3>WSH</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>來安裝一個</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>套件，詳細解說如下：</P>
+<P ALIGN="JUSTIFY">首先設定待安裝的套件</FONT><FONT SIZE=3>pak</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>檔案為</FONT><FONT SIZE=3>ntopsamp.pak</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，和套件</FONT><FONT SIZE=3>pak</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>名稱為</FONT><FONT SIZE=3>ntopsamp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，呼叫</FONT><FONT SIZE=3>CreateObject</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法以產生</FONT><FONT SIZE=3>catalog object</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，程式碼如下：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>pakPath = "c:\ntopsamp\mts\ntopsamp.pak"</P>
+<P>packageName = "ntopsamp"</P>
+<P>Dim catalog</P>
+<P>Set catalog = CreateObject("MTSAdmin.Catalog.1")</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">然後呼叫</FONT><FONT SIZE=3>GetCollection</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法取得取得</FONT><FONT SIZE=3>packages collection</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，並使用</FONT><FONT SIZE=3>populate</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法讀取所有套件，程式碼如下：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>Dim packages</P>
+<P>Set packages = catalog.GetCollection("Packages")</P>
+<P>packages.populate</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">呼叫</FONT><FONT SIZE=3>GetUtilInterface</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法以取得元件可用來安裝元件的公用程式物件，程式碼如下：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>Dim util</P>
+<P>Set util = packages.getUtilInterface</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">最後使用</FONT><FONT SIZE=3>InstallPackage</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法以從一個</FONT><FONT SIZE=3>.pak</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>檔案安裝套件，程式碼如下：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>util.InstallPackage pakPath, "", 0</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">您不需呼叫</FONT><FONT SIZE=3> SaveChanges </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法，即可安裝好套件。</P>
+<P ALIGN="JUSTIFY">執行後，於</FONT><FONT SIZE=3>MTS Explorer</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>重新整理後，發現已經新增加一個</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>套件</FONT><FONT SIZE=3>ntopsamp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>ASP</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>範例</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">如何透過網際網路，從瀏覽器，使用</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>來安裝一個</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>套件呢？</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4><P ALIGN="JUSTIFY"><FONT FACE="Wingdings">&#70;</FONT>
+</FONT><FONT SIZE=4> </FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4>技巧</P><DIR>
+
+</FONT><FONT FACE="Arial" SIZE=3><P ALIGN="JUSTIFY">ASP</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=3>程式碼與</FONT><FONT FACE="Arial" SIZE=3>WSH</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=3>的</FONT><FONT FACE="Arial" SIZE=3>.vbs</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=3>差不多，唯一的差異處為須將程式碼包括於</FONT><FONT FACE="Arial" SIZE=3>&lt;%…%&gt;</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=3>當中，如下：</P></DIR>
+
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;%@ LANGUAGE="VBScript" %&gt;</P>
+<P>&lt;% … %&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">從瀏覽器當中，執行</FONT><FONT SIZE=3>localhost/ntopsamp/mts/instpak.asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>asp</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>檔案，即可使得</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>來安裝一個</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>套件。程式碼如下：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;%@ LANGUAGE="VBScript" %&gt;</P>
+<P>&lt;%</P>
+<P>'</FONT><FONT FACE="華康中楷體,細明體" LANG="ZH-TW" SIZE=3>套件檔案</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>pakPath = "c:\ntopsamp\mts\ntopsamp.pak"</P>
+
+<P>'</FONT><FONT FACE="華康中楷體,細明體" LANG="ZH-TW" SIZE=3>套件名稱</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>packageName = "ntopsamp"</P>
+
+<P>'</FONT><FONT FACE="華康中楷體,細明體" LANG="ZH-TW" SIZE=3>首先產生</FONT><FONT FACE="Arial" SIZE=3>catalog object</P>
+<P>Dim catalog</P>
+<P>Set catalog = CreateObject("MTSAdmin.Catalog.1")</P>
+
+<P>'</FONT><FONT FACE="華康中楷體,細明體" LANG="ZH-TW" SIZE=3>然後取得</FONT><FONT FACE="Arial" SIZE=3>packages collection</P>
+<P>Dim packages</P>
+<P>Set packages = catalog.GetCollection("Packages")</P>
+
+<P>'</FONT><FONT FACE="華康中楷體,細明體" LANG="ZH-TW" SIZE=3>重新整理套件</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>packages.populate</P>
+
+<P>'</FONT><FONT FACE="華康中楷體,細明體" LANG="ZH-TW" SIZE=3>使用</FONT><FONT FACE="Arial" SIZE=3>InstallPackage</FONT><FONT FACE="華康中楷體,細明體" LANG="ZH-TW" SIZE=3>從一個</FONT><FONT FACE="Arial" SIZE=3>.pak</FONT><FONT FACE="華康中楷體,細明體" LANG="ZH-TW" SIZE=3>檔案安裝套件</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>Dim util</P>
+<P>Set util = packages.getUtilInterface</P>
+<P>util.InstallPackage pakPath, "", 0</P>
+
+<P>Response.Write "</FONT><FONT FACE="華康中楷體,細明體" LANG="ZH-TW" SIZE=3>安裝套件</FONT><FONT FACE="Arial" SIZE=3> OK!"</P>
+<P>%&gt;</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>VB</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>範例</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">如何使用</FONT><FONT SIZE=3>Visual Basic</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式，來安裝一個</FONT><FONT SIZE=3>MTS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>套件呢？</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4><P ALIGN="JUSTIFY"><FONT FACE="Wingdings">&#70;</FONT>
+</FONT><FONT SIZE=4> </FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4>技巧</P><DIR>
+
+</FONT><FONT FACE="Arial" SIZE=3><P ALIGN="JUSTIFY">Visual Basic</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=3>程式碼與</FONT><FONT FACE="Arial" SIZE=3>WSH</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=3>的</FONT><FONT FACE="Arial" SIZE=3>.vbs</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=3>差不多，唯一的差異處為須將</FONT><FONT FACE="Arial" SIZE=3>catalog</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=3>、</FONT><FONT FACE="Arial" SIZE=3>packages</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=3>、</FONT><FONT FACE="Arial" SIZE=3>pack</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=3>、</FONT><FONT FACE="Arial" SIZE=3>componentsInPack</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=3>、</FONT><FONT FACE="Arial" SIZE=3>util</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=3>等宣告為物件</FONT><FONT FACE="Arial" SIZE=3>Object</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=3>，程式碼如下：</P></DIR>
+
+
+<UL>
+</FONT><FONT FACE="Arial" SIZE=3><P ALIGN="JUSTIFY"><LI>Dim catalog As Object</LI></P>
+<P ALIGN="JUSTIFY"><LI>Dim packages As Object</LI></P>
+<P ALIGN="JUSTIFY"><LI>Dim pack As Object</LI></P></UL>
+
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>Dim componentsInPack As Object</LI></P>
+<P ALIGN="JUSTIFY"><LI>Dim util As Object</LI></P></UL>
+
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">程式碼如下：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>Private Sub InstPack_Click()</P>
+<P>On Error GoTo error1</P>
+<P>pakPath = "c:\ntopsamp\mts\ntopsamp.pak"</P>
+<P>packageName = "ntopsamp"</P>
+<P>Dim catalog As Object</P>
+<P>Set catalog = CreateObject("MTSAdmin.Catalog.1")</P>
+
+<P>Dim packages As Object</P>
+<P>Set packages = catalog.GetCollection("Packages")</P>
+<P>packages.populate</P>
+
+<P>Dim util As Object</P>
+<P>Set util = packages.getUtilInterface</P>
+<P>util.InstallPackage pakPath, "", 0</P>
+<P>Exit Sub</P>
+</FONT><FONT FACE="華康中楷體,細明體" LANG="ZH-TW" SIZE=3>
+</FONT><FONT FACE="Arial" SIZE=3><P>‘</FONT><FONT FACE="華康中楷體,細明體" LANG="ZH-TW" SIZE=3>如果安裝套件失敗，使用</FONT><FONT FACE="Arial" SIZE=3> Err </FONT><FONT FACE="華康中楷體,細明體" LANG="ZH-TW" SIZE=3>物件來顯示錯誤訊息</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>error1:</P>
+<P>MsgBox "</FONT><FONT FACE="華康中楷體,細明體" LANG="ZH-TW" SIZE=3>錯誤</FONT><FONT FACE="Arial" SIZE=3> " + Str$(Err.Number)</P>
+<P>End Sub</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>IIS 4.0</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>設計實例展示網站</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">作者準備一個展示各種</FONT><FONT SIZE=3>IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>設計實例的網站，提供各種網站網頁的資訊、與設計範例，包括</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>特異功能、</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料庫設計實例、網路商店、</FONT><FONT SIZE=3>ActiveX</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、推播頻道、動態</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>HTML 99</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>招等，網址如下：</P>
+<P ALIGN="JUSTIFY"></FONT><A HREF="../../index.html"><FONT SIZE=3>http://www.asp.com.tw</FONT></A></P>
+<FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">歡迎上網光臨指教。</P>
+<P ALIGN="JUSTIFY"></P></FONT></BODY>
+</HTML>

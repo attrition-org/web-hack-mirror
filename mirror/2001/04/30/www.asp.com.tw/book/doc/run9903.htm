@@ -1,0 +1,446 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>第 五 篇</TITLE>
+</HEAD>
+<BODY LINK="#0000ff" VLINK="#800080">
+
+<FONT FACE="System,新細明體" LANG="ZH-TW" SIZE=6><P ALIGN="CENTER">ADO</FONT><FONT FACE="全真中隸書,???" LANG="ZH-TW" SIZE=6>網站資料庫技術速成</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4><P ALIGN="RIGHT">刊登於RUN!PC雜誌 1999年 3月份        </P>
+<P ALIGN="RIGHT">作者</FONT><FONT SIZE=4> </FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4>喬篷科技</FONT><FONT FACE="華康少女文字體W4,???" LANG="ZH-TW" SIZE=4> </FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4>周世雄</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">筆者為微軟台北廳、經銷商訓練、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">TechNet</FONT><FONT FACE="新細明體" LANG="ZH-TW">等研討會講師，和微軟之友、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RUN!PC</FONT><FONT FACE="新細明體" LANG="ZH-TW">雜誌專欄作者，著作有「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">網站熱門應用技術</FONT><FONT FACE="標楷體" LANG="ZH-TW">」</FONT><FONT FACE="新細明體" LANG="ZH-TW">、「微軟熱門Web技術速成班」等網站網頁設計十幾本電腦書籍。現任「喬篷科技」公司總經理，從事</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Internet</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Intranet</FONT><FONT FACE="新細明體" LANG="ZH-TW">之</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫應用設計、網站網頁規劃架設等服務。</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW">示範網站</FONT><FONT FACE="華康少女文字體W4,???" LANG="ZH-TW">：</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">www.asp.com.tw</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">連絡</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">E-mail</FONT><FONT FACE="新細明體" LANG="ZH-TW">：</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">jackchou@tpts5.seed.net.tw</FONT><FONT FACE="新細明體" LANG="ZH-TW">。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P><A NAME="_Toc439430724">網際網路存取資料庫</A></P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">如何透過網際網路或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">intranet</FONT><FONT FACE="新細明體" LANG="ZH-TW">，存取伺服器資料庫的資料呢？</P>
+<P ALIGN="JUSTIFY">答案為使用瀏覽器，透過網際網路或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">intranet</FONT><FONT FACE="新細明體" LANG="ZH-TW">，經由於網站伺服器</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">執行的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW">）程式，來呼叫</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ADO</FONT><FONT FACE="新細明體" LANG="ZH-TW">（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ActiveX Data Object</FONT><FONT FACE="新細明體" LANG="ZH-TW">）、或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW">（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Remote Data Service</FONT><FONT FACE="新細明體" LANG="ZH-TW">）物件，再透過各種</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW">（或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">OLE DB</FONT><FONT FACE="新細明體" LANG="ZH-TW">）的驅動程式，即可連接到超過</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">50</FONT><FONT FACE="新細明體" LANG="ZH-TW">種支援</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW">（或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">OLE DB</FONT><FONT FACE="新細明體" LANG="ZH-TW">）的資料庫，包括</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Access</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Excel</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">FoxPro</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">dBase</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Oracle</FONT><FONT FACE="新細明體" LANG="ZH-TW">等資料庫，也可以連接到</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Excel</FONT><FONT FACE="新細明體" LANG="ZH-TW">、或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Text</FONT><FONT FACE="新細明體" LANG="ZH-TW">檔案。</P>
+<P ALIGN="JUSTIFY">您只要於網站伺服器</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">的電腦上，安裝這種資料庫的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW">（或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">OLE DB</FONT><FONT FACE="新細明體" LANG="ZH-TW">）的驅動程式，即可以存取位於網路上任何一台電腦支援</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW">（或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">OLE DB</FONT><FONT FACE="新細明體" LANG="ZH-TW">）的資料庫。</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>ADO</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>使用</FONT><FONT FACE="Arial" SIZE=5>Recordset</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>物件</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">（記錄集合）物件，將資料庫的資料先儲存到</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">當中，就可以讓多位使用者同時存取同一個資料庫。</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">ADO</FONT><FONT FACE="新細明體" LANG="ZH-TW">如何使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">物件呢？</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW" SIZE=6><P><A NAME="_Toc439430742"></FONT><FONT FACE="Arial" SIZE=6>ADO</FONT><FONT FACE="全真中隸書,???" LANG="ZH-TW" SIZE=6>如何鎖定</FONT><FONT FACE="Arial" SIZE=6>RecordSet</FONT><FONT FACE="全真中隸書,???" LANG="ZH-TW" SIZE=6>的記錄呢？</A></P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">（記錄集合）物件的方法如下：</P>
+</FONT><FONT FACE="Arial"><P>Set rs = Server.CreateObject("ADODB.Recordset")</P>
+<P>rs.Open SQL</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">指令</FONT><FONT FACE="Arial">, Conn, 1, 1&#9;</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">‘</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">讀取</P>
+</FONT><FONT FACE="Arial"><P>rs.Open SQL</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">指令</FONT><FONT FACE="Arial">, Conn, 1, 3</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">&#9;</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">‘</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">新增、修改、或刪除</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">到底</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">rs.Open</FONT><FONT FACE="新細明體" LANG="ZH-TW">後接的第三個參數</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">1</FONT><FONT FACE="新細明體" LANG="ZH-TW">和第四個參數是甚麼意思呢？為何第四個參數於讀取時要用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">1</FONT><FONT FACE="新細明體" LANG="ZH-TW">，新增、修改、或刪除時要用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">3</FONT><FONT FACE="新細明體" LANG="ZH-TW">呢？</P>
+<P ALIGN="JUSTIFY">第三個參數表示</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cursor</FONT><FONT FACE="新細明體" LANG="ZH-TW">類型。</P>
+<P ALIGN="JUSTIFY">第四個參數表示</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">的鎖定型態。</P>
+<P ALIGN="JUSTIFY">詳細介紹如下：</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>RecordSet</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>的鎖定</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">當開啟</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">物件時，您也可以於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">LockType</FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性指定鎖定的型態：</P>
+
+<UL>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>1</FONT><FONT FACE="新細明體" LANG="ZH-TW">：唯讀（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ReadOnly</FONT><FONT FACE="新細明體" LANG="ZH-TW">），不允許更新，為預設值。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>2</FONT><FONT FACE="新細明體" LANG="ZH-TW">：悲觀鎖定（</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">Pessimistic lock</FONT><FONT FACE="新細明體" LANG="ZH-TW">），在編輯</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料或呼叫了</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">AddNew</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法，一開始執行就立即鎖定此筆資料記錄或包含資料記錄的資料頁，並維持鎖定直到使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Update</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法將變更寫回到資料庫為止。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>3</FONT><FONT FACE="新細明體" LANG="ZH-TW">：樂觀鎖定（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Optimistic lock</FONT><FONT FACE="新細明體" LANG="ZH-TW">），使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Update</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法將變更寫回到資料庫時才鎖定此筆資料記錄。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>4</FONT><FONT FACE="新細明體" LANG="ZH-TW">：批次樂觀鎖定（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Batch Optimistic lock</FONT><FONT FACE="新細明體" LANG="ZH-TW">），使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">UpdateBatch</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法將多筆變更的記錄批次寫回到資料庫時，才鎖定此批資料記錄。</LI></P></UL>
+
+<P ALIGN="JUSTIFY">當您使用悲觀鎖定（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Pessimistic Lock</FONT><FONT FACE="新細明體" LANG="ZH-TW">）時，一旦編輯</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料或呼叫了</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">AddNew</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法時，就會鎖定包含目前編輯</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">的資料對應頁，直到明確地確認（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Commit</FONT><FONT FACE="新細明體" LANG="ZH-TW">）或取消這個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">的變更後，它才會釋放這個鎖定。</P>
+<P ALIGN="JUSTIFY">悲觀鎖定的主要優點，是取得鎖定之後，只要</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">還被鎖定著，就不會發生任何鎖定衝突。由於一個使用者開始編輯</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">後，其他使用者就無法改變它，所以悲觀鎖定是保證應用程式能讀取到目前最新資料的唯一方法。</P>
+<P ALIGN="JUSTIFY">悲觀鎖定的缺點，是在編輯和鎖定該</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">當中，包含該</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">的整個資料對應頁都會被鎖定。如果當使用者開始編輯和鎖定</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">後，在</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">被鎖定期間過了很久才明確地確認（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Commit</FONT><FONT FACE="新細明體" LANG="ZH-TW">）或取消這個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">的變更，就將產生一個問題，這不僅鎖定了使用者正在編輯的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">，而且還可能會鎖定存在於該被鎖定資料對應頁內其它的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">。</P>
+<P ALIGN="JUSTIFY">當您使用樂觀鎖定（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Optimistic Lock</FONT><FONT FACE="新細明體" LANG="ZH-TW">）時，只會在使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Update</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法變更</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">時，才鎖定該資料對應頁，所以能使鎖定的時間為最短，這是樂觀鎖定的主要優點。</P>
+<P ALIGN="JUSTIFY">樂觀鎖定的缺點，是當使用者開始編輯</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">時，無法確定更新是否會成功。如果另一個使用者改變了第一個使用者正在編輯的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">，那麼建立在樂觀鎖定的更新將會失敗。</P>
+<P ALIGN="JUSTIFY">譬如甲和乙都在編輯相同的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">，若甲開始以樂觀鎖定編輯一個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">，因為</FONT> <FONT FACE="新細明體" LANG="ZH-TW">甲使用的是樂觀鎖定，並沒有真正鎖定該</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">，所以無法禁止乙嘗試編輯相同的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">。</P>
+<P ALIGN="JUSTIFY">於是乙開始編輯相同的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">。但是，乙也不知道甲正在編輯該</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">，也看不到最新的資料。</P>
+<P ALIGN="JUSTIFY">因為乙也正在編輯該資料錄，所以當甲嘗試儲存他的變更時，就會收到一個錯誤。</P>
+<P ALIGN="JUSTIFY">當您使用異動（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">transaction</FONT><FONT FACE="新細明體" LANG="ZH-TW">）功能時，樂觀鎖定將會轉換成悲觀鎖定。因為在你做交易確認（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Commit</FONT><FONT FACE="新細明體" LANG="ZH-TW">）之前，異動一直會做寫入鎖定</FONT> <FONT FACE="新細明體" LANG="ZH-TW">（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Write-Lock</FONT><FONT FACE="新細明體" LANG="ZH-TW">）的功能，所以轉換成悲觀鎖定。</P>
+<P ALIGN="JUSTIFY">樂觀更新（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">optimistic update</FONT><FONT FACE="新細明體" LANG="ZH-TW">）是逐筆記錄進行的。您可以讓使用者能在自己的電腦中，暫存（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cache</FONT><FONT FACE="新細明體" LANG="ZH-TW">）多筆記錄的變更，然後使用批次處理，一次把這些多筆變更的記錄傳給伺服器進行更新，這樣效率比較高。這個方式稱為批次樂觀更新（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Batch Optimistic Update</FONT><FONT FACE="新細明體" LANG="ZH-TW">）。</P>
+<P ALIGN="JUSTIFY">批次樂觀更新使用的鎖定方式為批次樂觀鎖定（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Batch Optimistic lock</FONT><FONT FACE="新細明體" LANG="ZH-TW">），使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">UpdateBatch</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法將多筆變更的記錄批次寫回到資料庫時，才鎖定此批資料記錄。</P>
+<P ALIGN="JUSTIFY">在</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">物件上設定鎖定時，如果鎖定失敗，則會產生錯誤。</P>
+<P ALIGN="JUSTIFY">譬如有另一個使用者以鎖定的模式，開啟了</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">物件時，那麼當您嘗試鎖定該</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">物件時，就會發生錯誤。</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>cursor</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">cursor</FONT><FONT FACE="新細明體" LANG="ZH-TW">（資料指標）是一個指標或指標的集合，它指向根據某條件從資料庫中取回的資料。</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cursor</FONT><FONT FACE="新細明體" LANG="ZH-TW">的特性如下：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>可以表示單一資料表中的部份或全部</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">。</LI></P>
+<P ALIGN="JUSTIFY"><LI>可以表示多資料表的連結（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">join</FONT><FONT FACE="新細明體" LANG="ZH-TW">）中的部份或全部</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">。</LI></P>
+<P ALIGN="JUSTIFY"><LI>可以表示沒有</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">。</LI></P>
+<P ALIGN="JUSTIFY"><LI>在</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cursor</FONT><FONT FACE="新細明體" LANG="ZH-TW">層次上或者在資料欄層次上，</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cursor</FONT><FONT FACE="新細明體" LANG="ZH-TW">可以是唯讀的或可更新的。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>cursor</FONT><FONT FACE="新細明體" LANG="ZH-TW">既可以雙向捲動（表示在</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">中能向前或向後捲動），又可以是僅向前捲動。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>cursor</FONT><FONT FACE="新細明體" LANG="ZH-TW">可以存在於用戶端的電腦中，也可以存在於伺服器上。</LI></P></UL>
+
+</FONT><FONT FACE="Arial" SIZE=5><P>cursor</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>所在位置</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">cursor</FONT><FONT FACE="新細明體" LANG="ZH-TW">需要暫存的資源來儲存資料，這些資源為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RAM</FONT><FONT FACE="新細明體" LANG="ZH-TW">、虛擬記憶體、暫存檔或資料庫。如果這些資源在用戶端的電腦中，</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cursor</FONT><FONT FACE="新細明體" LANG="ZH-TW">就稱為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">client-side</FONT><FONT FACE="新細明體" LANG="ZH-TW">（用戶端）</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cursor</FONT><FONT FACE="新細明體" LANG="ZH-TW">。對於這種類型的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cursor</FONT><FONT FACE="新細明體" LANG="ZH-TW">，伺服器將</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cursor</FONT><FONT FACE="新細明體" LANG="ZH-TW">所代表的資料和</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cursor</FONT><FONT FACE="新細明體" LANG="ZH-TW">自身需要的資料傳到用戶端，由用戶端電腦來管理暫存的資源。</P>
+<P ALIGN="JUSTIFY">另外一種類型的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cursor</FONT><FONT FACE="新細明體" LANG="ZH-TW">，稱為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">server-side</FONT><FONT FACE="新細明體" LANG="ZH-TW">（伺服端）</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cursor</FONT><FONT FACE="新細明體" LANG="ZH-TW">。對於這種類型的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cursor</FONT><FONT FACE="新細明體" LANG="ZH-TW">，使用伺服器上的暫存資源來管理</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">物件。對於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">server-side cursor</FONT><FONT FACE="新細明體" LANG="ZH-TW">，只有由</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cursor</FONT><FONT FACE="新細明體" LANG="ZH-TW">選中的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">才透過網路傳送給用戶端的電腦。因此在網路通訊或頻寬出現問題時，使用這種類型的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cursor</FONT><FONT FACE="新細明體" LANG="ZH-TW">在性能上有很大的提昇。但是，因為需要伺服器上的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RAM</FONT><FONT FACE="新細明體" LANG="ZH-TW">和磁碟空間等資源，因此必須保證伺服器有足夠資源來管理所有客戶端電腦請求的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cursor</FONT><FONT FACE="新細明體" LANG="ZH-TW">。</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">CursorLocation</FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性，可以選擇</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cursor</FONT><FONT FACE="新細明體" LANG="ZH-TW">的所在位置，是在用戶端電腦還是伺服器上：</P>
+
+<UL>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>3</FONT><FONT FACE="新細明體" LANG="ZH-TW">：使用用戶端</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cursor</FONT><FONT FACE="新細明體" LANG="ZH-TW">。此選項對小的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">效果較好，但對大的結果集，其性能迅速下降。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>2</FONT><FONT FACE="新細明體" LANG="ZH-TW">：使用伺服端</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cursor</FONT><FONT FACE="新細明體" LANG="ZH-TW">。對於大多數的大型作業來說，這種類型的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cursor</FONT><FONT FACE="新細明體" LANG="ZH-TW">有較好的性能。</LI></P></UL>
+
+</FONT><FONT FACE="Arial" SIZE=5><P>cursor</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>類型</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">當開啟</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">物件時，可以於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">CursorType</FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性指定不同的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cursor</FONT><FONT FACE="新細明體" LANG="ZH-TW">類型：</P>
+
+<UL>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>0</FONT><FONT FACE="新細明體" LANG="ZH-TW">：</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Forward-only</FONT><FONT FACE="新細明體" LANG="ZH-TW">（只向前）：只能向前捲動，這是預設值。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>1</FONT><FONT FACE="新細明體" LANG="ZH-TW">：</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Keyset</FONT><FONT FACE="新細明體" LANG="ZH-TW">（索引鍵集）</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>2</FONT><FONT FACE="新細明體" LANG="ZH-TW">：</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Dynamic</FONT><FONT FACE="新細明體" LANG="ZH-TW">（動態）</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>3</FONT><FONT FACE="新細明體" LANG="ZH-TW">：</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Static</FONT><FONT FACE="新細明體" LANG="ZH-TW">（靜態）</LI></P></UL>
+
+<P ALIGN="JUSTIFY">如果應用程式只需要讀取一個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">，並不需要做新增、修改、刪除的動作，那麼用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Forward-only</FONT><FONT FACE="新細明體" LANG="ZH-TW">（只向前）的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">物件，可以明顯提高應用程式的執行性能。</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW" SIZE=6><P><A NAME="_Toc439430743"></FONT><FONT FACE="Arial" SIZE=6>ADO</FONT><FONT FACE="全真中隸書,???" LANG="ZH-TW" SIZE=6>存取資料庫如何顯示上一筆下一筆？</A></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">ADO</FONT><FONT FACE="新細明體" LANG="ZH-TW">存取資料庫如何顯示上一筆下一筆？</P>
+<P ALIGN="JUSTIFY">若要於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">移動到上一筆下一筆的位置，讓我們先學會以下</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">物件的屬性和方法：</P>
+
+<UL>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>BOF</FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性：目前指標指到</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">的第一筆。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>EOF</FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性：目前指標指到</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">的最後一筆。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>Move</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法：移動指標到</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">中的某一個記錄。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>AbsolutePosition</FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性：目前指標在</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">中的位置。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>bookmark</FONT><FONT FACE="新細明體" LANG="ZH-TW">（書籤）屬性：於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">的一筆記錄做一個記號。</LI></P></UL>
+
+<P ALIGN="JUSTIFY">詳細介紹如下：</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>BOF</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>與</FONT><FONT FACE="Arial" SIZE=5>EOF</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>屬性</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">可以撰寫程式碼來檢查</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">BOF</FONT><FONT FACE="新細明體" LANG="ZH-TW">與</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">EOF</FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性，來得知目前指標於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">的位置：</P>
+
+<UL>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>BOF</FONT><FONT FACE="新細明體" LANG="ZH-TW">與</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">EOF</FONT><FONT FACE="新細明體" LANG="ZH-TW">都為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">False</FONT><FONT FACE="新細明體" LANG="ZH-TW">：表示指標位於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">當中。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>BOF</FONT><FONT FACE="新細明體" LANG="ZH-TW">為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">True</FONT><FONT FACE="新細明體" LANG="ZH-TW">：目前指標指到</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">的第一筆。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>EOF</FONT><FONT FACE="新細明體" LANG="ZH-TW">為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">True</FONT><FONT FACE="新細明體" LANG="ZH-TW">：目前指標指到</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">的最後一筆。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>BOF</FONT><FONT FACE="新細明體" LANG="ZH-TW">與</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">EOF</FONT><FONT FACE="新細明體" LANG="ZH-TW">都為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">True</FONT><FONT FACE="新細明體" LANG="ZH-TW">：在</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">裏沒有任何的資料記錄。</LI></P></UL>
+
+</FONT><FONT FACE="Arial" SIZE=5><P>Move</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>方法</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">您可以用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Move</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法移動指標到</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">中的某一筆記錄：</P>
+
+<UL>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>MoveFirst</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法：移至第一筆記錄。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>MoveLast</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法：移至最後一筆記錄。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>MoveNext</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法：移至下一筆記錄。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>MovePrevious</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法：移至上一筆記錄。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>Move [n]</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法：移動指標到第</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">n</FONT><FONT FACE="新細明體" LANG="ZH-TW">筆記錄，</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">n</FONT><FONT FACE="新細明體" LANG="ZH-TW">由</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">0</FONT><FONT FACE="新細明體" LANG="ZH-TW">算起。</LI></P></UL>
+
+</FONT><FONT FACE="Arial" SIZE=5><P>AbsolutePosition</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>屬性</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">若您需要確定目前指標在</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">中的位置，您可以用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">AbsolutePosition</FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性。</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">AbsolutePosition</FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性的數值為目前指標相對於第一筆的位置，由</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">1</FONT><FONT FACE="新細明體" LANG="ZH-TW">算起，即第一筆的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">AbsolutePosition</FONT><FONT FACE="新細明體" LANG="ZH-TW">為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">1</FONT><FONT FACE="新細明體" LANG="ZH-TW">。然而，不要誤以為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">AbsolutePosition</FONT><FONT FACE="新細明體" LANG="ZH-TW">是資料記錄的編號，如果目前</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">處於未定的狀態，則</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">AsolutePosition</FONT><FONT FACE="新細明體" LANG="ZH-TW">的數值為–</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">1</FONT><FONT FACE="新細明體" LANG="ZH-TW">。</P>
+<P ALIGN="JUSTIFY">另外，在存取</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">時，無法保證</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">每次都以同樣的順序出現。</P>
+<P ALIGN="JUSTIFY">若要啟用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">AbsolutePosition</FONT><FONT FACE="新細明體" LANG="ZH-TW">，必須先設定為使用用戶端</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cursor</FONT><FONT FACE="新細明體" LANG="ZH-TW">，</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">碼如下：</P>
+</FONT><FONT FACE="Arial"><P>rs2.CursorLocation = 3&#9;</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>Move/AbsolutePosition</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>例子</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">讓我們看一個於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼當中使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Move/AbsolutePosition</FONT><FONT FACE="新細明體" LANG="ZH-TW">做到上一筆下一筆功能的例子。</P>
+<P ALIGN="JUSTIFY">譬如</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼如下：</P>
+</FONT><FONT FACE="Arial"><P>&lt;% </P>
+<P>Set conn1 = Server.CreateObject("ADODB.Connection") </P>
+<P>conn1.Open "DBQ="&amp; Server.MapPath("ntopsamp.mdb") &amp;";Driver={Microsoft Access Driver (*.mdb)};DriverId=25;FIL=MS Access;" </P>
+<P>Set rs2 = Server.CreateObject("ADODB.Recordset")</P>
+<P>SqlStr = "SELECT * From </FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">著作</FONT><FONT FACE="Arial">"</P>
+<P>'Enable AbsolutePosition</P>
+<P>rs2.CursorLocation = 3&#9;'adUseClient</P>
+<P>rs2.Open SqlStr,conn1,1,1</P>
+<P>if Request("sel") = "prev" then</P>
+<P>&#9;Session("position") = Session("position") - 1</P>
+<P>&#9;rs2.Move Session("position")</P>
+<P>elseif Request("sel") = "next" then</P>
+<P>&#9;Session("position") = Session("position") + 1</P>
+<P>&#9;rs2.Move Session("position")</P>
+<P>else</P>
+<P>&#9;Session("position") = 0</P>
+<P>end if</P>
+<P>%&gt;</P>
+<P>&lt;% = Session("position") %&gt;</P>
+<P>&lt;TABLE COLSPAN=8 CELLPADDING=5 BORDER=0&gt;</P>
+<P>&lt;TR&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">書名</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">出版</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">圖片</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">簡介</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;AbsolutePosition&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TR&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs2("</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">書名</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs2("</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">出版</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs2("</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">圖片</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs2("</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">簡介</FONT><FONT FACE="Arial">") %&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs2.AbsolutePosition %&gt;&lt;/TD&gt;</P>
+<P>&lt;/TR&gt; </P>
+<P>&lt;/TABLE&gt;</P>
+<P>&lt;% if Session("position") &gt; 0 then %&gt;</P>
+<P>&lt;A href=rs14.asp?sel=prev&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">上一筆</FONT><FONT FACE="Arial">&lt;/A&gt;</P>
+<P>&lt;% end if %&gt;</P>
+<P>&lt;% if Session("position") &lt; rs2.RecordCount -1 then %&gt;</P>
+<P>&lt;A href=rs14.asp?sel=next&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">下一筆</FONT><FONT FACE="Arial">&lt;/A&gt;</P>
+<P>&lt;% end if %&gt;</P>
+<P>&lt;% rs2.Close %&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">以上的</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼，於用戶端使用瀏覽器，瀏覽執行的結果，顯示上一筆下一筆的功能。</P>
+<P ALIGN="JUSTIFY">由</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Session("position")</FONT><FONT FACE="新細明體" LANG="ZH-TW">儲存這個使用者的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">指標位置，當按下</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">上一筆</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">超連結時，由</FONT>&lt;<FONT FACE="System,新細明體" LANG="ZH-TW">A href=rs14.asp?sel=prev&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW">上一筆</FONT>&lt;<FONT FACE="System,新細明體" LANG="ZH-TW">/A&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW">，將</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">sel</FONT><FONT FACE="新細明體" LANG="ZH-TW">設定為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">prev</FONT><FONT FACE="新細明體" LANG="ZH-TW">，並重新執行</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">rs14.asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">碼。由以下的程式部份，將</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Session("position")</FONT><FONT FACE="新細明體" LANG="ZH-TW">減一：</P>
+</FONT><FONT FACE="Arial"><P>if Request("sel") = "prev" then</P>
+<P>&#9;Session("position") = Session("position") - 1</P>
+<P>&#9;rs2.Move Session("position")</P>
+<P>elseif Request("sel") = "next" then</P>
+<P>&#9;Session("position") = Session("position") + 1</P>
+<P>&#9;rs2.Move Session("position")</P>
+<P>else</P>
+<P>&#9;Session("position") = 0</P>
+<P>end if</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">然後使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Move Session("position")</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法，將移動指標到第</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Session("position")</FONT><FONT FACE="新細明體" LANG="ZH-TW">個記錄，第一筆記錄的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Session("position")</FONT><FONT FACE="新細明體" LANG="ZH-TW">值為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">0</FONT><FONT FACE="新細明體" LANG="ZH-TW">。</P>
+<P ALIGN="JUSTIFY">當按下</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">下一筆</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">超連結時，由</FONT>&lt;<FONT FACE="System,新細明體" LANG="ZH-TW">A href=rs14.asp?sel=next&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW">下一筆</FONT>&lt;<FONT FACE="System,新細明體" LANG="ZH-TW">/A&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW">，將</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">sel</FONT><FONT FACE="新細明體" LANG="ZH-TW">設定為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">next</FONT><FONT FACE="新細明體" LANG="ZH-TW">，並重新執行</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">rs14.asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">碼。由以上的程式部份，將</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Session("position")</FONT><FONT FACE="新細明體" LANG="ZH-TW">加一，然後使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Move Session("position")</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法，將移動指標到第</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Session("position")</FONT><FONT FACE="新細明體" LANG="ZH-TW">個記錄。</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">AbsolutePosition</FONT><FONT FACE="新細明體" LANG="ZH-TW">部份，首先由</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">rs2.CursorLocation = 3</FONT><FONT FACE="新細明體" LANG="ZH-TW">設定為使用用戶端</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">cursor</FONT><FONT FACE="新細明體" LANG="ZH-TW">，以啟用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">AbsolutePosition</FONT><FONT FACE="新細明體" LANG="ZH-TW">，即可由</FONT>&lt;<FONT FACE="System,新細明體" LANG="ZH-TW">%= rs2.AbsolutePosition %&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW">顯示</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">AbsolutePosition</FONT><FONT FACE="新細明體" LANG="ZH-TW">的值。</P>
+<P ALIGN="JUSTIFY">為了判斷是否要顯示</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">上一筆</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] [</FONT><FONT FACE="新細明體" LANG="ZH-TW">下一筆</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">超連結，由以下的程式部份：</P>
+</FONT><FONT FACE="Arial"><P>&lt;% if Session("position") &gt; 0 then %&gt;</P>
+<P>&lt;A href=rs14.asp?sel=prev&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">上一筆</FONT><FONT FACE="Arial">&lt;/A&gt;</P>
+<P>&lt;% end if %&gt;</P>
+<P>&lt;% if Session("position") &lt; rs2.RecordCount -1 then %&gt;</P>
+<P>&lt;A href=rs14.asp?sel=next&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">下一筆</FONT><FONT FACE="Arial">&lt;/A&gt;</P>
+<P>&lt;% end if %&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">就可以使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">if Session("position") &gt; 0</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">if Session("position") &lt; rs2.RecordCount -1</FONT><FONT FACE="新細明體" LANG="ZH-TW">，比較目前的位置</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Session("position")</FONT><FONT FACE="新細明體" LANG="ZH-TW">和第一筆</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">0</FONT><FONT FACE="新細明體" LANG="ZH-TW">、第末筆</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordCount -1</FONT><FONT FACE="新細明體" LANG="ZH-TW">的位置，來判斷是否要顯示</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">上一筆</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] [</FONT><FONT FACE="新細明體" LANG="ZH-TW">下一筆</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">的超連結。</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>Bookmark</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>（書籤）</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">Bookmark</FONT><FONT FACE="新細明體" LANG="ZH-TW">（書籤）於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">的一筆記錄做一個記號。</P>
+<P ALIGN="JUSTIFY">使用時先移動到那筆資料，然後給予</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Bookmark</FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性一個名稱，即書籤記號的名稱，當要回到該筆記錄時，將</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Bookmark </FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性設為所設定書籤記號的名稱即可。</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>Bookmark</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>例子</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">如何使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Bookmark</FONT><FONT FACE="新細明體" LANG="ZH-TW">（書籤）呢？讓我們看一個於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼當中使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Bookmark</FONT><FONT FACE="新細明體" LANG="ZH-TW">的例子。</P>
+<P ALIGN="JUSTIFY">譬如</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼如下：</P>
+</FONT><FONT FACE="Arial"><P>&lt;% </P>
+<P>Set conn1 = Server.CreateObject("ADODB.Connection") </P>
+<P>conn1.Open "DBQ="&amp; Server.MapPath("ntopsamp.mdb") &amp;";Driver={Microsoft Access Driver (*.mdb)};DriverId=25;FIL=MS Access;" </P>
+<P>Set rs2 = Server.CreateObject("ADODB.Recordset")</P>
+<P>SqlStr = "SELECT * From </FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">著作</FONT><FONT FACE="Arial">"</P>
+<P>rs2.Open SqlStr,conn1,1,1</P>
+<P>rs2.MoveNext</P>
+<P>if Request("sel") = "last" then </P>
+</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW"><P>&#9;</FONT><FONT FACE="Arial">rs2.MoveLast</P>
+<P>elseif Request("sel") = "first" then </P>
+<P>&#9;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">&#9;</FONT><FONT FACE="Arial">rs2.MoveFirst</P>
+<P>elseif Request("sel") = "prev" then</P>
+<P>&#9;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">&#9;</FONT><FONT FACE="Arial">Session("position") = Session("position") - 1</P>
+<P>&#9;rs2.Move Session("position")</P>
+<P>elseif Request("sel") = "next" then</P>
+<P>&#9;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">&#9;</FONT><FONT FACE="Arial">Session("position") = Session("position") + 1</P>
+<P>&#9;rs2.Move Session("position")</P>
+<P>elseif Request("sel") = "set" then </P>
+<P>&#9;rs2.Move Session("position")</P>
+</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW"><P>&#9;</FONT><FONT FACE="Arial">Session("bk") = rs2.Bookmark </P>
+<P>elseif Request("sel") = "go" then </P>
+<P>&#9;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">&#9;</FONT><FONT FACE="Arial">rs2.Bookmark = Session("bk")</P>
+<P>else</P>
+</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW"><P>&#9;</FONT><FONT FACE="Arial">Session("position") = 0</P>
+<P>end if</P>
+<P>%&gt;</P>
+<P>&lt;TABLE COLSPAN=8 CELLPADDING=5 BORDER=0&gt;</P>
+<P>&lt;TR&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">書名</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">出版</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">圖片</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">簡介</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TR&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs2("</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">書名</FONT><FONT FACE="Arial">")%&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs2("</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">出版</FONT><FONT FACE="Arial">")%&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs2("</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">圖片</FONT><FONT FACE="Arial">")%&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs2("</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">簡介</FONT><FONT FACE="Arial">")%&gt;&lt;/TD&gt;</P>
+<P>&lt;/TR&gt; </P>
+<P>&lt;/TABLE&gt;</P>
+<P>&lt;A href=rs13.asp?sel=first&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">第一筆</FONT><FONT FACE="Arial">&lt;/A&gt;</P>
+<P>&lt;% if Session("position") &gt; 0 then %&gt;</P>
+<P>&lt;A href=rs13.asp?sel=prev&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">上一筆</FONT><FONT FACE="Arial">&lt;/A&gt;</P>
+<P>&lt;% end if %&gt;</P>
+<P>&lt;% if Session("position") &lt; rs2.RecordCount -1 then %&gt;</P>
+<P>&lt;A href=rs13.asp?sel=next&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">下一筆</FONT><FONT FACE="Arial">&lt;/A&gt;</P>
+<P>&lt;% end if %&gt;</P>
+<P>&lt;A href=rs13.asp?sel=last&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">最末筆</FONT><FONT FACE="Arial">&lt;/A&gt;</P>
+<P>&lt;A href=rs13.asp?sel=set&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">設定</FONT><FONT FACE="Arial">Bookmark&lt;/A&gt;</P>
+<P>&lt;A href=rs13.asp?sel=go&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">到</FONT><FONT FACE="Arial">Bookmark&lt;/A&gt;</P>
+<P>&lt;% rs2.Close %&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">由</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Session("bk")</FONT><FONT FACE="新細明體" LANG="ZH-TW">儲存這個使用者</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet </FONT><FONT FACE="新細明體" LANG="ZH-TW">的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">bookmark</FONT><FONT FACE="新細明體" LANG="ZH-TW">（書籤）位置，當按下</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">設定</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Bookmark] </FONT><FONT FACE="新細明體" LANG="ZH-TW">超連結時，由</FONT>&lt;<FONT FACE="System,新細明體" LANG="ZH-TW">A href=rs13.asp?sel=set&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW">設定</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Bookmark&lt;/A&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW">，將</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">sel</FONT><FONT FACE="新細明體" LANG="ZH-TW">設定為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">set</FONT><FONT FACE="新細明體" LANG="ZH-TW">，並重新執行</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">rs13.asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">碼。由以下的程式部份，首先</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">rs2.Move Session("position")</FONT><FONT FACE="新細明體" LANG="ZH-TW">回到上次的位置，然後使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Session("bk") = rs2.Bookmark</FONT><FONT FACE="新細明體" LANG="ZH-TW">設定書籤，</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Session("Bookmark")</FONT><FONT FACE="新細明體" LANG="ZH-TW">儲存書籤記號的名稱：</P>
+</FONT><FONT FACE="Arial"><P>if Request("sel") = "last" then </P>
+</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW"><P>&#9;</FONT><FONT FACE="Arial">rs2.MoveLast</P>
+<P>elseif Request("sel") = "first" then </P>
+<P>&#9;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">&#9;</FONT><FONT FACE="Arial">rs2.MoveFirst</P>
+<P>elseif Request("sel") = "prev" then</P>
+<P>&#9;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">&#9;</FONT><FONT FACE="Arial">Session("position") = Session("position") - 1</P>
+<P>&#9;rs2.Move Session("position")</P>
+<P>elseif Request("sel") = "next" then</P>
+<P>&#9;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">&#9;</FONT><FONT FACE="Arial">Session("position") = Session("position") + 1</P>
+<P>&#9;rs2.Move Session("position")</P>
+<P>elseif Request("sel") = "set" then </P>
+<P>&#9;rs2.Move Session("position")</P>
+</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW"><P>&#9;</FONT><FONT FACE="Arial">Session("bk") = rs2.Bookmark </P>
+<P>elseif Request("sel") = "go" then </P>
+<P>&#9;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">&#9;</FONT><FONT FACE="Arial">rs2.Bookmark = Session("bk")</P>
+<P>else</P>
+</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW"><P>&#9;</FONT><FONT FACE="Arial">Session("position") = 0</P>
+<P>end if</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">當按下</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">到</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Bookmark] </FONT><FONT FACE="新細明體" LANG="ZH-TW">超連結時，由</FONT>&lt;<FONT FACE="System,新細明體" LANG="ZH-TW">A href=rs13.asp?sel=go&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW">到</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Bookmark&lt;/A&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW">，將</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">sel</FONT><FONT FACE="新細明體" LANG="ZH-TW">設定為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">go</FONT><FONT FACE="新細明體" LANG="ZH-TW">，並重新執行</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">rs13.asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">碼。由以上的程式部份，由</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">rs2.Bookmark = Session("bk")</FONT><FONT FACE="新細明體" LANG="ZH-TW">回到上次書籤記號的位置。</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW" SIZE=6><P><A NAME="_Toc439430744"></FONT><FONT FACE="Arial" SIZE=6>ADO</FONT><FONT FACE="全真中隸書,???" LANG="ZH-TW" SIZE=6>存取資料庫如何顯示上一頁下一頁？</A></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">ADO</FONT><FONT FACE="新細明體" LANG="ZH-TW">存取資料庫如何顯示上一頁下一頁？</P>
+<P ALIGN="JUSTIFY">若要於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">移動到上一頁下一頁的位置，必須學會以下</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">物件的屬性：</P>
+
+<UL>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>PageSize</FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性：設定每一頁顯示的記錄筆數。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>PageCount</FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性：得知資料記錄的總頁數。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>AbsolutePage</FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性：設定顯示第幾頁的記錄筆數。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>RecordCount</FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性：得知</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">物件中資料記錄的總數目。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>MaxRecords</FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性：得知和設定傳到</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW">物件資料記錄的最大數目，預設值為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">0</FONT><FONT FACE="新細明體" LANG="ZH-TW">表示無限制。</LI></P></UL>
+
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>顯示上一頁下一頁的例子</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">讓我們看一個於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼當中使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">PageSize/PageCount/ AbsolutePage/RecordCount</FONT><FONT FACE="新細明體" LANG="ZH-TW">顯示上一頁下一頁的例子。</P>
+<P ALIGN="JUSTIFY">譬如</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼如下：</P>
+</FONT><FONT FACE="Arial"><P>&lt;%</P>
+<P>if Request("page") = "" then </P>
+</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW"><P>&#9;</FONT><FONT FACE="Arial">page = 1</P>
+<P>else</P>
+<P>&#9;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">&#9;</FONT><FONT FACE="Arial">page = CINT(Request("page"))</P>
+<P>end if</P>
+<P>Set conn1 = Server.CreateObject("ADODB.Connection") </P>
+<P>conn1.Open "DBQ="&amp; Server.MapPath("ntopsamp.mdb") &amp;";Driver={Microsoft Access Driver (*.mdb)};DriverId=25;FIL=MS Access;" </P>
+<P>Set rs2 = Server.CreateObject("ADODB.Recordset")</P>
+<P>SqlStr = "SELECT * From </FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">產品</FONT><FONT FACE="Arial">"</P>
+<P>rs2.Open SqlStr,conn1,1,1</P>
+<P>rs2.PageSize = 5</P>
+<P>rs2.AbsolutePage = page</P>
+<P>%&gt;</P>
+</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW"><P>第</FONT><FONT FACE="Arial"> &lt;% =page %&gt; </FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">頁</FONT><FONT FACE="Arial"> / </FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">計</FONT><FONT FACE="Arial"> &lt;% =rs2.PageCount %&gt; </FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">頁</FONT><FONT FACE="Arial"> (</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">計</FONT><FONT FACE="Arial"> &lt;% =rs2.RecordCount %&gt; </FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">筆</FONT><FONT FACE="Arial">)</P>
+<P>&lt;TABLE COLSPAN=8 CELLPADDING=5 BORDER=0&gt;</P>
+<P>&lt;TR&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#800000"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">代號</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#800000"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">名稱</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#800000"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">價格</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#800000"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">數量</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;/TR&gt;</P>
+<P>&lt;% For i = 1 To rs2.PageSize %&gt;</P>
+<P>&lt;TR&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs2("</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">代號</FONT><FONT FACE="Arial">")%&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs2("</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">名稱</FONT><FONT FACE="Arial">")%&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs2("</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">價格</FONT><FONT FACE="Arial">")%&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs2("</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">數量</FONT><FONT FACE="Arial">")%&gt;&lt;/TD&gt;</P>
+<P>&lt;/TR&gt; </P>
+<P>&lt;% </P>
+<P>rs2.MoveNext&#9;&#9;&#9;</P>
+<P>If rs2.EOF Then Exit For&#9;&#9;</P>
+<P>Next </P>
+<P>%&gt;</P>
+<P>&lt;/TABLE&gt;</P>
+<P>&lt;% if page &gt; 1 then %&gt;</P>
+<P>&lt;A href=rs16.asp?page=&lt;% =page -1 %&gt; &gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">上一頁</FONT><FONT FACE="Arial">&lt;/A&gt;</P>
+<P>&lt;% end if %&gt;</P>
+<P>&lt;% if page &lt; rs2.PageCount then %&gt;</P>
+<P>&lt;A href=rs16.asp?page=&lt;% =page +1 %&gt; &gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">下一頁</FONT><FONT FACE="Arial">&lt;/A&gt;</P>
+<P>&lt;% end if %&gt;</P>
+<P>&lt;%</P>
+<P>rs2.Close</P>
+<P>conn1.Close</P>
+<P>Set objCommand = Nothing</P>
+<P>Set rs2 = Nothing</P>
+<P>Set conn1 = Nothing</P>
+<P>%&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">當按下</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">下一頁</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">超連結時，由</FONT>&lt;<FONT FACE="System,新細明體" LANG="ZH-TW">A href=rs16.asp?page=&lt;% =page +1 %&gt; &gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW">下一頁</FONT>&lt;<FONT FACE="System,新細明體" LANG="ZH-TW">/A&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW">，將</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">page</FONT><FONT FACE="新細明體" LANG="ZH-TW">設定為加一，並重新執行</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">rs16.asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">asp</FONT><FONT FACE="新細明體" LANG="ZH-TW">碼。由</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">page = CINT(Request("page"))</FONT><FONT FACE="新細明體" LANG="ZH-TW">設定</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">page</FONT><FONT FACE="新細明體" LANG="ZH-TW">值。</P>
+<P ALIGN="JUSTIFY">首先於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">PageSize</FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性設定每一頁顯示的記錄筆數為</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">5</FONT><FONT FACE="新細明體" LANG="ZH-TW">，再於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">AbsolutePage</FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性設定顯示第</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">page</FONT><FONT FACE="新細明體" LANG="ZH-TW">頁的記錄筆數，程式部份如下：</P>
+</FONT><FONT FACE="Arial"><P>rs2.PageSize = 5</P>
+<P>rs2.AbsolutePage = page</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">由</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">PageCount</FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性得知資料記錄的總頁數，由</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordCount</FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性得知資料記錄的總筆數，程式部份如下：</P>
+</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW"><P>第</FONT><FONT FACE="Arial"> &lt;% =page %&gt; </FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">頁</FONT><FONT FACE="Arial"> / </FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">計</FONT><FONT FACE="Arial"> &lt;% =rs2.PageCount %&gt; </FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">頁</FONT><FONT FACE="Arial"> (</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">計</FONT><FONT FACE="Arial"> &lt;% =rs2.RecordCount %&gt; </FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">筆</FONT><FONT FACE="Arial">)</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">最後由</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">For i = 1 To rs2.PageSize…Next</FONT><FONT FACE="新細明體" LANG="ZH-TW">，將於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">PageSize</FONT><FONT FACE="新細明體" LANG="ZH-TW">屬性設定每一頁顯示的記錄筆數逐一顯示出來。</P>
+<P ALIGN="JUSTIFY">為了判斷是否要顯示</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">上一頁</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] [</FONT><FONT FACE="新細明體" LANG="ZH-TW">下一頁</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">超連結，由以下的程式部份：</P>
+</FONT><FONT FACE="Arial"><P>&lt;% if page &gt; 1 then %&gt;</P>
+<P>&lt;A href=rs16.asp?page=&lt;% =page -1 %&gt; &gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">上一頁</FONT><FONT FACE="Arial">&lt;/A&gt;</P>
+<P>&lt;% end if %&gt;</P>
+<P>&lt;% if page &lt; rs2.PageCount then %&gt;</P>
+<P>&lt;A href=rs16.asp?page=&lt;% =page +1 %&gt; &gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">下一頁</FONT><FONT FACE="Arial">&lt;/A&gt;</P>
+<P>&lt;% end if %&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">就可以使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">page</FONT><FONT FACE="新細明體" LANG="ZH-TW">，比較第一頁</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">1</FONT><FONT FACE="新細明體" LANG="ZH-TW">和總頁數</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">PageCount</FONT><FONT FACE="新細明體" LANG="ZH-TW">，即可判斷是否要顯示</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">上一頁</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] [</FONT><FONT FACE="新細明體" LANG="ZH-TW">下一頁</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">超連結。</P>
+<P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW" SIZE=6><P><A NAME="_Toc439430746"></FONT><FONT FACE="Arial" SIZE=6>ADO</FONT><FONT FACE="全真中隸書,???" LANG="ZH-TW" SIZE=6>如何提供異動（</FONT><FONT FACE="Arial" SIZE=6>transaction</FONT><FONT FACE="全真中隸書,???" LANG="ZH-TW" SIZE=6>）功能？</A></P>
+</FONT><FONT FACE="Arial" SIZE=5><P>BeginTrans/CommitTrans/Rollback</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>方法</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">當您必須更新多個資料表中的資料欄位時，並確保在所有的資料表中所作的改變都被完成（確認</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Commit</FONT><FONT FACE="新細明體" LANG="ZH-TW">）、或者不變（撤銷復原</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Rollback</FONT><FONT FACE="新細明體" LANG="ZH-TW">）時，您可以使用異動（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">transaction</FONT><FONT FACE="新細明體" LANG="ZH-TW">）來維護資料的完整性。</P>
+<P ALIGN="JUSTIFY">例如，當您將錢從甲帳戶匯到另一個乙帳戶時，需要從甲帳戶上減去一個數並加到另一個乙帳戶上。如果其中有一個更新失敗，帳戶就不會平衡。</P>
+<P ALIGN="JUSTIFY">使用異動（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">transaction</FONT><FONT FACE="新細明體" LANG="ZH-TW">）功能時，對資料所做的任何改變都可撤銷復原（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Rollback</FONT><FONT FACE="新細明體" LANG="ZH-TW">），或者可以確認（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Commit</FONT><FONT FACE="新細明體" LANG="ZH-TW">）儲存所有對資料庫的改變。</P>
+<P ALIGN="JUSTIFY">加上異動（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">transaction</FONT><FONT FACE="新細明體" LANG="ZH-TW">）功能的方法，為在更新第一筆資料欄位前，先使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">BeginTrans </FONT><FONT FACE="新細明體" LANG="ZH-TW">方法，然後，只要有任何更新失敗，就可以使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RollbackTrans</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法撤銷所有的更新。當您成功地更新最後一筆資料欄位之後，就可使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">CommitTrans</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法確認（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Commit</FONT><FONT FACE="新細明體" LANG="ZH-TW">）儲存到資料庫。</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">ADO</FONT><FONT FACE="新細明體" LANG="ZH-TW">有三種支援異動處理的方法：</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">BeginTrans</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">CommitTrans</FONT><FONT FACE="新細明體" LANG="ZH-TW">、與</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Rollback</FONT><FONT FACE="新細明體" LANG="ZH-TW">。但是，資料庫本身也必須支援異動處理的功能，譬如</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server</FONT><FONT FACE="新細明體" LANG="ZH-TW">提供異動（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">transaction</FONT><FONT FACE="新細明體" LANG="ZH-TW">）處理的功能，但是</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Access</FONT><FONT FACE="新細明體" LANG="ZH-TW">則未提供。</P>
+
+<UL>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>BeginTrans</FONT><FONT FACE="新細明體" LANG="ZH-TW">：開始一個異動處理，一旦開始一個異動處理，就必須在關閉資料庫或應用程式之前使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">CommitTrans</FONT><FONT FACE="新細明體" LANG="ZH-TW">或</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Rollback</FONT><FONT FACE="新細明體" LANG="ZH-TW">。當應用程式結束時，沒有交付確認（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Commit</FONT><FONT FACE="新細明體" LANG="ZH-TW">）的異動要自動復原。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>CommitTrans</FONT><FONT FACE="新細明體" LANG="ZH-TW">：將改變儲存到資料庫中。用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">BeginTrans</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法開啟異動處理以後，</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">CommitTrans</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法將</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">所有的改變儲存到資料庫。執行</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">CommitTrans</FONT><FONT FACE="新細明體" LANG="ZH-TW">時，所有改變成為永久性的改變。</LI></P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"><LI>Rollback</FONT><FONT FACE="新細明體" LANG="ZH-TW">：撤銷復原，倒退或者撤銷目前異動處理中所有已改變的資料。它同時終止異動處理。</LI></P></UL>
+
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>異動（</FONT><FONT FACE="Arial" SIZE=5>transaction</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>）例子</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">讓我們看一個於</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼當中使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">BeginTrans/ CommitTrans/RollbackTrans</FONT><FONT FACE="新細明體" LANG="ZH-TW">提供異動（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">transaction</FONT><FONT FACE="新細明體" LANG="ZH-TW">）功能的例子。</P>
+<P ALIGN="JUSTIFY">本例子，使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet </FONT><FONT FACE="新細明體" LANG="ZH-TW">的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Requery</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法，重新執行</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SELECT</FONT><FONT FACE="新細明體" LANG="ZH-TW">指令載入資料到</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">。</P>
+<P ALIGN="JUSTIFY">執行本例子的資料庫必須支援異動處理的功能，譬如</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server</FONT><FONT FACE="新細明體" LANG="ZH-TW">提供異動（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">transaction</FONT><FONT FACE="新細明體" LANG="ZH-TW">）處理的功能，但是</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Access</FONT><FONT FACE="新細明體" LANG="ZH-TW">則未提供。</P>
+<P ALIGN="JUSTIFY">譬如</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼如下，使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">BeginTrans</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法開始一個異動處理，將</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">檔案下載</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">資料表每一筆記錄的</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">檔案下載次數</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">欄位加上</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">100</FONT><FONT FACE="新細明體" LANG="ZH-TW">，再使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">CommitTrans</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法將</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">所有的改變儲存到資料庫。或者使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Rollback</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法，撤銷目前異動處理中所有已改變的資料：</P>
+</FONT><FONT FACE="Arial"><P>&lt;%</P>
+<P>Set conn1 = Server.CreateObject("ADODB.Connection")</P>
+<P>conn1.Open "driver={SQL Server};server=(Local);uid=sa;pwd=;database=comPak"</P>
+<P>Set rs2 = Server.CreateObject("ADODB.Recordset")</P>
+<P>sql = "SELECT * FROM </FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">檔案下載</FONT><FONT FACE="Arial">" </P>
+<P>rs2.Open sql,conn1,1,2,1</P>
+<P>conn1.BeginTrans</P>
+<P>Do while not rs2.EOF</P>
+<P>&#9;if IsNull(rs2("</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">檔案下載次數</FONT><FONT FACE="Arial">")) then rs2("</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">檔案下載次數</FONT><FONT FACE="Arial">") = 100</P>
+<P>&#9;rs2("</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">檔案下載次數</FONT><FONT FACE="Arial">") = rs2("</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">檔案下載次數</FONT><FONT FACE="Arial">") + 100</P>
+<P>&#9;rs2.MoveNext</P>
+<P>Loop</P>
+<P>conn1.CommitTrans</P>
+<P>'conn1.RollbackTrans</P>
+<P>rs2.Requery</P>
+<P>'rs2.Close</P>
+<P>'Set rs2 = Server.CreateObject("ADODB.Recordset")</P>
+<P>'sql = "SELECT * FROM </FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">檔案下載</FONT><FONT FACE="Arial">" </P>
+<P>'rs2.Open sql,conn1,1,2,1</P>
+<P>%&gt;</P>
+<P>&lt;TABLE COLSPAN=8 CELLPADDING=5 BORDER=0&gt;</P>
+<P>&lt;TR&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#800000"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">名稱</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#800000"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">檔案下載檔案</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#800000"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">檔案下載次數</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;/TR&gt;</P>
+<P>&lt;% Do while not rs2.EOF %&gt;</P>
+<P>&lt;TR&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs2("</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">名稱</FONT><FONT FACE="Arial">")%&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs2("</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">檔案下載檔案</FONT><FONT FACE="Arial">")%&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs2("</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">檔案下載次數</FONT><FONT FACE="Arial">")%&gt;&lt;/TD&gt;</P>
+<P>&lt;/TR&gt; </P>
+<P>&lt;% </P>
+<P>rs2.MoveNext&#9;&#9;&#9;</P>
+<P>Loop</P>
+<P>%&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">每執行一次，會將</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">檔案下載</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">資料表每一筆記錄的</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">檔案下載次數</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">欄位加上</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">100</FONT><FONT FACE="新細明體" LANG="ZH-TW">。</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>UpdateBatch/CancelBatch (SQL Server)</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">您可以使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">UpdateBatch</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法，將多筆變更的記錄，批次寫回到資料庫。</P>
+<P ALIGN="JUSTIFY">使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">UpdateBatch</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法時，不必每一筆變更記錄都下一個</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Update</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法，多筆記錄一起變更，最後再使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">UpdateBatch</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法，寫回到資料庫。或是使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">CancelBatch</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法，放棄所有的變更。</P>
+<P ALIGN="JUSTIFY">執行本例子的資料庫必須支援</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">UpdateBatch</FONT><FONT FACE="新細明體" LANG="ZH-TW">批次變更處理的功能，譬如</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">SQL Server</FONT><FONT FACE="新細明體" LANG="ZH-TW">提供</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">UpdateBatch</FONT><FONT FACE="新細明體" LANG="ZH-TW">的功能，但是</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Access</FONT><FONT FACE="新細明體" LANG="ZH-TW">則未提供。</P>
+<P ALIGN="JUSTIFY">譬如</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼如下，將</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">檔案下載</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">資料表每一筆記錄的</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">檔案下載次數</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">欄位加上</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">10</FONT><FONT FACE="新細明體" LANG="ZH-TW">，再使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">UpdateBatch</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法將</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">RecordSet</FONT><FONT FACE="新細明體" LANG="ZH-TW">所有的改變儲存到資料庫。或者使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">CancelBatch</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法，放棄所有的變更：</P>
+</FONT><FONT FACE="Arial"><P>&lt;%</P>
+<P>Set conn1 = Server.CreateObject("ADODB.Connection")</P>
+<P>conn1.Open "driver={SQL Server};server=(Local);uid=sa;pwd=;database=comPak"</P>
+<P>Set rs3 = Server.CreateObject("ADODB.Recordset")</P>
+<P>sql = "SELECT * FROM </FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">檔案下載</FONT><FONT FACE="Arial">" </P>
+<P>rs3.Open sql,conn1,1,4</P>
+<P>Do while not rs3.EOF</P>
+<P>&#9;if IsNull(rs3("</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">檔案下載次數</FONT><FONT FACE="Arial">")) then rs3("</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">檔案下載次數</FONT><FONT FACE="Arial">") = 10</P>
+<P>&#9;rs3("</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">檔案下載次數</FONT><FONT FACE="Arial">") = rs3("</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">檔案下載次數</FONT><FONT FACE="Arial">") + 10</P>
+<P>&#9;rs3.MoveNext</P>
+<P>Loop</P>
+<P>rs3.UpdateBatch</P>
+<P>'rs3.CancelBatch</P>
+<P>rs3.Requery</P>
+<P>%&gt;</P>
+<P>&lt;TABLE COLSPAN=8 CELLPADDING=5 BORDER=0&gt;</P>
+<P>&lt;TR&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#800000"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">名稱</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#800000"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">檔案下載檔案</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#800000"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">檔案下載次數</FONT><FONT FACE="Arial">&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;/TR&gt;</P>
+<P>&lt;% Do while not rs3.EOF %&gt;</P>
+<P>&lt;TR&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs3("</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">名稱</FONT><FONT FACE="Arial">")%&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs3("</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">檔案下載檔案</FONT><FONT FACE="Arial">")%&gt;&lt;/TD&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;%= rs3("</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW">檔案下載次數</FONT><FONT FACE="Arial">")%&gt;&lt;/TD&gt;</P>
+<P>&lt;/TR&gt; </P>
+<P>&lt;% </P>
+<P>rs3.MoveNext&#9;&#9;&#9;</P>
+<P>Loop</P>
+<P>%&gt;</P>
+<P>&lt;/TABLE&gt;</P>
+<P>&lt;%</P>
+<P>rs3.Close</P>
+<P>conn1.Close</P>
+<P>%&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">以上的</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">程式碼，於用戶端使用瀏覽器，顯示代號重覆的記錄。</P>
+<P ALIGN="JUSTIFY">其中</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">rs3.Open sql,conn1,1,4</FONT><FONT FACE="新細明體" LANG="ZH-TW">的</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">4</FONT><FONT FACE="新細明體" LANG="ZH-TW">表示為批次樂觀鎖定（</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Batch Optimistic lock</FONT><FONT FACE="新細明體" LANG="ZH-TW">），使用</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">UpdateBatch</FONT><FONT FACE="新細明體" LANG="ZH-TW">方法將多筆變更的記錄批次寫回到資料庫時，才鎖定此批資料記錄。</P>
+<P ALIGN="JUSTIFY">每執行一次，會將</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">檔案下載</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">資料表每一筆記錄的</FONT> <FONT FACE="System,新細明體" LANG="ZH-TW">[</FONT><FONT FACE="新細明體" LANG="ZH-TW">檔案下載次數</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">] </FONT><FONT FACE="新細明體" LANG="ZH-TW">欄位加上</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">10</FONT><FONT FACE="新細明體" LANG="ZH-TW">。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>網站資料庫設計參考資料</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">作者準備一個展示各種網站資料庫設計實例的網站，提供各種網站網頁的資訊、與設計範例，包括『網站熱門應用精選』、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW">特異功能、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">Web</FONT><FONT FACE="新細明體" LANG="ZH-TW">資料庫設計實例、網路商店、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ActiveX</FONT><FONT FACE="新細明體" LANG="ZH-TW">、推播頻道、動態</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW">、</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">HTML 99</FONT><FONT FACE="新細明體" LANG="ZH-TW">招等，網址如下：</P>
+</FONT><FONT FACE="System,新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY"></FONT><A HREF="../../index.html"><FONT FACE="System,新細明體" LANG="ZH-TW">http://www.asp.com.tw</FONT></A></P>
+<FONT FACE="新細明體" LANG="ZH-TW"><P ALIGN="JUSTIFY">歡迎上網光臨指教。</P>
+<P ALIGN="JUSTIFY">另外筆者最新著作為「</FONT><FONT FACE="System,新細明體" LANG="ZH-TW">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW">網站熱門應用技術</FONT><FONT FACE="標楷體" LANG="ZH-TW">」</FONT><FONT FACE="新細明體" LANG="ZH-TW">、「微軟熱門Web技術速成班」，對網站的技術提供更多的探討，歡迎參考。</P>
+<P ALIGN="JUSTIFY">　</P>
+<P ALIGN="JUSTIFY">　</P></FONT></BODY>
+</HTML>

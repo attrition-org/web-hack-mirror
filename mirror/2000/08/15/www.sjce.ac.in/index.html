@@ -1,0 +1,288 @@
+<html>
+<script language=Javascript>
+
+<!--
+
+var x,y
+
+var step=10
+
+var flag=0
+
+
+
+var message="Free Kashmir !!"
+
+message=message.split("")
+
+
+
+var xpos=new Array()
+
+for (i=0;i<=message.length-1;i++) {
+
+	xpos[i]=-50
+
+}
+
+
+
+var ypos=new Array()
+
+for (i=0;i<=message.length-1;i++) {
+
+	ypos[i]=-50
+
+}
+
+
+
+function handlerMM(e){
+
+	x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+
+	y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+
+	flag=1
+
+}
+
+
+
+function makesnake() {
+
+	if (flag==1 && document.all) {
+
+    	for (i=message.length-1; i>=1; i--) {
+
+   			xpos[i]=xpos[i-1]+step
+
+			ypos[i]=ypos[i-1]
+
+    	}
+
+		xpos[0]=x+step
+
+		ypos[0]=y
+
+	
+
+		for (i=0; i<message.length-1; i++) {
+
+    		var thisspan = eval("span"+(i)+".style")
+
+    		thisspan.posLeft=xpos[i]
+
+			thisspan.posTop=ypos[i]
+
+    	}
+
+	}
+
+	
+
+	else if (flag==1 && document.layers) {
+
+    	for (i=message.length-1; i>=1; i--) {
+
+   			xpos[i]=xpos[i-1]+step
+
+			ypos[i]=ypos[i-1]
+
+    	}
+
+		xpos[0]=x+step
+
+		ypos[0]=y
+
+	
+
+		for (i=0; i<message.length-1; i++) {
+
+    		var thisspan = eval("document.span"+i)
+
+    		thisspan.left=xpos[i]
+
+			thisspan.top=ypos[i]
+
+    	}
+
+	}
+
+		var timer=setTimeout("makesnake()",30)
+
+}
+
+// -->
+
+		</script><head>
+
+<style>
+
+<!--
+
+.spanstyle { color: #FF0033; font-size: 6pt; font-family: Arial; position: absolute; top: -50px; visibility: visible }
+
+-->
+
+</style>
+
+
+
+<style type="text/css">
+
+<!--
+
+.format { text-align: justify; font-face: Arial, Helvetica, Sans-Serif; size: 10pt; }
+
+//-->
+
+</style>
+
+
+
+<script>
+
+
+
+<!--
+
+
+
+function filter(imagename,objectsrc){
+
+if (document.images)
+
+document.images[imagename].src=eval(objectsrc+".src")
+
+}
+
+
+
+//-->
+
+
+
+</script>
+
+<script language="JavaScript">
+<!--
+
+function MM_popupMsg(msg) { //v1.0
+  alert(msg);
+}
+//-->
+</script>
+
+<title>::[m O s]:: - Zor Ka Jhatka</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+.mOs {  font-family: Arial, Helvetica, sans-serif; text-decoration: none}
+.format { text-align: justify; font-face: Arial, Helvetica, Sans-Serif; size: 10pt; }
+-->
+</style>
+</head>
+<script>
+
+<!--
+
+for (i=0;i<=message.length-1;i++) {
+
+    document.write("<span id='span"+i+"' class='spanstyle'>")
+
+	document.write(message[i])
+
+    document.write("</span>")
+
+}
+
+
+
+if (document.layers){
+
+	document.captureEvents(Event.MOUSEMOVE);
+
+}
+
+document.onmousemove = handlerMM;
+
+// -->
+
+</script>
+
+<body bgcolor="#000000" text="#000000" link="#000000" vlink="#000000" alink="#000000" class="mOs" onLoad="makesnake()">
+<table width="83%" border="0" cellspacing="2" cellpadding="2" align="center" bgcolor="#999999" name="main" class="mOs">
+  <tr> 
+    <td height="919"> 
+      <div align="center"> 
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">: : [ m 
+          O s ] : :<br>
+          This defacement brought to you by <br>
+          &quot;<font color="#660000">doodh nahee piyo gey to aisa he ho ga!</font>&quot;</font></p>
+        <p align="center"><font size="4">Rapes &amp; Molestations in (Held) Kashmir</font></p>
+        <p align="center"><font size="1">Part 1</font></p>
+        <p align="left"><font size="2">Today, India celebrates it's 53rd Independence 
+          day, while the people of Kashmir fight for their freedom and in the 
+          process, get either brutally murdered, terrorised or relentlessly sodomized 
+          by the Indian Militants. The following is a complete report of an incident 
+          that occured on the 13th of April, 2000.</font></p>
+        <p align="left">&nbsp;</p>
+        <table width="75%" border="0" cellspacing="2" cellpadding="2" bgcolor="#006666">
+          <tr> 
+            <td height="23"> 
+              <div align="center"><font size="2" color="#FFFFFF">Father tied with 
+                ropes and daughter gang-raped.</font> </div>
+            </td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <p align="left"><font size="2"><i>Name, Addr. and parentage of the victim: 
+          </i></font></p>
+        <p align="left"><i><font size="2" color="#999999">................................................</font></i><font size="2">Maryam 
+          W/o Muhammad Yousuf S/o Talib Hussain R/o Village Kesso Doda. </font></p>
+        <p align="left"><font size="2"><i>Victimizing Agency:</i> 26 Rashtriya 
+          Rifles </font></p>
+        <p align="left"><font size="2"><i>Date of Victimization:</i> April 13, 
+          2000. </font></p>
+        <p align="left"><font size="2"><i>Report:</i> On the 13th of April, 2000, 
+          the 26 Rashtriya Rifles cordoned off the village Kesso and ordered the 
+          people to remain indoors. Eight soldiers bandaged into the house of 
+          the victim, Maryam, where the only member present was her aged father-in-law, 
+          Talib Hussain. The soldiers tied the old-man with ropes and caught hold 
+          of his daughter-in-law, and gang-raped her right in front of him. During 
+          the barbarous act the victim lost consciousness. The lady was spotted 
+          in an unconscious state by a villager, namely Muhammad Ismail. When 
+          the news of the gang rape reached the Doda people, they came out on 
+          the roads protesting against the heinous act. Meanwhile, the security 
+          forces arrested three women protesters of the village Kesso when they 
+          were heading towards Doda as participants in the procession. </font></p>
+        <p align="left"><font face="Arial, Helvetica, sans-serif">------------------------------------------------------------------------------------------------------------------------------</font></p>
+        <p align="left"><font size="2">If you idiots still need more proof of 
+          the attrocities committed by the Indian Militants in Kashmir, read the 
+          next issue..</font></p>
+        <p align="left"><font size="1">note: if you want us to use explicit language, 
+          mail us! (fuckindia.org is currently being shifted, please bear with 
+          us.) </font></p>
+        <p>&nbsp;</p>
+        <p align="left"><font face="Arial, Helvetica, sans-serif" size="2">Members: 
+          shahmir, evilroot, Sl|der, paulski, qrs, teddy, afkdemon, angelz & miller.</font></p>
+        <p align="left"><font face="Arial, Helvetica, sans-serif" size="2">Greets: 
+          XORG, <a href="http://www.etc-crew.org/" class="mOs">etC!</a>, hdr, 
+          Makaveli Crew, <a href="http://sr2.xoom.com/doctornuker/" class="mOs">PHC</a>, 
+          [<a href="http://www.hackunlimited.com/" class="mOs">HUC</a>], APHC, 
+          Hizbul Mujahideen, mirinda, macwizard, aekpani, leeda, michelle pfeiffer, 
+          the Mujahideen and the people supporting the Kashmiri cause!</font></p>
+        <p align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">:: 
+          [ mOs ] :: Zor Ka Jhatka, Dheray Se Lagay </font></p>
+        <p align="center"><font color="#0000FF" size="2"><a href="http://www.fuckindia.org" class="mOs"><b><strong>| 
+          other defacements</strong></b></a> <strong><font color="#000000">|</font> 
+          <b><a href="mailto:angelz@fuckindia.org?subject=free%20kashmir!" class="mOs">contact</a></b></strong></font> 
+          | </p>
+      </div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

@@ -1,0 +1,382 @@
+<html>
+
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<meta NAME="GENERATOR" CONTENT="Microsoft FrontPage 3.0">
+<title>Listen to ham radio through the internet</title>
+
+<meta name="Microsoft Border" content="none, default">
+</head>
+
+<body LINK="#0000ff" VLINK="#800080">
+
+<p><span style="background-color: rgb(255,255,255); color: rgb(0,0,0)"><font FACE="Arial" size="2"><b>By Andrew R. Mitz, WA3LTJ</b></font></span></p>
+<b>
+
+<p ALIGN="CENTER"><font FACE="Arial" SIZE="5">An Internet Ham Radio Receiver</font></p>
+<font FACE="Arial"><i>
+
+<p ALIGN="CENTER">You can operate this rig from your Web browser!</p>
+</i></font></b><font FACE="Arial" size="2">
+
+<p>Hams are continually finding ways to mix ham radio with the Internet. The latest mix is
+a World Wide Web site called the &quot;Listening Post&quot; (http://nihac.info.nih.gov/
+listener/listener.html)<sup> </sup>, sponsored by the National Institutes of Health Radio
+Amateur Club (NIHRAC). This site lets you control a UHF/VHF receiver (ICOM R7000), and, if
+you have a sound card with the proper software, listen to AM, CW, FM, or SSB signals on
+any ham band between 28 and 2000 MHz! From this Web site you can listen to repeaters in
+the Washington, D.C. area, local simplex operation, and satellites as they pass overhead
+of the station located in Poolesville, Maryland. In addition, you can eavesdrop on other
+services, like the National Weather Service and the Southeast Regional Air Traffic Control
+towers. </p>
+</font><font FACE="Arial"><i><b>
+
+<p>How it all got started</p>
+</b></i></font><font FACE="Arial" size="2">
+
+<p>As with so many other ambitious ham radio projects, this one began over a mug of beer.
+Jeff Johnson (N3NPQ) had invited me to his annual Winter Solstice party. We were sitting
+in his home, which happens to be an Internet domain (jbj.org), surrounded by a room full
+of Sun unix servers and ham radio equipment. Jeff pointed at his kingdom of hardware and
+said, &quot;Andy, let&#146;s put a satellite station on the Internet.&quot; Over the next
+45 minutes I tried my best to convince him that the hurtles were too great to even
+consider such a task. In the end, I agreed to &quot;investigate&quot; the idea. The first
+step was to learn satellite operation. The following spring, Jeff arrived at my doorstep
+with a trunk full of equipment for satellite operation. By the end of the summer I was
+working the &quot;birds&quot; and having a ball. The next step was to see if we could put
+a UHF/VHF receiver on the Internet for listening to satellites. Thus, the Listening Post
+was born.</p>
+</font><font FACE="Arial"><i><b>
+
+<p>How to use it</p>
+</b></i></font><font FACE="Arial" size="2">
+
+<p>If you have a computer connected to the Internet with Microsoft Internet Explorer,
+Netscape Navigator, or similar Web browser, you can visit the Web site and take control of
+the receiver. If you have a PC running Microsoft Windows (any version past 3.0), a
+Macintosh, or a unix workstation, you can download software and to listen to the audio
+output of the receiver. Your computer, of course, must have a sound card and speakers. You
+will also need to be using a 28.8 K baud or faster connection, although some people report
+acceptable sound with a 14.4 K baud modem. </p>
+
+<p><i>Windows</i> and <i>Unix</i> users have two software options for listening to the
+receiver: <i>Speak Freely</i> and <i>RealAudio</i>. Macintosh users are limited to the
+latter. <i>Speak Freely</i> is a free program that is used by many people to send their
+voices over the Internet like a telephone. The Listening Post main Web page has
+instructions on where to <i>find Speak Freely</i>. To use it, download the appropriate
+version of <i>Speak Freely </i>(<i>Windows</i> 3.1, <i>Windows</i> <em>95</em>, or <i>Unix</i>)
+to an empty directory and then uncompress the file using <i>pkzip</i> for the PC, or <i>gnuzip</i>
+for <i>Unix</i>. Setting up <i>Speak Freely</i> is very simple and the program comes with
+very good documentation. <i>Windows</i> users only need execute the <i>speakfree.exe</i>
+program. <i>Unix</i> users execute the <i>sfspeaker</i> program. It is best to start <i>Speak
+Freely</i> after you connect to the Internet, but before selecting a frequency on the
+Listening Post Web pages. </p>
+
+<p>The alternative network audio system for using the Listening Post is <i>RealAudio</i>
+by <i>RealNetworks</i>. This is a commercial package, but the audio decoder, <i>RealPlayer</i>,
+is free from their Web site (http://www.real.com). If you have a Web browser installed on
+your computer, the <i>RealPlayer</i> will recognize your browser and add itself as a
+&quot;plug-in&quot;. Once it becomes a plug-in, the <i>RealPlayer</i> will start
+automatically when you click on the proper icon at the Listening Post site.</p>
+</font><font FACE="Arial"><i><b>
+
+<p>Main Listening Post Web page</p>
+</b></i></font><font FACE="Arial" size="2">
+
+<p>There are several different Web pages for controlling the Listening Post receiver. The
+main Listening Post Web page has one method of control and serves as a gateway to the
+other control Web pages. The main Web page has a simple operator interface that will work
+with just about any Web browser. You must use the <i>Speak Freely</i> application to hear
+audio from this page. If you would rather use <i>RealAudio</i>, click on the <i>RealAudio</i>
+icon for a similar Web page designed for use with the <i>RealPlayer</i>. If you have a Web
+browser that supports <i>Java</i> applets, you can click on the coffee cup on the main
+Listening Post page and enter the <i>Java</i>-enhanced Web page for controlling the
+receiver; this Web page supports both <i>Speak Freely</i> and <i>RealAudio</i>.</p>
+
+<p><img src="fig1.jpg" alt="fig1.jpg (13014 bytes)" WIDTH="598" HEIGHT="327"></p>
+</font>
+
+<p><font face="Arial" size="1">Figure 1 &#150; Frequency selection buttons on the main
+Listening Post Web page. A mouse click on one of these buttons changes the receiver to the
+frequency listed on the button. Some of the radio club names to the right are hot links to
+the clubs&#146; Web pages.</font></p>
+<font FACE="Arial" size="2">
+
+<p>I will first describe the operation of the main Listening Post Web page, then discuss
+how the other control pages differ. The main Listening Post Web page allows you to control
+the receiver in a couple of different ways. Figure 1 shows one way: preset &quot;frequency
+buttons&quot;. A mouse click on one of the frequency buttons will tune the radio to the
+frequency listed on the button. The frequency buttons are in a table that also has
+information about who uses each frequency. In the case of local repeaters, the table
+includes entries for the repeater, the repeater callsign, and the individual or club that
+operates the repeater. In some cases, a club has its own Web page, so clicking on the club
+name will take you to the club&#146;s Web page. </p>
+
+<p>Clicking on one of the frequency buttons initiates two processes. First, it sets the
+receiver&#146;s frequency. Second, it directs a digitized data stream, containing the
+receiver&#146;s audio, to your computer. If you have <i>Speak Freely</i> running, the
+audio from the receiver should arrive at your computer a few seconds after the request
+reaches the Web server. Your browser will then display a new Web page that tells you that
+your request has been received. If your request failed for some reason, the displayed Web
+page will explain why. A &quot;return&quot; option will take you back to the Listening
+Post page after you have read the message. If all goes well, an icon will appear in the <i>Speak
+Freely</i> window, and you will hear the receiver&#146;s audio on your computer. If you
+have chosen a quiet repeater, you may hear nothing but a slight hum. Regardless, you
+should still see an icon in the <i>Speak Freely</i> window. Changing frequency with the
+frequency buttons is simply a matter of clicking on a different button. The audio will
+usually give a squelch burst just as the receiver changes frequency. </p>
+
+<p>When you are done listening on the main Listening Post page, <b><i>it is very important
+to click on the </i>DISCONNECT<i> button at the bottom of the Web page</i></b>. If you do
+not disconnect, the audio server will continue to send you <i>Speak Freely</i> audio data
+even if you turn off your <i>Speak Freely</i> program. Since the audio data requires a
+high bandwidth, your Internet connection will be slowed substantially until you
+disconnect.</p>
+
+<p><img src="fig2.jpg" alt="fig2.jpg (12059 bytes)" WIDTH="601" HEIGHT="313"></p>
+<font face="Arial" size="1">
+
+<p>Figure 2 &#150; Manual frequency entry form and <b>DISCONNECT</b> button. You can enter
+a frequency and select a modulation mode to receive stations not preprogrammed into the
+frequency select buttons. The <b>DISCONNECT</b> button is used to disconnect from the <i>Speak
+Freely</i> audio data server.</font></p>
+
+<p>There is a <b>Manual frequency</b> entry form to access frequencies not listed on the
+frequency buttons. Manual frequency entry is almost as simple as using the frequency
+buttons. Figure 2 shows a one-line form near the bottom of the main Listening Post page.
+This form is a labeled &quot;Frequency (in MHz)&quot;. Type a frequency in here. Then
+click on one of the four buttons labeled: FM narrow, FM wide, AM, SSB (USB) to choose a
+mode. Finally, click the <b>Set Receiver</b> button. At this point operation should
+proceed as it did with the preset frequency buttons. Once again, don&#146;t forget to use
+the <b>Disconnect</b> button when you are done listening.</p>
+
+<p>If you chose to install the <i>RealPlayer</i> on your computer, you can switch to the <i>RealAudio</i>-enabled
+Listening Post page by clicking on the <i>RealAudio</i> logo at the top of the main
+Listening Post page. When you arrive, you are immediately greeted with another <i>RealAudio</i>
+logo. Click on this new logo to start up the <i>RealPlayer</i>. In a sense, <i>RealAudio</i>
+is the opposite of <i>Speak Freely</i>. You must click on the logo before using <i>RealAudio</i>
+and you must click on the <b>Disconnect</b> button after you use <i>Speak Freely</i>.
+Otherwise, using the two audio systems is quite similar. Once the <i>RealPlayer</i> is up
+and running, click on the buttons or enter frequencies in the manual entry form, just as
+you would on the main Listening Post page.</p>
+
+<p><img src="fig3.jpg" alt="fig3.jpg (21613 bytes)" WIDTH="614" HEIGHT="318"></p>
+<font face="Arial" size="1">
+
+<p>Figure 3 &#150; <i>Java</i> control applet. This applet can be found on the <i>Java</i>-enhanced
+page. It has all the functionality of the other two control pages, plus a status line and
+a method to step-up and step-down in frequency. Your Web browser must support <i>Java</i>
+to use this applet.</font></p>
+
+<p>If your Web browser supports <i>Java</i>, you can use the <i>Java</i>-enhanced control
+page shown in Figure 3. To access the <i>Java</i> control page, click on the steaming
+coffee cup at the top of the main Listening Post Web page. After a few seconds of loading
+time, the Listening Post control panel appears. The top &quot;status&quot; line of the
+control panel shows the frequency and mode of the receiver. It also shows the IP address
+of any user connected to the site with <i>Speak Freely</i>. The status display is designed
+to update automatically every 10 seconds. Just below the status line are a pair of buttons
+that allow you to select between <i>Speak Freely</i> and <i>RealAudio</i> sound. If you
+select <i>Speak Freely</i>, there is a <b>Disconnect</b> button displayed as well. Below
+the <b>Disconnect</b> button is a &quot;list box&quot; of frequencies. Double click on one
+of the frequencies. The receiver will tune to that frequency and audio will be sent to
+your computer. You should see the status line update soon thereafter. To manually enter a
+frequency, go to the entry box at the bottom of the control panel. Enter a frequency (in
+MHz), choose a modulation mode by clicking on AM, FMn, FMw, or USB, then click on the <b>Manual
+Enter</b> button.</p>
+
+<p>The Listening Post control panel on the <i>Java</i>-enhanced page has an option not
+available on the other Listening Post pages. The control panel has frequency step-up and
+step-down functions. Set the step size in MHz by entering a value into the field at the
+bottom right corner of the control panel. For example, a value of .0005 would give you 500
+Hz steps. Then, click on either the <b>up</b> or <b>down</b> button to step the receiver.
+In the current configuration the radio gives a squelch noise after each step: a somewhat
+annoying bug. </p>
+</font><font FACE="Arial"><i><b>
+
+<p>Troubleshooting</p>
+</b></i></font><font FACE="Arial" size="2">
+
+<p>The Listening Post is an experiment. As the experiment progresses we will add new
+features and make various architectural changes (see below). The Listening Post It is not
+a professionally-designed Web site intended to attract users. Instead, it is supposed to
+test ideas and encourage hams to investigate how the Internet can be used by radio
+amateurs. It will have many limitations and shortcomings. We welcome comments and we try
+to be helpful, but we cannot spend much time helping people sort out problems. Here are a
+few tips to try if you are not having success with the Web site. 
+
+<ul>
+  <b>
+  <li>Erratic behavior</b></li>
+</ul>
+
+<p>At the moment, only one <i>Speak Freely</i> user can listen to the audio at a time. Up
+to ten people can listen to the <i>RealAudio</i> data stream simultaneously. One potential
+problem is that up to ten people can connect to the control pages at one time. Thus, two
+or more people could interfere with each other trying to access the Listening Post. As
+currently configured, the user who most recently selected a frequency is the one who gets
+the <i>Speak Freely</i> audio data stream, and determines the receiver&#146;s frequency.
+Users could easily end up wresting the audio away from one another as they each click on
+frequency selections. This tug-of-war is more obvious for those users who are using the <i>Java</i>-enhanced
+control panel, since these users will notice different IP addresses being flashed on the
+status line. The two keys to dealing with the potential tug-of-war problem are: 1)
+understanding how it works and 2) courtesy. 
+
+<ul>
+  <b>
+  <li>No audio</b></li>
+</ul>
+
+<p>If you are a bit too hasty setting up the <i>Speak Freely</i> program, you might not
+hear the receiver. The help menu in the Windows version of <i>Speak Freely</i> has tips
+for testing your <i>Speak Freely</i> setup. I especially recommend doing the
+&quot;echo-back server&quot; tests. <i>RealAudio</i> is a very popular program. If you
+need help setting up <i>RealAudio</i>, there are many tips and suggestions at the
+Progressive Networks Web site. There are many Web sites that stream sound with <i>RealAudio</i>,
+so you will have no trouble testing your <i>RealAudio</i> setup. 
+
+<ul>
+  <b>
+  <li>Poor audio quality</b></li>
+</ul>
+
+<p>Good audio quality requires a fast enough Internet connection and a fast enough
+computer. Even if you are using a 28.8 k baud modem, check to see that you are connecting
+with your Internet service provider at some speed over 19 k baud. A poor phone connection
+will make a 28.8 k baud modem operate at much slower speeds. If you have other Internet
+traffic while you are listening to the Listening Post, like trying to retrieve your email,
+you are likely to mess up the audio. Finally, if you are using a 386 computer, chances are
+the computer is not fast enough to decode the compressed audio stream. 
+
+<ul>
+  <b>
+  <li>Your IP address is &quot;not allowed&quot;</b></li>
+</ul>
+
+<p>The Listening Post has provisions to lock out the IP addresses of people who misuse the
+site. Most Internet services &quot;rotate&quot; IP addresses, so a whole block of address
+must be disabled to keep certain individuals out of the system. You may get locked out if
+you happen to use the same service provider as such an individual. We are sorry for anyone
+who gets locked out for this reason, but there is not much we can do about it. You are
+welcome to email us to let us know that you have been locked out. 
+
+<ul>
+  <b><i>
+  <li>RealAudio</i> Player says the file cannot be found</b></li>
+</ul>
+
+<p>Sometimes the <i>RealAudio</i> Encoder computer crashes. This will result in a file not
+found error. Either check back on a different day, or try using the <i>Speak Freely</i>
+method of listening. 
+
+<ul>
+  <b>
+  <li>Control panel status line will not update on <i>Java</i>-enhanced page</b></li>
+</ul>
+
+<p>If the <i>Java</i> control panel status line does not update, try using the
+&quot;reload&quot; function in your Web browser, also called the &quot;refresh&quot; in
+some browsers, to force the display to update. </p>
+</font><font FACE="Arial"><i><b>
+
+<p>Technical description</p>
+</b></i></font><font FACE="Arial" size="2">
+
+<p>The radio receiver on the Listening Post is an ICOM IC-R7000 located in an office
+(North Latitude 39.07.532' , West Longitude 077.28.496'). The receiver connects to a
+commercial discone antenna (WB-1300) on a 25 foot mast. The receiver has a frequency range
+of 25 MHz to 2.0 GHz, with a small dead spot just above 1.0 GHz (1.0 to 1.025 GHz). It
+supports the following modulation modes: AM, wideband FM, narrow band FM, and SSB. SSB
+sideband selection is done by a rear-panel switch, which is always in the USB (upper
+sideband) position. The IC-R7000 has 100 memory channels, multiple scanning modes,
+front-end attenuator, infrared remote control, and loads of other features not used by the
+Listening Post. </p>
+
+<p><img src="fig4.jpg" alt="fig4.jpg (31208 bytes)" WIDTH="730" HEIGHT="733"></p>
+<font face="Arial" size="1">
+
+<p>Figure 4 &#150; Block diagram of the Listening Post. The IC-R7000 receiver is shown on
+the bottom left. It&#146;s audio feeds two computers for conversion to digitized audio
+data streams. All the other signals are network (digital) signals.</font></p>
+
+<p>Figure 4 shows the general architecture of the Listening Post. The receiver (lower left
+corner of Figure 4) is connected to the serial port of a Pentium PC via Icom's CI-V Level
+Converter for controlling the frequency and mode of the receiver. The audio output of the
+R7000 is spit and sent to two other computers. I will first explain the control aspects of
+the Listening Post.</p>
+
+<p>The Pentium PC connected to the CI-V Level Converter is running <i>Red Hat Linux</i>
+4.0, an excellent version of <i>Unix</i> that can be obtained free over the Internet. The <i>Linux</i>
+operating system operates the Web server. Web server requests come from the user through
+the Internet. The Web server requests for controlling the radio are handled through HTML
+(hyper-text markup language) forms or the <i>Java</i> control panel applet. These requests
+initiate CGI (Common Gateway Interface) programs written in the Perl 5 programming
+language. The CGI programs accept requests for frequency/mode changes, provide feedback to
+the requesting browser, keep logging files, and issue unix shell commands to the operating
+system. One of the shell commands runs &quot;icom&quot;, a nifty little control program by
+David Mills (W3HCF) at the University of Delaware. The icom program recognizes many
+different model Icom radios and allows unix hosts to control them via the serial
+interface. Other shell commands relay requests to the audio server, which sends digitized
+audio data to the user&#146;s computer. This audio server is a Sun Microsystems
+SPARCstation 20 running <i>Solaris</i> 2.6. The audio server either compresses audio with <i>Speak
+Freely</i> and broadcasts that data to the user, or it accepts already compressed <i>RealAudio</i>
+data and broadcasts the <i>RealAudio</i> data to the user. Since <i>RealAudio</i> employs
+a sophisticated sound compression scheme, it requires a dedicated computer just to encode
+the audio data stream. For <i>RealAudio</i> encoding, we use using a Pentium running <i>Windows</i>
+<i>95</i>. </p>
+</font><font FACE="Arial"><i><b>
+
+<p>The Future</p>
+</b></i></font><font FACE="Arial" size="2">
+
+<p>The Listening Post is just a waypoint in the long sojourn to a Web-operated satellite
+station. Not long ago I tried using the Listening Post to hear a satellite (RS-15) during
+an overhead pass. The changes in Doppler shift of the bird and the rather crude methods of
+tuning available on the Listening Post made tracking the frequency of a signal cumbersome.
+Thus, the next step will be to incorporate a satellite tracking program into the Listening
+Post software to automatically compensate for the Doppler shifts of a received signal. New
+control buttons on the Web page will have satellite names. These new buttons will be
+active only during a satellite pass. When you select a satellite button, the Listening
+Post will check your receive frequency and do Doppler compensation based on the Keplarian
+data for that satellite. The same tracking software will handle automatic positioning of
+steerable beam antennas. Our final hurtle will be the problem of remote transmitter
+operation. Stay tuned!</p>
+</font><font FACE="Arial"><i><b>
+
+<p>Notes</p>
+</b></i></font><font face="Arial" size="1">
+
+<p>The current web server is not at its permanent internet site. It will be move to
+another site sometime in the near future. When the web internet address is changed,
+information about the new web address will be left posted on the old address. Note also,
+we do not claim exclusive rights to the name &quot;Listening Post&quot;. </p>
+
+<p>Some frequencies, like cellular phone frequencies, have been &quot;locked out&quot; and
+cannot be accessed from the Listening Post. In addition, all transactions are logged. We
+keep records of who (i.e. what IP address) has selected what frequencies. Please do not
+use the Listening Post if this record-keeping raises privacy concerns that are
+uncomfortable for you.</p>
+
+<p>Pkzip is a file compress/uncompress utility. It is widely available on the internet.
+Shareware versions of Pkzip can be downloaded from the Pkware web site: <a href="http://www.pkware.com">http://www.pkware.com</a> .</p>
+
+<p>Gzip is a file compress/uncompress utility licensed by GNU. It is similar to Pkzip, but
+the license stipulates that anyone can use it for free. Gzip can be downloaded from many
+internet sites, e.g. <a href="ftp://wuarchive.wustl.edu/systems/gnu/">ftp://wuarchive.wustl.edu/systems/gnu/</a>
+. See the GNU web site ( <a href="http://www.gnu.ai.mit.edu/software/software.html">http://www.gnu.ai.mit.edu/software/software.html</a>
+) for more information.</p>
+
+<p>The RealAudio RealPlayer plug-in can be downloaded from the RealNetworks web site at: <a href="http://www.real.com">http://www.real.com</a> .</p>
+
+<p>The IP address is the address of your computer while it is connected to the internet.</p>
+
+<p>According to the IC-R7000 Service Manual, CI-V means: Communications Interface-V.</p>
+
+<p>The icom program can be downloaded from this web site: </font><a href="http://www.eecis.udel.edu/~mills/ntp/ntp/icom.tar.Z"><font face="Arial"><small><small>http://www.eecis.udel.edu/~mills/ntp/ntp/</small></small><font size="1">icom.tar.Z</font></font></a></p>
+
+<p>&nbsp;</p>
+
+<p><small>This article is Copyright 1998, QST Magazine<br>
+Reproduced with permission.</small><br>
+<small>February 1998 QST Magazine</small>
+</body>
+</html>

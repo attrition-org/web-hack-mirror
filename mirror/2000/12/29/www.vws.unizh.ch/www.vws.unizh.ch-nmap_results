@@ -1,0 +1,38 @@
+
+Starting nmap V. 2.54BETA3 ( www.insecure.org/nmap/ )
+Insufficient responses for TCP sequencing (3), OS detection may be less accurate
+Interesting ports on rzuds5.unizh.ch (130.60.68.45):
+(The 1 port scanned but not shown below is in state: closed)
+Port       State       Service
+22/tcp     open        ssh                     
+23/tcp     open        telnet                  
+25/tcp     filtered    smtp                    
+80/tcp     open        http                    
+
+TCP Sequence Prediction: Class=truly random
+                         Difficulty=9999999 (Good luck!)
+Aggressive OS guesses: AIX 4.3.2.0-4.3.3.0 on an IBM RS/* (93%), AIX 4.2 (93%), AIX 4.2.X (93%), AIX 4.3 (90%), AIX 4.02.0001.0000 (90%), AIX 4.1 (90%), Flowpoint 144 or 22XX DSL Router v3.0.8 (90%), IBM AIX v3.2.5 - 4 (90%)
+No exact OS matches for host (If you know what OS is running on it, see http://www.insecure.org/cgi-bin/nmap-submit.cgi).
+TCP/IP fingerprint:
+T1(Resp=Y%DF=N%W=AEF1%ACK=S++%Flags=AS%Ops=M)
+TSeq(Class=TR)
+T2(Resp=N)
+T1(Resp=Y%DF=N%W=AEF1%ACK=S++%Flags=AS%Ops=M)
+T3(Resp=N)
+T2(Resp=N)
+T4(Resp=Y%DF=N%W=E000%ACK=O%Flags=R%Ops=)
+T3(Resp=N)
+T5(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+T4(Resp=Y%DF=N%W=E000%ACK=O%Flags=R%Ops=)
+T6(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T5(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+T7(Resp=N)
+T6(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+PU(Resp=Y%DF=N%TOS=0%IPLEN=38%RIPTL=15C%RID=E%RIPCK=F%UCK=0%ULEN=134%DAT=E)
+T7(Resp=N)
+PU(Resp=Y%DF=N%TOS=0%IPLEN=38%RIPTL=15C%RID=E%RIPCK=F%UCK=0%ULEN=134%DAT=E)
+
+
+
+
+Nmap run completed -- 1 IP address (1 host up) scanned in 39 seconds

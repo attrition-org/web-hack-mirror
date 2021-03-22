@@ -1,0 +1,27 @@
+ 
+	
+
+
+	
+	
+
+	
+
+
+
+ok, a quick unicode to tell everyone that i have left hackweiser. that all i gotz to say. love to amnesiac hackweiser and electronicsouls! peace...philer@hushmail.com 
+
+  
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+  
+

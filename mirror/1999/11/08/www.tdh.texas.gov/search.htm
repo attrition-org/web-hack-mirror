@@ -1,0 +1,119 @@
+<HTML>
+<HEAD>
+<TITLE>TDH Search</TITLE>
+</HEAD>
+<BODY bgcolor="#ffffff">
+
+<center><img SRC="/topic/images/tdhsrch.gif"></center><BR>
+<center><A HREF="/topic/docs/srchtips.htm">
+<IMG SRC="/topic/images/help.gif"></A>
+<A HREF="/topic/docs/srchtips.htm">Search Tips</A>
+<A HREF="/topic/docs/qrylang.htm">
+<IMG SRC="/topic/images/help.gif"></A>
+<A HREF="/topic/docs/qrylang.htm">Query Language Guide</A>
+
+<A HREF="/topic/docs/hsearch3.htm">
+</center><br>
+<center><P><b>Search our site with <a href="http://www.verity.com">
+Verity&#174;</a></b></p></center>
+<hr>
+<!--- Begin copying here to embed the search form in your 
+Home page --->
+<FORM METHOD="POST" ACTION="/topic/bin/v_search.dll">
+<INPUT TYPE="hidden" NAME="Action" VALUE="Search">
+<UL>
+<TABLE>
+<TR>
+<TD COLSPAN=2><B>Query Term 1 - in the entire document</B>
+</TD></TR>
+<TR>
+<TD COLSPAN=2>
+<INPUT TYPE="radio" NAME="qparser.1" CHECKED VALUE="fullText">
+Words or phrases separated by commas<BR>	
+<INPUT TYPE="radio" NAME="qparser.1" VALUE="byExample">
+Free-form text </TD></TR>
+<TR><TD><TEXTAREA NAME="query" ROWS=3 COLS=50></TEXTAREA>
+</TD>    
+<TD>
+<INPUT TYPE="image" SRC="/topic/images/srchbtn.gif" NAME="srchButton" 
+ALT="Search" BORDER=0></TD></TR>
+<TR><TD ALIGN="left" VALIGN="TOP">Weight:	
+<SELECT NAME="Weight.1">	
+<OPTION SELECTED VALUE="101">Required	
+<OPTION VALUE="80">Important	
+<OPTION VALUE="50">Nice	
+<OPTION VALUE="20">Optional	
+<OPTION VALUE="-1">Excluded	
+</SELECT>	</TD></TR></TABLE>
+
+<HR>
+<!------------------------------------------------------------------->
+<TABLE><TR><TD COLSPAN=2><B>Query Term 2 - in a Field</B></TD></TR>
+<TR><TD><I>Field</I></TD>
+<TD><I>Operator</I></TD>
+<TD><I>Query Terms</I></TD></TR>
+<TR><TD><SELECT NAME="var;query2_a">	
+<OPTION SELECTED VALUE="">(None)	
+<OPTION VALUE="TITLE">Document Title	
+<OPTION VALUE="URL">URL (Web Location)	
+<OPTION VALUE="SNIPPET">Snippet	
+<OPTION VALUE="LAST_MODIFIED">Last Modified Date	
+<OPTION VALUE="CONTENT_TYPE">Content-Type	
+<OPTION VALUE="HREFS">HREFs from this page	
+</SELECT></TD>	
+<TD><SELECT NAME="var;query2_b">	
+<OPTION SELECTED VALUE="">(None)	
+<OPTION VALUE="&lt;CONTAINS&gt;">Contains	
+<OPTION VALUE="&lt;ENDS&gt;">Ends	
+<OPTION VALUE="&lt;MATCHES&gt;">Matches	
+<OPTION VALUE="&lt;STARTS&gt;">Starts	
+</SELECT></TD>	
+<TD><INPUT TYPE="edit" NAME="var;query2_c" VALUE=""></TD></TR>
+<TR><TD COLSPAN=2><I>Weight</I><BR>	
+<SELECT NAME="Weight.2">	
+<OPTION SELECTED VALUE="101">Required	
+<OPTION VALUE="80">Important	
+<OPTION VALUE="50">Nice	<OPTION VALUE="20">Optional	
+<OPTION VALUE="-1">Excluded	
+</SELECT></TD></TR></TABLE>
+<INPUT TYPE="hidden" NAME="query.2" VALUE="$query2_a $query2_b 
+$query2_c">
+<HR>
+<!------------------------------------------------------------------->
+<TABLE><TR>	
+<TD><I>Results Sorting</I></TD>	
+<TD><SELECT NAME="var;sortField1">	
+<OPTION SELECTED VALUE="Score">Score	
+<OPTION VALUE="Title">Title	
+</SELECT>	
+<INPUT TYPE="radio" NAME="var;sortOrder1" CHECKED VALUE="desc">Descending	
+<INPUT TYPE="radio" NAME="var;sortOrder1" VALUE="asc">Ascending	
+<INPUT TYPE="hidden" NAME="sortSpec" 
+VALUE="$sortField1 $sortOrder1">	
+</TD></TR>
+<TR><TD><I>Results Threshold</I></TD>	
+<TD><SELECT NAME="queryThreshold">	
+<OPTION SELECTED VALUE="0">Show All Results	
+<OPTION VALUE="75">Show Results with Scores >0.75	
+<OPTION VALUE="50">Show Results with Scores >0.50	
+<OPTION VALUE="25">Show Results with Scores >0.25	
+</SELECT></TD></TR>
+<TR><TD><I>Maximum Documents to Retrieve</I></TD>	
+<TD><SELECT NAME="maxDocs">	
+<OPTION VALUE="10">10	
+<OPTION SELECTED VALUE="25">25	
+<OPTION VALUE="50">50	
+<OPTION VALUE="100">100	</SELECT></TD></TR></TABLE>
+<TD>
+<INPUT TYPE="image" SRC="/topic/images/srchbtn.gif" NAME="srchButton" 
+ALT="Search" BORDER=0></TD>
+<P><INPUT TYPE="reset" VALUE=" Clear "></FORM>
+<!--- End copying here ---><P>
+<HR>
+
+
+
+<P><b>Return to </b><A HREF="index.html#Buttons">
+<IMG SRC="/topic/images/button.gif"> TDH Home Page</A></P>
+</BODY>
+</HTML>

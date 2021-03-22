@@ -1,0 +1,135 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+  <script language="JavaScript">
+<!--
+function MM_initTimelines() {
+    //MM_initTimelines() Copyright 1997 Macromedia, Inc. All rights reserved.
+    var ns = navigator.appName == "Netscape";
+    document.MM_Time = new Array(1);
+    document.MM_Time[0] = new Array(2);
+    document.MM_Time["Timeline1"] = document.MM_Time[0];
+    document.MM_Time[0].MM_Name = "Timeline1";
+    document.MM_Time[0].fps = 15;
+    document.MM_Time[0][0] = new String("sprite");
+    document.MM_Time[0][0].slot = 1;
+    if (ns)
+        document.MM_Time[0][0].obj = document.Layer1;
+    else
+        document.MM_Time[0][0].obj = document.all ? document.all["Layer1"] : null;
+    document.MM_Time[0][0].keyFrames = new Array(1, 20);
+    document.MM_Time[0][0].values = new Array(4);
+    document.MM_Time[0][0].values[0] = new Array(368,352,336,320,305,289,273,257,241,225,210,194,178,162,146,130,115,99,83,67);
+    document.MM_Time[0][0].values[0].prop = "left";
+    document.MM_Time[0][0].values[1] = new Array(25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25);
+    document.MM_Time[0][0].values[1].prop = "top";
+    if (!ns) {
+        document.MM_Time[0][0].values[0].prop2 = "style";
+        document.MM_Time[0][0].values[1].prop2 = "style";
+    }
+    document.MM_Time[0][0].values[2] = new Array(127,126,126,126,125,125,125,124,124,124,123,123,123,122,122,122,121,121,121,121);
+    document.MM_Time[0][0].values[2].prop = "width";
+    if (!ns)
+        document.MM_Time[0][0].values[2].prop2 = "style";
+    document.MM_Time[0][0].values[3] = new Array(50,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49);
+    document.MM_Time[0][0].values[3].prop = "height";
+    if (!ns)
+        document.MM_Time[0][0].values[3].prop2 = "style";
+    document.MM_Time[0][1] = new String("sprite");
+    document.MM_Time[0][1].slot = 2;
+    if (ns)
+        document.MM_Time[0][1].obj = document.Layer2;
+    else
+        document.MM_Time[0][1].obj = document.all ? document.all["Layer2"] : null;
+    document.MM_Time[0][1].keyFrames = new Array(1, 20);
+    document.MM_Time[0][1].values = new Array(3);
+    document.MM_Time[0][1].values[0] = new Array(3,16,28,41,54,66,79,92,104,117,130,143,155,168,181,193,206,219,231,244);
+    document.MM_Time[0][1].values[0].prop = "left";
+    document.MM_Time[0][1].values[1] = new Array(51,51,51,51,51,50,50,50,50,50,50,50,50,50,50,49,49,49,49,49);
+    document.MM_Time[0][1].values[1].prop = "top";
+    if (!ns) {
+        document.MM_Time[0][1].values[0].prop2 = "style";
+        document.MM_Time[0][1].values[1].prop2 = "style";
+    }
+    document.MM_Time[0][1].values[2] = new Array(40,40,40,40,41,41,41,41,42,42,42,42,43,43,43,43,44,44,44,45);
+    document.MM_Time[0][1].values[2].prop = "width";
+    if (!ns)
+        document.MM_Time[0][1].values[2].prop2 = "style";
+    document.MM_Time[0].lastFrame = 20;
+    for (i=0; i<document.MM_Time.length; i++) {
+        document.MM_Time[i].ID = null;
+        document.MM_Time[i].curFrame = 0;
+        document.MM_Time[i].delay = 1000/document.MM_Time[i].fps;
+    }
+}
+//-->
+</script>
+  <script language="JavaScript">
+<!--
+function MM_timelinePlay(tmLnName, myID) { //v1.2
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,propNum,theObj,firstTime=false;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (myID == null) { myID = ++tmLn.ID; firstTime=true;}//if new call, incr ID
+  if (myID == tmLn.ID) { //if Im newest
+    setTimeout('MM_timelinePlay("'+tmLnName+'",'+myID+')',tmLn.delay);
+    fNew = ++tmLn.curFrame;
+    for (i=0; i<tmLn.length; i++) {
+      sprite = tmLn[i];
+      if (sprite.charAt(0) == 's') {
+        if (sprite.obj) {
+          numKeyFr = sprite.keyFrames.length; firstKeyFr = sprite.keyFrames[0];
+          if (fNew >= firstKeyFr && fNew <= sprite.keyFrames[numKeyFr-1]) {//in range
+            keyFrm=1;
+            for (j=0; j<sprite.values.length; j++) {
+              props = sprite.values[j]; 
+              if (numKeyFr != props.length) {
+                if (props.prop2 == null) sprite.obj[props.prop] = props[fNew-firstKeyFr];
+                else        sprite.obj[props.prop2][props.prop] = props[fNew-firstKeyFr];
+              } else {
+                while (keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]) keyFrm++;
+                if (firstTime || fNew==sprite.keyFrames[keyFrm-1]) {
+                  if (props.prop2 == null) sprite.obj[props.prop] = props[keyFrm-1];
+                  else        sprite.obj[props.prop2][props.prop] = props[keyFrm-1];
+        } } } } }
+      } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+      if (fNew > tmLn.lastFrame) tmLn.ID = 0;
+  } }
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" onLoad="MM_timelinePlay('Timeline1')" link="#FFFFFF" vlink="#FFFFFF" alink="#FF3300">
+<div id="Layer1" style="position:absolute; left:368px; top:25px; width:127px; height:50px; z-index:1"><font face="Arial, Helvetica, sans-serif"><b><font size="7" color="#0000FF">Service</font></b></font></div>
+<div id="Layer2" style="position:absolute; left:3px; top:51px; width:40px; height:36px; z-index:2"><b><font size="6" color="#FF0000">Department</font></b></div>
+<div id="Layer3" style="position:absolute; left:151px; top:127px; width:58px; height:230px; z-index:3"><img src="../curve.gif" width="56" height="226"></div>
+<div id="Layer4" style="position:absolute; left:219px; top:269px; width:137px; height:19px; z-index:4; background-color: #FFFFFF"><a href="serviceform.html"><font face="Arial, Helvetica, sans-serif" size="2"> 
+  <font color="#000000"><b><font color="#0033CC">Book a Service</font></b></font> 
+  </font></a></div>
+<div id="Layer5" style="position:absolute; left:176px; top:359px; width:122px; height:7px; z-index:5"><font face="Arial, Helvetica, sans-serif" size="2"><a href="maintenance.htm"><font color="#003300"><font color="#0033CC"><b>Maintenance 
+  Tips</b></font></font></a></font> </div>
+<div id="Layer6" style="position:absolute; left:192px; top:331px; width:113px; height:14px; z-index:6"><font face="Arial, Helvetica, sans-serif" size="2"><a href="appearance.htm"><font color="#0033CC"><b>Appearance 
+  Tips</b></font></a></font></div>
+<div id="Layer7" style="position:absolute; left:67px; top:176px; width:88px; height:107px; z-index:7"><img src="shadow.gif" width="94" height="115"></div>
+<div id="Layer8" style="position:absolute; left:77px; top:167px; width:34px; height:50px; z-index:8"><img src="serviceman.JPG" width="93" height="116"></div>
+<div id="Layer9" style="position:absolute; left:83px; top:295px; width:89px; height:25px; z-index:9"> 
+  <p><font face="Arial, Helvetica, sans-serif" size="1"><b>Denis Charrington </b>Service 
+    Manager</font></p>
+  </div>
+<div id="Layer12" style="position:absolute; left:376px; top:267px; width:173px; height:62px; z-index:12"><font face="Arial, Helvetica, sans-serif" size="2"><i>When 
+  you bring your vehicle into our service department, you will discover the real 
+  meaning of service.</i></font></div>
+<div id="Layer13" style="position:absolute; left:222px; top:126px; width:327px; height:78px; z-index:13"><font face="Arial, Helvetica, sans-serif" size="2"><b>Our 
+  Service team</b> endeavours to provide you with the very best possible attention 
+  to your needs, and those of your vehicle. We have made an investment in up-to-date 
+  equipment and technology and we invest in our staff who are proud to receive 
+  constant training and specialist courses to keep them in touch with the latest 
+  technologies available in today's vehicles. </font></div>
+<div id="Layer10" style="position:absolute; left:211px; top:300px; width:131px; height:18px; z-index:14"><font face="Arial, Helvetica, sans-serif" size="2"><a href="../customercare/customercare.htm"><font color="#0033FF" size="3"><b><font color="#0033CC" size="2">Customer 
+  Care </font></b></font></a></font></div>
+</body>
+</html>

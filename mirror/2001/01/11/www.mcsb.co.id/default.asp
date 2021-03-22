@@ -1,0 +1,33 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.75 [en] (Windows NT 5.0; U) [Netscape]">
+   <title>HACKED : : BOYONS</title>
+</head>
+<body text="#FF0000" bgcolor="#000000" link="#FFFFFF" vlink="#FFFFFF" alink="#FFFFFF">
+
+<pre><img SRC="image.gif" height=94 width=335></pre>
+
+<center>
+<p><br>"They have computers, and they may have other weapons of mass destruction."
+<br>&nbsp;&nbsp; - Janet Reno, US Attorney General, 02-27-98
+<p><font face="Verdana"><font color="#FFFFFF"><font size=-1>NO FILES OF
+YOURS HAVE BEEN DELETED. <a href="index_orig.html">HERE</a> IS YOUR ORIGINAL
+FILE.</font></font></font>
+<p><font face="Verdana"><font color="#FFFFFF"><font size=+1>CRACKED .........</font></font></font>
+<p><font face="Verdana"><font color="#FFFFFF"><font size=+1>Admin Yth,</font></font></font>
+<p><font face="Verdana"><font color="#FFFFFF"><font size=+1>Sites anda
+mengandung bugs ... mohon anda merawat server anda ini ...</font></font></font>
+<br><font face="Verdana"><font color="#FFFFFF"><font size=+1>dan mohon
+maaf jika informasinya disampaikan dengan cara</font></font></font>
+<br><font face="Verdana"><font color="#FFFFFF"><font size=+1>seperti ini.</font></font></font>
+<br>&nbsp;
+<p><font face="Verdana"><font color="#FFFFFF"><font size=-1>WASSALAAM,</font></font></font>
+<br><font face="Verdana"><font color="#FFFFFF"><font size=-1>BoyonS@hackermail.com</font></font></font></center>
+
+<p><br>
+<br>
+<br>
+</body>
+</html>

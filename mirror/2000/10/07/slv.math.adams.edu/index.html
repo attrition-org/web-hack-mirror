@@ -1,0 +1,173 @@
+<html>
+<head>
+
+<script language="JavaScript">
+
+
+
+
+var ImgBase = 'img/3dnum/';
+var NumFmt  = 'gif';
+
+var Numbers = new Array(11);
+
+for (i=0; i<10; i++) {
+    Numbers[i] = new Image();
+    Numbers[i].src = ImgBase + i + '.' + NumFmt;
+}
+
+Numbers[10] = new Image();
+Numbers[10].src = ImgBase + 'colon.' + NumFmt;
+
+var LastShown = new Array(9);
+for (i=0; i<9; i++) {
+    LastShown[i] = ImgBase + '0.' + NumFmt;
+}
+
+function initImages () {
+    document.write( '<nobr>' );
+    for (var i=0; i<8; i++) {
+        if ( i%2 == 0 ) {
+          if (i > 0) { document.write( '\n<img src="' + ImgBase + 'colon.' + NumFmt + '>\n' ); }
+        }
+        document.write( '<img src="' + ImgBase + '0.' + NumFmt + '" name="imgnum' + i + '">' );
+    }
+    document.write( '<nobr>\n' );
+    startcount();
+}
+
+var timerID = null;
+var isRunning = false;
+
+function stopcount () {
+    if ( isRunning ) {
+      clearTimeout( timerID );
+    }
+    isRunning = false;
+}
+
+function startcount () {
+    stopcount();
+    countdown();
+}
+
+
+function countdown () {
+  var now = new Date();
+  var then = new Date("January 1, 2001");
+
+  var seconds = Math.round( ( then.getTime() - now.getTime() ) / 1000 );
+
+  var m = 60;
+  var h = m * 60;
+  var d = h * 24;
+
+  var time = '';
+
+  var days = Math.floor( seconds/d );
+  seconds -= days*d;
+
+  var hours = Math.floor( seconds/h );
+  seconds -= hours*h;
+
+  var minutes = Math.floor( seconds/m );
+  seconds -= minutes*m
+
+  if ( days < 10 ) { time += '00' + days; }
+  else { 
+    if ( days < 100) { 
+        time += '0' + days;
+    }
+    else {
+        time += days;
+    }
+  }
+  if ( hours < 10 ) { time += '0' + hours; }
+  else { time += hours;}
+  if ( minutes < 10 ) { time += '0' + minutes; }
+  else { time += minutes;}
+  if ( seconds < 10 ) { time += '0' + seconds }
+  else { time += seconds;}
+
+  for (var j=0; j<9; j++) {
+     var substr = time.substring(j, j+1);
+     var imgsrc = ImgBase + substr + '.' + NumFmt;
+     var imgname = 'imgnum' + j;
+
+     if (LastShown[j] != imgsrc) {
+        LastShown[j] = imgsrc;
+        document.images[imgname].src = imgsrc;
+     }
+  }
+
+  timerID = setTimeout( "countdown()", 950);
+  isRunning = true;
+
+}
+
+
+</script>
+
+<title>0wn3d by ka0x. ka0x@hackermail.com 1-877-328-0606</title>
+
+</head>
+
+<body bgcolor="#000000" background="img/bg/graygrid.jpg" vlink="#E4E4C9" text="#CCCC99" Link="#E4E4C9" alink="#000000" onLoad="startcount()">
+
+<center><img SRC="ka0x.gif" height=236 width=500></center>
+<p> <center> <B>W</B>obble <B>W</B>obble <B>I</B> <B>G</B>otcha! 
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+
+<p><center> Shouts: TelcoNinjas, Hackweiser, 0x7f, wkD, The Milk Man and all those I forgot.
+<BR>
+<BR>
+<BR>
+<BR>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td width="75%">&nbsp;</td></tr>
+<td align="center">
+  <table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+        <td align="center"><font face="Verdana, Helvetica, Arial" size="2"><b>Countdown to Dooms Day</b><br>All .us and .gov boxes are targets</font></td>
+  </tr>
+  <tr>
+    <td align="center">
+       <nobr>
+        <img src="img/3dnum/0.gif" name="imgnum0"><img src="img/3dnum/0.gif" name="imgnum1"><img src="img/3dnum/0.gif" name="imgnum2">
+        <img src="img/3dnum/colon.gif" name="c1">
+        <img src="img/3dnum/0.gif" name="imgnum3"><img src="img/3dnum/0.gif" name="imgnum4">
+        <img src="img/3dnum/colon.gif" name="c2">
+        <img src="img/3dnum/0.gif" name="imgnum5"><img src="img/3dnum/0.gif" name="imgnum6">
+        <img src="img/3dnum/colon.gif" name="c3">
+        <img src="img/3dnum/0.gif" name="imgnum7"><img src="img/3dnum/0.gif" name="imgnum8">
+       </nobr>
+    </td>
+  </tr>
+  </table>
+</td>
+</tr>
+</table>
+
+<p clear="all">
+<FONT size=2 face="Verdana, Geneva, Helvetica, sans-serif">
+
+<P>
+<i><a href="mailto:ka0x@hackermail.com">ka0x@hackermail.com</a></i>
+<BR>
+<center> 1-877-328-0606
+<BR>
+<center> Thanks for all the lovely messages on my vmb especially when it's a fed!@#
+</font>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</body>
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

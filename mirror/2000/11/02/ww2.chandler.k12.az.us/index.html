@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE> Chandler Unified School District - Dedicated to Excellence </TITLE>
+   <META NAME="Author" CONTENT="Jeff La Benz">
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+
+<script LANGUAGE="JavaScript">
+<!--
+var currentPage = ""
+var windowTarget=0
+
+function makeArray(n){
+	this.length = n
+	return this
+}
+
+function screen(winType,page){
+	this.winType = winType
+	this.page = page
+}
+
+// Window Type Codes:
+// 0 - Opens in the "content" frame of current window.
+// 1 - New window: No menubar, toolbar, location bar, or status bar.  Resizable.
+// 2 - Alert: under construction.
+// 3 - New window: Menubar only.
+// 4 - New window: Default maximum size with all toobars.
+// 5 - New window: Default maximum size with no toobars.
+// 6 - New window: External website address.  Default maximum size with all toobars.
+// 7 - Opens in the "content" frame of current window -- ADD "<pagename>.html#<target>"
+
+var newScreen = new makeArray(100)
+
+newScreen[0] = new screen("0","home") //
+newScreen[1] = new screen("1","calendar") //
+newScreen[2] = new screen("3","weather") //
+newScreen[3] = new screen("5","maps") //
+newScreen[4] = new screen("6","cusdemail.html") //
+newScreen[5] = new screen("2","search") //
+newScreen[6] = new screen("0","our-district") //
+newScreen[7] = new screen("1","school-board") //
+newScreen[8] = new screen("1","superintendent") //
+newScreen[9] = new screen("1","curriculum") //
+newScreen[10] = new screen("1","district-overview") //
+newScreen[11] = new screen("1","nutrition") //
+newScreen[12] = new screen("1","hr/hr-home") //
+newScreen[13] = new screen("1","hr/hotline-parent") //
+newScreen[14] = new screen("1","benefits/video-parent") //
+newScreen[15] = new screen("1","contacts2") //
+newScreen[16] = new screen("1","help") //
+newScreen[17] = new screen("5","plugins1") //
+newScreen[18] = new screen("1","how-to-apply") //
+newScreen[19] = new screen("1","schools") //
+newScreen[20] = new screen("3","contacts2") //
+newScreen[21] = new screen("1","info") //
+newScreen[22] = new screen("6","http://ww2.chandler.k12.az.us/education-foundation") //
+newScreen[23] = new screen("1","ed-tv") //
+newScreen[24] = new screen("1","nutrition") //
+newScreen[25] = new screen("1","hr-mission") //
+newScreen[26] = new screen("1","hr/salaries") //
+newScreen[27] = new screen("1","hr/applications") //
+newScreen[28] = new screen("1","hr/openings") //
+newScreen[29] = new screen("1","special-programs") //
+newScreen[30] = new screen("1","support-svcs") //
+newScreen[31] = new screen("1","curr-instr") //
+newScreen[32] = new screen("1","tax-credit") //
+newScreen[33] = new screen("1","transportation") //
+newScreen[34] = new screen("1","information-systems") //
+newScreen[35] = new screen("1","website-help") //
+newScreen[36] = new screen("3","hr/bulletin") //
+newScreen[37] = new screen("1","gifted") //
+newScreen[38] = new screen("1","special-education") //
+newScreen[39] = new screen("1","sped-overview") //
+newScreen[40] = new screen("1","pupilsvcs") //
+newScreen[41] = new screen("1","sped-letter") //
+newScreen[42] = new screen("5","special-education-forms/sped-forms") //
+newScreen[43] = new screen("1","instructional-resource-center") //
+newScreen[44] = new screen("7","home.html#news") //
+newScreen[45] = new screen("5","science-academies/index") //
+newScreen[46] = new screen("0","rfp") //
+newScreen[47] = new screen("7","home.html#news") //
+newScreen[48] = new screen("2","") //
+newScreen[49] = new screen("2","") //
+newScreen[50] = new screen("2","") // UNDER CONSTRUCTION
+
+
+function goOn(place){
+	if(newScreen[place].winType == 0){
+		var n = newScreen[place].page + ".html"
+		parent.content.location.href = n
+	}
+	if(newScreen[place].winType == 1){
+		windowTarget++
+		var n = newScreen[place].page + ".html"
+		window.open(n,'window2'+windowTarget,'height=420,width=625,left=2,top=2,menu=0,toolbar=0,location=0,directories=no,scrollbars,status=0,resizable')
+	}
+	if(newScreen[place].winType == 2){
+		alert("The link to this section is still under construction.\nPlease check again soon.")
+	}
+	if(newScreen[place].winType == 3){
+		windowTarget++
+		var n = newScreen[place].page + ".html"
+		window.open(n,'window2'+windowTarget,'height=385,width=625,left=2,top=2,menubar=1,toolbar=0,location=0,directories=no,scrollbars,status=1,resizable')
+	}
+	if(newScreen[place].winType == 4){
+		windowTarget++
+		var n = newScreen[place].page + ".html"
+		window.open(n,'window2'+windowTarget,'menubar=1,toolbar=1,location=1,directories=no,scrollbars,status=1,resizable')
+	}
+	if(newScreen[place].winType == 5){
+		windowTarget++
+		var n = newScreen[place].page + ".html"
+		window.open(n,'window2'+windowTarget,'menubar=0,toolbar=0,location=0,directories=no,scrollbars,status=0,resizable')
+	}
+	if(newScreen[place].winType == 6){
+		windowTarget++
+		var n = newScreen[place].page
+		window.open(n,'window2'+windowTarget,'menubar=1,toolbar=1,location=1,directories=no,scrollbars,status=1,resizable')
+	}
+	if(newScreen[place].winType == 7){
+		var n = newScreen[place].page
+		parent.content.location.href = n
+	}
+}
+
+function goMax(v){
+	windowTarget++
+	window.open(v,"window2"+windowTarget,"menubar=1,toolbar=1,location=1,directories=no,scrollbars,status=1,resizable")
+}
+
+// -->
+</script>
+</HEAD>
+<FRAMESET COLS="95,*" BORDER=0 FRAMEBORDER=NO>
+	<FRAME SRC="nav.html" NAME="nav" MARGINWIDTH=0 MARGINHEIGHT=0 SCROLLING=no>
+	<FRAMESET ROWS="43,*" BORDER=0 FRAMEBORDER=NO>
+		<FRAME SRC="tree.html" NAME="nav" MARGINWIDTH=7 MARGINHEIGHT=3 SCROLLING=no>
+		<FRAME SRC="home.html" NAME="content" MARGINWIDTH=5 MARGINHEIGHT=5 SCROLLING=auto>
+	</FRAMESET>
+</FRAMESET>
+
+</HTML>
+<!-- www.attrition.org web hack mirror - watermark or something -->

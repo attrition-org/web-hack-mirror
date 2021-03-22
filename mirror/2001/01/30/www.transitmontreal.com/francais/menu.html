@@ -1,0 +1,88 @@
+<HTML>
+<HEAD>
+<TITLE>Transit Montréal</TITLE>
+<script language="JavaScript">
+<!--//
+
+var currentclick = ""
+
+if (document.images){
+	var Img = new Array(16)
+	for (var i = 0; i < 16; i++){
+		Img[i] = new Image()
+	    }
+		Img[0].src = "ima/menu1_off.gif"
+		Img[1].src = "ima/menu1_over.gif"
+		Img[2].src = "ima/menu2_off.gif"
+		Img[3].src = "ima/menu2_over.gif"
+		Img[4].src = "ima/menu3_off.gif"
+		Img[5].src = "ima/menu3_over.gif"
+		Img[6].src = "ima/menu4_off.gif"
+		Img[7].src = "ima/menu4_over.gif"
+		Img[8].src = "ima/menu5_off.gif"
+		Img[9].src = "ima/menu5_over.gif"
+		Img[10].src = "ima/menu6_off.gif"
+		Img[11].src = "ima/menu6_over.gif"
+		Img[12].src = "ima/menu7_off.gif"
+		Img[13].src = "ima/menu7_over.gif"
+		Img[14].src = "../ima/off.gif"
+		Img[15].src = "../ima/on.gif"
+
+}
+
+function over(name, val){
+	eval('document.images[name].src = Img[val].src')
+}
+
+function out(name, val){	
+	eval('document.images[name].src = Img[val].src')
+}
+
+function clic(name,val){
+	eval('document.images["light1"].src = Img[14].src');
+	eval('document.images["light2"].src = Img[14].src');
+	eval('document.images["light3"].src = Img[14].src');
+	eval('document.images["light4"].src = Img[14].src');
+	eval('document.images["light5"].src = Img[14].src');
+	eval('document.images["light6"].src = Img[14].src');
+	eval('document.images["light7"].src = Img[14].src');
+	eval('document.images[name].src = Img[15].src');
+	currentclick = name;
+}
+
+function alloff(){
+	eval('document.images["light1"].src = Img[14].src');
+	eval('document.images["light2"].src = Img[14].src');
+	eval('document.images["light3"].src = Img[14].src');
+	eval('document.images["light4"].src = Img[14].src');
+	eval('document.images["light5"].src = Img[14].src');
+	eval('document.images["light6"].src = Img[14].src');
+	eval('document.images["light7"].src = Img[14].src');
+	currentclick = "";
+}
+
+//-->
+</script>
+</HEAD>
+
+<BODY BGCOLOR="#00CC00" TOPMARGIN="1" LEFTMARGIN="1" BACKGROUND="../ima/bgbottom.gif">
+
+<IMG SRC="../ima/pix.gif" WIDTH=1 HEIGHT=2 BORDER=0><BR>
+
+<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0>
+<TR>
+<TD VALIGN=top>
+<IMG SRC="../ima/off.gif" WIDTH=60 HEIGHT=6 BORDER=0 HSPACE=17 NAME="light1"><IMG SRC="../ima/off.gif" WIDTH=60 HEIGHT=6 BORDER=0 HSPACE=11 NAME="light2"><IMG SRC="../ima/off.gif" WIDTH=0 HEIGHT=0 BORDER=0 NAME="light3"><IMG SRC="../ima/off.gif" WIDTH=0 HEIGHT=0 BORDER=0  NAME="light4"><IMG SRC="../ima/off.gif" WIDTH=60 HEIGHT=6 BORDER=0 HSPACE=23 NAME="light5"><IMG SRC="../ima/off.gif" WIDTH=60 HEIGHT=6 BORDER=0 HSPACE=18 NAME="light6"><IMG SRC="../ima/off.gif" WIDTH=60 HEIGHT=6 BORDER=0 HSPACE=15 NAME="light7"><BR>
+
+<IMG SRC="../ima/pix.gif" WIDTH=1 HEIGHT=1 BORDER=0 VSPACE=4><BR>
+      <IMG SRC="../ima/pix.gif" WIDTH=2 HEIGHT=1 BORDER=0 HSPACE=4><A HREF="destinations.html" TARGET="mainframe" onMouseOver="over('menu1',1)" onMouseOut="out('menu1',0)"><IMG SRC="ima/menu1_off.gif" WIDTH=76 HEIGHT=11 BORDER=0 NAME="menu1"></A><A HREF="passagers.html" TARGET="mainframe" onMouseOver="over('menu2',3)" onMouseOut="out('menu2',2)"><IMG SRC="ima/menu2_off.gif" WIDTH=96 HEIGHT=11 BORDER=0 NAME="menu2"></A><A HREF="tokyo.html" TARGET="mainframe" onMouseOver="over('menu5',9)" onMouseOut="out('menu5',8)"><IMG SRC="ima/menu5_off.gif" WIDTH=105 HEIGHT=11 BORDER=0 NAME="menu5"></A><A HREF="boardingpass.html" TARGET="mainframe" onMouseOver="over('menu6',11)" onMouseOut="out('menu6',10)"><IMG SRC="ima/menu6_off.gif" WIDTH=93 HEIGHT=11 BORDER=0 NAME="menu6"></A><A HREF="equipage.html" TARGET="mainframe" onMouseOver="over('menu7',13)" onMouseOut="out('menu7',12)"><IMG SRC="ima/menu7_off.gif" WIDTH=92 HEIGHT=11 BORDER=0 NAME="menu7"></A><IMG SRC="ima/menu3_off.gif" WIDTH=0 HEIGHT=0 BORDER=0 NAME="menu3"><IMG SRC="ima/menu4_off.gif" WIDTH=0 HEIGHT=0 BORDER=0 NAME="menu4"><BR>
+</TD>
+<TD VALIGN=top>
+<IMG SRC="../ima/pix.gif" WIDTH=2 HEIGHT=1 BORDER=0 HSPACE=11><BR>
+</TD>
+
+</TR>
+</TABLE>
+</BODY>
+</HTML>
+

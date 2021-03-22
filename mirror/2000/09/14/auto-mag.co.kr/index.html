@@ -1,0 +1,109 @@
+<html>
+<head><style>
+a{text-decoration:none}
+A:hover {text-decoration: underline;}
+</style>
+<title>You've Been 0wned By: Scurvy</title>
+<style>
+.spanstyle {
+	position:absolute;
+	visibility:visible;
+	top:-50px;
+	font-size:8pt;
+	font-family:Verdana;
+      font-weight:bold;
+	color:#00FF00;
+}
+</style>
+<script>
+
+var x,y
+var step=20
+var flag=0
+
+var message="Scurvy "
+message=message.split("")
+
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	xpos[i]=-50
+}
+
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	ypos[i]=-50
+}
+
+function handlerMM(e){
+	x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+	y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+	flag=1
+}
+
+function makesnake() {
+	if (flag==1 && document.all) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("span"+(i)+".style")
+    		thisspan.posLeft=xpos[i]
+			thisspan.posTop=ypos[i]
+    	}
+	}
+	
+	else if (flag==1 && document.layers) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("document.span"+i)
+    		thisspan.left=xpos[i]
+			thisspan.top=ypos[i]
+    	}
+	}
+		var timer=setTimeout("makesnake()",30)
+}
+
+</script>
+
+</head>
+<BODY onLoad="makesnake()" style="width:100%;overflow-x:hidden;overflow-y:scroll" bgcolor="#000000" bgproperties="fixed" text="#FFFFFF" link="#00FF00" alink="#ff0000" vlink="#B00000#BB0000">
+<basefont size="3"><script>
+<!-- Beginning of JavaScript -
+
+for (i=0;i<=message.length-1;i++) {
+    document.write("<span id='span"+i+"' class='spanstyle'>")
+	document.write(message[i])
+    document.write("</span>")
+}
+
+if (document.layers){
+	document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+
+// - End of JavaScript - -->
+</script>
+<div align="center">
+<img src="http://www.stas.net/2/rewted/scurvyrsh.jpg" alt="Scurvy Was Here!">
+</div><br><br>
+<b><strong>This site was owned by <big><a href="mailto:irewtedjoo@mail.com">Scurvy</a></big>.<br><br></b></strong>
+<b><strong>Dear Admin: I patched your box, I guess I'm doing your job for you, will you send me a check? I didn't delete anything, I don't think. I backed up index.html to backup.index. I had fun trying to find your index.html on this box, although, I did delete the logs, sorry. </b></strong><br><br>
+   <font color="#0000A0"><b><strong>Scurvy wants to greet the following: <big>Datagram</big>, Piffy, Vortex, rootx11, nemesystm, mystik, Akurei, KavemaN, modify, <big>pimpshiz</big>(pimpshiz is the shit; Good luck with not getting raided), Gforce (hackers with a cause), matic, Happy_Hardcor3, hackweiser, dobe, gat0r, traze, biosdisk, JohnA, bi0cide, rakaen, B3RN, the cool admin that made this possible, everyone in RSH, and whoever I forgot to mention.<br><br><br>
+	Scurvy wants to say fuck to no one. This is a day and age when we hackers have got to stick together. If we don't, we'll all get fucked, just wait and see.</font>
+<br><div align="center"><a href="http://www.8op.com/rsh/"><img src="http://www.stas.net/2/rewted/rootshellme.jpg" alt="I'm not in RSH" border="0"></a><br><br><strong><b>E-mail me if you have any questions: <a href="mailto:irewtedjoo@mail.com">irewtedjoo@mail.com</a></strong></b>
+<br><br><div align="center">Come to Root Shell Hackers website: <a href="http://www.8op.com/rsh/">RSH</a></div><br><font size=1><tt>I'm not in RSH, and I don't deface for RSH, I do it for myself.</tt></font><br>
+
+<div align="center"><font size="0"><b><tt>Copyrights © Suck Ass, anything public shouldn't be copyrighted.</tt></font></b>
+</BODY>
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

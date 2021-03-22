@@ -1,0 +1,202 @@
+<html>
+<head>
+
+<title>Health Information Library - Main Index</title>
+
+<meta name="description" content="Covenant Health Online now brings health information right to the your fingertips.  The Health Information Library is a service of Covenant Health to provide health consumers with a topical medical information resource on the Internet.  With information in over 1100 topics ranging from aging to fitness, and from parenting to women's health, the Health Information Library&#153; is the area's best source for general health education.">
+
+<script language="JavaScript">
+<!--
+function validateForm(form) {
+	if (form.searchHILText.value == "") {
+		alert("Please enter a search term or terms, separated by commas.");
+		return false;
+	} else {
+	return true;
+	}
+}
+function go(){
+	if (document.selecter.select1.options[document.selecter.select1.selectedIndex].value != "none") {
+		location = document.selecter.select1.options[document.selecter.select1.selectedIndex].value	 }                       
+	}
+// -->
+</script>	
+	
+
+<script language="JavaScript1.2">
+
+var bookmarkurl=document.location
+var bookmarktitle=document.title
+
+function addbookmark(){
+if (document.all)
+window.external.AddFavorite(bookmarkurl,bookmarktitle)
+}
+
+</script>
+</head>
+
+<body bgcolor="#ffffff" link="#00396C" vlink="#891734" OnLoad="window.open('hil-masthead.html', 'Masthead');">
+
+<table border="0" cellspacing="0" cellpadding="6" width="500">
+	<tr>
+		<td><br>
+		<img src="../../images/hil-new-250.gif" width=250 height=77 border=0 alt="THE HEALTH INFORMATION LIBRARY" align="left">
+		<font face="Verdana,Arial,Helvetica" size="2">Covenant Health Online now brings health information to your fingertips.  <i>Newly revised for 1999</i>, the Health Information Library&#153; provides consumers with a topical medical information resource on the Internet with information in over 1,100 topics.<br></font>
+		</td>
+	</tr>
+	<tr>
+		<td><br><font face="Verdana,Arial,Helvetica" size=4 color="#00396C"><b>Table of Contents</b> <font size="1">(<a href="hil-overview.htm"><b>Getting Started</b></a>)</font></font>
+		</td>
+	</tr>
+	<tr><td><hr></td></tr>
+	<form action="HIL_search.cfm" method="post" onsubmit="return validateForm(this)">
+	<tr>
+		<td>
+		<table cellpadding="2" cellspacing="0" width="100%">
+			<tr>
+				<td width="50%"><font face="Verdana,Arial,Helvetica" size="3" color="#00396C">
+		<img src="images/cnt0.gif" alt="cnt0.gif" border="0" align="absmiddle"><b>Search The Library</b></font>
+				</td>
+				<td align="center" width="25%"><font face="Verdana,Arial,Helvetica" size="1">
+				Please enter your search terms, <br>separated by a comma:<br>
+				<input type="text" size="25" maxlength="60" name="searchHILText"></font>		
+				</td>
+				<td align="center" valign="bottom" width="25%"><input type="submit" value=" Search ">
+				</td>
+			</tr>
+		</table><br>
+		</td>
+	</tr>
+	</form>		
+	<tr>
+		<td>
+		<table cellpadding="2" cellspacing="0" width="100%">
+			<tr>
+				<td valign="top" width="39%"><font face="Verdana,Arial,Helvetica" size=2>
+				<img src="images/cnt0.gif" alt="cnt0.gif" border="0" align="absmiddle"> <b><font size="3" color="#00396C">Alphabetical Listing by <i>Category</i></font></b>
+				</td>
+				<td valign="top" align="center" width="61%">
+				<table cellspacing="0" bordercolordark="#00396C" bordercolorlight="#39A2FF" cellspacing="0" cellpadding="8" bgcolor="#D7ECFF" border="1">
+					<tr>
+						<td align="center"><form name="selecter">
+						<select name="select1" size=1>
+							<option value="Aging.htm">Aging
+							<option value="Alcohol.htm">Alcohol Problems
+							<option value="Allergy.htm">Allergies
+							<option value="Arth.htm">Arthritis
+							<option value="Back.htm">Back And Neck Problems
+							<option value="Blood.htm">Blood And Circulatory Problems
+							<option value="Bones.htm">Bones, Joints And Muscles
+							<option value="Brain.htm">Brain And Nervous System
+							<option value="Cancer.htm">Cancer
+							<option value="Cardio.htm">Cardiovascular Health
+							<option value="Child.htm">Child Health And Development
+							<option value="Common.htm">Common Illnesses
+							<option value="Cosm.htm">Cosmetic & Reconstructive Surgery
+							<option value="Dent.htm">Dental Health
+							<option value="Diabetes.htm">Diabetes
+							<option value="Digest.htm">Digestive System
+							<option value="Drug.htm">Drug Abuse
+							<option value="ENT.htm">Ear, Nose And Throat
+							<option value="Eating.htm">Eating Disorders
+							<option value="Exercise.htm">Exercise And Fitness
+							<option value="Eyes.htm">Eyes And Vision
+							<option value="Family.htm">Family Planning
+							<option value="Foot.htm">Foot Care
+							<option value="Genetic.htm">Genetic Disorders & Birth Defects
+							<option value="General.htm">General Health
+							<option value="Head.htm">Headaches
+							<option value="Quizzes.htm">Health Quizzes
+							<option value="Hearing.htm">Hearing
+							<option value="HIV.htm">HIV Infection/AIDS
+							<option value="Hormonal.htm">Hormonal Disorders
+							<option value="Infect.htm">Infectious Diseases
+							<option value="Medic.htm">Medications
+							<option value="Men.htm">Men's Health
+							<option value="Mental.htm">Mental And Emotional Health
+							<option value="Neuro.htm">Neurology
+							<option value="Newborn.htm">Newborn Care
+							<option value="Nutrition.htm">Nutrition
+							<option value="Parent.htm">Parenting
+							<option value="Personal.htm">Personal Safety
+							<option value="Pregnancy.htm">Pregnancy And Childbirth
+							<option value="Emergency.htm">Preparing For Emergencies
+							<option value="Resp.htm">Respiratory Problems
+							<option value="STD.htm">Sexually Transmitted Diseases
+							<option value="Skin.htm">Skin Health
+							<option value="Smoking.htm">Smoking
+							<option value="Sports.htm">Sports Injuries
+							<option value="Stress.htm">Stress And How To Cope
+							<option value="Surgery.htm">Surgery
+							<option value="Symptoms.htm">Symptoms
+							<option value="Teenage.htm">Teenage Concerns
+							<option value="Tests.htm">Tests And Examinations
+							<option value="Urinary.htm">Urinary & Genital Systems
+							<option value="Weight.htm">Weight Control
+							<option value="Women.htm">Women's Health
+						</select><p>
+						<input type="button" value="Choose Category" onclick="go()">
+						</form>
+						</td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+		</table></font>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="6"><br><img src="images/cnt0.gif" alt="cnt0.gif" border="0" align="absmiddle"><font face="Verdana,Arial,Helvetica" size="2"><b><font size="3" color="#00396C">Alphabetical Listing by <i>Topic</i></font><br>
+		<map name="hildir">
+			<area alt="A" shape="circle" coords="17,17,10" href="indexes/Atopic.htm">
+			<area alt="B" shape="circle" coords="41,17,10" href="indexes/Btopic.htm">
+			<area alt="C" shape="circle" coords="65,17,10" href="indexes/Ctopic.htm">
+			<area alt="D" shape="circle" coords="89,17,10" href="indexes/Dtopic.htm">
+			<area alt="E" shape="circle" coords="113,17,10" href="indexes/Etopic.htm">
+			<area alt="F" shape="circle" coords="137,17,10" href="indexes/Ftopic.htm">
+			<area alt="G" shape="circle" coords="161,17,10" href="indexes/Gtopic.htm">
+			<area alt="H" shape="circle" coords="185,17,10" href="indexes/Htopic.htm">
+			<area alt="I" shape="circle" coords="209,17,10" href="indexes/Itopic.htm">
+			<area alt="J" shape="circle" coords="233,17,10" href="indexes/Jtopic.htm">
+			<area alt="K" shape="circle" coords="257,17,10" href="indexes/Ktopic.htm">
+			<area alt="L" shape="circle" coords="281,17,10" href="indexes/Ltopic.htm">
+			<area alt="M" shape="circle" coords="305,17,10" href="indexes/Mtopic.htm">
+			<area alt="N" shape="circle" coords="329,17,10" href="indexes/Ntopic.htm">
+			<area alt="O" shape="circle" coords="353,17,10" href="indexes/Otopic.htm">
+			<area alt="P" shape="circle" coords="377,17,10" href="indexes/Ptopic.htm">
+			<area alt="Q" shape="circle" coords="17,39,10" href="indexes/Qtopic.htm">
+			<area alt="R" shape="circle" coords="41,39,10" href="indexes/Rtopic.htm">
+			<area alt="S" shape="circle" coords="65,39,10" href="indexes/Stopic.htm">
+			<area alt="T" shape="circle" coords="89,39,10" href="indexes/Ttopic.htm">
+			<area alt="U" shape="circle" coords="113,39,10" href="indexes/Utopic.htm">
+			<area alt="V" shape="circle" coords="137,39,10" href="indexes/Vtopic.htm">
+			<area alt="W" shape="circle" coords="161,39,10" href="indexes/Wtopic.htm">
+			<area alt="X" shape="circle" coords="185,39,10" href="indexes/Xtopic.htm">
+			<area alt="Y" shape="circle" coords="209,39,10" href="indexes/Ytopic.htm">
+			<area alt="Z" shape="circle" coords="233,39,10" href="indexes/tstub.htm">
+			<area alt="Other" coords="247,30,307,47" href="indexes/other.htm">
+		</map>
+		<div align="center"><img src="../../images/hil-directory.jpg" width=395 height=57 border=0 alt="Health Information Library - Directory" usemap="#hildir"></div>
+		</font>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="6" align="center"><hr><p><font face="Verdana,Arial,Helvetica" size="1">Copyright &copy 1998. <b>HBOC Call Center Group</b> (602) 230-7575.<br>
+All Rights Reserved. Information in this document is subject to change without notice.<p>
+
+		<font face="Verdana,Arial,Helvetica" size=1><a href="../../home.html">Home</a> | <a href="../../news/news.html">What's New</a> | <a href="../../aboutus/aboutus.html">All About Us</a> | <a href="../../healthy/healthy.cfm">Healthwise</a> | <a href="../../events/events.html">Events & Classes</a><br><a href="../../employ/employ.html">Employment Opportunities</a> | <a href="../../search_p1.html">Search</a> | <a href="../../netnursery/main.html">Net Nursery</a> <br><font size="3"><b>Health Information Library</b></font> | <a href="../../virtualtour.html">Virtual Tours</a><br><a href="../../sitemap.html">Website Map</a> | <a href="../../feedback/feedback.html">Feedback</a><p>
+
+		<i><script language="JavaScript">
+				<!--
+					document.write("This page last modified:  " + document.lastModified);
+				// -->
+		</script><p>
+		
+		<b><a href="/disclaim.html">Disclaimer:</a></b> Covenant Health developed and maintains this web site as a benefit for and in service to our communities.  While Covenant Health strives to keep the information contained on this site current, Covenant Health makes no warranty or guarantee concerning accuracy of content.  Although some of the information contained on this site relates to medical topics and issues, no information on the site should be construed as medical advice.  Any questions regarding your health or possible health problems should be directed to your physician.  The site also includes links providing direct access to other Internet sites, however Covenant Health takes no responsibility for the content or information contained on other sites and does not exert any editorial or other control over those sites.<p></i></font>
+		</td>
+	</tr>
+</table><br>
+
+</body>
+</html>

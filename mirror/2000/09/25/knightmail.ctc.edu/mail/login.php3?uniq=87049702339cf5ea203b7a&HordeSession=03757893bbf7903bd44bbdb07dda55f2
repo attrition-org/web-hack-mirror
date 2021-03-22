@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD W3 HTML//EN">
+<script language="JavaScript">
+if (parent.hordestatus) {
+  parent.hordestatus.location="status.php3?language=en&message=&status=green&HordeSession=03757893bbf7903bd44bbdb07dda55f2";
+} else if (parent.parent.hordestatus) {
+  parent.parent.hordestatus.location="status.php3?language=en&message=&status=green&HordeSession=03757893bbf7903bd44bbdb07dda55f2";
+} else if (top.opener && top.opener.parent.hordestatus) {
+  top.opener.parent.hordestatus.location="status.php3?language=en&message=&status=green&HordeSession=03757893bbf7903bd44bbdb07dda55f2";
+}
+</script>
+
+<html>
+<head>
+<title>WVC Student Email</title>
+
+<script language="JavaScript">
+<!--
+if (parent.menu)      { parent.menu.location="menu.php3?language=en&HordeSession=03757893bbf7903bd44bbdb07dda55f2"; }
+if (parent.impfolder) { parent.impfolder.location="select.php3?language=en&HordeSession=03757893bbf7903bd44bbdb07dda55f2"; }
+
+function submit_login() {
+  if (document.implogin.imapuser.value == "") {
+    alert("Please provide your username and password." );
+    document.implogin.imapuser.focus();
+    return false;
+  } else if (document.implogin.pass.value == "") {
+    alert("Please provide your username and password." );
+    document.implogin.pass.focus();
+    return false;
+  } else {
+    document.implogin.submit();
+    return true;
+  }
+}
+
+//-->
+</script>
+<script language="JavaScript1.2">
+<!--
+var IE4 = document.all;
+var NS4 = document.layers;
+function enter_key_trap (e) {
+  var keyPressed;
+  if (NS4)
+    keyPressed = String.fromCharCode(e.which);
+  else if (IE4)
+    keyPressed = String.fromCharCode(window.event.keyCode);
+  
+  if (keyPressed == "\r" || keyPressed == "\n") {
+    submit_login();
+  }
+}
+//-->
+</script>
+
+</head>
+
+<body bgcolor="#e9e9e9" text="#000000" link="#0000ff" vlink="#0000aa" alink="#0000ff">
+
+<noscript>
+<p><b>IMP requires JavaScript to perform certain message handling functions.</b></p>
+</noscript>
+
+<center>
+<form action="/horde/imp/mailbox.php3?HordeSession=03757893bbf7903bd44bbdb07dda55f2" method="post" name="implogin">
+<input type="hidden" notab name="actionID" value="6">
+<input type="hidden" notab name="mailbox" value="INBOX">
+
+<table border="0" width="300">
+<tr>
+  <td align="center" colspan="3">
+  <p><font size="+1" face="Geneva,Arial,Helvetica">
+	<b>WVC Student Email</b><br>
+		<font size="1">(<a href="newuser.php3?language=en&HordeSession=03757893bbf7903bd44bbdb07dda55f2">New User Introduction</a>)</font><br>
+	  </font></p>
+  <p><font size="2" face="Geneva,Arial,Helvetica">
+    </font></p>
+  </td>
+</tr>
+
+<tr>
+   <td align="right"><font size="2" face="Geneva,Arial,Helvetica"><b>Username</b></font></td>
+   <td><input type="text" tabindex="1" name="imapuser" value=""></td>
+   <td align="left"></td>
+</tr>
+
+<tr>
+   <td align="right"><font size="2" face="Geneva,Arial,Helvetica"><b>Password</b></font></td>
+   <td><input type="password" tabindex="2" name="pass"></td>
+   <td align="left"></td>
+</tr>
+
+<input type="hidden" name="server" notab value="localhost">
+<input type="hidden" name="port" notab value="143">
+
+<input type="hidden" notab name="folders" value="mail/">
+
+<tr>
+  <td align="right"><font size="2" face="Geneva,Arial,Helvetica"><b>Language</b></font></td>
+  <td><select name="new_lang" onchange="selectLang()"><option value="cs">Èesky</option>
+<option value="da">Dansk</option>
+<option value="de">Deutsch</option>
+<option value="el">Greek</option>
+<option value="en" SELECTED>English</option>
+<option value="es">Español</option>
+<option value="et">Estonian</option>
+<option value="fi">Suomi</option>
+<option value="fr">Fran&ccedil;ais</option>
+<option value="hu">Magyar</option>
+<option value="id">Bahasa Indonesia</option>
+<option value="it">Italiano</option>
+<option value="is">Íslenska</option>
+<option value="no-bok">Norsk-bokmål</option>
+<option value="no-nyn">Norsk-nynorsk</option>
+<option value="nl">Nederlands</option>
+<option value="pl">Polish</option>
+<option value="pt">Portuguese</option>
+<option value="pt-BR">Portugu&ecirc;s Brasileiro</option>
+<option value="se">Svenska</option>
+<option value="sk">Slovensky</option>
+<option value="ru">Russian</option>
+<option value="zh-tw">Traditional Chinese</option>
+</select>  </td>
+<td align="left"></td>
+</tr>
+
+<tr><td>&nbsp;</td><td align="center">
+<input type="submit" name="button" tabindex="4" value="log in" onClick="submit_login();return(false);"></td><td>&nbsp;</td></tr>
+
+</table>
+</form>
+</center>
+
+<script language="Javascript">
+function updatePort () {
+  if (document.implogin.servtype.options[document.implogin.servtype.selectedIndex].value == 'imap') {
+    document.implogin.port.value = 143;
+  } else if (document.implogin.servtype.options[document.implogin.servtype.selectedIndex].value == 'pop3') {
+    document.implogin.port.value = 110;
+  }
+} // updatePort()
+
+function selectLang () {
+  // We need to reload the login page here, but only if the user hasn't already entered a username and password
+  if (document.implogin.imapuser.value == "" && document.implogin.pass.value == "") {
+    var lang_page = "login.php3?language=" + document.implogin.new_lang[document.implogin.new_lang.selectedIndex].value;
+    self.location = lang_page;
+  }
+} // selectLang()
+
+document.implogin.new_lang.onChange = new Function("selectLang()");
+
+//-->
+</script>
+
+<script language="JavaScript1.2">
+<!--
+// Setup the enter keytrap code
+if (window.document.captureEvents != null) {
+  window.document.captureEvents(Event.KEYPRESS);
+  window.document.onkeypress = enter_key_trap;
+}
+//-->
+</script>
+<!-- This file contains any "Message Of The Day" Type information -->
+<!-- It will be included below the log-in form on the login page. -->
+</body>
+</html>

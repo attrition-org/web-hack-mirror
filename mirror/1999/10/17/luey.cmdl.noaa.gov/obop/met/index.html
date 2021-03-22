@@ -1,0 +1,143 @@
+<html>
+
+<head>
+<title>Station Meteorology</title>
+</head>
+
+<body BGCOLOR="#F0F0F0">
+<div align="center"><center>
+
+<table border="0" width="95%">
+  <tr>
+    <td align="center" width="25%" valign="top"><p align="center"><a href="http://www.noaa.gov/"><img src="/images/noaalogo1.gif" alt="NOAA" border="0" width="144" height="145"></a></p>
+    <p align="center"><big><big><em><font face="Arial"><strong>Observatory Operations</strong></font></em></big></big></td>
+    <td align="right" width="75%"><img src="images/stat1.jpg" alt="Station Meteorology" width="450" height="95"><i><p><font face="Arial"><b><a href="http://www.doc.gov/">U.S. Dept. of Commerce</a> / <a href="http://www.noaa.gov">NOAA</a> / <a href="http://ww
+
+w.erl.noaa.gov">ERL</a> / <a href="/index.html">CMDL</a> / <a href="../../obop">OBOP</a> / <u>Station Meteorology</u></b></font></i></td>
+  </tr>
+</table>
+</center></div>
+
+<div align="center"><center>
+
+<table BORDER="0" CELLSPACING="2" CELLPADDING="1" width="95%">
+  <tr>
+    <td COLSPAN="2" ALIGN="right" width="90%" valign="top"></td>
+    <td WIDTH="10%" ROWSPAN="2" valign="top" align="right" height="100%"><img src="images/verticalline.gif" align="right" alt=" " width="4" height="1300"></td>
+  </tr>
+  <tr>
+    <td WIDTH="25%" ALIGN="center" valign="top" height="25%"><p align="center"><a href="metprog.html"><img src="/images/buttons/highlightsbut.gif" alt="Highlights" border="0" width="135" height="40"></a></p>
+    <p align="center"><a href="ftp://ftp.cmdl.noaa.gov/met"><img src="/images/buttons/databut.gif" alt="Data" border="0" width="135" height="40"></a></p>
+    <p align="center"><a href="/info/links.html"><img src="/images/buttons/linksbut.gif" alt="Related Links" border="0" width="135" height="40"></a></p>
+    <p align="center"><a href="/personnel/cmdldir.html"><img src="/images/buttons/personnelbut.gif" alt="Personnel" border="0" width="135" height="40"></a></p>
+    <p align="center"><a href="/index.html"><img src="/images/buttons/labhomebut.gif" alt="CMDL" border="0" width="135" height="40"></a></p>
+    <p align="center"><a href="/obop"><img src="/images/buttons/obopbut.gif" alt="OBOP" border="0" width="135" height="40"></a></td>
+    <td WIDTH="75%" valign="top"><h3 align="right"><font face="Arial">Create Daily Weather
+    Plots</font></h3>
+    <form action="http://luey.cmdl.noaa.gov/obop/met/cgi-bin/metplot.cgi" method="post" target="view">
+      <p><font face="Arial">From Raw Minute Data <b> ( <i>NOTE: This data has not been edited!
+      </i>)</b></font>
+      <ul>
+      <p><font face="Arial"><b>Station</b> <select name="station" size="1">
+            <option value="bld">Boulder</option>
+            <option value="brw" selected>Barrow </option>
+            <option value="mlo">Mauna Loa </option>
+            <option value="smo">Samoa </option>
+            <option value="spo">South Pole </option>
+      </select>    <b>Year</b> <select name="year" size="1">
+            <option>1994 </option>
+            <option>1995 </option>
+            <option>1996 </option>
+            <option>1997 </option>
+            <option>1998</option>
+            <option selected>1999</option>
+          </select>    <b>Julian Day</b> <input name="jdoy" size="3" value="<!--#exec cmd="/www/obop/met/cgi-bin/yestrdoy"-->"></font><p><font face="Arial"><b>Select
+      Parameters to Plot</b></font>
+          <p><font face="Arial"><input name="ws" type="checkbox" value="yes">Wind
+          Speed<br>
+          <input name="wd" type="checkbox" value="yes">Wind Direction<br>
+          <input CHECKED name="ta" type="checkbox" value="yes">Air Temperature<br>
+          <input name="td" type="checkbox" value="yes">Dewpoint Temperature<br>
+          <input name="pa" type="checkbox" value="yes">Barometric Pressure<br>
+          <input name="rh" type="checkbox" value="yes">Relative Humidity</font>
+      <p><font face="Arial"><b>Select Plot Options</b></font>
+          <p><font face="Arial"><input name="mm" type="checkbox" value="yes">   
+          Use Station max/mins
+              for Plot Limits<br>
+          <input name="dm" type="checkbox" value="yes">   Show Daily Means<br>
+          <input name="hm" type="checkbox" value="yes">   Plot Hourly Averages<br>
+          <input name="tm" type="checkbox" value="yes">   Plot Ten Minute
+          Averages<br>
+          <input name="ns" type="checkbox" value="yes">   Don't Show Data Points</font>
+          <p><font face="Arial"><br>
+          Plot Size: <select name="sz" size="1">
+                <option>3.0 </option>
+                <option>4.0 </option>
+                <option>5.0 </option>
+                <option selected>6.0 </option>
+                <option>7.0 </option>
+                <option>8.0</option>
+              </select> inches</font>
+      <p><font face="Arial"><input type="submit" value="View"> <input type="reset" value="Clear">
+      </font></p></ul>
+    </form>
+    <hr>
+    <h3 align="right"><font face="Arial">Meteorological Summaries</font></h3>
+    <form action="http://www.cmdl.noaa.gov/obop/met/cgi-bin/display_recent" method="post">
+      <p><font face="Arial"><b>Station</b> <select name="station" size="1">
+        <option>Boulder</option>
+        <option selected>Barrow </option>
+        <option>Mauna Loa </option>
+        <option>Samoa </option>
+        <option>South Pole </option>
+      </select> </font></p>
+      <p><font face="Arial"><b>Period</b></font></p>
+      <ol>
+        <li><font face="Arial"><input name="period" type="radio" value="current">
+          Most Recent Raw
+          Met Data(Minute values over 1 hour).</font></li>
+        <li><font face="Arial"><input CHECKED name="period" type="radio" value="daily"> Most Recent
+          Daily Weather (hourly values). </font></li>
+        <li><font face="Arial"><input name="period" type="radio" value="month"> 
+          Recent Monthly
+          Summaries (daily values). <input maxLength="5" name="molcd" size="5" value="dec97"> 
+          (Enter mmmyy)</font></li>
+      </ol>
+      <p><font face="Arial"><input type="submit" value="View"> </font></p>
+    </form>
+    <hr>
+    <h3 align="right"><font face="Arial">Yearly Climatological Summaries</font></h3>
+    <form action="http://www.cmdl.noaa.gov/obop/met/cgi-bin/display_summary" method="post">
+      <p><font face="Arial"><b>Station</b> <select name="station" size="1">
+        <option selected>Barrow </option>
+        <option>Mauna Loa </option>
+        <option>Samoa </option>
+        <option>South Pole</option>
+      </select>  <b>Year</b> <input maxLength="4" name="year" size="4" value="1998"> 
+      <b>Type</b> <select name="type" size="1">
+        <option selected>Summary Table </option>
+        <option>Summary Plots </option>
+        <option>Wind Rose Table </option>
+        <option>Wind Rose Plot</option>
+      </select></font></p>
+      <p><font face="Arial">Click for multi-year (77-98) Summaries <input
+name="myr" type="checkbox" value="yes"></font></p>
+      <p><font face="Arial"><input type="submit" value="View"></font></p>
+    </form>
+    <hr>
+    <p align="right"><big>[<a href="ftp://ftp.cmdl.noaa.gov/met">Data</a>] [<a href="/info/links.html">Related Links</a>]</big><br>
+    <big>[<a href="/info/cmdldir.html">Personnel</a>] [<a href="/index.html">CMDL Home</a>]</big><br>
+    <big>[<a href="/obop">OBOP Home</a>]</big></td>
+  </tr>
+</table>
+</center></div>
+
+<hr align="center">
+
+<p align="center"><font face="Arial"><big>Station Meteorology</big><br>
+325 Broadway R/E/CG1<br>
+Boulder, CO 80303<br>
+Project Contact: <a href="mailto:tmefford@cmdl.noaa.gov">Tom Mefford</a><br>
+(303) 497-6051</font></p>
+</body>
+</html>

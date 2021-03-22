@@ -1,0 +1,70 @@
+<html><head><title>THANKS-CGI EZ-DISPLAY</title>
+</head>
+<body bgcolor="3366aa" text=ffffff link=yellow alink=red vlink=lime>
+<CENTER>
+<hr width=600 align=center>
+<script Language='JavaScript'>
+var now = new Date();
+var years = now.getYear();
+var months =now.getMonth();
+var days = now.getDate();
+var hours = now.getHours();
+var minutes = now.getMinutes();
+var seconds = now.getSeconds();
+var ram_num=Math.floor(Math.random()*10000);
+var markstr=""+years+"-"+months+"-"+days+"-"+hours+"-"+minutes+"-"+seconds+"-"+ram_num;
+var showcgiurl="http://www.thanks-cgi.com/cgi-bin/banker/banker_show.cgi";
+var clickcgiurl="http://www.thanks-cgi.com/cgi-bin/banker/banker_click.cgi";
+document.write('<a href='+clickcgiurl+'?'+markstr+'><img src='+showcgiurl+'?'+markstr+' border=0></a>');
+</script>
+<hr width=600 align=center>
+<h1><font face=arial>EZ-DISPLAY</font></h1>
+<table border=1>
+<tr><td width=220 height=100 align=center valign=middle>
+<a href=http://www.thanks-cgi.com/cgi-bin/rand/rand.cgi?randurl=http://www.4free.nu/><img src=http://www.thanks-cgi.com/4free.gif border=0></a>
+</td></tr></table>
+<font size=3 face=arial color=ffffff>
+This button will display dandomly.<br>
+You can check the record of each banners or logos impressions and hits.
+</font>
+<hr width=600>
+[<a href=http://www.thanks-cgi.com/cgi-bin/rand/rand.cgi?result>RESULT</a>] [<a href=../>BACK TO MAIN PAGE</a>]
+<hr width=600>
+<FONT size=1>© 1998, 1999 <A href="../index.html">Thanks CGI resources</A></FONT>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

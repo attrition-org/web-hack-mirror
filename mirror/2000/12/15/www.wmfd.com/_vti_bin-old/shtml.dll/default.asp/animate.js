@@ -1,0 +1,340 @@
+<% Response.AddHeader "Pragma", "No-Cache" %>
+<%
+Set conn = Server.CreateObject("ADODB.Connection")
+conn.open "wmfd","",""
+
+msgSQL = "SELECT * FROM tblMessages "
+msgSQL = msgSQL & "WHERE #" &Date &"# >= runDate AND #" &Date &"# <= endDate AND msgNews = 'Yes'"
+msgSQL = msgSQL & "ORDER BY msgPriority"
+Set rs = Server.CreateObject("ADODB.Recordset")
+rs.Open msgSQL, conn, 3, 3
+
+rowcount=0
+%>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!--#config timefmt="%a, %d %b %Y %H:%M:%S" -->
+<script language="JavaScript1.2" fptype="dynamicanimation" src="animate.js">
+</script>
+
+<title>0wn3d by McM4nus</title>
+<base href="http://www.wmfd.com/default.asp"></head>
+
+<body bgColor="#000000" leftMargin="0" topMargin="0" text="#FFFFFF">
+
+<table border="0" cellPadding="0" cellSpacing="0" height="1990" width="791">
+<tbody>
+  <tr>
+    <td bgColor="#000000" colSpan="3" height="209" vAlign="top" width="793"><img src="Linux-.gif" alt="Linux-!.gif (6126 bytes)" WIDTH="134" HEIGHT="126"></td>
+  </tr>
+  <tr>
+    <td bgColor="#ffffff" vAlign="top" width="133" background="Leftsid1.gif" nowrap height="1781"><strong>[Buttons/Side.htm]</strong>
+<p align="center" style="word-spacing: 0; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+    <p>&nbsp;</td>
+    <td bgColor="#ffffff" vAlign="top" width="542" height="1781">&nbsp; <table border="0" cellPadding="0" cellSpacing="0" width="516">
+<tbody>
+      <tr>
+        <td width="514" colspan="8"><p style="word-spacing: 0; margin-top: 0; margin-bottom: 0"><img border="0" src="news.gif" WIDTH="194" HEIGHT="18"></td>
+      </tr>
+      <tr>
+        <td bgColor="#FFFFFF" width="508" colspan="6"><table border="0" width="100%">
+          <tr>
+            <td width="100%"><!-- Begin Ban Man Pro Banner Code -  Zone: Home 1 --> <script LANGUAGE="JAVASCRIPT">
+<!--
+var browName = navigator.appName;
+var browDateTime = (new Date()).getTime();
+var browVersion = parseInt(navigator.appVersion);
+var ua=navigator.userAgent.toLowerCase();
+var adcode='';
+if (browName=='Netscape'){
+     if ((browVersion>=4)&&(ua.indexOf("mac")==-1))
+          { document.write('<S'+'CRIPT src="http://www.wmfd.com/banman/banman.asp?ZoneID=1&Task=Get&Browser=NETSCAPE4">');
+          document.write('</'+'scr'+'ipt>');
+          document.write(adcode); }
+     else if (browVersion>=3) 
+          { document.write('<A HREF="http://www.wmfd.com/banman/banman.asp?ZoneID=1&Task=Click&Mode=HTML&PageID=6262&RandomNumber=' + browDateTime + '" target="_new"><IMG SRC="http://www.wmfd.com/banman/banman.asp?ZoneID=1&Task=Get&Mode=HTML&PageID=6262&RandomNumber=' + browDateTime + '" width="320" height="50" border="0"></A>'); } }
+if (browName=='Microsoft Internet Explorer')
+     { document.write('<ifr'+'ame src="http://www.wmfd.com/banman/banman.asp?ZoneID=1&Task=Get&PageID=6262" width=320 height=50 Marginwidth=0 Marginheight=0 Hspace=0 Vspace=0 Frameborder=0 Scrolling=No></ifr'+'ame>'); }
+// --> 
+</script> <noscript> <a href="http://www.wmfd.com/banman/banman.asp?ZoneID=1&amp;Task=Click&amp;Mode=HTML&amp;PageID=6262" target="_new"><img src="http://www.wmfd.com/banman/banman.asp?ZoneID=1&amp;Task=Get&amp;Mode=HTML&amp;PageID=6262" width="320" height="50" border="0"></a> </noscript> <!-- End Ban Man Pro Banner Code -  Zone: Home 1 -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <script LANGUAGE="JAVASCRIPT">
+<!--
+var browName = navigator.appName;
+var browDateTime = (new Date()).getTime();
+var browVersion = parseInt(navigator.appVersion);
+var ua=navigator.userAgent.toLowerCase();
+var adcode='';
+if (browName=='Netscape'){
+     if ((browVersion>=4)&&(ua.indexOf("mac")==-1))
+          { document.write('<S'+'CRIPT src="http://www.wmfd.com/banman/banman.asp?ZoneID=47&Task=Get&Browser=NETSCAPE4">');
+          document.write('</'+'scr'+'ipt>');
+          document.write(adcode); }
+     else if (browVersion>=3) 
+          { document.write('<A HREF="http://www.wmfd.com/banman/banman.asp?ZoneID=47&Task=Click&Mode=HTML&PageID=35675&RandomNumber=' + browDateTime + '" target="_new"><IMG SRC="http://www.wmfd.com/banman/banman.asp?ZoneID=47&Task=Get&Mode=HTML&PageID=35675&RandomNumber=' + browDateTime + '" width="60" height="50" border="0"></A>'); } }
+if (browName=='Microsoft Internet Explorer')
+     { document.write('<ifr'+'ame src="http://www.wmfd.com/banman/banman.asp?ZoneID=47&Task=Get&PageID=35675" width=60 height=50 Marginwidth=0 Marginheight=0 Hspace=0 Vspace=0 Frameborder=0 Scrolling=No></ifr'+'ame>'); }
+// --> 
+</script> <noscript> <a href="http://www.wmfd.com/banman/banman.asp?ZoneID=47&amp;Task=Click&amp;Mode=HTML&amp;PageID=35675" target="_new"><img src="http://www.wmfd.com/banman/banman.asp?ZoneID=47&amp;Task=Get&amp;Mode=HTML&amp;PageID=35675" width="60" height="50" border="0"></a> </noscript> <!-- End Ban Man Pro Banner Code -  Zone: Home Page School Alert --> </td>
+          </tr>
+        </table>
+        </td>
+      </tr>
+      <tr>
+        <td width="508" colspan="6"><table border="0" width="479">
+          <tr>
+            <td width="201">B<font color="#400040">Brazil Rulez.............Greetz: Prime
+            Suspectz.........mcm4nus@programmer.net</font></td>
+            <td width="5"></td>
+            <td align="left" width="103"><font size="+1"><b><%=rs("msgHeadline") %></b></font><font size="1"><i>&nbsp;&nbsp; <a href="../../../newsboard/single.asp?Story=<%=rs("msgId")%>">details</a></i></font> </td>
+            <td width="144"><!-- Begin Ban Man Pro Banner Code -  Zone: Home Box 1 --> <script LANGUAGE="JAVASCRIPT">
+<!--
+var browName = navigator.appName;
+var browDateTime = (new Date()).getTime();
+var browVersion = parseInt(navigator.appVersion);
+var ua=navigator.userAgent.toLowerCase();
+var adcode='';
+if (browName=='Netscape'){
+     if ((browVersion>=4)&&(ua.indexOf("mac")==-1))
+          { document.write('<S'+'CRIPT src="http://www.wmfd.com/banman/banman.asp?ZoneID=4&Task=Get&Browser=NETSCAPE4">');
+          document.write('</'+'scr'+'ipt>');
+          document.write(adcode); }
+     else if (browVersion>=3) 
+          { document.write('<A HREF="http://www.wmfd.com/banman/banman.asp?ZoneID=4&Task=Click&Mode=HTML&PageID=81951&RandomNumber=' + browDateTime + '" target="_new"><IMG SRC="http://www.wmfd.com/banman/banman.asp?ZoneID=4&Task=Get&Mode=HTML&PageID=81951&RandomNumber=' + browDateTime + '" width="150" height="150" border="0"></A>'); } }
+if (browName=='Microsoft Internet Explorer')
+     { document.write('<ifr'+'ame src="http://www.wmfd.com/banman/banman.asp?ZoneID=4&Task=Get&PageID=81951" width=150 height=150 Marginwidth=0 Marginheight=0 Hspace=0 Vspace=0 Frameborder=0 Scrolling=No></ifr'+'ame>'); }
+// --> 
+</script> <noscript> <a href="http://www.wmfd.com/banman/banman.asp?ZoneID=4&amp;Task=Click&amp;Mode=HTML&amp;PageID=81951" target="_new"><img src="http://www.wmfd.com/banman/banman.asp?ZoneID=4&amp;Task=Get&amp;Mode=HTML&amp;PageID=81951" width="150" height="150" border="0"></a> </noscript> <!-- End Ban Man Pro Banner Code -  Zone: Home Box 1 --> </td>
+          </tr>
+          <tr>
+            <td bgColor="#FFFFFF" width="212" colspan="2">&nbsp; </td>
+          </tr>
+        </table>
+        </td>
+      </tr>
+      <tr>
+        <td width="514" colspan="8"><p style="line-height: 100%; word-spacing: 0; margin-top: 0; margin-bottom: 0"><b><i>Other
+        News&nbsp;</i></b>&nbsp;&nbsp; </p>
+        <p style="line-height: 100%; word-spacing: 0; margin-top: 0; margin-bottom: 0"><%
+rs.MoveFirst
+%> <%
+rs.MoveNext
+%> <%
+Do While Not rs.eof
+%> <font size="2"><b><i><a href="../../../newsboard/single.asp?Story=<%=rs("msgId")%>"><%=rs("msgHeadline") %></a></i></b></font> </p>
+        <p style="line-height: 0%; word-spacing: 0; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+        <p><%
+rs.MoveNext
+loop
+%> </td>
+      </tr>
+      <tr>
+        <td width="514" colspan="8"><i><font size="1"><a href="newsboard/news.asp">all news</a></font></i>
+        </td>
+      </tr>
+      <tr>
+        <td bgColor="#FFFFFF" width="508" colspan="6"><p style="word-spacing: 0; margin-top: 0; margin-bottom: 0"><img border="0" src="sports.gif" WIDTH="194" HEIGHT="18"></td>
+        <td colSpan="2" width="4"></td>
+      </tr>
+      <tr>
+        <td width="508" colspan="6"><table border="0" width="100%">
+          <tr>
+            <td width="100%"><!-- Begin Ban Man Pro Banner Code -  Zone: Home 2 --> <script LANGUAGE="JAVASCRIPT">
+<!--
+var browName = navigator.appName;
+var browDateTime = (new Date()).getTime();
+var browVersion = parseInt(navigator.appVersion);
+var ua=navigator.userAgent.toLowerCase();
+var adcode='';
+if (browName=='Netscape'){
+     if ((browVersion>=4)&&(ua.indexOf("mac")==-1))
+          { document.write('<S'+'CRIPT src="http://www.wmfd.com/banman/banman.asp?ZoneID=2&Task=Get&Browser=NETSCAPE4">');
+          document.write('</'+'scr'+'ipt>');
+          document.write(adcode); }
+     else if (browVersion>=3) 
+          { document.write('<A HREF="http://www.wmfd.com/banman/banman.asp?ZoneID=2&Task=Click&Mode=HTML&PageID=18067&RandomNumber=' + browDateTime + '" target="_new"><IMG SRC="http://www.wmfd.com/banman/banman.asp?ZoneID=2&Task=Get&Mode=HTML&PageID=18067&RandomNumber=' + browDateTime + '" width="320" height="50" border="0"></A>'); } }
+if (browName=='Microsoft Internet Explorer')
+     { document.write('<ifr'+'ame src="http://www.wmfd.com/banman/banman.asp?ZoneID=2&Task=Get&PageID=18067" width=320 height=50 Marginwidth=0 Marginheight=0 Hspace=0 Vspace=0 Frameborder=0 Scrolling=No></ifr'+'ame>'); }
+// --> 
+</script> <noscript> <a href="http://www.wmfd.com/banman/banman.asp?ZoneID=2&amp;Task=Click&amp;Mode=HTML&amp;PageID=18067" target="_new"><img src="http://www.wmfd.com/banman/banman.asp?ZoneID=2&amp;Task=Get&amp;Mode=HTML&amp;PageID=18067" width="320" height="50" border="0"></a> </noscript> <!-- End Ban Man Pro Banner Code -  Zone: Home 2 --> </td>
+          </tr>
+        </table>
+        </td>
+      </tr>
+      <tr>
+<%
+
+msgSQL = "SELECT * FROM tblMessages "
+msgSQL = msgSQL & "WHERE #" &Date &"# >= runDate AND #" &Date &"# <= endDate AND msgSports = 'Yes'"
+msgSQL = msgSQL & "ORDER BY msgPriority"
+Set rs = Server.CreateObject("ADODB.Recordset")
+rs.Open msgSQL, conn, 3, 3
+
+rowcount=0
+%>
+      </tr>
+      <tr>
+        <td width="277"><img src="http://www.wmfd.com/graphics/<%=rs("msgImage") %>"></td>
+        <td align="left" width="47"><font size="+1"><b><%=rs("msgHeadline") %></b></font><font size="1"><i>&nbsp;&nbsp; <a href="../../../newsboard/sports.asp">details</a></i></font> </td>
+      </tr>
+      <tr>
+        <td bgColor="#FFFFFF" width="508" colspan="6"><i><a href="newsboard/sports.asp">more
+        sports</a></i> <p>&nbsp;</td>
+      </tr>
+      <tr>
+        <td bgColor="#FFFFFF" width="514" colspan="8"><img border="0" src="weather.gif" WIDTH="194" HEIGHT="18">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      </tr>
+      <tr>
+        <td bgColor="#FFFFFF" width="514" colspan="8"><table border="0" width="100%">
+          <tr>
+            <td width="100%"><!-- Begin Ban Man Pro Banner Code -  Zone: Home 3 --> <script LANGUAGE="JAVASCRIPT">
+<!--
+var browName = navigator.appName;
+var browDateTime = (new Date()).getTime();
+var browVersion = parseInt(navigator.appVersion);
+var ua=navigator.userAgent.toLowerCase();
+var adcode='';
+if (browName=='Netscape'){
+     if ((browVersion>=4)&&(ua.indexOf("mac")==-1))
+          { document.write('<S'+'CRIPT src="http://www.wmfd.com/banman/banman.asp?ZoneID=3&Task=Get&Browser=NETSCAPE4">');
+          document.write('</'+'scr'+'ipt>');
+          document.write(adcode); }
+     else if (browVersion>=3) 
+          { document.write('<A HREF="http://www.wmfd.com/banman/banman.asp?ZoneID=3&Task=Click&Mode=HTML&PageID=7025&RandomNumber=' + browDateTime + '" target="_new"><IMG SRC="http://www.wmfd.com/banman/banman.asp?ZoneID=3&Task=Get&Mode=HTML&PageID=7025&RandomNumber=' + browDateTime + '" width="320" height="50" border="0"></A>'); } }
+if (browName=='Microsoft Internet Explorer')
+     { document.write('<ifr'+'ame src="http://www.wmfd.com/banman/banman.asp?ZoneID=3&Task=Get&PageID=7025" width=320 height=50 Marginwidth=0 Marginheight=0 Hspace=0 Vspace=0 Frameborder=0 Scrolling=No></ifr'+'ame>'); }
+// --> 
+</script> <noscript> <a href="http://www.wmfd.com/banman/banman.asp?ZoneID=3&amp;Task=Click&amp;Mode=HTML&amp;PageID=7025" target="_new"><img src="http://www.wmfd.com/banman/banman.asp?ZoneID=3&amp;Task=Get&amp;Mode=HTML&amp;PageID=7025" width="320" height="50" border="0"></a> </noscript> <!-- End Ban Man Pro Banner Code -  Zone: Home 3 --> </td>
+          </tr>
+        </table>
+        </td>
+      </tr>
+      <tr>
+        <td bgColor="#FFFFFF" width="326" colspan="2"><MAP NAME="FrontPageMap"><AREA SHAPE="RECT" COORDS="9, 4, 311, 239" HREF="weather/default.htm"></MAP><a href="_vti_bin/shtml.dll/default.asp/map"><img ismap usemap="#FrontPageMap" border="0" src="weather/maps/National/Small/Special.jpg"></a> </td>
+        <td bgColor="#FFFFFF" width="103"><p align="left"><font size="2"><a href="weather/Doppler/index.shtm">3 New Doppler Radars</a></font></p>
+        <p align="left"><font size="2"><a href="weather/light/default.shtm">Lightning Tracker</a></font></p>
+        <p align="left"><font size="2"><a href="weather/Lake/default.shtm">Lake Erie Forecast</a></font></p>
+        <p align="left"><font size="2"><a href="weather/Bug/default.htm">Bug Count</a></font></p>
+        <p align="left"><font size="2"><a href="weather/Fiveday/5day.htm">Five Day Forecast&nbsp;</a></font></p>
+        <p>&nbsp; </td>
+        <td bgColor="#FFFFFF" width="75" colspan="2">&nbsp; </td>
+      </tr>
+      <tr>
+        <td bgColor="#FFFFFF" width="508" colspan="5"><i><a href="weather/default.htm">more
+        weather</a></i> <p style="line-height: 100%">&nbsp;</td>
+        <td bgColor="#FFFFFF" width="4" colspan="3"></td>
+      </tr>
+      <tr>
+        <td bgColor="#FFFFFF" width="508" colspan="5"><img border="0" src="pets/Adopt.jpg" WIDTH="194" HEIGHT="18"> </td>
+        <td bgColor="#FFFFFF" width="4" colspan="3"></td>
+      </tr>
+      <tr>
+        <td bgColor="#FFFFFF" width="508" colspan="5"><!-- Begin Ban Man Pro Banner Code -  Zone: Home 4 --> <script LANGUAGE="JAVASCRIPT">
+<!--
+var browName = navigator.appName;
+var browDateTime = (new Date()).getTime();
+var browVersion = parseInt(navigator.appVersion);
+var ua=navigator.userAgent.toLowerCase();
+var adcode='';
+if (browName=='Netscape'){
+     if ((browVersion>=4)&&(ua.indexOf("mac")==-1))
+          { document.write('<S'+'CRIPT src="http://www.wmfd.com/banman/banman.asp?ZoneID=5&Task=Get&Browser=NETSCAPE4">');
+          document.write('</'+'scr'+'ipt>');
+          document.write(adcode); }
+     else if (browVersion>=3) 
+          { document.write('<A HREF="http://www.wmfd.com/banman/banman.asp?ZoneID=5&Task=Click&Mode=HTML&PageID=23195&RandomNumber=' + browDateTime + '" target="_new"><IMG SRC="http://www.wmfd.com/banman/banman.asp?ZoneID=5&Task=Get&Mode=HTML&PageID=23195&RandomNumber=' + browDateTime + '" width="320" height="50" border="0"></A>'); } }
+if (browName=='Microsoft Internet Explorer')
+     { document.write('<ifr'+'ame src="http://www.wmfd.com/banman/banman.asp?ZoneID=5&Task=Get&PageID=23195" width=320 height=50 Marginwidth=0 Marginheight=0 Hspace=0 Vspace=0 Frameborder=0 Scrolling=No></ifr'+'ame>'); }
+// --> 
+</script> <noscript> <a href="http://www.wmfd.com/banman/banman.asp?ZoneID=5&amp;Task=Click&amp;Mode=HTML&amp;PageID=23195" target="_new"><img src="http://www.wmfd.com/banman/banman.asp?ZoneID=5&amp;Task=Get&amp;Mode=HTML&amp;PageID=23195" width="320" height="50" border="0"></a> </noscript> <!-- End Ban Man Pro Banner Code -  Zone: Home 4 --> </td>
+        <td bgColor="#FFFFFF" width="4" colspan="3"></td>
+      </tr>
+      <tr>
+<%
+
+
+Set conn = Server.CreateObject("ADODB.Connection")
+conn.open "wmfdpets","",""
+
+msgSQL = "SELECT * FROM tblMessages "
+msgSQL = msgSQL & "ORDER BY msgPriority"
+
+
+
+Set rs = Server.CreateObject("ADODB.Recordset")
+rs.Open msgSQL, conn, 3, 3
+
+rowcount=0
+%>
+        <td bgColor="#FFFFFF" width="101" colspan="2"><img src="http://www.wmfd.com/pets/images/<%=rs("msgImage") %>.jpg"> </td>
+        <td bgColor="#FFFFFF" width="101" colspan="2"><b><%=rs("msgHeadline") %></b></td>
+        <td bgColor="#FFFFFF" width="171" colspan="2"></td>
+        <td bgColor="#FFFFFF" width="141" colspan="2"></td>
+      </tr>
+      <tr>
+        <td bgColor="#FFFFFF" width="508" colspan="5"></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF" bordercolor="#FFFFFF" width="277"><a href="pets/pets.asp">Click Here</a>
+        to see all pets available for adoption at the Richland County Dog Pound and Small Animal
+        Shelter&nbsp;</td>
+        <td align="center" width="47" bordercolor="#FFFFFF" bgcolor="#FFFFFF"></td>
+      </tr>
+      <tr>
+        <td width="277"></td>
+        <td bgColor="#FFFFFF" width="229" colspan="4"></td>
+      </tr>
+      <tr>
+        <td bgColor="#FFFFFF" width="508" colspan="5"></td>
+        <td bgColor="#FFFFFF" width="4" colspan="3"></td>
+      </tr>
+      <tr>
+        <td bgColor="#FFFFFF" width="508" colspan="5">&nbsp; <!-- Start SuperStats code version 2.0f.  Do not alter this code!     http://www.superstats.com --> <script language="JavaScript">
+var pageName = "";
+var code = " ";
+</script>
+        <script src="http://code.superstats.com/code?u=RMeisse">
+</script><script language="JavaScript">
+document.write(code);
+</script><noscript><a href="http://stats.superstats.com/c.cgi?u=RMeisse" target="_top"><img src="http://stats.superstats.com/b.cgi?u=RMeisse&amp;z=1" border="0" width="468" height="60"></a></noscript> <!-- End SuperStats tracking code. --> </td>
+        <td bgColor="#FFFFFF" width="4" colspan="3"></td>
+      </tr>
+      <tr>
+        <td bgColor="#FFFFFF" rowSpan="2" width="508" colspan="6">&nbsp; <p>&nbsp;</td>
+        <td colSpan="2" width="4"></td>
+      </tr>
+      <tr>
+        <td vAlign="top" width="2">&nbsp; <p align="left">&nbsp;</td>
+        <td vAlign="top" width="1"></td>
+      </tr>
+      <tr>
+        <td bgColor="#000000" colSpan="8" width="514"></td>
+      </tr>
+</tbody>
+    </table>
+    <strong>[Buttons/bottom.htm]</strong>
+<p align="center">&nbsp;</p>
+    <table border="0" width="100%">
+<tbody>
+      <tr>
+        <td width="50%"></td>
+        <td width="50%"></td>
+      </tr>
+</tbody>
+    </table>
+    <ul>
+    </ul>
+    </td>
+    <td align="right" vAlign="top" width="124" background="Rightsi1.gif" height="1781"><p align="left"></td>
+  </tr>
+</tbody>
+</table>
+</body>
+</html>
+<%
+rs.Close
+Set rs = Nothing
+conn.Close
+Set conn = Nothing
+%>

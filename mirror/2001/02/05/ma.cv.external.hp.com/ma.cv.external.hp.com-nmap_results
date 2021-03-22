@@ -1,0 +1,32 @@
+
+Starting nmap V. 2.54BETA3 ( www.insecure.org/nmap/ )
+Warning:  OS detection will be MUCH less reliable because we did not find at least 1 open and 1 closed TCP port
+Interesting ports on ma.cv.external.hp.com (192.170.7.58):
+Port       State       Service
+22/tcp     open        ssh                     
+23/tcp     filtered    telnet                  
+25/tcp     filtered    smtp                    
+53/tcp     filtered    domain                  
+80/tcp     open        http                    
+
+TCP Sequence Prediction: Class=random positive increments
+                         Difficulty=2296877 (Good luck!)
+Aggressive OS guesses: Linux 2.1.122 - 2.2.16 (90%), Linux kernel 2.2.13 (90%), Linux 2.2.14 (90%)
+No exact OS matches for host (If you know what OS is running on it, see http://www.insecure.org/cgi-bin/nmap-submit.cgi).
+TCP/IP fingerprint:
+TSeq(Class=RI%gcd=2%SI=118893)
+TSeq(Class=RI%gcd=1%SI=230D0A)
+TSeq(Class=RI%gcd=1%SI=230C2D)
+T1(Resp=Y%DF=Y%W=7F53%ACK=S++%Flags=AS%Ops=MENNTNW)
+T2(Resp=N)
+T3(Resp=N)
+T4(Resp=N)
+T5(Resp=N)
+T6(Resp=N)
+T7(Resp=N)
+PU(Resp=N)
+
+
+
+
+Nmap run completed -- 1 IP address (1 host up) scanned in 37 seconds

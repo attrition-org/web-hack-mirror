@@ -1,0 +1,223 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Remove this script section if you edit this page-->
+<script language="JavaScript">
+<!--
+var nav;
+function tcnavpop() {
+ var ag = window.navigator.userAgent;
+ var ver = parseInt(ag.charAt(ag.indexOf("/")+1),10);
+ if (top == this && !nav) {
+   nav = window.open(
+    "http://home.talkcity.com/homepopup.html?url=/QuadCir/xeno99/index.html",
+    "tcnav",
+    "toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=0,resizable=0,width=588,height=130"
+   );
+ }
+}
+tcnavpop();
+// -->
+</script>
+
+<HTML>
+
+<HEAD>
+<HEAD><TITLE>*XeNO's OZoNE*!</TITLE>
+<script language="JavaScript">
+
+
+
+<!--
+
+/* MjM'S JAVA CODENAME = PINGPONG
+
+   This JavaScript Code was written by MjM for Hyperchat UK
+
+   I am not responsible for any damage caused by my code.
+
+   This code can be modified as long as the Author's Name is still
+attached.
+
+   
+
+   Email : MjM@hyperchat.co.uk
+
+   
+
+   © Copyright 1996
+
+*/
+
+var yourwords = "*Click the page to BEAM DOWN to the OZoNE!!*";
+
+var buffer1="   **   ";
+
+var buffer2="   **   ";
+
+var message1=buffer1+yourwords+buffer2;
+
+var dir = "left";
+
+var speed = 75;
+
+function pingpong()
+
+{
+
+if (dir == "left")
+
+  {
+
+    message2=message1.substring(2,message1.length)+"  ";
+
+    window.status=message2;
+
+    setTimeout("pingpong();",speed);
+
+    message1=message2;
+
+    if (message1.substring(0,1) == "*") dir="right";
+
+  }
+
+else
+
+  {
+
+    message2="  "+message1.substring(0,message1.length-2);
+
+    window.status=message2;
+
+    setTimeout("pingpong();",speed);
+
+    message1=message2;
+
+    if (message1.substring(message1.length-1,message1.length) == "*")
+dir="left";
+
+  }
+
+}
+
+// -->
+
+
+
+</script>
+
+</head>
+<body onload="pingpong();">
+
+<SCRIPT>function makearray(n)
+  {
+    this.length = n;
+    for(var i = 1; i <= n; i++)
+        this[i] = 0;
+
+    return this;
+}
+
+hexa = new makearray(16);
+for(var i = 0; i < 10; i++)
+    hexa[i] = i;
+
+hexa[10]="a"; hexa[11]="b"; hexa[12]="c";
+hexa[13]="d"; hexa[14]="e"; hexa[15]="f";
+
+function hex(i) {
+    if (i < 0)
+        return "00";
+    else if (i > 255)
+        return "ff";
+    else
+        return "" + hexa[Math.floor(i/16)] + hexa[i%16];
+}
+function hext(i) {
+    if (i < 0)
+
+        return "00";
+    else if (i > 255)
+        return "EE";
+    else
+        return "" + hexa[Math.floor(i/16)] + hexa[i%16];
+}
+function settext(r, g, b) {
+    var tr = hext(r); var tg = hext(g); var tb = hext(b)
+    document.text = "#"+tr+tg+tb;
+}
+function setbgColor(r, g, b) {
+    var hr = hex(r); var hg = hex(g); var hb = hex(b)
+    document.bgColor = "#"+hr+hg+hb;
+}
+
+function fade(sr, sg, sb, er, eg, eb, step) {
+    for (var i = 0; i <= step; i++)  {
+         setbgColor(
+         Math.floor(sr * ((step-i)/step) + er * (i/step)),
+         Math.floor(sg * ((step-i)/step) + eg * (i/step)),
+         Math.floor(sb * ((step-i)/step) + eb * (i/step)));
+    }
+}
+
+function ftext(sr, sg, sb, er, eg, eb, step) {
+    for(var i = 0; i <= step; i++) {
+        settext(
+        Math.floor(sr * ((step-i)/step) + er * (i/step)),
+        Math.floor(sg * ((step-i)/step) + eg * (i/step)),
+        Math.floor(sb * ((step-i)/step) + eb * (i/step)));
+    }
+}
+
+/* Usage:
+ *   fade(inr,ing,inb, outr,outg,outb, step);
+ * example.
+ *   fade(0,0,0, 255,255,255, 255);
+ * fade from black to white with very slow speed.
+ *   fade(255,0,0, 0,0,255, 50);
+ *   fade(0xff,0x00,0x00, 0x00, 0x00,0x00,0xff, 50); // same as above
+ * fade from red to blue with fast speed.
+ * step 2 is very fast and step 255 is very slow.
+ */
+
+function fadeit() {
+    fade(255,255,255, 0, 0, 0, 100);
+}
+
+function fadetext() {
+    ftext(255, 255, 255, 255, 255, 255, 100);
+}
+
+function fadeout() {
+    /*fade(0,0,0, 255,255,255, 64); */
+}
+
+
+
+
+
+
+
+function fadein() {
+    fade(0,0,0, 255,255,255, 255);
+}
+
+function fadetext() {
+    ftext(255, 255, 255, 255, 255, 255, 100);
+}
+
+function fadeout() {
+    /*fade(0,0,0, 255,255,255, 64); */
+}
+/* do fadein */
+fadein();
+fadeit();
+/***** end fade script *****/
+/**************************************************************/</SCRIPT></HEAD>
+<BODY BACKGROUND="" BGCOLOR="#000000" TEXT="#66CC00" LINK="#FF0000" ALINK="#FFFFFF" VLINK="#FF0000"><!-- Start of Talk City Masthead --><!-- End of Talk City Masthead --><p><p><center>
+<br>
+<a href="the_xone.html"><img src="http://home.talkcity.com/QuadCir/xeno99/xenospage.JPG?28927" border=0></a>
+<!--Raisin/HiP Was Here-->
+</BODY>
+</HTML>
+
+
+

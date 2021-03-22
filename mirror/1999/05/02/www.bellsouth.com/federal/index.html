@@ -1,0 +1,286 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<html>
+<!--         Designed and coded by George Butticaz     	-->
+<!--     BellSouth Business Systems, Federal Division  	-->
+<!--           george_butticaz@bbs.bellsouth.com          	-->
+<!--                         Last modified 04/99                 		-->
+<head>
+<title>BellSouth Business - Federal Sales Division</title>
+ <script language="JavaScript">
+
+
+
+
+var browser=false;
+if((navigator.appName=="Netscape")&&(parseInt(navigator.appVersion)>=3)) 
+browser=true;
+
+function objectdata(hsize,vsize,replaceimg,restoreimg,mess)
+{if(browser) 
+{                this.mess=mess;
+                        this.simg=new Image(hsize,vsize);
+                        this.simg.src=replaceimg;
+                        this.rimg=new Image(hsize,vsize);
+                        this.rimg.src=restoreimg;                                                                                        }}
+
+if (browser){
+var object=new Array();
+
+object['civilian']= new objectdata(150,50,"images/civi_on.gif","images/civi_off.gif",
+"Civilian market contacts");
+object['military']= new objectdata(150,50,"images/mili_on.gif","images/mili_off.gif",
+"Military market contacts");
+object['saleseng']= new objectdata(150,50,"images/eng_on.gif","images/eng_off.gif",
+"Sales Engineering and Design contacts");
+object['contracts']= new objectdata(150,50,"images/cont_on.gif","images/cont_off.gif",
+"Contracts Administration and RFP Support");
+object['compliance']= new objectdata(150,50,"images/comp_on.gif","images/comp_off.gif",
+"Compliance information");
+object['progman']= new objectdata(150,50,"images/prog_on.gif","images/prog_off.gif",
+"Program Management");
+object['newslink']= new objectdata(150,50,"images/news_on.gif","images/news_off.gif",
+"NewsLink customer newsletter");
+object['netservices']= new objectdata(150,50,"images/net_on.gif","images/net_off.gif",
+"Find out about our network services");
+object['email']= new objectdata(150,50,"images/mail_on.gif","images/mail_off.gif",
+"Send us E-Mail");
+
+
+}
+
+function ReplaceOrig(name)
+{if(browser) 
+{window.status=object[name].mess;
+document[name].src=object[name].simg.src;}} 
+
+function RestoreOrig(name)
+{if(browser) 
+{window.status="";
+document[name].src=object[name].rimg.src;}} 
+
+// End of JavaScript -->
+
+
+
+
+</SCRIPT>
+<meta name="description" 
+        content="Names and contact information of BellSouth personnel
+        responsible for all Federal Government agencies in the nine State
+        BellSouth region">
+<meta name="keywords"
+        content="BellSouth, Federal, Sales, Division, communication,
+        communications, telecommunications, digital, southeast">
+</HEAD>
+
+ <BODY BGCOLOR="#FFFFFF"><BASEFONT FACE="Arial" SIZE="-1">
+
+      <center>
+      <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="95%">
+      <tr>
+      <td align="LEFT" valign="TOP" width="145">
+      <A HREF="http://www.bellsouth.com/"><img src="images/bellsout.gif"
+       alt="BellSouth" width="117" height="26" border="0"></A>
+      </td>
+      <td align="RIGHT" valign="TOP" width="455">
+      <A HREF="http://www.bellsouth.com/"><img src="images/dotcom.gif"
+         alt="BellSouth.com" width="92" height="31" border="0"></A>
+        <A HREF="mailto:Federal_Sales@BBS.BellSouth.com">
+        <img src="images/contactu.gif" ALT="Contact Us" WIDTH="78"
+         HEIGHT="31" BORDER="0"></A>
+      </td>
+      </tr>
+      </table></center>
+ 
+          <center>
+        <TABLE WIDTH="95%" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+        <TR>
+        <TD ALIGN="CENTER" VALIGN="TOP">
+        <img src="images/fds_mst.jpg" alt="BellSouth Business - Federal Sales Division"
+         width="600" height="75" border="0">
+        </td></tr>
+        <tr>
+        <TD ALIGN="CENTER" VALIGN="TOP" colspan="2" width="100%">
+        <img src="images/bannerle.gif" alt="Banner" width="465" height="22"
+         border="0"><img src="http://www.bellsouth.com/cgi-bin/nbdate/images/new-bannerright.gif" alt="Banner" width="135" height="22"
+         border="0">
+        </TD>
+        </TR>
+        </TABLE></center><br>
+
+	  <center>
+        <table width="95%" height="75%" BORDER="0"
+         cellspacing="0" cellpadding="3">
+
+       <tr>
+       <td width="24%" align="center">
+        <a href="html/civilian.htm" 
+         onmouseover="ReplaceOrig('civilian');return true;" 
+         onmouseout="RestoreOrig('civilian');">
+        <img src="images/civi_off.gif" name="civilian" width="150" height="50"
+         BORDER="0"></a><br>
+
+        <a href="html/military.htm" 
+         onmouseover="ReplaceOrig('military');return true;" 
+         onmouseout="RestoreOrig('military');">
+        <img src="images/mili_off.gif" name="military" width="150" height="50"
+         border="0"></a><br>
+
+        <a href="html/saleseng.htm" 
+         onmouseover="ReplaceOrig('saleseng');return true;" 
+         onmouseout="RestoreOrig('saleseng');">
+        <img src="images/eng_off.gif" name="saleseng" width="150" height="50"
+         border="0"></a><br>
+
+        <a href="html/contract.htm"
+         onmouseover="ReplaceOrig('contracts');return true;"
+         onmouseout="RestoreOrig('contracts');">
+        <img src="images/cont_off.gif" name="contracts" width="150" height="50"
+                border="0"></a><br>
+
+        <a href="html/complian.htm"
+         onmouseover="ReplaceOrig('compliance');return true;"
+         onmouseout="RestoreOrig('compliance');">
+        <img src="images/comp_off.gif" name="compliance" width="150"
+         height="50" border="0"></a><br>
+
+        <a href="html/prog_man.htm" 
+         onmouseover="ReplaceOrig('progman');return true;" 
+         onmouseout="RestoreOrig('progman');">
+        <img src="images/prog_off.gif" name="progman" width="150" height="50"
+         border="0"></a><br>
+
+        <a href="html/newslink.htm" 
+         onmouseover="ReplaceOrig('newslink');return true;" 
+         onmouseout="RestoreOrig('newslink');">
+        <img src="images/news_off.gif" name="newslink" width="150" height="50"
+         border="0"></a><br>
+
+        <a href="html/services.htm"
+         onmouseover="ReplaceOrig('netservices');return true;"
+         onmouseout="RestoreOrig('netservices');">
+        <img src="images/net_off.gif" name="netservices" width="150" height="50"
+                border="0"></a><br>
+
+      <a href="mailto:Federal_Sales@BBS.BellSouth.com"
+       onmouseover="ReplaceOrig('email');return true;"
+       onmouseout="RestoreOrig('email');">
+      <img src="images/mail_off.gif" name="email" width="150" height="50" 
+       border="0"></a></td>
+
+      <td><font face="Arial" size="-1">
+        <img src="images/region.gif" border="0" alt="BellSouth Region" 
+         width="221" height="212" align="RIGHT">
+        <p>BellSouth Business Systems Federal Sales Division provides 
+         a single point of contact for all federal agencies in 
+         the BellSouth Region, which includes AL, FL, GA, KY, LA, MS, 
+         NC, SC, and TN. We specialize in working with Federal 
+         Government customers to propose and provide network 
+         solutions to their business problems.</p>
+
+        <p>In addition to product knowledge, we are highly trained and
+         experienced in working with Federal Government procurement
+         policies.</p> <p>The Federal Sales Division is structured to support 
+         Military Markets and Civil Markets.  For more information please
+         contact your Account Manager.  Contact names, telephone numbers
+         and e-mail addresses are provided.</p>
+        </font>
+        </td>
+        </tr>
+        </table></center>
+
+	  <center>
+        <table width="95%" BORDER="0" cellspacing="0" cellpadding="0">
+        <tr>
+        <td align="CENTER"><font face="Arial" size="-1">
+        <center>
+         Find out about our capability of providing price quotes
+         via the internet...the <a href="html/gateway.htm">Service
+          Gateway</a>.
+        </center>
+        <center>Authorized users, please go directly to our gateway to
+        <A HREF=
+         "https://bsonline.bellsouth.net/cgi-bin/federal_u_request.cgi">
+         Service Pricing</A>.</center>
+        <center><p>Need to know who to call to report service problems?<br>
+         Click <a href="html/repair.htm">here</a> to get a list of direct
+         lines to our Business Repair Center (BRC) for federal
+         accounts.</p></center>
+        </font>
+        </td>
+            </tr></table>
+				<BR><BR>
+                        <center>
+                        <table width="90%" BORDER="0" cellspacing="0" cellpadding="4">
+                        <tr>
+   				<td width="44%" valign="top"><font face="Arial" size="-1">
+                                <a href="http://cpr.bst.bellsouth.com/" target="top">
+                                <img src="images/tariffs.gif" width="250" height="35" border="0"></a><br>
+                                <LI>Review <a href="http://cpr.bst.bellsouth.com/" target="top">tariffs and notifications</a>.</LI><br>
+					  <a href="http://www.bellsouth.com/areacode/"  target="top"><br>
+                                <img src="images/areacode.gif" width="250" height="35" border="0"></a><br>
+					  <LI>See complete listings on the status of new <a href="http://www.bellsouth.com/areacode/"
+						target="top">area codes</a>.</LI>&nbsp;
+  				</font>
+                        </td>
+                        <td width="12%">
+                                &nbsp;
+                        </td>
+    				<td valign="top"><font face="Arial" size="-1">
+                              <img src="images/y2k.gif" width="250" height="35" border="0"><br>
+					<LI>Visit our <A HREF = "http://bsonline.bellsouth.net/year2000/" target="top">Year 2000</a> site for more information.</LI><br><br>
+        				<LI>Read about BellSouth's Y2K compliance <A HREF="html/y2k.htm">testing</a>.</LI><br>
+				</font>
+                        </td>
+        </tr>
+        </table></center><br>
+
+        <table width="98%" height="25%" BORDER="0" cellspacing="0"
+         cellpadding="0">
+        <tr>
+        <td>
+        <font face="Arial" size="-1">
+        <center><P>
+        <a href="html/civilian.htm">Civilian</a> |
+        <a href="html/military.htm">Military</a> |
+        <a href="html/saleseng.htm">Sales Engineering and Design</a> |
+        <a href="html/prog_man.htm">Program Management</a><BR>
+        <a href="html/contract.htm">Contracts</a> |
+        <a href="html/complian.htm">Compliance</a> |
+        <a href="html/newslink.htm">NewsLink</a> |
+        <a href="html/services.htm">Network Services</a>
+        </P></center>
+        <center>
+         Send comments to <a href="mailto:Federal_Sales@BBS.BellSouth.com">
+         BellSouth Federal Sales</a>
+        </center>
+        </font>
+        </td>
+        </tr>
+        </table>
+
+        <table width="98%" BORDER="0" cellspacing="0" cellpadding="0">
+        <tr>
+        <td align="CENTER" valign="TOP">
+        <center>
+        <img src="images/washing2.jpg" border="0" alt="Washingtonscape"
+         width="600" height="107"></center>
+        </td>
+        </tr>
+        <tr>
+        <td align="CENTER" valign="TOP">
+        <font face="Arial" size="-2"><center>
+        <br>
+         Copyright 1996, 1997, 1998,1999
+        <a href="http://www.bellsouth.com/">BellSouth</a>. 
+         All Rights Reserved<br>
+        <a href="../legal.html">Legal Authorizations 
+         and Notices</a><br>
+            </center></font>
+        </td>
+        </tr>
+        </table>
+
+</body> 
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<title>Fokkersclub Hogeschool Delft</title>
+	<link href="FHD.css" rel="stylesheet" type="text/css">
+</head>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+WF_CHANNELMODE=1;
+WF_DIRECTORIES=2;
+WF_FULLSCREEN=4;  //Only for Internet Explorer
+WF_LOCATION=8;
+WF_MENUBAR=16;
+WF_RESIZABLE=32;
+WF_SCROLLBARS=64;
+WF_STATUS=128;
+WF_TITLEBAR=256;
+WF_TOOLBAR=512;
+WX_NOTRELATED=1024; //Must Always set for Netscape
+NULL=null;
+
+//open examples
+javascript:OpenWinEx('fhd.html',null,'Fokkersclub Hogeschool Delft',WX_NOTRELATED|WF_FULLSCREEN,0,0,window.screen.availWidth,window.screen.availHeight )
+
+//function OpenWinEx
+//v.1.0
+//by Tair Abdurman, 27/10/1999
+//Tested on IE 5.0 and NC 4.61
+//Open Window with extended options
+//--- sURL     : String  : URL to be open
+//--- sName    : String  : Window Name, if null then set to "ChildWindow"
+//--- sTitle   : String  : Window Title, if null then set to url
+//--- iFeatures: integer : binary value as window features (use bitwise OR to combine)
+//                         WF_CHANNELMODE 0x0001   channel mode on
+//                         WF_DIRECTORIES 0x0002   directories button on
+//                         WF_FULLSCREEN  0x0004   fullscreen window
+//                         WF_LOCATION    0x0008   location bar on
+//                         WF_MENUBAR     0x0010   menubar on
+//                         WF_RESIZABLE   0x0020   resizable window
+//                         WF_SCROLLBARS  0x0040   scrolbars on
+//                         WF_STATUS      0x0080   Status Bar on
+//                         WF_TITLEBAR    0x0100   Title Bar on
+//                         WF_TOOLBAR     0x0200   Tool Bar on 
+//                         WX_NOTRELATED  0x0400   Window not related 
+//                                                  to opener in screen
+//                                                  in netscape U must always 
+//                                                  set this bit.
+//--- ixPos    : integer : x Position for window, if iFeatures have 
+//                         WX_NOTRELATED feature set then this positions
+//                         related to desktop screen else related to opener
+//                         window screen. If this value set to null then
+//                         opening x position is a center arranged
+//                         default null 
+//--- iyPos    : integer : y Position for window, see ixPos for rules.
+//--- ixLength : integer : x length for window, if length more than possible 
+//                         size wrapped to parent screen size
+//                         default null
+//--- iyLength : integer : y length for window, see ixLength for rules
+//                         default null
+//--- bReplace : boolean : if true then new element created in history 
+//                         default true.
+
+function OpenWinEx(sURL
+                   ,sName
+                   ,sTitle
+                   ,iFeatures
+                   ,ixPos
+                   ,iyPos
+                   ,ixLength
+                   ,iyLength
+                   ,bReplace)
+{
+
+//**************************************************************************
+//Check InParams
+if ((sName==null) || (sName==''))
+    sName='ChildWindow';
+
+if ((sTitle==null) || (sTitle==''))
+    sTitle=sURL;
+
+if ((iFeatures==null) || (iFeatures>=2048))
+   iFeatures=WF_RESIZABLE;
+
+if ((ixPos==null) || (isNaN(ixPos)))
+   ixPos=-1;
+
+if ((iyPos==null) || (isNaN(iyPos)))
+   iyPos=-1;
+
+if ((ixLength==null) || (isNaN(ixLength)))
+   ixLength=-1;
+
+if ((iyLength==null) || (isNaN(iyLength)))
+   iyLength=-1;
+
+if ((bReplace==null) || (bReplace!=true) || (bReplace!=false))
+   bReplace=true;
+//**************************************************************************
+//Init values
+sFeatures='';
+//Check and set general positions
+if ((iFeatures & WX_NOTRELATED)==WX_NOTRELATED)
+   {
+     ScreenWidth=window.screen.availWidth;
+     ScreenHeight=window.screen.availHeight;
+     xLeftOffset=0;
+     yTopOffset=0;
+   }
+else
+   {
+     ScreenWidth=document.body.clientWidth;
+     ScreenHeight=document.body.clientHeight;
+     xLeftOffset=window.screenLeft;
+     yTopOffset=window.screenTop;
+   }
+
+if (((ixPos+ixLength)>ScreenWidth) || (ixPos==-1) || (ixLength==-1))
+   {
+   ixLength=Math.round(ScreenWidth/2);
+   ixPos=Math.round(ScreenWidth/4);
+   }
+else
+   {
+   if (ixLength==-1)
+      ixLength=Math.round(ScreenWidth/2);
+   if (ixPos==-1)
+      ixPos=Math.round(ScreenWidth/2)-Math.round(ixLength/2);
+   }
+
+if (((iyPos+iyLength)>ScreenHeight))
+   {
+   iyLength=Math.round(ScreenHeight/2);
+   iyPos=Math.round(ScreenHeight/4);
+   }
+else
+   {
+   if (iyLength==-1)
+      iyLength=Math.round(ScreenHeight/2);
+   if (iyPos==-1)
+      iyPos=Math.round(ScreenHeight/2)-Math.round(iyLength/2);
+   }
+
+   
+sFeatures ='left=' + (xLeftOffset + ixPos);
+sFeatures+=',height=' + iyLength;
+sFeatures+=',top=' + (yTopOffset+iyPos);
+sFeatures+=',width=' + ixLength;
+sFeatures+=',channelmode=' + ((iFeatures & WF_CHANNELMODE)/WF_CHANNELMODE);
+sFeatures+=',directories=' + ((iFeatures & WF_DIRECTORIES)/WF_DIRECTORIES);
+sFeatures+=',fullscreen=' + ((iFeatures & WF_FULLSCREEN)/WF_FULLSCREEN);
+sFeatures+=',location=' + ((iFeatures & WF_LOCATION)/WF_LOCATION)
+sFeatures+=',menubar=' + ((iFeatures & WF_MENUBAR)/WF_MENUBAR)
+sFeatures+=',resizable=' + ((iFeatures & WF_RESIZABLE)/WF_RESIZABLE)
+sFeatures+=',scrollbars=' + ((iFeatures & WF_SCROLLBARS)/WF_SCROLLBARS)
+sFeatures+=',status=' + ((iFeatures & WF_STATUS)/WF_STATUS)
+sFeatures+=',titlebar=' + ((iFeatures & WF_TITLEBAR)/WF_TITLEBAR)
+sFeatures+=',toolbar=' + ((iFeatures & WF_TOOLBAR)/WF_TOOLBAR)
+
+//call
+var wpChildWindow=window.open(sURL,sName,sFeatures,bReplace);
+wpChildWindow.document.title=sTitle;
+//**************************************************************************
+//Doing
+//**************************************************************************
+return;
+}
+
+</SCRIPT>
+<BODY>
+<DIV align=center>
+	<IMG align=middle alt="" border=0 height=250 src="Images/Fhd.gif" width=176> </DIV>
+<DIV align=center>&nbsp;</DIV>
+<DIV align=center><IMG alt="" border=0 height=92 
+src="Images\Copyright.gif" width=353></DIV>
+<DIV align=center>   
+&nbsp;</DIV>
+</BODY>
+</html>

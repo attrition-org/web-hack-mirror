@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Fantasy SportsNET - Add Classified</title>
+<link rev=made href="mailto:mbrown@tass.org">
+</head>
+<body bgcolor=#FFFFFF>
+
+<CENTER>
+<H1> Add a classified ad to <BR>Fantasy SportsNET</H2>
+
+<B><BLINK>Beware!!</BLINK></B> There is no way to correct incorrect 
+input, <BR>so be sure your info is right before hitting "Add Classified"!!!
+</CENTER>
+<BR>
+<FORM METHOD="POST" ACTION="cgi-bin/addclassified.pl">
+   <P>What sport would you like to advertise under?
+   <OL>
+    <LI>Baseball <INPUT NAME="sport" TYPE=radio VALUE="Baseball">
+    <LI>Basketball <INPUT NAME="sport" TYPE=radio VALUE="Basketball">
+    <LI>Football <INPUT NAME="sport" TYPE=radio VALUE="Football">
+    <LI>Hockey <INPUT NAME="sport" type=radio VALUE="Hockey">
+    <LI>Misc <INPUT NAME="sport" TYPE=radio VALUE="Misc">
+   </OL>
+
+
+   <P>Enter your name: <INPUT NAME="name" TYPE=text>
+  
+   <P>Enter your  E-mail address: <INPUT NAME="address" TYPE=text 
+SIZE="48">
+   <BR><I>Retype</I> your E-mail address to verify: <INPUT NAME="validaddress" TYPE=text SIZE="38">
+
+   <P>Enter a SHORT ad, (20 words or less):<BR> 
+<TEXTAREA NAME="message" ROWS="4" COLS="60"></TEXTAREA>
+
+
+    <P><INPUT TYPE=submit VALUE="Add Classified"> <INPUT TYPE=reset>
+
+</FORM>
+
+</body>
+</html>
+

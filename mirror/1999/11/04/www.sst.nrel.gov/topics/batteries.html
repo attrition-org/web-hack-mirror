@@ -1,0 +1,277 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../sst.css">
+<title>NREL-SST: Theory of Li Battery Materials</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<h1>Quantum-Mechanical Search for
+Advanced Li-ion Battery Materials</h1>
+
+<p>Advanced batteries are a growing
+$40-billion-a-year business which substantially impacts the areas
+of energy <img src="../images/licoo.gif" align="right" hspace="0"
+width="233" height="228">storage, energy
+efficiency, and advanced vehicles. Lightweight rechargeable
+Li-ion batteries are an attractive long-term technology that
+offers the promise of higherenergy densities than are currently
+available. The performance of these batteries is significantly
+impacted by the properties of the <i>cathode materials</i>, such
+as the intensively studied LiCoO<sub>2</sub> oxide. </p>
+
+<p>LiCoO<sub>2</sub> forms (among other structures
+&#150; see below) a layered structure in which the Li and Co
+cations sit in the octahedral sites of a nearly ideal fcc
+sublattice of oxygen atoms (Fig. 1). Other synthesized forms of
+LiCoO<sub>2</sub> also involve this octahedral sublattice of
+cations in the close-packed oxygen network, but with differing
+cation arrangements. Upon charging the LiCoO<sub>2</sub> battery
+cathode, Li is deintercalated out of these structures, leaving
+behind vacancies (denoted *) which can be positioned in different lattice
+locations, forming a delithiated Li<sub>x</sub>CoO<sub>2</sub>
+phase. Hence, there are three types of ordering problems which
+are of interest in this material: (i) Li/Co ordering in LiCoO<sub>2</sub>
+(<i>x</i>=1) leads to the different observed ordered phases and
+also to disordered Li/Co (rocksalt) at high temperature. (ii)
+Similarly, */Co ordering in the completely deintercalated * CoO<sub>2</sub>
+(<i>x</i>=0) is also of interest. (iii) The vacancies left behind
+by Li extraction can form ordered vacancy compounds in partially
+deintercalated Li<sub>x</sub>CoO<sub>2</sub>, leading to a */Li ordering
+problem for intermediate compositions 0&lt;<i>x</i>&lt;1. We
+refer to the first two of these ordering problems as <i>cation
+ordering</i> since they occur at fixed composition (either fully
+intercalated or deintercalated) and deal with the positions of
+the cations. The third type of ordering we call <i>intercalation
+ordering</i> since it deals with a fixed CoO<sub>2</sub>
+framework and the ordering may occur upon intercalation or
+deintercalation of Li as a function of composition.</p>
+
+<p>In a recent series of papers [1-3], we have
+developed a first-principles theoretical method for treating both
+cation and intercalation ordering in these battery cathode
+materials. The approach also allows one to predict the voltages
+of various ordered and disordered Li<sub>x</sub>CoO<sub>2</sub>
+cells, and hence to examine theoretically the electrochemical
+properties of battery cells from a quantum-mechanical approach.
+The first-principles nature of the method not only allows for a
+detailed understanding of the underlying physics of the
+intercalation processes, but also allows one to reliably
+investigate properties of as-yet-unsynthesized materials, and
+hence make predictions about new materials. The use of such a
+computational approach in Li battery design without the need for
+experimental input should greatly accelerate the discovery of new
+classes of battery materials.</p>
+
+<h2>Prediction of Battery Voltages and
+&quot;Ordered Vacancy Compounds&quot; from First-Principles</h2>
+
+<p>In intercalation systems such as Li in
+graphite, hydrogen in metals, and alkali-metals in transition
+metal dichalcogenides, the ``guest'' atom occupies certain
+``host'' sites preferentially at low temperatures while others
+remain empty. Due to this specificity of the interactions between
+the guest atoms and the intercalation lattice sites, a wide
+variety of intercalated structures can form, including ``ordered
+vacancy compounds''. Ordered vacancy compounds of intercalated Li
+atoms have been observed in several layered lithium-transition
+metal dichalcogenides such as Li<sub>x</sub>TiS<sub>2</sub>, Li<sub>x</sub>TaS<sub>2</sub>,
+and Li<sub>x</sub>CoO<sub>2</sub>. Above a critical temperature,
+these long-range ordered structures undergo an order-disorder
+transition into a phase where the vacancies are distributed in a
+disordered fashion on the intercalation sites. Vacancy ordering
+in Li<sub>x</sub>CoO<sub>2</sub> occurs on the Li sublattice
+which forms close-packed (111) planes yielding a two-dimensional
+triangular lattice. These Li-vacancy intercalation planes are
+stacked along &lt;111&gt; in a rhombohedral fashion (ABC). To
+study the intercalation ordering in Li<sub>x</sub>CoO<sub>2</sub>,
+we use a cluster expansion approach: LAPW total energies are
+computed for several (16) fully-relaxed ordered vacancy compounds
+in Li<sub>x</sub>CoO<sub>2</sub>, formed by removing Li atoms
+from the LiCoO<sub>2</sub> compound for various compositions and
+arrangements of vacancies. These first-principles energies are
+then mapped onto a cluster expansion, i.e., an Ising-like
+Hamiltonian, which contains extended-range pair, triplet, and
+quadruplet interactions between the substitutional units of the
+ordering problem (in this case, Li and ?). This cluster expansion
+is sufficiently accurate to predict the energies of various
+arrangements of vacancies, but sufficiently simple to evaluate
+that cells of 100,000 atoms (or more) may be quite easily
+calculated, and the combination of the cluster expansion with
+Monte Carlo statistical mechanics simulations affords the
+possibility of studying finite temperature properties.</p>
+
+<p>For a Li<sub>x</sub>CoO<sub>2</sub>/Li cell at
+temperature <i>T</i>, the voltage <i>V(x)</i> as a function of Li
+composition is given by the Li chemical potential difference
+between cathode (Li<sub>x</sub>CoO<sub>2</sub>) and anode (Li
+metal):</p>
+
+<p align="center" class="center">-eV(x,T) = <font
+face="Symbol">m</font><sub>Li</sub>(Li<sub>x</sub>CoO<sub>2</sub>,<i>T</i>)-
+<font face="Symbol">m</font><sub>Li</sub>(Li
+metal,<i>T</i>) (1)</p>
+
+<p>Using a static, bulk description, the chemical
+potential of Li metal is a constant reference energy and is
+independent of <i>T</i>. Thus, computing the voltage of Eq. (1)
+amounts to computing the chemical potential 
+<font face="Symbol">m</font><sub>Li</sub>(Li<sub>x</sub>CoO<sub>2</sub>,<i>T</i>)
+relative to the reference of Li metal. We have computed this
+chemical potential as a function of Li content and temperature
+from grand canonical (i.e., fixed chemical potential) Monte Carlo
+simulations of a Li<sub>x</sub>CoO<sub>2</sub> cluster expansion
+at finite <i>T</i>. [3] This provides a completely
+parameter-free, first-principles prediction of the Li
+intercalation voltage of the Li<sub>x</sub>CoO<sub>2</sub>/Li
+cell as a function of Li content. The predicted intercalation
+voltage profiles for zero- and finite temperatures are shown in
+Fig. 2. The first-principles calculations of electrochemical
+voltage agree well with measured data: Measured voltage profiles
+show an average voltage of around 4.0-4.2 V, while our
+first-principles predictions show an average of 3.8 V.</p>
+
+<p>The voltage profiles also contain information
+about the phase stability of the ordered vacancy compounds:
+Two-phase regions, defined in terms of free energies <i>vs</i>. <i>x</i>
+by tie-lines connecting the two phases, correspond to plateaus in
+the voltage profiles. Likewise, the voltage drops are associated
+with single phase, ordered regions. As the temperature is
+increased, drops become more rounded and disappear at
+order-disorder transitions. The voltage profile of the solid
+solution phase is completely smooth with no discontinuous voltage
+drops. By carefully examining the voltage profiles as a function
+of composition, the entire voltage-temperature phase diagram may
+be mapped out (Fig. 3). From this predicted phase diagram, we see
+that a large number of ordered vacancy compounds are stable at
+low temperature, however, as the temperature is raised, many of
+these phases undergo order-disorder reactions, and thus do not
+survive to room temperature. At 300 K, we predict that three
+ordered vacancy phases should remain stable: The predicted
+&quot;2x1&quot; phase has been observed in electrochemical and
+x-ray diffraction experiments, while the two <font
+face="Symbol">Ö</font>3x<font
+face="Symbol"> Ö</font>3 phases are
+predictions awaiting experimental verification.</p>
+
+<h2>Charge Redistribution and Electronic
+Stability with Respect to Li Removal in Li<sub>x</sub>CoO<sub>2</sub></h2>
+
+<p>Our calculations also provide insight into the
+remarkable stability of this material to Li-vacancies: The
+stoichiometric ordered layered LiCoO<sub>2</sub> compound is an
+insulator in LDA, but Li moves the Fermi level into the valence
+band, turning the system (in LDA) to a metal. The classic
+inorganic-chemistry view of this reaction is that the Co ion
+absorbs the charge change: it changes its oxidation state from Co<sup>3+</sup>
+in LiCoO<sub>2</sub> to Co<sup>4+</sup> in * CoO<sub>2</sub>.
+Considering the large (Mott-Hubbard) Coulomb energy of an
+unhybridized transition metal ion, such a change in oxidation
+state would be accompanied by substantial modification of the
+energy level structure of LiCoO<sub>2</sub>, which is not
+observed in our self-consistent calculations. Instead, we find
+that the charge enclosed around the Co site is surprisingly
+constant (7.36<font face="Symbol">±</font>0.04 valence 
+electrons inside a radius of 1.06Å) for
+all configurations, as the Li content is reduced from <i>x</i>=1
+to <i>x</i>=0. Figure 4 shows the charge rearrangements due to
+complete [<font face="Symbol">r</font>(LiCoO<sub>2</sub>)-<font 
+face="Symbol">r</font>(* CoO<sub>2</sub>)] and partial [<font 
+face="Symbol">r</font>(Li<sub>0.5</sub>CoO<sub>2</sub>)-<font
+face="Symbol"> r</font>(* CoO<sub>2</sub>)]
+Li removal, assuming the same lattice parameters and atomic
+positions (those of relaxed LiCoO<sub>2</sub>) for all
+structures. The calculated charge density demonstrates that as
+electronic charge is removed from the compound (via Li
+extraction), the oxygen-cobalt hybridization changes, so as to
+maintain a nearly constant charge (hence, nearly unchanged energy
+levels) around the Co site. This &quot;self-regulating
+response&quot; (minimizing the effect of external perturbations
+via rehybridization) is characteristic of systems having
+localized <i>d</i> states that communicate with a covalent
+manifold, e.g., transition-atom impurities in semiconductors. It
+explains in such systems why the <i>d</i>-like energy levels do
+not shift significantly in response to large nominal changes in
+charge, and thus at least partly explains the &quot;defect
+tolerance&quot; of these structures over a large range of Li
+concentrations.</p>
+
+<h2>Cation ordering: Layered <i>vs</i>.
+Cubic Li<sub>x</sub>CoO<sub>2</sub></h2>
+
+<p>The material LiCoO<sub>2</sub> (<i>x</i>=1) has
+been synthesized in two ordered forms: The commonly observed
+layered form (Fig. 1) discussed above, and a cubic form which has
+been produced by solution growth at low temperatures. The layered
+and cubic forms are extremely similar in terms of cation
+coordination sequence: Pair and three-body correlations are
+equivalent, with the first difference between the two occurring
+at the four-body correlation. Thus, one would expect the two
+forms of LiCoO<sub>2</sub> to exhibit similar energies and
+electrochemical potentials. However, electrochemical properties
+of the two compounds are very different: The cubic phase has a
+nearly flat low voltage plateau at 3.6 V, (for 0.5&lt; x &lt; 1) which
+contrasts with the high voltage profile of the layered phase
+which takes place near (or above) 4 V and has many voltage drops
+and plateaus. This distinction is initially difficult to
+understand given the structural similarity between the two, and
+the expected similar stability. By performing total energy
+calculations of these two parent structures and deintercalated
+products of them, we have found [2] the origin of the
+electrochemical differences between these two phases: Upon
+removal of Li from the cubic phase, the Li atoms move from their
+original octahedral positions to energetically favored
+tetrahedral sites and form the low-energy normal spinel compound,
+LiCo<sub>2</sub>O<sub>4</sub>. The low energy of this spinel
+compound divides the voltage of the cubic phase into a low
+voltage plateau (for 0.5 &lt x &lt; 1) and a high voltage region (for 0.0
+&lt; x &lt; 0.5). Although
+no experiments have succeeded in deintercalating the LiCo<sub>2</sub>O<sub>4
+</sub>spinel, our calculations demonstrate that Li extraction
+from this material should occur near 5V, thus providing a
+theoretical prediction of an as-yet-unsynthesized high voltage
+cathode material. Experiments to form and delithiate this spinel
+phase are currently underway. This prediction provides a clear
+example of how this first-principles approach should aid in the
+discovery of new and better battery materials while at the same
+time, elucidate the basic physics behind the electronic and
+structural processes of intercalation in these materials.</p>
+
+
+<h2>Selected References:</h2>
+<ol>
+<li><p>C. Wolverton and A. Zunger, &quot;Cation-
+and Vacancy-Ordering in Li<sub>x</sub>CoO<sub>2</sub>&quot; Phys.
+Rev. B <b>57</b>, 2242 (1998).</p></li>
+
+<li><p>C. Wolverton and A. Zunger,
+&quot;Prediction of Li Intercalation and Battery Voltages in
+Cubic and Layered Li<sub>x</sub>CoO<sub>2</sub>&quot; J.
+Electrochem. Soc. <b>145</b>, 2424 (1998).</p></li>
+
+<li><p>C. Wolverton and A. Zunger,
+&quot;First-Principles Theory of Vacancy Order-Disorder and
+Intercalation Battery Voltages in Li<sub>x</sub>CoO<sub>2</sub>&quot;
+Phys. Rev. Lett. <b>81</b>, 606 (1998)</p></li>
+</ol>
+
+<h2>Other References</h2>
+<p>For a listing of all SST references on the topic "Oxides",
+click on the "Get References" button below.</p>
+
+<FORM ACTION="http://pix.nrel.gov:8020/BASIS/nich/www/sstnrel/SDF" METHOD="POST">
+<INPUT TYPE="submit" VALUE="Get References">
+<!--Specify the topic -->
+<INPUT TYPE="hidden" NAME="TOPIC" VALUE="SSTOXIDE">
+<!--Request reverse chronological order -->
+<INPUT TYPE="hidden" NAME="FORMFL_OB" VALUE="Publication Year">
+<INPUT TYPE="hidden" NAME="FORM_SO" VALUE="Descend">
+<!--Specify that keywords should be anded, (this field is necessary for searches) -->
+<INPUT TYPE="hidden" NAME="FORM_C" VALUE="AND">
+</FORM>
+
+</body>
+</html>

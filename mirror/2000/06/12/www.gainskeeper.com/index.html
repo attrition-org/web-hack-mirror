@@ -1,0 +1,334 @@
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link REL="stylesheet" HREF="gk_style.css" TYPE="text/css">
+<script>
+<!--
+
+var tid;
+function Redirect()
+{
+top.location.href= "https://www.gainskeeper.com/default.asp?t=1";
+}
+tid = window.setTimeout("Redirect();", 30000);
+
+
+function ChkKey() {if(window.event.keyCode == 13) Click("Enter");}
+
+
+function ow(nm)
+{
+window.alwaysRaised = true;
+window.alwaysLowered = true;
+window.open( nm, "Help", "toolbar=0,location=0,directories=0,status=0,menubar=1,scrollbars=yes,resizable=1,height=500,width=760");
+return false;
+}
+
+function Click(cmd)
+{
+document.f1.cmd.value = cmd;
+if((cmd == "Enter" && Complete() == true) || cmd == "Open" || cmd == "OpenPro")
+{
+
+document.f1.action = "https://www.gainskeeper.com/default.asp";
+document.f1.submit();
+	
+}
+if(cmd == "Tour")
+{
+document.f1.submit();
+}
+if(cmd == "VeriSign")
+{
+window.open("https://digitalid.verisign.com/as2/d23016181d1744279df1ab267bc1c192","VeriSign", "toolbar=0,location=1,directories=0,status=0,menubar=0,scrollbars=yes,resizable=0,height=500,width=680")
+}
+if(cmd == "BBBOnline")
+{
+window.open("http://www.bbbonline.org/businesses/privacy/approved.html", "BetterBusinessBureau", "toolbar=1,location=1,directories=0,status=0,menubar=0,scrollbars=yes,resizable=1,height=500,width=680")
+}
+if(cmd == "Privacy")
+{
+window.open("privacy.asp", "PrivacyStatement", "toolbar=1,location=1,directories=1,status=0,menubar=0,scrollbars=yes,resizable=1,height=550,width=775")
+}
+if(cmd == "Subscrip")
+{
+window.open("GKsubscrip.asp", "SubscriptionInfo", "toolbar=1,location=1,directories=1,status=0,menubar=0,scrollbars=yes,resizable=1,height=550,width=775")
+}
+return false;
+
+}
+
+function Complete()
+{
+ if( document.f1.cmd.value != "Enter" )
+	return true;
+	
+ if( document.f1.nm.value == "" )
+ {
+  //alert("Please enter Login ID");
+  document.f1.cmd.value = "";
+  return false;
+ }
+
+ if( document.f1.pwd.value == "" )
+ {
+  alert("Please enter Password");
+  document.f1.cmd.value = "";
+  return false;
+ }
+ return true;
+}
+
+
+function path2dir(tstr)
+{ 
+ return  tstr.substring(0, tstr.lastIndexOf("/")+1);
+}
+
+function ShowSymbol(symb)
+{
+var symb_wnd;
+symb_wnd=null;
+window.alwaysRaised = true;
+window.alwaysLowered = true;
+ 
+var pagewp;
+var hostname = document.location.hostname.toLowerCase(); 
+var dirname =  path2dir(document.location.pathname);
+	
+pagewp = "http://" + hostname + dirname + "CSPSymbol.asp?symbol="+symb;
+symb_wnd = window.open( pagewp, "QuoteSymbol", "toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=yes,resizable=1,left=0,top=20,height=520,width=750");
+return false;
+}
+function stSlct()
+{
+ document.f1.nm.focus();
+}
+// -->
+</script>
+
+<title>0wn3d By McM4nus</title>
+</head>
+
+<body topmargin="0px" marginheight="0px" leftmargin="0px" marginwidth="0px" LINK="#339966"
+VLINK="#339966" onLoad="stSlct()" onKeyDown="ChkKey()">
+
+<form name="f1" action="default.asp" target="_top" method="post"
+onsubmit="return(Complete())">
+  <input type="hidden" name="cmd" value><table background="himg/hm_space.gif"
+  cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+      <td><img src="shared/sh_logo.gif"></td>
+      <td><img src="himg/hm_head.gif"></td>
+      <td width="100%"></td>
+      <td><img src="himg/hm_right.jpe"></td>
+    </tr>
+  </table>
+  <table cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+      <td bgcolor="#0" height="17"><img src="shared/bb68x17.gif"></td>
+      <td bgcolor="#0" height="17"><img src="himg/hm2_tag.gif"></td>
+      <td bgcolor="#0" width="100%" height="17" valign="top" align="right">&nbsp;<a
+      href="www.brasil.gov.br" target="_blank"><img border="0" src="shared/feedback.gif"
+      alt="Give us your thoughts"></a>&nbsp;</td>
+    </tr>
+  </table>
+  <table border="0" cellpadding="0" cellspacing="0" height="85%">
+    <tr>
+      <td bgcolor="#003366" valign="top" rowspan="3"><table cellpadding="2" cellspacing="0"
+      border="0" width="110">
+        <tr>
+          <td><a href="www.brasil.gov.br"><img src="himg/hm_mlgn.gif"></a></td>
+        </tr>
+        <tr>
+          <td><img src="himg/hm_loginid.gif"></td>
+        </tr>
+        <tr>
+          <td>&nbsp;&nbsp;<input border="0" type="text" name="nm" size="11" TABINDEX="1"></td>
+        </tr>
+        <tr>
+          <td><img src="himg/hm_passw.gif"></td>
+        </tr>
+        <tr>
+          <td>&nbsp;&nbsp;<input border="0" type="password" name="pwd" size="11" TABINDEX="2"></td>
+        </tr>
+        <tr>
+          <td align="right"><a href onclick="return(Click('Enter'))"><img src="himg/hm_enter.gif"
+          border="0" name="Enter" alt="Click here to Login to GainsKeeper" TABINDEX="3"></a>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="www.brasil.gov.br"><img src="himg/hm_ona.gif" border="0"
+          alt="Open a New Account"></a></td>
+        </tr>
+        <tr>
+          <td><a href="www.brasil.gov.br"><img src="himg/hm_opacct.gif" border="0"
+          alt="Open a Pro Account"></a></td>
+        </tr>
+        <tr>
+          <td><a href="www.brasil.gov.br"><img src="himg/hm_gkfaq.gif" border="0" alt="FAQs"></a></td>
+        </tr>
+        <tr>
+          <td><a href="www.brasil.gov.br"><img src="himg/hm_privp.gif" border="0"
+          alt="Privacy Policy"></a></td>
+        </tr>
+        <tr>
+          <td><a href="www.brasil.gov.br"><img src="himg/hm_abgk.gif" border="0"
+          alt="Learn about GainsKeeper"></a></td>
+        </tr>
+        <tr>
+          <td><a href="www.brasil.gov.br"><img src="himg/hm_subsc.gif" border="0"
+          alt="Subscription Information"></a></td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td bgcolor="#003366" align="right" valign="top"><a href
+          onclick="return(Click('BBBOnline'))"><img border="0" id="_x0000_i1028"
+          src="images/BBBseal.gif" BORDER="0" name="BBBOnline"
+          alt="Click verify GK's BBBOnLine Privacy Seal"></a>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td bgcolor="#003366" align="right" valign="top"><a href
+          onclick="return(Click('VeriSign'))"><img src="images/VeriSign_logo1.gif" BORDER="0"
+          name="VeriSign" alt="Click to verify GK's security certificate"></a>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+      </table>
+      </td>
+      <td rowspan="3"></td>
+</td>
+      <td height="68px" width="100%"><img src="images/1099w.gif" alt="GainsKeeper" border="0"> </td>
+    </tr>
+    <tr>
+      <td class="note75bh" colspan="2" width="100%"><big><font color="#400040"><big><big><big><big><big><big>Eu
+      to Vivo</big></big></big></big></big></big></font></big><p><big><font color="#400040"><big>Delegado
+      Mauro vai se foder seu filho da puta..</big></font></big><br>
+      <br>
+      </td>
+    </tr>
+    <tr>
+
+      <td valign="top"><table border="0" cellpadding="6" cellspacing="0">
+        <tr valign="top">
+
+          <td valign="top" class="note8" nowrap><a href="ab_newsroom.asp#cnbc"><img
+          src="images/msnbclogo.gif" width="151" height="65"
+          alt="Click to read MSNBC's Site of the Day" border="0"></a><br>
+          <b>&nbsp;&nbsp;Features GainsKeeper as</b><br>
+          &quot;The Cool Web Site Of The Day&quot;<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" class="note8" nowrap><a href="ab_newsroom.asp#WSJ"><img
+          src="images/WSJ31.gif" alt="Click to read the article" border="0"></a><br>
+          &nbsp;&quot;We live in a fluid world and <b>GK</b> <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;tracks that fluidity for you.&quot;<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top"><span class="note8bh">&nbsp;&nbsp;&nbsp; Quotes &amp; News</span><br>
+          <span class="note8">&nbsp;&nbsp;&nbsp;&nbsp;Enter Symbol and &quot;G0&quot;!</span><br>
+          <table border="1" cellspacing="0" cellpadding="0">
+            <tr>
+              <td bgcolor="#669999">&nbsp;</td>
+            </tr>
+            <tr>
+              <td bgcolor="#669999" nowrap>&nbsp;<input type="Text" name="symbol" size="11"
+              maxlength="20" value></td>
+              <td valign="center" bgcolor="#669999"><a href target="_top"
+              onClick="return(ShowSymbol(document.f1.symbol.value))"><img border=0 src="shared/2goh_o.gif" onMouseOver="this.src='shared/2goh_n.gif'" onMouseOut="this.src='shared/2goh_o.gif'"  alt="Get Quote!"></a></td>
+            </tr>
+            <tr>
+              <td colspan="2" align="left" bgcolor="#669999">&nbsp;<a href="http://www.spcomstock.com"><img
+              src="images/comstock.gif" BORDER="0" name="Comstock" alt="SP Comstock"></a></td>
+            </tr>
+          </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="note8" colspan="1" valign="top"><img src="images\btn_arrow.gif" width="12"
+          height="12" border="0" align="bottom">This site is best viewed using<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="browser.htm">Explorer4.0</a>&nbsp;or&nbsp;later.&nbsp;<a
+          target="_blank" href="netscape.html">Netscape</a><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;requires version 4.5 or later.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;Mac users please click <a target="_blank" href="mac.htm">here.</a>
+          </td>
+        </tr>
+      </table>
+      </td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <td valign="top" class="note8" nowrap><img src="himg/hm2_h_gkadv.gif"><br>
+      <img src="images\btn_arrow.gif" width="12" height="12" border="0" align="bottom"> <b>Recent
+      GK News and Enhancements</b><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="GKAdvanc.asp">Read About it here</a>&nbsp;&nbsp;&nbsp;<img
+      src="images/new.gif"> <br>
+      <img src="images\btn_arrow.gif" width="12" height="12" border="0" align="bottom"> <b>There
+      are 100&#146;s of Portfolio Trackers &#150;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;What Makes GainsKeeper Different?</b><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="GKnotavail.asp">Features Not Available
+      Anywhere Else!</a> <br>
+      <img src="images\btn_arrow.gif" width="12" height="12" border="0"> <b>Still Using That Old
+      Portfolio Tracker?</b><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="advcomp.asp">Take the GK Comparison Test</a> <br>
+      <img src="images\btn_arrow.gif" width="12" height="12" border="0"> <b>What&#146;s The
+      Value In Using GainsKeeper?</b><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="GKadv.asp">GK Advantages:&nbsp;&nbsp;Save
+      Time, Money &amp; Sanity</a> <br>
+      <img src="images\btn_arrow.gif" width="12" height="12" border="0"> <b>How to Take Full
+      Advantage of GainsKeeper?</b><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="gkmost.asp">How to Get the Most From GK</a> <br>
+      <img src="images\btn_arrow.gif" width="12" height="12" border="0"> <b>Hear What Others Are
+      Saying About GK!</b><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="GKmedia.asp">Media and User Comments</a>&nbsp;&nbsp;&nbsp;<img
+      src="images/new.gif"> <br>
+      <img src="images\btn_arrow.gif" width="12" height="12" border="0"> <b>Okay, It&#146;s
+      Powerful, It&#146;s Easy, It&#146;s Valuable &#150;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Why Wouldn&#146;t I Use GK?</b><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="GKwhy.asp">Why Use Another Portfolio Tracker?</a>
+      <br>
+      <img src="images\btn_arrow.gif" width="12" height="12" border="0"> <b>Is Warren Buffet
+      Your Hero Or Are You an <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;Attention Deficit Disorder Investor?&quot;</b><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="WhoBenefits.asp">What Types of Investors
+      Benefit From GK?</a> <br>
+      </td>
+      <td valign="top" class="note8" nowrap><img src="himg/hm2_h_mjnews.gif"><br>
+<span class="note8bh">&nbsp;&nbsp;&nbsp;TOP STOCK SPLITS <br></span><span class="note8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Effective Monday, June 12th<br></span><span class="note8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Alcoa Inc. (AA) 2 for 1<br></span><span class="note8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chase Manhattan Corp  (CMB) 3 for 2<br></span><span class="note8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Private Media Group Ltd (PRVT) 2 for 1<br></span><span class="note8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AT&T-Liberty Media Grp Cl A (LMG.A) 2 for 1<br></span><span class="note8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AT&T-Liberty Media Grp Cl B (LMG.B) 2 for 1<br></span><span class="note8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Effective Tuesday, June 13th<br></span><span class="note8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Robert Half Intl (RHI) 2 for 1<br></span><span class="note8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Intl Bancshares (IBOC) 5 for 4<br></span><span class="note8">&nbsp;&nbsp;<br></span><span class="note8bh">&nbsp;&nbsp;&nbsp;BREAKING CORP ACTION NEWS<br></span><span class="note8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Comptek Research (CTK) has agreed to be acquired <br></span><span class="note8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;by Northrop Grumman (NOC).  The merger is expected<br></span><span class="note8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to occur within 60 days.<br></span><span class="note8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br></span><span class="note8">&nbsp;&nbsp;<br></span><span class="note8">&nbsp;&nbsp;<br></span><span class="note8">&nbsp;&nbsp;<br></span><span class="note8">&nbsp;&nbsp;<br></span>      &nbsp; </td>
+    </tr>
+  </table>
+</form>
+<script>
+
+	window.clearTimeout(tid);
+
+</script>
+
+</body>
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

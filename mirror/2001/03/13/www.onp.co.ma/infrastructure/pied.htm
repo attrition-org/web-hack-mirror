@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<script language="JavaScript"><!--
+
+function copy(url)
+{
+	var fenetre=null;
+	
+	fenetre = window.open('', 'fenetre', 'width=400,height=500,resizable=yes,scrollbars=yes');
+
+	if (fenetre!=null)
+	{
+		
+    	fenetre.location.href = url;
+	}
+}
+
+function plan(url)
+{
+	var fenetre=null;
+	
+	fenetre = window.open('', 'fenetre', 'width=510,height=400,resizable=no,scrollbars=no');
+
+	if (fenetre!=null)
+	{
+		
+    	fenetre.location.href = url;
+	}
+}
+
+//--></script>
+
+</head>
+
+<body bgcolor="#FFCC99" TOPMARGIN="0" LEFTMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0">
+<img src="gif/pied.gif" width="550" height="37" border="0" usemap="#base"> <map name="base">
+  <area shape="rect" coords="326,19,366,36" href="javascript:plan('../plan/plan.htm')">
+  <area shape="rect" coords="189,19,236,36" href="mailto:onp@onp.co.ma">
+  <area shape="rect" coords="372,19,430,36" href="javascript:copy('../html/copyr.htm')">
+  <area shape="rect" coords="125,19,180,36" href="javascript:history.back()">
+</map>
+</body>
+</html>

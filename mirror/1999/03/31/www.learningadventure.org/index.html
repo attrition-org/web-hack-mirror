@@ -1,0 +1,208 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>TODAYS HACK</TITLE>
+
+</HEAD><BODY BACKGROUND="god4.jpg" text="#ff0000" bgcolor=#000000 onLoad="clock();">
+
+<FONT COLOR="#00FF00">
+
+<script language="JavaScript">
+
+
+function changeStatus() {
+  window.status = "CAN U READ THIS!!!"
+  setTimeout ("window.status=''", 2000)
+}
+
+
+
+function initArray() {
+  this.length = initArray.arguments.length
+  for (var i = 0; i < this.length; i++)
+    this[i+1] = initArray.arguments[i]
+}
+
+var hexChars = "0123456789ABCDEF";
+
+function Dec2Hex (Dec) {
+  var a = Dec % 16;
+  var b = (Dec - a)/16;
+  hex = "" + hexChars.charAt(b) + hexChars.charAt(a);
+  return hex;
+}
+
+function bgChanger (begin, end, steps) {
+  steps = steps -1 ;
+
+  redA     = begin.charAt(0) + begin.charAt(1);
+  red_valA = parseInt(redA,'16');
+  redB     = end.charAt(0) + end.charAt(1);
+  red_valB = parseInt(redB,'16');
+  red_int  = ((red_valB - red_valA) / steps) * -1;
+  grnA     = begin.charAt(2) + begin.charAt(3);
+  grn_valA = parseInt(grnA,'16');
+  grnB     = end.charAt(2) + end.charAt(3);
+  grn_valB = parseInt(grnB,'16');
+  grn_int  = ((grn_valB - grn_valA) / steps) * -1;
+  bluA     = begin.charAt(4) + begin.charAt(5);
+  blu_valA = parseInt(bluA,'16');
+  bluB     = end.charAt(4) + end.charAt(5);
+  blu_valB = parseInt(bluB,'16');
+  blu_int  = ((blu_valB - blu_valA) / steps) * -1;
+
+  step = 2;
+  red = red_valA;
+  grn = grn_valA;
+  blu = blu_valA;
+
+  document.bgColor = begin;
+
+  while ( steps >= step ) {
+    red -= red_int;
+    red_round = Math.round(red);
+    red_hex = Dec2Hex(red);
+
+    grn -= grn_int;
+    grn_round = Math.round(grn);
+    grn_hex = Dec2Hex(grn);
+
+    blu -= blu_int;
+    blu_round = Math.round(blu);
+    blu_hex = Dec2Hex(blu);
+
+    document.bgColor = red_hex + grn_hex + blu_hex;
+//    document.write("<br>bgcolor = " + red_hex + grn_hex + blu_hex);
+
+    step++;
+  }
+  document.bgColor = end;
+}
+
+
+
+</script><script language="JavaScript">
+
+
+<!--
+// black to black (pause)
+  bgChanger("000000","000000",25);
+// black to red
+  bgChanger("000000","FF0000",25);
+// red to black
+  bgChanger("FF0000","000000",25);
+// black to purple 
+  bgChanger("000000","AA00EE",25);
+// purple to black
+  bgChanger("AA00EE","000000",25);
+// black to blue
+  bgChanger("000000","0000FF",25);
+// blue to black
+  bgChanger("0000FF","000000",25);
+// black to black 
+  bgChanger("000000","000000",25);
+
+// -->
+
+
+</script>
+
+
+
+<H1 ALIGN="CENTER">The worlds most <B><I>INFAMOUS</i></B> criminal</H1>
+
+<P ALIGN="CENTER"><IMG SRC="bgates.jpg">
+
+
+
+<center>
+
+<script language="JavaScript"><!--
+
+
+
+var TimerId;
+
+var text = " ";
+
+function clock()
+
+
+
+{
+
+today = new Date();
+
+text = today.toLocaleString();
+
+document.momo.face.value = text;
+
+
+
+TimerId = setTimeout("clock()", 1000);
+
+
+
+}
+
+
+
+// --></script>
+
+<form method="POST" name="momo">
+
+<input type=text size=15 maxlength=256 name="face" wrap="virtual">
+
+</form>
+
+</center>
+
+
+  
+</font>
+<h1 align="center">&nbsp;</h1>
+<p align="left">&nbsp;</p>
+<p align="left">&nbsp;</p>
+<p align="left"><font color="#00CCCC"><b><font color="#FFFF00">ONCE AGAIN WE HAVE 
+  SUCCESSFULLY TAKEN DOWN ANOTHER SHITTY ASS SITE!! NO ELITE SHIT HERE, BABY, 
+  IT HURTS MY FUCKING EYES!! </font></b></font></p>
+<p align="left"><b><font color="#FFFF00">WE, THREE, OF THE ELITE GROUP ARE OUT 
+  THERE, NOT TO DESTROY, BUT TO MAKE AWARE OUR PRESENCE IN THE COMMUNITY. OUR 
+  MAIN GOAL IS TO BRING FORTH KNOWLEDGE TO ALL THE STUPID MOTHER FUCKING DICKHEADS</font></b></p>
+<p align="left"><b><font color="#FFFF00">WE AREN'T DOING THIS BECAUSE OF SOME 
+  BULLSHIT SECURITY PROBLEMS, OR TO GET OUT SOME MESSAGE FROM THE UNDERGROUND. 
+  WE DO IT <font size="2">BECAUSE WE CAN, AND YOU CAN'T. WE ARE ON A &quot;QUEST&quot; 
+  OF SORTS, TO </font>SEEK OUT THAT EVER SO HIDDEN FOUNTAIN OF KNOWLEDGE.</font></b></p>
+<p align="left"><b><font color="#FFFF00">TODAY'S HACK WAS BROUGHT TO YOU BY: KING 
+  DRAGON, KNYTE RAGE, &amp; ANALOGNET . ALSO BY THE LETTERS FU, AND THE NUMBER 
+  69.</font></b></p>
+<p align="left">&nbsp;</p>
+<p align="left"><b><font color="#FF6666" size="5" face="Courier New, Courier, mono">LAMER 
+  LIST</font><font color="#FF6666" size="5">:</font></b></p>
+<p align="left"><b><a href="LOZIER@AOL.COM"><font color="#00FF00">LOZIER@AOL.COM</font></a></b></p>
+<p align="left"><b><a href="KLANGEDON@AOL.COM"><font color="#33FF33">KLANGEDON@AOL.COM</font></a>- 
+  </b><b><font color="#FFFF00">AND ALL THE OTHER ONES THAT WE CAN'T REMEMBER RIGHT 
+  NOW.</font></b></p>
+<p align="left">&nbsp;</p>
+<p align="left">&nbsp;</p>
+<p align="left"><font size="5" color="#990099"><b><font color="#FFFF00">Quotes 
+  by members of the GOD's!!</font></b></font></p>
+<p align="left">&nbsp;</p>
+<p align="left"><b><font size="5" color="#FFFF00">Knyte Rage &quot;People who 
+  think they know everything are very irritating to those of us who do!&quot;</font></b></p>
+<p align="left"><b><font size="5" color="#FFFF00">King Dragon &quot;Bow to my 
+  neophytic power, mother fucker!&quot; </font></b></p>
+<p><b><font color="#FFFF00" size="5">ANALOGNET &quot;Getting root on this damn 
+  site was so easy I didn't even know I had it&quot;</font></b></p>
+<p><b><font size="5" color="#FFFF00"><u>SHOUTS TO OUR PEOPLES!!</u></font></b></p>
+<p><b><font color="#FFFF00">First I Knyte Rage would like to shout out to NOCX 
+  and his bitch ass mother, another shout to Weasle Works INC., Overkill and Ninjer 
+  and the rest of the GOD Staff. I would also like to thank Bill Gates for his 
+  participation in our excursion, with out him we could of not afforded the equipment 
+  to do such a task. Thanks Uncle Bill.</font></b></p>
+<p><b><font color="#FFFF00">King Dragon: Shout outs to my boys F-Dawg, &amp; John 
+  and his pet &quot;PEDO&quot;. Darby, top of the world, man! Fuck you, Buzz! 
+  Hey, Ang. Can't we just get along???</font></b></p>
+<p align="left"><font color="#FFFF00"><b>ANALOGNET: Classofmyown, Trish, Otter, 
+  Dyno, Drice </b></font></p>

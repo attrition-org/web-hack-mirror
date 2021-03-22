@@ -1,0 +1,160 @@
+<html>
+<head>
+<title>mv irc.script.kiddies /dev/null</title>
+<script language=JavaScript>
+function makearray(n) {
+  this.length = n;
+  for(var i = 1; i <= n; i++)
+    this[i] = 0;
+  return this;
+}
+hexa = new makearray(16);
+function fade(sr, sg, sb, er, eg, eb, step) {
+  for(var i = 0; i < 10; i++)
+    hexa[i] = i;
+  hexa[10]="a"; hexa[11]="b"; hexa[12]="c";
+  hexa[13]="d"; hexa[14]="e"; hexa[15]="f";
+  for(var i = 0; i <= step; i++) {
+    setbgColor(
+    Math.floor(sr * ((step-i)/step) + er * (i/step)),
+    Math.floor(sg * ((step-i)/step) + eg * (i/step)),
+    Math.floor(sb * ((step-i)/step) + eb * (i/step)));
+  }
+}
+function hex(i) {
+  if (i < 0)
+    return "00";
+  else if (i > 255)
+    return "ff";
+  else return "" + hexa[Math.floor(i/16)] + hexa[i%16];
+}
+function setbgColor(r, g, b) {
+  var hr = hex(r), hg = hex(g), hb = hex(b);
+  document.bgColor = "#"+hr+hg+hb;
+}
+//  Fin du script -->
+</script>
+<script language=JavaScript>
+<!-- Debut du script 
+var ms = navigator.appVersion.indexOf("MSIE")
+ie4 = (ms>0) && (parseInt(navigator.appVersion.substring(ms+5, ms+6)) >= 4)
+
+function deplace2(from, to) {
+  if (from < to) {
+    document.all.texte2.style.left = (from += 20);
+    setTimeout('deplace2(' + from + ',' + to + ')', 75);
+  }
+}
+
+function deplacen2(from, to) {
+  if (from < to) {
+    document.texte2.left = (from += 20);
+    setTimeout('deplacen2(' + from + ',' + to + ')', 75);
+  }
+}
+// Fin du script -->
+</script>
+<script language=JavaScript>
+<!-- Debut du script 
+var ms = navigator.appVersion.indexOf("MSIE")
+ie4 = (ms>0) && (parseInt(navigator.appVersion.substring(ms+5, ms+6)) >= 4)
+
+function deplace1(from, to, moveto) {
+  if (from > to) {
+    document.all.texte.style.left = (from -= moveto);
+    setTimeout('deplace1(' + from + ',' + to + ',' + moveto + ')', 75);
+  }
+}
+function deplacen1(from, to, moveto) {
+  if (from > to) {
+    document.texte.left = (from -= moveto);
+    setTimeout('deplacen1(' + from + ',' + to + ',' + moveto + ')', 75);
+  }
+}
+// Fin du script -->
+</script>
+<script language=JavaScript>
+<!-- Debut du script 
+var ms = navigator.appVersion.indexOf("MSIE")
+ie4 = (ms>0) && (parseInt(navigator.appVersion.substring(ms+5, ms+6)) >= 4)
+
+function deplace3(from, to) {
+  if (from > to) {
+    document.all.texte3.style.top = (from -= 10);
+    setTimeout('deplace3(' + from + ',' + to + ')', 75);
+  }
+}
+function deplacen3(from, to) {
+  if (from > to) {
+    document.texte3.top = (from -= 10);
+    setTimeout('deplacen3(' + from + ',' + to + ')', 75);
+  }
+}
+// Fin du script -->
+</script>
+</head>
+<body text="#00CC00" bgcolor="#000000" link="#0000EE" vlink="#551A8B" alink="#FF0000" onload="ie4?deplace3(200,0,20):deplacen3(200,0,20);
+ie4?deplace1(600,0,20):deplacen1(600,0,20);ie4?deplace2(-600,0,20):
+deplacen2(-600,0,20)">
+<script language=JavaScript>
+<!-- debut du script
+fade(255,255,255,0,0,0,120);
+//  Fin du script -->
+</script>
+<!-- fin de degrade blanc vers noir--><!--Debut Crystal coulant-->
+<div id=texte2 
+style="COLOR: #ff0000; FONT-FAMILY: Courier; FONT-SIZE: 20pt; POSITION: relative; TEXT-ALIGN: center"><b><i><font face="Courier New,Courier"><font size=+2><font color="#FF0000">B
+</font><font color="#33FF33">r a i n</font></font></font></i></b></div>
+<!--Fin Crystal coulant--><!--Debut Magic coulant-->
+<div id=texte 
+style="COLOR: #ff0000; FONT-FAMILY: Courier; FONT-SIZE: 20pt; POSITION: relative; TEXT-ALIGN: center"><b><i><font face="Courier New,Courier"><font size=+2><font color="#FF0000">S
+</font><font color="#33FF33">t o r m</font></font></font></i></b></div>
+<!--Fin Magic coulant--><!-- Debut Coulant Studio de tatouage et de percage -->
+<div id=texte3 
+style="COLOR: #ffffff; FONT-FAMILY: Courier; FONT-SIZE: 12pt; POSITION: relative; TEXT-ALIGN: center"><b><font face="Courier New,Courier"><font size=+2>[
+E l e c t r o n i c - S o u l s ]</font></font></b></div>
+<!-- Fin coulant Studio...-->
+<br><b><font face="Arial,Helvetica"><font color="#FFFFFF">----------------------------------------------------------------------------------------------------------------------------------------------------------------</font></font></b>
+<br><!--Debut Image de la porte d'entree -->
+<center><a href="anonce001.html"><img SRC="brainbkg.jpg" height=600 width=800></a></center>
+<b><font face="Arial,Helvetica"><font color="#FFFFFF">----------------------------------------------------------------------------------------------------------------------------------------------------------------</font></font></b>
+<br><b><font face="Arial,Helvetica"><font color="#FFFFFF">Hey Admin, sorry
+but i owned ur b0x, </font><font color="#FF0000">no files harmed </font><font color="#FFFFFF">and
+i made a </font><font color="#FF0000">backup</font><font color="#FFFFFF">
+of the old crap ;)</font></font></b>
+<br><b><font face="Arial,Helvetica"><font color="#FFFFFF">If u need </font><font color="#FF0000">help
+to secure ur box</font><font color="#FFFFFF">, cuz i was to lazy to fix
+it this time, send me a mail to:</font></font></b>
+<br><b><font face="Arial,Helvetica"><font color="#FF0000">BrainStorm@ElectronicSouls.zzn.com</font><font color="#FFFFFF">
+..or </font><font color="#FF0000">join or channel</font><font color="#FFFFFF">
+on stupid</font><font color="#FF0000"> irc.dal.net #ElectronicSouls</font></font></b>
+<br><b><font face="Arial,Helvetica"><font color="#FFFFFF">----------------------------------------------------------------------------------------------------------------------------------------------------------------</font></font></b>
+<br><b><font face="Arial,Helvetica"><font color="#FFFFFF"><font size=-1>..can't
+do much defacements these days, since i've a new job as programmer ;)</font></font></font></b>
+<br><b><font face="Arial,Helvetica"><font color="#FFFFFF"><font size=-1>so
+admins out there the crackers might be in ur systems b4 BrainStorm is there
+to secure it (<i>and that even for freee</i>) !</font></font></font></b>
+<br><b><font face="Arial,Helvetica"><font color="#FFFFFF"><font size=-1>get
+ya lazy asSes up and secure ur shit ! u can't just setup a lame box, never
+secure it again</font></font></font></b>
+<br><b><font face="Arial,Helvetica"><font color="#FFFFFF"><font size=-1>and
+only take the $$ for ur *so called* work :P .. go and read some administration
+textware !</font></font></font></b>
+<br><b><font face="Arial,Helvetica"><font color="#FFFFFF">----------------------------------------------------------------------------------------------------------------------------------------------------------------</font></font></b>
+<br><b><font face="Arial,Helvetica"><font color="#FFFFFF">Gre</font><font color="#33FF33"><font size=+2>e</font></font><font color="#FFFFFF">tings
+:</font></font></b>
+<br><b><i><font face="Arial,Helvetica"><font color="#FFFFFF">RobBbot,da_v0id,IT_FRESH,LordLunatic,OpCode,Internexus,derf-,</font></font></i></b>
+<br><b><i><font face="Arial,Helvetica"><font color="#FFFFFF">ghQst,le0n,^SpydeR^,Mescon,Icecoder,Krizzkane,JW23,kryptc,</font></font></i></b>
+<br><b><i><font face="Arial,Helvetica"><font color="#FFFFFF">warlord1101,s0lar,FiberOptik,z|mzum,potgirl,CraigTM,z0ltrax,</font></font></i></b>
+<br><b><i><font face="Arial,Helvetica"><font color="#FFFFFF">Deamoner,SectorX,LordRayden,websk8ter,FREAK88,ttyp123,FirstLady,</font></font></i></b>
+<br><b><i><font face="Arial,Helvetica"><font color="#FFFFFF">DoU,CyberX,0x7f,ADM,HFG,RSH..</font></font></i></b>
+<br><b><font face="Arial,Helvetica"><font color="#FFFFFF">----------------------------------------------------------------------------------------------------------------------------------------------------------------</font></font></b>
+<br><b><font face="Arial,Helvetica"><font color="#FFFFFF">(C) BrainStorm
+[ElectronicSouls] - 2000</font></font></b>
+<br><b><font face="Arial,Helvetica"><font color="#FFFFFF">----------------------------------------------------------------------------------------------------------------------------------------------------------------</font></font></b>
+<br><b><font face="Arial,Helvetica"><font color="#FFFFFF">[EOF]</font></font></b>
+<br><b><font face="Arial,Helvetica"><font color="#FFFFFF">&nbsp;</font></font></b>
+<br><b><font face="Arial,Helvetica"><font color="#FFFFFF"></font></font></b>&nbsp;
+</body>
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

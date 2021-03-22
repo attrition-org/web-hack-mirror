@@ -1,0 +1,227 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+  <script language="JavaScript">
+<!--
+function MM_initTimelines() {
+    //MM_initTimelines() Copyright 1997 Macromedia, Inc. All rights reserved.
+    var ns = navigator.appName == "Netscape";
+    document.MM_Time = new Array(1);
+    document.MM_Time[0] = new Array(2);
+    document.MM_Time["Timeline1"] = document.MM_Time[0];
+    document.MM_Time[0].MM_Name = "Timeline1";
+    document.MM_Time[0].fps = 15;
+    document.MM_Time[0][0] = new String("sprite");
+    document.MM_Time[0][0].slot = 1;
+    if (ns)
+        document.MM_Time[0][0].obj = document.Layer1;
+    else
+        document.MM_Time[0][0].obj = document.all ? document.all["Layer1"] : null;
+    document.MM_Time[0][0].keyFrames = new Array(1, 20);
+    document.MM_Time[0][0].values = new Array(4);
+    document.MM_Time[0][0].values[0] = new Array(356,341,326,310,295,280,265,250,234,219,204,189,173,158,143,128,113,97,82,67);
+    document.MM_Time[0][0].values[0].prop = "left";
+    document.MM_Time[0][0].values[1] = new Array(25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25);
+    document.MM_Time[0][0].values[1].prop = "top";
+    if (!ns) {
+        document.MM_Time[0][0].values[0].prop2 = "style";
+        document.MM_Time[0][0].values[1].prop2 = "style";
+    }
+    document.MM_Time[0][0].values[2] = new Array(127,125,124,123,122,121,120,119,118,117,115,114,113,112,111,110,109,108,107,106);
+    document.MM_Time[0][0].values[2].prop = "width";
+    if (!ns)
+        document.MM_Time[0][0].values[2].prop2 = "style";
+    document.MM_Time[0][0].values[3] = new Array(50,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49);
+    document.MM_Time[0][0].values[3].prop = "height";
+    if (!ns)
+        document.MM_Time[0][0].values[3].prop2 = "style";
+    document.MM_Time[0][1] = new String("sprite");
+    document.MM_Time[0][1].slot = 2;
+    if (ns)
+        document.MM_Time[0][1].obj = document.Layer2;
+    else
+        document.MM_Time[0][1].obj = document.all ? document.all["Layer2"] : null;
+    document.MM_Time[0][1].keyFrames = new Array(1, 20);
+    document.MM_Time[0][1].values = new Array(4);
+    document.MM_Time[0][1].values[0] = new Array(4,17,30,43,56,70,83,96,109,122,135,148,161,174,187,201,214,227,240,253);
+    document.MM_Time[0][1].values[0].prop = "left";
+    document.MM_Time[0][1].values[1] = new Array(49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49);
+    document.MM_Time[0][1].values[1].prop = "top";
+    if (!ns) {
+        document.MM_Time[0][1].values[0].prop2 = "style";
+        document.MM_Time[0][1].values[1].prop2 = "style";
+    }
+    document.MM_Time[0][1].values[2] = new Array(38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,39);
+    document.MM_Time[0][1].values[2].prop = "width";
+    if (!ns)
+        document.MM_Time[0][1].values[2].prop2 = "style";
+    document.MM_Time[0][1].values[3] = new Array(35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35);
+    document.MM_Time[0][1].values[3].prop = "height";
+    if (!ns)
+        document.MM_Time[0][1].values[3].prop2 = "style";
+    document.MM_Time[0].lastFrame = 20;
+    for (i=0; i<document.MM_Time.length; i++) {
+        document.MM_Time[i].ID = null;
+        document.MM_Time[i].curFrame = 0;
+        document.MM_Time[i].delay = 1000/document.MM_Time[i].fps;
+    }
+}
+//-->
+</script>
+  <script language="JavaScript">
+<!--
+function MM_timelinePlay(tmLnName, myID) { //v1.2
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,propNum,theObj,firstTime=false;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (myID == null) { myID = ++tmLn.ID; firstTime=true;}//if new call, incr ID
+  if (myID == tmLn.ID) { //if Im newest
+    setTimeout('MM_timelinePlay("'+tmLnName+'",'+myID+')',tmLn.delay);
+    fNew = ++tmLn.curFrame;
+    for (i=0; i<tmLn.length; i++) {
+      sprite = tmLn[i];
+      if (sprite.charAt(0) == 's') {
+        if (sprite.obj) {
+          numKeyFr = sprite.keyFrames.length; firstKeyFr = sprite.keyFrames[0];
+          if (fNew >= firstKeyFr && fNew <= sprite.keyFrames[numKeyFr-1]) {//in range
+            keyFrm=1;
+            for (j=0; j<sprite.values.length; j++) {
+              props = sprite.values[j]; 
+              if (numKeyFr != props.length) {
+                if (props.prop2 == null) sprite.obj[props.prop] = props[fNew-firstKeyFr];
+                else        sprite.obj[props.prop2][props.prop] = props[fNew-firstKeyFr];
+              } else {
+                while (keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]) keyFrm++;
+                if (firstTime || fNew==sprite.keyFrames[keyFrm-1]) {
+                  if (props.prop2 == null) sprite.obj[props.prop] = props[keyFrm-1];
+                  else        sprite.obj[props.prop2][props.prop] = props[keyFrm-1];
+        } } } } }
+      } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+      if (fNew > tmLn.lastFrame) tmLn.ID = 0;
+  } }
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" onLoad="MM_timelinePlay('Timeline1')">
+<div id="Layer1" style="position:absolute; left:356px; top:25px; width:127px; height:50px; z-index:1"><font face="Arial, Helvetica, sans-serif"><b><font size="7" color="#0000FF">Contact</font></b></font></div>
+<div id="Layer2" style="position:absolute; left:4px; top:49px; width:38px; height:35px; z-index:2"><b><font size="6" color="#FF0000">Us 
+  </font></b></div>
+<div id="Layer3" style="position:absolute; left:150px; top:125px; width:51px; height:64px; z-index:3"><img src="../curve.gif" width="56" height="227"></div>
+<div id="Layer4" style="position:absolute; left:204px; top:187px; width:262px; height:117px; z-index:4"> 
+  <ul>
+    <li><font size="2" face="Arial, Helvetica, sans-serif">Phone: <b>07 4050 5000</b></font></li>
+    <li><font size="2" face="Arial, Helvetica, sans-serif"> Fax: 07 4031 2041</font></li>
+    <li><font size="2" face="Arial, Helvetica, sans-serif">Customer Relations: 
+      07 4050 5092</font></li>
+    <li><font size="2" face="Arial, Helvetica, sans-serif"><a href="mailto:trinity@trinityauto.com.au">Email:trinity@trinityauto.com.au</a></font></li>
+    <li><font size="2" face="Arial, Helvetica, sans-serif">PO Box 1862 Cairns, 
+      Qld 4870</font></li>
+    <li><font size="2" face="Arial, Helvetica, sans-serif"> cnr. Florence &amp; 
+      McLeod Sts., Cairns</font></li>
+    <li><font face="Arial, Helvetica, sans-serif" size="2">http://trinityauto.com.au</font></li>
+  </ul>
+</div>
+<div id="Layer5" style="position:absolute; left:51px; top:200px; width:60px; height:60px; z-index:5"><img src="shadow.gif" width="105" height="105"></div>
+<div id="Layer6" style="position:absolute; left:61px; top:191px; width:33px; height:34px; z-index:6"><img src="contact_small2.JPG" width="105" height="105"></div>
+<div id="Layer7" style="position:absolute; left:202px; top:131px; width:296px; height:35px; z-index:7"><font face="Arial, Helvetica, sans-serif" size="2">At 
+  <b>Trinity Auto Group</b>, we make it easy for you to contact us:</font></div>
+<div id="Layer8" style="position:absolute; left:60px; top:374px; width:426px; height:30px; z-index:8"><font face="Arial, Helvetica, sans-serif" size="2"><b>In 
+  our efforts to improve</b> our service to you, we would appreciate it if you 
+  would take a couple of minutes to complete the form below. Thank you.</font></div>
+<div id="Layer9" style="position:absolute; left:59px; top:443px; width:489px; height:23px; z-index:9">
+  <form method="POST" action="http://www.powerup.com.au/cgi-bin/mailgate">
+    <!-- email address to send results to --> 
+    <input type=hidden name="recipient" value="trinity@trinityauto.com.au">
+    <!-- what this form is about --> 
+    <input type=hidden name="subject" value="Feedback form">
+    <!-- Page redirected to after form sent --> 
+    <input type=hidden name="redirect" value="http://www.trinityauto.com.au/thankyou/thankyou.htm">
+    <!-- Contact details--> 
+    <table bgcolor="#66CCFF" width="500" cellspacing="2" cellpadding="2">
+      <tr> 
+        <td> 
+          <table bgcolor="#66CCFF" width="500" cellspacing="2" cellpadding="2">
+            <tr><td colspan="2"><font face="Arial" size="5" ><b>Customer Service Feedback Form</b></font> 
+              </td>
+					<td></td>
+				<p> 
+            </tr>
+            <tr>
+              <td><font face="Arial" size="-1"><b>How do you rate our customer 
+                service?</b></font> <br>
+                <input type="Radio" name="Service" value="Poor">
+                &nbsp; 
+                <input type="Radio" name="Service" value="Poor - Average">
+                &nbsp; 
+                <input type="Radio" name="Service" value="Average">
+                &nbsp; 
+                <input type="Radio" name="Service" value="Average - Good">
+                &nbsp; 
+                <input type="Radio" name="Service" value="Good" checked>
+                <br>
+                poor - average - excellent 
+                <p> 
+              </td>
+            </tr>
+            <tr>
+              <td><font face="Arial" size="-1"><b>Have you found our Web site 
+                informative?</b></font> <br>
+                <input type="Radio" name="Informative" value="Little">
+                &nbsp; 
+                <input type="Radio" name="Informative" value="Moderately - Little">
+                &nbsp; 
+                <input type="Radio" name="Informative" value="Maderately">
+                &nbsp; 
+                <input type="Radio" name="Informative" value="Very - Moderately">
+                &nbsp; 
+                <input type="Radio" name="Informative" value="Very" checked>
+                <br>
+                little - moderate - very 
+                <p> 
+              </td>
+            </tr>
+            <tr> 
+				<td colspan="2">
+              <font face="Arial" size="-1"><b>Comments:</b></font> <br>
+                <textarea name="Comments" cols="40" rows="5" wrap="PHYSICAL"></textarea>
+            </td>
+				<td></td>    
+				<p> 
+              
+            </tr>
+            <tr> 
+              <td><font face="Arial" size="-1"><b>Your contact information (optional):</b></font> 
+                <br>
+                <font face="Arial" size="-1">First name:</font> <br>
+                <input type=text name="firstname" size=20>
+              </td>
+              <td><font face="Arial" size="-1">Last name:</font> <br>
+                <input type=text name="lastname" size=20>
+              </td>
+            </tr>
+            <tr> 
+              <td><font face="Arial" size="-1">Email address:</font> <br>
+                <input type=text name="email" size=30>
+              </td>
+              <td><font face="Arial" size="-1">Phone number:</font> <br>
+                <input type=text name="phone" size=10>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <!-- buttons and their labels fields --> 
+    <p> 
+      <input type="Submit" name="send" value="Send">
+      &nbsp;&nbsp;&nbsp; 
+      <input type="reset" name="clear" value="Clear">
+  </form>	  
+</div>
+</body>
+</html>

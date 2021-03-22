@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+<TITLE>Using FTP to upload a site home page to the server</TITLE>
+<META NAME="Copyright" VALUE="Copyright 1998-1999, Cobalt Networks, Inc.  All rights reserved.">
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" BACKGROUND="/cobalt-images/black_tile8.gif">
+<IMG SRC="/cobalt-images/top_logo_black.gif" WIDTH="95" HEIGHT="36" BORDER="0"><FONT COLOR=#000000>&nbsp;&nbsp;</FONT><FONT SIZE="5" COLOR="#FFFFFF" FACE="HELVETICA, ARIAL"><B>Using FTP to upload a site home page to the server</B></FONT>
+<BR><BR><BR>
+<P>As a site administrator, you have the priviledge to publish the site home page.</P>
+
+<P>Once you have created a home page and you want to post it on the Cobalt server appliance, you can upload it by following the steps listed below.</P>
+
+<P>Note:  Before uploading your home page, make sure its file name is <B>index.html</B>. The uploaded page will appear at http://&lt;your.vanity.domain&gt;/index.html.</P>
+
+<OL>
+<LI>Launch your FTP application, wait for the FTP prompt.
+<LI>Type <B>open &lt;hostname&gt;</B>, press Return or Enter. (<B>&lt;hostname&gt;</B> stands for the site name or IP address of the site that will host your home page).
+<LI>Type your user name when asked for login name, then press Return or Enter.
+<LI>Type your password when asked for password, then press Return or Enter.
+<LI>Type <B>cd /web</B>, press Return or Enter. This takes you to the directory for your site home page.
+<LI>Type <B>put &lt;path&gt;/index.html</B>, press Return or Enter. This uploads the file.<BR>
+(<B>&lt;path&gt;</B> stands for the directory location of your home page file on your local disk, and index.html should be the actual name of the file containing your Home page.)
+<LI>Type <B>quit</B>, then press Return or Enter. This terminates the file transfer session.
+<LI>Done! 
+</OL>
+</BODY>
+</HTML>

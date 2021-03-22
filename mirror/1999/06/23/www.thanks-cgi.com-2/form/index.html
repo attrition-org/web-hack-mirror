@@ -1,0 +1,45 @@
+<html><head><title>EmailForm</title></head>
+<body bgcolor="3366aa" background=../images/bluebk.gif text=ffffff link=yellow alink=red vlink=lime>
+<center>
+
+<table border=0 width=640>
+<tr><td align=center valign=top>
+
+<script Language='JavaScript'>
+var now = new Date();
+var years = now.getYear();
+var months =now.getMonth();
+var days = now.getDate();
+var hours = now.getHours();
+var minutes = now.getMinutes();
+var seconds = now.getSeconds();
+var ram_num=Math.floor(Math.random()*10000);
+var markstr=""+years+"-"+months+"-"+days+"-"+hours+"-"+minutes+"-"+seconds+"-"+ram_num;
+var showcgiurl="http://www.thanks-cgi.com/cgi-bin/banker/banker_show.cgi";
+var clickcgiurl="http://www.thanks-cgi.com/cgi-bin/banker/banker_click.cgi";
+document.write('<a href='+clickcgiurl+'?'+markstr+'><img src='+showcgiurl+'?'+markstr+' border=0></a>');
+</script>
+<hr>
+
+<font face=arial><h1>THANKS-CGI <font color=red>E-MAIL FORM</font></h1></font>
+<table>
+<form method=post action=http://www.thanks-cgi.com/cgi-bin/form/formtoemail.cgi>
+<tr><td align=right><font face=arial>Subject:</font></td><td><input type=text name='subject' size=30>(DEFAULT)</td></tr>
+<tr><td align=right><font face=arial>To E-mail:</font></td><td><input type=text name='toemail' size=30>(DEFAULT)</td></tr>
+<tr><td align=right><font face=arial>From E-mail:</font></td><td><input type=text name='fromemail' size=30>(DEFAULT)</td></tr>
+<tr><td align=right><font face=arial>Copy E-mail:</font></td><td><input type=text name='copyemail' size=30>(DEFAULT)</td></tr>
+<tr><td align=right><font face=arial>Name :</font></td><td><input type=text name='Name' size=30></td></tr>
+<tr><td align=right><font face=arial>HomePage:</td><td><input type=text name='HomePage' size=30 value='http://'></td></tr>
+<tr><td><font face=arial>NOTE:</font></td><td><textarea name='NOTE' rows='6' cols='40' wrap=hard></textarea></td></tr>
+<tr><td colspan=2 align=center><input type=submit><input type=reset></td></tr>
+</form>
+</table>
+<hr>
+<font face=arial>
+<a href="../webform.html">DETAIL</a>
+|
+<a href="../index.html">BACK TO MAIN PAGE</a>
+</font>
+</td></tr></table>
+</body>
+</html>

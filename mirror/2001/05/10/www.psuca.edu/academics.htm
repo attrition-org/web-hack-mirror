@@ -1,0 +1,103 @@
+
+<HTML>
+<head>
+	<TITLE>Academics</TITLE>
+
+<SCRIPT LANGUAGE = "JavaScript">
+browser_nm = navigator.appName;
+        br_version = parseInt(navigator.appVersion);
+             if (browser_nm == "Netscape" && br_version >= 3) version = "n3";
+             else version = "n2";
+
+             if (version == "n3") {
+             psu_homeon = new Image(); psu_homeon.src = "/images/psu_home1.gif";
+             psu_homeoff = new Image(); psu_homeoff.src = "/images/psu_home.gif";
+            }
+
+     function img_act(imgName) {
+             if (version == "n3") { imgOn = eval(imgName + "on.src"); document [imgName].src
+			 = imgOn; }
+     }
+
+     function img_inact(imgName) {
+             if (version == "n3") { imgOff = eval(imgName + "off.src"); document [imgName].src = imgOff; }
+
+     }
+</SCRIPT>
+</head>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000ff" VLINK="#005500" ALINK="#00ff00" LEFTMARGIN=0 TOPMARGIN=0 >
+<FONT FACE="Verdana, Arial, Helvetica" SIZE=2>
+
+<center><img src="images/t_aca.gif" align="top" border="0" alt="Academics"></center><p>
+<hr><p>
+<table width="80%" align="center" valign="top">
+<tr><td>
+<table cellspacing=20>
+
+	<tr><td align=left valign=top><img src="images/ball.gif" border=0></td>
+	<th align=left valign=top><FONT FACE="Verdana, Arial, Helvetica" SIZE=3>
+	Degree Programs
+
+	<ul><FONT FACE="Verdana, Arial, Helvetica" SIZE=2>
+	<li><a href="business.htm">
+	    Business Administration - B.B.A., & M.B.A.</a>
+	<li><a href="science.htm">Computer Science & Information Systems - B.S. & M.S.</a>
+</font>
+	</ul>
+	</th></tr>
+
+	<tr><td align=left valign=top><img src="images/ball.gif" border=0></td>
+	<th align=left><FONT FACE="Verdana, Arial, Helvetica" SIZE=3>
+	Non-Degree Programs
+
+	<ul><FONT FACE="Verdana, Arial, Helvetica" SIZE=2>
+	<li><a href="esl/default.asp">ESL Home Page</a>
+	<li><a href="nondegree.htm">English as a Second Language Program</a></font>
+	</ul>
+	</th></tr>
+
+	<tr><td align=left valign=top><img src="images/ball.gif" border=0></td>
+	<th align=left><FONT FACE="Verdana, Arial, Helvetica" SIZE=3>
+	Caps
+
+	<ul><FONT FACE="Verdana, Arial, Helvetica" SIZE=2>
+	<li><a href="caps.htm">PSU Center For Asia Pacific Studies</a></font>
+	</ul>
+	</th></tr>
+	
+	<tr><td align=left valign=top><img src="images/ball.gif" border=0></td>
+	<th align=left><FONT FACE="Verdana, Arial, Helvetica" SIZE=3>
+	Policies
+
+	<ul><FONT FACE="Verdana, Arial, Helvetica" SIZE=2>
+	<li><a href="policies.htm">Standards of Satisfactory Progress Policies</a></font>
+	</ul>
+	</th></tr>
+
+
+</table>
+	
+</td></tr>
+</table><p>
+<hr>
+
+<center>
+<A HREF="index.html" TARGET="browser" onMouseover = "img_act('psu_home')" onMouseout = "img_inact('psu_home')">
+<IMG SRC="images/psu_home.gif" ALT="PSU Home" ALIGN=TOP BORDER=0 name="psu_home"></A>
+</center><p>
+
+<center><FONT FACE="Verdana, Arial, Helvetica" SIZE=1>
+| <font color="red">Academics</font> | <a href="admission.htm">Admission</a> |
+<a href="alumni.htm">Alumni</a> | <a href="calendar.htm">Calendar</a> |
+<a href="campus.htm">LA Campus</a> | <br>
+
+| <a href="degree.htm">Degrees</a> | <a href="facilities.htm">Facilities</a> |
+<a href="international.htm">International</a> |
+<a href="library.htm">Library</a> | <a href="services.htm">Student Services</a> |<p>
+
+Copyright&copy; 1928 - 2000 Pacific States University<br>
+<a href="mailto:webmaster@psuca.edu">Webmaster</a></font></center></p>
+
+</BODY>
+</HTML>

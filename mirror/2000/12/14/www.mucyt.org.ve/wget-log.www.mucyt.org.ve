@@ -1,0 +1,45 @@
+--17:36:35--  http://www.mucyt.org.ve:80/
+           => `www.mucyt.org.ve/index.html'
+Connecting to www.mucyt.org.ve:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 1,047 [text/html]
+
+    0K -> .                                                      [100%]
+
+17:36:36 (1022.46 KB/s) - `www.mucyt.org.ve/index.html' saved [1047/1047]
+
+Loading robots.txt; please ignore errors.
+--17:36:36--  http://www.mucyt.org.ve:80/no-robots.txt
+           => `www.mucyt.org.ve/no-robots.txt'
+Connecting to www.mucyt.org.ve:80... connected!
+HTTP request sent, awaiting response... 404 Object Not Found
+17:36:37 ERROR 404: Object Not Found.
+
+--17:36:37--  http://www.mucyt.org.ve:80/defaul1.jpg
+           => `www.mucyt.org.ve/defaul1.jpg'
+Connecting to www.mucyt.org.ve:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 106,720 [image/jpeg]
+
+    0K -> .......... .......... .......... .......... .......... [ 47%]
+   50K -> .......... .......... .......... ..........            [ 86%]
+
+17:58:38 (69.96 B/s) - Read error at byte 92292/106720 (Connection timed out). Retrying.
+
+--17:58:38--  http://www.mucyt.org.ve:80/defaul1.jpg
+  (try: 2) => `www.mucyt.org.ve/defaul1.jpg'
+Connecting to www.mucyt.org.ve:80... connected!
+HTTP request sent, awaiting response... 206 Partial content
+Length: 106,720 (14,428 to go) [image/jpeg]
+
+          [ skipping 50K ]
+   50K -> ,,,,,,,,,, ,,,,,,,,,, ,,,,,,,,,, ,,,,,,,,,, .......... [ 95%]
+  100K -> ....                                                   [100%]
+
+17:59:01 (776.95 B/s) - `www.mucyt.org.ve/defaul1.jpg' saved [106720/106720]
+
+Converting www.mucyt.org.ve/index.html... done.
+
+FINISHED --17:59:01--
+Downloaded: 107,767 bytes in 2 files
+Converting www.mucyt.org.ve/index.html... done.

@@ -1,0 +1,20 @@
+<!--Folio is a division of Open Market inc.  Visit us at http://www.openmarket.com-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<HTML>
+<HEAD>
+	<TITLE>Browse View Frame page</TITLE>
+</HEAD>
+
+<FRAMESET ROWS="*,104">
+	<FRAMESET COLS="33%,*">
+		<FRAME Name="TOC_Frm" SRC="om_isapi.dll?clientID=152&hitsperheading=on&infobase=JPLPP4.NFO&record={D}&softpage=TOC" SCROLLING="AUTO" MARGINHEIGHT=22 MARGINWIDTH=10>
+		
+			<FRAME Name="Doc_Frm" SRC="om_isapi.dll?clientID=152&infobase=JPLPP4.NFO&softpage=Document" SCROLLING="AUTO" MARGINHEIGHT=11 MARGINWIDTH=24>
+		
+	</FRAMESET>
+	<FRAME Name="Tool_Frm" SRC="om_isapi.dll?clientID=152&infobase=JPLPP4.NFO&softpage=Browse_Tools" SCROLLING="NO" MARGINHEIGHT=0 MARGINWIDTH=4>
+</FRAMESET>
+
+</HTML>
+

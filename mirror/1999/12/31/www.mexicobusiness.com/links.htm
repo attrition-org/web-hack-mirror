@@ -1,0 +1,278 @@
+<!DOCTYPE HTML PUBLIC "-//SoftQuad Software//DTD HoTMetaL PRO 6.0::19990601::extensions to HTML 4.0//EN" "hmpro6.dtd">
+<HTML> 
+  <HEAD><SCRIPT LANGUAGE="JavaScript" ID="SQPreload">
+<!--
+function preloadImages() {
+    var theImages = new Array;
+    for(i=0; i<preloadImages.arguments.length; i++) {
+      theImages[i] = new Image();
+      loadedImages[i].src = preloadImages.arguments[i];
+    }
+}
+// -->
+</SCRIPT> <SCRIPT ID="SQTicker" LANGUAGE="JavaScript">
+<!--
+function setupTicker(theMessage,fwidth,speed)
+	{
+	x = new Date(); formcount = x.getTime();
+	formName = "scrollForm" + formcount;
+	fieldName = "scrollField" + formcount;
+	if ((navigator.userAgent.indexOf("MSIE") == -1) && (navigator.userAgent.indexOf("msie") == -1))
+		{
+		fieldStyle = "";
+		}
+	else
+		{
+		fieldStyle = "Courier";
+		}
+	document.write('<FORM name="'+ formName + '"><INPUT NAME="' + fieldName + '" SIZE="' + fwidth + '" STYLE="font-family:' + fieldStyle + '"></FORM>');
+	eval("scrollText(document." + formName + "." + fieldName + ",theMessage,fwidth,speed,0,0,0)");
+	}
+
+function scrollText(theField,theMessage,theWidth,theSpeed,scrollStart,scrollEnd,scrollCount)
+	{
+	theOtherField = theField;
+	if (scrollEnd < (theMessage.length))
+		{
+		theField.value = padTextPrefix(theMessage.substring(scrollStart,scrollEnd)," ",theWidth-scrollCount);
+		scrollEnd++;
+		}
+	else
+		{
+		scrollCount++;
+		theField.value = padTextSuffix(padTextPrefix(theMessage.substring(scrollStart,scrollEnd)," ",theWidth-scrollCount)," ",theWidth);
+		}
+	if (scrollCount == (parseInt(theWidth)-theMessage.substring(scrollStart,scrollEnd).length+1))
+		{
+		scrollStart++;
+		}
+  	if (scrollStart == scrollEnd)
+		{
+		scrollStart = 0;
+		scrollEnd = 0;
+		scrollCount = 0;
+		}
+	scrollTimeout=eval("window.setTimeout('scrollText(theOtherField,\""+theMessage+"\"," + theWidth + "," + theSpeed + "," + scrollStart + "," + scrollEnd + "," + scrollCount + ")',theSpeed)");
+	}
+
+function padTextPrefix (InString, PadChar, DefLength)
+	{
+	if (InString.length>=DefLength)
+		{
+		return (InString);
+		}
+	OutString = InString;
+	for (Count = InString.length; Count<DefLength; Count++)
+		{
+		OutString=PadChar+OutString
+		}
+	return (OutString);
+	}
+
+function padTextSuffix (InString, PadChar, DefLength)
+	{
+	if (InString.length >= DefLength)
+		{
+		return (InString);
+		}
+	OutString = InString;
+	for (Count = InString.length; Count<DefLength; Count++)
+		{
+		OutString = OutString + PadChar
+		}
+	return (OutString);
+	}
+// -->
+</SCRIPT> 
+	 <TITLE></TITLE> <SCRIPT ID="HoverImage_preload" LANGUAGE="JavaScript"><!-- preloadImages("images/buttons/mouseover/aboutbut2.gif","images/buttons/mousedown/aboutbut3.gif") // --></SCRIPT><LINK REL="SQDynButton"
+	 HREF="images/buttons/mouseover/aboutbut2.gif"><LINK REL="SQDynButton"
+	 HREF="images/buttons/mousedown/aboutbut3.gif"> <SCRIPT ID="HoverImage1_preload" LANGUAGE="JavaScript"><!-- preloadImages("images/buttons/mouseover/subsbut2.gif","images/buttons/mousedown/subsbut3.gif") // --></SCRIPT><LINK REL="SQDynButton"
+	 HREF="images/buttons/mouseover/subsbut2.gif"><LINK REL="SQDynButton"
+	 HREF="images/buttons/mousedown/subsbut3.gif"><SCRIPT ID="HoverImage2_preload" LANGUAGE="JavaScript"><!-- preloadImages("images/buttons/mouseover/circubut2.gif","images/buttons/mousedown/circubut3.gif") // --></SCRIPT><LINK REL="SQDynButton"
+	 HREF="images/buttons/mouseover/circubut2.gif"><LINK REL="SQDynButton"
+	 HREF="images/buttons/mousedown/circubut3.gif"><SCRIPT ID="HoverImage3_preload" LANGUAGE="JavaScript"><!-- preloadImages("images/buttons/mouseover/profbut2.gif","images/buttons/mousedown/profbut3.gif") // --></SCRIPT><LINK REL="SQDynButton"
+	 HREF="images/buttons/mouseover/profbut2.gif"><LINK REL="SQDynButton"
+	 HREF="images/buttons/mousedown/profbut3.gif"><SCRIPT ID="HoverImage4_preload" LANGUAGE="JavaScript"><!-- preloadImages("images/buttons/mouseover/archbut2.gif","images/buttons/mousedown/archbut3.gif") // --></SCRIPT><LINK REL="SQDynButton"
+	 HREF="images/buttons/mouseover/archbut2.gif"><LINK REL="SQDynButton"
+	 HREF="images/buttons/mousedown/archbut3.gif"><SCRIPT ID="HoverImage5_preload" LANGUAGE="JavaScript"><!-- preloadImages("images/buttons/mouseover/pastcovbut2.gif","images/buttons/mousedown/pastcovbut3.gif") // --></SCRIPT><LINK REL="SQDynButton"
+	 HREF="images/buttons/mouseover/pastcovbut2.gif"><LINK REL="SQDynButton"
+	 HREF="images/buttons/mousedown/pastcovbut3.gif"><SCRIPT ID="HoverImage6_preload" LANGUAGE="JavaScript"><!-- preloadImages("images/buttons/mouseover/linkbut2.gif","images/buttons/mousedown/linkbut3.gif") // --></SCRIPT><LINK
+	 REL="SQDynButton" HREF="images/buttons/mouseover/linkbut2.gif"><LINK
+	 REL="SQDynButton" HREF="images/buttons/mousedown/linkbut3.gif"><SCRIPT ID="HoverImage7_preload" LANGUAGE="JavaScript"><!-- preloadImages("images/buttons/mouseover/contacbut2.gif","images/buttons/mousedown/contacbut3.gif") // --></SCRIPT><LINK
+	 REL="SQDynButton" HREF="images/buttons/mouseover/contacbut2.gif"><LINK
+	 REL="SQDynButton" HREF="images/buttons/mousedown/contacbut3.gif"> 
+  </HEAD> 
+  <BODY BACKGROUND="images/backgrounds/p12c14.gif"> 
+	 <TABLE WIDTH="650" CELLPADDING="0" CELLSPACING="0"> 
+		<TR> 
+		  <TD WIDTH="151"><A HREF="index.htm"><IMG SRC="images/mbblack.gif"
+			 ALT="MB" WIDTH="160" HEIGHT="95" BORDER="0"></A></TD> 
+		  <TD WIDTH="59" VALIGN="BOTTOM" ALIGN="LEFT"> 
+			 <P ALIGN="RIGHT"><FONT
+				COLOR="#000000">The&nbsp;Magazine&nbsp;of&nbsp;the</FONT></P> </TD> 
+		  <TD WIDTH="1248" VALIGN="BOTTOM"><FONT COLOR="#000000">Nafta
+			 Marketplace </FONT></TD> 
+		</TR> 
+		<TR> 
+		  <TD WIDTH="151" BGCOLOR="#FF0000">&nbsp;</TD> 
+		  <TD WIDTH="59"></TD> 
+		  <TD WIDTH="1248"></TD> 
+		</TR> 
+		<TR> 
+		  <TD WIDTH="151">&nbsp;</TD> 
+		  <TD WIDTH="59" VALIGN="TOP"><A HREF="about.htm"
+			 ONMOUSEDOWN="if (HoverImage.src) {HoverImage.src='images/buttons/mousedown/aboutbut3.gif'}"
+			 ONMOUSEOVER="if (HoverImage.src) {HoverImage.src='images/buttons/mouseover/aboutbut2.gif'}"
+			 ONMOUSEOUT="if (HoverImage.src) {HoverImage.src='images/buttons/default/aboutbut.gif'}"
+			 ONMOUSEUP="if (HoverImage.src) {HoverImage.src='images/buttons/mouseover/aboutbut2.gif'}"><IMG
+			 SRC="images/buttons/default/aboutbut.gif" ID="HoverImage" NAME="HoverImage"
+			 BORDER="0" WIDTH="137" HEIGHT="37"></A><A HREF="subscribe.htm"
+			 ONMOUSEDOWN="if (HoverImage1.src) {HoverImage1.src='images/buttons/mousedown/subsbut3.gif'}"
+			 ONMOUSEOVER="if (HoverImage1.src) {HoverImage1.src='images/buttons/mouseover/subsbut2.gif'}"
+			 ONMOUSEOUT="if (HoverImage1.src) {HoverImage1.src='images/buttons/default/subsbut.gif'}"
+			 ONMOUSEUP="if (HoverImage1.src) {HoverImage1.src='images/buttons/mouseover/subsbut2.gif'}"><IMG
+			 SRC="images/buttons/default/subsbut.gif" ID="HoverImage1" NAME="HoverImage1"
+			 BORDER="0" WIDTH="137" HEIGHT="37"></A><A HREF="circula.htm"
+			 ONMOUSEDOWN="if (HoverImage2.src) {HoverImage2.src='images/buttons/mousedown/circubut3.gif'}"
+			 ONMOUSEOVER="if (HoverImage2.src) {HoverImage2.src='images/buttons/mouseover/circubut2.gif'}"
+			 ONMOUSEOUT="if (HoverImage2.src) {HoverImage2.src='images/buttons/default/circubut.gif'}"
+			 ONMOUSEUP="if (HoverImage2.src) {HoverImage2.src='images/buttons/mouseover/circubut2.gif'}"><IMG
+			 SRC="images/buttons/default/circubut.gif" ID="HoverImage2" NAME="HoverImage2"
+			 BORDER="0" WIDTH="137" HEIGHT="37"></A><A HREF="editprof.htm"
+			 ONMOUSEDOWN="if (HoverImage3.src) {HoverImage3.src='images/buttons/mousedown/profbut3.gif'}"
+			 ONMOUSEOVER="if (HoverImage3.src) {HoverImage3.src='images/buttons/mouseover/profbut2.gif'}"
+			 ONMOUSEOUT="if (HoverImage3.src) {HoverImage3.src='images/buttons/default/profbut.gif'}"
+			 ONMOUSEUP="if (HoverImage3.src) {HoverImage3.src='images/buttons/mouseover/profbut2.gif'}"><IMG
+			 SRC="images/buttons/default/profbut.gif" ID="HoverImage3" NAME="HoverImage3"
+			 BORDER="0" WIDTH="137" HEIGHT="37"></A><A
+			 HREF="archives/index.htm"
+			 ONMOUSEDOWN="if (HoverImage4.src) {HoverImage4.src='images/buttons/mousedown/archbut3.gif'}"
+			 ONMOUSEOVER="if (HoverImage4.src) {HoverImage4.src='images/buttons/mouseover/archbut2.gif'}"
+			 ONMOUSEOUT="if (HoverImage4.src) {HoverImage4.src='images/buttons/default/archbut.gif'}"
+			 ONMOUSEUP="if (HoverImage4.src) {HoverImage4.src='images/buttons/mouseover/archbut2.gif'}"><IMG
+			 SRC="images/buttons/default/archbut.gif" ID="HoverImage4" NAME="HoverImage4"
+			 BORDER="0" WIDTH="137" HEIGHT="37"></A><A HREF="covers.htm"
+			 ONMOUSEDOWN="if (HoverImage5.src) {HoverImage5.src='images/buttons/mousedown/pastcovbut3.gif'}"
+			 ONMOUSEOVER="if (HoverImage5.src) {HoverImage5.src='images/buttons/mouseover/pastcovbut2.gif'}"
+			 ONMOUSEOUT="if (HoverImage5.src) {HoverImage5.src='images/buttons/default/pastcovbut.gif'}"
+			 ONMOUSEUP="if (HoverImage5.src) {HoverImage5.src='images/buttons/mouseover/pastcovbut2.gif'}"><IMG
+			 SRC="images/buttons/default/pastcovbut.gif" ID="HoverImage5" NAME="HoverImage5"
+			 BORDER="0" WIDTH="137" HEIGHT="37"></A><A HREF="links.htm"
+			 ONMOUSEDOWN="if (HoverImage6.src) {HoverImage6.src='images/buttons/mousedown/linkbut3.gif'}"
+			 ONMOUSEOVER="if (HoverImage6.src) {HoverImage6.src='images/buttons/mouseover/linkbut2.gif'}"
+			 ONMOUSEOUT="if (HoverImage6.src) {HoverImage6.src='images/buttons/default/linkbut.gif'}"
+			 ONMOUSEUP="if (HoverImage6.src) {HoverImage6.src='images/buttons/mouseover/linkbut2.gif'}"><IMG
+			 SRC="images/buttons/default/linkbut.gif" ID="HoverImage6" NAME="HoverImage6"
+			 BORDER="0" WIDTH="137" HEIGHT="37"></A><A HREF="contactus.htm"
+			 ONMOUSEDOWN="if (HoverImage7.src) {HoverImage7.src='images/buttons/mousedown/contacbut3.gif'}"
+			 ONMOUSEOVER="if (HoverImage7.src) {HoverImage7.src='images/buttons/mouseover/contacbut2.gif'}"
+			 ONMOUSEOUT="if (HoverImage7.src) {HoverImage7.src='images/buttons/default/contacbut.gif'}"
+			 ONMOUSEUP="if (HoverImage7.src) {HoverImage7.src='images/buttons/mouseover/contacbut2.gif'}"><IMG
+			 SRC="images/buttons/default/contacbut.gif" ID="HoverImage7" NAME="HoverImage7"
+			 BORDER="0" WIDTH="137" HEIGHT="37"></A></TD> 
+		  <TD WIDTH="1248" VALIGN="TOP" ALIGN="LEFT"> 
+			 <P ALIGN="LEFT"><FONT SIZE="+1"
+				COLOR="#000000"><B>Links.</B></FONT></P> 
+			 <P ALIGN="CENTER"><A HREF="www.bancalatina.com.mx"><IMG
+				SRC="images/LogoBLfin.jpg" ALT="Banca Latina" WIDTH="350" HEIGHT="70"
+				BORDER="0"></A></P>
+			 <P ALIGN="CENTER"><A HREF="http://www.worldtradevenue.com">
+				<IMG SRC="http://www.worldtradevenue.com/banners/wtvban450x68.gif" WIDTH="450"
+				 HEIGHT="68" ALT="World Trade Venue"> </A></P> 
+			 <P ALIGN="CENTER"><FONT COLOR="#000000">Federation of International
+				Trade Associations: <A HREF="www.fita.org">www.fita.org</A> </FONT></P><FONT
+			 COLOR="#000000"> </FONT> 
+			 <P ALIGN="CENTER"><FONT COLOR="#000000">Mexico Business
+				Communications Directory, Your Business Passport to Mexico
+				<A
+				 HREF="http://webhome.idirect.com/~mexicofx">http://webhome.idirect.com/~mexicofx</A></FONT></P>
+			 
+			 <P ALIGN="CENTER"><A HREF="http://www.floramex.com"><IMG
+				SRC="images/floramex.gif" ALT="Flowers anyone?" WIDTH="468"
+				HEIGHT="60"></A></P> 
+			 <P ALIGN="CENTER"><A HREF="http://www.mexicartessen.com">
+				<IMG SRC="images/mexicarte.gif" ALT="Art from Mexico" WIDTH="255"
+				 HEIGHT="63"></A></P> 
+			 <TABLE WIDTH="70%" ALIGN="center"> 
+				<TR> 
+				  <TD ALIGN="CENTER"></TD> 
+				  <TD ALIGN="CENTER"><A HREF="http://www.continental.com"><IMG
+					 SRC="images/continental.gif" ALT="Continental Airlines" WIDTH="190"
+					 HEIGHT="80"></A></TD> 
+				</TR> 
+				<TR> 
+				  <TD ALIGN="CENTER"></TD> 
+				  <TD ALIGN="CENTER"><FONT SIZE="-1">Continental
+					 Airlines.</FONT></TD> 
+				</TR> 
+				<TR> 
+				  <TD ALIGN="CENTER"><A HREF="http://www.iridium.com"><IMG
+					 SRC="images/iridium.gif" ALT="Click me!" WIDTH="108" HEIGHT="91"></A></TD> 
+				  <TD ALIGN="CENTER"><A HREF="http://www.femsa.com"><IMG
+					 SRC="images/femsa.jpg" ALT="Click me!" WIDTH="150" HEIGHT="100"></A></TD> 
+				</TR> 
+				<TR> 
+				  <TD ALIGN="CENTER"><FONT SIZE="-1">Global
+					 Communications.</FONT></TD> 
+				  <TD ALIGN="CENTER"><FONT SIZE="-1">Leading Mexico's Beverage
+					 Market.</FONT></TD> 
+				</TR> 
+				<TR> 
+				  <TD ALIGN="CENTER"><A HREF="http://cemex.com"><IMG
+					 SRC="images/cemex.jpg" ALT="{short description of image}" WIDTH="300"
+					 HEIGHT="70"></A></TD> 
+				  <TD ALIGN="CENTER"><A HREF="http://www.cuauhnahuac.edu.mx"><IMG
+					 SRC="images/cuauhn.gif" ALT="Click me!" WIDTH="180" HEIGHT="60"></A></TD> 
+				</TR> 
+				<TR> 
+				  <TD ALIGN="CENTER"><FONT SIZE="-1">The World's Cement
+					 Company</FONT></TD> 
+				  <TD ALIGN="CENTER"><FONT SIZE="-1">Spanish Language
+					 Institute</FONT></TD> 
+				</TR> 
+				<TR> 
+				  <TD ALIGN="CENTER"><A HREF="http://www.oracle.com"><IMG
+					 SRC="images/oracle.gif" ALT="Click Me" WIDTH="250" HEIGHT="45"></A></TD> 
+				  <TD ALIGN="CENTER"><A HREF="http://www.interconti.com"><IMG
+					 SRC="images/presidente.gif" ALT="{short description of image}" WIDTH="188"
+					 HEIGHT="94"></A></TD> 
+				</TR> 
+				<TR> 
+				  <TD ALIGN="CENTER"><FONT SIZE="-1">Oracle Corporation</FONT></TD>
+				  
+				  <TD ALIGN="CENTER"><FONT SIZE="-1">1-800-327-0200</FONT><BR>
+					 </TD> 
+				</TR> 
+				<TR> 
+				  <TD ALIGN="CENTER"></TD> 
+				  <TD ALIGN="CENTER"></TD> 
+				</TR> 
+				<TR> 
+				  <TD ALIGN="CENTER"></TD> 
+				  <TD ALIGN="CENTER"></TD> 
+				</TR> 
+				<TR> 
+				  <TD ALIGN="CENTER"></TD> 
+				  <TD ALIGN="CENTER"></TD> 
+				</TR> 
+			 </TABLE> 
+			 <P ALIGN="LEFT"></P> </TD> 
+		</TR> 
+		<TR> 
+		  <TD WIDTH="151">&nbsp;</TD> 
+		  <TD WIDTH="59"></TD> 
+		  <TD WIDTH="1248" BGCOLOR="#006600">&nbsp;</TD> 
+		</TR> 
+	 </TABLE> 
+	 <P ALIGN="LEFT">&nbsp;</P> 
+	 <P ALIGN="LEFT"><IMG SRC="images/rules/d13c17.gif"
+		ALT="--------------------" BORDER="0" WIDTH="650" HEIGHT="11"></P> 
+	 <P ALIGN="LEFT"><FONT SIZE="-1">1999 Copyright&copy; [Hemisphere
+		Publishers' Group, Inc]. All rights reserved.</FONT><BR>
+		<A HREF="mailto:alger@mexicobusiness.com"><FONT
+		SIZE="-1">webmaster</FONT></A></P> 
+	 <P ALIGN="CENTER">&nbsp;</P> 
+	 <P ALIGN="CENTER">&nbsp;</P> 
+	 <P ALIGN="CENTER">&nbsp;</P> 
+	 <P ALIGN="CENTER">&nbsp;</P> </BODY>
+</HTML>

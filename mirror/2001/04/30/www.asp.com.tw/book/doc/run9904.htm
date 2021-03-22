@@ -1,0 +1,423 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>第 五 篇</TITLE>
+<META NAME="Template" CONTENT="F:\CWORD60\TEMPLATE\manual1.dot">
+</HEAD>
+<BODY LINK="#0000ff">
+
+<FONT SIZE=6><P ALIGN="CENTER">RDS</FONT><FONT FACE="全真中隸書,???" LANG="ZH-TW" SIZE=6>網站資料庫技術速成</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4 COLOR="#0000ff"><P ALIGN="RIGHT">刊登於</FONT><FONT SIZE=4 COLOR="#0000ff">RUN!PC 1999</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4 COLOR="#0000ff">年</FONT><FONT SIZE=4 COLOR="#0000ff">4</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4 COLOR="#0000ff">月</FONT><FONT SIZE=4 COLOR="#0000ff">       </P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4 COLOR="#0000ff"><P ALIGN="RIGHT">作者</FONT><FONT SIZE=4 COLOR="#0000ff"> </FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4 COLOR="#0000ff">喬篷科技</FONT><FONT FACE="華康少女文字體W4,???" LANG="ZH-TW" SIZE=4 COLOR="#0000ff"> </FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4 COLOR="#0000ff">周世雄</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW"><P ALIGN="JUSTIFY"></P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">筆者為「網站熱門應用精選</FONT><FONT FACE="標楷體" LANG="ZH-TW">」</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>設計成員之一，以及微軟台北廳、經銷商訓練、</FONT><FONT SIZE=3>TechNet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>等研討會講師，和微軟之友、</FONT><FONT SIZE=3>RUN!PC</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>雜誌專欄作者，著作有「</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>網站熱門應用技術</FONT><FONT FACE="標楷體" LANG="ZH-TW">」</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、「微軟熱門Web技術速成班」等網站網頁設計十幾本電腦書籍。現任「喬篷科技」公司總經理，從事</FONT><FONT SIZE=3>Internet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>Intranet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>之</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料庫應用設計、網站網頁規劃架設等服務。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>示範網站</FONT><FONT FACE="華康少女文字體W4,???" LANG="ZH-TW">：</FONT>www.asp.com.tw</P>
+<FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">連絡</FONT><FONT SIZE=3>E-mail</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>：</FONT><FONT SIZE=3>jackchou@tpts5.seed.net.tw</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</P>
+<P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>將網站「資料庫化」</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">所謂將網站「資料庫化」，指的是使用「資料庫」管理整個網站，採用資料庫，將網站「資料庫化」的好處在那裡？好處如下：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>訪客自由搜尋：將網站的內容儲存於資料庫當中，可以搜尋網站的資料。</LI></P>
+<P ALIGN="JUSTIFY"><LI>網頁自動更新：只要更新資料庫的資料，網頁內容會自動更新。</LI></P>
+<P ALIGN="JUSTIFY"><LI>各種網站資料庫應用。</LI></P>
+<P ALIGN="JUSTIFY"><LI>管理方便：直接使用瀏覽器管理與維護。</LI></P></UL>
+
+<P ALIGN="JUSTIFY">如何透過瀏覽器存取網站資料庫的資料呢？答案是：</P>
+
+<UL>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>ADO</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>ActiveX Data Object</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Remote Data Service</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）</LI></P></UL>
+
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）程式呼叫</FONT><FONT SIZE=3>ADO</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>或</FONT><FONT SIZE=3>RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>物件，就可以存取網站資料庫的資料。</P>
+<P ALIGN="JUSTIFY">上一期介紹</FONT><FONT SIZE=3>ADO</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>網站資料庫的設計技巧。本期將介紹</FONT><FONT SIZE=3>RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>網站資料庫的設計技巧，包括</FONT><FONT SIZE=3>RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料庫存取基本技巧（功能、與</FONT><FONT SIZE=3>GRID</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>結合、與</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>結合）、</FONT><FONT SIZE=3>RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料庫存取進階技巧（顯示上下筆、顯示上下頁、修改資料）等單元。</P>
+</FONT><FONT FACE="Arial" SIZE=5 COLOR="#0000ff"><P>RDS</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff">（</FONT><FONT FACE="Arial" SIZE=5 COLOR="#0000ff">Remote Data Service</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff">）</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Remote Data Service</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）是甚麼東東呢？</FONT><FONT SIZE=3>RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>提供一個資料處理的</FONT><FONT SIZE=3>ActiveX Control</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，以存取支援</FONT><FONT SIZE=3>ODBC</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Open Database Connectivity</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的資料庫。</P>
+<P ALIGN="JUSTIFY">一般的網站資料處理技術，譬如</FONT><FONT SIZE=3>ADO</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>IDC</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>等，資料查詢的動作，是在伺服端的網站伺服器運作的，每次查詢或更新資料的要求，都須由用戶端發起送到伺服端，伺服器運作查詢或更新資料庫後，再傳回用戶端的瀏覽器顯示出來。這一來一往，對頻繁的資料查詢動作，效率較差。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>提供的用戶端資料暫存（</FONT><FONT SIZE=3>Client-Side Data Cache</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）功能，將大量的資料暫存於用戶端的電腦。</FONT><FONT SIZE=3>RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>將伺服器資料庫可高達數千筆的資料，先下載到用戶端，在用戶端的瀏覽器直接做頻繁的資料查詢動作，大部份時間不須再與伺服器連線，效率較佳。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>與其他網站資料處理技術，有一個很大的不同點，就是</FONT><FONT SIZE=3>RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的資料查詢或更新動作，是在用戶端的瀏覽器上運作的，於瀏覽器更新多筆資料後，再一次送到伺服器更新資料庫。</P>
+<P ALIGN="JUSTIFY">這個資料查詢就是由安裝於用戶端的</FONT><FONT SIZE=3>RDS ActiveX Control</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>處理的。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>將資料庫的大量資料暫存於用戶端（前端），直接於用戶端的瀏覽器查詢資料，節省前端（用戶端）和後端（伺服端）之間資料往返所須的時間。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>適合於</FONT><FONT SIZE=3>Internet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>Intranet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、或</FONT><FONT SIZE=3>LAN</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>上，做頻繁的資料庫資料存取查詢動作。</P>
+</FONT><FONT FACE="全真中隸書,???" LANG="ZH-TW" SIZE=6><P><A NAME="_Toc439431909"></FONT><FONT FACE="Arial" SIZE=6>RDS</FONT><FONT FACE="全真中隸書,???" LANG="ZH-TW" SIZE=6>存取資料庫的功能呢？</A></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Remote Data Service</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），提供了以下數個新的功能：</P>
+
+<UL>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>Client Cursor Engine</LI></P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY"><LI>於用戶端排序和搜尋資料（</FONT><FONT SIZE=3>Sorting and Filtering</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）</LI></P>
+<P ALIGN="JUSTIFY"><LI>與</FONT><FONT SIZE=3>IE 4.0/5.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>整合</LI></P>
+<P ALIGN="JUSTIFY"><LI>將一個</FONT><FONT SIZE=3>Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>轉換成</FONT><FONT SIZE=3>MIME</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>字串</LI></P>
+<P ALIGN="JUSTIFY"><LI>於用戶端產生</FONT><FONT SIZE=3>Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>物件</LI></P></UL>
+
+<P ALIGN="JUSTIFY">簡介如下：</P>
+</FONT><FONT FACE="Arial" SIZE=5 COLOR="#0000ff"><P>Client Cursor Engine</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">Client Cursor Engine</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>提供用戶端游標（</FONT><FONT SIZE=3>client-side cursor</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的功能。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">Client Cursor Engine</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>讓您以非同步的方式，開啟和存取一個未連線的</FONT><FONT SIZE=3>Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</P>
+<P ALIGN="JUSTIFY">能夠提供這項功能的主要原因，是因為提供了下列的屬性（</FONT><FONT SIZE=3>properties</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）和方法（</FONT><FONT SIZE=3>methods</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）：</P>
+
+<UL>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>ExecuteOptions</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>屬性：執行為同步方式或為非同步方式，是否同步存取下一個</FONT><FONT SIZE=3>Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。即是否使用獨立的</FONT><FONT SIZE=3>thread</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>separate thread</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），非同步方式來執行</FONT><FONT SIZE=3>DataControl</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>物件的</FONT><FONT SIZE=3>Refresh</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>FetchOptions</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>屬性：設定讀取下載資料的方式，可以設定是否必須等到將所有的查詢資料都讀取下載到</FONT><FONT SIZE=3>Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>後，才可以做其他的動作。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>ReadyState</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>屬性：傳回</FONT><FONT SIZE=3>RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的狀態，譬如已經開啟</FONT><FONT SIZE=3>RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>但尚無資料、</FONT><FONT SIZE=3>Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>正在接受資料當中、</FONT><FONT SIZE=3>Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>已經接受完資料等狀態。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>Cancel</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法：取消正在進行的非同步（</FONT><FONT SIZE=3>asynchronous</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）執行或讀取動作。</LI></P></UL>
+
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">Remote Data Service</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>Client Cursor Engine</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，讓您可以更新許多的資料庫，譬如</FONT><FONT SIZE=3>Microsoft SQL Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>Microsoft Access</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>Oracle</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>等，以前只能更新</FONT><FONT SIZE=3>Microsoft SQL Server </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料庫。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>於用戶端排序和搜尋資料</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>提供於用戶端，對於暫存（</FONT><FONT SIZE=3>cache</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的資料，進行排序和搜尋資料的功能。</P>
+<P ALIGN="JUSTIFY">由於提供下列的屬性（</FONT><FONT SIZE=3>properties</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）和方法（</FONT><FONT SIZE=3>methods</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），您可以選擇待排序和搜尋資料的欄位名稱、排序的方向、搜尋的原則：</P>
+
+<UL>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>SortColumn</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>屬性：設定待排序的欄位名稱。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>SortDirection</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>屬性：設定待排序的方向，</FONT><FONT SIZE=3>True </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>表示正向排序（</FONT><FONT SIZE=3>Ascending order</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），</FONT><FONT SIZE=3>False</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>表示反向排序（</FONT><FONT SIZE=3>Descending order</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>FilterColumn</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>屬性：設定待搜尋的欄位名稱。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>FilterCriterion</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>屬性：設定待搜尋的原則。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>FilterValue</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>屬性：設定待搜尋的比較值。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>Reset</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法：開始於用戶端執行排序和搜尋的動作。</LI></P></UL>
+
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>與</FONT><FONT FACE="Arial" SIZE=5 COLOR="#0000ff">IE 4.0/5.0</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff">整合</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">Internet Explorer 4.0/5.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>瀏覽器，已經包括</FONT><FONT SIZE=3>Remote Data Service</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>用戶端執的元件，您不需要於</FONT><FONT SIZE=3>RDS ActiveX Control</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>使用</FONT><FONT SIZE=3>CODEBASE </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>參數來下載</FONT><FONT SIZE=3>Remote Data Service .cab</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>檔案。</P>
+<P ALIGN="JUSTIFY">最大的好處，是</FONT><FONT SIZE=3>RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>存取資料庫所下載到瀏覽器的資料，可以與</FONT><FONT SIZE=3>IE 4.0/5.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>大部份的</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>標記相結合，以顯示或更新資料。</P>
+<P ALIGN="JUSTIFY">使用</FONT><FONT SIZE=3>IE 4.0/5.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>標記，以顯示或更新</FONT><FONT SIZE=3>RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料，就不需要使用</FONT><FONT SIZE=3>DataControl</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>物件了。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>將一個</FONT><FONT FACE="Arial" SIZE=5 COLOR="#0000ff">Recordset</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff">轉換成</FONT><FONT FACE="Arial" SIZE=5 COLOR="#0000ff">MIME</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff">字串</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">ConvertToString</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法，將一個</FONT><FONT SIZE=3>Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>轉換成</FONT><FONT SIZE=3>MIME</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>字串。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>於用戶端產生</FONT><FONT FACE="Arial" SIZE=5 COLOR="#0000ff">Recordset</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff">物件</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">CreateRecordset</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法，讓您直接於用戶端產生</FONT><FONT SIZE=3>Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>物件。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">DataControl</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>物件提供唯讀的</FONT><FONT SIZE=3>Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>和唯寫的</FONT><FONT SIZE=3>SourceRecordset</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>屬性。</P>
+</FONT><FONT FACE="Arial" SIZE=5 COLOR="#0000ff"><P>RDS</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff">執行環境</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">於伺服器端所須的</FONT><FONT SIZE=3>RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>執行環境，如下：</P>
+
+<UL>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>Windows NT Server version 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>包括</FONT><FONT SIZE=3>Service Pack 3</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>或以後的版本。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>Internet Information Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）</FONT><FONT SIZE=3>3.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>或以後的版本，包括安裝</FONT><FONT SIZE=3>Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</FONT><FONT SIZE=3> </LI></P>
+<P ALIGN="JUSTIFY"><LI>Microsoft SQL Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>或其他支援</FONT><FONT SIZE=3>ODBC Level 2</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的資料庫。</LI></P></UL>
+
+<P ALIGN="JUSTIFY">於用戶端所須的</FONT><FONT SIZE=3>RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>執行環境，如下：</P>
+
+<UL>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>Windows 95</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>Windows NT Workstation 4.0 </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>Windows NT Server 4.0 </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>包括</FONT><FONT SIZE=3>Service Pack 3</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>或以後的版本。</LI></P>
+<P ALIGN="JUSTIFY"><LI>支援</FONT><FONT SIZE=3>ActiveX</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的瀏覽器，譬如</FONT><FONT SIZE=3>Microsoft Internet Explorer 3.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>以上版本等。</LI></P></UL>
+
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>三層式架構與</FONT><FONT FACE="Arial" SIZE=5 COLOR="#0000ff">RDS</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">若要善用</FONT><FONT SIZE=3>RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Remote Data Service</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）技術，必須了解甚麼是「三層式架構」的應用程式（</FONT><FONT SIZE=3>Three-Tiered Applications</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）。所謂「三層式架構」，指得是以下三層：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>用戶端層（</FONT><FONT SIZE=3>Client tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）：為一台</FONT><FONT SIZE=3>local</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>電腦，提供使用者顯示介面，以及處理遠端資料來源的資料。一般為使用瀏覽器（</FONT><FONT SIZE=3>Web-based</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>應用程式）、或使用一個單獨執行經編譯過的應用程式（</FONT><FONT SIZE=3>stand-alone compiled front-end application</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），做為使用者介面。</LI></P>
+<P ALIGN="JUSTIFY"><LI>中間層（</FONT><FONT SIZE=3>Middle tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）：為一台提供商業法則（</FONT><FONT SIZE=3>business rules</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的</FONT><FONT SIZE=3>Windows NT Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>電腦，</FONT><FONT SIZE=3>Web-based</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>應用程式為執行</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Active Server Page</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）語言的</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Internet Information Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），非</FONT><FONT SIZE=3>Web-based</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>應用程式則執行一個經編譯過的可執行應用程式。</LI></P>
+<P ALIGN="JUSTIFY"><LI>資料來源層（</FONT><FONT SIZE=3>Data source tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）：為一台提供資料庫管理系統（</FONT><FONT SIZE=3>database management system</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，簡稱</FONT><FONT SIZE=3>DBMS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的電腦，譬如</FONT><FONT SIZE=3>Microsoft SQL Server </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料庫。</LI></P></UL>
+
+<P ALIGN="JUSTIFY">「兩層式架構」與「三層式架構」主要相異處，為中間層（</FONT><FONT SIZE=3>Middle tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）與資料來源層（</FONT><FONT SIZE=3>Data source tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）被合併為一層。</FONT><FONT SIZE=3> </P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">「三層式架構」指得是邏輯上的三層，實際上，這「三層」並不需要區分為網路上的「三台」電腦，譬如您可以使用兩台電腦，一台</FONT><FONT SIZE=3>Windows 95/98</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>電腦執行瀏覽器，另外一台</FONT><FONT SIZE=3>Windows NT Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>電腦執行執行</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>和</FONT><FONT SIZE=3>Microsoft SQL Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。您可以根據效能和管理來決定要使用幾台的電腦。</P>
+<P ALIGN="JUSTIFY">當您開發</FONT><FONT SIZE=3>Remote Data Service</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的應用程式時，您可以區分應用程式為三個邏輯層。</P>
+<P ALIGN="JUSTIFY">中間層（</FONT><FONT SIZE=3>Middle tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）執行</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。用戶端層（</FONT><FONT SIZE=3>Client tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）一般為使用</FONT><FONT SIZE=3>Internet Explorer</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>瀏覽器，使用</FONT><FONT SIZE=3>HTTP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>協定與伺服器通訊，由於</FONT><FONT SIZE=3>Internet Explorer 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>或以後版本已經包含</FONT><FONT SIZE=3>RDS client</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>端元件（</FONT><FONT SIZE=3>client-side RDS components</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），因此可以簡化您的開發工作。</P>
+<P ALIGN="JUSTIFY">一旦使用者從用戶端層（</FONT><FONT SIZE=3>Client tier</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）要求查詢資料，經過</FONT><FONT SIZE=3>RDS client</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>端元件，和</FONT><FONT SIZE=3>RDS </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>伺服器端元件（</FONT><FONT SIZE=3>server-side RDS components</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），將查詢需求傳送到</FONT><FONT SIZE=3>IIS Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>伺服器和</FONT><FONT SIZE=3>DBMS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">RDS </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>伺服器端元件將</FONT><FONT SIZE=3>DBMS </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>將所執行結果的資料傳送到一個</FONT><FONT SIZE=3>ADO Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>物件，然後經過網路送回到用戶端電腦。</P>
+<P ALIGN="JUSTIFY">用戶端電腦可以使用一個</FONT><FONT SIZE=3>data-aware control</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，譬如一個</FONT><FONT SIZE=3>text box </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>或</FONT><FONT SIZE=3>grid</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，來顯示資料，管理資料的是</FONT><FONT SIZE=3>RDS.DataControl</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>物件。一個</FONT><FONT SIZE=3>RDS.DataControl</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>物件可以管理數個</FONT><FONT SIZE=3>data-aware controls</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>提供的用戶端資料暫存（</FONT><FONT SIZE=3>Client-Side Data Cache</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）功能，將大量的資料暫存於用戶端的電腦，可以減少與</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的連線數目，以提高效率。</P>
+<P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="全真中隸書,???" LANG="ZH-TW" SIZE=6><P><A NAME="_Toc430343000"><A NAME="_Toc439431910"></FONT><FONT FACE="Arial" SIZE=6>RDS</FONT><FONT FACE="全真中隸書,???" LANG="ZH-TW" SIZE=6>存取資料庫如何與</FONT><FONT FACE="Arial" SIZE=6>GRID</FONT><FONT FACE="全真中隸書,???" LANG="ZH-TW" SIZE=6>結合呢？</A></A></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>將存取查詢資料庫的結果顯示出來，有兩種方法：</P>
+<OL>
+
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>GRID ActiveX controls</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>：將</FONT><FONT SIZE=3>RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>存取查詢資料庫的結果</FONT><FONT SIZE=3>Recordset</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，連接到一個或多個的</FONT><FONT SIZE=3>GRID ActiveX controls</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，於用戶端的瀏覽器顯示出來，譬如</FONT><FONT SIZE=3>Apex</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>公司的</FONT><FONT SIZE=3>Datagrid</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、和</FONT><FONT SIZE=3>Sheridan</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>公司的</FONT><FONT SIZE=3>DropDown list</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>等。</LI></P>
+<P ALIGN="JUSTIFY"><LI>您也可使用</FONT><FONT SIZE=3>IE 4.0/5.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的大部份</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>標記，以顯示或更新資料。</LI></P></OL>
+
+</FONT><FONT FACE="Arial" SIZE=5 COLOR="#0000ff"><P>RDS</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff">資料庫設計要訣</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料庫設計要訣的步驟，如下：</P>
+<OL>
+
+<P ALIGN="JUSTIFY"><LI>將</FONT><FONT SIZE=3>RDS ActiveX Control</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，使用</FONT><FONT SIZE=3>&lt;OBJECT&gt;...&lt;/OBJECT&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>標記插入</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼當中。</LI></P>
+<P ALIGN="JUSTIFY"><LI>於</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼要顯示的地方，插入顯示查詢結果</FONT><FONT SIZE=3>GRID ActiveX Control</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>或使用</FONT><FONT SIZE=3>IE 4.0/5.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的大部份</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>標記。</LI></P>
+<P ALIGN="JUSTIFY"><LI>於「</FONT><FONT SIZE=3>rds.Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」設定</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>網址，「</FONT><FONT SIZE=3>rds.Connect</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」設定資料庫連線，和「</FONT><FONT SIZE=3>rds.SQL</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」設定</FONT><FONT SIZE=3>SQL</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>指令，再下個「</FONT><FONT SIZE=3>rds.Refresh</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」指令，即可開始執行存取查詢資料庫的動作。</LI></P></OL>
+
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料庫設計要訣的第一步驟，就是將</FONT><FONT SIZE=3>RDS ActiveX Control</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，使用</FONT><FONT SIZE=3>&lt;OBJECT&gt;...&lt;/OBJECT&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>標記插入</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼當中，如下：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;OBJECT classid="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"</P>
+<P>    ID=rds HEIGHT=1 WIDTH = 1&gt;</P>
+<P>    &lt;PARAM NAME="BINDINGS" VALUE="GRID1;"&gt;</P>
+<P>&lt;/OBJECT&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">用戶端的瀏覽器一旦瀏覽此</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>網頁，將自動下載和安裝</FONT><FONT SIZE=3>RDS ActiveX control</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>於用戶端的硬碟當中，只要第一次下載和安裝即可，不必每次瀏覽時都下載。</FONT><FONT SIZE=3>IE 4.0/5.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>已經包括這個</FONT><FONT SIZE=3>RDS ActiveX control</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</P>
+<P ALIGN="JUSTIFY">「</FONT><FONT SIZE=3>BINDINGS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」設定顯示查詢結果</FONT><FONT SIZE=3>GRID ActiveX control</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的名稱（</FONT><FONT SIZE=3>ID</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）。</P>
+<P ALIGN="JUSTIFY">第二步驟於</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼要顯示的地方，插入顯示此查詢結果</FONT><FONT SIZE=3>GRID ActiveX Control</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>&lt;OBJECT&gt;...&lt;/OBJECT&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>標記，如下：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;OBJECT ID="GRID1" WIDTH=600 HEIGHT=200 Datasrc="#rds"</P>
+<P> CODEBASE="http://&lt;%=Request.ServerVariables("SERVER_NAME")%&gt;/MSADC/Samples/ssdatb32.cab"</P>
+<P> CLASSID="CLSID:AC05DC80-7DF1-11d0-839E-00A024A94B3A"&gt;</P>
+<P>&lt;/OBJECT&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">顯示查詢結果</FONT><FONT SIZE=3>GRID ActiveX Control</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的相關檔案，為「</FONT><FONT SIZE=3>CODEBASE</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」所設定的</FONT><FONT SIZE=3>ssdatb32.cab</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>檔案，將自動下載和安裝於用戶端的硬碟當中。</P>
+<P ALIGN="JUSTIFY">第二步驟也可使用</FONT><FONT SIZE=3>IE 4.0/5.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的大部份</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>標記，不一定要使用</FONT><FONT SIZE=3>GRID ActiveX Control</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</P>
+<P ALIGN="JUSTIFY">第三步驟於「</FONT><FONT SIZE=3>rds.Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」設定</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>網址，「</FONT><FONT SIZE=3>rds.Connect</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」設定資料庫連線，和「</FONT><FONT SIZE=3>rds.SQL</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」設定</FONT><FONT SIZE=3>SQL</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>指令，再下個「</FONT><FONT SIZE=3>rds.Refresh</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」指令，即可開始執行存取查詢資料庫的動作。如下：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;SCRIPT LANGUAGE="VBScript"&gt;</P>
+<P>SUB Window_OnLoad</P>
+<P>&#9;rds.Server = "http://&lt;%=Request.ServerVariables("SERVER_NAME")%&gt;"</P>
+<P>  &#9;rds.Connect = "Driver={Microsoft Access Driver (*.mdb)};DBQ=&lt;% = Server.MapPath("ntopsamp.mdb") %&gt;"</P>
+<P>  &#9;rds.SQL = "Select * from </FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>著作</FONT><FONT FACE="Arial" SIZE=3>"</P>
+<P>  rds.Refresh&#9;&#9;</P>
+<P>End Sub</P>
+<P>&lt;/SCRIPT&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">看個例子就可知曉。</P>
+<P ALIGN="JUSTIFY">於用戶端使用瀏覽器</FONT><FONT SIZE=3>IE</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，瀏覽執行的結果，顯示資料表「著作」的所有資料。</P>
+<P ALIGN="JUSTIFY">程式碼部份，首先使用</FONT><FONT SIZE=3>RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的「</FONT><FONT SIZE=3>rds.Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」連結到</FONT><FONT SIZE=3>Access</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料庫</FONT><FONT SIZE=3>ntopsamp.mdb</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，「</FONT><FONT SIZE=3>rds.SQL</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」下</FONT><FONT SIZE=3>SQL</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>指令，「</FONT><FONT SIZE=3>Select * from </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>著作」查詢資料表「著作」的所有資料，將查詢的結果傳回到</FONT><FONT SIZE=3>rds</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>ActiveX control</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>當中：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;SCRIPT LANGUAGE="VBScript"&gt;</P>
+<P>SUB Window_OnLoad</P>
+<P>&#9;rds.Server = "http://&lt;%=Request.ServerVariables("SERVER_NAME")%&gt;"</P>
+<P>  &#9;rds.Connect = "Driver={Microsoft Access Driver (*.mdb)};DBQ=&lt;% = Server.MapPath("ntopsamp.mdb") %&gt;"</P>
+<P>  &#9;rds.SQL = "Select * from </FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>著作</FONT><FONT FACE="Arial" SIZE=3>"</P>
+<P>   rds.Refresh&#9;&#9;</P>
+<P>End Sub</P>
+<P>&lt;/SCRIPT&gt;</P>
+<P>&lt;OBJECT ID="GRID1" WIDTH=600 HEIGHT=200 Datasrc="#rds"</P>
+<P> CODEBASE="http://&lt;%=Request.ServerVariables("SERVER_NAME")%&gt;/MSADC/Samples/ssdatb32.cab"</P>
+<P> CLASSID="CLSID:AC05DC80-7DF1-11d0-839E-00A024A94B3A"&gt;</P>
+<P>&lt;/OBJECT&gt;</P>
+<P>&lt;OBJECT classid="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"</P>
+<P>    ID=rds HEIGHT=1 WIDTH = 1&gt;</P>
+<P>    &lt;PARAM NAME="BINDINGS" VALUE="GRID1;"&gt;</P>
+<P>&lt;/OBJECT&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">接著，將查詢的結果與</FONT><FONT SIZE=3>GRID ActiveX control GRID1</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>配合，於用戶端的瀏覽器顯示出來。</P>
+</FONT><FONT FACE="Arial" SIZE=5 COLOR="#0000ff"><P>RDS ActiveX control</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff">設定</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">第三步驟於「</FONT><FONT SIZE=3>rds.Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」設定</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>網址，「</FONT><FONT SIZE=3>rds.Connect</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」設定資料庫連線，和「</FONT><FONT SIZE=3>rds.SQL</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」設定</FONT><FONT SIZE=3>SQL</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>指令的部份，您也可以於</FONT><FONT SIZE=3>RDS ActiveX control</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的參數當中直接設定，執行結果與上例相同。</P>
+<P ALIGN="JUSTIFY">程式碼部份，與上例的差異處為：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;OBJECT classid="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"</P>
+<P>    ID=rds HEIGHT=1 WIDTH = 1&gt;</P>
+<P>    &lt;PARAM NAME="BINDINGS" VALUE="GRID1;"&gt;</P>
+<P>    &lt;PARAM NAME="SQL" VALUE="Select * from </FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>著作</FONT><FONT FACE="Arial" SIZE=3>"&gt;</P>
+<P>    &lt;PARAM NAME="Connect" VALUE="Driver={Microsoft Access Driver (*.mdb)};DBQ=&lt;% = Server.MapPath("ntopsamp.mdb") %&gt;"&gt;</P>
+<P>    &lt;PARAM NAME="Server" VALUE="http://&lt;%=Request.ServerVariables("SERVER_NAME")%&gt;" &gt;</P>
+<P>&lt;/OBJECT&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">於</FONT><FONT SIZE=3>RDS ActiveX control</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的參數</FONT><FONT SIZE=3>&lt;PARAM…&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>當中直接設定</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>網址、資料庫連線、和</FONT><FONT SIZE=3>SQL</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>指令，就不需要加入上例的</FONT><FONT SIZE=3>VBScript</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式碼，也不需要下個「</FONT><FONT SIZE=3>rds.Refresh</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」指令，即可自動執行存取查詢資料庫的動作。</P>
+</FONT><FONT FACE="全真中隸書,???" LANG="ZH-TW" SIZE=6><P><A NAME="_Toc430343001"><A NAME="_Toc439431911"></FONT><FONT FACE="Arial" SIZE=6>RDS</FONT><FONT FACE="全真中隸書,???" LANG="ZH-TW" SIZE=6>存取資料庫如何與</FONT><FONT FACE="Arial" SIZE=6>HTML</FONT><FONT FACE="全真中隸書,???" LANG="ZH-TW" SIZE=6>結合呢？</A></A></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼如何顯示執行</FONT><FONT SIZE=3>RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>查詢資料庫資料的結果呢？</P>
+<P ALIGN="JUSTIFY">與</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>標記相結合的技巧如下：</P>
+<OL>
+
+<P ALIGN="JUSTIFY"><LI>於</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>標記的</FONT><FONT SIZE=3>DATASRC</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>參數，設定資料來源。</LI></P>
+<P ALIGN="JUSTIFY"><LI>於</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>標記的</FONT><FONT SIZE=3>DATAFLD</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>參數，設定資料欄位名稱。</LI></P></OL>
+
+<P ALIGN="JUSTIFY">程式碼部份，首先使用</FONT><FONT SIZE=3>RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的「</FONT><FONT SIZE=3>rds3.Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」連結到</FONT><FONT SIZE=3>Access</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料庫</FONT><FONT SIZE=3>ntopsamp.mdb</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，「</FONT><FONT SIZE=3>rds3.SQL</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」下</FONT><FONT SIZE=3>SQL</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>指令，「</FONT><FONT SIZE=3>Select * from </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>著作」查詢資料表「著作」的所有資料，將查詢的結果傳回到</FONT><FONT SIZE=3>rds3</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>ActiveX control</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>當中：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;SCRIPT LANGUAGE="VBScript"&gt;</P>
+<P>SUB Window_OnLoad</P>
+<P>&#9;rds3.Server = "http://&lt;%=Request.ServerVariables("SERVER_NAME") %&gt;"</P>
+<P>rds3.Connect = "Driver={Microsoft Access Driver (*.mdb)};DBQ=&lt;% = Server.MapPath("ntopsamp.mdb") %&gt;"</P>
+<P>rds3.SQL = "Select * from </FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>著作</FONT><FONT FACE="Arial" SIZE=3>"</P>
+<P>rds3.Refresh&#9;&#9;</P>
+<P>End Sub</P>
+<P>&lt;/SCRIPT&gt;</P>
+<P>&lt;OBJECT classid="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"</P>
+<P>    ID=rds3 HEIGHT=1 WIDTH=1&gt;</P>
+<P>&lt;/OBJECT&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">接著，將查詢的結果與</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼相結合，顯示於瀏覽器</FONT><FONT SIZE=3>IE</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>當中。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>表格</FONT><FONT FACE="Arial" SIZE=5 COLOR="#0000ff">Table</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">於用戶端使用瀏覽器</FONT><FONT SIZE=3>IE</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，瀏覽執行的結果，顯示「著作」的所有資料。與表格的</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼</FONT><FONT SIZE=3>&lt;Table&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>相結合的</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式碼如下：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;table DataSrc="#rds3"&gt;</P>
+<P>&lt;tr&gt;&lt;thead&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>書名</FONT><FONT FACE="Arial" SIZE=3>&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>出版</FONT><FONT FACE="Arial" SIZE=3>&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>圖片</FONT><FONT FACE="Arial" SIZE=3>&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>簡介</FONT><FONT FACE="Arial" SIZE=3>&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;/tr&gt;&lt;/thead&gt;</P>
+<P>&lt;tr&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;span DataFld="</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>書名</FONT><FONT FACE="Arial" SIZE=3>"&gt;&lt;/span&gt;&lt;/td&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;span DataFld="</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>圖片</FONT><FONT FACE="Arial" SIZE=3>"&gt;&lt;/span&gt;&lt;/td&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;span DataFld="</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>出版</FONT><FONT FACE="Arial" SIZE=3>"&gt;&lt;/span&gt;&lt;/td&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;span DataFld="</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>簡介</FONT><FONT FACE="Arial" SIZE=3>"&gt;&lt;/span&gt;&lt;/td&gt;</P>
+<P>&lt;/tr&gt;</P>
+<P>&lt;/table&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">將</FONT><FONT SIZE=3>RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>查詢的結果顯示於表格</FONT><FONT SIZE=3>&lt;Table&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>當中的技巧，為如何區分欄位標題和資料的部份，技巧為使用「</FONT><FONT SIZE=3>&lt;thead&gt;…&lt;/thead&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」以顯示欄位標題部份，以後的部份才為資料部份。資料部份可以使用</FONT><FONT SIZE=3>&lt;tbody&gt;…&lt;tbody&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>或省略之。</P>
+<P ALIGN="JUSTIFY">其中「</FONT><FONT SIZE=3>DataSrc="#rds3"</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」設定資料來源為</FONT><FONT SIZE=3>rds3</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>ActiveX control</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，「</FONT><FONT SIZE=3>DataFld="</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>書名</FONT><FONT SIZE=3>"</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」將欄位為「書名」的資料顯示出來。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>其他</FONT><FONT FACE="華康細圓體,新細明體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff">html</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff">標記</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">與走馬燈文字</FONT><FONT SIZE=3>&lt;Marquee&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼相結合的</FONT><FONT FACE="華康細圓體,新細明體" LANG="ZH-TW" SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式碼如下：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;marquee DataSrc="#rds3" DataFld="</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>書名</FONT><FONT FACE="Arial" SIZE=3>"&gt;&lt;/marquee&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">其中「</FONT><FONT SIZE=3>DataSrc="#rds3"</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」設定資料來源為</FONT><FONT SIZE=3>rds3</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>ActiveX control</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，「</FONT><FONT SIZE=3>DataFld="</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>書名</FONT><FONT SIZE=3>"</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」將欄位為「書名」的資料顯示為走馬燈文字。</P>
+<P ALIGN="JUSTIFY">與文字輸入的</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼</FONT><FONT SIZE=3>Text</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>相結合的</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式碼如下：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;input type=text size=30 DataSrc="#rds3" DataFld="</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>書名</FONT><FONT FACE="Arial" SIZE=3>"&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">其中「</FONT><FONT SIZE=3>DataSrc="#rds3"</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」設定資料來源為</FONT><FONT SIZE=3>rds3</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>ActiveX control</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，「</FONT><FONT SIZE=3>DataFld="</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>書名</FONT><FONT SIZE=3>"</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」將文字輸入預設為欄位「書名」的資料。</P>
+<P ALIGN="JUSTIFY">與多行文字輸入的</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼</FONT><FONT SIZE=3>&lt; Textarea&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>相結合的</FONT><FONT FACE="華康細圓體,新細明體" LANG="ZH-TW" SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式碼如下：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;textarea DataSrc="#rds3" DataFld="</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>書名</FONT><FONT FACE="Arial" SIZE=3>"&gt;&lt;/textarea&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">其中「</FONT><FONT SIZE=3>DataSrc="#rds3"</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」設定資料來源為</FONT><FONT SIZE=3>rds3</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>ActiveX control</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，「</FONT><FONT SIZE=3>DataFld="</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>書名</FONT><FONT SIZE=3>"</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」將多行文字輸入預設為欄位「書名」的資料。</P>
+<P ALIGN="JUSTIFY">與勾選的</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼</FONT><FONT SIZE=3>Checkbox</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>相結合的</FONT><FONT FACE="華康細圓體,新細明體" LANG="ZH-TW" SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式碼如下：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;input type=checkbox DataSrc="#rds3" DataFld="</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>新書</FONT><FONT FACE="Arial" SIZE=3>"&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>新書</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">其中「</FONT><FONT SIZE=3>DataSrc="#rds3"</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」設定資料來源為</FONT><FONT SIZE=3>rds3</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>ActiveX control</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，「</FONT><FONT SIZE=3>DataFld="</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>新書</FONT><FONT SIZE=3>"</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」將檢查「著作」資料表中欄位「新書」資料的值，若為</FONT><FONT SIZE=3>True</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>則勾選（</FONT><FONT SIZE=3>Checked</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）。</P>
+<P ALIGN="JUSTIFY">與圖片的</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼</FONT><FONT SIZE=3>&lt;IMG…&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>相結合的</FONT><FONT FACE="華康細圓體,新細明體" LANG="ZH-TW" SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式碼如下：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;img DataSrc="#rds3" DataFld="</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>圖片</FONT><FONT FACE="Arial" SIZE=3>"&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">其中「</FONT><FONT SIZE=3>DataSrc="#rds3"</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」設定資料來源為</FONT><FONT SIZE=3>rds3</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>ActiveX control</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，「</FONT><FONT SIZE=3>DataFld="</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>圖片</FONT><FONT SIZE=3>"</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」將欄位為「圖片」的資料顯示為圖片。</P>
+<P ALIGN="JUSTIFY">與超連結的</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼</FONT><FONT SIZE=3>&lt;A HREF…&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>相結合的</FONT><FONT FACE="華康細圓體,新細明體" LANG="ZH-TW" SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式碼如下：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;A DataSrc="#rds3" DataFld="</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>簡介</FONT><FONT FACE="Arial" SIZE=3>"&gt;&lt;span DataSrc="#rds3" DataFld="</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>簡介</FONT><FONT FACE="Arial" SIZE=3>"&gt;&lt;/span&gt;&lt;/A&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">使用</FONT><FONT SIZE=3>&lt;span&gt;…&lt;/span&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>顯示超連結的文字部份。</P>
+<P ALIGN="JUSTIFY">「</FONT><FONT SIZE=3>DataSrc="#rds3"</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」設定資料來源為</FONT><FONT SIZE=3>rds3</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>ActiveX control</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，「</FONT><FONT SIZE=3>DataFld="</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>簡介</FONT><FONT SIZE=3>"</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」將欄位為「簡介」的資料顯示為超連結。</P>
+<P ALIGN="JUSTIFY">與下拉式選單的</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼</FONT><FONT SIZE=3>&lt;SELECT&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>相結合的</FONT><FONT FACE="華康細圓體,新細明體" LANG="ZH-TW" SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式碼如下：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;select DataSrc="#rds3" DataFld="Database"&gt;</P>
+<P>&lt;Option Value=" Access "&gt;Access&lt;/Option&gt;</P>
+<P>&lt;Option Value=" SQL Server "&gt;SQL Server&lt;/Option&gt;</P>
+<P>&lt;/select&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">其中「</FONT><FONT SIZE=3>DataSrc="#rds3"</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」設定資料來源為</FONT><FONT SIZE=3>rds3</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>ActiveX control</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，「</FONT><FONT SIZE=3>DataFld=" Database "</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」將欄位為「</FONT><FONT SIZE=3>Database</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」的資料顯示為下拉式選單的預設值。</P>
+<P ALIGN="JUSTIFY">與多選一的</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼</FONT><FONT SIZE=3>RADIO</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>相結合的</FONT><FONT FACE="華康細圓體,新細明體" LANG="ZH-TW" SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式碼如下：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;input type=radio DataSrc="#rds3" DataFld=" Database " Value=" Access "&gt; Access &lt;BR&gt;</P>
+<P>&lt;input type=radio DataSrc="#rds3" DataFld=" Database " Value=" SQL Server "&gt; SQL Server</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">其中「</FONT><FONT SIZE=3>DataSrc="#rds3"</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」設定資料來源為</FONT><FONT SIZE=3>rds3</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>ActiveX control</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，「</FONT><FONT SIZE=3>DataFld=" Database "</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」將欄位為「</FONT><FONT SIZE=3>Database</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」的資料顯示為多選一選項的預設值。</P>
+</FONT><FONT FACE="全真中隸書,???" LANG="ZH-TW" SIZE=6><P><A NAME="_Toc430343002"><A NAME="_Toc439431914"></FONT><FONT FACE="Arial" SIZE=6>RDS</FONT><FONT FACE="全真中隸書,???" LANG="ZH-TW" SIZE=6>存取資料庫如何顯示上一筆下一筆？</A></A></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>如何與</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼配合，以上一筆下一筆的方式顯示執行</FONT><FONT SIZE=3>RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>查詢資料庫資料的結果呢？</P>
+<P ALIGN="JUSTIFY">以上一筆下一筆的方式顯示執行</FONT><FONT SIZE=3>RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>查詢資料庫資料的結果的技巧：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>使用</FONT><FONT SIZE=3>Recordset.MoveFirst</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法，顯示第一筆的資料。</LI></P>
+<P ALIGN="JUSTIFY"><LI>使用</FONT><FONT SIZE=3>Recordset.MovePrevious</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法，顯示上一筆的資料。</LI></P>
+<P ALIGN="JUSTIFY"><LI>使用</FONT><FONT SIZE=3>Recordset.MoveNext</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法，顯示下一筆的資料。</LI></P>
+<P ALIGN="JUSTIFY"><LI>使用</FONT><FONT SIZE=3>Recordset.MoveLast</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法，顯示最末筆的資料。</LI></P></UL>
+
+<P ALIGN="JUSTIFY">於用戶端使用瀏覽器</FONT><FONT SIZE=3>IE</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，瀏覽執行的結果，顯示按下第一筆、上一筆、下一筆、最末筆的按鈕可以顯示第一筆、上一筆、下一筆、最末筆的資料。</P>
+<P ALIGN="JUSTIFY">程式碼部份，首先使用</FONT><FONT SIZE=3>RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的「</FONT><FONT SIZE=3>rds3.Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」連結到</FONT><FONT SIZE=3>Access</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料庫</FONT><FONT SIZE=3>ntopsamp.mdb</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，「</FONT><FONT SIZE=3>rds3.SQL</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」下</FONT><FONT SIZE=3>SQL</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>指令，「</FONT><FONT SIZE=3>Select * from </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>著作」查詢資料表「著作」的所有資料，將查詢的結果傳回到</FONT><FONT SIZE=3>rds3</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>ActiveX control</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>當中：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;SCRIPT LANGUAGE="VBScript"&gt;</P>
+<P>SUB Window_OnLoad</P>
+<P>&#9;rds3.Server = "http://&lt;%=Request.ServerVariables("SERVER_NAME")%&gt;"</P>
+<P>    &#9;rds3.Connect = "Driver={Microsoft Access Driver (*.mdb)};DBQ=&lt;% = Server.MapPath("ntopsamp.mdb") %&gt;"</P>
+<P>    &#9;rds3.SQL = "Select * from </FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>著作</FONT><FONT FACE="Arial" SIZE=3>"</P>
+<P>        rds3.Refresh&#9;&#9;</P>
+<P>End Sub</P>
+<P>&lt;/SCRIPT&gt;</P>
+<P>&lt;OBJECT classid="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"</P>
+<P>    ID=rds3 HEIGHT=1 WIDTH=1&gt;</P>
+<P>&lt;/OBJECT&gt;</P>
+<P>&lt;span DataSrc="#rds3" DataFld="</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>書名</FONT><FONT FACE="Arial" SIZE=3>"&gt;&lt;/span&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">使用</FONT><FONT SIZE=3>&lt;span&gt;…&lt;/span&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>顯示此筆資料，其中「</FONT><FONT SIZE=3>DataSrc="#rds3"</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」設定資料來源為</FONT><FONT SIZE=3>rds3</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>ActiveX control</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，「</FONT><FONT SIZE=3>DataFld="</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>書名</FONT><FONT SIZE=3>"</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」將欄位為「書名」的資料顯示出來。</P>
+<P ALIGN="JUSTIFY">按下「第一筆」的按鈕時，執行</FONT><FONT SIZE=3>onClick</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>所設定的「</FONT><FONT SIZE=3>rds3.Recordset.MoveFirst</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」，使用</FONT><FONT SIZE=3>MoveFirst</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法，顯示第一筆的資料。</P>
+<P ALIGN="JUSTIFY">按下「上一筆」的按鈕時，執行</FONT><FONT SIZE=3>onClick</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>所設定的「</FONT><FONT SIZE=3>rds3.Recordset.MovePrevious</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」，使用</FONT><FONT SIZE=3>MovePrevious</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法，顯示上一筆的資料。</P>
+<P ALIGN="JUSTIFY">按下「下一筆」的按鈕時，執行</FONT><FONT SIZE=3>onClick</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>所設定的「</FONT><FONT SIZE=3>rds3.Recordset.MoveNext"</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」，使用</FONT><FONT SIZE=3>MoveNext</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法，顯示下一筆的資料。</P>
+<P ALIGN="JUSTIFY">按下「最末筆」的按鈕時，執行</FONT><FONT SIZE=3>onClick</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>所設定的「</FONT><FONT SIZE=3>rds3.Recordset.MoveLast</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」，使用</FONT><FONT SIZE=3>MoveLast</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法，顯示最末筆的資料：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;input type=button value="</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>第一筆</FONT><FONT FACE="Arial" SIZE=3>" onClick ="rds3.Recordset.MoveFirst"&gt;</P>
+<P>&lt;input type=button value="</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>上一筆</FONT><FONT FACE="Arial" SIZE=3>" onClick ="rds3.Recordset.MovePrevious"&gt;</P>
+<P>&lt;input type=button value="</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>下一筆</FONT><FONT FACE="Arial" SIZE=3>" onClick ="rds3.Recordset.MoveNext"&gt;</P>
+<P>&lt;input type=button value="</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>最末筆</FONT><FONT FACE="Arial" SIZE=3>" onClick ="rds3.Recordset.MoveLast"&gt;</P>
+</FONT><FONT FACE="全真中隸書,???" LANG="ZH-TW" SIZE=6><P><A NAME="_Toc430343003"><A NAME="_Toc439431915"></FONT><FONT FACE="Arial" SIZE=6>RDS</FONT><FONT FACE="全真中隸書,???" LANG="ZH-TW" SIZE=6>存取資料庫如何顯示上一頁下一頁？</A></A></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>如何與</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>碼配合，以上一頁下一頁的方式顯示執行</FONT><FONT SIZE=3>RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>查詢資料庫資料的結果呢？</P>
+<P ALIGN="JUSTIFY">以上一頁下一頁的方式顯示執行</FONT><FONT SIZE=3>RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>查詢資料庫資料的結果的技巧：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>使用</FONT><FONT SIZE=3>PreviousPage</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法，顯示上一頁的資料。</LI></P>
+<P ALIGN="JUSTIFY"><LI>使用</FONT><FONT SIZE=3>NextPage</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法，顯示下一頁的資料。</LI></P>
+<P ALIGN="JUSTIFY"><LI>於</FONT><FONT SIZE=3>DataPageSize</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，設定每一頁顯示的資料筆數。</LI></P></UL>
+
+<P ALIGN="JUSTIFY">於用戶端使用瀏覽器</FONT><FONT SIZE=3>IE</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，瀏覽執行的結果，顯示按下上一頁或下一頁的按鈕可以顯示上一頁或下一頁的資料。</P>
+<P ALIGN="JUSTIFY">程式碼部份，首先使用</FONT><FONT SIZE=3>RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的「</FONT><FONT SIZE=3>rds3.Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」連結到</FONT><FONT SIZE=3>Access</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料庫</FONT><FONT SIZE=3>ntopsamp.mdb</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，「</FONT><FONT SIZE=3>rds3.SQL</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」下</FONT><FONT SIZE=3>SQL</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>指令，「</FONT><FONT SIZE=3>Select * from </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>著作」查詢資料表「著作」的所有資料，將查詢的結果傳回到</FONT><FONT SIZE=3>rds3</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>ActiveX control</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>當中：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;SCRIPT LANGUAGE="VBScript"&gt;</P>
+<P>SUB Window_OnLoad</P>
+<P>&#9;rds3.Server = "http://&lt;%=Request.ServerVariables("SERVER_NAME")%&gt;"</P>
+<P>    &#9;rds3.Connect = "Driver={Microsoft Access Driver (*.mdb)};DBQ=&lt;% = Server.MapPath("ntopsamp.mdb") %&gt;"</P>
+<P>    &#9;rds3.SQL = "Select * from </FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>著作</FONT><FONT FACE="Arial" SIZE=3>"</P>
+<P>        rds3.Refresh&#9;&#9;</P>
+<P>End Sub</P>
+<P>&lt;/SCRIPT&gt;</P>
+<P>&lt;OBJECT classid="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"</P>
+<P>    ID=rds3 HEIGHT=1 WIDTH=1&gt;</P>
+<P>&lt;/OBJECT&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">將</FONT><FONT SIZE=3>RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>查詢的結果顯示於表格</FONT><FONT SIZE=3>&lt;Table&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>當中，使用「</FONT><FONT SIZE=3>&lt;thead&gt;…&lt;/thead&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」以顯示欄位標題部份，以後的部份為資料部份。</P>
+<P ALIGN="JUSTIFY">其中「</FONT><FONT SIZE=3>DataSrc="#rds3"</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」設定資料來源為</FONT><FONT SIZE=3>rds3</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>ActiveX control</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，「</FONT><FONT SIZE=3>DataPageSize=3</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」設定每一頁顯示的資料筆數為</FONT><FONT SIZE=3>3</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;table DataSrc="#rds3" DataPageSize=3 id=table1&gt;</P>
+<P>&lt;tr&gt;</P>
+<P>&lt;thead&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>書名</FONT><FONT FACE="Arial" SIZE=3>&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>出版</FONT><FONT FACE="Arial" SIZE=3>&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>圖片</FONT><FONT FACE="Arial" SIZE=3>&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>簡介</FONT><FONT FACE="Arial" SIZE=3>&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;/tr&gt;</P>
+<P>&lt;/thead&gt;</P>
+<P>&lt;tbody&gt;</P>
+<P>&lt;tr&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;span DataFld="</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>書名</FONT><FONT FACE="Arial" SIZE=3>"&gt;&lt;/span&gt;&lt;/td&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;span DataFld="</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>出版</FONT><FONT FACE="Arial" SIZE=3>"&gt;&lt;/span&gt;&lt;/td&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;span DataFld="</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>圖片</FONT><FONT FACE="Arial" SIZE=3>"&gt;&lt;/span&gt;&lt;/td&gt;</P>
+<P>&lt;TD BGCOLOR="f7efde" ALIGN=CENTER&gt;&lt;span DataFld="</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>簡介</FONT><FONT FACE="Arial" SIZE=3>"&gt;&lt;/span&gt;&lt;/td&gt;</P>
+<P>&lt;/tr&gt;</P>
+<P>&lt;/tbody&gt;</P>
+<P>&lt;/table&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">「</FONT><FONT SIZE=3>DataFld="</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>書名</FONT><FONT SIZE=3>"</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」將欄位為「書名」的資料顯示出來。</P>
+<P ALIGN="JUSTIFY">按下「上一頁」的按鈕時，執行</FONT><FONT SIZE=3>onClick</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>所設定的「</FONT><FONT SIZE=3>table1.PreviousPage</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」，使用</FONT><FONT SIZE=3>PreviousPage</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法，顯示上一頁的資料，其中</FONT><FONT SIZE=3>table1</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>為表格</FONT><FONT SIZE=3>&lt;Table&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的代號</FONT><FONT SIZE=3>id</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</P>
+<P ALIGN="JUSTIFY">按下「下一頁」的按鈕時，執行</FONT><FONT SIZE=3>onClick</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>所設定的「</FONT><FONT SIZE=3>table1.NextPage</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」，使用</FONT><FONT SIZE=3>NextPage</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法，顯示下一頁的資料：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;input type=button value="</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>上一頁</FONT><FONT FACE="Arial" SIZE=3>" onClick ="table1.PreviousPage"&gt;</P>
+<P>&lt;input type=button value="</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>下一頁</FONT><FONT FACE="Arial" SIZE=3>" onClick ="table1.NextPage"&gt;</P>
+</FONT><FONT FACE="全真中隸書,???" LANG="ZH-TW" SIZE=6><P><A NAME="_Toc430343004"><A NAME="_Toc439431916"></FONT><FONT FACE="Arial" SIZE=6>RDS</FONT><FONT FACE="全真中隸書,???" LANG="ZH-TW" SIZE=6>存取資料庫如何修改資料？</A></A></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>存取資料庫，如何修改資料？</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>修改資料庫資料的技巧：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>使用</FONT><FONT SIZE=3>SubmitChanges</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法，將所有修改一起送到伺服器變更資料庫的資料。</LI></P>
+<P ALIGN="JUSTIFY"><LI>使用</FONT><FONT SIZE=3>CancelUpdate</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法，將所有尚未送到伺服器資料的資料恢復成原值。</LI></P></UL>
+
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>於文字輸入修改資料</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">於用戶端使用瀏覽器</FONT><FONT SIZE=3>IE</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，瀏覽執行的結果，修改資料後，按下「變更」按鈕可以確認修改，將所有修改一起送到伺服器變更資料庫的資料，按下「重寫」按鈕可以將所有資料恢復成原值。</P>
+<P ALIGN="JUSTIFY">程式碼部份，首先使用</FONT><FONT SIZE=3>RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的「</FONT><FONT SIZE=3>rds3.Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」連結到</FONT><FONT SIZE=3>Access</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料庫</FONT><FONT SIZE=3>ntopsamp.mdb</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，「</FONT><FONT SIZE=3>rds3.SQL</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」下</FONT><FONT SIZE=3>SQL</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>指令，「</FONT><FONT SIZE=3>Select * from </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>著作」查詢資料表「著作」的所有資料，將查詢的結果傳回到</FONT><FONT SIZE=3>rds3</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>ActiveX control</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>當中：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;SCRIPT LANGUAGE="VBScript"&gt;</P>
+<P>SUB Window_OnLoad</P>
+<P>&#9;rds3.Server = "http://&lt;%=Request.ServerVariables("SERVER_NAME")%&gt;"</P>
+<P>    &#9;rds3.Connect = "Driver={Microsoft Access Driver (*.mdb)};DBQ=&lt;% = Server.MapPath("ntopsamp.mdb") %&gt;"</P>
+<P>    &#9;rds3.SQL = "Select * from </FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>著作</FONT><FONT FACE="Arial" SIZE=3>"</P>
+<P>        rds3.Refresh&#9;&#9;</P>
+<P>End Sub</P>
+<P>&lt;/SCRIPT&gt;</P>
+<P>&lt;OBJECT classid="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"</P>
+<P>    ID=rds3 HEIGHT=1 WIDTH=1&gt;</P>
+<P>&lt;/OBJECT&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">將</FONT><FONT SIZE=3>RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>查詢的結果顯示於表格</FONT><FONT SIZE=3>&lt;Table&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>當中，使用「</FONT><FONT SIZE=3>&lt;thead&gt;…&lt;/thead&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」以顯示欄位標題部份，</FONT><FONT SIZE=3>&lt;tbody&gt;…&lt;/tbody&gt;</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的部份為資料部份：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;table DataSrc="#rds3" DataPageSize=3 id=table1&gt;</P>
+<P>&lt;tr&gt;</P>
+<P>&lt;thead&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>書名</FONT><FONT FACE="Arial" SIZE=3>&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>出版</FONT><FONT FACE="Arial" SIZE=3>&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>圖片</FONT><FONT FACE="Arial" SIZE=3>&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;TD ALIGN=CENTER BGCOLOR="#008080"&gt;&lt;FONT COLOR="#FFFFFF"&gt;</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>簡介</FONT><FONT FACE="Arial" SIZE=3>&lt;/FONT&gt;&lt;/TD&gt;</P>
+<P>&lt;/tr&gt;</P>
+<P>&lt;/thead&gt;</P>
+<P>&lt;tbody&gt;</P>
+<P>&lt;tr&gt;</P>
+<P>&lt;TD ALIGN=CENTER&gt;&lt;input type=text size=30 DataFld="</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>書名</FONT><FONT FACE="Arial" SIZE=3>"&gt;&lt;/td&gt;</P>
+<P>&lt;TD ALIGN=CENTER&gt;&lt;input type=text size=10 DataFld="</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>出版</FONT><FONT FACE="Arial" SIZE=3>"&gt;&lt;/td&gt;</P>
+<P>&lt;TD ALIGN=CENTER&gt;&lt;input type=text size=10 DataFld="</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>圖片</FONT><FONT FACE="Arial" SIZE=3>"&gt;&lt;/td&gt;</P>
+<P>&lt;TD ALIGN=CENTER&gt;&lt;input type=text size=10 DataFld="</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>簡介</FONT><FONT FACE="Arial" SIZE=3>"&gt;&lt;/td&gt;</P>
+<P>&lt;/tr&gt;</P>
+<P>&lt;/tbody&gt;</P>
+<P>&lt;/table&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">修改資料後，按下「變更」按鈕時，執行</FONT><FONT SIZE=3>onClick</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>所設定的「</FONT><FONT SIZE=3>rds3.SubmitChanges</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」，使用</FONT><FONT SIZE=3>SubmitChanges</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法，將所有修改一起送到伺服器以更新資料庫的資料；按下「重寫」按鈕時，執行</FONT><FONT SIZE=3>onClick</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>所設定的「</FONT><FONT SIZE=3>rds3.CancelUpdate</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」，使用</FONT><FONT SIZE=3>CancelUpdate</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法，將所有資料恢復成原值：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;input type=button value="</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>變更</FONT><FONT FACE="Arial" SIZE=3>" onClick ="rds3.SubmitChanges"&gt;</P>
+<P>&lt;input type=button value="</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>重寫</FONT><FONT FACE="Arial" SIZE=3>" onClick ="rds3.CancelUpdate"&gt;</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>於</FONT><FONT FACE="Arial" SIZE=5 COLOR="#0000ff">grid</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff">修改資料</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">上例為使用文字輸入修改資料的範例，於</FONT><FONT SIZE=3>grid</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>如何修改資料呢？</P>
+<P ALIGN="JUSTIFY">於用戶端使用瀏覽器</FONT><FONT SIZE=3>IE</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，瀏覽執行的結果，顯然修改資料後，按下「儲存修改」按鈕可以確認修改，將所有修改一起送到伺服器變更資料庫的資料，按下「取消修改」按鈕可以將所有資料恢復成原值。</P>
+<P ALIGN="JUSTIFY">程式碼部份，首先</FONT><FONT SIZE=3>RDS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>ActiveX control</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>當中，於「</FONT><FONT SIZE=3>Connect</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」連結到</FONT><FONT SIZE=3>Access</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料庫</FONT><FONT SIZE=3>ntopsamp.mdb</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，於「</FONT><FONT SIZE=3>Connect</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」連結到</FONT><FONT SIZE=3>Access</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料庫</FONT><FONT SIZE=3>ntopsamp.mdb</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，於「</FONT><FONT SIZE=3>Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」設定伺服器的名稱（使用</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>Request.ServerVariables("SERVER_NAME") </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>取得之），於「</FONT><FONT SIZE=3>SQL</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」下</FONT><FONT SIZE=3>SQL</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>指令，「</FONT><FONT SIZE=3>Select * from </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>著作」查詢資料表「著作」的所有資料，將查詢的結果傳到名稱為</FONT><FONT SIZE=3>GRID1</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>grid ActiveX control</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;OBJECT classid="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"</P>
+<P>    ID=rds HEIGHT=1 WIDTH = 1&gt;</P>
+<P>    &lt;PARAM NAME="BINDINGS" VALUE="GRID1;"&gt;</P>
+<P>    &lt;PARAM NAME="SQL" VALUE="Select * from </FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>著作</FONT><FONT FACE="Arial" SIZE=3>"&gt;</P>
+<P>    &lt;PARAM NAME="Connect" VALUE="Driver={Microsoft Access Driver (*.mdb)};DBQ=&lt;% = Server.MapPath("ntopsamp.mdb") %&gt;"&gt;</P>
+<P>    &lt;PARAM NAME="Server" VALUE="http://&lt;%=Request.ServerVariables("SERVER_NAME")%&gt;" &gt;</P>
+<P>&lt;/OBJECT&gt;</P>
+<P>&lt;OBJECT ID="GRID1" WIDTH=600 HEIGHT=200 Datasrc="#rds"</P>
+<P> CODEBASE="http://&lt;%=Request.ServerVariables("SERVER_NAME")%&gt;/MSADC/Samples/ssdatb32.cab"</P>
+<P> CLASSID="CLSID:AC05DC80-7DF1-11d0-839E-00A024A94B3A"&gt;</P>
+<P>  &lt;PARAM NAME="_Version" VALUE="131072"&gt;</P>
+<P>  &lt;PARAM NAME="BackColor" VALUE="-2147483643"&gt;</P>
+<P>  &lt;PARAM NAME="BackColorOdd" VALUE="-2147483643"&gt;</P>
+<P>  &lt;PARAM NAME="ForeColorEven" VALUE="0"&gt;&#9;</P>
+<P>&lt;/OBJECT&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">修改資料後，按下「儲存修改」按鈕時，執行</FONT><FONT SIZE=3>onClick</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>所設定的「</FONT><FONT SIZE=3>Change</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」副程式，使用</FONT><FONT SIZE=3>SubmitChanges</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法，將所有修改一起送到伺服器以更新資料庫的資料；按下「取消修改」按鈕時，執行</FONT><FONT SIZE=3>onClick</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>所設定的「</FONT><FONT SIZE=3>CancelChange</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」副程式，使用</FONT><FONT SIZE=3>CancelUpdate</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>方法，將所有資料恢復成原值：</P>
+</FONT><FONT FACE="Arial" SIZE=3><P>&lt;INPUT TYPE=BUTTON value="</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>儲存修改</FONT><FONT FACE="Arial" SIZE=3>" onClick="Change"&gt;</P>
+<P>&lt;INPUT TYPE=BUTTON value="</FONT><FONT FACE="華康中楷體,???" LANG="ZH-TW" SIZE=3>取消修改</FONT><FONT FACE="Arial" SIZE=3>"  onClick="CancelChange"&gt;</P>
+<P>&lt;SCRIPT LANGUAGE="VBScript"&gt;</P>
+<P>SUB Change</P>
+<P>&#9;rds.SubmitChanges</P>
+<P>&#9;rds.Refresh</P>
+<P>&#9;Grid1.Rebind</P>
+<P>End Sub</P>
+
+<P>SUB CancelChange</P>
+<P>&#9;rds.CancelUpdate</P>
+<P>&#9;rds.Refresh</P>
+<P>&#9;Grid1.Rebind</P>
+<P>End Sub</P>
+<P>&lt;/SCRIPT&gt;</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">並使用「</FONT><FONT SIZE=3>rds.Refresh</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」重新讀取資料庫的資料，「</FONT><FONT SIZE=3>Grid1.Rebind</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」重新更新於</FONT><FONT SIZE=3>grid</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>顯示的值。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5 COLOR="#0000ff"><P>網站資料庫設計參考資料</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">作者準備一個展示各種網站資料庫設計實例的網站，提供各種網站網頁的資訊、與設計範例，包括『網站熱門應用精選』、</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>特異功能、</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>資料庫設計實例、網路商店、</FONT><FONT SIZE=3>ActiveX</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、推播頻道、動態</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>HTML 99</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>招等，網址如下：</P>
+<P ALIGN="JUSTIFY"></FONT><A HREF="../../index.html"><FONT SIZE=3>http://www.asp.com.tw</FONT></A></P>
+<FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">歡迎上網光臨指教。</P>
+<P ALIGN="JUSTIFY">本文內容部份取材自筆者最新著作「</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>網站熱門應用技術</FONT><FONT FACE="標楷體" LANG="ZH-TW">」</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、「微軟熱門Web技術速成班」，書中對網站的技術提供更多的探討，歡迎參考。</P>
+<P ALIGN="JUSTIFY">　</P>
+<P ALIGN="JUSTIFY">　</P></FONT></BODY>
+</HTML>

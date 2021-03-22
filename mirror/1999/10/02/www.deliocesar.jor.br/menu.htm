@@ -1,0 +1,82 @@
+<html>
+
+<head>
+<base target="rtop">
+<title>Délio Cesar - Menu</title>
+</head>
+
+<body>
+<script language="JavaScript">
+<!--
+// início
+
+function WinOpen() {
+}
+today = new Date()
+if(today.getMinutes() < 10){ 
+pad = "0"}
+else 
+pad = "";
+if((today.getHours() < 12) && (today.getHours() >= 6)){
+document.write("<B><font color=3939ff>Bom Dia!</font></B></FONT>") // Aqui é o que aparece entre 06:00 e 12:00 hs.
+
+}
+if((today.getHours() >= 12) && (today.getHours() < 18)){
+document.write("<B><font color=3939ff>Boa Tarde!</font></B></FONT>") // Aqui é o que aparece entre 12:00 e 18:00 hs.
+}
+
+if((today.getHours() >= 18) && (today.getHours() <= 23)){
+document.write("<B><font color=3939ff>Boa Noite!</font></B></FONT>") // Aqui é o que aparece entre 18:00 e 24:00 hs.
+}
+
+if((today.getHours() >= 0) && (today.getHours() < 4)){
+document.write("<FONT color=3939ff><B>Boa Madrugada!<font color=black></font></B></FONT>") // Aqui é o que aparece entre 24:00 e 04:00 hs.
+}
+
+if((today.getHours() >= 4) && (today.getHours() <= 6)){
+document.write("<FONT color=3939ff><B><font color=3939ff></font></B></FONT>") // Aqui é o que aparece entre 04:00 e 06:00 hs.
+}
+
+//Um detalhe, quando for entre seis e sete da manhã, vai aparecer(conforme o ex. acima):
+//Bom dia! Está cedo! , aparece os dois, OK?
+
+// finalizar 
+// -->
+</script>
+
+
+<p align="left">&nbsp;</p>
+
+<p align="left">&nbsp;</p>
+
+<p align="left">&nbsp;</p>
+
+<p align="left">&nbsp;</p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center"><small><small><font face="Arial"><small>Copyright ® 1998-1999 <a
+href="http://www.netboxlondrina.cjb.net" target="_blank">NetBox</a></small></font></small></small></p>
+
+<p align="center"><small><small><small>Desde&nbsp; 31/08/99</small></small></small></p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center">&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p align="center"><img
+src="cgi-bin/count.exe?df=delio.dat|ft=2|frgb=000000|dd=E"> </p>
+
+<p align="center">&nbsp;</p>
+</body>
+</html>

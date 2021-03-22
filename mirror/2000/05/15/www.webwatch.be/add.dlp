@@ -1,0 +1,1013 @@
+
+
+
+
+ 
+
+
+
+
+ 
+
+<HTML>
+<HEAD>
+
+<META HTTP-EQUIV="Expires" CONTENT="Mon, 15 May 2000 23:59:59 EST">
+
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive 4">
+		<title>W e b w a t c h [ADD YOUR WEBSITE]</title>
+		<meta http-equiv="Expires" content="Thu, 17 Feb 2000 23:59:59 EST">
+		<script language="JAVASCRIPT" src="js_api/_add_checkform.js"></script>
+		<script language="JAVASCRIPT">
+<!--
+/*************************************************************************************************
+  BEGIN CHECK THE FORM
+*************************************************************************************************/
+function CheckTheForm (MyForm) {
+Language = 'en'
+SubmitFlag = true
+	if (document.addform.elements[0].options[document.addform.elements[0].selectedIndex].value == ''
+	&& document.addform.elements[1].options[document.addform.elements[1].selectedIndex].value == ''
+	&& document.addform.elements[2].options[document.addform.elements[2].selectedIndex].value == '')
+	{
+	GlobalMsg = GlobalMsg + 'You must register your site into at least one category!\n' ; SubmitFlag = false;
+	}
+	if (!CheckField ( 'Site name', MyForm, MyForm.Name, 'string', 'yes', 1000 )) { SubmitFlag = false  }
+	if ( TrimString(document.addform.Descriptio.value) == '' &&
+		TrimString(document.addform.DescriptioFR.value) == '' &&
+		TrimString(document.addform.DescriptioNL.value) == '' )
+	{
+	GlobalMsg = GlobalMsg + 'Please enter a description in at least one language!\n' ; SubmitFlag = false
+	}
+
+	if ( TrimString(document.addform.URL.value) == '' ||
+		TrimString(document.addform.URL.value) == 'http://' )
+	{
+	GlobalMsg = GlobalMsg + 'Please specify a URL in the appropriate field!\n' ; SubmitFlag = false
+	}
+	if (document.addform.Lang[0].checked == false &&
+		document.addform.Lang[1].checked == false &&
+		document.addform.Lang[2].checked == false ) {
+	GlobalMsg = GlobalMsg + 'Please specify the language used!\n' ; SubmitFlag = false
+	}
+
+
+	if (!CheckField ( 'Keywords', MyForm, MyForm.Keywords, 'string', 'yes', 1000 )) { SubmitFlag = false  }
+	if (!CheckField ( 'Your E-Mail', MyForm, MyForm.EMail, 'email', 'yes', 0 )) { SubmitFlag = false }
+	if (!CheckField ( 'Belgian Qualifier', MyForm, MyForm.CP, 'string', 'yes', 1000 )) { SubmitFlag = false }
+	if (!CheckField ( 'Username', MyForm, MyForm.username, 'string', 'yes', 1000 )) { SubmitFlag = false }
+	if (!CheckField ( 'Password', MyForm, MyForm.Password, 'string', 'yes', 1000 )) { SubmitFlag = false }
+
+
+
+	if ( SubmitFlag == false ) {
+				alert (GlobalMsg);
+				GlobalMsg=''
+				return false; 
+				} else {
+				return true
+					}
+
+
+} // End CheckTheForm
+// -->
+		</script>
+	</head>
+
+	<body bgcolor="white" link="#0031ce" alink="red" vlink="#ce3100">
+		<center>
+			<table border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tr height="48">
+					<td height="48" width="10">&nbsp;</td>
+					<td height="48" width="68"><!-- HITWATCHERS -->
+						<img border="0" height="1" src="http://www.hitwatchers.com/source/webtotal.gif" width="1"><!-- -->
+						 <!-- DAD MONITOR -->
+						<img border="0" height="1" src="http://194.78.47.32/webwatch.gif" width="1"><!-- -->
+					</td>
+					<td align="right" colspan="2" height="48" valign="top"><a href="index.html" onmouseover="window.status ='Home';return true"><img alt="[ W E B W A T C H ]" border="0" height="47" src="http://www.webwatch.be/images/logoWW2.gif" width="142"></a></td>
+					<td bgcolor="#fec500" height="48" valign="top" width="23"><img height="47" src="http://www.webwatch.be/images/Hmail.gif" width="23"></td>
+					<td bgcolor="#fec500" height="48" width="345">
+						<div align="right">
+							<font color="white" face="arial" helvetica size="5"><b>add your site</b></font><font color="white" face="arial" helvetica size="5">&nbsp; </font></div>
+					</td>
+				</tr>
+				<tr>
+					<td bgcolor="#ff3100" width="10">&nbsp;</td>
+					<td bgcolor="#ff3100" colspan="2">&nbsp;</td>
+					<td bgcolor="#ff3100" colspan="3"><font color="white" face="arial" helvetica><b>Internet in Belgium</b></font></td>
+				</tr>
+			</table>
+			<table border="0" cellpadding="0" cellspacing="0" width="415">
+				<tr>
+					<td><a href="index.dlp" onmouseover="window.status ='directory';return true"><img border="0" height="41" src="images/directory.gif" width="41"></a> <a href="http://crawler.webwatch.be/crawler.acgi" onmouseover="window.status ='Crawler';return true"><img border="0" height="41" src="images/crawler.gif" width="41"></a> <a href="/chat/default.html" onmouseover="window.status ='Chat';return true"><img border="0" height="41" src="images/chat.gif" width="41"></a> <a href="most/default.dlp" target="_top" onmouseover="window.status ='Most wanted';return true"><img border="0" height="41" src="images/most.gif" width="41"></a> <a href="mail/index.html" onmouseover="window.status ='By Mail';return true"><img border="0" height="41" src="images/mail.gif" width="41"></a> <a href="/news/" onmouseover="window.status ='News';return true"><img border="0" height="41" src="http://www.webwatch.be/images/News.gif" width="41"></a> <a href="week.html" target="_top" onmouseover="window.status ='Site of the Week';return true"><img border="0" height="41" src="images/week.gif" width="41"></a> <a href="http://www.webwatch.be/users/" onmouseover="window.status ='Community';return true"><img border="0" height="41" src="http://www.webwatch.be/images/comm.gif" width="41"></a> <a href="recent.dlp" onmouseover="window.status ='Recent Sites';return true"><img border="0" height="41" src="images/recent.gif" width="41"></a></td>
+				</tr>
+			</table>
+			<!-- END OF HEADINGS -------------------------------------------------->
+			<br>
+		</center>
+		<center>
+			<p><a href="http://194.78.47.71/cgi-bin/redirect.exe/002" target="_top" border="0" alt="[ Advertising on Webwatch ? (+32 2) 706 05 40 ]"><img border="0" src="http://194.78.47.71/cgi-bin/getimage.exe/002?GROUP=Webwatch"></a></p>
+			<br>
+			<table border="0" cellpadding="0" cellspacing="0" width="561" align="center">
+				<tr>
+					<td><font face="Helvetica,Arial,Verdana" size="2">If your Browser doesn't support forms, submit information or updates to : <a href="mailto:submit@webwatch.be">submit@webwatch.be</a> </font>
+						<p><font face="Helvetica,Arial,Verdana" helvetica size="2">Webwatch is <b>dedicated to Belgium, belgian sites or belgian related sites</b>.<br>
+						Foreign sites will be included ONLY if they contain information related to Belgium or belgian people ...<br>
+						Thanks for your comprehension ... </font></td>
+				</tr>
+			</table>
+			<script language="JavaScript1.2"></script>
+			<br>
+			<form action="add_prv.dlp" method="post" name="addform" onsubmit="return CheckTheForm(this)">
+			<table border="0" cellpadding="2" cellspacing="0" width="663">
+				<tr>
+					<td bgcolor="#ff6633" colspan="3">
+						<center>
+							<font size="2" face="Helvetica,Arial,Verdana"><tt><b>FILL IN THIS FORM :</b></tt></font></center>
+					</td>
+				</tr>
+				<tr>
+					<td bgcolor="#003366" width="29" align="center"><font color="white" face="Helvetica,Arial,Verdana" size="2"><b>1</b></font></td>
+					<td align="center" bgcolor="#ffce31" valign="top" width="130">
+						<div align="right">
+							<font face="Helvetica,Arial,Verdana" helvetica size="2" color="#ff6633">* </font><font face="Helvetica,Arial,Verdana" helvetica size="1">You must register your site into at least one category :</font></div>
+					</td>
+					<td bgcolor="#ffce31" width="395" valign="top"><font face="Helvetica,Arial,Verdana" size="1"><SELECT name="Category" size=1>
+					<OPTION value="" selected>First Category
+					
+						
+						<OPTION value="1">Agora/Agora
+					
+						
+						<OPTION value="2">Agora/Democracy
+					
+						
+						<OPTION value="3">Agora/Environment
+					
+						
+						<OPTION value="4">Agora/Government&Politics
+					
+						
+						<OPTION value="5">Agora/Jobs
+					
+						
+						<OPTION value="6">Agora/People
+					
+						
+						<OPTION value="7">Agora/Religion
+					
+						
+						<OPTION value="8">Arts&Culture/Arts&Culture
+					
+						
+						<OPTION value="9">Arts&Culture/Cinema
+					
+						
+						<OPTION value="10">Arts&Culture/Documentation
+					
+						
+						<OPTION value="11">Arts&Culture/Galleries
+					
+						
+						<OPTION value="12">Arts&Culture/Musea
+					
+						
+						<OPTION value="13">Arts&Culture/Music
+					
+						
+						<OPTION value="14">Arts&Culture/Opera
+					
+						
+						<OPTION value="15">Arts&Culture/Theatre
+					
+						
+						<OPTION value="16">Belgium/Belgium
+					
+						
+						<OPTION value="17">Business/Advertising, Marketing and PR
+					
+						
+						<OPTION value="18">Business/Audio-visual
+					
+						
+						<OPTION value="19">Business/Banks
+					
+						
+						<OPTION value="20">Business/Business
+					
+						
+						<OPTION value="21">Business/Cars
+					
+						
+						<OPTION value="22">Business/Consulting
+					
+						
+						<OPTION value="23">Business/Education
+					
+						
+						<OPTION value="24">Business/Fashion
+					
+						
+						<OPTION value="25">Business/Finance
+					
+						
+						<OPTION value="26">Business/Government
+					
+						
+						<OPTION value="27">Business/Graphic Design, DTP, Pre- Press
+					
+						
+						<OPTION value="28">Business/Industry
+					
+						
+						<OPTION value="29">Business/Information
+					
+						
+						<OPTION value="30">Business/Insurance
+					
+						
+						<OPTION value="31">Business/IT
+					
+						
+						<OPTION value="32">Business/Law&Notary
+					
+						
+						<OPTION value="33">Business/Medical
+					
+						
+						<OPTION value="34">Business/Organisation
+					
+						
+						<OPTION value="35">Business/Real Estate
+					
+						
+						<OPTION value="36">Business/Shopping
+					
+						
+						<OPTION value="37">Business/Telecoms
+					
+						
+						<OPTION value="38">Business/Trade
+					
+						
+						<OPTION value="39">Business/Translation-Writing
+					
+						
+						<OPTION value="40">Business/Web
+					
+						
+						<OPTION value="41">Computers/Clubs&Associations
+					
+						
+						<OPTION value="42">Computers/Computers
+					
+						
+						<OPTION value="43">Computers/Consultants&Services
+					
+						
+						<OPTION value="44">Computers/Databases
+					
+						
+						<OPTION value="45">Computers/Distributors
+					
+						
+						<OPTION value="46">Computers/Hardware&Software
+					
+						
+						<OPTION value="47">Computers/Multimedia
+					
+						
+						<OPTION value="48">Computers/Networking
+					
+						
+						<OPTION value="49">Computers/Programming
+					
+						
+						<OPTION value="50">Computers/Retail
+					
+						
+						<OPTION value="51">Education/Colleges
+					
+						
+						<OPTION value="52">Education/Education
+					
+						
+						<OPTION value="53">Education/Higher Education
+					
+						
+						<OPTION value="54">Education/Student Clubs
+					
+						
+						<OPTION value="55">Education/Universities
+					
+						
+						<OPTION value="56">Entertainment/Books
+					
+						
+						<OPTION value="57">Entertainment/Entertainment
+					
+						
+						<OPTION value="58">Entertainment/Movie
+					
+						
+						<OPTION value="59">Entertainment/Music
+					
+						
+						<OPTION value="60">Entertainment/Radio
+					
+						
+						<OPTION value="61">Entertainment/TV
+					
+						
+						<OPTION value="62">Events/Events
+					
+						
+						<OPTION value="63">Events/Live
+					
+						
+						<OPTION value="64">Hot/hot
+					
+						
+						<OPTION value="65">Internet/Access Providers
+					
+						
+						<OPTION value="66">Internet/Internet
+					
+						
+						<OPTION value="67">Internet/Refs
+					
+						
+						<OPTION value="68">Internet/Service Providers
+					
+						
+						<OPTION value="69">News/News
+					
+						
+						<OPTION value="70">Recreation/Food&Beverage
+					
+						
+						<OPTION value="71">Recreation/Recreation
+					
+						
+						<OPTION value="72">Recreation/Sport
+					
+						
+						<OPTION value="73">Recreation/Hobby
+					
+						
+						<OPTION value="74">Regional/Belgium
+					
+						
+						<OPTION value="75">Regional/Brussels
+					
+						
+						<OPTION value="76">Regional/Flanders
+					
+						
+						<OPTION value="77">Regional/Wallonia
+					
+						
+						<OPTION value="78">Research&Science/Research&Science
+					
+						
+						<OPTION value="79">Science/Science
+					
+						
+						<OPTION value="80">Shopping/Books
+					
+						
+						<OPTION value="81">Shopping/Cars
+					
+						
+						<OPTION value="82">Shopping/Computers
+					
+						
+						<OPTION value="83">Shopping/Departement Stores
+					
+						
+						<OPTION value="84">Shopping/Events
+					
+						
+						<OPTION value="85">Shopping/Flowers
+					
+						
+						<OPTION value="86">Shopping/Food&Beverage
+					
+						
+						<OPTION value="87">Shopping/Games
+					
+						
+						<OPTION value="88">Shopping/Gifts
+					
+						
+						<OPTION value="89">Shopping/Music
+					
+						
+						<OPTION value="90">Shopping/Tickets
+					
+						
+						<OPTION value="91">Shopping/Toys
+					
+						
+						<OPTION value="92">Shopping/Travel
+					
+						
+						<OPTION value="93">Travel/Destination
+					
+						
+						<OPTION value="94">Travel/Hotel
+					
+						
+						<OPTION value="95">Travel/Organisation
+					
+						
+						<OPTION value="96">Travel/Transportation
+					
+						
+						<OPTION value="97">Travel/Travel
+					
+						
+						<OPTION value="98">Various/Personal Pages
+					
+						
+						<OPTION value="99">Various/Various
+					
+				</SELECT><BR>
+				<SELECT name="Category" size=1>
+				<OPTION value="" selected>Second Category
+					
+						<OPTION value="1">Agora/Agora
+					
+						<OPTION value="2">Agora/Democracy
+					
+						<OPTION value="3">Agora/Environment
+					
+						<OPTION value="4">Agora/Government&Politics
+					
+						<OPTION value="5">Agora/Jobs
+					
+						<OPTION value="6">Agora/People
+					
+						<OPTION value="7">Agora/Religion
+					
+						<OPTION value="8">Arts&Culture/Arts&Culture
+					
+						<OPTION value="9">Arts&Culture/Cinema
+					
+						<OPTION value="10">Arts&Culture/Documentation
+					
+						<OPTION value="11">Arts&Culture/Galleries
+					
+						<OPTION value="12">Arts&Culture/Musea
+					
+						<OPTION value="13">Arts&Culture/Music
+					
+						<OPTION value="14">Arts&Culture/Opera
+					
+						<OPTION value="15">Arts&Culture/Theatre
+					
+						<OPTION value="16">Belgium/Belgium
+					
+						<OPTION value="17">Business/Advertising, Marketing and PR
+					
+						<OPTION value="18">Business/Audio-visual
+					
+						<OPTION value="19">Business/Banks
+					
+						<OPTION value="20">Business/Business
+					
+						<OPTION value="21">Business/Cars
+					
+						<OPTION value="22">Business/Consulting
+					
+						<OPTION value="23">Business/Education
+					
+						<OPTION value="24">Business/Fashion
+					
+						<OPTION value="25">Business/Finance
+					
+						<OPTION value="26">Business/Government
+					
+						<OPTION value="27">Business/Graphic Design, DTP, Pre- Press
+					
+						<OPTION value="28">Business/Industry
+					
+						<OPTION value="29">Business/Information
+					
+						<OPTION value="30">Business/Insurance
+					
+						<OPTION value="31">Business/IT
+					
+						<OPTION value="32">Business/Law&Notary
+					
+						<OPTION value="33">Business/Medical
+					
+						<OPTION value="34">Business/Organisation
+					
+						<OPTION value="35">Business/Real Estate
+					
+						<OPTION value="36">Business/Shopping
+					
+						<OPTION value="37">Business/Telecoms
+					
+						<OPTION value="38">Business/Trade
+					
+						<OPTION value="39">Business/Translation-Writing
+					
+						<OPTION value="40">Business/Web
+					
+						<OPTION value="41">Computers/Clubs&Associations
+					
+						<OPTION value="42">Computers/Computers
+					
+						<OPTION value="43">Computers/Consultants&Services
+					
+						<OPTION value="44">Computers/Databases
+					
+						<OPTION value="45">Computers/Distributors
+					
+						<OPTION value="46">Computers/Hardware&Software
+					
+						<OPTION value="47">Computers/Multimedia
+					
+						<OPTION value="48">Computers/Networking
+					
+						<OPTION value="49">Computers/Programming
+					
+						<OPTION value="50">Computers/Retail
+					
+						<OPTION value="51">Education/Colleges
+					
+						<OPTION value="52">Education/Education
+					
+						<OPTION value="53">Education/Higher Education
+					
+						<OPTION value="54">Education/Student Clubs
+					
+						<OPTION value="55">Education/Universities
+					
+						<OPTION value="56">Entertainment/Books
+					
+						<OPTION value="57">Entertainment/Entertainment
+					
+						<OPTION value="58">Entertainment/Movie
+					
+						<OPTION value="59">Entertainment/Music
+					
+						<OPTION value="60">Entertainment/Radio
+					
+						<OPTION value="61">Entertainment/TV
+					
+						<OPTION value="62">Events/Events
+					
+						<OPTION value="63">Events/Live
+					
+						<OPTION value="64">Hot/hot
+					
+						<OPTION value="65">Internet/Access Providers
+					
+						<OPTION value="66">Internet/Internet
+					
+						<OPTION value="67">Internet/Refs
+					
+						<OPTION value="68">Internet/Service Providers
+					
+						<OPTION value="69">News/News
+					
+						<OPTION value="70">Recreation/Food&Beverage
+					
+						<OPTION value="71">Recreation/Recreation
+					
+						<OPTION value="72">Recreation/Sport
+					
+						<OPTION value="73">Recreation/Hobby
+					
+						<OPTION value="74">Regional/Belgium
+					
+						<OPTION value="75">Regional/Brussels
+					
+						<OPTION value="76">Regional/Flanders
+					
+						<OPTION value="77">Regional/Wallonia
+					
+						<OPTION value="78">Research&Science/Research&Science
+					
+						<OPTION value="79">Science/Science
+					
+						<OPTION value="80">Shopping/Books
+					
+						<OPTION value="81">Shopping/Cars
+					
+						<OPTION value="82">Shopping/Computers
+					
+						<OPTION value="83">Shopping/Departement Stores
+					
+						<OPTION value="84">Shopping/Events
+					
+						<OPTION value="85">Shopping/Flowers
+					
+						<OPTION value="86">Shopping/Food&Beverage
+					
+						<OPTION value="87">Shopping/Games
+					
+						<OPTION value="88">Shopping/Gifts
+					
+						<OPTION value="89">Shopping/Music
+					
+						<OPTION value="90">Shopping/Tickets
+					
+						<OPTION value="91">Shopping/Toys
+					
+						<OPTION value="92">Shopping/Travel
+					
+						<OPTION value="93">Travel/Destination
+					
+						<OPTION value="94">Travel/Hotel
+					
+						<OPTION value="95">Travel/Organisation
+					
+						<OPTION value="96">Travel/Transportation
+					
+						<OPTION value="97">Travel/Travel
+					
+						<OPTION value="98">Various/Personal Pages
+					
+						<OPTION value="99">Various/Various
+					
+				</SELECT><BR>
+				<SELECT name="Category" size=1>
+				<OPTION value="" selected>Third Category
+					
+						<OPTION value="1">Agora/Agora
+					
+						<OPTION value="2">Agora/Democracy
+					
+						<OPTION value="3">Agora/Environment
+					
+						<OPTION value="4">Agora/Government&Politics
+					
+						<OPTION value="5">Agora/Jobs
+					
+						<OPTION value="6">Agora/People
+					
+						<OPTION value="7">Agora/Religion
+					
+						<OPTION value="8">Arts&Culture/Arts&Culture
+					
+						<OPTION value="9">Arts&Culture/Cinema
+					
+						<OPTION value="10">Arts&Culture/Documentation
+					
+						<OPTION value="11">Arts&Culture/Galleries
+					
+						<OPTION value="12">Arts&Culture/Musea
+					
+						<OPTION value="13">Arts&Culture/Music
+					
+						<OPTION value="14">Arts&Culture/Opera
+					
+						<OPTION value="15">Arts&Culture/Theatre
+					
+						<OPTION value="16">Belgium/Belgium
+					
+						<OPTION value="17">Business/Advertising, Marketing and PR
+					
+						<OPTION value="18">Business/Audio-visual
+					
+						<OPTION value="19">Business/Banks
+					
+						<OPTION value="20">Business/Business
+					
+						<OPTION value="21">Business/Cars
+					
+						<OPTION value="22">Business/Consulting
+					
+						<OPTION value="23">Business/Education
+					
+						<OPTION value="24">Business/Fashion
+					
+						<OPTION value="25">Business/Finance
+					
+						<OPTION value="26">Business/Government
+					
+						<OPTION value="27">Business/Graphic Design, DTP, Pre- Press
+					
+						<OPTION value="28">Business/Industry
+					
+						<OPTION value="29">Business/Information
+					
+						<OPTION value="30">Business/Insurance
+					
+						<OPTION value="31">Business/IT
+					
+						<OPTION value="32">Business/Law&Notary
+					
+						<OPTION value="33">Business/Medical
+					
+						<OPTION value="34">Business/Organisation
+					
+						<OPTION value="35">Business/Real Estate
+					
+						<OPTION value="36">Business/Shopping
+					
+						<OPTION value="37">Business/Telecoms
+					
+						<OPTION value="38">Business/Trade
+					
+						<OPTION value="39">Business/Translation-Writing
+					
+						<OPTION value="40">Business/Web
+					
+						<OPTION value="41">Computers/Clubs&Associations
+					
+						<OPTION value="42">Computers/Computers
+					
+						<OPTION value="43">Computers/Consultants&Services
+					
+						<OPTION value="44">Computers/Databases
+					
+						<OPTION value="45">Computers/Distributors
+					
+						<OPTION value="46">Computers/Hardware&Software
+					
+						<OPTION value="47">Computers/Multimedia
+					
+						<OPTION value="48">Computers/Networking
+					
+						<OPTION value="49">Computers/Programming
+					
+						<OPTION value="50">Computers/Retail
+					
+						<OPTION value="51">Education/Colleges
+					
+						<OPTION value="52">Education/Education
+					
+						<OPTION value="53">Education/Higher Education
+					
+						<OPTION value="54">Education/Student Clubs
+					
+						<OPTION value="55">Education/Universities
+					
+						<OPTION value="56">Entertainment/Books
+					
+						<OPTION value="57">Entertainment/Entertainment
+					
+						<OPTION value="58">Entertainment/Movie
+					
+						<OPTION value="59">Entertainment/Music
+					
+						<OPTION value="60">Entertainment/Radio
+					
+						<OPTION value="61">Entertainment/TV
+					
+						<OPTION value="62">Events/Events
+					
+						<OPTION value="63">Events/Live
+					
+						<OPTION value="64">Hot/hot
+					
+						<OPTION value="65">Internet/Access Providers
+					
+						<OPTION value="66">Internet/Internet
+					
+						<OPTION value="67">Internet/Refs
+					
+						<OPTION value="68">Internet/Service Providers
+					
+						<OPTION value="69">News/News
+					
+						<OPTION value="70">Recreation/Food&Beverage
+					
+						<OPTION value="71">Recreation/Recreation
+					
+						<OPTION value="72">Recreation/Sport
+					
+						<OPTION value="73">Recreation/Hobby
+					
+						<OPTION value="74">Regional/Belgium
+					
+						<OPTION value="75">Regional/Brussels
+					
+						<OPTION value="76">Regional/Flanders
+					
+						<OPTION value="77">Regional/Wallonia
+					
+						<OPTION value="78">Research&Science/Research&Science
+					
+						<OPTION value="79">Science/Science
+					
+						<OPTION value="80">Shopping/Books
+					
+						<OPTION value="81">Shopping/Cars
+					
+						<OPTION value="82">Shopping/Computers
+					
+						<OPTION value="83">Shopping/Departement Stores
+					
+						<OPTION value="84">Shopping/Events
+					
+						<OPTION value="85">Shopping/Flowers
+					
+						<OPTION value="86">Shopping/Food&Beverage
+					
+						<OPTION value="87">Shopping/Games
+					
+						<OPTION value="88">Shopping/Gifts
+					
+						<OPTION value="89">Shopping/Music
+					
+						<OPTION value="90">Shopping/Tickets
+					
+						<OPTION value="91">Shopping/Toys
+					
+						<OPTION value="92">Shopping/Travel
+					
+						<OPTION value="93">Travel/Destination
+					
+						<OPTION value="94">Travel/Hotel
+					
+						<OPTION value="95">Travel/Organisation
+					
+						<OPTION value="96">Travel/Transportation
+					
+						<OPTION value="97">Travel/Travel
+					
+						<OPTION value="98">Various/Personal Pages
+					
+						<OPTION value="99">Various/Various
+					
+				</SELECT><br>
+						</font><font face="Helvetica,Arial,Verdana" helvetica size="1">Note :<b>Belgium</b> category is reserved to General information (mainly administrative) related to Belgium.</font></td>
+				</tr>
+				<tr>
+					<td bgcolor="#006699" width="29" align="center"><font color="white" face="Helvetica,Arial,Verdana" size="2"><b>2</b></font></td>
+					<td bgcolor="#ffec67" width="130">
+						<div align="right">
+							<font face="Helvetica,Arial,Verdana" helvetica size="1">Site name :</font></div>
+					</td>
+					<td bgcolor="#ffec67" width="395"><font face="Helvetica,Arial,Verdana" size="1"><input name="Name" size="40" type="text"></font></td>
+				</tr>
+				<tr>
+					<td bgcolor="#003366" width="29" valign="top" align="center"><font color="white" face="Helvetica,Arial,Verdana" size="2"><b>3</b></font></td>
+					<td bgcolor="#ffce31" valign="top" width="130">
+						<div align="right">
+							<font face="Helvetica,Arial,Verdana" helvetica size="2" color="#ff6633">* </font><font face="Helvetica,Arial,Verdana" size="1">Enter a description in at least one language<br>
+							(max. 500 char.)</font></div>
+					</td>
+					<td bgcolor="#ffce31" width="395"><font face="Helvetica,Arial,Verdana" size="1"><b>English</b></font><font face="Helvetica,Arial,Verdana" size="1"><br>
+						<textarea cols="50" name="Descriptio" rows="5" wrap="virtual"></textarea><br>
+						<b>French</b><br>
+						<textarea cols="50" name="DescriptioFR" rows="5" wrap="virtual"></textarea><br>
+						<b>Dutch</b><br>
+						<textarea cols="50" name="DescriptioNL" rows="5" wrap="virtual"></textarea></font></td>
+				</tr>
+				<tr>
+					<td bgcolor="#006699" width="29" align="center"><font color="white" face="Helvetica,Arial,Verdana" size="2"><b>4</b></font></td>
+					<td bgcolor="#ffec67" width="130">
+						<div align="right">
+							<font face="Helvetica,Arial,Verdana" helvetica size="2" color="#ff6633">* </font><font face="Helvetica,Arial,Verdana" size="1">URL :</font></div>
+					</td>
+					<td bgcolor="#ffec67" width="395"><font face="Helvetica,Arial,Verdana" size="1"><input name="URL" size="40" value="http://" type="text"></font></td>
+				</tr>
+				<tr>
+					<td bgcolor="#003366" width="29" align="center"><font color="white" face="Helvetica,Arial,Verdana" size="2"><b>5</b></font></td>
+					<td bgcolor="#ffce31" width="130">
+						<div align="right">
+							<font face="Helvetica,Arial,Verdana" helvetica size="2" color="#ff6633">* </font><font face="Helvetica,Arial,Verdana" size="1">Language used :</font></div>
+					</td>
+					<td bgcolor="#ffce31" valign="top" width="395"><font face="Helvetica,Arial,Verdana" size="1"><input name="Lang" type="checkbox" value="F"> French <input name="Lang" type="checkbox" value="D"> Dutch <input name="Lang" type="checkbox" value="E"> English </font></td>
+				</tr>
+				<tr>
+					<td bgcolor="#006699" width="29" align="center"><font color="white" face="Helvetica,Arial,Verdana" size="2"><b>6</b></font></td>
+					<td bgcolor="#ffec67" valign="top" width="130">
+						<div align="right">
+							<font face="Helvetica,Arial,Verdana" helvetica size="2" color="#ff6633">* </font><font face="Helvetica,Arial,Verdana" size="1">Keywords :<br>
+							</font></div>
+					</td>
+					<td bgcolor="#ffec67" valign="top" width="395"><font face="Helvetica,Arial,Verdana" size="1"><textarea cols="50" name="Keywords" rows="5" wrap="virtual"></textarea></font></td>
+				</tr>
+				<tr>
+					<td bgcolor="#003366" width="29" align="center"><font color="white" face="Helvetica,Arial,Verdana" size="2"><b>7</b></font></td>
+					<td bgcolor="#ffce31" width="130">
+						<div align="right">
+							<font face="Helvetica,Arial,Verdana" size="1">Your Name :</font></div>
+					</td>
+					<td bgcolor="#ffce31" valign="top" width="395"><font face="Helvetica,Arial,Verdana" size="1"><input name="Contact" size="40" type="text"></font></td>
+				</tr>
+				<tr>
+					<td bgcolor="#006699" width="29" align="center"><font color="white" face="Helvetica,Arial,Verdana" size="2"><b>8</b></font></td>
+					<td bgcolor="#ffec67" width="130">
+						<div align="right">
+							<font face="Helvetica,Arial,Verdana" helvetica size="2" color="#ff6633">* </font><font face="Helvetica,Arial,Verdana" size="1">Your E-Mail :</font></div>
+					</td>
+					<td bgcolor="#ffec67" valign="top" width="395"><font face="Helvetica,Arial,Verdana" size="1"><input name="EMail" size="40" type="text"></font></td>
+				</tr>
+				<tr>
+					<td bgcolor="#003366" width="29" align="center"><font color="white" face="Helvetica,Arial,Verdana" size="2"><b>9</b></font></td>
+					<td bgcolor="#ffce31" width="130">
+						<div align="right">
+							<font face="Helvetica,Arial,Verdana" helvetica size="2" color="#ff6633">* </font><font face="Helvetica,Arial,Verdana" size="1">'Belgian Qualifier'<br>
+							Indicate the ZIP/Post Code related to the Editor/Owner of the site</font></div>
+					</td>
+					<td bgcolor="#ffce31" valign="top" width="395"><font face="Helvetica,Arial,Verdana" size="1"><input name="CP" size="10" type="text"></font></td>
+				</tr>
+				<tr>
+					<td bgcolor="#006699" width="29" align="center"><font color="white" face="Helvetica,Arial,Verdana" size="2"><b>10</b></font></td>
+					<td bgcolor="#ffec67" width="130">
+						<div align="right">
+							<font face="Helvetica,Arial,Verdana" size="1">Site Designed by :<br>
+							Indicate the name of the company or 'Internal'</font></div>
+					</td>
+					<td bgcolor="#ffec67" valign="top" width="395"><font face="Helvetica,Arial,Verdana" size="1"><input name="Designed" size="40" type="text"></font></td>
+				</tr>
+				<tr>
+					<td bgcolor="#003366" width="29" align="center"><font color="white" face="Helvetica,Arial,Verdana" size="2"><b>11</b></font></td>
+					<td bgcolor="#ffce31" width="130">
+						<div align="right">
+							<font face="Helvetica,Arial,Verdana" size="1">Web hosted by :<br>
+							Indicate the name of the company or 'Internal'</font></div>
+					</td>
+					<td bgcolor="#ffce31" valign="top" width="395"><font face="Helvetica,Arial,Verdana" size="1"><input name="Hosted" size="40" type="text"></font></td>
+				</tr>
+				<tr>
+					<td bgcolor="#006699" width="29" align="center"><font color="white" face="Helvetica,Arial,Verdana" size="2"><b>12</b></font></td>
+					<td bgcolor="#ffec67" valign="top" width="130">
+						<div align="right">
+							<font face="Helvetica,Arial,Verdana" size="1">Type :</font></div>
+					</td>
+					<td bgcolor="#ffec67" valign="top" width="395"><font face="Helvetica,Arial,Verdana" size="1"><select name="TYPE" size="1">
+							<option selected value="">One of these...
+							<option value="Company site">Company site
+							<option value="Personal site">Personal site
+							<option value="Unofficial site">Unofficial site
+							<option value="">Other
+						</select> &nbsp;&nbsp; if 'Other', please specify :<br>
+						<input name="Type" size="40" type="text"></font></td>
+				</tr>
+				<tr>
+					<td bgcolor="#003366" width="29" align="center"><font color="white" face="Helvetica,Arial,Verdana" size="2"><b>13</b></font></td>
+					<td bgcolor="#ffce31" valign="top" width="130">
+						<div align="right">
+							<font face="Helvetica,Arial,Verdana" size="1">Online since :<br>
+							Indicate Month/Year<br>
+							</font></div>
+					</td>
+					<td bgcolor="#ffce31" valign="top" width="395"><font face="Helvetica,Arial,Verdana" size="1"><input name="Online" size="10" type="text"></font></td>
+				</tr>
+				<tr>
+					<td bgcolor="#006699" width="29" align="center"><font color="white" face="Helvetica,Arial,Verdana" size="2"><b>14</b></font></td>
+					<td bgcolor="#ffec67" width="130">
+						<div align="right">
+							<font face="Helvetica,Arial,Verdana" helvetica size="2" color="#ff6633">*</font><font face="Helvetica,Arial,Verdana" size="1">Choose a Username :</font></div>
+					</td>
+					<td bgcolor="#ffec67" width="395"><font face="Helvetica,Arial,Verdana" size="1"><input name="username" size="10" maxlength="40" type="text"> (We suggest your Email)</font></td>
+				</tr>
+				<tr>
+					<td bgcolor="#003366" width="29" align="center"><font color="white" face="Helvetica,Arial,Verdana" size="2"><b>15</b></font></td>
+					<td bgcolor="#ffce31" width="130">
+						<div align="right">
+							<font face="Helvetica,Arial,Verdana" helvetica size="2" color="#ff6633">*</font><font face="Helvetica,Arial,Verdana" size="1">Choose a Password :</font></div>
+					</td>
+					<td bgcolor="#ffce31" valign="top" width="395"><font face="Helvetica,Arial,Verdana" size="1"><input name="Password" size="10" maxlength="10" type="text"> (We suggest your Birthdate: Eg. 15/12/1965)</font></td>
+				</tr>
+				<tr>
+					<td bgcolor="#006699" width="29" align="center"><font color="white" face="Helvetica,Arial,Verdana" size="2"><b>16</b></font></td>
+					<td bgcolor="#ffec67" width="130"><font face="Helvetica,Arial,Verdana" size="1">&nbsp;</font></td>
+					<td bgcolor="#ffec67" width="395"><font face="Helvetica,Arial,Verdana" size="1">Subscribe to Webwatch by Mail&nbsp;<input type="checkbox" name="Subscribe" value="yes" checked> <input name="Add" type="submit" value=" Preview "></font></td>
+				</tr>
+				<tr>
+					<td bgcolor="#003366" width="29" align="center"><font color="white" face="Helvetica,Arial,Verdana" size="2"><b>17</b></font></td>
+					<td bgcolor="#ffce31" width="130"><font face="Helvetica,Arial,Verdana" size="1">&nbsp;</font></td>
+					<td bgcolor="#ffce31" width="395"><font face="Helvetica,Arial,Verdana" size="1"><b>Thats all !</b></font></td>
+				</tr>
+				<tr>
+					<td colspan="3"><font face="Helvetica,Arial,Verdana" size="1">&nbsp;</font>
+						<center>
+							<p><font face="Helvetica,Arial,Verdana" size="2">(Be patient, could take a while ...) </font></p>
+							<p><font face="Helvetica,Arial,Verdana" size="1">Multiple submission services : [ <a href="http://sam.acorus.fr/referenceur/">Le Referenceur</a> | <a href="http://www.submit-it.com/">Submit-it</a> | <a href="http://www.wakatepe.com/submitnow/">Submit Now FR</a>] </font></center>
+					</td>
+				</tr>
+			</table>
+			<!-- BEGIN OF SMALL NAVIGATION -------------------------------------------------->
+			<hr>
+			</form>
+			</p>
+			<p>
+			<hr>
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" align="center">
+				<tr>
+					<td width="20%"><img align="left" alt="[ MORE ENGINES ]" height="17" src="images/engines.gif" width="19"> <a href="Search-engines.html"><font face="arial" helvetica size="1">More engines</font></a><font face="arial" helvetica size="1"> </font></td>
+					<td width="20%"><img align="left" alt="[ CURRENT STATUS ]" height="17" src="images/status.gif" width="19"> <a href="status.html"><font face="arial" helvetica size="1">Current status</font></a><font face="arial" helvetica size="1"> </font></td>
+					<td width="20%"><img align="left" alt="[ ADD YOUR SITE ]" height="17" src="images/Sadd.gif" width="19"> <a href="add.dlp"><font face="arial" helvetica size="1">Add</font></a><font face="arial" helvetica size="1"> or <a href="login.dlp">Update</a> a site </font></td>
+					<td width="20%"><img align="left" alt="[ HELP ]" height="17" src="images/help.gif" width="19"> <a href="help.html"><font face="arial" helvetica size="1">Help</font></a><font face="arial" helvetica size="1"> </font></td>
+					<td width="20%"><img align="left" alt="[ ABOUT WEBWATCH ]" height="17" src="images/about.gif" width="19"> <a href="Press.html"><font face="arial" helvetica size="1">About WebWatch</font></a><font face="arial" helvetica size="1"> </font></td>
+				</tr>
+			</table>
+		</center>
+	</body>
+
+</html>

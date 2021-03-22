@@ -1,0 +1,91 @@
+<html><center><a href=banners.php3?op=click&bid=3><img src=http://www.auto1000.com/images/icons/ban1.gif border=1></a></center><br><html>
+<head>
+<title>Rallies en México - El portal de los rallies en México...</title>
+<style rel=stylesheet type=text/css>
+	A:link { font-weight: bold; }
+	A:visited { font-weight: bold; }
+</style>
+</head>
+<body bgcolor="#778899" text="#000000" link="#000000" vlink="#000000" topmargin=5 leftmargin=0 rightmargin=0 marginheight=5>
+
+<table border=0 cellpadding=4 cellspacing=0 width=100% align=center>
+<tr><td bgcolor=778899>
+<table border="0" cellspacing="0" cellpadding="1" width="100%" bgcolor="#000000">
+<tr><td>
+<table border="0" cellspacing="0" cellpadding="3" width="100%" bgcolor="333333">
+<tr><td>
+<a href="index.html"><img src="themes/Default/deflogo.jpg" alt="Bienvenido a Rallies en México" border=0></a>
+</td><td align=right>
+<form action="search.php3" method=post><font face=Arial,Helvetica size=2 color="ffffff">
+Buscar<input type=name name=query>
+</form></tr>
+<tr bgcolor="666666"><td colspan=2 bgcolor="666666">
+<font face=Arial,Helvetica size=3 color=CCCCCC>El portal de los rallies en México...</td>
+</td></tr></table>
+</td></tr></table>
+</td></tr><tr><td valign=top width=100% bgcolor=778899>
+<table border=0 cellspacing=0 cellpadding=2 width=100%>
+<tr><td valign=top width=150 bgcolor=778899>
+
+<!-- Blocks Init -->
+
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>Menú Principal</td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+<li><a href=index.php3>Inicio</a>
+<li><a href=http://mail.mexicoenlinea.net.mx>Correo</a>
+<li><a href=links.php3>Buscador</a>
+<li><a href=topics.php3>Topicos</a>
+<li><a href=sections.php3>Secciónes</a>
+<li><a href=galeria/index.php>Galería</a>
+<li><a href=user.php3>Tú Cuenta</a>
+<li><a href=submit.php3>Enviar Noticias</a>
+<li><a href=article.php3?sid=10&mode=threaded&order=0&thold=0>Lista de correo</a>
+<li><a href=stats.php3>Estadísticas</a>
+<li><a href=top.php3>Top 10</a>
+<li><a href=faq.php3>FAQ</a></td></tr></table></td></tr></table><br>
+
+<!-- Because this is the DEFAULT theme, so print the user login block -->
+
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>Rallies en México Login
+</td></tr><tr><td bgcolor=FFFFFF>
+<font face=Arial,Helvetica size=2>
+<form action="user.php3" method="post">
+Nickname: <input type="text" name="uname" size=12 maxlength=25><br>
+Password: <input type="password" name="pass" size=12 maxlength=20><br>
+<center><input type="submit" name="op" value="login"></form>
+Don't have an account yet? You can <a href=user.php3>Create One</a>.
+As registered user you have some advantages like theme manager,
+comments configuration and post comments with your name.
+</center></td></tr></table></td></tr></table><br>
+
+<!-- Show Left Blocks -->
+
+
+
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>Rallie.com.mx esta cambiando!!!</td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+Rallies.com.mx esta cambiando para mejorar, próximamente tendremos un portal interactivo.</td></tr></table></td></tr></table><br>
+
+
+
+<img src=images/pix.gif border=0 width=150 height=1>
+</td><td width=100% valign=top><table border=0 cellpadding=8><tr><td><font face=Arial,Helvetica size=3><li> <a href="pollBooth.php3?pollID=1">Encuesta de prueba</a> (<a href="pollBooth.php3?op=results&pollID=1">Resultados</a> - 1 votos)
+<li> <a href="pollBooth.php3?pollID=2">¿Deseas que continue disponible la galería de fotos y videos?</a> (<a href="pollBooth.php3?op=results&pollID=2">Resultados</a> - 13 votos)
+<li> <a href="pollBooth.php3?pollID=3">¿Te gusta la nueva imágen de Rallies.com.mx?</a> (<a href="pollBooth.php3?op=results&pollID=3">Resultados</a> - 6 votos)
+<li> <a href="pollBooth.php3?pollID=4">¿Cual es el mejor auto WRC de la temporada 200?</a> (<a href="pollBooth.php3?op=results&pollID=4">Resultados</a> - 22 votos)
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</body></html>
+
+<font face=Arial,Helvetica size=1><center>
+<a href=http://www.mexicoenlinea.net.mx>Portal creado y administrado por México @ Línea</a><br><br>
+Todos los logos y marcas en este sitio son propiedad de su respectivo dueño. Los comentarios son propiedad del que los envia.<br>
+Powered by <a href=http://linuxpreview.org/php-nuke.php3>PHP-Nuke</a>, a web portal system.</a>.<br>
+<br>
+</body>
+</html>

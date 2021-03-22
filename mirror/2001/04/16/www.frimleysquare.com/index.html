@@ -1,0 +1,117 @@
+<% @Language = "VBScript" %>
+<% Response.buffer = true %>
+<!--
+	  WARNING!
+	  Please do not alter this file. It may be replaced if you upgrade your web server 
+     If you want to use it as a template, we recommend renaming it, and modifying the new file.
+	  Thanks.
+-->
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>Defaced, Hacked, Exploited</title>
+<%
+Dim strServername, strLocalname, strServerIP
+
+strServername = LCase(Request.ServerVariables("SERVER_NAME"))
+strServerIP = LCase(Request.ServerVariables("LOCAL_ADDR"))
+strRemoteIP =  LCase(Request.ServerVariables("REMOTE_ADDR"))
+
+
+%>
+<% If Request("uc") <> 1 AND  (strServername = "localhost" or strServerIP = strRemoteIP) then %>
+<% Response.Redirect "localstart.asp" %>
+<% else %>
+<% end if %>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+<div align="center"><center>
+
+<table border="1" cellpadding="15" cellspacing="1" width="600"
+background="file:///F:/Documents%20and%20Settings/Administrator/My%20Documents/sun2.jpg"
+bordercolor="#CECECE">
+    <tr>
+        <td><blockquote>
+            <p align="right" id="errortype"
+            style="font:14pt/16pt verdana; color:#4e4e4e"><font
+            color="#0000FF" size="4" face="Arial"></font>&nbsp;</p>
+            <p align="right" id="errortype"
+            style="font:14pt/16pt verdana; color:#4e4e4e"><font
+            color="#0000FF" size="3" face="Arial">.:[</font><font
+            color="#808080" size="4" face="Arial"><strong><u>
+            Defaced </u></strong></font><font color="#0000FF"
+            size="3" face="Arial">]:.</font></p>
+        </blockquote>
+        <blockquote>
+            <blockquote>
+                <p align="right" id="errortype"
+                style="font:14pt/16pt verdana; color:#4e4e4e"><font
+                color="#0000FF" size="3" face="Arial">.:[</font><font
+                color="#C0C0C0" size="3" face="Arial"><strong><u>
+                </u></strong></font><font color="#808080"
+                size="3" face="Arial"><strong><u>by keyDet79</u></strong></font><font
+                color="#C0C0C0" size="3" face="Arial"><strong><u>
+                </u></strong></font><font color="#0000FF"
+                size="3" face="Arial">]:.</font></p>
+            </blockquote>
+        </blockquote>
+        <blockquote>
+            <blockquote>
+                <p align="right" id="errortype"
+                style="font:14pt/16pt verdana; color:#4e4e4e"><font
+                color="#0000FF" size="4" face="Arial"></font>&nbsp;</p>
+            </blockquote>
+        </blockquote>
+        <hr size="1" width="90%" color="#0000FF">
+        <p align="left"><font color="#0000FF" size="2"
+        face="Arial"><strong>T</strong></font><font size="2"
+        face="Arial">he site you were trying to reach has been
+        hacked/cracked/defaced</font><font color="#0000FF"
+        size="2" face="Arial"><strong>,</strong></font><font
+        size="2" face="Arial"> you name it</font><font
+        color="#0000FF" size="2" face="Arial"><strong>,</strong></font><font
+        size="2" face="Arial"> by </font><font color="#0000FF"
+        size="2" face="Arial"><strong>keyDet79.</strong></font><font
+        size="2" face="Arial"><br>
+        </font><font color="#0000FF" size="2" face="Arial"><strong>V</strong></font><font
+        size="2" face="Arial">ulnerability was a very common
+        misconfiguration found under both</font><font
+        color="#0000FF" size="2" face="Arial"><strong>,</strong></font><font
+        size="2" face="Arial"> </font><font color="#0000FF"
+        size="2" face="Arial"><strong>U</strong></font><font
+        size="2" face="Arial">nix aswell as </font><font
+        color="#0000FF" size="2" face="Arial"><strong>W</strong></font><font
+        size="2" face="Arial">indows servers</font><font
+        color="#0000FF" size="2" face="Arial"><strong>.</strong></font></p>
+        <p align="left"><font color="#0000FF" size="2"
+        face="Arial"><strong>I</strong></font><font size="2"
+        face="Arial"> suggest the admin to think about this
+        mistake</font><font color="#0000FF" size="2" face="Arial"><strong>,</strong></font><font
+        size="2" face="Arial"> so it won't happen again in the
+        future</font><font color="#0000FF" size="2" face="Arial"><strong>.</strong></font><font
+        size="2" face="Arial"> </font><font color="#0000FF"
+        size="2" face="Arial"><strong>L</strong></font><font
+        size="2" face="Arial">et this be a lesson for you and
+        there's no need to thank me</font><font color="#0000FF"
+        size="2" face="Arial"><strong>.</strong></font></p>
+        <p align="left"><font color="#0000FF" size="2"
+        face="Arial"><strong>C</strong></font><font size="2"
+        face="Arial">lick </font><a href="index-old.htm"><font
+        size="2" face="Arial"><strong>Here</strong></font></a><font
+        size="2" face="Arial"> to proceed to the original website</font><font
+        color="#0000FF" size="2" face="Arial"><strong>.</strong></font></p>
+        </td>
+    </tr>
+</table>
+</center></div>
+</body>
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

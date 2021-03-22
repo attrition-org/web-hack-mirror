@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>WELCOME TO redhat .co.id WAR</title>
+</head>
+
+<body bgcolor="#000000" text="#FFFFFF">
+
+<p align="center"><strong><big><font face="Tahoma"><font
+color="#C0C0C0">Welcome To</font>
+<font color="red">red`hat</font><font color="#C0C0C0">`s deface
+site.</font></font></big></strong></p>
+
+<hr width="75%">
+
+<p align="center"><font face="Tahoma">Hey... Mr. Administrator, wake up
+from your long <B>sleeping</B> day.<br>
+It's time to patch your server.<br>
+<strong>NO HARM</strong> ON THE SERVER WAS DONE. To visit the old index of
+this site simple click <a href="redhat.html"><strong>HERE</strong></a>.
+<font></p>
+
+<hr width="75%">
+
+<p align="left"><font face="Tahoma"><strong>Shoutingz to</strong>
+: <strong>WarNetZ</strong>
+, Casey (best friends
+ever), ze4l0us, khosi, RyuKen, asg4rd, and all the SbG members.</font></p>
+
+
+<p align="left"><font face="Tahoma">&nbsp;</font></p>
+
+<p align="left"><font face="Tahoma">N.B. - WarNetZ, wanna play
+Counter-Terrorism? Miss so much to shoot your head with AWP :-)</font></p>
+
+<hr width="75%">
+
+<p align="center"><font face="Tahoma"><a
+href="mailto:root@ResumeForAll.Com">red`hat</a></font></p>
+</body>
+</html>

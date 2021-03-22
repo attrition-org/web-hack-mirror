@@ -1,0 +1,501 @@
+<html><!-- #BeginTemplate "/Templates/news.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>Pressemeldungen</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript">
+<!--
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+
+function MM_timelinePlay(tmLnName, myID) { //v1.2
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,propNum,theObj,firstTime=false;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (myID == null) { myID = ++tmLn.ID; firstTime=true;}//if new call, incr ID
+  if (myID == tmLn.ID) { //if Im newest
+    setTimeout('MM_timelinePlay("'+tmLnName+'",'+myID+')',tmLn.delay);
+    fNew = ++tmLn.curFrame;
+    for (i=0; i<tmLn.length; i++) {
+      sprite = tmLn[i];
+      if (sprite.charAt(0) == 's') {
+        if (sprite.obj) {
+          numKeyFr = sprite.keyFrames.length; firstKeyFr = sprite.keyFrames[0];
+          if (fNew >= firstKeyFr && fNew <= sprite.keyFrames[numKeyFr-1]) {//in range
+            keyFrm=1;
+            for (j=0; j<sprite.values.length; j++) {
+              props = sprite.values[j]; 
+              if (numKeyFr != props.length) {
+                if (props.prop2 == null) sprite.obj[props.prop] = props[fNew-firstKeyFr];
+                else        sprite.obj[props.prop2][props.prop] = props[fNew-firstKeyFr];
+              } else {
+                while (keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]) keyFrm++;
+                if (firstTime || fNew==sprite.keyFrames[keyFrm-1]) {
+                  if (props.prop2 == null) sprite.obj[props.prop] = props[keyFrm-1];
+                  else        sprite.obj[props.prop2][props.prop] = props[keyFrm-1];
+        } } } } }
+      } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+      if (fNew > tmLn.lastFrame) tmLn.ID = 0;
+  } }
+}
+
+function MM_timelineGoto(tmLnName, fNew, numGotos) { //v2.0
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,lastKeyFr,propNum,theObj;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (numGotos != null)
+    if (tmLn.gotoCount == null) tmLn.gotoCount = 1;
+    else if (tmLn.gotoCount++ >= numGotos) {tmLn.gotoCount=0; return}
+  jmpFwd = (fNew > tmLn.curFrame);
+  for (i = 0; i < tmLn.length; i++) {
+    sprite = (jmpFwd)? tmLn[i] : tmLn[(tmLn.length-1)-i]; //count bkwds if jumping back
+    if (sprite.charAt(0) == "s") {
+      numKeyFr = sprite.keyFrames.length;
+      firstKeyFr = sprite.keyFrames[0];
+      lastKeyFr = sprite.keyFrames[numKeyFr - 1];
+      if ((jmpFwd && fNew<firstKeyFr) || (!jmpFwd && lastKeyFr<fNew)) continue; //skip if untouchd
+      for (keyFrm=1; keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]; keyFrm++);
+      for (j=0; j<sprite.values.length; j++) {
+        props = sprite.values[j];
+        if (numKeyFr == props.length) propNum = keyFrm-1 //keyframes only
+        else propNum = Math.min(Math.max(0,fNew-firstKeyFr),props.length-1); //or keep in legal range
+        if (sprite.obj != null) {
+          if (props.prop2 == null) sprite.obj[props.prop] = props[propNum];
+          else        sprite.obj[props.prop2][props.prop] = props[propNum];
+      } }
+    } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+  }
+  tmLn.curFrame = fNew;
+  if (tmLn.ID == 0) eval('MM_timelinePlay(tmLnName)');
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v3.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function MM_initTimelines() {
+    //MM_initTimelines() Copyright 1997 Macromedia, Inc. All rights reserved.
+    var ns = navigator.appName == "Netscape";
+    document.MM_Time = new Array(1);
+    document.MM_Time[0] = new Array(1);
+    document.MM_Time["Timeline1"] = document.MM_Time[0];
+    document.MM_Time[0].MM_Name = "Timeline1";
+    document.MM_Time[0].fps = 4;
+    document.MM_Time[0][0] = new String("behavior");
+    document.MM_Time[0][0].frame = 16;
+    document.MM_Time[0][0].value = "MM_timelineGoto('Timeline1','1')";
+    document.MM_Time[0].lastFrame = 16;
+    for (i=0; i<document.MM_Time.length; i++) {
+        document.MM_Time[i].ID = null;
+        document.MM_Time[i].curFrame = 0;
+        document.MM_Time[i].delay = 1000/document.MM_Time[i].fps;
+    }
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" text="#333333" link="#6666FF" alink="#666600" vlink="#FFCC66" onLoad="MM_timelinePlay('Timeline1');MM_preloadImages('vueberuns.gif','vfuesrsie.gif','VOnline.gif','vservice.gif','vMembers.gif')" background="wirtschaft2000/bg2.gif">
+<div align="center"> 
+  <table width="700">
+    <tr>
+      <td height="48" width="143">
+        <div align="center"><img src="fwvlogoklein.gif" width="165" height="57"></div>
+      </td>
+      <td height="48" width="541"> 
+        <div align="center">
+          <table>
+            <tr> 
+              <td> 
+                <div align="right"><a href="UnsereZiele.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('&uuml;beruns','','vueberuns.gif',1)"><img name="überuns" border="0" src="ueberuns.gif" width="96" height="25"></a></div>
+              </td>
+              <td> 
+                <div align="center"></div>
+              </td>
+              <td> 
+                <div align="right"><a href="Fachberatung.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Service','','vservice.gif',1)"><img src="service.gif" width="96" height="25" border="0" name="Service"></a></div>
+              </td>
+              <td> 
+                <div align="right"><a href="links.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image3','','VOnline.gif',1)"><img src="Online.gif" width="96" height="25" border="0" name="Image3"></a></div>
+              </td>
+              <td> 
+                <div align="right"><a href="bundeslaender.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image4','','vMembers.gif',1)"><img src="members.gif" width="96" height="25" border="0" name="Image4"></a></div>
+              </td>
+            </tr>
+            <tr> 
+              <td height="2" colspan="5"> 
+                <div align="left"><img src="strich.gif" width="550" height="1"></div>
+              </td>
+            </tr>
+            <tr> 
+              <td> 
+                <div align="center"><a href="Presse.htm"><img src="uPresse.gif" width="34" height="9" border="0"></a></div>
+              </td>
+              <td> 
+                <div align="right"><img src="VNewsS.gif" width="98" height="28"></div>
+              </td>
+              <td> 
+                <div align="center"><a href="Termine.htm"><img src="uTermine.gif" width="48" height="12" border="0"></a></div>
+              </td>
+              <td> 
+                <div align="center"><img src="uZeitung.gif" width="39" height="11"></div>
+              </td>
+              <td> 
+                <div align="center"><a href="buchtip.htm"><img src="uBuchtipps.gif" width="52" height="12" border="0"></a></div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <table width="450">
+    <tr> 
+      <td> <!-- #BeginEditable "text" --> 
+        <p align="center"><a href="http://www.spoe.at/index_aktuell.htm"><img src="aktuell_gruen_optimiert14k.gif" width="200" height="43" border="0"></a></p>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif"><b>FWV-Presseaussendungen<br>
+          <br>
+          </b></font> </p>
+        <div align="left"> 
+          <table border="0" cellpadding="3" cellspacing="0" width="486">
+            <tr bgcolor="lightgrey" align="center"> 
+              <td width="80" valign="bottom"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+                Datum</font></b></td>
+              <td><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Titel</font></b></td>
+            </tr>
+            <tr bgcolor="white"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">01-03-23</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/010323.htm">Lebenszeichen 
+                der Frau Rossmann</a></font></td>
+            </tr>
+            <tr bgcolor="lightgrey"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">01-03-16</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/010316.htm">Gewerbenovelle 
+                im Kommen</a></font></td>
+            </tr>
+            <tr bgcolor="white"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">01-03-02</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/010302.htm">Abschaffung 
+                der Eintragungsgeb&uuml;hr</a></font></td>
+            </tr>
+            <tr bgcolor="lightgrey"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">01-02-28</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/010228.htm">FWV 
+                zur Lebensmittelproblematik</a></font></td>
+            </tr>
+            <tr bgcolor="white"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">01-01-30</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/010131.htm">Grasser 
+                borgt Geld von Betrieben</a></font></td>
+            </tr>
+            <tr bgcolor="lightgrey"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">01-01-26</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/010126.htm">&quot;denn 
+                schon von Kindesbeinen...&quot;</a></font></td>
+            </tr>
+            <tr bgcolor="white"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">01-01-15</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/010115.htm">FWV 
+                zu Ladenöffnungszeiten: Ja zu Veränderungen, Nein zu einem Kahlschlag 
+                </a></font></td>
+            </tr>
+            <tr bgcolor="lightgrey"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">00-12-11</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/001211.htm">Landeskonferenz 
+                FWV Steiermark</a></font></td>
+            </tr>
+            <tr bgcolor="white"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">00-11-30</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/001130.htm">FWV: 
+                Fast ein Konsens</a></font></td>
+            </tr>
+            <tr bgcolor="lightgrey"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">00-11-23</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/001123.htm">Der 
+                FWV hat die Interessen der KMU erfolgreich vertreten</a></font></td>
+            </tr>
+            <tr bgcolor="white"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">00-11-08</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/Budgethearing.htm">FWV 
+                zum Budgethearing - Kritik ist mehr als angebracht </a></font></td>
+            </tr>
+            <tr bgcolor="lightgrey"> 
+              <td valign="top" width="80"> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">00-11-06</font></p>
+              </td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+                <a href="presse/Temelin.htm">FWV: Temelin ist ein Faktum und kann 
+                (nur) faktisch </a>verbessert werden</font></td>
+            </tr>
+            <tr bgcolor="white"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">00-10-18</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/001018.htm">FWV 
+                zum Investitionsfreibetrag</a></font></td>
+            </tr>
+            <tr bgcolor="lightgrey"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">00-10-10</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/Abgaben.pdf">Pressekonferenz 
+                FWV Vorarlberg</a></font></td>
+            </tr>
+            <tr bgcolor="white"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">00-10-10</font></td>
+              <td><a href="presse/001010.htm"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">FWV 
+                Steiermark zur Landtagswahl</font></a></td>
+            </tr>
+            <tr bgcolor="lightgrey"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">00-10-05</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/001005.htm">Die 
+                Qualit&auml;t der Ausbildung darf nicht leiden</a></font></td>
+            </tr>
+            <tr bgcolor="white"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">00-09-27</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/000927.htm">Vorzieheffekt 
+                als Todesstoß für Vertrauensvorschuß </a></font></td>
+            </tr>
+            <tr bgcolor="lightgrey"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">00-09-14</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/000914.htm">Die 
+                Großen wollen eine Kammerreform - die Kleinen bezahlen </a></font></td>
+            </tr>
+            <tr bgcolor="white"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">00-09-12</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/Beschl%FCsse%20wozu.htm">Beschl&uuml;sse 
+                wozu?</a></font></td>
+            </tr>
+            <tr bgcolor="lightgrey"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">00-09-11</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/Kammer%20gemeinsam.htm">Kammerreform 
+                nur gemeinsam</a></font></td>
+            </tr>
+            <tr bgcolor="white"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">00-09-06</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/Stiftungen.htm">Vertrauenskrise 
+                in Stiftungen</a></font></td>
+            </tr>
+            <tr bgcolor="lightgrey"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">00-09-05</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/Budgeteinsparung.htm">Haiden 
+                zu Budgetpl&auml;nen</a></font></td>
+            </tr>
+            <tr bgcolor="white"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">00-08-31</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/Belastungen%20Wirtschaft.htm">Belastungen 
+                f&uuml;r die Wirtschaft</a></font></td>
+            </tr>
+            <tr bgcolor="lightgrey"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">00-08-30</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/Kaputtsparen.htm">Wirtschaft 
+                kaputtsparen</a></font></td>
+            </tr>
+            <tr bgcolor="white"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">00-07-27</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/ladenschluss.htm">FWV 
+                warnt vor Ladenschluss-Debatte</a></font></td>
+            </tr>
+            <tr bgcolor="lightgrey"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">00-07-25</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/kilometer.htm">Kilometergeld 
+                - Riess-Passer spielt mit falschen Karten</a> </font></td>
+            </tr>
+            <tr bgcolor="white"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">00-04-12</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+                <a href="presse/steuern.htm">Der Freie Wirtschaftsverband zu den 
+                neuen Steuern</a></font></td>
+            </tr>
+            <tr bgcolor="lightgrey"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">00-04-11</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/drueber.htm">Neue 
+                Regierungsmethode: D'rüberfahren über die</a> Sozialpartner</font></td>
+            </tr>
+            <tr bgcolor="white"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">00-03-22</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/belastungen.htm">Haiden/FWV/Wirtschaftskammerwahlen 
+                </a> </font></td>
+            </tr>
+            <tr bgcolor="lightgrey"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">00-03-21</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/wkwahl.htm">Wirtschaftskammer-Wahlen: 
+                FWV: Pressegespräch</a></font></td>
+            </tr>
+            <tr bgcolor="white"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">00-03-18 
+                </font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/gusenbauer.htm">Gusenbauer: 
+                Regierung unfähig, Herausforderungen </a>Österreichs zu bewältigen 
+                </font></td>
+            </tr>
+            <tr bgcolor="lightgrey"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">00-03-18</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a target="inhalt" href="presse/Wahlabschluss.htm">Wahlabschluss 
+                mit Häupl und Gusenbauer</a></font></td>
+            </tr>
+            <tr bgcolor="white"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">00-03-14</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/Getränke.htm">&quot;Wenn 
+                Getränke Luxus werden...&quot;</a></font></td>
+            </tr>
+            <tr bgcolor="lightgrey"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">00-03-07</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a target="inhalt" href="presse/WahlkampfWB.htm">Wahlaussagen 
+                des Wirtschaftsbundes...</a></font></td>
+            </tr>
+            <tr bgcolor="white"> 
+              <td width="80" valign="bottom"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">00-02-11</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/Resolution.htm">&nbsp;Resolution</a></font></td>
+            </tr>
+            <tr bgcolor="lightgrey"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">00-02-02</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/UmfrageWB.htm">Die 
+                Umfrage des Wirtschaftsbundes...</a></font></td>
+            </tr>
+            <tr bgcolor="white"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">99-11-26</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a target="inhalt" href="presse/991126b.htm">Anträge 
+                am Kammertag mit grosser Mehrheit angenommen</a></font></td>
+            </tr>
+            <tr bgcolor="lightgrey"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">99-11-26</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a target="inhalt" href="presse/991126a.htm">Lehrabschlussprüfung 
+                wird verändert</a></font></td>
+            </tr>
+            <tr bgcolor="white"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">99-11-26</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a target="inhalt" href="presse/991126.htm">Ladenöffnungszeitenänderung 
+                nicht ohne Befragung der Betroffenen!</a></font></td>
+            </tr>
+            <tr bgcolor="lightgrey"> 
+              <td valign="top" width="80"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">99-11-16</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a target="inhalt" href="presse/990430.htm">FWVÖ 
+                Pressegespräch zur Kammerreform in der Bank Austria International</a></font></td>
+            </tr>
+            <tr bgcolor="white"> 
+              <td width="80" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">99-04-30</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a target="inhalt" href="presse/990430.htm">ÖVP 
+                schützt einmal mehr die illegale Konkurrenz</a></font></td>
+            </tr>
+            <tr bgcolor="lightgrey"> 
+              <td width="80" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">99-02-10</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/990210.htm" target="_self">EU-Osterweiterung 
+                - Chance und Risiko</a></font></td>
+            </tr>
+            <tr bgcolor="white"> 
+              <td width="80" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">99-02-13</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/990213.htm" target="_self">FWVÖ-Präs. 
+                Haiden gegen Karenzgeld für alle</a></font></td>
+            </tr>
+            <tr bgcolor="lightgrey"> 
+              <td width="80" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">99-01-22</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/990122.htm" target="_self">Schwarzarbeiterbekämpfungsgesetz</a></font></td>
+            </tr>
+            <tr bgcolor="white"> 
+              <td width="80" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">98-12-07</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/archiv/9812101.htm">Behinderte 
+                besser in den Arbeitsmarkt integrieren</a></font></td>
+            </tr>
+            <tr bgcolor="lightgrey"> 
+              <td width="80" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">98-12-04</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/990101.htm" target="_self">FWVÖ 
+                sagt ja zum Umweltschutz</a></font></td>
+            </tr>
+            <tr bgcolor="white"> 
+              <td width="80" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">98-11-27</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/archiv/981127.htm">Arbeitsmedizinische 
+                Betreuung durch die AUVA</a></font></td>
+            </tr>
+            <tr bgcolor="lightgrey"> 
+              <td width="80" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">98-11-24</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/archiv/9811024.htm" target="_self">Forderungspaket 
+                des FWV zur Steuerreform</a></font></td>
+            </tr>
+            <tr bgcolor="white"> 
+              <td width="80" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">98-11-23</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/archiv/9811023.htm" target="_self">Euro: 
+                der Countdown läuft</a></font></td>
+            </tr>
+            <tr bgcolor="lightgrey"> 
+              <td width="80" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">98-11-22</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/archiv/9811022.htm" target="_self">Ende 
+                des Generalunternehmertums in Kärnten</a></font></td>
+            </tr>
+            <tr bgcolor="white"> 
+              <td width="80" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">98-11-21</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/archiv/9811021.htm" target="_self">Wochengeldregelung 
+                für Kleinst-Unternehmerinnen</a></font></td>
+            </tr>
+            <tr bgcolor="lightgrey"> 
+              <td width="80" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">98-11-19</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/archiv/981119.htm" target="_self">AUVA 
+                übernimmt präventiv- u. arbeitsmedizinische <br>
+                Betreuung von Betrieben bis zu 50 Mitarbeitern</a></font></td>
+            </tr>
+            <tr bgcolor="white"> 
+              <td width="80" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">98-09-10</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/archiv/980910.htm" target="_self">FLAF: 
+                Bei Überschuß Beiträge der Unternehmer senken!</a></font></td>
+            </tr>
+            <tr bgcolor="lightgrey"> 
+              <td width="80" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">98-07-16</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/archiv/980617.htm" target="_self">&#132;Zeltfeste&quot; 
+                &#150; der Gastronomie entgehen Milliardenbeträge!</a></font></td>
+            </tr>
+            <tr bgcolor="white"> 
+              <td width="80" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">98-06-02</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a target="_self" href="presse/archiv/980602.htm">Europartenariat 
+                Austria 1999: Förderung der internationalen Chancen</a></font></td>
+            </tr>
+            <tr bgcolor="lightgrey"> 
+              <td width="80" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">98-06-01</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/archiv/980601.htm" target="_self">Das 
+                letzte Wort ist noch nicht gesprochen</a></font></td>
+            </tr>
+            <tr bgcolor="white"> 
+              <td width="80" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">98-03-25</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/archiv/980325.htm" target="_self">Schattenwirtschaft 
+                ruiniert ehrliche Unternehmer</a></font></td>
+            </tr>
+            <tr bgcolor="lightgrey"> 
+              <td width="80" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">98-02-11</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/archiv/980211.htm" target="_self">KMU 
+                profitieren von ÖBB-Investitionsoffensive</a></font></td>
+            </tr>
+            <tr bgcolor="white"> 
+              <td width="80" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">98-01-19</font></td>
+              <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="presse/archiv/980119.htm" target="_self">Maderthaner-Kritik 
+                an ÖVP im Kern unterstützenswert!</a></font></td>
+            </tr>
+          </table>
+        </div>
+        <div align="left"> </div>
+        <!-- #EndEditable --></td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+</div>
+</body>
+<!-- #EndTemplate --></html>

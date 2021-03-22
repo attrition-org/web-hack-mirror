@@ -1,0 +1,203 @@
+<html>
+
+<head>
+<title>Stredná priemyselná škola Myjava</title>
+<script>
+<!--
+function statusScroll(stuff)
+{
+    var m1 = "     Vitajte na oficiálnej stránke strednej priemyselnej školy na Myjave"; 
+    var m2 = "     created by  Mgr.Branislav Magula"; 
+    var m3 = "     "; 
+var msg = m1+m2+m3;
+var out=" ";
+var c=1; 
+if (stuff > 100) {
+             stuff --;
+             var cmd="statusScroll("+stuff+")";
+             timerTwo=window.setTimeout(cmd,100);
+}
+else if (stuff <=100 && stuff >0) {
+for (c=0; c<stuff; c++){
+out+=" ";
+}
+out+=msg;
+stuff--;
+var cmd="statusScroll("+stuff+")";
+window.status=out;
+timerTwo=window.setTimeout(cmd,100);
+}
+else if (stuff <=0) {
+if (-stuff <msg.length){
+out+=msg.substring(-stuff, msg.length);
+stuff--;
+var cmd="statusScroll("+stuff+")";
+window.status=out;
+timerTwo=window.setTimeout(cmd,100);
+}
+else {
+window.status=" ";
+timerTwo=window.setTimeout("statusScroll(100)",75);
+                           }
+                  }
+           }
+// -->           
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+</head>
+
+<body onLoad="TimerONE=window.setTimeout('statusScroll(100)',500);" bgcolor="#FFFFFF">
+
+<table border="0" width="100%">
+  <tr>
+    <td width="22%"><p align="left">&nbsp;&nbsp;&nbsp; <a href="_private/jazyk/france.htm"><img src="images/vlajky/France.gif" width="33" height="23" BORDER="0" alt="Verzia vo francúzskom jazyku" style="border: medium none rgb(255,255,255)"></a>
+    &nbsp; <a href="_private/jazyk/deutsch.htm"><img src="images/vlajky/Germany.gif" width="33" height="23" BORDER="0" alt="Verzia v nemeckom jazyku" style="border: medium none rgb(255,255,255)"></a>&nbsp; <a href="_private/jazyk/en.htm"><img src="images/vlajky/anglicka.gif" width="34" border="0" height="21" alt="verzia v anglickom jazyku"></a></td>
+    <td width="53%" rowspan="3"><p align="center"><img src="images/tlacitka/logo.gif" alt="Stredná priemyselná škola Myjava" WIDTH="323" HEIGHT="59"></td>
+    <td width="25%" rowspan="3"><script language="JavaScript">
+<!--
+dnes = new Date();
+mesiac = dnes.getMonth()+1;
+den = dnes.getDate();
+// meniny - coded by (c) TiREX for Slovak calendar
+kalendar1 = new Array("","Alexandra","Daniela","Drahoslav","Andrea","Antónia",
+						 "Bohuslava/Róbert","Severín","Alexej","Dáša","Malvína",
+						 "Ernest","Rastislav","Radovan","Dobroslav","Kristína",
+						 "Nataša","Bohdana","Drahomíra","Dalibor","Vincent","Zora",
+						 "Miloš","Timotej","Gejza","Tamara","Bohuš","Alfonz",
+						 "Gašpar","Ema","Emil",
+						 "Tatiana","Erika/Erik","Blažej","Veronika","Agáta","Dorota",
+						 "Vanda","Zoja","Zdenko","Gabriela","Dezider","Perla",
+						 "Arpád","Valentín","Pravoslav","Ida","Miloslava","Jaromír",
+						 "Vlasta","Lívia","Eleonóra","Etela","Roman/Romana",
+						 "Matej","Frederik/Frederika","Viktor","Alexander",
+						 "Zlatica","",
+						 "Albín","Anežka","Bohumil/Bohumila","Kazimír","Fridrich",
+						 "Radoslav/Radoslava","Tomáš/Róbert","Alan/Alana","Františka",
+						 "Branislav/Bruno","Angela/Angelika","Gregor","Vlastimil",
+						 "Matilda","Svetlana","Boleslav","¼ubica","Eduard","Jozef",
+						 "Víazoslav","Blahoslav","Beòadik","Adrián","Gabriel",
+						 "Marián","Emanuel","Alena","Soòa","Miroslav","Vieroslava",
+						 "Benjamín",
+						 "Hugo","Zita","Richard","Izidor","Miroslava","Irena",
+						 "Zoltán/Róbert","Albert","Milena","Igor","Július","Estera",
+						 "Aleš","Justína","Fedor","Dana/Danica","Rudolf","Valér",
+						 "Jela","Marcel","Ervín","Slavomír","Vojtech","Juraj",
+						 "Marek","Jaroslava","Jaroslav","Jarmila","Lea",
+						 "Anastázia",
+						 "","Žigmund","Galina","Florián","Lesana/Lesia","Hermína",
+						 "Monika/Róbert","Ingrida","Roland","Viktória","Blažena",
+						 "Pankrác","Servác","Bonifác","Žofia","Svetozár","Gizela",
+						 "Viola","Gertrúda","Bernard","Zina","Júlia/Juliana",
+						 "Želmíra","Ela","Urban","Dušan","Iveta","Viliam","Vilma",
+						 "Ferdinand","Petronela/Petrana",
+						 "Žaneta","Xénia","Karolína","Lenka","Laura","Norbert",
+						 "Róbert","Medard","Stanislava","Margaréta","Dobroslava",
+						 "Zlatko","Anton","Vasil","Vít","Blanka","Adolf","Vratislav",
+						 "Alfréd","Valéria","Alojz","Paulína","Sidónia","Ján",
+						 "Tadeáš","Adriana","Ladislav/Ladislava","Beata",
+						 "Peter/Pavol/Petra","Melánia",
+						 "Diana","Berta","Miloslav","Prokop","","Patrik/Patrícia",
+						 "Oliver","Ivan","Lujza","Amália","Milota","Nina","Margita",
+						 "Kamil","Henrich","Drahomír","Bohuslav","Kamila","Dušana",
+						 "I¾ja/Eliáš","Daniel","Magdaléna","O¾ga","Vladimír",
+						 "Jakub","Anna/Hana","Božena","Krištof","Marta","Libuša",
+						 "Ignác",
+						 "Božidara","Gustáv","Jerguš","Dominik/Dominika","Hortenzia",
+						 "Jozefína","Štefánia","Oskar","¼ubomíra","Vavrinec",
+						 "Zuzana","Darina","¼ubomír","Mojmír","Marcela","Leonard",
+						 "Milica","Elena/Helena","Lýdia","Anabela","Jana","Tichomír",
+						 "Filip","Bartolomej","¼udovít","Samuel","Silvia","Augustín",
+						 "Nikola/Nikolaj","Ružena","Nora",
+						 "Drahoslava","Linda","Belo","Rozália","Regína","Alica",
+						 "Marianna","Miriama","Martina","Oleg","Bystrík");
+kalendar2 = new Array("Mária","Ctibor","¼udomil","Jolana","¼udmila","Olympia",
+						 "Eugénia","Konštantín","¼uboslav/¼uboslava","Matúš","Móric",
+						 "Zdenka","¼uboš/¼ubor","Vladislav","Edita","Cyprián",
+						 "Václav","Michal/Michaela","Jarolím",
+						 "Arnold","Levoslav","Stela","František","Viera","Natália",
+						 "Eliška","Brigita","Dionýz","Slavomíra","Valentína",
+						 "Maximilián","Koloman","Boris","Terézia","Vladimíra",
+						 "Hedviga","Lukáš","Kristián","Vendelín","Uršu¾a","Sergej",
+						 "Alojzia","Kvetoslava","Aurel","Demeter","Sabína","Dobromila",
+						 "Klára","Šimon/Simona","Aurélia",
+						 "Denis/Denisa","","Hubert","Karol","Imrich","Renáta",
+						 "René","Bohumír","Teodor","Tibor","Martin/Maroš","Svätopluk",
+						 "Stanislav","Irma","Leopold","Agnesa","Klaudia","Eugen",
+						 "Alžbeta","Félix","Elvíra","Cecília","Klement","Emília",
+						 "Katarína","Kornel","Milan","Henrieta","Vratko",
+						 "Ondrej/Andrej",
+						 "Edmund","Bibiána","Oldrich","Barbora","Oto","Mikuláš",
+						 "Ambróz","Marína","Izabela","Radúz","Hilda","Otília",
+						 "Lucia","Branislava/Bronislava","Ivica","Albína","Kornélia",
+						 "Sláva/Slávka","Judita","Dagmara","Bohdan","Adela","Nadežda",
+						 "Adam/Eva","","Štefan","Filoména","Ivana/Ivona","Milada",
+						 "Dávid","Silvester");
+dniVMesiaci = new Array(31,29,31,30,31,30,31,31,30,31,30,31);
+kalendarIndex = 0;
+for(i=0;i<(mesiac-1);i++) kalendarIndex+= dniVMesiaci[i];
+kalendarIndex+= (den-1);
+if((kalendarIndex - 255) >= 0 )
+  document.write("Meniny dnes oslavuje: " +kalendar2[kalendarIndex-255]);
+else 
+  document.write("Meniny dnes oslavuje: " +kalendar1[kalendarIndex]);
+// -->
+</script><small> </small></td>
+  </tr>
+  <tr>
+    <td width="22%"><p align="center"><a href="_private/comenius.htm"><img src="images/comenius.jpg" alt="comenius" border="0" WIDTH="130" HEIGHT="39"></a></td>
+  </tr>
+</table>
+
+<table border="0" width="100%" height="152">
+  <tr>
+    <td width="33%" height="49"><p align="right"><a href="_private/oskole.htm"><img src="images/tlacitka/o_Tkole.gif" alt="O škole" style="border: medium none rgb(255,255,255) WIDTH=" 80" HEIGHT="21" BORDER="0"></a></td>
+    <td width="33%" height="146" rowspan="3"><p align="center"><img src="images/tlacitka/skola.gif" width="232" height="158" alt="naša škola"></td>
+    <td width="34%" height="49"><a href="_private/stranky.htm"><img src="images/tlacitka/stranky.gif" alt="Stránky žiakov" style="border: medium none rgb(255,255,255) WIDTH=" 152" HEIGHT="26" BORDER="0"></a></td>
+  </tr>
+  <tr>
+    <td width="33%" height="49"><p align="center"><a href="_private/domov.htm"><img src="images/tlacitka/domov.gif" alt="Domov mládeže" style="border: medium none rgb(255,255,255) WIDTH=" 166" HEIGHT="21" BORDER="0"></a></td>
+    <td width="34%" height="49"><p align="center"><a href="_private/zaujimave.htm"><img src="images/tlacitka/Zaujimave.gif" alt="Zaujímavé stránky" style="border: medium none rgb(255,255,255) WIDTH=" 190" HEIGHT="26" BORDER="0"></a></td>
+  </tr>
+  <tr>
+    <td width="33%" height="48"><p align="right"><a href="_private/odbory.htm"><img src="images/tlacitka/odbory.gif" alt="Študijné odbory" style="border: medium none rgb(255,255,255) WIDTH=" 164" HEIGHT="31" BORDER="0"></a></td>
+    <td width="34%" height="48"><a href="_private/tvorbawww.htm"><img src="images/tlacitka/www.gif" alt="Tvorba WWW" style="border: medium none rgb(255,255,255) WIDTH=" 149" HEIGHT="21" BORDER="0"></a></td>
+  </tr>
+</table>
+
+<table border="0" width="829" height="21">
+  <tr>
+    <td width="12"></td>
+    <td width="344" height="17"><p align="right"><a href="_private/pomaturitne.htm"><img src="images/tlacitka/pomaturitne.gif" alt="Pomaturitné štúdium" style="border: medium none rgb(255,255,255) WIDTH=" 215" HEIGHT="21" BORDER="0"></a></td>
+    <td width="10"></td>
+    <td width="12"></td>
+    <td width="21"></td>
+    <td width="245"><a href="_private/kontakt.htm"><img src="images/tlacitka/kontakt.gif" alt="Kontakt" style="border: medium none rgb(255,255,255) WIDTH=" 85" HEIGHT="21" BORDER="0"></a></td>
+    <td width="157" height="17"></td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="29%"></td>
+    <td width="38%"></td>
+    <td width="33%"></td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" colspan="2"><p align="center"><em><small>Ste &nbsp; &nbsp; </small><!--webbot bot="HitCounter" i-image="3" i-digits="0" PREVIEW="&lt;strong&gt;[Hit Counter]&lt;/strong&gt;" u-custom i-resetvalue="9563" startspan --><img SRC="_vti_bin/fpcount.exe/?Page=mirror.htm|Image=3" ALT="Hit Counter"><!--webbot bot="HitCounter" endspan i-checksum="11235" --><small>&nbsp;&nbsp;&nbsp; návštevníkom stránky od 1.9.2000</small></em></td>
+  </tr>
+  <tr>
+    <td width="100%" colspan="2"><p align="center"><strong><em><small>Stránky sú
+    optimalizované pre rozlíšenie 800x600&nbsp; </small></em></strong></td>
+  </tr>
+  <tr>
+    <td width="40%"><p align="left"><small><em>&nbsp;&nbsp; </em></small></td>
+    <td width="60%"><small><em>Copyright © <a href="mailto:brano@spsmyj.sk" style="color: rgb(0,0,255)">webmaster</a></em></small></td>
+  </tr>
+</table>
+</body>
+</html>

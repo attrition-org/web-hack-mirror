@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Refresh" content="20">
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 2.0">
+<title>- Micki's Web Site: WebCam 2</title>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#FF0000"
+vlink="#0000FF" alink="#008000" onload="startClock()">
+<script language="JavaScript">
+<!--
+function remote()
+{
+   RemoteWin=window.open("ImageOnly.htm","","resizable=yes,toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=auto,copyhistory=0,width=664,height=616")
+   RemoteWin.creator=self
+}
+var Interval = 21
+function startClock() {
+   Interval = Interval - 1
+   if (Interval == -1) {
+      window.location.reload()
+   }
+   else {
+	   document.clock.time.value = Interval
+	   timerID = setTimeout("startClock()", 1000)
+   }
+}
+//-->
+</script><div align="center"><center>
+
+<table border="3" cellpadding="2" width="50%"
+bordercolor="#FF0000" bordercolordark="#FF0000"
+bordercolorlight="#0000FF">
+    <tr>
+        <td align="center"><img src="WEBCAM/ISPY.JPG" width="320"
+        height="240"></td>
+    </tr>
+</table>
+</center></div>
+
+<p align="center"><a href="javascript:remote()"><br>
+</a></p>
+
+<form name="clock">
+    <p align="center"><font color="#FF0000"
+    face="Arial, Helvetica">Image will reload in<br>
+    <input type="text" size="3" name="time"> Seconds.</font><font
+    color="#FF0000"> </font></p>
+</form>
+
+<p align="center"><a
+href="file:///g:webwork/fp_proj/micki/WELCOME.HTM"><img
+src="file:///g:webwork/fp_proj/micki/IMAGES/HOME.GIF" border="0"
+width="137" height="66"></a></p>
+</body>
+</html>

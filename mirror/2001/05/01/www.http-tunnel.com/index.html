@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Killed by VIshK@</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META content=VIshK@"=Author>
+<META content="MSHTML 5.50.4522.1800" name=GENERATOR>
+<STYLE>A {
+	TEXT-DECORATION: none
+}
+A:hover {
+	TEXT-DECORATION: underline
+}
+</STYLE>
+
+<STYLE>.spanstyle {
+	FONT-WEIGHT: bold; FONT-SIZE: 8pt; VISIBILITY: visible; COLOR: #00ff00; FONT-FAMILY: Verdana; POSITION: absolute; TOP: -50px
+}
+</STYLE>
+
+<SCRIPT>
+
+var x,y
+var step=20
+var flag=0
+var message="Killed by VIshK@  "
+message=message.split("")
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	xpos[i]=-50
+}
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	ypos[i]=-50
+}
+function handlerMM(e){
+	x = (document.layers) ? e.pageX
+: document.body.scrollLeft+event.clientX
+	y = (document.layers) ? e.pageY
+: document.body.scrollTop+event.clientY
+	flag=1
+}
+function makesnake() {
+	if (flag==1 && document.all) {
+    	for (i=message.length-1; i>=1; i--) {
+	xpos[i]=xpos[i-1]+step
+	ypos[i]=ypos[i-1]
+    	}
+	xpos[0]=x+step
+	ypos[0]=y
+	
+for (i=0; i<message.length-1; i++) {
+	var thisspan = eval("span"+(i)+".style")
+	thisspan.posLeft=xpos[i]
+		thisspan.posTop=ypos[i]
+    	}
+}
+	
+else if (flag==1 && document.layers) {
+    	for (i=message.length-1; i>=1; i--) {
+		xpos[i]=xpos[i-1]+step
+		ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("document.span"+i)
+    		thisspan.left=xpos[i]
+			thisspan.top=ypos[i]
+    	}
+}
+var timer=setTimeout("makesnake()",30)
+}
+
+</SCRIPT>
+</HEAD>
+<BODY style="OVERFLOW-Y: scroll; OVERFLOW-X: hidden; WIDTH: 100%" text=#ffff00 
+vLink=#551a8b aLink=#33ccff link=#ff0000 bgColor=#000000 onload=makesnake()>
+<SCRIPT>
+<!-- Beginning of JavaScript -
+for (i=0;i<=message.length-1;i++) {
+    document.write("<span id='span"+i+"' class='spanstyle'>")
+	document.write(message[i])
+    document.write("</span>")
+}
+if (document.layers){
+	document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+// - End of JavaScript -- -->
+</SCRIPT>
+<FONT size=+4></FONT>&nbsp; 
+<CENTER><BR>
+  <font size="6">Killed by VIshK@</font><BR>
+  <BR>
+<CENTER>
+    <img alt="Killed_not FORMATED!" 
+src="12cdrive.gif" width="502" height="157">
+</CENTER>
+  <div align="left"><font size="+1">Message to admin:<font size="+2" color="#33ff33"> 
+    I never saw such a weak securety</font></font></div>
+  <P align="right"><font size=+1>THX to Creators:<font color="#CC0000"> http -</font> 
+    <font color="#CC0000">tunnel is amaizing.</font></font> 
+  <P align="left">Dear Administrator, Please dont just restore the index like 
+    alot of you do, at least fix the bug(s).
+  <P align="left">And here some story about hacking from Russia. Russia is amaizing 
+    place. Free cd's, No computer laws and FREE Information!.
+  <P align="left">Ps: Pease love and ROCK'nROLL. For Motherland Russia ;)
+  <P>BTW: Everything alive, <font color="#99FF00">BUT</font> Logs are <font color="#CC0000">KILLED</font>! 
+    ;)<BR>
+    <BR>
+    <BR>
+    <BR>
+  <P><FONT color=#ffffff><font color=#ffffff><font size=-1>Job offers?</font></font> 
+    <FONT size=-1>Comments? Questions? ICQ ME to: ######</FONT></FONT></P>
+</CENTER></BODY></HTML>
+<!-- www.attrition.org web hack mirror - watermark or something -->

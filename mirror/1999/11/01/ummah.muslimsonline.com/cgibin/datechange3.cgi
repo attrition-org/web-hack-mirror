@@ -1,0 +1,1 @@
+<img src="ig_images/dates/frontdate2.gif" width="20" height="110">

@@ -1,0 +1,37 @@
+
+Starting nmap V. 2.54BETA3 ( www.insecure.org/nmap/ )
+Insufficient responses for TCP sequencing (2), OS detection may be less accurate
+Interesting ports on taleban.com (64.225.77.172):
+(The 3 ports scanned but not shown below are in state: closed)
+Port       State       Service
+25/tcp     open        smtp                    
+80/tcp     open        http                    
+
+TCP Sequence Prediction: Class=random positive increments
+                         Difficulty=92636 (Worthy challenge)
+Aggressive OS guesses: NetBSD 1.3H (after 19980919) or 1.3I (before 19990119) little endian arch (92%), NetBSD 1.3H (after 19980919) or 1.3I (before 19990119) big endian arch (92%), NetBSD 1.3I (after 19990119) to 1.4 x86 (92%), NetBSD 1.5_ALPHA i386 (90%), 3COM / USR TotalSwitch Firmware: 02.02.00R (90%), Bay Networks BayStack 310T switch (90%), MVS TCP/IP TCPMVS 3.2 (90%), HP-UX B11.00 U 9000/839 (89%)
+No exact OS matches for host (If you know what OS is running on it, see http://www.insecure.org/cgi-bin/nmap-submit.cgi).
+TCP/IP fingerprint:
+T1(Resp=Y%DF=N%W=4470%ACK=S++%Flags=AS%Ops=MNWNNT)
+TSeq(Class=RI%gcd=1%SI=F538)
+TSeq(Class=RI%gcd=1%SI=169DC)
+T2(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+T1(Resp=Y%DF=N%W=4470%ACK=S++%Flags=AS%Ops=MNWNNT)
+T3(Resp=Y%DF=N%W=4470%ACK=S++%Flags=AS%Ops=MNWNNT)
+T2(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+T4(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T3(Resp=Y%DF=N%W=4470%ACK=S++%Flags=AS%Ops=MNWNNT)
+T5(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+T4(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T6(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T5(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+T7(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+T6(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+PU(Resp=N)
+T7(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+PU(Resp=N)
+
+
+
+
+Nmap run completed -- 1 IP address (1 host up) scanned in 10 seconds

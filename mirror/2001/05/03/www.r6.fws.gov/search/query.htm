@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 3.0//EN" "html.dtd">
+<html>
+
+<head>
+
+<!--                *****      INSTRUCTIONS FOR CUSTOMIZING THIS FORM      *****                To customize this form, look for remarks in the file beginning with                5 stars ("*****"). These lines contain instructions for easily                customizing the most common qury form elements.-->
+
+	<link REL="STYLESHEET" HREF="is2style.css" TYPE="text/css">
+
+    <title>U.S. Fish and Wildlife Service Search Form</title>
+    <meta NAME="DESCRIPTION" CONTENT="U.S. Fish and Wildlife Service Search query form for Microsoft Index Server">
+    <meta NAME="AUTHOR" CONTENT="Renne and Microsoft Index Server Team">
+    <meta NAME="KEYWORDS" CONTENT="query, content, hit">
+    <meta NAME="SUBJECT" CONTENT="search form">
+    <meta NAME="MS.CATEGORY" CONTENT="Internet">
+    <meta NAME="MS.LOCALE" CONTENT="EN-US">
+    <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=Windows-1252">
+</head>
+
+<!-- ***** To change the form's background pattern, simply save your background pattern       using the name IS2BKGND.GIF in the same directory as this form. ***** -->
+<body background="back.gif">
+
+<table>
+
+        <tr><td><img SRC="fwslogo.gif" VALIGN="MIDDLE" ALIGN="LEFT" border="0" WIDTH="115" HEIGHT="135"></td>
+        <td align="center"><h2>U.S. Fish and Wildlife Service</h2><br>
+        <h2>Mountain-Prairie Region</h2></td>
+       </tr>
+</table>
+
+<form ACTION="/search/query.idq" METHOD="GET">
+    <table WIDTH="500">
+                        <tr>
+                                <td>Enter your query below:</td>
+                        </tr>
+                        <tr>
+                                <td><input TYPE="TEXT" NAME="CiRestriction" SIZE="65" MAXLENGTH="100" VALUE></td>
+                                <td><input TYPE="SUBMIT" VALUE="Go"></td>
+                        </tr>
+                                <tr>
+                                <td ALIGN="RIGHT"><a HREF="ixtiphlp.htm">Tips for searching</a></td>
+                        </tr>
+                        <tr>
+                                <td>
+                                        <p><input NAME="FreeText" TYPE="CHECKBOX">Use <a href="ixtiphlp.htm#FreeTextQueries">Free-Text Query</a>.
+                                </td>
+                        </tr>
+        </table>
+
+<!-- The CiScope parameter allows you to control which documents are searched. To search                the entire document set, use a value of "/", which corresponds to the root of your web                virtual namespace. To search a subset of your documents, set the value equal to the                virtual directory you want to search.  -->
+        <input TYPE="HIDDEN" NAME="CiScope" VALUE="/">
+
+        <input TYPE="HIDDEN" NAME="CiMaxRecordsPerPage" VALUE="10">
+    <input TYPE="HIDDEN" NAME="TemplateName" VALUE="query">
+    <input TYPE="HIDDEN" NAME="CiSort" VALUE="rank[d]">
+        <input TYPE="HIDDEN" NAME="HTMLQueryForm" VALUE="/search/query.htm">
+</form>
+
+<a href="..\">Return to the USFWS Mountain-Prairie Region Home Page</a>
+</body>
+</html>
+

@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>Fantasy SportsNET - Add League</title>
+<link rev=made href="mailto:mbrown@tass.org">
+</head>
+<body bgcolor=#FFFFFFFF>
+
+<CENTER>
+<H1> Add your league to <BR>Fantasy SportsNET</H2>
+This allows you to add your league information to Fantasy SportsNET if you 
+have an existing league.  You are <B>not</B> creating a league. We don't run
+these leagues here at FSN, we are just posting the info so you can look through
+the list and find a league to join on your own!<P>
+<B><BLINK>Beware!!</BLINK></B> There is no way to correct incorrect 
+input, <BR>so be sure your info is right before hitting "Add League"!!!
+</CENTER>
+<BR>
+<FORM 
+METHOD="POST" ACTION="cgi-bin/addleague.pl">
+   <P>What <B>sport</B> is your league?
+   <OL>
+    <LI>Baseball <INPUT NAME="sport" TYPE=radio VALUE="Baseball">
+    <LI>Basketball <INPUT NAME="sport" TYPE=radio VALUE="NBA">
+    <LI>Football <INPUT NAME="sport" TYPE=radio VALUE="Football">
+    <LI>Hockey <INPUT NAME="sport" type=radio VALUE="Hockey">
+   </OL>
+
+
+   <P>Enter League <B>Owner's name</B>: <INPUT NAME="name" TYPE=text>
+  
+   <P>Enter League <B>Owner's E-mail address</B>: <INPUT NAME="address"
+TYPE=text 
+SIZE="48">
+
+   <P><B>League Name</B>: <INPUT NAME="league" TYPE=text SIZE="48">
+
+   <P>Do you have a <B>League Link</B>?<B> (URL)</B> 
+
+   <OL>
+    <LI>Yes<INPUT NAME="linkyn" TYPE=radio VALUE="Yes">
+    <LI>No<INPUT NAME="linkyn" TYPE=radio VALUE="No">
+   </OL>
+
+<P>If yes, enter the <B>URL</B> here, otherwise LEAVE BLANK!<INPUT 
+NAME="link" VALUE="http://" TYPE=text SIZE="48">
+
+<P>What is the <B>cost</B> per team to join your league? <INPUT
+NAME="cost"
+TYPE=text
+SIZE="10">
+
+<P>Is your league <INPUT NAME="comm" TYPE=radio VALUE="Local"> <B>local
+or
+via the <INPUT NAME="comm" TYPE=radio VALUE="Internet"> internet</B>?<BR>
+If local please enter:<BR>
+City:<INPUT NAME="city" TYPE=text size="15">
+State:<INPUT NAME="state" TYPE=text size="2">
+
+   <P>Which <B>format</B> do you consider your league to be?
+
+   <OL>
+    <LI>Simulation <INPUT NAME="format" TYPE=radio VALUE="Simulation">
+    <LI>Head to Head Stats <INPUT NAME="format" TYPE=radio VALUE="Head-to-Head">
+    <LI>Rotisserie <INPUT NAME="format" TYPE=radio VALUE="Rotisserie">
+    <LI>Other <INPUT NAME="format" type=radio VALUE="Other">
+   </OL>
+
+
+
+    <P><INPUT TYPE=submit VALUE="Add League"> <INPUT TYPE=reset>
+</FORM>
+</body>
+</html>
+

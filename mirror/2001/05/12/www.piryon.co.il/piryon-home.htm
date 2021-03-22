@@ -1,0 +1,152 @@
+
+
+<html>
+<head>
+<META http-equiv="content-type" content="text/html;charset=iso-8859-8">
+<style>
+//change color
+<!--   A:hover
+{color="brown"} -->
+
+//the underline
+
+A:link { TEXT-DECORATION: none } A:visited { TEXT-DECORATION:
+none } A:active { TEXT-DECORATION: none } A:hover { COLOR: #0000<font
+face="Arial">33</font>; FONT-STYLE: normal; TEXT-DECORATION:
+underline} 
+</style>
+
+	<title>פריון</title>
+</head>
+
+<body bgcolor="#ffcc99">
+<br><br>
+<center>
+<SCRIPT LANGUAGE="VBScript">
+<!--
+Dim Msg(), NumMsgs, CharNum, CurrentString, Delay,Speed
+
+Sub Window_OnLoad()
+
+' STEP #1 
+' CHANGE THE VALUE OF Delay TO ADJUST THE DELAY BETWEEN MESSAGES
+
+	Delay = 3000 'milliseconds
+
+' STEP #2 
+' CHANGE THE VALUE OF Speed TO ADJUST THE SPEED OF THE MESSAGES
+	
+	Speed = 2 'milliseconds
+
+' STEP #3
+' CHANGE THE VALUE OF NumMsgs TO CORRESPOND TO THE NUMBER OF MESSAGES
+
+	NumMsgs=6
+	ReDim Msg(NumMsgs)
+
+' STEP #4
+' ENTER THE MESSAGES BELOW. MAKE SURE THE NUMBER CORRESPONDS TO NumMsgs
+' THE FIRST CHARACTER SHOULD BE 0 (Random Color), 1 (Green), 2 (Yellow), 3 (White), 4 (Cyan), or 5 (Red)
+' THE SECOND CHARACTER SHOULD BE 0 (No Scrolling), 1 (Left), 2 (Center), or 3 (Right)
+
+
+	Msg(1)=  "02www.piryon.co.il"
+	Msg(2)=  "03ברוכים הבאים לאתר חברת פריון."
+	Msg(3)=  "31החברה שמביאה לך את הקו הגנטי החדש."
+	Msg(4)=  "33פריון מבטיחה לך פרים בעלי חומר גנטי מעולה. "
+	Msg(5)=  "32פריון מבטיחה לך את המחיר הזול ביותר לפרה הרה."
+	Msg(6)=  "30בקרוב נתחיל את פעילותנו בעדר הישראלי."
+	Randomize()
+	IeTimer1.Interval=Speed
+	Call DoMessages()
+End Sub
+
+Sub DoMessages()
+	CurrentString=CurrentString+1
+	if CurrentString > NumMsgs then CurrentString=1
+	CharNum=0
+	IeTimer1.Enabled=True
+	Label1.Caption=" "
+End Sub
+
+Sub IeTimer1_Timer()
+	CharNum=CharNum+1
+	if CharNum=1 then
+		ColorCode=Left(Msg(CurrentString),1)
+		if ColorCode = 0 Then ColorCode=Int(Rnd()*5+1)
+		If ColorCode = 1 Then
+			Label1.Forecolor =65280 'Green
+			exit sub
+		elseif ColorCode=2 then 'Yellow
+			Label1.Forecolor=65535
+			exit sub
+		elseif ColorCode=3 then 'White
+			Label1.Forecolor=16777215
+			exit sub
+		elseif ColorCode=4 then 'Blue
+			Label1.Forecolor=16776960
+			exit sub
+		elseif ColorCode=5 then 'Red
+			Label1.Forecolor=255
+			exit sub
+		end if
+	end if
+
+	if CharNum=2 then
+		DisplayMode=Mid(Msg(CurrentString),2,1)
+		if DisplayMode = 1 or DisplayMode=2 or DisplayMode=3 then
+			Label1.TextAlign=DisplayMode
+			Exit Sub
+		end if
+		if DisplayMode = 0 then
+			ietimer1.Enabled=False
+			Label1.TextAlign=2
+			Label1.Caption=Right(Msg(CurrentString), Len(Msg(CurrentString))-2)
+			x=SetTimeOut("DoMessages",Delay,"VBScript")
+			exit sub
+		end if
+	end if
+		
+	if CharNum <= Len(Msg(CurrentString)) then 	
+		Label1.Caption=Label1.Caption & Mid(Msg(CurrentString),CharNum, 1)
+	else
+		Label1.TextAlign=2
+		ietimer1.Enabled=false
+		x=SetTimeOut("DoMessages",Delay,"VBScript")
+		exit sub
+	end if
+End Sub
+
+-->
+</SCRIPT>
+    <OBJECT ID="Label1" WIDTH=600 HEIGHT=29
+ CLASSID="CLSID:978C9E23-D4B0-11CE-BF2D-00AA003F40D0">
+    <PARAM NAME="ForeColor" VALUE="255">
+    <PARAM NAME="BackColor" VALUE="1">
+    <PARAM NAME="VariousPropertyBits" VALUE="27">
+    <PARAM NAME="Size" VALUE="11113;776">
+    <PARAM NAME="MousePointer" VALUE="99">
+    <PARAM NAME="BorderColor" VALUE="0">
+    <PARAM NAME="SpecialEffect" VALUE="1">
+    <PARAM NAME="FontName" VALUE="Arial">
+    <PARAM NAME="FontEffects" VALUE="1073741825">
+    <PARAM NAME="FontHeight" VALUE="280">
+    <PARAM NAME="FontCharSet" VALUE="0">
+    <PARAM NAME="FontPitchAndFamily" VALUE="2">
+    <PARAM NAME="FontWeight" VALUE="700">
+</OBJECT>
+    <OBJECT ID="IeTimer1" WIDTH=1 HEIGHT=1
+ CLASSID="CLSID:59CCB4A0-727D-11CF-AC36-00AA00A47DD2">
+    <PARAM NAME="_ExtentX" VALUE="26">
+    <PARAM NAME="_ExtentY" VALUE="26">
+</OBJECT>
+</center>
+
+<!--
+<div align="center"><font face="Arial" size="7" color="red"> ךלש שדחה יטנגה וקה- ןוירפ</font><br> 
+-->
+<br><br>
+<div align="center"><img src="images/para.gif" width="300" height="220" border="0" alt=""></div>
+</div></body>
+<img src="http://counter.cybernosh.co.il/cybercount.asp?ID=965836831" width="0" height="0">
+</html>

@@ -1,0 +1,141 @@
+<html>
+<head>
+<meta content="text/html; charset=windows-1251" http-equiv="Content-Type">
+<meta http-equiv="Page-Enter" content="blendTrans(Duration=5.0)"><style>
+.spanstyle {
+ position:absolute;
+ visibility:visible;
+ top:-30px;
+ font-size:7.5pt;
+ font-family:Verdana;
+      font-weight:none;
+ color:red;
+}
+</style><script language="JavaScript"><!--
+d=document;a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3"><!--
+js=13//--></script><script language="JavaScript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=172702;js='+js+a+';rand='+Math.random()+
+'" alt="" height=1 width=1>')
+if(js>11)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://top.list.ru/counter?js=na;id=172702"
+height=1 width=1 alt=""></noscript><script language="JavaScript"><!--
+if(js>11)d.write('--'+'>')//--></script>
+</HEAD>
+<BODY onLoad="makesnake()"
+style="width:100%;overflow-x:hidden;overflow-y:scroll"
+vlink="#0000FF"><CENTER>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH="626" ALIGN="CENTER">
+<script>
+var x,y
+var step=20
+var flag=0
+var message="1010011001001100100110010011001101001" //
+message=message.split("")
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+ xpos[i]=-50
+}
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+ ypos[i]=-50
+}
+function handlerMM(e){
+ x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+ y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+ flag=1
+}
+function makesnake() {
+ if (flag==1 && document.all) {
+     for (i=message.length-1; i>=1; i--) {
+      xpos[i]=xpos[i-1]+step
+   ypos[i]=ypos[i-1]
+     }
+  xpos[0]=x+step
+  ypos[0]=y
+  for (i=0; i<message.length-1; i++) {
+      var thisspan = eval("span"+(i)+".style")
+      thisspan.posLeft=xpos[i]
+   thisspan.posTop=ypos[i]
+     }
+ }
+ else if (flag==1 && document.layers) {
+     for (i=message.length-1; i>=1; i--) {
+      xpos[i]=xpos[i-1]+step
+   ypos[i]=ypos[i-1]
+     }
+  xpos[0]=x+step
+  ypos[0]=y
+  for (i=0; i<message.length-1; i++) {
+      var thisspan = eval("document.span"+i)
+      thisspan.left=xpos[i]
+   thisspan.top=ypos[i]
+     }
+ }
+  var timer=setTimeout("makesnake()",30)
+}
+</script>
+<script>
+<!-- Beginning of JavaScript -
+for (i=0;i<=message.length-1;i++) {
+    document.write("<span id='span"+i+"' class='spanstyle'>")
+ document.write(message[i])
+    document.write("</span>")
+}
+if (document.layers){
+ document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+// - End of JavaScript - -->
+</script>
+<style>
+ <!--
+ body, p, table, tr, td { font-size: 9pt; font-family: tahoma, sans-serif, arial; }
+ input, select, option { font-size: 9pt;  }
+ A { text-decoration: none; }
+ A:hover { color: "red"; text-decoration: underline; font-style: arial}
+ A:link  {  color= "bordow";  text-decoration: none}
+ A:visited  {  color= "bordow";  text-decoration: none }
+ text: { color= "red"; font-size: 9pt; font-style: arial }
+//-->
+</style>
+<title>-=D3f@c3d By InfernoZ and Us3r=-</title>
+</HEAD>
+<body bgcolor="#000000" topmargin=0 bottommargin=0 leftmargin=0 rightmargin=0
+marginwidth=0 marginheight=0 topmargin=0 leftmargin=0 text=black link=red vlink=red alink=red><script>
+<!--
+//
+var sound1="http://omen.ru/music/mid/Veter.mid"
+var sound2="http://omen.ru/music/mid/OUTEMN.MID"
+var sound3="http://omen.ru/music/mid/UlicaRoz.mid"
+var sound4="http://omen.ru/music/mid/Gruppa.mid"
+var sound5="http://omen.ru/music/mid/Na.mid"
+var x=Math.round(Math.random()*9)
+if (x==0) x=sound1
+else if (x==1) x=sound2
+else if (x==2) x=sound3
+else if (x==3) x=sound4
+else if (x==4) x=sound5
+else x=sound5
+if (navigator.appName=="Microsoft Internet Explorer")
+document.write('<bgsound src='+'"'+x+'"'+' loop="infinite">')
+else
+document.write('<embed src='+'"'+x+'"'+'hidden="true" border="0" width="20" height="20" autostart="true" loop="true">')
+//-->
+</script>
+<center><IMG SRC="http://t3stj00.pochtamt.ru/logo.gif" border=0 alt={h4ck3d}>
+<br><br><BR><BR><font color=red>
+<font color="orange">GreatZ</font><font color="bordow">:</font>
+All <b>m0sad team</b>, Rik0, Laz666, Expl0iT, M@n Dr@kE,  SlayerZ, MA3, DIMENSION - X, z3rG, Shaitan, UkR-XblP, Nitr0geaR, aCidfAlz, <a href="http://www.xakep.ru" target="_new"><font color="bordow"><b>Xakep.ru</b></font></a>, dark-eye, zLOB, BlinuX, ^Starsky, rayd, jerico-(man,not every one that deface sites is a hacker..;)), Theli(Gr8 work man!), Anti-401 Hack Crew, Alph4num3ric.
+<br><br><font color="orange">Big 10x for the mirrors</font><font color="bordow">:</font> <a href="http://www.attrition.org" target="_new"><font color="bordow">Attrition.org</font></a> and <a href="http://defaced.alldas.de" target="_new"><font color="bordow">Alldas.de</font></a><br><br><font color="orange">FuckZ</font><font color="bordow">:</font> <b>To Xegypt(<font color=orange>You suck</font>),</b>(<font color="orange">and all the other "Hackers" that deface Israeli and Russian sites in hope that somebody gonna respect them for writing something like "save Kashmir and Palestina" lol!</font>),Ixjunky(<font color="orange">LOH</font>),Hamas and Hizbollah (<font color="orange">crazy fucken terorists</font>)<br><BR><big><font color="s34df5">Why Do We Deface Sites??? click <a href="http://rotter.net/israel" target="_new"><font color="deepskyblue">Here!!!</font></big></a></font><br><br><BR><font color="aaffaa" face="comic">InfernoZ</font><font color="bordow">:</font><small>&nbsp;This <font color="bordow">Deface</font> is dedicated To my GirlFriend...</small></font><br><br><br><font color="aaffaa">Mail To</font><font color="bordow">:</font> <a href="mailto:vzlomshik_00@mail.ru">vzlomshik_00@mail.ru</a><br><br> <br><font color="aaffaa">And 10x to</font><font color="bordow">:</font><font color="red">&nbsp;<a href="http://www.ddt.ru" target="_new"><font color="bordow">ДДТ</font></a> and Russian vodka (<font color="orange">За моральную поддержку</font>;)<br><br></body>
+<img
+src="http://top.list.ru/counter?id=172702;t=56;l=1"
+border=0 height=31 width=88
+alt="[$-StatisticS-$]"></center>
+</html>

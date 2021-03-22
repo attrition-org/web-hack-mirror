@@ -1,0 +1,33 @@
+--06:00:58--  http://www.coke-china.com:80/
+           => `www.coke-china.com/index.html'
+Connecting to www.coke-china.com:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 1,682 [text/html]
+
+    0K -> .                                                      [100%]
+
+06:01:04 (397.73 B/s) - `www.coke-china.com/index.html' saved [1682/1682]
+
+Loading robots.txt; please ignore errors.
+--06:01:04--  http://www.coke-china.com:80/robots.txt
+           => `www.coke-china.com/robots.txt'
+Connecting to www.coke-china.com:80... connected!
+HTTP request sent, awaiting response... 404 File Not Found
+06:01:06 ERROR 404: File Not Found.
+
+--06:01:06--  http://www.coke-china.com:80/1.jpg
+           => `www.coke-china.com/1.jpg'
+Connecting to www.coke-china.com:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 61,099 [image/jpeg]
+
+    0K -> .......... .......... .......... .......... .......... [ 83%]
+   50K -> .........                                              [100%]
+
+06:01:26 (3.29 KB/s) - `www.coke-china.com/1.jpg' saved [61099/61099]
+
+Converting www.coke-china.com/index.html... done.
+
+FINISHED --06:01:26--
+Downloaded: 62,781 bytes in 2 files
+Converting www.coke-china.com/index.html... done.

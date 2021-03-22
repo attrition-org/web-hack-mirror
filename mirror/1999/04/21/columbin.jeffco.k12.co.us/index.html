@@ -1,0 +1,404 @@
+<HTML>
+<HEAD>
+	<TITLE>Columbine High School</TITLE>
+	<LINK rel=STYLESHEET href="style/style.css" type="text/css">
+	<SCRIPT language="javascript">
+	<!--
+	IE4 = (document.all) ? 1 : 0;
+	NS4 = (document.layers) ? 1 : 0;
+	ver4 = (IE4 || NS4) ? 1 : 0;
+	topLayer = "primeLayer";
+	
+	rCor = 138;
+	
+	if (ver4) {
+		
+		arCors = new Array()
+		
+		function setCors(which,top,bottom,left) {
+			arCors[which] = new Array();
+			arCors[which][0] = top;
+			arCors[which][1] = bottom;
+			arCors[which][2] = left;
+		}
+		
+		setCors(1,5,21,87);
+		setCors(2,22,39,73);
+		setCors(3,40,56,20);
+		setCors(4,57,72,83);
+		setCors(5,73,90,6);
+		setCors(6,91,107,71);
+		setCors(7,108,123,71);
+		setCors(8,124,141,46);
+		setCors(9,142,158,46);
+		setCors(10,159,175,5);
+		setCors(11,176,192,58);
+		
+		function mapOver (which,on) {
+				
+			tCor = arCors[which][0];
+			bCor = arCors[which][1];
+			lCor = arCors[which][2];
+			
+			if (NS4) {
+				if (on) {
+				document.menu.document.menuOn.clip.top = tCor
+				document.menu.document.menuOn.clip.right = rCor
+				document.menu.document.menuOn.clip.bottom = bCor
+				document.menu.document.menuOn.clip.left = lCor
+				document.menu.document.menuOn.visibility = "show"				
+				}
+				else {
+				document.menu.document.menuOn.clip.top = 0
+				document.menu.document.menuOn.clip.right = 0
+				document.menu.document.menuOn.clip.bottom = 0
+				document.menu.document.menuOn.clip.left = 0
+				}
+			}					
+	
+			if (IE4) {
+				if (on) {
+					document.all.menuOn.style.clip = "rect(" + tCor + " " + rCor + " " + bCor + " " + lCor + 	")"
+					document.all.menuOn.style.visibility = "visible"
+				}
+				else {document.all.menuOn.style.clip = "rect(0 0 0 0)"}}
+			}
+			
+			function show(id) {
+
+			if (NS4) {
+				document.layers[topLayer].visibility = "hide"
+				document.layers[id].visibility = "show"
+				topLayer = [id]
+				}
+			else if (IE4) {
+				document.all[topLayer].style.visibility = "hidden"
+				document.all[id].style.visibility = "visible"
+				topLayer = [id]
+				}
+			}
+			
+		}
+	//-->
+	</SCRIPT>
+</HEAD>
+
+<BODY>
+
+<DIV STYLE="position: absolute; top:0; text-align:right"><A HREF="mailto:yoshi@hosedown.com"><IMG src="http://columbin.jeffco.k12.co.us/images/corner_e.gifEmail"></A>
+</DIV>
+
+<DIV id="mainHeader">
+<p><IMG src="http://columbin.jeffco.k12.co.us/images/chsheader.gifine High School" BORDER=0>
+&nbsp; 6201 South Pierce Street &nbsp; Littleton, CO 80123 &nbsp; 303.982.4400</P>
+</DIV>
+
+<DIV id="menu">
+	
+		<MAP name="mainmenu">
+		<!-- #$-:Image Map file created by Map THIS! -->
+		<!-- #$-:Map THIS! free image map editor by Todd C. Wilson -->
+		<AREA shape=RECT coords="87,5,138,21" href="javascript:show('egoLayer')"
+		onMouseOver="mapOver('1',1)" onMouseOut="mapOver('1',0)">
+		<AREA shape=RECT coords="73,22,138,39" href="javascript:show('primeLayer')"
+		onMouseOver="mapOver('2',1)" onMouseOut="mapOver('2',0)">
+		<AREA shape=RECT coords="20,40,138,56" href="javascript:show('feedLayer')"
+		onMouseOver="mapOver('3',1)" onMouseOut="mapOver('3',0)">
+		<AREA shape=RECT coords="83,57,138,72" href="javascript:show('infoLayer')"
+		onMouseOver="mapOver('4',1)" onMouseOut="mapOver('4',0)">
+		<AREA shape=RECT coords="6,73,138,90" href="javascript:show('resLayer')"
+		onMouseOver="mapOver('5',1)" onMouseOut="mapOver('5',0)">
+		<AREA shape=RECT coords="71,91,138,107" href="javascript:show('adminLayer')"
+		onMouseOver="mapOver('6',1)" onMouseOut="mapOver('6',0)">
+		<AREA shape=RECT coords="71,108,138,123" href="javascript:show('deptLayer')"
+		onMouseOver="mapOver('7',1)" onMouseOut="mapOver('7',0)">
+		<AREA shape=RECT coords="46,124,138,141" href="javascript:show('sportsLayer')"
+		onMouseOver="mapOver('8',1)" onMouseOut="mapOver('8',0)">
+		<AREA shape=RECT coords="46,142,138,158" href="javascript:show('clubsLayer')"
+		onMouseOver="mapOver('9',1)" onMouseOut="mapOver('9',0)">
+		<AREA shape=RECT coords="5,159,138,175" href="javascript:show('counselLayer')"
+		onMouseOver="mapOver('10',1)" onMouseOut="mapOver('10',0)">
+		<AREA shape=RECT coords="58,176,138,192" href="javascript:show('alumniLayer')"
+		onMouseOver="mapOver('11',1)" onMouseOut="mapOver('11',0)">
+		</MAP>
+	
+	
+	<DIV id="menuBg"></DIV>
+
+	<DIV id="menuOn"></DIV>
+
+	<DIV id="menuImg"><IMG src="http://columbin.jeffco.k12.co.us/images/menu.gifight=199 alt="menu" border=0></DIV>
+
+</DIV>
+
+<!-- zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz-->
+
+<DIV id="egoLayer" class="textLayer"> 
+  <H4 class="header">E.G.O. - Everyone's got an opinion.</H4>
+  <P>Welcome to the brand new CHS website. I am Master Yoshi, your friendly neighborhood 
+    webmonkey, and your humble (???) host. That's right, it's all me, and I plan 
+    to make this the best high school site there is. OK, so that's not the most 
+    challenging thing you've ever heard of, but my therapist said I should have 
+    goals. He has a white lab coat and a huge syringe so he probably knows what 
+    he's talking about. Yeah, I bet he does. Anyhoo!</P>
+  <P>This site is going to serve the interests of the Columbine students. Now, 
+    my studies into mind reading are in a fairly premature phase so I'm going 
+    to be asking you for help. If you have any comments, suggestions, good ice 
+    cream recipes, whatever, email them to me at <A href="mailto:yoshi@hosedown.com">yoshi@hosedown.com</A>. 
+    I can't promise that every suggestion will see the light of day, but I will 
+    read everything you send. The best letters will get posted in the up-and-coming 
+    feedback section.</P>
+  <P>But Master Yoshi, I don't have an email account. Whatever shall I do?</P>
+  <P>Lucky for you, that's not a problem. There are many sites that offer web 
+    based email. I use <A href="http://www.imaginemail.com">Imaginemail.com</A>. 
+    <A href="http://home.netscape.com">Netscape</A> is good too. These sites make 
+    their money from advertising, so you don't have to pay a thing. Best of all, 
+    you don't even need your own computer. I'll have a more exhaustive list in 
+    the next couple of days. Keep your eyes peeled.</P>
+  <P>O look, the lovely nurse Thelma is saying I have to go back to the room with 
+    the pillows on the walls. Later!</P>
+  <P>I'm coming ya fat cow, quit yelling. Ooo, a steel bat. What? Is that suppose 
+    to intimidate me? HEY! AHHH! CUT THAT OUT. THAT HURTS. HEY…</P>
+</DIV>
+
+<!-- zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz-->
+
+<DIV id="primeLayer" class="textLayer" style="visibility: visible"> 
+  <H4>Latest happenings</H4>
+  <DIV class="headerLink" ><A HREF="announcements.html"><H4>Daily Announcements</H4></A></DIV>
+  <P>The peer counselors offer email counseling.  Check out their <a href="counsel/counsel.html">page</a>.</P>
+</DIV>
+
+<!-- zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz-->
+
+<DIV id="feedLayer" class="textLayer"> 
+	  <H4 class="header">Feedback</H4>
+	  <P>HI,<BR>
+	    As a CHS Alum ('89), I was really excited to find your site. I moved from 
+	    Colorado the summer after I graduated and so have lost contact with everyone. 
+	    Have you thought about adding a page for Alumni to your site? Maybe a place 
+	    to leave an e-mail addy where others could find it?<BR>
+	    <BR>
+	    Thanks,<BR>
+	    Susan</P>
+	  <P><B>Hi Susan, thanks for the note. </B></P>
+	  <P><B>I've been getting email from a lot of alumni who have lost touch with 
+	    their former buds. As I just happen to be a rather nice Webmonkey I shall 
+	    grant thy humble request. An Alumni section will go up as soon as I track 
+	    down whomever is in charge of these things and extort some useful information 
+	    out of them. </B></P>
+	  <P><B>While I'm doing that all you alumni could help by sending in suggestions 
+	    and any information about yourselves you would like to have posted. </B></P>
+	  <P><B>Just remember that you do this at your own risk. If your Prom date is 
+	    still upset about getting ditched on the most important day of their teenage 
+	    lives because you sneaked away to the nearest cafe to discuss the emotional 
+	    status of Mozart at the time of his death with that other person whom you 
+	    sworn you had nothing to say to anymore and you now suddenly find yourself 
+	    to be highly accident prone, don't come crying to me about it. Don't say I 
+	    didn't warn you.</B></P>
+	  <P><B>As you are probably aware everything in the world is a compromise (actually 
+	    that's horse feathers but is sounds good) and this is no exception. I would 
+	    really like to know what happens after High School. What's &quot;higher education&quot; 
+	    like? What's it like out there in the real world? Is any of this stuff we're 
+	    supposedly learning of any use later on? Looking back, is there anything you 
+	    would like to have done differently? Any mistakes you're glad you made? Is 
+	    wider really better?</B></P>
+	  <P><B>Think about it and share the wisdom. I'm looking forward to hearing from 
+	    you.</B></P>
+	  <P>I am a senior at CHS and i just visited your page while looking through some
+	college site to see what CHS has to offer on the web. First of I like how all
+	the information is updated and not from last year. However, i think that the
+	site would be much better if you would incorporate a backround, colors (navy
+	and silver), and maybe pictures into the site because i lost interest pretyy
+	quick. That's just some ideas that I thought would make the site more
+	interesting and help you to your goal of "best high school web-site". </P>
+	  <P>Thanks
+	for your time.</P>
+	  <P><B>Thanks for the note.  In regards to your comments:
+	</B>
+	</P>
+	  <P><B>Personally, I don't like backgrounds.  They look silly and cause 
+	all sorts of problems with readibility and such.
+	</B>
+	</P>
+	  <P><B>Silver is not a color, it's a reflection.  Asking for the color 
+	silver is like asking for the color "mirror".  It just doesn't work. 
+	 What usually happens is that instead of silver school logos use 
+	gray, and there is a lot of gray on the site.  As far as the navy 
+	goes, the buttons are navy, the headings are navy, the logo is navy. </B> 
+	
+	</P>
+	  <P><B>I may be wrong, but you probably lost interest because there isn't 
+	much to do on the site.  Things are coming along, but it's going to take a little while.  
+	
+	As far as the pictures go, you probably have a point.  Actually 
+	I think the whole thing could be a little bit more exciting.  I 
+	have some things I want to try out while on Break.  Check back in 
+	January.  Let me know what you think.</B></P>
+	  <P><B>Humbly,<BR>
+	    Master Yoshi</B></P>
+	  <P>Brand new: <A href="mailto:yoshi@hosedown.com">virtual cheese</A>.</P>
+</DIV>
+
+<!-- zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz-->
+
+<DIV id="infoLayer" class="textLayer">
+	<H4>General Information About Columbine</H4>
+	<DIV class="headerLink"><A HREF="info/info.html"><H4>More Information</H4></A></DIV>
+	<P>School Mascot - <B>Rebel</B><BR>
+	School Motto - <B>"Stretch for Excellence"</B><BR>
+	School Colors - <B>Blue and Silver</B></P>
+	<P align="right">At Columbine High School we will <B>Teach, Learn, and Model</B> life skills and attitudes that prepare us to:
+	<ul>
+		<LI><B>Work with People</B>
+		<LI><B>Prepare for Change</B>
+		<LI><B>Think Critically</B>
+		<LI><B>Act Responsibly</B>
+		<LI><B>Live in Harmony with Others and with Our Environment</B>
+	</ul>
+</DIV>
+
+<!-- zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz-->
+
+<DIV id="resLayer" class="textLayer"> 
+  <H4 class="header">Resources</H4>
+  
+  <TABLE border="1" cellspacing="0" cellpadding="0">
+    <TR> 
+      <TD class="color" colspan="3" > 
+        <FORM action="http://search.yahoo.com/bin/search">
+          <P> 
+            <INPUT size="30" name="p">
+            <INPUT type=submit value="Search Yahoo" name="submit">
+        </FORM>
+      </TD>
+    </TR>
+    <TR> 
+      <TD class="color" > 
+        <P><A href="http://jeffco.k12.co.us/">JeffcoNet</A></P>
+      </TD>
+      <TD class="color" colspan="2" align="right"> 
+      <A href="http://www.altavista.com/"><FONT size="2">AltaVista</FONT></A><FONT size="2">&nbsp 
+          &nbsp<A href="http://www.excite.com/">Excite</A>&nbsp &nbsp<A href="http://www.hotbot.com/">HotBot</A>&nbsp 
+          &nbsp<A href="http://www.metacrawler.com/">MetaCrawler</A></FONT>
+      </TD>
+    </TR>
+    <TR> 
+      <TD class="color" colspan="3"></TD>
+    </TR>
+    <TR> 
+      <TD class="color" ><A href="http://columbin.jeffco.k12.co.us/tj/">TJ's Psychology Page</A> &nbsp;
+        <A HREF="http://columbin.jeffco.k12.co.us/savino/">Mr. Savino's Page</A></TD>
+      <TD class="color"></TD>
+      <TD class="color"></TD>
+    </TR>
+    <TR> 
+      <TD class="color" colspan="3" height="62"></TD>
+    </TR>
+    <TR> 
+      <TD class="color" colspan="3"> <B><FONT color="#FAFAFA">Webster Internet Dictionary</FONT></B> 
+        <FORM method="GET" action="http://work.ucsd.edu:5141/cgi-bin/http_webster?">
+	  <P><FONT color="#FAFAFA">
+          Enter word here: 
+	    <INPUT type="text" name="isindex" size=40 value="">
+	    <BR>
+	    Exact 
+            <INPUT type="radio" name="method" value="exact" checked>
+	    Approx 
+            <INPUT type="radio" name="method" value="approx">
+	    </FONT><BR>
+            <INPUT type="submit" value="Look up definition" name="submit">
+            <INPUT type="reset" value="Clear entry" name="reset">
+        </FORM>
+      </TD>
+    </TR>
+  </TABLE>
+</DIV>
+
+<!-- zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz-->
+
+<DIV id="adminLayer" class="textLayer"> 
+  <H4 class="header">Administration</H4>
+  <P>Click <A HREF="admin/admin.html">Here</A></P>
+</DIV>
+
+<!-- zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz-->
+
+<DIV id="deptLayer" class="textLayer"> 
+  <H4 class="header">Departments</H4>
+  <TABLE CELLSPACING=0 BORDER=0 CELLPADDING=2 WIDTH="100%">
+<TR><TD class="color"><A href="dept/ace/ace.html">Ace</A></TD>
+<TD class="color">&nbsp;</TD>
+<TD class="color"><A href="dept/art/art.html">Art</A></TD>
+</TR>
+
+<TR><TD class="color"><A href="dept/bus/business.html">Business</A></TD>
+<TD class="color">&nbsp;</TD>
+<TD class="color"><A href="dept/comp/computer.html">Computer</A></TD>
+</TR>
+
+<TR><TD class="color"><A href="dept/eng/english.html">English</A></TD>
+<TD class="color">&nbsp;</TD>
+<TD class="color"><A href="dept/fcs/fcs.html">Family & Consumer Studies</A></TD>
+</TR>
+
+<TR><TD class="color"><A href="dept/fl/foreign.html">Foreign Language</A></TD>
+<TD class="color">&nbsp;</TD>
+<TD class="color"><A href="dept/is/is.html">Intervention Services</A></TD>
+</TR>
+
+<TR><TD class="color"><A href="dept/math/math.html">Math</A></TD>
+<TD class="color">&nbsp;</TD>
+<TD class="color"><A href="dept/music/music.html">Music</A></TD>
+</TR>
+
+<TR><TD class="color"><A href="dept/pe/pe.html">P.E.</A></TD>
+<TD class="color">&nbsp;</TD>
+<TD class="color"><A href="dept/sci/science.html">Science</A></TD>
+</TR>
+
+<TR><TD class="color"><A href="dept/ss/ss.html">Social Studies</A></TD>
+<TD class="color">&nbsp;</TD>
+<TD class="color"><A href="dept/tech/tech.html">Tech. Arts</A></TD>
+</TR>
+
+</TABLE>
+
+</DIV>
+
+<!-- zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz-->
+
+<DIV id="sportsLayer" class="textLayer" style="visibility: hidden"> 
+  <H4 class="header">Sports</H4>
+  <P><A href="sports/girlsbasketball/girlsbasketball.html">Girls Basketball</A></P>
+  <P><A href="sports/boysbasketball/boysbasketball.html">Boys Basketball</A></P>
+  <P><A href="sports/girlssoccer/girlssoccer.html">Girls Soccer</A></P>
+  <P><A href="sports/track/track.html">Track</A></P>
+</DIV>
+
+<!-- zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz-->
+
+<DIV id="clubsLayer" class="textLayer">
+<P><A HREF="clubs/clubs.html">Clubs at CHS</A></P>
+</DIV>
+
+<!-- zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz-->
+
+<DIV id="counselLayer" class="textLayer"><P><A HREF="counsel/counsel.html">Peer Counseling</A></p>
+</DIV>
+
+<!-- zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz-->
+
+<DIV id="alumniLayer" class="textLayer">
+<P>
+The plan is to have the senior information from all the yearbooks scanned in
+and published on the site. Alumni will then be able to list their current
+information so their old high school friends can get in touch with them. You
+can send <A HREF="mailto:yoshi@hosedown.com">me</A> your information now, and I'll publish it along with the
+yearbook stuff.</P>
+</DIV>
+
+
+
+</BODY>
+</HTML>

@@ -1,0 +1,260 @@
+<html>
+
+<head>
+<title>Dansie Shopping Cart - Demonstration.</title>
+<meta NAME="keywords"
+CONTENT="shopping, cart, store front, cgi, perl, HTML, page, web, webpage, commerce, credit, cards, card, secure, SSL">
+<meta NAME="description"
+CONTENT="Dansie Shopping Cart has been designed to handle almost every electronic commerce need. Any expert of HTML and FTP can easily set up a Dansie Shopping Cart on their website without any knowledge of Perl.">
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<meta NAME="author" CONTENT="Dansie Website Design - http://www.dansie.net">
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="wp1.jpg">
+<font SIZE="+3" COLOR="#0000FF">
+
+<p align="center">Dansie Shopping Cart<font SIZE="-1">©</font></font> <br>
+<img SRC="dansie_cart.gif" border="1" ALT="Dansie Shopping Cart" ALIGN="CENTER"
+width="150" height="50"> <br>
+<font SIZE="+2" COLOR="#0000FF">Demonstration</font><br>
+<font SIZE="+1" COLOR="#0000FF">Take Dansie Shopping Cart for a spin...</font> <br>
+</p>
+
+<table BORDER="2" BORDERCOLOR="#FF00FF" WIDTH="100%" BGCOLOR="#FFFFFF" CELLPADDING="5"
+CELLSPACING="0">
+  <tr>
+    <td COLSPAN="3"><p align="center"><b><font SIZE="+1" COLOR="#0000FF">Pretend Products: </font></b></td>
+  </tr>
+  <tr>
+    <td WIDTH="10%" BGCOLOR="#BBBBFF"><p align="center"><font COLOR="#0000FF">Demonstration of<br>
+    simple<br>
+    capabilities: </font></td>
+    <td ALIGN="CENTER" BGCOLOR="#FFFFFF"><img SRC="purse.jpg" BORDER="0"
+    ALT="Black Leather purse with leather straps." width="96" height="90"> </td>
+    <td ALIGN="CENTER"><form METHOD="POST"
+    ACTION="http://www.secure-transfer.com/cgi-shl/cart.pl">
+      <input type="hidden" name="custom1" value="Black Leather purse with leather straps"><input
+      type="hidden" name="img" value="purse.jpg"><input type="hidden" name="merchant"
+      value="merchant1"><input type="hidden" name="name" value="Black leather purse"><input
+      type="hidden" name="price" value="20.00"><input type="hidden" name="return"
+      value="http://www.secure-transfer.com/demo.html"><input type="hidden" name="sh" value="1"><font
+      FACE="Times New Roman" COLOR="#000099" SIZE="+1"><p>Black Leather purse with leather
+      straps<br>
+      Price: $20.00</font><br>
+      <input TYPE="submit" NAME="add" VALUE="Put in Shopping Cart"> </p>
+    </form>
+    <p><font SIZE="+1" COLOR="#FF0000"><b><a HREF="cart_form_source.html">View the source code
+    for this HTML form </a></b></font></td>
+  </tr>
+  <tr>
+    <td BGCOLOR="#BBBBFF"><p align="center"><font COLOR="#0000FF">Demonstration of<br>
+    comprehensive<br>
+    capabilities: </font></td>
+    <td ALIGN="CENTER" BGCOLOR="#FFFFFF"><img SRC="mens_tie.jpg" BORDER="0" ALT="Mens Tie."
+    width="75" height="123"> </td>
+    <td ALIGN="CENTER"><form METHOD="POST"
+    ACTION="http://www.dansie.net/cgi-bin/scripts/cart.pl">
+      <input type="hidden" name="name" value="Mens Tie"><input type="hidden" name="price"
+      value="40.00"><input type="hidden" name="sh" value="1"><input type="hidden" name="img"
+      value="mens_tie.jpg"><input type="hidden" name="return"
+      value="http://www.dansie.net/demo.html"><font FACE="Times New Roman" COLOR="#000099"
+      SIZE="+1"><p>Mens Tie<br>
+      Price: $40.00</font><br>
+      </p>
+      <table BORDER="1" BORDERCOLOR="#FF00FF" CELLSPACING="0">
+        <tr>
+          <td BGCOLOR="#FFCCAA"><font COLOR="#000099">Size:</font></td>
+          <td BGCOLOR="#FFCCAA"><font COLOR="#000099">Color:</font></td>
+          <td BGCOLOR="#FFCCAA"><font COLOR="#000099">Tie clip?</font></td>
+          <td BGCOLOR="#FFCCAA"><font COLOR="#000099">Quantity:</font></td>
+          <td ROWSPAN="2"><input TYPE="SUBMIT" NAME="add" VALUE="Order"></td>
+        </tr>
+        <tr>
+          <td><select NAME="custom1" SIZE="1">
+            <option>Small $40.00 </option>
+            <option>Large $50.00 </option>
+          </select><br>
+          </td>
+          <td><select NAME="custom2" SIZE="1">
+            <option>Grey </option>
+            <option>Blue </option>
+            <option>Purple </option>
+            <option>Polka Dot </option>
+          </select><br>
+          </td>
+          <td ALIGN="CENTER"><select NAME="custom3" SIZE="1">
+            <option>No clip </option>
+            <option>Clip +$10.00 </option>
+          </select><br>
+          </td>
+          <td ALIGN="CENTER"><input TYPE="TEXT" NAME="quantity" VALUE="1" SIZE="2" MAXLENGTH="2"><br>
+          </td>
+        </tr>
+      </table>
+    </form>
+    </td>
+  </tr>
+  <tr>
+    <td BGCOLOR="#BBBBFF"><p align="center"><font COLOR="#0000FF">Demonstration of<br>
+    comprehensive<br>
+    capabilities<br>
+    with custom<br>
+    calculations: </font></td>
+    <td ALIGN="CENTER" BGCOLOR="#FFFFFF"><font>&nbsp; </font><img SRC="flowers.jpg" BORDER="0"
+    ALT="Gift Basket" width="100" height="90"> </td>
+    <td ALIGN="CENTER"><form METHOD="POST"
+    ACTION="http://www.dansie.net/cgi-bin/scripts/cart.pl">
+      <input type="hidden" name="name" value="Gift Basket"><input type="hidden" name="price"
+      value="50.00"><input type="hidden" name="sh" value="3"><input type="hidden" name="img"
+      value="flowers.jpg"><input type="hidden" name="return"
+      value="http://www.dansie.net/demo.html"><input type="hidden" name="redirect" value="1"><input
+      type="hidden" name="custom1" value="Price $50.00"><font FACE="Times New Roman"
+      COLOR="#000099" SIZE="+1"><p>Gift Basket<br>
+      Price: $50.00 plus $1.00 per Rose<br>
+      Includes Delivery</font><br>
+      </p>
+      <table BORDER="1" BORDERCOLOR="#FF00FF" CELLSPACING="0">
+        <tr>
+          <td BGCOLOR="#FFCCAA"><font COLOR="#000099">Roses:</font></td>
+          <td BGCOLOR="#FFCCAA"><font COLOR="#000099">Chocolates?</font></td>
+          <td BGCOLOR="#FFCCAA"><font COLOR="#000099">Quantity:</font></td>
+          <td ROWSPAN="2"><input TYPE="SUBMIT" NAME="add" VALUE="Buy Now"></td>
+        </tr>
+        <tr>
+          <td><select NAME="custom3" SIZE="2">
+          </select><script>
+   var i = 0  // Initialize
+   var s = 0 // Length Start value
+   var e = 24 // Length End value
+   var c = 1  // Cost in units of money per extra unit of length (1 = $1.00 etc.)
+   for (var i = s; i<= e; i++)
+   {
+      document.write ("<OPTION VALUE=\""+i+" roses +$"+(i-s)*c+"\">"+i+"\n")
+   }
+</script> </td>
+          <td ALIGN="CENTER"><select NAME="custom2" SIZE="1">
+            <option>No Chocolates </option>
+            <option>Chocolates +$5 </option>
+          </select><br>
+          </td>
+          <td ALIGN="CENTER"><input TYPE="TEXT" NAME="quantity" VALUE="1" SIZE="2" MAXLENGTH="2"><br>
+          </td>
+        </tr>
+      </table>
+    </form>
+    </td>
+  </tr>
+  <tr>
+    <td BGCOLOR="#BBBBFF"><p align="center"><font COLOR="#0000FF">Demonstration of sending
+    multiple items to the cart at one time: </font></td>
+    <td COLSPAN="2"><form METHOD="POST" ACTION="http://www.dansie.net/cgi-bin/scripts/cart.pl">
+      <input type="hidden" name="name" value="multi-items"><input type="hidden" name="return"
+      value="http://www.dansie.net/demo.html"><table BORDER="0">
+        <tr>
+          <td><font FACE="Times New Roman" COLOR="#000099" SIZE="+1">Item:</font></td>
+          <td><font FACE="Times New Roman" COLOR="#000099" SIZE="+1">Quantity:</font></td>
+        </tr>
+        <tr>
+          <td><input TYPE="CHECKBOX" NAME="multi-item1"
+          VALUE="Banana Split|3.95|1|split.jpg|A delicious ice cream treat."> Banana Split </td>
+          <td ALIGN="CENTER"><input TYPE="TEXT" NAME="quantity1" VALUE="1" SIZE="2" MAXLENGTH="2"> </td>
+        </tr>
+        <tr>
+          <td><input TYPE="CHECKBOX" NAME="multi-item2"
+          VALUE="Pineapple|2|1|pineapple.jpg|A juicy pineapple."> Pineapple </td>
+          <td ALIGN="CENTER"><input TYPE="TEXT" NAME="quantity2" VALUE="1" SIZE="2" MAXLENGTH="2"> </td>
+        </tr>
+        <tr>
+          <td><input TYPE="CHECKBOX" NAME="multi-item3"
+          VALUE="Watermelon|3|1|watermelon.jpg|A ripe watermelon."> Watermelon </td>
+          <td ALIGN="CENTER"><input TYPE="TEXT" NAME="quantity3" VALUE="1" SIZE="2" MAXLENGTH="2"> </td>
+        </tr>
+      </table>
+      <p><input TYPE="SUBMIT" NAME="add" VALUE="Put these in my cart!"> &nbsp;&nbsp;&nbsp;&nbsp;
+      <img SRC="new.gif" ALT="New!" BORDER="0" width="26" height="21"> </p>
+    </form>
+    <p align="center"><font SIZE="+1" COLOR="#FF0000"><b><a
+    HREF="http://www.dansie.net/cart_form_source2.html">View the source code for this HTML
+    form </a></b></font><br>
+    </td>
+  </tr>
+  <tr>
+    <td BGCOLOR="#BBBBFF"><p align="center"><font COLOR="#0000FF">Demonstration of<br>
+    flat-file database capabilities: </font></td>
+    <td ALIGN="CENTER"><font SIZE="+1" COLOR="#FF0000"><b><a
+    HREF="http://www.dansie.net/cgi-bin/scripts/cart.pl?db|stuff.dat|Clothing">Clothing </a></b></font><br>
+    <br>
+    <a HREF="http://www.dansie.net/cgi-bin/scripts/cart.pl?db|stuff.dat|Books"><font SIZE="+1"
+    COLOR="#FF0000"><b>Books </b></font></a></td>
+    <td ALIGN="CENTER"><font SIZE="+1" COLOR="#FF0000"><b><a
+    HREF="http://www.dansie.net/stuff.dat">View source of data file </a></b></font><br>
+    <br>
+    </td>
+  </tr>
+  <tr>
+    <td BGCOLOR="#BBBBFF"><p align="center"><font COLOR="#0000FF">Demonstration of<br>
+    flat-file database<br>
+    <b>search</b> capabilities: </font></td>
+    <td COLSPAN="2"><font SIZE="-1">The Dansie Shopping Cart comes with a built-in search
+    engine for your flat-file databases. Try entering these keywords and see the different
+    results you get: <b>book, handbook, ziglar, clothing, shoe, tie.</b><br>
+    <form METHOD="POST" ACTION="http://www.dansie.net/cgi-bin/scripts/cart.pl">
+      <input type="hidden" name="file" value="stuff.dat"><p>Text Search: <input TYPE="TEXT"
+      NAME="search" SIZE="30"> <input TYPE="SUBMIT"> </p>
+    </form>
+    <form METHOD="POST" ACTION="http://www.dansie.net/cgi-bin/scripts/cart.pl">
+      <input type="hidden" name="file" value="stuff.dat"><p>Pull-Down Menu Search: <select
+      SIZE="1" NAME="search">
+        <option>book </option>
+        <option>handbook </option>
+        <option>ziglar </option>
+        <option>clothing </option>
+        <option>shoe </option>
+        <option>tie </option>
+        <option>Hawaii </option>
+      </select> <input TYPE="SUBMIT" VALUE="GO"><br>
+      </font></p>
+    </form>
+    </td>
+  </tr>
+  <tr>
+    <td BGCOLOR="#BBBBFF"><p align="center"><font COLOR="#0000FF">Demonstration of<br>
+    easy access<br>
+    to shopping cart: </font></td>
+    <td BGCOLOR="#FFFFFF"><a HREF="http://www.dansie.net/cgi-bin/scripts/cart.pl?look"><img
+    SRC="cart.gif" BORDER="0" ALT="View Your Shopping Cart" width="119" height="66"></a> </td>
+    <td BGCOLOR="#FFFFFF"><font SIZE="-1">Always place an easy to find graphical link back to
+    the shopping cart somewhere on each page of your website. This link should say something
+    like &quot;<b>View Cart</b>&quot; or &quot;<b>Checkout</b>&quot;. This makes it easy for
+    your customers to continue shopping while knowing they can easily find their way back to
+    the shopping cart at any time to complete their purchase. Go ahead, click on the image.
+    The shopping cart comes with this standard image, or you can make your own. </font></td>
+  </tr>
+</table>
+<a NAME="search">
+
+<p align="center"><br>
+<font SIZE="+1" FACE="Comic Sans MS">[</a><a HREF="cart.html">Features</a>] [<a
+HREF="demo.html">Demonstration</a>] [<a HREF="real_carts.html">Real Carts</a>] [<a
+HREF="cart_readme.html">ReadMe</a>] [<a HREF="cart_order.html">Order</a>] <br>
+<br>
+<a HREF="testimonials.html">[Testimonials]</a> <a HREF="mission.html">[Mission Statement]</a></font><br>
+<br>
+<b><a HREF="question.html"
+onMouseOver="window.status='Comments, Questions, Suggestions.'; return true;"
+onMouseOut="window.status=''; return true;"><font SIZE="+1">Questions about Dansie
+Shopping Cart's capabilities?</font></a><br>
+</b><br>
+<br>
+<img SRC="http://www.dansie.net/cgi-bin/counter.pl" BORDER="0" HEIGHT="0" WIDTH="0"> <!-- ADDRESS AND HOME TABLE --> </p>
+
+<table WIDTH="100%" CELLPADDING="0" CELLSPACING="0" BORDER="0">
+  <tr>
+    <td WIDTH="70%"><basefont SIZE="-2">www.dansie.net <br>
+    <font COLOR="#000000"><a HREF="mailto:cart@dansie.net">cart@dansie.net</a></font> </td>
+    <td ALIGN="RIGHT"><a HREF="index.html"><img SRC="home.gif" ALT="HOME" BORDER="0"
+    ALIGN="CENTER" width="40" height="40"></a> Home </td>
+  </tr>
+</table>
+</body>
+</html>

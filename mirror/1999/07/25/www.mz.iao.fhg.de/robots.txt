@@ -1,0 +1,21 @@
+#This is a file retrieved by webwalkers a.k.a. spiders that 
+#conform to a defacto standard.
+# See <URL:"http://web.nexor.co.uk/mak/doc/robots/norobots.html">
+#
+#The webmaster for this site is Oliver Kelkar <kelkar@iao.fhg.de>
+#
+#Format is:
+#       User-agent: <name of spider>
+#       Disallow: <nothing> | <path>
+# Flag  Date    By      Reason
+# $l1-  950130  epc     finally understood what the file was for!
+#
+#-----------------------------------------------------------------------------
+#   ROBOTS.TXT fuer http://www.mz.iao.fhg.de
+#
+#   Oliver Kelkar <Oliver.Kelkar@iao.fhg.de>, 3/96
+#-----------------------------------------------------------------------------
+# following prevents access to /misc/ for spiders
+User-Agent: *
+Disallow: /image
+Disallow: /button

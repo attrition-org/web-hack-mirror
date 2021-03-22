@@ -1,0 +1,504 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>Home Page&nbsp; Ofertas de Emprego</title>
+</head>
+
+<body bgcolor="#F1F1F1" onload="dynAnimation()">
+<script language="JavaScript" fptype="dynamicanimation">
+<!--
+  // If you want to change this script, you must also make the following
+  // changes so that FrontPage will not overwrite your new script.
+  // In the script tag, change type="dynamicanimation" to type="mydynamicanimation"
+  // In the first script statement, change "dynamicanimation" to "mydynamicanimation"
+  // Throughout the HTML content, change dynamicanimation= to mydynamicanimation=
+  // Change function dynAnimation to function mydynAnimation
+  // In the body tag, change onload="dynAnimation()" to onload="mydynAnimation()"
+  dynamicanimAttr = "dynamicanimation"
+  animateElements = new Array()
+  currentElement = 0
+  speed = 0
+  stepsZoom = 8
+  stepsWord = 8
+  stepsFly = 12
+  stepsSpiral = 16
+  steps = stepsZoom
+  step = 0
+  outString = ""
+  function dynAnimation()
+  {
+    var ms = navigator.appVersion.indexOf("MSIE")
+    ie4 = (ms>0) && (parseInt(navigator.appVersion.substring(ms+5, ms+6)) >= 4)
+    if(!ie4)
+    {
+      if((navigator.appName == "Netscape") &&
+         (parseInt(navigator.appVersion.substring(0, 1)) >= 4))
+      {
+        for (index=document.layers.length-1; index >= 0; index--)
+        {
+            layer=document.layers[index]
+            if (layer.left==10000)
+                layer.left=0
+        }
+      }
+      return
+    }
+    for (index=document.all.length-1; index >= document.body.sourceIndex; index--)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if(null != animation)
+      {
+        if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        {
+          ih = el.innerHTML
+          outString = ""
+          i1 = 0
+          iend = ih.length
+          while(true)
+          {
+            i2 = startWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, false, "")
+            if(i2 == iend)
+              break
+            i1 = i2
+            i2 = endWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, true, animation)
+            if(i2 == iend)
+              break
+            i1 = i2
+          }
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+        if(animation == "zoomIn" || animation == "zoomOut")
+        {
+          ih = el.innerHTML
+          outString = "<SPAN " + dynamicanimAttr + "=\"" + animation + "\" style=\"position: relative; left: 10000;\">"
+          outString += ih
+          outString += "</SPAN>"
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+      }
+    }
+    i = 0
+    for (index=document.body.sourceIndex; index < document.all.length; index++)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if (null != animation)
+      {
+        if(animation == "flyLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyRight")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyTop" || animation == "dropWord")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottom")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyTopLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyTopRight" || animation == "flyTopRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottomLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyBottomRight" || animation == "flyBottomRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "spiral")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "zoomIn")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else if(animation == "zoomOut")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        el.initLeft = el.style.posLeft
+        el.initTop = el.style.posTop
+        animateElements[i++] = el
+      }
+    }
+    window.setTimeout("animate();", speed)
+  }
+  function offsetLeft(el)
+  {
+    x = el.offsetLeft
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      x += e.offsetLeft;
+    return x
+  } 
+  function offsetTop(el)
+  {
+    y = el.offsetTop
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      y += e.offsetTop;
+    return y
+  } 
+  function startWord(ih, i)
+  {
+    for(tag = false; i < ih.length; i++)
+    {
+      c = ih.charAt(i)
+      if(c == '<')
+        tag = true
+      if(!tag)
+        return i
+      if(c == '>')
+        tag = false
+    }
+    return -1
+  }
+  function endWord(ih, i)
+  {
+    nonSpace = false
+    space = false
+    while(i < ih.length)
+    {
+      c = ih.charAt(i)
+      if(c != ' ')
+        nonSpace = true
+      if(nonSpace && c == ' ')
+        space = true
+      if(c == '<')
+        return i
+      if(space && c != ' ')
+        return i
+      i++
+    }
+    return -1
+  }
+  function outWord(ih, i1, i2, dyn, anim)
+  {
+    if(dyn)
+      outString += "<SPAN " + dynamicanimAttr + "=\"" + anim + "\" style=\"position: relative; left: 10000;\">"
+    outString += ih.substring(i1, i2)
+    if(dyn)
+      outString += "</SPAN>"
+  }
+  function animate()
+  {
+    el = animateElements[currentElement]
+    animation = el.getAttribute(dynamicanimAttr, false)
+    step++
+    if(animation == "spiral")
+    {
+      steps = stepsSpiral
+      v = step/steps
+      rf = 1.0 - v
+      t = v * 2.0*Math.PI
+      rx = Math.max(Math.abs(el.initLeft), 200)
+      ry = Math.max(Math.abs(el.initTop),  200)
+      el.style.posLeft = Math.ceil(-rf*Math.cos(t)*rx)
+      el.style.posTop  = Math.ceil(-rf*Math.sin(t)*ry)
+    }
+    else if(animation == "zoomIn")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(50+50*step/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else if(animation == "zoomOut")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(100+200*(steps-step)/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else
+    {
+      steps = stepsFly
+      if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        steps = stepsWord
+      dl = el.initLeft / steps
+      dt = el.initTop  / steps
+      el.style.posLeft = el.style.posLeft - dl
+      el.style.posTop = el.style.posTop - dt
+    }
+    if (step >= steps) 
+    {
+      el.style.posLeft = 0
+      el.style.posTop = 0
+      currentElement++
+      step = 0
+    }
+    if(currentElement < animateElements.length)
+      window.setTimeout("animate();", speed)
+  }
+//-->
+</script>
+
+<table border="0" width="97%" height="987">
+    <tr>
+        <td valign="top" colspan="2" width="159%" height="131"><!--webbot bot="Include" u-include="barra_std.htm" tag="BODY" startspan -->
+
+<table border="0" width="731" height="74">
+  <tr>
+    <td width="117" height="2" rowspan="2" valign="middle" align="left"><font face="Arial Black" color="#336600"><strong><img src="images/smallbrazao.GIF" alt="smallbrazao.GIF (3860 bytes)" WIDTH="113" HEIGHT="95"></strong></font></td>
+    <td width="606" height="1"><font color="#336600" size="1" face="Arial Black"><strong><a href="file:///C:/FrontPage%20Webs/index.htm"><img src="images/Cml.gif" alt="CML" border="0" WIDTH="99" HEIGHT="27"></a><a href="file:///C:/FrontPage%20Webs/52538.htm"><img src="images/Inform.gif" alt="Informacoes" border="0" WIDTH="99" HEIGHT="27"></a><a href="file:///C:/FrontPage%20Webs/query.htm"><img src="images/Procurar.gif" alt="Procurar" border="0" WIDTH="99" HEIGHT="27"></a><a href="file:///C:/FrontPage%20Webs/inquerito.htm"><img src="images/Comentar.gif" alt="Comentar" border="0" WIDTH="99" HEIGHT="27"></a><a href="file:///C:/FrontPage%20Webs/contactos.htm"><img src="images/Contacto.gif" alt="Contactar" border="0" WIDTH="99" HEIGHT="27"></a></strong></font></td>
+  </tr>
+  <tr>
+    <td width="606" bgcolor="#B7D17E" height="1" valign="top"><font face="Times New Roman" size="5" color="#008000"><strong>DMAGGRH</strong></font>&nbsp;<br>
+    <font face="Times New Roman" size="4" color="#008000"><strong>Direcção Municipal de
+    Administração Geral e Gestão de Recursos Humanos</strong></font></td>
+  </tr>
+</table>
+<!--webbot bot="Include" endspan i-checksum="44284" --></td>
+    </tr>
+    <tr>
+        <td valign="top" width="18%" bgcolor="#B7D17E" height="726"><!--webbot bot="Include" u-include="barra_latdgrh.htm" tag="BODY" startspan -->
+<div align="center"><center>
+
+<table border="0" width="100%" cellpadding="2" bordercolor="#008000" bordercolordark="#008000" bordercolorlight="#008000">
+  <tr>
+    <td width="100%" align="left" bordercolorlight="#FFFFFF" bgcolor="#EBF2DB" bordercolor="#808080" bordercolordark="#000000" valign="top"><a href="index.htm"><small><small><font face="Verdana">Home page</font></small></small></a></td>
+  </tr>
+  <tr>
+    <td width="100%" align="left" bordercolorlight="#FFFFFF" bgcolor="#EBF2DB" bordercolor="#808080" bordercolordark="#000000"><a href="DMAGGRH.htm"><font face="Verdana"><small><small>Breve
+    Historial</small></small></font></a></td>
+  </tr>
+  <tr>
+    <td width="100%" align="left" bordercolor="#808080" bgcolor="#EBF2DB" bordercolorlight="#FFFFFF" bordercolordark="#000000"><a href="estrutura.htm"><font face="Verdana"><small><small>Organograma</small></small></font></a></td>
+  </tr>
+  <tr>
+    <td width="100%" align="left" bgcolor="#EBF2DB"><a href="EstruturaDGRH.htm"><font face="Verdana"><small><small>Recursos Humanos</small></small></font></a></td>
+  </tr>
+  <tr>
+    <td width="100%" align="left" bgcolor="#EBF2DB"><p style="margin-left: 10px"><a href="administrar.htm"><font face="Verdana"><small><small>Administração</small></small></font></a></td>
+  </tr>
+  <tr>
+    <td width="100%" align="left" bgcolor="#EBF2DB"><p style="margin-left: 10px"><a href="Estudos.htm"><small><small><font face="Verdana">Estudos</font></small></small></a></td>
+  </tr>
+  <tr>
+    <td width="100%" align="left" bgcolor="#EBF2DB"><p style="margin-left: 10px"><a href="formar.htm"><small><small><font face="Verdana">Formação</font></small></small></a></td>
+  </tr>
+  <tr>
+    <td width="100%" align="left" bgcolor="#EBF2DB"><small><small><font face="Verdana"><p style="margin-left: 10px"><a href="Medicina.htm">Medicina do Trabalho</a></font></small></small></td>
+  </tr>
+  <tr>
+    <td width="100%" align="left" bgcolor="#EBF2DB"></td>
+  </tr>
+  <tr>
+    <td width="100%" align="left" bgcolor="#EBF2DB"><a href="Concursos.htm"><small><small><font face="Verdana">Ofertas de Emprego</font></small></small></a></td>
+  </tr>
+  <tr>
+    <td width="100%" align="left" bgcolor="#EBF2DB"><a href="Paf99.htm"><small><small><font face="Verdana">Plano Anual de Formação / 99</font></small></small></a></td>
+  </tr>
+  <tr>
+    <td width="100%" align="left" bgcolor="#EBF2DB"><a href="Pedemprego.htm"><small><small><font face="Verdana">Pedidos de Emprego 1998</font></small></small></a></td>
+  </tr>
+</table>
+</center></div>
+<!--webbot bot="Include" endspan i-checksum="65028" --></td>
+        <td valign="top" width="111%" height="726"><p align="center"><font color="#336600" size="6" face="Arial Black">Ofertas de Emprego</font><font color="#336600" size="7" face="Arial Black"> </font></p>
+        <p><img src="images/DGRH.h1.jpg" alt="wpeD.jpg (4668 bytes)" width="615" height="33"></p>
+        <table border="0" width="91%">
+            <tr>
+                <td width="100%"><table border="1" width="100%" bgcolor="#00FF00" bordercolor="#008000" bordercolordark="#008000" bordercolorlight="#008000">
+                    <tr>
+                        <td width="100%" bgcolor="#FFFFFF" bordercolor="#81CF0A" bordercolordark="#81CF0A" bordercolorlight="#81CF0A" dynamicanimation="flyTop" style="position: relative !important; left: 10000 !important"><p align="center"><font color="#FF0000" face="Arial"><strong><blink>Aviso</blink></strong><strong><br>
+                        </strong></font><font color="#000000" face="Arial">Em caso de interesse no
+                        ingresso em alguma das categorias aqui
+                        anunciadas contacte os nossos serviços<br>
+                        na morada e telefones acima indicados.<br>
+                        Consulte sempre os anúncios publicados
+                        em Diário da República (D.R.), a que
+                        fazemos referência.</font></p>
+                        </td>
+                    </tr>
+                </table>
+                </td>
+            </tr>
+        </table>
+        <table border="0" width="91%" height="10">
+            <tr>
+                <td width="100%" height="6">&nbsp;</td>
+            </tr>
+        </table>
+        <table border="1" width="565" bgcolor="#C0C0C0">
+            <tr>
+                <td width="559"><p align="center"><font color="#008000" size="4"><strong>Concursos
+                Internos</strong></font></p>
+                </td>
+            </tr>
+        </table>
+        <table border="0" width="90%" height="12">
+            <tr>
+                <td align="center" width="1%" height="8">&nbsp;</td>
+                <td align="center" width="73%" height="8">&nbsp;</td>
+                <td align="center" width="23%" height="8">&nbsp;</td>
+                <td align="center" width="21%" height="8">&nbsp;</td>
+                <td align="center" width="98%" height="8">&nbsp;</td>
+            </tr>
+        </table>
+        <table border="1" width="90%">
+            <tr>
+                <td width="100%"><p align="center"><font color="#FF0000" face="Verdana"><strong><blink>NÃO
+                SE ENCONTRA NENHUM EM ABERTO</blink></strong></font></p>
+                </td>
+            </tr>
+        </table>
+        <table border="1" width="565" bgcolor="#C0C0C0">
+            <tr>
+                <td width="559"><p align="center"><font color="#008000" size="4"><strong>Concursos
+                Externos de Ingresso</strong></font></p>
+                </td>
+            </tr>
+        </table>
+        <table border="1" width="90%">
+            <tr>
+                <td align="center" width="11%" height="39"><font color="#008000" size="1" face="Verdana"><strong>Tipo</strong></font></td>
+                <td align="center" width="35%" height="39"><font color="#008000" size="1" face="Verdana"><strong>Categoria</strong></font></td>
+                <td align="center" width="19%" height="39"><font color="#008000" size="1" face="Verdana"><strong>Data
+                e Local de Publicação</strong></font></td>
+                <td align="center" width="14%" height="39"><font color="#008000" size="1" face="Verdana"><strong>Prazo</strong></font></td>
+                <td align="center" width="68%" height="39"><font color="#008000" size="1" face="Verdana"><strong>Destinatários</strong></font></td>
+            </tr>
+            <tr>
+                <td align="center" width="4%" height="25"><font color="#FF0000" size="1">Ingresso</font></td>
+                <td align="center" width="37%" height="25"><font color="#FF0000" size="1">Técnico Superior (biblioteca
+                e documentação) 2ª Classe</font></td>
+                <td align="center" width="18%" height="25"><font color="#FF0000" size="1">18/11/99<br>
+                D.R. nº269 III Série </font></td>
+                <td align="center" width="14%" height="25"><font color="#FF0000" size="1">20 dias úteis</font></td>
+                <td align="center" width="72%" height="25"><p align="left"><font color="#FF0000" size="1">Possuidores
+                de uma das habilitações seguintes:<br>
+                a) Licenciatura, complementada por um dos cursos
+                instituídos pelos D.L. 20478 e 22014,
+                respectivamente de 6/11/31 e de 21/12/32 e pelos
+                D.L. 26026 e 49009, respectivamente de 7/11/35 e
+                16/5/69;<br>
+                b) Curso de especialização em Ciências
+                Documentais, opção em Documentação e
+                Biblioteca, criado pelo D.L. 87/82, de 13/7, e
+                regulamentado pelas portarias 448/83 e 449/83, de
+                19/4, e 825/85, de 9/11;<br>
+                c)Outros cursos de especialização pós-licenciatura
+                na área das Ciências Documentais de duração não
+                inferior a dois anos, ministrados em instituições
+                nacionais de ensino universitário;<br>
+                d)Cursos ministrados em instituições
+                estrangeiras, reconhecidos como equivalentes aos
+                mencionados nas alíneas precedentes.</font></p>
+                </td>
+            </tr>
+        </table>
+        <table border="0" width="90%">
+            <tr>
+                <td><table border="0" width="90%">
+                    <tr>
+                        <td width="100%">&nbsp; </td>
+                    </tr>
+                </table>
+                <p>&nbsp; </p>
+                </td>
+            </tr>
+        </table>
+        <table border="1" width="566" bgcolor="#C0C0C0">
+            <tr>
+                <td width="560"><p align="center"><font color="#008000" size="4"><strong>Ofertas Públicas
+                de Emprego</strong></font></p>
+                </td>
+            </tr>
+        </table>
+        <table border="0" width="90%" height="15">
+            <tr>
+                <td align="center" width="11%" height="39">&nbsp;</td>
+                <td align="center" width="35%" height="39">&nbsp;</td>
+                <td align="center" width="19%" height="39">&nbsp;</td>
+                <td align="center" width="14%" height="39">&nbsp;</td>
+                <td align="center" width="68%" height="39">&nbsp;</td>
+            </tr>
+        </table>
+        <table border="0" width="90%">
+            <tr>
+                <td width="100%"><table border="1" width="90%">
+                    <tr>
+                        <td width="100%"><p align="center"><font color="#FF0000" face="Verdana"><strong><blink>NÃO
+                        SE ENCONTRA NENHUMA EM ABERTO</blink></strong></font></p>
+                        </td>
+                    </tr>
+                </table>
+                </td>
+            </tr>
+        </table>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" width="27%" bgcolor="#B7D17E" height="44">&nbsp;</td>
+        <td valign="top" width="132%" height="44"><table border="1" width="90%" bgcolor="#008000" bordercolor="#008000" bordercolordark="#008000" bordercolorlight="#00FF00">
+            <tr>
+                <td width="89%" bgcolor="#008000" bordercolor="#008000" bordercolordark="#009500" bordercolorlight="#00D900"><p align="center"><font color="#FF0000" size="2" face="Arial"><strong><blink>Nota<br>
+                </blink></strong></font><font color="#FFFFFF" size="2" face="Arial"><blink>No seu próprio
+                interesse não deixe de consultar esta página
+                regularmente.</blink></font></p>
+                </td>
+            </tr>
+        </table>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" width="27%" bgcolor="#B7D17E" height="70">&nbsp;</td>
+        <td valign="top" width="132%" height="70"><p align="center"><a href="index.htm"><img src="images/admini1.jpg" alt="wpe2.jpg (1570 bytes)" border="0" width="99" height="31"></a></p>
+        </td>
+    </tr>
+</table>
+<!--webbot bot="Include" u-include="responsabil.htm" tag="BODY" startspan -->
+
+<hr width="95%">
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="10%"><a href="http://www.vbe.com/~starman/graphics/animate/email/mail.gif"><p align="center"></a><img alt="email13.gif" border="0" src="images/email13.gif" WIDTH="45" HEIGHT="52"></td>
+    <td width="90%"><em><font face="Verdana"><small><small>Câmara Municipal de Lisboa</small><br>
+    <small>DMAGGRH - Direcção Municipal de Administração Geral e Gestão de Recursos
+    Humanos</small></small><br>
+    <small><small>Tel: 727 11 30 / 727 11 69 Fax: 727 10 20</small><br>
+    </small></font><a href="mailto:cmldmaggrh.gab@mail.telepac.pt"><font face="Verdana" size="1" color="#0000FF"><u>cmldmaggrh.gab@mail.telepac.pt</u></font></a></em></td>
+  </tr>
+</table>
+<!--webbot bot="Include" endspan i-checksum="28130" -->
+</body>
+</html>

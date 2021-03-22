@@ -1,0 +1,356 @@
+<!--
+   Copyright (C) 1999, Keith Drakard - kif@irt.org
+
+   This program is distributed under the terms of the
+   WebGames License at http://www.irt.org/games/license.txt
+-->
+
+<HTML>
+<HEAD><TITLE>Yahtzee :WebGames</TITLE>
+
+<!-- Keith Drakard (kif@irt.org) v0.10 on 8th August 98
+                                 v0.20 on 9th August 98
+
+     hiscore whilst testing: 107+224 :)
+-->
+
+
+<SCRIPT LANGUAGE="JavaScript"><!-- //
+
+  // static global variables
+  var bonus_limit= 62;
+  var key= new Array(17);
+    key[0]= "Ones"; key[1]= "Twos"; key[2]= "Threes";
+    key[3]= "Fours"; key[4]= "Fives"; key[5]= "Sixes";
+    key[6]= "BONUS <SMALL>(if >"+bonus_limit+")</SMALL>";
+    key[7]= "<B>TOP TOTAL</B>";
+    key[8]= "Three Of A Kind"; key[9]= "Four Of A Kind";
+    key[10]="Small Straight"; key[11]="Large Straight";
+    key[12]="Full House"; key[13]="Yahtzee"; key[14]="Chance";
+    key[15]="<B>BOTTOM TOTAL</B>";
+    key[16]="<B>TOTAL</B>";
+  var version = (document.all || document.layers) ? 1 : 0
+  // get player options or set to default
+  var passed= window.location.search.substring(1);
+  var maxplayers= getParm(passed,'p')- 0; if (maxplayers==0) maxplayers=3;
+
+  // dynamic globals
+  var rolled= new Array(5); // for (i=0; i<5; i++) { rolled[i]= 0; }
+  var rolls= 0; var player= 0; var tmp= new Array(7); var goes= 0;
+  var score= new Array(maxplayers);
+  for (i=0; i<maxplayers; i++) { score[i]= new Array(17);
+    for (j=0; j<17; j++) {
+      if (j!=7 && j!=15 && j!=16) score[i][j]= -1; else score[i][j]= 0;
+    }
+  }
+
+  function preload() {
+    if (document.images) {
+      dice= new makeArray(7);
+        dice[0].src= "blank.gif";
+        dice[1].src= "one.gif";
+        dice[2].src= "two.gif";
+        dice[3].src= "three.gif";
+        dice[4].src= "four.gif";
+        dice[5].src= "five.gif";
+        dice[6].src= "six.gif";
+      number= new makeArray(11);
+        number[0].src= "0.gif";
+        number[1].src= "1.gif";
+        number[2].src= "2.gif";
+        number[3].src= "3.gif";
+        number[4].src= "4.gif";
+        number[5].src= "5.gif";
+        number[6].src= "6.gif";
+        number[7].src= "7.gif";
+        number[8].src= "8.gif";
+        number[9].src= "9.gif";
+        number[10].src= "blank.gif";
+
+    } else {
+      alert("Sorry, this game needs to run on a browser\nwhich supports the image object.");
+    }    
+  }
+
+  function newgame() {
+    var index= document.user.noofplayers.selectedIndex;
+    var tmp_p= document.user.noofplayers.options[index].value;
+
+    if (tmp_p!= maxplayers) {
+      // options have changed so we need to redraw the page
+      window.location.href= "index.htm?p="+tmp_p;
+
+    } else {
+      // same options so just reset the board
+      goes= 0;
+      for (k=0; k<17; k++) {
+        if (k==7 || k==15 || k==16) { first="100";second="10"; } else { first="10";second="1"; }
+        for (p=0; p<maxplayers; p++) {
+          document.images["p"+p+"k"+k+"d"+first].src= number[10].src;
+          document.images["p"+p+"k"+k+"d"+second].src= number[10].src;
+          if (k==7 || k==15 || k==16) document.images["p"+p+"k"+k+"d1"].src= number[0].src;
+          if (k!=7 && k!=15 && k!=16) score[p][k]= -1; else score[p][k]= 0;
+        }
+      }
+      rolls= 0; document.user.r.value= " 3 Rolls Left ";
+      for (i=0; i<5; i++) { select(i); rolled[i]= 0; }
+      document.images["play"+player].src= "blank.gif";
+      player= 0; document.images["play"+player].src= "notblank.gif";
+    }
+  }
+
+
+  // scoring functions
+
+  function numberof() {
+    for (x=0; x<7; x++) { tmp[x]=0; }          // reset the count of each number
+    for (x=0; x<5; x++) { tmp[rolled[x]]++; }  // and add 'em up again..
+  }
+  function sum(what) {
+    // adds up the numbers matching 'what', or alternatively, all numbers
+    temp= 0; for (x=0; x<5; x++) { if (rolled[x]== what || what==-1) temp+= rolled[x]; }
+    return(temp);
+  }
+  function match(what) {
+    for (x=1; x<7; x++) {
+      if (tmp[x] >= what) { return(sum(-1)); } // do we have enough?
+    } return(0);
+  }
+  function house() {
+    temp= 0; for (x=1; x<7; x++) { if (tmp[x]==2 || tmp[x]==3 || tmp[x]==5) temp+=tmp[x]; }
+    if (temp!= 5) temp=0;
+    return(temp);
+  }
+  function line(what) {
+    temp= 1;
+    if (tmp[3]==0 || tmp[4]==0) {
+      temp= 0; // can't have a line without them
+    } else {
+      if (what== 3) {
+        if ((tmp[1]>0 && tmp[2]>0) || (tmp[2]>0 && tmp[5]>0) || (tmp[5]>0 && tmp[6]>0)) temp=temp; else temp=0;
+      } else {
+        if (tmp[2]==0 || tmp[5]==0) temp=0;
+        if (tmp[1]==1 || tmp[6]==1) temp=temp; else temp=0;
+      }
+    }
+    return(temp);
+  }
+
+  function get_score(y) {
+    numberof();
+
+    if (y<  6) return(tmp[y+1]*(y+1)); // or use this: if (y<  6) return(sum(y+1));
+    if (y== 8) return(match(3));
+    if (y== 9) return(match(4));
+    if (y==10 && line(3)) return(30);
+    if (y==11 && line(4)) return(40);
+    if (y==12 && house()) return(25);
+    if (y==13 && match(5)) return(50);
+    if (y==14) return(sum(-1));
+
+    return(0);
+  }
+
+
+  // board updating functions
+
+  function pick(row) {
+    if (goes< (maxplayers* 13)) {
+      if (score[player][row]== -1) {
+        val= get_score(row);
+        if (val>0 || confirm("Are you sure you want to zero out this box?")) {
+          write(player,row,val); update_score(player,row,val);
+
+          // and the next player...
+          document.images["play"+player].src= "../common/blank.gif";
+          player++; if (player== maxplayers) player= 0;
+          document.images["play"+player].src= "../common/notblank.gif";
+          rolls= 0; var flag= " "+(3-rolls)+" Roll"; if (3-rolls!=1) flag+= "s";
+          flag+= " Left "; document.user.r.value= flag;
+          for (i=0; i<5; i++) { select(i); rolled[i]= 0; }
+          goes++;
+        }
+      } else alert("You can't fill in a box twice.");
+    }
+  }
+
+  function write(x,y,n) {
+    var ns= n+""; var len= ns.length;
+    document.images["p"+x+"k"+y+"d1"].src= number[ns.charAt(len-1)].src;
+    if (len>=2) document.images["p"+x+"k"+y+"d10"].src= number[ns.charAt(len-2)].src;
+    if (len==3) document.images["p"+x+"k"+y+"d100"].src= number[ns.charAt(len-3)].src;
+  }
+
+  function update_score(x,y,n) {
+    score[x][y]= n; y= (y< 6) ? 7 : 15   // top or bottom total
+    n+= score[x][y];
+    if (y==7 && score[x][6]!=35) {
+      if (n>bonus_limit) { n+= 35; score[x][6]= 35; write(x,6,35); }
+      else { score[x][6]++; if (score[x][6]==5) write(x,6,0); }
+    }
+    score[x][y]= n; write(x,y,n);
+
+    // total total...
+    y=16; n= score[x][7]+ score[x][15]; write(x,y,n);
+  }
+
+
+  // dice functions
+
+  function roll(rescue) {
+    var flag= 0;
+    if (goes< (maxplayers* 13)) {
+      if ((!rescue && rolls<3) || (rescue && rolls>0)) {
+        for (x=0; x<5; x++) {
+          if (!rescue && document.images["die"+x].src==dice[0].src) { rolled[x]=rand(6); flag=1; }
+          document.images["die"+x].src= dice[rolled[x]].src;
+        }
+      }
+      if (flag) {
+        rolls++; flag= " "+(3-rolls)+" Roll"; if (3-rolls!=1) flag+= "s";
+        flag+= " Left "; document.user.r.value= flag;
+      }
+    }
+  }
+
+  function select(x) {
+    if (rolls<3) {
+      if (document.images["die"+x].src== dice[0].src)
+        document.images["die"+x].src= dice[rolled[x]].src;
+      else
+        document.images["die"+x].src= dice[0].src;
+    }
+  }
+
+  // The Central Randomizer 1.3 (C) 1997 by Paul Houle (houle@msc.cornell.edu)
+  // See:  http://www.msc.cornell.edu/~houle/javascript/randomizer.html
+  // NOTE:- modified by Kif to produce integers between 1-limit
+  rnd.today=new Date(); rnd.seed=rnd.today.getTime();
+  function rnd() {
+    rnd.seed = (rnd.seed*9301+49297) % 233280;
+    return rnd.seed/(233280.0);
+  }
+  function rand(limit) { return Math.ceil(rnd()*limit); }
+
+  // The following functions were written by Martin Webb at http://www.irt.org/
+  function makeArray(n) {
+    this.length= n; for (i=0; i<n; i++) { this[i] = new Image(); }
+    return this;
+  }
+  function getParm(string,parm) {
+    var startPos= string.indexOf(parm+"=");
+    if (startPos> -1) {
+      startPos= startPos+ 2;
+      var endPos= string.indexOf("&",startPos);
+      if (endPos== -1) endPos= string.length;
+      return unescape(string.substring(startPos,endPos));
+    }
+    return '';
+  }
+
+//--></SCRIPT>
+</HEAD>
+
+<BODY BGCOLOR="#000000" TEXT="#ffffff" link="#ffffff" vlink="#ffffff" alink="#ffaaaa">
+<CENTER>
+ <FONT FACE="Arial, Helvetica, sans-serif">
+
+ <H1>Yahtzee</H1>
+
+
+ <SCRIPT LANGUAGE="JavaScript"><!-- //
+  var output= '';
+
+  output+= '<TABLE ALIGN=center CELLSPACING=8 CELLPADDING=0 BORDER=0><TR>\n';
+
+  // create the board
+  output+= '<TD><TABLE CELLSPACING=0 CELLPADDING=4 BORDER=0>\n';
+
+  // do the header
+  output+= '<TR ALIGN=center><TD>&nbsp;</TD>';
+  for (x=0; x<maxplayers; x++) { output+= '<TD BGCOLOR="';
+    if (x%2==1) output+= '#00001B'; else output+= '#001B00';
+    output+= '">&nbsp;<B>Player '+(x+1)+'</B>&nbsp;<BR>';
+    output+= '<IMG SRC="../common/'; if (x==0) output+= 'not';
+    output+= 'blank.gif" WIDTH=50 HEIGHT=3 ALT="" NAME="play'+x+'"></TD>';
+  } output+= '</TR>\n';
+
+  // for each row
+  for (k=0; k<17; k++) {
+
+    // set up the digits (100s,10s,1s) for the board
+    if (k==7 || k==15 || k==16) { first="100";second="10"; } else { first="10";second="1"; }
+
+    // do the "key"
+    output+= '<TR><TD BGCOLOR="';
+    if (k%2==1) output+= '#1B0000">'; else output+= '#220000">';
+    if (k!=6 && k!=7 && k!=15 && k!=16) output+= '<A HREF="javascript:pick('+k+');" onFocus="blur();">'+key[k]+'</A>';
+      else output+= key[k];
+    output+= '</TD>';
+
+    // for each player
+    for (p=0; p<maxplayers; p++) {
+      output+= '<TD BGCOLOR="';
+
+      // alternate colours for visibility...
+      if (k%2==1) { if (p%2==1) output+= '#00001B'; else output+= '#001B00'; }
+      else { if (p%2==1) output+= '#000022'; else output+= '#002200'; }
+
+      // do the digits (p1k12d10 etc)
+      output+= '" ALIGN=right><IMG SRC="blank.gif" WIDTH=14 HEIGHT=18 ALT="" NAME="p'+p+'k'+k+'d'+first+'">';
+      output+= '<IMG SRC="blank.gif" WIDTH=14 HEIGHT=18 ALT="" NAME="p'+p+'k'+k+'d'+second+'">';
+      if (k==7 || k==15 || k==16) output+= '<IMG SRC="0.gif" WIDTH=14 HEIGHT=18 ALT="" NAME="p'+p+'k'+k+'d1">';
+      output+= '</TD>';
+    }
+    output+= '</TR>\n';
+
+    // and if necessary, have a blank line
+    if (k==7 || k==15) output+= '<TR><TD COLSPAN=4>&nbsp;</TD></TR>\n';
+  }
+  output+= '</TABLE></TD>\n';
+
+
+  // and create the dice rolling bit, plus whose-go-is-it indicator etc
+  output+= '<TD VALIGN=top><FORM NAME="user"><TABLE CELLSPACING=2 CELLPADDING=4 BORDER=0>\n';
+  output+= '<TR><TD COLSPAN=5>&nbsp;</TD></TR>\n';
+  output+= '<TR BGCOLOR="#008800"><TD COLSPAN=5 ALIGN=center><FONT COLOR="#000000">Roll and select the dice you wish to remove</FONT></TD></TR>\n';
+  output+= '<TR BGCOLOR="#330000">'; for (x=0; x<5; x++) {
+    output+= '<TD><A HREF="javascript:select('+x+')" onFocus="blur();"><IMG SRC="blank.gif"';
+    output+= ' WIDTH=50 HEIGHT=50 NAME="die'+x+'" BORDER=0 ALT=""></A></TD>';
+  } output+= '</TR>\n';
+  output+= '<TR BGCOLOR="#008800"><TD COLSPAN=5 ALIGN=center><INPUT NAME="r" TYPE="button" VALUE=" 3 Rolls Left " onClick="roll(0)" onFocus="blur();">';
+  output+= '&nbsp;&nbsp;&nbsp;<INPUT TYPE="button" VALUE=" Unselect " onClick="roll(1)" onFocus="blur();"></TD></TR>\n';
+  output+= '<TR><TD COLSPAN=5>&nbsp;</TD></TR>\n';
+
+  output+= '<TR BGCOLOR="#008800"><TD COLSPAN=5 ALIGN=center VALIGN=middle><FONT COLOR="#000000">Players: <SELECT NAME="noofplayers" SIZE=1>';
+  for (x= 1; x<9; x++) {
+    output+= '<OPTION VALUE="'+x+'"';
+    if (x==maxplayers) output+= ' SELECTED';
+    output+= '>'+x;
+  }
+  output+= '</SELECT>&nbsp;&nbsp;&nbsp;<INPUT TYPE="button" VALUE=" New Game " onClick="newgame()"></FONT></TD></TR>\n';
+
+  output+= '<TR><TD COLSPAN=5>&nbsp;</TD></TR>\n';
+  output+= '<TR><TD COLSPAN=5>&nbsp;</TD></TR>\n';
+  output+= '<TR><TD COLSPAN=5 ALIGN=center><SMALL><A HREF="mailto:kif\@irt.org" STYLE="color:#aaaaff">';
+  output+= 'Keith Drakard</A> v0.20 9th August 1998<br><br>';
+//  output+='<form><input type="button" value="Return to Previous Page" onclick="history.back()"></form></SMALL></TD></TR>\n';
+  output+='</SMALL></TD></TR>\n';
+
+
+  // ideally, I'd write some user-interface type instructions here,
+  // and maybe a pointer to the general rules of Yahtzee (somewhere on the net?)
+
+  output+= '</TABLE></FORM></TD>\n';
+  output+= '</TR></TABLE>\n';
+
+  document.write(output);
+  preload();
+
+ //--></SCRIPT>
+
+
+ </FONT>
+</CENTER>
+<!--<a href="http://www.shu.ac.uk/maths/"><img src="../shumaths.jpg" width="207" height="71" alt="Back to the SHUMaths home page" border="0"></a></BODY>-->
+</HTML>

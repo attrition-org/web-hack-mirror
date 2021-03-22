@@ -1,0 +1,174 @@
+ 
+	
+
+
+<script>
+function submitonce(theform){
+//if IE 4+ or NS 6+
+if (document.all||document.getElementById){
+//screen thru every element in the form, and hunt down "submit" and "reset"
+for (i=0;i<theform.length;i++){
+var tempobj=theform.elements[i]
+if(tempobj.type.toLowerCase()=="submit"||tempobj.type.toLowerCase()=="reset")
+//disable em
+tempobj.disabled=true
+}}}
+</script>
+
+
+
+	<body onload="document.theform.username.focus();">
+
+
+	
+	
+	
+<HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE"> 
+<html>
+<head>
+<title>FuckedCompany.com - The Dot-com Deadpool</title>
+
+</head>
+<style>
+<!--
+BODY {scrollbar-face-color: #cccccc;scrollbar-shadow-color: #333333;scrollbar-highlight-color: #333333;scrollbar-3dlight-color: #333333;scrollbar-darkshadow-color: #333333;scrollbar-track-color: #333333;scrollbar-arrow-color: #0000ff;}
+a:link {font-family: Verdana, Geneva, Arial; font-size: 9pt; color:ffffff; font-weight:bold}
+a:visited {font-family: Verdana, Geneva, Arial; font-size:9pt; color:ffffff;font-weight:bold}
+a:hover {font-family: Verdana, Geneva, Arial; font-size:9pt; color:ffb600; font-weight:bold}
+.formlabel {font-family: Verdana, Geneva, Arial; font-size:9pt; color:ffffff; font-weight:bold}
+.regular {font-family: Verdana, Geneva, Arial; font-size:9pt; color:ffffff}
+.headline {font-family: Verdana, Geneva, Arial; font-size:9pt; color:ffffff; font-weight:bold}
+.article {font-family: Verdana, Geneva, Arial; font-size:9pt; color:ffffff}
+.error {font-family: Verdana, Geneva, Arial; font-size:9pt; color:ff0000; font-weight:bold}
+.nav {font-family:verdana,arial;font-size:8pt;color:ffffff;font-weight:bold}
+.navlink {font-family:verdana,arial;font-size:8pt;color:ffffff;font-weight:bold}
+.bigheadline {font-family:verdana,arial;font-size:13pt;color:ffffff;font-weight:bold}
+.pageheader {font-family:verdana,arial;font-size:12pt;color:ffffff;font-weight:bold}
+-->
+</style>
+<body bgColor=000000 text=ffffff alink=ff6600 vlink=ffffff link=ffffff leftmargin="0" topmargin="0">
+<!-- ImageReady Slices (header.psd) -->
+<table border=0 cellPadding=0 cellSpacing=0>
+	<tr>
+		<td width=646 height=76 bgColor=#000000 align=right>
+		<!-- These tags should be placed in the Home Page category in the 468x60 size space  -->
+			<IFRAME NORESIZE="NORESIZE" FRAMEBORDER="0" WIDTH=468 HEIGHT=60 MARGINWIDTH="0"
+			MARGINHEIGHT="0" SCROLLING="NO" SRC="http://ads.admonitor.net/adengine.cgi?F1251|1001|1|iframe|C10673|||_admonitor">
+			<SCRIPT LANGUAGE="JavaScript" SRC="http://ads.admonitor.net/adengine.cgi?F1251|1001|1|jscript|C10673|||_admonitor">
+			</SCRIPT>
+			<NOSCRIPT>
+			<A HREF="http://ads.admonitor.net/clicktrack.cgi?F1251|1001|1|image2|C10673|||" TARGET=_admonitor>
+			<IMG SRC="http://ads.admonitor.net/adengine.cgi?F1251|1001|1|image2|C10673|||" BORDER=0 WIDTH=468 HEIGHT=60></A>
+			</NOSCRIPT>
+			</IFRAME>
+		<!-- End of adMonitor v3.0 rich content tags -->
+		<img src="images/spacer.gif" height=1 width=25>
+		<!-- These tags should be placed in the Home Page category in the 120x60 size space  -->
+			<IFRAME NORESIZE="NORESIZE" FRAMEBORDER="0" WIDTH=120 HEIGHT=60 MARGINWIDTH="0"
+			MARGINHEIGHT="0" SCROLLING="NO" SRC="http://ads.admonitor.net/adengine.cgi?F1251|1006|1|iframe|C10673|||_admonitor">
+			<SCRIPT LANGUAGE="JavaScript" SRC="http://ads.admonitor.net/adengine.cgi?F1251|1006|1|jscript|C10673|||_admonitor">
+			</SCRIPT>
+			<NOSCRIPT>
+			<A HREF="http://ads.admonitor.net/clicktrack.cgi?F1251|1006|1|image2|C10673|||" TARGET=_admonitor>
+			<IMG SRC="http://ads.admonitor.net/adengine.cgi?F1251|1006|1|image2|C10673|||" BORDER=0 WIDTH=120 HEIGHT=60></A>
+			</NOSCRIPT>
+			</IFRAME>
+		<!-- End of adMonitor v3.0 rich content tags -->
+		</td>
+	</tr>
+	<tr><td><a href=../index.cfm><img src=../images/header_bar.gif border=0></a></td></tr>
+	<tr>
+		<td height=22 bgColor=#000000 class="nav" valign="top"><b>
+		&nbsp;&nbsp;<a href=../index.cfm><span class=navlink>Home</span></a> |
+		<a href=threadlist.cfm><span class=navlink>HFSC</span></a> |
+		<a href=/archives><span class=navlink>Archives</span></a> |
+		<a href=/jobs><span class=navlink>Find a New Job</span></a> |
+		<a href=/merch><span class=navlink>T-shirts & Crap</span></a> |
+		<a href=http://forum.fuckedcompany.com><span class=navlink>Message Board</span></a> |
+
+		<a href=/mobile><span class=navlink>Wireless</span></a> |
+		<a href=/contact><span class=navlink>Contact Pud</span></a>
+		
+		</b></font></td>
+	</tr>
+</table>
+<!-- End ImageReady Slices -->
+</body>
+</html>
+
+
+
+
+<span class="regular">
+		<table cellspacing=1 cellpadding=5 width=700 border=0>
+		<form name="theform" action="add2v2.cfm?requesttimeout=120" onSubmit="submitonce(this)">
+
+			
+				<input type="hidden" name="parentID" value="126999">
+				<input type="hidden" name="newsID" value="10102245153">
+				<input type="hidden" name="page" value="2">
+				<input type="hidden" name="cc" value="28">
+			
+					<tr bgColor=333333>
+						<td class=regular align=left valign=top>About registration:</td>
+						<td class=regular align=left>Now you can post with your registered username if you want to, or you can just make up a username.  Either way, all messages are anonymous and unmoderated.<br><a href=/signup>Click here</a> if you want to register.</td>
+					</tr>
+					<tr bgColor=6C000E>
+						<td class=formlabel align=right>Username: </td>
+						
+							
+							
+						
+						<td>
+							
+							<input value="" size=20 name="username" maxlength="30" required="yes" message="You do not have to register, but you have to post with a username.  Make one up if you want...">
+							
+						</td>
+					</tr>
+					<tr bgColor=333333>
+						<td class=formlabel align=left colspan=2>If you are not registered, leave the password field below blank.</td>
+					</tr>
+					<tr bgColor=6C000E>
+						<td class=formlabel align=right>Password: </td>
+						<td class=regular>
+							
+							<input value="" size=20 name="password" maxlength="255" required="no" type="Password"> (optional)
+							
+						</td>
+
+					</tr>
+					<tr bgColor=6C000E>
+						<td class=formlabel align=right>Subject: </td>
+						<td>
+						
+						<input value='re: Holy shit!' size=40 name="subject" maxlength="255">
+						
+						</td>
+					</tr>
+					<tr bgColor=6C000E valign="top">
+						<td class=formlabel align=right>
+						Comment: </td>
+							<td class=regular>
+							To quote the message you're replying to, leave in all the [QUOTE] stuff and type your message in after it ...<br><br>
+							<textarea name="comment" wrap="virtual" cols="40" rows="10">[QUOTE]Originally posted by scriptkiddies are gay:[B]
+
+this is gay, fucking script kiddies have no balls, FAGS! FAGS![/B][/QUOTE]</textarea></td>
+					</tr>
+					<tr bgColor=6C000E>
+						<td colspan=2 class=formlabel align=middle><input type=submit value="   Post Comment   "></td>
+					</tr>
+			
+		</table>
+	</form>
+</span>
+
+
+
+<div id="Layer1" style="position:absolute; left:21px; top:355px; width:71px; height:48px; z-index:2; visibility:hidden">
+<IMG SRC="http://hg1.hitbox.com/HG?hc=wf168&l=y&hb=WQ510212AEDS06EN0&cd=1&n=FC+/comments/addv2.cfm" height=62 width=88 border=0>
+</div>
+
+</td>
+</tr>
+</table>
+  

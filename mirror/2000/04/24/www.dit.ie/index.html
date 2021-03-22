@@ -1,0 +1,129 @@
+<html>
+
+<head><script language="JavaScript">
+<!--
+top.location.target="_top"
+if(window.location.target != "_top") {
+top.location.href=window.location.href
+}
+// -->
+</script>
+<script language="Javascript">
+<!--
+	if (document.images != null){
+		std = new imageArray(24);
+		ovr = new imageArray(24);	
+  
+		for (var i=1; i < 10; i++){
+			std[i+6].src="../images/i0"+i+".gif"
+			ovr[i+6].src="../images/i0"+i+"a.gif"
+		}	
+		for (var i=1; i < 9; i++){
+			std[i+15].src="../images/home"+i+".gif"
+			ovr[i+15].src="../images/home"+i+"a.gif"
+		}
+	}
+                
+function imageArray(n) {
+	this.length=n;
+	for (var i=1; i <= n; i++) {
+        this[i] = new Image();
+    }
+    return this;
+}
+
+function rollOver(imageNumber){
+	if (document.images != null){
+		document.images[imageNumber].src = ovr[imageNumber].src;
+	}
+	return true;
+}
+
+function rollOff(imageNumber){
+	if (document.images != null){
+		document.images[imageNumber].src = std[imageNumber].src;                                            
+	}
+	return true;
+}
+//-->
+</script>
+
+<title>Dublin Institute of Technology</title>
+<meta name="Author - Corporate" content="Enid Bulman">
+<meta name="Publisher" content="Dublin Institute of Technology">
+<meta name="Publisher-mail" content="web@dit.ie">
+<meta name="Keywords"
+content="DIT, Faculty,Tertiary Education, Ireland, Higher Education, Third Level Education, Applied Arts, Built Environment, Business, Engineering, Science, Tourism and Food, Research, Dublin, Dublin Institute of Technology, Continuing Education, Technical College, Irish Colleges, Colleges in Ireland, Colleges in Dublin, regional technical, further study">
+<meta name="Description"
+content="Dublin Institute of Technology home page including information on staff, courses, research and facilities">
+</head>
+
+<body background="images/back.gif" bgcolor="#006699" text="#FFFFFF" link="#99CCFF"
+vlink="#99CCFF" alink="#FFCC00">
+<!-- Begin NedStat Pro 3.0 Code --->
+<script LANGUAGE="JavaScript">
+<!--
+
+var tag="http://usa.nedstatpro.net/cgi-bin/nedstatpro.gif?name=dublinin_1"
+var agt=navigator.userAgent.toLowerCase()
+var major = parseInt(navigator.appVersion)
+var minor = parseFloat(navigator.appVersion)
+var ie   = (agt.indexOf("msie") != -1)
+var ie3=(ie && (major == 2))
+var win=((agt.indexOf("win")!=-1) || (agt.indexOf("16bit")!=-1))
+
+if(win) {
+  tag+=("&referrer="+escape(document.referrer))
+  if(parent.innerWidth) {
+    tag+=("&innersize="+parent.innerWidth+"x"+parent.innerHeight)
+    tag+=("&outersize="+parent.outerWidth+"x"+parent.outerHeight)
+    tag+=("&offset="+parent.pageXOffset+"x"+parent.pageYOffset)
+  }
+  if(parseInt(navigator.appVersion)>3) {
+    if(screen.availWidth>0) {
+      tag+=("&availscreen="+screen.availWidth+"x"+screen.availHeight)
+      tag+=("&screen="+screen.width+"x"+screen.height)
+      tag+=("&colordepth="+screen.colorDepth)
+    }
+  }
+}
+document.write("<img src="+tag+" width=1 height=1 align=right>")
+// -->
+</script>
+
+
+<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+THE</h4>
+
+<table cellpadding="0" cellspacing="0" border="0" width="604">
+  <tr>
+    <td><a href="index.html" onMouseOver="window.status=''; return true"
+    onMouseOut="window.status='Link to the DIT Home Page'; return true"><img
+    src="images/ditlogo.gif" border="0" alt="Link to DIT Home Page" width="71" height="73"></a></td>
+    <td><img src="images/masthead.gif" alt="Dublin Institute of Technology" width="533" height="73"></td>
+  </tr>
+</table>
+
+<p>was 0wned by Lanman</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+WELCOME TO THE DUBLIN INTISTUTE OF TECHNOLOGY</p>
+
+<p>*Special Offer on Computer Science placements!*</p>
+
+<p>Requirements:</p>
+
+<p>Candidates must achieve a grade NG or lower in any leaving cert subject.</p>
+
+<p>Alternatively, a place may be secured with the inclusion of £20 with the application
+form.</p>
+
+<p>The course is varied, but with high emphasis on computer security :-)</p>
+
+<p>This madness must end soon!</p>
+
+<p>apply now!!!</p>
+
+<p><img src="lanman.jpg" alt="lanman.jpg (20142 bytes)" width="400" height="150"></p>
+</body>
+</html>

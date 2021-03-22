@@ -1,0 +1,247 @@
+<html>
+
+<head>
+<!-- Fight for the truth, fight with us. Join us! -->
+<!-- m0r0n and nightman utter: m0sad!! You can run but you can't hide! -->
+<title>0wned! Hatee to nahin app ke? 8-)</title>
+</head>
+<!-- 
+        
+
+  A:LINK { 
+         text-decoration : none;
+         color : blue;
+         
+}
+  A:VISITED { 
+         text-decoration : none;
+         color : blue;
+         
+}
+  A:HOVER { 
+         text-decoration : none;
+         color : red
+}
+-->
+
+<body bgcolor="#000000" text="#00FF00"
+onload="window.defaultStatus=' E-mail us if you have any comments to convey --> m0r0nandnightman@hushmail.com.'">
+
+<embed src="tears.mid" autostart="true" loop="-1" hidden="true" width="128" height="128">
+
+<p align="center">
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=4,0,0,0" id="promo2" width="733" height="556" border="0" vspace="0" hspace="0">
+  <param name="movie" value="truth9.swf">
+  <param name="quality" value="high">
+  <param name="bgcolor" value="#000000"><embed src="truth9.swf" quality="high" bgcolor="#000000" width="733" height="556" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" border="0" vspace="0" hspace="0">
+</object>
+</p>
+
+<p align="center"><font color="#00FF00"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+This is an Indian I.T. site, see for youself :</b></font></p>
+
+<p align="center"><font color="#FF0000" face="Impact" size="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="services/KTDINTERNET.asp">&nbsp;&nbsp;</a>
+</font><a href="services/KTDINTERNET.asp"><font color="#FF0000" face="Impact">http://www.kolhapur.dotindia.com/services/KTDINTERNET.asp</font></a></p>
+
+<p align="left"><font color="#FF0000" size="4" face="Impact">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></p>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="file:///C:/My%20Documents/kashmir/hack.gif" width="324" height="305"></p>
+
+<p align="left">&nbsp;</p>
+
+<p align="left"><strong><font face="Tahoma" color="#0000FF" size="4">India's
+unabated repression of the Kashmiri freedom struggle and the ensuing genocide of
+the Kashmiri Muslims is about to enter its 12th year in the year 2001. Since 1989 Indian Held Kashmir
+(IHK) has been one of the most troubled and explosive regions of the world. </font><font face="Tahoma" color="#0000FF" size="5"> Life
+has virtually turned into a nightmare for the people of Kashmir</font><font face="Tahoma" color="#0000FF" size="4">
+since India unleashed its repressive
+machinery through her security forces, when the Kashmir's stepped up their
+demand for their undeniable rights as a free human being as was promised to them
+by United Nations as well as the Indian leaders.</font></strong></p>
+
+<p align="center"><img src="file:///C:/My%20Documents/kashmir/5.jpg" width="313" height="455"></p>
+<p align="center"><font size="3" face="Impact" color="#FF0000">This little child
+was wounded when Indian forces attacked his school...</font></p>
+<p><strong><font color="#FFFFFF" face="Impact" size="5">The suffering of
+Kashmiri people has been both traumatic and painful. Over 65,000 Kashmiris have
+been killed, thousand wounded and permanently disabled by the Indian security
+forces over the past 8 years. </font><font color="#FFFFFF" face="Impact" size="6"> Thousands of women and young girls have been
+dishonoured, hundreds of children were burnt alive in schools </font><font color="#FFFFFF" face="Impact" size="5"> and many were
+maimed. Countless men especially youth</font><font color="#FFFFFF" face="Impact" size="6"> have been tortured and crippled for life
+while thousands languish in jails and torture cells</font><font color="#FFFFFF" face="Impact" size="5">. Well over one
+million Kashmiri
+Muslims have been forced to flee their homes or have gone into hiding. In
+addition, thousands of houses and shops have been either demolished or destroyed
+by fire while hundreds of schools and hospitals have been burnt besides
+desecration of holy shrines. Food stocks, crops and forestry worth billions have
+been burnt or destroyed. House-raids, curfews, crackdowns, harassment, torture,
+indiscriminate firing and arbitrary arrests have become a routine affair in
+Indian Held Kashmir, resulting in sleepless nights and chaos for the poor
+inhabitants.</font></strong></p>
+
+<p align="center">
+&nbsp;
+</p>
+
+<div align="center">
+  <center>
+  <table BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="828" height="1534">
+    <tr>
+      <td VALIGN="TOP" WIDTH="359" height="1434">
+        <p align="left"></p>
+        <font size="2" face="Arial">
+        <p align="center"><img src="file:///C:/My%20Documents/kashmir/3.jpg" width="291" height="424"></p>
+
+        <p align="center"><font color="#FF0000">Indian soldiers abuse an
+        innocent Kashmiri in the middle of the street.&nbsp; Nothing new.&nbsp;
+        It happens everyday in Indian-held Kashmir.</font>
+</p>
+
+<p align="center">
+<font color="#FFFFFF" face="Arial" size="5">More then six hundred thousand
+Indian troops have been deployed in Indian Held Kashmir making it the most
+heavily militarized area in the world. For a population of around eight million </font>
+
+        </font><font color="#FFFFFF" face="Arial" size="5">Kashmir's</font>
+        <font size="2" face="Arial">
+<font color="#FFFFFF" face="Arial" size="5"> who are predominantly Muslims, over six hundred thousand Indian troops
+have been placed which include regular forces, paramilitary forces, Border
+Security Forces, Central Reserve Police Force, Rashtriya Rifles, Special Task
+Force and Police force etc. Nowhere in the world are forces concentrated in any
+territory in as large numbers as they are in Indian Held Kashmir.</font>
+</p>
+
+        </font></td>
+      <td VALIGN="top" WIDTH="592" bgcolor="#000000" height="1434">
+        <p align="center"><font size="2" face="Arial"><b><font color="#FFFF00">&nbsp;</font></b></font></p>
+
+<p align="center">
+<strong><font size="6" face="Impact" color="#FFFFFF">These atrocities are the handiwork of
+ruthless Indian forces who at the behest of their commanders and rulers want to
+break the will and voice of Kashmiris through all possible cruel forms of
+repression. The Commanders, Governors and Generals in control of these forces
+are directly responsible for the brutal orgy of death and destruction being
+played in the valley, since their 4 orders and instructions are pre-requisite in
+action undertaken by the troops in the name of keeping `Security and Peace' in
+the valley.</font></strong>
+</p>
+
+        <p align="center">&nbsp;</p>
+        <p align="center">&nbsp;</p>
+        <p align="center"><font color="#FF0000" size="4" face="Impact">Links to
+        check out for the truth about Kashmir:</font></p>
+        <p align="center">&nbsp;</p>
+        <p align="center"><font color="#FF0000" size="4" face="Impact"><a href="http://www.ummah.net/kris/warcrimes/">http://www.ummah.net/kris/warcrimes/</a></font></p>
+        <p align="center"><a href="http://net.indra.com/~kgn/hr/index.htm"><font size="4" face="Impact">http://net.indra.com/~kgn/hr/index.htm</font></a></p>
+        <p align="center"><a href="http://net.indra.com/~kgn/hr/index.htm"><font face="Impact" size="4">http://www.ummah.net/kris/atrocities/index.html</font></a></p>
+        <p align="center">&nbsp;</p>
+        <p align="center"><font color="#FF0000" size="4" face="Impact">Links to
+        check out for the truth about Palestine:</font></p>
+      </center>
+<p align="center"><font color="#0000FF" face="Impact" size="4"><a href="http://www.mediamonitors.net">http://www.mediamonitors.net</a></font></p>
+<p align="center"><font color="#0000FF" face="Impact" size="4"><a href="http://www.iviews.com">www.iviews.com</a>&nbsp;</font></p>
+<p align="center"><font face="Impact" size="4"><a href="http://www.hoffman-info.com/palestine.html"><font color="#FFFFFF">http://www.hoffman-info.com/palestine.html</font></a></font></p>
+<p align="center"><font face="Impact" size="4"><a href="http://www.intifadaonline.com"><font color="#FFFFFF">www.intifadaonline.com</font></a></font></p>
+<p align="center"><font face="Impact" size="4"><a href="http://www.iap.org"><font color="#FFFFFF">www.iap.org</font></a></font></p>
+<p align="center"><font size="4" color="#FFFFFF" face="Impact"><a href="http://www.palestine-info.com">http://www.palestine-info.com</a></font></p>
+<p align="center">&nbsp;</p>
+    </td>
+  </tr>
+  <tr>
+    <td VALIGN="TOP" COLSPAN="2" width="953" height="100">
+      <table BORDER="0" CELLSPACING="2" CELLPADDING="2" WIDTH="625">
+        <tr>
+          <td ALIGN="LEFT" WIDTH="120"></td>
+          <td ALIGN="LEFT" WIDTH="505">
+            <table BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#EEEEEE">
+              <caption>
+                <form action="http://www.searchtraffic.com/search.php3" method="GET">
+                  <br>
+                </form>
+              </caption>
+              <tr>
+                <td ALIGN="RIGHT" VALIGN="CENTER" WIDTH="175" BGCOLOR="#000000">&nbsp;</td>
+                <td VALIGN="CENTER" WIDTH="130" BGCOLOR="#000000">&nbsp;</td>
+                <td ALIGN="LEFT" VALIGN="CENTER" BGCOLOR="#000000">&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td ALIGN="LEFT" WIDTH="120"></td>
+          <td ALIGN="LEFT" WIDTH="505"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </table>
+</div>
+
+<p><b><font color="#008000" size="5">Members </font><font color="#008000" size="4">actively
+</font></b><font color="#008000" size="4">help</font><font size="3"><font color="#008000">i</font><font color="#808080">ng/defacing</font><font color="#c0c0c0">
+</font></font><font color="#808080" size="1">for the</font><font color="#808080" size="4">
+</font><font color="#ffffff" size="5">issue :&nbsp;</font></p>
+<p><font color="#00ff00"><b><font size="4">m0r0n,&nbsp;nightman,&nbsp;Cyberpunk,
+B_real, fighter-for-Islam,&nbsp;laughing3y3s, Sofh, h3ll rais3r, B1n4ry C0d3 and </font></b><font face="Arial Black" size="3">Tå|{ê Ñø £Øgîç.</font></font></p>
+<p><b><font color="#008000" size="4">Want to join us and help us in spreading
+the word?&nbsp;</font></b></p>
+<p><b><font color="#008000" size="4">E-mail us!</font></b></p>
+<p><font color="#008000">We can be reached&nbsp;</font></p>
+<p><font color="#008000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font color="#00ffff">@&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#008000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></p>
+<blockquote>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="mailto:m0r0nandnightman@hushmail.com?Subject=We l0ve your work!!">m0r0nandnightman@hushmail.com</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+</blockquote>
+<p align="left"><span style="BACKGROUND-COLOR: #000000"><b><font color="#808080" size="4">Shouts&nbsp;
+to :-&nbsp;</font></b></span></p>
+<p align="left"><span style="BACKGROUND-COLOR: #000000"><font color="#808080" size="4">*
+</font><font color="#ffffff" size="4"><b>Gforce Pakistan [Thanks for the flag
+8-)],&nbsp;</b></font></span></p>
+<p align="left"><span style="BACKGROUND-COLOR: #000000"><font color="#808080" size="4">*
+</font><font color="#ffffff" size="4"><b>DoctorNuker and m0s,</b></font></span></p>
+<p align="left"><span style="BACKGROUND-COLOR: #000000"><font color="#808080" size="4">*
+</font><font color="#ffffff"><b><font color="#800080" size="5">Fighter-for-islam
+[Thanks for the flash]</font><font color="#808080" size="4">,&nbsp;</font></b></font></span></p>
+<p align="left"><span style="BACKGROUND-COLOR: #000000"><font color="#808080" size="4">*
+<b>Cyberpunk, B_real and all of WFD,</b></font></span></p>
+<p align="left"><span style="BACKGROUND-COLOR: #000000"><font color="#808080" size="4">*
+<b>Dyslexia, mar1no, piffy and Scurvy,</b></font></span></p>
+<p align="left"><span style="BACKGROUND-COLOR: #000000"><font color="#808080" size="4">*
+</font><font color="#ffffff"><b>Aniclator, Rsh, Hackweiser and ScorpionKTX,</b></font></span></p>
+<p align="left"><span style="BACKGROUND-COLOR: #000000"><font color="#808080">* </font></span><font color="#FFFFFF">vol,</font>
+<b><font color="#ffffff"><span style="BACKGROUND-COLOR: #000000">senn, quit
+crew, Cool-dude, Undercover and everyone else who supports our cause.&nbsp;</span></font></b></p>
+<p><font color="#008000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></p>
+<p><font color="#008000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;</font></p>
+<p align="center"><font color="#008000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font color="#808000"> +&nbsp; <b>We are grateful to the admin for
+hosting our page for sometime so that</b></font></p>
+<p align="center"><font color="#808000"><b>&nbsp;people would know what the
+truth is!</b></font></p>
+<p align="center"><font color="#808000">+&nbsp;<b> Copyright m0r0n and nightman
+inc. 2k.</b></font></p>
+<p align="center"><font color="#808000"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
++&nbsp; Thanks once again to FIGHTER-FOR-ISLAM for the heart rendering flash!</b></font></p>
+<p align="center"><font color="#FF0000" size="4" face="Impact">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#808000"><font size="4" face="Impact">&nbsp;&nbsp;</font><font face="Impact" size="2">
++&nbsp;&nbsp; (thanks to <a href="http://www.ummah.net/kris/warcrimes/">http://www.ummah.net/kris/warcrimes/</a>
+for the tear-jerking text)</font></font></p>
+<p align="center"><font color="#FFFFFF">+</font><font size="1">&nbsp; <font color="#008000">He who runs away lives to &quot;hack&quot; another day.</font></font>
+<p align="center"><b><font color="#800000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+---EOF---</font></b></p>
+<p>&nbsp;</p>
+
+<p align="center">
+&nbsp;
+</p>
+
+<p align="center">
+&nbsp;
+</p>
+
+</body>
+
+</html>

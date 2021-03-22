@@ -1,0 +1,515 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+
+
+
+<HEAD>
+<TITLE>Welcome to ClanUK</TITLE>
+<META NAME="description" CONTENT="The UK's leading online gaming group">
+<META NAME="keywords" CONTENT="clan, uk, game, computer, Internet, Diablo, Everquest, Quake, Half-Life">
+<LINK REL="stylesheet" HREF="stylesheets/main.css">
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function MM_swapImgRestore() { //v2.0
+
+  if (document.MM_swapImgData != null)
+
+    for (var i=0; i<(document.MM_swapImgData.length-1); i+=2)
+
+      document.MM_swapImgData[i].src = document.MM_swapImgData[i+1];
+
+}
+
+
+
+function MM_preloadImages() { //v2.0
+
+  if (document.images) {
+
+    var imgFiles = MM_preloadImages.arguments;
+
+    if (document.preloadArray==null) document.preloadArray = new Array();
+
+    var i = document.preloadArray.length;
+
+    with (document) for (var j=0; j<imgFiles.length; j++) if (imgFiles[j].charAt(0)!="#"){
+
+      preloadArray[i] = new Image;
+
+      preloadArray[i++].src = imgFiles[j];
+
+  } }
+
+}
+
+
+
+function MM_swapImage() { //v2.0
+
+  var i,j=0,objStr,obj,swapArray=new Array,oldArray=document.MM_swapImgData;
+
+  for (i=0; i < (MM_swapImage.arguments.length-2); i+=3) {
+
+    objStr = MM_swapImage.arguments[(navigator.appName == 'Netscape')?i:i+1];
+
+    if ((objStr.indexOf('document.layers[')==0 && document.layers==null) ||
+
+        (objStr.indexOf('document.all[')   ==0 && document.all   ==null))
+
+      objStr = 'document'+objStr.substring(objStr.lastIndexOf('.'),objStr.length);
+
+    obj = eval(objStr);
+
+    if (obj != null) {
+
+      swapArray[j++] = obj;
+
+      swapArray[j++] = (oldArray==null || oldArray[j-1]!=obj)?obj.src:oldArray[j];
+
+      obj.src = MM_swapImage.arguments[i+2];
+
+  } }
+
+  document.MM_swapImgData = swapArray; //used for restore
+
+}
+
+
+
+function MM_showHideLayers() { //v2.0
+
+  var i, visStr, args, theObj;
+
+  args = MM_showHideLayers.arguments;
+
+  for (i=0; i<(args.length-2); i+=3) { //with arg triples (objNS,objIE,visStr)
+
+    visStr   = args[i+2];
+
+    if (navigator.appName == 'Netscape' && document.layers != null) {
+
+      theObj = eval(args[i]);
+
+      if (theObj) theObj.visibility = visStr;
+
+    } else if (document.all != null) { //IE
+
+      if (visStr == 'show') visStr = 'visible'; //convert vals
+
+      if (visStr == 'hide') visStr = 'hidden';
+
+      theObj = eval(args[i+1]);
+
+      if (theObj) theObj.style.visibility = visStr;
+
+  } }
+
+}
+
+
+
+function MM_timelinePlay(tmLnName, myID) { //v1.2
+
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,propNum,theObj,firstTime=false;
+
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+
+  tmLn = document.MM_Time[tmLnName];
+
+  if (myID == null) { myID = ++tmLn.ID; firstTime=true;}//if new call, incr ID
+
+  if (myID == tmLn.ID) { //if Im newest
+
+    setTimeout('MM_timelinePlay("'+tmLnName+'",'+myID+')',tmLn.delay);
+
+    fNew = ++tmLn.curFrame;
+
+    for (i=0; i<tmLn.length; i++) {
+
+      sprite = tmLn[i];
+
+      if (sprite.charAt(0) == 's') {
+
+        if (sprite.obj) {
+
+          numKeyFr = sprite.keyFrames.length; firstKeyFr = sprite.keyFrames[0];
+
+          if (fNew >= firstKeyFr && fNew <= sprite.keyFrames[numKeyFr-1]) {//in range
+
+            keyFrm=1;
+
+            for (j=0; j<sprite.values.length; j++) {
+
+              props = sprite.values[j]; 
+
+              if (numKeyFr != props.length) {
+
+                if (props.prop2 == null) sprite.obj[props.prop] = props[fNew-firstKeyFr];
+
+                else        sprite.obj[props.prop2][props.prop] = props[fNew-firstKeyFr];
+
+              } else {
+
+                while (keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]) keyFrm++;
+
+                if (firstTime || fNew==sprite.keyFrames[keyFrm-1]) {
+
+                  if (props.prop2 == null) sprite.obj[props.prop] = props[keyFrm-1];
+
+                  else        sprite.obj[props.prop2][props.prop] = props[keyFrm-1];
+
+        } } } } }
+
+      } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+
+      if (fNew > tmLn.lastFrame) tmLn.ID = 0;
+
+  } }
+
+}
+
+
+
+function MM_timelineGoto(tmLnName, fNew, numGotos) { //v2.0
+
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,lastKeyFr,propNum,theObj;
+
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+
+  tmLn = document.MM_Time[tmLnName];
+
+  if (numGotos != null)
+
+    if (tmLn.gotoCount == null) tmLn.gotoCount = 1;
+
+    else if (tmLn.gotoCount++ >= numGotos) {tmLn.gotoCount=0; return}
+
+  jmpFwd = (fNew > tmLn.curFrame);
+
+  for (i = 0; i < tmLn.length; i++) {
+
+    sprite = (jmpFwd)? tmLn[i] : tmLn[(tmLn.length-1)-i]; //count bkwds if jumping back
+
+    if (sprite.charAt(0) == "s") {
+
+      numKeyFr = sprite.keyFrames.length;
+
+      firstKeyFr = sprite.keyFrames[0];
+
+      lastKeyFr = sprite.keyFrames[numKeyFr - 1];
+
+      if ((jmpFwd && fNew<firstKeyFr) || (!jmpFwd && lastKeyFr<fNew)) continue; //skip if untouchd
+
+      for (keyFrm=1; keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]; keyFrm++);
+
+      for (j=0; j<sprite.values.length; j++) {
+
+        props = sprite.values[j];
+
+        if (numKeyFr == props.length) propNum = keyFrm-1 //keyframes only
+
+        else propNum = Math.min(Math.max(0,fNew-firstKeyFr),props.length-1); //or keep in legal range
+
+        if (sprite.obj != null) {
+
+          if (props.prop2 == null) sprite.obj[props.prop] = props[propNum];
+
+          else        sprite.obj[props.prop2][props.prop] = props[propNum];
+
+      } }
+
+    } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+
+  }
+
+  tmLn.curFrame = fNew;
+
+  if (tmLn.ID == 0) eval('MM_timelinePlay(tmLnName)');
+
+}
+
+function MM_initTimelines() {
+    //MM_initTimelines() Copyright 1997 Macromedia, Inc. All rights reserved.
+    var ns = navigator.appName == "Netscape";
+    document.MM_Time = new Array(1);
+    document.MM_Time[0] = new Array(16);
+    document.MM_Time["Timeline1"] = document.MM_Time[0];
+    document.MM_Time[0].MM_Name = "Timeline1";
+    document.MM_Time[0].fps = 15;
+    document.MM_Time[0][0] = new String("sprite");
+    document.MM_Time[0][0].slot = 1;
+    if (ns)
+        document.MM_Time[0][0].obj = document["headline"];
+    else
+        document.MM_Time[0][0].obj = document.all ? document.all["headline"] : null;
+    document.MM_Time[0][0].keyFrames = new Array(1, 30);
+    document.MM_Time[0][0].values = new Array(1);
+    document.MM_Time[0][0].values[0] = new Array("visible","hidden");
+    document.MM_Time[0][0].values[0].prop = "visibility";
+    if (!ns)
+        document.MM_Time[0][0].values[0].prop2 = "style";
+    document.MM_Time[0][1] = new String("behavior");
+    document.MM_Time[0][1].frame = 30;
+    document.MM_Time[0][1].value = "MM_showHideLayers('document.layers[\\\'headline\\\']','document.all[\\\'headline\\\']','hide')";
+    document.MM_Time[0][2] = new String("sprite");
+    document.MM_Time[0][2].slot = 2;
+    if (ns)
+        document.MM_Time[0][2].obj = document["headline1"];
+    else
+        document.MM_Time[0][2].obj = document.all ? document.all["headline1"] : null;
+    document.MM_Time[0][2].keyFrames = new Array(31, 60);
+    document.MM_Time[0][2].values = new Array(0);
+    document.MM_Time[0][3] = new String("behavior");
+    document.MM_Time[0][3].frame = 31;
+    document.MM_Time[0][3].value = "MM_showHideLayers('document.layers[\\\'headline1\\\']','document.all[\\\'headline1\\\']','show')";
+    document.MM_Time[0][4] = new String("behavior");
+    document.MM_Time[0][4].frame = 60;
+    document.MM_Time[0][4].value = "MM_showHideLayers('document.layers[\\\'headline1\\\']','document.all[\\\'headline1\\\']','hide')";
+    document.MM_Time[0][5] = new String("sprite");
+    document.MM_Time[0][5].slot = 3;
+    if (ns)
+        document.MM_Time[0][5].obj = document["headline2"];
+    else
+        document.MM_Time[0][5].obj = document.all ? document.all["headline2"] : null;
+    document.MM_Time[0][5].keyFrames = new Array(61, 90);
+    document.MM_Time[0][5].values = new Array(0);
+    document.MM_Time[0][6] = new String("behavior");
+    document.MM_Time[0][6].frame = 61;
+    document.MM_Time[0][6].value = "MM_showHideLayers('document.layers[\\\'headline2\\\']','document.all[\\\'headline2\\\']','show')";
+    document.MM_Time[0][7] = new String("behavior");
+    document.MM_Time[0][7].frame = 90;
+    document.MM_Time[0][7].value = "MM_showHideLayers('document.layers[\\\'headline2\\\']','document.all[\\\'headline2\\\']','hide')";
+    document.MM_Time[0][8] = new String("sprite");
+    document.MM_Time[0][8].slot = 4;
+    if (ns)
+        document.MM_Time[0][8].obj = document["headline3"];
+    else
+        document.MM_Time[0][8].obj = document.all ? document.all["headline3"] : null;
+    document.MM_Time[0][8].keyFrames = new Array(91, 120);
+    document.MM_Time[0][8].values = new Array(0);
+    document.MM_Time[0][9] = new String("behavior");
+    document.MM_Time[0][9].frame = 91;
+    document.MM_Time[0][9].value = "MM_showHideLayers('document.layers[\\\'headline3\\\']','document.all[\\\'headline3\\\']','show')";
+    document.MM_Time[0][10] = new String("behavior");
+    document.MM_Time[0][10].frame = 120;
+    document.MM_Time[0][10].value = "MM_showHideLayers('document.layers[\\\'headline3\\\']','document.all[\\\'headline3\\\']','hide')";
+    document.MM_Time[0][11] = new String("sprite");
+    document.MM_Time[0][11].slot = 5;
+    if (ns)
+        document.MM_Time[0][11].obj = document["headline4"];
+    else
+        document.MM_Time[0][11].obj = document.all ? document.all["headline4"] : null;
+    document.MM_Time[0][11].keyFrames = new Array(121, 150);
+    document.MM_Time[0][11].values = new Array(0);
+    document.MM_Time[0][12] = new String("behavior");
+    document.MM_Time[0][12].frame = 121;
+    document.MM_Time[0][12].value = "MM_showHideLayers('document.layers[\\\'headline4\\\']','document.all[\\\'headline4\\\']','show')";
+    document.MM_Time[0][13] = new String("behavior");
+    document.MM_Time[0][13].frame = 150;
+    document.MM_Time[0][13].value = "MM_showHideLayers('document.layers[\\\'headline4\\\']','document.all[\\\'headline4\\\']','hide')";
+    document.MM_Time[0][14] = new String("behavior");
+    document.MM_Time[0][14].frame = 151;
+    document.MM_Time[0][14].value = "MM_timelineGoto('Timeline1','1')";
+    document.MM_Time[0][15] = new String("behavior");
+    document.MM_Time[0][15].frame = 1;
+    document.MM_Time[0][15].value = "MM_showHideLayers('document.layers[\\\'headline4\\\']','document.all[\\\'headline4\\\']','hide')";
+    document.MM_Time[0].lastFrame = 151;
+    for (i=0; i<document.MM_Time.length; i++) {
+        document.MM_Time[i].ID = null;
+        document.MM_Time[i].curFrame = 0;
+        document.MM_Time[i].delay = 1000/document.MM_Time[i].fps;
+    }
+}
+//-->
+</SCRIPT>
+<META HTTP-EQUIV="pragma" CONTENT = "no-cache">
+</HEAD>
+
+
+
+<BODY TOPMARGIN="0" LEFTMARGIN="0" onLoad="MM_preloadImages('graphics/newso.gif','#915113794710');MM_preloadImages('graphics/infoo.gif','#915113838050');MM_preloadImages('graphics/gameso.gif','#915113887320');MM_preloadImages('graphics/memberso.gif','#915113920710');MM_showHideLayers('document.layers[\'headline\']','document.all[\'headline\']','show','document.layers[\'headline1\']','document.all[\'headline1\']','hide','document.layers[\'headline2\']','document.all[\'headline2\']','hide','document.layers[\'headline3\']','document.all[\'headline3\']','hide','document.layers[\'headline4\']','document.all[\'headline4\']','hide');MM_timelinePlay('Timeline1')">
+<DIV ID="welcome" STYLE="position:absolute; left:112px; top:124px; width:350px; height:275px; z-index:1; visibility: visible"> 
+  <P ALIGN="center"><br>
+    <img name="image1" src="graphics/xmasstreeBLK.gif" width="80" height="120"></P>
+  <P ALIGN="center"><i>Wishing you all a very merry Christmas, and a bug-free 
+    Millennium !</i></P>
+</DIV>
+
+<DIV ID="news" STYLE="position:absolute; left:113px; top:123px; width:350px; height:275px; z-index:2; visibility: hidden"> 
+
+  
+<P ALIGN="center">&nbsp;</P>
+<P ALIGN="center">&nbsp; </P>
+<P ALIGN="center"><A HREF="news/index.html">Kali's News</A></P>
+<P ALIGN="center"><A HREF="forum/index.html">Discussion Forums</A><BR>
+<FONT SIZE="-2">in using the Discussion Forums, you agree to be bound by the <A HREF="accept.html">Acceptable 
+Use Policy</A></FONT></P>
+<P ALIGN="center"><A HREF="asteroids/index.html">Asteroids</A> </P>
+<P ALIGN="center">&nbsp;</P>
+</DIV>
+
+<DIV ID="info" STYLE="position:absolute; left:111px; top:121px; width:350px; height:275px; z-index:3; visibility: hidden"> 
+
+<P ALIGN="center"><A HREF="index.html">Welcome Page</A></P>
+
+<P ALIGN="center"><A HREF="charter/index.html">ClanUK Charter</A></P>
+
+<P ALIGN="center"><A HREF="irc/index.html">IRC Zone</A></P>
+
+<P ALIGN="center"><A HREF="contact/index.html">Contact List</A></P>
+
+  
+
+<P ALIGN="center"><A HREF="trial/trialmembers.html">Trial Members</A></P>
+
+<P ALIGN="center"><A HREF="join/index.html">How To Join</A></P>
+
+<P ALIGN="center"><A HREF="PetitionHall/PetitionHalls.htm">Petitions Hall</A></P>
+
+</DIV>
+
+<DIV ID="games" STYLE="position:absolute; left:114px; top:126px; width:350px; height:275px; z-index:4; visibility: hidden"> 
+<P ALIGN="center">&nbsp;</P>
+<P ALIGN="center"><A HREF="zones/action.html">First-person perspective games</A> 
+(Action Zone)</P>
+<P ALIGN="center"><A HREF="zones/rpg.html">Role Playing Games</A> (RPG Zone)</P>
+<P ALIGN="center"><A HREF="zones/mmg.html">Massively Multiplayer Games</A> (MMG 
+Zone)</P>
+<P ALIGN="center"><A HREF="zones/strategy.html">Strategy Games</A> (Strat Zone) 
+</P>
+<P ALIGN="center">&nbsp;</P>
+<P ALIGN="center"><A HREF="zones/index.html">GameAuthor's Zone</A> (help for authoring)</P>
+</DIV>
+<DIV ID="members" STYLE="position:absolute; left:115px; top:126px; width:350px; height:275px; z-index:5; visibility: hidden"> 
+
+<P ALIGN="center">&nbsp;</P>
+<P ALIGN="center"><A HREF="elections/index.html">Ops Elections</A></P>
+<P ALIGN="center"><A HREF="cdms/index.html">CDMS Zone</A></P>
+
+<P ALIGN="center"><A HREF="party/index.html">Party Zone</A></P>
+
+<P ALIGN="center"><A HREF="download/index.html">Download Zone</A></P>
+<P ALIGN="center"><A HREF="email/index.html">Emailing List</A></P>
+</DIV>
+
+<DIV ID="headline" STYLE="position:absolute; left:492px; top:126px; width:180px; height:275px; z-index:6; visibility: visible"> 
+<CENTER>
+
+    
+<H2>What's New</H2>
+ 
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+    <P>Merry Christmas<A HREF="news/news.html"></A>!</P>
+</CENTER>
+</DIV>
+
+<DIV ID="headline1" STYLE="position:absolute; left:493px; top:126px; width:180px; height:275px; z-index:7; visibility: hidden"> 
+
+<CENTER>
+
+    <H2><B>What's New</B></H2>
+
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+
+<P><A HREF="news/index.html">Kali's News</A> updated<BR>
+<BR>
+28/10/99</P>
+</CENTER>
+
+</DIV>
+
+<DIV ID="headline2" STYLE="position:absolute; left:492px; top:126px; width:180px; height:275px; z-index:8; visibility: hidden"> 
+
+<CENTER>
+
+    <H2><B>What's New</B></H2>
+
+<P>&nbsp;</P>
+
+<P>&nbsp;</P>
+
+    
+<P><A HREF="trial/trialmembers.html">Trial Members</A> Updated</P>
+24/10/99 
+</CENTER>
+
+</DIV>
+
+<DIV ID="headline3" STYLE="position:absolute; left:494px; top:127px; width:180px; height:275px; z-index:9; visibility: hidden"> 
+
+<CENTER>
+
+    <H2><B>What's New</B></H2>
+
+<P>&nbsp;</P>
+
+<P>&nbsp;</P>
+<P>IRC EasyChat is back!</P>
+
+    
+<P>see the <A HREF="irc/index.html">IRC Zone</A><A HREF="petitionhall/PetitionHalls.htm"></A></P>
+</CENTER>
+
+</DIV>
+
+<DIV ID="headline4" STYLE="position:absolute; left:492px; top:128px; width:180px; height:275px; z-index:10; visibility: hidden"> 
+
+<CENTER>
+
+    <H2><B>What's New</B></H2>
+
+<P>&nbsp;</P>
+
+<P>&nbsp;</P>
+<P>CDMS is back!</P>
+<P>check out the <A HREF="party/index.html">CDMS Zone</A><BR>
+</P>
+</CENTER>
+</DIV>
+
+<CENTER>
+<A HREF="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.Image21','document.Image21','graphics/newso.gif','#915113794710')" onClick="MM_showHideLayers('document.layers[\'welcome\']','document.all[\'welcome\']','hide','document.layers[\'news\']','document.all[\'news\']','show','document.layers[\'info\']','document.all[\'info\']','hide','document.layers[\'games\']','document.all[\'games\']','hide','document.layers[\'members\']','document.all[\'members\']','hide')"><IMG NAME="Image21" BORDER="0" SRC="graphics/news.gif" WIDTH="120" HEIGHT="20" ALIGN="middle" ALT="BBS &amp; News"></A><A HREF="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.Image22','document.Image22','graphics/infoo.gif','#915113838050')" onClick="MM_showHideLayers('document.layers[\'welcome\']','document.all[\'welcome\']','hide','document.layers[\'news\']','document.all[\'news\']','hide','document.layers[\'info\']','document.all[\'info\']','show','document.layers[\'games\']','document.all[\'games\']','hide','document.layers[\'members\']','document.all[\'members\']','hide')"><IMG NAME="Image22" BORDER="0" SRC="graphics/info.gif" WIDTH="120" HEIGHT="20" ALIGN="middle" ALT="Info &amp; Help"></A><IMG SRC="graphics/cukgif100.gif" WIDTH="100" HEIGHT="60" ALIGN="middle" ALT="Click this logo within the site - to return to this page"><A HREF="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.Image23','document.Image23','graphics/gameso.gif','#915113887320')" onClick="MM_showHideLayers('document.layers[\'welcome\']','document.all[\'welcome\']','hide','document.layers[\'news\']','document.all[\'news\']','hide','document.layers[\'info\']','document.all[\'info\']','hide','document.layers[\'games\']','document.all[\'games\']','show','document.layers[\'members\']','document.all[\'members\']','hide')"><IMG NAME="Image23" BORDER="0" SRC="graphics/games.gif" WIDTH="120" HEIGHT="20" ALIGN="middle" ALT="Game Zones"></A><A HREF="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.Image24','document.Image24','graphics/memberso.gif','#915113920710')" onClick="MM_showHideLayers('document.layers[\'welcome\']','document.all[\'welcome\']','hide','document.layers[\'news\']','document.all[\'news\']','hide','document.layers[\'info\']','document.all[\'info\']','hide','document.layers[\'games\']','document.all[\'games\']','hide','document.layers[\'members\']','document.all[\'members\']','show')"><IMG NAME="Image24" BORDER="0" SRC="graphics/members.gif" WIDTH="120" HEIGHT="20" ALIGN="middle" ALT="Members Only"></A> 
+</CENTER>
+
+<CENTER>
+
+  <H1>Welcome to ClanUK - the UK's leading online gaming group</H1>
+
+</CENTER>
+
+<P ALIGN="center">&nbsp;</P>
+
+<P ALIGN="center">&nbsp;</P>
+
+<P ALIGN="center">&nbsp;</P>
+
+<P ALIGN="center">&nbsp;</P>
+
+<P ALIGN="center">&nbsp;</P>
+
+<P ALIGN="center">&nbsp;</P>
+
+<P ALIGN="center">&nbsp;</P>
+
+
+
+<P ALIGN="center">&nbsp; </P>
+
+<P>&nbsp;</P>
+<P ALIGN="center">&nbsp; </P>
+
+
+
+<P ALIGN="center">Copyright © ClanUK 1996-1999</P>
+
+</BODY>
+
+</HTML>
+<!-- shouts to undernet@k-rad you elite bitches - t.  fjear the b0g you freaks prae = dnb --><!-- www.attrition.org web hack mirror - watermark or something -->

@@ -1,0 +1,241 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+
+<head>
+<meta name="keywords" content="Archdiocese of North America">
+<title>BLESS USA: Online Registration</title>
+<script Language="JavaScript"><!--
+function FrontPage_Form1_Validator(theForm)
+{
+
+  if (theForm.State.selectedIndex == 0)
+  {
+    alert("You missed choosing an option in the \"State\" field.  Please go back and fill it in.");
+    theForm.State.focus();
+    return false;
+  }
+
+  if (theForm.ChooseFamilySponsor.checked) {
+    if (theForm.FamilySponsor.selectedIndex == 0) {
+      alert("You missed choosing an option in the \"Family Sponsor\" field.  Please go back and fill it in.");
+      theForm.FamilySponsor.focus();
+	return false;
+    }
+  }
+  else {
+    theForm.FamilySponsor.selectedIndex = 0;
+  }
+  return true;
+}
+//--></script>
+</head>
+<BODY BACKGROUND="../images/bg.gif" link="#6189c0">
+<table width="600" border="0" cellspacing="0" cellpadding="5">
+
+<TR>
+<!--BEGIN SIDEBAR-->
+	<td width="155" valign="TOP">
+	<CENTER><a href="/default.htm"><IMG SRC="../images/logo.gif" WIDTH=101 HEIGHT=100 BORDER=0 ALT=""></a></CENTER>
+	<P>
+	<FONT FACE="Verdana, Arial, Helvetica" size=2>
+	<A HREF="../org/index.shtml"><IMG SRC="../images/org.gif" WIDTH=146 HEIGHT=19 BORDER=0 ALT=""></A><br>
+	<img src="../images/bullet.gif" width=8 height=8 border=0 alt=""><A HREF="../org/about.shtml">About BLESS USA</A><br>
+	<img src="../images/bullet.gif" width=8 height=8 border=0 alt=""><A HREF="../org/history.shtml">History</A><br>
+	<img src="../images/bullet.gif" width=8 height=8 border=0 alt=""><A HREF="../org/goals.shtml">Mission Goals</A><br>
+	<img src="../images/bullet.gif" width=8 height=8 border=0 alt=""><A HREF="../org/contact.shtml">Contact Us</A>
+	<P>
+		<A HREF="../act/index.shtml"><IMG SRC="../images/act.gif" WIDTH=146 HEIGHT=19 BORDER=0 ALT=""></A><br>
+	<img src="../images/bullet.gif" width=8 height=8 border=0 alt=""><A HREF="../act/projects.shtml">Projects & Services</A>
+
+	<P>
+	<A HREF="index.shtml"><IMG SRC="../images/part.gif" WIDTH=146 HEIGHT=19 BORDER=0 ALT=""></A><br>
+	<img src="../images/bullet.gif" width=8 height=8 border=0 alt=""><A HREF="index.shtml">Prayer</A><br>
+	<img src="../images/bullet.gif" width=8 height=8 border=0 alt=""><A HREF="tellafriend.shtml">Tell A Friend</A><br>
+	<img src="../images/bullet.gif" width=8 height=8 border=0 alt=""><A HREF="contribute.shtml">Contribute</A><br>
+	<img src="../images/bullet.gif" width=8 height=8 border=0 alt=""><A HREF="membership.shtml">Membership</A><br>
+	<img src="../images/bullet.gif" width=8 height=8 border=0 alt=""><A HREF="serving.shtml">Volunteer as a servant</A><br>
+	<img src="../images/bullet.gif" width=8 height=8 border=0 alt=""><A HREF="../christian_ed/index.shtml">Christian Education</A><br>
+	
+	<P>
+	<A HREF="../info/index.shtml"><IMG SRC="../images/info.gif" WIDTH=146 HEIGHT=19 BORDER=0 ALT=""></A><br>
+	<img src="../images/bullet.gif" width=8 height=8 border=0 alt=""><A HREF="../info/faq.shtml">FAQs</A><br>	
+	<img src="../images/bullet.gif" width=8 height=8 border=0 alt=""><A HREF="../info/newsletter.shtml">Newsletter</A><br>
+	<img src="../images/bullet.gif" width=8 height=8 border=0 alt=""><A HREF="../info/news.shtml">BLESS USA News</A><br>
+	<img src="../images/bullet.gif" width=8 height=8 border=0 alt=""><A HREF="../info/updates.shtml">Website Updates</A><br>
+	<img src="../images/bullet.gif" width=8 height=8 border=0 alt=""><A HREF="../info/search.shtml">Search</A><br>
+	<img src="../images/bullet.gif" width=8 height=8 border=0 alt=""><A HREF="../info/comments.shtml">Comments/Questions</A><br>
+	
+			
+	<P>
+
+	<IMG SRC="../images/spacer.gif" WIDTH=155 BORDER=0 height=1 alt=""><br>
+	</TD>
+
+<!--END SIDEBAR-->
+<TD WIDTH=450 valign="top">
+<!--BEGIN STORIES-->
+    <font FACE="Verdana, Arial, Helvetica" size="2"><img SRC="/images/head_part.gif" BORDER="0" ALT="Participation" align="right" width="470" height="70"><br clear="all">
+    <form METHOD="POST" ACTION="membership_welcome_card.asp" onSubmit="return FrontPage_Form1_Validator(this)">
+      <p><font SIZE="+1"><b>Online Registration</b></font></p>
+      <p>
+<img src="../images/bullet.gif" width=8 height=8 border=0 alt="">&nbsp;&nbsp;&nbsp;
+      <font SIZE="-1">BLESS USA is an official nonprofit charity organization of the Coptic Orthodox Church under the Bishopric of Public, Ecumenical & Social Services.   Its mission is to raise the standard and quality of living for needy and disadvantaged Copts residing in Egypt, and to aid in alleviating their suffering.</font></font><font size="-1" face="Verdana, Arial, Helvetica">&nbsp;&nbsp;</font></p>
+      <p>
+	<FONT FACE="Verdana, Arial, Helvetica" size=2>
+<img src="../images/bullet.gif" width=8 height=8 border=0 alt="">&nbsp;&nbsp;&nbsp;
+Simply fill out this application online in order to be added to the membership and receive
+our newsletters.&nbsp; You can also participate in any of the BLESS USA projects
+below.</font></p>
+    <font FACE="Verdana, Arial, Helvetica" size="2">
+      <p>First Name, Initial<br>
+      <input TYPE="TEXT" SIZE="25" MAXLENGTH="30" NAME="txtFName"> <input TYPE="TEXT" SIZE="2" MAXLENGTH="2" NAME="txtInitial"><br>
+      Last Name<br>
+      <input TYPE="TEXT" SIZE="30" MAXLENGTH="30" NAME="txtLName"><br>
+      Address<br>
+      <input TYPE="TEXT" SIZE="30" MAXLENGTH="50" NAME="txtAddr1"><br>
+      <input TYPE="TEXT" SIZE="30" MAXLENGTH="50" NAME="txtAddr2"><br>
+      City:<br>
+      <input type="text" size="10" name="txtCity"><br>
+      State:<br>
+      <select name="State" size="1">
+        <option selected>Choose</option>
+        <option value="AK">AK</option>
+        <option value="AL">AL</option>
+        <option value="AR">AR</option>
+        <option value="AZ">AZ</option>
+        <option value="CA">CA</option>
+        <option value="CO">CO</option>
+        <option value="CT">CT</option>
+        <option value="DC">DC</option>
+        <option value="DE">DE</option>
+        <option value="FL">FL</option>
+        <option value="GA">GA</option>
+        <option value="HI">HI</option>
+        <option value="IA">IA</option>
+        <option value="ID">ID</option>
+        <option value="IL">IL</option>
+        <option value="IN">IN</option>
+        <option value="KS">KS</option>
+        <option value="KY">KY</option>
+        <option value="LA">LA</option>
+        <option value="MA">MA</option>
+        <option value="MD">MD</option>
+        <option value="ME">ME</option>
+        <option value="MI">MI</option>
+        <option value="MN">MN</option>
+        <option value="MO">MO</option>
+        <option value="MS">MS</option>
+        <option value="MT">MT</option>
+        <option value="NC">NC</option>
+        <option value="ND">ND</option>
+        <option value="NE">NE</option>
+        <option value="NH">NH</option>
+        <option value="NJ">NJ</option>
+        <option value="NM">NM</option>
+        <option value="NV">NV</option>
+        <option value="NY">NY</option>
+        <option value="OH">OH</option>
+        <option value="OK">OK</option>
+        <option value="OR">OR</option>
+        <option value="PA">PA</option>
+        <option value="RI">RI</option>
+        <option value="SC">SC</option>
+        <option value="SD">SD</option>
+        <option value="TN">TN</option>
+        <option value="TX">TX</option>
+        <option value="UT">UT</option>
+        <option value="VA">VA</option>
+        <option value="VT">VT</option>
+        <option value="WA">WA</option>
+        <option value="WI">WI</option>
+        <option value="WV">WV</option>
+        <option value="WY">WY</option>
+      </select> <br>
+      Zip/Postal&nbsp;Code:<br>
+      <input type="text" size="8" name="txtZip"><br>
+      </p>
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><font FACE="Verdana, Arial, Helvetica" size="2">Phone No.</font></td>
+          <td><font FACE="Verdana, Arial, Helvetica" size="2">Fax No.</font></td>
+        </tr>
+        <tr>
+          <td><font FACE="Verdana, Arial, Helvetica" size="2"><input TYPE="TEXT" SIZE="15" MAXLENGTH="20" NAME="txtPhone"></font></td>
+          <td><font FACE="Verdana, Arial, Helvetica" size="2"><input TYPE="TEXT" SIZE="15" MAXLENGTH="20" NAME="txtFax"></font></td>
+        </tr>
+        <tr>
+          <td><font FACE="Verdana, Arial, Helvetica" size="2">Email Address</font></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><font FACE="Verdana, Arial, Helvetica" size="2"><input TYPE="TEXT" SIZE="50" MAXLENGTH="50" NAME="txtEmail"></font></td>
+          <td></td>
+        </tr>
+      </table>
+      <hr>
+      <p><font color="#0000FF"><b>Optional</b>:</font></p>
+      <p><b>I would like to share in the following BLESS USA project(s) to help Copts in
+      Egypt who are in need: <font size="-2" color="gray">(You may choose more than one)</font></b></p>
+		<font FACE="Verdana, Arial, Helvetica" size="2">
+		<input TYPE="CHECKBOX" NAME="ChooseFamilySponsor" VALUE="SponsoringAFamily"><strong>Sponsoring a Family</strong> 
+			<select NAME="FamilySponsor" size="1">
+			<option value="None">Choose One:</option>
+			<option>Monthly</option>
+			<option>Semi-yearly</option>
+			<option>Yearly</option>
+			</select>
+		</font>
+      <p><font FACE="Verdana, Arial, Helvetica" size="2"><input TYPE="CHECKBOX" NAME="Medical" VALUE="MedicalAssistance"><strong>Medical Assistance</strong><br>
+      &nbsp;&nbsp;&nbsp; (Medical treatments and emergencies, kidney dialyses, blood transfusions, chronic
+      illnesses, surgeries, medications, x-rays, lab tests)</font></p>
+      <p><font FACE="Verdana, Arial, Helvetica" size="2"><input TYPE="CHECKBOX" NAME="Handicapped" VALUE="AssistanceOfTheHandicapped"><strong>Assistance of the
+      Handicapped</strong><br>
+      &nbsp;&nbsp;&nbsp; (Mentally &amp; physically)</font></p>
+      <p><font FACE="Verdana, Arial, Helvetica" size="2"><input TYPE="CHECKBOX" NAME="Housing" VALUE="Housing"><strong>Housing</strong><br>
+      &nbsp;&nbsp;&nbsp; (For the homeless, overcrowded housing, and for those emigrating from Upper Egypt)</font></p>
+      <p><font FACE="Verdana, Arial, Helvetica" size="2"><input TYPE="CHECKBOX" NAME="Marriage" VALUE="MarriageExpenseAssistance"><strong>Marriage Expense Assistance</strong><br>
+      &nbsp;&nbsp;&nbsp; (Assists young women with marriage costs)
+      </font></p>
+      <p><font FACE="Verdana, Arial, Helvetica" size="2"><input TYPE="CHECKBOX" NAME="Education" VALUE="Education"><strong>Education</strong><br>
+      </font></p>
+      <p><font FACE="Verdana, Arial, Helvetica" size="2"><input TYPE="CHECKBOX" NAME="Underdev" VALUE="FundingForTheUnderdeveloped"><strong>Funding for the Underdeveloped</strong><br>
+      &nbsp;&nbsp;&nbsp; (Initiating small income generating projects for needy </font>families)</p>
+      <p><font FACE="Verdana, Arial, Helvetica" size="2"><input TYPE="CHECKBOX" NAME="Emergency" VALUE="EmergencyFund"><strong>Emergency Fund</strong><br>
+      &nbsp;&nbsp;&nbsp; (For those who have suffered from natural disasters such as earthquakes, floods, etc. Also for those who suffer from fanatical
+      attacks)</font></p>
+      <p><font FACE="Verdana, Arial, Helvetica" size="2"><input type="checkbox" name="GeneralFund" value="GeneralFund"><strong>General Fund</strong><br>
+      &nbsp;&nbsp;&nbsp; (Distributed among the funds/projects listed above, based on the needs of those
+      projects) </font></p>
+
+      <div align="center"><div align="center"><center><p><input TYPE="SUBMIT" VALUE="Submit">
+      </center></div><div align="center"><p><br>
+      <!--footer-->
+<TR>
+    <td></td>
+    <td valign="BOTTOM">
+	<FONT FACE="Verdana, Arial, Helvetica" size=2><center>
+		<a href="/default.htm">Home</a> <img src="../images/bullet_footer.gif" width=8 height=8 border=0 alt=""> 
+		<a href="../org/index.shtml">Organization</a> <img src="../images/bullet_footer.gif" width=8 height=8 border=0 alt=""> 
+		<a href="../act/index.shtml">Activities</a> <img src="../images/bullet_footer.gif" width=8 height=8 border=0 alt="">  
+		<a href="index.shtml">Participation</a> <img src="../images/bullet_footer.gif" width=8 height=8 border=0 alt=""> 
+		<a href="../info/index.shtml">Information</a>
+	</center></FONT>
+    </td>
+</TR>
+<TR>
+	<td></td>
+	<td>
+		<FONT FACE="Verdana, Arial, Helvetica" size="-2" color="gray"><center>
+			<br>BLESS USA is tax-exempt under IRC 501 (c) (3)
+			<br>All donations are tax-exempt 
+			<br>&#169;2000 BLESS USA. All rights reserved.
+		</center></font>
+	</td>
+</TR> 
+</TABLE>
+
+<!--footer-->
+      </p>
+      
+      </center></div></div>
+    	</form>

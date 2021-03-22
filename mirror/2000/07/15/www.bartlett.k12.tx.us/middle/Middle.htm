@@ -1,0 +1,209 @@
+<html>
+
+<head>
+<title>Bartlett Middle School </title>
+<script LANGUAGE="JavaScript"><!-- Beginning of JavaScript Applet -------------------
+
+
+
+
+
+/* Copyright (C)1996 Web Integration Systems, Inc. DBA Websys, Inc.
+
+
+   All Rights Reserved.   This applet can be re-used or modified, if credit is given in  the source code. We will not be held responsible for any unwanted effects due to the usage of this applet or any derivative.  No warrantees for usability for any specific application are given or implied. Chris Skinner, January 30th, 1996.
+
+
+  Modified for CMS 3-30-97
+
+
+*/
+
+
+function scrollit_r2l(seed)
+
+
+{
+
+
+        var m1  = "   Welcome to Bartlett Middle School.   ";
+
+
+        var m2  = "  We love our Bulldogs!  ";
+
+
+        var msg=m1+m2;
+
+
+        var out = " ";
+
+
+        var c   = 1;
+
+
+        if (seed > 100) {
+
+
+                seed--;
+
+
+                var cmd="scrollit_r2l(" + seed + ")";
+
+
+                timerTwo=window.setTimeout(cmd,100);
+
+
+        }
+
+
+        else if (seed <= 100 && seed > 0) {
+
+
+                for (c=0 ; c < seed ; c++) {
+
+
+                        out+=" ";
+
+
+                }
+
+
+                out+=msg;
+
+
+                seed--;
+
+
+                var cmd="scrollit_r2l(" + seed + ")";
+
+
+                    window.status=out;
+
+
+                timerTwo=window.setTimeout(cmd,100);
+
+
+        }
+
+
+        else if (seed <= 0) {
+
+
+                if (-seed < msg.length) {
+
+
+                        out+=msg.substring(-seed,msg.length);
+
+
+                        seed--;
+
+
+                        var cmd="scrollit_r2l(" + seed + ")";
+
+
+                        window.status=out;
+
+
+                        timerTwo=window.setTimeout(cmd,100);
+
+
+                }
+
+
+                else {
+
+
+                        window.status=" ";
+
+
+                        timerTwo=window.setTimeout("scrollit_r2l(100)",75);
+
+
+                }
+
+
+        }
+
+
+}
+
+
+// -- End of JavaScript code -------------- --></script>
+</head>
+
+<body LINK="#171CED" ALINK="#15B2FF" VLINK="#C91F16" background="images/greyswrl.gif"
+onload="timerONE=window.setTimeout('scrollit_r2l(50)',500);">
+
+<p align="center">&nbsp;</p>
+
+<h1 align="center"><a name="Bartlett Midddle School"><font color="#0000FF">Bartlett Middle
+School</font></a><br>
+<small><small><small>Phone: 254-527-3352<br>
+Fax: 254-527-3513</small></small></small></h1>
+<a HREF="principal.htm">
+
+<p align="center"></a><font color="#000000"><strong><a
+href="mailto:mike9647@bartlett.k12.tx.us">Mike Mayfield </a>, Principal</strong></font><br>
+</p>
+
+<hr SIZE="5" align="center">
+
+<p align="center"><br>
+<big><font COLOR="#C91F16"><b><font color="#000000"><big>Mission Statement</big></font></b></p>
+
+<p align="center"></font><font color="#000000">The Faculty and staff of Bartlett Middle
+School strive to assist students to become more responsible citizens who demonstrate
+respect for themselves and others.</font><font COLOR="#C91F16"> </p>
+
+<p align="center"><font color="#000000">Through a partnership with members of the
+community, we endeavor to offer challenging educational opportunities which will allow our
+students to:</font></p>
+
+<p align="center"><font COLOR="#C91F16">*</font><font color="#000000">discover individual
+interests </font><br>
+<font COLOR="#C91F16">*</font><font color="#000000">cultivate a life long love of learning
+</font><br>
+<font COLOR="#C91F16">*</font><font color="#000000">develop skills</font></p>
+
+<p align="center"><font color="#000000">To cope with as well as productively contribute to
+our complex, dynamic and multi-cultural society.</font> </p>
+
+<hr align="center">
+
+<h1 align="center"><font COLOR="#C91F16">Who We Are</font><!--  Table--></h1>
+<div align="center"><center>
+
+<table BORDER="3" CELLSPACING="4" CELLPADDING="3">
+  <tr>
+    <td><p align="center"><a href="staff.htm"><b>Staff</b> </a></td>
+  </tr>
+</table>
+</center></div><font COLOR="#C91F16">
+
+<hr align="center">
+</font></font></big>
+
+<p align="center"><font COLOR="#C91F16"><strong><big><big><big><big>What we're learning ?</big></big></big></big></strong></font></p>
+<div align="center"><center>
+
+<table BORDER="3" CELLSPACING="4" CELLPADDING="3">
+  <tr>
+    <big><font COLOR="#C91F16"><td><p align="center"><a href="Events.htm"><b>Highlights</b></a></font></big></td>
+  </tr>
+</table>
+</center></div><font COLOR="#C91F16"><big>
+
+<hr align="center">
+</big></font>
+
+<p align="center"><font SIZE="-1"><a HREF="../index.htm">Home</a> | <a
+HREF="../admin/trustees.htm">Board of Trustees</a> | <a HREF="../admin/mission.htm">Mission</a>
+| <a HREF="../admin/goals.htm">Goals</a> | <a href="../admin/about.htm">General
+Information</a><br>
+<a href="../elem/Default.htm">Elementary School </a>| <a href="../default.htm">Middle
+School</a><a href="Default.htm"> </a>| <a href="../bhs/bhs.htm">High School</a> | <a
+href="../admin/calendar_D.htm">Calendar</a> | <a HREF="../admin/links.htm">Internet
+Resources</a> </font><font COLOR="#C91F16"><big><br>
+</big></font></p>
+</body>
+</html>

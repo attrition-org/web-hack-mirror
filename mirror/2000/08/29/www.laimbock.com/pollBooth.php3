@@ -1,0 +1,220 @@
+<html><html>
+<head>
+<title>Laimbock.com</title>
+        <META NAME="description" CONTENT="laimbock.com is the personal site of Patrick Laimbock">
+        <META NAME="keywords" CONTENT="www.laimbock.com,laimbock,patrick,patrick laimbock">
+        <META NAME="Generator" CONTENT="joe">
+        <META NAME="author" CONTENT= "Patrick Laimbock [webmaster@laimbock.com]">
+        <META NAME="copyright" CONTENT="Copyright (C) 2000 Patrick Laimbock">
+        <LINK REV=MADE HREF="mailto:webmaster@laimbock.com">
+        <LINK HREF="/other/style.css" REL="stylesheet" TYPE="text/css">
+
+</head>
+
+<BODY BACKGROUND="other/bg_with_zeros_and_ones.gif" text="#000000" link="#000000" vlink="#000000" topmargin=5 leftmargin=0 rightmargin=0 marginheight=5>
+
+<table border=0 cellpadding=4 cellspacing=0 width=100% align=center>
+<tr><td>
+<table border="0" cellspacing="0" cellpadding="1" width="100%">
+<tr><td>
+<table border="0" cellspacing="0" cellpadding="3" width="100%">
+<tr><td bgcolor="#00FFFF">
+<table width=100%>
+<tr>
+<td ALIGN=left>
+<a href="index.html"><img src="other/laimbock_blue_bg.png" alt="Welcome to Laimbock.com" border=0></a>
+</td>
+<td ALIGN=right VALIGN=middle>
+<!-- <a href="/"><img src="other/web_header1.png" alt="Welcome to Laimbock.com" border=0></a> -->
+<!-- </td><td align=right> -->
+<form action="search.php3" method=post><font face=Arial,Helvetica size=2><B>Search</B>&nbsp;<input type=name name=query>
+</form></td></tr></table>
+<tr><td colspan=2>
+<font face=Arial,Helvetica size=2 color=CCCCCC></td>
+</td></tr></table>
+</td></tr></table>
+</td></tr><tr><td valign=top width=100%>
+<table border=0 cellspacing=0 cellpadding=2 width=100%>
+<tr><td valign=top width=150>
+
+<!-- Blocks Init -->
+
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>Main Menu</td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+<li><a href=index.php3>Home</a>
+<li><a href=sections.php3?op=viewarticle&artid=1>Dayjob</a>
+<li><a href=stats.php3>Stats</a>
+<li><a href=top.php3>Top 10</a>
+<BR>
+<BR>
+<li><a href=xfree4/index.php3>XFree86 4.0.1 & RH6.2</a>
+<BR>
+<BR></td></tr></table></td></tr></table><br>
+
+<!-- Because this is the DEFAULT theme, so print the user login block -->
+
+<!-- Show Left Blocks -->
+
+
+
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2><center>Life is good!</center></td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+<CENTER><IMG SRC="other/pingvin.gif" ALT="Party on bro!"></CENTER></td></tr></table></td></tr></table><br>
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>Tonite's plans</td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+Friday August 25- No plans</td></tr></table></td></tr></table><br>
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>This weekend</td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+<li>August 25 - Nothing
+<li>August 26 - Nothing
+<li>August 27 - Mark's party</td></tr></table></td></tr></table><br>
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helvetica size=2>To Do</td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+<li>Guestbook
+<li>Stock quotes
+<li>Weather
+<li>Search engine</td></tr></table></td></tr></table><br>
+
+
+
+<!-- Show box with BOFH stuff -->
+<table border=0 cellspacing=0 cellpadding=0 width=100%
+bgcolor=000000><tr><td>  <table width=100% border=0 cellspacing=1
+cellpadding=3><tr><td colspan=1 bgcolor=CCCCC><font face=Arial,Helvetica size=2>Today's excuse
+</td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+We're on Token Ring, and it looks like the token got loose.
+</font>
+
+</td></tr></table></td></tr></table>
+
+<br>
+
+<!-- Show box with Slashdot News --> 
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCC>
+<font face=Arial,Helvetica size=2>
+<a href="http://slashdot.org" TARGET=_blank>Slashdot.org</a>
+</td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+<li><a href="http://slashdot.org/article.pl?sid=00/08/29/1822220" TARGET=_blank>How Many Applications Depend On Windows?</a><br>
+<li><a href="http://slashdot.org/article.pl?sid=00/08/29/1835246" TARGET=_blank>Mac OS X Beta To Come Out Sept. 13</a><br>
+<li><a href="http://slashdot.org/article.pl?sid=00/08/29/172222" TARGET=_blank>Micron sues Rambus for antitrust violations</a><br>
+<li><a href="http://slashdot.org/article.pl?sid=00/08/29/175249" TARGET=_blank>Salon on the XBox</a><br>
+<li><a href="http://slashdot.org/article.pl?sid=00/08/29/1252222" TARGET=_blank>R2D2 (Kenny Baker) Replaced with CGI for Ep2</a><br>
+<li><a href="http://slashdot.org/article.pl?sid=00/08/29/1316223" TARGET=_blank>Apple Sues Employee Over Cube Leaks</a><br>
+<li><a href="http://slashdot.org/article.pl?sid=00/08/23/1822224" TARGET=_blank>Learning GNU/Linux: The Survey Course Continues</a><br>
+<li><a href="http://slashdot.org/article.pl?sid=00/08/29/1258221" TARGET=_blank>Internet 2 Crawls Forward</a><br>
+<li><a href="http://slashdot.org/article.pl?sid=00/08/29/1247218" TARGET=_blank>Ex-Microsoft Employee On Unix Within The Empire</a><br>
+<li><a href="http://slashdot.org/article.pl?sid=00/08/29/1242238" TARGET=_blank>NVIDIA Sues 3dfx For Patent Infringement</a><br>
+
+
+</td></tr></table></td></tr></table>
+
+<BR>
+
+<!-- Show box with Freshmeat News -->
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=000000><tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=3><tr><td colspan=1 bgcolor=CCCCCC>
+<font face=Arial,Helveticasize=2>
+<a href="http://www.freshmeat.net" TARGET=_blank>Freshmeat</a>
+</td></tr><tr><td bgcolor=FFFFFF><font face=Arial,Helvetica size=2>
+<li><a href="http://freshmeat.net/projects/brag/" TARGET=_blank>
+brag</a><br>
+
+<li><a href="http://freshmeat.net/projects/j/" TARGET=_blank>
+j</a><br>
+
+<li><a href="http://freshmeat.net/projects/nco/" TARGET=_blank>
+NCO</a><br>
+
+<li><a href="http://freshmeat.net/projects/neomail/" TARGET=_blank>
+NeoMail</a><br>
+
+<li><a href="http://freshmeat.net/projects/libcwd/" TARGET=_blank>
+C++ Debugging Support library</a><br>
+
+<li><a href="http://freshmeat.net/projects/weirdx/" TARGET=_blank>
+WeirdX</a><br>
+
+<li><a href="http://freshmeat.net/projects/hpgs/" TARGET=_blank>
+hpgs</a><br>
+
+<li><a href="http://freshmeat.net/projects/ngspice/" TARGET=_blank>
+ngspice</a><br>
+
+<li><a href="http://freshmeat.net/projects/pygcs/" TARGET=_blank>
+PyGCS</a><br>
+
+<li><a href="http://freshmeat.net/projects/meilker.20000829/" TARGET=_blank>
+The dutch unified and complex MELKER project v.20000829</a><br>
+
+<li><a href="http://freshmeat.net/projects/meilker.20000829/" TARGET=_blank>
+The dutch unified and complex MELKER project v.20000829</a><br>
+
+<li><a href="http://freshmeat.net/projects/zzplayer/" TARGET=_blank>
+ZZplayer</a><br>
+
+<li><a href="http://freshmeat.net/projects/myquote/" TARGET=_blank>
+MyQuote</a><br>
+
+<li><a href="http://freshmeat.net/projects/foxcontrol-desktop/" TARGET=_blank>
+foXcontrol-desktop</a><br>
+
+<li><a href="http://freshmeat.net/projects/webman/" TARGET=_blank>
+Database Manager</a><br>
+
+<li><a href="http://freshmeat.net/projects/biojava/" TARGET=_blank>
+BioJava</a><br>
+
+<li><a href="http://freshmeat.net/projects/runsuid/" TARGET=_blank>
+runsuid</a><br>
+
+<li><a href="http://freshmeat.net/projects/worddig/" TARGET=_blank>
+word dig</a><br>
+
+<li><a href="http://freshmeat.net/projects/xoranalyze/" TARGET=_blank>
+XOR Analyze</a><br>
+
+<li><a href="http://freshmeat.net/projects/dotxygtk/" TARGET=_blank>
+dotXyGTK</a><br>
+
+<li><a href="http://freshmeat.net/projects/spambot/" TARGET=_blank>
+SpamBot</a><br>
+
+<li><a href="http://freshmeat.net/projects/kexis/" TARGET=_blank>
+Kexis</a><br>
+
+<li><a href="http://freshmeat.net/projects/taptunnel/" TARGET=_blank>
+taptunnel</a><br>
+
+<li><a href="http://freshmeat.net/projects/perlsmtpdaemon/" TARGET=_blank>
+Perl SMTP Daemon</a><br>
+
+<li><a href="http://freshmeat.net/projects/html-xml-utils/" TARGET=_blank>
+HTML-XML-utils</a><br>
+
+</td></tr></table></td></tr></table><BR>
+
+<img src=images/pix.gif border=0 width=150 height=1>
+</td><td width=100% valign=top>
+<table border=0 cellpadding=8><tr><td><font face=Arial,Helvetica size=3><li> <a href="pollBooth.php3?pollID=1">Like the new site?</a> (<a href="pollBooth.php3?op=results&pollID=1">Results</a> - 5 votes)
+<li> <a href="pollBooth.php3?pollID=2">Time for another poll?</a> (<a href="pollBooth.php3?op=results&pollID=2">Results</a> - 9 votes)
+<li> <a href="pollBooth.php3?pollID=3">Which radardetector to buy?</a> (<a href="pollBooth.php3?op=results&pollID=3">Results</a> - 3 votes)
+<li> <a href="pollBooth.php3?pollID=4">Should cybercriminals be jailed?</a> (<a href="pollBooth.php3?op=results&pollID=4">Results</a> - 1 votes)
+</td></tr></table>
+
+
+</td></tr></table>
+</td></tr></table>
+
+<font face=Arial,Helvetica size=1><center>
+<br>
+All logos and trademarks in this site are property of their respective owner. The comments are property of their posters, all the rest © 2000 by me<br>
+<br>
+<br>
+</body>
+</html>

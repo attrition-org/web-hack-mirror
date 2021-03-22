@@ -1,0 +1,32 @@
+--00:33:30--  http://www.charity.ca:80/
+           => `www.charity.ca/index.html'
+Connecting to www.charity.ca:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+
+    0K ->
+
+00:33:31 (377.93 KB/s) - `www.charity.ca/index.html' saved [387]
+
+Loading robots.txt; please ignore errors.
+--00:33:31--  http://www.charity.ca:80/no-robots.txt
+           => `www.charity.ca/no-robots.txt'
+Connecting to www.charity.ca:80... connected!
+HTTP request sent, awaiting response... 404 Object Not Found
+00:33:31 ERROR 404: Object Not Found.
+
+--00:33:31--  http://www.charity.ca:80/back.jpg
+           => `www.charity.ca/back.jpg'
+Connecting to www.charity.ca:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 14,118 [image/jpeg]
+
+    0K -> .......... ...                                         [100%]
+
+00:33:32 (56.74 KB/s) - `www.charity.ca/back.jpg' saved [14118/14118]
+
+Converting www.charity.ca/index.html... done.
+
+FINISHED --00:33:32--
+Downloaded: 14,505 bytes in 2 files
+Converting www.charity.ca/index.html... done.

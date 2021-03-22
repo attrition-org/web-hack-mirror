@@ -1,0 +1,42 @@
+--08:49:12--  http://www.rja.com.jo:80/
+           => `www.rja.com.jo/index.html'
+Connecting to www.rja.com.jo:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 1,662 [text/html]
+
+    0K -> .                                                      [100%]
+
+08:49:14 (35.28 KB/s) - `www.rja.com.jo/index.html' saved [1662/1662]
+
+Loading robots.txt; please ignore errors.
+--08:49:14--  http://www.rja.com.jo:80/no-robots.txt
+           => `www.rja.com.jo/no-robots.txt'
+Connecting to www.rja.com.jo:80... connected!
+HTTP request sent, awaiting response... 404 Not Found
+08:49:16 ERROR 404: Not Found.
+
+--08:49:16--  http://www.rja.com.jo:80/hkorp.jpg
+           => `www.rja.com.jo/hkorp.jpg'
+Connecting to www.rja.com.jo:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 11,324 [image/jpeg]
+
+    0K -> .                                                      [ 11%]
+
+08:49:23 (641.91 B/s) - Read error at byte 1253/11324 (No route to host). Retrying.
+
+--08:49:23--  http://www.rja.com.jo:80/hkorp.jpg
+  (try: 2) => `www.rja.com.jo/hkorp.jpg'
+Connecting to www.rja.com.jo:80... connected!
+HTTP request sent, awaiting response... 206 Partial Content
+Length: unspecified [image/jpeg]
+
+    0K -> ,......... .
+
+08:49:51 (385.85 B/s) - `www.rja.com.jo/hkorp.jpg' saved [11324]
+
+Converting www.rja.com.jo/index.html... done.
+
+FINISHED --08:49:51--
+Downloaded: 12,986 bytes in 2 files
+Converting www.rja.com.jo/index.html... done.

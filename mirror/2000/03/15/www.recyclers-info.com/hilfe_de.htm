@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>Recyclers Info - Hilfe</title>
+</head>
+<body background="./grafic/bg4.jpg">
+<center>
+<TABLE BORDER=0>
+<TR>
+<TD valign=top colspan=2>
+<map name="leiste_allg">
+<area shape=rect coords=10,0,88,23 href="javascript:show_win('navig-de.htm')">
+<area shape=rect coords=91,0,168,23 href="mail-de.htm">
+<area shape=rect coords=171,0,248,23 href="./de/hotlink.htm">
+<area shape=rect coords=251,0,328,23 href="struc_de.htm">
+<area shape=rect coords=331,0,408,23 href="hilfe_de.htm">
+<area shape=rect coords=411,0,489,23 href="default.htm">
+</map>
+<img src="./grafic/leiste_allg.gif" usemap="#leiste_allg" border=0>
+</TD>
+<TD valign=top rowspan=2>
+<A HREF="default.htm"><IMG SRC="./grafic/LogoRI3.gif" BORDER=0 ALT="Zurück" vspace=4></A>
+</TD>
+</TR>
+<TR>
+<TD width=135 valign=top>
+<A HREF="hilfe_en.htm"><IMG SRC="./grafic/english.gif" BORDER=0></A>
+<A HREF="hilfe_fr.htm"><IMG SRC="./grafic/french.gif" BORDER=0 hspace=5></A>
+<A HREF="hilfe_es.htm"><IMG SRC="./grafic/spain.gif" BORDER=0></A>
+</TD>
+<TD width=360 ALIGN=CENTER valign=top>
+<h2>Das Hilfesystem</h2>
+</TD>
+</TR>
+<TR>
+<TD colspan=3 align=center valign=top>
+(in Vorbereitung)
+</TD>
+</TR>
+</TABLE>
+</center>
+</body>
+<script language="JavaScript">
+<!--
+BrowserOk = false;
+//-->
+</script>
+<script language="JavaScript1.1">
+<!--
+BrowserOk = true;
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript">
+<!--   
+hfern = null;
+function show_win(hwin)
+{
+  window.name="recyclers_info_fenster";
+  if (BrowserOk)
+  {
+    if ((hfern!=null) && (hfern.closed)) { hfern = null; }
+    if (hfern==null)
+    {
+      hfern = window.open(hwin,"fern","width=160,height=460,toolbar=no,directories=no,status=no,location=no,menubar=no,resizable=yes,scrollbars=no");
+    }
+    else
+    {
+      hfern.focus();
+    }
+  }
+  else
+  {
+    window.open(hwin,"fern","width=160,height=460,toolbar=no,directories=no,status=no,location=no,menubar=no,resizable=yes,scrollbars=no");
+  }
+}
+//-->
+</SCRIPT>
+</html>

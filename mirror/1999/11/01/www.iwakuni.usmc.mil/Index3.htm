@@ -1,0 +1,306 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>MCAS Iwakuni Homepage</title>
+<base target="main">
+
+<script LANGUAGE="JavaScript" FPTYPE="dynamicanimation">
+<!--
+  // If you want to change this script, you must also make the following
+  // changes so that FrontPage will not overwrite your new script.
+  // In the script tag, change type="dynamicanimation" to type="mydynamicanimation"
+  // In the first script statement, change "dynamicanimation" to "mydynamicanimation"
+  // Throughout the HTML content, change dynamicanimation= to mydynamicanimation=
+  // Change function dynAnimation to function mydynAnimation
+  // In the body tag, change onload="dynAnimation()" to onload="mydynAnimation()"
+  dynamicanimAttr = "dynamicanimation"
+  animateElements = new Array()
+  currentElement = 0
+  speed = 0
+  stepsZoom = 8
+  stepsWord = 8
+  stepsFly = 12
+  stepsSpiral = 16
+  steps = stepsZoom
+  step = 0
+  outString = ""
+  function dynAnimation()
+  {
+    var ms = navigator.appVersion.indexOf("MSIE")
+    ie4 = (ms>0) && (parseInt(navigator.appVersion.substring(ms+5, ms+6)) >= 4)
+    if(!ie4)
+    {
+      if((navigator.appName == "Netscape") &&
+         (parseInt(navigator.appVersion.substring(0, 1)) >= 4))
+      {
+        for (index=document.layers.length-1; index >= 0; index--)
+        {
+            layer=document.layers[index]
+            if (layer.left==10000)
+                layer.left=0
+        }
+      }
+      return
+    }
+    for (index=document.all.length-1; index >= document.body.sourceIndex; index--)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if(null != animation)
+      {
+        if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        {
+          ih = el.innerHTML
+          outString = ""
+          i1 = 0
+          iend = ih.length
+          while(true)
+          {
+            i2 = startWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, false, "")
+            if(i2 == iend)
+              break
+            i1 = i2
+            i2 = endWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, true, animation)
+            if(i2 == iend)
+              break
+            i1 = i2
+          }
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+        if(animation == "zoomIn" || animation == "zoomOut")
+        {
+          ih = el.innerHTML
+          outString = "<SPAN " + dynamicanimAttr + "=\"" + animation + "\" style=\"position: relative; left: 10000;\">"
+          outString += ih
+          outString += "</SPAN>"
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+      }
+    }
+    i = 0
+    for (index=document.body.sourceIndex; index < document.all.length; index++)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if (null != animation)
+      {
+        if(animation == "flyLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyRight")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyTop" || animation == "dropWord")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottom")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyTopLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyTopRight" || animation == "flyTopRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottomLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyBottomRight" || animation == "flyBottomRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "spiral")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "zoomIn")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else if(animation == "zoomOut")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        el.initLeft = el.style.posLeft
+        el.initTop = el.style.posTop
+        animateElements[i++] = el
+      }
+    }
+    window.setTimeout("animate();", speed)
+  }
+  function offsetLeft(el)
+  {
+    x = el.offsetLeft
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      x += e.offsetLeft;
+    return x
+  } 
+  function offsetTop(el)
+  {
+    y = el.offsetTop
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      y += e.offsetTop;
+    return y
+  } 
+  function startWord(ih, i)
+  {
+    for(tag = false; i < ih.length; i++)
+    {
+      c = ih.charAt(i)
+      if(c == '<')
+        tag = true
+      if(!tag)
+        return i
+      if(c == '>')
+        tag = false
+    }
+    return -1
+  }
+  function endWord(ih, i)
+  {
+    nonSpace = false
+    space = false
+    while(i < ih.length)
+    {
+      c = ih.charAt(i)
+      if(c != ' ')
+        nonSpace = true
+      if(nonSpace && c == ' ')
+        space = true
+      if(c == '<')
+        return i
+      if(space && c != ' ')
+        return i
+      i++
+    }
+    return -1
+  }
+  function outWord(ih, i1, i2, dyn, anim)
+  {
+    if(dyn)
+      outString += "<SPAN " + dynamicanimAttr + "=\"" + anim + "\" style=\"position: relative; left: 10000;\">"
+    outString += ih.substring(i1, i2)
+    if(dyn)
+      outString += "</SPAN>"
+  }
+  function animate()
+  {
+    el = animateElements[currentElement]
+    animation = el.getAttribute(dynamicanimAttr, false)
+    step++
+    if(animation == "spiral")
+    {
+      steps = stepsSpiral
+      v = step/steps
+      rf = 1.0 - v
+      t = v * 2.0*Math.PI
+      rx = Math.max(Math.abs(el.initLeft), 200)
+      ry = Math.max(Math.abs(el.initTop),  200)
+      el.style.posLeft = Math.ceil(-rf*Math.cos(t)*rx)
+      el.style.posTop  = Math.ceil(-rf*Math.sin(t)*ry)
+    }
+    else if(animation == "zoomIn")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(50+50*step/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else if(animation == "zoomOut")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(100+200*(steps-step)/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else
+    {
+      steps = stepsFly
+      if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        steps = stepsWord
+      dl = el.initLeft / steps
+      dt = el.initTop  / steps
+      el.style.posLeft = el.style.posLeft - dl
+      el.style.posTop = el.style.posTop - dt
+    }
+    if (step >= steps) 
+    {
+      el.style.posLeft = 0
+      el.style.posTop = 0
+      currentElement++
+      step = 0
+    }
+    if(currentElement < animateElements.length)
+      window.setTimeout("animate();", speed)
+  }
+//-->
+</script><meta name="Microsoft Border" content="tl, default"></head>
+
+<body onload="dynAnimation()" background="images/grnbub1.jpg"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p><a name="top"></a></p>
+</td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%">
+
+<p>&nbsp;</p>
+</td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+<div align="left"><left>
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="738" height="771">
+  <tr>
+    <td align="center" valign="top" width="184" height="771" rowspan="2"><img src="images/newtorii2.gif" alt="images/newtorii2.gif (7718 bytes)" WIDTH="182" HEIGHT="108"><p align="center"><!--webbot bot="ImageMap" text="(0,0) (144,22) {News and Information} {Times New Roman} 10 B #c80000 CT 0  News_and_Information.htm##_self" src="images/goldbutton3.gif" alt="images/goldbutton3.gif (2771 bytes)" border="0" u-originalsrc="images/goldbutton3.gif" u-overlaysrc="images/Index3.htm_txt_goldbutton3_2.gif" startspan --><MAP NAME="FrontPageMap"><AREA SHAPE="RECT" COORDS="0, 0, 144, 22" HREF="News_and_Information.htm" TARGET="_self"></MAP><a href="_vti_bin/shtml.exe/Index3.htm/map"><img ismap  usemap="#FrontPageMap" border="0" height="22" alt="images/goldbutton3.gif (2771 bytes)" src="_derived/Index3.htm_txt_goldbutton3_2.gif" width="144"></a><!--webbot bot="ImageMap" endspan i-checksum="18968" --><!--webbot bot="ImageMap" default="Units_Here_Full_Frames.htm##_self" text="(21,0) (123,22) {Units Here} {Times New Roman} 10 B #c80000 CT 0  Units_Here_Full_Frames.htm##_top" src="images/goldbutton3.gif" alt="images/goldbutton3.gif (2771 bytes)" border="0" u-originalsrc="images/goldbutton3.gif" u-overlaysrc="_overlay/Index3.htm_txt_goldbutton3.gif" startspan --><MAP NAME="FrontPageMap1"><AREA SHAPE="RECT" COORDS="21, 0, 123, 22" HREF="Units_Here_Full_Frames.htm" TARGET="_top"><AREA COORDS="0,0,10000,10000" HREF="Units_Here_Full_Frames.htm" TARGET="_self"></MAP><a href="_vti_bin/shtml.exe/Index3.htm/map1"><img ismap  usemap="#FrontPageMap1" border="0" height="22" alt="images/goldbutton3.gif (2771 bytes)" src="_derived/Index3.htm_txt_goldbutton3.gif" width="144"></a><!--webbot bot="ImageMap" endspan i-checksum="44094" --><!--webbot bot="ImageMap" text="(21,0) (123,22) {Moving Here?} {Times New Roman} 10 B #c80000 CT 0  MovingHere.htm##_self" src="images/goldbutton3.gif" alt="images/goldbutton3.gif (2771 bytes)" border="0" u-originalsrc="images/goldbutton3.gif" u-overlaysrc="images/Index3.htm_txt_goldbutton3_3.gif" startspan --><MAP NAME="FrontPageMap2"><AREA SHAPE="RECT" COORDS="21, 0, 123, 22" HREF="MovingHere.htm" TARGET="_self"></MAP><a href="_vti_bin/shtml.exe/Index3.htm/map2"><img ismap  usemap="#FrontPageMap2" border="0" height="22" alt="images/goldbutton3.gif (2771 bytes)" src="_derived/Index3.htm_txt_goldbutton3_3.gif" width="144"></a><!--webbot bot="ImageMap" endspan i-checksum="21658" --><!--webbot bot="ImageMap" text="(0,0) (144,22) {For Marines and Families} {Times New Roman} 8 B #c80000 CT 0  MarinesFamilies_Full_Frames.htm##_top" src="images/goldbutton3.gif" alt="images/goldbutton3.gif (2771 bytes)" border="0" u-originalsrc="images/goldbutton3.gif" u-overlaysrc="images/Index3.htm_txt_goldbutton3_4.gif" startspan --><MAP NAME="FrontPageMap3"><AREA SHAPE="RECT" COORDS="0, 0, 144, 22" HREF="MarinesFamilies_Full_Frames.htm" TARGET="_top"></MAP><a href="_vti_bin/shtml.exe/Index3.htm/map3"><img ismap  usemap="#FrontPageMap3" border="0" height="22" alt="images/goldbutton3.gif (2771 bytes)" src="_derived/Index3.htm_txt_goldbutton3_4.gif" width="144"></a><!--webbot bot="ImageMap" endspan i-checksum="2328" --><!--webbot bot="ImageMap" text="(21,0) (123, 22) {Employment} {Times New Roman} 10 B #c80000 CT 0  Employment_Full_Frames.htm##_self" src="images/goldbutton3.gif" alt="images/goldbutton3.gif (2771 bytes)" border="0" u-originalsrc="images/goldbutton3.gif" u-overlaysrc="images/Index3.htm_txt_goldbutton3_5.gif" startspan --><MAP NAME="FrontPageMap4"><AREA SHAPE="RECT" COORDS="21, 0, 123, 22" HREF="Employment_Full_Frames.htm" TARGET="_self"></MAP><a href="_vti_bin/shtml.exe/Index3.htm/map4"><img ismap  usemap="#FrontPageMap4" border="0" height="22" alt="images/goldbutton3.gif (2771 bytes)" src="_derived/Index3.htm_txt_goldbutton3_5.gif" width="144"></a><!--webbot bot="ImageMap" endspan i-checksum="17137" --><!--webbot bot="ImageMap" text="(21,0) (123,22) {Off Duty} {Times New Roman} 10 B #c80000 CT 0  OffDuty.htm##_self" src="images/goldbutton3.gif" alt="images/goldbutton3.gif (2771 bytes)" border="0" u-originalsrc="images/goldbutton3.gif" u-overlaysrc="images/Index3.htm_txt_goldbutton3_6.gif" startspan --><MAP NAME="FrontPageMap5"><AREA SHAPE="RECT" COORDS="21, 0, 123, 22" HREF="OffDuty.htm" TARGET="_self"></MAP><a href="_vti_bin/shtml.exe/Index3.htm/map5"><img ismap  usemap="#FrontPageMap5" border="0" height="22" alt="images/goldbutton3.gif (2771 bytes)" src="_derived/Index3.htm_txt_goldbutton3_6.gif" width="144"></a><!--webbot bot="ImageMap" endspan i-checksum="5618" --><!--webbot bot="ImageMap" text="(21,0) (123,22) {Related Sites} {Times New Roman} 10 B #c80000 CT 0  OtherMCSites.htm##_self" src="images/goldbutton3.gif" alt="images/goldbutton3.gif (2771 bytes)" border="0" u-originalsrc="images/goldbutton3.gif" u-overlaysrc="images/Index3.htm_txt_goldbutton3_7.gif" startspan --><MAP NAME="FrontPageMap6"><AREA SHAPE="RECT" COORDS="21, 0, 123, 22" HREF="OtherMCSites.htm" TARGET="_self"></MAP><a href="_vti_bin/shtml.exe/Index3.htm/map6"><img ismap  usemap="#FrontPageMap6" border="0" height="22" alt="images/goldbutton3.gif (2771 bytes)" src="_derived/Index3.htm_txt_goldbutton3_7.gif" width="144"></a><!--webbot bot="ImageMap" endspan i-checksum="9647" --></p>
+    <p align="center" dynamicanimation="flyTopRight" style="position: relative !important; left: 10000 !important"><!--webbot bot="ImageMap" circle="(57,56) 56" src="images/f18roll.gif" width="116" height="116" alt="images/f18roll.gif (91404 bytes)" border="0" startspan --><img border="0" height="116" alt="images/f18roll.gif (91404 bytes)" src="images/f18roll.gif" width="116"><!--webbot bot="ImageMap" endspan i-checksum="4781" --></p>
+    <p align="center"><a href="F18Facts.htm" style="color: rgb(255,255,255)" target="_self"><font face="Garamond" color="#FF0000"><strong><big>C</big>lick here for facts on the F/A-18
+    aircraft.</strong></font></a></p>
+    <p align="center" dynamicanimation="flyTopRight" style="position: relative !important; left: 10000 !important">&nbsp;</p>
+    <p align="center"><em><font color="#C0C0C0"><small><small><small>Official United States
+    Marine Corps Air StationWebsite&nbsp; </small></small></small></font></em></p>
+    <p align="center"><a href="Privacy_Act.htm" style="color: rgb(192,192,192)" target="_self"><em><font color="#C0C0C0"><small><small><small>Please Read this Privacy and Security Notice</small></small></small></font></em></a></td>
+    <td width="14" height="577">&nbsp;&nbsp;&nbsp;</td>
+    <th valign="top" width="540" height="518"><img src="images/iwakunitext3.gif" width="514" height="75" alt="iwakunitext3.jpg (20313 bytes)" align="top"><p><img src="images/Copy%20of%20homepagetext.gif" width="337" height="59" alt="Copy of homepagetext.gif (1977 bytes)" align="right"></p>
+    <p align="center">&nbsp;</p>
+    <p align="center">&nbsp;</p>
+    <p align="center"><font size="3"><marquee style="background-image: url('jet6.gif'); font-weight: bold; text-align: center; vertical-align: text-bottom; color: rgb(0,0,128); font-size: 18pt; margin-top: 3px; padding-top: 2px" border="0" width="522" height="29" align="bottom">Welcome to Marine Corps Air Station Iwakuni, Japan.</marquee></font><!--webbot bot="ImageMap" rectangle="(95,92) (153,112) Japan_Map.htm##_self" src="images/japankorea3.gif" alt="images/japankorea3.gif (11874 bytes)" width="524" height="285" border="0" startspan --><MAP NAME="FrontPageMap8"><AREA SHAPE="RECT" COORDS="95, 92, 153, 112" HREF="Japan_Map.htm" TARGET="_self"></MAP><a href="_vti_bin/shtml.exe/Index3.htm/map8"><img ismap  usemap="#FrontPageMap8" border="0" height="285" alt="images/japankorea3.gif (11874 bytes)" src="images/japankorea3.gif" width="524"></a><!--webbot bot="ImageMap" endspan i-checksum="59840" --></th>
+  </tr>
+  <tr>
+    <td width="14" height="194"></td>
+  </tr>
+</table>
+</left>
+</div>
+
+<p>&nbsp; 
+<!--msnavigation--></td></tr><!--msnavigation--></table></body>
+</html>

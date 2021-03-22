@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+	<TITLE>Golem Designs - Open Auction</TITLE>
+</HEAD>
+<BODY TEXT=#000000 BGCOLOR=#FFFFFF LINK=#000088 VLINK=#000088 ALINK=#000088>
+	<TABLE WIDTH=100% BORDER=0><TR><TD VALIGN=TOP WIDTH=100%>
+		<FONT SIZE=+2>Golem Designs</FONT>
+		<BR>
+		<FONT SIZE=+1>Online Auction</FONT>
+	</TD><TD VALIGN=TOP ALIGN=LEFT>
+		<FORM ACTION=/cgi-bin/auction.pl METHOD=POST>
+		<INPUT TYPE=TEXT NAME=searchstring>
+		<INPUT TYPE=SUBMIT VALUE="Search">
+		<INPUT TYPE=HIDDEN NAME=action VALUE="search">
+		<FONT SIZE=-2><INPUT TYPE=RADIO NAME=searchtype VALUE="keyword" CHECKED>keyword <INPUT TYPE=RADIO NAME=searchtype VALUE="username">username </FONT>
+		</FORM>
+	</TD></TR></TABLE>
+	<P>
+<H2>Ron Levy's Wild Kingdom </H2><HR><FONT SIZE=+1><B>Information</B></FONT><HR>
+<TABLE WIDTH=100%><TR><TD><TABLE BORDER=1><TR><TD BGCOLOR=#BBBBBB><B>Ron Levy's Wild Kingdom </B></TD></TR><TR><TD BGCOLOR=#EEEEEE><B>Category:</B> <A HREF=auction.pl?category=music>Music CDs and Tapes</A></TD></TR><TR><TD BGCOLOR=#EEEEEE><B>Offered By:</B> <A HREF=mailto:webmaster@pnews.org>Thegolem</A></TR></TD><TR><TD BGCOLOR=#EEEEEE><B>Current Time:</B> Tue Aug  1 14:32:55 2000</TD></TR><TR><TD BGCOLOR=#EEEEEE><B>Closes:</B> Thu Aug  3 04:33:24 2000<BR><FONT SIZE=-2>Or 5 minutes after last bid...</FONT></TD></TR><TR><TD BGCOLOR=#EEEEEE><B>Number of Bids:</B> 0</TD></TR><TR><TD BGCOLOR=#EEEEEE><B>Last Bid:</B> $1.00 <FONT SIZE=-1>(reserve price met)</FONT></TD></TR></TABLE></TD></TR></TABLE>
+<HR><FONT SIZE=+1><B>Description</B></FONT><HR>This is a collectible from Rounder Records.   It is a new (shrunk wrapped) tape dated 1986  and contains: [1] I KNOW YOU KNOW I KNOW [2] CHICKEN-FRIED SNAKE [3] SO MANY ROADS [4] WHY YOU STAYING OUT SO LATE? [5] PARTY IN NOGALES [6] BIG TOWN PLAYBOY [7] IT'S HOT IN HERE [8] MY HEART'S IN TROUBLE [9] KNEE SQUEEZE [10] MUST HAVE MISSED A TURN SOMEWHERE ..  Originally this sold for $9.99.. Bid to Buy this collectible Rounder Records tape. (add $2.00 to defray cost of shipping and packing)</FONT></FONT></B></I></U></H1></H2></H3></H4></H5><HR><FONT SIZE=+1><B>Bid History</B></FONT><HR>
+<FONT SIZE=-1>No bids yet...</FONT><BR><FORM ACTION=/cgi-bin/auction.pl METHOD=POST>
+<HR><FONT SIZE=+1><B>Place A Bid</B></FONT><HR>
+<INPUT TYPE=HIDDEN NAME=action VALUE=procbid>
+<INPUT TYPE=HIDDEN NAME=ITEM VALUE="965295204">
+<INPUT TYPE=HIDDEN NAME=CATEGORY VALUE="music">
+<B>The High Bid Is:</B> $1.00<BR>
+<B>The Lowest You May Bid Is:</B> $1.00
+<P>Please note that by placing a bid you are making a contract between you and the seller.
+Once you place a bid, you may not retract it.  In some states, it is illegal to win
+an auction and not purchase the item.  In other words, if you don't want to pay for it,
+don't bid!
+<P><B><A HREF=auction.pl?action=reg>Registration</A> is required to post or bid!</B>
+<P><B>Your Handle/Alias:</B> <INPUT NAME=ALIAS TYPE=TEXT SIZE=30 MAXLENGTH=30> (used to track your bid)
+<BR><B>Your Password:</B> <INPUT NAME=PASSWORD TYPE=PASSWORD SIZE=30> (must be valid)
+<BR><B>Your Bid:</B> $<INPUT NAME=BID TYPE=TEXT SIZE=7 VALUE="1.00"><P>
+<INPUT TYPE=SUBMIT VALUE="Place Bid">
+<P><P ALIGN=CENTER><FONT SIZE=-1><A HREF=auction.pl>[Category List]</A> <A HREF=auction.pl?action=new>[Post New Item]</A> <A HREF=auction.pl?action=reg>[New Registration]</A> <A HREF=auction.pl?action=creg>[Change Registration]</A> <A HREF=auction.pl?action=closed>[Closed Auctions]</A> </FONT></P>
+<P>
+<CENTER><FONT SIZE=-1><A HREF="../index.html">TheGolemsPlace</A></FONT></CENTER>
+</BODY>
+</HTML>

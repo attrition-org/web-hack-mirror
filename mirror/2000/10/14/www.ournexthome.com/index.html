@@ -1,0 +1,166 @@
+<html>
+<head><style>
+a{text-decoration:none}
+A:hover {text-decoration: underline;}
+</style>
+<title>Rooted by Scurvy of RootShellHackers</title>
+<style>
+.spanstyle {
+	position:absolute;
+	visibility:visible;
+	top:-50px;
+	font-size:8pt;
+	font-family:Verdana;
+      font-weight:bold;
+	color:#00FF00;
+}
+</style>
+<script>
+
+var x,y
+var step=20
+var flag=0
+
+var message=">--{R.S.H}--< "
+message=message.split("")
+
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	xpos[i]=-50
+}
+
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	ypos[i]=-50
+}
+
+function handlerMM(e){
+	x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+	y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+	flag=1
+}
+
+function makesnake() {
+	if (flag==1 && document.all) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("span"+(i)+".style")
+    		thisspan.posLeft=xpos[i]
+			thisspan.posTop=ypos[i]
+    	}
+	}
+	
+	else if (flag==1 && document.layers) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("document.span"+i)
+    		thisspan.left=xpos[i]
+			thisspan.top=ypos[i]
+    	}
+	}
+		var timer=setTimeout("makesnake()",30)
+}
+
+</script>
+
+</head>
+<BODY onLoad="makesnake()" style="width:100%;overflow-x:hidden;overflow-y:scroll" bgcolor="#000000" bgproperties="fixed" text="#FFFFFF" link="#00FF00" alink="#ff0000" vlink="#B00000#BB0000">
+<basefont size="3"><script>
+<!-- Beginning of JavaScript -
+
+for (i=0;i<=message.length-1;i++) {
+    document.write("<span id='span"+i+"' class='spanstyle'>")
+	document.write(message[i])
+    document.write("</span>")
+}
+
+if (document.layers){
+	document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+
+// - End of JavaScript - -->
+</script>
+<div align="center">&nbsp;
+<a href="http://rsh.defacements.com"><img
+src="http://www.stas.net/6/retard/rshgood.jpg" alt="RootShellHackers!" border="0"></a>
+</div><br><br>
+<center><b><strong>This site was owned by <big><a href="mailto:scurvy@hushmail.com">Scurvy</a></big> of RootShellHackers.<br><br></b></strong></center>
+<b>The reason behind this defacement is because I wanted to let everyone
+know about the killings that have been going on. This shit is stupid. Why
+would anyone kill another person? People die of natural causes, desease,
+and other illnesses everyday, there is no need to kill people. Killing
+shows such inferiority. It's like a country kills other people in other
+countries to show that they have what it takes to kill. When really, the
+country doing the killing is just scared that the other country does not
+ph34r them. That's just stupid. I got up this morning and read the
+newspaper, headlining news around my area is 'Palestinians reluctant to
+attend summit' I'll just type out the whole article, word for word.<br>
+"Jerusalem - Despite international pressure, Yasser Arafat on Friday
+refused to attend a mideast summit until Israel agrees to stop firing at
+Palestinian demonstrators at flashpoints in the West Bank and Gaza.
+In the West Bank, violence persisted with two Palestinians killed by
+Israel gunfire. In Jerusalem, Israeli police masquerading as Palestinians
+seized two Arab teen-agers throwing stones at the U.S. Consulate and beat
+them while holding them in a chokehold.<br>
+U.N. Secretary-General Kofi Annan led diplomatic efforts to bring together
+Mr. Arafat and Israeli Prime Minister Ehud Barak at a U.S.-led summit at
+Egypt's Sinai resort of Sharm el-Sheik. After meeting Mr. Arafat,
+Mr. Annan said he was optimistic a summit could be held in Egypt within
+two days.<br>
+President Clinton called Egyptian President Hosni Mubarak and other Arab
+leaders to win their backing for a summit. Mr. Mubarak spoke with
+Mr. Arafat six times over the past 24 hours to try to persuade him to
+attend, Israel TV's Channel Two said. Mr. Annan was headed for Egypt
+today.<br>
+Palestinian officials were skeptical, though they said mediation efforts
+would continue.<br>
+'Israel must stop its attacks, and if Barak does not agree to the
+Palestinian conditions, there will not be a summit,' Palestinian
+negotiator Nabil Shaath said.<br>
+Mr. Afrat wants Israel to withdraw troops from the entrances of
+Palestinian cities, lift a siege of West Bank towns and agree to the
+establishment of an international commission of inquiry into the
+violence.<br>
+Mr. Barak also appeared reluctant. 'We have no problem with attending a
+summit that will stop the violence,' Mr. Barak told Israel TV's Channel
+One. 'We are not willing to get there by rewarding violence.'<br>
+Across the West Bank, Palestinians marched to protest Israel's rocket
+attacks Thursday against Palestinian government buildings, including
+police stations and broadcast centers.<br>
+Israel fired the missles in retribution for the brutal killing of two
+Israeli reserve soldiers by a Palestinian mob in a police station in the
+West Bank town of Ramallah.<br>
+Standing on the ruins of the police station hit by Israeli rockets, Marwan
+Barghouti, the West Bank leader of Mr. Arafat's Fatah movement, exhorted a
+cheering crowd to stand tough. 'This is our fight and we defy Barak and
+his tnaks and planes,' said Mr. Barghouti, who has been singled out by
+Mr. Barak as the mastermind of shooting attacks on Israelis.<br>
+Ninety-six people, most Palestinians, have been killed in 16 days of
+clashes triggered by the visit of Israel's hardline opposition leader,
+Ariel Sharon, to a Jerusalem shrine holy to Jews and Muslims.
+</b><br><br>
+Greets: <strong><b>Datagram</strong>, <strong>pimpshiz</strong>,
+<strong>doom</strong>, rootproc, nemesystm, wicked, lokal, Kreator,
+sinfony, Akurei, Starman_Jones, all of RSH, Apoc, puck, piffy,
+GForce, modify, bi0cide, gat0r, z, biosdisk, rootx11, nutsax, dobe, matic,
+hooyah, NetRebel, psaux, Traze, and whoever else I forgot.</b>
+<div align="center"><br><img
+src="http://www.stas.net/6/retard/gscurvy2.jpg" alt="Scurvy rooted your ass"><br><br>
+<b><big><a href="mailto:scurvy@hushmail.com">E-mail</a> me if you want. <a href="mailto:scurvy@hushmail.com">Scurvy@hushmail.com</a></big></b><br><br><font size="0"><b><tt>I'm finally defacing for Root Shell Hackers.</tt></font></b>
+</BODY>
+<!---This is for you bi0, I thought you might like it. ---!>
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

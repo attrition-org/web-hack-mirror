@@ -1,0 +1,81 @@
+<html>
+<!-- This scrolls ' Your Message Here ' in the status bar -->
+<script LANGUAGE="JavaScript">
+//Modified by Coffeecup.com
+function infoscroll(seed,looped)
+{
+        var text1  = " Welcome to INET NETWORK CONSULTANTS!           No matter what your INTERNET needs.  Web Design, Web Hosting, Network Consulting, or Other Internet Services ";
+        var text2  = "                   INET NETWORK CONSULTANTS can meet your needs!              Please find the section that best suits your needs!";        
+        var msg=text1+text2;
+        var putout = " ";
+        var c   = 1;
+        if (looped > 10) {
+                window.status="<Thanks !>";
+        }
+        else if (seed > 100) {
+                seed--;
+                var cmd="infoscroll(" + seed + "," + looped + ")";
+                timerTwo=window.setTimeout(cmd,100);
+        }
+        else if (seed <= 100 && seed > 0) {
+                for (c=0 ; c < seed ; c++) {
+                        putout+=" ";
+                }
+                putout+=msg.substring(0,100-seed);      
+                seed--;
+                var cmd="infoscroll(" + seed + "," + looped + ")";
+                    window.status=putout;
+                timerTwo=window.setTimeout(cmd,100);
+        }
+        else if (seed <= 0) {
+                if (-seed < msg.length) {
+                        putout+=msg.substring(-seed,msg.length);
+                        seed--;
+                        var cmd="infoscroll(" + seed + "," + looped + ")";
+                        window.status=putout;
+                        timerTwo=window.setTimeout(cmd,100); // 100
+                }
+                else {
+                        window.status=" ";
+                        looped += 1;
+                        var cmd = "infoscroll(100," + looped + ")";
+                        timerTwo=window.setTimeout(cmd,75); // 75
+                }
+        }
+}
+// -->
+<!--
+infoscroll(100,1)
+// -->
+</script>
+
+
+<head>
+<title>INET Network Consultants, San Angelo Texas</title>
+<meta NAME="GENERATOR" CONTENT="Microsoft FrontPage 3.0">
+</head>
+
+<frameset FRAMESPACING="0" BORDER="0" FRAMEBORDER="0" cols="25%,75%">
+  <frame SCROLLING="auto" SRC="side.html">
+  <frame SCROLLING="auto" NAME="main" SRC="main.html">
+  <noframes>
+  <body BACKGROUND TEXT="#000000" LINK="#0000FF" VLINK="#551A8B" ALINK="#FF0000"
+  BGCOLOR="#FFFFFF">
+  <p align="center">NOTE: This is a frame enhanced page. Best viewed in a web browser that
+  supports frames (e.g. Netscape). </p>
+  <hr>
+  <p align="center">If you can read this, your browser does not support frames<br>
+  Click here to get Netscape<br>
+  <br>
+  <a HREF="http://home.netscape.com/comprod/mirror/index.html"><img SRC="netscape30_now.gif"
+  WIDTH="88" HEIGHT="31"></a> </p>
+  </body>
+  </noframes>
+</frameset>
+
+<frameset>
+  <noframes>
+  </noframes>
+</frameset>
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

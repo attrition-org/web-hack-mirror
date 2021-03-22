@@ -1,0 +1,159 @@
+<html>
+	<%@language=vbscript%>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive 4">
+		<title>Home BIF (asp)</title>
+	</head>
+
+	<%
+	sub getFile(fname)
+		Dim fso, MyFile
+		Set fso = CreateObject("Scripting.FileSystemObject")
+		apath=server.MapPath(Request.ServerVariables("PATH_INFO"))
+		apath=fso.GetParentFolderName(apath)
+		if (fso.FileExists (apath & fname)) then
+			Set MyFile = fso.OpenTextFile(apath & fname,1)
+			Do While myfile.AtEndOfStream<>True
+				Response.Write myfile.readline
+			Loop
+			myfile.close
+		end if
+		set fso=nothing
+	end sub
+	%>
+
+	<body  bgcolor=lemonchiffon>
+		<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="lemonchiffon" id=LOGO>
+			<tr height=50>
+				<td align="middle" valign="center" width="80"><IMG height=40 src="images/Batara2.gif" width=40></td>
+				<td align="left"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="6" color="#527b00">Batara Internasional Finansindo</font></td>
+			</tr>
+		</table>
+		<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#00bfff" id=Menu>
+			<tr>
+				<td width="33%"><A href="default.asp"><font face="Arial" size="2">Home</font></A></td>
+				<td width="33%"><A href="NewMitra.htm"><font face="Arial" size="2">New Mitra</font></A></td>
+				<td width="34%"><A href="MitraLogin.htm"><font face="Arial" size="2">Mitra Login</font></A></td>
+			</tr>
+		</table>
+		
+		<table border=0	 cellpadding=0 cellspacing=0 id=Body>
+		<tr><!--1st column -->
+		<td width=150 valign=top id=Col#1>
+			<table border="0" width="150" bgcolor="#87ceeb"  id=SideMenu>
+				<tr><td><font face="Arial" size="2">Who we are...</font></td>
+				</tr>
+				<tr>
+					<td><font face="Arial" size="2">Best products</font></td>
+				</tr>
+				<tr>
+					<td><font face="Arial" size="2">FAQ</font></td>
+				</tr>
+				<tr>
+					<td><font face="Arial" size="2">Jobs</font></td>
+				</tr>
+				<tr>
+					<td><font face="Arial" size="2">Contact</font></td>
+				</tr>
+				<tr>
+					<td><font face="Arial" size="2"><A href="aboutus.htm">About us</A> </font></td>
+				</tr>
+				<tr>
+					<td><font face="Arial" size="2">Marketing:<br>
+						</font></td>
+				</tr>
+				<tr>
+					<td><A href="mailto:E-mail:%20mkt@bif.co.id"><font face="Arial" size="2">E-mail: mkt@bif.co.id</font></A></td>
+				</tr>
+				<tr>
+					<td>
+						<font face=arial size=1>this is a test run</font>
+					</td>
+				</tr>
+			</table>
+			</td><!--2nd column -->
+			<td width=300 valign=top id=Col#2>
+				<table border=0 cellpadding=0 cellspacing=0 id=Col#2>
+				<tr height=248 width="300">
+				<td>
+					<IMG height=248 src="images/Mitra002.gif" width=300>
+				</td>
+				<tr>
+				<td>
+					<%getfile "\ProdUnggul2.htm"%>
+				</td></tr>
+				</table>
+			</td><!--3rd column -->
+			<td valign=top>
+				<table border=0 width="100%" cellpadding=5 cellspacing=5 id=Col#3>
+				<tr height=100 valign=top id=Prod>
+					<td>
+					<table border=0 width="100%" cellpadding=0 cellspacing=0>
+					<tr bgcolor=DeepSkyBlue><td>
+						<FONT color=mediumpurple size=4>
+						Product Unggulan
+						</FONT>
+					</td></tr>
+					<tr><td>
+					<%getfile "\ProdUnggul.htm"%>
+					</td></tr>
+					</table>
+					</td>
+				</tr>
+				<tr height=100 valign=top id=Tips>
+					<td><%getFile "\Tips.htm"%></td>
+				</tr>
+				<tr height=100 valign=top id=Column>
+					<td><%getFile "\Columns.htm"%></td>
+				</tr>
+				<tr height=100 valign=top id=Banner>
+					<td><%getFile "\banner.htm"%></td>
+				</tr>
+				</table>
+			</td></tr>
+			<tr id=BottomMenu>
+				<td colspan=3>
+				<table border=0 cellpadding=0 cellspacing=0 width="100%">
+				<tr>
+					<td width=100><A href="default.asp">
+						<FONT face=Arial size=2>
+						Home
+						</FONT></A>
+					</td>
+					<td width=100><A href="NewMitra.htm">
+						<FONT face=Arial size=2>
+						New Mitra
+						</FONT></A>
+					</td>
+					<td width=100><A href="MitraLogin.htm">
+						<FONT face=Arial size=2>
+						Mitra Login
+						</FONT></A>
+					</td>
+					<td width=100>
+						<FONT face=Arial size=2>
+						FAQ
+						</FONT>
+					</td>
+					<td width=100><A href="aboutus.htm">
+						<FONT face=Arial size=2>
+						About Us
+						</FONT></A>
+					</td>
+					<td width=100>
+						<FONT face=Arial size=2>
+						Contact Us
+						</FONT>
+					</td>
+				</tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+		<br><font face=arial size=1>this is a test run.</font>
+		<br><center><font face=arial size=1>For more information about this website contact WebMaster@bif.co.id</font>
+		<br><font face=arial size=1>copyright Nandinusa Information System 2001</font></center>
+	</body>
+</html>

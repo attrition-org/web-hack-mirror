@@ -1,0 +1,188 @@
+
+<html>
+<head>
+<title>i lub choco-l@te! dont jo0!</title>
+<script language="JavaScript">
+
+<!--
+
+ns4 = (document.layers) ? true : false;
+ie4 = (document.all) ? true : false;
+var r = false;
+var bts = 255;
+blks = new Array(3);
+bgimg = new Image();
+bgimg.src = "f1a.gif"
+
+function init()
+{
+        initblk(0, 0, 25, 30, 5, "f1b.gif");
+        initblk(1, 0, 40, 70, 7, "f1c.gif");
+        initblk(2, 30, 20, 7, 7, "f1d.gif");
+        start();
+}
+
+function initblk(n, ty, cyc, fxa, fxb, im)
+{
+        if(ns4) blks[n] = eval('document.div' + n);
+        else if(ie4) blks[n] = eval('div' + n +'.style');
+        else document.location="/a.html";
+	
+        blks[n].xpos = parseInt(blks[n].left);
+        blks[n].ypos = parseInt(blks[n].top);
+        if( ty == 0 )
+        {
+                blks[n].xinc = fxb*Math.cos(fxa*Math.PI/180);
+                blks[n].yinc = fxb*Math.sin(fxa*Math.PI/180);
+        }
+        else
+        {
+                blks[n].xinc = fxa;
+                blks[n].yinc = fxb;
+        }
+        blks[n].count = 0;
+        blks[n].cyc = cyc;
+        blks[n].ty = ty;
+        blks[n].img = new Image();
+        blks[n].img.src = im;
+}
+
+function slide(i) { if( !(bts & (1 << i)) ) { slideblk(blks[i]); setTimeout("slide("+i+")", 30); } }
+
+
+function slideblk(block)
+{
+        if( !r )
+                return;
+        if( block.ty == 0 )
+        {
+                if( block.count < block.cyc*2 )
+                        block.xpos += block.xinc;
+                else
+                        block.xpos -= block.xinc;
+                if( block.count < block.cyc || block.count > block.cyc*3 )
+                        block.ypos -= block.yinc;
+                else
+                        block.ypos += block.yinc;
+                block.count++;
+                if( block.count > block.cyc*4 )
+                        block.count = 0;
+        }
+        else
+        {
+                if( block.count < block.ty )
+                        block.xpos += block.xinc;
+                else if( block.count < (block.ty + block.cyc) )
+                        block.ypos += block.yinc;
+                else if( block.count < (block.ty*2+block.cyc) )
+                        block.xpos -= block.xinc;
+                else
+                        block.ypos -= block.yinc;
+                block.count++;
+                if( block.count > (block.cyc*2+block.ty*2) )
+                        block.count = 0; 
+        }
+        block.left = block.xpos;
+        block.top = block.ypos;
+}
+
+function start()
+{
+        r = true;
+        var obts = bts;
+        bts = 0;
+        if( (obts & 1) == 1 ) slide(0);
+        if( (obts & 2) == 2 ) slide(1);
+        if( (obts & 4) == 4 ) slide(2);
+}
+
+function stop()
+{
+        if( r ) r = false;
+                
+}
+
+function movr(i)
+{
+        if( ns4 ) blks[i].document.images[0].src = blks[i].img.src;
+        if( ie4 ) document.images[i].src = blks[i].img.src;
+        status="[clck those buggas]";
+}
+
+function mout(i)
+{
+        if( ns4 ) blks[i].document.images[0].src = bgimg.src;
+        if( ie4 ) document.images[i].src = bgimg.src;
+        status="";
+}
+
+function foo(i)
+{
+        bts |= (1 << i);
+        if( bts == 7 )
+        {
+                stop();
+                document.location="f2.html";
+        }
+}
+
+function bar() { start(); }
+
+//-->
+</script>
+</head>
+
+<body bgcolor="#000000" onLoad="init()" text="#FFFFFF">
+<!--a href="javascript:start()">start</a> -- 
+<a href="javascript:stop()">stop</a--> 
+<div id="divT" style="position:absolute; left:50; top:50; width:800"> 
+  <p><font size=7><tt> aight all you peeps saw me and</tt></font></p>
+  <p><tt><font size="7">felchs recent hack where</font></tt></p>
+  <p><tt><font size="7">we jokingly called a bomb</font></tt></p>
+  <p><tt><font size="7">threat at felchs scoo.</font></tt></p>
+  <p><tt><font size="7">dont go crying to your </font></tt></p>
+  <p><tt><font size="7">mommys or your media whore</font></tt></p>
+  <p><tt><font size="7">freinds, it was a joke</font></tt></p>
+  <p><tt><font size="7">a bad joke tho. we try to</font></tt></p>
+  <p><tt><font size="7">bring entertaing html's</font></tt></p>
+  <p><tt><font size="7">for all our fans, but after</font></tt></p>
+  <p><tt><font size="7">a chat with a very ethical</font></tt></p>
+  <p><tt><font size="7">respected person, and hard</font></tt></p>
+  <p><tt><font size="7">thinking, what we did was</font></tt></p>
+  <p><tt><font size="7">not right, so if we here</font></tt></p>
+  <p><tt><font size="7">you cal us terrorists, ima</font></tt></p>
+  <p><tt><font size="7">going to own everything you</font></tt></p>
+  <p><tt><font size="7">have, YES that means the</font></tt></p>
+  <p><tt><font size="7">idiot JP from antionline</font></tt></p>
+  <p><tt><font size="7">and that crack whore from</font></tt></p>
+  <p><tt><font size="7">happy hacker. dont piss me</font></tt></p>
+  <p><tt><font size="7">off! apologies to felchs </font></tt></p>
+  <p><tt><font size="7">scoo, ( 420 bombs lol, sorry</font></tt></p>
+  <p><tt><font size="7">smoked weed today )</font></tt></p>
+  <p>&nbsp;</p>
+  <p><tt><font size="7">keep it real:</font></tt></p>
+  <p><tt><font size="4">fut0n,b33r,sj,bighawk,idi0,johnA,pimpshiz</font></tt></p>
+  <p><tt><font size="7"><b>gfo</b></font><font size="4">rce,phr4x(sorry),steele,seksi,doodoo</font></tt></p>
+  <p><tt><font size="4">rsh,karney,data,t4ct,dm3, and whoever i forgot.</font></tt></p>
+  <p>&nbsp;</p>
+  <p align="center"><font size=7><tt><img src="phel0n_.jpg" width="365" height="77"><br>
+    <br>
+    i did.</tt></font></p>
+  <p align="center"><tt><font size="7">im out peace</font></tt> </p>
+</div>
+
+
+<div id="div0" style="position:absolute; left:150; top:150; width:90"> <a href="javascript:foo(0);" onMouseOver="movr(0);" onMouseOut="mout(0);"> 
+  <img src="cracker.gif" width=54 height=46 border=0></a> </div>
+
+<div id="div1" style="position:absolute; left:50; top:250; width:90"> <a href="javascript:foo(1);" onMouseOver="movr(1);" onMouseOut="mout(1);"> 
+  <img src="cracker.gif" width=54 height=46 border=0></a> </div>
+
+<div id="div2" style="position:absolute; left:200; top:200; width:90"> <a href="javascript:foo(2);" onMouseOver="movr(2);" onMouseOut="mout(2);"> 
+  <img src="cracker.gif" width=54 height=46 border=0></a> </div>
+
+<div align="center"><font size="+2" color="#FFFFFF" face="Arial, Helvetica, sans-serif">hackweiser 
+  here in the 2k</font></div>
+</body>
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

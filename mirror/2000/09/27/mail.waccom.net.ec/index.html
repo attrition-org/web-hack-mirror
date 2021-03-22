@@ -1,0 +1,117 @@
+<html>
+<head><style>
+a{text-decoration:none}
+A:hover {text-decoration: underline;}
+</style>
+<title>You've Been 0wned By: Scurvy</title>
+<style>
+.spanstyle {
+        position:absolute;
+        visibility:visible;
+        top:-50px;
+        font-size:8pt;
+        font-family:Verdana;
+      font-weight:bold;
+        color:#00FF00;
+}
+</style>
+<script>
+
+var x,y
+var step=20
+var flag=0
+
+var message="Scurvy "
+message=message.split("")
+
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+        xpos[i]=-50
+
+}
+
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+        ypos[i]=-50
+
+}
+
+function handlerMM(e){
+        x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+        y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+        flag=1
+
+}
+
+function makesnake() {
+        if (flag==1 && document.all) {
+        for (i=message.length-1; i>=1; i--) {
+                        xpos[i]=xpos[i-1]+step
+                        ypos[i]=ypos[i-1]
+        }
+                xpos[0]=x+step
+                ypos[0]=y
+        
+                for (i=0; i<message.length-1; i++) {
+                var thisspan = eval("span"+(i)+".style")
+
+                thisspan.posLeft=xpos[i]
+
+                        thisspan.posTop=ypos[i]
+
+        }
+        }
+        
+        else if (flag==1 && document.layers) {
+        for (i=message.length-1; i>=1; i--) {
+                        xpos[i]=xpos[i-1]+step
+                        ypos[i]=ypos[i-1]
+        }
+                xpos[0]=x+step
+                ypos[0]=y
+        
+                for (i=0; i<message.length-1; i++) {
+                var thisspan = eval("document.span"+i)
+
+                thisspan.left=xpos[i]
+
+                        thisspan.top=ypos[i]
+
+        }
+        }
+                var timer=setTimeout("makesnake()",30)
+
+}
+
+</script>
+
+</head>
+<BODY onLoad="makesnake()" style="width:100%;overflow-x:hidden;overflow-y:scroll" bgcolor="#000000" bgproperties="fixed" text="#FFFFFF" link="#00FF00" alink="#ff0000" vlink="#B00000#BB0000">
+<basefont size="3"><script>
+<!-- Beginning of JavaScript -
+
+for (i=0;i<=message.length-1;i++) {
+    document.write("<span id='span"+i+"' class='spanstyle'>")
+        document.write(message[i])
+    document.write("</span>")
+}
+
+if (document.layers){
+        document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+
+// - End of JavaScript - -->
+</script>
+<div align="center">
+<img src="http://www.stas.net/2/rewted/nscurvy.jpg" alt="Scurvy Was Here!">
+</div><br><br>
+<center><b><strong>This site was owned by <big><a href="mailto:scurvy@hushmail.com">Scurvy</a></big>.<br><br></b></strong></center>
+<b>The reason behind this defacement is because I have something to say. I don't like the way Geoffrey Cherrington, a special agent for the Defense Criminal Investigative Service compared Jonathan James' (aka c0mrade) hacking to theft. The direct quote came from the <a href="http://www.herald.com/content/today/news/florida/digdocs/077474.htm">Miami Herald</a>. The direct quote is, "<font color="#FF0000">'Just because a store doesn't have security cameras doesn't mean you can go in and steal something from that store,' Cherrington said.</font>"  Ok. One thing, c0mrade never stole anything. He may have trespassed, and stumbled upon something he wasn't supposed to see, but he didn't take it. The way I read it, he didn't delete or remove anything, so he didn't steal anything. He went into an insecure government computer and had a look around. Big deal. At least he's an American. What if NASA had some secrets they didn't want to get out on that box, and some foreigner got into that insecure box and told his government about it? Then what? We'd be fucked, if it was important. A lesson to NASA's dumbass, fucking secure your boxes, bitches. Another thing about a comment c0mrade made was that you could log into some NASA computers with just a username and no password... now that's slack NASA. You are some lazy bastards that don't know what the fuck you're doing. C0mrade shouldn't be arrested, he should be praised that he found a hole in your gay boxen. NASA, you suck ass. Later.</b><br><br>
+Greets: <strong><b><big>Datagram</big></strong>, <strong><big>pimpshiz</big></strong>, doom,  nemesystm, lokal, Kreator, sinfony, all of RSH, SteeLe, wicked, neme, apoc, piffy, GForce, Starman_Jones, Akurei, bi0cide, gat0r, z, matic, hooyah, and whoever else I forgot.</b>
+<div align="center"><br><a href="http://www.8op.com/rsh/"><img src="http://www.stas.net/2/rewted/nrsh.jpg" alt="RootShellHackers!" border="0"></a><br><br>
+<b><big><a href="mailto:scurvy@hushmail.com">E-mail</a> me if you want. <a href="mailto:scurvy@hushmail.com">Scurvy@hushmail.com</a></big></b><br><br><font size="0"><b><tt>I'm not in RSH, they don't love me or something. But I still love them all.</tt></font></b>
+</BODY>
+<!-- Fucks go to: dumbass Sneed, dumbass 80m (80 morons for those that don't konw), Ti|| deserves a big fuck you! He's posting false claims of things people say. He's trying to act like he's elite or some shit by talking shit about someone else. He's talking shit about pimpshiz, myself and has threightened to talk shit about others, however lame that sounds. He's taking 'documentaion' of what other people and I say, then he puts the senteces on a webpage, scrambled up so no one knows how much of loser he really is, trying to make that person look stupid. Ti|| is in this group called RTFM (Retards That Fuck Monkeys) and he's upset because he can't deface, so he talks shit about other people that can/do deface. 
+And fuck everyone else that deserves a fuck, you dumb fucks. --!>
+</html><!-- www.attrition.org web hack mirror - watermark or something -->

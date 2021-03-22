@@ -1,0 +1,160 @@
+<html>
+
+<head>
+
+<meta http-equiv="Content-Language" content="es-cr">
+<style>
+<!--
+    .parent {font-size: 12pt;
+             font-weight: bold;
+             margin-top: 10;
+             text-indent: -14;
+             margin-left: 14;
+             cursor: hand;}
+    .child  {font-size: 10pt;
+             font-weight: normal;}
+    .image  {}
+-->
+</style>
+<title>666</title>
+</head>
+
+<body link="#FF9933" vlink="#CC6600" background="portada4.jpg" bgproperties="fixed">
+<script LANGUAGE="vbscript">
+<!--
+Option Explicit
+
+Dim oldColor
+Dim intCount
+
+intCount = 0
+
+Function AddParent(strName)
+    Dim strID 
+    Dim strTemp
+
+    strID = "ID" & intCount
+    intCount = intCount + 1
+
+    strTemp = "<DIV ID=""" & strID & """ CLASS=""parent""><IMG CLASS=""image"" SRC=""images/blue.gif"" ALT=""*"" ALIGN=MIDDLE BORDER=0 WIDTH=11 HEIGHT=11>" & strName & "<DIV CLASS=""child"" STYLE=""display:none""></DIV></DIV>"
+
+    outlineDiv.insertAdjacentHTML "BeforeEnd", strTemp
+
+    AddParent = strID
+End Function
+
+Sub DeleteParent(strParentID)
+    Dim objTemp
+
+    Set objTemp = document.all.item(strParentID)
+    objTemp.outerHTML = ""   
+End Sub
+
+Sub AddChild(strParentID, strName, strUrl)
+    Dim strTemp
+    Dim objTemp
+
+    strTemp = "<A HREF=""" & strUrl & """ CLASS=""link"">" & strName & "</A><BR>"
+
+    Set objTemp = document.all.item(strParentID)
+    objTemp.children(1).insertAdjacentHTML "BeforeEnd", strTemp
+End Sub
+
+Sub ExpandCollapse()    
+    Dim objElement
+    Dim objTargetDiv
+    Dim imgIcon
+
+    Set objElement = window.event.srcElement
+
+    ' did the user click the image or the parent name?
+    If objElement.className = "parent" Then
+        Set objTargetDiv = objElement.children(1)
+        Set imgIcon = objElement.children(0)
+    Else
+        Set objTargetDiv = objElement.parentElement.children(1)
+        Set imgIcon = objElement
+    End If
+    
+    ' if the parent has children, expand or collapse them
+    If objTargetDiv.children.length > 0 Then
+        If objTargetDiv.style.display = "none" Then   
+            objTargetDiv.style.display = ""
+            imgIcon.src = "images/red.gif"
+        Else
+            objTargetDiv.style.display = "none"
+            imgIcon.src = "images/blue.gif"
+        End If
+    End If
+End Sub
+
+Sub DoClick()
+    If (window.event.srcElement.className = "parent") Or (window.event.srcElement.className = "image") Then
+        ExpandCollapse
+    End If
+    window.event.cancelBubble = True
+End Sub
+
+Sub DoMouseOver()
+    If window.event.srcElement.tagName = "A" Then
+        oldColor = window.event.srcElement.style.color
+        window.event.srcElement.style.color = "red"
+    End If
+    window.event.cancelBubble = True
+End Sub
+
+Sub DoMouseOut()
+    If window.event.srcElement.tagName = "A" Then
+        window.event.srcElement.style.color = oldColor
+    End If
+    window.event.cancelBubble = True
+End Sub
+
+Sub Public_Put_StyleSheet(strUrl)
+    document.stylesheets(0).addImport(strUrl)
+End Sub
+
+Sub DoLinkEvent()
+    Dim strUrl
+
+    strUrl = window.event.srcElement.href
+    'prevent default action for a link
+    window.event.returnValue = False
+    window.external.raiseEvent "linkClick", strUrl 
+End Sub
+
+Sub window_onload
+    Dim intParentID
+
+    intParentID = AddParent("Información General")
+    Call AddChild(intParentID, "Historia", "historia.htm")
+    Call AddChild(intParentID, "Sala Constitucional", "sala4/index.html")
+    Call AddChild(intParentID, "Programa Corte Bid", "bid/index.htm")
+
+    intParentID = AddParent("Consulta Expedientes")
+    Call AddChild(intParentID, "Sala Constitucional", "consulta-sala4/default.asp")
+
+    intParentID = AddParent("Jurisprudencia")
+    Call AddChild(intParentID, "Jurisprudencia Judicial", "")
+  
+    intParentID = AddParent("Opinión")
+    Call AddChild(intParentID, "Comentarios y Sugerencias", "mailto:webmaster@poder-judicial.go.cr") 
+    
+    intParentID = AddParent("Actividades")
+    Call AddChild(intParentID, "XVII Jornadas Iberoamericanas de Derecho Procesal", "jornadas/pagina principal.htm") 
+End Sub
+
+-->
+</script>
+
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><big>Hacked By McM4nus, </big>fuck you: delegado mauro.</p>
+</body>
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

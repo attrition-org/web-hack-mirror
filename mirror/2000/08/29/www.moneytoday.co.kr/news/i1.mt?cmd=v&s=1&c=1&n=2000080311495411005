@@ -1,0 +1,626 @@
+<html>
+<head>
+<title>종목정보 - Money Today</title>
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=euc-kr">
+<link rel="stylesheet" type="text/css" href="/css/news.css">
+<meta name="discription" content="새 천년, 새 뉴스 머니투데이(moneytoday), 신개념의 경제뉴스비즈니스로 
+모든 금융정보 및 기관- 외국인 투자정보, 증권사 정보 및 동향까지 국내외 모든 금융 및
+경제정보를 리얼타임으로 전해드립니다.">
+<meta name="keywords" content="머니투데이,moneytoday,머니투대이,경제뉴스,제3시장,기업IR,증권,금융,금융상품,투자정보,주식,
+주식시세, 증권뉴스,증시,환율,환율정보,투자,경제뉴스비즈니스,인터넷공모,코스닥,
+KSE,KOSDAQ,KOSDAK,포트폴리오,온라인투자정보,신용평가,기업신용평가,재테크 투자정보,증시일정,투자전략,채권정보,
+특징주,경제신문">
+</head>
+<script language = "javascript">
+function winopen(ul){
+	var new_window; 
+	
+	var client_window_height=screen.height-65;
+	var client_window_width=screen.width-10;
+	var client_window_Features;
+	
+	client_window_Features = "height="+client_window_height+",width="+client_window_width+",top=0,left=0"
+   
+	new_window=window.open(ul,'window', client_window_Features);
+}
+function TotalNews() {
+	winopen("/total_body.htm");
+}
+</script>
+<!--kse, 코스닥 시세보기 시작 //-->
+<script language="JavaScript">
+<!-- 
+function kse() {
+RemindWindow = window.open( "", "mainpage","toolbar=no,width=750,height=450,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes" 
+);
+}
+// -->
+</script>
+<!--kse, 코스닥 시세보기 끝 //-->
+<body leftmargin="3" topmargin="3" marginwidth="0" marginheight="0" bgcolor="white">
+<!--- Top logo //---->
+<table width=774 bgcolor="#ffffff" border="0" cellspacing="0" cellpadding="0">
+   <tr>
+      <!--- logo image //--->
+			<td>
+			<table bgcolor="#19427D" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="25">
+						<a href="../index.html" ><img src="../images/moneylogo.gif" border="0"></a>
+						</td>
+					<tr><td colspan=3 bgcolor="19427D"><img src="../images/clear.gif" width="1" height="2" alt="" border="0"></td></tr>
+					<tr><td colspan=3 bgcolor=ffffff><img src="../images/clear.gif" width="1" height="3" alt="" border="0"></td></tr>
+				</table>
+			</td>
+	<td>
+		<table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+			<td class=menu style="padding-left: 5; padding-right: 5; padding-top: 4; padding-bottom: 3"><img src="../images/firstbestup.gif"></td>
+			</tr>
+			<tr>
+				<td class=menu style="padding-left: 5; padding-right: 5; padding-top: 4; padding-bottom: 3"><font color="#3866a4">&nbsp;&nbsp;&nbsp;<b>투명한 시장 만드는 투자뉴스의 리더</b></font></td>
+			</tr>
+	</table>
+	</td>		
+      <td><img src="../images/clear.gif" width="1" height="4" alt="" border="0"></td>
+      <td align=right>
+      
+		<SCRIPT LANGUAGE="JavaScript">
+			<!--
+			var how_many_ads = 3;
+			var now = new Date()
+			var sec = now.getSeconds()
+			var ad = sec % how_many_ads;
+			ad +=1;
+
+			if (ad==1) {
+				txt="엘지증권";
+				url="http://www.iflg.com";
+				alt="엘지증권";
+				banner="http://www.moneytoday.co.kr/images/lgbanner-b.gif";
+				width="374";
+				height="48";
+			}
+
+			else if (ad==2) {
+				txt="한화증권";
+				url="http://www.koreastock.co.kr";
+				alt="한화증권";
+				banner="http://www.moneytoday.co.kr/images/hanhwa-bb.gif";
+				width="374";
+				height="48";
+			}
+
+			else if (ad==3) {
+				txt="주택은행"; 
+				url="http://www.hcb.co.kr";
+				alt="주택은행";
+				banner="http://www.moneytoday.co.kr/images/jutec-b.gif";
+				width="374";
+				height="48";
+			}
+
+			document.write('<CENTER>');
+			document.write('<A HREF=\"' + url + '\" TARGET=\"blank\">');
+			document.write('<IMG SRC=\"' + banner + '\" WIDTH=')
+			document.write(width + ' HEIGHT=' + height + ' ');
+			document.write('ALT=\"' + alt + '\" BORDER=0><br>');
+			
+			document.write('</CENTER>');
+		
+			// -->
+		</SCRIPT>
+      </td>
+   </tr>
+</table>
+<!--- top main menu table //--->
+<table width=774 border="0" cellspacing="0" cellpadding="0">
+   <tr bgcolor="#3866A4">
+      <td width=130 class=menu style="padding-left: 5; padding-right: 5; padding-top: 4; padding-bottom: 3"> <a href="../member/use.htm"><font color=white>&nbsp;회원가입</font></a><font color=white> | </font><a href="../member/login.htm"><font color=white>로그온</font></a></td>
+      <td width=60 align=center class=menu style="padding-left: 5; padding-right: 5; padding-top: 4; padding-bottom: 3" onmouseover="this.style.background='#88c5eb'" onmouseout="this.style.background='#3866A4'"><a href="home.mt"><span class=menu>홈</span></a></td>
+      <td width=60 align=center class=menu style="padding-left: 5; padding-right: 5; padding-top: 4; padding-bottom: 3" onmouseover="this.style.background='#d1ca8c'" onmouseout="this.style.background='#3866A4'"><a href="news.html"><span class=menu>뉴스</span></a></td>
+   <td width=60 align=center class=menu style="padding-left: 5; padding-right: 5; padding-top: 4; padding-bottom: 3" onmouseover="this.style.background='#a7c5a7'" onmouseout="this.style.background='#3866A4'"><a href="status.html"><span class=menu>시황</span></a></td>
+      <td width=70 align=center class=menu style="padding-left: 5; padding-right: 5; padding-top: 4; padding-bottom: 3" bgcolor="#f7c38b"><a href="infor.html"><span class=menu>종목정보</span></a></td>
+      <td width=65 align=center class=menu style="padding-left: 5; padding-right: 5; padding-top: 4; padding-bottom: 3" onmouseover="this.style.background='#c8c6f1'" onmouseout="this.style.background='#3866A4'"><a href="d1.mt?cmd=l&s=&c=&sf=&sw="><span class=menu>데일리</span></a></td>     
+      <td width=100 align=center class=menu style="padding-left: 5; padding-right: 5; padding-top: 4; padding-bottom: 3" onmouseover="this.style.background='#f2b5b5'" onmouseout="this.style.background='#3866A4'"><a href="venture.html"><span class=menu>ITㆍ벤처</span></a></td>
+      <td width=70 align=center class=menu style="padding-left: 5; padding-right: 5; padding-top: 4; padding-bottom: 3" onmouseover="this.style.background='#97D19A'" onmouseout="this.style.background='#3866A4'"><a href="s1.mt?cmd=l&s=&c=&sf=&sw="><span class=menu>투자전략</span></a></td>      
+      <td width=65 align=center class=menu style="padding-left: 5; padding-right: 5; padding-top: 4; padding-bottom: 3" onmouseover="this.style.background='#98c4d9'" onmouseout="this.style.background='#3866A4'"><a href="b1.mt?cmd=l&s=&c=&sf=&sw="><span class=menu>게시판</span></a></td>
+      <td width=50 align=center><img src="../images/clear.gif" width="54" height="1" alt="" border="0"></td>      
+<!--   <td width=53 class=menu style="padding-left: 5; padding-right: 5; padding-top: 4; padding-bottom: 3" onmouseover="this.style.background='#a7c5a7'" onmouseout="this.style.background='#3866A4'"><nobr>&nbsp;<a href="/news/fund"><span class=menu> &nbsp;펀드 </span></a>&nbsp;</nobr></td> //-->
+   </tr>
+</table>
+
+<table width=774 border='0' cellspacing='0' cellpadding='0' bgcolor='#f7c38b'>
+<tr>
+ <!-- 시세판보기 시작 //-->
+ <td align=left class=list>&nbsp;&nbsp;&nbsp;<a href="../temp/market/market.html" onClick="kse()" target="mainpage"><font color=000000>시세판보기</font></a></td>
+ <!-- 시세판보기 끝 //-->
+ <td width='20' class=list>&nbsp;</td>
+ <td width='360' height='25' bgcolor='#f7c38b' align='LEFT' valign='MIDDLE'>&nbsp;</td>
+ <td width='264' bgcolor='#f7c38b' align='RIGHT' valign='bottom'>
+ <!-- <applet code='stockticker.class' name='sticker' width=240 height=20>
+ <param name=r value='247'>
+ <param name=g value='195'>
+ <param name=b value='139'>
+ </applet> //-->
+ &nbsp;
+ </td>
+</tr>
+</table><!-- Left Menu and Contents --->
+<table border=0 width='774' cellspacing='0' cellpadding='0'>
+	<tr>
+  	<td valign=top>  <!-- Left Menu -->
+<table border=0 width="130" cellspacing="0" cellpadding="0" bgcolor="#f7c38b">
+<!-- 종목코드 //-->
+<tr>
+ <td align=center class=list>
+ <font color=000000>주가조회 | </font><a href='seekall.htm'><font color=000000>종목코드</font></a></td>
+</tr>
+<tr>
+ <td align=center>
+ <form action=/news/codeseek.htm method=get name=se><input maxlength="15" name="codeseek" size="11" style="BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-SIZE: 9pt; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; PADDING-TOP: 1px">
+ <input type="image" src="../images/bu_qsearch_go.gif" align="absmiddle" alt="업체명 및 종목코드를 입력하시고 이 버튼을 눌러주세요." class="but" border="0">
+</tr>       
+ </form>
+<tr>
+ <td><img src="../images/clear.gif" width="1" height="9" alt="" border="0"></td>
+</tr>       
+<!-- 기사검색 //-->
+<tr>
+<td align=left class=list>&nbsp;&nbsp;&nbsp;<a href="http://211.115.202.77"><font color=000000>기사검색</a></td> 
+</tr>
+
+<script language = "javascript">
+function befSubMit(Form)
+{
+ if( Form.qr.value == "") { 
+ alert("검색어를 입력하셔야 합니다.")
+ Form.qr.focus();
+ return false
+ }
+ return true
+}
+</script>        
+      
+
+<tr>
+ <td align=center>
+ <form method='get' action='http://211.115.202.77/search97cgi/s97_cgi' onsubmit='return befSubMit(this)'>
+
+ <input type='hidden' name='action' value='FilterSearch'>
+ <input type='hidden' name='filter' value='makequery.hts'>
+ <input type='hidden' name='resulttemplate' value='presult.hts'>
+ <input type='hidden' name='sortfield' value='vupwdate'>
+ <input type='hidden' name='sortorder' value='desc'>
+ <input type='hidden' name='resultmaxdocs' value='200'>
+ <input type='hidden' name='strquery' value=''>
+ <input type='hidden' name='startyear' value='1991'>
+ <input type='hidden' name='startmonth' value='01'>
+ <input type='hidden' name='startday' value='01'>
+ <input type='hidden' name='endyear' value='2000'>
+ <input type='hidden' name='endmonth' value='12'>
+ <input type='hidden' name='endday' value='31'>
+ <input type='hidden' name='addquery' value=''>	      
+ <input type='hidden' name='lb' value=''>	      
+ <input maxlength="15" name="qr" size="11" style="BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-SIZE: 9pt; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; PADDING-TOP: 1px">
+ <input type="image" src="../images/bu_qsearch_go.gif" align="absmiddle" alt="검색어를 입력하시고 이 버튼을 눌러주세요." class="but" border="0">
+ </td>
+ </form>
+</tr>       
+<!-- 전체기사보기 시작 //--> 
+<tr> 
+ <td><img src="../images/clear.gif" width="1" height="10" alt="" border="0"></td>
+</tr>
+<tr> 
+ <td align=left class=list>&nbsp;&nbsp;&nbsp;<a href="JavaScript:TotalNews();"><img src="../images/totalnews.gif" border="0"></a></td>
+</tr> 
+<!-- 전체기사보기 끝 //--> 
+<tr>
+ <td><img src="../images/clear.gif" width="130" height="19" border="0"></td>
+</tr>
+<tr>
+  <td bgcolor="#f7c38b">
+          <!------  News menu table ------>
+  <table width="130" border="0" cellspacing="3" cellpadding="0" bgcolor="#f7c38b" background="../images/clear.gif">
+<tr>
+        	<td colsapn=2 class="ntext" valign=top><img src="../images/clear.gif" width="1" height="4" alt="" border="0"></td>
+            </tr>
+         <tr>
+              <td valign=top width="8"><img src="../images/informinibox.gif" width="11" height="11" alt="" border="0"></td>					  
+						  <td width="130"><a href="/news/i1.mt?cmd=l&s=&c=&sf=&sw="><span class="ntext">종목해부</span></a></td>
+						</tr>
+						<tr>
+              <td valign=top width="8"><img src="../images/informinibox.gif" width="11" height="11" alt="" border="0"></td>					  
+						  <td width="130"><a href="/news/infor.mt?br=30016&cmd=2"><span class="ntext">거래소</span></a></td>
+						</tr>
+						<tr>
+              <td valign=top width="8"><img src="../images/informinibox.gif" width="11" height="11" alt="" border="0"></td>					  
+						  <td><a href="/news/infor.mt?br=30017&cmd=2"><span class="ntext">코스닥</span></a></td>
+						</tr>
+						<tr>
+              <td valign=top width="8"><img src="../images/informinibox.gif" width="11" height="11" alt="" border="0"></td>					  
+						  <td><a href="/news/infor.mt?br=30018&cmd=2"><span class="ntext">제3시장</span></a></td>
+						</tr>
+						<tr>
+              <td valign=top width="8"><img src="../images/informinibox.gif" width="11" height="11" alt="" border="0"></td>					  
+						  <td><a href="/news/infor.mt?br=30019&cmd=2"><span class="ntext">오늘의 공시</span></a></td>
+			  <tr>
+  <td valign=top width="8"><img src="../images/informinibox.gif" width="11" height="11" alt="" border="0"></td>					  
+						  <td><a href="/news/infor.mt?br=30020&cmd=2"><span class="ntext">공시분석</span></a></td>
+						<tr>
+              <td valign=top width="8"><img src="../images/informinibox.gif" width="11" height="11" alt="" border="0"></td>					  
+						  <td><a href="/news/i7.mt?cmd=l&s=&c=&sf=&sw="><span class="ntext">종목리포트</span></a></td>
+						</tr>
+						<tr>
+              <td valign=top width="8"><img src="../images/informinibox.gif" width="11" height="11" alt="" border="0"></td>					  
+						  <td><a href="/news/i8.mt?cmd=l&s=&c=&sf=&sw="><span class="ntext">증권사추천종목</span></a></td>
+						</tr>
+          </table>
+	</td>         	
+        </tr>
+
+        <tr> <!-- Left Menu tail bar --->
+        	<td bgcolor=#e2ad74 height=10><img src="../images/clear.gif" width="1" height="10"></td>
+        </tr>      
+     </table>
+	 
+<TABLE BORDER="0" WIDTH=130 HEIGHT=5>
+<tr>
+<td img src="../images/clear.gif"></td>
+</tr>
+</table>
+
+<!-- 투자 정보팀 //-->
+<table bgcolor="#9C6F30" border="0" cellpadding="1" cellspacing="0" width="130" hspace="0" vspace="0" >
+  <tr bgcolor="#9C6F30"> 
+    <td> 
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" vspace="0">
+        <tr bgcolor="#F3EEDA"> 
+          <td height="20"> 
+            <div align="center"><b><font class="ntext"><font color="#9C6F30">투자정보팀 탐방기</font></font></b></div>
+          </td>
+        </tr>
+		<tr valign="top"> 
+          <td bgcolor="#ffffff"> &nbsp;<img src="../images/newstity.gif"><a href="/news/inforview.mt?gisa_id=2000081510593011029"><font size="2" class="ntext"><font color="#666600">벤트리</font></font></a></td>
+        </tr>
+		<tr valign="top"> 
+          <td bgcolor="#ffffff"> &nbsp;<img src="../images/newstity.gif"><a href="/news/inforview.mt?gisa_id=2000071414424611029"><font size="2" class="ntext"><font color="#666600">한일흥업</font></font></a></td>
+        </tr>
+	  </table>
+    </td>
+  </tr>
+</table>
+<!-- 투자 정보팀  끝 //--> 
+<table border="0" width=130 height=5>
+<tr> 
+<td img src="../images/clear.gif"></td>
+</tr>
+</table>  
+
+<!--종목발굴 시작 //-->
+<table width="130" cellspacing="0" cellpadding="1" border="0" bgcolor="#9C6F30">
+  <tr bgcolor="#9C6F30"> 
+    <td> 
+      <table border="0" cellspacing="0" cellpadding="1" width="100%">
+      <tr bgcolor="#F3EEDA"> 
+          <td valign="baseline" align="center"><b><font class="ntext"><font color="#9C6F30">김재승의 종목발굴</font></font> 
+            </b></td>
+       </tr>
+	     <tr valign="top" bgcolor="#ffffff" bordercolor="#d1ca8c"> 
+          <td width="125">&nbsp;<img src="../images/newstity.gif"><a href="/news/inforview.mt?gisa_id=2000061614530711007"><span class="ntext"><font color="#666600">한원마이크로웨이브</font></span></a></td>
+	   </tr>
+		 <tr valign="top" bgcolor="#ffffff" bordercolor="#d1ca8c"> 
+          <td width="125">&nbsp;<img src="../images/newstity.gif"><a href="/news/newsview.mt?gisa_id=2000053014171111007"><span class="ntext"><font color="#666600">태평양</font></span></a></td>
+	   </tr>
+	   <tr valign="top" bgcolor="#ffffff" bordercolor="#d1ca8c"> 
+          <td width="125">&nbsp;<img src="../images/newstity.gif"><a href="/news/inforview.mt?gisa_id=2000052613172611007"><span class="ntext"><font color="#666600">진켐</font></span></a></td>
+	   </tr>
+	   <tr valign="top" bgcolor="#ffffff" bordercolor="#d1ca8c"> 
+          <td width="125">&nbsp;<img src="../images/newstity.gif"><a href="/news/inforview.mt?gisa_id=2000051617401811007"><span class="ntext"><font color="#666600">플러스원애니메이션</font></span></a></td>
+	   </tr>
+	   <tr valign="top" bgcolor="#ffffff" bordercolor="#d1ca8c"> 
+          <td width="125">&nbsp;<img src="../images/newstity.gif"><a href="/news/inforview.mt?gisa_id=2000051312094211007"><span class="ntext"><font color="#666600">휴맥스</font></span></a></td>
+	   </tr>
+	   <tr valign="top" bgcolor="#ffffff" bordercolor="#d1ca8c"> 
+          <td width="125">&nbsp;<img src="../images/newstity.gif"><a href="/news/inforview.mt?gisa_id=2000051216000211007"><span class="ntext"><font color="#666600">위즈넷</font></span></a></td>
+	    </tr>
+	    <tr valign="top" bgcolor="#ffffff" bordercolor="#d1ca8c"> 
+          <td width="125">&nbsp;<img src="../images/newstity.gif"><a href="/news/newsview.mt?gisa_id=2000050917192011007"><span class="ntext"><font color="#666600">한섬</font></span></a></td>
+		</tr>
+	    <tr valign="top" bgcolor="#ffffff" bordercolor="#d1ca8c"> 
+          <td width="125">&nbsp;<img src="../images/newstity.gif"><a href="/news/inforview.mt?gisa_id=2000050816210711007"><span class="ntext"><font color="#666600">대영A&V </font></span></a></td>
+		</tr>
+	   <tr valign="top" bgcolor="#ffffff" bordercolor="#d1ca8c"> 
+          <td width="125">&nbsp;<img src="../images/newstity.gif"><a href="/news/inforview.mt?gisa_id=2000050415330411007"><span class="ntext"><font color="#666600">청람디지탈</font></span></a></td>
+		</tr>
+	     <tr valign="top" bgcolor="#ffffff" bordercolor="#d1ca8c"> 
+          <td width="125">&nbsp;<img src="../images/newstity.gif"><a href="/news/inforview.mt?gisa_id=2000050315340311007"><span class="ntext"><font color="#666600">신세계</font></span></a></td>
+		</tr>
+		<tr valign="top" bgcolor="#ffffff" bordercolor="#d1ca8c"> 
+          <td width="125">&nbsp;<img src="../images/newstity.gif"><a href="/news/newsview.mt?gisa_id=2000050216303911007"><span class="ntext"><font color="#666600">프리코스닥 3선 </font></span></a></td>
+       </tr>
+       <tr valign="top" bgcolor="#ffffff" bordercolor="#d1ca8c"> 
+          <td width="125">&nbsp;<img src="../images/newstity.gif"><a href="/news/inforview.mt?gisa_id=2000042710351011007"><span class="ntext"><font color="#666600">코스닥유망주 16선</font></span></a></td>
+       </tr>		
+      </table>
+    </td>
+  </tr>
+</table>
+<!--종목발굴 끝 -->
+<table border="0" width=130 height=5>
+<tr> 
+<td img src="../images/clear.gif"></td>
+</tr>
+</table>  
+<!-- IT 유망테마//-->
+<table bgcolor="#9C6F30" border="0" cellpadding="1" cellspacing="0" width="130" hspace="0" vspace="0" >
+  <tr bgcolor="#9C6F30"> 
+    <td> 
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" vspace="0">
+        <tr bgcolor="#F3EEDA"> 
+          <td height="20"> 
+            <div align="center"><b><font class="ntext"><font color="#9C6F30">IT 유망테마</font></font></b></div>
+          </td>
+        </tr>
+		<tr valign="top"> 
+          <td bgcolor="#ffffff"> &nbsp;<img src="../images/newstity.gif"><a href="/news/i1.mt?cmd=v&s=1&c=1&n=2000062304000511017"><font size="2" class="ntext"><font color="#666600">③B2B </font></font></a></td>
+        </tr>
+		<tr valign="top"> 
+          <td bgcolor="#ffffff"> &nbsp;<img src="../images/newstity.gif"><a href="/news/i1.mt?cmd=v&s=1&c=1&n=2000061720585511017"><font size="2" class="ntext"><font color="#666600">②UMS </font></font></a></td>
+        </tr>
+		<tr valign="top"> 
+          <td bgcolor="#ffffff"> &nbsp;<img src="../images/newstity.gif"><a href="/news/i1.mt?cmd=v&s=1&c=1&n=2000061421210711017"><font size="2" class="ntext"><font color="#666600">①무선인터넷 </font></font></a></td>
+        </tr>
+	</table>
+    </td>
+  </tr>
+</table>
+<!-- IT 유망테마 끝 //--> 
+<!-- 애드서버 태깅테스트 시작 
+<table>
+ <tr>
+  <td><img src="http://ad.247korea.com/cgi-bin/adcgi?SPONSOR=1&CATEGORY=moneytoday:item" border=0 vspace=7 width=1 height=1></td>
+ </tr>
+</table>
+애드서버 태깅테스트 끝//-->    </td>
+<!--- Contents --->
+		<td valign=top align=center width='644'>
+    <table border=0 cellpadding=0 cellspacing=0 width=600>
+      <tr bgcolor='#ffffff'>
+    		<td class=list align=right><a href='/news/i2.mt?cmd=l&s=&c=&sf=&sw='><img src='/images/bbsimage.gif' border=0></a></td>
+    	</tr>
+  	</table>
+    <table border=0 cellpadding=0 cellspacing=0 width=600>
+      <tr bgcolor='#ffffff'>
+    		<td class=list><img src='/images/inforbar11.gif'></td>
+    	</tr>
+  	</table>
+	<TABLE bgColor=#f7c38b border=0 cellPadding=0 cellSpacing=0 width=600>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE border=0 cellPadding=2 cellSpacing=1 width=600>
+        <TBODY>
+        <TR>
+          <TD width=150 bgColor=#e8e8e8 class=view align=middle vAlign=center><B>제 &nbsp; 목</B></FONT></TD>
+          <TD width=450 bgColor=white class=view>&nbsp; &nbsp; <B>GSOK후기(中) "선점논리 유효한가"</B></TD></TR>
+        <TR>
+          <TD bgColor=#e8e8e8 class=view align=middle vAlign=center><B>작성자</B></FONT></TD>
+					<TD bgColor=white class=view>&nbsp; &nbsp; <font color=#010080><a href='mailto:honggija@moneytoday.co.kr'>홍진석</a> 기자 &nbsp; | &nbsp; 08/05 08:58 &nbsp; | &nbsp; 조회 3204 &nbsp; &nbsp;</font></TD></TR>
+        </TBODY>
+      </TABLE>
+    </TD>
+  </TR>
+  </TBODY>
+</TABLE><br><p>
+	<TABLE bgColor=#f7c38b border=0 cellPadding=0 cellSpacing=0 width=600>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE border=0 cellPadding=20 cellSpacing=1 width=600>
+        <TBODY>
+        <TR>
+          <TD width=600 bgColor=#f9f9f9 class=view>
+[골드만삭스 인터넷보고서를 마치며]<br>
+
+
+에필로그(中)" 인터넷기업의 성공은 과연 선착순인가?"<br>
+
+
+<br>
+
+
+1996년 야후 씨넷 등의 나스닥 진입이후 인터넷기업의 성공신화에는 대부분 선점효과라는 수식어가 따라다녔다. 해당사업영역에서 선발주자만이 회원유치 인지도확보 등에서 후발주자에 비해 절대적인 우위에 있을 수 밖에 없다는 설명이다.<br>
+
+
+<br>
+
+
+야후!의 사례가 대표적으로 인용된다. 야후!는 검색기능을 갖춘 포털서비스로는 세계 최초였다. 제리 양등  설립자들은 학생시절 돈을 번다는 생각보다는 친구들에게 리포트를 쉽게 쓸 수 있도록 인터넷에서 자료를 간편하게 찾아주는 프로그램을 개발하다보니 야후!가 탄생했다고 밝히고 있다. <br>
+
+
+<br>
+
+
+아마존 역시 창고창업이란 신화로 널리 알려져 있다.<br>
+
+
+<br>
+
+
+어쨋든 야후!는 나스닥은 물론 전세계적으로도 대표적인 인터넷기업으로 꼽히며 선두주자자리를 유지해왔다. 그간 라이코스 알타비스타 익사이트 등의 거센 도전이 있었지만 선점의 신화는 여전히 야후! 편이었다. 무엇보다 주가가 말해준다.<br>
+
+
+<br>
+
+
+인터넷기업사는 아직 5년도 채 되지 않는 상태이지만 야후!이후 잇따라 등장한 인터넷스타기업들은 해당 분야에서 가장 발빠르게 인터넷사업을 펼친 기업으로 소개된다. 그래서 인터넷기업사의 서막은 뭐니뭐니해도 선점효과라는 키워드가 가장 잘 어울릴 듯하다.<br>
+
+
+<br>
+
+
+인터넷 기업의 성공을 조건인 '선점'에 대해서는 미국의 역사적 경험이 매우 중요한 배경으로 작용하고 있다. <br>
+
+
+<br>
+
+
+인터넷사업의 기본이랄 수 있는 도메인확보는 기존의 상표권에 대한 침해가 없다면 철저하게 선착순방식으로 운영된다. 마치 톰행크스 주연의 파앤드어웨이란 영화에서 보듯 말타고 달려가 먼저 자신의 땅이라고 표시하면 지주로 변신했던 서부개척시대와 마찬가지인 룰인 셈이다. 야후!의 선점은 무엇보다 yahoo라는 브랜드 그리고 도메인의 선점에서 비롯됐다고 해도 지나치지 않을 것이다.  <br>
+
+
+<br>
+
+
+아울러 이제는 일반화됐지만 인터넷등대지기역할(검색포털)이란 아이디어를 통해 정보의 바다를 쉽게 항해할 수 있도록 도와준 야후!와의 만남은 수많은 네티즌들의 인터넷 첫경험이기도 했다.<br>
+
+
+<br>
+
+
+그만큼 인터넷은 아무도 가지 않는 길을 용감하게 개척한 CEO들에게 막대한 부와 성공을 안겨준 것만은 사실이다.신생벤처 CEO들은 그래서 자금유치를 위한 사업설명서에 대부분 자신의 비즈니스모델이 최초임을 강조하고 있다.<br>
+
+
+<br>
+
+
+골드만삭스의 한국인터넷보고서 역시 이러한 선점효과의 그늘 아래 있었다.<br>
+
+
+<br>
+
+
+골드만삭스에 의해 대표기업으로 꼽힌 여러 기업 가운데 다음 새롬 옥션 한솔CSN 삼성물산 등은 분명 한국 인터넷사업에서 선발주자임이 분명하다. <br>
+
+
+<br>
+
+
+실제 골드만삭스는 여러 통계자료를 통해 이들 기업이 한국인터넷업계에서 선두그룹을 형성하고 있을 뿐만 아니라 세계 주요 사이트의 반열에도 오르고 있음을 강조하고 있다.<br>
+
+
+<br>
+
+
+그러나 공교롭게도 골드만삭스보고서가 나오기 전후로 전세계적으로 닷컴위기론이 고개를 들었다. 국내에서도 마찬가지였다.<br>
+
+
+<br>
+
+
+선점과 성공의 명예를 누렸던 많은 미국 닷컴기업들마저도 배런보고서의 살생부에 거명되는 등 닷컴에 대한 시각이 갑자기 냉정해졌다. 아마존마저도 금고가 조만간 텅 빌 것이란 분석마저 나왔다.<br>
+
+
+<br>
+
+
+이에 따라 선점효과에 대한 믿음은 상당히 희석돼갔다. 오히려 늦게 시작했어도 돈만 잘 벌면 된다는 이른바 수익모델이 인터넷기업평가의 0순위로 꼽히기 시작했다.<br>
+
+
+<br>
+
+
+국내에서도 선점에 대한 회의론이 고개를 들었다.<br>
+
+
+<br>
+
+
+다음 등 국내 포털이 과연 선점인가란 의문부터 나왔다. 다음은 hotmail.com의 복제품인 hanmail.net으로 시작한뒤 비실명회원가입 등으로 외형만 늘려왔다란 경쟁사들의 비난도 쏟아졌다. 회사의 로고도 ebay의 디자인을 빌려왔고 검색엔진도 독일산 파이어볼을 수입했다는 것.  결국 다음의 선점은 미국기업의 아이디어와 기술을 응용하여 국내에서 처음 사업을 개시한 골목대장 선점에 불과하다는 분석. 다음의 나스닥 상장 9월연기도 다음비즈니스모델을 별로 새롭게 여기지 못한 미국 투자자들의 반응때문이란 설명도 같은 맥락에서 이해할 수 있다.<br>
+
+
+<br>
+
+
+다만 골드만삭스의 새롬기술 분석은 선점의 중요성을 인정하되 "비용이 많이 들고 돈을 벌기 힘든 선점은 의미가 없다"는 최근의 분위기를 많이 반영한 듯하다.<br>
+
+
+<br>
+
+
+아울러 미국인터넷기업의 성공에 대해 선점대신 간택이란 새로운 해석도 나왔다.<br>
+
+
+<br>
+
+
+야후 아마존 이베이 등의 성공은 선점했기 때문이라기 보다 미국 IT업계 거물(마이크로소프트 썬마이크로시스템즈 오라클 시스코 인텔 등)들이 간택했기 때문이란 분석이다. 즉 미국 닷컴들의 탄생초기 엄청난 성장세는 미국IT산업의 생산물과 노하우 그리고 소프트웨어를 전세계적으로 판매하기 위한 상징적 효과를 지녔다는 설명.<br>
+
+
+미국 닷컴의 성공신화에 매료된 아시아 유럽 중남미 공학도들은 너도나도 닷컴벤처에 뛰어들었고 이를 위해 미국산 인텔칩,오라클 데이터베이스,마이크로소프트 운영체제,썬의 서버 등을 사들였다. 물론 창업투자회사들의 도움이 컸지만.<br>
+
+
+이렇다면 미국 닷컴의 높은 주가는 그만한 값어치를 하기 때문으로 볼 수 있다. 미국 닷컴의 성공신화와 높은 주가는 미국산 IT제품의 전세계적 수요를 가져와 미국의 국부를 늘려주는 역할을 해왔던 셈이다.<br>
+
+
+<br>
+
+
+후발주자들의 항변도 이어졌다.<br>
+
+
+<br>
+
+
+선점과 독점의 미묘한 차이에도 불구하고 국내 인터넷업계에서는 선점이 독점으로 자연적으로 진화하고 있다는 지적이다. 짧은 인터넷산업의 역사에서 선점효과 역시 아직 검증되지 않는 상황에서 단지 먼저 시작해서 많은 회원과 돈을 끌어들었을 뿐인 기업을 성공의 표준으로 삼아서는 곤란하다는 주장이다.<br>
+
+
+<br>
+
+
+ 한 벤처 CEO는 "선점이란 이유로 사실상 독점이란 장벽을 자의반 타의반으로 쌓아주고 있다"며 "인터넷만큼 보이지 않는 기술진보가 쉼없이 진행되는 산업이 없기에 독점은 차칫 기술진보와 기술보급에 걸림돌이 될 수 있다"고 지적했다. <br>
+
+
+그는 동시에 "잘 드러나지 않고 관리하기 힘든 고객감동에 잠시라도 소홀히 할 경우 네티즌들의 클릭은  무자비하게 다른 곳을 찾아간다"며 "인터넷은 그만큼 사용자중심의 공간"이라고 강조했다.<br>
+
+
+<br>
+
+
+그도 골드만삭스보고서를 봤지만 "한국인터넷은 이제 미국의존형에서 토착자립형으로 전환되고 있다"며 "정보검색이란 초기사용자패턴에서 동창회모임 먹거리구입 회사정보공유 일과 생활 그리고 사랑 등 실생활로 급속히 침투하고 있다"고 밝혔다.  <br>
+
+
+<br>
+
+
+선점효과의 빛이 바래지는 요즘 새로운 기술과 진짜 우리식 인터넷, 이를 통한 네티즌감동을 무기로 신예 인터넷기업들이 이미 공룡기업화된 선점기업들 사이로 날쌔게 움직이고 있다. 고객은 감동할때 기꺼이 찾아들고 돈을 지불할 용의가 있기 때문이다.<br>
+
+
+        	</TD></TR>
+        </TBODY>
+      </TABLE>
+    </TD>
+  </TR>
+  </TBODY>
+</TABLE><br><p>
+	<table border=0 width=600 cellspacing=0 cellpadding=0>
+	<tr>
+		<td class=list>
+		<a href='/news/n_print.mt?c=f7c38b&n=2000080311495411005' target='_blank'>인쇄용화면</a>&nbsp;&nbsp;		<a href=javascript:history.go(-1)>뒤로</a>
+	</td></tr>
+	</table><br><p>
+    </td>
+	</tr>
+  <!--- Copyright Table --->
+  <tr>
+		<td>&nbsp;</td>
+    <td>
+    	<table border='0' cellspacing='5' cellpadding='0' width=100%>
+      	<tr>
+      		<td align=right><a href='#top'><img src='../images/top.gif' width='59' height='19' alt='top' border='0'></a><br></td>
+        </tr>
+        <tr>
+        	<td bgcolor='#f7c38b'><img src='../images/clear.gif' width='1' height='2' alt='' border='0'></td>
+        </tr>
+				<tr>
+					<td valign='top'>
+						<font size=1 face='helvetica,arial' color='#f7c38b'>
+					  Copyright(c) MoneyToday All Rights Reserved<br> Contact <a href='mailto:webmaster@moneytoday.co.kr'>Webmaster</a> for more Information</font>
+					</td>
+				</tr>
+      </table>
+  	</td>
+	</tr>
+</table>
+</body>
+</html>

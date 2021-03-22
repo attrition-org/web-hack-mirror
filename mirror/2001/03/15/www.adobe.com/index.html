@@ -1,0 +1,702 @@
+<HTML>
+
+  <HEAD>
+    <META NAME="generator" CONTENT="Adobe GoLive 4">
+    <TITLE>Adobe Systems Incorporated</TITLE>
+    <SCRIPT LANGUAGE="JavaScript"><!--
+currentSection = "sitemenu";
+var lastOver;
+var preloadFlag = false;
+newWinOpen=0;
+
+//obsolete browser variable
+var sb=((navigator.appVersion.charAt(0)<4)||((navigator.appName.indexOf('Netscape')<0)&&(navigator.appName.indexOf('Microsoft Internet Explorer')<0)));
+
+/* determines which stylesheet to write based on 
+browser/platform combination.  Also sets global
+variable bp for browser/platform testing elsewhere. */
+function BP() {
+  if (sb) {
+     this.brow = null;
+     this.plat = null;
+     return this;
+     }
+   this.plat = (navigator.platform.indexOf('Mac') > -1) ? 'mac' : 'win';
+   this.brow = (navigator.appName.indexOf('Microsoft') > -1) ? 'ie' : 'ns';
+   return this;
+  }
+bp = new BP();
+document.write('<LINK HREF="http://www.adobe.com/ssi/css/' + bp.plat + '_' +
+bp.brow + '.css" REL="styleSheet" TYPE="text/css">');
+
+function preloadImages() {
+  if (document.images) {
+    img_navproducts = newImage("/imageshome/nav/products.gif");
+    img_navproducts_over = newImage("/imageshome/nav/products_over.gif");
+    img_navaboutadobe = newImage("/imageshome/nav/aboutadobe.gif");
+    img_navaboutadobe_over = newImage("/imageshome/nav/aboutadobe_over.gif");
+    img_navregistration = newImage("/imageshome/nav/registration.gif");
+    img_navregistration_over = newImage("/imageshome/nav/registration_over.gif");
+    img_navsupport = newImage("/imageshome/nav/support.gif");
+    img_navsupport_over = newImage("/imageshome/nav/support_over.gif");
+    img_navsearch = newImage("/imageshome/nav/search.gif");
+    img_navsearch_over = newImage("/imageshome/nav/search_over.gif");
+    img_navfeedback = newImage("/imageshome/nav/feedback.gif");
+    img_navfeedback_over = newImage("/imageshome/nav/feedback_over.gif");
+
+    img_navprint = newImage("/imageshome/redesign/print.gif");
+    img_navprint_over = newImage("/imageshome/redesign/print_over.gif");
+    
+    img_navweb = newImage("/imageshome/redesign/web.gif");
+    img_navweb_over = newImage("/imageshome/redesign/web_over.gif");
+    
+    img_navmotion = newImage("/imageshome/redesign/motion.gif");
+    img_navmotion_over = newImage("/imageshome/redesign/motion_over.gif");
+    
+    img_navepaper = newImage("/imageshome/redesign/epaper.gif");
+    img_navepaper_over = newImage("/imageshome/redesign/epaper_over.gif");
+    
+    img_navtopweb = newImage("/imageshome/redesign/topweb.gif");
+    img_navtopweb_over = newImage("/imageshome/redesign/topweb_over.gif");
+    
+    img_navtopmotion = newImage("/imageshome/redesign/topmotion.gif");
+    img_navtopmotion_over = newImage("/imageshome/redesign/topmotion_over.gif");
+    
+    img_navtopprint = newImage("/imageshome/redesign/topprint.gif");
+    img_navtopprint_over = newImage("/imageshome/redesign/topprint_over.gif");
+    
+    img_navtopepaper = newImage("/imageshome/redesign/topepaper.gif");
+    img_navtopepaper_over = newImage("/imageshome/redesign/topepaper_over.gif");
+    
+    img_navspotlight = newImage("/imageshome/redesign/spotlight.gif");
+    img_navspotlight_over = newImage("/imageshome/redesign/spotlight_over.gif");
+    
+    img_navdigimage = newImage("/imageshome/redesign/digimage.gif");
+    img_navdigimage_over = newImage("/imageshome/redesign/digimage_over.gif");
+    img_navpersonaladobe = newImage("/imageshome/nav/personaladobe.gif");
+    img_navpersonaladobe_over = newImage("/imageshome/nav/personaladobe_over.gif");
+    preloadFlag = true;
+  }
+}
+
+function newImage(arg) {
+  rslt = new Image();
+  rslt.src = arg;
+  return rslt;
+}
+
+
+function imgOn(which) { if (preloadFlag) {
+  if (document.images[which]) {
+    if (lastOver) {
+      imgOff(lastOver); 
+    }
+    document.images[which].src = eval('img_' + which + '_over').src;
+    lastOver = which;
+  }
+}
+}
+
+function imgOff(which) {
+  if (preloadFlag) {
+    if (which != ('nav' + currentSection)) {
+      document.images[which].src = eval('img_' + which).src;
+      }
+    }
+  }
+
+function startup() {
+ 
+    preloadImages();
+    imgOn("nav" + currentSection);
+}
+// -->
+    </SCRIPT>
+    <SCRIPT LANGUAGE="JavaScript"><!--
+function OpenWindow( url, width, height, options, name )
+             {
+             if ( ! width ) width = 640;
+             if ( ! height ) height = 420;
+             if ( ! options ) options = "scrollbars=yes,menubar=yes,toolbar=yes,location=yes,status=yes,resizable=yes";
+             if ( ! name ) name = "outsideSiteWindow";
+
+             var newWin = window.open( url, name, "width=" + width + ",height=" + height + "," + options );
+             }
+// -->
+    </SCRIPT>
+    <NOEDIT>
+    <NOSCRIPT>
+    <LINK HREF="/ssi/css/win_ie.css" REL="styleSheet" TYPE="text/css">
+    </NOSCRIPT></NOEDIT>
+    <STYLE><!--
+      body { background: white url(/images/nav/nav_sm.gif) repeat-x }-->
+    </STYLE>
+  </HEAD>
+
+  <BODY BACKGROUND="images/nav/nav_bg.gif" BGCOLOR="#ffffff" TEXT="#000000" LINK="#cc0000" ALINK="#cc0000" VLINK="#996666" MARGINWIDTH="0" MARGINHEIGHT="0" LEFTMARGIN="0" TOPMARGIN="0" ONLOAD="startup()" ONUNLOAD="if (newWinOpen && !newWin.closed) newWin.close();">
+    <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="752">
+      <TR HEIGHT="24">
+        <TD VALIGN="top" ROWSPAN="2" WIDTH="188"><A HREF="homepage.html"><IMG SRC="images/nav/logo_home.gif" WIDTH="188" HEIGHT="45" ALT="Adobe - Inspiration becomes reality" BORDER="0"></A></TD>
+        <TD COLSPAN="4" HEIGHT="24">
+          <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+            <TR HEIGHT="24">
+              <TD WIDTH="65" HEIGHT="24"><A HREF="products/main.html" ONMOUSEOVER="imgOn('navproducts')" ONMOUSEOUT="imgOff('navproducts')"><IMG NAME="navproducts" SRC="imageshome/nav/products.gif" WIDTH="65" HEIGHT="24" ALT="Products" BORDER="0"></A></TD>
+              <TD WIDTH="84" HEIGHT="24"><A HREF="aboutadobe/main.html" ONMOUSEOVER="imgOn('navaboutadobe')" ONMOUSEOUT="imgOff('navaboutadobe')"><IMG NAME="navaboutadobe" SRC="imageshome/nav/aboutadobe.gif" WIDTH="84" HEIGHT="24" ALT="About Adobe" BORDER="0"></A></TD>
+              <TD WIDTH="85" HEIGHT="24"><A HREF="store/registration/productreg.html" ONMOUSEOVER="imgOn('navregistration')" ONMOUSEOUT="imgOff('navregistration')"><IMG NAME="navregistration" SRC="imageshome/nav/registration.gif" WIDTH="85" HEIGHT="24" ALT="Registration" BORDER="0"></A></TD>
+              <TD WIDTH="58" HEIGHT="24"><A HREF="support/main.html" ONMOUSEOVER="imgOn('navsupport')" ONMOUSEOUT="imgOff('navsupport')"><IMG NAME="navsupport" SRC="imageshome/nav/support.gif" WIDTH="58" HEIGHT="24" ALT="Support" BORDER="0"></A></TD>
+              <TD WIDTH="100" HEIGHT="24"><A HREF="search/main.html" ONMOUSEOVER="imgOn('navsearch')" ONMOUSEOUT="imgOff('navsearch')"><IMG NAME="navsearch" SRC="imageshome/nav/search.gif" WIDTH="100" HEIGHT="24" ALT="Search/Sitemap" BORDER="0"></A></TD>
+              <TD WIDTH="101" HEIGHT="24"><A HREF="personaladobe/main.html" ONMOUSEOVER="imgOn('navpersonaladobe')" ONMOUSEOUT="imgOff('navpersonaladobe')"><IMG NAME="navpersonaladobe" SRC="imageshome/nav/personaladobe.gif" WIDTH="101" HEIGHT="24" ALT="Personal Adobe" BORDER="0"></A></TD>
+              <TD WIDTH="70" HEIGHT="24"><A HREF="misc/comments.html" ONMOUSEOVER="imgOn('navfeedback')" ONMOUSEOUT="imgOff('navfeedback')"><IMG NAME="navfeedback" SRC="imageshome/nav/feedback.gif" WIDTH="70" HEIGHT="24" ALT="Feedback" BORDER="0"></A></TD>
+            </TR>
+          </TABLE>
+        </TD>
+      </TR>
+      <TR HEIGHT="21">
+        <TD VALIGN="top" HEIGHT="21"></TD>
+        <TD HEIGHT="21"></TD>
+        <TD HEIGHT="21"></TD>
+        <TD HEIGHT="21"></TD>
+      </TR>
+    </TABLE>
+    <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="750">
+      <TR>
+        <TD WIDTH="592" ALIGN="left" VALIGN="top">
+          <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="592">
+            <TR>
+              <TD>
+                <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="592" HEIGHT="207">
+                  <TR HEIGHT="170">
+                    <TD HEIGHT="170" WIDTH="592"><A HREF="web/main.html"><IMG SRC="web/features/archinect/images/homepage.gif" WIDTH="592" HEIGHT="170" BORDER="0"></A></TD>
+                  </TR>
+                  <TR HEIGHT="37">
+                    <TD BGCOLOR="#000000" HEIGHT="37" WIDTH="592">
+                      <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="592">
+                        <TR>
+                          <TD WIDTH="50" VALIGN="top"><A HREF="web/main.html" ONMOUSEOVER="imgOn('navtopweb')" ONMOUSEOUT="imgOff('navtopweb')"><IMG BORDER="0" HEIGHT="37" WIDTH="50" SRC="imageshome/redesign/topweb.gif" ALT="Web" NAME="navtopweb"></A></TD>
+                          <TD WIDTH="532" CLASS="size1" VALIGN="middle">
+                            <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+                              <TR HEIGHT="6">
+                                <TD HEIGHT="6"><SPACER TYPE="block" WIDTH="6" HEIGHT="6"></TD>
+                              </TR>
+                              <TR>
+                                <TD CLASS="size1"><A HREF="web/main.html" STYLE="text-decoration: none"><FONT COLOR="#ffffff">This L.A.-based site brings architecture to the Web design community.</FONT></A></TD>
+                              </TR>
+                            </TABLE></TD>
+                          <TD CLASS="size1" WIDTH="10"></TD>
+                        </TR>
+                      </TABLE></TD>
+                  </TR>
+                </TABLE>
+                <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="592">
+                  <TR VALIGN="top" HEIGHT="17">
+                    <TD WIDTH="148" ALIGN="left" VALIGN="top" HEIGHT="17"><A HREF="print/main.html" ONMOUSEOVER="imgOn('navprint')" ONMOUSEOUT="imgOff('navprint')"><IMG BORDER="0" HEIGHT="17" WIDTH="148" SRC="imageshome/redesign/print.gif" ALT="Print Center" NAME="navprint"></A></TD>
+                    <TD COLSPAN="2" HEIGHT="17"><A HREF="motion/main.html" ONMOUSEOVER="imgOn('navmotion')" ONMOUSEOUT="imgOff('navmotion')"><IMG BORDER="0" HEIGHT="17" WIDTH="148" SRC="imageshome/redesign/motion.gif" ALT="Motion Center" NAME="navmotion"></A></TD>
+                    <TD COLSPAN="3" HEIGHT="17"><A HREF="epaper/main.html" ONMOUSEOVER="imgOn('navepaper')" ONMOUSEOUT="imgOff('navepaper')"><IMG BORDER="0" HEIGHT="17" WIDTH="148" SRC="imageshome/redesign/epaper.gif" ALT="ePaper" NAME="navepaper"></A></TD>
+                    <TD WIDTH="147" ROWSPAN="2" ALIGN="left">
+                      <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="147">
+                        <TR HEIGHT="5">
+                          <TD HEIGHT="5" WIDTH="147"><A HREF="store/products/photoshop.html" ONMOUSEOVER="imgOn('navspotlight')" ONMOUSEOUT="imgOff('navspotlight')"><IMG BORDER="0" HEIGHT="17" WIDTH="147" SRC="imageshome/redesign/spotlight.gif" ALT="Spotlight" NAME="navspotlight"></A></TD>
+                        </TR>
+                        <TR HEIGHT="10">
+                          <TD WIDTH="147" HEIGHT="10">
+                            <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="146">
+                              <TR HEIGHT="10">
+                                <TD WIDTH="13" HEIGHT="10"><SPACER HEIGHT="10" TYPE="block" WIDTH="10"></TD>
+                                <TD WIDTH="123" HEIGHT="10"><SPACER HEIGHT="10" TYPE="block" WIDTH="10"></TD>
+                                <TD WIDTH="10" HEIGHT="10"><SPACER HEIGHT="10" TYPE="block" WIDTH="7"></TD>
+                              </TR>
+                              <TR HEIGHT="70">
+                                <TD WIDTH="13" HEIGHT="70"></TD>
+                                <TD WIDTH="123" HEIGHT="70"><A HREF="store/products/aftereffects.html"><IMG SRC="images/spotlighticons/aeicon.gif" WIDTH="120" HEIGHT="70" BORDER="0"></A></TD>
+                                <TD WIDTH="10" HEIGHT="70"></TD>
+                              </TR>
+                              <TR HEIGHT="7">
+                                <TD WIDTH="13" HEIGHT="7"><SPACER HEIGHT="7" TYPE="block" WIDTH="10"></TD>
+                                <TD WIDTH="123" HEIGHT="7"><SPACER HEIGHT="7" TYPE="block" WIDTH="10"></TD>
+                                <TD WIDTH="10" HEIGHT="7"><SPACER HEIGHT="7" TYPE="block" WIDTH="7"></TD>
+                              </TR>
+                              <TR>
+                                <TD WIDTH="13"></TD>
+                                <TD WIDTH="123" CLASS="size1"><A HREF="store/products/aftereffects.html"><B>Preorder After Effects 5.0!<BR>
+                                    </B></A>Creative freedom and control with the ideal effects, compositing, and animation toolset. After Effects 5.0 from $649, upgrade from $199.</TD>
+                                <TD WIDTH="10"></TD>
+                              </TR>
+                              <TR HEIGHT="10">
+                                <TD WIDTH="13" HEIGHT="10"><SPACER HEIGHT="10" TYPE="block" WIDTH="10"></TD>
+                                <TD WIDTH="123" HEIGHT="10"><SPACER HEIGHT="10" TYPE="block" WIDTH="10"></TD>
+                                <TD WIDTH="10" HEIGHT="10"><SPACER HEIGHT="10" TYPE="block" WIDTH="7"></TD>
+                              </TR>
+                            </TABLE>
+                          </TD>
+                        </TR>
+                      </TABLE>
+                    </TD>
+                  </TR>
+                  <TR>
+                    <TD WIDTH="148" ALIGN="left" VALIGN="top">
+                      <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="148">
+                        <TR HEIGHT="10">
+                          <TD WIDTH="14" HEIGHT="10"><SPACER HEIGHT="10" TYPE="block" WIDTH="10"></TD>
+                          <TD WIDTH="120" HEIGHT="10"><SPACER HEIGHT="10" TYPE="block" WIDTH="10"></TD>
+                          <TD WIDTH="14" HEIGHT="10"><SPACER HEIGHT="10" TYPE="block" WIDTH="10"></TD>
+                        </TR>
+                        <TR HEIGHT="70">
+                          <TD WIDTH="14" HEIGHT="70"></TD>
+                          <TD WIDTH="120" HEIGHT="70"><A HREF="print/main.html"><IMG SRC="print/gallery/lipka/images/icon.jpg" WIDTH="120" HEIGHT="70" BORDER="0"></A></TD>
+                          <TD WIDTH="14" HEIGHT="70"></TD>
+                        </TR>
+                        <TR HEIGHT="7">
+                          <TD WIDTH="14" HEIGHT="7"><SPACER HEIGHT="7" TYPE="block" WIDTH="10"></TD>
+                          <TD WIDTH="120" HEIGHT="7"><SPACER HEIGHT="7" TYPE="block" WIDTH="10"></TD>
+                          <TD WIDTH="14" HEIGHT="7"><SPACER HEIGHT="7" TYPE="block" WIDTH="10"></TD>
+                        </TR>
+                        <TR>
+                          <TD WIDTH="14"></TD>
+                          <TD WIDTH="120" CLASS="size1"><B><A HREF="print/main.html">Jann Lipka<BR>
+                              </A></B>How this versatile Stockholm photographer came to kiss the darkroom goodbye.</TD>
+                          <TD WIDTH="14"></TD>
+                        </TR>
+                        <TR HEIGHT="10">
+                          <TD WIDTH="14" HEIGHT="10"><SPACER HEIGHT="10" TYPE="block" WIDTH="10"></TD>
+                          <TD WIDTH="120" HEIGHT="10"><SPACER HEIGHT="10" TYPE="block" WIDTH="10"></TD>
+                          <TD WIDTH="14" HEIGHT="10"><SPACER HEIGHT="10" TYPE="block" WIDTH="10"></TD>
+                        </TR>
+                      </TABLE>
+                    </TD>
+                    <TD BGCOLOR="#cccccc" WIDTH="1"><SPACER HEIGHT="1" TYPE="block" WIDTH="1"></TD>
+                    <TD WIDTH="147" ALIGN="left" VALIGN="top">
+                      <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="147">
+                        <TR HEIGHT="10">
+                          <TD WIDTH="13" HEIGHT="10"><SPACER HEIGHT="10" TYPE="block" WIDTH="10"></TD>
+                          <TD WIDTH="120" HEIGHT="10"><SPACER HEIGHT="10" TYPE="block" WIDTH="10"></TD>
+                          <TD WIDTH="14" HEIGHT="10"><SPACER HEIGHT="10" TYPE="block" WIDTH="10"></TD>
+                        </TR>
+                        <TR HEIGHT="70">
+                          <TD WIDTH="13" HEIGHT="70"></TD>
+                          <TD WIDTH="120" HEIGHT="70"><A HREF="motion/main.html"><IMG SRC="motion/gallery/belief/images/icon.jpg" WIDTH="120" HEIGHT="70" BORDER="0"></A></TD>
+                          <TD WIDTH="14" HEIGHT="70"></TD>
+                        </TR>
+                        <TR HEIGHT="7">
+                          <TD WIDTH="13" HEIGHT="7"><SPACER HEIGHT="7" TYPE="block" WIDTH="10"></TD>
+                          <TD WIDTH="120" HEIGHT="7"><SPACER HEIGHT="7" TYPE="block" WIDTH="10"></TD>
+                          <TD WIDTH="14" HEIGHT="7"><SPACER HEIGHT="7" TYPE="block" WIDTH="10"></TD>
+                        </TR>
+                        <TR>
+                          <TD WIDTH="13"></TD>
+                          <TD WIDTH="120" CLASS="size1"><A HREF="motion/main.html"><B>Do you believe?</B><BR></A>In genius beyond measure? In dogs that talk? Belief design studio does.</TD>
+                          <TD WIDTH="14"></TD>
+                        </TR>
+                        <TR HEIGHT="10">
+                          <TD WIDTH="13" HEIGHT="10"><SPACER HEIGHT="10" TYPE="block" WIDTH="10"></TD>
+                          <TD WIDTH="120" HEIGHT="10"><SPACER HEIGHT="10" TYPE="block" WIDTH="10"></TD>
+                          <TD WIDTH="14" HEIGHT="10"><SPACER HEIGHT="10" TYPE="block" WIDTH="10"></TD>
+                        </TR>
+                      </TABLE>
+                    </TD>
+                    <TD BGCOLOR="#cccccc" WIDTH="1"><SPACER HEIGHT="1" TYPE="block" WIDTH="1"></TD>
+                    <TD WIDTH="146" ALIGN="left" VALIGN="top">
+                      <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="146">
+                        <TR HEIGHT="10">
+                          <TD WIDTH="13" HEIGHT="10"><SPACER HEIGHT="10" TYPE="block" WIDTH="10"></TD>
+                          <TD WIDTH="120" HEIGHT="10"><SPACER HEIGHT="10" TYPE="block" WIDTH="10"></TD>
+                          <TD WIDTH="13" HEIGHT="10"><SPACER HEIGHT="10" TYPE="block" WIDTH="9"></TD>
+                        </TR>
+                        <TR HEIGHT="70">
+                          <TD WIDTH="13" HEIGHT="70"></TD>
+                          <TD WIDTH="120" HEIGHT="70"><A HREF="products/acrobat/main.html"><IMG SRC="images/spotlighticons/acro5_s5.jpg" WIDTH="120" HEIGHT="70" BORDER="0"></A></TD>
+                          <TD WIDTH="13" HEIGHT="70"></TD>
+                        </TR>
+                        <TR HEIGHT="7">
+                          <TD WIDTH="13" HEIGHT="7"><SPACER HEIGHT="7" TYPE="block" WIDTH="10"></TD>
+                          <TD WIDTH="120" HEIGHT="7"><SPACER HEIGHT="7" TYPE="block" WIDTH="10"></TD>
+                          <TD WIDTH="13" HEIGHT="7"><SPACER HEIGHT="7" TYPE="block" WIDTH="9"></TD>
+                        </TR>
+                        <TR>
+                          <TD WIDTH="13"></TD>
+                          <TD WIDTH="120" CLASS="size1"><B><A HREF="products/acrobat/main.html">Freedom to share<BR>
+                              </A></B>A new era of document exchange begins with Acrobat 5.0.</TD>
+                          <TD WIDTH="13"></TD>
+                        </TR>
+                        <TR HEIGHT="10">
+                          <TD WIDTH="13" HEIGHT="10"><SPACER HEIGHT="10" TYPE="block" WIDTH="10"></TD>
+                          <TD WIDTH="120" HEIGHT="10"><SPACER HEIGHT="10" TYPE="block" WIDTH="10"></TD>
+                          <TD WIDTH="13" HEIGHT="10"><SPACER HEIGHT="10" TYPE="block" WIDTH="10"></TD>
+                        </TR>
+                      </TABLE>
+                    </TD>
+                    <TD WIDTH="1" BGCOLOR="#cccccc"><SPACER HEIGHT="1" TYPE="block" WIDTH="1"></TD>
+                  </TR>
+                </TABLE>
+              </TD>
+            </TR>
+          </TABLE>
+          <A HREF="digitalimag/main.html" ONMOUSEOVER="imgOn('navdigimage')" ONMOUSEOUT="imgOff('navdigimage')"><IMG BORDER="0" HEIGHT="17" WIDTH="592" SRC="imageshome/redesign/digimage.gif" ALT="Digital Imaging" NAME="navdigimage"></A>
+          <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+            <TR HEIGHT="20">
+              <TD WIDTH="20" HEIGHT="20" ALIGN="left"></TD>
+              <TD WIDTH="88" HEIGHT="20" ALIGN="left"></TD>
+              <TD WIDTH="15" HEIGHT="20"></TD>
+              <TD WIDTH="88" HEIGHT="20" ALIGN="left"></TD>
+              <TD WIDTH="15" HEIGHT="20"></TD>
+              <TD WIDTH="88" HEIGHT="20" ALIGN="left"></TD>
+              <TD WIDTH="15" HEIGHT="20"></TD>
+              <TD WIDTH="88" HEIGHT="20"></TD>
+              <TD WIDTH="15" HEIGHT="20"></TD>
+              <TD WIDTH="105" HEIGHT="20"></TD>
+            </TR>
+            <TR>
+              <TD WIDTH="20" ALIGN="left"><SPACER TYPE="horizontal" SIZE="20"></TD>
+              <TD WIDTH="88" ALIGN="left"><A HREF="products/golive/main.html"><IMG BORDER="0" HEIGHT="31" WIDTH="88" SRC="images/mwgolive.gif" ALT="Made with GoLive"></A></TD>
+              <TD WIDTH="15"></TD>
+              <TD WIDTH="88" ALIGN="left"><NOEDIT>
+<SCRIPT LANGUAGE="VBScript">
+  on error resume next
+  gotflash = (IsObject(CreateObject("ShockwaveFlash.ShockwaveFlash")))
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+  function flash4() {
+    if (navigator.plugins) {
+      for (i=0; i<navigator.plugins.length; i++) {
+      if (navigator.plugins[i].description.indexOf("Flash 4")!=-1) return true;
+        }
+      return false;
+      }
+    }
+  // gotflash is true if already detected above, or can detect here...
+  this.gotflash = this.gotflash || (navigator.mimeTypes && navigator.mimeTypes["application/x-shockwave-flash"]
+    && navigator.mimeTypes["application/x-shockwave-flash"].enabledPlugin
+    && navigator.plugins && navigator.plugins["Shockwave Flash"]
+    && flash4());
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript"><!--
+if (gotflash) {
+	document.write('<EMBED SRC="/vector/anisplashlmbutton.swf" QUALITY="high" WIDTH="88" HEIGHT="31" TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash">');
+ } else {
+       document.write('<A HREF="products/livemotion/splash.html">');
+	document.write('<IMG SRC="images/lmbutton.gif" WIDTH="88" HEIGHT="31" BORDER="0" ALT="Animated by Livemotion">');
+       document.write('</A">');
+  }
+// --></SCRIPT><NOSCRIPT><A HREF="products/livemotion/splash.html"><IMG SRC="images/lmbutton.gif" WIDTH="88" HEIGHT="31" BORDER="0" ALT="Animated by Livemotion"></A></NOSCRIPT></NOEDIT></TD>
+              <TD WIDTH="15"></TD>
+              <TD WIDTH="88" ALIGN="left"><A HREF="products/acrobat/readstep.html"><IMG BORDER="0" HEIGHT="31" WIDTH="88" SRC="images/getacro.gif" ALT="Get Acrobat Reader"></A></TD>
+              <TD WIDTH="15"></TD>
+              <TD WIDTH="88"><A HREF="products/ebookreader/register.html"><IMG BORDER="0" HEIGHT="31" WIDTH="88" SRC="images/getereader.gif" ALT="Get Acrobat eBook Reader"></A></TD>
+              <TD WIDTH="15"></TD>
+              <TD WIDTH="105" ALIGN="left" VALIGN="top"><A HREF="svg/viewer/install/main.html"><IMG BORDER="0" HEIGHT="31" WIDTH="88" SRC="images/svgdownload.gif" ALT="Download SVG Viewer"></A></TD>
+            </TR>
+          </TABLE>
+        </TD>
+        <TD WIDTH="158" ALIGN="left" VALIGN="top" BGCOLOR="#e6e6e6">
+          <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="158">
+            <TR>
+              <TD WIDTH="13"></TD>
+              <TD WIDTH="135"><A HREF="store/main.html"><IMG BORDER="0" HEIGHT="24" WIDTH="135" SRC="imageshome/redesign/adobestore.gif" ALT="Adobe Store"></A></TD>
+              <TD WIDTH="10"></TD>
+            </TR>
+            <TR>
+              <TD WIDTH="13"></TD>
+              <TD WIDTH="135">
+                <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="135">
+                  <TR>
+                    <TD WIDTH="12" ALIGN="left" VALIGN="top"><IMG BORDER="0" HEIGHT="10" WIDTH="10" SRC="imageshome/redesign/bullet.gif"></TD>
+                    <TD WIDTH="123" CLASS="size1"><A HREF="store/products/premiere.html">Premiere 6<BR>upgrade - $149</A></TD>
+                  </TR>
+                  <TR HEIGHT="3">
+                    <TD WIDTH="12" HEIGHT="3"><SPACER HEIGHT="3" TYPE="block" WIDTH="10"></TD>
+                    <TD WIDTH="123" HEIGHT="3"><SPACER HEIGHT="3" TYPE="block" WIDTH="10"></TD>
+                  </TR>
+                </TABLE>
+                <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="135">
+                  <TR>
+                    <TD WIDTH="12" ALIGN="left" VALIGN="top"><IMG BORDER="0" HEIGHT="10" WIDTH="10" SRC="imageshome/redesign/bullet.gif"></TD>
+                    <TD WIDTH="123" CLASS="size1"><A HREF="store/products/webcoll.html">Web Collection<BR>
+                        
+from $999</A></TD>
+                  </TR>
+                  <TR HEIGHT="3">
+                    <TD WIDTH="12" HEIGHT="3"><SPACER HEIGHT="3" TYPE="block" WIDTH="10"></TD>
+                    <TD WIDTH="123" HEIGHT="3"><SPACER HEIGHT="3" TYPE="block" WIDTH="10"></TD>
+                  </TR>
+                </TABLE>
+                <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="135">
+                  <TR>
+                    <TD WIDTH="12" ALIGN="left" VALIGN="top"><IMG BORDER="0" HEIGHT="10" WIDTH="10" SRC="imageshome/redesign/bullet.gif"></TD>
+                    <TD WIDTH="123" CLASS="size1"><A HREF="/cgi-bin/redirect?http://www.apple.com/promo/designcollection/" ONCLICK="OpenWindow('http://www.adobe.com/cgi-bin/redirect?http://www.apple.com/promo/designcollection/'); return false">Design Collection<BR>
+                        
+            
+                        $699 with a Mac</A></TD>
+                  </TR>
+                  <TR HEIGHT="7">
+                    <TD WIDTH="12" HEIGHT="7"><SPACER HEIGHT="7" TYPE="block" WIDTH="10"></TD>
+                    <TD WIDTH="123" HEIGHT="7"><SPACER HEIGHT="7" TYPE="block" WIDTH="10"></TD>
+                  </TR>
+                </TABLE>
+              </TD>
+              <TD WIDTH="10"></TD>
+            </TR>
+            <TR HEIGHT="1">
+              <TD BGCOLOR="#cccccc" COLSPAN="3" HEIGHT="1"><SPACER HEIGHT="1" TYPE="block" WIDTH="10"></TD>
+            </TR>
+            <TR>
+              <TD WIDTH="13"></TD>
+              <TD WIDTH="135"><A HREF="products/main.html"><IMG BORDER="0" HEIGHT="24" WIDTH="135" SRC="imageshome/redesign/productindex.gif" ALT="Product Index"></A></TD>
+              <TD WIDTH="10"></TD>
+            </TR>
+            <TR>
+              <TD WIDTH="13"></TD>
+              <TD WIDTH="135">
+                <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="135">
+                  <TR>
+                    <TD WIDTH="12" ALIGN="left" VALIGN="top"><IMG BORDER="0" HEIGHT="10" WIDTH="10" SRC="imageshome/redesign/bullet.gif"></TD>
+                    <TD WIDTH="123" CLASS="size1"><A HREF="support/downloads/main.html">Plug-ins &amp; updates</A></TD>
+                  </TR>
+                  <TR HEIGHT="3">
+                    <TD WIDTH="12" HEIGHT="3"><SPACER HEIGHT="3" TYPE="block" WIDTH="10"></TD>
+                    <TD WIDTH="123" HEIGHT="3"><SPACER HEIGHT="3" TYPE="block" WIDTH="10"></TD>
+                  </TR>
+                  <TR>
+                    <TD WIDTH="12" ALIGN="left" VALIGN="top"><IMG BORDER="0" HEIGHT="10" WIDTH="10" SRC="imageshome/redesign/bullet.gif"></TD>
+                    <TD WIDTH="123" CLASS="size1"><A HREF="products/tryadobe/main.html">Free tryouts &amp; betas</A></TD>
+                  </TR>
+                  <TR HEIGHT="3">
+                    <TD WIDTH="12" HEIGHT="3"><SPACER HEIGHT="3" TYPE="block" WIDTH="10"></TD>
+                    <TD WIDTH="123" HEIGHT="3"><SPACER HEIGHT="3" TYPE="block" WIDTH="10"></TD>
+                  </TR>
+                  <TR>
+                    <TD WIDTH="12" ALIGN="left" VALIGN="top"><IMG BORDER="0" HEIGHT="10" WIDTH="10" SRC="imageshome/redesign/bullet.gif"></TD>
+                    <TD WIDTH="123" CLASS="size1"><A HREF="misc/training.html">Training</A></TD>
+                  </TR>
+                  <TR HEIGHT="7">
+                    <TD WIDTH="12" HEIGHT="7"><SPACER HEIGHT="7" TYPE="block" WIDTH="10"></TD>
+                    <TD WIDTH="123" HEIGHT="7"><SPACER HEIGHT="7" TYPE="block" WIDTH="10"></TD>
+                  </TR>
+                </TABLE>
+              </TD>
+              <TD WIDTH="10"></TD>
+            </TR>
+            <TR HEIGHT="1">
+              <TD BGCOLOR="#cccccc" COLSPAN="3" HEIGHT="1"><SPACER HEIGHT="1" TYPE="block" WIDTH="10"></TD>
+            </TR>
+            <TR>
+              <TD WIDTH="13"></TD>
+              <TD WIDTH="135"><A HREF="services/main.html"><IMG BORDER="0" HEIGHT="25" WIDTH="135" SRC="imageshome/redesign/onlineservices.gif" ALT="Online Services"></A></TD>
+              <TD WIDTH="10"></TD>
+            </TR>
+            <TR HEIGHT="1">
+              <TD BGCOLOR="#cccccc" COLSPAN="3" HEIGHT="1"><SPACER HEIGHT="1" TYPE="block" WIDTH="10"></TD>
+            </TR>
+            <TR>
+              <TD WIDTH="13"></TD>
+              <TD WIDTH="135"><IMG BORDER="0" HEIGHT="24" WIDTH="135" SRC="imageshome/redesign/adobeannounces.gif" ALT="Adobe Announces"></TD>
+              <TD WIDTH="10"></TD>
+            </TR>
+            <TR>
+              <TD WIDTH="13"></TD>
+              <TD WIDTH="135">
+                <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="135">
+                  <TR>
+                    <TD WIDTH="12" ALIGN="left" VALIGN="top"><IMG BORDER="0" HEIGHT="10" WIDTH="10" SRC="imageshome/redesign/bullet.gif"></TD>
+                    <TD WIDTH="123" CLASS="size1"><A HREF="products/photoshop/update.html">Photoshop 6.0.1<BR>update - free</A></TD>
+                  </TR>
+                  <TR HEIGHT="3">
+                    <TD WIDTH="12" HEIGHT="3"><SPACER HEIGHT="3" TYPE="block" WIDTH="10"></TD>
+                    <TD WIDTH="123" HEIGHT="3"><SPACER HEIGHT="3" TYPE="block" WIDTH="10"></TD>
+                  </TR>
+                </TABLE>
+                <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="135">
+                  <TR>
+                    <TD WIDTH="12" ALIGN="left" VALIGN="top"><IMG BORDER="0" HEIGHT="10" WIDTH="10" SRC="imageshome/redesign/bullet.gif"></TD>
+                    <TD WIDTH="123" CLASS="size1"><A HREF="products/acrobat/main.html">Announcing:<BR>
+                        Acrobat 5!</A></TD>
+                  </TR>
+                  <TR HEIGHT="3">
+                    <TD WIDTH="12" HEIGHT="3"><SPACER HEIGHT="3" TYPE="block" WIDTH="10"></TD>
+                    <TD WIDTH="123" HEIGHT="3"><SPACER HEIGHT="3" TYPE="block" WIDTH="10"></TD>
+                  </TR>
+                </TABLE>
+                <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="135">
+                  <TR>
+                    <TD WIDTH="12" ALIGN="left" VALIGN="top"><IMG BORDER="0" HEIGHT="10" WIDTH="10" SRC="imageshome/redesign/bullet.gif"></TD>
+                    <TD WIDTH="123" CLASS="size1"><A HREF="products/ebookreader/main.html">Download Acrobat<BR>
+                        eBook Reader - free</A></TD>
+                  </TR>
+                  <TR HEIGHT="3">
+                    <TD WIDTH="12" HEIGHT="3"><SPACER HEIGHT="3" TYPE="block" WIDTH="10"></TD>
+                    <TD WIDTH="123" HEIGHT="3"><SPACER HEIGHT="3" TYPE="block" WIDTH="10"></TD>
+                  </TR>
+                </TABLE>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="135">
+                  <TR HEIGHT="3">
+                    <TD WIDTH="12" ALIGN="left" VALIGN="top"><IMG BORDER="0" HEIGHT="10" WIDTH="10" SRC="imageshome/redesign/bullet.gif"></TD>
+                    <TD WIDTH="123" CLASS="size1"><A HREF=" products/adobestudio/main.html">Sign up for the<BR>
+Adobe Studio beta</A></TD>
+                  </TR>
+                  <TR HEIGHT="3">
+                    <TD WIDTH="12" HEIGHT="3"><SPACER HEIGHT="3" TYPE="block" WIDTH="10"></TD>
+                    <TD WIDTH="123" HEIGHT="3"><SPACER HEIGHT="3" TYPE="block" WIDTH="10"></TD>
+                  </TR>
+                </TABLE>
+                <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="135">
+                  <TR>
+                    <TD WIDTH="12" ALIGN="left" VALIGN="top"><IMG BORDER="0" HEIGHT="10" WIDTH="10" SRC="imageshome/redesign/bullet.gif"></TD>
+                    <TD WIDTH="123" CLASS="size1"><A HREF="events/main.html">Upcoming events</A></TD>
+                  </TR>
+ <TR HEIGHT="3">
+                    <TD WIDTH="12" HEIGHT="3"><SPACER HEIGHT="3" TYPE="block" WIDTH="10"></TD>
+                    <TD WIDTH="123" HEIGHT="3"><SPACER HEIGHT="3" TYPE="block" WIDTH="10"></TD>
+                  </TR>
+                </TABLE>
+                <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="135">
+                  <TR>
+                    <TD WIDTH="12" ALIGN="left" VALIGN="top"><SPACER HEIGHT="7" TYPE="block" WIDTH="10"></TD>
+                    <TD WIDTH="123" ALIGN="left" VALIGN="top">
+                      <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="120">
+                        <TR>
+                          <TD WIDTH="5"><A HREF="services/newsletter/subscribe.html"><IMG SRC="images/arrow_sm.gif" HEIGHT="5" WIDTH="3" ALIGN="center" BORDER="0"></A></TD>
+                          <TD WIDTH="115"><A HREF="services/newsletter/subscribe.html" CLASS="size1"><FONT COLOR="#666666"><B>Free e-mail</B></FONT></A></TD>
+                        </TR>
+                        <TR>
+                          <TD WIDTH="5"></TD>
+                          <TD WIDTH="115"><A HREF="services/newsletter/subscribe.html" CLASS="size1"><FONT COLOR="#666666"><B>newsletters</B></FONT></A></TD>
+                        </TR>
+                        <TR HEIGHT="7">
+                          <TD WIDTH="5" HEIGHT="7"><SPACER HEIGHT="7" TYPE="block" WIDTH="5"></TD>
+                          <TD WIDTH="115" HEIGHT="7"><SPACER HEIGHT="7" TYPE="block" WIDTH="10"></TD>
+                        </TR>
+                      </TABLE>
+                      <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="120">
+                        <TR>
+                          <TD WIDTH="5"><A HREF="aboutadobe/pressroom/main.html"><IMG SRC="images/arrow_sm.gif" HEIGHT="5" WIDTH="3" ALIGN="center" BORDER="0"></A></TD>
+                          <TD WIDTH="115"><A HREF="aboutadobe/pressroom/main.html" CLASS="size1"><FONT COLOR="#666666"><B>Press Room</B></FONT></A></TD>
+                        </TR>
+                        <TR HEIGHT="7">
+                          <TD WIDTH="5" HEIGHT="7"><SPACER HEIGHT="7" TYPE="block" WIDTH="5"></TD>
+                          <TD WIDTH="115" HEIGHT="7"><SPACER HEIGHT="7" TYPE="block" WIDTH="10"></TD>
+                        </TR>
+                      </TABLE>
+                    </TD>
+                  </TR>
+                </TABLE>
+              </TD>
+              <TD WIDTH="10"></TD>
+            </TR>
+            <TR HEIGHT="1">
+              <TD BGCOLOR="#cccccc" COLSPAN="3" HEIGHT="1"><SPACER HEIGHT="1" TYPE="block" WIDTH="10"></TD>
+            </TR>
+            <TR>
+              <TD WIDTH="13"></TD>
+              <TD WIDTH="135"><A HREF="#" ONCLICK="wwpopupwin(event); return false"><IMG BORDER="0" HEIGHT="25" WIDTH="135" SRC="imageshome/redesign/adobeworldwide.gif" ALT="Adobe Worldwide"></A></TD>
+              <TD WIDTH="10"></TD>
+            </TR>
+            <TR HEIGHT="1">
+              <TD BGCOLOR="#cccccc" COLSPAN="3" HEIGHT="1"><SPACER HEIGHT="1" TYPE="block" WIDTH="10"></TD>
+            </TR>
+            <TR HEIGHT="3">
+              <TD WIDTH="13" HEIGHT="3"><SPACER HEIGHT="3" TYPE="block" WIDTH="10"></TD>
+              <TD WIDTH="135" HEIGHT="3"><SPACER HEIGHT="3" TYPE="block" WIDTH="10"></TD>
+              <TD WIDTH="10" HEIGHT="3"><SPACER HEIGHT="3" TYPE="block" WIDTH="10"></TD>
+            </TR>
+            <TR>
+              <TD WIDTH="13"></TD>
+              <TD WIDTH="135"><A HREF="education/main.html"><IMG BORDER="0" HEIGHT="18" WIDTH="135" SRC="imageshome/redesign/adobeed.gif" alt="Adobe in Education"></A><A HREF="/cgi-bin/redirect?http://www.activeshare.com/"><IMG BORDER="0" HEIGHT="15" WIDTH="135" SRC="imageshome/redesign/activeshare1.gif" ALT="Activeshare.com"></A></TD>
+              <TD WIDTH="10"></TD>
+            </TR>
+            <TR>
+              <TD WIDTH="13"></TD>
+              <TD WIDTH="135">
+                <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="135">
+                  <TR>
+                    <TD WIDTH="12" ALIGN="left" VALIGN="top"></TD>
+                    <TD WIDTH="123" CLASS="size1">Share photos with family and friends</TD>
+                  </TR>
+                  <TR HEIGHT="3">
+                    <TD WIDTH="12" HEIGHT="3"><SPACER HEIGHT="3" TYPE="block" WIDTH="10"></TD>
+                    <TD WIDTH="123" HEIGHT="3"><SPACER HEIGHT="3" TYPE="block" WIDTH="10"></TD>
+                  </TR>
+                </TABLE>
+                <A HREF="/cgi-bin/redirect?http://partners.adobe.com/"><IMG BORDER="0" HEIGHT="18" WIDTH="135" SRC="imageshome/redesign/partnerprogs.gif" ALT="Partner Programs"></A><BR>
+                <A HREF="jobconnection/main.html"><IMG BORDER="0" HEIGHT="17" WIDTH="135" SRC="imageshome/redesign/eportfolios.gif" ALT="ePortfolios and Jobs"></A><A HREF="aboutadobe/careeropp/main.html"><IMG BORDER="0" HEIGHT="17" WIDTH="135" SRC="imageshome/redesign/jobsadobe.gif" ALT="Jobs at Adobe"></A></TD>
+              <TD WIDTH="10"></TD>
+            </TR>
+            <TR HEIGHT="10">
+              <TD WIDTH="13" HEIGHT="10"><SPACER HEIGHT="7" TYPE="block" WIDTH="10"></TD>
+              <TD WIDTH="135" HEIGHT="10"><SPACER HEIGHT="7" TYPE="block" WIDTH="10"></TD>
+              <TD WIDTH="10" HEIGHT="10"><SPACER HEIGHT="7" TYPE="block" WIDTH="10"></TD>
+            </TR>
+          </TABLE>
+        </TD>
+      </TR>
+    </TABLE>
+    <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="740">
+      <TR HEIGHT="30">
+        <TD HEIGHT="30" COLSPAN="2"><!--oobegin
+* OnlineOpinion v:2.0:
+* The following code is Copyright 1998-2000 OpinionLab, Inc.
+* All rights reserved. Unauthorized use is prohibited. 
+* http://www.opinionlab.com
+-->
+          <SCRIPT LANGUAGE="JavaScript1.2" SRC="js/onlineopinion.js"></SCRIPT>
+          <SCRIPT LANGUAGE="JavaScript1.2">
+<!--
+O_Go('grey',1,0,0,1);
+//-->
+</SCRIPT>
+          <!--ooend--></TD>
+      </TR>
+      <TR>
+        <TD WIDTH="20"></TD>
+        <TD WIDTH="720" VALIGN="top" CLASS="size1"><SPAN STYLE="color:#666666">Copyright &copy;2001 Adobe Systems Incorporated. All rights reserved.</SPAN><BR>
+          <A HREF="misc/copyright.html">Terms of Use</A><BR>
+          <A HREF="misc/privacy.html">Online Privacy Policy</A><BR>
+          <A HREF="aboutadobe/antipiracy/main.html">Avoid Software Piracy</A></TD>
+      </TR>
+      <TR HEIGHT="40">
+        <TD HEIGHT="40" COLSPAN="2"></TD>
+      </TR>
+    </TABLE>
+    <!--start worldwide popup-->
+    <SCRIPT LANGUAGE="JavaScript1.2"><!--
+function wwpopupwin(eventObject) {
+  thewinleft=eventObject.screenX-80;
+  thewintop=eventObject.screenY-500;
+  thewinwidth=160;
+  thewinheight=400;
+  
+  switch (bp) {
+    case 'nsmac': 
+      thewinleft=screenX+585;
+      break;
+    case 'nswin':
+
+      thewinheight="430";
+      thewinwidth=180;
+      thewinleft=screenX+585;
+      break;
+    case 'iewin':
+      thewinheight=430;
+      thewinwidth=180;
+      break;
+    default:
+      break; 
+    }
+   
+  if (thewinleft<0) thewinleft=0;
+  if ((thewinleft+thewinwidth)>screen.width) thewinleft=screen.width-(thewinwidth+10);
+  if (thewintop<20) thewintop=20;
+  
+  newWin = window.open("/worldwide.html", "wwpopup", "width="+thewinwidth+",height="+thewinheight+",scrollbars=0,menubar=0,toolbar=0,location=0,status=0,resizable=0,top="+thewintop+",left="+thewinleft+",screenX="+thewinleft+",screenY="+thewintop+",dependent");
+
+  if (bp=='iemac') {
+    newWin.moveTo(thewinleft+6,thewintop+22);
+    }
+  newWinOpen=1;
+  }
+// -->
+    </SCRIPT>
+    <!--end worldwide popup-->
+    <SCRIPT LANGUAGE="JavaScript1.2" SRC="digitalimag/GeneratedItems/CSScriptLib.js"></SCRIPT>
+    <!--template modified 7-28-00-->
+  </BODY>
+
+</HTML>
+<!-- Template modified 01/19/01 --><!-- www.attrition.org web hack mirror - watermark or something -->

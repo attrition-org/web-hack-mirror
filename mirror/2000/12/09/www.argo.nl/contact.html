@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>ARGO OFFICE</title>
+	<SCRIPT LANGUAGE="JavaScript">
+<!--
+function checkOS() {
+if(navigator.userAgent.indexOf('Win') != -1)
+    { var OpSys = "Windows"; }
+ else if(navigator.userAgent.indexOf('Mac') != -1)
+    { var OpSys = "Macintosh"; }
+  else { var OpSys = "other"; }
+  return OpSys;
+}
+
+var OpSys = checkOS();
+
+if (OpSys) 	{
+if (OpSys=="Windows")  { var Sheet="small.css";} 
+if (OpSys=="Macintosh")  { var Sheet="large.css";} }
+if (OpSys=="other")  { var Sheet="large.css";} 
+
+document.write("<link rel=Stylesheet HREF='http://www.argo.nl/styles/" + Sheet + "'>");
+// -->
+</SCRIPT>
+</head>
+
+<body marginheight=0 marginwidth=0 topmargin=0 leftmargin=0 rightmargin=0>
+
+<table width=780 CELLPADDING=0 CELLSPACING=0 BORDER=0>
+<tr>
+<td>
+<table width=779 CELLPADDING=0 CELLSPACING=0 BORDER=0>
+<tr>
+<td bgcolor="#000000"><img src="nav/main.jpg" width="779" height="43" alt="" border="0" usemap="#main">
+</td>
+</tr>
+
+<tr>
+<td bgcolor="#000000" height=1><img src="pics/nieuws.jpg" width="779" height="100" alt="" border="0"></td>
+</tr>
+
+<tr>
+<td valign=top>
+<table width=779 CELLPADDING=0 CELLSPACING=0 BORDER=0>
+<tr>
+<td valign=top>
+<table width=595 CELLPADDING=20 CELLSPACING=0 BORDER=0>
+<tr>
+<td valign=top>
+<img src="pics/contact.gif" width="400" height="50" alt="" border="0">
+<form method=post action='http://www.argo.nl/cgi-bin/formmail.pl'>
+
+<input type=hidden name='recipient' value='rene@bouwmeester.com'>
+
+<input type=hidden name='redirect' value='http://www.argo.nl/verzonden.html'>
+
+<input type=hidden name='sort' value='actie,tekst,realname,bedrijfsnaam,adres,postcode,plaats,telefoon,fax,email'>
+
+<input type=hidden name='print_blank_fields' value='1'>
+
+<input type=hidden name="subject" value="Aanvraag via argo.nl">
+
+<input type=hidden name="print_config" value="realname,email">
+
+
+
+<table width=100% cellpadding=0 cellspacing=0 border=0>
+
+<tr>
+
+<td colspan=2><font face=verdana, helvetica size=1>
+
+
+<input type=checkbox name=actie value=contact_opnemen> Neem contact met mij op
+<br>
+<input type=checkbox name=actie value=catalogus_sturen> Stuur mij een catalogus
+<p>
+
+Vragen en opmerkingen:<br>
+
+<textarea name="tekst" rows=4 cols=41 wrap=on></textarea></font>
+
+<pre>
+
+</pre>
+
+</td></tr>
+
+<tr><td><font face=verdana, helvetica size=1>
+
+* Naam:</td><td>            <input size=30 name="realname"></td></tr><tr>
+
+<td><font face=verdana, helvetica size=1>Bedrijfsnaam:  </td><td>     <input size=30 name="bedrijfsnaam"></td></tr>
+
+<tr>
+
+<td><font face=verdana, helvetica size=1>
+
+Adres: </td><td> <input size=30 name="adres"></td></tr><tr>
+
+
+
+<td><font face=verdana, helvetica size=1>
+
+Postcode: </td><td><input size=30 name="postcode"></td></tr><tr>
+
+
+
+<td><font face=verdana, helvetica size=1>
+
+Plaats: </td><td><input size=30 name="plaats"></td></tr><tr>
+
+
+
+<td><font face=verdana, helvetica size=1>
+
+Land: </td><td><input size=30 name="land"></td></tr><tr>
+
+<td><font face=verdana, helvetica size=1>
+
+Telefoon: </td><td><input size=15 name="telefoon"></td></tr><tr>
+
+<td><font face=verdana, helvetica size=1>
+
+Fax: </td><td><input size=15 name="fax"></td></tr><tr>
+
+<td><font face=verdana, helvetica size=1>
+
+* E-mail adres:</td><td><input size=30 name="email"></td></tr>
+
+<tr><td colspan=2><p>
+
+<input type=submit size=50 value="Send">
+
+<p><font face=verdana, helvetica size=1>
+
+* Gelieve minimaal deze velden in te vullen</font>
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+</td>
+<td width=184 bgcolor="#9CA1A5" valign=top>
+<table width=184 CELLPADDING=10 CELLSPACING=0 BORDER=0>
+<tr>
+<td valign=top>
+<div class="KaderTextKop">
+&nbsp;</div>
+<pre>
+
+
+
+
+
+
+
+
+
+
+</pre>
+
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+</table>
+
+
+</td>
+</tr>
+
+</table>
+</td>
+<td width=1 bgcolor="#000000"><img src="trans.gif" width="1" height="1" alt="" border="0"></td>
+</table>
+
+<map name="main">
+<area shape="rect" coords="146,8,202,35" href="index.html" title="">
+<area shape="rect" coords="215,8,295,35" href="overargo.html" title="">
+<area shape="rect" coords="306,8,369,35" href="cgi-bin/webdata_argonws.pl?cgifunction=Search" title="">
+<area shape="rect" coords="596,8,677,36" href="cgi-bin/argovac/webdata_argovac.cgi?cgifunction=Search" title="">
+<area shape="rect" coords="381,8,451,36" href=" collectie.html" title="">
+<area shape="rect" coords="463,6,584,36" href="http://argo.interkantoor.nl" title="" target="_blank">
+<area shape="rect" coords="690,7,758,36" href="contact.html" title="">
+<area shape="default" nohref>
+</map>
+</body>
+</html>
+;

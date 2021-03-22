@@ -1,0 +1,171 @@
+<!doctype html public "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+
+<head>
+<title>Câmara Municipal de Cascais</title>
+<script LANGUAGE="JavaScript">
+
+<!--
+// Detectar se o Browser é o NE3 ou + ou o IE4 ou mais
+bName = navigator.appName;
+bVer = parseInt(navigator.appVersion);
+    if ((bName == "Netscape" && bVer >= 3) || 
+        (bName == "Microsoft Internet Explorer" && bVer >= 4)) br = "n3"; 
+    else br = "n2";
+
+// Criar os objectos para as imagens activas e inactivas
+    if (br== "n3") { 
+
+    img1on = new Image();                    
+    img1on.src = "images/camara/l_camara_on.gif";      
+    img1off = new Image();              
+    img1off.src = "images/camara/l_camara_off.gif";  
+	
+    img2on = new Image();                    
+    img2on.src = "images/agenda/l_agenda_on.gif";      
+    img2off = new Image();              
+    img2off.src = "images/agenda/l_agenda_off.gif";
+
+    img3on = new Image();                    
+    img3on.src = "images/ambiente/l_ambiente_on.gif";      
+    img3off = new Image();              
+    img3off.src = "images/ambiente/l_ambiente_off.gif";  	
+	
+    img4on = new Image();                    
+    img4on.src = "images/social/l_social_on.gif";      
+    img4off = new Image();              
+    img4off.src = "images/social/l_social_off.gif";  	
+	
+    img5on = new Image();                    
+    img5on.src = "images/historia/l_historia_on.gif";      
+    img5off = new Image();              
+    img5off.src = "images/historia/l_historia_off.gif";  	
+	
+    img6on = new Image();                    
+    img6on.src = "images/web/l_web_on.gif";      
+    img6off = new Image();              
+    img6off.src = "images/web/l_web_off.gif";  	
+	
+    img7on = new Image();                    
+    img7on.src = "images/links/l_links_on.gif";      
+    img7off = new Image();              
+    img7off.src = "images/links/l_links_off.gif";  	
+       
+    img8on = new Image();                    
+    img8on.src = "images/projectos/l_projectos_on.gif";      
+    img8off = new Image();              
+    img8off.src = "images/projectos/l_projectos_off.gif";  		   
+
+    img9on = new Image();                    
+    img9on.src = "images/patrim_hist/l_patrim_on.gif";      
+    img9off = new Image();              
+    img9off.src = "images/patrim_hist/l_patrim_off.gif";
+}
+
+// Função "ON" as imagens
+function imgON(imgName) {
+    if (br == "n3") {
+    document[imgName].src = eval(imgName + "on.src");
+    }
+}
+
+// Função "OFF" as imagens
+function imgOFF(imgName) {
+    if (br == "n3") {
+    document[imgName].src = eval(imgName + "off.src");
+    }
+}
+// -->
+
+</script>
+</head>
+<script language="JavaScript">
+var ver = navigator.appVersion;
+
+if (ver.indexOf("MSIE") != -1) {
+	document.writeln("<body background='images/misc/bkg_home_ie.jpg'>");
+
+} else
+	document.writeln("<body background='images/misc/bkg_home_ns.jpg'>");
+
+document.bgcolor="#000000"
+</script>
+
+
+<body>
+
+<table width="687" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+<!-- ## White Space -->
+    <td width="14" rowspan="4"><img src="images/misc/white_space.gif" width="14" height="1" border="0"></td>
+<!-- #### Navigation Bar -->
+    <td width="173" valign="top" rowspan="4"><img src="images/misc/space_bar.gif" width="173" height="20" border="0" alt><a href="camara/camara.html" target="_top" onMouseOver="imgON('img1')" onMouseOut="imgOFF('img1')"><img name="img1" src="images/camara/l_camara_off.gif" border="0" alt width="174" height="50"></a><a href="agenda/agenda.html" target="_top" onMouseOver="imgON('img2')" onMouseOut="imgOFF('img2')"><img name="img2" src="images/agenda/l_agenda_off.gif" border="0" alt WIDTH="174" HEIGHT="50"></a><a href="projectos/projectos.html" target="_top" onMouseOver="imgON('img8')" onMouseOut="imgOFF('img8')"><img name="img8" src="images/projectos/l_projectos_off.gif" border="0" alt WIDTH="174" HEIGHT="50"></a><a href="ambiente/ambiente.html" target="_top" onMouseOver="imgON('img3')" onMouseOut="imgOFF('img3')"><img name="img3" src="images/ambiente/l_ambiente_off.gif" border="0" alt WIDTH="174" HEIGHT="50"></a><a href="social/social.html" target="_top" onMouseOver="imgON('img4')" onMouseOut="imgOFF('img4')"><img name="img4" src="images/social/l_social_off.gif" border="0" alt WIDTH="174" HEIGHT="50"></a><a href="historia/historia.html" target="_top" onMouseOver="imgON('img5')" onMouseOut="imgOFF('img5')"><img name="img5" src="images/historia/l_historia_off.gif" border="0" alt WIDTH="174" HEIGHT="50"></a><a href="patrim_hist/patrim_hist.html" target="_top" onMouseOver="imgON('img9')" onMouseOut="imgOFF('img9')"><img name="img9" src="images/patrim_hist/l_patrim_off.gif" border="0" WIDTH="174" HEIGHT="50"></a><a href="web/web.html" target="_top" onMouseOver="imgON('img6')" onMouseOut="imgOFF('img6')"><img name="img6" src="images/web/l_web_off.gif" border="0" alt WIDTH="174" HEIGHT="50"></a><a href="links/links.html" target="_top" onMouseOver="imgON('img7')" onMouseOut="imgOFF('img7')"><img name="img7" src="images/links/l_links_off.gif" border="0" alt WIDTH="174" HEIGHT="50"></a></td>
+<!-- ## White Space -->
+    <td width="2" rowspan="4"><img src="images/misc/white_space.gif" width="2" height="1" border="0"></td>
+<!-- #### Body -->
+    <td width="393" align="center" valign="top" colspan="2"><img src="images/home/header_mensagem.gif" border="0" alt="Mensagem do Presidente" WIDTH="286" HEIGHT="68"> <br>
+    <img src="images/home/mensagem.gif" border="0" alt WIDTH="371" HEIGHT="182"><img src="images/home/assinatura.gif" border="0" alt WIDTH="144" HEIGHT="54"> <br>
+    <br>
+    <a href="mailto:apoio.municipe@cm-cascais.pt"><img src="images/home/anim_envelope.gif" border="0" alt WIDTH="130" HEIGHT="70"></a> <p align="left"><br>
+<!-- END FASTCOUNTER LINK -->    </td>
+    <td width="92" align="right" valign="top"><br>
+    <br>
+      <map name="FPMap0">
+    <area href="Principal/mapa.html" target="_top" shape="rect" coords="2, 3, 89, 39"></map><img src="IMAGES/Principal/mapa.gif" border="0" usemap="#FPMap0" width="90" height="40"><br>
+    <map name="FPMap1">
+    <area href="apoio_municipal/apoio_municipal.html" target="_top" shape="rect" coords="2, 4, 89, 39"></map><img src="IMAGES/Principal/apoio_municipe.gif" border="0" width="90" height="41" usemap="#FPMap1"><br>
+    <p align="center"><a href="Premios/premios.html" target="_top"><img border="0" src="Premios/Imagens/premios_logo.gif"></a></p>
+    <p align="center"><a href="Jogos/Mensagem.html" target="_top"><img border="0" src="Jogos/imagens/Jogos_logo.gif" align="left"></a></td>
+  </tr>
+  <tr>
+    <td width="182" align="center" valign="top">    
+      <p align="center"><a href="Principal/Workshop/workshop.html" target="_top"><img border="0" src="Principal/Workshop/Images/workshop_logo.gif"></a>
+    </td>
+    <td width="203" align="center" valign="top">    <a href="Principal/Workshop/cursopintura.html" target="_top"><img border="0" src="Principal/Workshop/Images/cursopintura_logo.gif"></a>    </td>
+    <td width="92" align="right" valign="top">    <a href="Principal/ccc.html" target="_top"><img border="0" src="images/Principal/CCCascais/ccc_logo.gif" align="left"></a>    </td>
+  </tr>
+  <tr>
+    <td width="393" align="center" valign="top" colspan="2">
+      <p align="center">&nbsp;</p>
+      <p align="center"> <embed SRC="ph.swf" WIDTH="190" HEIGHT="150" TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" align="left"></p>
+      <p align="center">&nbsp;</p>
+      <p align="center">&nbsp;</p>
+      <p align="center">&nbsp;</p>
+      <p align="center">&nbsp;</p>
+      <p align="center">&nbsp;</p>
+      <p align="center"><font size="2">Vós, ó Franças, Semedos, Quintanilhas,<br>
+      Macedos, e outras pestes condenadas;<br>
+      Vós, de cujas buzinas penduradas<br>
+      Tremem de Jove as melindrosas filhas:<br>
+      <br>
+      Vós, néscios, que mamais das vis quadrilhas<br>
+      Do baixo vulgo insossas gargalhadas,<br>
+      Por versos maus, por trovas aleijadas,<br>
+      De que engenhais as vossas maravilhas:<br>
+      <br>
+      Deixai Elmano, que inocente e honrado<br>
+      Nunca de vós se lembra, meditando<br>
+      Em coisas sérias, de mais alto estado:<br>
+      <br>
+      E se quereis, os olhos alongando,<br>
+      Ei-lo! Vede-o no Pindo recostado,<br>
+      De perna erguida sobre vós......!</font></p>
+      <p align="right"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &quot; Bocage&quot;</font></p>
+    
+    </td>
+    <td width="92" align="right" valign="top" rowspan="2">
+      <p align="center"><!--webbot bot="HitCounter" u-custom i-digits="4" i-image="1" PREVIEW="&lt;strong&gt;[Hit Counter]&lt;/strong&gt;" i-resetvalue="0" startspan --><img SRC="_vti_bin/fpcount.exe/?Page=body.html|Image=1|Digits=4" ALT="Hit Counter"><!--webbot bot="HitCounter" endspan i-checksum="25279" -->
+      <br>
+      persons have seen this defaced site !</td>
+  </tr>
+  <tr>
+    <td width="393" align="center" valign="top" colspan="2">
+      <p align="left"><font face="Arial" size="1">Nº de visitantes desde
+    1/Jan/99</font><br>
+<!-- BEGIN FASTCOUNTER CODE -->    <a href="http://member.linkexchange.com/cgi-bin/fc/fastcounter-login?1139647" target="_top"><img border="0" src="http://fastcounter.linkexchange.com/fastcounter?1139647+2279301" width="90" height="16"></a> <!-- END FASTCOUNTER CODE --> <br>
+<!-- BEGIN FASTCOUNTER LINK -->    <font face="arial" size="1"><a href="http://fastcounter.linkexchange.com/fc-join" target="_top">FastCounter by LinkExchange</a> </font>    </td>
+  </tr>
+</table>
+</body>
+</html>

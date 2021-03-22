@@ -1,0 +1,491 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<title>예약서비스</title>
+<meta http-equiv="text/html;charset=euc-kr" content="Content-Type">
+<meta name="generator" content="Namo WebEditor v4.0">
+<SCRIPT LANGUAGE="JavaScript">
+
+<!--
+/* This code is Copyright (c) 1996 Nick Heinle and Athenia Associates, 
+ * all rights reserved. In order to receive the right to license this 
+ * code for use on your site the original code must be copied from the
+ * Web site webreference.com/javascript/. License is granted to user to 
+ * reuse this code on their own Web site if and only if this entire copyright
+ * notice is included. Code written by Nick Heinle of webreference.com. */
+   function getCookie (name) {var dcookie = document.cookie; 
+var cname = name + "=";var clen = dcookie.length;var cbegin = 0;
+        while (cbegin < clen) {        var vbegin = cbegin + cname.length;
+                if (dcookie.substring(cbegin, vbegin) == cname) { 
+                var vend = dcookie.indexOf (";", vbegin);
+                        if (vend == -1) vend = clen;
+                return unescape(dcookie.substring(vbegin, vend));
+                }        cbegin = dcookie.indexOf(" ", cbegin) + 1;
+                if (cbegin == 0) break;        }return null;}
+function setCookie (name, value, expires) {
+        if (!expires) expires = new Date();
+document.cookie = name + "=" + escape (value) + 
+"; expires=" + expires.toGMTString() +  "; path=/";}function delCookie (name) {
+var expireNow = new Date();document.cookie = name + "=" +
+"; expires=Thu, 01-Jan-70 00:00:01 GMT" +  "; path=/";}// -->
+    var expdate = new Date ();
+        expdate.setTime (expdate.getTime() + (1000* 31));
+        setCookie ("_name", "Bob", expdate);   
+
+
+</SCRIPT></head>
+
+<body bgcolor="white" text="black" link="#FF506E" vlink="#BE50FF" alink="#0033CC">
+
+<p align="center"><br></p>
+<p align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
+ src="image/rent-in1.jpg" width="452" height="81" border="0"></p>
+<p align="center">&nbsp; 
+<div align="center">
+    <form method="post" action="reserve.asp">
+<table border cellpadding="3" cellspacing="3" width="550">
+    <tr>
+        <td width="533" align="center" colspan="2" bgcolor="red">            <p><font face="돋움" size="2" color="white"><b>임차인 정보</b></font><font
+             face="돋움" size="2" color="black"> </font></td>
+    </tr>
+    <tr>
+        <td width="86" align="center"><p><font face="돋움" size="2" color="black">성명</font></td>
+        <td width="436"><p><font size="2"><input type="text" name="user_name"
+             size="30"></font></td>
+    </tr>
+    <tr>
+        <td width="86" align="center"><p><font face="돋움" size="2" color="black">주민등록번호</font></td>
+        <td width="436"><p><font size="2"><input type="text" name="user_resident"
+             size="30"></font></td>
+    </tr>
+    <tr>
+        <td width="86" align="center"><p><font face="돋움" size="2" color="black">EMAIL</font></td>
+        <td width="436"><p><font size="2"><input type="text" name="email" size="30"></font></td>
+    </tr>
+    <tr>
+        <td width="86" align="center"><p><font face="돋움" size="2" color="black">TEL</font></td>
+        <td width="436"><p><font size="2"><input type="text" name="tel" size="12"></font></td>
+    </tr>
+    <tr>
+        <td width="86" align="center"><p><font face="돋움" size="2" color="black">핸드폰</font></td>
+        <td width="436"><p><font size="2"><input type="text" name="fax" size="12"></font></td>
+    </tr>
+    <tr>
+        <td width="533" align="center" colspan="2" bgcolor="red"><p><font face="돋움"
+             size="2" color="white"><b>대여정보</b></font><font face="돋움" size="2"
+             color="white"> </font></td>
+    </tr>
+    <tr>
+        <td width="86" align="center"><p><font face="돋움" size="2" color="black">대여영업소<br> 
+            [ </font><a href="../company/location.html" target="_top"><font face="돋움"
+             size="2">영업망</font></a><font face="돋움" size="2" color="black"> 
+            ] </font></td>
+        <td width="436"><p><font face="돋움" size="2" color="black"><select name="lent_shop">
+            <option value="김포공항(국제제2청사)">김포공항(국제제2청사)</option>
+            <option value="서대문">서대문</option>
+            <option value="강남">강남</option>
+            <option value="힐튼호텔">힐튼호텔</option>
+            <option value="분당">분당</option>
+            <option value="양평동">양평동</option>
+            <option value="구로(본사)">구로(본사)</option>
+            <option value="인천">인천</option>
+            <option value="춘천">춘천</option>
+            <option value="속초">속초</option>
+            <option value="속초공항">속초공항</option>
+            <option value="평택">평택</option>
+            <option value="천안">천안</option>
+            <option value="온양">온양</option>
+            <option value="청주">청주</option>
+            <option value="대전">대전</option>
+            <option value="대구">대구</option>
+            <option value="경주">경주</option>
+            <option value="울산">울산</option>
+            <option value="울산공항">울산공항</option>
+            <option value="광주">광주</option>
+            <option value="창원">창원</option>
+            <option value="거제">거제</option>
+            <option value="부산">부산</option>
+            <option value="제주공항.3번주차장">제주공항.3번주차장</option>
+            <option value="제주.자연사박물관">제주.자연사박물관</option>
+            <option value="제주중문.하나호텔">제주중문.하나호텔</option>
+            <option value="기타">기타</option></select> </font></td>
+    </tr>
+    <tr>
+        <td width="86" align="center"><p><font face="돋움" size="2" color="black">대여일시</font></td>
+        <td width="436"><p><font face="돋움" size="2" color="black"><select name="lent_mm">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option></select> 월 <select name="lent_dd">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option></select>일<select name="lent_t">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option></select> 시 <select name="lent_m">
+            <option>00</option>
+            <option>10</option>
+            <option>20</option>
+            <option>30</option>
+            <option>40</option>
+            <option>50</option></select> 분 <input type="radio" name="lent_flag"
+             value="오전">AM <input type="radio" name="lent_flag" value="오후"
+             checked>PM </font></td>
+    </tr>
+    <tr>
+        <td width="86" align="center"><p><font face="돋움" size="2" color="black">반납영업소</font></td>
+        <td width="436"><p><font face="돋움" size="2" color="black"><select name="return_shop">
+            <option value="김포공항(국제제2청사)">김포공항(국제제2청사)</option>
+            <option value="서대문">서대문</option>
+            <option value="강남">강남</option>
+            <option value="힐튼호텔">힐튼호텔</option>
+            <option value="분당">분당</option>
+            <option value="양평동">양평동</option>
+            <option value="구로(본사)">구로(본사)</option>
+            <option value="인천">인천</option>
+            <option value="춘천">춘천</option>
+            <option value="속초">속초</option>
+            <option value="속초공항">속초공항</option>
+            <option value="평택">평택</option>
+            <option value="천안">천안</option>
+            <option value="온양">온양</option>
+            <option value="청주">청주</option>
+            <option value="대전">대전</option>
+            <option value="대구">대구</option>
+            <option value="경주">경주</option>
+            <option value="울산">울산</option>
+            <option value="울산공항">울산공항</option>
+            <option value="광주">광주</option>
+            <option value="창원">창원</option>
+            <option value="거제">거제</option>
+            <option value="부산">부산</option>
+            <option value="제주공항.3번주차장">제주공항.3번주차장</option>
+            <option value="제주.자연사박물관">제주.자연사박물관</option>
+            <option value="제주중문.하나호텔">제주중문.하나호텔</option>
+            <option value="기타">기타</option></select></font></td>
+    </tr>
+    <tr>
+        <td width="86" align="center"><p><font face="돋움" size="2" color="black">반납일시</font></td>
+        <td width="436"><p><font face="돋움" size="2" color="black"><select name="return_mm">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option></select>월 <select name="return_dd">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option></select>일 <select name="return_t">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option></select>시 <select name="return_m">
+            <option value="00">00</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+            <option value="50">50</option></select>분 <input type="radio" name="return_flag"
+             value="오전">AM <input type="radio" name="return_flag" value="오후"
+             checked>PM</font></td>
+    </tr>
+    <tr>
+        <td width="86" align="center"><p><font face="돋움" size="2" color="black">항공편</font></td>
+        <td width="436"><p><font size="2"><input type="text" name="airport" size="30"></font></td>
+    </tr>
+    <tr>
+        <td width="86" align="center"><p><font face="돋움" size="2" color="black">차종</font></td>
+        <td width="436"><p><font face="돋움" size="2" color="black"><select name="car_type">
+            <option value="마티즈">마티즈</option>
+	    <option value="엑센트">엑센트</option>
+            <option value="라노스1.5">라노스1.5</option>
+            <option value="누비라1.5">누비라1.5</option>
+	    <option value="아반테1.5">아반테1.5</option>
+            <option value="누비라스패건1.5">누비라스패건1.5</option>
+            <option value="레간자1.8">레간자1.8</option>
+            <option value="누비라스패건1.8">누비라스패건1.8</option>
+	    <option value="EF소나타1.8">EF소나타1.8</option>
+            <option value="티뷸런스">티뷸런스</option> 
+            <option value="레간자2.0">레간자2.0</option>
+	    <option value="EF소나타2.0">EF소나타2.0</option>
+            <option value="레간자울트라">레간자울트라</option>
+            <option value="갤로퍼">갤로퍼</option>
+            <option value="스포티지">스포티지</option>
+            <option value="무쏘">무쏘</option>
+            <option value="브로엄">브로엄</option>
+            <option value="코란도">코란도</option>
+            <option value="아카디아슈퍼">아카디아슈퍼</option>
+	    <option value="그랜져2.5">그랜져2.5</option>
+            <option value="벤츠E230">벤츠E230</option>
+            <option value="체어맨">체어맨</option>
+            <option value="볼보V70">볼보V70</option>
+            <option value="벤츠E280">벤츠E280</option>
+            <option value="캐딜락리무진">캐딜락리무진</option>
+            <option value="이스타나">이스타나</option>
+            <option value="프레지오">프레지오</option>
+            <option value="스타렉스">스타렉스</option>
+            <option value="카니발">카니발</option>
+            <option value="코러스">코러스</option>
+            <option value="콤비15인승">콤비15인승</option>
+            <option value="ASTRO">ASTRO VAN7</option></select></font></td>
+    </tr>
+    <tr>
+        <td width="86" align="center"><p><font face="돋움" size="2" color="black">할인제휴<br> 
+            [</font><a href="../company/partner.htm" target="_top"><font face="돋움"
+             size="2" color="black"> </font></a><a href="../company/partner.htm"
+             target="_top"><font face="돋움" size="2">제휴회사</font></a><font
+             face="돋움" size="2" color="black"> ] </font></td>
+        <td width="436"><p><font face="돋움" size="2" color="black"><select name="sale_join1">
+            <option value="NONE">NONE</option>
+            <option value="대우그룹">대우그룹 임직원</option>
+            <option value="Avis">Avis 회원</option>
+            <option value="대한항공">대한항공</option>
+            
+            <option value="동양화재">동양화재</option>
+            <option value="쌍용화재">쌍용화재</option>
+            <option value="제일화재">제일화재</option>
+            <option value="삼성화재">삼성화재</option>
+            <option value="다이너스카드">다이너스카드</option>
+            <option value="유공카드">유공카드</option>
+            <option value="SK카드">SK카드</option>
+            <option value="서울은행">서울은행</option>
+            <option value="대우오토카드">대우오토카드</option>
+            <option value="비씨법인카드">비씨법인카드</option>
+            <option value="아멕스카드">아멕스카드</option>
+            <option value="국민카드">국민카드</option>
+            
+            <option value="LG하이카드">LG하이카드</option>
+            <option value="한솔CNS">한솔CNS</option>
+            
+            <option value="투어뱅크">투어뱅크</option>
+            <option value="데이콤">데이콤 하나로</option>
+            <option value="한겨레">한겨레</option>
+            <option value="델타클럽(동아백화점)">델타클럽(동아백화점)</option>
+            <option value="한화콘도회원">한화콘도회원</option>
+            <option value="유니텔카드">유니텔카드</option>
+            <option value="SK텔레콤할인쿠폰">SK텔레콤할인쿠폰</option>
+            <option value="월드투어">월드투어</option>
+            <option value="밀레니엄카드">밀레니엄카드</option>
+            <option value="삼립하일라콘도회원">삼립하일라콘도회원</option>
+            
+            <option value="월간쿠폰차">월간쿠폰차</option>
+	    <option value="buynjoy">바이엔조이</option>
+	    <option value="철도회원">철도회원</option>
+            <option value="SK텔레콤리더스클럽">SK텔레콤리더스클럽</option>
+            <option value="DFS면세점">DFS갤러리아면세점</option></select> 
+            <select name="sale_join2">
+            <option value="NONE">NONE</option>
+            <option value="대우그룹">대우그룹 임직원</option>
+            <option value="Avis">Avis 회원</option>
+            <option value="대한항공">대한항공</option>
+            
+            <option value="동양화재">동양화재</option>
+            <option value="쌍용화재">쌍용화재</option>
+            <option value="제일화재">제일화재</option>
+            <option value="삼성화재">삼성화재</option>
+            <option value="다이너스카드">다이너스카드</option>
+            <option value="유공카드">유공카드</option>
+            <option value="SK카드">SK카드</option>
+            <option value="서울은행">서울은행</option>
+            <option value="대우오토카드">대우오토카드</option>
+            <option value="아멕스카드">아멕스카드</option>
+            <option value="국민카드">국민카드</option>
+            
+            <option value="LG하이카드">LG하이카드</option>
+            <option value="한솔CNS">한솔CNS</option>
+            
+            <option value="투어뱅크">투어뱅크</option>
+            <option value="데이콤">데이콤 하나로</option>
+            <option value="한겨레">한겨레</option>
+            <option value="델타클럽(동아백화점)">델타클럽(동아백화점)</option>
+            <option value="한화콘도회원">한화콘도회원</option>
+            <option value="유니텔카드">유니텔카드</option>
+            <option value="SK텔레콤할인쿠폰">SK텔레콤할인쿠폰</option>
+            <option value="월드투어">월드투어</option>
+            <option value="밀레니엄카드">밀레니엄카드</option>
+            <option value="삼립하일라콘도회원">삼립하일라콘도회원</option>
+            
+            <option value="월간쿠폰차">월간쿠폰차</option>
+	    <option value="buynjoy">바이엔조이</option>
+	    <option value="철도회원">철도회원</option>
+            <option value="SK텔레콤리더스클럽">SK텔레콤리더스클럽</option>
+            <option value="DFS면세점">DFS갤러리아면세점</option></select> 
+            <select name="sale_join3">
+            <option value="NONE">NONE</option>
+            <option value="대우그룹">대우그룹 임직원</option>
+            <option value="Avis">Avis 회원</option>
+            <option value="대한항공">대한항공</option>
+            
+            <option value="동양화재">동양화재</option>
+            <option value="쌍용화재">쌍용화재</option>
+            <option value="제일화재">제일화재</option>
+            <option value="삼성화재">삼성화재</option>
+            <option value="다이너스카드">다이너스카드</option>
+            <option value="유공카드">유공카드</option>
+            <option value="SK카드">SK카드</option>
+            <option value="서울은행">서울은행</option>
+            <option value="대우오토카드">대우오토카드</option>
+            <option value="비씨법인카드">비씨법인카드</option>
+            <option value="아멕스카드">아멕스카드</option>
+            <option value="국민카드">국민카드</option>
+            
+            <option value="LG하이카드">LG하이카드</option>
+            <option value="한솔CNS">한솔CNS</option>
+           
+            <option value="투어뱅크">투어뱅크</option>
+            <option value="데이콤">데이콤 하나로</option>
+            <option value="한겨레">한겨레</option>
+            <option value="델타클럽(동아백화점)">델타클럽(동아백화점)</option>
+            <option value="한화콘도회원">한화콘도회원</option>
+            <option value="유니텔카드">유니텔카드</option>
+            <option value="SK텔레콤할인쿠폰">SK텔레콤할인쿠폰</option>
+            <option value="월드투어">월드투어</option>
+            <option value="밀레니엄카드">밀레니엄카드</option>
+            <option value="삼립하일라콘도회원">삼립하일라콘도회원</option>
+            
+            <option value="월간쿠폰차">월간쿠폰차</option>
+	    <option value="buynjoy">바이엔조이</option>
+	    <option value="철도회원">철도회원</option>
+            <option value="SK텔레콤리더스클럽">SK텔레콤리더스클럽</option>
+            <option value="DFS면세점">DFS갤러리아면세점</option></select> 
+            </font></td>
+    </tr>
+    <tr>
+        <td width="86"><p><font size="2">&nbsp;</font></td>
+        <td width="436"><p><font face="돋움" size="2" color="black"><textarea
+             name="content" rows="12" cols="47"></textarea></font></td>
+    </tr>
+    <tr>
+        <td width="533" align="center" colspan="2"><p><font face="돋움" size="2"
+             color="black"><input type="submit" value="예   약">&nbsp;&nbsp;&nbsp; 
+            <input type="reset" value="reset"> </font></td>
+    </tr>
+</table>
+    </form>
+<table border="0">
+    <tr>
+        <td valign="top">            <p><font face="돋움" size="2" color="black">* 임차인 자격조건: </font></td>
+        <td><p><font face="돋움" size="2" color="black">승용자동차 - 만21세 
+            이상, 운전경력 1년 이상<br> 승합자동차 - 만26세 이상, 운전경력 3년 
+            이상 </font></td>
+    </tr>
+    <tr>
+        <td colspan="2"><p><font face="돋움" size="2" color="black">* 예약가능여부는 
+            12시간 이내에 통보해 드립니다. </font></td>
+    </tr>
+    <tr>
+        <td valign="top"><p><font face="돋움" size="2" color="black"><br> * 
+            온라인 입금: </font></td>
+        <td><p><font face="돋움" size="2" color="black"><br> 다음과 같이 예약지역을 
+            구분하여 온라인 입금해 주십시요.<br> <br> 내륙 예약 ▶ 『계좌번호』신한은행 
+            361-05-000493 예금주 (주)브이아이피 렌트카<br> 제주 예약 ▷ 『계좌번호』신한은행 
+            901-05-005170 예금주 (주)브이아이피 렌트카 </font></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+</table></div>
+<p align="center"><font size="2"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</font></p>
+
+<p align="center"><hr size="1" width="97%"> 
+<p align="center"><font face="돋움" size="2" color="black">E-Mail: </font><a
+ href="mailto:res@avis.co.kr"><font face="돋움" size="2">res@avis.co.kr</font></a><font
+ face="돋움" size="2" color="black"><br>
+</font><font face="돋움" size="2" color="black"><b>Copyright 1998 V . I . P. 
+Rent a car All rights reserved. </b></font></p>
+<p align="center"><font face="돋움" size="2" color="black"><br></font></p>
+</body>
+
+</html>

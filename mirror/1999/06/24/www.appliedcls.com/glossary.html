@@ -1,0 +1,180 @@
+<!-- ©1998 Applied Cognitive & Learning Sciences
+     Created and maintained by Kent Lim
+     for more information: klim@iname.com  -->
+               
+<HTML>
+<HEAD>
+<TITLE>Applied Cognitive & Learning Sciences - Glossary</TITLE>
+
+<script language="JavaScript">
+<!-- HIDE SCRIPT
+
+function Is ()
+{   // convert all characters to lowercase to simplify testing
+    var agt=navigator.userAgent.toLowerCase()
+
+    // *** BROWSER VERSION ***
+	this.nav  = ((agt.indexOf('mozilla')!=-1) && ((agt.indexOf('spoofer')==-1)
+                && (agt.indexOf('compatible') == -1)))
+    this.ie   = (agt.indexOf("msie") != -1)
+     
+    // *** PLATFORM ***
+    this.win   = ( (agt.indexOf("win")!=-1) || (agt.indexOf("16bit")!=-1) )
+    this.mac    = (agt.indexOf("mac")!=-1)
+}
+
+var is = new Is()
+//--> end hide JavaScript
+</SCRIPT>
+
+<script language="JavaScript">
+
+<!-- HIDE Script
+            
+//LEFT Navigation Rollovers
+
+browserName = navigator.appName;
+browserVer = parseInt(navigator.appVersion);
+        if ((browserName == "Netscape" && browserVer >= 3) || (browserName == "Microsoft Internet Explorer" && browserVer >=4)) {
+                version = "n3";
+                }
+        else
+                {
+                version = "n2";
+        }
+           
+
+if (version == "n3") {
+leftnav1=new Image()
+leftnav1.src="images/common/lt-but-who-up.gif"        
+           
+leftnav1b=new Image()
+leftnav1b.src="images/common/lt-but-who.gif"
+
+leftnav2=new Image()
+leftnav2.src="images/common/lt-but-what-up.gif"
+
+leftnav2b=new Image()
+leftnav2b.src="images/common/lt-but-what.gif"
+
+leftnav3=new Image()
+leftnav3.src="images/common/lt-but-style-up.gif"
+
+leftnav3b=new Image()
+leftnav3b.src="images/common/lt-but-style.gif"
+
+leftnav4=new Image()
+leftnav4.src="images/common/lt-but-programs-up.gif"
+
+leftnav4b=new Image()
+leftnav4b.src="images/common/lt-but-programs.gif"
+
+leftnav5=new Image()
+leftnav5.src="images/common/lt-but-recent-up.gif"
+
+leftnav5b=new Image()
+leftnav5b.src="images/common/lt-but-recent.gif"
+}
+
+function SwapOut(num) {
+               if (version == "n3") {
+                        if (num==3){document.c.src=leftnav3.src}
+                        else if (num==1){document.a.src=leftnav1.src}
+                        else if (num==2){document.b.src=leftnav2.src}                      
+                        else if (num==4){document.d.src=leftnav4.src}  
+                        else if (num==5){document.e.src=leftnav5.src}                 
+                        }
+                   return true;
+                   }                    
+                   function SwapBack(num) {
+       if (version == "n3") {                
+                        if (num==3){document.c.src=leftnav3b.src}
+                        else if (num==1){document.a.src=leftnav1b.src}
+                        else if (num==2){document.b.src=leftnav2b.src}
+                        else if (num==4){document.d.src=leftnav4b.src}
+                        else if (num==5){document.e.src=leftnav5b.src}
+                        }
+                   return true;
+                   }                  
+// STOP HIDE -->            
+
+</script>
+
+</HEAD>
+
+<BODY BGCOLOR="#ffffff" BACKGROUND="images/toplevel/grey-back.gif" LINK="#003399" VLINK="#8C0019">
+
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0>
+
+<TR>
+<TD width=118 rowspan=4 align=left valign=top><SCRIPT>
+<!--
+if (is.win)
+{
+   document.write('<IMG SRC="images/common/space.gif" WIDTH="116" HEIGHT="1" BORDER="0">')
+}
+if  (is.mac)
+{
+   document.write('<IMG SRC="images/common/space.gif" WIDTH="118" HEIGHT="1" BORDER="0">')
+}
+
+// -->
+</SCRIPT><BR><IMG SRC="images/common/space.gif" WIDTH="1" HEIGHT="90" BORDER="0"><BR>
+<a HREF="who/who-main.html" onMouseOver="if (version == 'n3') {SwapOut(1); self.status = 'Who we are: Our mission, philosophy, and methods'; return true}" onMouseOut='SwapBack(1)'><IMG SRC="images/common/lt-but-who.gif" ALT="Who we are" WIDTH="110" HEIGHT="26" BORDER="0" name="a"></a><BR><a HREF="what/what-main.html" onMouseOver="if (version == 'n3') {SwapOut(2); self.status = 'What we do: A summary of our services'; return true}" onMouseOut='SwapBack(2)'><IMG SRC="images/common/lt-but-what.gif" ALT="What we do" WIDTH="110" HEIGHT="25" BORDER="0" name="b"></a><BR><a HREF="style/style-main.html" onMouseOver="if (version == 'n3') {SwapOut(3); self.status = 'Your Style: Assess your own style of learning'; return true}" onMouseOut='SwapBack(3)'><IMG SRC="images/common/lt-but-style.gif" ALT="Your Style" WIDTH="110" HEIGHT="26" BORDER="0" name="c"></a><BR><a HREF="recent/recent-main.html" onMouseOver="if (version == 'n3') {SwapOut(5); self.status = 'Recent News: The latest developments'; return true}" onMouseOut='SwapBack(5)'><IMG SRC="images/common/lt-but-recent.gif" ALT="Recent News" WIDTH="110" HEIGHT="25" BORDER="0" name="e"></a>
+</TD>
+</TR>
+
+
+<TR>
+<TD>
+<IMG SRC="images/toplevel/grey-topnav.gif" WIDTH="677" HEIGHT=
+"78" ALIGN="BOTTOM" USEMAP="#grey-topnav" ISMAP
+BORDER="0"></TD>
+</TR>
+
+<TR>
+<TD><BR>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 width=475>
+
+<TR>
+<TD colspan=2>
+<IMG SRC="images/common/space.gif" WIDTH="25" HEIGHT="1" BORDER="0"><IMG SRC="images/toplevel/glossary.gif" ALT="GLOSSARY" WIDTH="102" HEIGHT="28" BORDER="0"><IMG SRC="images/toplevel/of-terms.gif" ALT="of TERMS" WIDTH="93" HEIGHT="28" BORDER="0">
+</TD>
+</TR>
+
+<TR>
+<TD width=75>
+</TD>
+<TD>
+
+These are many types of "languages" spoken when it comes to describe learning disabilities, and it's often helpful to familiarize yourself with a few basic definitions.   
+<BR><BR>
+<A HREF="glossary-1.html">Clinical Terms</A>: Here are some clinical terms often associated with learning disabilities.
+These definitions are provided by the fourth edition of The Diagnostic and Statistical Manual of Mental Disorders.
+<BR><BR>
+<A HREF="glossary-2.html">Legal Procedural Terms</A>: These laws and terms are often associated with the legal aspect of learning disabilities.
+<BR><BR>
+<A HREF="glossary-3.html">Tests</A>: Here are descriptions of some tests (and other assessment tools) we use to assess candidates.  These include the tests that are normally required in order to get special accommodations for exams like the LSAT, the BAR, the SAT, etc.
+<BR><BR>
+<A HREF="glossary-4.html">ACLS Terms & Definitions</A>: These are terms we often use to describe what we do.
+<BR><BR>
+
+
+</TD>
+
+</TR>
+</TABLE>
+</TD>
+</TR>
+
+</TABLE>
+
+<MAP NAME="grey-topnav">
+    <AREA SHAPE="rect" COORDS="352,54,463,68" HREF="self-test.html" onMouseOver="if (version == 'n3') {self.status = 'Take a self test to start assessing your own style of learning'; return true}">
+    <AREA SHAPE="rect" COORDS="248,53,352,68" HREF="glossary.html" onMouseOver="if (version == 'n3') {self.status = 'Glossary: Definitions of Terms'; return true}">
+    <AREA SHAPE="rect" COORDS="158,54,248,68" HREF="contact.html" onMouseOver="if (version == 'n3') {self.status = 'Contact Information'; return true}">
+    <AREA SHAPE="rect" COORDS="76,53,159,67" HREF="index.htm" onMouseOver="if (version == 'n3') {self.status = 'ACLS Home Page'; return true}">
+</MAP>
+
+</BODY>
+</HTML>

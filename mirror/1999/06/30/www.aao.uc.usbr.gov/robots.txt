@@ -1,0 +1,23 @@
+#
+
+User-agent: *
+Disallow: /
+
+#
+# To disallow all robots:
+#	User-agent: *
+#	Disallow: /
+#
+# To disallow a specific agent from entire site
+#	User-agent: usbr-crawler
+#	Disallow: /
+#
+# To give a specific agent complete site access
+#	User-agent: Lycos
+#	Disallow:
+# Use of <meta> tags within the HTML document to restrict access
+#  This document will not be indexed by robot
+# <META NAME="ROBOTS" CONTENT="NOINDEX">
+# or
+#   Links contained in this document will not be parsed by the robot
+# <META NAME="ROBOTS" CONTENT="NOFOLLOW">

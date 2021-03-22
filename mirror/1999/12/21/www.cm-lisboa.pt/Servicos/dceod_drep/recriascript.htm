@@ -1,0 +1,481 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>Cotas</title>
+
+</head>
+
+<body bgcolor="#FFFFFF">
+<!--webbot bot="Include" u-include="../../barra.htm" tag="BODY" startspan -->
+
+<p align="center"><font color="#000000" size="1" face="Arial"><strong><a href="../../index.htm" target="_top"><img src="../../images/Cml.gif" alt="CML" border="0" WIDTH="99" HEIGHT="27"></a><a href="../../Informacoes/52538.htm" target="_top"><img src="../../images/Inform.gif" alt="Informacoes" border="0" WIDTH="99" HEIGHT="27"></a><a href="../../query.htm" target="_top"><img src="../../images/Procurar.gif" alt="Procurar" border="0" WIDTH="99" HEIGHT="27"></a><a href="../../inquerito.htm" target="_top"><img src="../../images/Comentar.gif" alt="Comentar" border="0" WIDTH="99" HEIGHT="27"></a><a href="../../contactos.htm" target="_top"><img src="../../images/Contacto.gif" alt="Contactar" border="0" WIDTH="99" HEIGHT="27"></a></strong></font></p>
+<!--webbot bot="Include" endspan i-checksum="11154" --><script language="JavaScript">
+<!--
+
+function Control() {
+    
+	numcabecalho=3;
+	numlinhas = 15;
+	numtotal = numlinhas + numcabecalho;
+
+	window.document.s.c3.value = 0
+	for(i=4; i<= numtotal; i++) {
+  	window.document.s.c3.value = (window.document.s.c3.value - 0) + (eval("window.document.s.c"+i+".value")-0)
+	}
+	window.document.s.e3.value = 0
+	for(i=4; i<= numtotal; i++) {
+  	window.document.s.e3.value = (window.document.s.e3.value - 0) + (eval("window.document.s.e"+i+".value")-0)
+	}
+	for(i=4; i<= numtotal; i++) {
+  	eval("window.document.s.d"+i+".value = (window.document.s.c"+i+".value-0) *	(window.document.s.d3.value-0) / 100")
+	}
+	for(i=4; i<= numtotal; i++) {
+  	eval("window.document.s.f"+i+".value = (window.document.s.e"+i+".value-0) *	(window.document.s.f3.value-0) / 100")
+	}
+	window.document.s.g3.value = 0
+	for(i=4; i<= numtotal; i++) {
+  	window.document.s.g3.value = (window.document.s.g3.value - 0) + (eval("window.document.s.g"+i+".value")-0)
+	}
+	window.document.s.h3.value = 0
+	for(i=4; i<= numtotal; i++) {
+  	window.document.s.h3.value = (window.document.s.h3.value - 0) + (eval("window.document.s.h"+i+".value")-0)
+	}
+	for(i=4; i<= numtotal; i++) {
+  	eval("window.document.s.h"+i+".value = (window.document.s.d"+i+".value-0) +	(window.document.s.f"+i+".value-0) + (window.document.s.g"+i+".value-0)")
+	}
+	for(i=4; i<= numtotal; i++) {
+  	eval("window.document.s.i"+i+".value = (window.document.s.h"+i+".value-0) /	(window.document.s.b"+i+".value-0)")
+	}
+	for(i=4; i<= numtotal; i++) {
+  	eval("window.document.s.j"+i+".value = 7391600000 /(window.document.s.b"+i+".value-0)")
+	}
+	 
+	for(i=4; i<= numtotal; i++) {
+		val = eval("window.document.s.i"+i+".value")
+  		if (val < 90) eval("window.document.s.k"+i+".value = 0")
+		else if (val < 100) eval("window.document.s.k"+i+".value = 15")
+		else if (val < 115) eval("window.document.s.k"+i+".value = 25")
+		else if (val < 130) eval("window.document.s.k"+i+".value = 35")
+		else if (val < 155) eval("window.document.s.k"+i+".value = 45")
+		else if (val < 185) eval("window.document.s.k"+i+".value = 55")
+		else eval("window.document.s.k"+i+".value = 65")
+	}
+	for(i=4; i<= numtotal; i++) {
+		val = eval("window.document.s.h"+i+".value") * eval("window.document.s.k"+i+".value") / 100
+
+  		if (val < eval("window.document.s.j"+i+".value")) eval("window.document.s.l"+i+".value =" + val )
+		else eval("window.document.s.l"+i+".value = window.document.s.j"+i+".value")
+	}
+	for(i=4; i<= numtotal; i++) {
+		val = eval("window.document.s.i"+i+".value")
+  		if (val < 90) eval("window.document.s.m"+i+".value = 0")
+		else if (val < 100) eval("window.document.s.m"+i+".value = 6")
+		else if (val < 115) eval("window.document.s.m"+i+".value = 10")
+		else if (val < 130) eval("window.document.s.m"+i+".value = 14")
+		else if (val < 155) eval("window.document.s.m"+i+".value = 18")
+		else if (val < 185) eval("window.document.s.m"+i+".value = 22")
+		else eval("window.document.s.m"+i+".value = 26")
+	}
+	
+	for(i=4; i<= numtotal; i++) {
+		if (eval("window.document.s.l"+i+".value == window.document.s.j"+i+".value")) 
+			eval("window.document.s.n"+i+".value =" + "0.4 * window.document.s.l"+i+".value")
+		else eval("window.document.s.n"+i+".value = window.document.s.m"+i+".value * window.document.s.h"+i+".value /100")
+	}
+
+	window.document.s.l19.value = 0
+	for(i=4; i<= numtotal; i++) {
+  	window.document.s.l19.value = (window.document.s.l19.value - 0) + (eval("window.document.s.l"+i+".value")-0)
+	}
+	window.document.s.n19.value = 0
+	for(i=4; i<= numtotal; i++) {
+  	window.document.s.n19.value = (window.document.s.n19.value - 0) + (eval("window.document.s.n"+i+".value")-0)
+	}
+
+	window.document.s.l20.value = (window.document.s.l19.value - 0) * 0.3
+	window.document.s.l21.value = (window.document.s.l19.value - 0) * 0.3
+	window.document.s.l22.value = (window.document.s.l19.value - 0) * 0.4
+	window.document.s.n20.value = (window.document.s.n19.value - 0) * 0.3
+	window.document.s.n21.value = (window.document.s.n19.value - 0) * 0.3
+	window.document.s.n22.value = (window.document.s.n19.value - 0) * 0.4
+
+	
+	window.document.s.f1.value = (window.document.s.d3.value - 0) + (window.document.s.f3.value - 0)
+
+    window.document.s.d20.value = window.document.s.f1.value
+	for(i=4; i<= numtotal; i++) {
+  	window.document.s.d20.value = (window.document.s.d20.value - 0) + (eval("window.document.s.g"+i+".value")-0)
+	}
+	
+	window.document.s.k19.value = (window.document.s.l19.value - 0) / (window.document.s.d20.value - 0) * 100
+
+	return false
+ }
+
+//-->
+</script>
+
+<form name="s" onsubmit="return Control();" method="POST" action="../../_vti_bin/shtml.dll/Servicos/dceod_drep/recriascript.htm" webbot-action="--WEBBOT-SELF--">
+    <!--webbot bot="SaveResults" u-file="../../Iniciativas/timor/_private/form_results.txt" s-format="TEXT/CSV" s-label-fields="TRUE" startspan --><input TYPE="hidden" NAME="VTI-GROUP" VALUE="0"><!--webbot bot="SaveResults" endspan i-checksum="43374" --><div align="center"><center><p><input type="submit" value="Calcular"><br>
+    <br>
+    <font face="Arial">Preencha as celulas que estao a cinzento
+    ou, caso o seu browser mostre tudo a branco, as que <small><strong>NÃO</strong></small>
+    têm um asterisco, e carregue no botão &quot;Calcular&quot;</font></p>
+    </center></div><table border="1" width="757" name="t" style="border: medium none" height="621">
+        <tr>
+            <td align="center" bgcolor="#C0C0C0" colspan="2" width="94" style="border: medium none" height="40"><font face="Arial"><small><small>Inquilino</small></small></font></td>
+            <td align="center" bgcolor="#C0C0C0" colspan="4" style="border: medium none" height="40"><div align="center"><center><p><small><font face="Arial"><small>Valores
+            das Partes Comuns</small></font></small> &nbsp; <input type="text" name="f1" size="10" style="border: medium none" value="*"></p>
+            </td>
+            <td align="center" bgcolor="#C0C0C0" style="border: medium none" height="40"><small><font face="Arial"><small>Partes<br>
+            (Vi)</small></font></small></td>
+            <td align="center" bgcolor="#C0C0C0" style="border: medium none" height="40"><small><font face="Arial"><small>V.T.O.F.<br>
+            (VPC+Vi)</small></font></small></td>
+            <td align="center" bgcolor="#C0C0C0" style="border: medium none" height="40"><small><font face="Arial"><small>V.T.O.F<br>
+            /<br>
+            V.R.F</small></font></small></td>
+            <td align="center" bgcolor="#C0C0C0" style="border-left: medium none; border-right: medium none; border-top: medium none; border-bottom: 0 none" height="40"><small><font face="Arial"><small>COMPART.MAX.<br>
+            CM=108700*68/R*1000</small></font></small></td>
+            <td align="center" bgcolor="#C0C0C0" colspan="4" style="border: medium none" height="40"><font face="Arial"><small><small>Comparticipação</small></small></font></td>
+        </tr>
+        <tr align="center">
+            <td align="center" bgcolor="#C0C0C0" style="border: medium none" height="35"><div align="center"><center><p><font face="Arial"><small><small>Andar</small></small></font></p>
+            </td>
+            <td align="center" bgcolor="#C0C0C0" style="border: medium none" height="35"><div align="center"><center><p><font face="Arial"><small><small>Renda</small></small></font></p>
+            </td>
+            <td align="center" bgcolor="#C0C0C0" style="border: medium none" height="35"><div align="center"><center><p><font face="Arial"><small><small>%</small></small><br>
+            <input type="text" name="c3" size="5" style="font-weight: 100; background-color: rgb(192,192,192); border: medium none" value="*"></font></p>
+            </td>
+            <td align="center" bgcolor="#C0C0C0" style="border: medium none" height="35"><div align="center"><center><p><font face="Arial"><small><small>VPC
+            (ext)</small></small><br>
+            <small><small><small><small><small><small><small><small><small><input type="text" name="d3" size="10" style="border: medium none"></small></small></small></small></small></small></small></small></small></font></p>
+            </td>
+            <td align="center" bgcolor="#C0C0C0" style="border: medium none" height="35"><div align="center"><center><p><font face="Arial"><small><small>%</small></small><br>
+            <input type="text" name="e3" size="5" style="font-weight: 100; background-color: rgb(192,192,192); border: medium none" value="*"></font></p>
+            </td>
+            <td align="center" bgcolor="#C0C0C0" style="border: medium none" height="35"><div align="center"><center><p><font face="Arial"><small><small>VPC
+            (int)</small></small><br>
+            <small><small><small><small><small><small><small><small><small><input type="text" name="f3" size="10" style="border: medium none"></small></small></small></small></small></small></small></small></small></font></p>
+            </td>
+            <td align="center" bgcolor="#C0C0C0" style="border: medium none" height="35"><small><small><small><small><small><small><small><small><small><font face="Arial"><input type="text" name="g3" size="8" style="background-color: rgb(192,192,192); border: medium none" value="*"></font></small></small></small></small></small></small></small></small></small></td>
+            <td align="center" bgcolor="#C0C0C0" style="border: medium none" height="35"><small><small><small><small><small><small><small><small><small><font face="Arial"><input type="text" name="h3" size="8" style="background-color: rgb(192,192,192); border: medium none" value="*"></font></small></small></small></small></small></small></small></small></small></td>
+            <td align="center" bgcolor="#C0C0C0" style="border: medium none" height="35"></td>
+            <td align="center" bgcolor="#C0C0C0" style="border-left: medium none; border-right: medium none; border-top: medium none; border-bottom: 0 none" height="35"></td>
+            <td align="center" bgcolor="#C0C0C0" style="border: medium none" height="35"><font face="Arial"><small><small>%</small></small></font></td>
+            <td align="center" bgcolor="#C0C0C0" style="border: medium none" height="35"><font face="Arial"><small><small>Total</small></small></font></td>
+            <td align="center" bgcolor="#C0C0C0" style="border: medium none" height="35"><font face="Arial"><small><small>%</small></small></font></td>
+            <td align="center" bgcolor="#C0C0C0" style="border: medium none" height="35"><font face="Arial"><small><small>C.M.L.</small></small></font></td>
+        </tr>
+        <tr align="center">
+            <td align="center" bgcolor="#C0C0C0" width="43" style="border: medium none" height="21"><font face="Arial"><input type="text" name="a4" size="5" style="font-weight: 100; font-style: normal; font-variant: normal; text-transform: none; text-decoration: none"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="45" style="border: medium none" height="21"><font face="Arial"><input type="text" name="b4" size="8" style="font-weight: 100"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="18" style="border: medium none" height="21"><font face="Arial"><input type="text" name="c4" size="5" style="font-weight: 100"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="70" style="border: medium none" height="21"><small><small><small><small><small><small><small><small><small><font face="Arial"><input type="text" name="d4" size="10" style="background-color: rgb(192,192,192)" value="*"></font></small></small></small></small></small></small></small></small></small></td>
+            <td align="center" bgcolor="#C0C0C0" width="18" style="border: medium none" height="21"><input type="text" name="e4" size="5"></td>
+            <td align="center" bgcolor="#C0C0C0" width="63" style="border: medium none" height="21"><input type="text" name="f4" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="44" style="border: medium none" height="21"><input type="text" name="g4" size="9"></td>
+            <td align="center" bgcolor="#C0C0C0" width="63" style="border: medium none" height="21"><input type="text" name="h4" size="9" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="61" style="border: medium none" height="21"><input type="text" name="i4" size="6" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" style="border-left: medium none; border-right: medium none; border-top: medium none; border-bottom: 0 none" width="119" height="21"><input type="text" name="j4" size="9" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="39" style="border: medium none" height="21"><input type="text" name="k4" size="5" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="33" style="border: medium none" height="21"><input type="text" name="l4" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="15" style="border: medium none" height="21"><input type="text" name="m4" size="5" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="42" style="border: medium none" height="21"><input type="text" name="n4" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+        </tr>
+        <tr align="center">
+            <td align="center" bgcolor="#C0C0C0" width="43" style="border: medium none" height="21"><font face="Arial"><input type="text" name="a5" size="5" style="font-weight: 100; font-style: normal; font-variant: normal; text-transform: none; text-decoration: none"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="45" style="border: medium none" height="21"><font face="Arial"><input type="text" name="b5" size="8" style="font-weight: 100"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="18" style="border: medium none" height="21"><font face="Arial"><input type="text" name="c5" size="5" style="font-weight: 100"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="70" style="border: medium none" height="21"><small><small><small><small><small><small><small><small><small><font face="Arial"><input type="text" name="d5" size="10" style="background-color: rgb(192,192,192)" value="*"></font></small></small></small></small></small></small></small></small></small></td>
+            <td align="center" bgcolor="#C0C0C0" width="18" style="border: medium none" height="21"><input type="text" name="e5" size="5"></td>
+            <td align="center" bgcolor="#C0C0C0" width="63" style="border: medium none" height="21"><input type="text" name="f5" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="44" style="border: medium none" height="21"><input type="text" name="g5" size="9"></td>
+            <td align="center" bgcolor="#C0C0C0" width="63" style="border: medium none" height="21"><input type="text" name="h5" size="9" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="61" style="border: medium none" height="21"><input type="text" name="i5" size="6" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" style="border-left: medium none; border-right: medium none; border-top: medium none; border-bottom: 0 none" width="119" height="21"><input type="text" name="j5" size="9" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="39" style="border: medium none" height="21"><input type="text" name="k5" size="5" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="33" style="border: medium none" height="21"><input type="text" name="l5" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="15" style="border: medium none" height="21"><input type="text" name="m5" size="5" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="42" style="border: medium none" height="21"><input type="text" name="n5" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+        </tr>
+        <tr align="center">
+            <td align="center" bgcolor="#C0C0C0" width="43" style="border: medium none" height="21"><font face="Arial"><input type="text" name="a6" size="5" style="font-weight: 100; font-style: normal; font-variant: normal; text-transform: none; text-decoration: none"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="45" style="border: medium none" height="21"><font face="Arial"><input type="text" name="b6" size="8" style="font-weight: 100"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="18" style="border: medium none" height="21"><font face="Arial"><input type="text" name="c6" size="5" style="font-weight: 100"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="70" style="border: medium none" height="21"><small><small><small><small><small><small><small><small><small><font face="Arial"><input type="text" name="d6" size="10" style="background-color: rgb(192,192,192)" value="*"></font></small></small></small></small></small></small></small></small></small></td>
+            <td align="center" bgcolor="#C0C0C0" width="18" style="border: medium none" height="21"><input type="text" name="e6" size="5"></td>
+            <td align="center" bgcolor="#C0C0C0" width="63" style="border: medium none" height="21"><input type="text" name="f6" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="44" style="border: medium none" height="21"><input type="text" name="g6" size="9"></td>
+            <td align="center" bgcolor="#C0C0C0" width="63" style="border: medium none" height="21"><input type="text" name="h6" size="9" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="61" style="border: medium none" height="21"><input type="text" name="i6" size="6" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" style="border-left: medium none; border-right: medium none; border-top: medium none; border-bottom: 0 none" width="119" height="21"><input type="text" name="j6" size="9" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="39" style="border: medium none" height="21"><input type="text" name="k6" size="5" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="33" style="border: medium none" height="21"><input type="text" name="l6" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="15" style="border: medium none" height="21"><input type="text" name="m6" size="5" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="42" style="border: medium none" height="21"><input type="text" name="n6" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+        </tr>
+        <tr align="center">
+            <td align="center" bgcolor="#C0C0C0" width="43" style="border: medium none" height="21"><font face="Arial"><input type="text" name="a7" size="5" style="font-weight: 100; font-style: normal; font-variant: normal; text-transform: none; text-decoration: none"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="45" style="border: medium none" height="21"><font face="Arial"><input type="text" name="b7" size="8" style="font-weight: 100"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="18" style="border: medium none" height="21"><font face="Arial"><input type="text" name="c7" size="5" style="font-weight: 100"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="70" style="border: medium none" height="21"><small><small><small><small><small><small><small><small><small><font face="Arial"><input type="text" name="d7" size="10" style="background-color: rgb(192,192,192)" value="*"></font></small></small></small></small></small></small></small></small></small></td>
+            <td align="center" bgcolor="#C0C0C0" width="18" style="border: medium none" height="21"><input type="text" name="e7" size="5"></td>
+            <td align="center" bgcolor="#C0C0C0" width="63" style="border: medium none" height="21"><input type="text" name="f7" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="44" style="border: medium none" height="21"><input type="text" name="g7" size="9"></td>
+            <td align="center" bgcolor="#C0C0C0" width="63" style="border: medium none" height="21"><input type="text" name="h7" size="9" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="61" style="border: medium none" height="21"><input type="text" name="i7" size="6" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" style="border-left: medium none; border-right: medium none; border-top: medium none; border-bottom: 0 none" width="119" height="21"><input type="text" name="j7" size="9" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="39" style="border: medium none" height="21"><input type="text" name="k7" size="5" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="33" style="border: medium none" height="21"><input type="text" name="l7" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="15" style="border: medium none" height="21"><input type="text" name="m7" size="5" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="42" style="border: medium none" height="21"><input type="text" name="n7" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+        </tr>
+        <tr align="center">
+            <td align="center" bgcolor="#C0C0C0" width="43" style="border: medium none" height="21"><font face="Arial"><input type="text" name="a8" size="5" style="font-weight: 100; font-style: normal; font-variant: normal; text-transform: none; text-decoration: none"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="45" style="border: medium none" height="21"><font face="Arial"><input type="text" name="b8" size="8" style="font-weight: 100"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="18" style="border: medium none" height="21"><font face="Arial"><input type="text" name="c8" size="5" style="font-weight: 100"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="70" style="border: medium none" height="21"><small><small><small><small><small><small><small><small><small><font face="Arial"><input type="text" name="d8" size="10" style="background-color: rgb(192,192,192)" value="*"></font></small></small></small></small></small></small></small></small></small></td>
+            <td align="center" bgcolor="#C0C0C0" width="18" style="border: medium none" height="21"><input type="text" name="e8" size="5"></td>
+            <td align="center" bgcolor="#C0C0C0" width="63" style="border: medium none" height="21"><input type="text" name="f8" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="44" style="border: medium none" height="21"><input type="text" name="g8" size="9"></td>
+            <td align="center" bgcolor="#C0C0C0" width="63" style="border: medium none" height="21"><input type="text" name="h8" size="9" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="61" style="border: medium none" height="21"><input type="text" name="i8" size="6" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" style="border-left: medium none; border-right: medium none; border-top: medium none; border-bottom: 0 none" width="119" height="21"><input type="text" name="j8" size="9" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="39" style="border: medium none" height="21"><input type="text" name="k8" size="5" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="33" style="border: medium none" height="21"><input type="text" name="l8" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="15" style="border: medium none" height="21"><input type="text" name="m8" size="5" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="42" style="border: medium none" height="21"><input type="text" name="n8" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+        </tr>
+        <tr align="center">
+            <td align="center" bgcolor="#C0C0C0" width="43" style="border: medium none" height="21"><font face="Arial"><input type="text" name="a9" size="5" style="font-weight: 100; font-style: normal; font-variant: normal; text-transform: none; text-decoration: none"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="45" style="border: medium none" height="21"><font face="Arial"><input type="text" name="b9" size="8" style="font-weight: 100"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="18" style="border: medium none" height="21"><font face="Arial"><input type="text" name="c9" size="5" style="font-weight: 100"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="70" style="border: medium none" height="21"><small><small><small><small><small><small><small><small><small><font face="Arial"><input type="text" name="d9" size="10" style="background-color: rgb(192,192,192)" value="*"></font></small></small></small></small></small></small></small></small></small></td>
+            <td align="center" bgcolor="#C0C0C0" width="18" style="border: medium none" height="21"><input type="text" name="e9" size="5"></td>
+            <td align="center" bgcolor="#C0C0C0" width="63" style="border: medium none" height="21"><input type="text" name="f9" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="44" style="border: medium none" height="21"><input type="text" name="g9" size="9"></td>
+            <td align="center" bgcolor="#C0C0C0" width="63" style="border: medium none" height="21"><input type="text" name="h9" size="9" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="61" style="border: medium none" height="21"><input type="text" name="i9" size="6" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" style="border-left: medium none; border-right: medium none; border-top: medium none; border-bottom: 0 none" width="119" height="21"><input type="text" name="j9" size="9" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="39" style="border: medium none" height="21"><input type="text" name="k9" size="5" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="33" style="border: medium none" height="21"><input type="text" name="l9" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="15" style="border: medium none" height="21"><input type="text" name="m9" size="5" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="42" style="border: medium none" height="21"><input type="text" name="n9" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+        </tr>
+        <tr align="center">
+            <td align="center" bgcolor="#C0C0C0" width="43" style="border: medium none" height="21"><font face="Arial"><input type="text" name="a10" size="5" style="font-weight: 100; font-style: normal; font-variant: normal; text-transform: none; text-decoration: none"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="45" style="border: medium none" height="21"><font face="Arial"><input type="text" name="b10" size="8" style="font-weight: 100"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="18" style="border: medium none" height="21"><font face="Arial"><input type="text" name="c10" size="5" style="font-weight: 100"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="70" style="border: medium none" height="21"><small><small><small><small><small><small><small><small><small><font face="Arial"><input type="text" name="d10" size="10" style="background-color: rgb(192,192,192)" value="*"></font></small></small></small></small></small></small></small></small></small></td>
+            <td align="center" bgcolor="#C0C0C0" width="18" style="border: medium none" height="21"><input type="text" name="e10" size="5"></td>
+            <td align="center" bgcolor="#C0C0C0" width="63" style="border: medium none" height="21"><input type="text" name="f10" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="44" style="border: medium none" height="21"><input type="text" name="g10" size="9"></td>
+            <td align="center" bgcolor="#C0C0C0" width="63" style="border: medium none" height="21"><input type="text" name="h10" size="9" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="61" style="border: medium none" height="21"><input type="text" name="i10" size="6" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" style="border-left: medium none; border-right: medium none; border-top: medium none; border-bottom: 0 none" width="119" height="21"><input type="text" name="j10" size="9" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="39" style="border: medium none" height="21"><input type="text" name="k10" size="5" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="33" style="border: medium none" height="21"><input type="text" name="l10" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="15" style="border: medium none" height="21"><input type="text" name="m10" size="5" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="42" style="border: medium none" height="21"><input type="text" name="n10" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+        </tr>
+        <tr align="center">
+            <td align="center" bgcolor="#C0C0C0" width="43" style="border: medium none" height="21"><font face="Arial"><input type="text" name="a11" size="5" style="font-weight: 100; font-style: normal; font-variant: normal; text-transform: none; text-decoration: none"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="45" style="border: medium none" height="21"><font face="Arial"><input type="text" name="b11" size="8" style="font-weight: 100"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="18" style="border: medium none" height="21"><font face="Arial"><input type="text" name="c11" size="5" style="font-weight: 100"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="70" style="border: medium none" height="21"><small><small><small><small><small><small><small><small><small><font face="Arial"><input type="text" name="d11" size="10" style="background-color: rgb(192,192,192)" value="*"></font></small></small></small></small></small></small></small></small></small></td>
+            <td align="center" bgcolor="#C0C0C0" width="18" style="border: medium none" height="21"><input type="text" name="e11" size="5"></td>
+            <td align="center" bgcolor="#C0C0C0" width="63" style="border: medium none" height="21"><input type="text" name="f11" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="44" style="border: medium none" height="21"><input type="text" name="g11" size="9"></td>
+            <td align="center" bgcolor="#C0C0C0" width="63" style="border: medium none" height="21"><input type="text" name="h11" size="9" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="61" style="border: medium none" height="21"><input type="text" name="i11" size="6" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" style="border-left: medium none; border-right: medium none; border-top: medium none; border-bottom: 0 none" width="119" height="21"><input type="text" name="j11" size="9" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="39" style="border: medium none" height="21"><input type="text" name="k11" size="5" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="33" style="border: medium none" height="21"><input type="text" name="l11" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="15" style="border: medium none" height="21"><input type="text" name="m11" size="5" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="42" style="border: medium none" height="21"><input type="text" name="n11" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+        </tr>
+        <tr align="center">
+            <td align="center" bgcolor="#C0C0C0" width="43" style="border: medium none" height="21"><font face="Arial"><input type="text" name="a12" size="5" style="font-weight: 100; font-style: normal; font-variant: normal; text-transform: none; text-decoration: none"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="45" style="border: medium none" height="21"><font face="Arial"><input type="text" name="b12" size="8" style="font-weight: 100"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="18" style="border: medium none" height="21"><font face="Arial"><input type="text" name="c12" size="5" style="font-weight: 100"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="70" style="border: medium none" height="21"><small><small><small><small><small><small><small><small><small><font face="Arial"><input type="text" name="d12" size="10" style="background-color: rgb(192,192,192)" value="*"></font></small></small></small></small></small></small></small></small></small></td>
+            <td align="center" bgcolor="#C0C0C0" width="18" style="border: medium none" height="21"><input type="text" name="e12" size="5"></td>
+            <td align="center" bgcolor="#C0C0C0" width="63" style="border: medium none" height="21"><input type="text" name="f12" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="44" style="border: medium none" height="21"><input type="text" name="g12" size="9"></td>
+            <td align="center" bgcolor="#C0C0C0" width="63" style="border: medium none" height="21"><input type="text" name="h12" size="9" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="61" style="border: medium none" height="21"><input type="text" name="i12" size="6" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" style="border-left: medium none; border-right: medium none; border-top: medium none; border-bottom: 0 none" width="119" height="21"><input type="text" name="j12" size="9" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="39" style="border: medium none" height="21"><input type="text" name="k12" size="5" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="33" style="border: medium none" height="21"><input type="text" name="l12" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="15" style="border: medium none" height="21"><input type="text" name="m12" size="5" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="42" style="border: medium none" height="21"><input type="text" name="n12" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+        </tr>
+        <tr align="center">
+            <td align="center" bgcolor="#C0C0C0" width="43" style="border: medium none" height="17"><font face="Arial"><input type="text" name="a13" size="5" style="font-weight: 100; font-style: normal; font-variant: normal; text-transform: none; text-decoration: none"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="45" style="border: medium none" height="17"><font face="Arial"><input type="text" name="b13" size="8" style="font-weight: 100"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="18" style="border: medium none" height="17"><font face="Arial"><input type="text" name="c13" size="5" style="font-weight: 100"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="70" style="border: medium none" height="17"><small><small><small><small><small><small><small><small><small><font face="Arial"><input type="text" name="d13" size="10" style="background-color: rgb(192,192,192)" value="*"></font></small></small></small></small></small></small></small></small></small></td>
+            <td align="center" bgcolor="#C0C0C0" width="18" style="border: medium none" height="17"><input type="text" name="e13" size="5"></td>
+            <td align="center" bgcolor="#C0C0C0" width="63" style="border: medium none" height="17"><input type="text" name="f13" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="44" style="border: medium none" height="17"><input type="text" name="g13" size="9"></td>
+            <td align="center" bgcolor="#C0C0C0" width="63" style="border: medium none" height="17"><input type="text" name="h13" size="9" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="61" style="border: medium none" height="17"><input type="text" name="i13" size="6" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" style="border-left: medium none; border-right: medium none; border-top: medium none; border-bottom: 0 none" width="119" height="17"><input type="text" name="j13" size="9" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="39" style="border: medium none" height="17"><input type="text" name="k13" size="5" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="33" style="border: medium none" height="17"><input type="text" name="l13" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="15" style="border: medium none" height="17"><input type="text" name="m13" size="5" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="42" style="border: medium none" height="17"><input type="text" name="n13" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+        </tr>
+        <tr align="center">
+            <td align="center" bgcolor="#C0C0C0" width="43" style="border: medium none" height="21"><font face="Arial"><input type="text" name="a14" size="5" style="font-weight: 100; font-style: normal; font-variant: normal; text-transform: none; text-decoration: none"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="45" style="border: medium none" height="21"><font face="Arial"><input type="text" name="b14" size="8" style="font-weight: 100"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="18" style="border: medium none" height="21"><font face="Arial"><input type="text" name="c14" size="5" style="font-weight: 100"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="70" style="border: medium none" height="21"><small><small><small><small><small><small><small><small><small><font face="Arial"><input type="text" name="d14" size="10" style="background-color: rgb(192,192,192)" value="*"></font></small></small></small></small></small></small></small></small></small></td>
+            <td align="center" bgcolor="#C0C0C0" width="18" style="border: medium none" height="21"><input type="text" name="e14" size="5"></td>
+            <td align="center" bgcolor="#C0C0C0" width="63" style="border: medium none" height="21"><input type="text" name="f14" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="44" style="border: medium none" height="21"><input type="text" name="g14" size="9"></td>
+            <td align="center" bgcolor="#C0C0C0" width="63" style="border: medium none" height="21"><input type="text" name="h14" size="9" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="61" style="border: medium none" height="21"><input type="text" name="i14" size="6" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" style="border-left: medium none; border-right: medium none; border-top: medium none; border-bottom: 0 none" width="119" height="21"><input type="text" name="j14" size="9" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="39" style="border: medium none" height="21"><input type="text" name="k14" size="5" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="33" style="border: medium none" height="21"><input type="text" name="l14" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="15" style="border: medium none" height="21"><input type="text" name="m14" size="5" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="42" style="border: medium none" height="21"><input type="text" name="n14" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+        </tr>
+        <tr align="center">
+            <td align="center" bgcolor="#C0C0C0" width="43" style="border: medium none" height="21"><font face="Arial"><input type="text" name="a15" size="5" style="font-weight: 100; font-style: normal; font-variant: normal; text-transform: none; text-decoration: none"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="45" style="border: medium none" height="21"><font face="Arial"><input type="text" name="b15" size="8" style="font-weight: 100"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="18" style="border: medium none" height="21"><font face="Arial"><input type="text" name="c15" size="5" style="font-weight: 100"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="70" style="border: medium none" height="21"><small><small><small><small><small><small><small><small><small><font face="Arial"><input type="text" name="d15" size="10" style="background-color: rgb(192,192,192)" value="*"></font></small></small></small></small></small></small></small></small></small></td>
+            <td align="center" bgcolor="#C0C0C0" width="18" style="border: medium none" height="21"><input type="text" name="e15" size="5"></td>
+            <td align="center" bgcolor="#C0C0C0" width="63" style="border: medium none" height="21"><input type="text" name="f15" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="44" style="border: medium none" height="21"><input type="text" name="g15" size="9"></td>
+            <td align="center" bgcolor="#C0C0C0" width="63" style="border: medium none" height="21"><input type="text" name="h15" size="9" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="61" style="border: medium none" height="21"><input type="text" name="i15" size="6" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" style="border-left: medium none; border-right: medium none; border-top: medium none; border-bottom: 0 none" width="119" height="21"><input type="text" name="j15" size="9" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="39" style="border: medium none" height="21"><input type="text" name="k15" size="5" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="33" style="border: medium none" height="21"><input type="text" name="l15" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="15" style="border: medium none" height="21"><input type="text" name="m15" size="5" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="42" style="border: medium none" height="21"><input type="text" name="n15" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+        </tr>
+        <tr align="center">
+            <td align="center" bgcolor="#C0C0C0" width="43" style="border: medium none" height="21"><font face="Arial"><input type="text" name="a16" size="5" style="font-weight: 100; font-style: normal; font-variant: normal; text-transform: none; text-decoration: none"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="45" style="border: medium none" height="21"><font face="Arial"><input type="text" name="b16" size="8" style="font-weight: 100"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="18" style="border: medium none" height="21"><font face="Arial"><input type="text" name="c16" size="5" style="font-weight: 100"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="70" style="border: medium none" height="21"><small><small><small><small><small><small><small><small><small><font face="Arial"><input type="text" name="d16" size="10" style="background-color: rgb(192,192,192)" value="*"></font></small></small></small></small></small></small></small></small></small></td>
+            <td align="center" bgcolor="#C0C0C0" width="18" style="border: medium none" height="21"><input type="text" name="e16" size="5"></td>
+            <td align="center" bgcolor="#C0C0C0" width="63" style="border: medium none" height="21"><input type="text" name="f16" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="44" style="border: medium none" height="21"><input type="text" name="g16" size="9"></td>
+            <td align="center" bgcolor="#C0C0C0" width="63" style="border: medium none" height="21"><input type="text" name="h16" size="9" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="61" style="border: medium none" height="21"><input type="text" name="i16" size="6" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" style="border-left: medium none; border-right: medium none; border-top: medium none; border-bottom: 0 none" width="119" height="21"><input type="text" name="j16" size="9" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="39" style="border: medium none" height="21"><input type="text" name="k16" size="5" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="33" style="border: medium none" height="21"><input type="text" name="l16" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="15" style="border: medium none" height="21"><input type="text" name="m16" size="5" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="42" style="border: medium none" height="21"><input type="text" name="n16" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+        </tr>
+        <tr align="center">
+            <td align="center" bgcolor="#C0C0C0" width="43" style="border: medium none" height="21"><font face="Arial"><input type="text" name="a17" size="5" style="font-weight: 100; font-style: normal; font-variant: normal; text-transform: none; text-decoration: none"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="45" style="border: medium none" height="21"><font face="Arial"><input type="text" name="b17" size="8" style="font-weight: 100"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="18" style="border: medium none" height="21"><font face="Arial"><input type="text" name="c17" size="5" style="font-weight: 100"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="70" style="border: medium none" height="21"><small><small><small><small><small><small><small><small><small><font face="Arial"><input type="text" name="d17" size="10" style="background-color: rgb(192,192,192)" value="*"></font></small></small></small></small></small></small></small></small></small></td>
+            <td align="center" bgcolor="#C0C0C0" width="18" style="border: medium none" height="21"><input type="text" name="e17" size="5"></td>
+            <td align="center" bgcolor="#C0C0C0" width="63" style="border: medium none" height="21"><input type="text" name="f17" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="44" style="border: medium none" height="21"><input type="text" name="g17" size="9"></td>
+            <td align="center" bgcolor="#C0C0C0" width="63" style="border: medium none" height="21"><input type="text" name="h17" size="9" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="61" style="border: medium none" height="21"><input type="text" name="i17" size="6" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" style="border-left: medium none; border-right: medium none; border-top: medium none; border-bottom: 0 none" width="119" height="21"><input type="text" name="j17" size="9" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="39" style="border: medium none" height="21"><input type="text" name="k17" size="5" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="33" style="border: medium none" height="21"><input type="text" name="l17" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="15" style="border: medium none" height="21"><input type="text" name="m17" size="5" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="42" style="border: medium none" height="21"><input type="text" name="n17" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+        </tr>
+        <tr align="center">
+            <td align="center" bgcolor="#C0C0C0" width="43" style="border: medium none" height="21"><font face="Arial"><input type="text" name="a18" size="5" style="font-weight: 100; font-style: normal; font-variant: normal; text-transform: none; text-decoration: none"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="45" style="border: medium none" height="21"><font face="Arial"><input type="text" name="b18" size="8" style="font-weight: 100"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="18" style="border: medium none" height="21"><font face="Arial"><input type="text" name="c18" size="5" style="font-weight: 100"></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="70" style="border: medium none" height="21"><small><small><small><small><small><small><small><small><small><font face="Arial"><input type="text" name="d18" size="10" style="background-color: rgb(192,192,192)" value="*"></font></small></small></small></small></small></small></small></small></small></td>
+            <td align="center" bgcolor="#C0C0C0" width="18" style="border: medium none" height="21"><input type="text" name="e18" size="5"></td>
+            <td align="center" bgcolor="#C0C0C0" width="63" style="border: medium none" height="21"><input type="text" name="f18" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="44" style="border: medium none" height="21"><input type="text" name="g18" size="9"></td>
+            <td align="center" bgcolor="#C0C0C0" width="63" style="border: medium none" height="21"><input type="text" name="h18" size="9" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="61" style="border: medium none" height="21"><input type="text" name="i18" size="6" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" style="border-left: medium none; border-right: medium none; border-top: medium none; border-bottom: 0 none" width="119" height="21"><input type="text" name="j18" size="9" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="39" style="border: medium none" height="21"><input type="text" name="k18" size="5" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="33" style="border: medium none" height="21"><input type="text" name="l18" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="15" style="border: medium none" height="21"><input type="text" name="m18" size="5" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" width="42" style="border: medium none" height="21"><input type="text" name="n18" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+        </tr>
+        <tr align="center">
+            <td align="center" bgcolor="#FFFFFF" width="43" style="border: medium none" height="21"></td>
+            <td align="center" bgcolor="#FFFFFF" width="45" style="border: medium none" height="21"></td>
+            <td align="center" bgcolor="#FFFFFF" width="18" style="border: medium none" height="21"></td>
+            <td align="center" bgcolor="#FFFFFF" width="70" style="border: medium none" height="21"></td>
+            <td align="center" bgcolor="#FFFFFF" width="18" style="border: medium none" height="21"></td>
+            <td align="center" bgcolor="#FFFFFF" width="63" style="border: medium none" height="21"></td>
+            <td align="center" bgcolor="#FFFFFF" width="44" style="border: medium none" height="21"></td>
+            <td align="center" bgcolor="#FFFFFF" width="63" style="border: medium none" height="21"></td>
+            <td align="center" bgcolor="#FFFFFF" width="61" style="border: medium none" height="21"></td>
+            <td align="center" bgcolor="#FFFFFF" style="border-left: medium none; border-right: medium none; border-top: medium none; border-bottom: 0 none" width="119" height="21"></td>
+            <td align="center" bgcolor="#C0C0C0" width="39" style="border: medium none" height="21"><div align="left"><p><input type="text" name="k19" size="3" style="background-color: rgb(192,192,192)" value="*">%</p>
+            </td>
+            <td align="center" bgcolor="#C0C0C0" width="33" style="border: medium none" height="21"><input type="text" name="l19" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#FFFFFF" style="border: medium none" height="21"></td>
+            <td align="center" bgcolor="#C0C0C0" width="42" style="border: medium none" height="21"><input type="text" name="n19" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+        </tr>
+        <tr align="center">
+            <td align="center" bgcolor="#C0C0C0" colspan="3" style="border: medium none" height="21"><font face="Arial"><small><small>Valor total do orçamento
+            com IVA:</small></small></font></td>
+            <td align="center" bgcolor="#C0C0C0" width="70" style="border: medium none" height="21"><small><small><small><small><small><small><small><small><small><font face="Arial"><input type="text" name="d20" size="10" style="background-color: rgb(192,192,192)" value="*"></font></small></small></small></small></small></small></small></small></small></td>
+            <td align="center" bgcolor="#FFFFFF" style="border: medium none" colspan="5" height="21"><div align="left"><p><small><small><font face="Arial">V.P.C.(ext.)-Valor
+            das partes comuns no exterior</font></small></small></p>
+            </td>
+            <td align="center" bgcolor="#C0C0C0" style="border: medium none" colspan="2" height="21"><small><small><font face="Arial">a 30% da obra</font></small></small></td>
+            <td align="center" bgcolor="#C0C0C0" style="border: medium none" height="21"><small><font face="Arial"><input type="text" name="l20" size="10" style="background-color: rgb(192,192,192)" value="*"></font></small></td>
+            <td align="center" bgcolor="#C0C0C0" style="border-left: medium none; border-right: medium none; border-top: medium none; border-bottom: 0 none" height="21"><small><small><font face="Arial">a 30%</font></small></small></td>
+            <td align="center" bgcolor="#C0C0C0" style="border: medium none" height="21"><input type="text" name="n20" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+        </tr>
+        <tr align="center">
+            <td align="center" bgcolor="#FFFFFF" colspan="3" style="border: medium none" height="21"><div align="left"><p><small><font face="Arial"><small>Vi-Valor
+            das partes individuais</small></font></small></p>
+            </td>
+            <td align="center" bgcolor="#FFFFFF" width="70" style="border: medium none" height="21"></td>
+            <td align="center" bgcolor="#FFFFFF" style="border: medium none" colspan="5" height="21"><div align="left"><p><small><small><font face="Arial">V.P.C.(int.)-Valor
+            das partes comuns no interior</font></small></small></p>
+            </td>
+            <td align="center" bgcolor="#C0C0C0" style="border: medium none" colspan="2" height="21"><small><small><font face="Arial">a 60% da obra</font></small></small></td>
+            <td align="center" bgcolor="#C0C0C0" style="border: medium none" height="21"><input type="text" name="l21" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" style="border-left: medium none; border-right: medium none; border-top: medium none; border-bottom: 0 none" height="21"><small><small><font face="Arial">a 60%</font></small></small></td>
+            <td align="center" bgcolor="#C0C0C0" style="border: medium none" height="21"><input type="text" name="n21" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+        </tr>
+        <tr align="center">
+            <td align="center" bgcolor="#FFFFFF" colspan="3" style="border: medium none" height="23"><div align="left"><p><small><small>V.R.F.-Valor da renda
+            do fogo</small></small></p>
+            </td>
+            <td align="center" bgcolor="#FFFFFF" width="70" style="border: medium none" height="23"><input type="submit" value="Calcular"></td>
+            <td align="center" bgcolor="#FFFFFF" style="border: medium none" colspan="5" height="23"><div align="left"><p><small><font face="Arial"><small>V.T.O.F.-Valor
+            total obra do fogo</small></font></small></p>
+            </td>
+            <td align="center" bgcolor="#C0C0C0" style="border: medium none" colspan="2" height="23"><small><small><font face="Arial">a 100% da obra</font></small></small></td>
+            <td align="center" bgcolor="#C0C0C0" style="border: medium none" height="23"><input type="text" name="l22" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+            <td align="center" bgcolor="#C0C0C0" style="border-left: medium none; border-right: medium none; border-top: medium none; border-bottom: 0 none" height="23"><small><small><font face="Arial">a 100%</font></small></small></td>
+            <td align="center" bgcolor="#C0C0C0" style="border: medium none" height="23"><input type="text" name="n22" size="10" style="background-color: rgb(192,192,192)" value="*"></td>
+        </tr>
+        <tr align="center">
+            <td align="center" bgcolor="#FFFFFF" colspan="3" style="border: medium none" height="17"><small><small><div align="left"><p><font face="Arial">R-Renda (escudos)</font></small></small></p>
+            </td>
+            <td align="center" bgcolor="#FFFFFF" width="70" style="border: medium none" height="17"></td>
+            <td align="center" bgcolor="#FFFFFF" style="border: medium none" colspan="5" height="17"></td>
+            <td align="center" bgcolor="#FFFFFF" style="border: medium none" colspan="2" height="17"></td>
+            <td align="center" bgcolor="#FFFFFF" style="border: medium none" height="17"></td>
+            <td align="center" bgcolor="#FFFFFF" style="border-left: medium none; border-right: medium none; border-top: medium none; border-bottom: 0 none" height="17"></td>
+            <td align="center" bgcolor="#FFFFFF" style="border: medium none" height="17"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

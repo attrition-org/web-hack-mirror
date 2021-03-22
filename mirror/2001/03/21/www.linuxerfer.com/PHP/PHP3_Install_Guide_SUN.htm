@@ -1,0 +1,757 @@
+<HTML>
+<HEAD>
+ <TITLE>Linuxerfer.Com</TITLE>
+<META content="text/html; charset=EUC-KR" http-equiv=Content-Type>
+<STYLE type=text/css>
+A:link { TEXT-DECORATION: none }
+A:visited {TEXT-DECORATION: none}
+A:active {TEXT-DECORATION: none}
+A:hover {TEXT-DECORATION: underline}
+BODY {FONT-SIZE: 10pt}
+TD {FONT-SIZE: 10pt}
+</STYLE>
+</HEAD>
+
+<BODY bgColor=#ffffff text=#111111 link=#000000 aLink=#222222 vLink=#333333>
+
+<TABLE align=center bgColor=#ffffff border=0 cellPadding=0 cellSpacing=0 width=670>
+<TR>
+ <TD height="1"></TD>
+ <TD></TD>
+ <TD></TD>
+ <TD></TD>
+ <TD align=right>
+  <FONT color=#111111>www.Linuxerfer.com</FONT>&nbsp;&nbsp;</TD>
+ <TD bgColor=#000000 height="7" width="1">
+  <img src="image/empty.gif" width=1></TD>
+ <TD></TD>
+</TR>
+<TR>
+ <TD></TD>
+ <TD bgColor=#000000 height="7">
+  <img src="image/empty.gif" width=1></TD>
+ <TD></TD>
+ <TD></TD>
+ <TD></TD>
+ <TD bgColor=#000000 height="7">
+  <img src="image/empty.gif" width=1></TD>
+ <TD></TD>
+</TR>
+<TR>
+ <TD bgColor=#000000 colSpan=7 height=1>
+  <img src="image/empty.gif" height=1 width=100%></TD>
+</TR>
+<TR>
+ <TD></TD>
+ <TD bgColor=#000000 height=1>
+  <img src="image/empty.gif" width=1></TD>
+ <TD bgColor=#f1f1f1 align=right vAlign=top width=670 colspan=3>
+
+ <!-- -------------------------- 본  문 START ------------------------------ -->
+ <TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+ <TR>
+  <TD width=465 align=left bgColor=#e1e1e1 vAlign=middle>
+   <FONT color=#111111>&nbsp;&nbsp;<span lang=EN-US><B>PHP3 Install Guide in SUN</B></span></FONT></TD>
+  <TD bgColor=#000000 height=25 width=1>
+   <img src="image/empty.gif" width=1></TD>
+  <TD width=265></TD>
+ </TR>
+ <TR>
+  <TD bgColor=#000000 colSpan=2 height=1 width=1>
+   <img src="image/empty.gif" width=1></TD>
+  <TD></TD>
+ </TR>
+ </TABLE>
+
+ <TABLE border=0 cellPadding=0 cellSpacing=10 width="100%">
+ <TR>
+  <TD>
+   본 문서는 SUN Sloalris 운영체제에서 ORACLE 지원 기능을 포함한 PHP 모듈의
+   아파치 웹서버 컴파일을<BR> 다룹니다.<P>
+   웹서버 : APACHE 1.3.3  (<a href="http://www.apache.org" target="_new">http://www.apache.org</a>)<BR>
+   DB     : ORACLE 7.3.3  (<a href="http://www.php.net" target="_new">http://www.php.net</a>)<BR>
+   백엔드 : PHP3.0.5<BR>
+   OS     : SUN Solaris 2.5.1<P>
+
+   1. 인스톨을 하기 전에 기본적으로 gunzip, gnutar, gcc, gmake 가 설치되어
+   있어야 한다.<BR>&nbsp;&nbsp; 위의 프로그은 GNU Public License 를 따르며 <a href="http://www.sunfreeware.com" target="_new">http://sunfreeware.com</a> 에서 구할 수 있습니다.<P>
+
+   2. 먼저 ORACLE 유저의 환경변수를 root 에게 설정해 줍니다.<P>
+
+    #su - oracle<BR>
+
+    $env<P>
+
+    에서 출력되는 결과를 root 에게 설정해 주는데 .cshrc 파일(혹은 .bashrc 또는 .profile) 을 열어 아래<BR> 내용을 추가한다.<BR>
+
+    ------------------------------------------------------------------------<BR>
+<PRE>
+    ORACLE_HOME=/oracle/app/oracle/product/7.3.2;export ORACLE_HOME
+    ORACLE_SID=ORA73;export ORACLE_SID
+    NLS_LANG=American_America.KO16KSC5601;export NLS_LANG
+    TNS_ADMIN=$ORACLE_HOME/network/admin;export TNS_ADMIN
+    LD_LIBRARY_PATH=$ORACLE_HOME/lib;export LD_LIBRARY_PATH
+    ORA_NLS32=$ORACLE_HOME/ocommon/nls/admin/data;export ORA_NLS32
+    ORACLE_BASE=/oracle/app/oracle;export ORACLE_BASE
+    PATH=$PATH:$ORACLE_HOME/bin;export PATH
+</PRE>
+    ------------------------------------------------------------------------<BR>
+
+    그리고 root 로 다시 로그인 한다.<P>
+
+
+    3. apache_1_3_3_tar.gz 를 /usr/local/apache 에 php-3_0_6_tar.gz 를
+    /usr/local/php 에 각 각 푼다.<P>
+ 
+
+    4. /usr/local/apache/src 로 이동 ./Configure 를 실행한다. 아래와 같다.<P>
+<PRE>
+    leo# ./Configure
+    Using config file: Configuration
+    Creating Makefile
+     + configured for Solaris 251 platform
+     + setting C compiler to gcc
+     + setting C pre-processor to gcc -E
+     + checking for system header files
+     + adding selected modules
+     + doing sanity check on compiler and options
+    Creating Makefile in support
+    Creating Makefile in main
+    Creating Makefile in ap
+    Creating Makefile in regex
+    Creating Makefile in os/unix
+    Creating Makefile in modules/standard
+    Creating Makefile in modules/php3
+</PRE>
+
+
+    5. 이제 /usr/local/php/ 로 이동 ./setup 을 실행한다.<BR>
+    이때 아파치 모듈을 Y 오라클 지원을 Y 로 하고 나머지는 기본값으로 한다.
+    아래와 같다.<P>
+
+    ------------------------------------------------------------------------<BR>
+<PRE>
+leo# ./setup
+
+***************************************************************************
+*                                                                         *
+*  Welcome to the PHP 3.0 setup script.  Use this script if you do not    *
+*  want or know how to use the configure program.  See the INSTALL file   *
+*  for further installation instructions.                                 *
+*                                                                         *
+*  You will now be asked a series of questions for your installation.     *
+*  For each question, your options will be shown in parantheses, and      *
+*  for some a default value is listed shown in brackets.                  *
+*                                                                         *
+***************************************************************************
+
+-e Whether to build PHP as an Apache module. If you are running
+ Apache, building PHP as a module will give better performance and
+ security. If you answer no PHP will be built as a CGI program.
+ The CGI version also enables Apache users to run different PHP3-enabled
+ pages under different user-ids.
+If you answer `yes', the default directory is `/usr/local/etc/httpd'.
+
+Build as an Apache module? (`yes', `no' or dir) [no] : Y  
+Enter Apache base install directory [/usr/local/etc/httpd] : /usr/local/apache
+
+-e Whether to respect transfer tables used by mod_charset when PHP compiled
+ as Apache module. It is required to allow mod_charset (aka Russian Apache)
+ to work properly.
+
+Enable transfer tables used by mod_charset? (yes/no) [no] : 
+
+-e Whether to build PHP as fhttpd module. If you are running
+ fhttpd, building PHP as a module will give better performance,
+ more control and remote execution capability. More info about fhttpd 
+ can be found at http://phobos.illtel.denver.co.us/pub/fhttpd/.
+If you answer `yes', the default directory is `/usr/local/src/fhttpd'.
+
+Build as an fhttpd module? (`yes', `no' or dir) [no] : 
+
+-e Whether to include GD support. If PHP can find the GD libraries
+ on your system, it will be included automatically. You should enter
+ something here if you do not want to include GD support or if you
+ have installed GD in some unusual directory.
+If you answer `yes', the default directory is `/usr'.
+
+GD support? (`yes', `no' or dir) [yes] : 
+Enter GD install directory [/usr] : 
+
+-e Whether to build PHP with Oracle support. Has been confirmed to
+ work with Oracle versions 7.0 to 7.3. If you have not set up your
+ Oracle environment, enter what $ORACLE_HOME is usually set to here.
+ More info about Oracle can be found at http://www.oracle.com/.
+If you answer `yes', the default directory is `Oracle'.
+
+Oracle support? (`yes', `no' or dir) [no] : Y
+Enter home directory [Oracle] : 
+
+-e Whether to build PHP with iODBC support. This feature was first
+ developed for iODBC Driver Manager, a freely redistributable ODBC
+ driver manager which runs under many flavors of UNIX.
+ More info about iODBC can be found on the FreeODBC Pages at 
+ http://users.ids.net/~bjepson/freeODBC/.
+If you answer `yes', the default directory is `/usr/local'.
+ 
+iODBC support? (`yes', `no' or dir) [no] : 
+
+-e Whether to build PHP with OpenLink ODBC support.
+ See http://www.openlinksw.com/ for more information.
+If you answer `yes', the default directory is `/usr/local/openlink'.
+
+OpenLink ODBC support? (`yes', `no' or dir) [no] : 
+
+-e Whether to build with Adabas D support.
+ More info about Adabas D can be found at http://www.adabas.com/.
+If you answer `yes', the default directory is `/usr/local'.
+
+Adabas D support? (`yes', `no' or dir) [no] : 
+
+-e Whether to build PHP with Sybase support (DBLib only).
+ More info about Sybase can be found at http://www.sybase.com/.
+If you answer `yes', the default directory is `/home/sybase'.
+
+Sybase support? (`yes', `no' or dir) [no] : 
+
+-e Whether to build PHP with Sybase-CT support.
+If you answer `yes', the default directory is `/home/sybase'.
+
+Sybase-CT support? (`yes', `no' or dir) [no] : 
+
+-e Whether to build PHP with MySQL support.
+ More info about MySQL can be found at http://www.tcx.se/.
+If you answer `yes', the default directory is `/usr/local'.
+ 
+MySQL support? (`yes', `no' or dir) [no] : 
+
+-e Whether to build PHP with mSQL support. PHP supports both mSQL 1.0 and
+ mSQL 2.0. However, if you build PHP with mSQL 1.0 libraries, you will
+ only be able to access mSQL 1.0 databases, ditto for mSQL 2.0.
+ More info about mSQL can be found at http://www.hughes.com.au/.
+If you answer `yes', the default directory is `/usr/local/Hughes'.
+ 
+mSQL support? (`yes', `no' or dir) [no] : 
+
+-e Whether to build PHP with PostgreSQL support.
+ More info about PostgreSQL can be found at
+ http://www.postgreSQL.org/.
+If you answer `yes', the default directory is `/usr/local/pgsql'.
+
+PostgreSQL support? (`yes', `no' or dir) [no] : 
+
+-e Whether to build PHP with Solid support.
+ More information about Solid can be found at http://www.solidtech.com/.
+If you answer `yes', the default directory is `/usr/local/solid'.
+
+Solid support? (`yes', `no' or dir) [no] : 
+
+-e Whether to build PHP with Empress support.
+ Has been confirmed to work with Empress Version 8.10.
+ If you have not set up your Empress environment,
+ enter what $EMPRESSPATH is usually set to here.
+ More info about Empress can be found at http://www.empress.com/.
+If you answer `yes', the default directory is `Empress'.
+
+Empress support? (`yes', `no' or dir) [no] : 
+
+-e Whether to build PHP with Informix support. If you have not set up your
+ Informix environment, enter what $INFORMIXDIR is usually set to here.
+ You MUST set $INFORMIXDIR before trying to compile!
+ More info about Informix can be found at http://www.informix.com/.
+If you answer `yes', the default directory is `Informix'.
+
+Informix support? (`yes', `no' or dir) [no] : 
+
+-e Whether to build PHP with InterBase support. More
+ information about InterBase can be found at http://www.interbase.com/.
+If you answer `yes', the default directory is `/usr/interbase'.
+
+InterBase support? (`yes', `no' or dir) [no] : 
+
+-e Whether to build with Hyperwave support. More
+ information about Hyperwave can be found at http://www.hyperwave.com.
+
+Hyperwave support? (yes/no) [no] : 
+
+-e Whether to build with LDAP (Lightweight Directory Access Protocol)
+ support.
+ More information about LDAP can be found in RFC1777 and RFC1778.
+If you answer `yes', the default directory is `/usr/local/ldap'.
+
+LDAP support? (`yes', `no' or dir) [no] : 
+
+-e Whether to build with IMAP (Internet Message Access Protocol)
+ support.
+ More information about LDAP can be found in RFC1777 and RFC1778.
+If you answer `yes', the default directory is `/usr/local/imap'.
+
+IMAP support? (`yes', `no' or dir) [no] : 
+
+-e Whether to build PHP with Velocis support.
+ More information about Velocis can be found at http://www.raima.com/.
+If you answer `yes', the default directory is `/usr/local/velocis'.
+
+Velocis support? (`yes', `no' or dir) [no] : 
+
+-e Whether to build PHP with CODBC support.
+ This feature was first developed for Sybase SQL Anywhere 5.5 on QNX,
+ but may be used for any unknown ODBC driver on all flavors of UNIX.
+If you answer `yes', the default directory is `/usr/local'.
+
+custom ODBC support? (`yes', `no' or dir) [no] : 
+
+-e Whether to use the bundled dbase library.
+
+dBase support?  (yes/no) [no] : 
+
+-e Whether to use the bundled filePro library. Read-access only.
+
+filePro support?  (yes/no) [no] : 
+
+-e Whether to use the pdflib support to write .pdf-files.
+ Tested for version 0.6!
+If you answer `yes', the default directory is `/usr/local'.
+
+pdflib 0.6 support?  (`yes', `no' or dir) [no] : 
+
+-e Whether to use the Ftf Toolkit support to write/read .fdf-files.
+ Tested for version 2.0!
+If you answer `yes', the default directory is `/usr/local'.
+
+Acrobat Forms (Ftf Toolkit 2.0) support?  (`yes', `no' or dir) [no] : 
+
+-e Whether to use the zlib support to read/write .gz-files.
+ Requires zlib version >= 1.0.9!
+If you answer `yes', the default directory is `/usr'.
+
+zlib (>= 1.0.9) support?  (`yes', `no' or dir) [no] : 
+
+-e Whether to use the System V shared memory (currently only solaris and linux).
+
+System V shared memory support?  (yes/no) [no] : 
+
+-e Whether to use the System V semaphores (currently only solaris and linux).
+
+System V semaphores support?  (yes/no) [no] : 
+
+-e Directory where the PHP3 configuration file (php3.ini) is
+ located.
+If you answer `yes', the default directory is `/usr/local/lib'.
+
+Default config directory? (`yes', `no' or dir) [no] : 
+
+-e Whether to use the systems regular expression library rather than
+ the bundled one. If you are building PHP3 as a server module, you must
+ use the same library when building PHP3 as when linking the server.
+ Enable this if the systems library provides special features you need.
+ It is recommended that you use the bundled library if possible.
+
+Use the system regex library? (yes/no) [no] : 
+
+-e Whether to enable debug information. Answering "no" here will make
+ PHP run faster, but it will be harder to trace bugs. You are 
+ encouraged to leave debugging on while PHP 3.0 is in alpha and 
+ beta state.
+
+Compile with debug information? (yes/no) [yes] : 
+
+-e Whether to enable PHP safe mode. This imposes several
+ restrictions on what PHP can do, such as opening only files within
+ the document root. Read the Security chapter of the documentation
+ for more information. CGI users should always enable secure mode.
+ This only sets the default, it may be enabled or disabled in the
+ configuration file later.
+
+Enable safe mode by default? (yes/no) [no] : 
+
+-e The directory where executables that may be run from safe mode
+ are located.
+
+Default safe mode exec dir? (dir) [/usr/local/bin] : 
+
+-e Enable the HTTP_GET_VARS, HTTP_POST_VARS and HTTP_COOKIE_VARS arrays by
+ default (can be turned on or off in the configuration file).
+
+Enable variable tracking by default? (yes/no) [no] : 
+
+-e Whether to magic quotes by default. This can be changed in the
+ configuration file.
+
+Enable magic quotes by default? (yes/no) [no] : 
+
+-e Whether to enable PHP remote debugging support. This feature
+ is still under development.
+
+Enable PHP remote debugger? (yes/no) [no] : 
+
+-e Enables bc style arbitrary precision math functions.
+
+Enable bc style precision math functions (yes/no) [no] : 
+
+-e Compile with memory limit support.
+
+Enable memory limit? (yes/no) [no] : 
+
+-e Whether to enable the short form of the PHP HTML embed tags.
+ The short form is "<? code; ?>", while the long form is
+ "<?php code; ?>". If you plan on using XML on your site, you
+ should disable the short form. This is the default and can be overridden
+ in the configuration file.
+
+Allow short tag by default? (yes/no) [yes] : 
+
+-e Enable the URL-aware fopen wrapper that allows accessing files via http
+ or ftp.
+
+Enable URL fopen wrappers? (yes/no) [yes] : 
+
+  ***************************************************************************
+  *                                                                         *
+  *                      Running configure...                               *
+  *                                                                         *
+  ***************************************************************************
+
+./configure --with-apache=/usr/local/apache --with-oracle
+loading cache ./config.cache
+checking whether build environment is sane... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for bison... no
+checking for byacc... no
+configure: warning: You will need bison if you'd want to regenerate the PHP 3.0 parsers.
+checking for gcc... (cached) gcc
+checking whether the C compiler (gcc  ) works... yes
+checking whether the C compiler (gcc  ) is a cross-compiler... no
+checking whether we are using GNU C... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for ranlib... (cached) ranlib
+checking whether gcc and cc understand -c and -o together... (cached) yes
+checking for perl... /bin/perl
+checking if compiler supports -R... (cached) yes
+checking for sendmail... (cached) /usr/lib/sendmail
+checking for gdbm_open in -lgdbm... (cached) no
+checking for dbm_open in -ldb... (cached) no
+checking for dbm_open in -lc... (cached) yes
+checking preferred dbm library... ndbm chosen
+checking for gethostname in -lnsl... (cached) yes
+checking for socket in -lc... (cached) no
+checking for socket in -lsocket... (cached) yes
+checking for gethostbyaddr in -lc... (cached) yes
+checking for crypt in -lc... (cached) yes
+checking for dlopen in -lc... (cached) no
+checking for dlopen in -ldl... (cached) yes
+checking for sin in -lc... (cached) no
+checking for sin in -lm... (cached) yes
+checking for res_search in -lsocket... (cached) no
+checking for res_search in -lresolv... (cached) yes
+checking how to run the C preprocessor... (cached) gcc -E
+checking for ANSI C header files... (cached) yes
+checking for dirent.h that defines DIR... (cached) yes
+checking for opendir in -ldir... (cached) no
+checking for fclose declaration... ok
+checking for fcntl.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for crypt.h... (cached) yes
+checking for sys/file.h... (cached) yes
+checking for memory.h... (cached) yes
+checking for pwd.h... (cached) yes
+checking for grp.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for sys/wait.h... (cached) yes
+checking for syslog.h... (cached) yes
+checking for string.h... (cached) yes
+checking for sys/varargs.h... (cached) yes
+checking for stdarg.h... (cached) yes
+checking for sys/time.h... (cached) yes
+checking for signal.h... (cached) yes
+checking for netinet/in.h... (cached) yes
+checking for dlfcn.h... (cached) yes
+checking for limits.h... (cached) yes
+checking for sys/types.h... (cached) yes
+checking for unix.h... (cached) no
+checking whether struct tm is in sys/time.h or time.h... (cached) time.h
+checking for tm_zone in struct tm... (cached) no
+checking for tzname... (cached) yes
+checking for st_blksize in struct stat... (cached) yes
+checking for st_blocks in struct stat... (cached) yes
+checking for st_rdev in struct stat... (cached) yes
+checking for size_t... (cached) yes
+checking for uid_t in sys/types.h... (cached) yes
+checking for uint... (cached) yes
+checking for ulong... (cached) yes
+checking for vprintf... (cached) yes
+checking for memcpy... (cached) yes
+checking for memmove... (cached) yes
+checking for strdup... (cached) yes
+checking for strerror... (cached) yes
+checking for strcasecmp... (cached) yes
+checking for strstr... (cached) yes
+checking for flock... (cached) no
+checking for lockf... (cached) yes
+checking for putenv... (cached) yes
+checking for tempnam... (cached) yes
+checking for usleep... (cached) yes
+checking for setlocale... (cached) yes
+checking for gettimeofday... (cached) yes
+checking for setvbuf... (cached) yes
+checking for srand48... (cached) yes
+checking for lrand48... (cached) yes
+checking for srandom... (cached) yes
+checking for random... (cached) yes
+checking for link... (cached) yes
+checking for symlink... (cached) yes
+checking for regcomp... (cached) yes
+checking for getlogin... (cached) yes
+checking for cuserid... (cached) yes
+checking for vsnprintf... (cached) no
+checking for snprintf... (cached) no
+checking for gcvt... (cached) yes
+checking for utime... (cached) yes
+checking for crypt... (cached) yes
+checking for setitimer... (cached) yes
+checking for rint... (cached) yes
+checking for unsetenv... (cached) no
+checking for strftime... (cached) yes
+checking for setsockopt... (cached) yes
+checking for tzset... (cached) yes
+checking whether utime accepts a null argument... (cached) yes
+checking for working alloca.h... (cached) yes
+checking for alloca... (cached) yes
+checking for broken sprintf... ok
+checking for getopt... (cached) yes
+checking for standard DES crypt... yes
+checking for extended DES crypt... no
+checking for MD5 crypt... no
+checking for Blowfish crypt... no
+checking whether to use bundled regex library... yes
+checking for Apache module support via DSO through APXS... no
+checking for Apache module support via DSO through APACI... no
+checking for Apache module support... yes - Apache 1.3.x
+checking for mod_charset compatibility option... no
+checking for fhttpd module support... no
+checking for IMAP support... no
+checking whether to include GD support... checking for gdImageLine in -lgd... no
+checking for gdImageString16 in -lgd... no
+checking for Oracle support... yes
+checking Oracle version... 7.3
+checking for iODBC support... no
+checking for OpenLink ODBC support... no
+checking for Adabas support... no
+checking for Sybase support... no
+checking for Sybase-CT support... no
+checking for MySQL support... no
+checking for mSQL support... no
+checking for PostgresSQL support... no
+checking for Solid support... no
+checking for Empress support... no
+checking for LDAP support... no
+checking for SNMP support... no
+checking for Velocis support... no
+checking for Informix support... no
+checking for InterBase support... no
+checking for a custom ODBC support... no
+checking for Hyperwave support... no
+checking for XML support... no
+checking whether to include zlib support... no
+checking whether to include pdflib support... no
+checking whether to include fdftk support... no
+checking whether to include the bundled dbase library... no
+checking whether to include the bundled filePro support... no
+checking whether to enable DAV support through mod_dav... no
+checking whether to enable unified ODBC support... no
+checking whether to use a configuration file... yes
+checking whether to include debugging symbols... no
+checking whether to enable safe mode by default... no
+checking for safe mode exec dir... /usr/local/php/bin
+checking whether to enable track_vars variables by default... no
+checking whether to enable magic quotes by default... no
+checking whether to enable remote debugger support... no
+checking whether to enable bc style precision math functions... yes
+checking whether to enable a memory limit... no
+checking whether to enable short tags by default... yes
+checking whether to enable the URL-aware fopen wrapper... yes
+checking whether to enable System V semaphore support... no
+checking whether to enable System V shared memory support... no
+
+updating cache ./config.cache
+
+creating ./config.status
+creating Makefile
+creating build-defs.h
+creating stamp-h
+creating libphp3.module
+creating doc/Makefile
+creating doc/version.ent
+creating doc/checkdoc
+creating extra/gd/bdf2gdfont
+creating regex/Makefile
+creating dbase/Makefile
+creating config.h
+
+  ***************************************************************************
+  *                                                                         *
+  *  Configuration options were saved in do-conf, if desired you can        *
+  *  edit this file and then run it. Run ./configure --help for a list      *
+  *  of options.                                                            *
+  *                                                                         *
+  *  Read the INSTALL file for more information and for help in             *
+  *  configuring apache. See the web site at: http://www.php.net/ for       *
+  *  documentation and more. If desired copy the php3.ini-dist file to      *
+  *  your config directory/php3.ini and edit it.                            *
+  *                                                                         *
+  ***************************************************************************
+ 
+leo#
+</PRE>
+   -------------------------------------------------------------------------<P>
+
+    6. 이제 PHP 를 컴파일 한다.<P>
+
+    #make<BR>
+    #make install<P>
+
+    7. 인스톨이 끝나면 /usr/local/apache/src/modules/php3 디렉토리가 생기고 아래화일이 복사된다.<P>
+
+    Makefile         Makefile.tmpl  libphp3.a       mod_php3.c  mod_php3.o<BR>
+    Makefile.libdir  libmodphp3.a   libphp3.module  mod_php3.h  php_version.h<P>
+
+    8. /usr/local/apache/src/Configuration 파일을 열어 적당한 곳에<BR>
+    AddModule modules/php3/libphp3.a  을 추가시킨다.<P>
+
+    9. /usr/local/apache/src/Configure 를 실행시킨다.<P>
+<PRE>
+------------------------------------
+
+leo# ./Configure     
+Using config file: Configuration
+Creating Makefile
+ + configured for Solaris 251 platform
+ + setting C compiler to gcc
+ + setting C pre-processor to gcc -E
+ + checking for system header files
+ + adding selected modules
+    o php3_module uses ConfigStart/End     
+ + doing sanity check on compiler and options
+Creating Makefile in support
+Creating Makefile in main
+Creating Makefile in ap
+Creating Makefile in regex
+Creating Makefile in os/unix
+Creating Makefile in modules/standard
+Creating Makefile in modules/php3
+
+------------------------------------
+</PRE>
+
+    10. make 를 실행하면 httpd 파일이 생긴다. 이화일이 바로 아파치 웹서버 데몬이다.<P>
+
+    11. 이제 여러분의 서버에 알맞게 conf 화일을 수정한다.
+        일단 배포본에 따라온 3개의 설정화일을 복사한다.<P>
+
+    # cd /usr/local/apache/conf<BR>
+    # cp httpd.conf-dist httpd.conf<BR>
+    # cp srm.conf-dist srm.conf<BR>
+    # cp access.conf-dist access.conf<P>
+
+    httpd.conf 에서는 다음을 고친다.<P>
+
+    ServerAdmin you@your.address   // 관리자 Email<BR>
+    ServerRoot "@@ServerRoot@@"    // 아파치 base 디렉토리 여기서는  "/usr/local/apache"<BR>
+    ServerName new.host.name       // 웹서버 이름<BR>
+
+    srm.conf 에서는 다음처럼 고친다.<P>
+
+    DocumentRoot "/usr/local/apache/htdocs"<BR>
+    Alias /icons/ "/usr/local/apache/icons/"<BR>
+    ScriptAlias /cgi-bin/ "/usr/local/apache/cgi-bin/"<P>
+
+    AddType application/x-httpd-php3 .phtml<BR>
+    AddType application/x-httpd-php3 .html  # <- 추가 하세요<BR>
+    AddType application/x-httpd-php3 .htm   # <- 추가 하세요<BR>
+    AddType application/x-httpd-php3-source .phps<P>
+
+    access.conf 에서는 다음처럼 고친다.<P>
+
+    @ServerRoot@  ->   /usr/lcoal/apache/<P>
+
+    &lt;Directory "/usr/lcoal/apache/htdocs"&gt;<BR>
+    &lt;Directory "/usr/local/apache/cgi-bin"&gt;<P>
+
+
+    12. 모두 제대로 고쳤으면 이제 웹서버를 띄운다.<P>
+
+    # cd ..<BR>
+    [apache]# ./src/httpd<P>
+
+    -f 옵션으로 설정화일을 지정해서 다음처럼 띄울수도 있다.<P>
+
+    [apache]# /usr/local/apache/src/httpd -f /usr/local/apache/conf/httpd.conf<P>
+
+    13. 아파치 데몬이 떠 있나 확인한다.<P>
+
+    [apache]# ps ?ef | grep httpd<BR>
+    357  ?  S    0:00 /usr/local/apache/sbin/httpd<BR>
+    358  ?  S    0:00 /usr/local/apache/sbin/httpd<BR>
+    359  ?  S    0:00 /usr/local/apache/sbin/httpd<BR>
+    360  ?  S    0:00 /usr/local/apache/sbin/httpd<BR>
+    361  ?  S    0:00 /usr/local/apache/sbin/httpd<BR>
+    387  ?  S    0:00 /usr/local/apache/sbin/httpd<P>
+
+    14. 웹브아우저를 띄우고 http://localhost 에 연결한다.<P>
+
+    "It Worked! The Apache Web Server is Installed on this Web Site! "<P>
+
+    라는 메시지가 나오면 성공이다.<P>
+
+    15. PHP3 가 작동하나 살펴 본다.<P>
+
+    /usr/local/apache/htdocs/  에  phptest.html 이라는 화일을 만들고 다음을 입력한다.<P>
+ 
+<PRE>
+&lt;html&gt;
+&lt;?php
+  phpinfo() ;
+?&gt;
+&lt;/html&gt;
+</PRE>
+
+    16. 다시 웹브라운저에서 phptest.html 을 본다.
+
+   <P></TD>
+ </TR>
+ </TABLE>
+ <P>
+ <!-- --------------------------- 본  문 END ------------------------------- -->
+
+ </TD>
+
+<!-- -----------------------------  꼬리말  -------------------------------- -->
+ <TD bgColor=#000000 height=1 width=1>
+  <img src="image/empty.gif" width=1></TD>
+ <TD height=1 width=7></TD>
+</TR>
+<TR>
+ <TD bgColor=#000000 colSpan=7 height=1 width=1>
+  <img src="image/empty.gif" width=1></TD>
+</TR>
+<TR>
+ <TD height=1 width=7></TD>
+ <TD bgColor=#000000 height=7 width=1>
+  <img src="image/empty.gif" width=1></TD>
+ <TD colspan=3></TD>
+ <TD bgColor=#000000 height=7 width=1>
+  <img src="image/empty.gif" width=1></TD>
+ <TD height=1 width=7></TD>
+</TR>
+<TR>
+ <TD height=1 width=7></TD>
+ <TD bgColor=#000000 height=7 width=1>
+  <img src="image/empty.gif" width=1></TD>
+ <TD vAlign=top>&nbsp;www.Linuxerfer.com<BR></TD>
+ <TD colspan=3 align=right><TT>2000/09/21 19:19:39</TT> <BR></TD>
+ <TD></TD>
+</TR>
+</TABLE>
+<P></P>
+</BODY>
+</HTML>

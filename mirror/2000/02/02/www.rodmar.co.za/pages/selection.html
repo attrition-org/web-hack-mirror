@@ -1,0 +1,257 @@
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Microsoft FrontPage 4.0">
+		<title>selection of site</title>
+		<csactions>
+			<csaction name="B39FB85427" class="Goto Link" type="ONEVENT" val0="holstein.html" val1="information frame">
+			<csaction name="B39FB88C29" class="Goto Link" type="ONEVENT" val0="bonsma.html" val1="information frame">
+			<csaction name="B39FB8A630" class="Goto Link" type="ONEVENT" val0="breeds.html" val1="information frame">
+			<csaction name="B39FB8B831" class="Goto Link" type="ONEVENT" val0="equipm.html" val1="information frame">
+			<csaction name="B39FB8CE32" class="Goto Link" type="ONEVENT" val0="farms.html" val1="information frame">
+			<csaction name="B39FB90234" class="Goto Link" type="ONEVENT" val0="company.html" val1="information frame">
+			<csaction name="B39FBE9E36" class="Goto Link" type="ONEVENT" val0="jersey.html" val1="information frame">
+			<csaction name="B3A0F63F5" class="Goto Link" type="ONEVENT" val0="outhand.html" val1="information frame">
+			<csaction name="B3A0F8657" class="Goto Link" type="ONEVENT" val0="mailto:rodmar@rodmar.co.za" val1>
+		</csactions>
+		<csscriptdict>
+			<script><!--
+function CSClickReturn () {
+	var bAgent = window.navigator.userAgent; 
+	var bAppName = window.navigator.appName;
+	if ((bAppName.indexOf("Explorer") >= 0) && (bAgent.indexOf("Mozilla/3") >= 0) && (bAgent.indexOf("Mac") >= 0))
+		return true; // dont follow link
+	else return false; // dont follow link
+}
+CSStopExecution = false;
+
+function CSAction(array) { 
+	return CSAction2(CSAct, array);
+}
+function CSAction2(fct, array) { 
+	var result;
+	for (var i=0;i<array.length;i++) {
+		if(CSStopExecution) return false; 
+		var actArray = fct[array[i]];
+		var tempArray = new Array;
+		for(var j=1;j<actArray.length;j++) {
+			if((actArray[j] != null) && (typeof(actArray[j]) == "object") && (actArray[j].length == 2)) {
+				if(actArray[j][0] == "VAR") {
+					tempArray[j] = CSStateArray[actArray[j][1]];
+				}
+				else {
+					if(actArray[j][0] == "ACT") {
+						tempArray[j] = CSAction(new Array(new String(actArray[j][1])));
+					}
+				else
+					tempArray[j] = actArray[j];
+				}
+			}
+			else
+				tempArray[j] = actArray[j];
+		}			
+		result = actArray[0](tempArray);
+	}
+	return result;
+}
+CSAct = new Object;
+function CSGotoLink(action) {
+	if (action[2].length) {
+		var hasFrame=false;
+		for(i=0;i<parent.frames.length;i++) { if (parent.frames[i].name==action[2]) { hasFrame=true; break;}}
+		if (hasFrame==true)
+			parent.frames[action[2]].location = action[1];
+		else
+			window.open (action[1],action[2],"");
+	}
+	else location = action[1];
+}
+// --></script>
+		</csscriptdict>
+		<csactiondict>
+		<script><!--
+CSAct[/*CMP*/ 'B39FB85427'] = new Array(CSGotoLink,/*URL*/ 'holstein.html','information frame');
+CSAct[/*CMP*/ 'B39FB88C29'] = new Array(CSGotoLink,/*URL*/ 'bonsma.html','information frame');
+CSAct[/*CMP*/ 'B39FB8A630'] = new Array(CSGotoLink,/*URL*/ 'breeds.html','information frame');
+CSAct[/*CMP*/ 'B39FB8B831'] = new Array(CSGotoLink,/*URL*/ 'equipm.html','information frame');
+CSAct[/*CMP*/ 'B39FB8CE32'] = new Array(CSGotoLink,/*URL*/ 'farms.html','information frame');
+CSAct[/*CMP*/ 'B39FB90234'] = new Array(CSGotoLink,/*URL*/ 'company.html','information frame');
+CSAct[/*CMP*/ 'B39FBE9E36'] = new Array(CSGotoLink,/*URL*/ 'jersey.html','information frame');
+CSAct[/*CMP*/ 'B3A0F63F5'] = new Array(CSGotoLink,/*URL*/ 'outhand.html','information frame');
+CSAct[/*CMP*/ 'B3A0F8657'] = new Array(CSGotoLink,/*URL*/ 'mailto:rodmar@rodmar.co.za','');
+
+// --></script>
+		</csactiondict>
+        <base target="_self">
+	</head>
+
+	<body link="#FFFFFF" vlink="#FFFFFF" alink="#FFFFFF">
+		<table cool width="199" height="602" border="0" cellpadding="0" cellspacing="0" gridx="20" showgridx gridy="20" showgridy bgcolor="#9a0012">
+			<tr height="1" cntrlrow>
+				<td width="1" height="1"><spacer type="block" width="1" height="1"></td>
+				<td width="9" height="1"><spacer type="block" width="14" height="1"></td>
+				<td width="4" height="1"><spacer type="block" width="1" height="1"></td>
+				<td width="7" height="1"><spacer type="block" width="1" height="1"></td>
+				<td width="23" height="1"><spacer type="block" width="23" height="1"></td>
+				<td width="1" height="1"><spacer type="block" width="1" height="1"></td>
+				<td width="1" height="1"><spacer type="block" width="1" height="1"></td>
+				<td width="93" height="1"><spacer type="block" width="93" height="1"></td>
+				<td width="9" height="1"><spacer type="block" width="9" height="1"></td>
+				<td width="21" height="1"><spacer type="block" width="21" height="1"></td>
+				<td width="1" height="1"><spacer type="block" width="1" height="1"></td>
+				<td width="1" height="1"><spacer type="block" width="1" height="1"></td>
+				<td width="8" height="1"><spacer type="block" width="8" height="1"></td>
+				<td width="5" height="1"><spacer type="block" width="5" height="1"></td>
+				<td width="15" height="1"><spacer type="block" width="15" height="1"></td>
+			</tr>
+			<tr height="128">
+				<td width="1" height="128"><spacer type="block" width="1" height="128"></td>
+				<td width="179" height="128" colspan="13" rowspan="1" valign="top" align="left" xpos="0"><img height="128" width="176" src="../media/slogo.jpeg"></td>
+				<td width="15" height="128"><spacer type="block" width="15" height="128"></td>
+			</tr>
+			<tr height="32">
+				<td width="1" height="32"><spacer type="block" width="1" height="32"></td>
+				<td width="9" height="32"><spacer type="block" width="14" height="32"></td>
+				<td width="4" height="32"><spacer type="block" width="1" height="32"></td>
+				<td width="7" height="32"><spacer type="block" width="1" height="32"></td>
+				<td width="127" height="32" colspan="5" rowspan="1" valign="top" align="left" xpos="16" content csheight="32"><font face="Times New Roman,Georgia,Times" size="4" color="white"><b>auctions</b></font></td>
+				<td width="21" height="32"><spacer type="block" width="21" height="32"></td>
+				<td width="1" height="32"><spacer type="block" width="1" height="32"></td>
+				<td width="1" height="32"><spacer type="block" width="1" height="32"></td>
+				<td width="8" height="32"><spacer type="block" width="8" height="32"></td>
+				<td width="5" height="32"><spacer type="block" width="5" height="32"></td>
+				<td width="15" height="32"><spacer type="block" width="15" height="32"></td>
+			</tr>
+			<tr height="23">
+				<td width="1" height="23"><spacer type="block" width="1" height="23"></td>
+				<td width="9" height="23"><spacer type="block" width="14" height="23"></td>
+				<td width="4" height="23"><spacer type="block" width="1" height="23"></td>
+				<td width="7" height="23"><spacer type="block" width="1" height="23"></td>
+				<td width="23" height="23"><spacer type="block" width="23" height="23"></td>
+				<td width="1" height="23"><spacer type="block" width="1" height="23"></td>
+				<td width="1" height="23"><spacer type="block" width="1" height="23"></td>
+				<td width="125" height="23" colspan="5" rowspan="1" valign="top" align="left" xpos="41" content csheight="23"><a href="holstein.html" target="information frame" title="holstein" csclick="B39FB85427" onclick="CSAction(new Array(/*CMP*/'B39FB85427'));return CSClickReturn();"><font size="4" color="white">holsteins</font></a></td>
+				<td width="8" height="23"><spacer type="block" width="8" height="23"></td>
+				<td width="5" height="23"><spacer type="block" width="5" height="23"></td>
+				<td width="15" height="23"><spacer type="block" width="15" height="23"></td>
+			</tr>
+			<tr height="23">
+				<td width="1" height="23"><spacer type="block" width="1" height="23"></td>
+				<td width="9" height="23"><spacer type="block" width="14" height="23"></td>
+				<td width="4" height="23"><spacer type="block" width="1" height="23"></td>
+				<td width="7" height="23"><spacer type="block" width="1" height="23"></td>
+				<td width="23" height="23"><spacer type="block" width="23" height="23"></td>
+				<td width="1" height="23"><spacer type="block" width="1" height="23"></td>
+				<td width="125" height="23" colspan="5" rowspan="1" valign="top" align="left" xpos="40" content csheight="23"><a href="jersey.html" target="information frame" title="jersey" csclick="B39FBE9E36" onclick="CSAction(new Array(/*CMP*/'B39FBE9E36'));return CSClickReturn();"><font size="4" color="white">jerseys</font></a></td>
+				<td width="1" height="23"><spacer type="block" width="1" height="23"></td>
+				<td width="8" height="23"><spacer type="block" width="8" height="23"></td>
+				<td width="5" height="23"><spacer type="block" width="5" height="23"></td>
+				<td width="15" height="23"><spacer type="block" width="15" height="23"></td>
+			</tr>
+			<tr height="23">
+				<td width="1" height="23"><spacer type="block" width="1" height="23"></td>
+				<td width="9" height="23"><spacer type="block" width="14" height="23"></td>
+				<td width="4" height="23"><spacer type="block" width="1" height="23"></td>
+				<td width="7" height="23"><spacer type="block" width="1" height="23"></td>
+				<td width="23" height="23"><spacer type="block" width="23" height="23"></td>
+				<td width="125" height="23" colspan="5" rowspan="1" valign="top" align="left" xpos="39" content csheight="23"><a href="bonsma.html" target="information frame" title="bonsmara" csclick="B39FB88C29" onclick="CSAction(new Array(/*CMP*/'B39FB88C29'));return CSClickReturn();"><font size="4" color="white">bonsmara</font></a></td>
+				<td width="1" height="23"><spacer type="block" width="1" height="23"></td>
+				<td width="1" height="23"><spacer type="block" width="1" height="23"></td>
+				<td width="8" height="23"><spacer type="block" width="8" height="23"></td>
+				<td width="5" height="23"><spacer type="block" width="5" height="23"></td>
+				<td width="15" height="23"><spacer type="block" width="15" height="23"></td>
+			</tr>
+			<tr height="23">
+				<td width="1" height="23"><spacer type="block" width="1" height="23"></td>
+				<td width="9" height="23"><spacer type="block" width="14" height="23"></td>
+				<td width="4" height="23"><spacer type="block" width="1" height="23"></td>
+				<td width="7" height="23"><spacer type="block" width="1" height="23"></td>
+				<td width="23" height="23"><spacer type="block" width="23" height="23"></td>
+				<td width="125" height="23" colspan="5" rowspan="1" valign="top" align="left" xpos="39" content csheight="23"><a href="breeds.html" target="information frame" title="other breeds" csclick="B39FB8A630" onclick="CSAction(new Array(/*CMP*/'B39FB8A630'));return CSClickReturn();"><font size="4" color="white">other breeds</font></a></td>
+				<td width="1" height="23"><spacer type="block" width="1" height="23"></td>
+				<td width="1" height="23"><spacer type="block" width="1" height="23"></td>
+				<td width="8" height="23"><spacer type="block" width="8" height="23"></td>
+				<td width="5" height="23"><spacer type="block" width="5" height="23"></td>
+				<td width="15" height="23"><spacer type="block" width="15" height="23"></td>
+			</tr>
+			<tr height="23">
+				<td width="1" height="23"><spacer type="block" width="1" height="23"></td>
+				<td width="9" height="23"><spacer type="block" width="14" height="23"></td>
+				<td width="4" height="23"><spacer type="block" width="1" height="23"></td>
+				<td width="7" height="23"><spacer type="block" width="1" height="23"></td>
+				<td width="23" height="23"><spacer type="block" width="23" height="23"></td>
+				<td width="1" height="23"><spacer type="block" width="1" height="23"></td>
+				<td width="125" height="23" colspan="5" rowspan="1" valign="top" align="left" xpos="40" content csheight="23"><a href="equipm.html" target="information frame" title="equipment" csclick="B39FB8B831" onclick="CSAction(new Array(/*CMP*/'B39FB8B831'));return CSClickReturn();"><font size="4" color="white">equipment</font></a></td>
+				<td width="1" height="23"><spacer type="block" width="1" height="23"></td>
+				<td width="8" height="23"><spacer type="block" width="8" height="23"></td>
+				<td width="5" height="23"><spacer type="block" width="5" height="23"></td>
+				<td width="15" height="23"><spacer type="block" width="15" height="23"></td>
+			</tr>
+			<tr height="45">
+				<td width="1" height="45"><spacer type="block" width="1" height="45"></td>
+				<td width="9" height="45"><spacer type="block" width="14" height="45"></td>
+				<td width="4" height="45"><spacer type="block" width="1" height="45"></td>
+				<td width="7" height="45"><spacer type="block" width="1" height="45"></td>
+				<td width="23" height="45"><spacer type="block" width="23" height="45"></td>
+				<td width="1" height="45"><spacer type="block" width="1" height="45"></td>
+				<td width="125" height="45" colspan="5" rowspan="1" valign="top" align="left" xpos="40" content csheight="23"><a href="farms.html" target="information frame" title="farms" csclick="B39FB8CE32" onclick="CSAction(new Array(/*CMP*/'B39FB8CE32'));return CSClickReturn();"><font size="4" color="#FFFFFF">farms</font></a></td>
+				<td width="1" height="45"><spacer type="block" width="1" height="45"></td>
+				<td width="8" height="45"><spacer type="block" width="8" height="45"></td>
+				<td width="5" height="45"><spacer type="block" width="5" height="45"></td>
+				<td width="15" height="45"><spacer type="block" width="15" height="45"></td>
+			</tr>
+			<tr height="28">
+				<td width="1" height="28"><spacer type="block" width="1" height="28"></td>
+				<td width="9" height="28"><spacer type="block" width="14" height="28"></td>
+				<td width="127" height="28" colspan="6" rowspan="1" valign="top" align="left" xpos="14" content csheight="24"><b><font face="Times New Roman,Georgia,Times" size="4" color="white">&nbsp;</font><a href="../auction_results.htm" target="information frame"><font face="Times New Roman,Georgia,Times" size="4" color="#FFFFFF">auction results</font></a></b></td>
+				<td width="9" height="28"><spacer type="block" width="9" height="28"></td>
+				<td width="21" height="28"><spacer type="block" width="21" height="28"></td>
+				<td width="1" height="28"><spacer type="block" width="1" height="28"></td>
+				<td width="1" height="28"><spacer type="block" width="1" height="28"></td>
+				<td width="8" height="28"><spacer type="block" width="8" height="28"></td>
+				<td width="5" height="28"><spacer type="block" width="5" height="28"></td>
+				<td width="15" height="28"><spacer type="block" width="15" height="28"></td>
+			</tr>
+			<tr height="27">
+				<td width="1" height="27"><spacer type="block" width="1" height="27"></td>
+				<td width="9" height="27"><spacer type="block" width="14" height="27"></td>
+				<td width="167" height="27" colspan="11" rowspan="1" valign="top" align="left" xpos="14" content csheight="24"><font face="Times New Roman,Georgia,Times" size="4" color="white"><b>&nbsp;</b></font><a href="outhand.html" target="information frame" title="out of hand sales" csclick="B3A0F63F5" onclick="CSAction(new Array(/*CMP*/'B3A0F63F5'));return CSClickReturn();"><font face="Times New Roman,Georgia,Times" size="4" color="white"><b>out of hand sales</b></font></a>&nbsp;
+                  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <font size="4" color="#FFFFFF"><b><a href="../angus.htm" target="information frame">angus</a>&nbsp;</b></font>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b><font face="Arial" size="4" color="#FFFFFF">
+                  </font><font face="Times New Roman" size="4" color="#FFFFFF"><u><a href="../bonsmara_cattle.htm" target="information frame">bonsmara</a></u></font></b></p>
+                  <p><font face="Times New Roman" size="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="../simmentaler.htm"><font color="#FFFFFF"><b>simmentaler</b></font></a></font></p>
+                  <p><font face="Times New Roman" size="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="farms.html" target="information frame"><font color="#FFFFFF"><b>farms</b></font></a></font></p>
+                  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;
+                  <b><a href="../equipment_for_sale.htm" target="information frame"><font face="Times New Roman,Georgia,Times" size="4" color="#FFFFFF">equipment</font></a></b></p>
+                  <p>&nbsp;</p>
+                </td>
+				<td width="5" height="27"><spacer type="block" width="5" height="27"></td>
+				<td width="15" height="27"><spacer type="block" width="15" height="27"></td>
+			</tr>
+			<tr height="25">
+				<td width="1" height="25"><spacer type="block" width="1" height="25"></td>
+				<td width="9" height="25"><spacer type="block" width="14" height="25"></td>
+				<td width="4" height="25"><spacer type="block" width="1" height="25"></td>
+				<td width="170" height="25" colspan="11" rowspan="1" valign="top" align="left" xpos="15" content csheight="24"><a href="company.html" target="information frame" title="company details" csclick="B39FB90234" onclick="CSAction(new Array(/*CMP*/'B39FB90234'));return CSClickReturn();"><font face="Times New Roman,Georgia,Times" size="4" color="white"><b>company details</b></font></a></td>
+				<td width="15" height="25"><spacer type="block" width="15" height="25"></td>
+			</tr>
+			<tr height="180">
+				<td width="1" height="199"><spacer type="block" width="1" height="180"></td>
+				<td width="9" height="199"><spacer type="block" width="14" height="180"></td>
+				<td width="167" height="199" colspan="11" rowspan="1" valign="top" align="left" xpos="14" content csheight="32"><b><font face="Times New Roman,Georgia,Times" size="4" color="#FFFFFF">&nbsp;</font><a href="mailto:rodmar@rodmar.co.za" title="roderick and martin adress" onclick="CSAction(new Array(/*CMP*/'B3A0F8657'));return CSClickReturn();" csclick="B3A0F8657"><font face="Times New Roman,Georgia,Times" size="4" color="#FFFFFF">e-mail</font></a></b>
+                  <p><a href="../new_page_2.htm" target="information frame">&nbsp;
+                  <b><u><font color="#FFFFFF">Help
+                  us / Feedback</font></u></b></a></p>
+                </td>
+				<td width="5" height="199"><spacer type="block" width="5" height="180"></td>
+				<td width="15" height="199"><spacer type="block" width="15" height="180"></td>
+			</tr>
+		</table>
+	</body>
+
+</html>

@@ -1,0 +1,32 @@
+--19:22:06--  http://www.ford.com:80/
+           => `www.ford.com/index.html'
+Connecting to www.ford.com:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 1,301 [text/html]
+
+    0K -> .                                                      [100%]
+
+19:22:06 (1.24 MB/s) - `www.ford.com/index.html' saved [1301/1301]
+
+Loading robots.txt; please ignore errors.
+--19:22:06--  http://www.ford.com:80/no-robots.txt
+           => `www.ford.com/no-robots.txt'
+Connecting to www.ford.com:80... connected!
+HTTP request sent, awaiting response... 404 Object Not Found
+19:22:07 ERROR 404: Object Not Found.
+
+--19:22:07--  http://www.ford.com:80/logo.gif
+           => `www.ford.com/logo.gif'
+Connecting to www.ford.com:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 9,449 [image/gif]
+
+    0K -> .........                                              [100%]
+
+19:22:07 (137.72 KB/s) - `www.ford.com/logo.gif' saved [9449/9449]
+
+Converting www.ford.com/index.html... done.
+
+FINISHED --19:22:07--
+Downloaded: 10,750 bytes in 2 files
+Converting www.ford.com/index.html... done.

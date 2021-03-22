@@ -1,0 +1,117 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<html>
+
+<head>
+<title>Home Page</title>
+</head>
+
+<body background="BackPB_copy.jpg">
+
+<!--webbot BOT="GeneratedScript" PREVIEW=" " startspan --><script Language="JavaScript"><!--
+function FrontPage_Form1_Validator(theForm)
+{
+
+  if (theForm.Txt_Firma.value == "")
+  {
+    alert("Please enter a value for the \"Txt_Firma\" field.");
+    theForm.Txt_Firma.focus();
+    return (false);
+  }
+
+  if (theForm.Txt_Firma.value.length < 1)
+  {
+    alert("Please enter at least 1 characters in the \"Txt_Firma\" field.");
+    theForm.Txt_Firma.focus();
+    return (false);
+  }
+
+  if (theForm.Txt_Firma.value.length > 50)
+  {
+    alert("Please enter at most 50 characters in the \"Txt_Firma\" field.");
+    theForm.Txt_Firma.focus();
+    return (false);
+  }
+
+  if (theForm.Data.value == "")
+  {
+    alert("Please enter a value for the \"  /  /\" field.");
+    theForm.Data.focus();
+    return (false);
+  }
+  return (true);
+}
+//--></script><!--webbot BOT="GeneratedScript" endspan --><form action="http://200.241.198.186/cpl.asp" Method="Post" onsubmit="return FrontPage_Form1_Validator(this)" name="FrontPage_Form1">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="84%" bgcolor="#FFFF99"><font color="#000066" size="4" face="Verdana, Arial, Helvetica, sans-serif"><i><b><div align="center"><center><p>Núcleo
+      Técnico de Informática<br>
+      </b></i></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#000066"><em>Departamento
+      de Web Sites e Suporte a Redes</em></font></p>
+      </center></div><div align="center"><center><p><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#000066">Telefones de
+      contato: 241-1718 Ramal: 7022<br>
+      WebDesigner: <a href="mailto:claudio@saude.pb.gov.br">claudio@saude.pb.gov.br</font><font color="#000066" size="4" face="Verdana, Arial, Helvetica, sans-serif"> </font></a></td>
+      <td width="1%" bgcolor="#FFFF99" align="center"><div align="center"></div></td>
+    </tr>
+  </table>
+  <div align="center"><center><table width="100%" border="0" height="25">
+    <tr bgcolor="#000099">
+      <td height="21"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFFFF"><b><div align="center"><center><p>CADASTRO DE EMPRESAS</b></font> </td>
+    </tr>
+  </table>
+  </center></div><div align="center"><center><table border="7" width="99%" height="118" bordercolor="#000000" bordercolorlight="#C0C0C0" bordercolordark="#C0C0C0" style="border-left: 2px none">
+    <tr>
+      <td width="12%" height="23" align="left"><font face="Arial" size="1">Firma:&nbsp;</font></td>
+      <td width="22%" height="23" align="left"><font face="Arial" size="1"><!--webbot bot="Validation" B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="50" --><input type="text" name="Txt_Firma" size="26" maxlength="50"></font></td>
+      <td width="12%" height="23" align="left"><font face="Arial" size="1">C.G.C: </font></td>
+      <td width="38%" height="23" align="left"><font face="Arial" size="1"><input type="text" name="CGC" size="35"></font></td>
+    </tr>
+    <tr>
+      <td width="12%" height="24" align="left"><font face="Arial" size="1">E-mail:&nbsp;&nbsp;</font></td>
+      <td width="22%" height="24" align="left"><font face="Arial" size="1"><input type="text" name="email" size="26"></font></td>
+      <td width="12%" height="24" align="left"><font face="Arial" size="1">Representante:</font></td>
+      <td width="38%" height="24" align="left"><font face="Arial" size="1"><input type="text" name="Representante" size="35"></font></td>
+    </tr>
+    <tr>
+      <td width="12%" height="24" align="left"><font face="Arial" size="1">Endereço: </font></td>
+      <td width="22%" height="24" align="left"><font face="Arial" size="1"><input type="text" name="Endereco" size="26"></font></td>
+      <td width="12%" height="24" align="left"><font face="Arial" size="1">Complemento:</font></td>
+      <td width="38%" height="24" align="left"><font face="Arial" size="1"><input type="text" name="Complemento" size="35"></font></td>
+    </tr>
+    <tr>
+      <td width="12%" height="23" align="left"><font face="Arial" size="1">Bairro:</font></td>
+      <td width="22%" height="23" align="left"><font face="Arial" size="1"><input type="text" name="Bairro" size="26"></font></td>
+      <td width="12%" height="23" align="left"><font face="Arial" size="1">Cidade:&nbsp;</font></td>
+      <td width="38%" height="23" align="left"><font face="Arial" size="1"><input type="text" name="Cidade" size="35"></font></td>
+    </tr>
+    <tr>
+      <td width="12%" height="23" align="left"><font face="Arial" size="1">Estado:</font></td>
+      <td width="22%" height="23" align="left"><input type="text" name="Estado" size="26"></td>
+      <td width="12%" height="23" align="left"><font face="Arial" size="1">Edital: </font></td>
+      <td width="38%" height="23" align="left"><select NAME="Lista_Edital" size="1">
+        <option value="Aquisição de Medicamentos - TP_31">Aquisição de Medicamentos - TP_31</option>
+        <option value="Concorrencia - CO_16">Concorrencia - CO_16</option>
+        <option value="Concorrencia - CO_17">Concorrencia - CO_17</option>
+        <option value="Aquisição de Equipamentos - TP_33">Aquisição de Equipamentos - TP_33</option>
+        <option value="Aquisição de Medicamentos - TP_34">Aquisição de Medicamentos - TP_34</option>
+        <option value="Aquisição de Equipamentos - TP_35">Aquisição de Equipamentos - TP_35</option>
+      </select></td>
+    </tr>
+    <tr>
+      <td width="12%" height="23" align="left"><font face="Arial" size="1">Data:</font></td>
+      <td width="22%" height="23" align="left"><!--webbot bot="Validation" S-Display-Name="  /  /" S-Data-Type="String" B-Value-Required="TRUE" --><input type="text" name="Data" size="26"></td>
+      <td width="12%" height="23" align="left"><font face="Arial" size="1">Telefone:</font></td>
+      <td width="25%" height="23" align="left"><input type="text" name="Telefone" size="15"><font face="Arial" size="1">Fax: </font><input type="text" name="Fax" size="16"></td>
+    </tr>
+  </table>
+  </center></div><div align="center"><center><table width="100%" border="0">
+    <tr bgcolor="#000099">
+      <td><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#FFFFFF"><b><div align="center"><center><p>Powered by Núcleo Técnico de Informática</b></font></td>
+    </tr>
+  </table>
+  </center></div><div align="center"><center><p>&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="Submit" value="Enviar" name="B1">&nbsp;&nbsp;<input type="reset" value="Limpar" name="B_Limpar">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+  </center></div><div align="center"><center><p><a href="/index.html">Home</a> | <a href="/Editais/hp_editais1.html">Edital</a> | <a href="http://200.241.198.186/Consultacpl.htm">Consulta</a> </p>
+  </center></div>
+</form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+--23:59:34--  http://www.somewhereinthyme.net:80/
+           => `www.somewhereinthyme.net/index.html'
+Connecting to www.somewhereinthyme.net:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 3,041 [text/html]
+
+    0K -> ..                                                     [100%]
+
+23:59:35 (7.61 KB/s) - `www.somewhereinthyme.net/index.html' saved [3041/3041]
+
+Loading robots.txt; please ignore errors.
+--23:59:37--  http://www.somewhereinthyme.net:80/no-robots.txt
+           => `www.somewhereinthyme.net/no-robots.txt'
+Connecting to www.somewhereinthyme.net:80... connected!
+HTTP request sent, awaiting response... 404 Not Found
+23:59:37 ERROR 404: Not Found.
+
+--23:59:37--  http://www.somewhereinthyme.net:80/badhabit.jpg
+           => `www.somewhereinthyme.net/badhabit.jpg'
+Connecting to www.somewhereinthyme.net:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 72,345 [image/jpeg]
+
+    0K -> .......... .......... .......... .......... .......... [ 70%]
+   50K -> .......... ..........                                  [100%]
+
+00:00:00 (3.17 KB/s) - `www.somewhereinthyme.net/badhabit.jpg' saved [72345/72345]
+
+Converting www.somewhereinthyme.net/index.html... done.
+
+FINISHED --00:00:00--
+Downloaded: 75,386 bytes in 2 files
+Converting www.somewhereinthyme.net/index.html... done.

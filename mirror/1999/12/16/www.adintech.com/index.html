@@ -1,0 +1,465 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>rooted</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<bgsound src="GMVIOLIN.MID" loop="-1">
+
+
+<meta name="Microsoft Theme" content="blends 011">
+<meta name="Microsoft Border" content="none, default">
+</head>
+
+<body background="_themes/blends/blegtext.gif" bgcolor="#CCCCCC" text="#000000" link="#990000" vlink="#666666" alink="#CC9900"><!--mstheme--><font face="Trebuchet MS, Arial, Helvetica">
+<p align="center"><b>Rooted by the<br>
+</b><img border="0" src="logo.jpg" width="250" height="80"></p>
+<p align="center"><b>BLACK&nbsp; LAVA&nbsp; NETWORK<br>
+<a href="http://bln.cjb.net">HTTP://BLN.CJB.NET</a></b></p>
+<p class="MsoNormal"><b><font size="4">Stream of Consciousness</font></b></p>
+<p class="MsoNormal"><font size="3">&nbsp;&nbsp;&nbsp; On the top of my mind. A
+wannabe hacker with a conscience? I feel bad defacing these sites. For what? To
+express my opinion. True. I live in a democratic country where my opinion is
+just as valuable as my peer's, so why do I deserve to deface someone's site
+(they're opinion) simply to express mine? Is mine worth more than theirs. It has
+nothing to do with the consequences. I inhale the guilt of everyone who's ever
+defaced a a site. Even if you want to justify it by quoting some greater good,
+it isn't right because it hurts people. But does that really matter? No.&nbsp;</font></p>
+<p class="MsoNormal">&nbsp;&nbsp;&nbsp;<font size="3"> My opinion is not worth
+more than my peer'. The fact of the matter is all our opinion's our worth
+nothing. We are truly weak. And that's why we hack sites. Because it gives us a
+medium of expression. I can reach everyone reading this right now and tell them
+how I'm feeling. Well this is how I feel. Go out, hackers, crackers, and yes
+even LIL SCRIPT KIDDIES LIKE MYSELF, go out and deface more sites ; because its
+not about the l33teness its not about 0wning a site, its about expression. And
+the alternative is quite bleak. Will your article be published intact in your
+local newspaper? or will it be censored, or not make it at all? Will your
+artwork make it to the museum or will it be lost? Will you be elected and make a
+difference? Perhaps. But for the rest of us, here it is. Right here. On this
+page.</font></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span lang="EN-US">Peace2:&nbsp;&nbsp;&nbsp; Zeroeffect[BLN],
+DrkPlague(thanks), WOH(Wacko on top), Cyber-Lite, DHC(mad luv), Progenic(thanks)</span></p>
+<p class="MsoNormal"><span lang="EN-US">P.S.2:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Attrition.org + Parse + All the rest &lt;-- Bringing it to the world.</span></p>
+<p class="MsoNormal"><span lang="EN-US">admin: original index.html = old.html ,
+and I'm sorry.</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<!--mstheme--></font></body>
+</html>
+nerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+      }
+    }
+    i = 0
+    for (index=document.body.sourceIndex; index < document.all.length; index++)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if (null != animation)
+      {
+        if(animation == "flyLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyRight")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyTop" || animation == "dropWord")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottom")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyTopLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyTopRight" || animation == "flyTopRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottomLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyBottomRight" || animation == "flyBottomRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "spiral")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "zoomIn")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else if(animation == "zoomOut")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        el.initLeft = el.style.posLeft
+        el.initTop = el.style.posTop
+        animateElements[i++] = el
+      }
+    }
+    window.setTimeout("animate();", speed)
+  }
+  function offsetLeft(el)
+  {
+    x = el.offsetLeft
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      x += e.offsetLeft;
+    return x
+  } 
+  function offsetTop(el)
+  {
+    y = el.offsetTop
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      y += e.offsetTop;
+    return y
+  } 
+  function startWord(ih, i)
+  {
+    for(tag = false; i < ih.length; i++)
+    {
+      c = ih.charAt(i)
+      if(c == '<')
+        tag = true
+      if(!tag)
+        return i
+      if(c == '>')
+        tag = false
+    }
+    return -1
+  }
+  function endWord(ih, i)
+  {
+    nonSpace = false
+    space = false
+    while(i < ih.length)
+    {
+      c = ih.charAt(i)
+      if(c != ' ')
+        nonSpace = true
+      if(nonSpace && c == ' ')
+        space = true
+      if(c == '<')
+        return i
+      if(space && c != ' ')
+        return i
+      i++
+    }
+    return -1
+  }
+  function outWord(ih, i1, i2, dyn, anim)
+  {
+    if(dyn)
+      outString += "<SPAN " + dynamicanimAttr + "=\"" + anim + "\" style=\"position: relative; left: 10000;\">"
+    outString += ih.substring(i1, i2)
+    if(dyn)
+      outString += "</SPAN>"
+  }
+  function animate()
+  {
+    el = animateElements[currentElement]
+    animation = el.getAttribute(dynamicanimAttr, false)
+    step++
+    if(animation == "spiral")
+    {
+      steps = stepsSpiral
+      v = step/steps
+      rf = 1.0 - v
+      t = v * 2.0*Math.PI
+      rx = Math.max(Math.abs(el.initLeft), 200)
+      ry = Math.max(Math.abs(el.initTop),  200)
+      el.style.posLeft = Math.ceil(-rf*Math.cos(t)*rx)
+      el.style.posTop  = Math.ceil(-rf*Math.sin(t)*ry)
+    }
+    else if(animation == "zoomIn")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(50+50*step/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else if(animation == "zoomOut")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(100+200*(steps-step)/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else
+    {
+      steps = stepsFly
+      if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        steps = stepsWord
+      dl = el.initLeft / steps
+      dt = el.initTop  / steps
+      el.style.posLeft = el.style.posLeft - dl
+      el.style.posTop = el.style.posTop - dt
+    }
+    if (step >= steps) 
+    {
+      el.style.posLeft = 0
+      el.style.posTop = 0
+      currentElement++
+      step = 0
+    }
+    if(currentElement < animateElements.length)
+      window.setTimeout("animate();", speed)
+  }
+//-->
+</script></head>
+
+<body onload="dynAnimation()" background="_themes/blends/blegtext.gif" bgcolor="#CCCCCC" text="#000000" link="#990000" vlink="#666666" alink="#CC9900"><!--mstheme--><font face="Trebuchet MS, Arial, Helvetica">
+
+<p align="center" dynamicanimation="dropWord" style="position: relative !important; left: 10000 !important"><big><strong><big><font color="#800000">ADVANCED INNOVATED TECHNOLOGY, INC.</font></big></strong></big></p>
+
+<p align="center" dynamicanimation="flyTop" style="position: relative !important; left: 10000 !important"><big><big><font color="#400080"><strong>ADINTECH</strong></font></big></big></p>
+<div align="center"><center>
+
+<!--mstheme--></font><table border="1" width="90%" height="1" cellspacing="0" bordercolordark="#CC9900" bordercolorlight="#CC9900">
+  <tr>
+    <td width="16%" height="27"><!--mstheme--><font face="Trebuchet MS, Arial, Helvetica"><p align="center"><strong><big><font color="#FF0000"><marquee behavior="alternate" border="0">COMPUTERS</marquee></font></big></strong><!--mstheme--></font></td>
+    <td width="16%" height="27"><!--mstheme--><font face="Trebuchet MS, Arial, Helvetica"><p align="center"><strong><font color="#0000FF"><big><marquee behavior="alternate" border="0">LAPTOPS</marquee></big></font></strong><!--mstheme--></font></td>
+    <td width="17%" height="27"><!--mstheme--><font face="Trebuchet MS, Arial, Helvetica"><p align="center"><font color="#800000"><strong><big><marquee behavior="alternate" border="0">SERVERS</marquee></big></strong></font><!--mstheme--></font></td>
+    <td width="17%" height="27"><!--mstheme--><font face="Trebuchet MS, Arial, Helvetica"><p align="center"><font color="#FF0080"><strong><big><marquee behavior="alternate" border="0">SCANNERS</marquee></big></strong></font><!--mstheme--></font></td>
+    <td width="17%" height="27"><!--mstheme--><font face="Trebuchet MS, Arial, Helvetica"><p align="center"><font color="#FF0080"><strong><big><marquee behavior="alternate" border="0">PRINTERS</marquee></big></strong></font><!--mstheme--></font></td>
+    <td width="17%" height="27"><!--mstheme--><font face="Trebuchet MS, Arial, Helvetica"><p align="center"><font color="#408080"><strong><big><marquee behavior="alternate" border="0">SOFTWARE</marquee></big></strong></font><!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="16%" height="1" valign="top"><!--mstheme--><font face="Trebuchet MS, Arial, Helvetica"><p align="center"><img src="toppag1.gif" alt="wpe9.gif (7045 bytes)" WIDTH="106" HEIGHT="80"><!--mstheme--></font></td>
+    <td width="16%" height="1" valign="top"><!--mstheme--><font face="Trebuchet MS, Arial, Helvetica"><img src="toppag2.gif" alt="wpeA.gif (7813 bytes)" WIDTH="104" HEIGHT="94"><!--mstheme--></font></td>
+    <td width="17%" height="1" valign="top"><!--mstheme--><font face="Trebuchet MS, Arial, Helvetica"><p align="center"><img src="toppag3.gif" alt="wpeD.gif (4436 bytes)" WIDTH="73" HEIGHT="89"><!--mstheme--></font></td>
+    <td width="17%" height="1" valign="top"><!--mstheme--><font face="Trebuchet MS, Arial, Helvetica"><p align="center"><img src="toppag4.gif" alt="wpeF.gif (4782 bytes)" WIDTH="96" HEIGHT="90"><!--mstheme--></font></td>
+    <td width="17%" height="1" valign="top"><!--mstheme--><font face="Trebuchet MS, Arial, Helvetica"><p align="center"><img src="toppag5.gif" alt="wpe10.gif (4300 bytes)" WIDTH="78" HEIGHT="83"><!--mstheme--></font></td>
+    <td width="17%" height="1"><!--mstheme--><font face="Trebuchet MS, Arial, Helvetica"><img src="index.1.gif" alt="wpe1.gif (2656 bytes)" WIDTH="138" HEIGHT="98"><!--mstheme--></font></td>
+  </tr>
+</table><!--mstheme--><font face="Trebuchet MS, Arial, Helvetica">
+</center></div>
+
+<p align="center"><font color="#000080"><strong><big>ADINTECH is a solution provider with
+top certified engineers working</big></strong></font></p>
+
+<p align="center"><font color="#000080"><strong><big>to assist you in your day-to-day
+challenges and into the 21st century.&nbsp; </big></strong></font></p>
+<div align="center"><center>
+
+<!--mstheme--></font><table border="0" width="95%" height="1" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="16%" height="1"><!--mstheme--><font face="Trebuchet MS, Arial, Helvetica">
+    <applet code="fphover.class" codebase="_fpclass/" width="120" height="24">
+      <param name="text" value="SERVICE">
+      <param name="color" value="#0000FF">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    <!--mstheme--></font></td>
+    <td width="16%" height="1"><!--mstheme--><font face="Trebuchet MS, Arial, Helvetica">
+    <applet code="fphover.class" codebase="_fpclass/" width="120" height="24">
+      <param name="text" value="NETWORK">
+      <param name="color" value="#000080">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    <!--mstheme--></font></td>
+    <td width="17%" height="1"><!--mstheme--><font face="Trebuchet MS, Arial, Helvetica">
+    <applet code="fphover.class" codebase="_fpclass/" width="120" height="24">
+      <param name="text" value="SUPPORT">
+      <param name="color" value="#00FF00">
+      <param name="hovercolor" value="#FF0000">
+      <param name="textcolor" value="#0000FF">
+      <param name="effect" value="glow">
+      <param name="url" value valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    <!--mstheme--></font></td>
+    <td width="17%" height="1"><!--mstheme--><font face="Trebuchet MS, Arial, Helvetica">
+    <applet code="fphover.class" codebase="_fpclass/" width="120" height="24">
+      <param name="text" value="INTERNET">
+      <param name="color" value="#008080">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    <!--mstheme--></font></td>
+    <td width="17%" height="1"><!--mstheme--><font face="Trebuchet MS, Arial, Helvetica">
+    <applet code="fphover.class" codebase="_fpclass/" width="120" height="24">
+      <param name="text" value="RENTAL">
+      <param name="color" value="#FF0000">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    <!--mstheme--></font></td>
+    <td width="17%" height="1"><!--mstheme--><font face="Trebuchet MS, Arial, Helvetica">
+    <applet code="fphover.class" codebase="_fpclass/" width="120" height="24">
+      <param name="text" value="WEB DESIGN">
+      <param name="color" value="#800000">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    <!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="16%" height="1"><!--mstheme--><font face="Trebuchet MS, Arial, Helvetica">
+    <applet code="fphover.class" codebase="_fpclass/" width="120" height="24">
+      <param name="text" value="CONSULTING">
+      <param name="color" value="#008000">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    <!--mstheme--></font></td>
+    <td width="16%" height="1"><!--mstheme--><font face="Trebuchet MS, Arial, Helvetica">
+    <applet code="fphover.class" codebase="_fpclass/" width="117" height="24">
+      <param name="text" value="CABLING">
+      <param name="color" value="#00FFFF">
+      <param name="hovercolor" value="#FF0000">
+      <param name="textcolor" value="#0000FF">
+      <param name="effect" value="glow">
+      <param name="url" value valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    <!--mstheme--></font></td>
+    <td width="17%" height="1"><!--mstheme--><font face="Trebuchet MS, Arial, Helvetica">
+    <applet code="fphover.class" codebase="_fpclass/" width="120" height="24">
+      <param name="text" value="SALES">
+      <param name="color" value="#808000">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    <!--mstheme--></font></td>
+    <td width="17%" height="1"><!--mstheme--><font face="Trebuchet MS, Arial, Helvetica">
+    <applet code="fphover.class" codebase="_fpclass/" width="120" height="24">
+      <param name="text" value="SOFT. DEV.">
+      <param name="color" value="#0000FF">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    <!--mstheme--></font></td>
+    <td width="17%" height="1"><!--mstheme--><font face="Trebuchet MS, Arial, Helvetica">
+    <applet code="fphover.class" codebase="_fpclass/" width="120" height="24">
+      <param name="text" value="STAFFING">
+      <param name="color" value="#000080">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    <!--mstheme--></font></td>
+    <td width="17%" height="1"><!--mstheme--><font face="Trebuchet MS, Arial, Helvetica">
+    <applet code="fphover.class" codebase="_fpclass/" width="120" height="24">
+      <param name="text" value="TRAINING">
+      <param name="color" value="#008080">
+      <param name="hovercolor" value="#0000FF">
+      <param name="textcolor" value="#FFFFFF">
+      <param name="effect" value="glow">
+      <param name="url" value valuetype="ref">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="bold">
+      <param name="fontsize" value="14">
+    </applet>
+    <!--mstheme--></font></td>
+  </tr>
+</table><!--mstheme--><font face="Trebuchet MS, Arial, Helvetica">
+</center></div><div align="center"><center>
+
+<!--mstheme--></font><table border="1" width="97%" height="26" bordercolordark="#CC9900" bordercolorlight="#CC9900">
+  <tr>
+    <td width="100%" height="20"><!--mstheme--><font face="Trebuchet MS, Arial, Helvetica"><p align="center"><big><font color="#0000FF"><big>Our service
+    and support is available 24 hours a day,7 days a week.</big></font></big><!--mstheme--></font></td>
+  </tr>
+</table><!--mstheme--><font face="Trebuchet MS, Arial, Helvetica">
+</center></div>
+
+<p align="center"><big><big><strong><font color="#FF0000">Free pickup and delivery</font></strong></big></big></p>
+<div align="center"><center>
+
+<!--mstheme--></font><table border="1" width="96%" height="1" bordercolordark="#CC9900" bordercolorlight="#CC9900">
+  <tr>
+    <td width="19%" align="left" height="1"><!--mstheme--><font face="Trebuchet MS, Arial, Helvetica"><p align="center"><strong><font color="#0000FF"><big>MD-DC-VA
+    </big></font></strong><!--mstheme--></font></td>
+    <td width="25%" align="left" height="1"><!--mstheme--><font face="Trebuchet MS, Arial, Helvetica"><p align="center"><strong><font color="#000000"><big>301-231-6343
+    </big></font></strong><!--mstheme--></font></td>
+    <td width="25%" align="left" height="1"><!--mstheme--><font face="Trebuchet MS, Arial, Helvetica"><p align="center"><strong><font color="#000000"><big>703-499-8555</big></font></strong><!--mstheme--></font></td>
+    <td width="37%" align="left" height="1" nowrap><!--mstheme--><font face="Trebuchet MS, Arial, Helvetica"><p align="center"><strong><font color="#000000"><big>FAX: 301-231-9835</big></font></strong><!--mstheme--></font></td>
+  </tr>
+</table><!--mstheme--><font face="Trebuchet MS, Arial, Helvetica">
+</center></div>
+
+<p align="center"><strong><big><font color="#FF0000"><a href="mailto:info@adintech.com">info@adintech.com</a>&nbsp;</font><font color="#800040">&nbsp; </font><font color="#FF0080">&nbsp;</font><font color="#008040"><a href="mailto:sales@adintech.com">sales@adintech.com</a></font><font color="#008080"> </font><font color="#800040">&nbsp;&nbsp;</font><a href="mailto:rental@adintech.com"><font color="#FF0080"><u>rental@adintech.com</u></font></a></big><br>
+<font color="#800040">&nbsp;<big><big>&nbsp;</big></font><font color="#FF0000"> </font><font color="#0000FF"><a href="mailto:support@adintech.com">support@adintech.com</a></font><font color="#800040"> &nbsp; </font><a href="mailto:tech@adintech.com"><font color="#000080"><u>tech@adintech.com</u></font></a></big></strong></p>
+
+<p align="center"><big>For job opportunities Email us @</big> <a href="mailto:info@adintech.com">info@adintech.com</a></p>
+
+<p align="center">&nbsp;</p>
+<!--mstheme--></font></body>
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

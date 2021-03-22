@@ -1,0 +1,308 @@
+<html>
+
+<head>
+<title>ADRENA on line! </title>
+<SCRIPT LANGUAGE="JavaScript">
+
+
+        
+        self.onError=null;
+        
+        currentX = currentY = 0;  
+        whichIt = null;           
+        lastScrollX = 0; lastScrollY = 0;
+        
+        NS = (document.layers) ? 1 : 0;
+        IE = (document.all) ? 1: 0;
+        
+        <!-- STALKER CODE -->
+        function heartBeat() {
+        
+                if(IE) { diffY = document.body.scrollTop; diffX = document.body.scrollLeft; }
+            if(NS) { diffY = self.pageYOffset; diffX = self.pageXOffset; }
+                
+                if(diffY != lastScrollY) {
+                        percent = .1 * (diffY - lastScrollY);
+                        if(percent > 0) percent = Math.ceil(percent);
+                        else percent = Math.floor(percent);
+                                        if(IE) document.all.floater.style.pixelTop += percent;
+                                        if(NS) document.floater.top += percent; 
+                        lastScrollY = lastScrollY + percent;
+            }
+                if(diffX != lastScrollX) {
+                        percent = .1 * (diffX - lastScrollX);
+                        if(percent > 0) percent = Math.ceil(percent);
+                        else percent = Math.floor(percent);
+                        if(IE) document.all.floater.style.pixelLeft += percent;
+                        if(NS) document.floater.left += percent;
+                        lastScrollX = lastScrollX + percent;
+                }       
+        }
+        <!-- /STALKER CODE -->
+        
+        <!-- DRAG DROP CODE -->
+        function XXcheckFocus(x,y) { 
+                stalkerx = document.floater.pageX;
+                stalkery = document.floater.pageY;
+                stalkerwidth = document.floater.clip.width;
+                stalkerheight = document.floater.clip.height;
+                if( (x > stalkerx && x < (stalkerx+stalkerwidth)) && (y > stalkery && y < (stalkery+stalkerheight))) return true;
+                else return false;
+        }
+        
+        function grabIt(e) {
+                if(IE) {
+                        whichIt = event.srcElement;
+                        while (whichIt.id.indexOf("floater") == -1) {
+                                whichIt = whichIt.parentElement;
+                                if (whichIt == null) { return true; }
+                    }
+                        whichIt.style.pixelLeft = whichIt.offsetLeft;
+                    whichIt.style.pixelTop = whichIt.offsetTop;
+                        currentX = (event.clientX + document.body.scrollLeft);
+                        currentY = (event.clientY + document.body.scrollTop);   
+                } else { 
+                window.captureEvents(Event.MOUSEMOVE);
+                if(checkFocus (e.pageX,e.pageY)) { 
+                        whichIt = document.floater;
+                        StalkerTouchedX = e.pageX-document.floater.pageX;
+
+                        StalkerTouchedY = e.pageY-document.floater.pageY;
+                } 
+                }
+            return true;
+        }
+        
+        function moveIt(e) {
+                if (whichIt == null) { return false; }
+                if(IE) {
+                    newX = (event.clientX + document.body.scrollLeft);
+                    newY = (event.clientY + document.body.scrollTop);
+                    distanceX = (newX - currentX);    distanceY = (newY - currentY);
+                    currentX = newX;    currentY = newY;
+                    whichIt.style.pixelLeft += distanceX;
+                    whichIt.style.pixelTop += distanceY;
+                        if(whichIt.style.pixelTop < document.body.scrollTop) whichIt.style.pixelTop = document.body.scrollTop;
+                        if(whichIt.style.pixelLeft < document.body.scrollLeft) whichIt.style.pixelLeft = document.body.scrollLeft;
+                        if(whichIt.style.pixelLeft > document.body.offsetWidth - document.body.scrollLeft - whichIt.style.pixelWidth - 20) whichIt.style.pixelLeft = document.body.offsetWidth - whichIt.style.pixelWidth - 20;
+                        if(whichIt.style.pixelTop > document.body.offsetHeight + document.body.scrollTop - whichIt.style.pixelHeight - 5) whichIt.style.pixelTop = document.body.offsetHeight + document.body.scrollTop - whichIt.style.pixelHeight - 5;
+                        event.returnValue = false;
+                } else { 
+                        whichIt.moveTo(e.pageX-StalkerTouchedX,e.pageY-StalkerTouchedY);
+                if(whichIt.left < 0+self.pageXOffset) whichIt.left = 0+self.pageXOffset;
+                if(whichIt.top < 0+self.pageYOffset) whichIt.top = 0+self.pageYOffset;
+                if( (whichIt.left + whichIt.clip.width) >= (window.innerWidth+self.pageXOffset-17)) whichIt.left = ((window.innerWidth+self.pageXOffset)-whichIt.clip.width)-17;
+                if( (whichIt.top + whichIt.clip.height) >= (window.innerHeight+self.pageYOffset-17)) whichIt.top = ((window.innerHeight+self.pageYOffset)-whichIt.clip.height)-17;
+                return false;
+                }
+            return false;
+        }
+        
+        function dropIt() {
+                whichIt = null;
+            if(NS) window.releaseEvents (Event.MOUSEMOVE);
+            return true;
+        }
+        <!-- DRAG DROP CODE -->
+        
+        if(NS) {
+                window.captureEvents(Event.MOUSEUP|Event.MOUSEDOWN);
+                window.onmousedown = grabIt;
+                window.onmousemove = moveIt;
+                window.onmouseup = dropIt;
+        }
+        if(IE) {
+                document.onmousedown = grabIt;
+                document.onmousemove = moveIt;
+                document.onmouseup = dropIt;
+        }
+        
+        if(NS || IE) action = window.setInterval("heartBeat()",1);
+             
+
+
+
+</SCRIPT>
+<STYLE TYPE="text/css">
+#floater {
+        position: absolute;
+        left: 05%;
+        top: 25;
+        visibility: visible;
+        z-index:10;
+}
+</STYLE>
+
+</head>
+<body bgcolor="#000000" text="#FFFF33" link="#3333CC">
+<div id="floater" style="left: 10%"> <a href="index.html" ><img src="logoAd.gif" border=0 alt="" width="64" height="62"></a> 
+</div>
+<div align="center"> 
+  <table border="0" cellpadding="0" cellspacing="0" width="582" height="76">
+    <center>
+      <tr> 
+        <td width="429" align="left" height="80"><map name="FPMap0"> <area href="index.html" shape="rect" coords="76, 21, 205, 84"></map><img border="0" src="bb1v.gif" usemap="#FPMap0" width="429" height="95"></td>
+        <td width="126" align="justify"><a href="parceiros.htm"><img border="0" src="Parceiros2.gif" width="126" height="95"></a></td>
+        <td width="36" align="left" height="79"><img border="0" src="bb3gif.gif" width="34" height="95"></td>
+      </tr>
+    </center>
+    <center>
+    </center>
+  </table>
+</div>
+<div align="center"> 
+  <table border="0" cellpadding="0" cellspacing="0" width="595" height="1913">
+    <center>
+      <tr>
+        <td width="593" align="left" height="42" colspan="2"> 
+          <table border="0" cellpadding="0" cellspacing="0" width="537">
+            <tr> 
+              <td width="71" align="center" valign="top"><a name="topo"></a><img border="0" src="buttonmove2.gif" align="right" width="30" height="20"></td>
+              <td width="75" align="center"><a href="esportes.htm"><img border="0" src="botAdre2.gif" width="75" height="21"></a></td>
+              <td width="76" align="center"><a href="noticias.htm"><img border="0" src="botAdre3.gif" width="75" height="21"></a></td>
+              <td width="76" align="center"><a href="equipamento.htm"><img border="0" src="botAdre1.gif" width="75" height="21"></a></td>
+              <td width="77" align="center"><a href="park.htm"><img border="0" src="botAdreXX.gif" width="75" height="22"></a></td>
+              <td width="75" align="center"><a href="guia.htm"><img border="0" src="botAdre5.gif" width="75" height="21"></a></td>
+              <td width="75" align="center"><a href="ecotrip.htm"><img border="0" src="botAdre6.gif" width="75" height="21"></a></td>
+              <td width="1"></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr> 
+        <td width="221" height="138" valign="middle"> 
+          <p align="center"><img border="0" src="caldeirao.jpg" width="156" height="118"> </td>
+    </center>
+        <td width="370" height="138" valign="middle" align="center"> 
+          <p align="left" style="margin-top: 0; margin-bottom: 0"><b><i><font face="Arial" color="#FFFF00" size="5">Bungee
+          Jump de helicóptero </font></i></b></p>
+    <center>
+      <p align="center"><b><font face="Courier New" size="4" color="#C0C0C0">P</font></b><b><font face="Courier New" size="4" color="#C0C0C0">or
+      </font><a href="mailto:fabioshoel@adrena.com.br"><font face="Courier New" size="4" color="#C0C0C0">Fabio
+      Shoel</font></a></b> </td>
+      </tr>
+    <tr> 
+      <td width="591" height="41" valign="middle" align="center" colspan="2"> <img border="0" src="helibungeex.jpg" align="right" alt="Fabio salta do helicóptero para as cameras da Globo / foto: Lelo Jachimowicz" width="142" height="120"><font FACE="Arial">Depois
+        do sucesso dos saltos da Feiticeira Joana Prado, veio o reconhecimento.
+        O telefone tocou: era da produção do novo programa do Luciano Huck,
+        convidando nossa equipe para fazer um salto. Só que agora, algumas
+        coisas tinham mudado! Não era mais para a Bandeirantes e sim para a
+        Rede Globo e mais, eles queriam algo novo, como saltar de um
+        helicóptero!</font> </td>
+    </tr>
+    <tr>
+      <td width="593" height="1585" valign="middle" align="center" colspan="2"> <font FACE="Arial">
+        <p align="justify">O produtor nos perguntou se haveria algum problema em
+        executar esse salto, dissemos que não, mas nunca tínhamos feito um
+        salto desses. Então Lico Shoel, meu irmão, me perguntou, se eu
+        saltaria e respondi na lata: - Claro, sem dúvida!</p>
+        <p align="justify">Uma burocracia jamais vista nos foi pedida, mandaram
+        um formulário para nós respondermos, que investigava toda minha vida
+        de bungee-jumper e instrutor, quantos saltos, cursos, resgates, lista de
+        equipamentos e etc.Ai, depois pra completar, exigiram um documento,
+        reconhecido em cartório, que isentava a empresa do helicóptero e a
+        Globo de qualquer problema que pudesse ocorrer durante o salto (isso foi
+        só um fator que nos deixou com mais vontade para mostrarmos nosso
+        profissionalismo, porque parecia que eles não acreditavam que éramos
+        capazes). Após muitos adiamentos, chegou o grande dia, passagens
+        confirmadas, equipamentos mais que checados, plano de ancoragem completo
+        (isso já era departamento do Lico, mas ele me acalmava, dizendo que já
+        tinha tudo brifado com o Paul Adamo, nosso fornecedor norte americano, e
+        não teria nenhum problema).</p>
+        <p align="justify">Então era só dormir e acordar para pegar o avião
+        para o Rio, mas quem falou que eu conseguia dormir! Minha cabeça
+        parecia estar com pilhas duracell, não conseguia pegar no sono, só
+        imaginando o salto do dia seguinte. Passado a noite em claro, a equipe
+        estava formada e a escalação era a segunte: - eu, Fabio Shoel,
+        encarregado em saltar, Lico Shoel, responsável pela ancoragem e
+        equipamentos, a Fabi, Fabiana Bruno, uma pessoa zen, que eu adoro, veio
+        também pra dar aquela paz necessária, naqueles momentos em que todos
+        querem dar palpites e sugestões e o Lelo Jachimowicz (fotografo
+        profissional) responsável por registrar o feito.</p>
+        <p align="justify">Pegamos o avião cedinho, cinqüenta minutinhos e já
+        estávamos no Rio, um translado nos esperava no aeroporto (estilo
+        primeiro mundo) e nos levou direto para o Aeroporto de Jacarepaguá,
+        para conhecermos o piloto e sua equipe. Chegando lá vimos a aeronave
+        (que por sinal era um show!), trocamos uma idéia com o piloto e com os
+        produtores do programa, que haviam contratado um consultor para dar
+        assistência quanto a segurança, realmente eles não conheciam o
+        trabalho da nossa equipe e estavam morrendo de medo que algo desse
+        errado.</p>
+        <p align="justify">Preparamos toda a ancoragem, o consultor tinha uns
+        equipamentos novos bem legais e colocou-os na ancoragem e no back-up
+        (uma segunda amarração para dar dupla segurança).</p>
+        <p align="justify">Equipamentos montados, apresentações feitas, nos
+        lavaram agora para o Projac (a &quot;casa &quot;da Globo) onde tudo e
+        todos acontecem! Chegando lá, todos já estavam eufóricos, queriam
+        saber quem ia saltar do helicóptero?</p>
+        <p align="justify">Quando me apresentei, eles não botaram uma fé! Mas
+        nem liguei,estava compenetrado no que ia fazer (saltar de 130m em cima
+        do mar na praia da Barra da Tijuca). Ali me troquei, para aparecer
+        bonito na foto, aí era só esperar o Luciano aparecer, para sim
+        fazermos o grande salto! Primeiro apareceu o Jorjão (diretor do
+        programa), ele me passou o que ia acontecer, me deu alguns toques, tipo
+        só falar quando o microfone estivesse na minha boca, porque o barulho
+        do helicóptero em movimento era ensurdecedor! Então apareceu o L. Huck,
+        me agradecendo por vir (imagina ele me agradecendo, mas na verdade era
+        eu que teria que agradecer!) e lá fomos! Subimos no helicóptero: eu,
+        Luciano, cameraman, piloto e seu fiel ajudante.</p>
+        <p align="justify">Fomos trocando uma idéia, desde o Projac até a
+        praia da Barra da Tijuca (onde o Luciano desceria para ver o salto do
+        solo, convidei-o para ver o salto de cima, mas ele preferiu ver de
+        baixo! Então entrou em cena a infra- estrutura global (literalmente
+        tipo &quot;Hollywood&quot;), quatro câmeras estavam preparadas para
+        não perder nem um lance do salto, uma em meu capacete (que era um
+        trambolho), outra dentro do nosso helicóptero, para pegar a saída,
+        outra em outro helicóptero, que pegou o salto na mesma altura,
+        mostrando o visual por completo e outra na praia pra pegar a chegada!
+        Tudo pronto e todos a postos, era só subir para eu saltar!</p>
+        <p align="left">O helicóptero subiu, isso meu coração já estava a
+        milhão! Não estava com medo, estava preocupado em fazer um salto
+        bonito. Daí, o piloto me disse já estava na altura X (130m) e era só
+        eu saltar, com isso, pedi para o ajudante do piloto descarregar o
+        elástico, para não pesar muito nos meus pés, só que ele estava mais
+        nervoso que eu e se perdeu na hora! (dando mais ADRENA!!!, numa hora
+        dessas só pensava porque o Lico não estava lá e sim, aquele cara que
+        não tinha nada a ver!), ele não me entendia, parecia que eu falava em
+        grego, mas o câmera, um senhor sangue bom, daqueles mandados, traduziu
+        o que eu pedia e ele fez! Após essa pequena ADRENA, não agüentava
+        mais! Tinha que saltar, dei um check visual em tudo, porque não sou
+        besta, estava tudo ok como tínhamos planejados, aí foi só abrir os
+        braços e voar numa altura nunca sentida por mim, foi demais! Porque
+        saltar em cima do mar com o Rio de fundo, é um espetáculo!</p>
+        <p align="left">Fiquei pendurado por alguns segundos, o piloto me levou
+        para areia, onde o Luciano me esperava. Estavam todos eufóricos com
+        aquela adrenalina a mil; Todos adoraram, tudo havia saído perfeito! (do
+        jeito que eu queria, completamente profissional)</p>
+        <p align="left">Quando cheguei na areia, meu irmão me desconectou da
+        aeronava e o Luciano veio me elogiar, dizendo que o salto foi lindo e
+        todos estavam super contentes! Após o salto, saí correndo para ligar
+        para minha mãe, pois ela estava morrendo de preocupação! Liguei e ela
+        ficou super feliz que nada tinha acontecido e todos tinham gostado.</p>
+        <p>Depois do salto, foi só alegria e agora espero pelo próximo,
+        ansioso para extravasar essa adrenalina, mais isso já é uma outra
+        história que espero contar em breve!</font> </td>
+    </tr>
+  </table>
+</div>
+<div align="center"> 
+  <center>
+    <table border="0" cellpadding="0" cellspacing="0" width="486" height="102">
+      <tr> 
+        <td valign="top" colspan="6" width="434" height="55"><img border="0" src="barraBaixo1v.gif" width="447" height="55"></td>
+        <td width="162" rowspan="2" height="102"><a href="mailto:adrena@uol.com.br"><img border="0" src="FALECONOSCO1.gif" width="133" height="115"></a></td>
+      </tr>
+      <tr> 
+        <td width="99" valign="top" height="47"></td>
+        <td width="75" valign="top" height="47"><a href="#topo"><img border="0" src="botAdreB0.gif" width="75" height="21"></a></td>
+        <td width="76" valign="top" height="47"><a href="javascript:history.go(-1);"><img border="0" src="botAdreB1.gif" width="75" height="21"></a></td>
+        <td width="77" valign="top" height="47"><a href="index.html"><img border="0" src="botAdreB2.gif" width="75" height="21"></a></td>
+        <td width="76" valign="top" height="47"><a href="equipe.htm"><img border="0" src="botAdreB3.gif" width="75" height="21"></a></td>
+        <td width="39" valign="top" height="47"></td>
+      </tr>
+    </table>
+  </center>
+</div>
+</body>
+
+</html>

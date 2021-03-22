@@ -1,0 +1,266 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<META name="GENERATOR" content="IBM HomePage Builder 2001 V5.0.2 for Windows">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META name="description" content="Linux及びパソコン初心者でインターネットサーバーの構築、Windows2000内部ネットワーク、LAN、CGIなど">
+<META name="keywords" content="Linux,linux,LINUX,サーバー,network,ネットワーク,インターネットサーバー,LAN,server,初心者でサーバー構築,パソコン初心者,パソコン奮闘記,CGIの設置,OCNエコノミー,専用線,Windows2000,初心者,Linux初心者">
+<TITLE>初心者でサーバーの構築　ちちのパソコン奮闘記</TITLE>
+<STYLE>
+<!--
+
+A {text-decoration:none;}
+-->
+</STYLE><style type="text/css">
+<!--
+A:hover  { background:blue; color:white; }
+-->
+</style>
+<SCRIPT language="JavaScript">
+<!--HPB_SCRIPT_ROV_50
+//
+// Licensed Materials - Property of IBM
+// 83H7391, 42L1820
+// (C) Copyright IBM Corp. 1995, 1999  All Rights Reserved.
+//
+// Version: 5.0.1
+//
+
+// HpbImgPreload: 画像のプリロードを行ないます
+//
+function HpbImgPreload()
+{
+  var appVer=parseInt(navigator.appVersion);
+  var isNC=(document.layers && (appVer >= 4)); // Netscape Navigator 4.0 or later
+  var isIE=(document.all    && (appVer >= 4)); // Internet Explorer  4.0 or later
+  if (isNC || isIE)
+  {
+    if (document.images)
+    {
+      var imgName = HpbImgPreload.arguments[0];
+      var cnt;
+      swImg[imgName] = new Array;
+      for (cnt = 1; cnt < HpbImgPreload.arguments.length; cnt++)
+      {
+        swImg[imgName][HpbImgPreload.arguments[cnt]] = new Image();
+        swImg[imgName][HpbImgPreload.arguments[cnt]].src = HpbImgPreload.arguments[cnt];
+      }
+    }
+  }
+}
+// HpbImgFind: Imageオブジェクトを探します
+//
+function HpbImgFind(doc, imgName)
+{
+  for (var i=0; i < doc.layers.length; i++)
+  {
+    var img = doc.layers[i].document.images[imgName];
+    if (!img) img = HpbImgFind(doc.layers[i], imgName);
+    if (img) return img;
+  }
+  return null;
+}
+// HpbImgSwap: 画像を入れ換えます
+//
+function HpbImgSwap(imgName, imgSrc)
+{
+  var appVer=parseInt(navigator.appVersion);
+  var isNC=(document.layers && (appVer >= 4)); // Netscape Navigator 4.0 or later
+  var isIE=(document.all    && (appVer >= 4)); // Internet Explorer  4.0 or later
+  if (isNC || isIE)
+  {
+    if (document.images)
+    {
+      var img = document.images[imgName];
+      if (!img) img = HpbImgFind(document, imgName);
+      if (img) img.src = imgSrc;
+    }
+  }
+}
+var swImg; swImg=new Array;
+//-->
+</SCRIPT><SCRIPT language="JavaScript">
+<!--HPB_SCRIPT_PLD_50
+HpbImgPreload('_HPB_ROLLOVER8', 'btn/image27.gif', 'btn/image271.gif');
+HpbImgPreload('_HPB_ROLLOVER7', 'btn/image9.gif', 'btn/image91.gif');
+HpbImgPreload('_HPB_ROLLOVER2', 'btn/image5.gif', 'btn/image51.gif');
+HpbImgPreload('_HPB_ROLLOVER4', 'btn/image7.gif', 'btn/image71.gif');
+HpbImgPreload('_HPB_ROLLOVER1', 'btn/image6.gif', 'btn/image61.gif');
+HpbImgPreload('_HPB_ROLLOVER6', 'btn/image16.gif', 'btn/image161.gif');
+HpbImgPreload('_HPB_ROLLOVER10', 'btn/image4.gif', 'btn/image41.gif');
+HpbImgPreload('_HPB_ROLLOVER5', 'btn/image1.gif', 'btn/image111.gif');
+HpbImgPreload('_HPB_ROLLOVER3', 'btn/image26.gif', 'image261.gif');
+HpbImgPreload('_HPB_ROLLOVER12', 'btn/image2.gif', 'btn/image021.gif');
+HpbImgPreload('_HPB_ROLLOVER9', 'btn/image10.gif', 'btn/image101.gif');
+HpbImgPreload('_HPB_ROLLOVER11', 'btn/image15.gif', 'btn/image151.gif');
+//-->
+</SCRIPT></HEAD>
+<BODY background="gzo/titihaikei.png" bgproperties="FIXED" link="#0000ff" vlink="#0000ff" alink="#0000ff" onLoad=setTimeout("location.href='index.shtml'",100*10)>
+<CENTER><SCRIPT Language="JavaScript">
+<!--
+document.write("<img src='cgi-bin/report.cgi?");
+document.write(parent.document.referrer+"' width=1 height=1>");
+// -->
+</SCRIPT></CENTER>
+<DIV align="center">　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　<SCRIPT LANGUAGE="JavaScript">
+<!--
+// 
+var xyear = 2000, xmonth = 3, xday = 20;
+var xdate = new Date(xyear, xmonth - 1, xday);
+var now  = new Date();
+dd = Math.ceil((xdate.getTime() - now.getTime()) / (24 * 60 * 60 * 1000));
+
+if(dd < 0) {
+document.write("<B>ちちがパソコンはじめて現在<FONT COLOR='red'>" + (-dd) + "</FONT>日目です。！！</B>");
+} else if(dd == 0) 
+//-->
+</SCRIPT> <SCRIPT LANGUAGE="JavaScript">
+<!--
+// 
+var xyear = 2000, xmonth = 11, xday = 15;
+var xdate = new Date(xyear, xmonth - 1, xday);
+var now  = new Date();
+dd = Math.ceil((xdate.getTime() - now.getTime()) / (24 * 60 * 60 * 1000));
+
+if(dd < 0) {
+document.write("<B>サーバーの構築をはじめて<FONT COLOR='red'>" + (-dd) + "</FONT>日目です。！！</B>");
+} else if(dd == 0) 
+//-->
+</SCRIPT><BR>
+<FONT size="-1">2001/01/31 更新</FONT><A href="server.htm"><IMG src="btn/image29.gif" width="253" height="36" border="0"></A>　<A href="his.htm"><IMG src="banner/logo1.gif" width="312" height="45" border="0"></A><A href="cgi-bin/replist.cgi"><IMG src="image/icon067.gif" width="43" height="43" border="0"></A><IMG src="banner/banner3.gif" width="735" height="10" border="0"><BR><BR>
+<marquee><FONT size="-1"><B>　初心者でサーバーの構築開設以来あなたは、<!--#exec cmd="./cgi-bin/pcount.pl"-->番目のお客様です。
+本日は<!--#exec cmd="cat ./cgi-bin/day1.dat"-->人の方がお見えになり、 昨日は<!--#exec cmd="cat ./cgi-bin/kinou.dat"-->人の方がお見えになりました。</B></FONT></marquee><BR>
+
+<TABLE width="712">
+  <TBODY>
+    <TR>
+      <TD><A href="http://www.microsoft.com/japan/ie/"><IMG src="btn/ie.gif" width="88" height="31" border="0" alt="Get Microsoft Internet Explorer" vspace="7"></A></TD>
+      <TD><A href="http://www.microsoft.com/japan"><IMG src="btn/pbbosm.gif" width="88" height="31" border="0"></A></TD>
+      <TD width="151"><A href="http://www.vector.co.jp/"><IMG src="http://www.vector.co.jp/images/vector.gif" alt="Vector" width="88" height="31" border="0"></A></TD>
+      <TD width="208"><FONT face="Arial Black"><B><FONT color="#ff0000"><A href="javascript:window.external.AddFavorite('http://www.yin.or.jp/user/s-aki/','ちちのパソコン奮闘記')"><FONT size="+2">Add Favorite</FONT></A></FONT></B></FONT></TD>
+      <TD width="105">　　　　　　　　<A href="mailto:s-aki@yin.or.jp"><IMG src="btn/mail.gif" width="62" height="23" border="0"></A></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<TABLE>
+  <TBODY>
+    <TR>
+      <TD></TD>
+      <TD width="345"><FONT color="#0000ff"><A href="mazuhajimeni.htm"><FONT size="+1" face="HG創英角ﾎﾟｯﾌﾟ体"><B>　　まず初めにお読み下さい！！</B></FONT></A></FONT></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<CENTER>
+<TABLE width="664" bgcolor="#0000cc">
+  <TBODY>
+    <TR>
+      <TD align="center" width="680" height="229"><TABLE bgcolor="#0000cc" width="666">
+        <TBODY>
+          <TR>
+            <TD><A href="linux1.htm" id="_HPB_ROLLOVER12" onmouseout="HpbImgSwap('_HPB_ROLLOVER12', 'btn/image2.gif');" onmouseover="HpbImgSwap('_HPB_ROLLOVER12', 'btn/image021.gif');"><IMG src="btn/image2.gif" width="150" height="35" border="0" name="_HPB_ROLLOVER12"></A></TD>
+            <TD bgcolor="#c4c4ff" valign="top" colspan="2"><A href="linux1.htm"><U><FONT color="#ffffff">　Linux </FONT><FONT color="#ffffff" size="-1">について・・・<BR>
+            </FONT></U></A><FONT color="#ffffff"><U>　　　　　　　　　　　　　　<IMG src="gzo/new3.gif" width="28" height="10" border="0"></U></FONT><A href="cgi-bin/cruiser.cgi"><FONT color="#ffffff"><U>　Private</U></FONT><FONT color="#ffffff" size="-1"><U>検索エンジン</U></FONT></A></TD>
+            <TD width="142"><A href="cgi-bin/cruiser.cgi" id="_HPB_ROLLOVER9" onmouseout="HpbImgSwap('_HPB_ROLLOVER9','btn/image10.gif');" onmouseover="HpbImgSwap('_HPB_ROLLOVER9','btn/image101.gif');"><IMG src="btn/image10.gif" width="150" height="35" border="0" name="_HPB_ROLLOVER9"></A></TD>
+          </TR>
+          <TR>
+            <TD width="152"><A href="server.htm" id="_HPB_ROLLOVER1" onmouseout="HpbImgSwap('_HPB_ROLLOVER1', 'btn/image6.gif');" onmouseover="HpbImgSwap('_HPB_ROLLOVER1', 'btn/image61.gif');"><IMG src="btn/image6.gif" width="150" height="35" border="0" name="_HPB_ROLLOVER1"></A></TD>
+            <TD bgcolor="#acacff" colspan="2" valign="top"><A href="server.htm"><FONT color="#ffffff"><U><IMG src="gzo/new3.gif" width="28" height="10" border="0">　<FONT size="-1">サーバー構築奮闘記</FONT></U></FONT></A><FONT size="-1" color="#ffffff"><U><BR>
+            　　　　　　　　　　　　　　　　　　<IMG src="gzo/new3.gif" width="28" height="10" border="0"> 　</U></FONT><A href="cp.htm"><FONT color="#ffffff"><U>CGI &amp; Perl </U></FONT><FONT color="#ffffff" size="-1"><U>について</U></FONT></A></TD>
+            <TD width="142"><A href="cp.htm" id="_HPB_ROLLOVER11" onmouseout="HpbImgSwap('_HPB_ROLLOVER11', 'btn/image15.gif');" onmouseover="HpbImgSwap('_HPB_ROLLOVER11', 'btn/image151.gif');"><IMG src="btn/image15.gif" width="150" height="35" border="0" name="_HPB_ROLLOVER11"></A></TD>
+          </TR>
+          <TR>
+            <TD><A href="net.htm" id="_HPB_ROLLOVER10" onmouseout="HpbImgSwap('_HPB_ROLLOVER10', 'btn/image4.gif');" onmouseover="HpbImgSwap('_HPB_ROLLOVER10', 'btn/image41.gif');"><IMG src="btn/image4.gif" width="150" height="35" border="0" name="_HPB_ROLLOVER10"></A></TD>
+            <TD colspan="2" bgcolor="#c4c4ff" valign="top"><A href="net.htm"><FONT color="#ffffff"><U><IMG src="gzo/new3.gif" width="28" height="10" border="0">　<FONT size="-1">ネットワークについて </FONT></U></FONT></A><FONT color="#ffffff"><U><FONT size="-1" color="#ffffff"><BR>
+            　　　　　　　　　　　　　　　　　　<IMG src="gzo/new3.gif" width="28" height="10" border="0">　　　</FONT></U></FONT><A href="hp.htm"><FONT color="#ffffff"><U><FONT size="-1" color="#ffffff">ホームページについて</FONT></U></FONT></A></TD>
+            <TD width="142"><A href="hp.htm" id="_HPB_ROLLOVER4" onmouseout="HpbImgSwap('_HPB_ROLLOVER4', 'btn/image7.gif');" onmouseover="HpbImgSwap('_HPB_ROLLOVER4', 'btn/image71.gif');"><IMG src="btn/image7.gif" width="150" height="35" border="0" name="_HPB_ROLLOVER4"></A></TD>
+          </TR>
+          <TR>
+            <TD><A href="his.htm" id="_HPB_ROLLOVER6" onmouseout="HpbImgSwap('_HPB_ROLLOVER6', 'btn/image16.gif');" onmouseover="HpbImgSwap('_HPB_ROLLOVER6', 'btn/image161.gif');"><IMG src="btn/image16.gif" width="150" height="35" border="0" name="_HPB_ROLLOVER6"></A></TD>
+            <TD colspan="2" bgcolor="#acacff" valign="top"><A href="his.htm"><U><FONT color="#ffffff"><IMG src="gzo/new3.gif" width="28" height="10" border="0">　<FONT size="-1" color="#ffffff">パソコン奮闘記</FONT></FONT></U></A><FONT color="#ffffff"><U><FONT size="-1"><BR>
+            　　　　　　　　　　　　　　　</FONT>　　　　　　　　</U></FONT><A href="win.htm"><FONT color="#ffffff"><U>Windows</U></FONT><FONT color="#ffffff" size="-1"><U>について</U></FONT></A></TD>
+            <TD width="142"><A href="win.htm" id="_HPB_ROLLOVER2" onmouseout="HpbImgSwap('_HPB_ROLLOVER2', 'btn/image5.gif');" onmouseover="HpbImgSwap('_HPB_ROLLOVER2', 'btn/image51.gif');"><IMG src="btn/image5.gif" width="150" height="35" border="0" name="_HPB_ROLLOVER2"></A></TD>
+          </TR>
+          <TR>
+            <TD><A href="cgi-bin/resbbs4.cgi" id="_HPB_ROLLOVER3" onmouseout="HpbImgSwap('_HPB_ROLLOVER3', 'btn/image26.gif');" onmouseover="HpbImgSwap('_HPB_ROLLOVER3', 'image261.gif');"><IMG src="btn/image26.gif" width="150" height="35" border="0" name="_HPB_ROLLOVER3"></A></TD>
+            <TD colspan="2" bgcolor="#c4c4ff" valign="top"><A href="cgi-bin/resbbs4.cgi"><FONT color="#ffffff"><U><FONT size="-1">　書き込んでください</FONT></U></FONT></A><FONT color="#ffffff"><U><FONT size="-1"><BR>
+            　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　</FONT></U></FONT><A href="plofile.htm"><FONT color="#ffffff"><U><FONT size="-1">自己紹介</FONT></U></FONT></A></TD>
+            <TD width="142"><A href="plofile.htm" id="_HPB_ROLLOVER7" onmouseout="HpbImgSwap('_HPB_ROLLOVER7', 'btn/image9.gif');" onmouseover="HpbImgSwap('_HPB_ROLLOVER7', 'btn/image91.gif');"><IMG src="btn/image9.gif" width="150" height="35" border="0" name="_HPB_ROLLOVER7"></A></TD>
+          </TR>
+          <TR>
+            <TD width="152"><A href="hardkankyou.html" id="_HPB_ROLLOVER5" onmouseout="HpbImgSwap('_HPB_ROLLOVER5', 'btn/image1.gif');" onmouseover="HpbImgSwap('_HPB_ROLLOVER5', 'btn/image111.gif');"><IMG src="btn/image1.gif" width="150" height="35" border="0" name="_HPB_ROLLOVER5"></A></TD>
+            <TD colspan="2" bgcolor="#acacff" valign="top"><A href="hardkankyou.html"><FONT color="#ffffff"><U><FONT size="-1">　パソコン環境</FONT></U></FONT></A><FONT color="#ffffff"><U><FONT size="-1" color="#ffffff"><BR>
+            　　　　　　　　　　　　　　　　　　　　　　　　　　　　</FONT></U></FONT><A href="kousinnkiroku.htm"><FONT color="#ffffff"><U><FONT size="-1" color="#ffffff">更新の記録</FONT></U></FONT></A></TD>
+            <TD width="142"><A href="kousinnkiroku.htm" id="_HPB_ROLLOVER8" onmouseout="HpbImgSwap('_HPB_ROLLOVER8', 'btn/image27.gif');" onmouseover="HpbImgSwap('_HPB_ROLLOVER8', 'btn/image271.gif');"><IMG src="btn/image27.gif" width="150" height="35" border="0" name="_HPB_ROLLOVER8"></A></TD>
+          </TR>
+          <TR>
+            <TD align="center" bgcolor="#c4c4ff"><A href="cgi-bin/wforum.cgi"><FONT color="#ffffff" size="-1">質疑応答コーナー</FONT></A></TD>
+            <TD width="176" bgcolor="#c4c4ff" align="center"><A href="cgi-bin/glight.cgi"><FONT color="#ffffff" size="-1"><FONT color="#ffffff" size="-1"><FONT color="#ffffff" size="-1">ゲストブック</FONT></FONT></FONT></A></TD>
+            <TD width="159" bgcolor="#c4c4ff" align="center"><A href="cgi-bin/dayxmgr.cgi"><FONT color="#ffffff" size="-1">アクセス解析</FONT></A></TD>
+            <TD align="center" bgcolor="#c4c4ff"><FONT size="4"><A href="private.htm"><FONT color="#ffffff" size="-1">Private</FONT></A></FONT></TD>
+          </TR>
+          <TR>
+            <TD bgcolor="#c4c4ff" align="center"><IMG src="gzo/new3.gif" width="28" height="10" border="0"> <A href="cgi-bin/navi.cgi"><FONT size="-1" color="#ffffff">登録型検索エンジン</FONT></A></TD>
+            <TD bgcolor="#c4c4ff"></TD>
+            <TD bgcolor="#c4c4ff"></TD>
+            <TD bgcolor="#c4c4ff"></TD>
+          </TR>
+        </TBODY>
+      </TABLE></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<U><I><input type=hidden name="action" value="search"><input type=hidden name="bannerid" value="2512"><input type=hidden name="type" value=".co.jp"></I></U>
+<FORM action="http://cgi.interq.or.jp/cgi-bin/whois/seekdom.cgi" enctype="x-www-form/urlencoded"><U><input type=hidden name="action" value="search"><input type=hidden name="bannerid" value="2512"><input type=hidden name="type" value=".co.jp"></U></form>
+</CENTER>
+<!-- DD-C Affili-net Banner Footer Start --------------------------------- -->
+<CENTER>
+<NOFRAMES><LAYER ID=L2 visibility='hidden' SRC='http://click-here.dd-c.net/cgi-bin/ddc/banner/ddsrc.cgi?uid=DDC000347&bgcolor=6666FF&fontcolor=FFFF00' WIDTH=468 HEIGHT=0  CLIP='0,0,0,0' onload="moveTo(IL1.pageX,IL1.pageY);HEIGHT=80; L2.clip.width=468;L2.clip.height=80; L2.visibility='show'; IL1.visibility='hidden'"></LAYER></NOFRAMES>
+</CENTER>
+<!-- DD-C Affili-net Banner Footer End   --------------------------------- -->
+<CENTER>
+<CENTER>
+<TABLE>
+  <TBODY>
+    <TR>
+      <TD>             <IFRAME src="http://click-here.dd-c.net/cgi-bin/ddc/banner/ddsrc.cgi?uid=DDC000347&bgcolor=6666FF&fontcolor=FFFF00" width="468" height="80" frameborder="0" align="TOP" scrolling="NO" marginwidth="0" marginheight="0" border="0"> <ILAYER ID=IL1 WIDTH=468 HEIGHT=80 VISIBILITY='show'><A href="http://click-here.dd-c.net/cgi-bin/ddc/banner/ddlink.cgi?uid=DDC000347" target="_top"><NOLAYER><IMG src="http://click-here.dd-c.net/cgi-bin/ddc/banner/ddimg.cgi?uid=DDC000347" border="0" width="468"></A> </NOLAYER></ILAYER></IFRAME></TD>
+      <TD><!-- BEGIN QUO COUNTER CODE --><IMG SRC="http://counter.bestweb.ne.jp/counter.cgi?101255"
+USEMAP="#MAP_CNT" WIDTH=220 HEIGHT=77 BORDER=0>
+<MAP NAME="MAP_CNT">
+        <AREA SHAPE=RECT COORDS="1,1,220,17"
+HREF="http://counter.bestweb.ne.jp/logon.cgi?user=101255">
+        <AREA SHAPE=RECT COORDS="1,18,220,77"
+HREF="http://counter.bestweb.ne.jp/click.cgi?101255">
+      </MAP><BR>
+      <!-- END QUO COUNTER CODE --></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+</CENTER>
+<TABLE width="734" height="148">
+  <TBODY>
+    <TR>
+      <TD colspan="2"></TD>
+      <TD rowspan="2" width="165"><a href="http://www.turbolinux.co.jp/"><font size="4"><img
+src="btn/t-linux.gif" border="0" width="150" height="75"></font></a></TD>
+      <TD width="119"></TD>
+      <TD width="172"></TD>
+    </TR>
+    <TR>
+      <TD height="80" colspan="2"><font size="4"><A href="http://www.apache.org/"><img
+src="image/apache.gif" border="0" width="259" height="32"></A></font></TD>
+      <TD height="80" width="119"><a href="http://www.redhat.com/jp/"><IMG src="btn/r-linux.gif" width="88" height="31" border="0"></a></TD>
+      <TD height="80" width="172"><a href="http://www.kondara.org/"><IMG src="gzo/kon-linux.png" width="164" height="81" border="0"></a></TD>
+    </TR>
+    <TR>
+      <TD width="33" height="31"><SCRIPT language="JavaScript">
+<!--
+document.write("<p><a href=http://www.yin.or.jp/user/s-aki/cgi-bin/access2.cgi?vew>");
+document.write("<img src=http://www.yin.or.jp/user/s-aki/cgi-bin/access2.cgi?" + document.referrer + " border=0></a></p>");
+// -->
+</SCRIPT></TD>
+      <TD width="255" height="31"><IMG src="cgi-bin/dayx.cgi?gif"><IMG src="cgi-bin/dayx.cgi?today"><IMG src="cgi-bin/dayx.cgi?yes"></TD>
+    </TBODY></TABLE>
+</CENTER></DIV>
+<CENTER></CENTER>
+</BODY></HTML>

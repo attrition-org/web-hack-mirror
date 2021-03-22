@@ -1,0 +1,96 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<CENTER>
+                         <style>
+
+                         .fpunkte
+                         {
+                             position: absolute;
+                             top: -200;
+                             font-family: Arial, Helvetica, sans-serif;
+                         }
+
+                         </style>
+
+                         <title>----------Hacked by Mist----------Just for
+                         fun:-)</title>
+
+</head>
+<BODY LINK="#000000" TEXT="#FFFFFF" VLINK="#000000" ALINK="#000000" BGCOLOR="#000000" onload="init()">
+
+                         <script>
+
+                         var delay=20;
+
+                         function moveit(was, startx, starty, endx, endy, steps, wait)
+                         {
+                             if(wait && wait>0)
+                                 setTimeout('moveit("'+was+'",'+startx+','+starty+','+endx+','+endy+','+steps+','+(wait-1)+')', delay);
+                             else
+                             {
+                                 if(document.layers)
+                                 {
+                                     document.layers[was].left=startx;
+                                     document.layers[was].top=starty;
+                                 }
+                                 else
+                                 {
+                                     document.all[was].style.left=startx;
+                                     document.all[was].style.top=starty;
+                                 }
+
+                                 startx+=(endx-startx)/steps;
+                                 starty+=(endy-starty)/steps;
+
+                                 if(steps>0)
+                                     setTimeout('moveit("'+was+'",'+startx+','+starty+','+endx+','+endy+','+(steps-1)+')', delay);
+                             }
+                         }
+
+
+                         function init()
+                         {
+                             if(navigator.appName=="Netscape")
+                             {
+                                 var w=innerWidth;
+                                 var h=innerHeight;
+                             } else
+                             {
+                                 var w=document.body.offsetWidth;
+                                 var h=document.body.offsetHeight;
+                             }
+
+                             var mw=w/2;
+                             var mh=h/2;
+
+                             moveit("f1", mw-0, -100, mw-160, 50, 30, 20);    
+                             moveit("f2", -0, 0, mw-30, 100, 60);         
+                             moveit("f3", w, 100, mw-120, 118, 60, 0);        
+                             moveit("f4", w, 0, mw-80, 160, 60);         
+                             moveit("f5", 100, h+10, mw-115, 200, 60);        
+                         }
+
+                         </script>
+                         <div id="f1" class=fpunkte style="background: blue; color: white; width: 10; font-size:60px;">Mis†</div>
+                         <div id="f2" class=fpunkte style="font-size:20px;">waZ here too :-)</div>
+                         <div id="f3" class=fpunkte style="font-size:40px;"><i>LamoZ</i> must DIE!</div>
+                         <div id="f4" class=fpunkte style="font-size:16px;">RegardZ DeMoX, r00t, LSd, BoDyGuArD and AntioX</div>
+                         <div id="f5" class=fpunkte style="color: blue; font-size:18px;">GreetZ UkR-XblP™
+                         </div>
+</center>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<table border="0" width="100%">
+  <tr>
+    <td width="50%">
+      <p align="right"><img border="0" src="wa.jpg" width="335" height="68"></td>
+    <td width="50%"><a href="mailto:mist@ukrteam.com?subject=hacked"><img border="0" src="IQ.jpg" width="270" height="160" alt="any facking commentZ?"></a></td>
+  </tr>
+</table>
+</BODY>
+</HTML>
+ <!-- safemode.org defacement mirror Thu Jul 27 09:19:31 GMT 2000 -->

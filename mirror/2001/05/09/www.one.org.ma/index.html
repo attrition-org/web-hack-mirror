@@ -1,0 +1,252 @@
+
+<HTML>
+<HEAD>
+<TITLE>ONE</TITLE>
+
+<SCRIPT language=JavaScript>
+<!--
+
+
+var WM_acceptsCookies = false;
+if(document.cookie == '') {
+  
+  document.cookie = 'WM_acceptsCookies=yes';
+  
+  if(document.cookie.indexOf('WM_acceptsCookies=yes') != -1) WM_acceptsCookies = true;
+} else {
+  WM_acceptsCookies = true;
+}
+
+
+function WM_setCookie (name, value, hours, path, domain, secure) {
+  
+  if (WM_acceptsCookies) {
+    if (typeof(hours) == 'string') {
+      var numHours = hours;
+    } else {
+      var numHours = (new Date((new Date()).getTime() + hours*3600000)).toGMTString();
+    }
+    
+    document.cookie = name + '=' + escape(value) + ((hours)?(';expires=' + numHours):'') + ((path)?';path=' + path:'') + ((domain)?';domain=' + domain:'') + ((secure && (secure == true))?'; secure':'');
+  }
+}
+
+function WM_readCookie(name) {
+  
+  if(document.cookie == '') return false; 
+  else return (WM_getCookieValue(name))?unescape(WM_getCookieValue(name)):false;
+}
+
+function WM_getCookieValue(name) {
+  
+  var firstChar, lastChar;
+  
+  var theBigCookie = document.cookie;
+  
+  firstChar = theBigCookie.indexOf(name);
+  
+  if(firstChar != -1) {
+    
+    firstChar += name.length + 1;
+    
+    lastChar = theBigCookie.indexOf(';', firstChar);
+    if(lastChar == -1) lastChar = theBigCookie.length;
+    
+    return theBigCookie.substring(firstChar, lastChar);
+  } else {
+    
+    return false;
+  }
+}
+
+function WM_killCookie(name, path, domain) {
+  
+  var theValue = WM_getCookieValue(name);
+  
+  if(theValue) {
+    
+    document.cookie = name + '=' + theValue + '; expires=Fri, 13-Apr-1970 00:00:00 GMT' + ((path)?';path=' + path:'') + ((domain)?';domain=' + domain:'');
+  }
+}
+
+
+function WM_addPluginToCookieString(cookieName, newValue, position, totalLength) {
+  var newString='', thisPosition, currentValue = WM_readCookie(cookieName);
+  var daValues = new Array();
+  if (currentValue) { 
+      
+      for (i=0;i<currentValue.length;i++) {
+	  thisPosition = currentValue.substring(i,i+1); 
+	  
+	  if(i == position) { 
+	      newString += '' + newValue;
+	  } else {
+	      newString += '' + thisPosition;
+	  }
+	  /*
+	if((thisPosition != 'x') && (thisPosition != 'b') && (i+1 != position)) { 
+	  daValues[i] = thisPosition;
+	} else {
+	  daValues[i] = (i+1 == position)?newValue:'x';
+	}
+	  */
+      }
+      /*
+      for (i=0;i<daValues.length;i++) {
+	newString += '' + daValues[i];
+      }
+      */
+  } else { 
+    for (i=0;i<position;i++) newString += 'x';
+    newString += '' + newValue;
+    if (totalLength && (totalLength > position)) for (i=newString.length; i<totalLength; i++) newString += 'x';
+  }
+  return newString;
+}
+
+
+// -->
+
+</SCRIPT>
+
+<SCRIPT language=Javascript>
+var WM_startTagFix = '</';
+var i_am_vindows = 0;
+if ((navigator.userAgent.indexOf('MSIE') != -1) && (navigator.userAgent.indexOf('Windows') != -1)){
+  i_am_vindows = 1;
+  document.writeln('<script language="VBscript">');
+  document.writeln('\'This will scan for plugins for all versions of Internet Explorer that has a VB script engine version 2 or greater.');
+  document.writeln('\'This includes all versions of IE4 and beyond and some versions of IE 3.');
+  document.writeln('Dim WM_detect_through_vb');
+  document.writeln('WM_detect_through_vb = 0');
+  document.writeln('If ScriptEngineMajorVersion >= 2 then');
+  document.writeln('  WM_detect_through_vb = 1');
+  document.writeln('End If');
+  document.writeln('Function WM_activeXDetect(activeXname)');
+  document.writeln('  on error resume next');
+  document.writeln('  If ScriptEngineMajorVersion >= 2 then');
+  document.writeln('     WM_activeXDetect = False');
+  document.writeln('     WM_activeXDetect = IsObject(CreateObject(activeXname))');
+  document.writeln('     If (err) then');
+  document.writeln('        WM_activeXDetect = False');
+  document.writeln('     End If');
+  document.writeln('   Else');
+  document.writeln('     WM_activeXDetect = False');
+  document.writeln('   End If');
+  document.writeln('End Function');
+  document.writeln(WM_startTagFix+'script>');
+}
+
+function WM_pluginDetect(plugindescription, pluginxtension, pluginmime, activeXname){
+  
+  var i,plugin_undetectable=0,detected=0;
+
+  var detectable_activex = new Array('ShockwaveFlash.ShockwaveFlash', 'SWCtl.SWCtl.1');
+
+  if (navigator.userAgent.indexOf('MSIE') != -1) {
+    if (navigator.userAgent.indexOf('Win') != -1) {
+      if (WM_detect_through_vb){
+	for(i=0;i<detectable_activex.length;i++){
+	  if(activeXname.indexOf(detectable_activex[i]) != -1){
+	    plugin_undetectable = 0;	
+	    break;
+	  } else {
+	    plugin_undetectable = 1;
+	  }
+	}
+      } else {
+	 plugin_undetectable = 1;
+      }
+    } else {
+      plugin_undetectable = 1;
+    }
+  } 
+  if(navigator.plugins){
+    if(navigator.plugins.length > 1){
+      for (i = 0; i < navigator.plugins.length; i++) {
+	plugin = navigator.plugins[i];
+	if (plugin.description.indexOf(plugindescription) != -1) {
+	  numTypes = plugin.length;
+	  for (j = 0; j < numTypes; j++) {
+	    mimetype = plugin[j];
+	    if (mimetype) {
+	      if (mimetype.enabledPlugin && (mimetype.suffixes.indexOf(pluginxtension) != -1)) {
+		detected = 1;
+	      }
+	      if (navigator.mimeTypes[pluginmime] == null) {
+		detected = 0;
+	      }
+	    }
+	  }
+	}
+      }
+      return detected;
+    } else if(plugin_undetectable){
+      return 2;
+    } else if (i_am_vindows == 1) {
+      return WM_activeXDetect(activeXname);
+    } else {
+	return 0;
+    }
+  } else { 		
+    return 0;
+  }
+}
+</SCRIPT>
+
+<SCRIPT>
+<!--
+function WM_flashDetect(versionNum) {
+    var isItThere = 0;
+    var flash3Detect = WM_pluginDetect('Flash 3', 'swf', 'application/x-shockwave-flash', 'ShockwaveFlash.ShockwaveFlash.3');
+
+    var flash4Detect = WM_pluginDetect('Flash 4', 'swf', 'application/x-shockwave-flash', 'ShockwaveFlash.ShockwaveFlash.4');
+
+    if(versionNum == 3) {
+	isItThere = (((flash3Detect) && (flash3Detect != 2)) || ((flash4Detect) && (flash4Detect != 2)));
+    } else if(versionNum == 4) {
+	isItThere = (flash4Detect);
+    }
+    return isItThere;
+}
+// -->
+</SCRIPT>
+
+<SCRIPT>
+
+
+var plugDetect = WM_flashDetect(3);
+
+
+
+var cookieVal = '3';
+var cookiePos = 0;
+
+
+
+if(plugDetect && (plugDetect != 2)){ 
+
+  if(WM_acceptsCookies) {
+    var daValue = WM_addPluginToCookieString('AnimationExpressPlugins',cookieVal,cookiePos,3);
+  }
+
+  document.location="default.asp";
+
+} else { 
+
+  document.writeln('<table border="0" width="100%" cellspacing="0" cellpadding="0" height="100%"><tr><td width="100%" valign="middle">');
+  document.writeln('<blockquote><p align="left"><font face="Arial" size="3">Le plug-in flash est nécessaire pour  visualiser les animation du Site Web de l&acute;ONE</font></p>');
+  document.writeln('<ul><li><font face="Arial" size="3">Pour activer l&acute;installation, <a href="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash">cliquez ici</a></font></li>');
+  document.writeln('<li><font face="Arial" size="3">Pour passer directement à l&acute;écran suivant, <a href="html/m1_00.htm">cliquez ici</a></font></li></ul>');
+  document.writeln('</blockquote> </td></tr>');
+  document.writeln('</table>');
+
+
+
+}
+</SCRIPT>
+
+</HTML>
+
+
+<!-- www.attrition.org web hack mirror - watermark or something -->

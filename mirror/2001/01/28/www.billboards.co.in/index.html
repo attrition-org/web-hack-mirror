@@ -1,0 +1,310 @@
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+   <title>++$$++ Hatee toh naheen aap keh? ++$$++</title>
+
+
+   <style type="text/css"><!--
+body { scrollbar-face-color: purple; scrollbar-shadow-color: #335997; scrollbar-highlight-color: #FF9999; scrollbar-3dlight-color: #335997; scrollbar-darkshadow-color: black; scrollbar-track-color: lightgreen; scrollbar-arrow-color: #FFFFCE }
+//--></style>
+
+
+
+<SCRIPT language="Javascript">
+
+<!-- BEGIN CODE
+
+flag = 1;
+function xit()
+{
+if (flag==1)
+open("http://www.kashmir.com");
+}
+
+// End hiding script -->
+
+
+</SCRIPT>
+
+
+
+   <style TYPE="text/css">
+#slide {
+                Position: Absolute;
+                Left: 5;
+                Top: 5;
+                Visibility: Visible;
+                }
+
+
+</style>
+
+
+<meta name="Microsoft Theme" content="none, default">
+</head>
+
+<body onUnload="xit();" bgcolor="#003300" text="#FFFFFF">
+
+<span ID="slide">
+
+<table CELLSPACING="0" BORDER="0" CELLPADDING="0" ALIGN="right" >
+<TR><td><img src="wfdwfd.gif" width="160" height="100"></TD></tr>
+</table>
+</span>
+
+<script LANGUAGE="JavaScript">
+
+        self.onError=null;
+        
+        currentX = currentY = 0;  
+        whichIt = null;           
+        lastScrollX = 0; lastScrollY =0;
+        
+        NS = (document.layers) ? 1 : 0;
+        IE = (document.all) ? 1: 0;
+        
+        function heartBeat() {
+        
+                if(IE) { diffY = document.body.scrollTop; diffX = document.body.scrollLeft; }
+            if(NS) { diffY = self.pageYOffset; diffX = self.pageXOffset; }
+                
+                if(diffY != lastScrollY) {
+                        percent = .1 * (diffY - lastScrollY);
+                        if(percent > 0) percent = Math.ceil(percent);
+                        else percent = Math.floor(percent);
+                                        if(IE) document.all.slide.style.pixelTop += percent;
+                                        if(NS) document.slide.top += percent; 
+                        lastScrollY = lastScrollY + percent;
+            }
+                if(diffX != lastScrollX) {
+                        percent = .1 * (diffX - lastScrollX);
+                        if(percent > 0) percent = Math.ceil(percent);
+                        else percent = Math.floor(percent);
+                        if(IE) document.all.slide.style.pixelLeft += percent;
+                        if(NS) document.slide.left += percent;
+                        lastScrollX = lastScrollX + percent;
+                }       
+        }
+
+        function checkFocus(x,y) { 
+        var totalY, totalX;
+                floatx = document.slide.pageX;
+                floaty = document.slide.pageY;
+                floatwidth = document.slide.clip.width;
+                floatheight = document.slide.clip.height;
+                        
+                        if(20 == 0) totalY = floatheight;
+                        else totalY = 20;
+                        if(0 == 0) totalX = floatwidth;
+                        else totalX = 0;
+                if( (x > floatx && x < (floatx+totalX)) && (y > floaty && y < (floaty+totalY))) return true;
+                else return false;
+        }
+        
+        function grabIt(e) {
+                if(IE) {
+                        whichIt = event.srcElement;
+                        while (whichIt.id.indexOf("slide") == -1) {
+                                whichIt = whichIt.parentElement;
+                                if (whichIt == null) { return true; }
+                    }
+                        whichIt.style.pixelLeft = whichIt.offsetLeft;
+                    whichIt.style.pixelTop = whichIt.offsetTop;
+                        currentX = (event.clientX + document.body.scrollLeft);
+                        currentY = (event.clientY + document.body.scrollTop);
+                        
+                        if(20 == 0) totalY = whichIt.style.pixelHeight;
+                        else totalY = 20;
+                        if(0 == 0) totalX = whichIt.style.pixelWidth;
+                        else totalX = 0;
+                        if(!(event.clientX > whichIt.offsetLeft && event.clientX < whichIt.offsetLeft + totalX) || 
+                        !(currentY > whichIt.offsetTop && currentY < whichIt.offsetTop + totalY)) whichIt = null;
+                } else { 
+                window.captureEvents(Event.MOUSEMOVE);
+                if(checkFocus (e.pageX,e.pageY)) { 
+                        whichIt = document.slide;
+                        FloatTouchedX = e.pageX-document.slide.pageX;
+                        FloatTouchedY = e.pageY-document.slide.pageY;
+                } 
+                }
+            return true;
+        }
+        
+        function moveIt(e) {
+                if (whichIt == null) { return false; }
+                if(IE) {
+                    newX = (event.clientX + document.body.scrollLeft);
+                    newY = (event.clientY + document.body.scrollTop);
+                    distanceX = (newX - currentX);    distanceY = (newY - currentY);
+                    currentX = newX;    currentY = newY;
+                    whichIt.style.pixelLeft += distanceX;
+                    whichIt.style.pixelTop += distanceY;
+                        if(whichIt.style.pixelTop < document.body.scrollTop) whichIt.style.pixelTop = document.body.scrollTop;
+                        if(whichIt.style.pixelLeft < document.body.scrollLeft) whichIt.style.pixelLeft = document.body.scrollLeft;
+                        if(whichIt.style.pixelLeft > document.body.offsetWidth - document.body.scrollLeft - whichIt.style.pixelWidth - 20) whichIt.style.pixelLeft = document.body.offsetWidth - whichIt.style.pixelWidth - 20;
+                        if(whichIt.style.pixelTop > document.body.offsetHeight + document.body.scrollTop - whichIt.style.pixelHeight - 5) whichIt.style.pixelTop = document.body.offsetHeight + document.body.scrollTop - whichIt.style.pixelHeight - 5;
+                        event.returnValue = false;
+                } else { 
+                        whichIt.moveTo(e.pageX-FloatTouchedX,e.pageY-FloatTouchedY);
+                if(whichIt.left < 0+self.pageXOffset) whichIt.left = 0+self.pageXOffset;
+                if(whichIt.top < 0+self.pageYOffset) whichIt.top = 0+self.pageYOffset;
+                if( (whichIt.left + whichIt.clip.width) >= (window.innerWidth+self.pageXOffset-17)) whichIt.left = ((window.innerWidth+self.pageXOffset)-whichIt.clip.width)-17;
+                if( (whichIt.top + whichIt.clip.height) >= (window.innerHeight+self.pageYOffset-17)) whichIt.top = ((window.innerHeight+self.pageYOffset)-whichIt.clip.height)-17;
+                return false;
+                }
+            return false;
+        }
+        
+        function dropIt() {
+                whichIt = null;
+            if(NS) window.releaseEvents (Event.MOUSEMOVE);
+            return true;
+        }
+
+        
+        if(NS) {
+                window.captureEvents(Event.MOUSEUP|Event.MOUSEDOWN);
+                window.onmousedown = grabIt;
+                window.onmousemove = moveIt;
+                window.onmouseup = dropIt;
+        }
+        if(IE) {
+                document.onmousedown = grabIt;
+                document.onmousemove = moveIt;
+                document.onmouseup = dropIt;
+        }
+        
+        
+        if(NS || IE) action = window.setInterval("heartBeat()",1);
+        
+
+</script>
+
+
+<script language=JavaScript>
+ <!--
+ 
+ 
+ var message="Press Ok if you support our cause!!! ";
+ function click(e) {
+ if (document.all) {
+ if (event.button==2||event.button==3) {
+ alert(message);
+ return false;
+ }
+ }
+ if (document.layers) {
+ if (e.which == 3) {
+ alert(message);
+ return false;
+ }
+ }
+ }
+ if (document.layers) {
+ document.captureEvents(Event.MOUSEDOWN);
+ }
+ document.onmousedown=click;
+ // --> 
+ </script>
+<p>&nbsp;</p>
+<p><b><font size="7" color="#00FF00" face="Tempus Sans ITC">m0r0n and nightman
+of</font></b></p>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#FFFFFF" size="5" face="Andale Mono"><b>0wn</b></font></p>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <blockquote>
+<p><font color="#FF0000" size="6" face="Arial">http://www.billboards.co.in/</font></p>
+      </blockquote>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <b><font size="5">(Bill<font color="#FF9900">board</font><font color="#008000">s
+      India!)</font></font></b></p>
+      <blockquote>
+        <blockquote>
+          <blockquote>
+            <p><font color="#008000" size="1">Please read on if you want to know
+            the real truth</font><b><font color="#008000" size="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></b></p>
+          </blockquote>
+        </blockquote>
+      </blockquote>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<p><font face="Arial Narrow" color="#00ff00" size="5">===============================================================</font></p>
+<p><font face="Arial Narrow" color="#00ff00" size="5">Beginning of the facts:-</font></p>
+<p><font size="3">The violence came as Indian security forces tightened security
+and intensified searches in the region ahead of India's January 26 Republic Day
+celebrations when militants have threatened to strike. Officials said an
+unidentified militant was killed on Thursday in a gun battle with Indian police
+in the Bemina area of Srinagar, the summer capital of Jammu and Kashmir.</font></p>
+<p><font face="Fixedsys" color="#00ff00" size="3"><u>And look at what the U.S.
+has to say on the violence</u>:-</font></p>
+<p><font face="Fixedsys" size="3">WASHINGTON, Jan 25: Welcoming the second
+Indian extension of the Kashmir ceasefire, the United States on Wednesday said
+it believed the peace process would be greatly enhanced if the Kashmiri freedom
+fighters groups responded positively to India's announcement by taking steps to
+halt violence.<br>
+<br>
+Replying to questions at his daily press briefing, State Department spokesman
+Richard Boucher also said the government of Pakistan should use its influence
+with Kashmiri groups to urge them to end violence in the territory.<br>
+<br>
+Asked whether the ceasefire extensions were leading anywhere, Mr. Boucher said:
+&quot;Certainly, we think it is a good thing. This followed on earlier steps,
+positive steps, that we have seen from both India and Pakistan. We believe the
+peace process would be greatly enhanced if the Kashmiri groups responded
+positively to India's announcement by taking steps to halt the violence. We
+would encourage all the parties to take initiatives to reduce violence and
+foster a process to end the conflict in Kashmir.&quot; -- Dawn.com</font></p>
+<p><font face="Fixedsys" color="#008000" size="3">End of facts.</font></p>
+<p align="left"><font face="Fixedsys" color="#008000" size="3">==============================================================================================</font><font face="Fixedsys" color="#00ff00" size="3">
+The U.N. would
+definitely not go against India but they are forgetting that </font><font face="Fixedsys" color="#ff0000" size="3">God</font><font face="Fixedsys" color="#00ff00" size="3">
+is watching. If the Indian politicians would not stop the </font><font face="Fixedsys" color="#ff0000" size="3">violence
+</font><font face="Fixedsys" color="#00ff00" size="3">and </font><font face="Fixedsys" color="#ff0000" size="3">terrorism
+</font><font face="Fixedsys" color="#00ff00" size="3">against </font><font face="Fixedsys" color="#ffffff" size="3">P</font><font face="Fixedsys" color="#008000" size="3">a</font><font face="Fixedsys" color="#ffffff" size="3">kis</font><font face="Fixedsys" color="#008000" size="3">ta</font><font face="Fixedsys" color="#ffffff" size="3">n</font><font face="Fixedsys" color="#00ff00" size="3">
+then they will always face natural disasters. The </font><font face="Fixedsys" color="#ff0000" size="3">earth-quake</font><font face="Fixedsys" color="#00ff00" size="3">
+was just the beginning.....! -- </font><font face="Fixedsys" color="#00ff00" size="4">nightman</font><br>
+====================================================================================</p>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font face="Fixedsys" color="#00ff00" size="4">&nbsp;&nbsp;&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp;
+<font face="Fixedsys" color="#00ff00" size="4">Hand shakes :-</font></p>
+<p align="center"><font face="Fixedsys" size="4"><font color="#00ff00">* Gforce
+Pakistan (</font><font color="#ffffff" size="2">Sniper, heataz, Rsnake,
+instinct, miller and rave-</font><font color="#00ff00">)</font></font></p>
+<p align="center"><font face="Fixedsys" color="#00ff00" size="4">* DoctorNuker,
+m0s and Nitr8!, All of Quit crew)</font></p>
+<p align="center"><font face="Fixedsys" color="#00ff00" size="4">&nbsp;*
+Drumcode, Icefist, dislexik, DownKaos, mar1no, piffy, datagram, Scurvy, dodi and
+philer!</font></p>
+<p align="center"><font color="#00ff00" face="Fixedsys" size="4">&nbsp;*
+Aniclator, Silver Lords, Devil-Soul, Data Masters-- pr0digy, Rsh, Hackweiser,
+moshack, ScorpionKTX, Prime Suspects and Dr-hacker.</font></p>
+<p align="center"><font face="Fixedsys" color="#00ff00" size="4">&nbsp;*
+kr4kr0k, |ncubus_, seninel-, vol, senn, Cool-dude, Undercover and everyone else&nbsp;&nbsp;who
+supports our cause.</font></p>
+<p align="center"><font face="Fixedsys" color="#00ff00" size="4">&nbsp;<font color="#00ff00">*
+Alldas and Attrition (good mirroring sites)</font></font></p>
+<p align="center"><font face="Fixedsys" size="4" color="#00FF00">*<font face="Fixedsys">
+sub-0, Cyberpunk, B_real,&nbsp;laughing3y3s, h3ll rais3r,&nbsp; B1n4ry C0d3,
+brake^off and Tå|{êÑø£Øgîç.</font></font></p>
+<p align="left"><font face="Abadi MT Condensed Light" color="#00ff00" size="4">===============================================================</font></p>
+<p align="center"><font face="Comic Sans MS"><b><font color="#ffffff" size="5">Reach
+all of </font><font color="#00ff00" size="6">us</font><font face="Impact" color="#ffffff" size="5">
+@ </font></b><a href="mailto:wfd2001@nightmail.com?Subject=You people r0ck!"><font face="Impact" color="#00ff00" size="5">wfd2001@nightmail.com</font></a></font></p>
+<p align="center">&nbsp;<font face="Comic Sans MS"><font color="#ffffff" size="5">Reach
+</font><font face="Impact" color="#00ff00" size="5">m0r0n</font></font><font face="Impact" color="#00ff00" size="5">
+and nightman</font><font face="Comic Sans MS"><font face="Impact" color="#00ff00" size="5">&nbsp;
+@ </font><a href="mailto:m0r0nandnightman@doityourself.com?subject=Happy Birthday m0r0n."><font color="#00ff00" size="5">m0r0nandnightman@doityourself.com</font></a></font></p>
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p align="center"><u><font color="#ffffff" size="2">The eleventh commandment:</font></u></p>
+<p align="center"><font face="Comic Sans MS" color="#ffffff" size="1">Thou shalt
+not get caught.</font></p>
+<p align="center">&nbsp;</p>
+
+<!-- www.attrition.org web hack mirror - watermark or something -->

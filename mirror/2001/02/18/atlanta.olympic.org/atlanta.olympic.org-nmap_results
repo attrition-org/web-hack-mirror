@@ -1,0 +1,32 @@
+
+Starting nmap V. 2.54BETA3 ( www.insecure.org/nmap/ )
+Warning:  OS detection will be MUCH less reliable because we did not find at least 1 open and 1 closed TCP port
+Interesting ports on  (167.230.16.133):
+Port       State       Service
+22/tcp     filtered    ssh                     
+23/tcp     filtered    telnet                  
+25/tcp     filtered    smtp                    
+53/tcp     filtered    domain                  
+80/tcp     open        http                    
+
+TCP Sequence Prediction: Class=random positive increments
+                         Difficulty=45607 (Worthy challenge)
+Aggressive OS guesses: Raptor Firewall 6 on Solaris 2.6 (95%), Solaris 2.6 - 2.7 (89%), Windows Millenium Edition v4.90.3000 (84%), FreeBSD 4.0-20000208-CURRENT (84%), FreeBSD 2.2.1 - 4.1 (84%)
+No exact OS matches for host (If you know what OS is running on it, see http://www.insecure.org/cgi-bin/nmap-submit.cgi).
+TCP/IP fingerprint:
+TSeq(Class=RI%gcd=1%SI=C732)
+TSeq(Class=RI%gcd=1%SI=1E3E)
+TSeq(Class=RI%gcd=1%SI=B227)
+T1(Resp=Y%DF=Y%W=FFFF%ACK=S++%Flags=AS%Ops=NNTNWME)
+T2(Resp=N)
+T3(Resp=N)
+T4(Resp=N)
+T5(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+T6(Resp=N)
+T7(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+PU(Resp=N)
+
+
+
+
+Nmap run completed -- 1 IP address (1 host up) scanned in 48 seconds

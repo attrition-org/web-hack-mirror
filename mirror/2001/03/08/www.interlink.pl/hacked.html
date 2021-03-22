@@ -1,0 +1,256 @@
+<SCRIPT language="JavaScript">
+function przelattekst(seed,looped)
+{
+  var text1  = " OFERUJEMY,SZYBKI,TANI DOSTEP DO INTERNETU!!! ";
+  var text2  = " ---INTERLINK-Tanio,Bezpiecznie---";        
+  var msg=text1+text2;
+  var putout = " ";
+  var c   = 1;
+  if (looped > 10) 
+  {  window.status="";  }
+  else if (seed > 100) 
+  {
+     seed--;
+     var cmd="przelattekst(" + seed + "," + looped + ")";
+     timerTwo=window.setTimeout(cmd,100);
+  }
+  else if (seed <= 100 && seed > 0) 
+  {
+    for (c=0 ; c < seed ; c++) 
+    {  putout+=" ";  }
+    putout+=msg.substring(0,100-seed);	
+    seed--;
+    var cmd="przelattekst(" + seed + "," + looped + ")";
+    window.status=putout;
+    timerTwo=window.setTimeout(cmd,100);
+  }
+  else if (seed <= 0) 
+  {
+    if (-seed < msg.length) 
+    {
+      putout+=msg.substring(-seed,msg.length);
+      seed--;
+      var cmd="przelattekst(" + seed + "," + looped + ")";
+      window.status=putout;
+      timerTwo=window.setTimeout(cmd,100); // 100
+    }
+    else 
+    {
+      window.status=" ";
+      looped += 1;
+      var cmd = "przelattekst(100," + looped + ")";
+      timerTwo=window.setTimeout(cmd,75); // 75
+    }
+  }
+}
+przelattekst(100,1)
+</SCRIPT>
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+<meta http-equiv="Site-Exit" content="revealTrans(Duration=1.0,Transition=23)">
+
+<title>Home</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<base target="_top">
+<!--mstheme--><link rel="stylesheet" type="text/css" href="_themes/copy-of-zero/copy1111.css"><meta name="Microsoft Theme" content="copy-of-zero 1111, default">
+<meta name="Microsoft Border" content="tlb">
+</head>
+
+<body  ><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+
+
+
+<p>
+<img border="0" src="_borders/i.gif" width="40" height="40"><img border="0" src="_borders/n.gif" width="40" height="40"><img border="0" src="_borders/t.gif" width="40" height="40"><img border="0" src="_borders/e.gif" width="40" height="40"><img border="0" src="_borders/r.gif" width="40" height="40"><img border="0" src="_borders/l.gif" width="40" height="40"><img border="0" src="_borders/i.gif" width="40" height="40"><img border="0" src="_borders/n.gif" width="40" height="40"><img border="0" src="_borders/k.gif" width="40" height="40">
+</p>
+
+
+<p>&nbsp;</p>
+
+</td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%">
+
+
+<p><script language="JavaScript"><!--
+MSFPhover = 
+  (((navigator.appName == "Netscape") && 
+  (parseInt(navigator.appVersion) >= 3 )) || 
+  ((navigator.appName == "Microsoft Internet Explorer") && 
+  (parseInt(navigator.appVersion) >= 4 ))); 
+function MSFPpreload(img) 
+{
+  var a=new Image(); a.src=img; return a; 
+}
+// --></script><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav1n=MSFPpreload("_derived/news.htm_cmp_copy-of-zero110_vbtn.gif"); MSFPnav1h=MSFPpreload("_derived/news.htm_cmp_copy-of-zero110_vbtn_a.gif"); }
+// --></script><a href="news.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1h.src" onmouseout="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1n.src"><img src="_derived/news.htm_cmp_copy-of-zero110_vbtn.gif" width="140" height="60" border="0" alt="OFERTA" name="MSFPnav1"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav2n=MSFPpreload("_derived/chat.htm_cmp_copy-of-zero110_vbtn.gif"); MSFPnav2h=MSFPpreload("_derived/chat.htm_cmp_copy-of-zero110_vbtn_a.gif"); }
+// --></script><a href="chat.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav2'].src=MSFPnav2h.src" onmouseout="if(MSFPhover) document['MSFPnav2'].src=MSFPnav2n.src"><img src="_derived/chat.htm_cmp_copy-of-zero110_vbtn.gif" width="140" height="60" border="0" alt="CHAT" name="MSFPnav2"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav3n=MSFPpreload("_derived/www.htm_cmp_copy-of-zero110_vbtn.gif"); MSFPnav3h=MSFPpreload("_derived/www.htm_cmp_copy-of-zero110_vbtn_a.gif"); }
+// --></script><a href="www.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav3'].src=MSFPnav3h.src" onmouseout="if(MSFPhover) document['MSFPnav3'].src=MSFPnav3n.src"><img src="_derived/www.htm_cmp_copy-of-zero110_vbtn.gif" width="140" height="60" border="0" alt="WWW" name="MSFPnav3"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav4n=MSFPpreload("_derived/linki.htm_cmp_copy-of-zero110_vbtn.gif"); MSFPnav4h=MSFPpreload("_derived/linki.htm_cmp_copy-of-zero110_vbtn_a.gif"); }
+// --></script><a href="linki.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav4'].src=MSFPnav4h.src" onmouseout="if(MSFPhover) document['MSFPnav4'].src=MSFPnav4n.src"><img src="_derived/linki.htm_cmp_copy-of-zero110_vbtn.gif" width="140" height="60" border="0" alt="LINKI" name="MSFPnav4"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav5n=MSFPpreload("_derived/unreal.htm_cmp_copy-of-zero110_vbtn.gif"); MSFPnav5h=MSFPpreload("_derived/unreal.htm_cmp_copy-of-zero110_vbtn_a.gif"); }
+// --></script><a href="unreal.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav5'].src=MSFPnav5h.src" onmouseout="if(MSFPhover) document['MSFPnav5'].src=MSFPnav5n.src"><img src="_derived/unreal.htm_cmp_copy-of-zero110_vbtn.gif" width="140" height="60" border="0" alt="UNREAL" name="MSFPnav5"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav6n=MSFPpreload("_derived/humor.htm_cmp_copy-of-zero110_vbtn.gif"); MSFPnav6h=MSFPpreload("_derived/humor.htm_cmp_copy-of-zero110_vbtn_a.gif"); }
+// --></script><a href="humor.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav6'].src=MSFPnav6h.src" onmouseout="if(MSFPhover) document['MSFPnav6'].src=MSFPnav6n.src"><img src="_derived/humor.htm_cmp_copy-of-zero110_vbtn.gif" width="140" height="60" border="0" alt="HUMOR" name="MSFPnav6"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav7n=MSFPpreload("_derived/sponsorzy.htm_cmp_copy-of-zero110_vbtn.gif"); MSFPnav7h=MSFPpreload("_derived/sponsorzy.htm_cmp_copy-of-zero110_vbtn_a.gif"); }
+// --></script><a href="sponsorzy.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav7'].src=MSFPnav7h.src" onmouseout="if(MSFPhover) document['MSFPnav7'].src=MSFPnav7n.src"><img src="_derived/sponsorzy.htm_cmp_copy-of-zero110_vbtn.gif" width="140" height="60" border="0" alt="SPONSORZY" name="MSFPnav7"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav8n=MSFPpreload("_derived/reklama.htm_cmp_copy-of-zero110_vbtn.gif"); MSFPnav8h=MSFPpreload("_derived/reklama.htm_cmp_copy-of-zero110_vbtn_a.gif"); }
+// --></script><a href="reklama.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav8'].src=MSFPnav8h.src" onmouseout="if(MSFPhover) document['MSFPnav8'].src=MSFPnav8n.src"><img src="_derived/reklama.htm_cmp_copy-of-zero110_vbtn.gif" width="140" height="60" border="0" alt="REKLAMA" name="MSFPnav8"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav9n=MSFPpreload("_derived/zestawy_pc.htm_cmp_copy-of-zero110_vbtn.gif"); MSFPnav9h=MSFPpreload("_derived/zestawy_pc.htm_cmp_copy-of-zero110_vbtn_a.gif"); }
+// --></script><a href="zestawy_pc.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav9'].src=MSFPnav9h.src" onmouseout="if(MSFPhover) document['MSFPnav9'].src=MSFPnav9n.src"><img src="_derived/zestawy_pc.htm_cmp_copy-of-zero110_vbtn.gif" width="140" height="60" border="0" alt="ZESTAWY PC" name="MSFPnav9"></a>&nbsp;
+</p>
+
+
+<p>
+<img border="0" src="_borders/internet_taniej.gif" width="160" height="100">
+</p>
+
+
+<p>
+&nbsp;
+</p>
+
+
+<p>
+&nbsp;
+</p>
+
+
+<p>
+&nbsp;
+</p>
+
+<p>&nbsp;
+</p>
+
+<p>&nbsp;
+</p>
+
+<p>&nbsp;
+</p>
+
+<p>&nbsp;
+</p>
+
+<p>&nbsp;
+</p>
+
+<p>&nbsp;
+</p>
+
+<p>&nbsp;
+</p>
+
+<p>&nbsp;
+</p>
+
+<p>&nbsp;
+</p>
+
+</td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+<FORM NAME="marquee1">
+<p>
+<INPUT NAME="text" SIZE=70 VALUE="                                               INWAZJA ROZPOCZ&#280;TA!!!!! ZAPRASZAMY WSZYSTKICH CH&#280;TNYCH!!!!!                       ">
+</p>
+</FORM>
+
+<SCRIPT>
+<!--
+/*Text box marquee by Dave Methvin,
+Windows Magazine
+May be used/modified if credit line is
+retained*/
+ScrollSpeed = 100
+ScrollChars = 1
+function ScrollMarquee() {
+window.setTimeout('ScrollMarquee()',ScrollSpeed);
+
+var msg = document.marquee1.text.value; 
+document.marquee1.text.value =
+msg.substring(ScrollChars) +
+msg.substring(0,ScrollChars); 
+} 
+ScrollMarquee() 
+//-->
+
+</SCRIPT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<hr align="center">
+<p><b><font color="#FFFF00" face="Batang" size="5">Inwazja Internetu w Gda&#324;sku</font><font color="#FFFF00" face="Batang" size="6"><img border="0" src="wykrzyknik.gif" width="39" height="77"></font></b></p>
+<p><b><font color="#FFFF00" face="Batang" size="5">&#321;&#261;cza sta&#322;e-59
+z&#322;.*NON STOP</font></b></p>
+<p><b><font color="#FFFF00" face="Batang" size="5">Chcesz wiedzie&#263; wi&#281;cej?????</font></b></p>
+<p><font color="#FFFF00">&nbsp;</font></p>
+<p><b><font color="#FFFF00" face="Batang" size="5">ZADZWO&#323;</font><font color="#FFFF00" face="Batang" size="6">&nbsp;</font></b></p>
+<p><b><font face="Batang"><font color="#FFFF00" size="5">*</font> </font><font face="Arial" size="5">Kwota zale&#380;y od
+lokalizacji.</font></b></p>
+<hr align="center">
+<h2><font color="#0000FF">Informacje&nbsp; kontaktowe</font></h2>
+<p><font color="#000000">Wszystkie pytania prosz&#281; kierowa&#263; pod numerem telefonu podanym poni&#380;ej
+oraz na adresy pocztowe te&#380; podane poni&#380;ej.</font></p>
+      <p>&nbsp; </p>
+
+      <dl>
+        <dt><strong><font color="#000000">Telefon</font></strong> </dt>
+        <dd><font color="#000000"><!--webbot bot="Substitution" s-variable="CompanyPhone" startspan -->58 3055841<!--webbot bot="Substitution" endspan i-checksum="13875" --></font></dd>
+        <dt><b><font color="#000000">Fax</font></b></dt>
+        <dd><font color="#000000"><!--webbot bot="Substitution" s-variable="CompanyFAX" startspan -->58 3016890<!--webbot bot="Substitution" endspan i-checksum="13814" --></font></dd>
+        <dt><strong><font color="#000000">Adres pocztowy</font></strong> </dt>
+        <dd><font color="#000000"><!--webbot bot="Substitution" s-variable="CompanyAddress" startspan -->ul.Targ Drzewny 12/14 80-886 Gda&#324;sk<!--webbot bot="Substitution" endspan i-checksum="29611" --></font></dd>
+        <dt><strong><font color="#000000">Poczta elektroniczna&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </strong><img border="0" src="pocz0089.gif" width="84" height="70"> </dt>
+        <dd><font color="#000000">Informacje ogólne: </font> <a href="mailto:biuro@interlink.pl"><font color="#0000FF"><!--webbot
+        bot="Substitution" s-variable="CompanyEmail" startspan -->biuro@interlink.pl<!--webbot
+        bot="Substitution" endspan i-checksum="46214" --></font></a><br>
+          <font color="#000000">
+          Webmaster: </font> <a href="mailto:admin@interlink.pl"><font color="#0000FF"><!--webbot
+        bot="Substitution" s-variable="CompanyWebmaster" startspan -->admin@interlink.pl<!--webbot
+        bot="Substitution" endspan i-checksum="46083" --></font></a></dd>
+      </dl>
+
+
+
+
+<p>
+<img border="0" src="in1beta1.gif" width="400" height="60">
+
+<FORM ACTION="http://hipermarket.interlink.pl"><INPUT TYPE="submit" VALUE="Wojna przeciwko hipermarketom w Trojmiescie!!!"></FORM>
+<p>&nbsp;</p>
+<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p>&nbsp;</p>
+
+
+<p><nobr>[&nbsp;Home&nbsp;]</nobr> <nobr>[&nbsp;<a href="news.htm">OFERTA</a>&nbsp;]</nobr> <nobr>[&nbsp;<a href="chat.htm">CHAT</a>&nbsp;]</nobr> <nobr>[&nbsp;<a href="www.htm">WWW</a>&nbsp;]</nobr> <nobr>[&nbsp;<a href="linki.htm">LINKI</a>&nbsp;]</nobr> <nobr>[&nbsp;<a href="unreal.htm">UNREAL</a>&nbsp;]</nobr> <nobr>[&nbsp;<a href="humor.htm">HUMOR</a>&nbsp;]</nobr> <nobr>[&nbsp;<a href="sponsorzy.htm">SPONSORZY</a>&nbsp;]</nobr> <nobr>[&nbsp;<a href="reklama.htm">REKLAMA</a>&nbsp;]</nobr> <nobr>[&nbsp;<a href="zestawy_pc.htm">ZESTAWY&nbsp;PC</a>&nbsp;]</nobr>&nbsp;&nbsp;
+</p>
+
+
+<p>&nbsp;&nbsp;<img border="0" src="_borders/frontp2000.jpg" width="88" height="31"><img border="0" src="_borders/wysokarozdzialka.jpg" width="88" height="31"> <img border="0" src="_borders/trzeba.gif" width="65" height="50">
+ &nbsp;<a target=_top href="http://stat.webmedia.pl/cgi-bin/anal?031877"><img border=0 src="http://stat.webmedia.pl/cgi-bin/stat?031877&stat1" alt="stat4u">
+&nbsp;
+</a>
+
+
+</p>
+
+
+<h5>Wy&#347;lij maila do <a href="mailto:admin@interlink.pl">admin@interlink.pl</a> w sprawie pyta&#324;
+oraz komentarzy dotycz&#261;cych naszej strony.<br>
+
+
+
+Last modified: marca 01, 2001</h5>
+
+</td></tr><!--msnavigation--></table></body>
+</html>
+
+

@@ -1,0 +1,713 @@
+<HTML>
+<HEAD>
+	<TITLE>TheForce.net Star Wars Prequel News</TITLE>
+		
+<script language="JavaScript1.1">
+
+<!-- hide
+
+//Paul Davidson's Graphical Countdown script
+//©1998 Paul Davidson and theForce.net
+//******************************************
+//Use of this script in whole or in part without
+//the expressed written consent of Paul Davidson
+//and/or theForce.net is prohibited by law
+
+if (document.images) {
+var one = new Image(15,20);
+var two = new Image(15,20);
+var three = new Image(15,20);
+var four = new Image(15,20);
+var five = new Image(15,20);
+var six = new Image(15,20);
+var seven = new Image(15,20);
+var eight = new Image(15,20);
+var nine = new Image(15,20);
+var zero = new Image(15,20);
+var space = new Image(15,20);
+
+one.src = "countdown/1.gif";
+two.src = "countdown/2.gif";
+three.src = "countdown/3.gif";
+four.src = "countdown/4.gif";
+five.src = "countdown/5.gif";
+six.src =  "countdown/6.gif";
+seven.src =  "countdown/7.gif";
+eight.src =  "countdown/8.gif";
+nine.src =  "countdown/9.gif";
+zero.src =  "countdown/0.gif";
+space.src = "countdown/pixel.gif";
+}
+
+//value to remember on/off state
+var on_off = 0;
+
+function countdown() {
+	//	Setting the current date
+	var today = new Date();
+	var hour = today.getHours();
+	var day = today.getDate();
+	var sec = today.getSeconds();
+	var min =today.getMinutes();
+	var month = today.getMonth();
+	month = month;  //CHANGED: was "month = month + 1;"
+	var year = today.getYear();
+
+	//	Setting the Prequel date
+	preqDate = new Date(99,4,19,0,0,0);
+	var hour2 = preqDate.getHours();
+	var min2 = preqDate.getMinutes();
+	var sec2 = preqDate.getSeconds();
+	var month2 = preqDate.getMonth();
+	month2 = month2;  //CHANGED: was "month2 = month2 + 1;"
+	var day2 = preqDate.getDate();
+	var year2 = preqDate.getYear();
+
+	//	Subtract Present from Prequel Date, eliminating years and months
+	year = year2 - year;
+	day2 = day2 + (year * 365);  // years converted to days
+
+	//  start converting months to days
+        month = monthToDay(month);
+	month2 = monthToDay(month2);
+	day += month;
+	day2 += month2;
+	day = day2 - day;
+	if (hour2 >= hour)
+		hour = hour2 - hour;
+	else
+	{
+		day -= 1;
+		hour2 += 24;
+		hour = hour2 - hour;
+	}
+	if (min2 >= min)
+		min = min2 - min;
+	else
+	{
+		if (hour != 0)
+			hour -= 1;
+		else
+		{
+			hour = 23;
+			day -= 1;
+		}
+		min2 += 60;
+		min = min2 - min;
+	}
+	if (sec2 >= sec)
+		sec = sec2 - sec;
+	else
+	{
+		if (min != 0)
+			min -= 1;
+		else
+		{
+			min = 59;
+			if (hour != 0)
+				hour -= 1;
+			else
+			{
+				hour = 23;
+				day -= 1;
+			}
+		}
+		sec2 += 60;
+		sec = sec2 - sec;
+	}
+
+	//  Turn numbers to strings
+	min = "" + min;
+	sec = "" + sec;
+	day = "" + day;
+	if (hour == 0)
+		hour = "0";
+	else
+		hour = "" + hour;
+	if (hour.length == 1) {
+		document.hour1.src = imagename("0").src;
+		document.hour2.src = imagename(hour.substring(0,1)).src;
+	}
+	else {
+		document.hour1.src = imagename(hour.substring(0,1)).src;
+		document.hour2.src = imagename(hour.substring(1,2)).src;
+	}
+        if (min.length == 1) {
+		document.min1.src = imagename("0").src;
+		document.min2.src = imagename(min).src;
+	}
+	else {
+		document.min1.src = imagename(min.substring(0,1)).src;
+		document.min2.src = imagename(min.substring(1,2)).src;
+	}
+	if (sec.length == 1) {
+		document.sec1.src = imagename("0").src;
+		document.sec2.src = imagename(sec).src;
+	}
+	else {
+		document.sec1.src = imagename(sec.substring(0,1)).src;
+		document.sec2.src = imagename(sec.substring(1,2)).src;
+	}
+
+        if (day.length == 1) {
+               	document.day1.src = space.src;
+		document.day2.src = space.src;
+		document.day3.src = imagename(day.substring(0,1)).src;
+	}
+	else if (day.length == 2) {
+		document.day1.src = space.src;
+		document.day2.src = imagename(day.substring(0,1)).src;
+		document.day3.src = imagename(day.substring(1,2)).src;
+	}
+	else {
+		document.day1.src = imagename(day.substring(0,1)).src;
+		document.day2.src = imagename(day.substring(1,2)).src;
+		document.day3.src = imagename(day.substring(2,3)).src;
+	}
+        if (on_off == 1)
+           setTimeout("countdown()",750);
+}
+
+function imagename(value) {
+	value = "" + value;
+	if (value == "1") return one;
+	if (value == "2") return two;
+	if (value == "3") return three;
+	if (value == "4") return four;
+	if (value == "5") return five;
+	if (value == "6") return six;
+	if (value == "7") return seven;
+	if (value == "8") return eight;
+	if (value == "9") return nine;
+	if (value == "0") return zero;
+	return zero;
+}
+
+function monthToDay(month)
+{
+	mlength = new MakeArray(13);
+	mlength[1] = 31;
+	mlength[2] = 28;
+	mlength[3] = 31;
+	mlength[4] = 30;
+	mlength[5] = 31;
+	mlength[6] = 30;
+	mlength[7] = 31;
+	mlength[8] = 31;
+	mlength[9] = 30;
+	mlength[10] = 31;
+	mlength[11] = 30;
+	mlength[12] = 31;
+	var i = month;
+	month = 0;
+	for(; i > 0; i = i - 1)
+	{
+		month += mlength[i];
+	}
+	return month;
+}
+
+function MakeArray(n){
+	this.length=n;
+	for(var i=1; i<=n; i++){ this[i]=0; }
+		return this;
+}
+
+function InitWords(){
+        document.days.src = "countdown/days.gif";
+        document.hours.src = "countdown/hours.gif";
+        document.minutes.src = "countdown/minutes.gif";
+        document.seconds.src = "countdown/seconds.gif";
+}
+
+function toggle()
+{
+        if (on_off == 0 && (document.images))
+        {
+                on_off = 1;
+                InitWords();
+                countdown();
+        }
+        else
+                on_off = 0;
+}
+
+
+// -->
+</script>
+
+</HEAD>
+
+<BODY BGCOLOR="White" TEXT="Black" LINK="#232323" VLINK="#232323" ALINK="#232323" 
+	LEFTMARGIN=0 TOPMARGIN=0 MARGINHEIGHT=0 MARGINWIDTH=0>
+<BASE HREF="http://theforce.net/prequels/">
+
+
+<table CELLSPACING=0 CELLPADDING=0 BORDER=0 WIDTH="100%">
+	<!-- TITLE BAR -->
+	<tr>
+		<td ALIGN="LEFT" VALIGN="TOP" BGCOLOR="#FFFFFF" COLSPAN=4 WIDTH=630 HEIGHT=140
+			BACKGROUND="graphics/bannertopbg.jpg">
+		<IMG SRC="graphics/bannertop.jpg" WIDTH=630 HEIGHT=140 BORDER=0 ALT="THE FORCE.NET"></td>
+	</tr>
+
+	
+	<tr>
+		<!-- LEFT MENU GRAPHIC STRIP -->
+		<td VALIGN="TOP" ROWSPAN=2 WIDTH=45>
+		<IMG SRC="graphics/bannerleft.jpg" WIDTH=45 BORDER=0></td>
+
+		<!-- MENU -->
+		<td VALIGN="TOP" ROWSPAN=2 WIDTH=124>
+			<FONT FACE="Arial,Helvetica" SIZE=1>
+			<!-- MENU ITEMS -->
+			<FONT SIZE=3 COLOR="#968A72"><B>&nbsp;TheForce.Net</B></FONT><BR>
+			&nbsp;&nbsp;&nbsp;<A HREF="../index.html">TheForce.Net Main</A><BR>
+			&nbsp;&nbsp;&nbsp;<A HREF="http://www.theDen.com">The DEN</A><BR>
+			&nbsp;&nbsp;&nbsp;<A HREF="http://www.entertainmentearth.com/action.lasso?-db=a&-lay=a&-format=alink.html&-recid=1&a=20017theFo&-update">Entertainment Earth</A><BR>
+			<P>
+			<A HREF="">
+				<FONT SIZE=3 COLOR="#968A72"><B>&nbsp;Prequel News</B></FONT></A><BR>
+			<P>
+			<FONT SIZE=3 COLOR="#968A72"><B>&nbsp;Prequel Info</B></FONT><BR>
+			&nbsp;&nbsp;&nbsp;<A HREF="oldPreq/title.html">
+				Title / Release</A><BR>
+			&nbsp;&nbsp;&nbsp;<A HREF="oldPreq/plot2.html">
+				Storyline</A><BR>
+			&nbsp;&nbsp;&nbsp;<A HREF="oldPreq/characters/characters2.shtml">
+				Characters</A><BR>
+			&nbsp;&nbsp;&nbsp;<A HREF="oldPreq/ships/ships.shtml">
+				Ships / Vehicles</A><BR>
+			&nbsp;&nbsp;&nbsp;<A HREF="oldPreq/locations/locations.shtml">
+				Locations</A><BR>
+			&nbsp;&nbsp;&nbsp;<A HREF="oldPreq/cast/cast.html">
+				Cast</A><BR>
+			&nbsp;&nbsp;&nbsp;<A HREF="oldPreq/crew/crew.html">
+				Crew</A><BR>
+			&nbsp;&nbsp;&nbsp;<A HREF="oldPreq/production.html">
+				Production</A><BR>
+			&nbsp;&nbsp;&nbsp;<A HREF="oldPreq/falserumors.html">
+				False Rumors</A><BR>
+			&nbsp;&nbsp;&nbsp;<A HREF="oldPreq/otherpreq.html">
+				Other News</A><BR>
+			<P>
+			<FONT SIZE=3 COLOR="#968A72"><B>&nbsp;More Prequels</B></FONT><BR>
+			&nbsp;&nbsp;&nbsp;<A HREF="http://theforce.net/cgi-bin/forumdisplay.cgi?action=topics&forum=+The+Prequels&number=1">
+				Prequel Discussion</A><BR>
+			&nbsp;&nbsp;&nbsp;<A HREF="../multimedia">
+				Prequel Multimedia</A><BR>
+			&nbsp;&nbsp;&nbsp;<A HREF="../museum">
+				Prequel Fan Art</A><BR>
+			&nbsp;&nbsp;&nbsp;<A HREF="../jedicouncil/addresses">
+				Cast/Crew Addresses</A><BR>
+			<P>
+			<A HREF="preqlinks.shtml">
+				<FONT SIZE=3 COLOR="#968A72"><B>&nbsp;Prequel Links</B></FONT></A><BR>
+			<P>
+			<A HREF="mailto:starwars@theforce.net">
+				<FONT SIZE=3 COLOR="#968A72"><B>&nbsp;Contact Us</B></FONT></A><BR>
+			<P>
+			&nbsp;<a href="javascript:toggle();"
+><IMG SRC="countdown/toggle.gif" WIDTH="80" HEIGHT="20" BORDER="0"></a><br>
+<img src="countdown/pixel.gif" name=day1 width=15 height=20 hspace=0 vspace=0
+><img src="countdown/pixel.gif" name=day2 width=15 height=20 hspace=0 vspace=0
+><img src="countdown/pixel.gif" name=day3 width=15 height=20 hspace=0 vspace=0
+><IMG SRC="countdown/pixel.gif" name="days" WIDTH="25" HEIGHT="20"><br>
+<img src="countdown/pixel.gif" name=spacer1 width=15 height=20 hspace=0 vspace=0
+><img src="countdown/pixel.gif" name=hour1 width=15 height=20 hspace=0 vspace=0
+><img src="countdown/pixel.gif" name=hour2 width=15 height=20 hspace=0 vspace=0
+><IMG SRC="countdown/pixel.gif" name="hours" WIDTH="35" HEIGHT="20"><br>
+<img src="countdown/pixel.gif" name=spacer2 width=15 height=20 hspace=0 vspace=0
+><img src="countdown/pixel.gif" name=min1 width=15 height=20 hspace=0 vspace=0
+><img src="countdown/pixel.gif" name=min2 width=15 height=20 hspace=0 vspace=0
+><IMG SRC="countdown/pixel.gif" name="minutes" WIDTH="45" HEIGHT="20"><br>
+<img src="countdown/pixel.gif" name=spacer3 width=15 height=20 hspace=0 vspace=0
+><img src="countdown/pixel.gif" name=sec1 width=15 height=20 hspace=0 vspace=0
+><img src="countdown/pixel.gif" name=sec2 width=15 height=20 hspace=0 vspace=0
+><IMG SRC="countdown/pixel.gif" name="seconds" WIDTH="42" HEIGHT="20">
+
+			<P>
+			<TABLE>
+				<TR>
+					<TD BGCOLOR="#968A72" ALIGN=CENTER>
+						<FONT FACE="Arial,Helvetica" SIZE=2>
+						<FORM METHOD=POST ACTION="http://theforce.net/cgi-bin/use.cgi">
+						<input type=hidden name="action" value="add">
+						
+						Join our newsletter
+						<FONT SIZE=3><B>use@theforce.net</B></FONT><BR>
+						by entering your email address here
+						<input type=text name="email" value="" size=17 maxlength=60><BR>
+						<INPUT TYPE=SUBMIT VALUE="Subscribe">
+						</FORM>
+					</TD>
+				</TR>
+			</TABLE>
+
+			<P>
+			<A HREF="http://www.entertainmentearth.com/action.lasso?-db=a&-lay=a&-format=alink.html&-recid=1&a=20017theFo&-update">
+				<IMG SRC="../main/pics/hosted_by_ee.gif" WIDTH=120 BORDER=0></A>
+		</td>
+		
+		<!-- MENU BAR RIGHT -->
+		<td VALIGN="TOP" ALIGN="RIGHT" WIDTH=10 ROWSPAN=2>
+			<IMG SRC="graphics/innerleft.jpg" WIDTH=6 HEIGHT=463 BORDER=0>
+		</td>
+		
+		<!-- ADVERTISEMENT -->
+		<td COLSPAN=1 HEIGHT=65 ALIGN="CENTER" ROWSPAN=1>
+			<IMG SRC="../main/pics/pixel.gif" HEIGHT=1 WIDTH=479 ALIGN=LEFT><BR>
+			<script language="JavaScript1.1" 
+				SRC="http://adserver.affiliation.com/jserver/AREA=IM.DEN.SCIFI.THEFORCE">
+			</script>
+	
+			<script language="JavaScript">
+				<!--
+					var MSIE_3 = navigator.userAgent.indexOf('MSIE 3');
+					var OPERA_3 = navigator.userAgent.indexOf('Opera/3');
+					var now = new Date();
+					var random = now.getTime();
+					if ((OPERA_3 != -1) || (MSIE_3 != -1)) {
+						document.write('<A HREF="http://adserver.affiliation.com/cgi-bin/accipiter/adclick.exe/AREA=IM.DEN.SCIFI.THEFORCE?' + random + '" TARGET="_NEW">');
+						document.write('<IMG SRC="http://adserver.affiliation.com/cgi-bin/accipiter/adserver.exe/AREA=IM.DEN.SCIFI.THEFORCE?' + random + '" HEIGHT=60 WIDTH=468 BORDER=0></A>');
+					}
+				// -->
+			</script>
+	
+			<noscript>
+				<A HREF="http://adserver.affiliation.com/cgi-bin/accipiter/adclick.exe/AREA=IM.DEN.SCIFI.THEFORCE" TARGET="_NEW">
+					<IMG SRC="http://adserver.affiliation.com/cgi-bin/accipiter/adserver.exe/AREA=IM.DEN.SCIFI.THEFORCE" HEIGHT=60 WIDTH=468 BORDER=0></A>
+			</noscript>
+		</td>
+	</tr>
+
+	<tr>
+		<!-- LATEST NEWS -->
+		<td VALIGN="TOP" COLSPAN=1 ROWSPAN=1 WIDTH="100%" HEIGHT=44>
+			<IMG SRC="../main/pics/pixel.gif" HEIGHT=1 WIDTH=479><BR>
+			<IMG SRC="../main/pics/pixel.gif" HEIGHT=500 WIDTH=1 ALIGN=LEFT>
+				
+			<FONT FACE="Arial,Helvetica">
+
+<table width=600 border=0>
+<tr>
+<td width=120>
+<IMG SRC="graphics/top_button.trailerA.jpg" WIDTH=55 HEIGHT=55 BORDER=0 ALT="" align=left>
+<font size=1><b><a href="trailer/">Trailer A</a></b></font>
+</td>
+<td width=120>
+<IMG SRC="graphics/top_button.trailerB.jpg" WIDTH=55 HEIGHT=55 BORDER=0 ALIGN="LEFT" ALT="">
+<font size=1><b><a href="trailerb/">Trailer B</a></b></font>
+</td>
+<td width=180>
+<IMG SRC="graphics/top_button.jarjar.jpg" WIDTH=55 HEIGHT=55 BORDER=0 ALIGN="LEFT" ALT="">
+<font size=1><b>Jar Jar speaks!</b><br>
+<a href="../multimedia/sound/epi/jarjar_TFN.wav">.WAV (588 kB)</a><br> 
+<a href="../multimedia/sound/epi/jarjar_TFN.mov">.MOV (44 kB)</a></font>
+</td>
+<td width=180>
+<IMG SRC="graphics/top_button.darths.jpg" WIDTH=55 HEIGHT=55 BORDER=0 ALIGN="LEFT" ALT="">
+<font size=1><b>The Darths speak!</b><br>
+<a href="newspics/sidious.wav">Sidious.wav</a><br>  
+<a href="newspics/maul.wav">Maul.wav</a></font>
+</tr>
+</table>
+
+
+		<TABLE WIDTH=120 ALIGN=RIGHT>
+			<TR>
+				<TD BGCOLOR="#BBBBBB" ALIGN=CENTER>
+					<FONT FACE="Arial,Helvetica" SIZE=2>
+					<IMG SRC="../main/pics/pixel.gif" WIDTH=120 HEIGHT=15><BR>
+					<IMG SRC="newspics/trailerC60mirrors.jpg"><BR>
+					<B>Created by TFN from new footage on 60 Minutes.</B>
+					<P>
+					<A HREF="http://www.dailysci-fi.com/media/trailerc602.mov" target="_new">
+						The DEN</A><BR>
+					<A HREF="http://129.78.10.77/other/TFN_TrailerC.mov" target="_new">
+						Zoo/City</A><BR>
+					<A HREF="ftp://209.44.26.64/pub/starwars/TFN_TrailerC.mov" target="_new">
+						Advancenet</A><BR>
+					<A HREF="http://empire.res.wabash.edu/TFN_TrailerC.mov" target="_new">
+						Star Wars HUB</A><BR>
+					<A HREF="ftp://t3:t3@209.53.30.233/TFN_TrailerC.mov" TARGET="_new">
+						ToodlePip! FTP</A><BR>
+					<A HREF="http://ciateq.mx/~elwen/starwars/TFN_TrailerC.mov" target="_new">
+						Ciateq (Mexico City)</A><BR>
+					<A HREF="ftp://www.starwars.nu/trailer-c_tfn.mov" target="_new">
+						starwars.nu (Sweden)</A><BR>
+					<A HREF="http://www.fh-sbg.ac.at/~tstadlau/starwars/trailerc60.mov " target="_new">
+						SKYNET (Austria)</A><BR>
+					<A HREF="http://www.shatteredrose.com/TFN_TrailerC.mov" target="_new">
+						James Wj Rose</A><BR>
+					<A HREF="http://163.120.93.51/TFN_TrailerC.mov" target="_new">
+						Benjamin Everson</A><BR>
+					<A HREF="http://www.landspeeder.com/TFN_TrailerC.mov" target="_new">
+						landspeeder.com</A><BR>
+					<A HREF="http://www.blackjedi.eu.org/movies/tfn_trailerc.mov" target="_new">
+						BlackJedi.eu.org (UK)</A><BR> 
+					<A HREF="http://www.elombligo.com/trailer_star_wars.htm" target="_new">
+						El Ombligo (Argentina)</A><BR>
+					<A HREF="ftp://ftp.theed.net/TFN_TrailerC.mov" target="_new">
+						Theed.net</A><BR>
+					<A HREF="http://josh.rlc.net/trailers/trailerc.mov" target="_new">
+						josh.rlc.net</A><BR>
+					<A HREF="ftp://phroputer.dhs.org/pub/FanTrailers/TFN_TrailerC.mov" target="_new">
+						Ben Vaughan</A><BR>
+					<A HREF="http://expert.cc.purdue.edu/~brittin/images/trailerc.mov" target="_new">
+						Brittin Cruthers</A><BR>
+					<A HREF="http://students.washington.edu/achen/TFN_TrailerC.mov" target="_new">
+						Andrew Chen</A><BR>
+					<A HREF="http://weber.u.washington.edu/~achen/TFN_TrailerC.mov" target="_new">
+						Andrew Chen</A><BR>
+					<A HREF="http://www.dianoga.com/movies/TFN_TrailerC.mov" target="_new">
+						Erik Chudy</A><BR>
+					<A HREF="ftp://ftp.reborn.net/TFN_TrailerC.mov" target="_new">
+						reborn.net</A><BR> 
+					<A HREF="http://foobar.dhs.org/starwars/" target="_new">
+						foobar.dhs.org</A><BR> 
+					<A HREF="http://www.cis.ohio-state.edu/~mahrt/starwars/TFN_TrailerC.mov" target="_new">
+						Dallas Mahrt</A><BR>
+					<A HREF="http://toaster.sped.ukans.edu/TFN_TrailerC.mov" target="_new">
+						Justin Bradford</A><BR>
+					<A HREF="http://www.emich.edu/~winterh/starwars/TFN_TrailerC.mov" target="_new">
+						Robert Winterhalter</A><BR>
+					<A HREF="ftp://starwars.novamet.com/pub/TFN_TrailerC.mov" target="_new">
+						NovaMetrix Development</A><BR>
+					<A HREF="http://labyrinth.access.com.au/TFN_TrailerC.mov" target="_new">
+						Paul Robinson (Australia)</A><BR>
+					<A HREF="http://www.thereelsite.com/news.html" target="_new">
+						The Reel Site</A><br>
+					<A HREF="http://hawk-ent.simplenet.com/Downloads" target="_new">
+						Daniel Hamad</A><BR>
+					<A HREF="http://www.tod.net/starwars/TFN_TrailerC.mov" target="_new">
+						tod.net</A><BR>
+					<A HREF="http://syntom.cit.cornell.edu/TFN_TrailerC.mov" target="_new">
+						Andreas Matern</A><BR>
+					<A HREF="http://tfarchive.com/starwars/TFN_TrailerC.mov" target="_new">
+						Transformers Archive</A><BR>
+					<A HREF="http://www.arsenic.net/downloads" target="_new">
+						arsenic.net</A><BR>
+					<P>
+					If you can mirror this file, please 
+					<A HREF="mailto:starwars@theforce.net?subject=TrailerC_mirror">
+					send us a note</A>.
+					<P>
+					
+					<IMG SRC="newspics/trailerBmirrors.jpg"><P>
+					<B>OFFICIAL SITE</B><BR>
+					<A HREF="http://trailer.starwars.com">trailer.starwars.com</A><BR>
+					<A HREF="http://www.apple.com/quicktime/trailers/fox/episode-i/">Apple.Com</A>(very fast)
+					<P>
+					<B>480 x 216</B><BR>
+					<A HREF="http://cgi.pathfinder.com/time/digital/reports/starwars/starwars.html">
+						TIME Digital</A> (very fast)<BR>
+					<A HREF="ftp://ftp.zdnet.com/pub/private/menace/menace_480.mov">
+						ZDNet</A> (very fast)<BR>
+					<A HREF="ftp://209.143.228.116/pub/pmenaceb.mov">
+						The DEN</A><BR>
+					<A HREF="http://www.getwild.com/cgi-bin/external.cgi?209.143.228.181/scifi/Episode1.mov">
+						The DEN</A><BR>
+					<A HREF="http://www.nytimes.com/library/film/starwars-trailer480.html">
+						The New York Times</A><BR>
+					<A HREF="http://206.251.0.16/menace_480.mov">
+						Karl Davis</A><BR>
+					<A HREF="http://www.sith.co.uk/menace_480.mov">
+						ohms</A> - UK<BR>
+					<A HREF="http://webdev.webstar.co.uk/_ohms/downloads/star%20wars/menace_480.mov">
+						ohms</A> - UK<BR>
+					<A HREF="ftp://ftp.ethereality.com/pub/menace_480.mov">
+						Star Wars Wonder World</A><BR>
+					<A HREF="http://163.120.93.51/menace_480.mov">
+						Ben Everson</A><BR>
+					<A HREF="http://www.christs.cam.ac.uk/~jrc31/Tb480.mov">
+						The Movie Sentinel</A> - UK<BR>
+					<A HREF="http://dust.simplenet.com/starwars/menace_480.mov">
+						Andreas C</A><BR>
+					<A HREF="http://s8953a.steinan.ntnu.no/menace_480.mov">
+						Hexaphim</A> - Norway<BR>
+					<A HREF="http://www.umsys.umu.se/~daniel/pub/menace_480_mov.zip">
+						Realm of Atrus</A> - Sweden<BR>
+					<A HREF="http://www.games.net/download/files/0,1129,1061,00.html">
+						Games.net</A><BR>
+					<A HREF="http://www.won.net/scripts/download.pl?url=http://ftp.won.net/pub/movies/menace_480.mov">
+						WON.net</A><BR>
+					<A HREF="http://www.red5.net.au/menace_480.mov">
+						Red5</A> - Australia<BR>
+					<A HREF="http://www.lacosa.com.ar/menace_480.qt">
+						El Ombligo</A> - Argentina<BR>
+					<A HREF="http://kcohn.simplenet.com/menace_480.mov">
+						Kevin Cohn</A><BR>
+					<A HREF="http://www.netstudio.hu/starwars/video/Episode-I/menace_480.mov">
+						Aluminium Falcon</A> - Hungary<BR>
+					<A HREF="http://www.archiwum.star.gdansk.pl/video/menace_480.qt">
+						Archiwum Star Wars</A> - Poland<BR>
+
+
+<P>
+					<B>320</B><BR>
+					<A HREF="http://cgi.pathfinder.com/time/digital/reports/starwars/starwars.html">
+						TIME Digital</A> (very fast)<BR>
+					<A HREF="ftp://209.143.228.116/pub/menace_320.mov">
+						The DEN</A><BR>
+					<A HREF="http://www.getwild.com/cgi-bin/external.cgi?209.143.228.181/scifi/menace_320.mov">
+						The DEN</A><BR>
+					<A HREF="http://www.nytimes.com/library/film/starwars-trailer320.html">
+						The New York Times</A><BR>
+					<A HREF="http://www.christs.cam.ac.uk/~jrc31/tb320.mov">
+						The Movie Sentinel</A> - UK<BR>
+					<A HREF="http://163.120.93.51/menace_320.mov">
+						Ben Everson</A><BR>
+					<A HREF="http://www.games.net/download/files/0,1129,1060,00.html">
+						Games.net</A><BR>
+					<A HREF="http://www.red5.net.au/menace_320.mov">
+						Red5</A> - Australia<BR>
+					<A HREF="http://www.netstudio.hu/starwars/video/Episode-I/menace_320.mov">
+						Aluminium Falcon</A> - Hungary<BR>
+					<A HREF="http://www.swen.naboomail.com/prequels/menace_320.mov">
+						SWEN</A><BR>
+
+					<P>
+					<B>240</B><BR>
+					<A HREF="http://www.starwars-universe.com/conseiljedi/trailer/menace_240.mov">
+						TFN French Edition</A><BR>
+					<A HREF="ftp://209.143.228.116/pub/menace_240.mov">
+						The DEN</A><BR>
+					<A HREF="http://www.nytimes.com/library/film/starwars-trailer240.html">
+						The New York Times</A><BR>
+					<A HREF="http://members.xoom.com/trailerb/smalltrailerb.zip">
+						Unca Danny</A><BR>
+					<A HREF="http://www.theed.net/smalltrailerb.zip">
+						Theed.net</A><BR>
+					<P>
+					If you have a mirror site, please
+					<A HREF="mailto:starwars@theforce.net?subject=Trailer B Mirror">
+					send us a note</A>.
+					<BR>&nbsp;
+					</FONT>
+				</TD>
+			</TR>
+		</TABLE>
+
+
+<!-- END OF MAIN INDEX HEADER -->	
+<TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0 WIDTH=100%><TR><TD BGCOLOR=#968A72><FONT FACE=Arial,Helvetica SIZE=4><B>&nbsp;&nbsp;Latest Star Wars Prequels News</B></FONT></TD></TR></TABLE>
+<CENTER><A HREF=../cgi-bin/Ultimate.cgi><SMALL>Click here to discuss these stories in our Jedi Council forums.</A><P></SMALL></CENTER><FONT SIZE=3 COLOR=#968A72><B>Status of Episode I Sets</B></FONT><BR>
+<SMALL>Fri, Apr 02, 99 04:02:55 AM CST<P></SMALL>
+The Bothan Spy wrote in with an update, letting us know that LucasFilm is keeping the Episode I sets stored at Leavesden (albeit in a dismantled state) so that they can be used again for Episode II.  This concurs with previous reports that Lucas will return to the United Kingdom for at least some Episode II filming.<P>
+<FONT SIZE=3 COLOR=#968A72><B>Tonight's <I>ET</I> to Feature This Summer's Hot Movies</B></FONT><BR>
+<SMALL>Thu, Apr 01, 99 07:44:16 PM CST<P></SMALL>
+Kenneth, Carter and other readers sent us notes to let us know that tonight's Entertainment Tonight will be carrying a story on the summer movies. Naturally, Star Wars will be there... but probably not a lot of new information. The <A HREF="http://www.etonline.com" target="_new">ET Online</A> preview shows 'Star Wars', 'Austin Powers', 'Eyes Wide Shut' and 'Wild, Wild West'.<P><I>UPDATE:</I>  Carter followed up, "Just watched ET! It said that some close friends of George Lucas's (Spielberg and others) screened the movie and suggested some changes to be  made in the ending of the movie to make it less confusing. George actually  did change it and then said forget that and changed it back."<P>
+<FONT SIZE=3 COLOR=#968A72><B>Displaying the Books</B></FONT><BR>
+<SMALL>Thu, Apr 01, 99 03:57:19 PM CST<P></SMALL>
+Check our <A HREF=../books/index.html><FONT COLOR=#646d91>Books section</FONT></A> for this Prequels-related story.<P><FONT SIZE=3 COLOR=#968A72><B>More Travelling Show Information</B></FONT><BR>
+<SMALL>Thu, Apr 01, 99 03:57:19 PM CST<P></SMALL>
+Check our <A HREF=../holonet/index.html><FONT COLOR=#01237D>Miscellaneous section</FONT></A> for this Prequels-related story.<P><FONT SIZE=3 COLOR=#968A72><B>Lucas Shows <I>TPM</I> To Friends and Reveals Timeline</B></FONT><BR>
+<SMALL>Thu, Apr 01, 99 02:37:57 PM CST<P></SMALL>
+A <A HREF="http://www.variety.com/search/article.asp?articleID=1117492871" target="_new">Daily Variety</A> report by Army Archerd has some fun quotes from Lucas, as well as revealing that TPM is on time, he'll start writing Episode 2 in December for shooting in June 2000 for release (presumably) in 2002 and that 2005 will be the end of the Star Wars film run.  <BLOCKQUOTE><SMALL>  HOLLYWOOD (Variety) - ""That's what friends are for,'' said George Lucas, who has shown his ""Star Wars: Episode 1 - The Phantom Menace'' to friends Steven  Spielberg, Ron Howard, Francis Ford Coppola, Martin Scorsese, Brian De Palma, Frank Darabont and Larry Kasdan, ""whom I trust,'' Lucas added.  <P>  Their reaction/opinion? ""Quite frankly,'' Lucas sheepishly admitted, ""they were blown away.'' Also quite frankly, Lucas admits he didn't expect a ""Return of the Jedi''  jubilant reaction. He says he'll be happy with ""Empire Strikes Back'' audience approval.  <P>  ""But you never know,'' he admitted. ""However, this one is the funniest as well as being very exciting and very emotional. And it's been a fun experience. I'm very  happy with it.''  <P>  He'd gone back to make editing changes after showing it to his friends, saying, ""I know what they were thinking. But, then I put it all back,'' he laughed. (His friends'  reaction to the first ""Star Wars,'' you recall, was very negative.)  <P>  He is now a week and a half away from completing the final 100 shots and does about 40 of 'em a week. He'll be more than ready for the May 19 launching.  <P>  As for the next prequel, he'll start writing the script in January to shoot in June 2000. ""I have an advantage, I don't have to go through development hell. And I don't  have to get the director's approval.''  <P>  He'll need only three years, instead of the usual four, to complete the next ""Star Wars.'' He has the preliminary designs as well as (some of) the established characters,  costumes, planets and sets which were created for/with ""Episode I.'' He says he'll be ""stuck'' with his ""Star Wars'' until 2005.  <P>  After that? ""Anything different from this!'' But he reminds, ""This has been a fun experience'' -- for us, too, George.  </SMALL></BLOCKQUOTE><P>
+<FONT SIZE=3 COLOR=#968A72><B><I>TPM</I> Tie-ins: 7-11 / Better Homes and Gardens ?</B></FONT><BR>
+<SMALL>Thu, Apr 01, 99 11:48:10 AM CST<P></SMALL>
+Two readers have checked in with reports of Episode 1 tie-ins that we haven't been able to confirm or deny. <FONT COLOR=PURPLE>One was told by a 7-11 Convenience Store representative that they would have "special plastic  drink/slurpee cups with characters from TPM on them". Another reader wrote us a few weeks ago to tell us he was unloading 300 boxes which turned out to labelled "Star Wars display for Better Homes and Gardens".</FONT><P>    <I>UPDATE:</I> A reader writes, "Ohhh would that it were true. I've worked for Meredtih Corp, the parent company of Better Homes and Gardens, for years as an art director. I can tell you that no one here knows anything about a promotional tie in with the Phantom Meanace. Whatever this person unloaded is probably unauthorized."<P>  <I>UPDATE 2:</I> The Replacement Killer writes, "I work in the advertising department for The Southland  Corporation (7-Eleven), and I can confirm with you that there are indeed  Fountain Soft-drink collectors cups going to 7-Eleven in mid May.  There  are several different cups to the collection.  All but one cup can be  found at other restaurant chains.  There will be one collector's cup  exclusive to 7-Eleven, so get out there and get one!!  In addition to the  collectors cups, there will be a 7-foot tall standee of Jar-Jar going into  all 7-Eleven stores most likely starting in June.  Let me tell you that  this thing is HUGE!  And the detail on Jar-Jar is absolutely amazing!   7-Eleven is expected to receive many other "goodies" through Pepsi which  should roll out the day the movie opens."  <P>  If you happen to have any connection at all with either of these companies and can shed some light on these (or any other) promotions, please <A HREF="mailto:starwars@theforce.net">send us a note</A>.<P>
+<FONT SIZE=3 COLOR=#968A72><B>More <I>TPM</I> Magazine Announcements</B></FONT><BR>
+<SMALL>Thu, Apr 01, 99 11:08:33 AM CST<P></SMALL>
+<IMG SRC="newspics/0599_lucas_cover_big.jpg" ALIGN=LEFT>The print edition of PREVIEWS lists the following publications as scheduled to have Episode 1 coverage in their June issues:  Beckett Sci-Fi Collector #4,  Tomart's Action Figure Digest #66,  Cinefex #78, Femme Fatales Vol 8 #1, Sci-Fi Teen #7, SFX #54, Starburst #251 and Xpose Special #8.<P>  <IMG SRC="newspics/0599_natalie_cover_big.jpg" ALIGN=RIGHT>  The Star Wars related issues of Premiere magazine that <A HREF="http://jedinet.com/prequels" target="_new">Jedinet</A> has been reporting about is now being previewed at the magazine's official site. Its May issue (shipping April 6) will carry four separate covers. <A HREF="http://www.premiere.com/articles/0599_starwars_teaser_1.html" target="_new">Teaser 1</A> has part of an interview where George Lucas responds to specific internet-started rumors. <A HREF="http://www.premiere.com/articles/0599_starwars_teaser_2.html" target="_new">Preview 2</A> quotes Natalie Portman on the scope of being in Star Wars.<P>  We're also told that a certain popular men's magazine "read for the articles" will have a story on the Star Wars lineups and an interview with Samuel L Jackson in June. That's all we'll say on that.<P>
+<FONT SIZE=3 COLOR=#968A72><B>Hasbro's Complete Summer 1999 Star Wars Catalog</B></FONT><BR>
+<SMALL>Thu, Apr 01, 99 02:30:31 AM CST<P></SMALL>
+Check our <A HREF=http://theforce.net/collecting/><FONT COLOR=#ffb208>Collecting section</FONT></A> for this Prequels-related story.<P><FONT SIZE=3 COLOR=#968A72><B>Some Star Wars Schtick on Conan O'Brien</B></FONT><BR>
+<SMALL>Thu, Apr 01, 99 02:09:19 AM CST<P></SMALL>
+A number of alert readers have informed us that tonight's Conan O'Brien has some funny Episode I-related humour.  Those of you in the western North American timezones are encouraged to tune in and see it.<P>
+<FONT SIZE=3 COLOR=#968A72><B>New Pics from PREVIEWS Print Edition</B></FONT><BR>
+<SMALL>Thu, Apr 01, 99 01:44:48 AM CST<P></SMALL>
+The print edition of PREVIEWS magazine featured new pictures of Amidala and Qui-Gon Jinn in promoting the two comic one-shot issues based on these characters. The poor quality is due to the newsprint. Also interesting was the characterization of Jinn: (Hilight very minor spoilers to read)<P>  <FONT COLOR=WHITE>  Though he has been branded a maverick, a troublesome Jedi with a propensity to follow his own aptitude for the Force in all living things, Qui-Gon Jinn is undoubtedly a Jedi Knight of the first order.<P></FONT>  <CENTER>  <IMG SRC="newspics/prevAmidala.jpg">  <IMG SRC="newspics/prevQuiGon.jpg">  </CENTER><P ALIGN=RIGHT><SMALL><A HREF=http://theforce.net/cgi-bin/tfn.cgi?action=getstory&storyID=1631&webTV=on><FONT COLOR=BLUE>WebTV readers click here for SPOILERS</FONT></A></SMALL></P>
+<P>
+<FONT SIZE=3 COLOR=#968A72><B>Tickets for TPM</B></FONT><BR>
+<SMALL>Wed, Mar 31, 99 11:06:48 PM CST<P></SMALL>
+While the official policy is no advance tickets, these reported scans showed up in our inbox earlier today from MANDALORE:<P><center>    <IMG SRC="newspics/first.JPG"></center><P>
+<FONT SIZE=3 COLOR=#968A72><B>WGN and theforce.net</B></FONT><BR>
+<SMALL>Wed, Mar 31, 99 10:54:27 PM CST<P></SMALL>
+Our very own Brian Zoromski will be on Chicago's ultra powerful WGN Radio tonight to talk prequels with their night hosts Steve and Johnnie. You can listen to the program which is slated to air just after midnight (CST) tonight via their website's Real Audio Broadcast, or on 720 on your AM dial.<P>    Click <A HREF="http://www.wgnam.com/listen/" target=parent>here</a> to visit their site, then click "enjoy" to hear them live via the world wide web. <P><P>
+<FONT SIZE=3 COLOR=#968A72><B>Official Site Update</B></FONT><BR>
+<SMALL>Wed, Mar 31, 99 10:48:32 PM CST<P></SMALL>
+The Official Site has updated with a followup to their Weapons of Episode I with a 'Locations' series. The first in the segment is the MosEspa Marketplace.<P>     Click <A HREF="http://www.darthmaul.com" target=parent>here</a> to visit their site.<P>
+<FONT SIZE=3 COLOR=#968A72><B>McGregor's Thoughts on Star Wars Dialog</B></FONT><BR>
+<SMALL>Wed, Mar 31, 99 05:34:10 PM CST<P></SMALL>
+In today's <A HREF="http://www.asylum.com/cgi-bin/news?&loadstory=922849751" target="_new">Hollywood Wire - Wire Datebook</A>, they have a small writeup about Ewan McGregor (as it's his birthday). His comments on <I>TPM</I> dialog are interesting...  <BLOCKQUOTE>  Ewan MacGregor, 28 - The Scottish-born actor plays the young                                                 Obi-Wan Kenobi in this summer's Star Wars: Episode One, The                                                 Phantom Menace. McGregor says his biggest challenge in                                                 portraying the character -- who was portrayed by Alec Guinness in                                                 the first Star Wars trilogy -- was getting his English accent just                                                 right. The film is filled with plenty of special effects, but McGregor                                                 admits the dialogue is just as bad in the new film as it was in the                                                 first Star Wars. In fact, he calls Alec Guinness' performance in the                                                 first flick "legendary" considering "all the bad dialogue." MacGregor                               is also the nephew of actor Dennis Lawson, who portrayed Wedge Antilles in the first                               Star Wars trilogy. McGregor flicks: Star Wars: Episode One, The Phantom Menace                               (1999), Eye of the Beholder (1999), South From Hell's Kitchen (1999), A Life Less                               Ordinary (1997), Trainspotting (1996) Shallow Grave (1994).</BLOCKQUOTE><P>
+<FONT SIZE=3 COLOR=#968A72><B>Internet Media Decision Irks Roughcut</B></FONT><BR>
+<SMALL>Wed, Mar 31, 99 04:07:31 PM CST<P></SMALL>
+Today's <A HREF="http://www.roughcut.com/today/hot.button/index.html" target="_new">Hot Button column</A> by <A HREF="mailto:david@roughcut.com">David Poland</A> complains about an LFL decision to exclude "internet outlets" from the press junket for the film. (You should swing by today if interested as the full article will likely disappear soon.) Here are some clips...  <BLOCKQUOTE><SMALL>  I found out this week that Lucasfilm has decided to disallow participation in the junket for the film by any internet outlets. Why? The stated goal is to "funnel all of the internet traffic to starwars.com." Let me be the first to say: "Screw you, guys!" After months of making promotional decisions on the basis of making the film "for the people," Lucasfilm is shutting the door on the very people who make up their core audience. You...  <P>And they don't need the traffic at their site. It's not a money issue. (Even                               though their Website is now loaded with e-commerce upsales of toys and                               posters and movie-related events.) It's a control issue. Control of reviews.                               (Major 'net publications respect embargo dates.) Control of the secrets.                               (Major 'net publications respect the need to avoid spoilers, far more so than                               the New York or Los Angeles Times, thank you.) Control of the story.                               Sorry, guys. You can't control the truth. And as infuriating as any of this is                               the fact that all the news is likely to be good. What is this obsession? And                               why use this muscle on the medium that most honors you?  </SMALL></BLOCKQUOTE>  It's an interesting issue indeed. While fan sites like TheForce.Net wouldn't be considered "press" to LFL anyhow, we're curious about your thoughts on this issue. Please speak out in our <A HREF="http://jedicouncil.net/cgi-bin/forumdisplay.cgi?action=topics&forum=+The+Prequels+(Non-Spoiler!!)">Jedi Council non-spoiler prequel forum</A>.<P>
+<FONT SIZE=3 COLOR=#968A72><B>Boston Globe Article</B></FONT><BR>
+<SMALL>Wed, Mar 31, 99 03:33:26 PM CST<P></SMALL>
+Check our <A HREF=../holonet/index.html><FONT COLOR=#01237D>Miscellaneous section</FONT></A> for this Prequels-related story.<P><FONT SIZE=3 COLOR=#968A72><B>SPY REPORT: Amidala's Plan</B></FONT><BR>
+<SMALL>Wed, Mar 31, 99 03:26:20 PM CST<P></SMALL>
+<A HREF="mailto:mtfbwya@hotmail.com">MTFBWYA</a> has yet again contributed with more dialogue from an early draft of Episode I. Here's the report, spoilers included, so highlight to read:<P><BLOCKQUOTE>    <font color=white><center>CAPT. PANAKA<BR>  The Federation will force you to sign the treaty.<P>    QUI-GON<BR>  I agree. . . I'm not sure what you hope to accomplish by going back.<P>    AMIDALA<BR>  I hope to take our system back.<P>    CAPT. PANAKA<BR>  That's impossible. There are only twelve of us. . . we have no army.<P>    QUI-GON<BR>  We cannot fight a war for you, Your Highness, only protect you.<P>    AMIDALA<BR>  I have a plan. . . Jar Jar Binks!<P>  </font></center></BLOCKQUOTE>  What exactly does this segment of the script suggest? Why not head on over to the Jedicouncil <A HREF="http://www.jedicouncil.com">forums</a> to discuss this with other visitors. Also, if you haven't read MTFBWYA's prequel <A HREF="http://jedicouncil.net/forum/Forum1/HTML/004199.html" target=parent>threads</a> in our Jedicouncil, be sure to check them out!<P ALIGN=RIGHT><SMALL><A HREF=http://theforce.net/cgi-bin/tfn.cgi?action=getstory&storyID=1638&webTV=on><FONT COLOR=BLUE>WebTV readers click here for SPOILERS</FONT></A></SMALL></P>
+<P>
+<FONT SIZE=3 COLOR=#968A72><B>Happy Birthday Ewan!</B></FONT><BR>
+<SMALL>Wed, Mar 31, 99 12:19:00 PM CST<P></SMALL>
+Born 3/31/71.<P>    Thanks to SWFSun for informing us.<P>
+<FONT SIZE=3 COLOR=#968A72><B>WGY Radio 810 Dave Prowse Interview</B></FONT><BR>
+<SMALL>Wed, Mar 31, 99 11:57:33 AM CST<P></SMALL>
+Check our <A HREF=../holonet/index.html><FONT COLOR=#01237D>Miscellaneous section</FONT></A> for this Prequels-related story.<P><FONT SIZE=3 COLOR=#968A72><B>Celebration Ticket Information. . .</B></FONT><BR>
+<SMALL>Wed, Mar 31, 99 08:21:01 AM CST<P></SMALL>
+<A HREF="http://www.hydrospanner.com/toys" atreg=parent>Hydrospanner</A> is reporting on some intesting news regarding the Official SW Celebration coming up in Denver in about a month. Be sure to check out their site for the full report. Here's part of their story:<p><blockquote>Due to counterfeiting  problems, if you ordered the 3-Day Event Pass from the Star Wars Fan  Club/MosEspa.com for the Star Wars Celebration (April 30th-May 2nd, Denver,  CO) you will NOT recieve them!</BLOCKQUOTE><P>  Rod from our Rebel Friends section also called the fan club and here's the reply they gave him yesterday:<P><BLOCKQUOTE>  The operator said I would then receive a  confirmation of the order first (I suppose like the e-mail confirmation the rest of our staff has been receiving), and that they don't send the tickets anyway: the only  send a VOUCHER and you have to go to the ticket booth in Denver to get your  tickets. The guy said that even when the voucher did arrive too late for me,  they'd still have my name in the computer, and upon showing a legitimate ID  I  would be able to get my ticket at the ticket booth in Denver.</BLOCKQUOTE><P>  Then Amy contributes with this little tidbit about Cons in general:<P><BLOCKQUOTE>  This is the way alot of cons work nowadays.. actually, almost all of them. Even if you have paid in advance you still have to stand in line for your real entrance ticket, your con badge, your bag of goodies and things like that.  <P></BLOCKQUOTE> Thanks for the help! As soon as we get official confirmation from <A HREF="http://shop.starwars.com" target=parent">MosEspa.com</a> you'll hear it hear first.<P>    And stay tuned to the latest information regarding the Denver Celebration at our <A HREF="http://www.theforce.net/collecting/Denver/"target=parent>Celebration Page</a> and expect a major update soon! Make TheForce.Net your place for all of the news from Denver!<P>
+<TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0 WIDTH=100%><TR><TD BGCOLOR=#968A72><FONT FACE=Arial,Helvetica SIZE=4><B>&nbsp;&nbsp;Recent Star Wars Prequels News</B></FONT></TD></TR></TABLE><P>
+<DD><LI><A HREF=http://theforce.net/cgi-bin/tfn.cgi?action=getstory&storyID=1623><FONT COLOR=#968A72><B>Topps Offers Hobby Exclusive TPM Mag</B></FONT></A>
+<SMALL>Wed, Mar 31, 99</SMALL>
+<DD><LI><A HREF=http://theforce.net/cgi-bin/tfn.cgi?action=getstory&storyID=1620><FONT COLOR=#968A72><B>Official Site Update</B></FONT></A>
+<SMALL>Tue, Mar 30, 99</SMALL>
+<DD><LI><A HREF=http://theforce.net/cgi-bin/tfn.cgi?action=getstory&storyID=1619><FONT COLOR=#968A72><B>Test Shots of New Battledroid Figure</B></FONT></A>
+<SMALL>Tue, Mar 30, 99</SMALL>
+<DD><LI><A HREF=http://theforce.net/cgi-bin/tfn.cgi?action=getstory&storyID=1616><FONT COLOR=#968A72><B>SW Fans Planning to Skip Work?</B></FONT></A>
+<SMALL>Tue, Mar 30, 99</SMALL>
+<DD><LI><A HREF=http://theforce.net/cgi-bin/tfn.cgi?action=getstory&storyID=1613><FONT COLOR=#968A72><B>McGregor and Neeson Featured in UK Article</B></FONT></A>
+<SMALL>Tue, Mar 30, 99</SMALL>
+<DD><LI><A HREF=http://theforce.net/cgi-bin/tfn.cgi?action=getstory&storyID=1611><FONT COLOR=#968A72><B>Trailer C is Ready for Download</B></FONT></A>
+<SMALL>Mon, Mar 29, 99</SMALL>
+<DD><LI><A HREF=http://theforce.net/cgi-bin/tfn.cgi?action=getstory&storyID=1612><FONT COLOR=#968A72><B><I>60 Minutes</I> Observations: Tape Date and Duel Note</B></FONT></A>
+<SMALL>Mon, Mar 29, 99</SMALL>
+<DD><LI><A HREF=http://theforce.net/cgi-bin/tfn.cgi?action=getstory&storyID=1609><FONT COLOR=#968A72><B>The Outer Rim Posts Mega List of Episode One Products</B></FONT></A>
+<SMALL>Mon, Mar 29, 99</SMALL>
+<DD><LI><A HREF=http://theforce.net/cgi-bin/tfn.cgi?action=getstory&storyID=1608><FONT COLOR=#968A72><B>Ray Park Autograph Picture</B></FONT></A>
+<SMALL>Mon, Mar 29, 99</SMALL>
+<DD><LI><A HREF=http://theforce.net/cgi-bin/tfn.cgi?action=getstory&storyID=1607><FONT COLOR=#968A72><B>Seven Prequel Poster Designs</B></FONT></A>
+<SMALL>Mon, Mar 29, 99</SMALL>
+<DD><LI><A HREF=http://theforce.net/cgi-bin/tfn.cgi?action=getstory&storyID=1606><FONT COLOR=#968A72><B>Diary 8a and More Confirmed <I>Celebration</I> Guests</B></FONT></A>
+<SMALL>Mon, Mar 29, 99</SMALL>
+<DD><LI><A HREF=http://theforce.net/cgi-bin/tfn.cgi?action=getstory&storyID=1602><FONT COLOR=#968A72><B>Late Show TPM sketch</B></FONT></A>
+<SMALL>Mon, Mar 29, 99</SMALL>
+<DD><LI><A HREF=http://theforce.net/cgi-bin/tfn.cgi?action=getstory&storyID=1600><FONT COLOR=#968A72><B>John Williams TV Interview</B></FONT></A>
+<SMALL>Mon, Mar 29, 99</SMALL>
+<DD><LI><A HREF=http://theforce.net/cgi-bin/tfn.cgi?action=getstory&storyID=1603><FONT COLOR=#968A72><B>Sio Babble or Bibble? Sidius or Sidious?</B></FONT></A>
+<SMALL>Mon, Mar 29, 99</SMALL>
+<DD><LI><A HREF=http://theforce.net/cgi-bin/tfn.cgi?action=getstory&storyID=1601><FONT COLOR=#968A72><B>USA Today TPM article</B></FONT></A>
+<SMALL>Mon, Mar 29, 99</SMALL>
+<DD><LI><A HREF=http://theforce.net/cgi-bin/tfn.cgi?action=getstory&storyID=1599><FONT COLOR=#968A72><B>Episode I Incredible Cross-Sections Scans</B></FONT></A>
+<SMALL>Mon, Mar 29, 99</SMALL>
+<DD><LI><A HREF=http://theforce.net/cgi-bin/tfn.cgi?action=getstory&storyID=1595><FONT COLOR=#968A72><B>Star Wars Episode I Sticker Book</B></FONT></A>
+<SMALL>Mon, Mar 29, 99</SMALL>
+<DD><LI><A HREF=http://theforce.net/cgi-bin/tfn.cgi?action=getstory&storyID=1598><FONT COLOR=#968A72><B><I>60 Minutes</I> Video</B></FONT></A>
+<SMALL>Mon, Mar 29, 99</SMALL>
+<DD><LI><A HREF=http://theforce.net/cgi-bin/tfn.cgi?action=getstory&storyID=1597><FONT COLOR=#968A72><B>Episode I Micro Machine Boxed vehicles</B></FONT></A>
+<SMALL>Sun, Mar 28, 99</SMALL>
+<DD><LI><A HREF=http://theforce.net/cgi-bin/tfn.cgi?action=getstory&storyID=1596><FONT COLOR=#968A72><B><i>Boston Globe</i> Reports on Williams Soundtrack</B></FONT></A>
+<SMALL>Sun, Mar 28, 99</SMALL>
+<DD><LI><A HREF=http://theforce.net/cgi-bin/tfn.cgi?action=getstory&storyID=1581><FONT COLOR=#968A72><B>The Force.net Returns to TalkSpot.com</B></FONT></A>
+<SMALL>Sun, Mar 28, 99</SMALL>
+<P><TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0 WIDTH=100%><TR><TD BGCOLOR=#968A72><FONT FACE=Arial,Helvetica SIZE=4><B>&nbsp;&nbsp;Star Wars Prequels News Archive</B></FONT></TD></TR></TABLE><P>
+<CENTER>&#8226;&nbsp;<A HREF=../cgi-bin/tfn.cgi?action=archive&month=1999-04&section=prequels><FONT COLOR=#968A72>April 1999</FONT></A>&nbsp;&#8226;
+<A HREF=../cgi-bin/tfn.cgi?action=archive&month=1999-03&section=prequels><FONT COLOR=#968A72>March 1999</FONT></A>&nbsp;&#8226;
+<A HREF=../cgi-bin/tfn.cgi?action=archive&month=1999-01&section=prequels><FONT COLOR=#968A72>January 1999</FONT></A>&nbsp;&#8226;
+<A HREF=../cgi-bin/tfn.cgi?action=archive&month=1998-12&section=prequels><FONT COLOR=#968A72>December 1998</FONT></A>&nbsp;&#8226;
+<A HREF=../cgi-bin/tfn.cgi?action=archive&month=1998-11&section=prequels><FONT COLOR=#968A72>November 1998</FONT></A>&nbsp;&#8226;
+<A HREF=../cgi-bin/tfn.cgi?action=archive&month=1998-10&section=prequels><FONT COLOR=#968A72>October 1998</FONT></A>&nbsp;&#8226;
+<A HREF=../cgi-bin/tfn.cgi?action=archive&month=1998-09&section=prequels><FONT COLOR=#968A72>September 1998</FONT></A>&nbsp;&#8226;
+<A HREF=../cgi-bin/tfn.cgi?action=archive&month=1998-08&section=prequels><FONT COLOR=#968A72>August 1998</FONT></A>&nbsp;&#8226;
+<A HREF=../cgi-bin/tfn.cgi?action=archive&month=1998-07&section=prequels><FONT COLOR=#968A72>July 1998</FONT></A>&nbsp;&#8226;
+<A HREF=../cgi-bin/tfn.cgi?action=archive&month=1998-06&section=prequels><FONT COLOR=#968A72>June 1998</FONT></A>&nbsp;&#8226;
+</CENTER>
+<!-- START OF MAIN INDEX FOOTER -->	
+		</td>
+	</tr>
+</table>
+
+</BODY>
+</HTML>

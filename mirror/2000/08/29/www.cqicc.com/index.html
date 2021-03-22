@@ -1,0 +1,33 @@
+<html><body bgcolor=#000000><table bgcolor=#000000 width=75% align=center border=0 cellpadding=10><td>
+<font color=#ffffff face="tahoma" size=+0>
+	<center><font size=+2><b>Hey admin, listen up</b></font></center>
+	<br>
+	Ok man. I broke into your site on the 3rd of this month. I emailed you twice. I sent you details of the exploit. And I've never
+	received a reply and your site is still open to attack. Do you care? Obviously not.<br><br>
+	
+	So. I got in through your SQL server - it has no password on the 'sa' account which lets me do anything on your system. There are many
+	other holes you're vulnerable to. I have taken the liberty of doing the following:<br><br>
+	
+	<ul>
+		- I've shut down your SQL server. Restart it and give the 'sa' user a password, but ONLY IF YOU NEED TO USE IT. <br><br>
+		- I've moved the MSADC files out from "c:\program files\common files\system\msadc" to "c:\temp\msadc"<br><br>
+		- I've removed the sample files from your webroot<br><br>
+		- I've removed the samples scripts from your webroot<br><br>
+		- I've removed the administration sample scripts from your admin directory<br><br>
+	</ul><br><br>
+	
+	This should keep the script kiddies away. Please note that you should take time to secure your box for the future, including setting
+	the proper registry keys to disallow RDS attacks etc. <br><br>
+	
+	Also, you should unbind NETBIOS from your internet adapter... sheeeesh, where did you learn computing?<br><br>
+	
+	Basically, your machine is a hackers playground and you should persuade your boss to buy you some training and books on the subject
+	of security. Read the Micro$oft recommended security practices and implement them. Subscribe to Bugtraq. Remember what Bruce Schneier
+	said: "Security is a process, not a product". <br><br>
+	
+	If you feel you still don't want to speak to me or secure your server further, suit yourself. Otherwise, my email address is below.<br><br>
+	
+	-- Herbless@hushmail.com<br><br>
+	
+</td></table></body></html>	
+		<!-- www.attrition.org web hack mirror - watermark or something -->

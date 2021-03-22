@@ -1,0 +1,732 @@
+
+
+<html>
+<head>
+<title>Limp Bizkit Latest News</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!--created by jOn Walker for Etensity Inc. 2000 --> 
+<style type="text/css">
+#newsCont{position:absolute; width:235; height:290; overflow:hidden; top:130; left:130; clip:rect(0,235,290,0); visibility:hidden; z-index:46;}
+#newsDown{position:absolute; width:15; height:16; left:240; top:430; z-index:47}
+#newsUp{position:absolute; width:15; height:16; left:260; top:430; z-index:48;}
+#newsText{position:absolute; top:0; left:0; z-index:49;}
+</style>
+<script language="JavaScript" src="http://a52.g.akamai.net/7/52/329/5e512a0e26a1ca/www.limpbizkit.com/include/javascipts/scrollable.js"></script>
+<script type="text/javascript" language="JavaScript">
+//browsercheck
+function checkBrowser(){
+	this.ver=navigator.appVersion
+	this.dom=document.getElementById?1:0
+	this.ie5=(this.ver.indexOf("MSIE 5")>-1 && this.dom)?1:0;
+	this.ie4=(document.all && !this.dom)?1:0;
+	this.ns5=(this.dom && parseInt(this.ver) >= 5) ?1:0;
+	this.ns4=(document.layers && !this.dom)?1:0;
+	this.bw=(this.ie5 || this.ie4 || this.ns4 || this.ns5)
+	return this
+}
+bw = new checkBrowser()
+/*****************
+
+You set the width and height of the divs inside the style tag, you only have to
+change the divCont, Remeber to set the clip the same as the width and height.
+You can remove the divUp and divDown layers if you want. 
+This script should also work if you make the divCont position:relative.
+Then you should be able to place this inside a table or something. Just remember
+that Netscape crash very easily with relative positioned divs and tables.
+
+Updated with a fix for error if moving over layer before pageload.
+
+****************/
+//If you want it to move faster you can set this lower:
+var speed=50
+
+//Sets variables to keep track of what's happening
+var dloop, uloop, timer;
+
+//Object constructor
+function makeObj(obj,nest){
+    nest=(!nest) ? '':'document.'+nest+'.'
+	this.el=bw.dom?document.getElementById(obj):bw.ie4?document.all[obj]:bw.ns4?eval(nest+'document.'+obj):0;
+  	this.css=bw.dom?document.getElementById(obj).style:bw.ie4?document.all[obj].style:bw.ns4?eval(nest+'document.'+obj):0;
+	this.scrollHeight=bw.ns4?this.css.document.height:this.el.offsetHeight
+	this.clipHeight=bw.ns4?this.css.clip.height:this.el.offsetHeight
+	this.up=goUp;this.down=goDown;
+	this.moveIt=moveIt; this.x; this.y;
+    this.obj = obj + "Object"
+    eval(this.obj + "=this")
+    return this
+}
+function moveIt(x,y){
+	this.x=x;this.y=y
+	this.css.left=this.x
+	this.css.top=this.y
+}
+
+//Makes the object go up
+function goDown(move){
+	if(this.y>-this.scrollHeight+oCont.clipHeight){
+		this.moveIt(0,this.y-move);
+		if(dloop) setTimeout(this.obj+".down("+move+")", speed);
+	}
+}
+//Makes the object go down
+function goUp(move){
+	if(this.y<0){
+		this.moveIt(0,this.y-move);
+		if(uloop) setTimeout(this.obj+".up("+move+")", speed);
+	}
+}
+//Calls the scrolling functions. Also checks whether the page is loaded or not.
+function scroll(speed){
+	if(loaded){
+		if(speed>0) {uloop=false;dloop=true;oScroll.down(speed);}
+		else {dloop=false;uloop=true;oScroll.up(speed);}
+	}
+}
+
+//Stops the scrolling (called on mouseout)
+function noScroll(){
+	if (dloop) dloop=false;
+    if (uloop) uloop=false;
+	if(timer) clearTimeout(timer);
+}
+//Makes the object
+var loaded;
+function scrollInit(){
+	oCont=new makeObj('newsCont')
+	oScroll=new makeObj('newsText','newsCont')
+	oScroll.moveIt(0,0)
+	oCont.css.visibility='visible'
+	loaded=true;
+}
+//Call the init on page load
+onload=scrollInit;
+</script>
+
+<script>
+// Refreshes Netscape when resized so that div get redrawn correctly
+// Browser and Platform Detection
+var agt=navigator.userAgent.toLowerCase(); 
+var is_major = parseInt(navigator.appVersion); 
+var is_minor = parseFloat(navigator.appVersion);
+
+var is_nav  = ((agt.indexOf('mozilla')!=-1) && (agt.indexOf('spoofer')==-1) 
+                && (agt.indexOf('compatible') == -1) && (agt.indexOf('opera')==-1) 
+                && (agt.indexOf('webtv')==-1));
+var is_nav2 = (is_nav && (is_major == 2)); 
+var is_nav3 = (is_nav && (is_major == 3)); 
+var is_nav4 = (is_nav && (is_major == 4)); 
+var is_nav4up = (is_nav && (is_major >= 4)); 
+var is_nav5 = (is_nav && (is_major == 5));
+
+var is_ie   = (agt.indexOf("msie") != -1);
+var is_ie3  = (is_ie && (is_major < 4)); 
+var is_ie4  = (is_ie && (is_major == 4) && (agt.indexOf("msie 5.0")==-1) ); 
+var is_ie4up  = (is_ie  && (is_major >= 4)); 
+var is_ie5  = (is_ie && (is_major == 4) && (agt.indexOf("msie 5.0")!=-1) ); 
+var is_ie5up  = (is_ie  && !is_ie3 && !is_ie4); 
+
+var is_mac = (agt.indexOf("mac")!= -1);
+
+browserName = navigator.appName;
+
+if (is_nav4) {
+	ouWidth = window.outerWidth;
+	ouHeight = window.outerHeight;
+	// A shorter interval can be used but may not work correctly if the resize takes
+	// too long to happen.
+	resz = window.setInterval('reloadOnResize()', 1500);
+}
+
+function reloadOnResize() {
+	if (window.outerWidth != ouWidth || window.outerHeight != ouHeight) {
+		document.location.reload();
+	}
+}
+
+</script>
+<LINK rel="stylesheet" type="text/css" href="../library/styles.css">
+</head>
+
+<body bgcolor="#666666" marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" text="#CCCC99" link="#CCCC99" vlink="#CCCC99" alink="#CC9933">
+
+<!--Copyright Info-->
+<div id="Layer10" style="position:absolute; left:0px; top:480px; width:100%; height:41px; z-index:1; overflow: visible">
+<div align=center>
+<font face="Verdana, arial, helvetica, sans-serif" size="-2">
+	
+© 
+  Copyright 1994-2001 Limp Bizkit, The Firm, Inc. & limpbizkit.com 
+  <br> All rights reserved. Reproduction in whole or in part without written permission 
+    is strictly forbidden.
+
+
+
+  </font>
+</div>
+</div>
+<!--End Copyright Info-->
+
+<div id="Layer1" style="position:absolute; left:0; top:0; width:760; height:450; z-index:1"><img src="http://a52.g.akamai.net/7/52/329/60034d888620ed/www.limpbizkit.com/news/images/background.jpg" width="760" height="450"></div>
+<div id="Layer2" style="position:absolute; left:0; top:0; width:100%; height:53; z-index:2">
+   <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td align="left" width="410"><img src="http://a52.g.akamai.net/7/52/329/94fb0c3ed8a8f9/www.limpbizkit.com/news/images/spacer.gif" width="410" height="55" border="0"></td>
+      <td bgcolor="#333333" width="50%"><img src="http://a52.g.akamai.net/7/52/329/94fb0c3ed8a8f9/www.limpbizkit.com/news/images/spacer.gif" width="10" height="55" border="0"></td>
+    </tr>
+  </table>
+</div>
+
+<div id="mainlinks" style="position:absolute; left:408px; top:20px; width:340; height:40; z-index:4; visibility:visible; ">
+		<table cellpadding="0" cellspacing="0" border="0" width="340">
+		<tr>
+		<td align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#CCCC99"><a href='/index.htm'>HOME</a>&nbsp;|&nbsp;Latest News&nbsp;|&nbsp;<a href='/band/default.asp'>The Band</a>&nbsp;|&nbsp;<a href='/tour/default.asp'>Tour</a>&nbsp;|&nbsp;<a href='/music/default.asp'>Music</a>&nbsp;|&nbsp;<a href='/photos/default.asp'>Photos</a><br><a href='/videos/default.asp'>Videos</a>&nbsp;|&nbsp;<a href='/chat/default.asp'>Chat/Forums</a>&nbsp;|&nbsp;<a href='/fans/default.asp'>Fans</a>&nbsp;|&nbsp;<a href='/multimedia/default.asp'>Multimedia</a>&nbsp;|&nbsp;<a href='/members/default.asp'>Online Fanclub</a><br></font></td>
+		</tr>
+		</table>
+</div>
+<div id="newsDown" style="left: 221px; top: 426px"> <a href="#" onMouseOver="scroll(5)" onMouseOut="noScroll()"> 
+  <img src="http://a52.g.akamai.net/7/52/329/aa5cf68e860839/www.limpbizkit.com/news/images/news_downarrow.gif" width=64 height=27 alt="" border=0> </a> 
+</div>
+<div id="newsUp" style="left: 280px; top: 427px"> <a href="#" onMouseOver="scroll(-5)" onMouseOut="noScroll()"> 
+  <img src="http://a52.g.akamai.net/7/52/329/9d1133040570d3/www.limpbizkit.com/news/images/news_uparrow.gif" width=33 height=27 alt="" border=0> </a> 
+</div>
+<div id="newsCont">
+	<div id="newsText">
+	
+	<table width=100% border=0 cellspacing=0 cellpadding=5>
+		<tr>
+			<td>
+				<div align=right>
+				<font face="Verdana, Arial, Helvetica, sans-serif" size="1" COLOR="#393008">
+					<b>2/6/2001</b>
+				</font>
+				</div>
+				<BR>
+				<font face="Verdana, Arial, Helvetica, sans-serif" size="2" COLOR="#393008">
+					<b>WHAT UP FREAKS?</b>
+				</font>
+				<br>&nbsp;<br>
+				<font face="Verdana, Arial, Helvetica, sans-serif" size="1" COLOR="#393008">
+					what the hell is up?!!!!!!!! im a freak!! i just thought i'd let all y'all know that. for no reason what so ever. i just like the fact that i can go in the backdoor of this website and say anything i want in the news. im a FREAK. i just sold my house, my dog bizkit is insane, my osiris shoes are phat ass hell, and i had a dream about brittney, you know who, last night for no apparent reason. she was giving me a butt massage. i was not mad at that!! oh yeah remember to rent or buy THE FIGHT CLUB a.s.a.p. but you gotta watch it over and over to get the subliminal storyline. and if you get a chance go see TRAFFIC. i thought is was pretty tight. one more good one for your dvd would be CLOSE ENCOUNTERS OF THE THIRD KIND. you do know aliens are out there right? ill be in the chat alittle later on. keep checking the news cuz ill be keepin you posted daily. by the way, i havent figured out how to get my pictures and videos on here yet. somebody help a cracker out!!
+				</font>
+			</td>
+		</tr>
+	</table>
+	
+	</div>
+</div>
+
+<script type="text/javascript" language="JavaScript">
+// <!-- 
+if (is_ie || is_nav5) {
+document.write("<div id='links' style='position:absolute; left:400; top:115; width:360; height:340; z-index:4; overflow: auto'>")
+} 
+if (is_nav4) {
+document.write("<layer id='links' name='links' left=400 top=120  clip=360,330>")
+}
+// -->
+</script>
+	<table width=330 height="300" border=0 cellspacing=0 cellpadding=5 background="/images/clear.gif">
+			
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#000000">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=267">2/6/2001 - WHAT UP FREAKS?</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=264">2/3/2001 - NEW SINGLE POLL</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=263">2/3/2001 - fred update</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=250">2/1/2001 - FRED DURST NEWS</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=254">2/1/2001 - FRED IN CHAT</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=256">2/1/2001 - Vote for My Way and Win a Limp Shirt</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=255">2/1/2001 - RUMORS</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=246">1/31/2001 - Limp Bizkit Devastated Over Big Day Out Tragedy</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=247">1/31/2001 - Vote for Limp in Blockbuster Awards</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=244">1/30/2001 - Vote for the My Way Video</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=240">1/29/2001 - Limp Bizkit & Big Day Out</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=220">1/10/2001 - Hear Fred on "Outside"</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=199">1/5/2001 - Keep Watch for "My Way" Video</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=198">1/3/2001 - Limp Bizkit Nominated for Grammy Award</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=193">12/19/2000 - New Bizkit Stuff on Multimedia Page</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=184">12/7/2000 - New Fan Art Section</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=178">12/1/2000 - Limp Bizkit Wins VH1 My Music Award</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=182">11/30/2000 - Anger Management Digital Postcard</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=180">11/28/2000 - Limp on Howard Stern's TV Show</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=140">11/16/2000 - Just Announced: Version 3.0 of Bizkit's Buy It</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=136">11/15/2000 - Limp Bizkit in Vancouver</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=137">11/15/2000 - Write Limp Bizkit's Band Member Bios</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=147">11/15/2000 - San Francisco Show Rollin'</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=119">11/10/2000 - Fred Durst Yahoo SegaNet Chat Transcript</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=120">11/8/2000 - Bizkit's Buy It Before U Can Buy It Version 2.5</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=117">11/2/2000 - Bizkit's Buy It Before U Can Buy It Version 2.0</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=116">10/30/2000 - My Generation Postcard Available Now!!!</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=115">10/25/2000 - Bizkit's Buy It Before U Can Buy It</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=114">10/24/2000 - Win a Platinum Plaque Award</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=110">10/20/2000 - @limpbizkit.com Email Service Closing</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=113">10/20/2000 - Limp Bizkit Nominated for European Music Awards</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=112">10/19/2000 - Bonus Tracks Available with Special CDs</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=111">10/17/2000 - Limp TV: Limp Bizkit Invade NYC  Today 5:30 EST</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=108">10/16/2000 - Limp Bizkit World Premiere Webcast</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=109">10/16/2000 - Send a Digital "Rollin'" Postcard</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=101">10/13/2000 - Chocolate Starfish Listening Party</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=102">10/13/2000 - Limp Chat on AOL</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=103">10/13/2000 - Limp on TRL</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=104">10/13/2000 - Limp on Howard Stern</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=105">10/13/2000 - Limp on MTV</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=106">10/13/2000 - Limp @ Playboy Mansion</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=107">10/13/2000 - Limp on the Radio</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=100">10/6/2000 - Meet Limp Bizkit</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+					<tr>
+					<td>
+					<ul>
+					<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#B5AEA5">
+					
+						<li>
+							<a class='news_links' href="default.asp?id=79">9/29/2000 - Gold Autographed CD's</b></a></li></font>
+						
+					</td>
+					</tr>
+					
+				
+	</table>
+	</layer> 
+	<!-- I don't know why, but the feature that makes this area scroll in Netscape insists that this tag be here to work correctly -->
+<script type="text/javascript" language="JavaScript">
+// <!--
+if (is_ie || is_nav5) {
+	document.write("</div>")
+} 
+if (is_nav4) {
+	document.write("</layer>")
+	var c = new Scrollable(document.links)
+	}
+// -->
+</script>
+</body>
+</html>
+

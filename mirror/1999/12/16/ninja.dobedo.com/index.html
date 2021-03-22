@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+<TITLE> [ninja.dobedo.com] </TITLE>
+<LINK REL=STYLESHEET HREF="style.css" TYPE="text/css"> 
+<style>
+<!--
+all.clsMenuItemNS{font: bold x-small Verdana; color: white; text-decoration: none;}
+.clsMenuItemIE{text-decoration: none; font: bold xx-small Verdana; color: white; cursor: hand;}
+A:hover {color: red;}
+-->
+</style>
+</HEAD>
+<BODY BGCOLOR="#FFCC00">
+<script language="JavaScript" src="menu.js"></script>
+<script language="JavaScript" src="menucontext.js"></script>
+<script language="JavaScript">
+showToolbar();
+</script>
+<script language="JavaScript">
+function UpdateIt(){
+if (document.all){
+document.all["MainTable"].style.top = document.body.scrollTop;
+setTimeout("UpdateIt()", 200);
+}
+}
+UpdateIt();
+</script>
+<CENTER><TABLE>
+<TR>
+	<TD height="200">&nbsp;</TD>
+</TR>
+<TR>
+	<TD height="200"><img src="ninja2.gif"></TD>
+</TR>
+<TR>
+	<TD height="200">&nbsp;</TD>
+</TR>
+</TABLE></CENTER>
+
+<p>Da Eternal patched ye olde crontab overflow.
+</BODY>
+</HTML>
+<!-- www.attrition.org web hack mirror - watermark or something -->

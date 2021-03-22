@@ -1,0 +1,88 @@
+<HTML>
+<BODY BGCOLOR=#FFFFFF>
+<CENTER>
+<!--#exec cmd="/www/wwwfiles/FantasySportsNET/cgi-bin/ad_image.pl" -->
+</CENTER>
+<FONT SIZE=-3>
+<A HREF="advertise.html">Advertising Corner</A>
+</FONT>
+<Hr>
+<CENTER>
+<H1>Rank the NBA players</H1>
+</CENTER>
+<FORM METHOD="POST" ACTION="http://www.tass.org/FantasySportsNET/cgi-bin/rank">
+
+   <P>What stats would you like to use?
+   <OL>
+    <LI>Last Season ('98 - '99) <INPUT NAME="stats" TYPE=radio VALUE="last_season">
+    <LI>Current Season ('99 - '00) <INPUT NAME="stats" TYPE=radio VALUE="this_season">
+    <LI>Last 10 games ('99 - '00) <INPUT NAME="stats" TYPE=radio VALUE="last_ten">
+   </OL>
+
+   <P>Rank by:
+   <OL>
+    <LI>Position <INPUT NAME="rankby" TYPE=radio VALUE="position">
+    <LI>Overall <INPUT NAME="rankby" TYPE=radio VALUE="overall">
+   </OL>
+
+    <P>What sorting method do you wish to implement?
+    <OL>
+	<LI>Fantasy Points Per Game Played <INPUT NAME="sort" TYPE=radio VALUE="sort_fppg">
+	<LI>Total Fantasy Points <INPUT NAME="sort" TYPE=radio VALUE="sort_tfp">
+	<LI>Fantasy Points Per 48 Minutes <INPUT NAME="sort" TYPE=radio VALUE="sort_fppm">
+	<LI>Alphabetically <INPUT NAME="sort" TYPE=radio VALUE="alpha">
+    </OL>
+<P> Please enter minimum games played to list: <INPUT NAME="minimum_gp" TYPE=text SIZE=2 VALUE="1">
+<P> Please enter number of players to list: <INPUT NAME="rank_num" TYPE=text SIZE=3 VALUE="10">
+<P> Now enter the value of each category in your fantasy league:<BR>
+<TABLE CELLPADDING=8>
+<TR>
+<TD>
+PTS<BR><INPUT NAME="pts" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+<TD>
+OFF REB<BR><INPUT NAME="oreb" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+<TD>
+DEF REB<BR><INPUT NAME="dreb" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+<TD>
+BLK<BR><INPUT NAME="blk" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+<TD>
+TO<BR><INPUT NAME="to" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+<TD>
+STL<BR><INPUT NAME="stl" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+<TD>
+AST<BR><INPUT NAME="ast" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+</TR>
+<TR>
+<TD>
+Made 3PT<BR><INPUT NAME="thrptm" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+<TD>
+Made FT<BR><INPUT NAME="ftm" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+<TD>
+Missed FT<BR><INPUT NAME="msft" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+<TD>
+Made FG<BR><INPUT NAME="mfg" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+<TD>
+Missed FG<BR><INPUT NAME="msfg" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+<TD>
+PF<BR><INPUT NAME="pf" TYPE=TEXT SIZE=2 VALUE="0">
+</TD>
+</TR>
+</TABLE>
+<P><INPUT TYPE=submit VALUE="Get Rankings!"> <INPUT TYPE=reset>
+</FORM>
+</body>
+<!--#exec cgi="cgi-bin/log.cgi" -->
+</html>
+

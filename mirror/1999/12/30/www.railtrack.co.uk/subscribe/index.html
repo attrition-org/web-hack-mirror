@@ -1,0 +1,170 @@
+
+	<html><head>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+
+<title>Railtrack - Subscribe</title>
+<LINK REL="stylesheet" TYPE="text/css" HREF="/style/rt_default.css">
+
+<script LANGUAGE=JAVASCRIPT>
+<!--
+
+function _CF_onError(form_object, input_object, object_value, error_message)
+    {
+	alert(error_message);
+       	return false;	
+    }
+
+
+function _CF_hasValue(obj, obj_type)
+    {
+    if (obj_type == "TEXT" || obj_type == "PASSWORD")
+	{
+    	if (obj.value.length == 0) 
+      		return false;
+    	else 
+      		return true;
+    	}
+    else if (obj_type == "SELECT")
+	{
+        for (i=0; i < obj.length; i++)
+	    	{
+		if (obj.options[i].selected)
+			return true;
+		}
+
+       	return false;	
+	}
+    else if (obj_type == "SINGLE_VALUE_RADIO" || obj_type == "SINGLE_VALUE_CHECKBOX")
+	{
+
+		if (obj.checked)
+			return true;
+		else
+       		return false;	
+	}
+    else if (obj_type == "RADIO" || obj_type == "CHECKBOX")
+	{
+
+        for (i=0; i < obj.length; i++)
+	    	{
+		if (obj[i].checked)
+			return true;
+		}
+
+       	return false;	
+	}
+	}
+
+function  _CF_checkCFForm_1(_CF_this)
+    {
+    if  (!_CF_hasValue(_CF_this.email, "TEXT" )) 
+        {
+        if  (!_CF_onError(_CF_this, _CF_this.email, _CF_this.email.value, "Please enter your email address."))
+            {
+            return false; 
+            }
+        }
+
+    if  (!_CF_hasValue(_CF_this.password, "PASSWORD" )) 
+        {
+        if  (!_CF_onError(_CF_this, _CF_this.password, _CF_this.password.value, "Please enter a password"))
+            {
+            return false; 
+            }
+        }
+
+    return true;
+    }
+
+//-->
+</script>
+</head>
+<body bgcolor="#FFFFFF" leftmargin=0 topmargin=0 background="images/background.gif">
+
+<!-- Table for top of page navigation -->
+<TABLE WIDTH="595" CELLPADDING="0" CELLSPACING="0" BORDER="0">
+  <TR> 
+    <TD WIDTH=158><IMG SRC="../images/nothing.gif" WIDTH=158 HEIGHT=1 BORDER=0></TD>
+    <TD WIDTH=82><IMG SRC="../images/nothing.gif" WIDTH=82 HEIGHT=1 BORDER=0></TD>
+    <TD WIDTH=30><IMG SRC="../images/nothing.gif" WIDTH=30 HEIGHT=1 BORDER=0></TD>
+    <TD WIDTH=125><IMG SRC="../images/nothing.gif" WIDTH=65 HEIGHT=18 BORDER=0></TD>
+    <TD WIDTH=190><IMG SRC="../images/nothing.gif" WIDTH=150 HEIGHT=1 BORDER=0></TD>
+    <TD WIDTH=110><IMG SRC="../images/nothing.gif" WIDTH=110 HEIGHT=1 BORDER=0></TD>
+  </TR>
+  <TR> 
+    <TD ALIGN="right" VALIGN="top" width="158"><IMG SRC="../images/home/rtlogo_legal.gif" WIDTH=147 HEIGHT=15 BORDER=0 ALT="RAILTRACK"></TD>
+    <TD COLSPAN="2"><img src="../images/nothing.gif" width=65 height=18 border=0></TD>
+    <TD width="125" valign="top">&nbsp;</TD>
+    <TD width="300" COLSPAN="2" valign="top" align="left"> 
+      <div align="right"><a href="javascript:history.back();"><img src="../images/search/back_button.gif" width="41" height="18" border="0" alt="go back"></a><img src="../images/nothing.gif" width=10 height=18 border=0><img src="../images/global/z_button.gif" width="10" height="18"><a href="../index.htm" target="_top"><img src="../images/global/glob_subnav_central_box.gif" height="18" alt="central menu" border="0"></a></div>
+    </TD>
+  </TR>
+  <TR> 
+    <TD COLSPAN="6"><IMG SRC="../images/nothing.gif" WIDTH=1 HEIGHT=15 BORDER=0></TD>
+  </TR>
+</TABLE>
+<!-- End of table for top navigation -->
+
+<table width="595" border="0" cellspacing="2" cellpadding="2">
+<tr>
+<td align="right">
+
+<!-- Start of main page contents -->
+<FORM NAME="CFForm_1" ACTION="login.cfm" METHOD=POST onSubmit="return _CF_checkCFForm_1(this)">
+<table width="99%" border="0" cellspacing="2" cellpadding="2">
+<tr>
+	<td><img src="transparent.gif" width=140 height=1></td>
+	<td colspan="2" align="left" valign="middle"><IMG alt=subscribe border=0 height=40 src="../images/subscribe/head_subscribe.gif" width=249></td>
+	<td>&nbsp;</td>
+</tr>
+</table>
+
+<table width="550" border="0" cellspacing="2" cellpadding="2">
+<tr>
+	<td width="10">&nbsp;</td>
+	<td colspan="2" align="right" valign="top"><br>&nbsp;<IMG alt="" border=0 height=45 src="../images/subscribe/photobox.gif" width=184><br>&nbsp;</td>
+	<td colspan="2" align="left" valign="top"><B>Login or <a href="subscribe.cfm">subscribe</a></B><br><font face="Verdana, Arial, sans-serif, Helvetica, Geneva;" size="2" color="#000066"><P>
+Railtrack email updates is a free service which sends you email notification of new press releases, travel information, regeneration news, and other information posted on this site. </P>
+
+<P>When you subscribe you can indicate which stations and areas of interest you wish to receive information on. You can also choose a password that will let you edit these options at any time. </P>
+
+<P>If you are a first time user click 'subscribe', otherwise enter your password and click 'login' to edit your subscription options.</P>
+</font></td>
+</tr>
+<tr>
+	<td height="5" colspan="5"></td>
+</tr>
+<tr>
+	<td width="10">&nbsp;</td>
+	<td><img src="../images/subscribe/transparent.gif" width=50 height=1 border=0 alt=""></td>
+	<td align="LEFT"><IMG alt="Email" border=0 height=10 src="../images/subscribe/head_email.gif" width=43></td>
+	<td align="left"><INPUT TYPE="Text" NAME="email" VALUE="" SIZE=20 MAXLENGTH= 40></td>
+	<td>&nbsp;</td>
+</tr>
+<tr>
+	<td width="10">&nbsp;</td>
+	<td>&nbsp;</td>
+	<td><IMG alt="password" border=0 height=10 src="../images/subscribe/head_password.gif" width=73></td>
+	<td align="LEFT"><INPUT TYPE="password" NAME="password" SIZE=20 MAXLENGTH= 40></td>
+	<td>&nbsp;</td>
+</tr>
+<tr>
+	<td width="10">&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td><input type="image" src="../images/subscribe/button_login.gif" width=63 alt="Submit" border=0 height=22></td>
+	<td>&nbsp;</td>
+</tr>
+</table>
+</FORM>
+<!-- End of main page contents -->
+
+</td>
+</tr>
+</table>
+</body>
+</html>
+
+
+

@@ -1,0 +1,277 @@
+<HTML>
+
+<HEAD>
+	<TITLE>Texas Alcoholic Beverage Commission - Y2K Statement</TITLE>
+<META NAME="keywords" content="Year 2000, Y2K, y2k,Texas Alcoholic Beverage Commission, TABC, tabc, links, contingency, continuity, planning, project, embedded systems, Millennium Bug, Year 2000 Bug, Y2K Information, Interface Compliance, Trading Partner Compliance, Public Information, Year 2000 Disclosure">
+</HEAD>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Hide the script
+function Email() {window.open("contact/Email.htm","Email","toolbar=yes,width=475,height=500");}
+// Unhide -->
+</SCRIPT>
+<script language="JavaScript">
+
+<!-- Hiding script from old browsers
+
+/************************************************************************/
+/* */
+/* Copyright (C) 1996 Glub, Un-Inc. All Rights Reserved. */
+/* Feel free to reuse or modify this code, */
+/* provided this header remains in tact. */
+/* [http://www.dotdotcom.com/] [http://sdcc8.ucsd.edu/~gcohen/] */
+/* */
+/************************************************************************/
+
+/* Initializations */
+
+var timerID;
+var timerRunning = false;
+var today = new Date();
+var enday = new Date();
+var secPerDay = 0;
+var minPerDay = 0;
+var hourPerDay = 0;
+var secsLeft = 0;
+var secsRound = 0;
+var secsRemain = 0;
+var minLeft = 0;
+var minRound = 0;
+var minRemain = 0;
+var timeRemain = 0;
+
+
+/* This function will stop the clock */
+
+function stopclock (){
+if(timerRunning)
+clearTimeout(timerID);
+timerRunning = false;
+}
+
+/* This function will start the clock */
+
+function startclock () {
+stopclock();
+showtime();
+}
+
+/* 
+This is the heart of the script
+
+today is the date today, wow.
+enday is the date you want to count til. For this example enday is the year 2000.
+secsPerDay will be used to get the seconds per day, double wow.
+you should be able to figure out minPerDay, hoursPerDay, and PerDay.
+*/
+
+
+function showtime () {
+today = new Date();
+enday = new Date("January, 1 2000 00:00");
+enday.setYear("2000");
+secsPerDay = 1000 ;
+minPerDay = 60 * 1000 ;
+hoursPerDay = 60 * 60 * 1000;
+PerDay = 24 * 60 * 60 * 1000;
+
+
+/*Seconds*/
+
+/*
+secsLeft is the raw seconds remaining until the date.
+secsRound is the rounded seconds remaining until the date.
+secsRemain is the re-configured seconds. The seconds need to be
+limited from 59 to 0 much like a real clock counts. This will do it.
+*/
+
+
+secsLeft = (enday.getTime() - today.getTime()) / minPerDay;
+
+secsRound = Math.round(secsLeft);
+
+secsRemain = secsLeft - secsRound;
+
+secsRemain = (secsRemain < 0) ? secsRemain = 60 - ((secsRound - secsLeft) * 60) : secsRemain = (secsLeft - secsRound) * 60;
+
+secsRemain = Math.round(secsRemain);
+
+
+/*Minutes*/
+
+/*
+minLeft is the raw minutes remaining until the date.
+minRound is the rounded seconds remaining until the date.
+minRemain is the re-configured minutes. The minutes need to be
+limited from 59 to 0 much like a real clock. Gosh I feel like a
+skipping record. Oh well.
+*/
+
+
+minLeft = ((enday.getTime() - today.getTime()) / hoursPerDay);
+
+minRound = Math.round(minLeft);
+
+minRemain = minLeft - minRound;
+
+minRemain = (minRemain < 0) ? minRemain = 60 - ((minRound - minLeft) * 60) : minRemain = ((minLeft - minRound) * 60);
+
+minRemain = Math.round(minRemain - 0.495);
+
+
+/*Hours*/
+
+/*
+hoursLeft is the raw hours remaining until the date.
+hoursRound is the rounded hours remaining until the date.
+hoursRemain is the re-configured hours. The hours need to be
+limited from 23 to 0 much like a real clock. I think you're starting
+to get the picture, no?
+*/
+
+
+hoursLeft = ((enday.getTime() - today.getTime()) / PerDay);
+
+hoursRound = Math.round(hoursLeft);
+
+hoursRemain = hoursLeft - hoursRound;
+
+hoursRemain = (hoursRemain < 0) ? hoursRemain = 24 - ((hoursRound - hoursLeft) * 24) : hoursRemain = ((hoursLeft - hoursRound) * 24);
+
+hoursRemain = Math.round(hoursRemain - 0.5);
+
+
+/*Days*/
+
+/*
+daysLeft is the raw days remaining until the date.
+daysRound is the rounded days remaining until the date.
+daysRemain is the re-configured days. The days need to be 
+rounded, guess daysRound is not needed, but it sure looks 
+good don't it?
+*/
+
+
+daysLeft = ((enday.getTime() - today.getTime()) / PerDay);
+
+daysLeft = (daysLeft - 0.5);
+
+daysRound = Math.round(daysLeft);
+
+daysRemain = daysRound;
+
+
+/*Time*/
+
+/*
+timeRemain makes the clock more elegant.
+document.clock.face.value is used to show the time remaining.
+timeID controls the refresh rate of the clock. The number is the rate in 
+milliseconds.
+The if statement will stop the clock when the time has expired.
+*/
+
+
+timeRemain = daysRemain + " days, " + hoursRemain + " hours, " + minRemain + " minutes, " + secsRemain + " seconds";
+
+document.clock.face.value = timeRemain;
+timerID = setTimeout("showtime()",1000);
+timerRunning = true;
+
+if (daysRemain < 0) {
+
+clearTimeout(timerID);
+timerRunning = false;
+document.clock.face.value = "Time Has Expired";
+}
+
+}
+
+// end hiding contents from old browsers -->
+</script>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#08734A" VLINK="#CAA06F" ALINK="#FF0000" onload="startclock()">
+<CENTER>
+<TABLE CELLPADDING=0 CELLSPACING=0 WIDTH=640 BORDER=0 ALIGN="MIDDLE" VALIGN="TOP">
+<TR>
+	<TD align="middle"><IMG SRC="images/barhome.jpg" ALT="Texas Alcoholic Beverage Commission" WIDTH=640 HEIGHT=120 BORDER=0></TD>
+</TR>
+<TR>
+	<TD><IMG SRC="images/navnone.gif" ALT="Navigation Bar" USEMAP="#Bar" WIDTH=640 HEIGHT=53 BORDER=0>
+	<MAP NAME="Bar">
+	<AREA SHAPE="poly" COORDS="176,21 264,21 259,34 246,42 193,42 180,34" HREF="default.htm">
+	<AREA SHAPE="poly" COORDS="269,21 357,21 352,34 339,42 286,42 273,34" HREF="about/default.htm">
+	<AREA SHAPE="poly" COORDS="360,21 448,21 443,34 430,42 377,42 364,34" HREF="jobs/default.htm">
+	<AREA SHAPE="poly" COORDS="452,21 540,21 535,34 522,42 469,42 456,34" HREF="contact/default.htm">
+	<AREA SHAPE="poly" COORDS="544,21 632,21 627,34 614,42 561,42 548,34" HREF="help/default.htm">
+	</MAP><BR>
+	</TD>
+</TR>
+</TABLE>
+<FONT SIZE=2 FACE="Arial">
+<TABLE CELLPADDING=0 CELLSPACING=0 WIDTH=640 BORDER=0 ALIGN="MIDDLE" VALIGN="TOP">
+<TR>
+	<TD width="25%"><CENTER><IMG SRC="images/y2k.gif" ALT="TABC Year 2000 Disclosure Statement" WIDTH=192 HEIGHT=166 BORDER=0></CENTER> 	<CENTER><form name="clock" onsubmit="0"><font size="1" face="Arial"><input type="text" size="31" name="face"><BR>Until Year 2000</font></form></CENTER></TD>
+	<TD width="35%" valign="bottom">&nbsp; </TD>
+	<TD width="40%" ><FONT SIZE=1 FACE="Arial"><UL><H5>Links</H5>
+	<LI><A HREF="http://www.dir.state.tx.us/y2k/">Texas Year 2000 Work Group</A>
+	<LI><A HREF="http://y2knotices.dir.state.tx.us/index.html">Texas Year 2000 Product Notice Website</A>
+	<LI><A HREF="http://www.utexas.edu/y2k/">UT Austin</A>
+	<LI><A HREF="http://www.itpolicy.gsa.gov">U.S. General Services Administration</A>
+	<LI><A HREF="http://www.microsoft.com/technet/year2k/">Microsoft Year 2000 Resource Center</A>
+	<LI><A HREF="http://www.year2000.com">Year 2000 Information Center</A>
+	<LI><A HREF="http://www.y2klinks.com/">Y2K Links Database</A>
+	<LI><A HREF="http://www.yahoo.com/Computers_and_Internet/Year_2000_Problem/">Yahoo Year 2000 Problem Page</A>
+	<LI><A HREF="http://www.bindview.com/special/year2000.html">Bindview Year 200 Links Page</A>
+	<LI><A HREF="http://www.mitre.org/research/y2k/docs/DATES.html">Potential Y2K Problem Dates</A>
+	<LI><A HREF="http://readiness2000.state.tx.us/">Readiness 2000</A>
+</FONT></UL></TD>
+</TR>
+<TR><TD colspan="3">
+<FONT SIZE=2 FACE="Arial">The Texas Alcoholic Beverage Commission (TABC) has been working on Year 2000 project tasks since 1996.  The project is coordinated by Jay Webster, 
+Director of Information Resources Department (IRD), and is part of the Year 2000 project for the State of Texas.  The goal of the project is to assure continuity of 
+mission critical services before, during, and after the crossover to the year 2000.
+<BR><BR>
+The project plan encompasses information technology systems, embedded systems in facilities and utilities, trading partners/supply chains, and electronic interfaces.  
+All departmental units within the TABC participate in the project and have been involved in awareness, risk assessment, inventory, remediation, testing,
+implementation, and contingency/continuity planning phases of the project.
+<BR><BR>
+In January 1997 the TABC suspended all program enhancements in order to concentrate on Year 2000 issues.  The following is a high level summary of activities involved in addressing the Year 2000 concerns:<UL>
+<LI>All files containing date fields were identified.
+<LI>All files containing date fields were reorganized so that they could accept a 4-digit year.
+<LI>All programs containing date fields and date functions were identified.
+<LI>Conversion time estimates were made for the conversion process.
+<LI>Staff assignments were made by application system.
+<LI>Progress made on each individual program was tracked.
+<LI>IRD worked with Department of Information Resources to comply with all requirements.
+<LI>Conversion programs were written for each file.
+<LI>Conversion steps were tested and timed.</UL>
+Remediation, testing, and implementation into production of mission critical systems which support the Licensing, Compliance, and Enforcement functions within the agency was completed in May, 1997.  All personal computer hardware and software have been tested and designated as compliant.  Business continuity and contingency planning will be completed by September, 1999.
+<BR><BR>
+<H4>Questions and comments can be forwarded to:</H4>
+	<BLOCKQUOTE>Jay Webster, Year 2000 Coordinator and Director,<BR>
+	Information Resources Department<BR>
+	Texas Alcoholic Beverage Commission<BR>
+	PO Box 13127<BR>
+	Austin, Texas  78711-3127<BR>
+	E-mail: <A HREF="mailto:y2k@tabc.state.tx.us">y2k@tabc.state.tx.us</A><BR>
+	(512) 206-3457<BR>
+	Fax: (512) 206-3281</BLOCKQUOTE>
+
+This document, prepared by the TABC, constitutes a "Year 2000 Readiness Disclosure" as that term is defined in the "Year 2000 Information and Readiness Disclosure Act" (s.2392, 105th Congress, 2nd Session).<BR><BR></FONT></TD></TR></TABLE></CENTER>
+
+<CENTER><TABLE CELLPADDING=0 CELLSPACING=0 WIDTH=640 BORDER=0 ALIGN="MIDDLE" VALIGN="TOP">
+<TR>
+	<TD ALIGN="middle"><IMG SRC="images/line.gif" ALT="Line" WIDTH=640 HEIGHT=5 BORDER=0><BR>
+<FONT SIZE=1 FACE="Arial"><A HREF="default.htm">Home</A> |  <A HREF="about/default.htm">About Us</A> |  <A HREF="jobs/default.htm">JOBS</A> | <A HREF="contact/default.htm">Contact Us</A> | <A HREF="help/default.htm">Help</A><BR>
+<A HREF="disclaimer.htm">Disclaimer</A> | <A HREF="javascript:Email()">Email Us</A>
+<BR>Copyright &copy; 1999, Texas Alcoholic Beverage Commission, All rights reserved.<BR>
+<script language="JavaScript">
+<!--hide script from old browsers
+document.write("Last Updated: " +
+document.lastModified);
+// end hiding -->
+</script></FONT></TD>
+</TR>
+</TABLE></CENTER>
+</BODY>
+</HTML>

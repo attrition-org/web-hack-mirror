@@ -1,0 +1,202 @@
+<html>
+<head><title> ::  Que Lindo! ::</title>
+
+<STYLE TYPE="text/css">
+<!--
+
+BODY{
+overflow:scroll;
+overflow-x:hidden;
+}
+
+.s1
+{
+  position  : absolute;
+  font-size : 10pt;
+  color     : blue;
+  visibility: hidden;
+}
+
+.s2
+{
+  position  : absolute;
+  font-size : 18pt;
+  color     : red;
+	visibility : hidden;
+}
+
+.s3
+{
+  position  : absolute;
+  font-size : 14pt;
+  color     : gold;
+	visibility : hidden;
+}
+
+.s4
+{
+  position  : absolute;
+  font-size : 12pt;
+  color     : lime;
+	visibility : hidden;
+}
+
+//-->
+</STYLE>
+</head>
+<body bgcolor=black >
+<DIV ID="div1" CLASS="s1">*</DIV>
+<DIV ID="div2" CLASS="s2">*</DIV>
+<DIV ID="div3" CLASS="s3">*</DIV>
+<DIV ID="div4" CLASS="s4">*</DIV>
+
+
+<SCRIPT LANGUAGE="javascript" TYPE="text/javascript">
+
+/*
+Submitted by Mike McGrath  http://website.lineone.net/~mike_mcgrath
+Featured on Website Abstraction (http://wsabstract.com)
+For this and over 400+ free scripts, visit http://wsabstract.com
+*/
+
+var nav = (document.layers);
+var tmr = null;
+var spd = 50;
+var x = 0;
+var x_offset = 5;
+var y = 0;
+var y_offset = 15;
+
+if(nav) document.captureEvents(Event.MOUSEMOVE);
+document.onmousemove = get_mouse; 
+
+function get_mouse(e)
+{    
+  x = (nav) ? e.pageX : event.clientX+document.body.scrollLeft;
+  y = (nav) ? e.pageY : event.clientY+document.body.scrollTop;
+  x += x_offset;
+  y += y_offset;
+  beam(1);     
+}
+
+function beam(n)
+{
+  if(n<5)
+  {
+    if(nav)
+    { 
+      eval("document.div"+n+".top="+y);
+      eval("document.div"+n+".left="+x);
+      eval("document.div"+n+".visibility='visible'");
+    }  
+    else
+    {
+      eval("div"+n+".style.top="+y);
+      eval("div"+n+".style.left="+x);
+      eval("div"+n+".style.visibility='visible'");
+    }
+    n++;
+    tmr=setTimeout("beam("+n+")",spd);
+  }
+  else
+  {
+     clearTimeout(tmr);
+     fade(4);
+  }   
+} 
+
+function fade(n)
+{
+  if(n>0) 
+  {
+    if(nav)eval("document.div"+n+".visibility='hidden'");
+    else eval("div"+n+".style.visibility='hidden'"); 
+    n--;
+    tmr=setTimeout("fade("+n+")",spd);
+  }
+  else clearTimeout(tmr);
+} 
+
+// -->
+</SCRIPT>
+
+<p align="center"><font color=white face="arial" size="-2">Nois é Ralé ... Mas Não é Mané!!</font><br>
+<font face="arial, helvetica" size="-2"></a></font></p>
+
+
+<font face ="verdana, arial" size=2 color=#00000>
+
+</font>
+<br><br><br>
+<br>
+<br>
+<br>
+<br>
+
+<p align=center><b> <font face ="verdana" size=5 color=red>
+
+"Nos Devemos amar Nossos Inimigos"<br>
+...<br>
+"O povo criativo jamais será dominado"<br> 
+...<br>
+</font>
+
+<p align=center><b> <font face ="verdana" size=3 color=lime>
+
+We are :: Nessus :: Sysop :: ph4nt4 :: KKND :: zeal0t :: raver   <br>
+...<br>
+</font>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+
+<p align=center><b> <font face ="verdana, arial" size=1 color=lime>
+Nao sou hipocrita!<br>
+Nao Owno Paginas e Coloco Apoio as criancas carente<br>
+Afinal tambem nao fiz nada por eles<br>
+Nao xingo politicos porque c eu estivesse la faria o mesmo<br>
+Nao falo "Nada foi deletado simplesmente renomeado"<br>
+Ou entao Nao somos mals Apenas queremos testar nossos conhecimentos<br>
+Nao falo fuckz adm eu nem conheco ele"<br>
+Q ironia fodem o kra e ainda colocam nada foi deletado<br>
+Nada tenho contra a aqueles q fazem isso<br>
+Apenas nao faco nunca fiz e jamais farei<br>
+Nao sou hipocrita<br>
+Afinal... somos humildes "h4x0rs"<br>
+Nao encomodamos ninguem<br>
+sorry adm!! (essa é uma verdadeira piada) <br>
+O adm Pode estar desempregado agora<br>
+MAs mesmo assim Fuck adm <br>
+Imaginem nos hackeamos um site e colocamos <br>
+"Foda-se o governador ladrao, queremos emprego"<br>
+Depois que ele morre falamos<br>
+Foi o melhor governador que tivemos<br>
+O adm Pode estar desempregado agora<br>
+ISso é ser hipocrita???<br>
+Nao sei quem sou eu para julgar<br>
+MAs de 1 coisa eu sei <br> 
+Sei que eu nao sou HIPOCRITA<br>
+...<br>	
+</font>
+<p align=center><b><font face="verdana" size=1 color=orange>
+	Agradecimentos: <br>
+all my friend 
+| sysop | Nessus | ph4nt4 | KKND | zeal0t | raver <br>
+...<br>
+<br>
+gigidagostino@mail.ru<br>
+irc.brasnet.org <br>
+#cr1m3<br>
+PropAganda Enganosa<br>
+...<br>
+</font>
+
+
+
+
+
+</html>
+
+<!-- www.attrition.org web hack mirror - watermark or something -->

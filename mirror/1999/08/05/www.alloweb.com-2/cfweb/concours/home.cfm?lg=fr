@@ -1,0 +1,313 @@
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<title>Alloweb</title>
+
+<script LANGUAGE=JAVASCRIPT>
+<!--
+
+function _CF_onError(form_object, input_object, object_value, error_message)
+    {
+	alert(error_message);
+       	return false;	
+    }
+
+
+function _CF_hasValue(obj, obj_type)
+    {
+    if (obj_type == "TEXT" || obj_type == "PASSWORD")
+	{
+    	if (obj.value.length == 0) 
+      		return false;
+    	else 
+      		return true;
+    	}
+    else if (obj_type == "SELECT")
+	{
+        for (i=0; i < obj.length; i++)
+	    	{
+		if (obj.options[i].selected)
+			return true;
+		}
+
+       	return false;	
+	}
+    else if (obj_type == "RADIO" || obj_type == "CHECKBOX")
+	{
+
+        for (i=0; i < obj.length; i++)
+	    	{
+		if (obj[i].checked)
+			return true;
+		}
+
+       	return false;	
+	}
+	}
+
+function  _CF_checkCFForm_1(_CF_this)
+    {
+    if  (!_CF_hasValue(_CF_this.C_COMPTEUR, "TEXT" )) 
+        {
+        if  (!_CF_onError(_CF_this, _CF_this.C_COMPTEUR, _CF_this.C_COMPTEUR.value, "Vous avez oublié de remplir un champ obligatoire"))
+            {
+            return false; 
+            }
+        }
+
+    if  (!_CF_hasValue(_CF_this.C_SOCIETE, "TEXT" )) 
+        {
+        if  (!_CF_onError(_CF_this, _CF_this.C_SOCIETE, _CF_this.C_SOCIETE.value, "Vous avez oublié de remplir un champ obligatoire"))
+            {
+            return false; 
+            }
+        }
+
+    if  (!_CF_hasValue(_CF_this.C_CONTACT, "TEXT" )) 
+        {
+        if  (!_CF_onError(_CF_this, _CF_this.C_CONTACT, _CF_this.C_CONTACT.value, "Vous avez oublié de remplir un champ obligatoire"))
+            {
+            return false; 
+            }
+        }
+
+    if  (!_CF_hasValue(_CF_this.C_FONCTION, "TEXT" )) 
+        {
+        if  (!_CF_onError(_CF_this, _CF_this.C_FONCTION, _CF_this.C_FONCTION.value, "Vous avez oublié de remplir un champ obligatoire"))
+            {
+            return false; 
+            }
+        }
+
+    if  (!_CF_hasValue(_CF_this.C_ADRESSE, "TEXT" )) 
+        {
+        if  (!_CF_onError(_CF_this, _CF_this.C_ADRESSE, _CF_this.C_ADRESSE.value, "Vous avez oublié de remplir un champ obligatoire"))
+            {
+            return false; 
+            }
+        }
+
+    if  (!_CF_hasValue(_CF_this.C_CODE, "TEXT" )) 
+        {
+        if  (!_CF_onError(_CF_this, _CF_this.C_CODE, _CF_this.C_CODE.value, "Vous avez oublié de remplir un champ obligatoire"))
+            {
+            return false; 
+            }
+        }
+
+    if  (!_CF_hasValue(_CF_this.C_LOC, "TEXT" )) 
+        {
+        if  (!_CF_onError(_CF_this, _CF_this.C_LOC, _CF_this.C_LOC.value, "Vous avez oublié de remplir un champ obligatoire"))
+            {
+            return false; 
+            }
+        }
+
+    if  (!_CF_hasValue(_CF_this.C_TVA, "TEXT" )) 
+        {
+        if  (!_CF_onError(_CF_this, _CF_this.C_TVA, _CF_this.C_TVA.value, "Vous avez oublié de remplir un champ obligatoire"))
+            {
+            return false; 
+            }
+        }
+
+    return true;
+    }
+
+//-->
+</script>
+</head>
+<body bgcolor="Gray" text="Black" link="Green" vlink="Maroon" leftmargin=0 topmargin=0>
+
+
+
+
+<FORM NAME="CFForm_1" ACTION="home.cfm" METHOD=POST onSubmit="return _CF_checkCFForm_1(this)" method="post">
+<input type="hidden" name="lg" value="fr">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+			
+			
+	
+
+
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10" bgcolor="#FFFF80">
+<tr>
+	<td colspan="2" bgcolor="Black">
+	<center><font style="font-family: Verdana, arial; font-size: 10pt" color="White">GAGNEZ 6 MOIS<br>D'ABONNEMENT GRATUIT</font></center>
+	</td>
+</tr>
+<tr>
+	<td colspan="2"><center>
+	
+	
+	<input type="hidden" name="C_DATE_C" value="25-08-1999">
+	<input type="hidden" name="C_LANGUE" value="fr">
+	<font style="font-family: Verdana, arial; font-size: 8pt" color="Maroon">En date du 25-08-1999 à 12h00,<br>quel sera le nombre de "hits" sur le site Alloweb ?</font><p>
+	
+	<INPUT TYPE="TEXT" NAME="C_COMPTEUR" SIZE=10>&nbsp;<font color="red">*</font><p>
+	
+	<font style="font-family: Verdana, arial; font-size: 8pt" color="Maroon">Actuellement, le nombre de hits est de 17505 .</font><p>
+	<font style="font-family: Verdana, arial; font-size: 8pt" color="Black">Ce concours est réservé aux entreprises belges.</font>
+	<p>
+	
+<table>
+<tr>
+	<td align="right">
+	<font style="font-family: Verdana, arial; font-size: 8pt" color="Maroon">Société : </font>
+	</td>
+	<td align="left">
+	<INPUT TYPE="TEXT" NAME="C_SOCIETE" SIZE=20 MAXLENGTH=80>&nbsp;<font color="red">*</font>
+	</td>
+</tr>
+<tr>
+	<td align="right">
+	<font style="font-family: Verdana, arial; font-size: 8pt" color="Maroon">Responsable : </font>
+	</td>
+	<td align="left">
+	<INPUT TYPE="TEXT" NAME="C_CONTACT" SIZE=20 MAXLENGTH=50>&nbsp;<font color="red">*</font>
+	</td>
+</tr>
+<tr>
+	<td align="right">
+	<font style="font-family: Verdana, arial; font-size: 8pt" color="Maroon">Fonction : </font>
+	</td>
+	<td align="left">
+	<INPUT TYPE="TEXT" NAME="C_FONCTION" SIZE=20 MAXLENGTH=50>&nbsp;<font color="red">*</font>
+	</td>
+</tr>
+<tr>
+	<td align="right">
+	<font style="font-family: Verdana, arial; font-size: 8pt" color="Maroon">Rue/numéro : </font>
+	</td>
+	<td align="left">
+	<INPUT TYPE="TEXT" NAME="C_ADRESSE" SIZE=20 MAXLENGTH=50>&nbsp;<font color="red">*</font>
+	</td>
+</tr>
+<tr>
+	<td align="right">
+	<font style="font-family: Verdana, arial; font-size: 8pt" color="Maroon">Code postal/localité : </font>
+	</td>
+	<td align="left">
+	<INPUT TYPE="TEXT" NAME="C_CODE" SIZE=4 MAXLENGTH=5><INPUT TYPE="TEXT" NAME="C_LOC" SIZE=14 MAXLENGTH=50>&nbsp;<font color="red">*</font>
+	</td>
+</tr>
+<tr>
+	<td align="right">
+	<font style="font-family: Verdana, arial; font-size: 8pt" color="Maroon">Numéro de TVA : </font>
+	</td>
+	<td align="left">
+	<INPUT TYPE="TEXT" NAME="C_TVA" VALUE="BE" SIZE=20 MAXLENGTH=20>&nbsp;<font color="red">*</font>
+	</td>
+</tr>
+<tr>
+	<td align="right">
+	<font style="font-family: Verdana, arial; font-size: 8pt" color="Maroon">Numéro de téléphone : </font>
+	</td>
+	<td align="left" valign="top">
+	<font style="font-family: Verdana, arial; font-size: 8pt" color="Black">+32/</font><INPUT TYPE="TEXT" NAME="C_TEL" SIZE=16 MAXLENGTH=12>
+	</td>
+</tr>
+<tr>
+	<td align="right">
+	<font style="font-family: Verdana, arial; font-size: 8pt" color="Maroon">Numéro de télécopie : </font>
+	</td>
+	<td align="left" valign="top">
+	<font style="font-family: Verdana, arial; font-size: 8pt" color="Black">+32/</font><INPUT TYPE="TEXT" NAME="C_FAX" SIZE=16 MAXLENGTH=12>
+	</td>
+</tr>
+<tr>
+	<td align="right">
+	<font style="font-family: Verdana, arial; font-size: 8pt" color="Maroon">Adresse e-mail : </font>
+	</td>
+	<td align="left">
+	<INPUT TYPE="TEXT" NAME="C_EMAIL" SIZE=20 MAXLENGTH=80>
+	</td>
+</tr>
+</table>
+<table>
+<tr>
+	<td valign="top">
+	<INPUT TYPE="CHECKBOX" NAME="C_MAJ" CHECKED >
+	</td>
+	<td>
+	
+	<font style="font-family: Verdana, arial; font-size: 8pt" color="Maroon">Je désire mettre à jour gratuitement les informations de mon entreprise sur alloweb mentionnées ci-dessus.</font><p>
+	<font style="font-family: Verdana, arial; font-size: 8pt" color="Black">Les champs marqués avec  : "</font><font color="red">*</font><font style="font-family: Verdana, arial; font-size: 8pt" color="Black">" sont obligatoires.</font>
+	
+	</td>
+</tr>
+<tr>
+	<td colspan="2">
+	&nbsp;<br><center><input type="submit" value="Envoyer"></center>
+	</td>
+</tr>
+</table>
+	</center></td>
+</tr>
+</table>
+</FORM>
+
+
+</body>
+</html>

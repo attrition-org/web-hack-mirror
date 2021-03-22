@@ -1,0 +1,46 @@
+
+
+<html>
+<head>
+<meta NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<script language=javascript>
+
+//make array of image links
+var images = new Array();
+//make array of links to visit
+var links = new Array();
+var timeout = new Array();
+
+//initialize the arrays
+
+//	images[] = "";
+	//links[] = "";
+	//timeout[] = ;
+
+//max = 0;
+x = 0;
+
+function startClock() 
+{
+        if( x == max )
+        {
+			x = 0;
+		}
+		
+		document.images[0].src = images[x];
+		document.links[0].href = links[x];
+		document.images[0].src = images[x];
+        timerID = setTimeout("startClock()", timeout[x]*1000);
+        x++;
+}
+</script>
+</head>
+<body bgcolor=#000080 text="#000000" link="#CC0099" vlink="#999999" alink="#FF66FF" >
+<table border=0 cellpadding=0 height=60 width="100%">
+<tr>
+<td align="center" valign="top" height=60 width="100%" bgcolor="#000080"><a href="../index.html" name="link"><img src="/images/banners/mix1.gif" border="0" WIDTH="468" HEIGHT="60" valign="bottom" name="ad"></a></td>
+</tr>
+</table>
+</font></p>
+</body>
+</html>

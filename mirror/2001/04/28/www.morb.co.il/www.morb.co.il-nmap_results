@@ -1,0 +1,37 @@
+
+Starting nmap V. 2.54BETA3 ( www.insecure.org/nmap/ )
+Insufficient responses for TCP sequencing (0), OS detection may be less accurate
+Insufficient responses for TCP sequencing (1), OS detection may be less accurate
+Interesting ports on  (192.114.178.147):
+(The 3 ports scanned but not shown below are in state: closed)
+Port       State       Service
+25/tcp     open        smtp                    
+80/tcp     open        http                    
+
+TCP Sequence Prediction: Class=random positive increments
+                         Difficulty=55420 (Worthy challenge)
+Aggressive OS guesses: Windows 2000 Professional, Build 2128 (94%), Microsoft NT 4.0 Server SP5 + 2047 Hotfixes (94%), Windows NT 4 SP3 (94%), Cisco IOS 12.0(3.3)S  (perhaps a 7200) (92%), FreeBSD 3.2-STABLE (92%), Windows NT4 / Win95 / Win98 (92%), NetBSD 1.3I (after 19990119) to 1.4 x86 (91%), HP-UX B11.00 U 9000/839 (90%)
+No exact OS matches for host (If you know what OS is running on it, see http://www.insecure.org/cgi-bin/nmap-submit.cgi).
+TCP/IP fingerprint:
+T1(Resp=Y%DF=Y%W=4470%ACK=S++%Flags=AS%Ops=M)
+TSeq(Class=RI%gcd=1%SI=D87C)
+T2(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+T1(Resp=Y%DF=Y%W=4470%ACK=S++%Flags=AS%Ops=M)
+T3(Resp=Y%DF=Y%W=4470%ACK=S++%Flags=AS%Ops=M)
+T2(Resp=Y%DF=N%W=0%ACK=S%Flags=AR%Ops=)
+T4(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T3(Resp=Y%DF=Y%W=4470%ACK=S++%Flags=AS%Ops=M)
+T5(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+T4(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T6(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+T5(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+T7(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+T6(Resp=Y%DF=N%W=0%ACK=O%Flags=R%Ops=)
+PU(Resp=N)
+T7(Resp=Y%DF=N%W=0%ACK=S++%Flags=AR%Ops=)
+PU(Resp=N)
+
+
+
+
+Nmap run completed -- 1 IP address (1 host up) scanned in 19 seconds

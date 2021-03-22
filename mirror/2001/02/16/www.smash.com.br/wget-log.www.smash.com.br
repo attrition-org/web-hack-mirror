@@ -1,0 +1,32 @@
+--11:17:40--  http://www.smash.com.br:80/
+           => `www.smash.com.br/index.html'
+Connecting to www.smash.com.br:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 4,659 [text/html]
+
+    0K -> ....                                                   [100%]
+
+11:17:42 (3.83 KB/s) - `www.smash.com.br/index.html' saved [4659/4659]
+
+Loading robots.txt; please ignore errors.
+--11:17:43--  http://www.smash.com.br:80/no-robots.txt
+           => `www.smash.com.br/no-robots.txt'
+Connecting to www.smash.com.br:80... connected!
+HTTP request sent, awaiting response... 404 Not Found
+11:17:44 ERROR 404: Not Found.
+
+--11:17:44--  http://www.smash.com.br:80/some.jpg
+           => `www.smash.com.br/some.jpg'
+Connecting to www.smash.com.br:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 37,722 [image/jpeg]
+
+    0K -> .......... .......... .......... ......                [100%]
+
+11:17:47 (13.33 KB/s) - `www.smash.com.br/some.jpg' saved [37722/37722]
+
+Converting www.smash.com.br/index.html... done.
+
+FINISHED --11:17:47--
+Downloaded: 42,381 bytes in 2 files
+Converting www.smash.com.br/index.html... done.

@@ -1,0 +1,285 @@
+<html>
+<head>
+<title>Suivi des dossiers des entreprises</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="description" content="Fireworks Splice HTML">
+</head>
+
+<script language="JavaScript">
+function valid(){
+var fil=0.0;
+fil = document.su_doss.societe_id.value;
+if (fil=="")
+{
+alert ("Vous devez saisir un code société");
+return false
+}
+}
+</script>
+
+<BODY aLink=#ff6600 bgColor=#ffffff leftMargin=0 text=#333333 
+topMargin=0 vLink=#ce5900 marginheight="0" marginwidth="0">
+<a name="debut"></a>
+
+<script language="JavaScript">
+browserName = navigator.appName;
+browserVer  = parseInt(navigator.appVersion);
+
+if (browserName == "Netscape" && browserVer >= 3)
+  version = "ver1";
+else
+  version = "ver2";
+
+function civiewer1 (url)
+{
+var civiewerpop;
+        civiewerpop = window.open (url,'civiewer','location=no,toolbar=no,directories=no,menubar=no,resizable=no,scrollbars=yes,status=no,width=600,height=400,left=0,top=0');
+                if ( version == "ver1" )
+        civiewerpop.focus();
+}
+</script>
+
+<style type="text/css">
+<!--
+BODY, TD {font-family:arial;font-size:10pt;}
+INPUT {font-size:9pt}
+A {color:#0000FF;}
+A:hover {color:#FF3300;}
+
+.HdrPromoBarTitle {color:#FFFFFF;font-size:7pt;font-weight:bold;font-family:Verdana;}
+A.ChnlTlbarTitleLink {font-family:verdana;font-size:10pt;font-weight:bold;color:#FFFFFF;text-decoration:underline;}
+
+.HeaderMsnNavbarLink {font-family:verdana,sans-serif;font-size:10pt;font-weight:bold;color:#000000}
+.HeaderMsnNavbarLink:hover{color:#FF3300}
+.HeaderTitleLink {font-family:arial,sans-serif;font-size:18pt;font-weight:bold;color:#000000;text-decoration:none}
+.HeaderTitleLink:hover{color:#FF3300;text-decoration:underline}
+.HeaderSearchNavbarActiveCell {background-color:#CCCCCC;border-right-style:solid;border-width:1px;border-color:#FFFFFF}
+.HeaderSearchNavbarInactiveCell {background-color:#993300;border-right-style:solid;border-width:1px;border-color:#FFFFFF;cursor:hand}
+.HeaderSearchNavbarActiveLink {font-family:arial,sans-serif;font-size:10pt;font-weight:bold;color:#000000}
+.HeaderSearchNavbarInactiveLink {font-family:arial,sans-serif;font-size:10pt;font-weight:bold;color:#FFFFFF;text-decoration:none}
+.HeaderSearchNavbarInactiveLink:hover {color:#FFFFFF}
+.FooterLink {font-family:arial,sans-serif;font-size:7pt}
+.FooterCopyrightLink {color:#FFFFFF}
+
+.HpMainTitle {font-family:arial;font-size:13pt;color:#FFFFFF;font-weight:bold}
+.HpSearchTitle {font-family:verdana,arial;font-size:12pt;color:#999999;font-weight:bold;text-decoration:underline}
+.HpCatListMainLink {font-family:arial;font-weight:bold;font-size:10pt;color:blue}
+.HpCatListSubLink {font-family:arial;font-size:8pt;color:blue}
+.HpTipsTitle {font-family:arial;font-size:17pt;color:#993300}
+.HpTipsText {font-family:arial;font-size:8pt;color:#FFFFFF}
+.HpTipsLink {font-family:arial;font-weight:bold;font-size:8pt;color:#FFFFFF}
+.HpVcntText {font-family:arial;font-size:8pt;color:#FFFFFF}
+.HpVcntLink {font-family:arial;font-weight:bold;font-size:8pt;color:#FFFFFF}
+.HpAddonLink {font-family:arial;font-weight:bold;font-size:8pt;color:blue}
+.HpIntWebTitle {color:#000000; font-size:10pt; font-weight:bold}
+.HpIntWebText {color:blue; font-size:8pt}
+.HpIntWebLink {color:blue; font-size:8pt}
+
+A.UCategLinks {color:blue;}
+A.UCategMainLinks {color:blue;}
+
+.VcntMainTitle {font-family:arial;font-size:14pt;font-weight:bold;color:#005AB4}
+.VcntMainText {font-family:arial;font-size:10pt;color:#FFFFFF}
+.VcntUcAnswerText {font-family:arial;font-size:10pt}
+.VcntFormLink {font-family:arial;font-size:10pt;font-weight:bold;color:#FFFFFF}
+.VcntMainLink {font-family:arial;font-size:10pt;font-weight:bold}
+.VcntTitle {font-family:arial;font-size:12pt;font-weight:bold;color:#003366;line-height:20pt}
+.VcntSubTitle {font-family:arial;font-size:10pt;font-weight:bold;color:blue}
+.VcntLink {font-family:arial;font-size:10pt;line-height:20pt}
+.VcntAnswerTitle {font-family:arial;font-size:16pt;font-weight:bold;color:#FFFFFF;line-height:30pt}
+.VcntAnswerLink {font-family:arial;font-size:10pt;color:blue}
+.VcntAnswerIntro {font-family:arial;font-size:8pt;color:#4C81B6}
+
+-->
+</style>
+
+<table border="0" cellpadding="0" cellspacing="0" width="732">
+
+<tr valign="top"> 
+<td rowspan="3">
+<b>
+<font face="Verdana, Arial, Helvetica, sans-serif" size=1>
+<img name="Page2_r1_c1" src="../images/Partie_app2.jpg" border="0">
+</font>
+</b>
+<br>
+</td>
+<td>
+<img name="Page2_r1_c3" src="../images/Partie_006.jpg" border="0" usemap="#home"> 
+</td>
+<td>
+<img name="Page2_r1_c4" src="../images/mi_10.gif" border="0" usemap="#0235">
+</td>
+</tr>
+
+<tr valign="top">
+<td colspan="4" valign="middle">
+<font size="2" face="Arial, Helvetica, sans-serif" color="#FF0000">
+<b>
+CONTRATS SPÉCIAUX DE FORMATION</b>
+</font>
+</td>
+</tr>
+
+<tr> 
+<td colspan="4" valign="top">
+<img src="../images/filet.gif"><br>
+&nbsp;
+<br>
+
+<map name="home">
+  <area shape="rect" coords="101,2,199,51" href="../home.htm">
+  <area shape="default" href="../home.htm">
+</map> <map name="03">
+  <area shape="rect" coords="328,0,348,17" href="../html/e001_00.htm">
+  <area shape="rect" coords="248,1,310,14" href="../html/e001_04.htm">
+  <area shape="rect" coords="159,1,245,15" href="JavaScript:;"
+  onclick="civiewer1('../suivi_dossier/sd_reclamation.asp')">
+  <area shape="rect" coords="60,1,155,16"  >
+  <area shape="rect" coords="1,0,57,16" href="../html/e001_01.htm">
+</map> <map name="0235">
+  <area shape="rect" coords="149,39,274,51">
+  <area shape="rect" coords="153,29,286,41" href="../html/for_dist.htm">
+  <area shape="rect" coords="156,18,272,29" href="../action_planifiee/catalogue.asp?menu=1">
+  <area shape="rect" coords="156,5,243,18" href="../formation/cours_soir.asp?menu=1">
+  <area shape="rect" coords="313,78,389,88" href="../html/plansite.htm">
+  <area shape="rect" coords="330,69,388,79" href="../html/contacts.htm">
+  <area shape="rect" coords="347,59,392,68" href="../html/aide.htm">
+  <area shape="rect" coords="339,48,386,56" href="../html/sport.htm">
+  <area shape="rect" coords="152,80,240,88" href="../html/publicat.htm">
+  <area shape="rect" coords="153,66,252,77" href="../appel_offre/publication1.asp">
+  <area shape="rect" coords="154,54,293,64" href="../html/crea_ent.htm">
+  <area shape="rect" coords="0,81,129,88" href="../html/jp001_00.htm">
+  <area shape="rect" coords="4,66,101,78" href="../html/l001_00.htm">
+  <area shape="rect" coords="4,42,132,64" href="../html/s001_00.htm">
+  <area shape="rect" coords="4,32,54,41" href="../html/j001_00.htm">
+  <area shape="rect" coords="5,19,84,31" href="../html/e001_00.htm">
+  <area shape="rect" coords="4,7,122,20" href="../html/a001_01.htm">
+  <area shape="rect" coords="339,36,385,47" href="../html/agenda.asp">
+  <area shape="rect" coords="339,24,386,34" href="../home.htm">
+
+</map> <map name="6">
+  <area shape="rect" coords="109,0,194,55" href="../home.htm">
+</map>
+
+
+<br>
+
+<table bgcolor="#FFFFFF" align="center" border="0" cellpadding="0" cellspacing="5" width="90%">
+<tr>
+<td class="HpSearchTitle" colspan="3">
+<IMG height=10 src="../images/puce_gris.gif" width=9> Suivi de dossiers des entreprises :
+</td>
+</tr>
+</table>
+<br>
+
+<table bgcolor="#FFFFFF" align="center" border="0" cellpadding="0" cellspacing="5" width="90%">
+<tr>
+<td>
+<font face="arial">
+Veuillez saisir le code de votre société et son mot de passe.
+</font>
+<p>
+</td>
+</tr>
+
+<tr>
+<td>
+
+<form method="post" name="su_doss" action="menu_dossier.asp?menu=1&action=verifier" onsubmit="return valid()">
+<p>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#999999">
+<b>
+<IMG height=6 src="../images/g_puce.gif" width=7>&nbsp;Code société
+</b>
+</font>
+<input size="16" id=societe_id name=societe_id maxlength="30" >                                    
+<br>
+<br>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#999999">
+<b>
+<IMG height=6 src="../images/g_puce.gif" width=7>&nbsp;Mot de passe</b>
+</font>
+<input id=societe_pass name=societe_pass type=password maxlength="30" size="16">
+<br>
+<br>
+</p>
+&nbsp;&nbsp;&nbsp;<input type="submit" value="Valider" id=submit1 name=submit1>
+<input type="reset" value="Effacer" id=reset1 name=reset1>
+</form>
+<p>
+<p>
+<p>
+</td>
+</tr>
+</table>
+
+
+<br>
+<p>
+<p>
+<p>
+
+
+<table bgcolor="#FFFFFF" align="center" border="0" cellpadding="0" cellspacing="5" width="90%">
+<tr>
+<td>
+
+<font face="arial">
+Si vous avez oublié ou perdu votre mot de passe, 
+prière de nous contacter :<br>
+</font>
+</p>
+
+<p>
+<font face="Arial, Helvetica, sans-serif" size="1" color="#000000">
+Responsable : M. DAGHY
+</font>
+<font face="Arial, Helvetica, sans-serif" size="1" color="#000000">
+<br>
+Tél : 022 62 28 02.<br>
+Fax : 022 62 28 03.<br>
+E-mail : dfce@ofppt.org.ma.
+</font>
+</p>
+
+</td>
+</tr>
+</table>
+
+<p>
+<p>
+
+<table bgcolor="#FFFFFF" align="center" border="0" cellpadding="0" cellspacing="5" width="90%">
+<tr valign="top" nowrap> 
+<td> 
+<div align="center">
+<font color="#000099">.................................................................................
+............................
+<a href="#debut">
+<img src="../images/top.jpg" width="23" height="13" border="0">
+<br>
+</a>
+</font>
+
+<font color="#000099" face="Arial, Helvetica, sans-serif" size="1">© copyright 2000 
+<br>                Office de la Formation Professionnelle et de la Promotion du Travail
+</font>
+
+</div>
+<div align="center"></div>
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+
+<br>
+<br>
+
+</body>
+</html>
+

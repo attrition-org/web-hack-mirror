@@ -1,0 +1,128 @@
+<html>
+<head>
+<title>[ConClaveCrew]</title>
+
+<style>
+a{text-decoration:none}
+A:hover {text-decoration: underline;}
+</style>
+
+<style>
+.spanstyle
+ {
+  position:absolute;
+  visibility:visible;
+  top:-50px;
+  font-size:8pt;
+  font-family:Verdana;
+  font-weight:bold;
+  color:#978CFF;
+ }
+</style>
+
+<script>
+var x,y
+var step=10
+var flag=0
+var message="/me and #sh "
+message=message.split("")
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++)
+ {
+  xpos[i]=-50
+ }
+
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++)
+ {
+  ypos[i]=-50
+ }
+
+function handlerMM(e)
+ {
+  x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+  y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+  flag=1
+ }
+
+function makesnake()
+ {
+  
+  if (flag==1 && document.all)
+   {
+     for (i=message.length-1; i>=1; i--)
+      {
+       xpos[i]=xpos[i-1]+step
+       ypos[i]=ypos[i-1]
+      }
+
+     xpos[0]=x+step
+     ypos[0]=y
+	
+     for (i=0; i<message.length-1; i++)
+      {
+       var thisspan = eval("span"+(i)+".style")
+       thisspan.posLeft=xpos[i]
+       thisspan.posTop=ypos[i]
+      }
+   }
+	
+else if (flag==1 && document.layers)
+ {
+  for (i=message.length-1; i>=1; i--)
+   {
+    xpos[i]=xpos[i-1]+step
+    ypos[i]=ypos[i-1]
+   }
+
+   xpos[0]=x+step
+   ypos[0]=y	
+   for (i=0; i<message.length-1; i++)
+    {
+     var thisspan = eval("document.span"+i)
+     thisspan.left=xpos[i]
+     thisspan.top=ypos[i]
+    }
+
+ }
+var timer=setTimeout("makesnake()",0)
+}
+
+</script>
+</head>
+<BODY onLoad="makesnake()" style="width:100%;overflow-x:hidden;overflow-y:scroll"
+bgcolor="#000000" bgproperties="fixed" text="#FFFFFF">
+
+<script>
+for (i=0;i<=message.length-1;i++)
+ {
+  document.write("<span id='span"+i+"' class='spanstyle'>")
+  document.write(message[i])
+  document.write("</span>")
+ }
+if (document.layers){document.captureEvents(Event.MOUSEMOVE);}
+document.onmousemove = handlerMM;
+</script>
+
+<CENTER>
+<H2>
+<BR>
+ Defaced by
+<BR>
+ <IMG src="http://defaced.alldas.de/mirror/2001/02/22/beuster1.fb10.tu-berlin.de/banner.gif"><BR>
+<BR>
+
+<H3>
+<BR><BR>
+We started defacing WinNT but as you can see, it's possible to learn very fast, if you're not dumb :)<BR>
+ConClaveCrew decided to defaced some irix, aix, sunos (pr0phet inspired us)<BR>
+<BR><BR>
+Hey Inx do you mean us?<A HREF="http://defaced.alldas.de/mirror/2001/04/17/mercury.sgi.co.kr/"> Inx Mirror</A><BR>
+</H3>
+
+</H2>
+</CENTER>
+</body>
+</html>
+
+<!-- www.attrition.org web hack mirror - watermark or something -->

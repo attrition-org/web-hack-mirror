@@ -1,0 +1,682 @@
+
+
+
+
+
+			   
+
+
+
+
+
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 FINAL//EN">
+
+<HTML>
+<HEAD>
+<TITLE>Search Results</TITLE>
+<META NAME="Generator" CONTENT="NetObjects Fusion 3.0 for Windows">
+
+</HEAD>
+
+<BODY  BACKGROUND="../../Deepbackground.gif" LINK="#0000FF" VLINK="#800080" TEXT="#000000" TOPMARGIN=0 LEFTMARGIN=0 MARGINWIDTH=0 MARGINHEIGHT=0>
+<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0 WIDTH=638>
+<TR VALIGN="top" ALIGN="left">
+<TD>
+
+  <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100>
+   <TR VALIGN="top" ALIGN="left">
+	<TD HEIGHT =18></TD>
+   </TR>
+   <TR VALIGN="top" ALIGN="left">
+	<TD WIDTH=100 HEIGHT =169><FORM  ACTION="/cfdocs/stage/search/search/search.cfm"  METHOD=POST>
+
+<font face="Arial" size=-1>   &nbsp
+<i>Quick</i> <b>Search</B></font>
+ &nbsp <INPUT TYPE="text" NAME="KEYWORD" VALUE="" SIZE=10 MAXLENGTH=50 ><BR>&nbsp
+<select name="word"> <option value="1">Title<option value="2">Author</select> 
+
+<Input Type="Hidden" Name="session.addToken" Value = "CFID=26479&CFTOKEN=13395" border=0 >
+<INPUT TYPE="image" border=0 src="/cfdocs/stage/assets/images/submit.gif">
+</FORM><APPLET CODE="joybutton.class" CODEBASE="/cfdocs/stage/" WIDTH=100 HEIGHT=375>
+<PARAM NAME="C" VALUE="COPYWRITE 1998 SILICON JOY SOFTWARE WWW.SILICONJOY.COM">
+<PARAM NAME="G" VALUE="15| |FFFFFF|0|0|0|0|7|60|10|0|800000|0">
+<PARAM NAME="0" VALUE="0|25|100|25|0|8|13|FF0000|FF0000|1| | |/cfdocs/stage/search/search.cfm| |1|FFFFFF|31|17|12|0|2|Search| |8|8|0|0|8|13|FF0000|FF0000|1| | | | |1|000000|31|17|12|2|2|Search| |8|8|0|0|8|13|FF0000|FF0000|0| | | | |1|FFFFFF|32|18|12|0|2|Search| |8|8|0">
+<PARAM NAME="1" VALUE="0|50|100|25|0|8|13|FF0000|FF0000|1| | |/cfdocs/stage/search/browse_subjects/browse_subjects.cfm| |2|FFFFFF|25|17|12|0|2|Subjects|FFFFFF|25|29|12|0|2| | |8|8|0|0|8|13|FF0000|FF0000|1| | | | |2|000000|25|17|12|2|2|Subjects|000000|25|29|12|2|2| | |8|8|0|0|8|13|FF0000|FF0000|0| | | | |2|FFFFFF|26|18|12|0|2|Subjects|FFFFFF|26|30|12|0|2| | |8|8|0">
+<PARAM NAME="2" VALUE="0|75|100|25|0|8|13|FF0000|FF0000|1| | |/cfdocs/stage/library/book_library/book_library.cfm| |2|FFFFFF|31|17|12|0|2|Library|FFFFFF|31|31|12|0|2| | |8|8|0|0|8|13|FF0000|FF0000|1| | | | |2|000000|31|17|12|2|2|Library|000000|31|31|12|2|2| | |8|8|0|0|8|13|FF0000|FF0000|0| | | | |2|FFFFFF|32|18|12|0|2|Library|FFFFFF|32|32|12|0|2| | |8|8|0">
+<PARAM NAME="3" VALUE="0|150|100|25|0|8|13|FF0000|FF0000|1| | |/cfdocs/stage/enhancement/enhancement.cfm| |2|FFFFFF|11|17|12|0|2|Study Groups|FFFFFF|15|30|12|0|2| | |8|8|0|0|8|13|FF0000|FF0000|1| | | | |2|000000|11|17|12|2|2|Study Groups|000000|15|30|12|2|2| | |8|8|0|0|8|13|FF0000|FF0000|0| | | | |2|FFFFFF|12|18|12|0|2|Study Groups|FFFFFF|16|31|12|0|2| | |8|8|0">
+<PARAM NAME="4" VALUE="0|175|100|25|0|8|13|FF0000|FF0000|1| | |/cfdocs/stage/recommend.cfm| |2|FFFFFF|10|17|12|0|2|Recommend'n|FFFFFF|32|31|12|0|2| | |8|8|0|0|8|13|FF0000|FF0000|1| | | | |2|000000|10|17|12|2|2|Recommend'n|000000|32|31|12|2|2| | |8|8|0|0|8|13|FF0000|FF0000|0| | | | |2|FFFFFF|11|18|12|0|2|Recommend'n|FFFFFF|33|32|12|0|2| | |9|8|0">
+<PARAM NAME="5" VALUE="0|200|100|25|0|8|13|FF0000|FF0000|1| | |/cfdocs/stage/your_account/your_account.cfm| |1|FFFFFF|12|17|12|0|2|Your Account| |8|8|0|0|8|13|FF0000|FF0000|1| | | | |1|000000|12|17|12|2|2|Your Account| |8|8|0|0|8|13|FF0000|FF0000|0| | | | |1|FFFFFF|13|18|12|0|2|Your Account| |8|8|0">
+<PARAM NAME="6" VALUE="0|225|100|25|0|8|13|FF0000|FF0000|1| | |/cfdocs/stage/suggestion.cfm| |1|FFFFFF|20|17|12|0|2|Feedback| |8|8|0|0|8|13|FF0000|FF0000|1| | | | |1|000000|20|17|12|2|2|Feedback| |8|8|0|0|8|13|FF0000|FF0000|0| | | | |1|FFFFFF|21|18|12|0|2|Feedback| |8|8|0">
+<PARAM NAME="7" VALUE="0|250|100|25|0|8|13|FF0000|FF0000|1| | |/cfdocs/stage/Your_Account/New/new.cfm| |2|FFFFFF|17|17|12|0|2|Community|FFFFFF|17|29|12|0|2| | |8|8|0|0|8|13|FF0000|FF0000|1| | | | |2|000000|17|17|12|2|2|Community|000000|17|29|12|2|2| | |8|8|0|0|8|13|FF0000|FF0000|0| | | | |2|FFFFFF|18|18|12|0|2|Community|FFFFFF|18|30|12|0|2| | |8|8|0">
+<PARAM NAME="8" VALUE="0|275|100|25|0|8|18|FF0000|FF0000|1| | |/cfdocs/stage/faq/faq.cfm| |1|FFFFFF|36|17|12|0|2|FAQ| |8|8|0|0|8|18|FF0000|FF0000|1| | | | |1|000000|36|17|12|2|2|FAQ| |8|8|0|0|8|18|FF0000|FF0000|0| | | | |1|FFFFFF|37|18|12|0|2|FAQ| |8|8|0">
+<PARAM NAME="9" VALUE="0|300|100|25|0|8|18|FF0000|FF0000|1| | |/cfdocs/stage/shopping_cart.cfm| |1|FFFFFF|9|17|12|0|2|Shopping Cart| |8|8|0|0|8|18|FF0000|FF0000|1| | | | |1|000000|9|17|12|2|2|Shopping Cart| |8|8|0|0|8|18|FF0000|FF0000|0| | | | |1|FFFFFF|10|18|12|0|2|Shopping Cart| |8|8|0">
+<PARAM NAME="10" VALUE="0|325|100|25|0|8|18|FF0000|FF0000|1| | |/cfdocs/stage/contact_us/contact_us.cfm| |1|FFFFFF|16|17|12|0|2|Contact Us| |8|8|0|0|8|18|FF0000|FF0000|1| | | | |1|000000|16|17|12|2|2|Contact Us| |8|8|0|0|8|18|FF0000|FF0000|0| | | | |1|FFFFFF|17|18|12|0|2|Contact Us| |8|8|0">
+<PARAM NAME="11" VALUE="0|350|100|25|0|8|18|FF0000|FF0000|1| | |/cfdocs/stage/index.cfm| |1|FFFFFF|34|17|12|0|2|Home| |8|8|0|0|8|18|FF0000|FF0000|1| | | | |1|000000|34|17|12|2|2|Home| |8|8|0|0|8|18|FF0000|FF0000|0| | | | |1|FFFFFF|35|18|12|0|2|Home| |8|8|0">
+<PARAM NAME="12" VALUE="0|125|100|25|0|8|18|FF0000|FF0000|1| | |/cfdocs/stage/event.cfm| |1|FFFFFF|13|17|12|0|2|World Events| |6|8|0|0|8|18|FF0000|FF0000|1| | | | |1|000000|13|17|12|2|2|World Events| |8|8|0|0|8|18|FF0000|FF0000|0| | | | |1|FFFFFF|14|18|12|0|2|World Events| |7|8|0">
+<PARAM NAME="13" VALUE="0|100|100|25|0|8|18|FF0000|FF0000|1| | |/cfdocs/stage/logon.cfm| |1|FFFFFF|10|17|12|0|2|Chat & Forum| |8|8|0|0|8|18|FF0000|FF0000|1| | | | |1|000000|10|17|12|2|2|Chat & Forum| |8|8|0|0|8|18|FF0000|FF0000|0| | | | |1|FFFFFF|11|18|12|0|2|Chat & Forum| |8|8|0">
+<PARAM NAME="14" VALUE="0|0|100|25|0|8|18|0000FF|0000FF|1| | |http://www.deepknowledge.com/infodesk/infodesk.cfm| |1|FFFFFF|8|17|12|0|2|Live Help Desk| |8|8|0|0|8|18|0000FF|0000FF|1| | | | |1|FFFFFF|8|17|12|2|2|Live Help Desk| |8|8|0|0|8|18|0000FF|0000FF|0| | | | |1|FFFFFF|9|18|12|0|2|Live Help Desk| |8|8|0">
+</APPLET>
+
+
+
+&nbsp&nbsp<font face="Arial" size=-2>To Report An Error</font>
+&nbsp&nbsp<FONT face="Arial" SIZE="-2"></font> <font face="Arial" size=-2><A HREF="/cfdocs/stage/bug_report/bug_report.cfm?CFID=26479&CFTOKEN=13395">click here</a></FONT>
+
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100 HEIGHT=169><TR ALIGN=LEFT VALIGN=TOP><TD>
+
+<FORM NAME="LayoutRegion53FORM" ACTION=""  METHOD=POST>
+
+</FORM></TD></TR></TABLE>
+</TD>
+   </TR>
+  </TABLE></TD>
+<TD>
+
+  <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=538>
+   <TR VALIGN="top" ALIGN="left">
+	<TD WIDTH=6 HEIGHT =3><IMG SRC="../../clearpixel.gif" WIDTH =6 HEIGHT=1 BORDER=0></TD>
+	<TD WIDTH=8><IMG SRC="../../clearpixel.gif" WIDTH =8 HEIGHT=1 BORDER=0></TD>
+	<TD WIDTH=5><IMG SRC="../../clearpixel.gif" WIDTH =5 HEIGHT=1 BORDER=0></TD>
+	<TD WIDTH=1><IMG SRC="../../clearpixel.gif" WIDTH =1 HEIGHT=1 BORDER=0></TD>
+	<TD WIDTH=12><IMG SRC="../../clearpixel.gif" WIDTH =12 HEIGHT=1 BORDER=0></TD>
+	<TD WIDTH=241><IMG SRC="../../clearpixel.gif" WIDTH =241 HEIGHT=1 BORDER=0></TD>
+	<TD WIDTH=241><IMG SRC="../../clearpixel.gif" WIDTH =241 HEIGHT=1 BORDER=0></TD>
+	<TD WIDTH=8><IMG SRC="../../clearpixel.gif" WIDTH =8 HEIGHT=1 BORDER=0></TD>
+	<TD WIDTH=2><IMG SRC="../../clearpixel.gif" WIDTH =2 HEIGHT=1 BORDER=0></TD>
+	<TD WIDTH=6><IMG SRC="../../clearpixel.gif" WIDTH =6 HEIGHT=1 BORDER=0></TD>
+	<TD WIDTH=3><IMG SRC="../../clearpixel.gif" WIDTH =3 HEIGHT=1 BORDER=0></TD>
+	<TD WIDTH=5><IMG SRC="../../clearpixel.gif" WIDTH =5 HEIGHT=1 BORDER=0></TD>
+   </TR>
+   <TR VALIGN="top" ALIGN="left">
+	<TD COLSPAN=2 HEIGHT =34></TD>
+	<TD WIDTH=516 COLSPAN=8 ALIGN="left" VALIGN="top"><IMG id="Picture10" HEIGHT=34 WIDTH=516 SRC="../../banner2.gif"  BORDER=0  ALT="banner2" ></TD>
+	<TD COLSPAN=2></TD>
+   </TR>
+   <TR VALIGN="top" ALIGN="left">
+	<TD COLSPAN=2 HEIGHT =5></TD>
+	<TD WIDTH=516 COLSPAN=8><applet code="Fade.class" CODEBASE="/cfdocs/stage/" width="516" height="28">
+<param name="bgcolor" value="cc9900">
+<param name="txtcolor" value="333300">
+<param name="changefactor" value="1">
+<param name="text1" value="deepknowledge.com... Treasures, Solutions, Answers for the Melanin Enriched">
+<param name="url1" value="http://www.deepknowledge.com">
+<param name="font1" value="TimesRoman,ITALIC,16">
+<param name="text2" value="Follow in the footsteps of your Ancestors,">
+<param name="url2" value="http://www.deepknowledge.com">
+<param name="font2" value="TimesRoman,ITALIC,18">
+<param name="text3" value="for the mind is trained through knowledge.">
+<param name="url3" value="http://www.deepknowledge.com">
+<param name="font3" value="TimesRoman,ITALIC,18">
+<param name="text4" value="Behold, their words endure in books.">
+<param name="url4" value="http://www.deepknowledge.com">
+<param name="font4" value="TimesRoman,ITALIC,18">
+<param name="text5" value="Open and read them and follow their wise counsel.">
+<param name="url5" value="http://www.deepknowledge.com">
+<param name="font5" value="TimesRoman,ITALIC,18">
+
+<param name="text6" value="For one who is taught becomes skilled...">
+<param name="url6" value="http://www.deepknowledge.com">
+<param name="font6" value="TimesRoman,ITALIC,18">
+
+
+<param name="text7" value="from The Husia, The Book of Kheti, 1500 BCE">
+<param name="url7" value="http://www.deepknowledge.com">
+<param name="font7" value="TimesRoman,ITALIC,18">
+
+
+</applet><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=516 HEIGHT=5><TR ALIGN=LEFT VALIGN=TOP><TD>
+</TD></TR></TABLE>
+</TD>
+	<TD COLSPAN=2></TD>
+   </TR>
+   <TR VALIGN="top" ALIGN="left">
+	<TD COLSPAN=12 HEIGHT =2></TD>
+   </TR>
+   <TR VALIGN="top" ALIGN="left">
+	<TD COLSPAN=4 HEIGHT =5></TD>
+	<TD WIDTH=513 COLSPAN=7>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table>
+
+<TD>
+</TD>
+
+<TD>
+</TD>
+
+<TD>
+</TD>
+
+<TD>
+</TD>
+
+<TD>
+</TD>
+
+<TD>
+</TD>
+
+<TD>
+</TD>
+
+<TD>
+</TD>
+
+<TD>
+</TD>
+
+<TD>
+</TD>
+</table>
+
+
+<font face="Arial">
+Total Items Found 26 Book(s) , 1<a href="/cfdocs/stage/search/search_results/audio_subject/audio_subject.cfm?CFID=26479&CFTOKEN=13395&CAT_NUM=38"> Audio(s)</a>.
+</font>
+
+<BR><br>
+<font face="Arial">
+Books  1 - 10 of 26 for Subject:  Afrikan Mystery Systems. <BR></font>
+
+
+&nbsp
+
+
+
+
+
+<a href="/cfdocs/stage/search/search_results/search_results.cfm?CFID=26479&CFTOKEN=13395&CAT_NUM=38&Startrow=1&holder=10"><font face="Arial">
+  Next Set Of Titles</font>
+</a>
+
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=513 HEIGHT=5><TR ALIGN=LEFT VALIGN=TOP><TD>
+
+<FORM NAME="LayoutRegion1FORM" ACTION=""  METHOD=POST>
+
+</FORM></TD></TR></TABLE>
+</TD>
+	<TD></TD>
+   </TR>
+   <TR VALIGN="top" ALIGN="left">
+	<TD COLSPAN=12 HEIGHT =2></TD>
+   </TR>
+   <TR VALIGN="top" ALIGN="left">
+	<TD HEIGHT =8></TD>
+	<TD WIDTH=532 COLSPAN=11><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=532 HEIGHT=8><TR ALIGN=LEFT VALIGN=TOP><TD>
+<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0 WIDTH=532>
+<TR VALIGN="top" ALIGN="left">
+<TD>
+
+  <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=264>
+   <TR VALIGN="top" ALIGN="left">
+	<TD WIDTH=4 HEIGHT =8><IMG SRC="../../clearpixel.gif" WIDTH =4 HEIGHT=1 BORDER=0></TD>
+	<TD WIDTH=260><table>
+
+<TR>
+<TD valign="top" align="center"><a href="/cfdocs/stage/detail_page/detail_page.cfm?ITEM_NUM=0620178256&CFID=26479&CFTOKEN=13395"><IMG SRC=/cfdocs/stage/assets/images/0620178256.gif></a><BR>
+<font face="Arial" size=-1><a href="/cfdocs/stage/shopping_cart.cfm?cart='1'&URL='/cfdocs/stage/shopping_cart/shopping_cart.cfm'&ITEM_NUM=0620178256&CFID=26479&CFTOKEN=13395"><font face="Arial">Add To Cart</font></A></font></TD><TD valign="top"><font face="Arial" size=-1><a href="/cfdocs/stage/detail_page/detail_page.cfm?ITEM_NUM=0620178256&CFID=26479&CFTOKEN=13395"><b>African Masters & The Mystery School<BR>
+</a><BR></B>
+Rhodia Mann<BR>
+$13.00<BR>
+
+<font face="Arial">
+Softcover</font>
+
+
+</font>
+</font></TD>
+</TR>
+
+</table>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=260 HEIGHT=8><TR ALIGN=LEFT VALIGN=TOP><TD>
+</TD></TR></TABLE>
+</TD>
+   </TR>
+  </TABLE></TD>
+<TD>
+
+  <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=268>
+   <TR VALIGN="top" ALIGN="left">
+	<TD WIDTH=8 HEIGHT =8><IMG SRC="../../clearpixel.gif" WIDTH =8 HEIGHT=1 BORDER=0></TD>
+	<TD WIDTH=260><table>
+
+
+
+
+<TR>
+<TD valign="top" align="center"><a href="/cfdocs/stage/detail_page/detail_page.cfm?ITEM_NUM=1564590615&CFID=26479&CFTOKEN=13395"><IMG SRC=/cfdocs/stage/assets/images/1564590615.gif></a><BR>
+<font face="Arial" size=-1><a href="/cfdocs/stage/shopping_cart.cfm?cart='1'&URL='/cfdocs/stage/shopping_cart.cfm'&ITEM_NUM=1564590615&CFID=26479&CFTOKEN=13395"><font face="Arial">Add To Cart</font></A></font></TD><TD valign="top"><font face="Arial" size=-1><a href="/cfdocs/stage/detail_page/detail_page.cfm?ITEM_NUM=1564590615&CFID=26479&CFTOKEN=13395"><b>Ancient Mysteries and Modern Masonry<BR>
+</a><BR></B>
+Charles  H. Vail<BR>
+$25.00<BR>
+
+<font face="Arial">
+Softcover</font>
+
+
+</font></font>
+</TR>
+
+</table>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=260 HEIGHT=8><TR ALIGN=LEFT VALIGN=TOP><TD>
+</TD></TR></TABLE>
+</TD>
+   </TR>
+  </TABLE></TD>
+</TR>
+</TABLE>
+</TD></TR></TABLE>
+</TD>
+   </TR>
+   <TR VALIGN="top" ALIGN="left">
+	<TD COLSPAN=12 HEIGHT =10></TD>
+   </TR>
+   <TR VALIGN="top" ALIGN="left">
+	<TD HEIGHT =8></TD>
+	<TD WIDTH=532 COLSPAN=11><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=532 HEIGHT=8><TR ALIGN=LEFT VALIGN=TOP><TD>
+<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0 WIDTH=532>
+<TR VALIGN="top" ALIGN="left">
+<TD>
+
+  <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=264>
+   <TR VALIGN="top" ALIGN="left">
+	<TD WIDTH=4 HEIGHT =8><IMG SRC="../../clearpixel.gif" WIDTH =4 HEIGHT=1 BORDER=0></TD>
+	<TD WIDTH=260><table>
+
+
+
+
+<TR>
+<TD valign="top" align="center"><a href="/cfdocs/stage/detail_page/detail_page.cfm?ITEM_NUM=0916411230&CFID=26479&CFTOKEN=13395"><IMG SRC=/cfdocs/stage/assets/images/0916411230.gif></a><BR>
+<font face="Arial" size=-1><a href="/cfdocs/stage/shopping_cart.cfm?cart='1'&URL='/cfdocs/stage/shopping_cart.cfm'&ITEM_NUM=0916411230&CFID=26479&CFTOKEN=13395"><font face="Arial">Add To Cart</font></A></font></TD><TD valign="top"><font face="Arial" size=-1><a href="/cfdocs/stage/detail_page/detail_page.cfm?ITEM_NUM=0916411230&CFID=26479&CFTOKEN=13395"><b>Bandlet of Righteousness<BR>
+An Ethiopian Book of the Dead<BR></a><BR></B>
+E. A Wallis Budge<BR>
+$5.95<BR>
+
+<font face="Arial">
+Softcover</font>
+
+
+</font></font>
+</TR>
+
+</table>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=260 HEIGHT=8><TR ALIGN=LEFT VALIGN=TOP><TD>
+</TD></TR></TABLE>
+</TD>
+   </TR>
+  </TABLE></TD>
+<TD>
+
+  <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=268>
+   <TR VALIGN="top" ALIGN="left">
+	<TD WIDTH=8 HEIGHT =8><IMG SRC="../../clearpixel.gif" WIDTH =8 HEIGHT=1 BORDER=0></TD>
+	<TD WIDTH=260><table>
+
+
+
+
+<TR>
+<TD valign="top" align="center"><a href="/cfdocs/stage/detail_page/detail_page.cfm?ITEM_NUM=1884564054&CFID=26479&CFTOKEN=13395"><IMG SRC=/cfdocs/stage/assets/images/1884564054.gif><a/><BR>
+<font face="Arial" size=-1><a href="/cfdocs/stage/shopping_cart.cfm?cart='1'&URL='/cfdocs/stage/shopping_cart.cfm'&ITEM_NUM=1884564054&CFID=26479&CFTOKEN=13395"><font face="Arial">Add To Cart</font></A></font></TD><TD valign="top"><font face="Arial" size=-1><a href="/cfdocs/stage/detail_page/detail_page.cfm?ITEM_NUM=1884564054&CFID=26479&CFTOKEN=13395"><b>Christian Yoga<BR>
+The Mystical Journey From Jesus To Christ   Book 1<BR></A><BR></B>
+Muata Ashby<BR>
+$19.95<BR>
+
+<font face="Arial">
+Softcover</font>
+
+
+</font></font>
+</TR>
+
+</table>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=260 HEIGHT=8><TR ALIGN=LEFT VALIGN=TOP><TD>
+</TD></TR></TABLE>
+</TD>
+   </TR>
+  </TABLE></TD>
+</TR>
+</TABLE>
+</TD></TR></TABLE>
+</TD>
+   </TR>
+   <TR VALIGN="top" ALIGN="left">
+	<TD COLSPAN=12 HEIGHT =10></TD>
+   </TR>
+   <TR VALIGN="top" ALIGN="left">
+	<TD HEIGHT =8></TD>
+	<TD WIDTH=532 COLSPAN=11><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=532 HEIGHT=8><TR ALIGN=LEFT VALIGN=TOP><TD>
+<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0 WIDTH=532>
+<TR VALIGN="top" ALIGN="left">
+<TD>
+
+  <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=264>
+   <TR VALIGN="top" ALIGN="left">
+	<TD WIDTH=4 HEIGHT =8><IMG SRC="../../clearpixel.gif" WIDTH =4 HEIGHT=1 BORDER=0></TD>
+	<TD WIDTH=260><table>
+
+
+
+
+<TR>
+<TD valign="top" align="center"><a href="/cfdocs/stage/detail_page/detail_page.cfm?ITEM_NUM=0195198212&CFID=26479&CFTOKEN=13395"><IMG SRC=/cfdocs/stage/assets/images/0195198212.gif><a/><BR>
+<font face="Arial" size=-1><a href="/cfdocs/stage/shopping_cart.cfm?cart='1'&URL='/cfdocs/stage/shopping_cart.cfm'&ITEM_NUM=0195198212&CFID=26479&CFTOKEN=13395"><font face="Arial">Add To Cart</font></A></font></TD><TD valign="top"><font face="Arial" size=-1><a href="/cfdocs/stage/detail_page/detail_page.cfm?ITEM_NUM=0195198212&CFID=26479&CFTOKEN=13395"><b>Conversations with Ogotemmeli<BR>
+An Introduction To Dogon Religious Ideas<BR></a><BR></B>
+Marcel Griaule<BR>
+$17.95<BR>
+
+<font face="Arial" >
+Softcover</font>
+
+
+</font></font>
+</TR>
+
+</table>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=260 HEIGHT=8><TR ALIGN=LEFT VALIGN=TOP><TD>
+</TD></TR></TABLE>
+</TD>
+   </TR>
+  </TABLE></TD>
+<TD>
+
+  <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=268>
+   <TR VALIGN="top" ALIGN="left">
+	<TD WIDTH=8 HEIGHT =8><IMG SRC="../../clearpixel.gif" WIDTH =8 HEIGHT=1 BORDER=0></TD>
+	<TD WIDTH=260><table>
+
+
+
+
+<TR>
+<TD valign="top" align="center"><a href="/cfdocs/stage/detail_page/detail_page.cfm?ITEM_NUM=0500810249&CFID=26479&CFTOKEN=13395"><IMG SRC=/cfdocs/stage/assets/images/0500810249.gif></a><BR>
+<font face="Arial" size=-1><a href="/cfdocs/stage/shopping_cart.cfm?cart='1'&URL='/cfdocs/stage/shopping_cart.cfm'&ITEM_NUM=0500810249&CFID=26479&CFTOKEN=13395"><font face="Arial">Add To Cart</font></A></font></TD><TD valign="top"><font face="Arial" size=-1><a href="/cfdocs/stage/detail_page/detail_page.cfm?ITEM_NUM=0500810249&CFID=26479&CFTOKEN=13395"><b>Egyptian Mysteries<BR>
+New Light On Ancient Knowledge<BR></a><BR></B>
+L. Lamy<BR>
+$15.95<BR>
+
+<font face="Arial">
+Softcover</font>
+
+
+</font></font>
+</TR>
+
+</table>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=260 HEIGHT=8><TR ALIGN=LEFT VALIGN=TOP><TD>
+</TD></TR></TABLE>
+</TD>
+   </TR>
+  </TABLE></TD>
+</TR>
+</TABLE>
+</TD></TR></TABLE>
+</TD>
+   </TR>
+   <TR VALIGN="top" ALIGN="left">
+	<TD COLSPAN=12 HEIGHT =10></TD>
+   </TR>
+   <TR VALIGN="top" ALIGN="left">
+	<TD HEIGHT =8></TD>
+	<TD WIDTH=532 COLSPAN=11><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=532 HEIGHT=8><TR ALIGN=LEFT VALIGN=TOP><TD>
+<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0 WIDTH=532>
+<TR VALIGN="top" ALIGN="left">
+<TD>
+
+  <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=264>
+   <TR VALIGN="top" ALIGN="left">
+	<TD WIDTH=4 HEIGHT =8><IMG SRC="../../clearpixel.gif" WIDTH =4 HEIGHT=1 BORDER=0></TD>
+	<TD WIDTH=260><table>
+
+
+
+
+<TR>
+<TD valign="top" align="center"><a href="/cfdocs/stage/detail_page/detail_page.cfm?ITEM_NUM=0877286817&CFID=26479&CFTOKEN=13395"><IMG SRC=/cfdocs/stage/assets/images/0877286817.GIF></A><BR>
+<font face="Arial" size=-1><a href="/cfdocs/stage/shopping_cart.cfm?cart='1'&URL='/cfdocs/stage/shopping_cart.cfm'&ITEM_NUM=0877286817&CFID=26479&CFTOKEN=13395"><font face="Arial">Add To Cart</font></A></font></TD><TD valign="top"><font face="Arial" size=-1><a href="/cfdocs/stage/detail_page/detail_page.cfm?ITEM_NUM=0877286817&CFID=26479&CFTOKEN=13395"><b>Egyptian Mysteries<BR>
+Account of An Initiation<BR></a><BR></B>
+Iamblichus<BR>
+$9.95<BR>
+
+<font face="Arial">
+Softcover</font>
+
+
+</font></font>
+</TR>
+
+</table>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=260 HEIGHT=8><TR ALIGN=LEFT VALIGN=TOP><TD>
+</TD></TR></TABLE>
+</TD>
+   </TR>
+  </TABLE></TD>
+<TD>
+
+  <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=268>
+   <TR VALIGN="top" ALIGN="left">
+	<TD WIDTH=8 HEIGHT =8><IMG SRC="../../clearpixel.gif" WIDTH =8 HEIGHT=1 BORDER=0></TD>
+	<TD WIDTH=260><table>
+
+
+
+
+<TR>
+<TD valign="top" align="center"><a href="/cfdocs/stage/detail_page/detail_page.cfm?ITEM_NUM=1884564003&CFID=26479&CFTOKEN=13395"><IMG SRC=/cfdocs/stage/assets/images/1884564003.gif></A><BR>
+<font face="Arial" size=-1><a href="/cfdocs/stage/shopping_cart.cfm?cart='1'&URL='/cfdocs/stage/shopping_cart.cfm'&ITEM_NUM=1884564003&CFID=26479&CFTOKEN=13395"><font face="Arial">Add To Cart</font></A></font></TD><TD valign="top"><font face="Arial" size=-1><a href="/cfdocs/stage/detail_page/detail_page.cfm?ITEM_NUM=1884564003&CFID=26479&CFTOKEN=13395"><b>Egyptian Proverbs (Temt Tchaas)<BR>
+Mystical Wisdom Teachings & Meditations<BR></A><BR></B>
+Muata Ashby<BR>
+$9.95<BR>
+
+<font face="Arial">
+Softcover</font>
+
+
+</font></font>
+</TR>
+
+</table>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=260 HEIGHT=8><TR ALIGN=LEFT VALIGN=TOP><TD>
+</TD></TR></TABLE>
+</TD>
+   </TR>
+  </TABLE></TD>
+</TR>
+</TABLE>
+</TD></TR></TABLE>
+</TD>
+   </TR>
+   <TR VALIGN="top" ALIGN="left">
+	<TD COLSPAN=12 HEIGHT =10></TD>
+   </TR>
+   <TR VALIGN="top" ALIGN="left">
+	<TD HEIGHT =8></TD>
+	<TD WIDTH=532 COLSPAN=11><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=532 HEIGHT=8><TR ALIGN=LEFT VALIGN=TOP><TD>
+<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0 WIDTH=532>
+<TR VALIGN="top" ALIGN="left">
+<TD>
+
+  <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=264>
+   <TR VALIGN="top" ALIGN="left">
+	<TD WIDTH=4 HEIGHT =8><IMG SRC="../../clearpixel.gif" WIDTH =4 HEIGHT=1 BORDER=0></TD>
+	<TD WIDTH=260><table>
+
+
+
+
+<TR>
+<TD valign="top" align="center"><a href="/cfdocs/stage/detail_page/detail_page.cfm?ITEM_NUM=1884564399&CFID=26479&CFTOKEN=13395"><IMG SRC=/cfdocs/stage/assets/images/1884564399.gif></A><BR>
+<font face="Arial" size=-1><a href="/cfdocs/stage/shopping_cart.cfm?cart='1'&URL='/cfdocs/stage/shopping_cart.cfm'&ITEM_NUM=1884564399&CFID=26479&CFTOKEN=13395"><font face="Arial">Add To Cart</font></A></font></TD><TD valign="top"><font face="Arial" size=-1><a href="/cfdocs/stage/detail_page/detail_page.cfm?ITEM_NUM=1884564399&CFID=26479&CFTOKEN=13395"><b>Egyptian Yoga<BR>
+Vol.II  The Supreme Wisdom of Enlightenment<BR></A><BR></B>
+Muata Ashby<BR>
+$18.95<BR>
+
+<font face="Arial">
+Softcover</font>
+
+
+</font></font>
+</TR>
+
+</table>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=260 HEIGHT=8><TR ALIGN=LEFT VALIGN=TOP><TD>
+</TD></TR></TABLE>
+</TD>
+   </TR>
+  </TABLE></TD>
+<TD>
+
+  <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=268>
+   <TR VALIGN="top" ALIGN="left">
+	<TD WIDTH=8 HEIGHT =8><IMG SRC="../../clearpixel.gif" WIDTH =8 HEIGHT=1 BORDER=0></TD>
+	<TD WIDTH=260><table>
+
+
+
+
+<TR>
+<TD valign="top" align="center"><a href="/cfdocs/stage/detail_page/detail_page.cfm?ITEM_NUM=1884564100&CFID=26479&CFTOKEN=13395"><IMG SRC=/cfdocs/stage/assets/images/1884564100.gif></a><BR>
+<font face="Arial" size=-1><a href="/cfdocs/stage/shopping_cart.cfm?cart='1'&URL='/cfdocs/stage/shopping_cart.cfm'&ITEM_NUM=1884564100&CFID=26479&CFTOKEN=13395"><font face="Arial">Add To Cart</font></A></font></TD><TD valign="top"><font face="Arial" size=-1><a href="/cfdocs/stage/detail_page/detail_page.cfm?ITEM_NUM=1884564100&CFID=26479&CFTOKEN=13395"><b>Egyptian Yoga     Exercise Workout Book<BR>
+The History, Myth and Practice of Yoga Exercise in Ancient Egypt<BR></A><BR></B>
+Muata Ashby<BR>
+$16.99<BR>
+
+<font face="Arial">
+Softcover</font>
+
+
+</font></font>
+</TR>
+
+</table>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=260 HEIGHT=8><TR ALIGN=LEFT VALIGN=TOP><TD>
+</TD></TR></TABLE>
+</TD>
+   </TR>
+  </TABLE></TD>
+</TR>
+</TABLE>
+</TD></TR></TABLE>
+</TD>
+   </TR>
+   <TR VALIGN="top" ALIGN="left">
+	<TD COLSPAN=12 HEIGHT =3></TD>
+   </TR>
+   <TR VALIGN="top" ALIGN="left">
+	<TD COLSPAN=6 HEIGHT =7></TD>
+	<TD WIDTH=249 COLSPAN=2>
+&nbsp
+
+
+
+
+
+<a href="/cfdocs/stage/search/search_results/search_results.cfm?CFID=26479&CFTOKEN=13395&CAT_NUM=38&Startrow=1&holder=10"><font face="Arial">
+  Next Set Of Titles</font>
+</a>
+
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=249 HEIGHT=7><TR ALIGN=LEFT VALIGN=TOP><TD>
+</TD></TR></TABLE>
+</TD>
+	<TD COLSPAN=4></TD>
+   </TR>
+   <TR VALIGN="top" ALIGN="left">
+	<TD COLSPAN=12 HEIGHT =65></TD>
+   </TR>
+   <TR VALIGN="top" ALIGN="left">
+	<TD COLSPAN=3></TD>
+	<TD WIDTH=505 COLSPAN=6>
+	  <TABLE id="Table10" BORDER=0 CELLSPACING=2 CELLPADDING=0  WIDTH=505 >
+	 <TR VALIGN="top" ALIGN="left">
+		<TD WIDTH=67><a href="/cfdocs/stage/search/search.cfm?#session.addToken#">
+<P><FONT SIZE="-1" FACE="Arial,Helvetica,Univers,Zurich BT">Search</FONT></a></TD>
+		<TD WIDTH=84><a href="/cfdocs/stage/search/search.cfm?#session.addToken#">
+<P><FONT SIZE="-1" FACE="Arial,Helvetica,Univers,Zurich BT">Subjects</FONT></a></TD>
+		<TD WIDTH=54><a href="/cfdocs/stage/library/book_library/book_library.cfm?#session.addToken#">
+<P><FONT SIZE="-1" FACE="Arial,Helvetica,Univers,Zurich BT">Library</FONT></a></TD>
+		<TD WIDTH=95><a href="/cfdocs/stage/discussion_center/discussion_center.cfm?#session.addToken#">
+<P><FONT SIZE="-1" FACE="Arial,Helvetica,Univers,Zurich BT">Study Group</FONT></A></TD>
+		<TD WIDTH=104><a href="/cfdocs/stage/recommend.cfm?#session.addToken#">
+<P><FONT SIZE="-1" FACE="Arial,Helvetica,Univers,Zurich BT">Recommend'n</FONT></A></TD>
+		<TD WIDTH=87><a href="/cfdocs/stage/your_account/your_account.cfm?#session.addToken#">
+<P><FONT SIZE="-1" FACE="Arial,Helvetica,Univers,Zurich BT">Your Account</FONT></A></TD>
+	 </TR>
+	 <TR VALIGN="top" ALIGN="left">
+		<TD WIDTH=67><a href="/cfdocs/stage/suggestion.cfm?#session.addToken#">
+<P><FONT SIZE="-1" FACE="Arial,Helvetica,Univers,Zurich BT">Feedback</FONT></A></TD>
+		<TD WIDTH=84><a href="/cfdocs/stage/your_account/your_account.cfm?#session.addToken#">
+<P><FONT SIZE="-1" FACE="Arial,Helvetica,Univers,Zurich BT">Community</FONT></A></TD>
+		<TD WIDTH=54><a href="/cfdocs/stage/faq/faq.cfm?#session.addToken#">
+<P><FONT SIZE="-1" FACE="Arial,Helvetica,Univers,Zurich BT">FAQ</FONT></A></TD>
+		<TD WIDTH=95><a href="/cfdocs/stage/shopping_cart.cfm?#session.addToken#">
+<P><FONT SIZE="-1" FACE="Arial,Helvetica,Univers,Zurich BT">Shopping Cart</FONT></a></TD>
+		<TD WIDTH=104><a href="/cfdocs/stage/contact_us/contact_us.cfm?#session.addToken#">
+<P><FONT SIZE="-1" FACE="Arial,Helvetica,Univers,Zurich BT">Contact Us</FONT></a></TD>
+		<TD WIDTH=87><a href="/cfdocs/stage/index.cfm?#session.addToken#">
+<P><FONT SIZE="-1" FACE="Arial,Helvetica,Univers,Zurich BT">Home</FONT></a></TD>
+	 </TR>
+	  </TABLE></TD>
+	<TD COLSPAN=3></TD>
+   </TR>
+   <TR VALIGN="top" ALIGN="left">
+	<TD COLSPAN=12 HEIGHT =18></TD>
+   </TR>
+   <TR VALIGN="top" ALIGN="left">
+	<TD COLSPAN=5></TD>
+	<TD WIDTH=482 COLSPAN=2>
+<P><FONT SIZE="-1" FACE="Arial,Helvetica,Univers,Zurich BT">Copyright&nbsp; &copy 1998 M o r e e&nbsp; C T I&nbsp; W e b&nbsp; C o n s u l t i n g.&nbsp; All rights reserved.&nbsp; Deepknowledge.com is a service mark of M o r e e&nbsp; C T I&nbsp; W e b&nbsp; C o n s u l t i n g. </FONT></TD>
+	<TD COLSPAN=5></TD>
+   </TR>
+  </TABLE></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

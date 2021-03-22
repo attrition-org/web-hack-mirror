@@ -1,0 +1,119 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=">
+<script language="JavaScript">
+<!-- Begin
+function leapto(form) {
+var myindex=form.dest.selectedIndex
+parent.location.href=(form.dest.options[myindex].value);
+// You can output to ANY frame using:  parent.[framename].location.href
+}
+// End -->
+
+<!--
+function MM_preloadImages() { //v2.0
+  if (document.images) {
+    var imgFiles = MM_preloadImages.arguments;
+    if (document.preloadArray==null) document.preloadArray = new Array();
+    var i = document.preloadArray.length;
+    with (document) for (var j=0; j<imgFiles.length; j++) if (imgFiles[j].charAt(0)!="#"){
+      preloadArray[i] = new Image;
+      preloadArray[i++].src = imgFiles[j];
+  } }
+}
+
+function MM_swapImgRestore() { //v2.0
+  if (document.MM_swapImgData != null)
+    for (var i=0; i<(document.MM_swapImgData.length-1); i+=2)
+      document.MM_swapImgData[i].src = document.MM_swapImgData[i+1];
+}
+
+function MM_swapImage() { //v2.0
+  var i,j=0,objStr,obj,swapArray=new Array,oldArray=document.MM_swapImgData;
+  for (i=0; i < (MM_swapImage.arguments.length-2); i+=3) {
+    objStr = MM_swapImage.arguments[(navigator.appName == 'Netscape')?i:i+1];
+    if ((objStr.indexOf('document.layers[')==0 && document.layers==null) ||
+        (objStr.indexOf('document.all[')   ==0 && document.all   ==null))
+      objStr = 'document'+objStr.substring(objStr.lastIndexOf('.'),objStr.length);
+    obj = eval(objStr);
+    if (obj != null) {
+      swapArray[j++] = obj;
+      swapArray[j++] = (oldArray==null || oldArray[j-1]!=obj)?obj.src:oldArray[j];
+      obj.src = MM_swapImage.arguments[i+2];
+  } }
+  document.MM_swapImgData = swapArray; //used for restore
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#B5B2CE" leftmargin="0" topmargin="0" marginheight="0" marginwidth="0" onLoad="MM_preloadImages('Pics/Ana/banner2on.gif','#938515883774');MM_preloadImages('Pics/Ana/banner3on.gif','#938516039388');MM_preloadImages('Pics/Ana/banner4on.gif','#938516070783')" background="Pics/Ana/bak_a.jpg">
+<img src="Pics/Ana/clear_pixel.gif" width="8" height="1"><img src="Pics/Ana/banner1.gif" width="180" height="29"><a href="http://www.philips.com/search.html" target="_blank" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('parent.frames[\'banner\'].document.search','parent.frames[\'banner\'].document.search','Pics/Ana/banner2on.gif','#938515883774')"><img src="Pics/Ana/banner2.gif" width="72" height="29" border="0" name="search"></a><a href="http://www.philips.com/cgi-bin/fb" target="_blank" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('parent.frames[\'banner\'].document.talk','parent.frames[\'banner\'].document.talk','Pics/Ana/banner3on.gif','#938516039388')"><img src="Pics/Ana/banner3.gif" width="61" height="29" border="0" name="talk"></a><a href="http://www.philips.com" target="_blank" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('parent.frames[\'banner\'].document.home','parent.frames[\'banner\'].document.home','Pics/Ana/banner4on.gif','#938516070783')"><img src="Pics/Ana/banner4.gif" width="147" height="29" name="home" border="0"></a><img src="Pics/Ana/birlikte-anim.gif" width="140" height="29"><br>
+<img src="Pics/Ana/clear_pixel.gif" width="8" height="1"><img src="Pics/Ana/banner-alt.gif" width="600" height="23"> 
+<table width="630" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="8" height="10"><img src="Pics/ElektUrun/clear_pixel.gif" width="1" height="10"></td>
+    <td width="230" height="10"> 
+      <div align="left"><img src="Pics/Ana/box-urunler.gif" width="92" height="8"> 
+      </div>
+    </td>
+    <td width="200" height="10"><img src="Pics/ElektUrun/clear_pixel.gif" width="1" height="10"></td>
+    <td height="10"> 
+      <div align="right"><img src="Pics/Ana/box-kelime.gif" width="74" height="8"><img src="Pics/ElektUrun/clear_pixel.gif" width="1" height="10"></div>
+    </td>
+    <td height="10" width="48" valign="middle"> 
+      <div align="left"></div>
+    </td>
+    <td height="10"><img src="Pics/ElektUrun/clear_pixel.gif" width="1" height="10"></td>
+  </tr>
+  <tr>
+    <td width="8"><img src="Pics/Ana/clear_pixel.gif" width="8" height="1"></td>
+    <td> 
+      <form>
+        <div align="left"><font size="2"><font face="Verdana, Arial, Helvetica, sans-serif"> 
+          <select name="dest" onChange="leapto(this.form)">
+            <option value="index.shtml" selected>P h i l i p s    T ü r k i y 
+            e           -&gt;&gt;</option>
+            <option value="html/IsElekt/urunler.shtml"> + Ýþ Elektroniði</option>
+            <option value="html/ElektUrun/ElektUrun.shtml"> + Elektronik Ürünler 
+            </option>
+            <option value="html/ElektUrun/Goruntu/Goruntu_frameset.shtml">     - 
+            Görüntü Sistemleri</option>
+            <option value="html/ElektUrun/Ses/Ses_frameset.shtml">     - Ses Sistemleri</option>
+            <option value="html/ElektUrun/Kaset/Kaset_frameset.shtml">     - Kaset 
+            ve Aksesuarlar</option>
+            <option value="html/EvAletBakim/00_01.shtml">  + Ev Aletleri ve Kiþisel 
+            Bakým</option>
+            <option value="http://www.medical.philips.com">  + Medikal Sistemler</option>
+            <option value="html/Devre/devre.shtml">  + Devre Elemanlarý</option>
+            <option value="http://www.philips.com.tr/html/aydinlatma/index.html">  
+            + Aydýnlatma</option>
+          </select>
+          </font> </font> </div>
+      </form>
+    </td>
+    <td valign="middle" width="200">&nbsp;</td>
+<form method="get" action="/search/query.idq" target="_top">    <td valign="top">
+	<div align=right><input name="CiRestriction" size=15></div>
+	        <INPUT TYPE="HIDDEN" NAME="CiScope" VALUE="/html">
+	        <INPUT TYPE="HIDDEN" NAME="CiMaxRecordsPerPage" VALUE="10">
+	        <INPUT TYPE="HIDDEN" NAME="TemplateName" VALUE="query">
+	        <INPUT TYPE="HIDDEN" NAME="CiSort" VALUE="rank[d]">
+	        <INPUT TYPE="HIDDEN" NAME="HTMLQueryForm" VALUE="query.htm">
+</td>
+
+
+
+    <td width="48" valign="top"> 
+      <div align="left"><font face="Verdana, Verdana, Arial, Helvetica, sans-serif, Helvetica, sans-serif" size="1"> 
+        <img src="Pics/Ana/clear_pixel.gif" width="1" height="4"><br>
+        &nbsp;<input type=image src="Pics/Ana/ok.gif" width="28" height="17" align="top"></font></div>
+     
+    </td>
+      </form>
+    <td valign="top">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

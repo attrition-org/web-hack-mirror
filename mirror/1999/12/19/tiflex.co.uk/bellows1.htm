@@ -1,0 +1,184 @@
+<html>
+
+<head>
+<title>BELLOWS REPLY</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+
+
+<meta name="Microsoft Theme" content="none, default"><meta name="Microsoft Border" content="none"></head>
+
+<body background="_borders/Bell_Back_8.jpg" bgproperties="fixed">
+
+<p>&nbsp;</p>
+
+<p>
+<applet name="BtnPlayer" code="BtnPlayer.class" codebase="./" archive="BtnPlayer.jar" width="106" height="36">
+  <param name="cabbase" value="BtnPlayer.cab">
+  <param name="p" value="1,0,1,ffffff,-1,.,0,0,0,.,.,.">
+  <param name="0" value="0,0,105,37,1,0,0,2,^0,^4,^192,^0,^12,^0,^1,^40,^25,^1,^0,^40,^25,TIF_Button_2.jpg,TIF_Button_3a.jpg,TIF_Button_1.jpg,^.,^.,^.,http://tiflex.co.uk/index.html,.,TIF Button 2,.,ff,ff0000,ff,^ffffff,^ff0000,^.">
+  <param name="r" value="3a647b83">
+  <param name="c" value="413e2902"><map name="Small_Tif_Button"> <area shape="rect" href="old.html" coords="0,0,105,37"> </map> <img usemap="#Small_Tif_Button" src="Small_Tif_ButtonMap.jpg" width="106" height="36" border="0">
+</applet>
+<font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><a href="bellows.htm"><font FACE="Arial" SIZE="4"><img src="_borders/Bellows_red_3.gif" alt="Back to Bellows home page" WIDTH="92" HEIGHT="43"></font></a></p>
+
+<!--webbot BOT="GeneratedScript" PREVIEW=" " startspan --><script Language="JavaScript"><!--
+function FrontPage_Form1_Validator(theForm)
+{
+
+  if (theForm.Name_Bellows.value == "")
+  {
+    alert("Please enter a value for the \"Name_Bellows\" field.");
+    theForm.Name_Bellows.focus();
+    return (false);
+  }
+
+  var checkOK = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-@.";
+  var checkStr = theForm.Email1.value;
+  var allValid = true;
+  for (i = 0;  i < checkStr.length;  i++)
+  {
+    ch = checkStr.charAt(i);
+    for (j = 0;  j < checkOK.length;  j++)
+      if (ch == checkOK.charAt(j))
+        break;
+    if (j == checkOK.length)
+    {
+      allValid = false;
+      break;
+    }
+  }
+  if (!allValid)
+  {
+    alert("Please enter only letter, digit and \"@.\" characters in the \"E-Mail Address\" field.");
+    theForm.Email1.focus();
+    return (false);
+  }
+  return (true);
+}
+//--></script><!--webbot BOT="GeneratedScript" endspan --><form method="POST" action="_vti_bin/shtml.exe/bellows1.htm" onsubmit="return FrontPage_Form1_Validator(this)" name="FrontPage_Form1" webbot-action="--WEBBOT-SELF--">
+  <!--webbot bot="SaveResults" S-Email-Format="TEXT/TSV" S-Email-Address="bellows@tiflex.co.uk" B-Email-Label-Fields="FALSE" B-Email-Subject-From-Field="FALSE" S-Email-Subject="Bellows Auto Reply" S-Builtin-Fields="Date Time" startspan --><input TYPE="hidden" NAME="VTI-GROUP" VALUE="0"><!--webbot bot="SaveResults" endspan i-checksum="43374" --><div align="left"><table border="0" width="600">
+    <tr>
+      <td width="1%"><font face="Arial"><strong><small>Your Name</small></strong><br>
+      <!--webbot bot="Validation" B-Value-Required="TRUE" --><input type="text" name="Name_Bellows" size="64" tabindex="1" style="border-left: 2px solid rgb(0,0,0); border-right: 2px solid rgb(192,192,192); border-top: 2px solid rgb(192,192,192); border-bottom: 2px solid rgb(0,0,0)"></font></td>
+    </tr>
+    <tr>
+      <td width="1%"><font face="Arial"><strong><small>Your Position / Job Title</small><br>
+      </strong><input type="text" name="JobTitle" size="64" tabindex="2"></font></td>
+    </tr>
+    <tr>
+      <td width="1%"><font face="Arial"><strong><small>Your Company Name</small><br>
+      </strong><input type="text" name="Co_Name" size="64" tabindex="3"></font></td>
+    </tr>
+    <tr>
+      <td width="1%"><font face="Arial"><strong><small>Address 1</small><br>
+      </strong><input type="text" name="Address1" size="64" tabindex="4"></font></td>
+    </tr>
+    <tr>
+      <td width="1%"><font face="Arial"><strong><small>Address 2</small><br>
+      </strong><input type="text" name="Address2" size="64" tabindex="5"></font></td>
+    </tr>
+  </table>
+  </div><div align="left"><table border="0" width="600">
+    <tr>
+      <td width="142"><font face="Arial"><strong><small>Town / City</small><br>
+      </strong><input type="text" name="Town" size="28" tabindex="6"></font></td>
+      <td width="318"><font face="Arial"><strong><small>County / State</small><br>
+      </strong><input type="text" name="County1" size="30" tabindex="7"></font></td>
+    </tr>
+    <tr>
+      <td width="142"><font face="Arial"><strong><small>Country</small><br>
+      </strong><input type="text" name="Country" size="28" tabindex="8"></font></td>
+      <td width="318"><font face="Arial"><strong><small>Postcode</small><br>
+      </strong><input type="text" name="PostCode" size="30" style="float: left; margin-left: auto" tabindex="9"></font></td>
+    </tr>
+    <tr>
+      <td width="142"><font face="Arial"><strong><small>Email Address</small><br>
+      </strong><!--webbot bot="Validation" S-Display-Name="E-Mail Address" S-Data-Type="String" B-Allow-Letters="TRUE" B-Allow-Digits="TRUE" S-Allow-Other-Chars="@." --><input type="text" name="Email1" size="28" tabindex="10"></font></td>
+      <td width="318"><font face="Arial"><strong><small>Telephone</small></strong><br>
+      <input type="text" name="Phone" size="30" tabindex="11"></font></td>
+    </tr>
+  </table>
+  </div><p><strong><small><font face="Arial">Please supply me with more information on:</font></small></strong></p>
+  <div align="left"><table border="0" bordercolorlight="#FFFFFF" bordercolordark="#000000" bordercolor="#000000">
+    <tr>
+      <td><font face="Arial"><input type="checkbox" name="A1" value="1_B&amp;C" tabindex="12">TICO
+      Bellows &amp; Compensators<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for Power Engineering&nbsp; </font></td>
+      <td valign="top"><font face="Arial"><input type="checkbox" name="A2" value="1_MB" tabindex="13">TICO Metal Bellows</font></td>
+    </tr>
+    <tr>
+      <td><font face="Arial"><input type="checkbox" name="A3" value="1_S" tabindex="14">TICO
+      Speedwrap</font></td>
+      <td><font face="Arial"><input type="checkbox" name="A4" value="1_OSS" tabindex="15">TICO
+      On Site Services</font></td>
+    </tr>
+    <tr>
+      <td><font face="Arial"><input type="checkbox" name="A5" value="1_BCB" tabindex="16">TICO
+      Bellows Convoluted (Sewn/Fabric) Bellows</font></td>
+      <td><font face="Arial"><input type="checkbox" name="A6" value="1_EJ" tabindex="17">TICO
+      Expansion Joints</font></td>
+    </tr>
+  </table>
+  </div><div align="left"><table border="0" width="600" cellpadding="2">
+    <tr>
+      <td width="1%"><font face="Arial"><br>
+      <strong><small>Any other specific information request</small><br>
+      </strong></font><textarea rows="2" name="Specific" cols="63" tabindex="18"></textarea></td>
+    </tr>
+  </table>
+  </div><p><strong><small><font face="Arial">Our Organisation is:</font></small></strong></p>
+  <div align="left"><table border="0">
+    <tr>
+      <td><font face="Arial"><input type="checkbox" name="B1" value="2_EU" tabindex="19">An End
+      User of the Product</font></td>
+      <td><font face="Arial"><input type="checkbox" name="B2" value="2_OEM" tabindex="20">An
+      Original Equipment Manufacturer</font></td>
+    </tr>
+    <tr>
+      <td><font face="Arial"><input type="checkbox" name="B3" value="2_C/SB" tabindex="21">A
+      Consultancy or Specifying Body&nbsp; </font></td>
+      <td><font face="Arial"><input type="checkbox" name="B4" value="2_O" tabindex="22">Other</font></td>
+    </tr>
+  </table>
+  </div><p><strong><small><font face="Arial">We are involved in:</font></small></strong></p>
+  <div align="left"><table border="0">
+    <tr>
+      <td><font face="Arial"><input type="checkbox" name="C1" value="3_PE" tabindex="23">Power
+      Engineering &nbsp; </font></td>
+      <td><font face="Arial"><input type="checkbox" name="C2" value="3_CP" tabindex="24">Chemical
+      Processing</font></td>
+      <td><font face="Arial"><input type="checkbox" name="C3" value="3_P&amp;P" tabindex="25">Pulp
+      and Paper</font></td>
+    </tr>
+    <tr>
+      <td><font face="Arial"><input type="checkbox" name="C4" value="3_MP" tabindex="26">Metal
+      Processing</font></td>
+      <td><font face="Arial"><input type="checkbox" name="C5" value="3_ME/P" tabindex="27">Mineral
+      Extraction / Processing&nbsp; </font></td>
+      <td><font face="Arial"><input type="checkbox" name="C6" value="3_M/O" tabindex="28">Marine
+      / Offshore</font></td>
+    </tr>
+    <tr>
+      <td><font face="Arial"><input type="checkbox" name="C7" value="3_O" tabindex="29">Other</font></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+  </div><p><strong><small><font face="Arial">Reason for request:</font></small></strong></p>
+  <div align="left"><table border="0">
+    <tr>
+      <td><font face="Arial"><input type="checkbox" name="D1" value="4_SP" tabindex="30">Working
+      on a specific project&nbsp; </font></td>
+      <td><font face="Arial"><input type="checkbox" name="D2" value="4_GI" tabindex="31">General
+      interest</font></td>
+    </tr>
+    <tr>
+      <td><font face="Arial"><input type="checkbox" name="D3" value="4_SP/C/S" tabindex="32">Sourcing
+      Parts / Components / Spares&nbsp; </font></td>
+    </tr>
+  </table>
+  </div><p><font face="Arial"><input type="submit" value="Submit" name="B1" tabindex="33">
+  &nbsp;&nbsp;&nbsp; <input type="reset" value="Reset" name="B2" tabindex="34"></font></p>
+</form>
+</body>
+</html>

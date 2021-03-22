@@ -1,0 +1,32 @@
+--14:36:19--  http://self.org:80/
+           => `self.org/index.html'
+Connecting to self.org:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+
+    0K -> .
+
+14:36:19 (1000.00 KB/s) - `self.org/index.html' saved [1024]
+
+Loading robots.txt; please ignore errors.
+--14:36:19--  http://self.org:80/no-robots.txt
+           => `self.org/no-robots.txt'
+Connecting to self.org:80... connected!
+HTTP request sent, awaiting response... 404 Object Not Found
+14:36:19 ERROR 404: Object Not Found.
+
+--14:36:19--  http://self.org:80/jnb.swf
+           => `self.org/jnb.swf'
+Connecting to self.org:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 4,955 [application/x-shockwave-flash]
+
+    0K -> ....                                                   [100%]
+
+14:36:19 (53.77 KB/s) - `self.org/jnb.swf' saved [4955/4955]
+
+Converting self.org/index.html... done.
+
+FINISHED --14:36:20--
+Downloaded: 5,979 bytes in 2 files
+Converting self.org/index.html... done.

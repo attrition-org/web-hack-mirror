@@ -1,0 +1,733 @@
+<HTML>
+<HEAD>
+<TITLE>전자신문(ETnews) Service</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+
+<!--
+
+// Definitions
+
+// size of AdCorner image
+// You should change this when you change the image.
+var     nAdCornerWidth          = 75;
+var     nAdCornerHeight         = 130;
+
+// right and bottom margin
+var     nAdCornerMarginX                = 2;
+var     nAdCornerMarginY                = 2;
+
+// window's scrollbar width and height
+var     nScrollBarWidth         = 16;
+var     nScrollBarHeight        = 16;
+
+// navigator check
+var     isMSIE                  = 0;
+var     nVersion                = 3;
+
+// refresh interval of AdCorner
+var     nInterval               = 100;
+
+var     isLoaded                = 0;
+
+function setup ()
+{
+        // Detect Navigator
+        nVersion        = parseInt (navigator.appVersion);      // chang
+        if (navigator.appName == "Microsoft Internet Explorer")
+        {
+                isMSIE  = 1;
+                if (navigator.userAgent.indexOf ("MSIE 5") != -1)
+                {
+                        nVersion = 5;
+                }
+        }
+        else
+        {
+                isMSIE  = 0;
+                if (nVersion >= 4)
+                {
+                        window.captureEvents (Event.MOUSEMOVE);
+                }
+        }
+
+        if (nVersion >= 4)
+        {
+                window.setInterval ("AdCornerMove();", nInterval);
+        }
+}
+
+function        AdCornerMove    ()
+{
+        if (isLoaded == 0)
+        {
+                return;
+        }
+        if (isMSIE)
+        {
+                nAdCornerOriginX        = document.body.clientWidth - idAdCorner.width - nAdCornerMarginX;
+                nAdCornerOriginY        = document.body.clientHeight - idAdCorner.height - nAdCornerMarginY;
+
+                nAdCornerOriginX        += document.body.scrollLeft;
+                nAdCornerOriginY        += document.body.scrollTop;
+
+                idAdCorner.style.pixelLeft      = nAdCornerOriginX;
+                idAdCorner.style.pixelTop       = nAdCornerOriginY;
+        }
+        else
+        {
+                nAdCornerOriginX        = window.innerWidth + window.pageXOffset - nAdCornerWidth - nAdCornerMarginX;
+                nAdCornerOriginY        = window.innerHeight + window.pageYOffset - nAdCornerHeight - nAdCornerMarginY;
+
+                if (window.scrollbars.visible == true)
+                {
+                        nAdCornerOriginX        -= nScrollBarWidth;
+                        nAdCornerOriginY        -= nScrollBarHeight;
+                }
+
+                document.layers["idAdCorner"].pageX     = nAdCornerOriginX;
+                document.layers["idAdCorner"].pageY     = nAdCornerOriginY;
+        }
+}
+
+//-->
+
+</SCRIPT>
+<STYLE type="text/css">
+<!--
+	:link{color:#0000DD;text-decoration:none}
+	:active{color:#000077;text-decoration:none}
+	:visited{color:#000077;text-decoration:none}
+-->
+</STYLE>
+</HEAD>
+<BODY BACKGROUND="http://203.234.140.1/new_icons/home/bg.gif">
+<!--- 1 번째 테이블 --->
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=630>
+<TD WIDTH=180 VALIGN=BOTTOM ALIGN=LEFT>
+<IMG BORDER=0 WIDTH=176 HSPACE=0 VSPACE=0 HEIGHT=90 ALIGN=LEFT SRC="../et_icons/home.gif" USEMAP="#etnews_menu">
+</TD>
+<TD WIDTH=100 VALIGN=BOTTOM ALIGN=LEFT>
+<A HREF="http://203.234.140.1/etnews/specialreport_y2k?Y2K" TARGET="_new"><IMG BORDER=0 WIDTH=98 HEIGHT=90 HSPACE=0 VSPACE=0 ALIGN=LEFT SRC="../et_icons/P1T1.gif" ALT="Y2K"></A>
+<TD>
+<TD WIDTH=88 VALIGN=BOTTOM ALIGN=LEFT>
+<A HREF="http://203.234.140.1/adv/P1T2/P1T2.html" TARGET="_new"><IMG BORDER=0 WIDTH=86 HEIGHT=90 ALIGN=LEFT HSPACE=0 VSPACE=0 SRC="../et_icons/P1T2.gif" ALT="데이콤인터파크"></A>
+</TD>
+<TD WIDTH=88 VALIGN=BOTTOM ALIGN=LEFT>
+<A HREF="http://203.234.140.1/adv/P1T3/P1T3.html" TARGET="_new"><IMG BORDER=0 WIDTH=86 HEIGHT=90 ALIGN=LEFT HSPACE=0 VSPACE=0 SRC="../et_icons/P1T3.gif" ALT="미르텍"></A></TD>
+</TD>
+<TD WIDTH=88 VALIGN=BOTTOM ALIGN=LEFT>
+<A HREF="http://203.234.140.1/adv/P1T4/P1T4.html" TARGET="_new"><IMG BORDER=0 WIDTH=86 HEIGHT=90 ALIGN=LEFT HSPACE=0 VSPACE=0 SRC="../et_icons/P1T4.gif" ALT="한국HP"></A></TD>
+</TD>
+<TD WIDTH=86 VALIGN=BOTTOM ALIGN=RIGHT>
+<A HREF="http://203.234.140.1/adv/P1T5/P1T5.html" TARGET="_new"><IMG BORDER=0 WIDTH=86 HEIGHT=90 ALIGN=LEFT HSPACE=0 VSPACE=0 SRC="../et_icons/P1T5.gif" ALT="이엔지"></A>
+</TD>
+</TABLE>
+<MAP NAME="etnews_menu">
+<AREA SHAPE="rect" ALT="홈페이지" COORDS="0,21,175,70" href="etnews.html">
+<AREA SHAPE="rect" ALT="전자신문" COORDS="0,73,54,90" href="../etnews/sub_etnews?01">
+<AREA SHAPE="rect" ALT="정보통신" COORDS="54,73,127,90" href="../etnews/jetnews">
+<AREA SHAPE="rect" ALT="English" COORDS="129,73,171,90" href="../etnews/english" TARGET="_top">
+</MAP>
+<!--- 2 번째 --->
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=630>
+<TD WIDTH=630><HR SIZE=1>
+</TABLE>
+<P>
+<!--- 3 번째 --->
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=630>
+<TD WIDTH=120 VALIGN=TOP ALIGN=LEFT>
+<TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0 WIDTH=116>
+<TR><TD ALIGN=LEFT VALIGN=TOP>
+<FONT SIZE=2 FACE="돋움, arial"><B>1999.  5. 21 (금)</B></FONT>
+</TD></TR>
+<TR><TD ALIGN=LEFT VALIGN=TOP>
+<IMG BORDER=0 SRC="http://203.234.140.1/new_icons/home/t_1.gif" ALT="특집"><BR>
+</TD></TR>
+<TR><TD ALIGN=LEFT VALIGN=TOP>
+<FONT SIZE=2>&nbsp;</FONT><FONT SIZE=3 COLOR=0000FF>&#42;</FONT>
+<A HREF="http://203.234.140.1/etnews/display_special?화요특집"><FONT SIZE=2 FACE="돋움, arial">화요특집</FONT></A>
+</TD></TR>
+<TR><TD ALIGN=LEFT VALIGN=TOP>
+<FONT SIZE=2>&nbsp;</FONT><FONT SIZE=3 COLOR=0000FF>&#42;</FONT>
+<A HREF="http://203.234.140.1/etnews/display_special?테마특집"><FONT SIZE=2 FACE="돋움, arial">테마특집</FONT></A>
+</TD></TR>
+<TR><TD HEIGHT=10></TD></TR>
+<TR><TD ALIGN=LEFT VALIGN=TOP>
+<A HREF="http://203.234.140.1/adv/P1M1/P1M1.html" TARGET="_new"><IMG BORDER=0 SRC="http://203.234.140.1/et_icons/P1M1.gif" ALT="한국후지쯔"></A></TD></TR>
+<TR><TD HEIGHT=3></TD></TR>
+</TABLE>
+</TD>
+<TD WIDTH=15 VALIGN=TOP ALIGN=LEFT><IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" HEIGHT=140 WIDTH=15></TD>
+<TD WIDTH=290 VALIGN=TOP ALIGN=LEFT>
+<TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0 WIDTH=290>
+<TR><TD VALIGN=TOP ALIGN=LEFT WIDTH=290>
+<A HREF="../etnews/new_etnews_content?199905210096|01"><IMG SRC="../headimg/top/1999052101.gif" ALIGN=LEFT WIDTH=290 HEIGHT=64 HSPACE=0 VSPACE=0 BORDER=0></A></TD>
+<TR><TD VALIGN=TOP ALIGN=LEFT WIDTH=290><FONT SIZE=-1> 　미국 퀄컴이 그동안 단말기 및 시스템에만 적용해 왔던 코드분할다중접속(CDMA)기술 로열티 적용범위를 응용 부가장비 및 소프트웨어 관련 분야 전반으로<font size=-1 color=aaaaaa> continued...</font></FONT>
+</TABLE>
+</TD>
+<TD WIDTH=15 VALIGN=TOP ALIGN=LEFT><IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" HEIGHT=140 WIDTH=15></TD>
+<TD WIDTH=190 VALIGN=TOP ALIGN=LEFT>
+<IMG SRC="http://203.234.140.1/new_icons/home/t_right_a1.gif"><BR>
+<TABLE BORDER=1 WIDTH=190 CELLPADDING=1 CELLSPACING=0 BGCOLOR=#eeeeee BORDERCOLOR=#6e607a>
+<TR><TD ALIGN=LEFT VALIGN=TOP>
+<FONT SIZE=-1>*</FONT>
+<A HREF="http://203.234.140.1/etnews/specialreport_ibiz" TARGET="_new">
+<FONT SIZE=-1 FACE=돋움,Arial><SPAN STYLE=COLOR:#000000>인터넷 비즈니스포럼 창설</SPAN></A></FONT><BR>
+<FONT SIZE=-1>*</FONT>
+<A HREF="../etnews/new_etnews_content?199904070094|01">
+<FONT SIZE=-1 FACE=돋움,Arial><SPAN STYLE=COLOR:#000000>ETnews 더 빨라집니다</SPAN></A></FONT><BR>
+<FONT SIZE=-1>*</FONT>
+<A HREF="special/끝없는혁명1999.html" TARGET="_new">
+<FONT SIZE=-1 FACE=돋움,Arial><SPAN STYLE=COLOR:#000000>전자산업40년 시리즈 연재중</SPAN></A></FONT><BR>
+</TD></TR>
+</TABLE>
+<IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=190 HEIGHT=5 BORDER=0><BR>
+<A HREF="http://203.234.140.1/adv/P1B1/P1B1.html" TARGET="_new"><IMG SRC="http://203.234.140.1/et_icons/P1B1.gif" ALIGN=CENTER WIDTH=190 HEIGHT=40 BORDER=0 ALT="무창정보통신"></A>
+</TD>
+</TABLE>
+<!--- 4 번째 --->
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=630>
+<TR><TD ALIGN=LEFT VALIGN=TOP WIDTH=120><A HREF="../etnews/display_today_news?19990521"><IMG BORDER=0 SRC="http://203.234.140.1/new_icons/home/t_1a.gif"></A></TD>
+<TD WIDTH=510><HR SIZE=1>
+</TD></TR>
+</TABLE>
+<!--- 5-1 번째 --->
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=630>
+<TD WIDTH=120 VALIGN=TOP ALIGN=LEFT>
+<TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0 WIDTH=116>
+<TR><TD ALIGN=LEFT VALIGN=TOP>
+<A HREF="../etnews/site_map">
+<IMG BORDER=0 SRC="http://203.234.140.1/new_icons/home/t_2.gif"></A>
+<TR><TD HEIGHT=5></TD></TR>
+<TR><TD VALIGN=TOP ALIGN=LEFT><A HREF="http://203.234.140.1/adv/P1M2/P1M2.html" TARGET="_new"><IMG BORDER=0 SRC="http://203.234.140.1/et_icons/P1M2.gif" ALT="HP"></A></TD></TR>
+<TR><TD HEIGHT=5></TD></TR>
+<TR><TD ALIGN=LEFT VALIGN=TOP><A HREF="mailto:feedback@www.etnews.co.kr"><IMG BORDER=0 SRC="http://203.234.140.1/new_icons/home/t_3.gif"></A></TD></TR>
+<TR><TD HEIGHT=5></TD></TR>
+<TR><TD VALIGN=TOP ALIGN=LEFT><A HREF="http://203.234.140.1/adv/P1M3/P1M3.html" TARGET="_new"><IMG BORDER=0 SRC="http://203.234.140.1/et_icons/P1M3.gif" ALT="암전정밀광학"></A></TD>
+</TABLE>
+</TD>
+<TD WIDTH=15 VALIGN=TOP ALIGN=LEFT><IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" HEIGHT=1 WIDTH=15></TD>
+<TD WIDTH=290 VALIGN=TOP ALIGN=LEFT>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 BGCOLOR=#FFFFFF>
+<TR><TD ALIGN=LEFT VALIGN=TOP WIDTH=180>
+<IMG SRC="../headimg/19990521.jpg" WIDTH=180 HEIGHT=154 BORDER=0 ALT="제5회 정보통신망 정보보호 워크숍">
+</TD>
+<TD ALIGN=CENTER VALIGN=TOP WIDTH=110 HEIGHT=154>
+<TABLE WIDTH=110 CELLPADDING=0 CELLSPACING=0 BORDER=0>
+<TR><TD ALIGN=CENTER VALIGN=TOP WIDTH=100% BGCOLOR=#EEEEEE>
+<IMG SRC="http://203.234.140.1/new_icons/home/search.gif" WIDTH=95 HEIGHT=25 BORDER=0><BR>
+</TD></TR>
+</TABLE>
+<TABLE WIDTH=110 CELLPADDING=0 CELLSPACING=0 BORDER=0 BGCOLOR=#EEEEEE>
+<TR><TD ALIGN=CENTER VALIGN=TOP WIDTH=100%>
+<FORM METHOD=POST action="http://www.etnews.co.kr/etnews/ir_search?ETNEWS|50|1999|all">
+<INPUT TYPE=TEXT NAME=word MAXLENGTH=100 SIZE=12>
+<A HREF="../etnews/search"><IMG SRC="http://203.234.140.1/new_icons/home/search2.gif" WIDTH=95 HEIGHT=20 BORDER=0></A><BR>
+<IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=110 HEIGHT=5 BORDER=0><BR>
+<A HREF="http://203.234.140.1/adv/P1B3/P1B3.html" TARGET="_new"><IMG BORDER=0 WIDTH=100 HEIGHT=70 SRC="http://203.234.140.1/et_icons/P1B3.gif" ALT="데이콤인터파크"></A><BR>
+<IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=110  HEIGHT=11 BORDER=0><BR>
+</TD></TR>
+</TABLE>
+</TD></TR>
+</TABLE>
+</FORM>
+</TD>
+<TD WIDTH=15 VALIGN=TOP ALIGN=LEFT><IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" HEIGHT=1 WIDTH=15></TD>
+<TD WIDTH=190 VALIGN=TOP ALIGN=LEFT BGCOLOR=#EEEEEE>
+<TABLE BGCOLOR=#EEEEEE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=190>
+<TR><TD>
+<A HREF="../etnews/jetnews">
+<IMG SRC="http://203.234.140.1/new_icons/home/ic_title1.gif" ALIGN=CENTER WIDTH=190 BORDER=0></A><BR>
+</TD></TR>
+<TR><TD>
+<IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" HEIGHT=3 WIDTH=190><BR>
+<A HREF="../etnews/new_jetnews_content?199905170078|08"><FONT SIZE=2><SPAN STYLE=COLOR:#000000><B> <특집-노트북> 대중화 시대 활짝</B></A></FONT></SPAN>
+</TD></TR>
+<TR><TD><IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=190 HEIGHT=5 BORDER=0><BR>
+<FONT SIZE=-1><SPAN STYLE=COLOR:#000000>　국내 노트북 PC 시장이 급성장하고 있다. 얼마 전까지만 해도 데스크톱 PC보다 값은 훨씬 비싸면서 성능은 떨어져 「보조」 수준에<font size=-1 color=aaaaaa> continued...</font></FONT><BR>
+<IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=190 HEIGHT=1 BORDER=0>
+</TD></TR>
+</TABLE>
+</TD>
+</TABLE>
+<!--- 5-2 번째 --->
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=630>
+<TR><TD ALIGN=LEFT VALIGN=TOP WIDTH=120>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=116>
+<TD ALIGN=LEFT VALIGN=TOP>
+<A HREF="http://altavista.co.kr"><IMG BORDER=0 SRC="http://203.234.140.1/new_icons/home/altavista.gif" ALT="ALTAVISTA"></A>
+</TD></TR>
+<TR><TD ALIGN=LEFT VALIGN=TOP>
+<A HREF="../etnews/word"><IMG BORDER=0 SRC="http://203.234.140.1/new_icons/home/t_3a.gif"></A>
+</TD></TR>
+<TR><TD ALIGN=LEFT VALIGN=TOP>
+<A HREF="../etnews/man"><IMG BORDER=0 SRC="http://203.234.140.1/new_icons/home/t_5.gif"></A>
+</TD></TR>
+<TR><TD ALIGN=LEFT VALIGN=TOP>
+<A HREF="../etnews/company" TARGET="_new"><IMG BORDER=0 SRC="http://203.234.140.1/new_icons/home/t_6.gif"></A>
+</TD></TR>
+</TABLE>
+</TD>
+<TD ALIGN=LEFT VALIGN=TOP WIDTH=15>
+<IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=15 HEIGHT=1 BORDER=0>
+</TD>
+<TD ALIGN=LEFT VALIGN=TOP WIDTH=290>
+<TABLE BORDER=0 CELLPADDING=5 CELLSPACING=0 WIDTH=290>
+<TR><TD ALIGN=CENTER VALIGN=MIDDLE BGCOLOR=#84756A WIDTH=15>
+<FONT COLOR=#FFFFFF SIZE=-1><B>알<BR>림</B></FONT>
+</TD>
+<TD ALIGN=LEFT VALIGN=TOP BGCOLOR=EFEFEF WIDTH=275>
+<A HREF=../etnews/new_etnews_content?199905190072|01>
+<FONT SIZE=+0><SPAN STYLE=COLOR:#001840><B> * [인터넷 비즈니스포럼] 창설</B></SPAN></FONT></A><BR>
+<FONT SIZE=-1 COLOR=#333333><b>일시/장소</B></FONT><FONT SIZE=-1 COLOR=#000000> 5.25 전경련회관 19F 도원</FONT><BR>
+<FONT SIZE=-1 COLOR=#333333><b>문의</B></FONT><FONT SIZE=-1 COLOR=#000000> 780-0202, 679-9042</FONT><BR>
+<A HREF=http://www.sek.co.kr/e-bus/index.htm TARGET=_new>
+<FONT SIZE=+0><SPAN STYLE=COLOR:#001840><B> * 인터넷 비즈니스 엑스포 99</B></SPAN></FONT></A><BR>
+<FONT SIZE=-1 COLOR=#333333><b>일시/장소</B></FONT><FONT SIZE=-1 COLOR=#000000> 5.27 양재동 교육문화회관</FONT><BR>
+<FONT SIZE=-1 COLOR=#333333><b>문의</B></FONT><FONT SIZE=-1 COLOR=#000000> 전자신문 사업국 637-8114(교335)</FONT><BR>
+</TD></TR>
+</TABLE>
+<IMG HEIGHT=10 SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=290 BORDER=0><BR>
+</TD>
+<TD ALIGN=LEFT VALIGN=TOP WIDTH=15>
+<IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=15 HEIGHT=1 BORDER=0>
+</TD>
+<TD WIDTH=190 VALIGN=TOP ALIGN=LEFT BGCOLOR=#EEEEEE>
+<TABLE BORDER=0 WIDTH=190 CELLPADDING=0 CELLSPACING=0>
+<TR><TD width=190>
+<A HREF=http://www.kyobotrade.co.kr TARGET="_new">
+<IMG SRC=../et_icons/kyobo2.gif BORDER=0 ALT="교보증권"><BR>
+<IMG SRC=../et_icons/jisu.gif BORDER=0 ALT="교보증권"><BR>
+<IMG SRC=../et_icons/kyobo1.gif BORDER=0 ALT="교보증권"></A><BR>
+</TD></TR>
+</TABLE>
+<IMG HEIGHT=10 SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=190 BORDER=0><BR>
+</TD>
+</TABLE>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=630>
+<TD ALIGN=LEFT VALIGN=TOP WIDTH=120>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=116>
+<TR><TD ALIGN=LEFT VALIGN=TOP>
+<A HREF="special/끝없는혁명1999.html?끝없는혁명" TARGET="_new">
+<IMG BORDER=0 SRC="http://203.234.140.1/et_icons/end_1999.gif"></A>
+</TD></TR>
+</TABLE>
+</TD>
+<TD ALIGN=LEFT VALIGN=TOP WIDTH=15>
+<IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=15 HEIGHT=1 BORDER=0>
+</TD>
+<TD ALIGN=LEFT VALIGN=TOP WIDTH=290>
+<A HREF="http://203.234.140.1/adv/P1B5/P1B5.html" TARGET="_new"><IMG BORDER=0 WIDTH=290 SRC="http://203.234.140.1/et_icons/P1B5.gif" ALT="한국IBM"></A><BR>
+<IMG HEIGHT=10 SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=290 BORDER=0><BR>
+</TD>
+<TD ALIGN=LEFT VALIGN=TOP WIDTH=15>
+<IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=15 HEIGHT=1 BORDER=0>
+</TD>
+<TD ALIGN=LEFT BGCOLOR=#EEEEEE VALIGN=TOP WIDTH=190>
+<A HREF="http://203.234.140.1/adv/P1B6/P1B6.html" TARGET="_new"><IMG BORDER=0 WIDTH=190 SRC="http://203.234.140.1/et_icons/P1B6.gif" ALT="인하대학교"></A><BR>
+<IMG HEIGHT=10 SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=190 BORDER=0><BR>
+</TD></TR>
+</TABLE>
+<!--- 5_3 번째 --->
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=630>
+<TR><TD ALIGN=LEFT VALIGN=TOP WIDTH=120>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=116>
+<TR><TD ALIGN=LEFT VALIGN=TOP>
+<A HREF=../etnews/issue><IMG BORDER=0 SRC="http://203.234.140.1/new_icons/home/t_10.gif"></A>
+</TD></TR>
+<TR><TD ALIGN=LEFT VALIGN=TOP>
+<A HREF=../etnews/market><IMG BORDER=0 SRC="http://203.234.140.1/new_icons/home/t_11.gif"></A>
+</TD></TR>
+<TR><TD ALIGN=LEFT VALIGN=TOP>
+<A HREF=../etnews/series><IMG BORDER=0 SRC="http://203.234.140.1/new_icons/home/t_12.gif"></A>
+</TD></TR>
+<TR><TD ALIGN=LEFT VALIGN=TOP HEIGHT=10>
+</TD></TR>
+<TR><TD ALIGN=LEFT VALIGN=TOP>
+<A HREF=../etnews/expert><IMG BORDER=0 SRC="http://203.234.140.1/new_icons/home/t_7.gif"></A>
+</TD></TR>
+<TR><TD ALIGN=LEFT VALIGN=TOP>
+<FONT SIZE=2>&nbsp;</FONT><FONT color=#0000ff SIZE=3>*</FONT>
+<A HREf="http://203.234.140.1/etnews/display_expert?미래포럼|미래포럼"><FONT FACE="돋움, arial" SIZE=2>미래포럼</FONT></A>
+</TD></TR>
+<TR><TD ALIGN=LEFT VALIGN=TOP>
+<FONT SIZE=2>&nbsp;</FONT><FONT color=#0000ff SIZE=3>*</FONT>
+<A HREf="http://203.234.140.1/etnews/display_expert?테마특강|테마특강"><FONT FACE="돋움, arial" SIZE=2>테마특강</FONT></A>
+</TD></TR>
+<TR><TD ALIGN=LEFT VALIGN=TOP>
+<FONT SIZE=2>&nbsp;</FONT><FONT color=#0000ff SIZE=3>*</FONT>
+<A HREf="http://203.234.140.1/etnews/display_expert?월요논단|월요논단"><FONT FACE="돋움, arial" SIZE=2>월요논단</FONT></A>
+</TD></TR>
+<TR><TD ALIGN=LEFT VALIGN=TOP>
+<FONT SIZE=2>&nbsp;</FONT><FONT color=#0000ff SIZE=3>*</FONT>
+<A HREf="http://203.234.140.1/etnews/display_expert?해외기술동향|해외기술동향"><FONT FACE="돋움, arial" SIZE=2>해외기술동향</FONT></A>
+</TD></TR>
+<TR><TD ALIGN=LEFT VALIGN=TOP>
+<A HREF="../etnews/display_special?인사|인사">
+<IMG BORDER=0 SRC="http://203.234.140.1/new_icons/home/t_15.gif"></A>
+</TD></TR>
+</TABLE>
+</TD>
+<TD ALIGN=LEFT VALIGN=TOP WIDTH=15>
+<IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=15  HEIGHT=1 BORDER=0>
+</TD>
+<TD ALIGN=LEFT VALIGN=TOP WIDTH=290>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=290>
+<TR><TD ALIGN=LEFT VALIGN=TOP WIDTH=290>
+<A HREF="../etnews/new_etnews_content?199905210102|02"><IMG SRC="../headimg/top/1999052102.gif" WIDTH=290 HEIGHT=35 HSPACE=0 BORDER=0></A></TD>
+</TD></TR>
+<TR><TD ALIGN=LEFT VALIGN=TOP WIDTH=290><FONT SIZE=-1> 　지난 4월중 전자, 정보통신 수출이 올들어 가장 큰 폭인 20.3% 증가하는 등 수출신장세가 갈수록 높아지고 있는 것으로 나타났다.
+
+　한국전자산업진흥회가<font size=-1 color=aaaaaa> continued...</font></FONT>
+</TD></TR>
+</TABLE>
+<IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=290 HEIGHT=3 BORDER=0><BR>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=290>
+<TR><TD ALIGN=LEFT VALIGN=TOP WIDTH=290>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif"><A HREF="../etnews/new_etnews_content?199905210094|01"><FONT SIZE=+0>반도체 빅딜 최종 계약</FONT></A>
+</TD></TR>
+<TR><TD ALIGN=LEFT VALIGN=TOP WIDTH=290>
+<FONT SIZE=-1>　현대전자와 LG반도체간 반도체 빅딜 최종 계약이 체결됐다.
+
+　이에 따라 지난해 12월 통합 반도체회사의 경영주체로 현대전자를 선정한 지 만 5개월만에<font size=-1 color=aaaaaa> continued...</font></FONT>
+</TD></TR>
+</TABLE>
+</TD>
+<TD ALIGN=LEFT VALIGN=TOP WIDTH=15>
+<IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=15  HEIGHT=1 BORDER=0>
+</TD>
+<TD ALIGN=LEFT VALIGN=TOP WIDTH=190>
+<TABLE BGCOLOR=#EEEEEE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=190>
+<TR><TD ALIGN=LEFT VALIGN=TOP>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif">
+<A HREF="../etnews/new_jetnews_content?199905170080|08"><FONT SIZE=-1><SPAN STYLE=COLOR:#000000><특집-노트북> 주요 업체 주력 제품.. 대우통신  솔로 CN620.CN630</FONT></SPAN></A>
+</TD></TR>
+<TR><TD ALIGN=LEFT VALIGN=TOP>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif">
+<A HREF="../etnews/new_jetnews_content?199905170082|08"><FONT SIZE=-1><SPAN STYLE=COLOR:#000000><특집-노트북> 주요 업체 주력 제품.. 삼보컴퓨터  드림북 라이트</FONT></SPAN></A>
+</TD></TR>
+<TR><TD ALIGN=LEFT VALIGN=TOP>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif">
+<A HREF="../etnews/new_jetnews_content?199905170081|08"><FONT SIZE=-1><SPAN STYLE=COLOR:#000000><특집-노트북> 주요 업체 주력 제품.. LG IBM  씽크패드 i</FONT></SPAN></A>
+</TD></TR>
+<TR><TD ALIGN=LEFT VALIGN=TOP>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif">
+<A HREF="../etnews/new_jetnews_content?199905170084|08"><FONT SIZE=-1><SPAN STYLE=COLOR:#000000><특집-노트북> 컴팩.후지쯔  다크호스  부상</FONT></SPAN></A>
+</TD></TR>
+</TABLE>
+<IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=190 HEIGHT=5 BORDER=0><BR>
+<A HREF="../etnews/sub_etnews?20">
+<IMG BORDER=0 SRC="http://203.234.140.1/new_icons/home/t_right_a2.gif"></A><BR>
+<TABLE BORDER=1 WIDTH=190 CELLPADDING=1 CELLSPACING=0 BGCOLOR=#eeeeee BORDERColor=#6e607a>
+<TR><TD ALIGN=CENTER VALIGN=TOP>
+<A HREF="http://203.234.140.1/etnews/display_enter?477.1|게임SW"><FONT FACE=돋움,arial SIZE=-1><SPAN STYLE=COLOR:#000000>게임SW</A></FONT></SPAN><BR>
+</TD>
+<TD ALIGN=CENTER VALIGN=TOP>
+<A HREF="http://203.234.140.1/etnews/display_enter?박영민|골프"><FONT FACE=돋움,arial SIZE=-1><SPAN STYLE=COLOR:#000000>골프</A></FONT></SPAN><BR>
+</TD></TR>
+<TR><TD ALIGN=CENTER VALIGN=TOP>
+<A HREF="http://203.234.140.1/etnews/display_enter?PC통신유머|PC통신유머"><FONT FACE=돋움,arial SIZE=-1><SPAN STYLE=COLOR:#000000>PC통신유머</A></FONT></SPAN><BR>
+</TD>
+<TD ALIGN=CENTER VALIGN=TOP>
+<A HREF="http://203.234.140.1/etnews/display_enter?스크린관람석|영화관람석"><FONT FACE=돋움,arial SIZE=-1><SPAN STYLE=COLOR:#000000>영화관람석</A></FONT></SPAN><BR>
+</TD></TR>
+<TR><TD ALIGN=CENTER VALIGN=TOP>
+<A HREF="http://203.234.140.1/etnews/display_enter?새비디오|새비디오"><FONT FACE=돋움,arial SIZE=-1><SPAN STYLE=COLOR:#000000>새비디오</A></FONT></SPAN><BR>
+</TD>
+<TD ALIGN=CENTER VALIGN=TOP>
+<A HREF="http://203.234.140.1/etnews/display_enter?레포츠|레포츠"><FONT FACE=돋움,arial SIZE=-1><SPAN STYLE=COLOR:#000000>레포츠</A></FONT></SPAN><BR>
+</TD></TR>
+</TABLE>
+</TD></TR>
+</TABLE><P>
+<!--- 6 번째 --->
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=630>
+<TD WIDTH=120 VALIGN=TOP ALIGN=LEFT>
+<A HREF="http://203.234.140.1/adv/P1M4/P1M4.html" TARGET="_new"><IMG SRC="http://203.234.140.1/et_icons/P1M4.gif" ALT="레저시티" BORDER=0></A>
+</TD>
+<TD WIDTH=15 VALIGN=TOP ALIGN=LEFT>
+<IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=15  HEIGHT=1 BORDER=0>
+</TD>
+<TD WIDTH=290 VALIGN=TOP ALIGN=LEFT>
+<A HREF="http://203.234.140.1/adv/P1B8/P1B8.html" TARGET="_new"><IMG BORDER=0 SRC="http://203.234.140.1/et_icons/P1B8.gif" ALT="포에스정보기술"></A>
+</TD>
+<TD WIDTH=15 VALIGN=TOP ALIGN=LEFT>
+<IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=15  HEIGHT=1 BORDER=0>
+</TD>
+<TD WIDTH=190 VALIGN=TOP ALIGN=LEFT>
+<A HREF="http://203.234.140.1/adv/P1B10/P1B10.html" TARGET="_new"><IMG BORDER=0 SRC="http://203.234.140.1/et_icons/P1B10.gif" ALT="이지클럽"></A>
+</TD></TR>
+</TABLE>
+<P>
+<!--- 7 번째 --->
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=630>
+<TR><TD WIDTH=120 VALIGN=TOP ALIGN=LEFT>
+</TD>
+<TD WIDTH=15 VALIGN=TOP ALIGN=LEFT>
+<IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=15  HEIGHT=1 BORDER=0>
+</TD>
+<TD WIDTH=495 VALIGN=TOP ALIGN=LEFT>
+<IMG BORDER=0 SRC="http://203.234.140.1/new_icons/home/today.gif">
+</TD></TR>
+</TABLE>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=630>
+<TR><TD WIDTH=120 VALIGN=TOP ALIGN=LEFT>
+<TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0 WIDTH=116>
+<TR><TD ALIGN=LEFT VALIGN=TOP>
+<FONT SIZE=2>&nbsp;</FONT><FONT SIZE=-2 COLOR=CC0000>▶</FONT>
+<A HREf="http://203.234.140.1/etnews/history"><FONT SIZE=2 FACE="돋움, arial">일일소사</FONT></A>
+</TD></TR>
+<TR><TD ALIGN=LEFT VALIGN=TOP>
+<FONT SIZE=2>&nbsp;</FONT><FONT SIZE=-2 COLOR=CC0000>▶</FONT>
+<A HREf="http://203.234.140.1/etnews/bbs"><FONT SIZE=2 FACE="돋움, arial">독자의소리</FONT></A>
+</TD></TR>
+<TR><TD ALIGN=LEFT VALIGN=TOP>
+<FONT SIZE=2>&nbsp;</FONT><FONT SIZE=-2 COLOR=CC0000>▶</FONT>
+<A HREf="http://203.234.140.1/etnews/order_menu"><FONT SIZE=2 FACE="돋움, arial">구독신청</FONT></A>
+</TD></TR>
+<TR><TD ALIGN=LEFT VALIGN=TOP HEIGHT=10>
+</TD></TR>
+<TR><TD ALIGN=LEFT VALIGN=TOP>
+<A HREf="http://www.korea-stock.com" TARGET="_new"><IMG SRC="http://203.234.140.1/new_icons/home/stock.gif" BORDER=0></A>
+</TD></TR>
+</TABLE>
+</TD>
+<TD WIDTH=15 ALIGN=CENTER VALIGN=TOP>
+<IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=15  HEIGHT=1 BORDER=0>
+</TD>
+<TD VALIGN=TOP WIDTH=290>
+<IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=290  HEIGHT=1 BORDER=0><BR>
+<TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0 WIDTH=290>
+<TR><TD VALIGN=TOP WIDTH=290>
+<A HREF="../etnews/sub_etnews?01">
+<B><FONT>[종합]</FONT></B></A><BR>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif"><FONT SIZE=-1>
+<A HREF="../etnews/new_etnews_content?199905210093|01"><FONT SIZE=-1>한통, 비동기 방식 IMT2000 개발</FONT></A><BR>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif"><FONT SIZE=-1>
+<A HREF="../etnews/new_etnews_content?199905210092|01"><FONT SIZE=-1><알림> 인터넷 비즈니스 리더 모임</FONT></A><BR>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif"><FONT SIZE=-1>
+<A HREF="../etnews/new_etnews_content?199905200000|01"><FONT SIZE=-1>IT컨설팅 "패권 경쟁"</FONT></A><BR>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif"><FONT SIZE=-1>
+<A HREF="../etnews/new_etnews_content?199905200127|01"><FONT SIZE=-1>D램 수요 "디지털기기"로 중심 이동.. 업계 판도 바뀐다</FONT></A><BR>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif"><FONT SIZE=-1>
+<A HREF="../etnews/new_etnews_content?199905200126|01"><FONT SIZE=-1>공급업체들, FA설비 Y2K 해결 협력</FONT></A><BR>
+</TD></TR>
+</TABLE>
+</TD>
+<TD WIDTH=15 ALIGN=CENTER VALIGN=TOP>
+<IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=15  HEIGHT=1 BORDER=0>
+</TD>
+<TD VALIGN=TOP WIDTH=190>
+<IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=190  HEIGHT=1 BORDER=0><BR>
+<TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0 WIDTH=190>
+<TR><TD VALIGN=TOP WIDTH=190>
+<A HREF="../etnews/sub_etnews?11">
+<B><FONT>[오피니언]</FONT></B></A><BR>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif"><FONT SIZE=-1>
+<A HREF="../etnews/new_etnews_content?199905210003|11"><FONT SIZE=-1><사설> ITS구축사업 정상화 급하다</FONT></A><BR>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif"><FONT SIZE=-1>
+<A HREF="../etnews/new_etnews_content?199905210001|11"><FONT SIZE=-1><네트워크> "할부판매 허용"에 안도</FONT></A><BR>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif"><FONT SIZE=-1>
+<A HREF="../etnews/new_etnews_content?199905210000|11"><FONT SIZE=-1><네트워크> 채권 회수에 기대감 커져</FONT></A><BR>
+</TD></TR>
+</TABLE>
+</TD></TR>
+</TABLE>
+<P>
+<!--- 8 번째 --->
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=630>
+<TR><TD WIDTH=120 VALIGN=TOP ALIGN=LEFT>
+<A HREF="../etnews/sub_etnews?13"><IMG BORDER=0 SRC="http://203.234.140.1/new_icons/home/cyber.gif"></A>
+</TD>
+<TD WIDTH=15 VALIGN=TOP ALIGN=LEFT>
+<IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=15  HEIGHT=1 BORDER=0>
+</TD>
+<TD VALIGN=TOP WIDTH=290>
+<A HREF="http://203.234.140.1/adv/P1B11/P1B11.html" TARGET="_new"><IMG SRC="http://203.234.140.1/et_icons/P1B11.gif" BORDER=0 ALT="다한테크"></A></TD>
+</TD>
+<TD WIDTH=15 VALIGN=TOP ALIGN=LEFT>
+<IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=15  HEIGHT=1 BORDER=0>
+</TD>
+<TD VALIGN=TOP WIDTH=190>
+<A HREF="http://203.234.140.1/adv/P1B12/P1B12.html" TARGET="_new"><IMG SRC="http://203.234.140.1/et_icons/P1B12.gif" BORDER=0 ALT="KT코넷"></A></TD>
+</TD></TR>
+</TABLE><P>
+<!--- 9 번째 --->
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=630>
+<TR><TD WIDTH=120 VALIGN=TOP ALIGN=LEFT>
+<TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0 WIDTH=116>
+<TR><TD ALIGN=LEFT VALIGN=TOP>
+<A HREF="http://203.234.140.1/adv/P1M7/P1M7.html" TARGET="_new"><IMG BORDER=0 SRC="http://203.234.140.1/et_icons/P1M7.gif" ALT="인터넷광고"></A>
+</TD></TR>
+</TABLE>
+<TABLE CELLSPACING=2 CELLPADDING=0 BORDER=0 WIDTH=102 BGCOLOR=#0069b3>
+<TR><TD ALIGN=LEFT VALIGN=TOP>
+<A HREF="http://203.234.140.1/etnews/sub_market_fix?010|0|총류|본사행사|본사행사"><IMG SRC="http://203.234.140.1/new_icons/home/event.gif" BORDER=0></A><BR>
+</TR></TD>
+<TR><TD ALIGN=LEFT VALIGN=TOP>
+<TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0 WIDTH=100 BGCOLOR=#DAE6F3>
+<TR><TD ALIGN=LEFT VALIGN=TOP>
+<A HREF="http://203.234.140.1/etnews/display_special?신SW상품대상">
+<FONT SIZE=2 FACE=돋움, arial><SPAN STYLE=COLOR:#0069b3>&nbsp;신SW상품대상</SPAN></FONT></A><BR>
+<A HREF="http://www.contest.co.kr?한국인터넷대상">
+<FONT SIZE=2 FACE=돋움, arial><SPAN STYLE=COLOR:#0069b3>&nbsp;한국인터넷대상</SPAN></FONT></A><BR>
+<A HREF="http://203.234.140.1/etnews/display_special?대한민국게임대상">
+<FONT SIZE=2 FACE=돋움, arial><SPAN STYLE=COLOR:#0069b3>&nbsp;대한민국게임대상</SPAN></FONT></A><BR>
+</TR></TD>
+</TABLE>
+</TR></TD>
+</TABLE>
+<P>
+<TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0 WIDTH=100 BGCOLOR=#DAE6F3>
+<TR><TD ALIGN=LEFT VALIGN=TOP>
+<A HREF="http://www.sek.co.kr" TARGET="_new"><IMG SRC="http://203.234.140.1/et_icons/icon99_sek.gif" BORDER=0></A><BR>
+</TABLE>
+</TD>
+<TD WIDTH=15 VALIGN=TOP ALIGN=LEFT>
+<IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=15  HEIGHT=1 BORDER=0>
+</TD>
+<TD ALIGN=LEFT VALIGN=TOP WIDTH=290>
+<IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=290  HEIGHT=1 BORDER=0><BR>
+<TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0 WIDTH=290>
+<TR><TD ALIGN=LEFT VALIGN=TOP WIDTH=290>
+<A HREF="../etnews/sub_etnews?03">
+<B><FONT>[정보통신]</FONT></B></A><BR>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif"><FONT SIZE=-1><A HREF="../etnews/new_etnews_content?199905210106|03">PC통신업계, 인터넷 포털서비스 "바람"</A></FONT><BR>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif"><FONT SIZE=-1><A HREF="../etnews/new_etnews_content?199905210009|03">업계, 이동전화 "홈트레이딩 서비스" 도입 붐</A></FONT><BR>
+<P>
+<A HREF="../etnews/sub_etnews?04">
+<B><FONT>[컴퓨터,OA,SW]</FONT></B></A><BR>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif"><FONT SIZE=-1><A HREF="../etnews/new_etnews_content?199905210016|04">새 인사정보시스템 "열풍"</A></FONT><BR>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif"><FONT SIZE=-1><A HREF="../etnews/new_etnews_content?199905210024|04">홈페이지 제작SW 큰 인기</A></FONT><BR>
+<P>
+<A HREF="../etnews/sub_etnews?05">
+<B><FONT>[해외전자산업]</FONT></B></A><BR>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif"><FONT SIZE=-1><A HREF="../etnews/new_etnews_content?199905210034|05">인터넷 의료업체들, M&A 적극 나서</A></FONT><BR>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif"><FONT SIZE=-1><A HREF="../etnews/new_etnews_content?199905210033|05">모토롤러, 반도체 제조 신기술 개발</A></FONT><BR>
+</TD></TR>
+</TABLE>
+</TD>
+<TD WIDTH=15 VALIGN=TOP ALIGN=LEFT>
+<IMG SRC="http://203.234.140.1/new_icons/home/blank.gif WIDTH=15  HEIGHT=1 BORDER=0>
+</TD>
+<TD ALIGN=LEFT VALIGN=TOP WIDTH=190>
+<IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=190  HEIGHT=1 BORDER=0><BR>
+<TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0 WIDTH=190>
+<TR><TD ALIGN=LEFT VALIGN=TOP WIDTH=190>
+<A HREF="../etnews/sub_etnews?02">
+<B><FONT>[경제과학]</FONT></B></A><BR>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif"><FONT SIZE=-1><A HREF="../etnews/new_etnews_content?199905210102|02">전자.정보통신 수출 "신바람"</A></FONT><BR>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif"><FONT SIZE=-1><A HREF="../etnews/new_etnews_content?199905210101|02">과기자문회의, "민.관 기술사업단" 설치 건의</A></FONT><BR>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif"><FONT SIZE=-1><A HREF="../etnews/new_etnews_content?199905210100|02">중소기업 화의 인가 크게 늘어</A></FONT><BR>
+<P>
+<A HREF="../etnews/sub_etnews?07">
+<B><FONT>[부품,소재]</FONT></B></A><BR>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif"><FONT SIZE=-1><A HREF="../etnews/new_etnews_content?199905210057|07">중소부품업체, 불법체류 근로자 단속강화로 일손부족 심화</A></FONT><BR>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif"><FONT SIZE=-1><A HREF="../etnews/new_etnews_content?199905210064|07">PCB용 캐드.캠 관심 쏠린다</A></FONT><BR>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif"><FONT SIZE=-1><A HREF="../etnews/new_etnews_content?199905210060|07">신기술 주역 대리급 직원, 성과급 2억 받았다</A></FONT><BR>
+</TD></TR>
+</TABLE>
+</TD></TR>
+</TABLE><P>
+<!--- 10 번째 --->
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=630>
+<TR><TD WIDTH=120 VALIGN=TOP ALIGN=LEFT>
+</TD>
+<TD WIDTH=15 VALIGN=TOP ALIGN=LEFT>
+<IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=15  HEIGHT=1 BORDER=0>
+</TD>
+<TD VALIGN=TOP WIDTH=290>
+<A HREF="http://203.234.140.1/adv/P1B13/P1B13.html" TARGET="_new"><IMG SRC="http://203.234.140.1/et_icons/P1B13.gif" BORDER=0 ALT="소프트비젼"></A>
+</TD>
+<TD WIDTH=15 VALIGN=TOP ALIGN=LEFT>
+<IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=15  HEIGHT=1 BORDER=0>
+</TD>
+<TD VALIGN=TOP WIDTH=190>
+<A HREF="http://203.234.140.1/adv/P1B14/P1B14.html" TARGET="_new"><IMG SRC="http://203.234.140.1/et_icons/P1B14.gif" BORDER=0 ALT="격동98"></A>
+</TD></TR>
+</TABLE><P>
+<!--- 10 번째 --->
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=630>
+<TR><TD WIDTH=120 VALIGN=BOTTOM ALIGN=LEFT>
+<TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0 WIDTH=116>
+<TR><TD ALIGN=LEFT VALIGN=TOP>
+<A HREF="http://www.microsoft.com/ie_intl/ko/download" TARGET="_new"><IMG BORDER=0 SRC="../et_icons/IE4.gif" ALT="MS"></A>
+</TD></TR>
+</TABLE>
+</TD>
+<TD WIDTH=15 VALIGN=TOP ALIGN=LEFT>
+<IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=15  HEIGHT=1 BORDER=0>
+</TD>
+<TD WIDTH=290 VALIGN=TOP ALIGN=LEFT>
+<IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=290  HEIGHT=1 BORDER=0><BR>
+<TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0 WIDTH=290>
+<TR><TD ALIGN=LEFT VALIGN=TOP WIDTH=290>
+<A HREF="../etnews/sub_etnews?08">
+<B><FONT>[가전,HA]</FONT></B></A><BR>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif"><FONT SIZE=-1><A HREF="../etnews/new_etnews_content?199905210066|08">MP3 플레이어 내수시장 "4파전"</A></FONT><BR>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif"><FONT SIZE=-1><A HREF="../etnews/new_etnews_content?199905210068|08">코스닥 등록 가전업체들, 작년 영업 비교적 양호</A></FONT><BR>
+<P>
+<A HREF="../etnews/sub_etnews?09">
+<B><FONT>[종합유통]</FONT></B></A><BR>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif"><FONT SIZE=-1><A HREF="../etnews/new_etnews_content?199905210073|09">유통업계, MS의 "CA제도" 규제 움직임에 엇갈린 반응</A></FONT><BR>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif"><FONT SIZE=-1><A HREF="../etnews/new_etnews_content?199905210072|09">관세청, SEPP형 CPU 관세소급 적용</A></FONT><BR>
+<P>
+<A HREF="../etnews/sub_etnews?06">
+<B><FONT>[산업전자]</FONT></B></A><BR>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif"><FONT SIZE=-1><A HREF="../etnews/new_etnews_content?199905210115|06">공작기계 시장, 뚜렷한 회복세</A></FONT><BR>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif"><FONT SIZE=-1><A HREF="../etnews/new_etnews_content?199905210121|06">지능형 교통시스템 구축 사업, 건교부보다 정통부가 더 열성</A></FONT><BR>
+</TD></TR>
+</TABLE>
+</TD>
+<TD WIDTH=15 VALIGN=TOP ALIGN=LEFT>
+<IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=15 HEIGHT=1 BORDER=0>
+</TD>
+<TD WIDTH=190 VALIGN=TOP ALIGN=LEFT>
+<IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=190  HEIGHT=1 BORDER=0><BR>
+<TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0 WIDTH=190>
+<TR><TD ALIGN=LEFT VALIGN=TOP WIDTH=190>
+<A HREF="../etnews/sub_etnews?10">
+<B><FONT>[영상문화]</FONT></B></A><BR>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif"><FONT SIZE=-1><A HREF="../etnews/new_etnews_content?199905210042|10">방송장비업계, 마케팅 아웃소싱 활발</A></FONT><BR>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif"><FONT SIZE=-1><A HREF="../etnews/new_etnews_content?199905210053|10">국산 애니메이션 "뜬다"</A></FONT><BR>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif"><FONT SIZE=-1><A HREF="../etnews/new_etnews_content?199905210044|10">불법음반.비디오 제작 기업화</A></FONT><BR>
+<P>
+<A HREF="../etnews/sub_etnews?20">
+<B><FONT>[정보생활]</FONT></B></A><BR>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif"><FONT SIZE=-1><A HREF="../etnews/new_etnews_content?199905150030|20">사이버 공간 "사기꾼" 날뛴다</A></FONT><BR>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif"><FONT SIZE=-1><A HREF="../etnews/new_etnews_content?199905150032|20">&lt뉴스초점&gt 컴퓨터 자격증 실효성 "논란"</A></FONT><BR>
+<IMG SRC="http://203.234.140.1/new_icons/home/et.gif"><FONT SIZE=-1><A HREF="../etnews/new_etnews_content?199905150057|20">컴퓨터 서적 출판계, 저작권 "소송 大亂"</A></FONT><BR>
+</TD></TR>
+</TABLE><P>
+</TD></TR>
+</TABLE><P>
+<TABLE BORDER=0 WIDTH=630>
+<TD WIDTH=120>
+</TD>
+<TD WIDTH=15 VALIGN=TOP ALIGN=LEFT>
+<IMG SRC="http://203.234.140.1/new_icons/home/blank.gif" WIDTH=15  HEIGHT=1 BORDER=0>
+</TD>
+<TD WIDTH=495>
+<HR SIZE=1>
+<TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0 HEIGHT=44 WIDTH=495>
+<TR><TD VALIGN=TOP ALIGN=CENTER WIDTH=495 HEIGHT=16>
+<FONT SIZE=-2 COLOR=8C002A>Copyright (C)1996-99 ETnews All rights reserved</FONT>
+</TD></TR>
+<TR><TD VALIGN=TOP ALIGN=CENTER WIDTH=495 HEIGHT=28>
+<A HREF=../etnews/title>
+<IMG BORDER=0 SRC="http://203.234.140.1/new_icons/home/etmark-s.gif" WIDTH=204 HEIGHT=28 ALIGN=CENTER></A>
+</TD></TR>
+</TABLE>
+</TD></TR>
+</TABLE>
+<layer	name="idAdCorner" zIndex=2 left=10 top=1000>
+<a href="http://203.231.132.18/Ad/hanaro/9905/blue_etnews.htm" TARGET="_new"><img id="idAdCorner" border=0 src="../et_icons/adcon마진.gif" style="position:absolute;left=10;top=1000;z-index:2;"></a>
+</layer>
+<script LANGUAGE="JavaScript">
+<!--
+	window.onload=setup;
+	isLoaded = 1;
+//-->
+</script>
+</BODY>
+</HTML>

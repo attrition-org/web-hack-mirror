@@ -1,0 +1,362 @@
+<html>
+
+<head>
+<title> Christian International - Dr.Bill Hamon / Equipping for the Ministry</title>
+<meta name="revisit-after" content="10 days">
+<meta name="title" content="Christian International - Dr.Bill Hamon / Equipping for the Ministry">
+<meta name="Description" content="A Prophetic and Apostolic Ministry equipping and activating God's People 
+for the works of the Ministry.">
+<meta name="Keywords" content="christian, ministries, apostle, prophet, prophecy, training, apostolic, hamon, resource, network, 
+prayer, missions, outreach, churches, Jesus, christian, hamon, ministries, apostle, prophet, prophecy, 
+prophetic ministry, training, apostolic, resource, network, prayer, missions, outreach, churches, Jesus, christian">
+<meta NAME="resource-type" CONTENT="document">
+<meta NAME="reply-to" CONTENT="cinpm@arc.net">
+<meta name="robots" content="all">
+<meta name="rating" content="General">
+<meta name="distribution" content="global">
+
+<script LANGUAGE="JavaScript" FPTYPE="dynamicanimation">
+<!--
+  // If you want to change this script, you must also make the following
+  // changes so that FrontPage will not overwrite your new script.
+  // In the script tag, change type="dynamicanimation" to type="mydynamicanimation"
+  // In the first script statement, change "dynamicanimation" to "mydynamicanimation"
+  // Throughout the HTML content, change dynamicanimation= to mydynamicanimation=
+  // Change function dynAnimation to function mydynAnimation
+  // In the body tag, change onload="dynAnimation()" to onload="mydynAnimation()"
+  dynamicanimAttr = "dynamicanimation"
+  animateElements = new Array()
+  currentElement = 0
+  speed = 0
+  stepsZoom = 8
+  stepsWord = 8
+  stepsFly = 12
+  stepsSpiral = 16
+  steps = stepsZoom
+  step = 0
+  outString = ""
+  function dynAnimation()
+  {
+    var ms = navigator.appVersion.indexOf("MSIE")
+    ie4 = (ms>0) && (parseInt(navigator.appVersion.substring(ms+5, ms+6)) >= 4)
+    if(!ie4)
+    {
+      if((navigator.appName == "Netscape") &&
+         (parseInt(navigator.appVersion.substring(0, 1)) >= 4))
+      {
+        for (index=document.layers.length-1; index >= 0; index--)
+        {
+            layer=document.layers[index]
+            if (layer.left==10000)
+                layer.left=0
+        }
+      }
+      return
+    }
+    for (index=document.all.length-1; index >= document.body.sourceIndex; index--)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if(null != animation)
+      {
+        if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        {
+          ih = el.innerHTML
+          outString = ""
+          i1 = 0
+          iend = ih.length
+          while(true)
+          {
+            i2 = startWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, false, "")
+            if(i2 == iend)
+              break
+            i1 = i2
+            i2 = endWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, true, animation)
+            if(i2 == iend)
+              break
+            i1 = i2
+          }
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+        if(animation == "zoomIn" || animation == "zoomOut")
+        {
+          ih = el.innerHTML
+          outString = "<SPAN " + dynamicanimAttr + "=\"" + animation + "\" style=\"position: relative; left: 10000;\">"
+          outString += ih
+          outString += "</SPAN>"
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+      }
+    }
+    i = 0
+    for (index=document.body.sourceIndex; index < document.all.length; index++)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if (null != animation)
+      {
+        if(animation == "flyLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyRight")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyTop" || animation == "dropWord")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottom")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyTopLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyTopRight" || animation == "flyTopRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottomLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyBottomRight" || animation == "flyBottomRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "spiral")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "zoomIn")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else if(animation == "zoomOut")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        el.initLeft = el.style.posLeft
+        el.initTop = el.style.posTop
+        animateElements[i++] = el
+      }
+    }
+    window.setTimeout("animate();", speed)
+  }
+  function offsetLeft(el)
+  {
+    x = el.offsetLeft
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      x += e.offsetLeft;
+    return x
+  } 
+  function offsetTop(el)
+  {
+    y = el.offsetTop
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      y += e.offsetTop;
+    return y
+  } 
+  function startWord(ih, i)
+  {
+    for(tag = false; i < ih.length; i++)
+    {
+      c = ih.charAt(i)
+      if(c == '<')
+        tag = true
+      if(!tag)
+        return i
+      if(c == '>')
+        tag = false
+    }
+    return -1
+  }
+  function endWord(ih, i)
+  {
+    nonSpace = false
+    space = false
+    while(i < ih.length)
+    {
+      c = ih.charAt(i)
+      if(c != ' ')
+        nonSpace = true
+      if(nonSpace && c == ' ')
+        space = true
+      if(c == '<')
+        return i
+      if(space && c != ' ')
+        return i
+      i++
+    }
+    return -1
+  }
+  function outWord(ih, i1, i2, dyn, anim)
+  {
+    if(dyn)
+      outString += "<SPAN " + dynamicanimAttr + "=\"" + anim + "\" style=\"position: relative; left: 10000;\">"
+    outString += ih.substring(i1, i2)
+    if(dyn)
+      outString += "</SPAN>"
+  }
+  function animate()
+  {
+    el = animateElements[currentElement]
+    animation = el.getAttribute(dynamicanimAttr, false)
+    step++
+    if(animation == "spiral")
+    {
+      steps = stepsSpiral
+      v = step/steps
+      rf = 1.0 - v
+      t = v * 2.0*Math.PI
+      rx = Math.max(Math.abs(el.initLeft), 200)
+      ry = Math.max(Math.abs(el.initTop),  200)
+      el.style.posLeft = Math.ceil(-rf*Math.cos(t)*rx)
+      el.style.posTop  = Math.ceil(-rf*Math.sin(t)*ry)
+    }
+    else if(animation == "zoomIn")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(50+50*step/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else if(animation == "zoomOut")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(100+200*(steps-step)/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else
+    {
+      steps = stepsFly
+      if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        steps = stepsWord
+      dl = el.initLeft / steps
+      dt = el.initTop  / steps
+      el.style.posLeft = el.style.posLeft - dl
+      el.style.posTop = el.style.posTop - dt
+    }
+    if (step >= steps) 
+    {
+      el.style.posLeft = 0
+      el.style.posTop = 0
+      currentElement++
+      step = 0
+    }
+    if(currentElement < animateElements.length)
+      window.setTimeout("animate();", speed)
+  }
+//-->
+</script><meta name="Microsoft Theme" content="blueprnt 111, default"></head>
+
+<body onload="dynAnimation()" background="_themes/blueprnt/blutextb.gif" bgcolor="#FFFF99" text="#003366" link="#9900CC" vlink="#808080" alink="#CC9900"><!--mstheme--><font face="century gothic, arial, helvetica">
+
+<p align="center"><img src="main.gif" width="325" height="65" alt="main.jpg (13582 bytes)"></p>
+
+<p align="center"><font face="Lucida Sans" color="#800000"><strong>&quot;A PROPHETIC AND
+APOSTOLIC MINISTRY <br>
+EQUIPPING AND ACTIVATING GOD'S PEOPLE <br>
+FOR THE WORKS OF THE MINISTRY&quot;</strong></font></p>
+
+<p align="center" dynamicanimation="flyTop" style="position: relative !important; left: 10000 !important">&nbsp;&nbsp;&nbsp;&nbsp; <img src="bishop.jpg" width="115" height="149" alt="bishop.jpg (12698 bytes)">&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="mailbox.gif" width="100" height="109" alt="mailbox.jpg (13850 bytes)"><br>
+<big><a href="bill/bill.html">Bishop Bill &amp; Evelyn Hamon</a> &nbsp; <a href="http://www.cimn.net/inquiry.html">Add To Our Mail-List</a></big></p>
+
+<p align="left"><blink><font face="MetropolitainesD" color="#800000"><big><u><big><em><strong>Updates!</strong></em></big></u></big></font></blink></p>
+
+<!--mstheme--></font><!--msthemelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <!--msthemelist--><tr><td valign="baseline" width="42"><img src="_themes/blueprnt/blubul1a.gif" width="20" height="20" hspace="11"></td><td valign="top" width="100%"><!--mstheme--><font face="century gothic, arial, helvetica"><p align="center"><a href="http://www.cimn.net/seminars/maycibn/May.htm" style="color: rgb(128,0,128)"><strong><em><u><font color="#800080"><big>The May Apostolic
+    &amp; Prophetic Business </big><br>
+    <big>Activation</big> <big>Conference</big> <big>with Dr.Peter Wagner </big><br>
+    <big>and others</big></font></u></em></strong></a></p>
+  <!--mstheme--></font><!--msthemelist--></td></tr>
+<!--msthemelist--></table><!--mstheme--><font face="century gothic, arial, helvetica">
+
+<p align="center">&nbsp;</p>
+
+<!--mstheme--></font><!--msthemelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <!--msthemelist--><tr><td valign="baseline" width="42"><img src="_themes/blueprnt/blubul1a.gif" width="20" height="20" hspace="11"></td><td valign="top" width="100%"><!--mstheme--><font face="century gothic, arial, helvetica"><p align="center"><big><a href="http://www.cimn.net/SHS/shs319.htm" style="color: rgb(128,0,128)"><em><strong><font color="#800080">School of the Holy Spirit</font></strong></em></a><font face="MetropolitainesD" color="#800080"> </font></big></p>
+  <!--mstheme--></font><!--msthemelist--></td></tr>
+<!--msthemelist--></table><!--mstheme--><font face="century gothic, arial, helvetica">
+
+<p align="center">&nbsp;</p>
+
+<!--mstheme--></font><!--msthemelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <!--msthemelist--><tr><td valign="baseline" width="42"><img src="_themes/blueprnt/blubul1a.gif" width="20" height="20" hspace="11"></td><td valign="top" width="100%"><!--mstheme--><font face="century gothic, arial, helvetica"><p align="center"><strong><font color="#800080"><em><a href="http://www.ficministries.org/conference/julybrochure.htm" style="color: rgb(128,0,128)"><big>Freedom In Christ Ministries Conference </big><br>
+    <big>and Grand Tour &quot;Alaska Style&quot;</big><br>
+    <big>with Dr.Hamon!</a> </big></em></font></strong></p>
+  <!--mstheme--></font><!--msthemelist--></td></tr>
+<!--msthemelist--></table><!--mstheme--><font face="century gothic, arial, helvetica">
+
+<!--msthemeseparator--><p align="center"><img src="_themes/blueprnt/bluhorsa.gif" width="300" height="10"></p>
+
+<!--mstheme--></font><!--msthemelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <!--msthemelist--><tr><td valign="baseline" width="42"><img src="_themes/blueprnt/blubul1a.gif" width="20" height="20" hspace="11"></td><td valign="top" width="100%"><!--mstheme--><font face="century gothic, arial, helvetica"><p align="center"><em><big><strong><a href="http://www.cimn.net/word/y2k.htm" style="color: rgb(128,0,128)">The Y2K Report!</a> </strong></big></em></p>
+  <!--mstheme--></font><!--msthemelist--></td></tr>
+<!--msthemelist--></table><!--mstheme--><font face="century gothic, arial, helvetica">
+
+<p align="center">&nbsp;</p>
+
+<!--mstheme--></font><!--msthemelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <!--msthemelist--><tr><td valign="baseline" width="42"><img src="_themes/blueprnt/blubul1a.gif" width="20" height="20" hspace="11"></td><td valign="top" width="100%"><!--mstheme--><font face="century gothic, arial, helvetica"><p align="center"><a href="http://www.cimn.net/word/99word.htm"><big><font color="#780B88"><em><strong>1999 Word of the Lord by Bishop Hamon!</strong></em></font></big></a></p>
+  <!--mstheme--></font><!--msthemelist--></td></tr>
+<!--msthemelist--></table><!--mstheme--><font face="century gothic, arial, helvetica">
+
+<p align="center"><font color="#800000"><big><big><big><blink><strong><em>Listen</em></strong></blink></big></big>
+to Real Audio samples of </big></font><br>
+<a href="music/music.htm"><font color="#800000"><big>&quot;Demonstration Generation&quot;</big></font></a><br>
+<big><font color="#800000">the latest CD written and produced by</font> </big><br>
+<big><a href="http://www.cimn.net/willing/heart.html">Dean Mitchum</a><font color="#800000">!</font></big></p>
+
+<!--msthemeseparator--><p align="center"><img src="_themes/blueprnt/bluhorsa.gif" width="300" height="10"></p>
+
+<p align="center"><br>
+<img src="itc.gif" alt="itc.jpg (5185 bytes)" WIDTH="179" HEIGHT="95"></p>
+
+<p align="center"><big><big><big><font color="#800000">Phone: 850-231-2600</font></big></big></big></p>
+
+<p align="center"><br>
+<a href="mailto:jhlucia@digitalexp.com"><img src="email3.gif" alt="Webmaster.gif (25432 bytes)" border="0" WIDTH="100" HEIGHT="62"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; <a href="http://www.weather.com/weather/cities/us_fl_santa_rosa_beach.html"><img src="sunny.gif" alt="sunny.gif (1418 bytes)" border="0" WIDTH="52" HEIGHT="52"></a><br>
+<big><strong><font color="#FFFF00" face="Lucida Handwriting">&nbsp; </font></strong><font face="Lucida Handwriting" color="#0000FF">E-Mail Webmaster</font></big>&nbsp;<font face="MS Sans Serif"><small><small><small><font color="#0000FF"><strong>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; Click for Local Weather</strong></font> </small></small></small></font></p>
+
+<p align="center"><font face="MS Sans Serif"><br>
+<!--webbot bot="HitCounter" i-image="4" i-digits="5" PREVIEW="&lt;strong&gt;[Hit Counter]&lt;/strong&gt;" u-custom i-resetvalue="8792" startspan --><img SRC="_vti_bin/fpcount.exe/?Page=CIMinistries.htm|Image=4|Digits=5" ALT="Hit Counter"><!--webbot bot="HitCounter" endspan i-checksum="53097" --><br>
+</font><font color="#800000" face="System"><strong>Since 01/99</strong></font></p>
+
+<p align="center"><font face="MS Sans Serif"><small><small><small>&nbsp;
+&nbsp;&nbsp;&nbsp;</small></small></small></font></p>
+<!--mstheme--></font></body>
+</html>

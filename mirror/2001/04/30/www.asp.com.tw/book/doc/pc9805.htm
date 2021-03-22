@@ -1,0 +1,223 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>第 五 篇</TITLE>
+<META NAME="Template" CONTENT="F:\CWORD60\TEMPLATE\manual1.dot">
+</HEAD>
+<BODY LINK="#0000ff">
+
+<FONT FACE="標楷體" LANG="ZH-TW" SIZE=7><P ALIGN="CENTER">IIS 4.0網站建構與管理</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4><P ALIGN="RIGHT">作者</FONT><FONT SIZE=4> </FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4>喬篷科技</FONT><FONT FACE="華康少女文字體W4,細明體" LANG="ZH-TW" SIZE=4> </FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=4>周世雄</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>本文重點</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW"><P ALIGN="JUSTIFY">介紹</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=3>建構與管理</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=3>網站</FONT><FONT FACE="標楷體" LANG="ZH-TW">的方法，包括首先計算網站所須頻寬，介紹建構</FONT>IIS<FONT FACE="標楷體" LANG="ZH-TW">網站的連線方式，道出快速建立</FONT>IIS<FONT FACE="標楷體" LANG="ZH-TW">網站的方法，以及敘述</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=3>管理IIS</FONT><FONT FACE="標楷體" LANG="ZH-TW">網站的方法，讓您迅速地建立一個</FONT>Web<FONT FACE="標楷體" LANG="ZH-TW">站台、和</FONT>FTP<FONT FACE="標楷體" LANG="ZH-TW">站台。</P>
+<P ALIGN="JUSTIFY"></P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">作者著作有網站網頁、</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、IE設計等相關的十本電腦書籍，其中有關</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的著作「NT動態網站速成班」、「NT網站資料庫速成班 設計實例篇」，並以簡體版本發行於大陸，最新力作為</FONT><FONT FACE="標楷體" LANG="ZH-TW">「</FONT><FONT SIZE=3>IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>超級網站速成班</FONT><FONT FACE="標楷體" LANG="ZH-TW">」</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</P>
+<P ALIGN="JUSTIFY">作者從蘋果二號玩到網際網路，有十幾年電腦研發與行銷的工作經驗，並曾任職於宏碁電腦公司研展和產品行銷經理、特望科技總經理等職務，現任「喬篷科技」公司總經理，從事</FONT><FONT SIZE=3>Internet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>Intranet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>之網站資料庫應用設計、網站網頁規劃架設、電子商務等服務。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>示範網站</FONT><FONT FACE="華康少女文字體W4,細明體" LANG="ZH-TW">：</FONT>www.asp.com.tw</P>
+<FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">連絡</FONT><FONT SIZE=3>E-mail</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>：</FONT><FONT SIZE=3>jackchou@tpts5.seed.net.tw</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>Internet Information Server </P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">您想要在</FONT><FONT SIZE=3>Windows NT</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>或</FONT><FONT SIZE=3> Windows 95/98</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>上，迅速架設一個「超級」的</FONT><FONT SIZE=3>Internet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、或</FONT><FONT SIZE=3>Intranet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>網站伺服器嗎？</P>
+<I><P ALIGN="JUSTIFY">需要選擇什麼樣的軟體呢？不用再考慮了！</I>「俗又大碗」的唯一選擇就是</FONT><FONT SIZE=3>Microsoft</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>公司的「</FONT><FONT SIZE=3>Windows NT Option Pack</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」中文版軟體，包括主要的</FONT><FONT SIZE=3>IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（網站伺服器），以及</FONT><FONT SIZE=3>Index Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（中文全文檢索）、</FONT><FONT SIZE=3>Certificate Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>SSL</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>與安全認證）、</FONT><FONT SIZE=3>Transaction Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（資料交易）、</FONT><FONT SIZE=3>Site Server Express</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（使用分析）、和</FONT><FONT SIZE=3>Message Queue Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（訊息交換）等軟體。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">Microsoft</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>公司這次推出的「</FONT><FONT SIZE=3>Windows NT Option Pack</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」中文版軟體，幾乎將</FONT><FONT SIZE=3>Microsoft</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>開發的所有</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>伺服器都頃巢而出，涵蓋了</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>伺服器所需的各種完整功能。以筆者的角度來看，「</FONT><FONT SIZE=3>Windows NT Option Pack</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>」將大幅提升使用</FONT><FONT SIZE=3>Windows NT</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>作為</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>伺服器的市場佔有率，加上是免費下載的（</FONT><FONT SIZE=3>CD</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>版本為</FONT><FONT SIZE=3>NT$990</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），殺傷力之大，可預見使用</FONT><FONT SIZE=3>UNIX</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>作為</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>伺服器的市場，以及</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>伺服器的廠商如</FONT><FONT SIZE=3>Netscape</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>公司，將大受影響！</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>到了</FONT><FONT SIZE=3>4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>版本，功能增加了「非常地多」，功能變成「非常地強」，包括於</FONT><FONT SIZE=3>Windows NT Option Pack</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>或</FONT><FONT SIZE=3>Windows NT Server 5.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>當中。新出貨的</FONT><FONT SIZE=3>Windows NT Server 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>當中，也包括</FONT><FONT SIZE=3>Windows NT Option Pack</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=7><P>建構</FONT><FONT FACE="Arial" SIZE=7>IIS</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=7>網站</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>計算網站所須頻寬</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">建構一個</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>網站，首先讓我們先計算網站所須頻寬。</P>
+<P ALIGN="JUSTIFY">您所建構的</FONT><FONT SIZE=3>Internet</FONT><FONT FACE="華康少女文字體W4,細明體" LANG="ZH-TW" SIZE=3>網站</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，</FONT><FONT FACE="華康少女文字體W4,細明體" LANG="ZH-TW" SIZE=3>需</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>要多少的頻寬（每秒的連線速度）才夠呢？</FONT><FONT SIZE=3>64 Kbps</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>？</FONT><FONT SIZE=3>128 Kbps</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>？</FONT><FONT SIZE=3>512 Kbps</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>？或</FONT><FONT SIZE=3>T1</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>1,54 Mbps</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>？</P>
+<P ALIGN="JUSTIFY">您的</FONT><FONT SIZE=3>Internet </FONT><FONT FACE="華康少女文字體W4,細明體" LANG="ZH-TW" SIZE=3>網站所需的</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>連線頻寬，決定於：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>使用者所要求傳送的資料大小，即網頁檔案的大小。</LI></P>
+<P ALIGN="JUSTIFY"><LI>可以同時服務的人數，即同時有幾個人上網。</LI></P>
+<P ALIGN="JUSTIFY"><LI>使用者願意等候接收檔案的時間。</LI></P></UL>
+
+<P ALIGN="JUSTIFY">若沒有足夠的頻寬以供應進來</FONT><FONT FACE="華康少女文字體W4,細明體" LANG="ZH-TW" SIZE=3>網站</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的人數使用，將發生嚴重的滯延或失敗。</P>
+<P ALIGN="JUSTIFY">一但決定</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>或</FONT><FONT SIZE=3> FTP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>伺服器所需的頻寬，您也必須考慮到其它服務所吃掉的頻寬。這些服務包括電子郵件（</FONT><FONT SIZE=3>e-mail</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）、新聞（</FONT><FONT SIZE=3>news</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），或即時傳送的聲音影像資料流。您必須提供足夠的頻寬，以供</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3> FTP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、和其它各種服務使用。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>願意等候接收檔案的時間</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">您必須考慮傳送</FONT><FONT FACE="華康少女文字體W4,細明體" LANG="ZH-TW" SIZE=3>網站網頁</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>檔案至使用者的速度，檔案傳送的快慢決定於連線的速度及傳送檔案的大小。</P>
+<P ALIGN="JUSTIFY">對於使用者願意等候接收檔案的時間而言，一般準則為傳送一頁的文字不超過「五秒鐘」，之後再傳送非文字的其他檔案（包括圖形、聲音、及視訊等）部份，非文字部份不應超過「</FONT><FONT SIZE=3>30 </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>秒鐘」。</P>
+<P ALIGN="JUSTIFY">換句話說，當使用者使用瀏覽器光臨貴寶號的網站時，最好於「五秒鐘」內於瀏覽器顯示出網頁的文字部份，其他的圖形等部份於瀏覽器等候的時間不要超過「</FONT><FONT SIZE=3>30 </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>秒鐘」，否則可能遭受使用者因沒有耐心而放棄。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>每天可以提供的連線數目</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">讓我們計算每天可以提供的連線（可被查閱）數目。</P>
+<P ALIGN="JUSTIFY">以</FONT><FONT SIZE=3>T1</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>連線而言，每秒可以傳輸</FONT><FONT SIZE=3>125.3 KBytes</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，計算方式為</FONT><FONT SIZE=3>1,540,000 bps </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>連線速度除以</FONT><FONT SIZE=3>12 </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>個位元（因每傳送</FONT><FONT SIZE=3>8</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>個位元的資料，就會浪費處理</FONT><FONT SIZE=3>4</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>個位元的時間），求出每秒傳輸</FONT><FONT SIZE=3> 125.3 KBytes</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</P>
+<P ALIGN="JUSTIFY">每天可以傳輸</FONT><FONT SIZE=3>10,825,920 KBytes</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>125.3 Kbytes * 60 * 60 * 24</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）。</P>
+<P ALIGN="JUSTIFY">假設網頁（文字加圖形）的平均檔案大小為</FONT><FONT SIZE=3> 25 KBytes</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，則每天可被查閱人數為</FONT><FONT SIZE=3> 433,037</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>10,825,920 KBytes / 25 KBytes</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）。</FONT><FONT SIZE=3> </P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">將不同的連線速度，計算每天可能的連線（可被查閱）人數，如下：</P></FONT>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=1 WIDTH=488>
+<TR><TD WIDTH="35%" VALIGN="TOP">
+<FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="CENTER">連線速度</FONT></TD>
+<TD WIDTH="65%" VALIGN="TOP">
+<FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="CENTER">瀏覽</FONT><FONT SIZE=3>25 Kbytes</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>網頁</P>
+<P ALIGN="CENTER">每天可以提供的查閱人數</FONT></TD>
+</TR>
+<TR><TD WIDTH="35%" VALIGN="TOP">
+<FONT SIZE=3><P ALIGN="RIGHT">14.4 Kbps</FONT></TD>
+<TD WIDTH="65%" VALIGN="TOP">
+<FONT SIZE=3><P ALIGN="RIGHT">41,472</FONT></TD>
+</TR>
+<TR><TD WIDTH="35%" VALIGN="TOP">
+<FONT SIZE=3><P ALIGN="RIGHT">64 Kbps</FONT></TD>
+<TD WIDTH="65%" VALIGN="TOP">
+<FONT SIZE=3><P ALIGN="RIGHT">18,432</FONT></TD>
+</TR>
+<TR><TD WIDTH="35%" VALIGN="TOP">
+<FONT SIZE=3><P ALIGN="RIGHT">128 Kbps</FONT></TD>
+<TD WIDTH="65%" VALIGN="TOP">
+<FONT SIZE=3><P ALIGN="RIGHT">36,864</FONT></TD>
+</TR>
+<TR><TD WIDTH="35%" VALIGN="TOP">
+<FONT SIZE=3><P ALIGN="RIGHT">256 Kbps</FONT></TD>
+<TD WIDTH="65%" VALIGN="TOP">
+<FONT SIZE=3><P ALIGN="RIGHT">73,728</FONT></TD>
+</TR>
+<TR><TD WIDTH="35%" VALIGN="TOP">
+<FONT SIZE=3><P ALIGN="RIGHT">512 Kbps</FONT></TD>
+<TD WIDTH="65%" VALIGN="TOP">
+<FONT SIZE=3><P ALIGN="RIGHT">147,456</FONT></TD>
+</TR>
+<TR><TD WIDTH="35%" VALIGN="TOP">
+<FONT SIZE=3><P ALIGN="RIGHT">T1 1,54 Mbps</FONT></TD>
+<TD WIDTH="65%" VALIGN="TOP">
+<FONT SIZE=3><P ALIGN="RIGHT">433,037</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT FACE="Arial" SIZE=5><P>64K</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>專線夠用嗎？</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">若您租用</FONT><FONT SIZE=3>64K</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>專線，若一頁網頁（文字加圖形）的平均檔案大小為</FONT><FONT SIZE=3> 5 KBytes</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，等待的時間為</FONT><FONT SIZE=3>5</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>秒鐘，則每秒傳送速度為</FONT><FONT SIZE=3>5 KBytes</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，每秒傳送網頁數為</FONT><FONT SIZE=3>1</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>頁，可以同時上線的使用者人數為</FONT><FONT SIZE=3>5</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>人，每天可查閱人數為</FONT><FONT SIZE=3>92,160</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</P>
+<P ALIGN="JUSTIFY">將不同的連線速度，除以每位使用者每秒鐘所須傳送的位元，得到可以同時的使用者人數，如下：</P></FONT>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=1 WIDTH=359>
+<TR><TD WIDTH="39%" VALIGN="TOP">
+<FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="CENTER">連線速度</FONT></TD>
+<TD WIDTH="61%" VALIGN="TOP">
+<FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="CENTER">大約可以支援的同時使用者數</FONT></TD>
+</TR>
+<TR><TD WIDTH="39%" VALIGN="TOP">
+<FONT SIZE=3><P ALIGN="RIGHT">14.4 Kbps</FONT></TD>
+<TD WIDTH="61%" VALIGN="TOP">
+<FONT SIZE=3><P ALIGN="RIGHT">1</FONT></TD>
+</TR>
+<TR><TD WIDTH="39%" VALIGN="TOP">
+<FONT SIZE=3><P ALIGN="RIGHT">64 Kbps</FONT></TD>
+<TD WIDTH="61%" VALIGN="TOP">
+<FONT SIZE=3><P ALIGN="RIGHT">5</FONT></TD>
+</TR>
+<TR><TD WIDTH="39%" VALIGN="TOP">
+<FONT SIZE=3><P ALIGN="RIGHT">T1 1,54 Mbps</FONT></TD>
+<TD WIDTH="61%" VALIGN="TOP">
+<FONT SIZE=3><P ALIGN="RIGHT">121</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">在此是假設每一個網頁的檔案大小為</FONT><FONT SIZE=3>5 KBytes</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，須在</FONT><FONT SIZE=3> 5 </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>秒之內傳輸完畢。如果有更多的使用者同時想連線上您的伺服器，他們不會被拒絕，但是等待的時間會大於</FONT><FONT SIZE=3>5</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>秒鐘。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"> </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>天啊！一個網頁大小為</FONT><FONT SIZE=3> 5 Kbytes</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>時，</FONT><FONT SIZE=3>64K</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>專線可以同時上線的使用者人數為</FONT><FONT SIZE=3>5</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>人，一個網頁隨便加個幾張各數</FONT><FONT SIZE=3>Kbytes</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的圖形，譬如總計</FONT><FONT SIZE=3>30KBytes</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，即使只讓一個人連線，由於每秒傳送速度為</FONT><FONT SIZE=3>5 KBytes</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，等待的時間也須</FONT><FONT SIZE=3>6</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>秒鐘！</P>
+<P ALIGN="JUSTIFY">那麼，您想想每月花費兩萬多租用的</FONT><FONT SIZE=3>64K</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>專線，夠用嗎？</P>
+<P ALIGN="JUSTIFY">當然，當使用者再次光臨您網站時，瀏覽器可使用前一次暫存的圖形檔案，真的幫了不少頻寬的忙。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>建構</FONT><FONT FACE="Arial" SIZE=5>IIS</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>網站可以採用的連線方式</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">若您想要建構一個</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的網站，以便執行</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式和資料庫應用程式，可以採用的連線方式，如下，前三種為</FONT><FONT SIZE=3>Internet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>網站，第四種為</FONT><FONT SIZE=3>Intranet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>企業內部網站：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>租用專線：自己添購和維護伺服器電腦（安裝</FONT><FONT SIZE=3>Windows NT Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>和</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）和路由器等設備，拉一條專線。</LI></P>
+<P ALIGN="JUSTIFY"><LI>虛擬主機：租用</FONT><FONT SIZE=3>ISP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Internet </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>服務提供者）主機的硬碟空間，須找「可執行</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式和資料庫」的</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>虛擬主機，以及較大的硬碟空間，以裝日益膨脹的資料庫。</LI></P>
+<P ALIGN="JUSTIFY"><LI>主機代管（</FONT><FONT SIZE=3>co-location</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）：自己準備一台</FONT><FONT SIZE=3>Windows NT Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>和安裝</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的伺服器電腦，放置於</FONT><FONT SIZE=3>ISP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的機房。</LI></P>
+<P ALIGN="JUSTIFY"><LI>區域網路：準備一台</FONT><FONT SIZE=3>Windows NT Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>和安裝</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的伺服器電腦，連接到區域網路，做為</FONT><FONT SIZE=3>Intranet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的企業內網站。</LI></P></UL>
+
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>租用專線</P>
+</FONT><FONT FACE="華康少女文字體W4,細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">建構一個</FONT><FONT SIZE=3>Internet</FONT><FONT FACE="華康少女文字體W4,細明體" LANG="ZH-TW" SIZE=3>網站的傳統方式</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，為租用專線，向中華電信租用一條專線，由您的</FONT><FONT FACE="華康少女文字體W4,細明體" LANG="ZH-TW" SIZE=3>網站伺服器</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>連接到</FONT><FONT SIZE=3>ISP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的機房，以連線上</FONT><FONT SIZE=3>Internet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</P>
+<P ALIGN="JUSTIFY">您的</FONT><FONT FACE="華康少女文字體W4,細明體" LANG="ZH-TW" SIZE=3>網站</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>伺服器透過網路卡、路由器（</FONT><FONT SIZE=3>router</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）等裝置與</FONT><FONT SIZE=3> Internet </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>連線。接線的方式，為專線接到</FONT><FONT SIZE=3>DSU</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>裝置後，接到路由器，再接到區域網路的</FONT><FONT SIZE=3>HUB</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，</FONT><FONT FACE="華康少女文字體W4,細明體" LANG="ZH-TW" SIZE=3>網站</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>伺服器透過網路卡接到</FONT><FONT SIZE=3>HUB</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">Internet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>專線費用，包括</FONT><FONT SIZE=3>Internet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>連線費用與中華電信的專線電路費，譬如</FONT><FONT SIZE=3>64 Kbps</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>專線，以</FONT><FONT SIZE=3>Hinet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>而言，月租費為每個月兩萬多，</FONT><FONT SIZE=3>128 Kbps</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>專線為五萬多，</FONT><FONT SIZE=3>T1</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>專線為</FONT><FONT SIZE=3>35</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>萬多。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>虛擬主機</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">除了「租用專線」方式外，另外一個方法為採用「虛擬主機」方式，租用</FONT><FONT SIZE=3>ISP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>主機的硬碟空間。</P>
+<P ALIGN="JUSTIFY">「租用專線」方式必須自己添購和維護設備，設備包括伺服器電腦和路由器等，約須十幾萬。「虛擬主機」方式，由於運用</FONT><FONT SIZE=3>ISP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的設備，可節省設備費用與維護的人力。</P>
+<P ALIGN="JUSTIFY">「虛擬主機」方式，費用一般為每個月數千元，譬如</FONT><FONT SIZE=3>Hinet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>每月</FONT><FONT SIZE=3>4,400</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>15MB</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），其他</FONT><FONT SIZE=3>ISP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>約每月</FONT><FONT SIZE=3>2,000~4,000</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。須注意的是，是否對頻寬有所限制，許多</FONT><FONT SIZE=3>ISP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>將「虛擬主機」的頻寬限制為</FONT><FONT SIZE=3>64K</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>或</FONT><FONT SIZE=3>128K</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，有的不限制但是也不保證。</P>
+<P ALIGN="JUSTIFY">大部份</FONT><FONT SIZE=3>ISP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>提供的「虛擬主機」，由於大都是</FONT><FONT SIZE=3>UNIX</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>主機，只能執行使用</FONT><FONT SIZE=3>Perl</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>寫的</FONT><FONT SIZE=3>CGI</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式，都不能執行</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式和存取網站資料庫的網站應用程式。</P>
+<P ALIGN="JUSTIFY">國內有些</FONT><FONT SIZE=3>ISP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，提供「可執行</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式和資料庫」的</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>虛擬主機，有</FONT><FONT SIZE=3>50MB</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的硬碟空間，解決了不能執行</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式和存取網站資料庫的問題，費用為每個月數千元，詳情請上網</FONT>www.asp.com.tw<FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>查詢。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>主機代管（</FONT><FONT FACE="Arial" SIZE=5>co-location</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>）</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">除了「租用專線」、「虛擬主機」方式外，國外流行另外一個方法，叫做「主機代管」（</FONT><FONT SIZE=3>co-location</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的方式，自己準備一台伺服器電腦，放置於</FONT><FONT SIZE=3>ISP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的機房，向</FONT><FONT SIZE=3>ISP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>租用放置空間，與其大頻寬的網路連線。</P>
+<P ALIGN="JUSTIFY">好處為可分享</FONT><FONT SIZE=3>ISP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的大頻寬，而費用較便宜。國內的</FONT><FONT SIZE=3>ISP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>有數家提供「主機代管」（</FONT><FONT SIZE=3>co-location</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的服務，費用約為每月一萬多，詳情請上網</FONT>www.asp.com.tw<FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>查詢。</P>
+<P ALIGN="JUSTIFY">「主機代管」（</FONT><FONT SIZE=3>co-location</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）方式，也解決執行</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>程式和存取網站資料庫的問題。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>建立</FONT><FONT FACE="Arial" SIZE=5>Web</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>站台</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">若要快速建立一個</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>站台，您可以使用</FONT><FONT SIZE=3> IIS </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>內含的</FONT><FONT SIZE=3> [</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>預設</FONT><FONT SIZE=3> Web </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>站台</FONT><FONT SIZE=3>] </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>來建立站台。</FONT><FONT SIZE=3>[</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>預設</FONT><FONT SIZE=3> Web </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>站台</FONT><FONT SIZE=3>] </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>可於</FONT><FONT SIZE=3> [Internet </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>服務管理員</FONT><FONT SIZE=3>] </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>找到。</P>
+<P ALIGN="JUSTIFY">首先建立</FONT><FONT SIZE=3> Web </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>站台的首頁，將首頁的檔名命名為</FONT><FONT SIZE=3> default.htm</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。再將您的首頁檔案複製到</FONT><FONT SIZE=3> IIS </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的預設</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>站台主目錄\</FONT><FONT SIZE=3>Inetpub\Wwwroot</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>下。</P>
+<P ALIGN="JUSTIFY">如果您的網路有名稱解析系統，則訪客只要在瀏覽器的位址列輸入</FONT><FONT SIZE=3>http:// </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>加上您電腦的名稱，譬如</FONT><FONT SIZE=3>http://nt</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，便可以連線到您的</FONT><FONT SIZE=3>Web</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>站台，瀏覽首頁的資訊。如果您的網路沒有名稱解析系統，則訪客必須輸入您電腦的</FONT><FONT SIZE=3>IP </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>位址。</P>
+<P ALIGN="JUSTIFY">如果您想使用其它檔名做為首頁，您必須啟動</FONT><FONT SIZE=3> [Internet </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>服務管理員</FONT><FONT SIZE=3>] </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，選擇</FONT><FONT SIZE=3> [</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>預設</FONT><FONT SIZE=3> Web </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>站台</FONT><FONT SIZE=3>] </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，按滑鼠右鍵選擇</FONT><FONT SIZE=3> [</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>內容</FONT><FONT SIZE=3>]</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，然後選擇</FONT><FONT SIZE=3> [</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>文件</FONT><FONT SIZE=3>] </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>頁，按下</FONT><FONT SIZE=3> [</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>新增</FONT><FONT SIZE=3>] </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>按鈕以新增一個新的首頁檔名，並將此新增首頁檔名移到</FONT><FONT SIZE=3> [</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>啟用預設文件</FONT><FONT SIZE=3>] </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的預端。</P>
+<P ALIGN="JUSTIFY">如此一來，當訪客在瀏覽器的位址列輸入您電腦的名稱或</FONT><FONT SIZE=3>IP </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>位址時，便可以瀏覽首頁</FONT><FONT SIZE=3>index.htm</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>檔。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>建立</FONT><FONT FACE="Arial" SIZE=5>FTP</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>站台</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">若要快速建立一個</FONT><FONT SIZE=3>FTP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>站台，您可以使用</FONT><FONT SIZE=3> IIS </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>內含的</FONT><FONT SIZE=3> [</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>預設</FONT><FONT SIZE=3>FTP </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>站台</FONT><FONT SIZE=3>] </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>來建立站台。</FONT><FONT SIZE=3>[</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>預設</FONT><FONT SIZE=3>FTP </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>站台</FONT><FONT SIZE=3>] </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>可於</FONT><FONT SIZE=3> [Internet </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>服務管理員</FONT><FONT SIZE=3>] </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>找到。</P>
+<P ALIGN="JUSTIFY">將您的檔案複製或移動到</FONT><FONT SIZE=3> [</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>預設</FONT><FONT SIZE=3> FTP </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>站台</FONT><FONT SIZE=3>] </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的主目錄\</FONT><FONT SIZE=3>Inetpub\Ftproot</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>下。</FONT><FONT SIZE=3> </P>
+<P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=7><P>管理</FONT><FONT FACE="Arial" SIZE=7>IIS</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=7>網站</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>整合的管理介面</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>使用一個單一整合的</FONT><FONT SIZE=3>Microsoft Management Console</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（管理控制台，簡稱</FONT><FONT SIZE=3>MMC</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），來管理</FONT><FONT SIZE=3>Internet Service</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>WWW</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>FTP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>NNTP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>SMTP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）、</FONT><FONT SIZE=3>Microsoft Transaction Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、和</FONT><FONT SIZE=3>Microsoft Index Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">MMC</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>使用一個相同的整合控制介面畫面，即可做所有的管理，可以節省用戶學習多個管理介面的時間。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">MMC</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>並且整合</FONT><FONT SIZE=3>Windows NT</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的一些管理工具，包括識別碼管理員（</FONT><FONT SIZE=3>Key Manager</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）、伺服器管理員（</FONT><FONT SIZE=3>Service Manager</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）、用戶管理員（</FONT><FONT SIZE=3>User Manager</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）、事件檢視器（</FONT><FONT SIZE=3>Event Viewer</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）、效能監視器（</FONT><FONT SIZE=3>Performance Monitor</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）、和效能監視器（</FONT><FONT SIZE=3>Performance Monitor</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）等。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>數種管理方式</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>提供數種管理網站伺服器的方式，包括：</P>
+
+<UL>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>Internet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>服務管理員：使用上述單一整合的</FONT><FONT SIZE=3>Microsoft Management Console</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>MMC</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）控制介面來管理。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>Internet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>服務管理員（</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）：使用瀏覽器，透過</FONT><FONT SIZE=3>Internet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>或</FONT><FONT SIZE=3>Intranet</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，於遠端來管理</FONT><FONT SIZE=3>WWW</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>FTP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>站台。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>Windows Scripting Host</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>：可以使用</FONT><FONT SIZE=3>DOS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>指令行的方式，來管理</FONT><FONT SIZE=3>WWW</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>FTP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，可以產生、啟動、停止、暫停</FONT><FONT SIZE=3>WWW</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>或</FONT><FONT SIZE=3>FTP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>網站，產生、移除虛擬目錄，控制目錄存取的設定，以及顯示搜查設定的樹狀結構等。</LI></P></UL>
+
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>頻寬限制</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">管理者可以將放置於一台伺服器的每一個網站，做分配頻寬（</FONT><FONT SIZE=3>allocate bandwidth</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的動作，限制一個網站最多的頻寬，以保證所有網站都可以享有頻寬，不會被一個熱門的網站吃掉所有的頻寬。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>各自管理網站</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">放置於同一台伺服器的每一個網站之管理者，可以各自管理其網站，而不互相影響。譬如每一個網站之管理者，可以設定其網站的存取權限、啟動記錄、改變預設文件表尾、設定內容有效期間、設定內容分級等。每一個網站之管理者，並沒有改變</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>設定、</FONT><FONT SIZE=3>Windows NT Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>設定、或網路設定的權限。譬如每一個網站之管理者無權設定匿名用戶名稱密碼、設定頻寬限制、改變網路設定、伺服器用戶設定等。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>效能監視</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>讓管理者能夠針對一個網站伺服器中各自的網站，做效能的監視。這個表示管理者能夠得知那個網站使用最大的頻寬。</P>
+<P ALIGN="JUSTIFY">使用</FONT><FONT SIZE=3>Windows NT</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的效能監視器（</FONT><FONT SIZE=3>Performance Monitor</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），可以監視網站伺服器的效能。效能監視器使用計數器（</FONT><FONT SIZE=3>counters</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），以監視每個時段的檔案傳輸率、頻寬使用率、連線率等。</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>詳細的記錄</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>提供兩種新的記錄（</FONT><FONT SIZE=3>log</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）方式，如下：</P>
+
+<UL>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>Customized Extended Logging</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>：使用</FONT><FONT SIZE=3>W3C</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>Extended Logging</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>標準格式。這個格式是一個可以客戶化的</FONT><FONT SIZE=3>ASCII</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>格式，讓管理者可以移除不必要的欄位，以限制記錄（</FONT><FONT SIZE=3>log</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的檔案大小。這些記錄（</FONT><FONT SIZE=3>log</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的欄位約有</FONT><FONT SIZE=3>20</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>個，包括日期、時間、</FONT><FONT SIZE=3>IP Address</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、和瀏覽器種類等。</LI></P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY"><LI>Resource Logging</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>：大部份</FONT><FONT SIZE=3>IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的記錄（</FONT><FONT SIZE=3>log</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），可以設定到每個檔案的方式。管理者可以選擇那些資源需要做記錄，減少記錄（</FONT><FONT SIZE=3>log</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的檔案大小，以增進執行的效率和容易分析記錄。譬如您可以將所有的影像圖片儲存到一個目錄下，並且選擇此目錄不要做記錄（</FONT><FONT SIZE=3>log</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）。</LI></P></UL>
+
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>用戶端認證</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">使用用戶端認證（</FONT><FONT SIZE=3>Client Certificate</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），讓使用者自動登入伺服器。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的</FONT><FONT SIZE=3>Certificate Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，使您公司能夠自行建立一個認證中心（</FONT><FONT SIZE=3>Certificate Authority</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>），自己核發用戶端認證給所有用戶，讓用戶安全地存取伺服器的資訊。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>並且提供用戶端認證與</FONT><FONT SIZE=3>Windows NT user account</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的對照表，以用戶端認證方式自動登入伺服器的用戶，依照此對照表，即享有所對應到</FONT><FONT SIZE=3>user account</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的權限。</P>
+<P ALIGN="JUSTIFY">此對照表有兩種對照方式，包括一個用戶端認證對照到一個</FONT><FONT SIZE=3>user account</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的一對一方式，以及多個用戶端認證對照到一個</FONT><FONT SIZE=3>user account</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的多對一方式。</P>
+<P ALIGN="JUSTIFY">多對一的對照方式，管理者可以定義對照原則，譬如由定義某個認證中心所核發的所有用戶端認證，都對照到同一個</FONT><FONT SIZE=3>user account</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，而非一個對一個。</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>SSL</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>安全協定</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">使用</FONT><FONT SIZE=3>SSL</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>Secure Sockets Layer</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）安全協定的方式，用戶與伺服器可以建立安全的連線，傳送前先將資料加密，以於網路上傳送加過密的資料，接收時再將資料解密以獲得原來的資料。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>支援</FONT><FONT SIZE=3>SSL 2.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>和</FONT><FONT SIZE=3>3.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的標準規格。</P>
+<P ALIGN="JUSTIFY">使用</FONT><FONT SIZE=3>SSL</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>前，伺服器必須先取得伺服器認證（</FONT><FONT SIZE=3>Server Certificate</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）。於</FONT><FONT SIZE=3>SSL</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>連線時，伺服器將其伺服器認證傳送給用戶，讓用戶驗證伺服器的身份。</P>
+<P ALIGN="JUSTIFY">伺服器也可以要求用戶傳送其用戶端認證，讓伺服器驗證用戶的身份，但是並不是需要如此。</P>
+<P ALIGN="JUSTIFY">如此建立</FONT><FONT SIZE=3>SSL</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>連線後，用戶與伺服器即可以安全地傳送資料。</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>Microsoft Site Server Express</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">Windows NT Option Pack</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>所包括的</FONT><FONT SIZE=3>Microsoft Site Server Express</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，為</FONT><FONT SIZE=3>Microsoft Site Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的精簡版本，不包括</FONT><FONT SIZE=3>Microsoft Site Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>所提供電子商務的功能。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">Microsoft Site Server Express</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>提供：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>用法分析（</FONT><FONT SIZE=3>usage analysis</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的功能。</LI></P>
+<P ALIGN="JUSTIFY"><LI>站台分析（</FONT><FONT SIZE=3>content analysis</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）的功能。</LI></P>
+<P ALIGN="JUSTIFY"><LI>發行（</FONT><FONT SIZE=3>publish</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）內容的功能。</LI></P></UL>
+
+<P ALIGN="JUSTIFY">每一次使用者登入網站時，就會於</FONT><FONT SIZE=3>log</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>記錄一行的資料，這些資料不經過分析不易讀取。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">Microsoft Site Server Express</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的用法分析（</FONT><FONT SIZE=3>usage analysis</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）功能，透過</FONT><FONT SIZE=3>Usage Import</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>和</FONT><FONT SIZE=3>Report Writer</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的模組，分析</FONT><FONT SIZE=3>log</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>記錄的資料，統計使用的資訊。</P>
+<P ALIGN="JUSTIFY">於一個組織內，由於有愈來愈多的單位提供同一個網站內網頁的內容，讓網站變得複雜而不易管理。</FONT><FONT SIZE=3>Microsoft Site Server Express</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的站台分析（</FONT><FONT SIZE=3>content analysis</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）功能，提供網站內所有網頁內容的分析，包括超連結是否存在、物件是否存在等。</P>
+</FONT><FONT FACE="Arial" SIZE=5><P>Microsoft Index Server</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">Windows NT Option Pack</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>所包括的</FONT><FONT SIZE=3>Microsoft Index Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，提供中文全文檢索的功能。</P>
+<P ALIGN="JUSTIFY">用戶使用瀏覽器，輸入關鍵字，即可以搜尋網站的內容。</P>
+</FONT><FONT SIZE=3><P ALIGN="JUSTIFY">Microsoft Index Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，提供的中文全文檢索的功能，包括：</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>支援</FONT><FONT SIZE=3>Active Server Pages</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）：使用</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>即可以設計搜尋表單、和搜尋網站內容的結果顯示格式，以及產生複雜精確的搜尋。</LI></P>
+<P ALIGN="JUSTIFY"><LI>支援</FONT><FONT SIZE=3>SQL</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>查詢：除了使用標準的搜尋表單，另外一個全文檢索的方式，為於</FONT><FONT SIZE=3>ASP</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>和</FONT><FONT SIZE=3>ADO</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>的應用程式當中，使用</FONT><FONT SIZE=3>SQL </FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>查詢（</FONT><FONT SIZE=3>SQL query</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）。</LI></P>
+<P ALIGN="JUSTIFY"><LI>容易管理：使用</FONT><FONT SIZE=3>Microsoft Management Console</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>（管理控制台，簡稱</FONT><FONT SIZE=3>MMC</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）管理</FONT><FONT SIZE=3>Microsoft Index Server</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。一個網站或虛擬目錄，若要加入全文檢索的搜尋範圍，只要於</FONT><FONT SIZE=3>MMC</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>中選擇按滑鼠右鍵，選擇內容（</FONT><FONT SIZE=3>property</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>）即可設定是否加入全文檢索的搜尋範圍。</LI></P>
+<P ALIGN="JUSTIFY"><LI>支援中文等多種語文。</LI></P></UL>
+
+</FONT><FONT FACE="Arial" SIZE=5><P>IIS 4.0</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5>功能展示網站</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">作者準備一個展示</FONT><FONT SIZE=3>IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>功能的網站，提供各種網站網頁的資訊、與設計範例，包括</FONT><FONT SIZE=3>IIS</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>特異功能、網站資料庫設計實例、網路商店、</FONT><FONT SIZE=3>ActiveX</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、推播頻道、動態</FONT><FONT SIZE=3>HTML</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>、</FONT><FONT SIZE=3>HTML 99</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>招等，網址如下：</P>
+<P ALIGN="JUSTIFY"></FONT><A HREF="../../index.html"><FONT SIZE=3>http://www.asp.com.tw</FONT></A></P>
+<FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">歡迎上網光臨指教。</P>
+<P ALIGN="JUSTIFY">若想迅速學會</FONT><FONT SIZE=3>IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>，可以參考作者的著作</FONT><FONT FACE="標楷體" LANG="ZH-TW">「</FONT><FONT SIZE=3>IIS 4.0</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>超級網站速成班</FONT><FONT FACE="標楷體" LANG="ZH-TW">」</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3>。</P>
+<P ALIGN="JUSTIFY">　</P>
+<P ALIGN="JUSTIFY">　</P>
+<P ALIGN="JUSTIFY">　</P>
+<P ALIGN="JUSTIFY">　</P>
+</FONT><FONT FACE="標楷體" LANG="ZH-TW" SIZE=5><P>　</P>
+</FONT><FONT FACE="新細明體" LANG="ZH-TW" SIZE=3><P ALIGN="JUSTIFY">　</P></FONT></BODY>
+</HTML>

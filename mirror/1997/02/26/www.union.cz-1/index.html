@@ -1,0 +1,95 @@
+<HTML>
+<HEAD>
+<TITLE> CzERT UB, a.s. </TITLE>
+</HEAD>
+<BODY BACKGROUND="images/bgw.jpg">
+<BODY onLoad="timerONE=window.setTimeout('StatusScrollBar(100)',500);"  BGCOLOR="#C0C0C0" TEXT="#000000" LINK="#0000FF" VLINK="#000080" ALINK="#400040">
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Beginning of JavaScript Applet -------------------
+/* Copyright 1996 Dennis j. Cox */
+
+function StatusScrollBar(seed)
+{
+        var m1  = " * * * ";
+        var m2  = "CzERT Vas Vita na nejbezpecnejsi Cesky Banke"
+	   var m3  = " * * * "
+        var m4  = "CzERT Welcomes You to the safest Czech Bank"
+        var m5  = " * * * ";
+
+
+        var msg=m1+m2+m3+m4+m5;
+        var out = " ";
+        var c   = 1;
+
+        if (seed > 100) {
+                seed--;
+                var cmd="StatusScrollBar(" + seed + ")";
+                timerTwo=window.setTimeout(cmd,100);
+        }
+        else if (seed <= 100 && seed > 0) {
+                for (c=0 ; c < seed ; c++) {
+                        out+=" ";
+                }
+                out+=msg;
+                seed--;
+                var cmd="StatusScrollBar(" + seed + ")";
+                    window.status=out;
+                timerTwo=window.setTimeout(cmd,100);
+        }
+        else if (seed <= 0) {
+                if (-seed < msg.length) {
+                        out+=msg.substring(-seed,msg.length);
+                        seed--;
+                        var cmd="StatusScrollBar(" + seed + ")";
+                        window.status=out;
+                        timerTwo=window.setTimeout(cmd,100);
+                }
+                else {
+                        window.status=" ";
+                        timerTwo=window.setTimeout("StatusScrollBar(100)",75);
+                }
+        }
+}
+// -- End of JavaScript code -------------- -->
+</SCRIPT>
+<BODY >
+
+<CENTER>
+
+<align=center><p><img src="images/ub.jpg" border=0 vspace=20>
+<align=center><p><img src="images/build.gif" border=0>
+
+<center>
+<b><h3>
+<font color="#0080C0">
+CzERT Banka, a.s.<p>
+ul. 30 dubna c. 35, 702 00 Ostrava<p>
+tel.: +42/69/6108111 , fax.: +42/69/211586<p>
+</center></font>
+<hr>
+</center>
+I vas uz prestalo bavit to zastarale klasicke bankovnictvi ? I vy
+chytate epilepse a jevite znamky schizofrenie, kdyz cekate v nekonecne rade
+k pokladne v bance ? Tak roztrhejte tu vasi starou trapnou vkladni knizku
+a archaickou plastikovou bankomatovou karticku ! Odstartujte slavnostne
+svuj oblibeny WWW browser a pojdte s nami surfovat do financniho sveta
+budoucnosti !! <p>
+
+Pozor ! Pro tento vikend tady pro vas mame extra-specialni akci ! Prijdte
+na uid (0) exkurzi po nasem vysoce bezpecnem Internet WWW servru, ktery
+zaruci dokonalou bezpecnost vsech Vasich financnich transakci. Ale vic Vam
+uz neprozradime, protoze tim by sme pokazili prekvapeni ;) <b><a href="CzERT.html">hehehe</a> !</b>
+<p>
+<center>
+</b></h3>
+<p>
+<HR ALIGN=center SIZE=3>
+<p>
+<A HREF="http://www.penthouse.cz">Èeská verze.....</A><ALIGN=LEFT>
+<A HREF="http://www.penthouse.cz"><img src="images/czflag.gif" border=0></a>
+<ALIGN=LEFT><A HREF="http://www.penthousemag.com"><IMG SRC="images/ukflag.gif" border=0 ></A>
+<A HREF="http://www.penthousemag.com">.....English version</A>
+
+</CENTER>
+</BODY>
+</HTML>

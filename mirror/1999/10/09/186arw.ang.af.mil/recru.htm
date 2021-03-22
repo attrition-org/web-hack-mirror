@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<!-- Created by Tom Bergin -->
+
+<head>
+<title>186 Air Refueling Wing Recruiters</title>
+<script LANGUAGE="JavaScript"><!--
+ 
+
+function runClock() {
+  today   = new Date();
+  hours   = today.getHours();
+  minutes = today.getMinutes();
+  seconds = today.getSeconds();
+  // choose the folowing if you like an AM/PM clock
+  // timeValue = "" + ((hours > 12) ? hours - 12 : hours);
+  // instead of the following:
+  timeValue = hours;
+  timeValue += ((minutes < 10) ? ":0" : ":") + minutes;
+  timeValue += ((seconds < 10) ? ":0" : ":") + seconds;
+  // choose the following if you've chosen fot the AM/PM state:
+  // timeValue  += (hours >= 12) ? " P.M." : " A.M.";
+  document.clock.time.value = timeValue;
+  timerID = setTimeout("runClock()",1000);
+  timerRunning = true;
+}
+//-->
+</script>
+</head>
+
+<body onLoad="runClock()" bgcolor="FFFFFF" text="000000" link="0000FF" vlink="004080"
+background="Image/white.gif">
+
+<table width="100%" cellspacing="0" border="0">
+  <tr>
+    <td><p align="center"><img src="Image/wngpatch2.gif" height="170" width="170"></td>
+    <td><p align="left"><img src="Image/arw2.gif" height="80" width="340"></td>
+  </tr>
+</table>
+
+<p align="center"><br>
+<font face="arial" color="#000080">If you are interested in joining the Mississippi Air
+National Guard, or want to receive more information about the Air National Guard please
+fill in the form below and submit. An Air National Guard Recruiter will contact you and
+set up an appointment to discuss your future in the Mississippi Air National Guard. </font><br>
+</p>
+
+<form NAME="clock" onSubmit="0">
+  <div align="center"><center><p><font color="#FF0000"><em>Don't waste any more time</em></font>
+  <input TYPE="text" NAME="time" SIZE="8" VALUE> </p>
+  </center></div>
+</form>
+
+<hr>
+
+<form NAME="mail_form" ACTION="mailto:rrushing@msmei.ang.af.mil?Subject=Join the Guard"
+METHOD="POST" ENCTYPE="text/plain">
+  <input type="hidden" name="Info" value><table>
+    <tr>
+      <td>Name:&nbsp;&nbsp; </td>
+      <td><input TYPE="text" NAME="Name" size="20"> </td>
+    </tr>
+    <tr>
+      <td>Address:&nbsp;&nbsp; </td>
+      <td><input TYPE="text" NAME="Address" size="20"> </td>
+    </tr>
+    <tr>
+      <td>City, State:&nbsp;&nbsp; </td>
+      <td><input TYPE="text" NAME="City, State" size="20"> </td>
+    </tr>
+    <tr>
+      <td>Zip:&nbsp;&nbsp; </td>
+      <td><input TYPE="text" NAME="Zip" size="20"> </td>
+    </tr>
+    <tr>
+      <td>Comments: </td>
+      <td><textarea NAME="Comments" COLS="60" ROWS="6">
+</textarea> </td>
+    </tr>
+  </table>
+  <div align="center"><center><p><input TYPE="reset" VALUE="Clear Form"> <input
+  TYPE="submit" VALUE="Submit"> <input TYPE="button" VALUE="Return to Previous Page"
+  onClick="history.back();"> </p>
+  </center></div>
+</form>
+
+<p align="center"><a href="mission.htm"
+onMouseOver="self.status='The Mission of the 186th Air Refueling Wing ' ;return true"
+OnMouseOut="self.status='186 Air Refueling Wing'; return true" onclick="exit=false;">Mission</a>
+|&nbsp;<a href="vision.htm"
+onMouseOver="self.status='The Vision of the 186th Air Refueling Wing' ;return true"
+OnMouseOut="self.status='186 Air Refueling Wing'; return true" onclick="exit=false;">Vision</a>
+|&nbsp;<a href="utadate.htm" onMouseOver="self.status='UTA Schedule' ;return true"
+OnMouseOut="self.status='186 Air Refueling Wing'; return true" onclick="exit=false;">UTA
+Schedule</a> |&nbsp;<a href="186hist.htm"
+onMouseOver="self.status='A brief history of the Wing' ;return true"
+OnMouseOut="self.status='186 Air Refueling Wing'; return true" onclick="exit=false;">History</a>
+|&nbsp;<a href="pay.htm" onMouseOver="self.status='Pay Charts and more ' ;return true"
+OnMouseOut="self.status='186 Air Refueling Wing'; return true" onclick="exit=false;">Finacial
+Matters</a> |&nbsp;<a href="default.htm"
+onMouseOver="self.status='Back Home' ;return true"
+OnMouseOut="self.status='186 Air Refueling Wing'; return true" onclick="exit=false;">Home</a>
+</p>
+</body>
+</html>

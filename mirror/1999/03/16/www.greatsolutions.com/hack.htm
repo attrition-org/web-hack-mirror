@@ -1,0 +1,145 @@
+<HTML>
+<HEAD>
+<TITLE>Shockwave</TITLE>
+</HEAD>
+<BODY bgcolor="#000000">
+<CENTER>
+<SCRIPT LANGUAGE=JavaScript>
+<!--
+var InternetExplorer = navigator.appName.indexOf("Microsoft") != -1;
+
+// Handle all the the FSCommand messages in a FutureSplash movie
+function Hack_DoFSCommand(command, args) {
+  var HackObj = InternetExplorer ? Hack : document.Hack;
+  // Place your code here...
+}
+// Hook for Internet Explorer 
+if (navigator.userAgent && navigator.userAgent.indexOf("MSIE")>=0 && (navigator.userAgent.indexOf("Windows 95")>=0 || navigator.userAgent.indexOf("Windows NT")>=0)) {
+	document.write('<SCRIPT LANGUAGE=VBScript\> \n');
+	document.write('on error resume next \n');
+	document.write('Sub Hack_FSCommand(ByVal command, ByVal args)\n');
+	document.write('  call Hack_DoFSCommand(command, args)\n');
+	document.write('end sub\n');
+	document.write('</SCRIPT\> \n');
+}
+//-->
+</SCRIPT>
+
+<!-- Aftershock Hack.swf 3=550 4=400 42 6=1 10=1 18 33 38 45 27 41 26 -->
+<!-- Text from the movie: HACKED T Th Thi This This  p This  pa This  pag This  page This  page  h This  page  ha This  page  has This  page  has  b This  page  has  be This  page  has  bee This  page  has  been By Dr. No -->
+
+<SCRIPT LANGUAGE="JavaScript" SRC="http://www.macromedia.com/shockwave/download/smart/getsw.js">
+function getShockwave()
+{
+window.open( "http://www.macromedia.com/shockwave/download/", "" );
+}
+</script>
+
+<SCRIPT LANGUAGE=JavaScript>
+<!--
+var ShockMode = 0;
+var OldVersionOfPlugin = 0;
+if (navigator.mimeTypes && navigator.mimeTypes["application/x-shockwave-flash"] && navigator.mimeTypes["application/x-shockwave-flash"].enabledPlugin) {
+	if (navigator.plugins && navigator.plugins["Shockwave Flash"])
+		ShockMode = 1;
+	else
+		OldVersionOfPlugin = 1;
+} else if (navigator.appName && navigator.appName.indexOf("Microsoft") != -1 
+	&& (navigator.userAgent.indexOf("Windows NT") != -1 || navigator.userAgent.indexOf("Windows 95") != -1 )) {
+	ShockMode = 1;
+}
+function checkForShockwave()
+{
+	navigator.plugins.refresh();
+	if ( navigator.plugins["Shockwave Flash"] ){ 
+		parent.location.reload();
+	} else {
+		setTimeout( "checkForShockwave()", 1000 );
+	}
+}
+if (!ShockMode && navigator.appName && navigator.appName.indexOf("Netscape") != - 1 && navigator.appVersion.indexOf("4.") != - 1
+&& navigator.javaEnabled() && netscape.softupdate.Trigger.UpdateEnabled() && document.cookie.indexOf("StartedShockwaveInstall") == -1) {
+	var jarPath = new String("");
+	if (navigator.platform.indexOf("Win32") >= 0 )
+		jarPath = "http://download.macromedia.com/pub/shockwave/jars/english/silentflash32.jar"
+	else if (navigator.platform.indexOf("Win16") >= 0 )
+		jarPath = "http://download.macromedia.com/pub/shockwave/jars/english/silentflash16.jar"
+	else if (navigator.platform.indexOf("MacPPC") >= 0 )
+		jarPath = "http://download.macromedia.com/pub/shockwave/jars/english/silentflashppc.jar"
+	if (jarPath.length) {
+		netscape.softupdate.Trigger.StartSoftwareUpdate (jarPath, netscape.softupdate.Trigger.FORCE_MODE);
+		document.cookie='StartedShockwaveInstall;path=/;'
+		setTimeout("checkForShockwave()", 1000);
+	}
+}
+// check for java
+var JavaOK = 0;
+if (navigator.appVersion && (navigator.appVersion.indexOf("MSIE 3.") >=0 || (navigator.appVersion.indexOf("2.") == - 1 && navigator.javaEnabled() )))
+	JavaOK = 1;
+// check for cookie
+if (document.cookie && (document.cookie.indexOf("Aftershock=P") >= 0)) {
+	ShockMode = 1;
+} else if (document.cookie && (document.cookie.indexOf("Aftershock=J") >= 0)) {
+	JavaOK = 1;
+	ShockMode = 0;
+} else if (document.cookie && (document.cookie.indexOf("Aftershock=G") >= 0)) {
+	JavaOK = 0;
+	ShockMode = 0;
+}
+
+if ( ShockMode ) {
+	document.write('<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"');
+	document.write(' codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=3,0,0,0"');
+	document.write(' ID=Hack WIDTH=550 HEIGHT=400>');
+	document.write('  <PARAM NAME=movie VALUE="Hack.swf"> ');
+	document.write('  <PARAM NAME=loop VALUE=false> ');
+	document.write('  <PARAM NAME=quality VALUE=autohigh> ');
+	document.write('  <PARAM NAME=bgcolor VALUE=#000000> ');
+	document.write('<EMBED SRC="Hack.swf"');
+	document.write(' NAME=Hack swLiveConnect=TRUE WIDTH=550 HEIGHT=400');
+	document.write(' LOOP=false QUALITY=autohigh BGCOLOR=#000000');
+	document.write(' TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash">');
+	document.write('</EMBED>');
+	document.write('</OBJECT>');
+} else if ( JavaOK ) {
+if (navigator.appName && navigator.appName.indexOf("Netscape") >= 0 && navigator.appVersion.indexOf("4.") >= 0)
+	document.write('<APPLET CODE=Flash.class  ARCHIVE=Flash.jar WIDTH=550 HEIGHT=400>')
+else
+	document.write('<APPLET CODE=Flash.class  ARCHIVE=Flash.zip WIDTH=550 HEIGHT=400>')
+	document.write('  <PARAM NAME=cabbase VALUE="Flash.cab"> ');
+	document.write('  <PARAM NAME=movie VALUE="Hack.swf"> ');
+	document.write('  <PARAM NAME=loop VALUE=false> ');
+	document.write('  <PARAM NAME=quality VALUE=autohigh> ');
+	document.write('</APPLET>');
+	if (( navigator.appName.indexOf( "Microsoft" ) != -1 ) && ( navigator.appVersion.indexOf( "Macintosh" ) != -1 ) && ( navigator.appVersion.indexOf( "3." ) == 0 ))
+	{
+		document.write( '<P><A HREF="http://www.macromedia.com/shockwave/download/">' );
+		document.write( '<img src="get_shockwave.gif" WIDTH=88 HEIGHT=31 BORDER=0></A>' );
+	} else {
+		document.write( '<P><A HREF="#" onClick="getShockwave(' );
+		document.write( "'Director 0.0','Flash 2.0'" );
+		document.write( ')">' );
+		document.write( '<img src="get_shockwave.gif" WIDTH=88 HEIGHT=31 BORDER=0></A>' );
+	}
+	if ( OldVersionOfPlugin )
+		document.write( '<P>This page contains a new format movie that the current Shockwave plug-in cannot handle. Please update to the new version.</P>' );
+} else if (!(navigator.appName && navigator.appName.indexOf("Netscape")>=0 && navigator.appVersion.indexOf("2.")>=0)){
+	document.write('<IMG SRC="Hack.gif" WIDTH=550 HEIGHT=400 BORDER=0>');
+	if (( navigator.appName.indexOf( "Microsoft" ) != -1 ) && ( navigator.appVersion.indexOf( "Macintosh" ) != -1 ) && ( navigator.appVersion.indexOf( "3." ) == 0 ))
+	{
+		document.write( '<P><A HREF="http://www.macromedia.com/shockwave/download/">' );
+		document.write( '<img src="get_shockwave.gif" WIDTH=88 HEIGHT=31 BORDER=0></A>' );
+	} else {
+		document.write( '<P><A HREF="#" onClick="getShockwave(' );
+		document.write( "'Director 0.0','Flash 2.0'" );
+		document.write( ')">' );
+		document.write( '<img src="get_shockwave.gif" WIDTH=88 HEIGHT=31 BORDER=0></A>' );
+	}
+	if ( OldVersionOfPlugin )
+		document.write( '<P>This page contains a new format movie that the current Shockwave plug-in cannot handle. Please update to the new version.</P>' );
+}
+//-->
+</SCRIPT><NOEMBED><IMG SRC="Hack.gif" WIDTH=550 HEIGHT=400 BORDER=0></NOEMBED><NOSCRIPT><IMG SRC="Hack.gif" WIDTH=550 HEIGHT=400 BORDER=0><P><A HREF="http://www.macromedia.com/shockwave/download/"><IMG SRC="get_shockwave.gif" WIDTH=88 HEIGHT=31 BORDER=0></A></NOSCRIPT><!-- EndAftershock Hack.swf -->
+</CENTER>
+</BODY>
+</HTML>

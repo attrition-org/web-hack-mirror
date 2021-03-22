@@ -1,0 +1,50 @@
+--07:50:04--  http://lmsser2.larc.nasa.gov:80/
+           => `lmsser2.larc.nasa.gov/index.html'
+Connecting to lmsser2.larc.nasa.gov:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 2,811 [text/html]
+
+    0K -> ..                                                     [100%]
+
+07:50:05 (14.60 KB/s) - `lmsser2.larc.nasa.gov/index.html' saved [2811/2811]
+
+Loading robots.txt; please ignore errors.
+--07:50:05--  http://lmsser2.larc.nasa.gov:80/no-robots.txt
+           => `lmsser2.larc.nasa.gov/no-robots.txt'
+Connecting to lmsser2.larc.nasa.gov:80... connected!
+HTTP request sent, awaiting response... 404 Object Not Found
+07:50:05 ERROR 404: Object Not Found.
+
+--07:50:05--  http://lmsser2.larc.nasa.gov:80/mirror.htm
+           => `lmsser2.larc.nasa.gov/mirror.htm'
+Connecting to lmsser2.larc.nasa.gov:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 369 [text/html]
+
+    0K ->                                                        [100%]
+
+07:50:05 (360.35 KB/s) - `lmsser2.larc.nasa.gov/mirror.htm' saved [369/369]
+
+--07:50:05--  http://lmsser2.larc.nasa.gov:80/livelink/livelink.exe/
+           => `lmsser2.larc.nasa.gov/livelink/livelink.exe/index.html'
+Connecting to lmsser2.larc.nasa.gov:80... connected!
+HTTP request sent, awaiting response... 302 Object Moved
+Location: http://lmsser2.larc.nasa.gov:80/livelink/livelink.exe?func=LL.getlogin&NextURL=%2Flivelink%2Flivelink%2Eexe%2F [following]
+--07:50:06--  http://lmsser2.larc.nasa.gov:80/livelink/livelink.exe?func=LL.getlogin&NextURL=/livelink/livelink.exe/
+           => `lmsser2.larc.nasa.gov/livelink/livelink.exe?func=LL.getlogin&NextURL=/livelink/livelink.exe/index.html'
+Connecting to lmsser2.larc.nasa.gov:80... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+
+    0K -> .
+
+07:50:06 (1.71 MB/s) - `lmsser2.larc.nasa.gov/livelink/livelink.exe?func=LL.getlogin&NextURL=/livelink/livelink.exe/index.html' saved [1790]
+
+Converting lmsser2.larc.nasa.gov/mirror.htm... done.
+Converting lmsser2.larc.nasa.gov/index.html... done.
+
+FINISHED --07:50:06--
+Downloaded: 4,970 bytes in 3 files
+Converting lmsser2.larc.nasa.gov/index.html... done.
+Converting lmsser2.larc.nasa.gov/mirror.htm... done.
+Converting lmsser2.larc.nasa.gov/livelink/livelink.exe?func=LL.getlogin&NextURL=/livelink/livelink.exe/index.html... done.

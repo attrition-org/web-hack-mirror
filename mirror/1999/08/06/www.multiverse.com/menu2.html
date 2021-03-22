@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>Multverse - The Internet Source</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+<SCRIPT language="Javascript">
+<!--
+		if (parseInt(navigator.appVersion) >= 3)
+		{
+		normal = new MakeArray(8)
+		over = new MakeArray(8)
+		picture = new MakeArray(9)
+		blurb = new MakeArray(9)
+		
+		normal[1].src = "navpix/menu1.gif"
+		normal[2].src = "navpix/menu2.gif"
+		normal[3].src = "navpix/menu3.gif"
+		normal[4].src = "navpix/menu4.gif"
+		normal[5].src = "navpix/menu5.gif"
+		normal[6].src = "navpix/menu6.gif"
+		normal[7].src = "navpix/menu7.gif"
+		normal[8].src = "navpix/menu8.gif"
+	
+		over[1].src = "navpix/menu1a.gif"
+		over[2].src = "navpix/menu2a.gif"
+		over[3].src = "navpix/menu3a.gif"
+		over[4].src = "navpix/menu4a.gif"
+		over[5].src = "navpix/menu5a.gif"
+		over[6].src = "navpix/menu6a.gif"
+		over[7].src = "navpix/menu7a.gif"
+		over[8].src = "navpix/menu8a.gif"
+		
+	
+		picture[1].src = "navpix/1.gif"
+		picture[2].src = "navpix/2.gif"
+		picture[3].src = "navpix/3.gif"
+		picture[4].src = "navpix/4.gif"
+		picture[5].src = "navpix/5.gif"
+		picture[6].src = "navpix/6.gif"
+		picture[7].src = "navpix/7.gif"
+		picture[8].src = "navpix/8.gif"
+		picture[9].src = "navpix/0.gif"
+		
+		blurb[1] = "Get Monster Bandwidth to the Internet!"
+		blurb[2] = "Meet Multiverse"
+		blurb[3] = "Our Most Valuable Resource"
+		blurb[4] = "Pick your Pipeline to the Internet"
+		blurb[5] = "Well 'Versed - the Multiverse Bulletin"
+		blurb[6] = "Multiverse Search"
+		blurb[7] = "Signup for a Better Online Connection!"
+		blurb[8] = "Multiverse Web Tour"
+		blurb[9] = "Multiverse - Your Internet Company"
+		}
+		
+      function MakeArray(n) {
+              this.length = n
+              for (var i = 1; i<=n; i++) {
+                      this[i] = new Image()
+                      }
+              return this
+      }
+
+	function msover(num) {
+		if (parseInt(navigator.appVersion) >= 3)
+		{			
+				document.images[num+1].src = over[num].src
+				window.status = blurb[num]
+				document.images[0].src = picture[num].src
+			}
+		}
+
+	function msout(num) {
+		if (parseInt(navigator.appVersion) >= 3)
+		{
+	                  		document.images[num+1].src = normal[num].src
+	                  		document.images[0].src = picture[9].src
+	                  		window.status = blurb[9]
+			}	            
+		}
+
+// -->
+
+</SCRIPT>
+</HEAD>
+<BODY TEXT="#FFFFFF" BGCOLOR="#000000" LINK="#F0C071" VLINK="#8C884B" ALINK="#FCF8BB">
+
+<CENTER><P><BASE target="main"><IMG SRC="0.gif" ALT="" HEIGHT=69 WIDTH=130><BR>
+<A HREF="home.html" onMouseOver="self.status='Multiverse - Your Internet Company';return true" target="main"><IMG SRC="mvhome.gif" ALT="Multiverse - The Internet Source" BORDER=0 HEIGHT=20 WIDTH=130></A><BR>
+<A HREF="dedicated.html" onmouseover="msover(1) ; return true" onmouseout="msout(1)"><IMG SRC="menu1.gif" ALT="Leased Lines" VSPACE=1 BORDER=0 HEIGHT=20 WIDTH=130></A><BR>
+<A HREF="http://www.multiverse.com/people/" onmouseover="msover(2) ; return true" onmouseout="msout(2)"><IMG SRC="menu2.gif" ALT="Who Is Multiverse" VSPACE=1 BORDER=0 HEIGHT=20 WIDTH=130></A><BR>
+<A HREF="cc.html" onmouseover="msover(3) ; return true" onmouseout="msout(3)"><IMG SRC="menu3.gif" ALT="Customer Corner" VSPACE=1 BORDER=0 HEIGHT=20 WIDTH=130></A><BR>
+<A HREF="http://www.multiverse.com/service/" onmouseover="msover(4) ; return true" onmouseout="msout(4)"><IMG SRC="menu4.gif" ALT="Service Plans" VSPACE=1 BORDER=0 HEIGHT=20 WIDTH=130></A><BR>
+<A HREF="http://www.multiverse.com/bulletins/" onmouseover="msover(5) ; return true" onmouseout="msout(5)"><IMG SRC="menu5.gif" ALT="What's New" VSPACE=1 BORDER=0 HEIGHT=20 WIDTH=130></A><BR>
+<A HREF="/search.htm" onmouseover="msover(6) ; return true" onmouseout="msout(6)"><IMG SRC="menu6.gif" ALT="Search" VSPACE=1 BORDER=0 HEIGHT=20 WIDTH=130></A><BR>
+<A HREF="service/joinmv.html" onmouseover="msover(7) ; return true" onmouseout="msout(7)"><IMG SRC="menu7.gif" ALT="Online Signup" VSPACE=1 BORDER=0 HEIGHT=20 WIDTH=130></A><BR>
+<A HREF="http://webtour.multiverse.com/" target="_top" onmouseover="msover(8) ; return true" onmouseout="msout(8)"><IMG SRC="menu8.gif" ALT="Web Tour" VSPACE=1 BORDER=0 HEIGHT=20 WIDTH=130></A><BR>
+
+
+
+</P></CENTER>
+
+</BODY>
+</HTML>

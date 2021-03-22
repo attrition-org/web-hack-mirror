@@ -1,0 +1,439 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   
+   <meta name="GENERATOR" content="Mozilla/4.7 [en] (Win95; I) [Netscape]">
+   <title>judo</title>
+<script LANGUAGE="JavaScript" FPTYPE="dynamicanimation">
+<!--
+  // If you want to change this script, you must also make the following
+  // changes so that FrontPage will not overwrite your new script.
+  // In the script tag, change type="dynamicanimation" to type="mydynamicanimation"
+  // In the first script statement, change "dynamicanimation" to "mydynamicanimation"
+  // Throughout the HTML content, change dynamicanimation= to mydynamicanimation=
+  // Change function dynAnimation to function mydynAnimation
+  // In the body tag, change onload="dynAnimation()" to onload="mydynAnimation()"
+  dynamicanimAttr = "dynamicanimation"
+  animateElements = new Array()
+  currentElement = 0
+  speed = 0
+  stepsZoom = 8
+  stepsWord = 8
+  stepsFly = 12
+  stepsSpiral = 16
+  steps = stepsZoom
+  step = 0
+  outString = ""
+  function dynAnimation()
+  {
+    var ms = navigator.appVersion.indexOf("MSIE")
+    ie4 = (ms>0) && (parseInt(navigator.appVersion.substring(ms+5, ms+6)) >= 4)
+    if(!ie4)
+    {
+      if((navigator.appName == "Netscape") &&
+         (parseInt(navigator.appVersion.substring(0, 1)) >= 4))
+      {
+        for (index=document.layers.length-1; index >= 0; index--)
+        {
+            layer=document.layers[index]
+            if (layer.left==10000)
+                layer.left=0
+        }
+      }
+      return
+    }
+    for (index=document.all.length-1; index >= document.body.sourceIndex; index--)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if(null != animation)
+      {
+        if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        {
+          ih = el.innerHTML
+          outString = ""
+          i1 = 0
+          iend = ih.length
+          while(true)
+          {
+            i2 = startWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, false, "")
+            if(i2 == iend)
+              break
+            i1 = i2
+            i2 = endWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, true, animation)
+            if(i2 == iend)
+              break
+            i1 = i2
+          }
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+        if(animation == "zoomIn" || animation == "zoomOut")
+        {
+          ih = el.innerHTML
+          outString = "<SPAN " + dynamicanimAttr + "=\"" + animation + "\" style=\"position: relative; left: 10000;\">"
+          outString += ih
+          outString += "</SPAN>"
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+      }
+    }
+    i = 0
+    for (index=document.body.sourceIndex; index < document.all.length; index++)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if (null != animation)
+      {
+        if(animation == "flyLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyRight")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyTop" || animation == "dropWord")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottom")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyTopLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyTopRight" || animation == "flyTopRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottomLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyBottomRight" || animation == "flyBottomRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "spiral")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "zoomIn")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else if(animation == "zoomOut")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        el.initLeft = el.style.posLeft
+        el.initTop = el.style.posTop
+        animateElements[i++] = el
+      }
+    }
+    window.setTimeout("animate();", speed)
+  }
+  function offsetLeft(el)
+  {
+    x = el.offsetLeft
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      x += e.offsetLeft;
+    return x
+  } 
+  function offsetTop(el)
+  {
+    y = el.offsetTop
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      y += e.offsetTop;
+    return y
+  } 
+  function startWord(ih, i)
+  {
+    for(tag = false; i < ih.length; i++)
+    {
+      c = ih.charAt(i)
+      if(c == '<')
+        tag = true
+      if(!tag)
+        return i
+      if(c == '>')
+        tag = false
+    }
+    return -1
+  }
+  function endWord(ih, i)
+  {
+    nonSpace = false
+    space = false
+    while(i < ih.length)
+    {
+      c = ih.charAt(i)
+      if(c != ' ')
+        nonSpace = true
+      if(nonSpace && c == ' ')
+        space = true
+      if(c == '<')
+        return i
+      if(space && c != ' ')
+        return i
+      i++
+    }
+    return -1
+  }
+  function outWord(ih, i1, i2, dyn, anim)
+  {
+    if(dyn)
+      outString += "<SPAN " + dynamicanimAttr + "=\"" + anim + "\" style=\"position: relative; left: 10000;\">"
+    outString += ih.substring(i1, i2)
+    if(dyn)
+      outString += "</SPAN>"
+  }
+  function animate()
+  {
+    el = animateElements[currentElement]
+    animation = el.getAttribute(dynamicanimAttr, false)
+    step++
+    if(animation == "spiral")
+    {
+      steps = stepsSpiral
+      v = step/steps
+      rf = 1.0 - v
+      t = v * 2.0*Math.PI
+      rx = Math.max(Math.abs(el.initLeft), 200)
+      ry = Math.max(Math.abs(el.initTop),  200)
+      el.style.posLeft = Math.ceil(-rf*Math.cos(t)*rx)
+      el.style.posTop  = Math.ceil(-rf*Math.sin(t)*ry)
+    }
+    else if(animation == "zoomIn")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(50+50*step/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else if(animation == "zoomOut")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(100+200*(steps-step)/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else
+    {
+      steps = stepsFly
+      if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        steps = stepsWord
+      dl = el.initLeft / steps
+      dt = el.initTop  / steps
+      el.style.posLeft = el.style.posLeft - dl
+      el.style.posTop = el.style.posTop - dt
+    }
+    if (step >= steps) 
+    {
+      el.style.posLeft = 0
+      el.style.posTop = 0
+      currentElement++
+      step = 0
+    }
+    if(currentElement < animateElements.length)
+      window.setTimeout("animate();", speed)
+  }
+//-->
+</script>
+</head>
+<body onload="dynAnimation()">
+&nbsp;
+<table BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%">
+<tr>
+<td></td>
+</tr>
+</table>
+
+<table BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%">
+<tr>
+<td VALIGN="TOP" WIDTH="1%"></td>
+
+<td VALIGN="TOP" WIDTH="24"></td>
+
+<td VALIGN="TOP">
+<div dynamicanimation="dropWord" style="position: relative !important; left: 10000 !important"><img SRC="JUDO_H1.gif" ALT="wpe2.gif (1814 bytes)" height="82" width="81">&nbsp;<font size="+4">&nbsp;</font>&nbsp;<font size="+4">&nbsp;&nbsp;
+</font><font size="+3">Judo Class&nbsp;</font><img SRC="JUDO_H2.gif" ALT="wpe3.gif (1814 bytes)" height="82" width="81"></div>
+<font face="Lucida Calligraphy"><font color="#800000"><font size="-1">Judo
+is an art, a science, a sport, a means of self-defense and also a means
+of offense. It is an art because it is a method of achieving self-expression.
+It is a science because it implies mastery of various laws of nature such
+as gravity, friction, momentum, velocity, weight transmission, and unison
+of forces. Judo is movement education in which the student becomes aware
+of body movement problems. It is a sport that can be enjoyed by young and
+old alike - men, women, girls and boys.</font></font></font>
+<br>&nbsp;
+<table BORDER="0">
+<tr>
+<td><img SRC="class1.jpg" ALT="class1.jpg (24885 bytes)" BORDER="3" height="233" width="350"></td>
+</tr>
+</table>
+
+<p><font face="Lucida Calligraphy"><font color="#000080">Beginning Judo
+Class</font></font>
+<p><font face="Lucida Calligraphy"><font color="#000080">Below:&nbsp; Students
+learn the basics of competing in a tournament, although it is not required
+for class completion.&nbsp; Public classes are also being offered; for
+more information, contact the Cumberland College Judo Sensei, Doug Fortune,
+(606) 539-4384.</font></font>
+<br>&nbsp;
+<table BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%">
+<tr>
+<td WIDTH="50%"><img SRC="bowing1.jpg" ALT="bowing1.jpg (18125 bytes)" BORDER="3" height="233" width="350"></td>
+
+<td WIDTH="50%"><img SRC="complete1.jpg" ALT="complete1.jpg (16415 bytes)" BORDER="3" height="233" width="350"></td>
+</tr>
+</table>
+
+<p><i><u><font face="Lucida Calligraphy"><font color="#800000"><font size="+1">Course
+Description:</font></font></font></u></i>
+<p><font face="Lucida Calligraphy"><font color="#800000"><font size="-1">This
+is an activity course designed to provide basic knowledge of the martial
+arts techniques in Judo.&nbsp; The student will be introduced to and have
+the opportunity to practice the various aspects of this Olympic sport.&nbsp;</font></font></font>
+<p><i><u><font face="Lucida Calligraphy"><font color="#800000"><font size="+1">Purpose:</font></font></font></u></i>
+<p><font face="Lucida Calligraphy"><font color="#800000"><font size="-1">This
+Judo course is designed to introduce the student to philosophy, tradition,
+and practice of the sport of Judo.&nbsp; In order to achieve this purpose,
+the student will be given the opportunity to observe and practice falling,
+throwing, pinning, and locking techniques.</font></font></font>
+<br>&nbsp;
+<table BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%">
+<tr>
+<td WIDTH="50%"><img SRC="attempt1.jpg" ALT="attempt1.jpg (24968 bytes)" BORDER="3" height="262" width="350"></td>
+
+<td WIDTH="50%">Most of the Cumberland College team members were either
+recruited by the Judo Sensei or became a team member through the beginning
+or intermediate Judo classes offered to CC students.</td>
+</tr>
+</table>
+
+<p><font face="Lucida Calligraphy"><font color="#800000"><font size="-1">Objectives:</font></font></font>
+<p><font face="Lucida Calligraphy"><font color="#800000"><font size="-1">This
+class is intended to:</font></font></font>
+<p><font face="Lucida Calligraphy"><font color="#800000"><font size="-1">1)
+enable the student to understand the origin, tradition, and philosophy
+of Judo as a sport;&nbsp;</font></font></font>
+<p><font face="Lucida Calligraphy"><font color="#800000"><font size="-1">2)
+help the student understand the theory and application of Judo techniques;</font></font></font>
+<p><font face="Lucida Calligraphy"><font color="#800000"><font size="-1">3)
+enable the student to understand the Judo belt ranking system and work
+toward a higher rank;</font></font></font>
+<p><font face="Lucida Calligraphy"><font color="#800000"><font size="-1">4)
+enable the student to understand and use Japanese terminology in identifying
+Judo techniques;</font></font></font>
+<p><font face="Lucida Calligraphy"><font color="#800000"><font size="-1">5)
+provide the student with an appreciation for and an interest in the continuation
+of the sport.</font></font></font>
+<br>&nbsp;
+<table BORDER="0" WIDTH="556">
+<tr>
+<td WIDTH="187">Judo team members also help teach the beginning and intermediate
+class.&nbsp;
+<p>With the extra help, class members can be provided personal attention
+to help prevent new judoka from developing bad habits.</td>
+
+<td WIDTH="361"><img SRC="awesome1.gif" ALT="wpe26.gif (29603 bytes)" BORDER="3" height="235" width="351" align="RIGHT"></td>
+</tr>
+</table>
+
+<table BORDER="0" WIDTH="80%">
+<tr>
+<td>Below are links to the other web pages on this site for viewers whose
+web browsers do not support frames.</td>
+</tr>
+</table>
+
+<table BORDER="0">
+<tr>
+<td WIDTH="50"></td>
+
+<td WIDTH="500"><a href="http://www.cumber.edu/athletic/judo/INDEX.htm">Cumberland
+Judo Team</a></td>
+</tr>
+</table>
+
+<table BORDER="0">
+<tr>
+<td WIDTH="50"></td>
+
+<td WIDTH="500"><a href="http://www.cumber.edu/athletic/judo/discuss.htm">History
+of Cumberland Judo</a></td>
+</tr>
+</table>
+
+<table BORDER="0">
+<tr>
+<td WIDTH="50"></td>
+
+<td WIDTH="500"><a href="http://www.cumber.edu/athletic/judo/status.htm">History
+of Sensei (Doug Fortune)</a></td>
+</tr>
+</table>
+
+<table BORDER="0">
+<tr>
+<td WIDTH="50"></td>
+
+<td WIDTH="500"><a href="http://www.cumber.edu/athletic/judo/prospect.htm">Prospect
+Card Information</a></td>
+</tr>
+</table>
+
+<br>&nbsp;
+<table BORDER="0">
+<tr>
+<td WIDTH="50"></td>
+
+<td><a href="http://www.cumber.edu/athletic/judo/schedule.htm">Schedule</a></td>
+</tr>
+</table>
+
+<br>&nbsp;
+<br>&nbsp;
+<table BORDER="0">
+<tr>
+<td WIDTH="300"><font face="Lucida Calligraphy"><font color="#000080"><font size="-2">Burns,
+Donald J. and Stephen M. Thompson.&nbsp; <u>An Introduction to Judo for
+Student and Teacher</u>.&nbsp;&nbsp; Dubuque, Dowa: Kendall/Hunt Publishing
+Company, 1976.&nbsp;</font></font></font></td>
+</tr>
+</table>
+
+<p>&nbsp;</td>
+</tr>
+</table>
+
+<br>&nbsp;
+</body>
+</html>

@@ -1,0 +1,206 @@
+<HTML>
+<HEAD>
+<title>MASA TENiSi - [ ATV - TÜRKiYE'NiN 1 NUMARALI TELEViZYON KANALI - http://www.atv.com.tr ]</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1254">
+<meta NAME="author&programmer" CONTENT="Fatih Gürcan [webmaster@atv.com.tr]">
+<meta NAME="owner" CONTENT="www.atv.com.tr">
+<meta NAME="description" CONTENT="Atv Internet Web Sitesi">
+<meta NAME="keywords" CONTENT="Atv, Televizyon, Türkiye, Web, Internet">
+<meta NAME="Sponsor" CONTENT="Sabah Gazetesi, Birnumara Yayincilik">
+<meta NAME="Partner" CONTENT="Beyaz Karinca Ltd.">
+<meta NAME="COPYRIGHT" CONTENT="1999 Fatih Gurcan [Materyaller izinsiz kopyalanamaz]">
+<style TYPE="text/css">
+<!--
+A:link, A:visited { text-decoration: none }
+A:hover { text-decoration: underline; color: none }
+-->
+</style>
+
+</HEAD>
+<BODY onLoad="startUp()" onmousemove="movePaddle()" onKeypress="reverseIt()" link="#000000" vlink="#000000" alink="#000000">
+<SCRIPT>
+//Script Fatih Gurcan tarafindan modify edilmistir.
+
+window.onerror=new Function("return true")
+var dx;
+var dy;
+var scor = 0;
+var dod;
+var pscor = 0;
+var escor = 0;
+var point;
+var los;
+var reversal = 0;
+
+
+function startUp()
+{
+score.scorebox.value = " "
+score.box.value= " "
+score.reverse.value = " "
+}
+
+function initialize()
+{
+dx = 2;
+dy = 2;
+los = Math.round(21 * Math.random()) + 1;
+point = 0;
+hefr = Math.round(200 * Math.random()) + 35;
+vred = Math.round(100 * Math.random()) + 100;
+ball.style.posTop = hefr;
+ball.style.posLeft = vred;
+
+moveBall()
+}
+
+function moveBall()
+{
+
+var xp = ball.style.posLeft;
+var yp = ball.style.posTop;
+var sig = paddle.style.posTop;
+var gis = paddle.style.posLeft;
+var hit = document.elementFromPoint(xp,yp);
+var pore = 215
+var place = pore - 1; 
+
+if (point < 7)
+{
+if ((yp >= 15) && (yp <= 215))
+paddle.style.posTop = yp - 6;
+else
+paddle.style.posTop = place
+}
+if (point >= 7)
+{
+if ((yp >= 15) && (yp <= 215))
+paddle.style.posTop = yp + 13;
+else
+paddle.style.posTop = place
+}
+
+if ((yp < 27) || (yp > 258))
+dy = dy * -1
+
+if (point >= 15)
+paddle.style.posTop = sig
+
+if (xp >= 358){
+escor = escor + .5
+score.scorebox.value = " " +escor+ " "
+gameLose()
+return
+}
+
+if (xp <= 27)
+{
+pscor = pscor + .5
+score.box.value = " " +pscor+ " "
+gameWin()
+return
+}
+
+
+if (hit != null)
+{
+if (hit.id == "paddle"){
+dx = dx * -1;
+point = point + 1
+}
+else if (hit.id == "enemy") {
+dx = dx * -1;
+}
+}
+
+
+
+ball.style.posTop += dy
+ball.style.posLeft += dx
+
+
+
+window.setTimeout("moveBall()", 1, "JavaScript");
+
+
+}
+
+function movePaddle()
+{
+var ypos = window.event.y;
+if ((ypos >= 15) && (ypos <= 230))
+enemy.style.posTop = ypos;
+}
+
+function gameLose()
+{
+if (escor >= 15){
+goal.style.visibility = "hidden"
+lose.style.visibility = "visible"
+alert("Üzgünüm. Ama rövansinda belki sen kazanirsin ;-) Bu arada " +escor+ " e " +pscor+ " kaybettin!")
+history.go(-1)
+}
+else
+return
+}
+
+function gameWin()
+{
+if (pscor >= 15){
+goal.style.visibility = "hidden"
+win.style.visibility = "visible"
+alert("Mükemmel, sen harikasin!!!. Beni " +pscor+ " e " +escor+ " puanla yendin!")
+history.go(-1)
+}
+else
+return
+}
+
+function reverseIt()
+{
+if (reversal <= 9)
+{
+if (window.event.keyCode == 118){
+dy = dy * -1
+reversal = reversal + 1
+score.reverse.value = reversal
+}
+if (window.event.keyCode == 104){
+dx = dx * -1
+reversal = reversal + 1
+score.reverse.value = reversal
+}
+}
+}
+
+</SCRIPT>
+
+<p>
+<IMG id="ball" SRC="ball.gif" STYLE="position: absolute; Top:115; Left:110; Width:16; Height:15;z-index=3;">
+<IMG id="border" SRC="table.gif" STYLE="position: absolute; Top:25; Left:25; Width:350; Height:250;z-index=2;">
+<IMG id="paddle" SRC="pad.gif" STYLE="position: absolute; Top:30; Left:40; Width:15; Height:60; z-index:3">
+<IMG id="enemy" SRC="pad.gif" STYLE="position: absolute; Top:30; Left:340; Width:15; Height:60;z-index:3">
+<IMG id="bord" SRC="border1.gif" STYLE="position: absolute; Top:25; Left:20; Width:5; Height:250;z-index:3">
+<IMG id="borde" SRC="border1.gif" STYLE="position: absolute; Top:25; Left:375; Width:5; Height:250;z-index:3">
+<IMG id="bordit" SRC="border3.gif" STYLE="position: absolute; Top:20; Left:25; Width:350; Height:5;z-index:3">
+<IMG id="bordit" SRC="border3.gif" STYLE="position: absolute; Top:275; Left:25; Width:350; Height:5;z-index:3">
+<INPUT TYPE="button" VALUE="Topu at!" onClick="initialize()" onmousedown="initialize()" STYLE="position: absolute; Top:15; Left:400;z-index:3">
+<FORM NAME="score">
+<INPUT TYPE="text" NAME="box" SIZE="10" STYLE="position: absolute; Top:69; Left:400;z-index:3">
+<INPUT TYPE="text" NAME="scorebox" SIZE="10" STYLE="position: absolute; Top:120; Left:400;z-index:3">
+<INPUT TYPE="text" NAME="reverse" SIZE="10" STYLE="position: absolute; Top:190; Left:400;z-index:3">
+<DIV STYLE="position: absolute; Left:400; Top:50;z-index:5">Senin Skorun:</DIV>
+<DIV STYLE="position: absolute; Left:400; Top:100;z-index:5">Bilgisayar Skoru:</DIV>
+<DIV STYLE="position: absolute; Left:400; Top:170;z-index:5">Opsiyonlar:</DIV>
+<DIV id="win" STYLE="position: absolute; font-size: 50px; Left:15; Top:290; visibility:hidden;z-index:3">Sen kazandın :-(!!!!</DIV>
+<DIV  id="lose" STYLE="position: absolute; font-size: 50px; Left:15; Top:290; visibility:hidden;z-index:3">Kaybettin ;-)!!!!</DIV>
+<DIV  id="goal" STYLE="position: absolute; font-size: 12px; left: 15; top: 290; visibility: visible; z-index: 3; width: 367; height: 60">Yukarıdaki
+  platform üzerinde sağ taraftaki raket sizin, diğeri bilgisayarındır.
+  Mouse'u kullanarak bu raketi çok rahatça hareket ettirebilirsiniz. Topu at
+  butonu tıklanarak oyunu başlatabilir ve skorunuzu kutucuklardan takip
+  edebilirsiniz. Bol şans!
+  <p align="center"><b>1999 © <a href="../index.html"> ATV</a> <a href="mailto:webmaster@atv.com.tr">Webmaster</a></b></DIV>
+</FORM>
+<p align="center"><b><font face="Arial" size="1" color="#FFFFFF">ID=859?tek sayac</font></b></p>
+</BODY>
+</HTML>

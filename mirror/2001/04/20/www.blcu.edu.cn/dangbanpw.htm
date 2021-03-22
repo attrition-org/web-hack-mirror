@@ -1,0 +1,36 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>党办-口令</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<base target="main">
+
+<meta name="Microsoft Border" content="none">
+</head>
+
+<body bgcolor="#008080">
+
+<!--webbot BOT="GeneratedScript" PREVIEW=" " startspan --><script Language="VBScript"><!--
+function FrontPage_Form1_onsubmit()
+  Set theForm = document.FrontPage_Form1
+
+  If (theForm.pw.value = "") Then
+    MsgBox "请在 pw 域中输入值。", 0, "有效性验证错误"
+    theForm.pw.focus()
+    FrontPage_Form1_onsubmit = False
+    Exit Function
+  End If
+  FrontPage_Form1_onsubmit = True 
+End Function
+--></script><!--webbot BOT="GeneratedScript" endspan --><form method="POST" action="http://www.blcu.edu.cn/dangban-tz1.asp" name="FrontPage_Form1">
+  <table border="0" cellspacing="1" width="100%">
+    <tr>
+      <td width="30%" align="right"><font face="隶书" color="#FFFF00"><big><big>请输入口令</big></big></font></td>
+      <td width="15%" align="left"><!--webbot bot="Validation" S-Display-Name="pw" S-Data-Type="String" B-Value-Required="TRUE" --><input type="password" name="pw" size="7"></td>
+      <td width="34%"><input type="submit" value="确认" name="B1" style="font-size: 14pt; background-color: rgb(0,128,128); color: rgb(255,255,0)"></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

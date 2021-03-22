@@ -1,0 +1,40 @@
+<html><head><title>Thanks-CGI [Websearch]</title></head>
+<body bgcolor="3366aa" text=000000 link=yellow alink=red vlink=lime>
+
+<center>
+
+<script Language='JavaScript'>
+var now = new Date();
+var years = now.getYear();
+var months =now.getMonth();
+var days = now.getDate();
+var hours = now.getHours();
+var minutes = now.getMinutes();
+var seconds = now.getSeconds();
+var ram_num=Math.floor(Math.random()*10000);
+var markstr=""+years+"-"+months+"-"+days+"-"+hours+"-"+minutes+"-"+seconds+"-"+ram_num;
+var showcgiurl="http://www.thanks-cgi.com/cgi-bin/banker/banker_show.cgi";
+var clickcgiurl="http://www.thanks-cgi.com/cgi-bin/banker/banker_click.cgi";
+document.write('<a href='+clickcgiurl+'?'+markstr+'><img src='+showcgiurl+'?'+markstr+' border=0></a>');
+</script><hr>
+
+
+<h1><font face=arial>WebSearch</font></h1>
+<hr size=1>
+<form method=post action="http://www.thanks-cgi.com/cgi-bin/search/websearch.cgi">
+<input type=text name="searchword" size=20>
+<input type=submit value="SEARCH"></form>
+<hr size=1>
+<table><tr><td>
+<!--resulthere-->
+</td></tr></table>
+<hr width=600 align=center>
+<font size=3 face=arial color=#ffffff>
+<b>
+<a href="../websearch.html">DETAIL</a>
+|
+<a href="../index.html">BACK TO MAIN PAGE</a>
+</b>
+</font>
+</body>
+</html>

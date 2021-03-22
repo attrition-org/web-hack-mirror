@@ -1,0 +1,105 @@
+<html>
+<head>
+<title>::crazy_bit::</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style>
+.spanstyle {
+	position:absolute;
+	visibility:visible;
+	top:-50px;
+	font-size:10pt;
+	font-family:Verdana;
+    font-weight:bold;
+	color:yellow;
+}
+</style>
+<script>
+var x,y
+var step=20
+var flag=0
+
+
+var message="h@ck3d by crazy_bit "
+message=message.split("")
+
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	xpos[i]=-50
+}
+
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	ypos[i]=-50
+}
+
+function handlerMM(e){
+	x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+	y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+	flag=1
+}
+
+function makesnake() {
+	if (flag==1 && document.all) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("span"+(i)+".style")
+    		thisspan.posLeft=xpos[i]
+			thisspan.posTop=ypos[i]
+    	}
+	}
+	
+	else if (flag==1 && document.layers) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("document.span"+i)
+    		thisspan.left=xpos[i]
+			thisspan.top=ypos[i]
+    	}
+	}
+		var timer=setTimeout("makesnake()",30)
+}
+
+</script>
+</head>
+
+<body body onLoad="makesnake()" style="width:100%;overflow-x:hidden;overflow-y:scroll" bgcolor="#000000" text="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<script>
+<!-- Beginning of JavaScript -
+
+for (i=0;i<=message.length-1;i++) {
+    document.write("<span id='span"+i+"' class='spanstyle'>")
+	document.write(message[i])
+    document.write("</span>")
+}
+
+if (document.layers){
+	document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+
+// - End of JavaScript - -->
+</script>
+<table height="100%" width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>
+      <div align="center">
+        <h1><b><font color="#FF0000">c</font><font color="#FF0033">r</font><font color="#FF0066">a</font><font color="#FF00CC">zy</font><font color="#FF00FF">_</font><font color="#FF33FF">b</font><font color="#FF66FF">i</font><font color="#FF99FF">t<font color="#FFCCFF">@</font></font><font color="#FFFFFF">u</font><font color="#FFFFCC">s</font><font color="#FFFF99">a.</font><font color="#FFFF66">n</font><font color="#FFFF33">e</font><font color="#FFFF00">t</font></b></h1>
+      </div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

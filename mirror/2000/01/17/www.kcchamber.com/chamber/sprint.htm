@@ -1,0 +1,107 @@
+<html>
+
+<head>
+<title>Greater Kansas City Chamber of Commerce</title>
+</head>
+<script LANGUAGE="JavaScript">
+
+
+
+<!-- Beginning of WebMania!/JavaScript Applet -------------
+/* Copyright (C)1996 Q&D Software Development
+All Rights Reserved.
+*/
+function scroll_status (seed)
+{
+    var msg = "Your interactive Chamber brings business to you!";
+    var out = " ";
+    var c = 1;
+    if (150 < seed) {
+            seed--;
+            var cmd="scroll_status(" + seed + ")";
+            timerTwo = window.setTimeout(cmd, 100);
+    }
+    else if (seed <= 150 && 0 < seed) {
+            for (c=0 ; c < seed ; c++) {
+                    out+=" ";
+            }
+            out+=msg;
+            seed--;
+            var cmd="scroll_status(" + seed + ")";
+                window.status=out;
+            timerTwo=window.setTimeout(cmd,100);
+    }
+    else if (seed <= 0) {
+            if (-seed < msg.length) {
+                    out+=msg.substring(-seed,msg.length);
+                    seed--;
+            var cmd="scroll_status(" + seed + ")";
+                    window.status=out;
+                    timerTwo=window.setTimeout(cmd,100);
+            }
+            else {
+                    window.status=" ";
+                    timerTwo=window.setTimeout("scroll_status(150)",100);
+            }
+    }
+}
+// -- End of JavaScript code -------------- -->
+
+
+
+</script>
+
+
+<body onLoad="timerONE=window.setTimeout('scroll_status(100)',50);" link="#ff0000" vlink="#665599" background="../graphics/bkg-new.gif" bgcolor="#ffffff">
+
+<table width="600" border="0">
+  <tr>
+    <td align="center"><table width="520" border="0">
+      <tr>
+        <td><img src="../graphics/kcity00.gif" alt="Greater Kansas City Chamber of Commerce" align="top" WIDTH="468" HEIGHT="96"> </td>
+        <td align="right" valign="bottom"><a href="http://www.sprint.com"><img src="../graphics/sprint.gif" border="0" alt="Sprint Corporation" WIDTH="125" HEIGHT="37"></a><p><font color="#ffffff">.</font><br>
+        <b><i>Doing Business on the Internet.</i></b> </td>
+      </tr>
+    </table>
+    <p><img src="../graphics/gkchr.gif" border="0" alt="horizontal rule" WIDTH="600" HEIGHT="2"></p>
+    <table width="500">
+      <tr>
+        <td colspan="2"><p align="center"><img src="../graphics/gkcdots.gif" alt="dotted line" WIDTH="400" HEIGHT="1"><br>
+        <font size="+2"><b>Preferred Business Buyers Guide</b></font><br>
+        <img src="../graphics/gkcdots.gif" alt="dotted line" WIDTH="400" HEIGHT="1"></td>
+      </tr>
+      <tr>
+        <td><strong><img src="../graphics/gkcdot.gif" alt="dot" WIDTH="12" HEIGHT="8"> <a href="startingpoint/"><img src="startingpoint/startingpointsmall.gif" border="0" align="middle" WIDTH="190" HEIGHT="35"></a> <a href="../startingpoint/">How to start a business</a><br>
+        </strong><img src="../graphics/gkcdot.gif" alt="dot" WIDTH="12" HEIGHT="8"> <a href="http://www.sprint.com"><b>Sprint
+        - Your Business Needs Met Here</b></a> <br>
+        <img src="../graphics/gkcdot.gif" alt="dot" WIDTH="12" HEIGHT="8"> <a href="gkcfree.htm"><b>Free HomePage
+        for Your Business</b></a> <br>
+        <img src="../graphics/gkcdot.gif" alt="dot" WIDTH="12" HEIGHT="8"> <a href="/chamber/gkcjoin1.htm"><b>Join the
+        Chamber NOW!</b></a> <br>
+        <img src="../graphics/gkcdot.gif" alt="dot" WIDTH="12" HEIGHT="8">  <a href="http://www.thechamber.net/cgi-bin/foxweb.exe/cwlink/99directory?cc=KANCITY"><b>Index of
+        Chamber Members</b></a> <br>
+        <img src="../graphics/gkcdot.gif" alt="dot" WIDTH="12" HEIGHT="8"> <a href="gkcfree.htm"><b>Add me to
+        this list!</b></a> <br>
+        </td>
+        <td><!-- SPONSORS AND LINKS --></td>
+      </tr>
+    </table>
+    <p><img src="../graphics/gkcdots.gif" alt="dotted line" WIDTH="400" HEIGHT="1"></p>
+    <p><a href="../index.html"><img border="0" src="/graphics/gkcsmall.gif" alt="logo" WIDTH="195" HEIGHT="62"></a> <a href="http://www.sprint.com"><img src="../graphics/sprint.gif" border="0" alt="Sprint Corporation" WIDTH="125" HEIGHT="37"></a> <a href="http://www.kansascity.com"><img border="0" src="/graphics/kccsml2.gif" WIDTH="70" HEIGHT="66"></a> </p>
+    <p><img src="../graphics/gkcdots.gif" alt="dotted line" WIDTH="400" HEIGHT="1"><br>
+    <i>Brought to you by the <a href="../index.html">Greater Kansas City Chamber of
+    Commerce</a>,<br>
+    its members, <a href="http://www.sprint.com">Sprint</a>, and <a href="http://www.kansascity.com">kansascity.com</a></i><br>
+    <img src="../graphics/gkcdots.gif" alt="dotted line" WIDTH="400" HEIGHT="1"></p>
+    <table width="500">
+      <tr>
+        <td align="center"><a href="sprint.htm">HomePage</a> | <a href="http://www.sprint.com">Sprint</a> | <a href="/chamber/gkcjoin1.htm">Join Chamber</a>
+        | <a href="/cgi-bin/direct?template=gkcdir.htm">Chamber Index</a> | Buyers Guide<br>
+        <a href="mailto:chamber@kcity.com">Email Chamber</a></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

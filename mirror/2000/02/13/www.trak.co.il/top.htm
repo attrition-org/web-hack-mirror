@@ -1,0 +1,66 @@
+<html>
+
+<head>
+<base target="main">
+<title>TRAK</title>
+<script language="JavaScript">
+
+<!--
+<!-- hide this script from non-javascript-enabled browsers
+if (document.images) {
+Inavbartemp_01_01 = new Image(20, 17);Inavbartemp_01_01.src = 'images/1top.gif';
+Inavbartemp_01_01o = new Image(20, 17);Inavbartemp_01_01o.src = 'images/2top.gif';
+}
+function di(id,name){
+  if (document.images) {document.images[id].src=eval(name+".src"); }
+}
+
+// function that displays status bar message
+
+function dm(msgStr) {
+  document.returnValue = false;
+  if (document.images) { 
+     window.status = msgStr;
+     document.returnValue = true;
+  }
+}
+var showMsg = navigator.userAgent != "Mozilla/4.0 (compatible; MSIE 4.0; Mac_PowerPC)";
+function dmim(msgStr) {
+  document.returnValue = false;
+  if (showMsg) { 
+    window.status = msgStr;
+    document.returnValue = true;
+  }
+}
+
+// stop hiding -->
+
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+
+</script>
+</head>
+
+<body bgcolor="#000000" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0">
+<div align="left">
+
+<table border="0" cellspacing="0" cellpadding="0" width="534">
+  <tr>
+    <td align="left" valign="middle" width="365"><a href="index.html"
+    onmouseout="di('Nnavbartemp_01_01','Inavbartemp_01_01');dm(''); return true;"
+    onmouseover="di('Nnavbartemp_01_01','Inavbartemp_01_01o');dm('????? ???????'); return true;"
+    target="_top"><img border="0" name="Nnavbartemp_01_01" src="images/1top.gif" WIDTH="94"
+    HEIGHT="58"></a><img src="images/top.gif" WIDTH="266" HEIGHT="58"> </td>
+    <td width="78" align="center" valign="top"><p align="left"><img src="images/tr.gif"
+    WIDTH="76" HEIGHT="48"></td>
+    <td width="51" align="center" valign="top"><p align="left"><img src="images/aspin.gif"
+    WIDTH="48" HEIGHT="48"></td>
+    <td width="42" align="center" valign="top"><p align="left"><img src="images/k.gif"
+    WIDTH="38" HEIGHT="48"></td>
+  </tr>
+</table>
+</div>
+</body>
+</html>

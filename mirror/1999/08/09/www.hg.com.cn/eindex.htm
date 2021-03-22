@@ -1,0 +1,335 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>eHome Page</title>
+
+<script LANGUAGE="JavaScript" FPTYPE="dynamicanimation">
+<!--
+  // If you want to change this script, you must also make the following
+  // changes so that FrontPage will not overwrite your new script.
+  // In the script tag, change type="dynamicanimation" to type="mydynamicanimation"
+  // In the first script statement, change "dynamicanimation" to "mydynamicanimation"
+  // Throughout the HTML content, change dynamicanimation= to mydynamicanimation=
+  // Change function dynAnimation to function mydynAnimation
+  // In the body tag, change onload="dynAnimation()" to onload="mydynAnimation()"
+  dynamicanimAttr = "dynamicanimation"
+  animateElements = new Array()
+  currentElement = 0
+  speed = 0
+  stepsZoom = 8
+  stepsWord = 8
+  stepsFly = 12
+  stepsSpiral = 16
+  steps = stepsZoom
+  step = 0
+  outString = ""
+  function dynAnimation()
+  {
+    var ms = navigator.appVersion.indexOf("MSIE")
+    ie4 = (ms>0) && (parseInt(navigator.appVersion.substring(ms+5, ms+6)) >= 4)
+    if(!ie4)
+    {
+      if((navigator.appName == "Netscape") &&
+         (parseInt(navigator.appVersion.substring(0, 1)) >= 4))
+      {
+        for (index=document.layers.length-1; index >= 0; index--)
+        {
+            layer=document.layers[index]
+            if (layer.left==10000)
+                layer.left=0
+        }
+      }
+      return
+    }
+    for (index=document.all.length-1; index >= document.body.sourceIndex; index--)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if(null != animation)
+      {
+        if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        {
+          ih = el.innerHTML
+          outString = ""
+          i1 = 0
+          iend = ih.length
+          while(true)
+          {
+            i2 = startWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, false, "")
+            if(i2 == iend)
+              break
+            i1 = i2
+            i2 = endWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, true, animation)
+            if(i2 == iend)
+              break
+            i1 = i2
+          }
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+        if(animation == "zoomIn" || animation == "zoomOut")
+        {
+          ih = el.innerHTML
+          outString = "<SPAN " + dynamicanimAttr + "=\"" + animation + "\" style=\"position: relative; left: 10000;\">"
+          outString += ih
+          outString += "</SPAN>"
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+      }
+    }
+    i = 0
+    for (index=document.body.sourceIndex; index < document.all.length; index++)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if (null != animation)
+      {
+        if(animation == "flyLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyRight")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyTop" || animation == "dropWord")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottom")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyTopLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyTopRight" || animation == "flyTopRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottomLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyBottomRight" || animation == "flyBottomRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "spiral")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "zoomIn")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else if(animation == "zoomOut")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        el.initLeft = el.style.posLeft
+        el.initTop = el.style.posTop
+        animateElements[i++] = el
+      }
+    }
+    window.setTimeout("animate();", speed)
+  }
+  function offsetLeft(el)
+  {
+    x = el.offsetLeft
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      x += e.offsetLeft;
+    return x
+  } 
+  function offsetTop(el)
+  {
+    y = el.offsetTop
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      y += e.offsetTop;
+    return y
+  } 
+  function startWord(ih, i)
+  {
+    for(tag = false; i < ih.length; i++)
+    {
+      c = ih.charAt(i)
+      if(c == '<')
+        tag = true
+      if(!tag)
+        return i
+      if(c == '>')
+        tag = false
+    }
+    return -1
+  }
+  function endWord(ih, i)
+  {
+    nonSpace = false
+    space = false
+    while(i < ih.length)
+    {
+      c = ih.charAt(i)
+      if(c != ' ')
+        nonSpace = true
+      if(nonSpace && c == ' ')
+        space = true
+      if(c == '<')
+        return i
+      if(space && c != ' ')
+        return i
+      i++
+    }
+    return -1
+  }
+  function outWord(ih, i1, i2, dyn, anim)
+  {
+    if(dyn)
+      outString += "<SPAN " + dynamicanimAttr + "=\"" + anim + "\" style=\"position: relative; left: 10000;\">"
+    outString += ih.substring(i1, i2)
+    if(dyn)
+      outString += "</SPAN>"
+  }
+  function animate()
+  {
+    el = animateElements[currentElement]
+    animation = el.getAttribute(dynamicanimAttr, false)
+    step++
+    if(animation == "spiral")
+    {
+      steps = stepsSpiral
+      v = step/steps
+      rf = 1.0 - v
+      t = v * 2.0*Math.PI
+      rx = Math.max(Math.abs(el.initLeft), 200)
+      ry = Math.max(Math.abs(el.initTop),  200)
+      el.style.posLeft = Math.ceil(-rf*Math.cos(t)*rx)
+      el.style.posTop  = Math.ceil(-rf*Math.sin(t)*ry)
+    }
+    else if(animation == "zoomIn")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(50+50*step/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else if(animation == "zoomOut")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(100+200*(steps-step)/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else
+    {
+      steps = stepsFly
+      if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        steps = stepsWord
+      dl = el.initLeft / steps
+      dt = el.initTop  / steps
+      el.style.posLeft = el.style.posLeft - dl
+      el.style.posTop = el.style.posTop - dt
+    }
+    if (step >= steps) 
+    {
+      el.style.posLeft = 0
+      el.style.posTop = 0
+      currentElement++
+      step = 0
+    }
+    if(currentElement < animateElements.length)
+      window.setTimeout("animate();", speed)
+  }
+//-->
+</script><meta name="Microsoft Border" content="none"></head>
+
+<body onload="dynAnimation()">
+
+<p><img src="images/HglogoL.JPG" alt="HglogoL.JPG (5011 bytes)" WIDTH="85" HEIGHT="40"> <img src="images/et1.JPG" alt="et1.JPG (9268 bytes)" WIDTH="439" HEIGHT="43"> &nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp; <img src="images/line2.JPG" alt="line2.JPG (2749 bytes)" WIDTH="539" HEIGHT="14"> </p>
+
+<p align="right">[<a href="indexold.htm">中文版</a>]&nbsp;&nbsp;&nbsp; </p>
+
+<table border="0" width="99%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="32%" valign="top"><p align="center" dynamicanimation="spiral" style="position: relative !important; left: 10000 !important"><strong><big><big><font face="隶书" color="#BB0000">　 </font><font color="#BB0000" face="Brush Script MT">HG </font></big></big><font face="隶书" color="#BB0000"><img src="images/newrun0.gif" alt="newrun0.gif (6196 bytes)" WIDTH="39" HEIGHT="21"></font><font color="#BB0000" face="Brush Script MT"><big><big> News</big></big></font></strong></p>
+    <p><img src="images/butten.GIF" alt="bullet1.GIF (1223 bytes)" WIDTH="32" HEIGHT="16"> <a href="80news.htm"><strong>Latest 
+    News about HG Broadband Supernodal Intelligent Platform </strong></a></p>
+    <p><a href="80.htm" style="color: rgb(255,0,0)"><strong>HG BSP80 has abtained entry 
+    certificate issued by Ministry of&nbsp; Posts&amp;Telecommunications</strong></a></p>
+    <p><img src="images/butten.GIF" alt="bullet1.GIF (1223 bytes)" WIDTH="32" HEIGHT="16"><a href="Li%20Battery/eli.htm"><strong>HG Lithium-ion Battery</strong></a></p>
+    <p>Large energy, low self-discharge ratio, no-memory, long circular-life, safety and 
+    no-pollution......</p>
+    <p ALIGN="JUSTIFY">　</p>
+    <p><img src="images/butten.GIF" alt="bullet1.GIF (1223 bytes)" WIDTH="32" HEIGHT="16">&nbsp; <a href="mac.htm"><strong><font SIZE="3">华光科技推出基于世界主流技术的报业彩色出版解决方案</font></strong></a></td>
+    <td width="4%" valign="top"></td>
+    <td width="64%"><strong><font color="#BB0000">Weifang Huaguang Technology Co.,Ltd.</font>,is 
+    a state-owned large-sized backbone enterprise, It most supported by the state industrial 
+    policy and mainly devoted in the manufacture and marketing of <font color="#BB0000">computers 
+    and communication products</font>.</strong><p><font size="2" face="黑体"><strong>　</strong></font><!--webbot bot="ImageMap" circle="(239,224) 31 feedback/eindex.htm" circle="(110,206) 33 org/eindex.htm" circle="(67,131) 32 productor/ecomputor.htm" circle="(108,58) 34 about/eindex.htm" circle="(232,32) 32 network/index.htm" src="images/ehg6.JPG" alt="ehg6.JPG (30428 bytes)" border="0" startspan --><MAP NAME="FrontPageMap"><AREA SHAPE="CIRCLE" COORDS="239, 224, 31" HREF="feedback/eindex.htm"><AREA SHAPE="CIRCLE" COORDS="110, 206, 33" HREF="org/eindex.htm"><AREA SHAPE="CIRCLE" COORDS="67, 131, 32" HREF="productor/ecomputor.htm"><AREA SHAPE="CIRCLE" COORDS="108, 58, 34" HREF="about/eindex.htm"><AREA SHAPE="CIRCLE" COORDS="232, 32, 32" HREF="network/index.htm"></MAP><a href="_vti_bin/shtml.exe/eindex.htm/map"><img height="265" ismap alt="ehg6.JPG (30428 bytes)" border="0" src="images/ehg6.JPG" usemap="#FrontPageMap" width="468"></a><!--webbot bot="ImageMap" endspan i-checksum="9128" --></td>
+  </tr>
+</table>
+
+<hr width="80%" color="#00008C" noshade size="3">
+
+<p align="center"><strong><font color="#004080">( <a href="about/eindex.htm">About HG</a> 
+)( <a href="org/eindex.htm">Organization</a> )( <a href="productor/ecomputor.htm">Products</a> 
+)( <a href="network/index.htm">Marketing</a> )( <a href="feedback/eindex.htm">Feedback</a> 
+)</font></strong></p>
+
+<hr width="54%" color="#00008C" noshade size="3">
+
+<p align="center"><strong><small>HG technology Co. , Ltd.&nbsp; All rights reserved</small></strong></p>
+
+<p align="center"><strong><small>Add：272 East Dongfeng Street Weifang, Shandong, 
+P.R.China</small></strong></p>
+
+<p align="center"><strong><small>P.C. ：261041</small></strong></p>
+
+<p align="center"><strong><small>Tel：+86（0536）8236921</small></strong></p>
+
+<p align="center"><strong><small>Fax：+86（0536）8222888 8235397</small></strong></p>
+
+<p align="center"><strong><small>Email：info@hg.com.cn</small></strong></p>
+<div align="center"><center>
+
+<table>
+  <tr>
+    <td><small>Suggest browsing with</small></td>
+    <td><p align="center"><img src="images/ieget.GIF" alt="ieget.GIF (1601 bytes)" WIDTH="88" HEIGHT="31"><br>
+    <font face="Arial" size="1">internet explorer4.0</font></td>
+    <td><small>or</small></td>
+    <td><p align="center"><img src="images/netscape4now.gif" alt="netscape4now.gif (2002 bytes)" WIDTH="88" HEIGHT="31"><br>
+    <font face="Arial" size="1">Netscape communicator 4.04</font></td>
+    <td><font face="Arial" size="1">&amp;&nbsp; 400*800 monitor</font></td>
+  </tr>
+</table>
+</center></div>
+
+<p>　</p>
+</body>
+</html>

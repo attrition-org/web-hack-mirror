@@ -1,0 +1,130 @@
+<html>
+<head>
+<title>Trinity Auto</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+  <script language="JavaScript"><!--
+function MM_initTimelines() {
+    //MM_initTimelines() Copyright 1997 Macromedia, Inc. All rights reserved.
+    var ns = navigator.appName == "Netscape";
+    document.MM_Time = new Array(1);
+    document.MM_Time[0] = new Array(2);
+    document.MM_Time["Timeline1"] = document.MM_Time[0];
+    document.MM_Time[0].MM_Name = "Timeline1";
+    document.MM_Time[0].fps = 15;
+    document.MM_Time[0][0] = new String("sprite");
+    document.MM_Time[0][0].slot = 1;
+    if (ns)
+        document.MM_Time[0][0].obj = document.Layer1;
+    else
+        document.MM_Time[0][0].obj = document.all ? document.all["Layer1"] : null;
+    document.MM_Time[0][0].keyFrames = new Array(1, 20);
+    document.MM_Time[0][0].values = new Array(3);
+    document.MM_Time[0][0].values[0] = new Array(389,372,355,338,321,304,287,270,253,236,220,203,186,169,152,135,118,101,84,67);
+    document.MM_Time[0][0].values[0].prop = "left";
+    document.MM_Time[0][0].values[1] = new Array(25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25);
+    document.MM_Time[0][0].values[1].prop = "top";
+    if (!ns) {
+        document.MM_Time[0][0].values[0].prop2 = "style";
+        document.MM_Time[0][0].values[1].prop2 = "style";
+    }
+    document.MM_Time[0][0].values[2] = new Array(146,147,148,149,151,152,153,155,156,157,159,160,161,163,164,165,167,168,169,171);
+    document.MM_Time[0][0].values[2].prop = "width";
+    if (!ns)
+        document.MM_Time[0][0].values[2].prop2 = "style";
+    document.MM_Time[0][1] = new String("sprite");
+    document.MM_Time[0][1].slot = 2;
+    if (ns)
+        document.MM_Time[0][1].obj = document.Layer2;
+    else
+        document.MM_Time[0][1].obj = document.all ? document.all["Layer2"] : null;
+    document.MM_Time[0][1].keyFrames = new Array(1, 20);
+    document.MM_Time[0][1].values = new Array(2);
+    document.MM_Time[0][1].values[0] = new Array(2,13,25,36,47,59,70,82,93,104,116,127,138,150,161,173,184,195,207,218);
+    document.MM_Time[0][1].values[0].prop = "left";
+    document.MM_Time[0][1].values[1] = new Array(51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51);
+    document.MM_Time[0][1].values[1].prop = "top";
+    if (!ns) {
+        document.MM_Time[0][1].values[0].prop2 = "style";
+        document.MM_Time[0][1].values[1].prop2 = "style";
+    }
+    document.MM_Time[0].lastFrame = 20;
+    for (i=0; i<document.MM_Time.length; i++) {
+        document.MM_Time[i].ID = null;
+        document.MM_Time[i].curFrame = 0;
+        document.MM_Time[i].delay = 1000/document.MM_Time[i].fps;
+    }
+}
+//-->
+</script>
+  <script language="JavaScript"><!--
+function MM_timelinePlay(tmLnName, myID) { //v1.2
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,propNum,theObj,firstTime=false;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (myID == null) { myID = ++tmLn.ID; firstTime=true;}//if new call, incr ID
+  if (myID == tmLn.ID) { //if Im newest
+    setTimeout('MM_timelinePlay("'+tmLnName+'",'+myID+')',tmLn.delay);
+    fNew = ++tmLn.curFrame;
+    for (i=0; i<tmLn.length; i++) {
+      sprite = tmLn[i];
+      if (sprite.charAt(0) == 's') {
+        if (sprite.obj) {
+          numKeyFr = sprite.keyFrames.length; firstKeyFr = sprite.keyFrames[0];
+          if (fNew >= firstKeyFr && fNew <= sprite.keyFrames[numKeyFr-1]) {//in range
+            keyFrm=1;
+            for (j=0; j<sprite.values.length; j++) {
+              props = sprite.values[j]; 
+              if (numKeyFr != props.length) {
+                if (props.prop2 == null) sprite.obj[props.prop] = props[fNew-firstKeyFr];
+                else        sprite.obj[props.prop2][props.prop] = props[fNew-firstKeyFr];
+              } else {
+                while (keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]) keyFrm++;
+                if (firstTime || fNew==sprite.keyFrames[keyFrm-1]) {
+                  if (props.prop2 == null) sprite.obj[props.prop] = props[keyFrm-1];
+                  else        sprite.obj[props.prop2][props.prop] = props[keyFrm-1];
+        } } } } }
+      } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+      if (fNew > tmLn.lastFrame) tmLn.ID = 0;
+  } }
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" link="white" onLoad="MM_timelinePlay('Timeline1')">
+<div id="Layer1" style="position:absolute; left:389px; top:25px; width:146px; height:49px; z-index:1"><font face="Arial, Helvetica, sans-serif"><b><font size="7" color="#0000FF">Virtual</font></b></font></div>
+<div id="Layer2" style="position:absolute; left:2px; top:51px; width:161px; height:36px; z-index:2"><b><font size="6" color="#FF0000">Showroom</font></b></div>
+<div id="Layer3" style="position:absolute; left:107px; top:407px; width:29px; height:17px; z-index:11"><img src="autolist.gif" width="336" height="18" usemap="#autolist"></div>
+<div id="Layer7" style="position:absolute; left:200px; top:430px; width:90px; height:12px; z-index:12"><img src="slect_an.gif" width="144" height="20"></div>
+<div id="Layer8" style="position:absolute; left:33px; top:92px; width:355px; height:180px; z-index:13"><img src="montage4.jpg" width="500" height="313" usemap="#montage4"></div>
+<map name="autolist">
+<area shape="rect" coords="1,0,41,17" href="ford/ford2.htm">
+<area shape="rect" coords="42,0,128,17" href="landrover/landrover.html">
+<area shape="rect" coords="127,0,184,17" href="honda/honda.html">
+<area shape="rect" coords="185,0,249,17" href="hyundai/hyundai.html">
+<area shape="rect" coords="250,0,306,17" href="suzuki/suzuki.html">
+<area shape="rect" coords="307,0,335,17" href="kia/kia.html">
+<area shape="default" nohref>
+</map>
+<map name="montage1">
+<area shape="rect" alt="Kia Showroom" coords="39,168,192,294" href="kia/kia.html">
+<area shape="rect" alt="Hyundai showroom" coords="33,53,166,108" href="hyundai/hyundai.html">
+<area shape="rect" alt="Suzuki showroom" coords="204,72,274,133" href="suzuki/suzuki.html">
+<area shape="rect" alt="Ford showroom" coords="87,2,346,52" href="ford/ford2.htm">
+<area shape="polygon" alt="Honda showroom" coords="199,149,282,168,282,110,329,111,330,207,198,199,198,149" href="honda/honda.html">
+<area shape="rect" alt="Landrover showroom" coords="413,98,468,187" href="landrover/landrover.html">
+<area shape="default" nohref>
+</map>
+<map name="montage4">
+<area shape="rect" coords="34,2,356,50" href="ford/ford2.htm">
+<area shape="rect" coords="12,78,182,139" href="hyundai/hyundai.html">
+<area shape="rect" coords="203,99,273,164" href="suzuki/suzuki.html">
+<area shape="polygon" coords="197,183,279,183,278,132,325,132,329,241,204,237,203,182,203,182,203,182,203,182,203,182,203,182" href="honda/honda.html">
+<area shape="rect" coords="31,191,192,232" href="kia/kia.html">
+<area shape="rect" coords="406,124,470,234" href="landrover/landrover.html">
+<area shape="default" nohref>
+</map>
+</body>
+</html>

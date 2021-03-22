@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<meta content="text/html; charset=windows-1250" http-equiv="Content-Type">
+<meta content name="description">
+<meta content name="keywords">
+<meta content="Microsoft FrontPage 3.0" name="GENERATOR">
+<title>defaced by slash</title>
+</head>
+
+<body aLink="#ff0000" bgColor="#000000" link="#0099cc" text="#ffffff" vLink="#999999">
+<div align="center"><center>
+
+<table border="0" cellSpacing="0" width="600" height="502">
+<TBODY>
+  <tr>
+    <td height="59"></td>
+  </tr>
+  <tr>
+    <td bgColor="#333333" height="15"><font face="verdana" size="1"><u>Defaced by slash</u> [
+    28.1.2000 ] Original site <a href="index-old.htm">here</a></font></td>
+  </tr>
+  <tr>
+    <td height="205"><small><font face="Verdana">&nbsp;&nbsp;&nbsp;&nbsp; <a
+    href="../index.html">www.ukrin.com</a><small> &nbsp;-</small> </font><font
+    face="Verdana" color="#FFFFFF">Slash Hacker has a Windows NT Server at home. Why? Because
+    he knows if he's going to hack NT he's best using the same type of computer...it gives him
+    all the necessary tools. He has installed RAS and has a dial-up connection to the
+    Internet. One morning, around 2:30am he dials into the Internet...his IP address is
+    dynamically assigned to him. He opens up a Command Prompt window and gets down to work. He
+    knows </font><font face="Verdana">www.ukrin.com</font><font face="Verdana" color="#FFFFFF">'s
+    web server is running IIS. How? Because he once did a search on &quot;batch files as
+    CGI&quot; using Excites search engine. That phrase is in Chapter 8 of Internet Information
+    Server's on-line help....and unfortunately it's been indexed by Excite's spider...now
+    slash has a list of around 600 web servers running IIS.</font></small><p><small><font
+    face="Verdana" color="#FFFFFF">He ftps to </font><font face="Verdana">www.ukrin.com</font><font
+    face="Verdana" color="#FFFFFF">. He isn't even sure yet if the server is running the ftp
+    service. He knows if he gets a connection refused message it wont be...he's in luck
+    though...the following appears on the screen :</font></small></p>
+    <p><small><font face="Verdana" color="#FFFFFF">C:\ftp www.</font><font face="Verdana">ukrin.com</font></small></p>
+    <p><small><font face="Verdana" color="#FFFFFF">Connected to www.</font><font
+    face="Verdana">ukrin.com</font><font face="Verdana" color="#FFFFFF">.</font></small></p>
+    <p><font face="Verdana" color="#FFFFFF"><small>220 webby Microsoft FTP Service (Version
+    3.0).</small></font></p>
+    <p><small><font face="Verdana" color="#FFFFFF">User (www.</font><font face="Verdana">ukrin.com</font><font
+    face="Verdana" color="#FFFFFF">:(none)):</font></small></p>
+    <p><font face="Verdana" color="#FFFFFF"><small>This connection message tells him something
+    extremely important : The NetBIOS name of the server : WEBBY. From this he can deduce the
+    name of the anonymous internet account that is used by NT to allow people to anonymously
+    use the WWW, FTP and Gopher services on the machine. If the default account hasn't been
+    changed, and he knows that it is very rare if it has been changed, the anonymous internet
+    account will be called IUSR_WEBBY. This information will be needed later if he's to gain
+    Administrator access to the machine. He enters &quot;anonymous&quot; as the user and the
+    following appears :</small></font></p>
+    <p><font face="Verdana" color="#FFFFFF"><small>331 Anonymous access allowed, send identity
+    (e-mail name) as password.</small></font></p>
+    <p><font face="Verdana" color="#FFFFFF"><small>Password:</small></font></p>
+    <p><font face="Verdana" color="#FFFFFF"><small><small>&nbsp;</small>slash often tries the
+    &quot;guest&quot; account before using &quot;anonymous&quot; as the user. A fresh install
+    of NT has the &quot;guest&quot; account disabled but some admins enable this account....
+    and the funny thing is they usually put a weak password on it such as 'guest' or no
+    password at all. If he manages to gain access to the ftp service with this account he has
+    a valid NT user account....everything that the &quot;guest&quot; account has access
+    to...so does slash, and sometimes that can be almost everything. He knows he can access
+    their site now...but there is still a long way to go yet....even at this point he still
+    might not get access. At this point he doesn't even supply a password...he just presses
+    enter and gets a message stating that the Anonymous user is logged in. First off he types
+    &quot;cd /c&quot; because some admins will make the root of the drive a virtual ftp
+    directory and leave the default alias name : &quot;/c&quot;. Next he sees whether he can
+    actually &quot;put&quot; any files onto the site ie. is the write permission enabled for
+    this ftp site. He's in luck. Next he types &quot;dir&quot; to see what he has access to.
+    He chuckles to himself when he sees a directory called &quot;CGI-BIN&quot;. Obviously the
+    Webmaster of the NT machine has put this here with the rest of the WWW site so he can
+    remotely make changes to it. slash knows that the CGI-BIN has the &quot;Execute&quot;
+    permission so if he can manage to put any program in here he can run it from his web
+    browser. He hopes that the Webmaster hasn't, using NTFS file-level security, cut off write
+    access to the anonymous internet account to this directory...even though he knows there
+    are sometimes ways round this. He changes to the CGI-BIN directory and then changes the
+    type to I by using the command &quot;binary&quot;. Then he types &quot;put cmd.exe&quot;.
+    He's in luck..he gets the following response :</small></font></p>
+    <p><font face="Verdana" color="#FFFFFF"><small>200 PORT command successful.</small></font></p>
+    <p><font face="Verdana" color="#FFFFFF"><small>150 Opening BINARY mode data connection for
+    CMD.EXE.</small></font></p>
+    <p><font face="Verdana" color="#FFFFFF"><small>226 Transfer complete.</small></font></p>
+    <p><font face="Verdana" color="#FFFFFF"><small>208144 bytes sent in 0.06 seconds (3469.07
+    Kbytes/sec)</small></font></p>
+    <p><font face="Verdana" color="#FFFFFF"><small>Next he puts getadmin.exe and gasys.dll
+    into the same directory. With these three files in place he doesn't even gracefully
+    &quot;close&quot; the ftp session; he just closes the Command Prompt window. With a smile
+    on his face he leans back and lights a smoke, savouring the moment...he knows he has
+    them.... After crunching the cigarette out in an overflowing ashtray he connects to his
+    second ISP. He does this because if logging is enabled on the NT machine the IP address of
+    ISP's proxy server will be left and not his own...not that it really matters because soon
+    he'll edit the logfile and wipe all traces of his presence. Opening up the web browser he
+    enters the following URL :</small></font></p>
+    <p><small><font face="Verdana" color="#FFFFFF">http://www.</font><font face="Verdana">ukrin.com</font><font
+    face="Verdana" color="#FFFFFF">/cgi-bin/getadmin.exe?IUSR_WEBBY</font></small></p>
+    <p><font face="Verdana" color="#FFFFFF"><small>After about a fifteen second wait the
+    following appears on his web browser:</small></font></p>
+    <p><font face="Verdana" color="#FFFFFF"><small>CGI Error</small></font></p>
+    <p><font face="Verdana" color="#FFFFFF"><small>The specified CGI application misbehaved by
+    not returning a complete set of HTTP headers. The headers it did return are:</small></font></p>
+    <p><font face="Verdana" color="#FFFFFF"><small>Congratulations , now account IUSR_WEBBY
+    have administrator rights!</small></font></p>
+    <p><font face="Verdana" color="#FFFFFF"><small>He has just made the anonymous internet
+    account a local administrator and consequently using this account he can do pretty much
+    what he wants to. Firstly though, he has to create an account for himself that he can use
+    to connect to the NT server using NT Explorer and most of the Administrative tools. He
+    can't use the IUSR_SATURN account because he doesn't know the randomly generated password.
+    To create an account he enters the following URL:</small></font></p>
+    <p><small><font face="Verdana" color="#FFFFFF">http://www.</font><font face="Verdana">ukrin.com</font><font
+    face="Verdana" color="#FFFFFF">/cgi-bin/cmd.exe?/c%20c:\winnt\system32\net.exe%20user%20xxx%20hacked%20/add</font></small></p>
+    <p><font face="Verdana" color="#FFFFFF"><small>He has just created an account called
+    &quot;xxx&quot; with the password &quot;hacked&quot;. To make the account a local
+    administrator he enters the following URL:</small></font></p>
+    <p><small><font face="Verdana" color="#FFFFFF">http://www</font><font face="Verdana">.ukrin.com</font><font
+    face="Verdana" color="#FFFFFF">/cgi-bin/getadmin.exe?xxx</font></small></p>
+    <p><small><font face="Verdana" color="#FFFFFF">It has taken him less than ten minutes to
+    do all of this. He disconnects from his ISP and clicks on start, goes upto find and does a
+    search for the computer </font><font face="Verdana">www.ukrin.com</font><font
+    face="Verdana" color="#FFFFFF">. After about a minute the computer is found :</font></small></p>
+    <p><small><font face="Verdana" color="#FFFFFF">Next he right clicks on the
+    &quot;computer&quot; and then clicks on Explore. NT Explorer opens and after a little wait
+    Alex is prompted for a user-name and password. He enters &quot;xxx&quot; and
+    &quot;hacked&quot;. Moments later he is connected. Admin rights for the computer </font><font
+    face="Verdana">www.ukrin.com<font color="#FFFFFF"> </font></font><font face="Verdana"
+    color="#FFFFFF">are appended to his own security access token...now he can do anything.
+    Using User Manager for Domains he can retrieve all the account information; he can connect
+    to the Internet Service Manager; he can view Server Manager...first though, using NT
+    Explorer he maps a drive to the hidden system share C$. He changes to the
+    Winnt\system32\logfiles directory and opens up the logfile for that day. He deletes all of
+    the log entries pertaining to his &quot;visit&quot; and saves it. If he gets any message
+    about sharing violations all he has to do is change the date on the computer with the
+    following URL:</font></small></p>
+    <p><small><font face="Verdana" color="#FFFFFF">http://www.</font><font face="Verdana">ukrin.com</font><font
+    face="Verdana" color="#FFFFFF">/cgi-bin/cmd.exe?/c%20date%2002/02/98</font></small></p>
+    <p><font face="Verdana" color="#FFFFFF"><small>Next, using the Registry Editor he connects
+    to the registry on the remote computer. Then using L0phtcrack he dumps the SAM (the
+    Security Accounts Manager - holds account info) on the NT server and begins cracking all
+    the passwords on the machine. Using the Task Manager he sets the priority to Low because
+    L0phtcrack is fairly processor intensive (NB L0phtcrack ver 2.0 sets the priority to Low
+    anyway) and there is still a few thing he must do to hide the fact that that some-one has
+    gained entry. He deletes cmd.exe, getadmin.exe and gasys.dll from the cgi-bin, then he
+    checks the security event log for the remote NT server using Event Viewer to see if he's
+    left any traces there. Finally using User Manager for Domains he removes admin rights from
+    the IUSR_WEBBY account and deletes the xxx account he created a few moments earlier. He
+    doesn't need this account anymore....L0phtcrack will be able to brute force all the
+    accounts. Next time he connects to this machine it will be using the Administrator
+    account. He breaks his connection to the Internet and sets 10phtcrack's priority to High,
+    leaves it running and heads to bed...Looking at his alarm clock : it's just passed
+    3:10am....Sighing to himself, he mumbles, &quot;Sheesh, I'm getting slow!&quot; and falls
+    asleep with a grin on his face.</small></font></p>
+    <p><font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;peace
+    out, slash&nbsp;&nbsp;&nbsp;</font></p>
+    <p><font face="Verdana" size="2">&nbsp;&nbsp; </font></td>
+  </tr>
+  <tr>
+    <td height="6"><font color="#000000" face="Verdana" size="1">-</font></td>
+  </tr>
+  <tr>
+    <td bgColor="#333333" height="15"><font face="verdana" size="1"><u>Shoutouts</u></font></td>
+  </tr>
+  <tr>
+    <td height="156"><font face="verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;- auto360, Team
+    Echo, wyze1, p4riah, Analognet, LogError, zanith, v00d00, PHC,
+    attrition.org,&nbsp;net-security.org, ex1t, sAs72, Cruciphux,&nbsp;HWA.hax0r.news, BHZ,
+    SiRiUs, sLina, kLick_Mi, mosthated, pr1sm ,fuqraq, airWalk, [Princev], zeroeffect, and the
+    whole BLN.</font><p><font face="verdana" size="2">&nbsp;&nbsp;&nbsp; - Yo, Pakistan HC sup
+    with you ?! If You see this mail me.</font></p>
+    <p><font face="verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp; <u>Links...</u><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <a href="http://www.attrition.org">Attrition.org</a>: Keep
+    up the good work fellows<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <a href="http://www.net-security.org">HelpNet Security</a>:
+    The best news site on the net<br>
+    &nbsp;&nbsp;&nbsp;&nbsp; - <a href="http://www.blacklava.org">BLack Lava Network</a>: BLN
+    for life !!!</font></p>
+    <p align="left"><font face="verdana" size="2"><br>
+    </font></td>
+  </tr>
+  <tr>
+    <td align="center" height="15"><font face="verdana" size="1"><p align="center">Copyright
+    © <a href="mailto:tcsh@b0f.i-p.com">slash</a></font></td>
+  </tr>
+  <tr>
+    <td align="center" height="15"><font face="verdana" size="1">Penetrating systems since
+    1998</font></td>
+  </tr>
+</TBODY>
+</table>
+</center></div>
+</body>
+</html>
+<!-- www.ukrin.com - defaced by slash -->

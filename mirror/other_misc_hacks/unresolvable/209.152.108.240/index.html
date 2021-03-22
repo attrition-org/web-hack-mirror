@@ -1,0 +1,87 @@
+<html>
+
+<head>
+<title>The Marshalltown Trowel Company</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+</head>
+
+<body>
+
+<table border="0" width="100%" cellpadding="0" cellspacing="1">
+  <tr>
+    <td><p align="center"><img src="images/h-logo.jpg" alt="Marshalltown Trowel" WIDTH="120" HEIGHT="85"><img src="images/wspace.gif" width="15" height="1"></td>
+    <td width="100%" valign="bottom"><img src="images/homeh.jpg" alt="Welcome to Marshalltown Trowel Company" WIDTH="433" HEIGHT="55"></td>
+  </tr>
+  <tr>
+    <td valign="top"><!--webbot bot="Include" U-Include="mainmenu.htm" TAG="BODY" startspan -->
+
+<p><map name="FPMap0">
+<area href="contact.html" shape="rect" coords="0, 273, 119, 287">
+<area href="employ.html" coords="0, 250, 119, 266" shape="rect">
+<area href="history.html" shape="rect" coords="0, 224, 119, 241">
+<area href="infosrc.html" shape="rect" coords="0, 183, 119, 202">
+<area href="forum/default.asp" shape="rect" coords="0, 158, 119, 175">
+<area href="howto.html" shape="rect" coords="0, 133, 119, 149">
+<area href="http://mtc.Know-Where.com/marshalltown/" coords="0, 94, 119, 110" shape="rect">
+<area href="prodline.html" shape="rect" coords="0, 67, 119, 84">
+<area href="catalog/index.html" shape="rect" coords="0, 41, 119, 59">
+<area href="default.asp" shape="rect" coords="0, 3, 119, 20"></map><img rectangle=" (0,224) (119, 241)  history.html" rectangle=" (0,183) (119, 202)  infosrc.html" rectangle=" (0,158) (119, 175)  forum/default.asp" rectangle=" (0,133) (119, 149)  howto.html" rectangle=" (0,94) (119, 110)  findus.html" rectangle=" (0,67) (119, 84)  prodline.html" rectangle=" (0,41) (119, 59)  catalog/index.html" rectangle=" (0,3) (119, 20)  default.asp" src="images/mainmenu.jpg" border="0" usemap="#FPMap0" WIDTH="120" HEIGHT="288"><br>
+</p>
+<p><a href="archtrwl.html"><img border="0" src="images/arch-sold.jpg" width="100" height="47"></a></p>
+<!--webbot bot="Include" endspan i-checksum="26334" -->
+
+</td>
+    <td width="100%" valign="top"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr>
+        <td align="center"><a href="catalog/index.html"><img src="images/fp-catal.jpg" alt="Online Catalog" border="0" WIDTH="135" HEIGHT="150"></a></td>
+        <td align="center"><a href="howto.html"><img src="images/fp-howto.jpg" alt="How to" border="0" WIDTH="135" HEIGHT="150"></a></td>
+        <td align="center" valign="top"><form method="POST" action="catalog/results.asp">
+          <p><img border="0" src="images/wspace.gif" width="1" height="20"><br>
+          <img src="images/fp-srch.jpg" alt="Catalog Search" WIDTH="137" HEIGHT="15"></p>
+          <p><font face="Arial,Helv" size="2"><input type="text" size="10" name="Item"></font><input src="images/fp-gosr.jpg" name="bttnGo" alt="Go! Begin Search" type="image" align="absmiddle" border="0" WIDTH="31" HEIGHT="21"></p>
+        </form></td>
+      </tr>
+      <tr>
+        <td align="center"><a href="http://mtc.know-where.com/marshalltown/"><img src="images/fp-store.jpg" alt="Store Locator" border="0" WIDTH="135" HEIGHT="150"></a></td>
+        <td align="center"><a href="forum/default.asp"><img src="images/fp-talk.jpg" alt="Trowel Talk" border="0" WIDTH="135" HEIGHT="150"></a></td>
+        <td align="center">
+        <img src="images/fp-pshot.jpg" WIDTH="135" HEIGHT="150">
+        </td>
+      </tr>
+    </table>
+    <div align="center"><center><table border="0" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="100%"><p align="center">&nbsp;&nbsp;&nbsp;&nbsp; <br>
+        <a href="archtrwl.html"><img src="images/fp-archt.jpg" alt="Archaeology Trowel" border="0" WIDTH="400" HEIGHT="60"><br>
+          </a>&nbsp;&nbsp;&nbsp;</td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+<!--webbot bot="Include" U-Include="footer.html" TAG="BODY" startspan -->
+
+<p align="center"><font color="#008040" size="1" face="Verdana">wow
+your allready hacked <strong><u>aretch</u></strong> style!</font></p>
+
+<p><img src="refresh.gif" width="13" height="16"> <font size="1">&nbsp;&nbsp;
+</font><font color="#008040" size="1" face="Verdana">refresh your
+browser much as you want but this site is hacked!</font><font
+face="Times New Roman"><br>
+</font><img src="multifolders.gif" width="15" height="13"> <font
+size="1">&nbsp;&nbsp;</font><font color="#008040" size="1"
+face="Verdana">we had nothing better to do so we deleted your web
+site but dont worry everythign is all-backed up.</font><font
+face="Times New Roman"><br>
+</font><img src="information.gif" width="11" height="11"> <font
+size="1">&nbsp;&nbsp; </font><font color="#008040" size="1"
+face="Verdana">greets to: artech (my self), hiwind, epic keep
+ep3d real bro, xenox, areo, ytcracker, darkplague, 0m3g4,
+nemesystem, s1dew4yz, tron, zero effect, 2600, attrition,
+safemode, mikz, asp, team echo, and coolio who i dont know but u
+sound like da man with the masta plan :D hehe and also me and my
+self and i.</font></p>
+<!--webbot bot="Include" endspan i-checksum="3634" -->
+
+</body>
+</html>

@@ -1,0 +1,243 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+  <script language="JavaScript">
+<!--
+function MM_initTimelines() {
+    //MM_initTimelines() Copyright 1997 Macromedia, Inc. All rights reserved.
+    var ns = navigator.appName == "Netscape";
+    document.MM_Time = new Array(1);
+    document.MM_Time[0] = new Array(2);
+    document.MM_Time["Timeline1"] = document.MM_Time[0];
+    document.MM_Time[0].MM_Name = "Timeline1";
+    document.MM_Time[0].fps = 15;
+    document.MM_Time[0][0] = new String("sprite");
+    document.MM_Time[0][0].slot = 1;
+    if (ns)
+        document.MM_Time[0][0].obj = document.Layer1;
+    else
+        document.MM_Time[0][0].obj = document.all ? document.all["Layer1"] : null;
+    document.MM_Time[0][0].keyFrames = new Array(1, 20);
+    document.MM_Time[0][0].values = new Array(4);
+    document.MM_Time[0][0].values[0] = new Array(247,236,226,215,204,193,183,172,161,150,140,129,118,107,97,86,75,64,54,43);
+    document.MM_Time[0][0].values[0].prop = "left";
+    document.MM_Time[0][0].values[1] = new Array(25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25);
+    document.MM_Time[0][0].values[1].prop = "top";
+    if (!ns) {
+        document.MM_Time[0][0].values[0].prop2 = "style";
+        document.MM_Time[0][0].values[1].prop2 = "style";
+    }
+    document.MM_Time[0][0].values[2] = new Array(127,129,131,133,136,138,140,143,145,147,150,152,154,157,159,161,164,166,168,171);
+    document.MM_Time[0][0].values[2].prop = "width";
+    if (!ns)
+        document.MM_Time[0][0].values[2].prop2 = "style";
+    document.MM_Time[0][0].values[3] = new Array(50,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49);
+    document.MM_Time[0][0].values[3].prop = "height";
+    if (!ns)
+        document.MM_Time[0][0].values[3].prop2 = "style";
+    document.MM_Time[0][1] = new String("sprite");
+    document.MM_Time[0][1].slot = 2;
+    if (ns)
+        document.MM_Time[0][1].obj = document.Layer2;
+    else
+        document.MM_Time[0][1].obj = document.all ? document.all["Layer2"] : null;
+    document.MM_Time[0][1].keyFrames = new Array(1, 20);
+    document.MM_Time[0][1].values = new Array(3);
+    document.MM_Time[0][1].values[0] = new Array(4,21,39,56,74,91,109,126,144,161,179,196,214,231,249,266,284,301,319,336);
+    document.MM_Time[0][1].values[0].prop = "left";
+    document.MM_Time[0][1].values[1] = new Array(51,51,51,51,51,50,50,50,50,50,50,50,50,50,50,49,49,49,49,49);
+    document.MM_Time[0][1].values[1].prop = "top";
+    if (!ns) {
+        document.MM_Time[0][1].values[0].prop2 = "style";
+        document.MM_Time[0][1].values[1].prop2 = "style";
+    }
+    document.MM_Time[0][1].values[2] = new Array(40,40,40,40,41,41,41,41,42,42,42,42,43,43,43,43,44,44,44,45);
+    document.MM_Time[0][1].values[2].prop = "width";
+    if (!ns)
+        document.MM_Time[0][1].values[2].prop2 = "style";
+    document.MM_Time[0].lastFrame = 20;
+    for (i=0; i<document.MM_Time.length; i++) {
+        document.MM_Time[i].ID = null;
+        document.MM_Time[i].curFrame = 0;
+        document.MM_Time[i].delay = 1000/document.MM_Time[i].fps;
+    }
+}
+//-->
+</script>
+  <script language="JavaScript">
+<!--
+function MM_timelinePlay(tmLnName, myID) { //v1.2
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,propNum,theObj,firstTime=false;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (myID == null) { myID = ++tmLn.ID; firstTime=true;}//if new call, incr ID
+  if (myID == tmLn.ID) { //if Im newest
+    setTimeout('MM_timelinePlay("'+tmLnName+'",'+myID+')',tmLn.delay);
+    fNew = ++tmLn.curFrame;
+    for (i=0; i<tmLn.length; i++) {
+      sprite = tmLn[i];
+      if (sprite.charAt(0) == 's') {
+        if (sprite.obj) {
+          numKeyFr = sprite.keyFrames.length; firstKeyFr = sprite.keyFrames[0];
+          if (fNew >= firstKeyFr && fNew <= sprite.keyFrames[numKeyFr-1]) {//in range
+            keyFrm=1;
+            for (j=0; j<sprite.values.length; j++) {
+              props = sprite.values[j]; 
+              if (numKeyFr != props.length) {
+                if (props.prop2 == null) sprite.obj[props.prop] = props[fNew-firstKeyFr];
+                else        sprite.obj[props.prop2][props.prop] = props[fNew-firstKeyFr];
+              } else {
+                while (keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]) keyFrm++;
+                if (firstTime || fNew==sprite.keyFrames[keyFrm-1]) {
+                  if (props.prop2 == null) sprite.obj[props.prop] = props[keyFrm-1];
+                  else        sprite.obj[props.prop2][props.prop] = props[keyFrm-1];
+        } } } } }
+      } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+      if (fNew > tmLn.lastFrame) tmLn.ID = 0;
+  } }
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" onLoad="MM_timelinePlay('Timeline1')">
+<div id="Layer1" style="position:absolute; left:247px; top:25px; width:127px; height:50px; z-index:1"><font face="Arial, Helvetica, sans-serif"><b><font size="7" color="#0000FF">Employment</font></b></font></div>
+<div id="Layer2" style="position:absolute; left:4px; top:51px; width:40px; height:36px; z-index:2"><b><font size="6" color="#FF0000">Opportunities</font></b></div>
+<div id="Layer3" style="position:absolute; left:150px; top:125px; width:50px; height:62px; z-index:3"><img src="../curve.gif" width="56" height="227"></div>
+<div id="Layer4" style="position:absolute; left:231px; top:150px; width:310px; height:43px; z-index:4"><b><font face="Arial, Helvetica, sans-serif" size="2">Trinity 
+  Auto Group</font></b> <font face="Arial, Helvetica, sans-serif" size="2">currently 
+  employs over 96 full-time and casual staff. From senior management positions, 
+  through to junior clerical and vehicle detailers, the positions are many and 
+  varied. Please bookmark this page and return often to check for any vacant positions.</font></div>
+
+
+<div id="Layer12" style="position:absolute; left:230px; top:276px; width:51px; height:16px; z-index:13"><img src="wanted.gif" width="84" height="18"></div>
+
+<div id="Layer7" style="position:absolute; left:48px; top:363px; width:501px; height:23px; z-index:7"> 
+  <p><font face="Arial, Helvetica, sans-serif" size="2"><b>Service Department</b> 
+    </font> <br>
+    <font face="Arial, Helvetica, sans-serif" size="2">Our Service Department, 
+    on occassion, has vacancies for technicians in the following areas: mechanical, 
+    electrical, airconditioning installation and servicing, LP gas installation 
+    and servicing, electronic fuel Injection and electronics. </font></p>
+  <p><b><font face="Arial, Helvetica, sans-serif" size="2">Sales Department</font></b><br>
+    <font face="Arial, Helvetica, sans-serif" size="2">Our Sales Department employs 
+    finance and insurance consultants, new vehicle sales consultants, used vehicle 
+    sales consultants, vehicle appraisers, and clerical staff. </font> </p>
+  <p><font face="Arial, Helvetica, sans-serif" size="2"><b>Administration</b><br>
+    Clerks, receptionists and stock controllers are among the positions available 
+    with in the administration department.</font></p>
+  <p><b><font face="Arial, Helvetica, sans-serif" size="2">Parts Department </font></b> 
+    <br>
+    <font size="2"><font face="Arial, Helvetica, sans-serif">Our Spare Parts department 
+    employs delivery drivers, storepersons, clerical staff, and spare parts interpreters 
+    and on-road representatives.</font></font></p>
+</div>
+  
+<div id="Layer8" style="position:absolute; left:41px; top:174px; width:37px; height:35px; z-index:8"><img src="mechshadow.gif" width="128" height="147"></div>
+<div id="Layer9" style="position:absolute; left:49px; top:165px; width:29px; height:30px; z-index:9"><img src="mechanic.jpg" width="128" height="150"></div>
+<div id="Layer11" style="position:absolute; left:47px; top:651px; width:502px; height:15px; z-index:11"><font face="Arial, Helvetica, sans-serif" size="2"> 
+  You are invited to complete the form below if you are interested in applying 
+  for a position at Trinity Auto Group. You will receive a reply to your query 
+  within 24 hours.</font></div>
+<div id="Layer10" style="position:absolute; left:46px; top:685px; width:520px; height:164px; z-index:10"> 
+  <!-- Address of cgi script - don't change this address --> 
+  <form method="POST" action="http://www.powerup.com.au/cgi-bin/mailgate"> 
+  <!-- email address to send results to --> 
+  <input type=hidden name="recipient" value="trinity@trinityauto.com.au">
+    <!-- what this form is about --> 
+    <input type=hidden name="subject" value="Employment Request">
+    <!-- Page redirected to after form sent --> 
+    <input type=hidden name="redirect" value="http://www.trinityauto.com.au/thankyou/thankyou.htm">
+
+
+  <table bgcolor="#66CCFF" width="500" cellspacing="2" cellpadding="2">
+    <tr> 
+      <td> 
+        <table bgcolor="#66CCFF" width="500" cellspacing="2" cellpadding="2">
+          <tr> 
+            <td colspan="2"><font face="Arial" size="-1"><b>Your contact information:</b></font></td>
+          </tr>
+          <tr> 
+            <td width="271"><font face="Arial" size="-1">First name:</font> <br>
+              <input type=text name="First name" size=20>
+            </td>
+            <td width="213"><font face="Arial" size="-1">Last name:</font> <br>
+              <input type=text name="Last name" size=30>
+            </td>
+          </tr>
+          <tr> 
+            <td width="271"><font face="Arial" size="-1">Email address:</font> 
+              <br>
+              <input type=text name="Email" size=30>
+            </td>
+            <td width="213"><font face="Arial" size="-1">Phone number:</font> 
+              <br>
+              <input type=text name="Phone" size=10>
+            </td>
+          </tr>
+          <tr> 
+            <td width="271"><font face="Arial" size="-1"><b>Position for which 
+              you would like to apply:</b></font> </td>
+          </tr>
+          <tr> 
+            <td width="271"> 
+              <input type="Text" name="Position" size="35" maxlength="53">
+            </td>
+          </tr>
+          <tr> 
+            <td width="271"><font face="Arial" size="-1"><b>Previous Experience:</b></font></td>
+          </tr>
+          <tr> 
+            <td width="271" colspan="2"> 
+              <textarea name="Experience" cols="60" rows="5" wrap="PHYSICAL"></textarea>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  
+  <p>
+  
+  	<!-- buttons and their labels fields -->
+	
+      <input type="Submit" name="send" value="Send">
+      &nbsp;&nbsp;&nbsp; 
+      <input type="reset" name="clear" value="Clear">
+<p>
+
+
+<!-- list of required fields -->
+<input type=hidden name="required" value="email,firstname,lastname">
+
+<!-- report on type details of your respondent -->
+<input type=hidden name="env_report" value="REMOTE_HOST,REMOTE_ADDR,REMOTE_USER,HTTP_USER_AGENT">
+
+<!-- feedback thank you form starts here -->
+<input type=hidden name="print_config" value="firstname,lastname,email,phone,comments">
+<input type=hidden name="sort" value="order:firstname,lastname,email,phone,comments,">
+
+<!-- Choose the colours you want for your thank you page -->
+<input type=hidden name="title" value="Thank You for Your Response">
+<input type=hidden name="bgcolor" value="#FFFFFF">
+<input type=hidden name="text_color" value="#000000">
+<input type=hidden name="link_color" value="#FF0000">
+<input type=hidden name="vlink_color" value="#0000FF">
+
+<!-- Choose the URL of the place you would like your respondent to go to next
+<input type=hidden name="return_link_url" value="http://www.csn.act.edu.au/">
+<input type=hidden name="return_link_title" value="Back to CSN"> -->
+
+<p>
+
+  
+
+</form></div>
+<div id="Layer6" style="position:absolute; left:230px; top:298px; width:314px; height:38px; z-index:14"><font face="Arial, Helvetica, sans-serif"><b><font color="#FF0000" size="2"><a href="positions%20vacant.htm">Current 
+  Vacancies</a></font></b><font size="2">. Click here to see descriptions of </font><font face="Arial, Helvetica, sans-serif"><font size="2">positions</font></font><font size="2"> 
+  currently available with Trinity Auto Group.</font></font></div>
+</body></html>

@@ -1,0 +1,169 @@
+<HTML>
+<HEAD>
+<TITLE>Are you Addicted to the Internet?</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+
+var total = 0;
+function Clear(form)
+{
+	 form.answer1.value = ""
+	 form.answer2.value = ""
+	 form.answer3.value = ""
+	 form.answer4.value = ""
+	 form.answer5.value = ""
+	 form.answer6.value = ""
+	 form.answer7.value = ""
+	 form.answer8.value = ""
+	 form.answer9.value = ""
+	 form.answer10.value = ""	 
+}
+
+function getTotal (form)	{
+        if (form.answer1.checked)	{
+        	ans1  = 1;
+        	}else{
+        			ans1 = 0;
+        }
+        
+        if (form.answer2.checked)	{
+        	ans2  = 1;
+        		}else{
+        			ans2 = 0;
+        }
+        
+        if (form.answer3.checked)	{
+        	ans3 = 1;
+        	}else{
+        			ans3 = 0;
+        }
+        
+        
+        if (form.answer4.checked)	{
+        	ans4 = 1;
+        	}else{
+        			ans4 = 0;
+        }
+        
+        
+        if (form.answer5.checked)	{
+        	ans5 = 1;
+        	}else{
+        			ans5 = 0;
+        }
+        
+        
+        if (form.answer6.checked)	{
+        	ans6 = 1;
+        	}else{
+        			ans6 = 0;
+        }
+        
+        
+        if (form.answer7.checked)	{
+        	ans7 = 1;
+        	}else{
+        			ans7 = 0;
+        }
+        
+        
+        if (form.answer8.checked)	{
+        	ans8 = 1;
+        	}else{
+        			ans8 = 0;
+        }
+        
+        
+        if (form.answer9.checked)	{
+        	ans9 = 1;
+        	}else{
+        			ans9 = 0;
+        }
+        
+        
+        if (form.answer10.checked)	{
+        	ans10 = 1;
+        	}else{
+        			ans10 = 0;
+        }
+       
+form.total.value = eval(ans1+ans2+ans3+ans4+ans5+ans6+ans7+ans8+ans9+ans10)
+	
+}
+
+
+function Comment(form)	{
+
+
+total = getTotal(form);
+
+			if(form.total.value < 1)	
+  		 	form.total.value = "How did you make it this far?!";
+  			
+  			 else if  
+   				(form.total.value > 0 && form.total.value < 2) 	
+   				form.total.value ="You're still pretending! I bet you don't even have an ICQ number.";
+   			
+   			 else if 
+   				 (form.total.value > 1 && form.total.value < 4) 
+   				 form.total.value ="Maybe it's time to start cutting back.";
+  			
+  			 else if 
+ 				(form.total.value > 3 && form.total.value < 6) 
+   				form.total.value ="Try harder, you're not Geeky enoughy for Ten yet. *smile*";
+   			
+   			 else if 
+  				(form.total.value > 5 && form.total.value < 8) 
+   				form.total.value ="Almost there. Now go say COM, OLE, GPF and ROM a few times for practice.";
+   			
+   			 else if	
+				(form.total.value > 7 && form.total.value < 10) 
+   				form.total.value ="You are a well-balanced Raving Geek! Congrats!!";  
+   				
+   				
+   			 else if	
+				(form.total.value > 9 && form.total.value < 11) 
+   				form.total.value ="You are a goner. Go lie under a tree and write a haiku. And don't use a laptop!";  
+   							
+}
+</SCRIPT>
+</HEAD>	
+<BODY BACKGROUND="designbkg.gif" BGCOLOR="#FFFFFF">
+<IMG SRC="addict.gif" WIDTH="600" HEIGHT="100" ALT="Are you addicted?">
+<FORM NAME="form">
+
+<FONT FACE="Arial" COLOR="#000000"><I>Check all that apply,
+ then click the <B>Compute Geek Status</B> button.
+</I></FONT>
+<FONT FACE="Arial">
+<P ALIGN=LEFT>
+<INPUT TYPE="checkbox" NAME="answer1">All my friends have an @ in their addresses.
+<br><INPUT TYPE="checkbox" NAME="answer2">I back up my data every day.
+<br><INPUT TYPE="checkbox" NAME="answer3">I rotate my screen savers more frequently than my car tires.
+<br><INPUT TYPE="checkbox" NAME="answer4">The thought that a CD could refer to finance or music rarely enters my mind.
+<br><INPUT TYPE="checkbox" NAME="answer5">My computer has a pet name.
+<br><INPUT TYPE="checkbox" NAME="answer6">I know what http and HTML stand for.
+<br><INPUT TYPE="checkbox" NAME="answer7">I would rather get more dots per inch than miles per gallon.
+<br><INPUT TYPE="checkbox" NAME="answer8">I talk to my mouse.
+<br><INPUT TYPE="checkbox" NAME="answer9">When someone says Java I don't think of coffee.
+<br><INPUT TYPE="checkbox" NAME="answer10">People with less than 64MB of RAM are boring!
+<P>
+<INPUT TYPE="button" NAME="button" Value="Compute Geek Status" 
+onClick="Comment(this.form)"><br>           
+<INPUT TYPE="reset" NAME="button" Value="Clear" 
+onClick="Clear(this.form)"><BR>    
+<B>Geek Status:</B><TEXTAREA NAME="total" ROWS=3 cols=30></TEXTAREA></FONT>
+<P>&nbsp;</P>
+<TABLE BORDER="0" WIDTH="550">
+<TR><TD WIDTH="490" ALIGN="right">
+<FONT FACE="arial" SIZE="-2">Geek Status hosted by
+<A HREF="index.html">
+<IMG SRC="smlogo.gif" ALIGN="middle" WIDTH="57" HEIGHT="34" BORDER="0" ALT="TenTil Design"></A>
+ </TD></TR>
+</TABLE>
+
+<P>&nbsp;</P>
+<IMG SRC="/cgi-bin/count.cgi?addict&">
+<FONT SIZE="-1" FACE="arial">
+Geeks have checked their addiction status before you.
+</BODY>
+</HTML>

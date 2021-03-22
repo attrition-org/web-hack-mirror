@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+</head>
+
+<script LANGUAGE="JavaScript">
+    function setFocus()
+    {
+      if (document.form) {
+        document.form.mapdesc.focus();        
+        return;
+      }
+    }
+</script>
+
+<body bgcolor="#596db8" onload="setFocus()">
+
+<font face="Arial,Helvetica,Verdana">
+<form name="form" target="MainCol" method="POST" action="http://catalog.maplink.com/scripts/wsisa.dll/WService=MapLinkTest/catalogquick.r">
+
+	<b>QuickSearch:  </b><input type="text" name="mapdesc" size="26" maxlength="36">
+	<input type="Submit" value="GO">
+	
+</form>
+</font>
+</body>
+</html>

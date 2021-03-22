@@ -1,0 +1,220 @@
+<html>
+<head>
+	<title>WSACE Bill Tracking</title>
+	<META NAME="description" CONTENT="Washington State Legislature - tracking issues related to transportation, public works and counties.">
+</head>
+
+<BODY  background="../../images/backgrounds/speckled.gif" LEFTMARGIN=0 TOPMARGIN=0>
+	
+<!--Heading-->
+<TABLE WIDTH=100% CELLPADDING=2 CELLSPACING=0 BORDER=0>
+
+<TR><TD bgcolor="3A9AD9" colspan=5>
+<A HREF = "../../index.html" ><img src="../../images/buttonbar/smallcrab.gif" alt="crab" width=40 vspace=3 align=left border="0"></a>
+<font FACE="verdana,arial,helvetica" size=-1><i>Washington State County Road Administration Board</i></font>
+</TR>
+
+<TR>
+<!--Margin-->
+<TD bgcolor="FFFFFF" VALIGN=top rowspan=2>
+<center>
+<img src="../../images/titles/BillTracking.gif" border=0 alt="Bill Tracking">
+</center>
+</TD>
+
+<!--Bill Tracking Information-->
+<TD VALIGN=top colspan=4>
+<img src="../../images/BlankPixel.gif" hspace=10 vspace=10 align=top alt=""><br>
+<font FACE="verdana,arial,helvetica" size=5>
+<center>
+	<b>WSACE Bill Tracking</b>
+</center>
+<font size=2>
+<img src="../../images/BlankPixel.gif" hspace=10 vspace=75 align=left alt=""><br>
+CRAB Staff serves a critical function of monitoring and interacting with legislation key to Washington 
+State counties. One tool we use in this process is a simple database of bills including a brief 
+description, status and upcoming hearings.
+<p>
+This page is your access to our bill data. You can search and view our current records. You can also 
+sign up to have an update sent to you via email weekly.
+<p>
+</TR>
+
+<TR>
+<TD>
+<img src="../../images/BlankPixel.gif" hspace=10 vspace=10 align=top alt="">
+</TD>
+
+<!-- Report Views -->
+<TD width=50% valign=top>
+<font FACE="verdana,arial,helvetica" size=3>
+<a href="StatusReport.cfm">Current Bill Status Report</a>
+<p>
+<b><i>or</i></b><p>
+<b>Search for a specific bill</b><br>
+<font size=2>(all fields are optional)
+
+
+<form action="DetailReport.cfm" method=POST>
+
+<font size=2>Key Word:</font><br><input type="text" name="KeyWord" size=25><br>
+<font size=2>Bill Number:</font><br><input type="text" name="BillNumber" size=25><br>
+<font size=2>Committee:</font><br><select name="CommitteeID">
+			<option value="">(all committees)
+			
+				<option value="39">
+			
+				<option value="1">Agriculture/Ecology
+			
+				<option value="2">Appropriations
+			
+				<option value="3">Capital Budget
+			
+				<option value="4">Commerce & Labor
+			
+				<option value="5">Del to Gov
+			
+				<option value="6">Ecology & Parks
+			
+				<option value="7">Economic Development
+			
+				<option value="8">Energy, Tele. & Util.
+			
+				<option value="12">Env/Qual & Water
+			
+				<option value="9">Environmental Affairs
+			
+				<option value="10">Finance
+			
+				<option value="48">Government Admin.
+			
+				<option value="11">Government Operations
+			
+				<option value="49">Government Ref/Land Use
+			
+				<option value="13">House
+			
+				<option value="38">House Concurrent Resolution
+			
+				<option value="34">House Joint Memorial
+			
+				<option value="36">House Joint Resolution
+			
+				<option value="14">House/Ag. & Ecology
+			
+				<option value="40">House/Com. & Lab.
+			
+				<option value="46">House/Env
+			
+				<option value="15">House/Govt. Oper.
+			
+				<option value="47">House/Law Just
+			
+				<option value="16">House/Natural Res.
+			
+				<option value="17">House/Rules
+			
+				<option value="18">House/Trans.
+			
+				<option value="19">Judiciary
+			
+				<option value="20">Labor & Commerce
+			
+				<option value="21">Law & Justice
+			
+				<option value="22">Local Government
+			
+				<option value="23">Natural Resources
+			
+				<option value="24">Rules
+			
+				<option value="25">Senate
+			
+				<option value="44">Senate Ag/Env
+			
+				<option value="43">Senate Com. & Lab.
+			
+				<option value="37">Senate Concurrent Resolution
+			
+				<option value="45">Senate En/Util
+			
+				<option value="33">Senate Joint Memorial
+			
+				<option value="35">Senate Joint Resolution
+			
+				<option value="28">Senate/Ecol. & Parks
+			
+				<option value="27">Senate/Gov. Oper.
+			
+				<option value="42">Senate/Nat. Res.
+			
+				<option value="41">Senate/Rules
+			
+				<option value="26">Senate/Trans.
+			
+				<option value="29">State Government
+			
+				<option value="30">Trade, Econ. Dev.
+			
+				<option value="31">Transportation
+			
+				<option value="32">Ways & Means
+			
+		</select><p>
+
+<input type="submit" value="Search"> 
+<input type="reset" value="Refresh Form">
+</form>
+
+<p>
+</TD>
+
+<!--Subscribe to the mailing list-->
+<TD bgcolor="3A9AD9" width=50% valign=top>
+<font FACE="verdana,arial,helvetica" size=3>
+<img src="../../images/BlankPixel.gif" hspace=5 vspace=5 align=top alt=""><br>
+<center>
+	<b>Bill Status Mailing List</b>
+</center>
+<p>
+<font size=2>
+<img src="../../images/BlankPixel.gif" hspace=5 vspace=170 align=left alt="">
+If you would like to add yourself to our mailing list, please enter your name and email address then 
+click the 'Subscribe' button. If you would like to remove yourself from the list, please enter your 
+email address and then click the 'Unsubscribe' button.
+<p>
+You will receive confirmation of your addition or removal via email.
+<p>
+<form action="update.cfm" method=post>
+
+<!-- email address is required -->
+<input type="Hidden" name="Email_Required" value="You must enter an Email address.">
+
+<font FACE="verdana,arial,helvetica" size=2>
+<font size=2>Name:</font><br><input type="Text" name="Subscriber" size=25><br>
+<font size=2>Email:</font><br><input type="Text" name="Email" size=25>
+<p>
+<pre>
+<INPUT TYPE="Submit" NAME="Add" VALUE="Subscribe"> <INPUT TYPE="Submit" NAME="Remove" VALUE="Unsubscribe">
+</pre>
+</form>
+<img src="../../images/BlankPixel.gif" hspace=10 vspace=3 align=top alt=""><br>
+</TD>
+
+<TD>
+<img src="../../images/BlankPixel.gif" hspace=10 vspace=5 align=top alt="">
+</TD>
+</TR>
+</table>
+
+<!--Standard Footer-->
+<hr>
+<CENTER><FONT FACE="verdana,arial,helvetica" SIZE=1>
+</I>Please send your comments about this site to the <A HREF="mailto:webmaster@crab.wa.gov">WebMaster</A>.<br>
+<b><A HREF = "../../index.html" >home</a> | <A HREF = "../../counties/index.html">counties</a> | <A HREF = "../../resources/index.html">resources</a> | <A HREF = "../../search/index.html">search</a> | <A HREF = "../../help.html">help</a> | <a href="../../copyright.html">disclaimers</a></b>
+</font>
+</CENTER>
+<!--end Standard Footer-->
+
+</body>
+</html>

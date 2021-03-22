@@ -1,0 +1,197 @@
+<html>
+
+<head>
+<meta name="description" content>
+<meta name="keywords" content>
+<!--   DESCRIPTION:  This will make your status banner scrabble together.	INSTRUCTIONS:  Place this script in the HEAD tags ofyour webpage.  Then place the appropriate messages in the areas below.	FUNCTIONALITY:  Works in both Netscape and IE.-->
+<script LANGUAGE="JavaScript">
+
+//Modified by CoffeeCup Software 
+//This code is Copyright (c) 1997 CoffeeCup Software 
+//all rights reserved. License is granted to a single user to 
+//reuse this code on a personal or business Web Site. 
+
+<!--
+var speed = 13
+
+var pause = 1333
+
+var timerID = null
+
+var scrabbleBanner = false
+
+var cc = new Array()
+
+cc[0] = "BEXON Truck Accessories"
+cc[1] = "CHROME"
+cc[2] = "ALUMINUM"
+cc[3] = "STAINLESS STEEL"
+
+var message = 0
+
+var state = ""
+
+newBanner()
+
+function stopBanner() {
+	if (scrabbleBanner)
+		clearTimeout(timerID)
+
+	scrabbleBanner = false
+}
+
+function firstBanner() {
+	stopBanner()
+	seeBanner()
+}
+
+function newBanner() {
+	state = ""
+	for (var i = 0; i < cc[message].length; ++i) {
+		state += "0"
+	}
+}
+
+function seeBanner() {
+	if (getString()) {
+		message++
+		if (cc.length <= message)
+			message = 0
+
+		newBanner()
+
+		timerID = setTimeout("seeBanner()", pause)
+
+		scrabbleBanner = true
+	} else {
+		var str = ""
+
+		for (var c = 0; c < state.length; ++c) {
+			str += (state.charAt(c) == "1") ? cc[message].charAt(c) : "     "
+		}
+		window.status = str
+		timerID = setTimeout("seeBanner()", speed)
+		scrabbleBanner = true
+	}
+}
+
+function getString() {
+
+	var full = true
+	for (var c = 0; c < state.length; ++c) {
+		if (state.charAt(c) == 0)
+			full = false
+	}
+	if (full)
+		return true
+
+	while (1) {
+		var num = getRandom(cc[message].length)
+		if (state.charAt(num) == "0")
+			break
+	}
+	state = state.substring(0, num) + "1" + state.substring(num + 1, state.length)
+	return false
+}
+
+function getRandom(max) {
+	return Math.round((max - 1) * Math.random())
+}
+
+// -->
+</script>
+
+<title>http://bexon.com is hacked by p4riah</title>
+</head>
+
+<body onLoad="firstBanner()" bgcolor="#000000" text="#FFFFFF">
+<div align="center">
+
+<p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">HACKED BY:</font></p>
+
+<p><font face="Times New Roman, Times, serif" size="7"><b>p4riah</b></font></p>
+
+<table align="left" border="1" borderColor="#cccccc" width="33%">
+<TBODY>
+  <tr>
+    <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">..mi iskorishtavamo
+    tehnologiju, mi uchimo iz nje, mi ju koristimo i mi ju eksploatiramo. tehnologija je vrlo
+    mochan alat, kao i njeno znanje, ali neki ljudi idu iza tih granica, testiraju granice,
+    nalazechi nove puteve i ideje... mi zovemo takve ljude hakerima, i mi smo jedni od
+    mnogih..</font><p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">by vent - <b>The
+    Level Seven Crew</b></font></td>
+  </tr>
+</TBODY>
+</table>
+
+<table align="left" border="0" height="1" width="65%">
+<TBODY>
+  <tr>
+    <td height="1"><font size="2" color="#ff0000" face="Verdana, Arial, Helvetica, sans-serif"><b>message</b>:
+    This site is hacked, because there was a big security problem. During this hack I didn't
+    destroy any data, so dont get mad at me, just think about your security next time. To
+    restore the original page, just rename oldindex.html to index.html </font><font size="2"
+    face="Verdana, Arial, Helvetica, sans-serif" color="#FFFFFF">-diskusija: Koji
+    vrag??..hack..pa ne valjda opet? Evo slijedi iskreno objashnjenje zashto ovo radim. Jednom
+    je neki chovjek iz nasheg ph33rs0m3 chasopisa &quot;HACKER&quot; rekao da
+    &quot;hakeri&quot; ovo rade da nahrane svoj ego velichine trosobnog stana :)..u neku ruku
+    istina, ali nije samo to. Radim ovo jer se dobro osjecham nakon ovoga...neznam kako da to
+    opishem.. samodokazivanje??..neznam...Neki che rechi da je to kriminal...mozhda...ali
+    kakav je to kriminal ako nisam nishta unishtio?Svi podaci su nedirnuti..pa se pitam ne bi
+    li nasha i ostale ph33rs0m3 policije trebale hvatati silovatelje, ubojice, lopovske
+    tajkune itd. ?? Ili josh bolje spamere, crackere :))..Ma sve je to ono kako se to kazhe
+    &quot;hackers circle&quot; i stalno che se ponavljati..ako ja odem opet che dochi neko
+    drugi itd. P.S. primio sam par mailova gdje se sumnja da sam ja BHZ ili josh bolje, da smo
+    ja i BHZ suradnici i da to radim njemu u slavu. Naravno nijedno od toga nije istina, zna
+    me samo sa IRCa. Samo ga spominjem zbog toga jer ima Sec. Zone i smatram da je to dobar
+    sajt za Hrvatski narod.</font></td>
+  </tr>
+</TBODY>
+</table>
+
+<p align="left">&nbsp;</p>
+
+<p align="left">&nbsp;</p>
+
+<p align="left">&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+<div align="left">
+
+<p>&nbsp;</p>
+<div align="left">
+
+<table align="left" border="0" width="75%">
+<TBODY>
+</table>
+</div>
+
+<p align="left">&nbsp;</p>
+</div></div>
+
+<p align="left">&nbsp;</p>
+
+<p align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">&nbsp;</font></p>
+
+<p align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">&nbsp;</font></p>
+
+<p align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">&nbsp;</font></p>
+
+<p align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">&nbsp;</font></p>
+
+<p align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">&nbsp;</font></p>
+
+<p align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">&nbsp;</font></p>
+
+<p align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">SHOUTZ GOEZ TO
+REAL MAN: SiRiUs, airWalk, [Princev], klick_me, BHZ Flash, ph33r, EmptyHead, Crni NLO, CMH
+i svima ostalima sa #hr.hackers kanala. RESPECT GOEZ TO: <b>The Level Seven Crew &amp;
+v00d00</b></font></p>
+
+<p align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">contact at: <a
+href="mailto:p4riah@mail.com">p4riah@mail.com</a></font></p>
+</body>
+</html>
+<!-- www.attrition.org web hack mirror - watermark or something -->

@@ -1,0 +1,174 @@
+<!-- ©1998 Applied Cognitive & Learning Sciences
+     Created and maintained by Kent Lim
+     for more information: klim@iname.com  -->
+	       
+<HTML>
+<HEAD>
+<TITLE>Applied Cognitive & Learning Sciences - Recent News</TITLE>
+
+<script language="JavaScript">
+<!-- HIDE SCRIPT
+
+function Is ()
+{   // convert all characters to lowercase to simplify testing
+    var agt=navigator.userAgent.toLowerCase()
+
+    // *** BROWSER VERSION ***
+	this.nav  = ((agt.indexOf('mozilla')!=-1) && ((agt.indexOf('spoofer')==-1)
+                && (agt.indexOf('compatible') == -1)))
+    this.ie   = (agt.indexOf("msie") != -1)
+     
+    // *** PLATFORM ***
+    this.win   = ( (agt.indexOf("win")!=-1) || (agt.indexOf("16bit")!=-1) )
+    this.mac    = (agt.indexOf("mac")!=-1)
+}
+
+var is = new Is()
+//--> end hide JavaScript
+</SCRIPT>
+
+<script language="JavaScript">
+<!-- HIDE Script
+            
+//LEFT Navigation Rollovers
+
+browserName = navigator.appName;
+browserVer = parseInt(navigator.appVersion);
+        if ((browserName == "Netscape" && browserVer >= 3) || (browserName == "Microsoft Internet Explorer" && browserVer >=4)) {
+                version = "n3";
+                }
+        else
+                {
+                version = "n2";
+        }
+
+if (version == "n3") {
+leftnav1=new Image()
+leftnav1.src="../images/common/lt-but-who-up.gif"        
+           
+leftnav1b=new Image()
+leftnav1b.src="../images/common/lt-but-who.gif"
+
+leftnav2=new Image()
+leftnav2.src="../images/common/lt-but-what-up.gif"
+
+leftnav2b=new Image()
+leftnav2b.src="../images/common/lt-but-what.gif"
+
+leftnav3=new Image()
+leftnav3.src="../images/common/lt-but-style-up.gif"
+
+leftnav3b=new Image()
+leftnav3b.src="../images/common/lt-but-style.gif"
+
+leftnav4=new Image()
+leftnav4.src="../images/common/lt-but-programs-up.gif"
+
+leftnav4b=new Image()
+leftnav4b.src="../images/common/lt-but-programs.gif"
+
+leftnav5=new Image()
+leftnav5.src="../images/common/lt-but-recent-up.gif"
+
+leftnav5b=new Image()
+leftnav5b.src="../images/common/lt-but-recent.gif"
+}
+
+function SwapOut(num) {
+               if (version == "n3") {
+                        if (num==3){document.c.src=leftnav3.src}
+                        else if (num==1){document.a.src=leftnav1.src}
+                        else if (num==2){document.b.src=leftnav2.src}                      
+                        else if (num==4){document.d.src=leftnav4.src}  
+                        else if (num==5){document.e.src=leftnav5.src}                 
+                        }
+                   return true;
+                   }                    
+                   function SwapBack(num) {
+       if (version == "n3") {                
+                        if (num==3){document.c.src=leftnav3b.src}
+                        else if (num==1){document.a.src=leftnav1b.src}
+                        else if (num==2){document.b.src=leftnav2b.src}
+                        else if (num==4){document.d.src=leftnav4b.src}
+                        else if (num==5){document.e.src=leftnav5b.src}
+                        }
+                   return true;
+                   }     
+            
+// STOP HIDE -->            
+</script>
+
+</HEAD>
+
+<BODY BGCOLOR="#ffffff" BACKGROUND="../images/gfx-recent/maroon-back.gif"  LINK="#003399" VLINK="#8C0019">
+
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 width=640>
+
+<TR>
+<TD width=118 rowspan=4 align=left valign=top>
+
+<SCRIPT>
+<!--
+if (is.win) {
+	if (is.nav) {
+	document.write('<IMG SRC="../images/common/space.gif" WIDTH="118" HEIGHT="1" BORDER="0">')
+	} else {
+	document.write('<IMG SRC="../images/common/space.gif" WIDTH="116" HEIGHT="1" BORDER="0">')
+	}
+}
+if  (is.mac)
+{
+   document.write('<IMG SRC="../images/common/space.gif" WIDTH="118" HEIGHT="1" BORDER="0">')
+}
+// -->
+</SCRIPT>
+
+
+<BR><IMG SRC="../images/common/space.gif" WIDTH="1" HEIGHT="90" BORDER="0"><BR>
+<a HREF="../who/who-main.html" onMouseOver="if (version == 'n3') {SwapOut(1); self.status = 'Who we are: Our mission, philosophy, and methods'; return true}" onMouseOut='SwapBack(1)'><IMG SRC="../images/common/lt-but-who.gif" ALT="Who we are" WIDTH="110" HEIGHT="26" BORDER="0" name="a"></a><BR><a HREF="../what/what-main.html" onMouseOver="if (version == 'n3') {SwapOut(2);self.status = 'What we do: A summary of our services'; return true}" onMouseOut='SwapBack(2)'><IMG SRC="../images/common/lt-but-what.gif" ALT="What we do" WIDTH="110" HEIGHT="25" BORDER="0" name="b"></a><BR><a HREF="../style/style-main.html" onMouseOver="if (version == 'n3') {SwapOut(3); self.status = 'Your Style: Assess your own style of learning'; return true}" onMouseOut='SwapBack(3)'><IMG SRC="../images/common/lt-but-style.gif" ALT="Your Style" WIDTH="110" HEIGHT="26" BORDER="0" name="c"></a><BR><a HREF="../recent/recent-main.html" onMouseOver="if (version == 'n3') {self.status = 'Recent News: The latest developments'; return true}"><IMG SRC="../images/common/lt-but-recent-up.gif" ALT="Recent News" WIDTH="110" HEIGHT="25" BORDER="0" name="e"></a>
+</TD>
+</TR>
+
+
+<TR>
+<TD valign=top height=80>
+<img src="../images/gfx-recent/maroon-topnav.gif" width="676" height="78" usemap="#maroon-topnav" ismap ALT="" border="0" ><BR><BR>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 width=475>
+
+<TR>
+<TD colspan=2 valign=top>
+<IMG SRC="../images/common/space.gif" WIDTH="25" HEIGHT="1" BORDER="0"><IMG SRC="../images/gfx-recent/recent-news.gif" ALT="Recent news" ALIGN=TOP WIDTH="135" HEIGHT="28" BORDER="0">
+</TD>
+</TR>
+
+<TR>
+
+<TD width=68>
+</TD>
+<TD valign=top>
+Come back in the near future for the latest news and information from AppliedCLS.
+
+<BR><BR><BR>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+
+
+
+</TABLE>
+
+<!-- Client side image map -->
+<map name="maroon-topnav">
+<area shape="rect" coords="366,54,468,69"  href="../self-test.html"
+	 onMouseOver="if (version == 'n3') {self.status = 'Take a self test to start assessing your own style of learning'; return true}">
+<area shape="rect" coords="261,54,366,69"  href="../glossary.html"
+	onMouseOver="if (version == 'n3') {self.status = 'Glossary: Definitions of Terms'; return true}">
+<area shape="rect" coords="171,54,261,69"  href="../contact.html"
+	onMouseOver="if (version == 'n3') {self.status = 'Contact Information'; return true}">
+<area shape="rect" coords="87,53,172,69"  HREF="../index.htm" onMouseOver="if (version == 'n3') {self.status = 'Applied Cognitive & Learning Sciences Home Page'; return true}">
+</map>
+
+</BODY>
+</HTML>

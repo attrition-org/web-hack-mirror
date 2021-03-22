@@ -1,0 +1,201 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<HTML>
+
+<HEAD>
+<TITLE>JavaScript Test Page : Loan Calculator</TITLE>
+<META NAME="GENERATOR" CONTENT="Arachnophilia Version 2.1">
+<META NAME="FORMATTER" CONTENT="Arachnophilia Version 2.1">
+
+</HEAD>
+
+<BODY BACKGROUND="" BGCOLOR="#c0c0c0" TEXT="#000000" LINK="#0000ff" VLINK="#800080" ALINK="#ff0000">
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- ;
+
+function isNum(str) {
+/*
+...  determines whether the string 'str' is a number (i.e. contains only digits and .)
+*/
+for (var i = 0; i < str.length; i++) {
+	var ch = str.substring(i, i + 1)
+	if ((ch < "0" || "9" < ch) && ch != '.') {
+		return false
+		}
+	}
+if ((str.length==0)) {
+	return false
+	}
+else  {
+	return true
+	}
+}
+
+
+function FindPayment()  {
+var discount=0
+var tradein=0
+var deposit=0
+msg=''
+ppstring=document.calcPayment.amount.value
+if (!isNum(ppstring)) {
+	msg+='Non-numeric or absent data in loan amount field\n'
+	}
+aprstring=document.calcPayment.aprpcnt.value
+if (!isNum(aprstring)) {
+	msg+='Non-numeric or absent data in APR field\n'
+	}
+nstring=document.calcPayment.nmonths.value
+if (!isNum(nstring)) {
+	msg+='Non-numeric or absent data in number of months field\n'
+	}
+if (msg.length==0)  {
+var pp=parseFloat(ppstring)
+var p=pp-discount-tradein-deposit
+var n=parseFloat(nstring)
+var apr=parseFloat(aprstring)
+var r=Math.pow((1+apr/100),1/12)
+if (apr>0) {
+	rn=Math.pow(r,n)
+	a=p*(1-r)*rn/(1-rn)
+	}
+else  {
+	a=p/n
+	}
+a=0.01*Math.round(a*100)
+totp=0.01*Math.round(a*n*100)
+interest=0.01*Math.round((totp-p)*100)
+interestpcnt=0.01*Math.round(interest/p*100*100)
+//alert("Monthly payment = "+a+"\nTotal payment = "+totp)
+document.calcPayment.mpayment.value=a
+document.calcPayment.trepaid.value=totp
+document.calcPayment.trepaidpcnt.value=interestpcnt
+}
+else {
+	alert(msg)
+}
+}
+
+function FindAPR()  {
+var deposit=0
+var q=0
+msg=''
+pstring=document.calcAPR.amount.value
+if (!isNum(pstring)) {
+	msg+='Non-numeric or absent data in loan amount field\n'
+	}
+paystring=document.calcAPR.mpayment.value
+if (!isNum(paystring)) {
+	msg+='Non-numeric or absent data in payment field\n'
+	}
+nstring=document.calcAPR.nmonths.value
+if (!isNum(nstring)) {
+	msg+='Non-numeric or absent data in number of months field\n'
+	}
+if (msg.length==0)  {
+var p=parseFloat(pstring)
+var n=parseFloat(nstring)
+var a=parseFloat(paystring)
+r=1.01
+pp=p-deposit
+rnew=0
+while (Math.abs(r-rnew)>0.0000001)   {
+    var rn=Math.pow(r,n)
+    rnm1=rn/r
+    fac=(pp*rn-q)*(1-r)/(1-rn)-a
+    facdash=(n*pp*rnm1*(1-r)-(pp*rn-q))/(1-rn)+(pp*rn-q)*(1-r)*n*rnm1/((1-rn)*(1-rn))
+    rnew=r-fac/facdash
+    r=rnew
+    }
+r12=Math.pow(r,12)
+apr=0.01*Math.round((r12-1)*100*100)
+document.calcAPR.aprpcnt.value=apr
+}
+else {
+	alert(msg)
+	}
+}
+
+// end hide -->
+</SCRIPT>
+
+<H1><FONT COLOR="Green" Face="Tahoma" Size="6"><B>Testing JavaScript</B></FONT></H1>
+<hr>
+<br>
+<font color="#804040" face="Verdana" size="3"><b>#3 : Loan (APR) calculator :</B></font>
+<p>
+<B>(a) Enter the details of your loan and APR the program calculates your monthly payment</B><P>
+<FORM name="calcPayment">
+<TABLE>
+<TR>
+  <TD>Loan amount : </TD>
+  <TD><INPUT TYPE="text" NAME="amount" SIZE="10" MAXLENGTH="10" VALUE=""></INPUT></TD>
+  <TD>  Monthly Payment : </TD>
+  <TD><INPUT TYPE="text" NAME="mpayment" SIZE="10" MAXLENGTH="10" VALUE=""></INPUT></TD>
+</TR>
+<TR>
+  <TD>APR (%) :</TD>
+  <TD><INPUT TYPE="text" NAME="aprpcnt" SIZE="10" MAXLENGTH="10" VALUE=""></INPUT></TD>
+  <TD>  Total Repaid :</TD>
+  <TD><INPUT TYPE="text" NAME="trepaid" SIZE="10" MAXLENGTH="10" VALUE=""></INPUT></TD>
+</TR>
+<TR>
+  <TD>Number of months :</TD>
+  <TD><INPUT TYPE="text" NAME="nmonths" SIZE="10" MAXLENGTH="10" VALUE=""></INPUT></TD>
+  <TD>  Interest Paid (%)  :</TD>
+  <TD><INPUT TYPE="text" NAME="trepaidpcnt" SIZE="10" MAXLENGTH="10" VALUE=""></INPUT></TD>
+</TR>
+</TABLE>
+<P>
+<INPUT TYPE="button" value="Calculate the monthly payment" onclick="FindPayment()"></INPUT>
+<INPUT TYPE="Reset" VALUE="Clear the fields"></INPUT>
+</FORM>
+<p>
+<hr>
+<p>
+<b>(b) Enter the details of your loan and monthly payment and the program calculates your APR</b>
+<p>
+<FORM name="calcAPR">
+<TABLE>
+<TR>
+  <TD>Loan amount: </TD>
+  <TD><INPUT TYPE="text" NAME="amount" SIZE="10" MAXLENGTH="10" VALUE=""></INPUT></TD>
+  <TD> APR (%) : </TD>
+  <TD><INPUT TYPE="text" NAME="aprpcnt" SIZE="10" MAXLENGTH="10" VALUE=""></INPUT></TD>
+</TR>
+<TR>
+  <TD>Monthly payment :</TD>
+  <TD><INPUT TYPE="text" NAME="mpayment" SIZE="10" MAXLENGTH="10" VALUE=""></INPUT></TD>
+</TR>
+<TR>
+  <TD>Number of months :</TD>
+  <TD><INPUT TYPE="text" NAME="nmonths" SIZE="10" MAXLENGTH="10" VALUE=""></INPUT></TD>
+</TR>
+</TABLE>
+<P>
+<INPUT TYPE="button" value="Calculate the APR" onclick="FindAPR()"></INPUT>
+<INPUT TYPE="Reset" VALUE="Clear the fields"></INPUT>
+<P>
+</FORM>
+<hr>
+<p>
+<a href="js1.html">js1</a> |
+<a href="js2.html">js2</a> |
+<a href="js4.html">js4</a>
+<p>
+<hr>
+<TABLE cellpadding=3>
+<TR>
+   <TD><a href="jstest.html"> <IMG border=0 align=middle ALT="Back to the Index Page" SRC="/res/back2.gif"></A>
+</TD>
+    <TD><a href="/index.htm"> <IMG border=0 align=middle ALT="Back to the Home Page" SRC="../../res/home.gif"></A>
+</TD>
+  <TD><FONT SIZE="2" COLOR="#800040" FACE="Tahoma">© Jeff Waldock, 1997 <BR>
+Revised: Monday, June 02, 1997 09:38 AM
+</FONT></TD>
+</TR>
+</TABLE>
+
+</BODY>
+</HTML>

@@ -1,0 +1,36 @@
+<HTML>
+<HEAD>
+<TITLE>Shockwave</TITLE>
+</HEAD>
+<BODY bgcolor="#000000">
+<div align="CENTER">
+  <!-- Aftershock project.dcr 3=592 4=380 0=3 --> <OBJECT classid="clsid:166B1BCA-3F9C-11CF-8075-444553540000"
+ codebase="http://active.macromedia.com/director/cabs/sw.cab#version=6,0,0,0"
+ ID=project WIDTH=592 HEIGHT=380 ALIGN=top>
+    <PARAM NAME=src VALUE="project.dcr">
+    <SCRIPT LANGUAGE=JavaScript>
+<!--
+var ShockMode = 0;
+if (navigator.mimeTypes && navigator.mimeTypes["application/x-director"] && navigator.mimeTypes["application/x-director"].enabledPlugin) {
+	if (navigator.plugins && navigator.plugins["Shockwave for Director"] && (versionIndex = navigator.plugins["Shockwave for Director"].description.indexOf(".")) != - 1) {
+		var versionString = navigator.plugins["Shockwave for Director"].description.substring(versionIndex-1, versionIndex);
+		versionIndex = parseInt( versionString );
+		if ( versionIndex >= 6 )
+			ShockMode = 1;
+	}
+}
+if ( ShockMode ) {
+	document.write('<EMBED SRC="project.dcr"');
+	document.write(' swLiveConnect=FALSE WIDTH=592 HEIGHT=380 ALIGN=top');
+	document.write(' TYPE="application/x-director" PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveDirector">');
+	document.write('</EMBED>');
+} else if (!(navigator.appName && navigator.appName.indexOf("Netscape")>=0 && navigator.appVersion.indexOf("2.")>=0)){
+	document.write('<IMG SRC="project.gif" WIDTH=592 ALIGN=top HEIGHT=380 BORDER=0>');
+}
+//-->
+</SCRIPT><NOEMBED>
+    <IMG SRC="project.gif" WIDTH=592 ALIGN=top HEIGHT=380 BORDER=0></NOEMBED><NOSCRIPT><IMG SRC="project.gif" WIDTH=592 ALIGN=top HEIGHT=380 BORDER=0></NOSCRIPT> 
+  </OBJECT><!-- EndAftershock project.dcr --> 
+</div>
+</BODY>
+</HTML>

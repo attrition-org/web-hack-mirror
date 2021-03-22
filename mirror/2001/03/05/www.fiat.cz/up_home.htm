@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1250">
+        <title>Sito ufficiale Fiat</title>
+    </head>
+    <SCRIPT TYPE="text/javascript" LANGUAGE="JavaScript">
+
+ <!--
+// Test del Browser:
+		agent = navigator.userAgent
+		browser = 0
+		selected = ''
+		if (agent.indexOf("a/3",1) == 6 || agent.indexOf("a/4",1) == 6) {browser = 1} else {browser = 0}
+		
+		
+		// Cache delle immagini:
+		if (browser == 1) {
+
+			mappa_n = new Image(98,86);
+			mappa_n.src = "images00/mappa_n.gif";
+			mappa_h = new Image(98,86);
+			mappa_h.src = "/images/mappa_h.gif";
+			mappa_s = new Image(98,86);
+			mappa_s.src = "/images/mappa_h.gif";
+			mappa_c = new Image(98,86);
+			mappa_c.src = "images/finta.gif";
+			
+			guida_n = new Image(82,86);
+			guida_n.src = "images00/guida_n.gif";
+			guida_h = new Image(82,86);
+			guida_h.src = "/images/guida_h.gif";
+			guida_s = new Image(82,86);
+			guida_s.src = "/images/guida_h.gif";
+			guida_c = new Image(82,86);
+			guida_c.src = "images00/finta.gif";
+			
+			cerca_n = new Image(82,86);
+			cerca_n.src = "images00/cerca_n.gif";
+			cerca_h = new Image(82,86);
+			cerca_h.src = "/images/cerca_h.gif";
+			cerca_s = new Image(82,86);
+			cerca_s.src = "/images/cerca_h.gif";
+			cerca_c = new Image(82,86);
+			cerca_c.src = "images00/finta.gif";
+		
+		}
+		function nt4(img) {
+			if (agent.indexOf("WinNT") == -1) {return;} else {document.images[img].src = eval(img + "_c.src")}
+		}
+	
+		function pass(prima,tipo) {
+		if (browser == 1) {
+		if (tipo == 's') {
+		                if (selected) {
+		                        nt4(prima)
+		                        document.images[selected].src = eval(selected + "_n.src")
+		                }
+		                nt4(prima)
+		                document.images[prima].src = eval(prima + "_s.src")
+		                selected=prima
+		                }
+		if (tipo == 'h') {
+		                if (prima != selected) {
+		                nt4(prima)
+		                document.images[prima].src = eval(prima + "_h.src")
+		                        }
+		                }
+		if (tipo == 'n') {
+		                if (prima != selected) {
+		                        nt4(prima)
+		                        document.images[prima].src = eval(prima + "_n.src")
+		                        }
+		                }
+		        }
+		}
+		function pippo()
+		{;window.parent.sx.location.href='sx.htm';}
+		function pippo1()
+		{;window.parent.main.location.href='main.htm';}
+		
+		function guida()
+		{;window.parent.main.location.href='/ita/tool_down.htm';}
+		function guida1()
+		{;window.parent.sx.location.href='sx.htm';}
+		function guida2()
+		{;window.parent.sfondo.location.href='mappa/default.htm';}
+		
+	//-->	
+	
+</SCRIPT>
+    <body topmargin="0" marginwidth="0" marginheight="0" leftmargin="0" bgcolor="white" background="images/backgr.gif">
+        <table border="0" CELLSPACING="0" CELLPADDING="0">
+            <TR>
+                <TD><img width="5" src="images00/sfondoblu.gif" height="37" border="0"></TD><TD><a target="_top" href="default.htm"><IMG border="0" WIDTH="146" SRC="images/meta1_fiat.gif" HEIGHT="37"></a></TD><TD colspan="5"><IMG border="0" SRC="images/meta2_fiat.gif" HEIGHT="37"></TD>
+            </TR>
+            <tr valign="top">
+                <TD rowspan="2"><img width="5" src="images00/biancoSfondo.gif" height="100" border="0"></TD><TD><IMG border="0" WIDTH="146" SRC="images/sotto_meta1.gif" HEIGHT="29"></TD><TD><IMG border="0" SRC="images/sotto_meta2.gif" HEIGHT="29"></TD><TD><a target="_top" onMouseOver="window.status='Search'; pass('cerca','h'); return true;" onMouseOut="window.status=''; pass('cerca','n'); return true;" onClick="pass('cerca','s');" href="cerca/default.htm"><img width="60" src="images00/cerca_n.gif" name="cerca" height="29" border="0" Alt="HLEDEJ"></a></TD><TD><a target="_top" onMouseOver="window.status='Site Map'; pass('mappa','h'); return true;" onMouseOut="window.status=''; pass('mappa','n'); return true;" onClick="pass('mappa','s');" href="mappasito/default.htm"><img width="60" src="images00/mappa_n.gif" name="mappa" height="29" border="0" Alt="MAPA"></a></TD><TD><a target="_top" onMouseOver="window.status='Site Guide'; pass('guida','h'); return true;" onMouseOut="window.status=''; pass('guida','n'); return true;" onClick="pass('guida','s');" href="guidaalsito/default.htm"><img width="60" src="images00/guida_n.gif" name="guida" height="29" border="0" Alt="POPIS"></a></TD><TD><IMG border="0" WIDTH="1" SRC="images/up_06.gif" HEIGHT="29"></TD>
+            </tr>
+            <tr>
+                <td colspan="7">&nbsp;</td>
+            </tr>
+        </table>
+    </body>
+</html>

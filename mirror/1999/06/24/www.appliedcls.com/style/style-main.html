@@ -1,0 +1,200 @@
+<!-- ©1998 Applied Cognitive & Learning Sciences
+     Created and maintained by Kent Lim
+     for more information: klim@iname.com  -->
+	       
+<HTML>
+<HEAD>
+<TITLE>Applied Cognitive & Learning Sciences - Your style</TITLE>
+
+<script language="JavaScript">
+<!-- HIDE SCRIPT
+
+function Is ()
+{   // convert all characters to lowercase to simplify testing
+    var agt=navigator.userAgent.toLowerCase()
+
+    // *** BROWSER VERSION ***
+	this.nav  = ((agt.indexOf('mozilla')!=-1) && ((agt.indexOf('spoofer')==-1)
+                && (agt.indexOf('compatible') == -1)))
+    this.ie   = (agt.indexOf("msie") != -1)
+     
+    // *** PLATFORM ***
+    this.win   = ( (agt.indexOf("win")!=-1) || (agt.indexOf("16bit")!=-1) )
+    this.mac    = (agt.indexOf("mac")!=-1)
+}
+
+var is = new Is()
+//--> end hide JavaScript
+</SCRIPT>
+
+<script language="JavaScript">
+<!-- HIDE Script
+            
+//LEFT Navigation Rollovers
+
+browserName = navigator.appName;
+browserVer = parseInt(navigator.appVersion);
+        if ((browserName == "Netscape" && browserVer >= 3) || (browserName == "Microsoft Internet Explorer" && browserVer >=4)) {
+                version = "n3";
+                }
+        else
+                {
+                version = "n2";
+        }
+
+if (version == "n3") {
+leftnav1=new Image()
+leftnav1.src="../images/common/lt-but-who-up.gif"        
+           
+leftnav1b=new Image()
+leftnav1b.src="../images/common/lt-but-who.gif"
+
+leftnav2=new Image()
+leftnav2.src="../images/common/lt-but-what-up.gif"
+
+leftnav2b=new Image()
+leftnav2b.src="../images/common/lt-but-what.gif"
+
+leftnav3=new Image()
+leftnav3.src="../images/common/lt-but-style-up.gif"
+
+leftnav3b=new Image()
+leftnav3b.src="../images/common/lt-but-style.gif"
+
+leftnav4=new Image()
+leftnav4.src="../images/common/lt-but-programs-up.gif"
+
+leftnav4b=new Image()
+leftnav4b.src="../images/common/lt-but-programs.gif"
+
+leftnav5=new Image()
+leftnav5.src="../images/common/lt-but-recent-up.gif"
+
+leftnav5b=new Image()
+leftnav5b.src="../images/common/lt-but-recent.gif"
+}
+
+function SwapOut(num) {
+               if (version == "n3") {
+                        if (num==3){document.c.src=leftnav3.src}
+                        else if (num==1){document.a.src=leftnav1.src}
+                        else if (num==2){document.b.src=leftnav2.src}                      
+                        else if (num==4){document.d.src=leftnav4.src}  
+                        else if (num==5){document.e.src=leftnav5.src}                 
+                        }
+                   return true;
+                   }                    
+                   function SwapBack(num) {
+       if (version == "n3") {                
+                        if (num==3){document.c.src=leftnav3b.src}
+                        else if (num==1){document.a.src=leftnav1b.src}
+                        else if (num==2){document.b.src=leftnav2b.src}
+                        else if (num==4){document.d.src=leftnav4b.src}
+                        else if (num==5){document.e.src=leftnav5b.src}
+                        }
+                   return true;
+                   }     
+            
+// STOP HIDE -->            
+</script>
+
+</HEAD>
+
+<BODY BGCOLOR="#ffffff" BACKGROUND="../images/gfx-style/maize-back.gif"  LINK="#003399" VLINK="#8C0019">
+
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 width=640>
+
+<TR>
+<TD width=118 rowspan=4 align=left valign=top>
+
+<SCRIPT>
+<!--
+if (is.win) {
+	if (is.nav) {
+	document.write('<IMG SRC="../images/common/space.gif" WIDTH="118" HEIGHT="1" BORDER="0">')
+	} else {
+	document.write('<IMG SRC="../images/common/space.gif" WIDTH="116" HEIGHT="1" BORDER="0">')
+	}
+}
+if  (is.mac)
+{
+   document.write('<IMG SRC="../images/common/space.gif" WIDTH="118" HEIGHT="1" BORDER="0">')
+}
+// -->
+</SCRIPT>
+
+
+<BR><IMG SRC="../images/common/space.gif" WIDTH="1" HEIGHT="90" BORDER="0"><BR>
+<a HREF="../who/who-main.html" onMouseOver="if (version == 'n3') {SwapOut(1); self.status = 'Who we are: Our mission, philosophy, and methods'; return true}" onMouseOut='SwapBack(1)'><IMG SRC="../images/common/lt-but-who.gif" ALT="Who we are" WIDTH="110" HEIGHT="26" BORDER="0" name="a"></a><BR><a HREF="../what/what-main.html" onMouseOver="if (version == 'n3') {SwapOut(2);self.status = 'What we do: A summary of our services'; return true}" onMouseOut='SwapBack(2)'><IMG SRC="../images/common/lt-but-what.gif" ALT="What we do" WIDTH="110" HEIGHT="25" BORDER="0" name="b"></a><BR><a HREF="../style/style-main.html" onMouseOver="if (version == 'n3') {self.status = 'Your Style: Assess your own style of learning'; return true}"><IMG SRC="../images/common/lt-but-style-up.gif" ALT="Your Style" WIDTH="110" HEIGHT="26" BORDER="0" name="c"></a><BR><a HREF="../recent/recent-main.html" onMouseOver="if (version == 'n3') {SwapOut(5); self.status = 'Recent News: The latest developments'; return true}" onMouseOut='SwapBack(5)'><IMG SRC="../images/common/lt-but-recent.gif" ALT="Recent News" WIDTH="110" HEIGHT="25" BORDER="0" name="e"></a>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<img src="../images/gfx-style/maize-topnav.gif" width="676" height="78" usemap="#maize-topnav" ismap ALT="" border="0" >
+</TD>
+</TR>
+
+<TR>
+<TD><BR>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 width=475>
+
+<TR>
+<TD colspan=2>
+<IMG SRC="../images/common/space.gif" WIDTH="25" HEIGHT="1" BORDER="0"><IMG SRC="../images/gfx-style/your-style.gif" ALT="Your style" ALIGN=TOP WIDTH="121" HEIGHT="28" BORDER="0">
+</TD>
+</TR>
+
+<TR>
+
+<TD width=68>
+</TD>
+<TD>
+
+<FONT COLOR="#A56331"><B>Learning Styles and Disabilities</B></FONT> 
+<BR><BR>
+If you're like most people, you have no idea about how you learn, memorize, and express information.  All you know is that your lectures and textbooks provide you with "the stuff you're supposed to know," and through your sincere and concentrated efforts, that information is supposed to get out, somehow, onto paper. 
+<BR><BR>
+And if your law school is like most schools in the American educational system, it's likely that it has taught you information in one standard way, through one standard method, under the assumption that there's <I>one best or only one way</I> to learn, memorize, and express it.  One teacher.  One subject.  One class.  One best way to learn the topic.  This is what we refer to as the <B>compliance</B> learning.
+<BR><BR>
+
+The problem: if the one best way isn't yours, you suffer.  What compliance learning fails to address is the crucial role our <B>individual differences</B> play when it comes to learning.  Every individual learns, understands, and expresses information differently.  
+<BR><BR>
+
+The combination of different learning "techniques" that the individual has developed over time can be called the individual's <B>learning style</B>.  Everybody's learning style is different, and should be treated as such.  Different aspects of an individual's personality, environment, and physical well-being all contribute to the effectiveness of his or her particular learning style. Incidentally, schools don't teach you ways to develop your learning style, much less acknowledge its existence! 
+<BR><BR>
+
+This is bad news especially for people whose learning styles are undeveloped or improperly utilized for any number of reasons. These people have difficulty functioning in that "one best learning environment" dictated by their schools.  Their grades and test scores reflect substantially lower-than-average performance, and not for lack of trying.  What many of them are able to express on paper doesn't accurately reflect their actual store of knowledge, or the store of the knowledge they could have if they "just knew how to get it."  These people have what we call <B>learning disabilities</B>, and in order to help them perform at the same level as their peers who aren't "style-challenged," their own learning styles have got to be examined, treated, and understood.
+<BR><BR>
+ 
+<FONT COLOR="#A56331"><B>How Does This Affect Me?</B></FONT><BR><BR>
+
+The <B>Americans with Disabilities Act of 1990</B> demonstrates that government and other institutions must provide certain resources for people with disabilities.  For school and testing situations, these resources can range from the installation of a wheelchair ramp to providing a quiet room to write in during a licensing exam.  The law requires a clear delineation of the learning disability in order for an individual to qualify for accommodations.  
+<BR><BR>
+
+Applied Cognitive & Learning Sciences helps provide these delineations, even when they might not have been known about, let alone treated.  ACLS also gives you the insight to making the most of them.
+ 
+<BR><BR><BR>
+
+</TD>
+
+</TR>
+</TABLE>
+</TD>
+</TR>
+
+</TABLE>
+
+<!-- Client side image map -->
+<map name="maize-topnav">
+<area shape="rect" coords="366,54,468,69"  href="../self-test.html"
+	 onMouseOver="if (version == 'n3') {self.status = 'Take a self test to start assessing your own style of learning'; return true}">
+<area shape="rect" coords="261,54,366,69"  href="../glossary.html"
+	onMouseOver="if (version == 'n3') {self.status = 'Glossary: Definitions of Terms'; return true}">
+<area shape="rect" coords="171,54,261,69"  href="../contact.html"
+	onMouseOver="if (version == 'n3') {self.status = 'Contact Information'; return true}">
+<area shape="rect" coords="87,53,172,69"  HREF="../index.htm" onMouseOver="if (version == 'n3') {self.status = 'Applied Cognitive & Learning Sciences Home Page'; return true}">
+</map>
+
+</BODY>
+</HTML>

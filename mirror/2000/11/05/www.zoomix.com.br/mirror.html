@@ -1,0 +1,111 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="pt-br">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="FULL" content="Hacked v1.0">
+<meta name="AnIcLaToR" content="RGH.Editor.Document">
+<title>Hacked By AnIcLaToR</title>
+<style>
+.spanstyle {
+ position:absolute;
+ visibility:visible;
+ top:-50px;
+ font-size:12pt;
+ font-family:Arial Narrow;
+      font-weight:bold;
+ color:white;
+}
+</style>
+</head>
+
+<body  body onLoad="makesnake()" style="width:100%;overflow-x:hidden;overflow-y:scroll" topmargin="0" bgcolor="#000000" text="#FFFFFF" background="logotipo4.GIF">
+<P align=center>&nbsp;</P>
+<P align=center><IMG border=0 height=100 src="logotipo8.gif" width=250></P>
+<P align=center>&nbsp;</P>
+<P align=center><font size="6" color="#FF3300">Rooted by AnIcLaToR</font></P>
+<P align=center><FONT color=#ffff00 size=4>É isso ai HACKERS do Brasil é nois na fita mostrando q não é só os manos dos E.U.A q manja na parada parabéns a todos os hackers estamos fazendo um bom trabalho :']</FONT></P>
+<P align=center><font size="4" color="#FF9900">Israelenses e Palestinos tem qparar com essas guerras pq ta fudendo todo o mundo com essa guerra !! O dólar subiu , petróleo subiu tudo ta subindo ate as mortes dos palestinos (+ de 100 mortos) esse Yasser Arafat 'e um velho sem noção fecha um acordo de PAZ
+e ponto final.</font></P>
+<P align=center><FONT size=4>&nbsp;<font color="#66FF33">Admin: Your file index.html was renamed to index.back</font></FONT></P>
+<P align=center><FONT size=4><A href="mailto:aniclator@linuxbr.com.br"><FONT color=#0000ff>aniclator@linuxbr.com.br</FONT></A> </FONT></P>
+<P align=center>&nbsp;</P>
+<P align=center><FONT size=4>&nbsp;&nbsp;Greets&nbsp; &lt;=&gt; alldas , attrition , safemode, fux0r , Neon Lenz , Alien00 , suid crew ,  x-s4nd3r ,  m0r0n and nightman
+, ScorpionKTX , TRIBUNAL , mor_PH_eus , VUGO&nbsp;e para todos q me apoiam.</FONT></P>
+</body>
+<script>
+var x,y
+var step=10
+var flag=0
+ 
+var message="-=#=>Hackeado por AnIcLaToR<=#=- " 
+message=message.split("")
+ 
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+ xpos[i]=-50
+}
+ 
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+ ypos[i]=-50
+}
+ 
+function handlerMM(e){
+ x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+ y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+ flag=1
+}
+ 
+function makesnake() {
+ if (flag==1 && document.all) {
+     for (i=message.length-1; i>=1; i--) {
+      xpos[i]=xpos[i-1]+step
+   ypos[i]=ypos[i-1]
+     }
+  xpos[0]=x+step
+  ypos[0]=y
+ 
+  for (i=0; i<message.length-1; i++) {
+      var thisspan = eval("span"+(i)+".style")
+      thisspan.posLeft=xpos[i]
+   thisspan.posTop=ypos[i]
+     }
+ }
+ 
+ else if (flag==1 && document.layers) {
+     for (i=message.length-1; i>=1; i--) {
+      xpos[i]=xpos[i-1]+step
+   ypos[i]=ypos[i-1]
+     }
+  xpos[0]=x+step
+  ypos[0]=y
+ 
+  for (i=0; i<message.length-1; i++) {
+      var thisspan = eval("document.span"+i)
+      thisspan.left=xpos[i]
+   thisspan.top=ypos[i]
+     }
+ }
+  var timer=setTimeout("makesnake()",30)
+}
+ 
+</script>
+<script>
+<!-- Beginning of JavaScript -
+ 
+for (i=0;i<=message.length-1;i++) {
+    document.write("<span id='span"+i+"' class='spanstyle'>")
+ document.write(message[i])
+    document.write("</span>")
+}
+ 
+if (document.layers){
+ document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+ 
+// - End of JavaScript - -->
+</script>
+</HTML>
+<!-- www.attrition.org web hack mirror - watermark or something -->

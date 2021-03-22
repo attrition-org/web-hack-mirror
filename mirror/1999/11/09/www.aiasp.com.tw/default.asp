@@ -1,0 +1,55 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="pt-br">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Changed by the DHC (nemesystm)</title>
+</head>
+
+<body bgcolor="#000000" text="#FFFFFF" link="#FF0000" vlink="#FF0000" alink="#FF0000">
+
+<p align="center"><img border="0" src="y.jpg"></p>
+<p align="center">This page is changed by the DHC. (Nemesystm)
+</p>
+<p align="center"><a href="http://dhc1.da.ru">dhc1.da.ru</a>
+</p>
+<p align="center">Admin: mail me at <a href="mailto:dhcorp1@hotmail.com">dhcorp1@hotmail.com</a>
+and I'll tell you what's wrong.&nbsp;
+</p>
+<p align="center">And if anyone knows where I can find Prometheus A.K.A.
+Chronoss, please mail me too then. Thanks.
+</p>
+<p align="center">MURDER.<br>
+I have a gun in my hand,<br>
+and still you can't understand:<br>
+I'M TRYING TO KILL YOU!<br>
+My crosshairs on your eyes,<br>
+I hope no one cries.<br>
+Damn it's hot,<br>
+Concentrate: take your shot.<br>
+Me and my black clothes,<br>
+My bullets in his head.<br>
+Yes! He's dead.<br>
+Say bye bye now...<br>
+You ain't coming back,<br>
+to abuse me and use crack.<br>
+My energy is to good for you,<br>
+so why do I do what I do?<br>
+I hate myself, a feeling of guilt kicks in,<br>
+I wish I hadn't taken the shot,<br>
+and damn, what was it hot.<br>
+			Firefly<br>
+</p>
+<p align="center">Now the greets. To everyone of the DHC: Nemesystm, (leader of the DHC, this site's
+changer), Trinity, ©Æ$4R, Dark Plague, §lash ¥, Aero, Zanith, Spiderfire,
+H@vock, Firefly. everyone in the Underground Havock: Zero, Ashes, Buntee, Hakz,
+Innrwrld, Kr0me Warri0r, Nando, Phewl, Prox, Razor Burn, Regal, Ghetto Pirate,
+etc. you know who you are. Nym, all the girlies in Canada + Belgium, Herrinys Armata, de Horny           Story people,
+HRB, PH'Z,          Assassin, R3P3NT, magik, Guano           Apes, Attrition (for putting up with me),
+Dutchthreat, Hackernews, Packetstorm, etc. And all the ex members of the WHA.</p>
+
+</body>
+
+</html>

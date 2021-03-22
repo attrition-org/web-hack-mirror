@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>NASAA</title>
+
+<link rel="stylesheet" type="text/css" href="stylesheets/header.css">
+</head>
+
+<script LANGUAGE="JAVASCRIPT">
+function jv_submit()
+  {
+  frr=document.form1;
+  loc1="";
+  loc2="";
+  //   switch(frr.select.options[frr.select.selectedIndex].value)
+  switch(frr.select.selectedIndex)
+      {
+      case 0: loc1="/nasaa/abtnasaa/about_index.html";                       loc2="/nasaa/abtnasaa/view_top_stories.asp?start=0&partition=1"; break;
+      case 1: loc1="/nasaa/library/libindex.html";             loc2="/nasaa/scripts/fu_display_list.asp?ptid=71";                  break;
+      case 2: loc1="/nasaa/exams/index.html";                             loc2="/nasaa/exams/s63intro.html";                           break;
+      case 3: loc1="/nasaa/legaffairs/laindex.html"; loc2="/nasaa/legaffairs/overview.html";                    break;
+      case 4: loc1="/nasaa/news&pa/newsindex.html";           loc2="/nasaa/news&pa/paoverview.html";                break;
+      case 5: loc1="/nasaa/bd/bdindex.html";                        loc2="/nasaa/bd/brokerdealer1.html";                     break;
+      case 6: loc1="/nasaa/corpfin/cfindex.html";               loc2="/nasaa/corpfin/cfoverview.html";              break;
+      case 7: loc1="/nasaa/enforcement/enforcemtindex.html";                 loc2="/nasaa/enforcement/enfoverview.html";                break;
+      case 8: loc1="/nasaa/invadvisor/iaindex.html";       loc2="/nasaa/invadvisor/iaoverview.html";      break;
+      case 9: loc1="/nasaa/invedu/inveduindex.html";               loc2="/nasaa/invedu/invedoverview.html";               break;
+      case 10: loc1="/nasaa/members_only/mo_index.html";                        loc2="/nasaa/members_only/login.asp";                               break;
+      }
+
+  //  parent.index.location.href=loc1;
+  //  parent.body.location.href=loc2;
+  open(loc1,'index');
+  open(loc2,'body');
+  }
+
+</script>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" background="images/banner_pieces/banner_sect3.jpg">
+<form action method="post" name="form1" target="index">
+<table border="0" cellspacing="0" cellpadding="0" background="images/banner_pieces/banner_sect3.jpg">
+<tr>
+<td rowspan="2" width="181" valign="top"><img src="images/banner_pieces/banner_sect1.jpg" border="0" usemap="#banner_link" width="181" height="60"></td>
+<td valign="top" colspan="2"><img src="images/banner_pieces/banner_sect2_alt.jpg" width="387" height="29" align="top"></td>
+      <td rowspan="2" valign="top"><!--<img src="images/banner_pieces/banner_sect5.jpg" width="232" height="60">--></td>
+</tr>
+
+<tr>
+<td align="right" valign="middle"><img src="images/1ptrans.gif" width="50" height="1">
+<font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#FFFFFF">MAIN         MENU:</font>
+<img src="images/1ptrans.gif" width="5" height="1"></td>
+<td valign="middle"> <font face="Verdana, Arial, Helvetica, sans-serif" size="-1">
+<select name="select" size="1" OnChange="jv_submit();">
+     <option value="11" selected>about nasaa</option>
+     <option value="12">nasaa library</option>
+     <option value="13">exams</option>
+     <option value="14">legislative affairs</option>
+     <option value="15">news &amp; public affairs</option>
+     <option value="16">broker dealer</option>
+     <option value="17">corporate finance </option>
+     <option value="18">enforcement</option>
+     <option value="19">investment adviser</option>
+     <option value="20">investor education</option>
+     <option value="21">members only</option>
+</select>
+<!-- input type="button" name="button" value="GO" onClick="jv_submit();" -->
+&nbsp; <a href="overview.htm" target="body">Site Overview</a></font></td>
+</tr></table></form><map name="banner_link">
+<area shape="rect" coords="0,0,180,59" href="abtnasaa/news1.html" target="body">
+</map>
+</body>
+</html>

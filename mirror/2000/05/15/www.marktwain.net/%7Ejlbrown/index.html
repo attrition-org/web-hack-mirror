@@ -1,0 +1,445 @@
+<!DOCTYPE HTML PUBLIC "-//W3O//DTD W3 HTML 2.0//EN">
+<!--	Windows 95 Personal Web Server	Home Page	7/1/96	Created		Microsoft	This page has been purposely kept very simple so that even	users that haven't created home pages before can	change the template very easily to suit their needs.-->
+<html>
+
+<head>
+<title>Stoneville</title>
+<bgsound src="tool.mid" loop="-1">
+
+<script LANGUAGE="JavaScript" FPTYPE="dynamicanimation">
+<!--
+  // If you want to change this script, you must also make the following
+  // changes so that FrontPage will not overwrite your new script.
+  // In the script tag, change type="dynamicanimation" to type="mydynamicanimation"
+  // In the first script statement, change "dynamicanimation" to "mydynamicanimation"
+  // Throughout the HTML content, change dynamicanimation= to mydynamicanimation=
+  // Change function dynAnimation to function mydynAnimation
+  // In the body tag, change onload="dynAnimation()" to onload="mydynAnimation()"
+  dynamicanimAttr = "dynamicanimation"
+  animateElements = new Array()
+  currentElement = 0
+  speed = 0
+  stepsZoom = 8
+  stepsWord = 8
+  stepsFly = 12
+  stepsSpiral = 16
+  steps = stepsZoom
+  step = 0
+  outString = ""
+  function dynAnimation()
+  {
+    var ms = navigator.appVersion.indexOf("MSIE")
+    ie4 = (ms>0) && (parseInt(navigator.appVersion.substring(ms+5, ms+6)) >= 4)
+    if(!ie4)
+    {
+      if((navigator.appName == "Netscape") &&
+         (parseInt(navigator.appVersion.substring(0, 1)) >= 4))
+      {
+        for (index=document.layers.length-1; index >= 0; index--)
+        {
+            layer=document.layers[index]
+            if (layer.left==10000)
+                layer.left=0
+        }
+      }
+      return
+    }
+    for (index=document.all.length-1; index >= document.body.sourceIndex; index--)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if(null != animation)
+      {
+        if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        {
+          ih = el.innerHTML
+          outString = ""
+          i1 = 0
+          iend = ih.length
+          while(true)
+          {
+            i2 = startWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, false, "")
+            if(i2 == iend)
+              break
+            i1 = i2
+            i2 = endWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, true, animation)
+            if(i2 == iend)
+              break
+            i1 = i2
+          }
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+        if(animation == "zoomIn" || animation == "zoomOut")
+        {
+          ih = el.innerHTML
+          outString = "<SPAN " + dynamicanimAttr + "=\"" + animation + "\" style=\"position: relative; left: 10000;\">"
+          outString += ih
+          outString += "</SPAN>"
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+      }
+    }
+    i = 0
+    for (index=document.body.sourceIndex; index < document.all.length; index++)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if (null != animation)
+      {
+        if(animation == "flyLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyRight")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyTop" || animation == "dropWord")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottom")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyTopLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyTopRight" || animation == "flyTopRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottomLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyBottomRight" || animation == "flyBottomRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "spiral")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "zoomIn")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else if(animation == "zoomOut")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        el.initLeft = el.style.posLeft
+        el.initTop = el.style.posTop
+        animateElements[i++] = el
+      }
+    }
+    window.setTimeout("animate();", speed)
+  }
+  function offsetLeft(el)
+  {
+    x = el.offsetLeft
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      x += e.offsetLeft;
+    return x
+  } 
+  function offsetTop(el)
+  {
+    y = el.offsetTop
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      y += e.offsetTop;
+    return y
+  } 
+  function startWord(ih, i)
+  {
+    for(tag = false; i < ih.length; i++)
+    {
+      c = ih.charAt(i)
+      if(c == '<')
+        tag = true
+      if(!tag)
+        return i
+      if(c == '>')
+        tag = false
+    }
+    return -1
+  }
+  function endWord(ih, i)
+  {
+    nonSpace = false
+    space = false
+    while(i < ih.length)
+    {
+      c = ih.charAt(i)
+      if(c != ' ')
+        nonSpace = true
+      if(nonSpace && c == ' ')
+        space = true
+      if(c == '<')
+        return i
+      if(space && c != ' ')
+        return i
+      i++
+    }
+    return -1
+  }
+  function outWord(ih, i1, i2, dyn, anim)
+  {
+    if(dyn)
+      outString += "<SPAN " + dynamicanimAttr + "=\"" + anim + "\" style=\"position: relative; left: 10000;\">"
+    outString += ih.substring(i1, i2)
+    if(dyn)
+      outString += "</SPAN>"
+  }
+  function animate()
+  {
+    el = animateElements[currentElement]
+    animation = el.getAttribute(dynamicanimAttr, false)
+    step++
+    if(animation == "spiral")
+    {
+      steps = stepsSpiral
+      v = step/steps
+      rf = 1.0 - v
+      t = v * 2.0*Math.PI
+      rx = Math.max(Math.abs(el.initLeft), 200)
+      ry = Math.max(Math.abs(el.initTop),  200)
+      el.style.posLeft = Math.ceil(-rf*Math.cos(t)*rx)
+      el.style.posTop  = Math.ceil(-rf*Math.sin(t)*ry)
+    }
+    else if(animation == "zoomIn")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(50+50*step/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else if(animation == "zoomOut")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(100+200*(steps-step)/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else
+    {
+      steps = stepsFly
+      if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        steps = stepsWord
+      dl = el.initLeft / steps
+      dt = el.initTop  / steps
+      el.style.posLeft = el.style.posLeft - dl
+      el.style.posTop = el.style.posTop - dt
+    }
+    if (step >= steps) 
+    {
+      el.style.posLeft = 0
+      el.style.posTop = 0
+      currentElement++
+      step = 0
+    }
+    if(currentElement < animateElements.length)
+      window.setTimeout("animate();", speed)
+  }
+//-->
+</script><meta name="Microsoft Border" content="none"></head>
+
+<body background="back6.gif" onload="dynAnimation()" bgproperties="fixed">
+
+<h2 align="center"><!--webbot bot="HTMLMarkup" StartSpan --><a href="c:/webpage/
+dicnside.wav"></a><!--webbot BOT="HTMLMarkup" endspan --><!--webbot bot="HTMLMarkup" StartSpan --><a href="dicnside.wav"></a><!--webbot BOT="HTMLMarkup" endspan --><img src="eye5.gif" alt="eye5.gif (2063 bytes)" WIDTH="42" HEIGHT="44"> <!-- Change the line above with your name to say, Karen's Home Page--><img src="welcom2.gif" alt="welcom2.gif (44572 bytes)" WIDTH="350" HEIGHT="130"><big><big><big> </big></big></big><img src="eye5.gif" alt="eye5.gif (2063 bytes)" WIDTH="42" HEIGHT="44"></h2>
+
+<p align="center"><font face="Bauhaus 93" color="#0000FF"><big><big><big><big><big>to</big></big></big></big></big></font></p>
+
+<p align="center"><big><em><strong><font face="Snap ITC" color="#800000"><big><big><big><big><big>STONEVILLE</big></big></big></big></big></font></strong></em></big></p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center" dynamicanimation="dropWord" style="position: relative !important; left: 10000 !important">&nbsp;</p>
+
+<p><img src="burstani.gif" alt="burstani.gif (9370 bytes)" WIDTH="462" HEIGHT="18"></p>
+
+<p><!-- Add more information about yourself. Your interests etc. --> <font color="#00FF00"><big><big>Greetings....and thanx for stopping by :)</big></big></font></p>
+
+<p><font color="#00FF00"><big><big>On my page you will find links for Mechwarrior2
+Mercenaries,Tribes,Kali 95, Motocross Madness,and about everything else needed to have a
+great time on the net</big></big></font></p>
+
+<p><font color="#00FF00"><big><big>Don't laugh, as this is my first attempt at a webpage</big></big></font></p>
+
+<p><big><big><font color="#00FF00">Check back to see whats new,as I'll be updating often</font></big></big></p>
+
+<p><img src="burstani.gif" alt="burstani.gif (9370 bytes)" WIDTH="462" HEIGHT="18"></p>
+
+<p><font color="#00FF00"><marquee behavior="alternate" border="0">Mech Patrol    comin' through people</marquee></font></p>
+
+<p align="center"><img src="untitled.jpg" alt="untitled.bmp (1440054 bytes)" WIDTH="800" HEIGHT="600"></p>
+
+<p>&nbsp;</p>
+
+<hr>
+
+<p align="center"><!--webbot bot="HTMLMarkup" StartSpan --><center><table border="1" width="90%" cellpadding="5"><tr><td><center><form action="http://msg.mirabilis.com/scripts/WWPMsg.dll" method="post" name="frmPager"><table border="0" cellpadding="0" cellspacing="0"><tr><td colspan="5" align="center"><font size="-2" face="arial">ENTER YOUR MESSAGE AND DETAILS AND PRESS <b>SEND</b></font><br><a href="http://public.icq.com/public/panels/webpanel/links/webpanel.html"><img src="http://public.icq.com/public/panels/webpanel/images/topleft.gif" width=174 height=23 border="0" alt="ICQ Web-Pager Panel"></a><a href="http://public.icq.com/public/panels/webpanel/links/download.html"><img src="http://public.icq.com/public/panels/webpanel/images/topright.gif" width=256 height=23 border="0" alt="What is ICQ, Download"></a></td></tr><tr><td rowspan="4"><img src="http://public.icq.com/public/panels/webpanel/images/left.gif" width=7 height=69 border=0 alt=""></td><td valign="top" bgcolor="#1d079f" colspan="3"><img src="http://public.icq.com/public/panels/webpanel/images/top.gif" width=417 height=6 border=0 alt=""></td><td rowspan="4"><img src="http://public.icq.com/public/panels/webpanel/images/right.gif" width=5 height=69 border=0 alt=""></td></tr><tr><td bgcolor="#554893" rowspan="2"><a href="http://public.icq.com/public/panels/webpanel/people.html"><img src="http://public.icq.com/public/panels/webpanel/images/peoplespace.gif" width=78 height=28 alt="ICQ PeopleSpace Directory" border=0></a><br><a href="http://public.icq.com/public/panels/webpanel/links/wwp.html?8535672"><img src="http://public.icq.com/public/panels/webpanel/images/pcc.gif" width=78 height=28 alt="View My Page" border=0></a></td><td bgcolor="#554893" valign="middle" align="center"><INPUT TYPE="TEXT" NAME="from" VALUE="Your Name" SIZE=15 MAXLENGTH=40 onMouseOver="this.focus()" onFocus="this.select()"><input type="text" name="fromemail" value="Your Email" size="15" maxlength="40" onMouseOver="this.focus()" onFocus="this.select()"></td><td bgcolor="#554893" align="right" rowspan=2><input type="image" src="http://public.icq.com/public/panels/webpanel/images/send.gif" width=78 height=28 border=0><br><a href="http://public.icq.com/public/panels/webpanel/links/page.html"><img src="http://public.icq.com/public/panels/webpanel/images/pageuser.gif" width=78 height=28 alt="Page an ICQ User" border=0></a></td></tr><tr><td bgcolor="#554893" valign="middle" align="center"><INPUT TYPE="hidden" NAME="subject" VALUE="From WebPager Panel"><input name="body" type="text" size="32" maxlength="400" value="Type your message here" onMouseOver="this.focus()" onFocus="this.select()"></td></tr><tr><td valign="bottom" bgcolor="#554893" colspan="3"><input type="hidden" name="to" value="8535672"><img src="http://public.icq.com/public/panels/webpanel/images/bottom.gif" width=418 height=7 border=0 alt=""></td></tr></table></form><FORM ACTION="http://cgi.icq.com/cgi-bin/redirect/searchit.pl5" method="post"><input type="hidden" name="range" value="web"><input type="hidden" name="up" value="cp2"><table border="0" cellpadding="0" cellspacing="0"><tr><td><table cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#554893" rowspan="3"><a href="http://public.icq.com/public/panels/webpanel/links/directories.html"><img src="http://public.icq.com/public/panels/webpanel/images/searchbar-left.gif" width=85 height=35 border=0 alt=""></a></td><td bgcolor="#554893"><img src="http://public.icq.com/public/panels/webpanel/images/searchbar-top.gif" width=261 height=5 border=0 alt=""></td><td bgcolor="#554893" rowspan="3"><input type="image" src="http://public.icq.com/public/panels/webpanel/images/searchbar-right.gif" width=84 height=35 border=0 alt="Search"></td></tr><tr><td bgcolor="#554893" align="center"><input type="text" size="32" name="KEYWORDS"></td></tr><tr><td bgcolor="#554893"><img src="http://public.icq.com/public/panels/webpanel/images/searchbar-bottom.gif" width=261 height=4 border=0 alt=""></td></tr></table></td></tr><tr><td ALIGN="CENTER"><font face="ms sans serif" size="-2"><a href="http://public.icq.com/public/panels/webpanel/links/webpanel.html">This site is powered by the ICQ Web Pager Panel</a>&nbsp;&copy; 1999 ICQ Inc. All Rights Reserved.</font></td></tr></table></form></center><font face="arial" size="-1"><i>You can <b>ICQ-Page</b> the owner of this web page as well as other users right from here with no additional software. Your messagewill be instantly delivered. If the user is online, the message will popup on his/her screen, if the user is offline it will be stored and forwarded to him/her as soon as he/she connects to the internet. Installing the ICQ client will enable you to know if your friends are online and communicate directly with them.</i></font><center><font face="ms sans serif" size="-2">Use of the ICQ Web Pager Panel is subject to <a href="http://public.icq.com/public/panels/webpanel/links/legal.html">Terms of Service</a></font></center></td></tr></table></center><!--webbot BOT="HTMLMarkup" endspan --></p>
+
+<p align="center"><!--webbot bot="HTMLMarkup" StartSpan --><img src="http://online.mirabilis.com/scripts/online.dll?icq=8535672&img=8"><!--webbot BOT="HTMLMarkup" endspan --></p>
+
+<p><font face="Century Gothic" color="#00FF40"><strong><big><big><big><big>Choose your
+destination</big></big></big></big></strong></font></p>
+
+<p>
+<applet code="fphover.class" codebase="_fpclass/" width="120" height="24">
+  <param name="text" value="Mercs">
+  <param name="color" value="#0000FF">
+  <param name="hovercolor" value="#00FFFF">
+  <param name="textcolor" value="#FFFFFF">
+  <param name="effect" value="glow">
+  <param name="url" value="all_the.htm" valuetype="ref">
+  <param name="bgcolor" value="#000000">
+  <param name="image" value valuetype="ref">
+  <param name="hoverimage" value valuetype="ref">
+  <param name="sound" value valuetype="ref">
+  <param name="hoversound" value valuetype="ref">
+</applet>
+<applet code="fphover.class" codebase="_fpclass/" width="120" height="24">
+  <param name="text" value="Our Pics">
+  <param name="color" value="#000080">
+  <param name="hovercolor" value="#0000FF">
+  <param name="textcolor" value="#FFFFFF">
+  <param name="effect" value="glow">
+  <param name="url" value="paige.htm" valuetype="ref">
+</applet>
+</p>
+
+<p>
+<applet code="fphover.class" codebase="_fpclass/" width="120" height="24">
+  <param name="text" value="My Links">
+  <param name="color" value="#000080">
+  <param name="hovercolor" value="#0000FF">
+  <param name="textcolor" value="#FFFFFF">
+  <param name="effect" value="glow">
+  <param name="url" value="my_links.htm" valuetype="ref">
+</applet>
+<applet code="fphover.class" codebase="_fpclass/" width="120" height="24">
+  <param name="text" value="Great Danes">
+  <param name="color" value="#0000FF">
+  <param name="hovercolor" value="#00FFFF">
+  <param name="textcolor" value="#FFFFFF">
+  <param name="effect" value="glow">
+  <param name="url" value="sampson.htm" valuetype="ref">
+</applet>
+</p>
+
+<p>
+<applet code="fphover.class" codebase="_fpclass/" width="120" height="24">
+  <param name="text" value="MCM">
+  <param name="color" value="#0000FF">
+  <param name="hovercolor" value="#00FFFF">
+  <param name="textcolor" value="#FFFFFF">
+  <param name="effect" value="glow">
+  <param name="url" value="motorcross_madness.htm" valuetype="ref">
+</applet>
+<applet code="fphover.class" codebase="_fpclass/" width="120" height="24">
+  <param name="text" value="Tribes">
+  <param name="color" value="#000080">
+  <param name="hovercolor" value="#0000FF">
+  <param name="textcolor" value="#FFFFFF">
+  <param name="effect" value="glow">
+  <param name="url" value="mongoose_tribe_home_page.htm" valuetype="ref">
+</applet>
+</p>
+
+<p>&nbsp;</p>
+
+<p dynamicanimation="spiral" style="position: relative !important; left: 10000 !important"><img src="mailbox1.gif" alt="mailbox1.gif (17344 bytes)" WIDTH="73" HEIGHT="70"></p>
+
+<p dynamicanimation="spiral" style="position: relative !important; left: 10000 !important"><a href="mailto:jlbrown@kvmo.net">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+mailto:jlbrown@kvmo.net</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+
+<p align="center"><!--webbot bot="HTMLMarkup" StartSpan --><!---start of code--->
+<center>
+<p>
+<a href="http://neptune.guestworld.lycos.com/wgb/wgbsign.dbm?owner=Stoneville">Sign My Guestbook</a>
+<a href="http://GuestWorld.Lycos.com/"><img src="http://guestworld.lycos.com/GuestWorldbutton.gif" height="31" width="87" border ="0" alt="Guestbook by GuestWorld"></a>
+<a href="http://neptune.guestworld.lycos.com/wgb/wgbview.dbm?owner=Stoneville">View My Guestbook</a>
+</center>
+<!---end of code--->
+
+<!--webbot BOT="HTMLMarkup" endspan --></p>
+
+<p align="center"><font color="#00FF00">This page has been accessed <!--webbot bot="HitCounter" i-image="4" i-digits="5" PREVIEW="&lt;strong&gt;[Hit Counter]&lt;/strong&gt;" u-custom i-resetvalue="0" startspan --><img SRC="_vti_bin/fpcount.exe/~jlbrown/?Page=index.html|Image=4|Digits=5" ALT="Hit Counter"><!--webbot bot="HitCounter" endspan i-checksum="55740" --> times. </font></p>
+
+<p align="center"><font color="#00FF00"><!--webbot bot="HTMLMarkup" StartSpan --> <center>
+<table border="10" cellpadding="0" cellspacing="5" width="365" height="130"
+bgcolor="#FFFFFF">
+  <tr>
+    <td width="100" height="120" valign="middle" align="center" bgcolor="#000000" rowspan="2"><a
+    href="http://www.dwwd.com/graphics/" target="_top"><img src="http://www.dwwd.com/graphics/anifps.gif"
+    alt="Visit the Frontpage Stars WebRing Home Site" border="0" WIDTH="100" HEIGHT="100"></a></td>
+    <td width="150" height="100" valign="middle" align="center" bgcolor="#FFFFFF"><small>This <a
+    href="http://www.dwwd.com/graphics/" target="_top">Frontpage Stars WebRing</a> is owned by <a href="mailto:jlbrown@kvmo.net">Stone</a>.<br>
+    Want to <a href="http://www.dwwd.com/graphics/join.html" target="_top">join</a> the Frontpage Stars WebRing?</small></td>
+    <td width="100" height="100" valign="middle" align="center" bgcolor="#FFFFFF"><small>[<a
+    href="http://www.webring.org/cgi-bin/webring?ring=fpstars;id=167;sprev">Skip Prev</a>]</small><br>
+    <small>[<a href="http://www.webring.org/cgi-bin/webring?ring=fpstars;id=167;prev"
+    target="_top">Prev</a>][<a
+    href="http://www.webring.org/cgi-bin/webring?ring=fpstars;id=167;next" target="_top">Next</a>]</small><br>
+    <small>[<a href="http://www.webring.org/cgi-bin/webring?ring=fpstars;id=167;skip"
+    target="_top">Skip Next</a>]</small><br>
+    <small>[<a href="http://www.webring.org/cgi-bin/webring?random;ring=fpstars"
+    target="_top">Random</a>]</small><br>
+    <small>[<a href="http://www.webring.org/cgi-bin/webring?ring=fpstars;id=167;next5"
+    target="_top">Next 5</a>]</small><br>
+    <small>[<a href="http://www.webring.org/cgi-bin/webring?ring=fpstars;list" target="_top">List
+    Sites</a>]</small></td>
+  </tr>
+  <tr>
+    <td width="250" height="15" valign="middle" align="center" bgcolor="#FFFFFF" colspan="2"><small></small><a
+    href="http://www.webring.org/cgi-bin/webring?ring=fpstars;id=167;form=launchnav;getform"><img
+    src="http://www.dwwd.com/graphics/images/fpnavig.jpg" width="250" height="15" alt="Launch the Frontpage Stars Webring Navigator" border="0"></a><small></small></td>
+  </tr>
+</table>
+</center> <!--webbot BOT="HTMLMarkup" endspan --></font></p>
+
+<p>&nbsp;</p>
+
+<p align="center" dynamicanimation="spiral" style="position: relative !important; left: 10000 !important"><font color="#00FF00"><font size="-2"><!--webbot bot="HTMLMarkup" StartSpan --><META  name="description" content="Welcome to Stoneville.">
+<META  name="keywords" content="GreatDanes,Mechwarrior,MotocrossMadness,Tribes"><!--webbot BOT="HTMLMarkup" endspan --></font> <font size="+1">*The following text is some kind of disclaimer...other sites
+have them...so why not mine...*</font></font></p>
+
+<p><font size="+1" color="#00FF00">All pictures displayed on this page were found on the
+WEB and considered public domain. If this is not the case let me know and I will be glad
+to either discontinue usages of said picture or put up information as to give the owner of
+the picture in question credit for it's creation.</font></p>
+
+<p align="center"><font size="+1" color="#00FF00">Disclaimer by ARCADE</font></p>
+
+<p align="center"><font size="+1" color="#00FF00">This site is best viewed at</font></p>
+
+<p align="center"><font size="+1" color="#00FF00">1024x768</font></p>
+</body>
+</html>

@@ -1,0 +1,603 @@
+
+<html>
+
+<head>
+
+
+<!--///////////////////////////////////////
+	MetaTags 시작
+	///////////////////////////////////////-->
+
+<META name="description" content="designed by sini@ultari.co.kr">
+<META name="description" content="programmed by jania@ultari.co.kr">
+
+<!--///////////////////////////////////////
+	MetaTags 끝
+	///////////////////////////////////////--><!--///////////////////////////////////////
+	StyleSheets 시작
+	///////////////////////////////////////-->
+
+<style type=text/css>
+body{margin:0px}
+</style>
+
+
+
+<STYLE type="text/css">
+<!--
+
+        .topmenu{font-family: 굴림; font-size: 9pt; color: #EFEFE0; text-decoration: none}
+        .topmenu :link{font-family: 굴림; font-size: 9pt; color: #EFEFE0; text-decoration: none}
+        .topmenu :visited{font-family: 굴림; font-size: 9pt; color: #CCFFCC; text-decoration: none}
+        .topmenu :active{font-family: 굴림; font-size: 9pt; color: #FFFFCC; text-decoration: none}
+        .topmenu :hover{font-family: 굴림; font-size: 9pt; color:#FBA300; text-decoration: none}
+
+
+	a{font-family: 굴림; font-size: 9pt; line-height: 14px;}	
+	a:link{text-decoration:none; color:#0152E7;}	
+	a:visited{text-decoration:none;	color:#0152E7;}	
+	a:active{text-decoration:underline; color:#5C069B;}	
+	a:hover{text-decoration:underline; color:#FBA300;}
+	rgb(102,153,204);
+-->
+</STYLE>
+
+<!--///////////////////////////////////////
+	StyleSheets 끝
+	///////////////////////////////////////-->
+<!--///////////////////////////////////////
+	JavaScripts 시작
+	///////////////////////////////////////-->
+
+<SCRIPT Language=JavaScript>
+
+		browserName = navigator.appName;
+		browserVer = parseInt(navigator.appVersion);
+		version = "incompatible";
+		
+		if (browserName == "Netscape" || browserVer >= 3) version = "n3";
+
+		if (version == "n3")
+		{
+			icon1on = new Image();
+			icon1on.src ="/images/tm_on-01-01.gif";
+			icon1off = new Image();
+			icon1off.src = "/images/tm-01-01.gif";
+			
+			icon2on = new Image();                
+			icon2on.src ="/images/tm_on-01-02.gif";
+			icon2off = new Image();
+			icon2off.src = "/images/tm-01-02.gif";
+			
+			icon3on = new Image();                
+			icon3on.src ="/images/tm_on-01-03.gif";
+			icon3off = new Image();
+			icon3off.src = "/images/tm-01-03.gif";
+			
+			icon4on = new Image();                
+			icon4on.src ="/images/tm_on-01-04.gif";
+			icon4off = new Image();
+			icon4off.src = "/images/tm-01-04.gif";
+			
+		}
+		
+		function img_act(imgIcon)
+		{
+			if (version == "n3") 
+			{
+				iconOn = eval(imgIcon + "on.src");
+				document[imgIcon].src = iconOn;
+				return true;
+			}
+		}
+		
+		function img_inact(imgIcon)
+		{
+			if (version == "n3") 
+			{
+				iconOff = eval(imgIcon + "off.src");
+				document[imgIcon].src = iconOff;
+				return true;
+			}
+		}
+	
+</SCRIPT>
+
+<!--///////////////////////////////////////
+	JavaScripts 끝
+	///////////////////////////////////////-->
+
+
+
+
+<title> Welcome to 문화공룡 OK-TICKET </title>
+
+
+
+
+</head>
+
+<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" bgcolor="#ffffff">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td><!--///////////////////////////////////////
+	MainMenus 시작
+	///////////////////////////////////////-->
+<table width="100%" height="75" border="0" cellspacing="0" cellpadding="0" BGCOLOR=#004D4A>
+ 	<TR>
+		<TD background='../images/top_bg.gif' WIDTH=217><A href='index.html'><IMG src="../images/top_01-01.gif" width="181" height="71" border="0" ALT=""></A></TD>
+		<TD background='../images/top_bg.gif' WIDTH=100%></TD>
+		<TD background='../images/top_bg.gif' VALIGN=BOTTOM ALIGN=right>
+		<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 VALIGN=BOTTOM WIDTH=280 background='../images/top_bg.gif'>
+  		<TR>
+    		<TD background='../images/top_bg.gif'>
+    		<A HREF="index.html" TARGET=_top onMouseover="img_act('icon1');" onMouseout="img_inact('icon1');"><IMG SRC="../images/tm-01-01.gif" BORDER="0" NAME='icon1'></TD>
+    		<TD background='../images/top_bg.gif'>
+    		<A HREF="../member/agreement.asp" TARGET=_top onMouseover="img_act('icon2');" onMouseout="img_inact('icon2');"><IMG SRC="../images/tm-01-02.gif" BORDER="0" NAME='icon2'></TD>
+    		<TD background='../images/top_bg.gif'>
+    		<A HREF="schedule.asp" TARGET=_top onMouseover="img_act('icon3');" onMouseout="img_inact('icon3');"><IMG SRC="../images/tm-01-03.gif" BORDER="0" NAME='icon3'></TD>
+    		<TD background='../images/top_bg.gif'>
+    		<A HREF="../shop/cart.asp" TARGET=_top onMouseover="img_act('icon4');" onMouseout="img_inact('icon4');"><IMG SRC="../images/tm-01-04.gif" BORDER="0" NAME='icon4'></TD>
+  			</TR>
+		</TABLE>
+		</TD>
+		
+		
+		<TD align=right VALIGN=BOTTOM background='../images/top_bg.gif'>
+			<TABLE MARGINWIDTH=0 MARGINHEIGHT=0 TOPMARGIN=0 LEFTMARGIN=0 BORDER=0 CELLPADDING=0 CELLSPACING=0>
+			<TR>
+				<TD COLSPAN=3>
+				<A href='searchForm.asp?t=1'><IMG SRC="../images/search.gif" BORDER=0 ALT=""></A>
+				</TD>
+<!----------------------
+				<TD>
+				<IMG SRC="../images/diary.gif" WIDTH=83 HEIGHT=13 BORDER=0 ALT="">
+				</TD>
+---------------------->
+				<TD></TD>	
+			</TR>
+			<TR>
+			
+				<form method=post name=search action=../search.asp>
+				<TD>
+				<select name=searchid value="검색">
+                        <option value="행사">행사</option>
+                        <option value="artist">Artist/단체</option>
+                        <option value="티켓">ticket</option>
+                        <option value="shop">shop</option>
+                        </select>
+           </TD> 
+           <TD>
+           
+				
+				<INPUT TYPE=text name=searchname SIZE=12 maxlength=64>
+				</TD>
+				<TD VALIGN=BOTTOM>
+				<A href='javascript:document.search.submit();'><IMG SRC="../images/go.gif" WIDTH=21 HEIGHT=21 BORDER=0 ALT="" HSPACE=3></A>&nbsp;&nbsp;&nbsp;
+				</TD>
+				</FORM>
+<!----------------------
+		<FORM name=diary method=get action='/home/schedule.asp'>
+				<TD>
+				<FONT SIZE=2 COLOR=WHITE>
+				<SELECT NAME="yy">
+				<option>2002</option>
+				<option>2001</option>
+				<option selected>2000</option>
+				<option>1999</option>
+				<option>1998</option>
+				</SELECT>
+				년&nbsp;
+				<SELECT NAME="mm">
+				<option>01</option>
+				<option>02</option>
+				<option>03</option>
+				<option>04</option>
+				<option>05</option>
+				<option>06</option>
+				<option>07</option>
+				<option>08</option>
+				<option>09</option>
+				<option>10</option>
+				<option>11</option>
+				<option>12</option>
+				</SELECT>
+				월
+				</TD>
+				<TD VALIGN=BOTTOM>
+				<A href='javascript:document.diary.submit();'><IMG SRC="../images/go.gif" WIDTH=21 HEIGHT=21 BORDER=0 ALT="" HSPACE=3></A>&nbsp;&nbsp;&nbsp;
+				</TD>	
+				</FORM> 
+---------------->
+			</TR>
+			</TABLE>
+		</TD>
+  	</TR>
+
+	<TR bgcolor="#FF5100"> 
+		<TD colSpan=4 align=right height=27><span class="topmenu">
+
+					[<FONT size=2 color=black><B>Home</B></FONT>]
+
+					[<A href="/concert/" target=_top>콘서트</A>]
+
+					[<A href="/art/" target=_top>아트</A>]
+
+					[<A href="/family/" target=_top>패밀리 & 이벤트</A>]
+
+					[<A href="../community/index.html" target=_top>OT-커뮤니티</A>]
+
+					[<A href="../member/index.html" target=_top>회원메뉴</A>]
+
+					[<A href="../goods/list.asp?idd=1" target=_top>Shop</A>]
+
+					[<A href="../contact/index.html" target=_top>Contact Us</A>]
+
+		/
+		
+		guest(손님)
+
+		[<A href='../member/loginForm.asp'>Log-in</A>]
+
+		</span></TD>
+  	</TR>
+</TABLE>
+<!--///////////////////////////////////////
+	MainMenus 끝
+	///////////////////////////////////////-->
+	
+	
+</td>
+</tr>
+
+
+<tr>
+<td>
+<!--///////////////////////////////////////
+	SubMenus 시작
+	///////////////////////////////////////-->
+<TABLE border=0 cellpadding=0 cellspacing=2 width=100%>
+	<TR><TD align=right><FONT size=2>
+
+		[<FONT size=2><B>시작화면</B></FONT>]
+
+		[<A href="schedule.asp">공연일정</A>]
+
+		[<A href="searchForm.asp">정보검색</A>]
+
+		[<A href="help.asp">이용안내</A>]
+
+	</TD></TR>
+</TABLE>
+<!--///////////////////////////////////////
+	SubMenus 끝
+	///////////////////////////////////////-->
+</td>
+</tr>
+<tr>
+<td>	
+			
+<!----- 본문 시작 ------>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr><td colspan="3" height="20">&nbsp;</td></tr>
+	
+	<tr>
+		<td width="33%" align="right" valign="top"> 
+			<!----Concerts Start-----> 
+			<table width="92%" height="270" border="0" cellspacing="0" cellpadding="5" height="262">
+				<tr bgcolor="#3D4A84"> 
+					<td> 
+						<table width="100%" height="100%" border="0" cellspacing="2" cellpadding="0" bgcolor="#FFFFFF">
+							<tr bgcolor="#98A8C0"> 
+								<td colspan="2" height="50"><img src="../images/main_t01.gif" width="126" height="39" border="0"></td>
+							</tr>
+
+							<tr>
+								<td rowspan="2" width="130" height="200" valign="top" align="center"><br><a href="../event/detail.asp?eid=1275&cid=43"><img src="../dbimages/events/1275.jpg" width="110" height="95" BORDER=0></a></td>
+								<td>
+									<br>
+
+									<img src="images/dot1.gif" border="0" ALT HSPACE="5" WIDTH="9" HEIGHT="11"><a href="../event/list.asp?c=e.categoryId=43&amp;cid=28&amp;v=1">댄스/발라드</a><br>
+
+									<img src="images/dot1.gif" border="0" ALT HSPACE="5" WIDTH="9" HEIGHT="11"><a href="../event/list.asp?c=e.categoryId=44&amp;cid=28&amp;v=1">락/포크</a><br>
+
+									<img src="images/dot1.gif" border="0" ALT HSPACE="5" WIDTH="9" HEIGHT="11"><a href="../event/list.asp?c=e.categoryId=45&amp;cid=28&amp;v=1">재즈/R&B</a><br>
+
+									<img src="images/dot1.gif" border="0" ALT HSPACE="5" WIDTH="9" HEIGHT="11"><a href="../event/list.asp?c=e.categoryId=61&amp;cid=28&amp;v=1">개그콘서트</a><br>
+
+									<img src="images/dot1.gif" border="0" ALT HSPACE="5" WIDTH="9" HEIGHT="11"><a href="../event/list.asp?c=e.categoryId=57&amp;cid=28&amp;v=1">Pops/내한공연</a><br>
+
+									<img src="images/dot1.gif" border="0" ALT HSPACE="5" WIDTH="9" HEIGHT="11"><a href="../event/list.asp?c=e.categoryId=46&amp;cid=28&amp;v=1">올드 가요</a><br>
+
+								</td>
+							</tr>
+							<tr>
+								<td><a href="../goods/list.asp?c=g.categoryId+IN+(SELECT+categoryId+FROM+tblCategory+WHERE+parentNode=28)&cid=28"><img src="images/cart_music.gif" width="119" height="39" border="0" ALT></a></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<!----Concerts End-----> 
+			<br>
+			<!----Family start-----> 
+			<table width="92%" height="270" border="0" cellspacing="0" cellpadding="5" height="262">
+				<tr bgcolor="#CFBA63"> 
+					<td> 
+						<table width="100%" border="0" cellspacing="2" cellpadding="0" bgcolor="#FFFFFF" height="100%">
+							<tr bgcolor="#D3CA98"> 
+								<td colspan="2" height="50"><img src="../images/main_t03.gif" width="212" height="46" border="0"></td>
+							</tr>
+
+							<tr> 
+								<td rowspan="2" width="130" height="200" valign="top" align="center"><br><a href="../event/detail.asp?eid=1299&cid=39"><img src="../dbimages/events/1299.jpg" width="110" height="94" BORDER=0></a></td>
+								<td>
+
+									<img src="images/dot3.gif" border="0" ALT HSPACE="5" WIDTH="9" HEIGHT="11"><a href="../event/list.asp?c=e.categoryId=66&amp;cid=29&amp;v=1">자동차전용극장</a><br>
+
+									<img src="images/dot3.gif" border="0" ALT HSPACE="5" WIDTH="9" HEIGHT="11"><a href="../event/list.asp?c=e.categoryId=37&amp;cid=29&amp;v=1">라이브클럽</a><br>
+
+									<img src="images/dot3.gif" border="0" ALT HSPACE="5" WIDTH="9" HEIGHT="11"><a href="../event/list.asp?c=e.categoryId=39&amp;cid=29&amp;v=1">전시/축제</a><br>
+
+									<img src="images/dot3.gif" border="0" ALT HSPACE="5" WIDTH="9" HEIGHT="11"><a href="../event/list.asp?c=e.categoryId=62&amp;cid=29&amp;v=1">어린이/가족</a><br>
+
+									<img src="images/dot3.gif" border="0" ALT HSPACE="5" WIDTH="9" HEIGHT="11"><a href="../event/list.asp?c=e.categoryId=64&amp;cid=29&amp;v=1">기타 이벤트</a><br>
+
+								</td>
+							</tr>
+							<tr>
+								<td><a href="../goods/list.asp?c=g.categoryId+IN+(SELECT+categoryId+FROM+tblCategory+WHERE+parentNode=29)&cid=29"><img src="images/cart_event.gif" width="119" height="39" border="0" ALT></a></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<!----Family End-----> 
+		</td>
+		
+		<td width="34%" align="center" valign="top">
+			<!----Arts Start----->
+			<table width="92%" height="270" border="0" cellspacing="0" cellpadding="5" height="262">
+				<tr bgcolor="#A82B44"> 
+					<td> 
+						<table width="100%" border="0" cellspacing="2" cellpadding="0" bgColor="white" height="100%">
+							<tr bgcolor="#D8B5BC"> 
+								<td colspan="2" height="50"><img src="../images/main_t02.gif" width="58" height="39" border="0"></td>
+							</tr>
+
+													<tr>
+								<td rowspan="2" width="130" height="200" valign="top" align="center"><br><a href="../event/detail.asp?eid=1302&cid=34"><img src="../dbimages/events/1302.jpg" width="110" height="94" BORDER=0></a></td>
+								<td>
+									<br>
+
+									<img src="images/dot2.gif" border="0" ALT HSPACE="5" WIDTH="9" HEIGHT="11"><a href="../event/list.asp?c=e.categoryId=52&amp;cid=30&amp;v=1">클래식/오페라</a><br>
+
+									<img src="images/dot2.gif" border="0" ALT HSPACE="5" WIDTH="9" HEIGHT="11"><a href="../event/list.asp?c=e.categoryId=34&amp;cid=30&amp;v=1">연극/뮤지컬</a><br>
+
+									<img src="images/dot2.gif" border="0" ALT HSPACE="5" WIDTH="9" HEIGHT="11"><a href="../event/list.asp?c=e.categoryId=33&amp;cid=30&amp;v=1">영화</a><br>
+
+									<img src="images/dot2.gif" border="0" ALT HSPACE="5" WIDTH="9" HEIGHT="11"><a href="../event/list.asp?c=e.categoryId=32&amp;cid=30&amp;v=1">무용/발레</a><br>
+
+									<img src="images/dot2.gif" border="0" ALT HSPACE="5" WIDTH="9" HEIGHT="11"><a href="../event/list.asp?c=e.categoryId=35&amp;cid=30&amp;v=1">전통음악</a><br>
+
+									<img src="images/dot2.gif" border="0" ALT HSPACE="5" WIDTH="9" HEIGHT="11"><a href="../event/list.asp?c=e.categoryId=36&amp;cid=30&amp;v=1">미술/박물관</a><br>
+
+								</td>
+							</tr>
+							<tr>
+								<td><a href="../goods/list.asp?c=g.categoryId+IN+(SELECT+categoryId+FROM+tblCategory+WHERE+parentNode=30)&cid=30"><img src="images/cart_art.gif" width="119" height="39" border="0" ALT></a></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<!----Arts End-----> 
+			<br>
+			<!----OT-Commity Start-----> 
+			<table width="92%" height="270" border="0" cellspacing="0" cellpadding="5" height="262">
+				<tr bgcolor="#875098"> 
+					<td>
+						<table width="100%" border="0" cellspacing="2" cellpadding="0" bgcolor="#FFFFFF" height="100%">
+							<tr bgcolor="#C7B4CD"> 
+								<td colspan="2" height="50"><img src="../images/main_t04.gif" width="210" height="46" border="0"></td>
+							</tr>
+							<tr>
+								<td rowspan="2" width="130" height="200" align="center" valign="top"><br><a href="../community/index.html"><img src="../images/concert4.jpg" width="110" height="94" BORDER=0></a></td>
+								<td>
+									<!----category------>
+									<img src="images/dot4.gif" border="0" ALT HSPACE="5" WIDTH="9" HEIGHT="11"><a href="../FreeTicket/list.asp">프리티켓 모음</a><br>
+									<img src="images/dot4.gif" border="0" ALT HSPACE="5" WIDTH="9" HEIGHT="11"><a href="../FreeEvent/list.asp">이벤트 PR 마당</a><br>
+									<img src="images/dot4.gif" border="0" ALT HSPACE="5" WIDTH="9" HEIGHT="11"><a href="../sponsor/list.asp">아티스트 갤러리</a><br>
+									<img src="images/dot4.gif" border="0" ALT HSPACE="5" WIDTH="9" HEIGHT="11"><a href="http://bbs.localhost.co.kr/okticket/ezboard.cgi?db=faq2">자유게시판</a><br>
+									<img src="images/dot4.gif" border="0" ALT HSPACE="5" WIDTH="9" HEIGHT="11"><a href="http://bbs.localhost.co.kr/okticket/ezboard.cgi?db=faq1">OT-공지사항</a>
+									<!----categoryend------>
+								</td>
+							</tr>
+							<tr> 
+								<td><a href="http://bbs.okticket.com/ezboard.cgi?db=faq3"><img src="images/cart_ot.gif" width="119" height="39" border="0" ALT></a></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<!----OT-Commity End-----> 
+		</td>
+
+		<td width="33%" valign="top" align="center">     
+			<!----Right Start-----> 
+			<table cellpadding="0" cellspacing="5" border="0" width="97%" height="100%" bgColor="#bbbbbb">
+				<tr bgcolor="#F0F0F0"> 
+					<td valign="top" align="center"> 
+						<table width="100%" border="0" cellspacing="0" cellpadding="20" bgcolor="#F0F0F0">
+							<tr> 
+								<td>
+									<img src="images/mt_otspecial.gif" width="91" height="17" border="0" alt>
+									
+									<table border="0">
+										<tr> 
+											<td>
+												<A href='../freeticket/list.asp'><img src="images/ots_banner1.gif" width="200" height="50" border="0" alt vspace="5" hspace="5"></A><br>
+												<A href='../freeevent/list.asp'><img src="images/ots_banner2.gif" width="200" height="50" border="0" alt vspace="5" hspace="5"></A><br>
+												<A href='../sponsor/list.asp'><img src="images/ots_banner3.gif" width="200" height="50" border="0" alt vspace="5" hspace="5"></A><br>
+											
+												<applet archive="AnWater.jar" code="AnWater.class" width="200" height="100">
+<param name="credits" value="Applet by Fabio Ciucci (www.anfyteam.com)">
+<param name="res" value="1">
+<param name="image" value="01.jpg">
+<param name="light" value="YES">
+<param name="minlight" value="10">
+<param name="maxlight" value="100">
+<param name="autodesign" value="YES">
+<param name="density" value="4">
+<param name="fishnum" value="0">
+<param name="cross" value="YES">
+<param name="crossfactor" value="30">
+<param name="rainsize" value="0">
+<param name="rainfactor" value="10">
+<param name="srainsize" value="0">
+<param name="srainfactor" value="10">
+<param name="fixdrop" value="NO">
+<param name="fixdropX" value="0">
+<param name="fixdropY" value="0">
+<param name="fixdropS" value="0">
+<param name="fixdropF" value="0">
+<param name="pressure" value="800">
+<param name="fluidmode" value="oil">
+<param name="interactive" value="YES">
+<param name="overimg" value="NO">
+<param name="overimgX" value="0">
+<param name="overimgY" value="0">
+<param name="textscroll" value="waterscr.txt">
+<param name="texttype" value="horizontal">
+<param name="textvspace" value="0">
+<param name="textminfont" value="8">
+<param name="textmaxfont" value="172">
+<param name="textoffset" value="0">
+<param name="textspeed" value="1">
+<param name="textfont" value="Helvetica">
+<param name="textbold" value="YES">
+<param name="textitalic" value="NO">
+<param name="textsize" value="24">
+<param name="textshadow" value="NO">
+<param name="TextSColR" value="0">
+<param name="TextSColG" value="0">
+<param name="TextSColB" value="0">
+<param name="TextColR" value="0">
+<param name="TextColG" value="0">
+<param name="TextColB" value="0">
+<param name="TextJumpAmp" value="0">
+<param name="TextJumpSpd" value="0">
+<param name="TextSineAmp" value="0">
+<param name="TextSineSpd" value="0">
+<param name="TextSineAngle" value="0">
+<param name="regcode" value="NO">
+<param name="reglink" value="NO">
+<param name="regnewframe" value="NO">
+<param name="regframename" value="_blank">
+<param name="statusmsg" value="Water applet">
+<param name="memdelay" value="1000">
+<param name="priority" value="3">
+<param name="MinSYNC" value="10">
+Sorry, your browser doesn't support Java(tm).
+</applet>
+<br><A href='#' onclick='window.open("./in/index1212.html", "newWindow", "width=800 height=600 scrollbars=yes")'>페스티발보기</a>
+											</td>
+										</tr>
+									</table>
+	
+					<font size="2" color="BLACK"><img src="../images/t_hotnews.gif" border="0" alt> <br>
+				    <br>
+					               <table width="330">
+								   
+								   
+								   <tr width="330">
+								   <font size="2" color="#2D8BFF"><a href=news/view.asp?ListNum=173><img src=http://www.okticket.com/home/images/dot2.gif border=0>&nbsp;&nbsp;[앨범]로니 제임스 디오의 앨범 <매지카></a></font>
+								   </tr>
+								   
+								   
+								   <tr width="330">
+								   <font size="2" color="#2D8BFF"><a href=news/view.asp?ListNum=172><img src=http://www.okticket.com/home/images/dot2.gif border=0>&nbsp;&nbsp;[영화]美엔 지금 <식스티 세컨즈> 열풍이</a></font>
+								   </tr>
+								   
+								   
+								   <tr width="330">
+								   <font size="2" color="#2D8BFF"><a href=news/view.asp?ListNum=171><img src=http://www.okticket.com/home/images/dot2.gif border=0>&nbsp;&nbsp;[연극]카이로연극제 초청공문 오류로 극단 신청서도 못내</a></font>
+								   </tr>
+								   
+								   
+								   <tr width="330">
+								   <font size="2" color="#2D8BFF"><a href=news/view.asp?ListNum=170><img src=http://www.okticket.com/home/images/dot2.gif border=0>&nbsp;&nbsp;[앨범]신나라 뮤직 < 6ㆍ25 메모리> 복각 CD 발매</a></font>
+								   </tr>
+								   
+								   
+								   <tr width="330">
+								   <font size="2" color="#2D8BFF"><a href=news/view.asp?ListNum=169><img src=http://www.okticket.com/home/images/dot2.gif border=0>&nbsp;&nbsp;</a></font>
+								   </tr>
+								   
+								   
+								   <tr width="330">
+								   <font size="2" color="#2D8BFF"><a href=news/view.asp?ListNum=168><img src=http://www.okticket.com/home/images/dot2.gif border=0>&nbsp;&nbsp;[영화]부산, 영화촬영 메카로 뜬다</a></font>
+								   </tr>
+								   
+								   
+								   <tr width="330">
+								   <font size="2" color="#2D8BFF"><a href=news/view.asp?ListNum=167><img src=http://www.okticket.com/home/images/dot2.gif border=0>&nbsp;&nbsp;[음악]統獨 찬가 <앙코르></a></font>
+								   </tr>
+								   
+								   
+								   <tr width="330">
+								   <font size="2" color="#2D8BFF"><a href=news/view.asp?ListNum=166><img src=http://www.okticket.com/home/images/dot2.gif border=0>&nbsp;&nbsp;[음악]뉴서울필의 시와 풍경을 그린 음악</a></font>
+								   </tr>
+								   
+								   
+								   <tr width="330">
+								   <font size="2" color="#2D8BFF"><a href=news/view.asp?ListNum=165><img src=http://www.okticket.com/home/images/dot2.gif border=0>&nbsp;&nbsp;[영화]올여름 섬뜩한 공룡 주의보 <다이너소어></a></font>
+								   </tr>
+								   
+								   
+								   <tr width="330">
+								   <font size="2" color="#2D8BFF"><a href=news/view.asp?ListNum=164><img src=http://www.okticket.com/home/images/dot2.gif border=0>&nbsp;&nbsp;[음반]4인조 메탈밴드 <마루> 모던 록 톤으로 변신</a></font>
+								   </tr>
+								   
+								   <table>	
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<!----Right End----->
+		</td>
+	</tr>
+</table>
+
+<!----본문끝---->
+</td>
+</tr>
+<tr height=10></tr>
+ 
+
+<tr> 
+    <td colspan="2" align="right"></td>
+</tr>
+</table><br>
+<center><!--///////////////////////////////////////
+	Footer 시작
+	///////////////////////////////////////-->
+
+<DIV align=center><FONT size=2 face=arial>
+	Copyright &copy; 2000 <a href=mailto:webmaster@okticket.com>okticket.com</a>, corporation.<BR>
+	서울시 서초구 서초동 1451-1 원일빌딩 501호 tel: 525-6591<BR>
+	All rights reserved.<BR>
+	<BR>
+</DIV>
+<!--///////////////////////////////////////
+	Footer 끝
+	///////////////////////////////////////-->
+</td>
+</tr>
+</table></center>
+</body>
+
+</html>
+ 

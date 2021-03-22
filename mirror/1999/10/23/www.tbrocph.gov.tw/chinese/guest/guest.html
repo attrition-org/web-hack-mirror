@@ -1,0 +1,96 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>guest</TITLE>
+<META NAME="Template" CONTENT="C:\PROGRAM FILES\MICROSOFT OFFICE\OFFICE\html.dot">
+</HEAD>
+<BODY LINK="#0000ff" VLINK="#800080" BACKGROUND="Light_Grey_BrickA265.gif">
+
+<P><!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN"><script language="JavaScript"><FONT FACE="System,????" LANG="ZH-TW">var timerID = null; var tickerString = "歡迎您來到澎湖國家風景區，"+ "澎湖有您內心所期待的純、的淨，嘈雜又壓抑的都市生活您是否已感到疲憊，該是您釋放自己的時候了，"+ "澎湖是您短暫遠離塵囂的最好去處，想想啊</FONT> <FONT FACE="System,????" LANG="ZH-TW">! 那藍天、那碧海、那草原上悠游自在的牛群，微風輕拂臉龐、再也沒有人強迫你、壓迫你做任何討厭的事，你完完全全屬於你自己。"+ "醉在澎湖的溫柔，宛若迴旋於愛莉絲仙境般，這麼美的地方，值得大家告訴大家，留下您的流言吧</FONT> <FONT FACE="System,????" LANG="ZH-TW">!!" var showStart, showEnd; var tickerWidth = 80; <!--字串可見長度>
+var timerRunning = false;
+function stopTicker ()
+{ if(timerRunning) 
+     clearTimeout(timerID);
+  timerRunning = false;
+}
+function showTicker () 
+{       var showString;
+        if (showStart<showEnd)
+           showString=tickerString.substring(showStart,showEnd+2);
+           
+        else showString=tickerString.substring(showStart,tickerString.length)+
+                  tickerString.substring(0,showEnd+2);
+                  
+       showStart=(showStart+2)%tickerString.length; <!--字串顯現的地方>
+       
+        showEnd=(showEnd+2)%tickerString.length;
+               
+        document.ticker.face.value = showString; <!-- 把字串assign to layout>
+    
+<!--^^^^^^^^ ^^^^^^ ^^^^ ^^^^^   ^^^^^^^^^^>
+    <!--文件  form-name input-name input值 assign之字串> 
+  timerID = setTimeout("showTicker()",1000); <!-- 100指速度>
+  timerRunning = true;
+}
+function startTicker () 
+{      var i;
+       var tmpString = "";
+       // append a blank string of length=tickerWidth with tickerString
+        for (i=0;i<tickerWidth;i++) <!-- 兩次字串間之間隔空白(此以字串長度為空白間隔)>
+            tmpString+=" ";
+            tmpString+=tickerString;
+            tickerString=tmpString;
+        showStart=0;
+        showEnd=tickerWidth-1;
+  stopTicker();
+  showTicker();
+}
+// --></script>
+<P ALIGN="CENTER"><IMG SRC="GUEST11.gif" WIDTH=468 HEIGHT=102></P>
+<FORM>
+<P><div align="center"></P></FONT>
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=1>
+<TR><TD VALIGN="MIDDLE">
+<FONT FACE="System,????" LANG="ZH-TW"><P ALIGN="CENTER"><B>
+<INPUT TYPE="text" NAME="face">
+</B></FONT></TD>
+</TR>
+</TABLE>
+</CENTER></P>
+
+<P ALIGN="CENTER"></div></P></FORM>
+<FONT FACE="System,????" LANG="ZH-TW"><P><HR></P>
+<P><div align="center"></P></FONT>
+<P ALIGN="CENTER"><CENTER><TABLE CELLSPACING=0 BORDER=0>
+<TR><TD VALIGN="MIDDLE">
+<FONT FACE="System,????" LANG="ZH-TW"><P ALIGN="CENTER"></FONT><A HREF="guest2.html"><IMG SRC="p-guest/guest2.gif" BORDER=0 WIDTH=202 HEIGHT=59><B><FONT FACE="System,????" LANG="ZH-TW">&lt;/img</B></FONT></A></TD>
+<TD VALIGN="MIDDLE">
+<FONT FACE="System,????" LANG="ZH-TW"><P ALIGN="CENTER"></FONT><A HREF="guest2.html"><FONT FACE="System,????" LANG="ZH-TW">guest2.html</FONT></A><B><FONT FACE="System,????" LANG="ZH-TW">　</B></FONT></TD>
+<TD VALIGN="MIDDLE">
+<FONT FACE="System,????" LANG="ZH-TW"><P ALIGN="CENTER"></FONT><A HREF="guest2.html"><FONT FACE="System,????" LANG="ZH-TW">guest2.html</FONT></A><B><FONT FACE="System,????" LANG="ZH-TW">　</B></FONT></TD>
+</TR>
+<TR><TD VALIGN="MIDDLE">
+<FONT FACE="System,????" LANG="ZH-TW"><P ALIGN="CENTER"></FONT><A HREF="guest2.html"><IMG SRC="p-guest/g-an3.gif" BORDER=0 WIDTH=202 HEIGHT=59></A></TD>
+<TD VALIGN="MIDDLE">
+<FONT FACE="System,????" LANG="ZH-TW"><P ALIGN="CENTER"></FONT><A HREF="guest3.html"><IMG SRC="p-guest/guest3.gif" BORDER=0 WIDTH=202 HEIGHT=59></A></TD>
+<TD VALIGN="MIDDLE">
+<FONT FACE="System,????" LANG="ZH-TW"><P ALIGN="CENTER"><IMG SRC="p-guest/g-an1.gif" WIDTH=202 HEIGHT=59></FONT></TD>
+</TR>
+<TR><TD VALIGN="MIDDLE">
+<B><FONT FACE="System,????" LANG="ZH-TW"><P ALIGN="CENTER">　</B></FONT></TD>
+<TD VALIGN="MIDDLE">
+<FONT FACE="System,????" LANG="ZH-TW"><P ALIGN="CENTER"><IMG SRC="p-guest/g-an.gif" WIDTH=202 HEIGHT=52></FONT></TD>
+<TD VALIGN="MIDDLE">
+<FONT FACE="System,????" LANG="ZH-TW"><P ALIGN="CENTER"></FONT><A HREF="guest4.html"><IMG SRC="p-guest/guest4.gif" BORDER=0 WIDTH=202 HEIGHT=59></A></TD>
+</TR>
+</TABLE>
+</CENTER></P>
+
+<P ALIGN="CENTER"></div></P>
+<FONT FACE="System,????" LANG="ZH-TW"><P><HR></P>
+</FONT><B><FONT FACE="System,????" LANG="ZH-TW" SIZE=2><P ALIGN="CENTER">[</B></FONT><A HREF="guest2.html"><B><FONT FACE="System,????" LANG="ZH-TW" SIZE=2>澎管處佈告</B></FONT></A><B><FONT FACE="System,????" LANG="ZH-TW" SIZE=2>| </B></FONT><A HREF="guest3.html"><B><FONT FACE="System,????" LANG="ZH-TW" SIZE=2>訪客留言板</B></FONT></A><B><FONT FACE="System,????" LANG="ZH-TW" SIZE=2>|</B></FONT><A HREF="guest4.html"><B><FONT FACE="System,????" LANG="ZH-TW" SIZE=2>訪客意見欄</B></FONT></A><B><FONT FACE="System,????" LANG="ZH-TW" SIZE=2>] </P>
+</B></FONT><FONT FACE="System,????" LANG="ZH-TW"><P><HR></P>
+</FONT><B><FONT FACE="System,????" LANG="ZH-TW" SIZE=2><P ALIGN="CENTER">[</B></FONT><A HREF="../adm/adm1.html"><B><FONT FACE="System,????" LANG="ZH-TW" SIZE=2>關於澎管處</B></FONT></A><B><FONT FACE="System,????" LANG="ZH-TW" SIZE=2>|</B></FONT><A HREF="../find/find.html"><B><FONT FACE="System,????" LANG="ZH-TW" SIZE=2>發現澎湖</B></FONT></A><B><FONT FACE="System,????" LANG="ZH-TW" SIZE=2>|</B></FONT><A HREF="../tour/tour.html"><B><FONT FACE="System,????" LANG="ZH-TW" SIZE=2>尋幽訪勝</B></FONT></A><B><FONT FACE="System,????" LANG="ZH-TW" SIZE=2>|</B></FONT><A HREF="../info/gohere.html"><B><FONT FACE="System,????" LANG="ZH-TW" SIZE=2>到此一遊</B></FONT></A><B><FONT FACE="System,????" LANG="ZH-TW" SIZE=2>|</B></FONT><A HREF="../info/info1.html"><B><FONT FACE="System,????" LANG="ZH-TW" SIZE=2>旅遊資訊</B></FONT></A><B><FONT FACE="System,????" LANG="ZH-TW" SIZE=2>|</B></FONT><A HREF="guest1.html"><B><FONT FACE="System,????" LANG="ZH-TW" SIZE=2>交流園地</B></FONT></A><B><FONT FACE="System,????" LANG="ZH-TW" SIZE=2>|</B></FONT><A HREF="../net/net.html"><B><FONT FACE="System,????" LANG="ZH-TW" SIZE=2>一</FONT><FONT SIZE=2> </FONT><FONT FACE="System,????" LANG="ZH-TW" SIZE=2>網無際</B></FONT></A><B><FONT FACE="System,????" LANG="ZH-TW" SIZE=2>|</B></FONT><A HREF="../news.html"><B><FONT FACE="System,????" LANG="ZH-TW" SIZE=2>最新消息</B></FONT></A><B><FONT FACE="System,????" LANG="ZH-TW" SIZE=2>]<BR>
+<IMG SRC="../home.gif" WIDTH=68 HEIGHT=48></B></FONT><A HREF="../chinese.html"><B><FONT FACE="System,????" LANG="ZH-TW" SIZE=2>首頁</B></FONT></A></P></BODY>
+</HTML>
