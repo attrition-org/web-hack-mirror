@@ -1,4 +1,4 @@
-## [ATTRITION Get](http://www.attrition.org/mirror/attrition/)
+## [ATTRITION Get](http://www.attrition.org/mirror/attrition/) (aka 'aget')
 
 #### copyright 1999-2001 Brian Martin (jericho@attrition.org)
 ##### quasi-bloatware 'cuz i'm anal retentive
