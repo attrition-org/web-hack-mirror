@@ -25,7 +25,9 @@ as generate the statistics.
 associated group name.
 
 ### INSERT
-'*insert*' is a utility designed by attrition.org staff 
+'*insert*' is a utility designed by WHiTe VaMPiRe, written for usage with
+Project Gamma's Defaced Web Site Archive. It was then used by attrition.org 
+staff to cleanly insert new defacements into our existing breakout pages.
 
 ### REN_VTI
 '*ren_vit*' is a utility designed by attrition.org staff
