@@ -30,7 +30,9 @@ Project Gamma's Defaced Web Site Archive. It was then used by attrition.org
 staff to cleanly insert new defacements into our existing breakout pages.
 
 ### REN_VTI
-'*ren_vit*' is a utility designed by attrition.org staff
+'*ren_vit*' is a one-off utility designed by munge to clean up a big mess
+of directories named \_vti that were captured as part of mirroring sites
+hosted on IIS (if memory serves)
 
 ### SUMMARY
 '*summary*' is a utility designed by attrition.org staff
