@@ -16,37 +16,19 @@ for our alerts so they could ignore them. We [wrote a blog](https://attrition.or
 this circus.)
 
 ### GEN
-'*gen*' is a utility designed by attrition.org staff to mirror web
-page defacements. this is an evolving utility that goes several steps
-beyond simple mirrors.
+'*gen*' is a utility designed by attrition.org staff to generate the
+breakout pages for defacements by individual, group, and TLD, as well
+as generate the statistics.
 
 ### GETGROUP
-'*getgroup*' is a utility designed by attrition.org staff to mirror web
-page defacements. this is an evolving utility that goes several steps
-beyond simple mirrors.
+'*getgroup*' is a utility designed by attrition.org staff
 
 ### INSERT
-'*insert*' is a utility designed by attrition.org staff to mirror web
-page defacements. this is an evolving utility that goes several steps
-beyond simple mirrors.
+'*insert*' is a utility designed by attrition.org staff 
 
 ### REN_VTI
-'*ren_vit*' is a utility designed by attrition.org staff to mirror web
-page defacements. this is an evolving utility that goes several steps
-beyond simple mirrors.
+'*ren_vit*' is a utility designed by attrition.org staff
 
 ### SUMMARY
-'*summary*' is a utility designed by attrition.org staff to mirror web
-page defacements. this is an evolving utility that goes several steps
-beyond simple mirrors.
-
-#### Thanks to
- * Munge - excellent shell-fu, debugging, optimizing and more
- * Punkis - debugging, testing
- * Mcintyre - couple feature ideas, a little testing
- * Marcus Manning - idea to mail country based CERT
-
-thanks to snowcrash (.woeM) for occasionally sitting in my lap while i work
-thanks to the pacific ocean and 7 hours with no laptop for brainstorming
-a bulk of the features of this beast (herro Tokyo)
+'*summary*' is a utility designed by attrition.org staff
 
