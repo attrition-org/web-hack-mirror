@@ -21,7 +21,8 @@ breakout pages for defacements by individual, group, and TLD, as well
 as generate the statistics.
 
 ### GETGROUP
-'*getgroup*' is a utility designed by attrition.org staff
+'*getgroup*' is a simple one-off utility designed by munge to fetch the
+associated group name.
 
 ### INSERT
 '*insert*' is a utility designed by attrition.org staff 
