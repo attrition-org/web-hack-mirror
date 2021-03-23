@@ -35,5 +35,6 @@ of directories named \_vti that were captured as part of mirroring sites
 hosted on IIS (if memory serves)
 
 ### SUMMARY
-'*summary*' is a utility designed by attrition.org staff
+'*summary*' is a utility designed by attrition.org staff that mailed details 
+of the captured mirror to the defaced-summary mail list
 
