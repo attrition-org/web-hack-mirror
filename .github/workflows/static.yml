@@ -35,8 +35,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          # Upload entire repository
-          path: '.'
+          # Specify path to upload to Pages
+          path: 'mirror/1997'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
