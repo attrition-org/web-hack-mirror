@@ -1,1 +1,0 @@
-<html><head><link REL="SHORTCUT ICON" href=http://www.i365i.com/hero/city/image/ybb.ico><meta http-equiv="Content-Type" content="text/html; charset=gb2312"><title>e-路社区</title></head><frameset framespacing="0" border="false" frameborder="0" rows="*,20"><frame name="main" src="list.cgi?menu=show"><frame name="yuzi" scrolling="no" noresize></frameset></html>
